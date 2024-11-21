@@ -1,0 +1,5 @@
+*.infofile
+*.nes
+*.nes.dbg
+*.o
+*.o.dep
