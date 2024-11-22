@@ -83,22 +83,22 @@
 
 .scope bank10
 .segment "PRG10"
-.include "src/bank10.asm"
+.include "src/font/bank10.asm"
 .endscope
 
 .scope bank11
 .segment "PRG11"
-.include "src/bank11.asm"
+.include "src/font/bank11.asm"
 .endscope
 
 .scope bank12
 .segment "PRG12"
-.include "src/bank12.asm"
+.include "src/font/bank12.asm"
 .endscope
 
 .scope bank13
 .segment "PRG13"
-.include "src/bank13.asm"
+.include "src/font/bank13.asm"
 .endscope
 
 .scope bank14
@@ -163,327 +163,327 @@
 
 .scope bank20
 .segment "PRG20"
-.include "src/bank20.asm"
+.include "src/world/bank20.asm"
 .endscope
 
 .scope bank21
 .segment "PRG21"
-.include "src/bank21.asm"
+.include "src/world/bank21.asm"
 .endscope
 
 .scope bank22
 .segment "PRG22"
-.include "src/bank22.asm"
+.include "src/world/bank22.asm"
 .endscope
 
 .scope bank23
 .segment "PRG23"
-.include "src/bank23.asm"
+.include "src/world/bank23.asm"
 .endscope
 
 .scope bank24
 .segment "PRG24"
-.include "src/bank24.asm"
+.include "src/world/bank24.asm"
 .endscope
 
 .scope bank25
 .segment "PRG25"
-.include "src/bank25.asm"
+.include "src/world/bank25.asm"
 .endscope
 
 .scope bank26
 .segment "PRG26"
-.include "src/bank26.asm"
+.include "src/world/bank26.asm"
 .endscope
 
 .scope bank27
 .segment "PRG27"
-.include "src/bank27.asm"
+.include "src/world/bank27.asm"
 .endscope
 
 .scope bank28
 .segment "PRG28"
-.include "src/bank28.asm"
+.include "src/world/bank28.asm"
 .endscope
 
 .scope bank29
 .segment "PRG29"
-.include "src/bank29.asm"
+.include "src/world/bank29.asm"
 .endscope
 
 .scope bank2a
 .segment "PRG2a"
-.include "src/bank2a.asm"
+.include "src/world/bank2a.asm"
 .endscope
 
 .scope bank2b
 .segment "PRG2b"
-.include "src/bank2b.asm"
+.include "src/world/bank2b.asm"
 .endscope
 
 .scope bank2c
 .segment "PRG2c"
-.include "src/bank2c.asm"
+.include "src/world/bank2c.asm"
 .endscope
 
 .scope bank2d
 .segment "PRG2d"
-.include "src/bank2d.asm"
+.include "src/world/bank2d.asm"
 .endscope
 
 .scope bank2e
 .segment "PRG2e"
-.include "src/bank2e.asm"
+.include "src/world/bank2e.asm"
 .endscope
 
 .scope bank2f
 .segment "PRG2f"
-.include "src/bank2f.asm"
+.include "src/world/bank2f.asm"
 .endscope
 
 .scope bank30
 .segment "PRG30"
-.include "src/bank30.asm"
+.include "src/world/bank30.asm"
 .endscope
 
 .scope bank31
 .segment "PRG31"
-.include "src/bank31.asm"
+.include "src/world/bank31.asm"
 .endscope
 
 .scope bank32
 .segment "PRG32"
-.include "src/bank32.asm"
+.include "src/world/bank32.asm"
 .endscope
 
 .scope bank33
 .segment "PRG33"
-.include "src/bank33.asm"
+.include "src/world/bank33.asm"
 .endscope
 
 .scope bank34
 .segment "PRG34"
-.include "src/bank34.asm"
+.include "src/world/bank34.asm"
 .endscope
 
 .scope bank35
 .segment "PRG35"
-.include "src/bank35.asm"
+.include "src/world/bank35.asm"
 .endscope
 
 .scope bank36
 .segment "PRG36"
-.include "src/bank36.asm"
+.include "src/world/bank36.asm"
 .endscope
 
 .scope bank37
 .segment "PRG37"
-.include "src/bank37.asm"
+.include "src/world/bank37.asm"
 .endscope
 
 .scope bank38
 .segment "PRG38"
-.include "src/bank38.asm"
+.include "src/world/bank38.asm"
 .endscope
 
 .scope bank39
 .segment "PRG39"
-.include "src/bank39.asm"
+.include "src/world/bank39.asm"
 .endscope
 
 .scope bank3a
 .segment "PRG3a"
-.include "src/bank3a.asm"
+.include "src/world/bank3a.asm"
 .endscope
 
 .scope bank3b
 .segment "PRG3b"
-.include "src/bank3b.asm"
+.include "src/world/bank3b.asm"
 .endscope
 
 .scope bank3c
 .segment "PRG3c"
-.include "src/bank3c.asm"
+.include "src/world/bank3c.asm"
 .endscope
 
 .scope bank3d
 .segment "PRG3d"
-.include "src/bank3d.asm"
+.include "src/world/bank3d.asm"
 .endscope
 
 .scope bank3e
 .segment "PRG3e"
-.include "src/bank3e.asm"
+.include "src/world/bank3e.asm"
 .endscope
 
 .scope bank3f
 .segment "PRG3f"
-.include "src/bank3f.asm"
+.include "src/world/bank3f.asm"
 .endscope
 
 .scope bank40
 .segment "PRG40"
-.include "src/bank40.asm"
+.include "src/world/bank40.asm"
 .endscope
 
 .scope bank41
 .segment "PRG41"
-.include "src/bank41.asm"
+.include "src/world/bank41.asm"
 .endscope
 
 .scope bank42
 .segment "PRG42"
-.include "src/bank42.asm"
+.include "src/world/bank42.asm"
 .endscope
 
 .scope bank43
 .segment "PRG43"
-.include "src/bank43.asm"
+.include "src/world/bank43.asm"
 .endscope
 
 .scope bank44
 .segment "PRG44"
-.include "src/bank44.asm"
+.include "src/world/bank44.asm"
 .endscope
 
 .scope bank45
 .segment "PRG45"
-.include "src/bank45.asm"
+.include "src/world/bank45.asm"
 .endscope
 
 .scope bank46
 .segment "PRG46"
-.include "src/bank46.asm"
+.include "src/world/bank46.asm"
 .endscope
 
 .scope bank47
 .segment "PRG47"
-.include "src/bank47.asm"
+.include "src/world/bank47.asm"
 .endscope
 
 .scope bank48
 .segment "PRG48"
-.include "src/bank48.asm"
+.include "src/world/bank48.asm"
 .endscope
 
 .scope bank49
 .segment "PRG49"
-.include "src/bank49.asm"
+.include "src/world/bank49.asm"
 .endscope
 
 .scope bank4a
 .segment "PRG4a"
-.include "src/bank4a.asm"
+.include "src/world/bank4a.asm"
 .endscope
 
 .scope bank4b
 .segment "PRG4b"
-.include "src/bank4b.asm"
+.include "src/world/bank4b.asm"
 .endscope
 
 .scope bank4c
 .segment "PRG4c"
-.include "src/bank4c.asm"
+.include "src/world/bank4c.asm"
 .endscope
 
 .scope bank4d
 .segment "PRG4d"
-.include "src/bank4d.asm"
+.include "src/world/bank4d.asm"
 .endscope
 
 .scope bank4e
 .segment "PRG4e"
-.include "src/bank4e.asm"
+.include "src/world/bank4e.asm"
 .endscope
 
 .scope bank4f
 .segment "PRG4f"
-.include "src/bank4f.asm"
+.include "src/world/bank4f.asm"
 .endscope
 
 .scope bank50
 .segment "PRG50"
-.include "src/bank50.asm"
+.include "src/world/bank50.asm"
 .endscope
 
 .scope bank51
 .segment "PRG51"
-.include "src/bank51.asm"
+.include "src/world/bank51.asm"
 .endscope
 
 .scope bank52
 .segment "PRG52"
-.include "src/bank52.asm"
+.include "src/world/bank52.asm"
 .endscope
 
 .scope bank53
 .segment "PRG53"
-.include "src/bank53.asm"
+.include "src/world/bank53.asm"
 .endscope
 
 .scope bank54
 .segment "PRG54"
-.include "src/bank54.asm"
+.include "src/world/bank54.asm"
 .endscope
 
 .scope bank55
 .segment "PRG55"
-.include "src/bank55.asm"
+.include "src/world/bank55.asm"
 .endscope
 
 .scope bank56
 .segment "PRG56"
-.include "src/bank56.asm"
+.include "src/world/bank56.asm"
 .endscope
 
 .scope bank57
 .segment "PRG57"
-.include "src/bank57.asm"
+.include "src/world/bank57.asm"
 .endscope
 
 .scope bank58
 .segment "PRG58"
-.include "src/bank58.asm"
+.include "src/world/bank58.asm"
 .endscope
 
 .scope bank59
 .segment "PRG59"
-.include "src/bank59.asm"
+.include "src/world/bank59.asm"
 .endscope
 
 .scope bank5a
 .segment "PRG5a"
-.include "src/bank5a.asm"
+.include "src/world/bank5a.asm"
 .endscope
 
 .scope bank5b
 .segment "PRG5b"
-.include "src/bank5b.asm"
+.include "src/world/bank5b.asm"
 .endscope
 
 .scope bank5c
 .segment "PRG5c"
-.include "src/bank5c.asm"
+.include "src/world/bank5c.asm"
 .endscope
 
 .scope bank5d
 .segment "PRG5d"
-.include "src/bank5d.asm"
+.include "src/world/bank5d.asm"
 .endscope
 
 .scope bank5e
 .segment "PRG5e"
-.include "src/bank5e.asm"
+.include "src/world/bank5e.asm"
 .endscope
 
 .scope bank5f
 .segment "PRG5f"
-.include "src/bank5f.asm"
+.include "src/world/bank5f.asm"
 .endscope
 
 .scope bank60
 .segment "PRG60"
-.include "src/bank60.asm"
+.include "src/empty/bank60.asm"
 .endscope
 
 .scope bank61
@@ -493,7 +493,7 @@
 
 .scope bank62
 .segment "PRG62"
-.include "src/bank62.asm"
+.include "src/empty/bank62.asm"
 .endscope
 
 .scope bank63

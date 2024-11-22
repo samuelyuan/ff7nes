@@ -33,7 +33,7 @@ PRG1d: start = $8000, size = $4000;
 PRG1e: start = $8000, size = $4000;
 PRG1f: start = $c000, size = $4000;
 PRG20: start = $8000, size = $4000;
-PRG21: start = $8000, size = $4000;
+PRG21: start = $c000, size = $4000;
 PRG22: start = $8000, size = $4000;
 PRG23: start = $c000, size = $4000;
 PRG24: start = $8000, size = $4000;
