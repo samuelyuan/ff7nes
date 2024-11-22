@@ -63,22 +63,12 @@
 
 .scope bank0c
 .segment "PRG0c"
-.include "src/bank0c.asm"
-.endscope
-
-.scope bank0d
-.segment "PRG0d"
-.include "src/bank0d.asm"
+.include "src/strings/bank0c.asm"
 .endscope
 
 .scope bank0e
 .segment "PRG0e"
-.include "src/bank0e.asm"
-.endscope
-
-.scope bank0f
-.segment "PRG0f"
-.include "src/bank0f.asm"
+.include "src/strings/bank0e.asm"
 .endscope
 
 .scope bank10
@@ -113,22 +103,12 @@
 
 .scope bank16
 .segment "PRG16"
-.include "src/bank16.asm"
-.endscope
-
-.scope bank17
-.segment "PRG17"
-.include "src/bank17.asm"
+.include "src/strings/bank16.asm"
 .endscope
 
 .scope bank18
 .segment "PRG18"
-.include "src/bank18.asm"
-.endscope
-
-.scope bank19
-.segment "PRG19"
-.include "src/bank19.asm"
+.include "src/strings/bank18.asm"
 .endscope
 
 .scope bank1a
