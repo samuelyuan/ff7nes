@@ -1092,300 +1092,431 @@ L8AA3:
 L8AAC:
         .byte   "}Scholar"                      ; 8AAC 7D 53 63 68 6F 6C 61 72  }Scholar
         .byte   $0D,$0A,$FF,$FF                 ; 8AB4 0D 0A FF FF              ....
+; ----------------------------------------------------------------------------
 L8AB8:
-        .byte   $8C,$8B,$92,$8B,$9A,$8B,$A2,$8B ; 8AB8 8C 8B 92 8B 9A 8B A2 8B  ........
-        .byte   $A8,$8B,$B1,$8B,$B9,$8B,$C2,$8B ; 8AC0 A8 8B B1 8B B9 8B C2 8B  ........
-        .byte   $CB,$8B,$D4,$8B,$DE,$8B,$E6,$8B ; 8AC8 CB 8B D4 8B DE 8B E6 8B  ........
-        .byte   $EF,$8B,$F7,$8B,$01,$8C,$0A,$8C ; 8AD0 EF 8B F7 8B 01 8C 0A 8C  ........
-        .byte   $13,$8C,$1B,$8C,$22,$8C         ; 8AD8 13 8C 1B 8C 22 8C        ....".
-        .byte   ","                             ; 8ADE 2C                       ,
-        .byte   $8C                             ; 8ADF 8C                       .
-        .byte   "6"                             ; 8AE0 36                       6
-        .byte   $8C                             ; 8AE1 8C                       .
-        .byte   "?"                             ; 8AE2 3F                       ?
-        .byte   $8C                             ; 8AE3 8C                       .
-        .byte   "I"                             ; 8AE4 49                       I
-        .byte   $8C                             ; 8AE5 8C                       .
-        .byte   "P"                             ; 8AE6 50                       P
-        .byte   $8C                             ; 8AE7 8C                       .
-        .byte   "X"                             ; 8AE8 58                       X
-        .byte   $8C                             ; 8AE9 8C                       .
-        .byte   "_"                             ; 8AEA 5F                       _
-        .byte   $8C                             ; 8AEB 8C                       .
-        .byte   "h"                             ; 8AEC 68                       h
-        .byte   $8C                             ; 8AED 8C                       .
-        .byte   "r"                             ; 8AEE 72                       r
-        .byte   $8C                             ; 8AEF 8C                       .
-        .byte   "y"                             ; 8AF0 79                       y
-        .byte   $8C,$83,$8C,$8B,$8C,$93,$8C,$9B ; 8AF1 8C 83 8C 8B 8C 93 8C 9B  ........
-        .byte   $8C,$A4,$8C,$AD,$8C,$B4,$8C,$BB ; 8AF9 8C A4 8C AD 8C B4 8C BB  ........
-        .byte   $8C,$C3,$8C,$CB,$8C,$D3,$8C,$DD ; 8B01 8C C3 8C CB 8C D3 8C DD  ........
-        .byte   $8C,$E6,$8C,$ED,$8C,$F6,$8C,$FE ; 8B09 8C E6 8C ED 8C F6 8C FE  ........
-        .byte   $8C,$07,$8D,$10,$8D,$18,$8D     ; 8B11 8C 07 8D 10 8D 18 8D     .......
-        .byte   "!"                             ; 8B18 21                       !
-        .byte   $8D                             ; 8B19 8D                       .
-        .byte   "*"                             ; 8B1A 2A                       *
-        .byte   $8D                             ; 8B1B 8D                       .
-        .byte   "3"                             ; 8B1C 33                       3
-        .byte   $8D                             ; 8B1D 8D                       .
-        .byte   "="                             ; 8B1E 3D                       =
-        .byte   $8D                             ; 8B1F 8D                       .
-        .byte   "F"                             ; 8B20 46                       F
-        .byte   $8D                             ; 8B21 8D                       .
-        .byte   "P"                             ; 8B22 50                       P
-        .byte   $8D                             ; 8B23 8D                       .
-        .byte   "Y"                             ; 8B24 59                       Y
-        .byte   $8D                             ; 8B25 8D                       .
-        .byte   "b"                             ; 8B26 62                       b
-        .byte   $8D                             ; 8B27 8D                       .
-        .byte   "k"                             ; 8B28 6B                       k
-        .byte   $8D                             ; 8B29 8D                       .
-        .byte   "r"                             ; 8B2A 72                       r
-        .byte   $8D                             ; 8B2B 8D                       .
-        .byte   "{"                             ; 8B2C 7B                       {
-        .byte   $8D,$82,$8D,$8B,$8D,$92,$8D,$98 ; 8B2D 8D 82 8D 8B 8D 92 8D 98  ........
-        .byte   $8D,$A2,$8D,$AC,$8D,$B4,$8D,$BB ; 8B35 8D A2 8D AC 8D B4 8D BB  ........
-        .byte   $8D,$C3,$8D,$CB,$8D,$D5,$8D,$DC ; 8B3D 8D C3 8D CB 8D D5 8D DC  ........
-        .byte   $8D,$E6,$8D,$EF,$8D,$F7,$8D,$FE ; 8B45 8D E6 8D EF 8D F7 8D FE  ........
-        .byte   $8D,$05,$8E,$0F,$8E,$18,$8E     ; 8B4D 8D 05 8E 0F 8E 18 8E     .......
-        .byte   "!"                             ; 8B54 21                       !
-        .byte   $8E                             ; 8B55 8E                       .
-        .byte   "("                             ; 8B56 28                       (
-        .byte   $8E                             ; 8B57 8E                       .
-        .byte   "1"                             ; 8B58 31                       1
-        .byte   $8E                             ; 8B59 8E                       .
-        .byte   ":"                             ; 8B5A 3A                       :
-        .byte   $8E                             ; 8B5B 8E                       .
-        .byte   "B"                             ; 8B5C 42                       B
-        .byte   $8E                             ; 8B5D 8E                       .
-        .byte   "H"                             ; 8B5E 48                       H
-        .byte   $8E                             ; 8B5F 8E                       .
-        .byte   "O"                             ; 8B60 4F                       O
-        .byte   $8E                             ; 8B61 8E                       .
-        .byte   "Y"                             ; 8B62 59                       Y
-        .byte   $8E                             ; 8B63 8E                       .
-        .byte   "c"                             ; 8B64 63                       c
-        .byte   $8E                             ; 8B65 8E                       .
-        .byte   "j"                             ; 8B66 6A                       j
-        .byte   $8E                             ; 8B67 8E                       .
-        .byte   "r"                             ; 8B68 72                       r
-        .byte   $8E                             ; 8B69 8E                       .
-        .byte   "|"                             ; 8B6A 7C                       |
-        .byte   $8E,$84,$8E,$8A,$8E,$92,$8E,$9A ; 8B6B 8E 84 8E 8A 8E 92 8E 9A  ........
-        .byte   $8E,$A3,$8E,$AA,$8E,$B3,$8E,$BC ; 8B73 8E A3 8E AA 8E B3 8E BC  ........
-        .byte   $8E,$C5,$8E,$CF,$8E,$D8,$8E,$E2 ; 8B7B 8E C5 8E CF 8E D8 8E E2  ........
-        .byte   $8E,$EA,$8E,$F3,$8E,$FD,$8E,$04 ; 8B83 8E EA 8E F3 8E FD 8E 04  ........
-        .byte   $8F                             ; 8B8B 8F                       .
+        .addr   L8B8C                           ; 8AB8 8C 8B                    ..
+        .addr   L8B92                           ; 8ABA 92 8B                    ..
+        .addr   L8B9A                           ; 8ABC 9A 8B                    ..
+        .addr   L8BA2                           ; 8ABE A2 8B                    ..
+        .addr   L8BA8                           ; 8AC0 A8 8B                    ..
+        .addr   L8BB1                           ; 8AC2 B1 8B                    ..
+        .addr   L8BB9                           ; 8AC4 B9 8B                    ..
+        .addr   L8BC2                           ; 8AC6 C2 8B                    ..
+        .addr   L8BCB                           ; 8AC8 CB 8B                    ..
+        .addr   L8BD4                           ; 8ACA D4 8B                    ..
+        .addr   L8BDE                           ; 8ACC DE 8B                    ..
+        .addr   L8BE6                           ; 8ACE E6 8B                    ..
+        .addr   L8BEF                           ; 8AD0 EF 8B                    ..
+        .addr   L8BF7                           ; 8AD2 F7 8B                    ..
+        .addr   L8C01                           ; 8AD4 01 8C                    ..
+        .addr   L8C0A                           ; 8AD6 0A 8C                    ..
+        .addr   L8C13                           ; 8AD8 13 8C                    ..
+        .addr   L8C1B                           ; 8ADA 1B 8C                    ..
+        .addr   L8C22                           ; 8ADC 22 8C                    ".
+        .addr   L8C2C                           ; 8ADE 2C 8C                    ,.
+        .addr   L8C36                           ; 8AE0 36 8C                    6.
+        .addr   L8C3F                           ; 8AE2 3F 8C                    ?.
+        .addr   L8C49                           ; 8AE4 49 8C                    I.
+        .addr   L8C50                           ; 8AE6 50 8C                    P.
+        .addr   L8C58                           ; 8AE8 58 8C                    X.
+        .addr   L8C5F                           ; 8AEA 5F 8C                    _.
+        .addr   L8C68                           ; 8AEC 68 8C                    h.
+        .addr   L8C72                           ; 8AEE 72 8C                    r.
+        .addr   L8C79                           ; 8AF0 79 8C                    y.
+        .addr   L8C83                           ; 8AF2 83 8C                    ..
+        .addr   L8C8B                           ; 8AF4 8B 8C                    ..
+        .addr   L8C93                           ; 8AF6 93 8C                    ..
+        .addr   L8C9B                           ; 8AF8 9B 8C                    ..
+        .addr   L8CA4                           ; 8AFA A4 8C                    ..
+        .addr   L8CAD                           ; 8AFC AD 8C                    ..
+        .addr   L8CB4                           ; 8AFE B4 8C                    ..
+        .addr   L8CBB                           ; 8B00 BB 8C                    ..
+        .addr   L8CC3                           ; 8B02 C3 8C                    ..
+        .addr   L8CCB                           ; 8B04 CB 8C                    ..
+        .addr   L8CD3                           ; 8B06 D3 8C                    ..
+        .addr   L8CDD                           ; 8B08 DD 8C                    ..
+        .addr   L8CE6                           ; 8B0A E6 8C                    ..
+        .addr   L8CED                           ; 8B0C ED 8C                    ..
+        .addr   L8CF6                           ; 8B0E F6 8C                    ..
+        .addr   L8CFE                           ; 8B10 FE 8C                    ..
+        .addr   L8D07                           ; 8B12 07 8D                    ..
+        .addr   L8D10                           ; 8B14 10 8D                    ..
+        .addr   L8D18                           ; 8B16 18 8D                    ..
+        .addr   L8D21                           ; 8B18 21 8D                    !.
+        .addr   L8D2A                           ; 8B1A 2A 8D                    *.
+        .addr   L8D33                           ; 8B1C 33 8D                    3.
+        .addr   L8D3D                           ; 8B1E 3D 8D                    =.
+        .addr   L8D46                           ; 8B20 46 8D                    F.
+        .addr   L8D50                           ; 8B22 50 8D                    P.
+        .addr   L8D59                           ; 8B24 59 8D                    Y.
+        .addr   L8D62                           ; 8B26 62 8D                    b.
+        .addr   L8D6B                           ; 8B28 6B 8D                    k.
+        .addr   L8D72                           ; 8B2A 72 8D                    r.
+        .addr   L8D7B                           ; 8B2C 7B 8D                    {.
+        .addr   L8D82                           ; 8B2E 82 8D                    ..
+        .addr   L8D8B                           ; 8B30 8B 8D                    ..
+        .addr   L8D92                           ; 8B32 92 8D                    ..
+        .addr   L8D98                           ; 8B34 98 8D                    ..
+        .addr   L8DA2                           ; 8B36 A2 8D                    ..
+        .addr   L8DAC                           ; 8B38 AC 8D                    ..
+        .addr   L8DB4                           ; 8B3A B4 8D                    ..
+        .addr   L8DBB                           ; 8B3C BB 8D                    ..
+        .addr   L8DC3                           ; 8B3E C3 8D                    ..
+        .addr   L8DCB                           ; 8B40 CB 8D                    ..
+        .addr   L8DD5                           ; 8B42 D5 8D                    ..
+        .addr   L8DDC                           ; 8B44 DC 8D                    ..
+        .addr   L8DE6                           ; 8B46 E6 8D                    ..
+        .addr   L8DEF                           ; 8B48 EF 8D                    ..
+        .addr   L8DF7                           ; 8B4A F7 8D                    ..
+        .addr   L8DFE                           ; 8B4C FE 8D                    ..
+        .addr   L8E05                           ; 8B4E 05 8E                    ..
+        .addr   L8E0F                           ; 8B50 0F 8E                    ..
+        .addr   L8E18                           ; 8B52 18 8E                    ..
+        .addr   L8E21                           ; 8B54 21 8E                    !.
+        .addr   L8E28                           ; 8B56 28 8E                    (.
+        .addr   L8E31                           ; 8B58 31 8E                    1.
+        .addr   L8E3A                           ; 8B5A 3A 8E                    :.
+        .addr   L8E42                           ; 8B5C 42 8E                    B.
+        .addr   L8E48                           ; 8B5E 48 8E                    H.
+        .addr   L8E4F                           ; 8B60 4F 8E                    O.
+        .addr   L8E59                           ; 8B62 59 8E                    Y.
+        .addr   L8E63                           ; 8B64 63 8E                    c.
+        .addr   L8E6A                           ; 8B66 6A 8E                    j.
+        .addr   L8E72                           ; 8B68 72 8E                    r.
+        .addr   L8E7C                           ; 8B6A 7C 8E                    |.
+        .addr   L8E84                           ; 8B6C 84 8E                    ..
+        .addr   L8E8A                           ; 8B6E 8A 8E                    ..
+        .addr   L8E92                           ; 8B70 92 8E                    ..
+        .addr   L8E9A                           ; 8B72 9A 8E                    ..
+        .addr   L8EA3                           ; 8B74 A3 8E                    ..
+        .addr   L8EAA                           ; 8B76 AA 8E                    ..
+        .addr   L8EB3                           ; 8B78 B3 8E                    ..
+        .addr   L8EBC                           ; 8B7A BC 8E                    ..
+        .addr   L8EC5                           ; 8B7C C5 8E                    ..
+        .addr   L8ECF                           ; 8B7E CF 8E                    ..
+        .addr   L8ED8                           ; 8B80 D8 8E                    ..
+        .addr   L8EE2                           ; 8B82 E2 8E                    ..
+        .addr   L8EEA                           ; 8B84 EA 8E                    ..
+        .addr   L8EF3                           ; 8B86 F3 8E                    ..
+        .addr   L8EFD                           ; 8B88 FD 8E                    ..
+        .addr   L8F04                           ; 8B8A 04 8F                    ..
+; ----------------------------------------------------------------------------
+L8B8C:
         .byte   "None"                          ; 8B8C 4E 6F 6E 65              None
         .byte   $0D,$0A                         ; 8B90 0D 0A                    ..
+L8B92:
         .byte   "~Cloud"                        ; 8B92 7E 43 6C 6F 75 64        ~Cloud
         .byte   $0D,$0A                         ; 8B98 0D 0A                    ..
+L8B9A:
         .byte   "~Arson"                        ; 8B9A 7E 41 72 73 6F 6E        ~Arson
         .byte   $0D,$0A                         ; 8BA0 0D 0A                    ..
+L8BA2:
         .byte   "~Law"                          ; 8BA2 7E 4C 61 77              ~Law
         .byte   $0D,$0A                         ; 8BA6 0D 0A                    ..
+L8BA8:
         .byte   "~Chitin"                       ; 8BA8 7E 43 68 69 74 69 6E     ~Chitin
         .byte   $0D,$0A                         ; 8BAF 0D 0A                    ..
+L8BB1:
         .byte   "~Light"                        ; 8BB1 7E 4C 69 67 68 74        ~Light
         .byte   $0D,$0A                         ; 8BB7 0D 0A                    ..
+L8BB9:
         .byte   "~Puppet"                       ; 8BB9 7E 50 75 70 70 65 74     ~Puppet
         .byte   $0D,$0A                         ; 8BC0 0D 0A                    ..
+L8BC2:
         .byte   "~Winged"                       ; 8BC2 7E 57 69 6E 67 65 64     ~Winged
         .byte   $0D,$0A                         ; 8BC9 0D 0A                    ..
+L8BCB:
         .byte   "~Silver"                       ; 8BCB 7E 53 69 6C 76 65 72     ~Silver
         .byte   $0D,$0A                         ; 8BD2 0D 0A                    ..
+L8BD4:
         .byte   "~Eternal"                      ; 8BD4 7E 45 74 65 72 6E 61 6C  ~Eternal
         .byte   $0D,$0A                         ; 8BDC 0D 0A                    ..
+L8BDE:
         .byte   "~Valor"                        ; 8BDE 7E 56 61 6C 6F 72        ~Valor
         .byte   $0D,$0A                         ; 8BE4 0D 0A                    ..
+L8BE6:
         .byte   "~Elemnt"                       ; 8BE6 7E 45 6C 65 6D 6E 74     ~Elemnt
         .byte   $0D,$0A                         ; 8BED 0D 0A                    ..
+L8BEF:
         .byte   "~Wrath"                        ; 8BEF 7E 57 72 61 74 68        ~Wrath
         .byte   $0D,$0A                         ; 8BF5 0D 0A                    ..
+L8BF7:
         .byte   "~Command"                      ; 8BF7 7E 43 6F 6D 6D 61 6E 64  ~Command
         .byte   $0D,$0A                         ; 8BFF 0D 0A                    ..
+L8C01:
         .byte   "~Emblem"                       ; 8C01 7E 45 6D 62 6C 65 6D     ~Emblem
         .byte   $0D,$0A                         ; 8C08 0D 0A                    ..
+L8C0A:
         .byte   "~Halite"                       ; 8C0A 7E 48 61 6C 69 74 65     ~Halite
         .byte   $0D,$0A                         ; 8C11 0D 0A                    ..
+L8C13:
         .byte   "~Envoy"                        ; 8C13 7E 45 6E 76 6F 79        ~Envoy
         .byte   $0D,$0A                         ; 8C19 0D 0A                    ..
+L8C1B:
         .byte   "~Easy"                         ; 8C1B 7E 45 61 73 79           ~Easy
         .byte   $0D,$0A                         ; 8C20 0D 0A                    ..
+L8C22:
         .byte   "~Defiant"                      ; 8C22 7E 44 65 66 69 61 6E 74  ~Defiant
         .byte   $0D,$0A                         ; 8C2A 0D 0A                    ..
+L8C2C:
         .byte   "~General"                      ; 8C2C 7E 47 65 6E 65 72 61 6C  ~General
         .byte   $0D,$0A                         ; 8C34 0D 0A                    ..
+L8C36:
         .byte   "~Valued"                       ; 8C36 7E 56 61 6C 75 65 64     ~Valued
         .byte   $0D,$0A                         ; 8C3D 0D 0A                    ..
+L8C3F:
         .byte   "~Destryr"                      ; 8C3F 7E 44 65 73 74 72 79 72  ~Destryr
         .byte   $0D,$0A                         ; 8C47 0D 0A                    ..
+L8C49:
         .byte   "~Fire"                         ; 8C49 7E 46 69 72 65           ~Fire
         .byte   $0D,$0A                         ; 8C4E 0D 0A                    ..
+L8C50:
         .byte   "~Dream"                        ; 8C50 7E 44 72 65 61 6D        ~Dream
         .byte   $0D,$0A                         ; 8C56 0D 0A                    ..
+L8C58:
         .byte   "~Dual"                         ; 8C58 7E 44 75 61 6C           ~Dual
         .byte   $0D,$0A                         ; 8C5D 0D 0A                    ..
+L8C5F:
         .byte   "~Vortex"                       ; 8C5F 7E 56 6F 72 74 65 78     ~Vortex
         .byte   $0D,$0A                         ; 8C66 0D 0A                    ..
+L8C68:
         .byte   "~Crescnt"                      ; 8C68 7E 43 72 65 73 63 6E 74  ~Crescnt
         .byte   $0D,$0A                         ; 8C70 0D 0A                    ..
+L8C72:
         .byte   "~Wind"                         ; 8C72 7E 57 69 6E 64           ~Wind
         .byte   $0D,$0A                         ; 8C77 0D 0A                    ..
+L8C79:
         .byte   "~Miracle"                      ; 8C79 7E 4D 69 72 61 63 6C 65  ~Miracle
         .byte   $0D,$0A                         ; 8C81 0D 0A                    ..
+L8C83:
         .byte   "~Color"                        ; 8C83 7E 43 6F 6C 6F 72        ~Color
         .byte   $0D,$0A                         ; 8C89 0D 0A                    ..
+L8C8B:
         .byte   "~Scute"                        ; 8C8B 7E 53 63 75 74 65        ~Scute
         .byte   $0D,$0A                         ; 8C91 0D 0A                    ..
+L8C93:
         .byte   "~Heavy"                        ; 8C93 7E 48 65 61 76 79        ~Heavy
         .byte   $0D,$0A                         ; 8C99 0D 0A                    ..
+L8C9B:
         .byte   "~Strong"                       ; 8C9B 7E 53 74 72 6F 6E 67     ~Strong
         .byte   $0D,$0A                         ; 8CA2 0D 0A                    ..
+L8CA4:
         .byte   "~Bright"                       ; 8CA4 7E 42 72 69 67 68 74     ~Bright
         .byte   $0D,$0A                         ; 8CAB 0D 0A                    ..
+L8CAD:
         .byte   "~Bear"                         ; 8CAD 7E 42 65 61 72           ~Bear
         .byte   $0D,$0A                         ; 8CB2 0D 0A                    ..
+L8CB4:
         .byte   "~Mail"                         ; 8CB4 7E 4D 61 69 6C           ~Mail
         .byte   $0D,$0A                         ; 8CB9 0D 0A                    ..
+L8CBB:
         .byte   "~Scale"                        ; 8CBB 7E 53 63 61 6C 65        ~Scale
         .byte   $0D,$0A                         ; 8CC1 0D 0A                    ..
+L8CC3:
         .byte   "~Loose"                        ; 8CC3 7E 4C 6F 6F 73 65        ~Loose
         .byte   $0D,$0A                         ; 8CC9 0D 0A                    ..
+L8CCB:
         .byte   "~Chain"                        ; 8CCB 7E 43 68 61 69 6E        ~Chain
         .byte   $0D,$0A                         ; 8CD1 0D 0A                    ..
+L8CD3:
         .byte   "~Control"                      ; 8CD3 7E 43 6F 6E 74 72 6F 6C  ~Control
         .byte   $0D,$0A                         ; 8CDB 0D 0A                    ..
+L8CDD:
         .byte   "~Connor"                       ; 8CDD 7E 43 6F 6E 6E 6F 72     ~Connor
         .byte   $0D,$0A                         ; 8CE4 0D 0A                    ..
+L8CE6:
         .byte   "~Bane"                         ; 8CE6 7E 42 61 6E 65           ~Bane
         .byte   $0D,$0A                         ; 8CEB 0D 0A                    ..
+L8CED:
         .byte   "~Killer"                       ; 8CED 7E 4B 69 6C 6C 65 72     ~Killer
         .byte   $0D,$0A                         ; 8CF4 0D 0A                    ..
+L8CF6:
         .byte   "~World"                        ; 8CF6 7E 57 6F 72 6C 64        ~World
         .byte   $0D,$0A                         ; 8CFC 0D 0A                    ..
+L8CFE:
         .byte   "~Wanton"                       ; 8CFE 7E 57 61 6E 74 6F 6E     ~Wanton
         .byte   $0D,$0A                         ; 8D05 0D 0A                    ..
+L8D07:
         .byte   "~Aeolus"                       ; 8D07 7E 41 65 6F 6C 75 73     ~Aeolus
         .byte   $0D,$0A                         ; 8D0E 0D 0A                    ..
+L8D10:
         .byte   "~Ghost"                        ; 8D10 7E 47 68 6F 73 74        ~Ghost
         .byte   $0D,$0A                         ; 8D16 0D 0A                    ..
+L8D18:
         .byte   "~Canine"                       ; 8D18 7E 43 61 6E 69 6E 65     ~Canine
         .byte   $0D,$0A                         ; 8D1F 0D 0A                    ..
+L8D21:
         .byte   "~Kensei"                       ; 8D21 7E 4B 65 6E 73 65 69     ~Kensei
         .byte   $0D,$0A                         ; 8D28 0D 0A                    ..
+L8D2A:
         .byte   "~Raptor"                       ; 8D2A 7E 52 61 70 74 6F 72     ~Raptor
         .byte   $0D,$0A                         ; 8D31 0D 0A                    ..
+L8D33:
         .byte   "~Baptist"                      ; 8D33 7E 42 61 70 74 69 73 74  ~Baptist
         .byte   $0D,$0A                         ; 8D3B 0D 0A                    ..
+L8D3D:
         .byte   "~Slayer"                       ; 8D3D 7E 53 6C 61 79 65 72     ~Slayer
         .byte   $0D,$0A                         ; 8D44 0D 0A                    ..
+L8D46:
         .byte   "~Thunder"                      ; 8D46 7E 54 68 75 6E 64 65 72  ~Thunder
         .byte   $0D,$0A                         ; 8D4E 0D 0A                    ..
+L8D50:
         .byte   "~Travel"                       ; 8D50 7E 54 72 61 76 65 6C     ~Travel
         .byte   $0D,$0A                         ; 8D57 0D 0A                    ..
+L8D59:
         .byte   "~Voodoo"                       ; 8D59 7E 56 6F 6F 64 6F 6F     ~Voodoo
         .byte   $0D,$0A                         ; 8D60 0D 0A                    ..
+L8D62:
         .byte   "~Lamell"                       ; 8D62 7E 4C 61 6D 65 6C 6C     ~Lamell
         .byte   $0D,$0A                         ; 8D69 0D 0A                    ..
+L8D6B:
         .byte   "~Fate"                         ; 8D6B 7E 46 61 74 65           ~Fate
         .byte   $0D,$0A                         ; 8D70 0D 0A                    ..
+L8D72:
         .byte   "~Lizard"                       ; 8D72 7E 4C 69 7A 61 72 64     ~Lizard
         .byte   $0D,$0A                         ; 8D79 0D 0A                    ..
+L8D7B:
         .byte   "~Moss"                         ; 8D7B 7E 4D 6F 73 73           ~Moss
         .byte   $0D,$0A                         ; 8D80 0D 0A                    ..
+L8D82:
         .byte   "~Shadow"                       ; 8D82 7E 53 68 61 64 6F 77     ~Shadow
         .byte   $0D,$0A                         ; 8D89 0D 0A                    ..
+L8D8B:
         .byte   "~Kuma"                         ; 8D8B 7E 4B 75 6D 61           ~Kuma
         .byte   $0D,$0A                         ; 8D90 0D 0A                    ..
+L8D92:
         .byte   "~War"                          ; 8D92 7E 57 61 72              ~War
         .byte   $0D,$0A                         ; 8D96 0D 0A                    ..
+L8D98:
         .byte   "~Bristle"                      ; 8D98 7E 42 72 69 73 74 6C 65  ~Bristle
         .byte   $0D,$0A                         ; 8DA0 0D 0A                    ..
+L8DA2:
         .byte   "~Archaic"                      ; 8DA2 7E 41 72 63 68 61 69 63  ~Archaic
         .byte   $0D,$0A                         ; 8DAA 0D 0A                    ..
+L8DAC:
         .byte   "~Demon"                        ; 8DAC 7E 44 65 6D 6F 6E        ~Demon
         .byte   $0D,$0A                         ; 8DB2 0D 0A                    ..
+L8DB4:
         .byte   "~Mana"                         ; 8DB4 7E 4D 61 6E 61           ~Mana
         .byte   $0D,$0A                         ; 8DB9 0D 0A                    ..
+L8DBB:
         .byte   "~Storm"                        ; 8DBB 7E 53 74 6F 72 6D        ~Storm
         .byte   $0D,$0A                         ; 8DC1 0D 0A                    ..
+L8DC3:
         .byte   "~Magic"                        ; 8DC3 7E 4D 61 67 69 63        ~Magic
         .byte   $0D,$0A                         ; 8DC9 0D 0A                    ..
+L8DCB:
         .byte   "~Prophet"                      ; 8DCB 7E 50 72 6F 70 68 65 74  ~Prophet
         .byte   $0D,$0A                         ; 8DD3 0D 0A                    ..
+L8DD5:
         .byte   "~Mare"                         ; 8DD5 7E 4D 61 72 65           ~Mare
         .byte   $0D,$0A                         ; 8DDA 0D 0A                    ..
+L8DDC:
         .byte   "~Acclaim"                      ; 8DDC 7E 41 63 63 6C 61 69 6D  ~Acclaim
         .byte   $0D,$0A                         ; 8DE4 0D 0A                    ..
+L8DE6:
         .byte   "~Valley"                       ; 8DE6 7E 56 61 6C 6C 65 79     ~Valley
         .byte   $0D,$0A                         ; 8DED 0D 0A                    ..
+L8DEF:
         .byte   "~Ashen"                        ; 8DEF 7E 41 73 68 65 6E        ~Ashen
         .byte   $0D,$0A                         ; 8DF5 0D 0A                    ..
+L8DF7:
         .byte   "~Hope"                         ; 8DF7 7E 48 6F 70 65           ~Hope
         .byte   $0D,$0A                         ; 8DFC 0D 0A                    ..
+L8DFE:
         .byte   "~Mist"                         ; 8DFE 7E 4D 69 73 74           ~Mist
         .byte   $0D,$0A                         ; 8E03 0D 0A                    ..
+L8E05:
         .byte   "~Binding"                      ; 8E05 7E 42 69 6E 64 69 6E 67  ~Binding
         .byte   $0D,$0A                         ; 8E0D 0D 0A                    ..
+L8E0F:
         .byte   "~Barren"                       ; 8E0F 7E 42 61 72 72 65 6E     ~Barren
         .byte   $0D,$0A                         ; 8E16 0D 0A                    ..
+L8E18:
         .byte   "~Cleric"                       ; 8E18 7E 43 6C 65 72 69 63     ~Cleric
         .byte   $0D,$0A                         ; 8E1F 0D 0A                    ..
+L8E21:
         .byte   "~Fang"                         ; 8E21 7E 46 61 6E 67           ~Fang
         .byte   $0D,$0A                         ; 8E26 0D 0A                    ..
+L8E28:
         .byte   "~Devout"                       ; 8E28 7E 44 65 76 6F 75 74     ~Devout
         .byte   $0D,$0A                         ; 8E2F 0D 0A                    ..
+L8E31:
         .byte   "~Sacred"                       ; 8E31 7E 53 61 63 72 65 64     ~Sacred
         .byte   $0D,$0A                         ; 8E38 0D 0A                    ..
+L8E3A:
         .byte   "~Stone"                        ; 8E3A 7E 53 74 6F 6E 65        ~Stone
         .byte   $0D,$0A                         ; 8E40 0D 0A                    ..
+L8E42:
         .byte   "~Sky"                          ; 8E42 7E 53 6B 79              ~Sky
         .byte   $0D,$0A                         ; 8E46 0D 0A                    ..
+L8E48:
         .byte   "~Mage"                         ; 8E48 7E 4D 61 67 65           ~Mage
         .byte   $0D,$0A                         ; 8E4D 0D 0A                    ..
+L8E4F:
         .byte   "~Vampire"                      ; 8E4F 7E 56 61 6D 70 69 72 65  ~Vampire
         .byte   $0D,$0A                         ; 8E57 0D 0A                    ..
+L8E59:
         .byte   "~Courier"                      ; 8E59 7E 43 6F 75 72 69 65 72  ~Courier
         .byte   $0D,$0A                         ; 8E61 0D 0A                    ..
+L8E63:
         .byte   "~Rain"                         ; 8E63 7E 52 61 69 6E           ~Rain
         .byte   $0D,$0A                         ; 8E68 0D 0A                    ..
+L8E6A:
         .byte   "~Lunar"                        ; 8E6A 7E 4C 75 6E 61 72        ~Lunar
         .byte   $0D,$0A                         ; 8E70 0D 0A                    ..
+L8E72:
         .byte   "~Natural"                      ; 8E72 7E 4E 61 74 75 72 61 6C  ~Natural
         .byte   $0D,$0A                         ; 8E7A 0D 0A                    ..
+L8E7C:
         .byte   "~Sheet"                        ; 8E7C 7E 53 68 65 65 74        ~Sheet
         .byte   $0D,$0A                         ; 8E82 0D 0A                    ..
+L8E84:
         .byte   "~Red"                          ; 8E84 7E 52 65 64              ~Red
         .byte   $0D,$0A                         ; 8E88 0D 0A                    ..
+L8E8A:
         .byte   "~Thick"                        ; 8E8A 7E 54 68 69 63 6B        ~Thick
         .byte   $0D,$0A                         ; 8E90 0D 0A                    ..
+L8E92:
         .byte   "~Woven"                        ; 8E92 7E 57 6F 76 65 6E        ~Woven
         .byte   $0D,$0A                         ; 8E98 0D 0A                    ..
+L8E9A:
         .byte   "~Flaxen"                       ; 8E9A 7E 46 6C 61 78 65 6E     ~Flaxen
         .byte   $0D,$0A                         ; 8EA1 0D 0A                    ..
+L8EA3:
         .byte   "~Firm"                         ; 8EA3 7E 46 69 72 6D           ~Firm
         .byte   $0D,$0A                         ; 8EA8 0D 0A                    ..
+L8EAA:
         .byte   "~Dressy"                       ; 8EAA 7E 44 72 65 73 73 79     ~Dressy
         .byte   $0D,$0A                         ; 8EB1 0D 0A                    ..
+L8EB3:
         .byte   "~Ragged"                       ; 8EB3 7E 52 61 67 67 65 64     ~Ragged
         .byte   $0D,$0A                         ; 8EBA 0D 0A                    ..
+L8EBC:
         .byte   "~Broken"                       ; 8EBC 7E 42 72 6F 6B 65 6E     ~Broken
         .byte   $0D,$0A                         ; 8EC3 0D 0A                    ..
+L8EC5:
         .byte   "~Hunting"                      ; 8EC5 7E 48 75 6E 74 69 6E 67  ~Hunting
         .byte   $0D,$0A                         ; 8ECD 0D 0A                    ..
+L8ECF:
         .byte   "~Novice"                       ; 8ECF 7E 4E 6F 76 69 63 65     ~Novice
         .byte   $0D,$0A                         ; 8ED6 0D 0A                    ..
+L8ED8:
         .byte   "~Assasin"                      ; 8ED8 7E 41 73 73 61 73 69 6E  ~Assasin
         .byte   $0D,$0A                         ; 8EE0 0D 0A                    ..
+L8EE2:
         .byte   "~Thief"                        ; 8EE2 7E 54 68 69 65 66        ~Thief
         .byte   $0D,$0A                         ; 8EE8 0D 0A                    ..
+L8EEA:
         .byte   "~Cotton"                       ; 8EEA 7E 43 6F 74 74 6F 6E     ~Cotton
         .byte   $0D,$0A                         ; 8EF1 0D 0A                    ..
+L8EF3:
         .byte   "~Servant"                      ; 8EF3 7E 53 65 72 76 61 6E 74  ~Servant
         .byte   $0D,$0A                         ; 8EFB 0D 0A                    ..
+L8EFD:
         .byte   "~Monk"                         ; 8EFD 7E 4D 6F 6E 6B           ~Monk
         .byte   $0D,$0A                         ; 8F02 0D 0A                    ..
+L8F04:
         .byte   "~Recruit"                      ; 8F04 7E 52 65 63 72 75 69 74  ~Recruit
         .byte   $0D,$0A,$FF,$FF                 ; 8F0C 0D 0A FF FF              ....
 ; ----------------------------------------------------------------------------
@@ -1685,630 +1816,1046 @@ L916B:
         .byte   $7F                             ; 916B 7F                       .
         .byte   "Lowly"                         ; 916C 4C 6F 77 6C 79           Lowly
         .byte   $0D,$0A,$FF,$FF                 ; 9171 0D 0A FF FF              ....
+; ----------------------------------------------------------------------------
 L9175:
-        .byte   "?"                             ; 9175 3F                       ?
-        .byte   $92                             ; 9176 92                       .
-        .byte   "E"                             ; 9177 45                       E
-        .byte   $92                             ; 9178 92                       .
-        .byte   "N"                             ; 9179 4E                       N
-        .byte   $92                             ; 917A 92                       .
-        .byte   "X"                             ; 917B 58                       X
-        .byte   $92                             ; 917C 92                       .
-        .byte   "_"                             ; 917D 5F                       _
-        .byte   $92                             ; 917E 92                       .
-        .byte   "i"                             ; 917F 69                       i
-        .byte   $92                             ; 9180 92                       .
-        .byte   "s"                             ; 9181 73                       s
-        .byte   $92                             ; 9182 92                       .
-        .byte   "}"                             ; 9183 7D                       }
-        .byte   $92,$87,$92,$8F,$92,$96,$92,$A0 ; 9184 92 87 92 8F 92 96 92 A0  ........
-        .byte   $92,$AA,$92,$B4,$92,$BE,$92,$C7 ; 918C 92 AA 92 B4 92 BE 92 C7  ........
-        .byte   $92,$D1,$92,$DA,$92,$E4,$92,$EE ; 9194 92 D1 92 DA 92 E4 92 EE  ........
-        .byte   $92,$F7,$92,$00,$93,$0A,$93,$14 ; 919C 92 F7 92 00 93 0A 93 14  ........
-        .byte   $93,$1E,$93                     ; 91A4 93 1E 93                 ...
-        .byte   "#"                             ; 91A7 23                       #
-        .byte   $93                             ; 91A8 93                       .
-        .byte   "-"                             ; 91A9 2D                       -
-        .byte   $93                             ; 91AA 93                       .
-        .byte   "5"                             ; 91AB 35                       5
-        .byte   $93                             ; 91AC 93                       .
-        .byte   "?"                             ; 91AD 3F                       ?
-        .byte   $93                             ; 91AE 93                       .
-        .byte   "H"                             ; 91AF 48                       H
-        .byte   $93                             ; 91B0 93                       .
-        .byte   "R"                             ; 91B1 52                       R
-        .byte   $93                             ; 91B2 93                       .
-        .byte   "Y"                             ; 91B3 59                       Y
-        .byte   $93                             ; 91B4 93                       .
-        .byte   "b"                             ; 91B5 62                       b
-        .byte   $93                             ; 91B6 93                       .
-        .byte   "k"                             ; 91B7 6B                       k
-        .byte   $93                             ; 91B8 93                       .
-        .byte   "u"                             ; 91B9 75                       u
-        .byte   $93                             ; 91BA 93                       .
-        .byte   "}"                             ; 91BB 7D                       }
-        .byte   $93,$87,$93,$8F,$93,$97,$93,$A1 ; 91BC 93 87 93 8F 93 97 93 A1  ........
-        .byte   $93,$AA,$93,$B4,$93,$BC,$93,$C6 ; 91C4 93 AA 93 B4 93 BC 93 C6  ........
-        .byte   $93,$CF,$93,$D6,$93,$E0,$93,$E9 ; 91CC 93 CF 93 D6 93 E0 93 E9  ........
-        .byte   $93,$F1,$93,$F9,$93,$01,$94,$0B ; 91D4 93 F1 93 F9 93 01 94 0B  ........
-        .byte   $94,$15,$94,$1E,$94             ; 91DC 94 15 94 1E 94           .....
-        .byte   "&"                             ; 91E1 26                       &
-        .byte   $94                             ; 91E2 94                       .
-        .byte   "/"                             ; 91E3 2F                       /
-        .byte   $94                             ; 91E4 94                       .
-        .byte   "8"                             ; 91E5 38                       8
-        .byte   $94                             ; 91E6 94                       .
-        .byte   "@"                             ; 91E7 40                       @
-        .byte   $94                             ; 91E8 94                       .
-        .byte   "J"                             ; 91E9 4A                       J
-        .byte   $94                             ; 91EA 94                       .
-        .byte   "T"                             ; 91EB 54                       T
-        .byte   $94                             ; 91EC 94                       .
-        .byte   "^"                             ; 91ED 5E                       ^
-        .byte   $94                             ; 91EE 94                       .
-        .byte   "h"                             ; 91EF 68                       h
-        .byte   $94                             ; 91F0 94                       .
-        .byte   "r"                             ; 91F1 72                       r
-        .byte   $94                             ; 91F2 94                       .
-        .byte   "{"                             ; 91F3 7B                       {
-        .byte   $94,$82,$94,$8B,$94,$95,$94,$9D ; 91F4 94 82 94 8B 94 95 94 9D  ........
-        .byte   $94,$A4,$94,$AB,$94,$B5,$94,$BE ; 91FC 94 A4 94 AB 94 B5 94 BE  ........
-        .byte   $94,$C8,$94,$D2,$94,$DC,$94,$E5 ; 9204 94 C8 94 D2 94 DC 94 E5  ........
-        .byte   $94,$ED,$94,$F4,$94,$FA,$94,$04 ; 920C 94 ED 94 F4 94 FA 94 04  ........
-        .byte   $95,$0C,$95,$14,$95,$1D,$95     ; 9214 95 0C 95 14 95 1D 95     .......
-        .byte   "'"                             ; 921B 27                       '
-        .byte   $95                             ; 921C 95                       .
-        .byte   "."                             ; 921D 2E                       .
-        .byte   $95                             ; 921E 95                       .
-        .byte   "7"                             ; 921F 37                       7
-        .byte   $95                             ; 9220 95                       .
-        .byte   "A"                             ; 9221 41                       A
-        .byte   $95                             ; 9222 95                       .
-        .byte   "I"                             ; 9223 49                       I
-        .byte   $95                             ; 9224 95                       .
-        .byte   "Q"                             ; 9225 51                       Q
-        .byte   $95                             ; 9226 95                       .
-        .byte   "Y"                             ; 9227 59                       Y
-        .byte   $95                             ; 9228 95                       .
-        .byte   "c"                             ; 9229 63                       c
-        .byte   $95                             ; 922A 95                       .
-        .byte   "m"                             ; 922B 6D                       m
-        .byte   $95                             ; 922C 95                       .
-        .byte   "w"                             ; 922D 77                       w
-        .byte   $95,$7F,$95,$89,$95,$90,$95,$96 ; 922E 95 7F 95 89 95 90 95 96  ........
-        .byte   $95,$A0,$95,$AA,$95,$B3,$95,$BC ; 9236 95 A0 95 AA 95 B3 95 BC  ........
-        .byte   $95                             ; 923E 95                       .
+        .addr   L923F                           ; 9175 3F 92                    ?.
+        .addr   L9245                           ; 9177 45 92                    E.
+        .addr   L924E                           ; 9179 4E 92                    N.
+        .addr   L9258                           ; 917B 58 92                    X.
+        .addr   L925F                           ; 917D 5F 92                    _.
+        .addr   L9269                           ; 917F 69 92                    i.
+        .addr   L9273                           ; 9181 73 92                    s.
+        .addr   L927D                           ; 9183 7D 92                    }.
+        .addr   L9287                           ; 9185 87 92                    ..
+        .addr   L928F                           ; 9187 8F 92                    ..
+        .addr   L9296                           ; 9189 96 92                    ..
+        .addr   L92A0                           ; 918B A0 92                    ..
+        .addr   L92AA                           ; 918D AA 92                    ..
+        .addr   L92B4                           ; 918F B4 92                    ..
+        .addr   L92BE                           ; 9191 BE 92                    ..
+        .addr   L92C7                           ; 9193 C7 92                    ..
+        .addr   L92D1                           ; 9195 D1 92                    ..
+        .addr   L92DA                           ; 9197 DA 92                    ..
+        .addr   L92E4                           ; 9199 E4 92                    ..
+        .addr   L92EE                           ; 919B EE 92                    ..
+        .addr   L92F7                           ; 919D F7 92                    ..
+        .addr   L9300                           ; 919F 00 93                    ..
+        .addr   L930A                           ; 91A1 0A 93                    ..
+        .addr   L9314                           ; 91A3 14 93                    ..
+        .addr   L931E                           ; 91A5 1E 93                    ..
+        .addr   L9323                           ; 91A7 23 93                    #.
+        .addr   L932D                           ; 91A9 2D 93                    -.
+        .addr   L9335                           ; 91AB 35 93                    5.
+        .addr   L933F                           ; 91AD 3F 93                    ?.
+        .addr   L9348                           ; 91AF 48 93                    H.
+        .addr   L9352                           ; 91B1 52 93                    R.
+        .addr   L9359                           ; 91B3 59 93                    Y.
+        .addr   L9362                           ; 91B5 62 93                    b.
+        .addr   L936B                           ; 91B7 6B 93                    k.
+        .addr   L9375                           ; 91B9 75 93                    u.
+        .addr   L937D                           ; 91BB 7D 93                    }.
+        .addr   L9387                           ; 91BD 87 93                    ..
+        .addr   L938F                           ; 91BF 8F 93                    ..
+        .addr   L9397                           ; 91C1 97 93                    ..
+        .addr   L93A1                           ; 91C3 A1 93                    ..
+        .addr   L93AA                           ; 91C5 AA 93                    ..
+        .addr   L93B4                           ; 91C7 B4 93                    ..
+        .addr   L93BC                           ; 91C9 BC 93                    ..
+        .addr   L93C6                           ; 91CB C6 93                    ..
+        .addr   L93CF                           ; 91CD CF 93                    ..
+        .addr   L93D6                           ; 91CF D6 93                    ..
+        .addr   L93E0                           ; 91D1 E0 93                    ..
+        .addr   L93E9                           ; 91D3 E9 93                    ..
+        .addr   L93F1                           ; 91D5 F1 93                    ..
+        .addr   L93F9                           ; 91D7 F9 93                    ..
+        .addr   L9401                           ; 91D9 01 94                    ..
+        .addr   L940B                           ; 91DB 0B 94                    ..
+        .addr   L9415                           ; 91DD 15 94                    ..
+        .addr   L941E                           ; 91DF 1E 94                    ..
+        .addr   L9426                           ; 91E1 26 94                    &.
+        .addr   L942F                           ; 91E3 2F 94                    /.
+        .addr   L9438                           ; 91E5 38 94                    8.
+        .addr   L9440                           ; 91E7 40 94                    @.
+        .addr   L944A                           ; 91E9 4A 94                    J.
+        .addr   L9454                           ; 91EB 54 94                    T.
+        .addr   L945E                           ; 91ED 5E 94                    ^.
+        .addr   L9468                           ; 91EF 68 94                    h.
+        .addr   L9472                           ; 91F1 72 94                    r.
+        .addr   L947B                           ; 91F3 7B 94                    {.
+        .addr   L9482                           ; 91F5 82 94                    ..
+        .addr   L948B                           ; 91F7 8B 94                    ..
+        .addr   L9495                           ; 91F9 95 94                    ..
+        .addr   L949D                           ; 91FB 9D 94                    ..
+        .addr   L94A4                           ; 91FD A4 94                    ..
+        .addr   L94AB                           ; 91FF AB 94                    ..
+        .addr   L94B5                           ; 9201 B5 94                    ..
+        .addr   L94BE                           ; 9203 BE 94                    ..
+        .addr   L94C8                           ; 9205 C8 94                    ..
+        .addr   L94D2                           ; 9207 D2 94                    ..
+        .addr   L94DC                           ; 9209 DC 94                    ..
+        .addr   L94E5                           ; 920B E5 94                    ..
+        .addr   L94ED                           ; 920D ED 94                    ..
+        .addr   L94F4                           ; 920F F4 94                    ..
+        .addr   L94FA                           ; 9211 FA 94                    ..
+        .addr   L9504                           ; 9213 04 95                    ..
+        .addr   L950C                           ; 9215 0C 95                    ..
+        .addr   L9514                           ; 9217 14 95                    ..
+        .addr   L951D                           ; 9219 1D 95                    ..
+        .addr   L9527                           ; 921B 27 95                    '.
+        .addr   L952E                           ; 921D 2E 95                    ..
+        .addr   L9537                           ; 921F 37 95                    7.
+        .addr   L9541                           ; 9221 41 95                    A.
+        .addr   L9549                           ; 9223 49 95                    I.
+        .addr   L9551                           ; 9225 51 95                    Q.
+        .addr   L9559                           ; 9227 59 95                    Y.
+        .addr   L9563                           ; 9229 63 95                    c.
+        .addr   L956D                           ; 922B 6D 95                    m.
+        .addr   L9577                           ; 922D 77 95                    w.
+        .addr   L957F                           ; 922F 7F 95                    ..
+        .addr   L9589                           ; 9231 89 95                    ..
+        .addr   L9590                           ; 9233 90 95                    ..
+        .addr   L9596                           ; 9235 96 95                    ..
+        .addr   L95A0                           ; 9237 A0 95                    ..
+        .addr   L95AA                           ; 9239 AA 95                    ..
+        .addr   L95B3                           ; 923B B3 95                    ..
+        .addr   L95BC                           ; 923D BC 95                    ..
+; ----------------------------------------------------------------------------
+L923F:
         .byte   "None"                          ; 923F 4E 6F 6E 65              None
-        .byte   $0D,$0A,$80                     ; 9243 0D 0A 80                 ...
+        .byte   $0D,$0A                         ; 9243 0D 0A                    ..
+L9245:
+        .byte   $80                             ; 9245 80                       .
         .byte   "Buster"                        ; 9246 42 75 73 74 65 72        Buster
-        .byte   $0D,$0A,$80                     ; 924C 0D 0A 80                 ...
+        .byte   $0D,$0A                         ; 924C 0D 0A                    ..
+L924E:
+        .byte   $80                             ; 924E 80                       .
         .byte   "Mythril"                       ; 924F 4D 79 74 68 72 69 6C     Mythril
-        .byte   $0D,$0A,$80                     ; 9256 0D 0A 80                 ...
+        .byte   $0D,$0A                         ; 9256 0D 0A                    ..
+L9258:
+        .byte   $80                             ; 9258 80                       .
         .byte   "Hard"                          ; 9259 48 61 72 64              Hard
-        .byte   $0D,$0A,$80                     ; 925D 0D 0A 80                 ...
+        .byte   $0D,$0A                         ; 925D 0D 0A                    ..
+L925F:
+        .byte   $80                             ; 925F 80                       .
         .byte   "Butrfly"                       ; 9260 42 75 74 72 66 6C 79     Butrfly
-        .byte   $0D,$0A,$80                     ; 9267 0D 0A 80                 ...
+        .byte   $0D,$0A                         ; 9267 0D 0A                    ..
+L9269:
+        .byte   $80                             ; 9269 80                       .
         .byte   "Enhance"                       ; 926A 45 6E 68 61 6E 63 65     Enhance
-        .byte   $0D,$0A,$80                     ; 9271 0D 0A 80                 ...
+        .byte   $0D,$0A                         ; 9271 0D 0A                    ..
+L9273:
+        .byte   $80                             ; 9273 80                       .
         .byte   "Organic"                       ; 9274 4F 72 67 61 6E 69 63     Organic
-        .byte   $0D,$0A,$80                     ; 927B 0D 0A 80                 ...
+        .byte   $0D,$0A                         ; 927B 0D 0A                    ..
+L927D:
+        .byte   $80                             ; 927D 80                       .
         .byte   "Crystal"                       ; 927E 43 72 79 73 74 61 6C     Crystal
-        .byte   $0D,$0A,$80                     ; 9285 0D 0A 80                 ...
+        .byte   $0D,$0A                         ; 9285 0D 0A                    ..
+L9287:
+        .byte   $80                             ; 9287 80                       .
         .byte   "Force"                         ; 9288 46 6F 72 63 65           Force
-        .byte   $0D,$0A,$80                     ; 928D 0D 0A 80                 ...
+        .byte   $0D,$0A                         ; 928D 0D 0A                    ..
+L928F:
+        .byte   $80                             ; 928F 80                       .
         .byte   "Rune"                          ; 9290 52 75 6E 65              Rune
-        .byte   $0D,$0A,$80                     ; 9294 0D 0A 80                 ...
+        .byte   $0D,$0A                         ; 9294 0D 0A                    ..
+L9296:
+        .byte   $80                             ; 9296 80                       .
         .byte   "Murasam"                       ; 9297 4D 75 72 61 73 61 6D     Murasam
-        .byte   $0D,$0A,$80                     ; 929E 0D 0A 80                 ...
+        .byte   $0D,$0A                         ; 929E 0D 0A                    ..
+L92A0:
+        .byte   $80                             ; 92A0 80                       .
         .byte   "Nailbat"                       ; 92A1 4E 61 69 6C 62 61 74     Nailbat
-        .byte   $0D,$0A,$80                     ; 92A8 0D 0A 80                 ...
+        .byte   $0D,$0A                         ; 92A8 0D 0A                    ..
+L92AA:
+        .byte   $80                             ; 92AA 80                       .
         .byte   "Yoshiyu"                       ; 92AB 59 6F 73 68 69 79 75     Yoshiyu
-        .byte   $0D,$0A,$80                     ; 92B2 0D 0A 80                 ...
+        .byte   $0D,$0A                         ; 92B2 0D 0A                    ..
+L92B4:
+        .byte   $80                             ; 92B4 80                       .
         .byte   "Apocaly"                       ; 92B5 41 70 6F 63 61 6C 79     Apocaly
-        .byte   $0D,$0A,$80                     ; 92BC 0D 0A 80                 ...
+        .byte   $0D,$0A                         ; 92BC 0D 0A                    ..
+L92BE:
+        .byte   $80                             ; 92BE 80                       .
         .byte   "Heaven"                        ; 92BF 48 65 61 76 65 6E        Heaven
-        .byte   $0D,$0A,$80                     ; 92C5 0D 0A 80                 ...
+        .byte   $0D,$0A                         ; 92C5 0D 0A                    ..
+L92C7:
+        .byte   $80                             ; 92C7 80                       .
         .byte   "Ragnrok"                       ; 92C8 52 61 67 6E 72 6F 6B     Ragnrok
-        .byte   $0D,$0A,$80                     ; 92CF 0D 0A 80                 ...
+        .byte   $0D,$0A                         ; 92CF 0D 0A                    ..
+L92D1:
+        .byte   $80                             ; 92D1 80                       .
         .byte   "Ultima"                        ; 92D2 55 6C 74 69 6D 61        Ultima
-        .byte   $0D,$0A,$81                     ; 92D8 0D 0A 81                 ...
+        .byte   $0D,$0A                         ; 92D8 0D 0A                    ..
+L92DA:
+        .byte   $81                             ; 92DA 81                       .
         .byte   "Gatling"                       ; 92DB 47 61 74 6C 69 6E 67     Gatling
-        .byte   $0D,$0A,$81                     ; 92E2 0D 0A 81                 ...
+        .byte   $0D,$0A                         ; 92E2 0D 0A                    ..
+L92E4:
+        .byte   $81                             ; 92E4 81                       .
         .byte   "Assault"                       ; 92E5 41 73 73 61 75 6C 74     Assault
-        .byte   $0D,$0A,$81                     ; 92EC 0D 0A 81                 ...
+        .byte   $0D,$0A                         ; 92EC 0D 0A                    ..
+L92EE:
+        .byte   $81                             ; 92EE 81                       .
         .byte   "Cannon"                        ; 92EF 43 61 6E 6E 6F 6E        Cannon
-        .byte   $0D,$0A,$81                     ; 92F5 0D 0A 81                 ...
+        .byte   $0D,$0A                         ; 92F5 0D 0A                    ..
+L92F7:
+        .byte   $81                             ; 92F7 81                       .
         .byte   "Atomic"                        ; 92F8 41 74 6F 6D 69 63        Atomic
-        .byte   $0D,$0A,$81                     ; 92FE 0D 0A 81                 ...
+        .byte   $0D,$0A                         ; 92FE 0D 0A                    ..
+L9300:
+        .byte   $81                             ; 9300 81                       .
         .byte   "HVulcan"                       ; 9301 48 56 75 6C 63 61 6E     HVulcan
-        .byte   $0D,$0A,$81                     ; 9308 0D 0A 81                 ...
+        .byte   $0D,$0A                         ; 9308 0D 0A                    ..
+L930A:
+        .byte   $81                             ; 930A 81                       .
         .byte   "ChainSw"                       ; 930B 43 68 61 69 6E 53 77     ChainSw
-        .byte   $0D,$0A,$81                     ; 9312 0D 0A 81                 ...
+        .byte   $0D,$0A                         ; 9312 0D 0A                    ..
+L9314:
+        .byte   $81                             ; 9314 81                       .
         .byte   "MicroLS"                       ; 9315 4D 69 63 72 6F 4C 53     MicroLS
-        .byte   $0D,$0A,$81                     ; 931C 0D 0A 81                 ...
+        .byte   $0D,$0A                         ; 931C 0D 0A                    ..
+L931E:
+        .byte   $81                             ; 931E 81                       .
         .byte   "AM"                            ; 931F 41 4D                    AM
-        .byte   $0D,$0A,$81                     ; 9321 0D 0A 81                 ...
+        .byte   $0D,$0A                         ; 9321 0D 0A                    ..
+L9323:
+        .byte   $81                             ; 9323 81                       .
         .byte   "Machine"                       ; 9324 4D 61 63 68 69 6E 65     Machine
-        .byte   $0D,$0A,$81                     ; 932B 0D 0A 81                 ...
+        .byte   $0D,$0A                         ; 932B 0D 0A                    ..
+L932D:
+        .byte   $81                             ; 932D 81                       .
         .byte   "Drill"                         ; 932E 44 72 69 6C 6C           Drill
-        .byte   $0D,$0A,$81                     ; 9333 0D 0A 81                 ...
+        .byte   $0D,$0A                         ; 9333 0D 0A                    ..
+L9335:
+        .byte   $81                             ; 9335 81                       .
         .byte   "Bazooka"                       ; 9336 42 61 7A 6F 6F 6B 61     Bazooka
-        .byte   $0D,$0A,$81                     ; 933D 0D 0A 81                 ...
+        .byte   $0D,$0A                         ; 933D 0D 0A                    ..
+L933F:
+        .byte   $81                             ; 933F 81                       .
         .byte   "Rocket"                        ; 9340 52 6F 63 6B 65 74        Rocket
-        .byte   $0D,$0A,$81                     ; 9346 0D 0A 81                 ...
+        .byte   $0D,$0A                         ; 9346 0D 0A                    ..
+L9348:
+        .byte   $81                             ; 9348 81                       .
         .byte   "Launchr"                       ; 9349 4C 61 75 6E 63 68 72     Launchr
-        .byte   $0D,$0A,$81                     ; 9350 0D 0A 81                 ...
+        .byte   $0D,$0A                         ; 9350 0D 0A                    ..
+L9352:
+        .byte   $81                             ; 9352 81                       .
         .byte   "Pile"                          ; 9353 50 69 6C 65              Pile
-        .byte   $0D,$0A,$81                     ; 9357 0D 0A 81                 ...
+        .byte   $0D,$0A                         ; 9357 0D 0A                    ..
+L9359:
+        .byte   $81                             ; 9359 81                       .
         .byte   "MaxRay"                        ; 935A 4D 61 78 52 61 79        MaxRay
-        .byte   $0D,$0A,$81                     ; 9360 0D 0A 81                 ...
+        .byte   $0D,$0A                         ; 9360 0D 0A                    ..
+L9362:
+        .byte   $81                             ; 9362 81                       .
         .byte   "MScore"                        ; 9363 4D 53 63 6F 72 65        MScore
-        .byte   $0D,$0A,$82                     ; 9369 0D 0A 82                 ...
+        .byte   $0D,$0A                         ; 9369 0D 0A                    ..
+L936B:
+        .byte   $82                             ; 936B 82                       .
         .byte   "Leather"                       ; 936C 4C 65 61 74 68 65 72     Leather
-        .byte   $0D,$0A,$82                     ; 9373 0D 0A 82                 ...
+        .byte   $0D,$0A                         ; 9373 0D 0A                    ..
+L9375:
+        .byte   $82                             ; 9375 82                       .
         .byte   "Metal"                         ; 9376 4D 65 74 61 6C           Metal
-        .byte   $0D,$0A,$82                     ; 937B 0D 0A 82                 ...
+        .byte   $0D,$0A                         ; 937B 0D 0A                    ..
+L937D:
+        .byte   $82                             ; 937D 82                       .
         .byte   "Mythril"                       ; 937E 4D 79 74 68 72 69 6C     Mythril
-        .byte   $0D,$0A,$82                     ; 9385 0D 0A 82                 ...
+        .byte   $0D,$0A                         ; 9385 0D 0A                    ..
+L9387:
+        .byte   $82                             ; 9387 82                       .
         .byte   "Grand"                         ; 9388 47 72 61 6E 64           Grand
-        .byte   $0D,$0A,$82                     ; 938D 0D 0A 82                 ...
+        .byte   $0D,$0A                         ; 938D 0D 0A                    ..
+L938F:
+        .byte   $82                             ; 938F 82                       .
         .byte   "Tiger"                         ; 9390 54 69 67 65 72           Tiger
-        .byte   $0D,$0A,$82                     ; 9395 0D 0A 82                 ...
+        .byte   $0D,$0A                         ; 9395 0D 0A                    ..
+L9397:
+        .byte   $82                             ; 9397 82                       .
         .byte   "Diamond"                       ; 9398 44 69 61 6D 6F 6E 64     Diamond
-        .byte   $0D,$0A,$82                     ; 939F 0D 0A 82                 ...
+        .byte   $0D,$0A                         ; 939F 0D 0A                    ..
+L93A1:
+        .byte   $82                             ; 93A1 82                       .
         .byte   "Dragon"                        ; 93A2 44 72 61 67 6F 6E        Dragon
-        .byte   $0D,$0A,$82                     ; 93A8 0D 0A 82                 ...
+        .byte   $0D,$0A                         ; 93A8 0D 0A                    ..
+L93AA:
+        .byte   $82                             ; 93AA 82                       .
         .byte   "Crystal"                       ; 93AB 43 72 79 73 74 61 6C     Crystal
-        .byte   $0D,$0A,$82                     ; 93B2 0D 0A 82                 ...
+        .byte   $0D,$0A                         ; 93B2 0D 0A                    ..
+L93B4:
+        .byte   $82                             ; 93B4 82                       .
         .byte   "Motor"                         ; 93B5 4D 6F 74 6F 72           Motor
-        .byte   $0D,$0A,$82                     ; 93BA 0D 0A 82                 ...
+        .byte   $0D,$0A                         ; 93BA 0D 0A                    ..
+L93BC:
+        .byte   $82                             ; 93BC 82                       .
         .byte   "Platnum"                       ; 93BD 50 6C 61 74 6E 75 6D     Platnum
-        .byte   $0D,$0A,$82                     ; 93C4 0D 0A 82                 ...
+        .byte   $0D,$0A                         ; 93C4 0D 0A                    ..
+L93C6:
+        .byte   $82                             ; 93C6 82                       .
         .byte   "Kaiser"                        ; 93C7 4B 61 69 73 65 72        Kaiser
-        .byte   $0D,$0A,$82                     ; 93CD 0D 0A 82                 ...
+        .byte   $0D,$0A                         ; 93CD 0D 0A                    ..
+L93CF:
+        .byte   $82                             ; 93CF 82                       .
         .byte   "Work"                          ; 93D0 57 6F 72 6B              Work
-        .byte   $0D,$0A,$82                     ; 93D4 0D 0A 82                 ...
+        .byte   $0D,$0A                         ; 93D4 0D 0A                    ..
+L93D6:
+        .byte   $82                             ; 93D6 82                       .
         .byte   "PwrSoul"                       ; 93D7 50 77 72 53 6F 75 6C     PwrSoul
-        .byte   $0D,$0A,$82                     ; 93DE 0D 0A 82                 ...
+        .byte   $0D,$0A                         ; 93DE 0D 0A                    ..
+L93E0:
+        .byte   $82                             ; 93E0 82                       .
         .byte   "Master"                        ; 93E1 4D 61 73 74 65 72        Master
-        .byte   $0D,$0A,$82                     ; 93E7 0D 0A 82                 ...
+        .byte   $0D,$0A                         ; 93E7 0D 0A                    ..
+L93E9:
+        .byte   $82                             ; 93E9 82                       .
         .byte   "God's"                         ; 93EA 47 6F 64 27 73           God's
-        .byte   $0D,$0A,$82                     ; 93EF 0D 0A 82                 ...
+        .byte   $0D,$0A                         ; 93EF 0D 0A                    ..
+L93F1:
+        .byte   $82                             ; 93F1 82                       .
         .byte   "Heart"                         ; 93F2 48 65 61 72 74           Heart
-        .byte   $0D,$0A,$83                     ; 93F7 0D 0A 83                 ...
+        .byte   $0D,$0A                         ; 93F7 0D 0A                    ..
+L93F9:
+        .byte   $83                             ; 93F9 83                       .
         .byte   "Guard"                         ; 93FA 47 75 61 72 64           Guard
-        .byte   $0D,$0A,$83                     ; 93FF 0D 0A 83                 ...
+        .byte   $0D,$0A                         ; 93FF 0D 0A                    ..
+L9401:
+        .byte   $83                             ; 9401 83                       .
         .byte   "Mythril"                       ; 9402 4D 79 74 68 72 69 6C     Mythril
-        .byte   $0D,$0A,$83                     ; 9409 0D 0A 83                 ...
+        .byte   $0D,$0A                         ; 9409 0D 0A                    ..
+L940B:
+        .byte   $83                             ; 940B 83                       .
         .byte   "FulMetl"                       ; 940C 46 75 6C 4D 65 74 6C     FulMetl
-        .byte   $0D,$0A,$83                     ; 9413 0D 0A 83                 ...
+        .byte   $0D,$0A                         ; 9413 0D 0A                    ..
+L9415:
+        .byte   $83                             ; 9415 83                       .
         .byte   "Strike"                        ; 9416 53 74 72 69 6B 65        Strike
-        .byte   $0D,$0A,$83                     ; 941C 0D 0A 83                 ...
+        .byte   $0D,$0A                         ; 941C 0D 0A                    ..
+L941E:
+        .byte   $83                             ; 941E 83                       .
         .byte   "Prism"                         ; 941F 50 72 69 73 6D           Prism
-        .byte   $0D,$0A,$83                     ; 9424 0D 0A 83                 ...
+        .byte   $0D,$0A                         ; 9424 0D 0A                    ..
+L9426:
+        .byte   $83                             ; 9426 83                       .
         .byte   "Aurora"                        ; 9427 41 75 72 6F 72 61        Aurora
-        .byte   $0D,$0A,$83                     ; 942D 0D 0A 83                 ...
+        .byte   $0D,$0A                         ; 942D 0D 0A                    ..
+L942F:
+        .byte   $83                             ; 942F 83                       .
         .byte   "Wizard"                        ; 9430 57 69 7A 61 72 64        Wizard
-        .byte   $0D,$0A,$83                     ; 9436 0D 0A 83                 ...
+        .byte   $0D,$0A                         ; 9436 0D 0A                    ..
+L9438:
+        .byte   $83                             ; 9438 83                       .
         .byte   "Wiser"                         ; 9439 57 69 73 65 72           Wiser
-        .byte   $0D,$0A,$83                     ; 943E 0D 0A 83                 ...
+        .byte   $0D,$0A                         ; 943E 0D 0A                    ..
+L9440:
+        .byte   $83                             ; 9440 83                       .
         .byte   "FairyTl"                       ; 9441 46 61 69 72 79 54 6C     FairyTl
-        .byte   $0D,$0A,$83                     ; 9448 0D 0A 83                 ...
+        .byte   $0D,$0A                         ; 9448 0D 0A                    ..
+L944A:
+        .byte   $83                             ; 944A 83                       .
         .byte   "Umbrela"                       ; 944B 55 6D 62 72 65 6C 61     Umbrela
-        .byte   $0D,$0A,$83                     ; 9452 0D 0A 83                 ...
+        .byte   $0D,$0A                         ; 9452 0D 0A                    ..
+L9454:
+        .byte   $83                             ; 9454 83                       .
         .byte   "Princss"                       ; 9455 50 72 69 6E 63 73 73     Princss
-        .byte   $0D,$0A,$84                     ; 945C 0D 0A 84                 ...
+        .byte   $0D,$0A                         ; 945C 0D 0A                    ..
+L945E:
+        .byte   $84                             ; 945E 84                       .
         .byte   "Mythril"                       ; 945F 4D 79 74 68 72 69 6C     Mythril
-        .byte   $0D,$0A,$84                     ; 9466 0D 0A 84                 ...
+        .byte   $0D,$0A                         ; 9466 0D 0A                    ..
+L9468:
+        .byte   $84                             ; 9468 84                       .
         .byte   "Diamond"                       ; 9469 44 69 61 6D 6F 6E 64     Diamond
-        .byte   $0D,$0A,$84                     ; 9470 0D 0A 84                 ...
+        .byte   $0D,$0A                         ; 9470 0D 0A                    ..
+L9472:
+        .byte   $84                             ; 9472 84                       .
         .byte   "Silver"                        ; 9473 53 69 6C 76 65 72        Silver
-        .byte   $0D,$0A,$84                     ; 9479 0D 0A 84                 ...
+        .byte   $0D,$0A                         ; 9479 0D 0A                    ..
+L947B:
+        .byte   $84                             ; 947B 84                       .
         .byte   "Gold"                          ; 947C 47 6F 6C 64              Gold
-        .byte   $0D,$0A,$84                     ; 9480 0D 0A 84                 ...
+        .byte   $0D,$0A                         ; 9480 0D 0A                    ..
+L9482:
+        .byte   $84                             ; 9482 84                       .
         .byte   "Adaman"                        ; 9483 41 64 61 6D 61 6E        Adaman
-        .byte   $0D,$0A,$84                     ; 9489 0D 0A 84                 ...
+        .byte   $0D,$0A                         ; 9489 0D 0A                    ..
+L948B:
+        .byte   $84                             ; 948B 84                       .
         .byte   "Crystal"                       ; 948C 43 72 79 73 74 61 6C     Crystal
-        .byte   $0D,$0A,$84                     ; 9493 0D 0A 84                 ...
+        .byte   $0D,$0A                         ; 9493 0D 0A                    ..
+L9495:
+        .byte   $84                             ; 9495 84                       .
         .byte   "Magic"                         ; 9496 4D 61 67 69 63           Magic
-        .byte   $0D,$0A,$84                     ; 949B 0D 0A 84                 ...
+        .byte   $0D,$0A                         ; 949B 0D 0A                    ..
+L949D:
+        .byte   $84                             ; 949D 84                       .
         .byte   "Plus"                          ; 949E 50 6C 75 73              Plus
-        .byte   $0D,$0A,$84                     ; 94A2 0D 0A 84                 ...
+        .byte   $0D,$0A                         ; 94A2 0D 0A                    ..
+L94A4:
+        .byte   $84                             ; 94A4 84                       .
         .byte   "Cent"                          ; 94A5 43 65 6E 74              Cent
-        .byte   $0D,$0A,$94                     ; 94A9 0D 0A 94                 ...
+        .byte   $0D,$0A                         ; 94A9 0D 0A                    ..
+L94AB:
+        .byte   $94                             ; 94AB 94                       .
         .byte   "Hairpin"                       ; 94AC 48 61 69 72 70 69 6E     Hairpin
-        .byte   $0D,$0A,$84                     ; 94B3 0D 0A 84                 ...
+        .byte   $0D,$0A                         ; 94B3 0D 0A                    ..
+L94B5:
+        .byte   $84                             ; 94B5 84                       .
         .byte   "Seraph"                        ; 94B6 53 65 72 61 70 68        Seraph
-        .byte   $0D,$0A,$84                     ; 94BC 0D 0A 84                 ...
+        .byte   $0D,$0A                         ; 94BC 0D 0A                    ..
+L94BE:
+        .byte   $84                             ; 94BE 84                       .
         .byte   "Behemot"                       ; 94BF 42 65 68 65 6D 6F 74     Behemot
-        .byte   $0D,$0A,$84                     ; 94C6 0D 0A 84                 ...
+        .byte   $0D,$0A                         ; 94C6 0D 0A                    ..
+L94C8:
+        .byte   $84                             ; 94C8 84                       .
         .byte   "SprnGun"                       ; 94C9 53 70 72 6E 47 75 6E     SprnGun
-        .byte   $0D,$0A,$84                     ; 94D0 0D 0A 84                 ...
+        .byte   $0D,$0A                         ; 94D0 0D 0A                    ..
+L94D2:
+        .byte   $84                             ; 94D2 84                       .
         .byte   "LimMoon"                       ; 94D3 4C 69 6D 4D 6F 6F 6E     LimMoon
-        .byte   $0D,$0A,$85                     ; 94DA 0D 0A 85                 ...
+        .byte   $0D,$0A                         ; 94DA 0D 0A                    ..
+L94DC:
+        .byte   $85                             ; 94DC 85                       .
         .byte   "Yellow"                        ; 94DD 59 65 6C 6C 6F 77        Yellow
-        .byte   $0D,$0A,$85                     ; 94E3 0D 0A 85                 ...
+        .byte   $0D,$0A                         ; 94E3 0D 0A                    ..
+L94E5:
+        .byte   $85                             ; 94E5 85                       .
         .byte   "Green"                         ; 94E6 47 72 65 65 6E           Green
-        .byte   $0D,$0A,$85                     ; 94EB 0D 0A 85                 ...
+        .byte   $0D,$0A                         ; 94EB 0D 0A                    ..
+L94ED:
+        .byte   $85                             ; 94ED 85                       .
         .byte   "Blue"                          ; 94EE 42 6C 75 65              Blue
-        .byte   $0D,$0A,$85                     ; 94F2 0D 0A 85                 ...
+        .byte   $0D,$0A                         ; 94F2 0D 0A                    ..
+L94F4:
+        .byte   $85                             ; 94F4 85                       .
         .byte   "Red"                           ; 94F5 52 65 64                 Red
-        .byte   $0D,$0A,$85                     ; 94F8 0D 0A 85                 ...
+        .byte   $0D,$0A                         ; 94F8 0D 0A                    ..
+L94FA:
+        .byte   $85                             ; 94FA 85                       .
         .byte   "Crystal"                       ; 94FB 43 72 79 73 74 61 6C     Crystal
-        .byte   $0D,$0A,$85                     ; 9502 0D 0A 85                 ...
+        .byte   $0D,$0A                         ; 9502 0D 0A                    ..
+L9504:
+        .byte   $85                             ; 9504 85                       .
         .byte   "White"                         ; 9505 57 68 69 74 65           White
-        .byte   $0D,$0A,$85                     ; 950A 0D 0A 85                 ...
+        .byte   $0D,$0A                         ; 950A 0D 0A                    ..
+L950C:
+        .byte   $85                             ; 950C 85                       .
         .byte   "Black"                         ; 950D 42 6C 61 63 6B           Black
-        .byte   $0D,$0A,$85                     ; 9512 0D 0A 85                 ...
+        .byte   $0D,$0A                         ; 9512 0D 0A                    ..
+L9514:
+        .byte   $85                             ; 9514 85                       .
         .byte   "Silver"                        ; 9515 53 69 6C 76 65 72        Silver
-        .byte   $0D,$0A,$85                     ; 951B 0D 0A 85                 ...
+        .byte   $0D,$0A                         ; 951B 0D 0A                    ..
+L951D:
+        .byte   $85                             ; 951D 85                       .
         .byte   "Trumpet"                       ; 951E 54 72 75 6D 70 65 74     Trumpet
-        .byte   $0D,$0A,$85                     ; 9525 0D 0A 85                 ...
+        .byte   $0D,$0A                         ; 9525 0D 0A                    ..
+L9527:
+        .byte   $85                             ; 9527 85                       .
         .byte   "Gold"                          ; 9528 47 6F 6C 64              Gold
-        .byte   $0D,$0A,$85                     ; 952C 0D 0A 85                 ...
+        .byte   $0D,$0A                         ; 952C 0D 0A                    ..
+L952E:
+        .byte   $85                             ; 952E 85                       .
         .byte   "Battle"                        ; 952F 42 61 74 74 6C 65        Battle
-        .byte   $0D,$0A,$85                     ; 9535 0D 0A 85                 ...
+        .byte   $0D,$0A                         ; 9535 0D 0A                    ..
+L9537:
+        .byte   $85                             ; 9537 85                       .
         .byte   "Starlit"                       ; 9538 53 74 61 72 6C 69 74     Starlit
-        .byte   $0D,$0A,$85                     ; 953F 0D 0A 85                 ...
+        .byte   $0D,$0A                         ; 953F 0D 0A                    ..
+L9541:
+        .byte   $85                             ; 9541 85                       .
         .byte   "Shout"                         ; 9542 53 68 6F 75 74           Shout
-        .byte   $0D,$0A,$86                     ; 9547 0D 0A 86                 ...
+        .byte   $0D,$0A                         ; 9547 0D 0A                    ..
+L9549:
+        .byte   $86                             ; 9549 86                       .
         .byte   "Spear"                         ; 954A 53 70 65 61 72           Spear
-        .byte   $0D,$0A,$86                     ; 954F 0D 0A 86                 ...
+        .byte   $0D,$0A                         ; 954F 0D 0A                    ..
+L9551:
+        .byte   $86                             ; 9551 86                       .
         .byte   "Slash"                         ; 9552 53 6C 61 73 68           Slash
-        .byte   $0D,$0A,$86                     ; 9557 0D 0A 86                 ...
+        .byte   $0D,$0A                         ; 9557 0D 0A                    ..
+L9559:
+        .byte   $86                             ; 9559 86                       .
         .byte   "Trident"                       ; 955A 54 72 69 64 65 6E 74     Trident
-        .byte   $0D,$0A,$86                     ; 9561 0D 0A 86                 ...
+        .byte   $0D,$0A                         ; 9561 0D 0A                    ..
+L9563:
+        .byte   $86                             ; 9563 86                       .
         .byte   "MastAxe"                       ; 9564 4D 61 73 74 41 78 65     MastAxe
-        .byte   $0D,$0A,$86                     ; 956B 0D 0A 86                 ...
+        .byte   $0D,$0A                         ; 956B 0D 0A                    ..
+L956D:
+        .byte   $86                             ; 956D 86                       .
         .byte   "Partsan"                       ; 956E 50 61 72 74 73 61 6E     Partsan
-        .byte   $0D,$0A,$86                     ; 9575 0D 0A 86                 ...
+        .byte   $0D,$0A                         ; 9575 0D 0A                    ..
+L9577:
+        .byte   $86                             ; 9577 86                       .
         .byte   "Viper"                         ; 9578 56 69 70 65 72           Viper
-        .byte   $0D,$0A,$86                     ; 957D 0D 0A 86                 ...
+        .byte   $0D,$0A                         ; 957D 0D 0A                    ..
+L957F:
+        .byte   $86                             ; 957F 86                       .
         .byte   "Javelin"                       ; 9580 4A 61 76 65 6C 69 6E     Javelin
-        .byte   $0D,$0A,$86                     ; 9587 0D 0A 86                 ...
+        .byte   $0D,$0A                         ; 9587 0D 0A                    ..
+L9589:
+        .byte   $86                             ; 9589 86                       .
         .byte   "Grow"                          ; 958A 47 72 6F 77              Grow
-        .byte   $0D,$0A,$86                     ; 958E 0D 0A 86                 ...
+        .byte   $0D,$0A                         ; 958E 0D 0A                    ..
+L9590:
+        .byte   $86                             ; 9590 86                       .
         .byte   "Mop"                           ; 9591 4D 6F 70                 Mop
-        .byte   $0D,$0A,$86                     ; 9594 0D 0A 86                 ...
+        .byte   $0D,$0A                         ; 9594 0D 0A                    ..
+L9596:
+        .byte   $86                             ; 9596 86                       .
         .byte   "Dragoon"                       ; 9597 44 72 61 67 6F 6F 6E     Dragoon
-        .byte   $0D,$0A,$86                     ; 959E 0D 0A 86                 ...
+        .byte   $0D,$0A                         ; 959E 0D 0A                    ..
+L95A0:
+        .byte   $86                             ; 95A0 86                       .
         .byte   "Scimitr"                       ; 95A1 53 63 69 6D 69 74 72     Scimitr
-        .byte   $0D,$0A,$86                     ; 95A8 0D 0A 86                 ...
+        .byte   $0D,$0A                         ; 95A8 0D 0A                    ..
+L95AA:
+        .byte   $86                             ; 95AA 86                       .
         .byte   "Flayer"                        ; 95AB 46 6C 61 79 65 72        Flayer
-        .byte   $0D,$0A,$86                     ; 95B1 0D 0A 86                 ...
+        .byte   $0D,$0A                         ; 95B1 0D 0A                    ..
+L95B3:
+        .byte   $86                             ; 95B3 86                       .
         .byte   "Spirit"                        ; 95B4 53 70 69 72 69 74        Spirit
-        .byte   $0D,$0A,$86                     ; 95BA 0D 0A 86                 ...
+        .byte   $0D,$0A                         ; 95BA 0D 0A                    ..
+L95BC:
+        .byte   $86                             ; 95BC 86                       .
         .byte   "Venus"                         ; 95BD 56 65 6E 75 73           Venus
         .byte   $0D,$0A,$FF,$FF                 ; 95C2 0D 0A FF FF              ....
+; ----------------------------------------------------------------------------
 L95C6:
-        .byte   $D6,$95,$DC,$95,$E3,$95,$EB,$95 ; 95C6 D6 95 DC 95 E3 95 EB 95  ........
-        .byte   $F2,$95,$F9,$95,$01,$96,$09,$96 ; 95CE F2 95 F9 95 01 96 09 96  ........
+        .addr   L95D6                           ; 95C6 D6 95                    ..
+        .addr   L95DC                           ; 95C8 DC 95                    ..
+        .addr   L95E3                           ; 95CA E3 95                    ..
+        .addr   L95EB                           ; 95CC EB 95                    ..
+        .addr   L95F2                           ; 95CE F2 95                    ..
+        .addr   L95F9                           ; 95D0 F9 95                    ..
+        .addr   L9601                           ; 95D2 01 96                    ..
+        .addr   L9609                           ; 95D4 09 96                    ..
+; ----------------------------------------------------------------------------
+L95D6:
         .byte   "None"                          ; 95D6 4E 6F 6E 65              None
-        .byte   $0D,$0A,$87                     ; 95DA 0D 0A 87                 ...
+        .byte   $0D,$0A                         ; 95DA 0D 0A                    ..
+L95DC:
+        .byte   $87                             ; 95DC 87                       .
         .byte   "Fire"                          ; 95DD 46 69 72 65              Fire
-        .byte   $0D,$0A,$87                     ; 95E1 0D 0A 87                 ...
+        .byte   $0D,$0A                         ; 95E1 0D 0A                    ..
+L95E3:
+        .byte   $87                             ; 95E3 87                       .
         .byte   "Water"                         ; 95E4 57 61 74 65 72           Water
-        .byte   $0D,$0A,$87                     ; 95E9 0D 0A 87                 ...
+        .byte   $0D,$0A                         ; 95E9 0D 0A                    ..
+L95EB:
+        .byte   $87                             ; 95EB 87                       .
         .byte   "Bolt"                          ; 95EC 42 6F 6C 74              Bolt
-        .byte   $0D,$0A,$87                     ; 95F0 0D 0A 87                 ...
+        .byte   $0D,$0A                         ; 95F0 0D 0A                    ..
+L95F2:
+        .byte   $87                             ; 95F2 87                       .
         .byte   "Wind"                          ; 95F3 57 69 6E 64              Wind
-        .byte   $0D,$0A,$87                     ; 95F7 0D 0A 87                 ...
+        .byte   $0D,$0A                         ; 95F7 0D 0A                    ..
+L95F9:
+        .byte   $87                             ; 95F9 87                       .
         .byte   "Earth"                         ; 95FA 45 61 72 74 68           Earth
-        .byte   $0D,$0A,$87                     ; 95FF 0D 0A 87                 ...
+        .byte   $0D,$0A                         ; 95FF 0D 0A                    ..
+L9601:
+        .byte   $87                             ; 9601 87                       .
         .byte   "Light"                         ; 9602 4C 69 67 68 74           Light
-        .byte   $0D,$0A,$87                     ; 9607 0D 0A 87                 ...
+        .byte   $0D,$0A                         ; 9607 0D 0A                    ..
+L9609:
+        .byte   $87                             ; 9609 87                       .
         .byte   "Ice "                          ; 960A 49 63 65 20              Ice 
         .byte   $0D,$0A,$FF,$FF                 ; 960E 0D 0A FF FF              ....
+; ----------------------------------------------------------------------------
 L9612:
-        .byte   $92,$96,$98,$96,$A1,$96,$AB,$96 ; 9612 92 96 98 96 A1 96 AB 96  ........
-        .byte   $B4,$96,$BE,$96,$C7,$96,$D1,$96 ; 961A B4 96 BE 96 C7 96 D1 96  ........
-        .byte   $DA,$96,$E4,$96,$ED,$96,$F7,$96 ; 9622 DA 96 E4 96 ED 96 F7 96  ........
-        .byte   $00,$97,$0A,$97,$13,$97,$1D,$97 ; 962A 00 97 0A 97 13 97 1D 97  ........
-        .byte   "&"                             ; 9632 26                       &
-        .byte   $97                             ; 9633 97                       .
-        .byte   "0"                             ; 9634 30                       0
-        .byte   $97                             ; 9635 97                       .
-        .byte   "9"                             ; 9636 39                       9
-        .byte   $97                             ; 9637 97                       .
-        .byte   "C"                             ; 9638 43                       C
-        .byte   $97                             ; 9639 97                       .
-        .byte   "L"                             ; 963A 4C                       L
-        .byte   $97                             ; 963B 97                       .
-        .byte   "U"                             ; 963C 55                       U
-        .byte   $97                             ; 963D 97                       .
-        .byte   "^"                             ; 963E 5E                       ^
-        .byte   $97                             ; 963F 97                       .
-        .byte   "g"                             ; 9640 67                       g
-        .byte   $97                             ; 9641 97                       .
-        .byte   "p"                             ; 9642 70                       p
-        .byte   $97                             ; 9643 97                       .
-        .byte   "y"                             ; 9644 79                       y
-        .byte   $97,$82,$97,$8B,$97,$94,$97,$9D ; 9645 97 82 97 8B 97 94 97 9D  ........
-        .byte   $97,$A7,$97,$B0,$97,$B9,$97,$C2 ; 964D 97 A7 97 B0 97 B9 97 C2  ........
-        .byte   $97,$CC,$97,$D5,$97,$DE,$97,$E8 ; 9655 97 CC 97 D5 97 DE 97 E8  ........
-        .byte   $97,$F1,$97,$FB,$97,$04,$98,$0E ; 965D 97 F1 97 FB 97 04 98 0E  ........
-        .byte   $98,$17,$98                     ; 9665 98 17 98                 ...
-        .byte   "!"                             ; 9668 21                       !
-        .byte   $98                             ; 9669 98                       .
-        .byte   "*"                             ; 966A 2A                       *
-        .byte   $98                             ; 966B 98                       .
-        .byte   "4"                             ; 966C 34                       4
-        .byte   $98                             ; 966D 98                       .
-        .byte   "="                             ; 966E 3D                       =
-        .byte   $98                             ; 966F 98                       .
-        .byte   "F"                             ; 9670 46                       F
-        .byte   $98                             ; 9671 98                       .
-        .byte   "O"                             ; 9672 4F                       O
-        .byte   $98                             ; 9673 98                       .
-        .byte   "X"                             ; 9674 58                       X
-        .byte   $98                             ; 9675 98                       .
-        .byte   "a"                             ; 9676 61                       a
-        .byte   $98                             ; 9677 98                       .
-        .byte   "j"                             ; 9678 6A                       j
-        .byte   $98                             ; 9679 98                       .
-        .byte   "s"                             ; 967A 73                       s
-        .byte   $98                             ; 967B 98                       .
-        .byte   "|"                             ; 967C 7C                       |
-        .byte   $98,$85,$98,$8F,$98,$98,$98,$A2 ; 967D 98 85 98 8F 98 98 98 A2  ........
-        .byte   $98,$AB,$98,$B5,$98,$BE,$98,$C8 ; 9685 98 AB 98 B5 98 BE 98 C8  ........
-        .byte   $98,$D1,$98,$DB,$98             ; 968D 98 D1 98 DB 98           .....
+        .addr   L9692                           ; 9612 92 96                    ..
+        .addr   L9698                           ; 9614 98 96                    ..
+        .addr   L96A1                           ; 9616 A1 96                    ..
+        .addr   L96AB                           ; 9618 AB 96                    ..
+        .addr   L96B4                           ; 961A B4 96                    ..
+        .addr   L96BE                           ; 961C BE 96                    ..
+        .addr   L96C7                           ; 961E C7 96                    ..
+        .addr   L96D1                           ; 9620 D1 96                    ..
+        .addr   L96DA                           ; 9622 DA 96                    ..
+        .addr   L96E4                           ; 9624 E4 96                    ..
+        .addr   L96ED                           ; 9626 ED 96                    ..
+        .addr   L96F7                           ; 9628 F7 96                    ..
+        .addr   L9700                           ; 962A 00 97                    ..
+        .addr   L970A                           ; 962C 0A 97                    ..
+        .addr   L9713                           ; 962E 13 97                    ..
+        .addr   L971D                           ; 9630 1D 97                    ..
+        .addr   L9726                           ; 9632 26 97                    &.
+        .addr   L9730                           ; 9634 30 97                    0.
+        .addr   L9739                           ; 9636 39 97                    9.
+        .addr   L9743                           ; 9638 43 97                    C.
+        .addr   L974C                           ; 963A 4C 97                    L.
+        .addr   L9755                           ; 963C 55 97                    U.
+        .addr   L975E                           ; 963E 5E 97                    ^.
+        .addr   L9767                           ; 9640 67 97                    g.
+        .addr   L9770                           ; 9642 70 97                    p.
+        .addr   L9779                           ; 9644 79 97                    y.
+        .addr   L9782                           ; 9646 82 97                    ..
+        .addr   L978B                           ; 9648 8B 97                    ..
+        .addr   L9794                           ; 964A 94 97                    ..
+        .addr   L979D                           ; 964C 9D 97                    ..
+        .addr   L97A7                           ; 964E A7 97                    ..
+        .addr   L97B0                           ; 9650 B0 97                    ..
+        .addr   L97B9                           ; 9652 B9 97                    ..
+        .addr   L97C2                           ; 9654 C2 97                    ..
+        .addr   L97CC                           ; 9656 CC 97                    ..
+        .addr   L97D5                           ; 9658 D5 97                    ..
+        .addr   L97DE                           ; 965A DE 97                    ..
+        .addr   L97E8                           ; 965C E8 97                    ..
+        .addr   L97F1                           ; 965E F1 97                    ..
+        .addr   L97FB                           ; 9660 FB 97                    ..
+        .addr   L9804                           ; 9662 04 98                    ..
+        .addr   L980E                           ; 9664 0E 98                    ..
+        .addr   L9817                           ; 9666 17 98                    ..
+        .addr   L9821                           ; 9668 21 98                    !.
+        .addr   L982A                           ; 966A 2A 98                    *.
+        .addr   L9834                           ; 966C 34 98                    4.
+        .addr   L983D                           ; 966E 3D 98                    =.
+        .addr   L9846                           ; 9670 46 98                    F.
+        .addr   L984F                           ; 9672 4F 98                    O.
+        .addr   L9858                           ; 9674 58 98                    X.
+        .addr   L9861                           ; 9676 61 98                    a.
+        .addr   L986A                           ; 9678 6A 98                    j.
+        .addr   L9873                           ; 967A 73 98                    s.
+        .addr   L987C                           ; 967C 7C 98                    |.
+        .addr   L9885                           ; 967E 85 98                    ..
+        .addr   L988F                           ; 9680 8F 98                    ..
+        .addr   L9898                           ; 9682 98 98                    ..
+        .addr   L98A2                           ; 9684 A2 98                    ..
+        .addr   L98AB                           ; 9686 AB 98                    ..
+        .addr   L98B5                           ; 9688 B5 98                    ..
+        .addr   L98BE                           ; 968A BE 98                    ..
+        .addr   L98C8                           ; 968C C8 98                    ..
+        .addr   L98D1                           ; 968E D1 98                    ..
+        .addr   L98DB                           ; 9690 DB 98                    ..
+; ----------------------------------------------------------------------------
+L9692:
         .byte   "None"                          ; 9692 4E 6F 6E 65              None
-        .byte   $0D,$0A,$C0,$AF                 ; 9696 0D 0A C0 AF              ....
+        .byte   $0D,$0A                         ; 9696 0D 0A                    ..
+L9698:
+        .byte   $C0,$AF                         ; 9698 C0 AF                    ..
         .byte   "Fire"                          ; 969A 46 69 72 65              Fire
         .byte   $0D,$0A                         ; 969E 0D 0A                    ..
         .byte   "0"                             ; 96A0 30                       0
+L96A1:
         .byte   $C0,$AF                         ; 96A1 C0 AF                    ..
         .byte   "Blaze "                        ; 96A3 42 6C 61 7A 65 20        Blaze 
-        .byte   $0D,$0A,$C0,$AF                 ; 96A9 0D 0A C0 AF              ....
+        .byte   $0D,$0A                         ; 96A9 0D 0A                    ..
+L96AB:
+        .byte   $C0,$AF                         ; 96AB C0 AF                    ..
         .byte   "Fire2"                         ; 96AD 46 69 72 65 32           Fire2
-        .byte   $0D,$0A,$C0,$AF                 ; 96B2 0D 0A C0 AF              ....
+        .byte   $0D,$0A                         ; 96B2 0D 0A                    ..
+L96B4:
+        .byte   $C0,$AF                         ; 96B4 C0 AF                    ..
         .byte   "Blaze2"                        ; 96B6 42 6C 61 7A 65 32        Blaze2
-        .byte   $0D,$0A,$C0,$AF                 ; 96BC 0D 0A C0 AF              ....
+        .byte   $0D,$0A                         ; 96BC 0D 0A                    ..
+L96BE:
+        .byte   $C0,$AF                         ; 96BE C0 AF                    ..
         .byte   "Fire3"                         ; 96C0 46 69 72 65 33           Fire3
-        .byte   $0D,$0A,$C0,$AF                 ; 96C5 0D 0A C0 AF              ....
+        .byte   $0D,$0A                         ; 96C5 0D 0A                    ..
+L96C7:
+        .byte   $C0,$AF                         ; 96C7 C0 AF                    ..
         .byte   "Blaze3"                        ; 96C9 42 6C 61 7A 65 33        Blaze3
-        .byte   $0D,$0A,$C0,$AF                 ; 96CF 0D 0A C0 AF              ....
+        .byte   $0D,$0A                         ; 96CF 0D 0A                    ..
+L96D1:
+        .byte   $C0,$AF                         ; 96D1 C0 AF                    ..
         .byte   "Fire4"                         ; 96D3 46 69 72 65 34           Fire4
-        .byte   $0D,$0A,$C0,$AF                 ; 96D8 0D 0A C0 AF              ....
+        .byte   $0D,$0A                         ; 96D8 0D 0A                    ..
+L96DA:
+        .byte   $C0,$AF                         ; 96DA C0 AF                    ..
         .byte   "Blaze4"                        ; 96DC 42 6C 61 7A 65 34        Blaze4
-        .byte   $0D,$0A,$C0,$AF                 ; 96E2 0D 0A C0 AF              ....
+        .byte   $0D,$0A                         ; 96E2 0D 0A                    ..
+L96E4:
+        .byte   $C0,$AF                         ; 96E4 C0 AF                    ..
         .byte   "Ifrit"                         ; 96E6 49 66 72 69 74           Ifrit
-        .byte   $0D,$0A,$C0,$B0                 ; 96EB 0D 0A C0 B0              ....
+        .byte   $0D,$0A                         ; 96EB 0D 0A                    ..
+L96ED:
+        .byte   $C0,$B0                         ; 96ED C0 B0                    ..
         .byte   "Water "                        ; 96EF 57 61 74 65 72 20        Water 
-        .byte   $0D,$0A,$C0,$B0                 ; 96F5 0D 0A C0 B0              ....
+        .byte   $0D,$0A                         ; 96F5 0D 0A                    ..
+L96F7:
+        .byte   $C0,$B0                         ; 96F7 C0 B0                    ..
         .byte   "Flood"                         ; 96F9 46 6C 6F 6F 64           Flood
-        .byte   $0D,$0A,$C0,$B0                 ; 96FE 0D 0A C0 B0              ....
+        .byte   $0D,$0A                         ; 96FE 0D 0A                    ..
+L9700:
+        .byte   $C0,$B0                         ; 9700 C0 B0                    ..
         .byte   "Water2"                        ; 9702 57 61 74 65 72 32        Water2
-        .byte   $0D,$0A,$C0,$B0                 ; 9708 0D 0A C0 B0              ....
+        .byte   $0D,$0A                         ; 9708 0D 0A                    ..
+L970A:
+        .byte   $C0,$B0                         ; 970A C0 B0                    ..
         .byte   "Cure2"                         ; 970C 43 75 72 65 32           Cure2
-        .byte   $0D,$0A,$C0,$B0                 ; 9711 0D 0A C0 B0              ....
+        .byte   $0D,$0A                         ; 9711 0D 0A                    ..
+L9713:
+        .byte   $C0,$B0                         ; 9713 C0 B0                    ..
         .byte   "Water3"                        ; 9715 57 61 74 65 72 33        Water3
-        .byte   $0D,$0A,$C0,$B0                 ; 971B 0D 0A C0 B0              ....
+        .byte   $0D,$0A                         ; 971B 0D 0A                    ..
+L971D:
+        .byte   $C0,$B0                         ; 971D C0 B0                    ..
         .byte   "Flood2"                        ; 971F 46 6C 6F 6F 64 32        Flood2
-        .byte   $0D,$C0,$B0                     ; 9725 0D C0 B0                 ...
+        .byte   $0D                             ; 9725 0D                       .
+L9726:
+        .byte   $C0,$B0                         ; 9726 C0 B0                    ..
         .byte   "Water4"                        ; 9728 57 61 74 65 72 34        Water4
-        .byte   $0D,$0A,$C0,$B0                 ; 972E 0D 0A C0 B0              ....
+        .byte   $0D,$0A                         ; 972E 0D 0A                    ..
+L9730:
+        .byte   $C0,$B0                         ; 9730 C0 B0                    ..
         .byte   "Cure3"                         ; 9732 43 75 72 65 33           Cure3
-        .byte   $0D,$0A,$C0,$B0                 ; 9737 0D 0A C0 B0              ....
+        .byte   $0D,$0A                         ; 9737 0D 0A                    ..
+L9739:
+        .byte   $C0,$B0                         ; 9739 C0 B0                    ..
         .byte   "Leviat"                        ; 973B 4C 65 76 69 61 74        Leviat
-        .byte   $0D,$0A,$C0,$B1                 ; 9741 0D 0A C0 B1              ....
+        .byte   $0D,$0A                         ; 9741 0D 0A                    ..
+L9743:
+        .byte   $C0,$B1                         ; 9743 C0 B1                    ..
         .byte   "Bolt "                         ; 9745 42 6F 6C 74 20           Bolt 
-        .byte   $0D,$0A,$C0,$B1                 ; 974A 0D 0A C0 B1              ....
+        .byte   $0D,$0A                         ; 974A 0D 0A                    ..
+L974C:
+        .byte   $C0,$B1                         ; 974C C0 B1                    ..
         .byte   "Shock"                         ; 974E 53 68 6F 63 6B           Shock
-        .byte   $0D,$0A,$C0,$B1                 ; 9753 0D 0A C0 B1              ....
+        .byte   $0D,$0A                         ; 9753 0D 0A                    ..
+L9755:
+        .byte   $C0,$B1                         ; 9755 C0 B1                    ..
         .byte   "Bolt2"                         ; 9757 42 6F 6C 74 32           Bolt2
-        .byte   $0D,$0A,$C0,$B1                 ; 975C 0D 0A C0 B1              ....
+        .byte   $0D,$0A                         ; 975C 0D 0A                    ..
+L975E:
+        .byte   $C0,$B1                         ; 975E C0 B1                    ..
         .byte   "Shock2"                        ; 9760 53 68 6F 63 6B 32        Shock2
-        .byte   $0D,$C0,$B1                     ; 9766 0D C0 B1                 ...
+        .byte   $0D                             ; 9766 0D                       .
+L9767:
+        .byte   $C0,$B1                         ; 9767 C0 B1                    ..
         .byte   "Bolt3"                         ; 9769 42 6F 6C 74 33           Bolt3
-        .byte   $0D,$0A,$C0,$B1                 ; 976E 0D 0A C0 B1              ....
+        .byte   $0D,$0A                         ; 976E 0D 0A                    ..
+L9770:
+        .byte   $C0,$B1                         ; 9770 C0 B1                    ..
         .byte   "Shock3"                        ; 9772 53 68 6F 63 6B 33        Shock3
-        .byte   $0D,$C0,$B1                     ; 9778 0D C0 B1                 ...
+        .byte   $0D                             ; 9778 0D                       .
+L9779:
+        .byte   $C0,$B1                         ; 9779 C0 B1                    ..
         .byte   "Bolt4"                         ; 977B 42 6F 6C 74 34           Bolt4
-        .byte   $0D,$0A,$C0,$B1                 ; 9780 0D 0A C0 B1              ....
+        .byte   $0D,$0A                         ; 9780 0D 0A                    ..
+L9782:
+        .byte   $C0,$B1                         ; 9782 C0 B1                    ..
         .byte   "Shock4"                        ; 9784 53 68 6F 63 6B 34        Shock4
-        .byte   $0D,$C0,$B1                     ; 978A 0D C0 B1                 ...
+        .byte   $0D                             ; 978A 0D                       .
+L978B:
+        .byte   $C0,$B1                         ; 978B C0 B1                    ..
         .byte   "Ramuh"                         ; 978D 52 61 6D 75 68           Ramuh
-        .byte   $0D,$0A,$C0,$B2                 ; 9792 0D 0A C0 B2              ....
+        .byte   $0D,$0A                         ; 9792 0D 0A                    ..
+L9794:
+        .byte   $C0,$B2                         ; 9794 C0 B2                    ..
         .byte   "Aero "                         ; 9796 41 65 72 6F 20           Aero 
-        .byte   $0D,$0A,$C0,$B2                 ; 979B 0D 0A C0 B2              ....
+        .byte   $0D,$0A                         ; 979B 0D 0A                    ..
+L979D:
+        .byte   $C0,$B2                         ; 979D C0 B2                    ..
         .byte   "Gale"                          ; 979F 47 61 6C 65              Gale
-        .byte   $0D,$0A,$0D,$0A,$C0,$B2         ; 97A3 0D 0A 0D 0A C0 B2        ......
+        .byte   $0D,$0A,$0D,$0A                 ; 97A3 0D 0A 0D 0A              ....
+L97A7:
+        .byte   $C0,$B2                         ; 97A7 C0 B2                    ..
         .byte   "Aero2"                         ; 97A9 41 65 72 6F 32           Aero2
-        .byte   $0D,$0A,$C0,$B2                 ; 97AE 0D 0A C0 B2              ....
+        .byte   $0D,$0A                         ; 97AE 0D 0A                    ..
+L97B0:
+        .byte   $C0,$B2                         ; 97B0 C0 B2                    ..
         .byte   "Cure2"                         ; 97B2 43 75 72 65 32           Cure2
-        .byte   $0D,$0A,$C0,$B2                 ; 97B7 0D 0A C0 B2              ....
+        .byte   $0D,$0A                         ; 97B7 0D 0A                    ..
+L97B9:
+        .byte   $C0,$B2                         ; 97B9 C0 B2                    ..
         .byte   "Aero3"                         ; 97BB 41 65 72 6F 33           Aero3
-        .byte   $0D,$0A,$C0,$B2                 ; 97C0 0D 0A C0 B2              ....
+        .byte   $0D,$0A                         ; 97C0 0D 0A                    ..
+L97C2:
+        .byte   $C0,$B2                         ; 97C2 C0 B2                    ..
         .byte   "Gale2"                         ; 97C4 47 61 6C 65 32           Gale2
         .byte   $0D,$0A                         ; 97C9 0D 0A                    ..
         .byte   " "                             ; 97CB 20                        
+L97CC:
         .byte   $C0,$B2                         ; 97CC C0 B2                    ..
         .byte   "Aero4"                         ; 97CE 41 65 72 6F 34           Aero4
-        .byte   $0D,$0A,$C0,$B2                 ; 97D3 0D 0A C0 B2              ....
+        .byte   $0D,$0A                         ; 97D3 0D 0A                    ..
+L97D5:
+        .byte   $C0,$B2                         ; 97D5 C0 B2                    ..
         .byte   "Cure3"                         ; 97D7 43 75 72 65 33           Cure3
-        .byte   $0D,$0A,$C0,$B2                 ; 97DC 0D 0A C0 B2              ....
+        .byte   $0D,$0A                         ; 97DC 0D 0A                    ..
+L97DE:
+        .byte   $C0,$B2                         ; 97DE C0 B2                    ..
         .byte   "Typhon"                        ; 97E0 54 79 70 68 6F 6E        Typhon
-        .byte   $0D,$0A,$C0,$B3                 ; 97E6 0D 0A C0 B3              ....
+        .byte   $0D,$0A                         ; 97E6 0D 0A                    ..
+L97E8:
+        .byte   $C0,$B3                         ; 97E8 C0 B3                    ..
         .byte   "Stone"                         ; 97EA 53 74 6F 6E 65           Stone
-        .byte   $0D,$0A,$C0,$B3                 ; 97EF 0D 0A C0 B3              ....
+        .byte   $0D,$0A                         ; 97EF 0D 0A                    ..
+L97F1:
+        .byte   $C0,$B3                         ; 97F1 C0 B3                    ..
         .byte   "Quake "                        ; 97F3 51 75 61 6B 65 20        Quake 
-        .byte   $0D,$0A,$C0,$B3                 ; 97F9 0D 0A C0 B3              ....
+        .byte   $0D,$0A                         ; 97F9 0D 0A                    ..
+L97FB:
+        .byte   $C0,$B3                         ; 97FB C0 B3                    ..
         .byte   "Stone2"                        ; 97FD 53 74 6F 6E 65 32        Stone2
-        .byte   $0D,$C0,$B3                     ; 9803 0D C0 B3                 ...
+        .byte   $0D                             ; 9803 0D                       .
+L9804:
+        .byte   $C0,$B3                         ; 9804 C0 B3                    ..
         .byte   "Quake2"                        ; 9806 51 75 61 6B 65 32        Quake2
-        .byte   $0D,$0A,$C0,$B3                 ; 980C 0D 0A C0 B3              ....
+        .byte   $0D,$0A                         ; 980C 0D 0A                    ..
+L980E:
+        .byte   $C0,$B3                         ; 980E C0 B3                    ..
         .byte   "Stone3"                        ; 9810 53 74 6F 6E 65 33        Stone3
-        .byte   $0D,$C0,$B3                     ; 9816 0D C0 B3                 ...
+        .byte   $0D                             ; 9816 0D                       .
+L9817:
+        .byte   $C0,$B3                         ; 9817 C0 B3                    ..
         .byte   "Quake3"                        ; 9819 51 75 61 6B 65 33        Quake3
-        .byte   $0D,$0A,$C0,$B3                 ; 981F 0D 0A C0 B3              ....
+        .byte   $0D,$0A                         ; 981F 0D 0A                    ..
+L9821:
+        .byte   $C0,$B3                         ; 9821 C0 B3                    ..
         .byte   "Stone4"                        ; 9823 53 74 6F 6E 65 34        Stone4
-        .byte   $0D,$C0,$B3                     ; 9829 0D C0 B3                 ...
+        .byte   $0D                             ; 9829 0D                       .
+L982A:
+        .byte   $C0,$B3                         ; 982A C0 B3                    ..
         .byte   "Quake4"                        ; 982C 51 75 61 6B 65 34        Quake4
-        .byte   $0D,$0A,$C0,$B3                 ; 9832 0D 0A C0 B3              ....
+        .byte   $0D,$0A                         ; 9832 0D 0A                    ..
+L9834:
+        .byte   $C0,$B3                         ; 9834 C0 B3                    ..
         .byte   "Titan"                         ; 9836 54 69 74 61 6E           Titan
-        .byte   $0D,$0A,$C0,$B4                 ; 983B 0D 0A C0 B4              ....
+        .byte   $0D,$0A                         ; 983B 0D 0A                    ..
+L983D:
+        .byte   $C0,$B4                         ; 983D C0 B4                    ..
         .byte   "Cure "                         ; 983F 43 75 72 65 20           Cure 
-        .byte   $0D,$0A,$C0,$B4                 ; 9844 0D 0A C0 B4              ....
+        .byte   $0D,$0A                         ; 9844 0D 0A                    ..
+L9846:
+        .byte   $C0,$B4                         ; 9846 C0 B4                    ..
         .byte   "Dia"                           ; 9848 44 69 61                 Dia
-        .byte   $0D,$0A,$00,$00,$C0,$B4         ; 984B 0D 0A 00 00 C0 B4        ......
+        .byte   $0D,$0A,$00,$00                 ; 984B 0D 0A 00 00              ....
+L984F:
+        .byte   $C0,$B4                         ; 984F C0 B4                    ..
         .byte   "Cure2"                         ; 9851 43 75 72 65 32           Cure2
-        .byte   $0D,$0A,$C0,$B4                 ; 9856 0D 0A C0 B4              ....
+        .byte   $0D,$0A                         ; 9856 0D 0A                    ..
+L9858:
+        .byte   $C0,$B4                         ; 9858 C0 B4                    ..
         .byte   "Heal "                         ; 985A 48 65 61 6C 20           Heal 
-        .byte   $0D,$0A,$C0,$B4                 ; 985F 0D 0A C0 B4              ....
+        .byte   $0D,$0A                         ; 985F 0D 0A                    ..
+L9861:
+        .byte   $C0,$B4                         ; 9861 C0 B4                    ..
         .byte   "Cure3"                         ; 9863 43 75 72 65 33           Cure3
-        .byte   $0D,$0A,$C0,$B4                 ; 9868 0D 0A C0 B4              ....
+        .byte   $0D,$0A                         ; 9868 0D 0A                    ..
+L986A:
+        .byte   $C0,$B4                         ; 986A C0 B4                    ..
         .byte   "Dia2"                          ; 986C 44 69 61 32              Dia2
-        .byte   $0D,$0A,$00,$C0,$B4             ; 9870 0D 0A 00 C0 B4           .....
+        .byte   $0D,$0A,$00                     ; 9870 0D 0A 00                 ...
+L9873:
+        .byte   $C0,$B4                         ; 9873 C0 B4                    ..
         .byte   "Cure4"                         ; 9875 43 75 72 65 34           Cure4
-        .byte   $0D,$0A,$C0,$B4                 ; 987A 0D 0A C0 B4              ....
+        .byte   $0D,$0A                         ; 987A 0D 0A                    ..
+L987C:
+        .byte   $C0,$B4                         ; 987C C0 B4                    ..
         .byte   "Heal2"                         ; 987E 48 65 61 6C 32           Heal2
-        .byte   $0D,$0A,$C0,$B4                 ; 9883 0D 0A C0 B4              ....
+        .byte   $0D,$0A                         ; 9883 0D 0A                    ..
+L9885:
+        .byte   $C0,$B4                         ; 9885 C0 B4                    ..
         .byte   "Bahamt"                        ; 9887 42 61 68 61 6D 74        Bahamt
-        .byte   $0D,$0A,$C0,$B5                 ; 988D 0D 0A C0 B5              ....
+        .byte   $0D,$0A                         ; 988D 0D 0A                    ..
+L988F:
+        .byte   $C0,$B5                         ; 988F C0 B5                    ..
         .byte   "Ice  "                         ; 9891 49 63 65 20 20           Ice  
-        .byte   $0D,$0A,$C0,$B5                 ; 9896 0D 0A C0 B5              ....
+        .byte   $0D,$0A                         ; 9896 0D 0A                    ..
+L9898:
+        .byte   $C0,$B5                         ; 9898 C0 B5                    ..
         .byte   "Hail  "                        ; 989A 48 61 69 6C 20 20        Hail  
-        .byte   $0D,$0A,$C0,$B5                 ; 98A0 0D 0A C0 B5              ....
+        .byte   $0D,$0A                         ; 98A0 0D 0A                    ..
+L98A2:
+        .byte   $C0,$B5                         ; 98A2 C0 B5                    ..
         .byte   "Ice2 "                         ; 98A4 49 63 65 32 20           Ice2 
-        .byte   $0D,$0A,$C0,$B5                 ; 98A9 0D 0A C0 B5              ....
+        .byte   $0D,$0A                         ; 98A9 0D 0A                    ..
+L98AB:
+        .byte   $C0,$B5                         ; 98AB C0 B5                    ..
         .byte   "Hail2 "                        ; 98AD 48 61 69 6C 32 20        Hail2 
-        .byte   $0D,$0A,$C0,$B5                 ; 98B3 0D 0A C0 B5              ....
+        .byte   $0D,$0A                         ; 98B3 0D 0A                    ..
+L98B5:
+        .byte   $C0,$B5                         ; 98B5 C0 B5                    ..
         .byte   "Ice3 "                         ; 98B7 49 63 65 33 20           Ice3 
-        .byte   $0D,$0A,$C0,$B5                 ; 98BC 0D 0A C0 B5              ....
+        .byte   $0D,$0A                         ; 98BC 0D 0A                    ..
+L98BE:
+        .byte   $C0,$B5                         ; 98BE C0 B5                    ..
         .byte   "Hail3 "                        ; 98C0 48 61 69 6C 33 20        Hail3 
-        .byte   $0D,$0A,$C0,$B5                 ; 98C6 0D 0A C0 B5              ....
+        .byte   $0D,$0A                         ; 98C6 0D 0A                    ..
+L98C8:
+        .byte   $C0,$B5                         ; 98C8 C0 B5                    ..
         .byte   "Ice4 "                         ; 98CA 49 63 65 34 20           Ice4 
-        .byte   $0D,$0A,$C0,$B5                 ; 98CF 0D 0A C0 B5              ....
+        .byte   $0D,$0A                         ; 98CF 0D 0A                    ..
+L98D1:
+        .byte   $C0,$B5                         ; 98D1 C0 B5                    ..
         .byte   "Hail4 "                        ; 98D3 48 61 69 6C 34 20        Hail4 
-        .byte   $0D,$0A,$C0,$B5                 ; 98D9 0D 0A C0 B5              ....
+        .byte   $0D,$0A                         ; 98D9 0D 0A                    ..
+L98DB:
+        .byte   $C0,$B5                         ; 98DB C0 B5                    ..
         .byte   "Shiva"                         ; 98DD 53 68 69 76 61           Shiva
         .byte   $0D,$FF,$FF                     ; 98E2 0D FF FF                 ...
+; ----------------------------------------------------------------------------
 L98E5:
-        .byte   "%"                             ; 98E5 25                       %
-        .byte   $99                             ; 98E6 99                       .
-        .byte   "+"                             ; 98E7 2B                       +
-        .byte   $99                             ; 98E8 99                       .
-        .byte   "3"                             ; 98E9 33                       3
-        .byte   $99                             ; 98EA 99                       .
-        .byte   "="                             ; 98EB 3D                       =
-        .byte   $99                             ; 98EC 99                       .
-        .byte   "G"                             ; 98ED 47                       G
-        .byte   $99                             ; 98EE 99                       .
-        .byte   "Q"                             ; 98EF 51                       Q
-        .byte   $99                             ; 98F0 99                       .
-        .byte   "W"                             ; 98F1 57                       W
-        .byte   $99                             ; 98F2 99                       .
-        .byte   "_"                             ; 98F3 5F                       _
-        .byte   $99                             ; 98F4 99                       .
-        .byte   "g"                             ; 98F5 67                       g
-        .byte   $99                             ; 98F6 99                       .
-        .byte   "n"                             ; 98F7 6E                       n
-        .byte   $99                             ; 98F8 99                       .
-        .byte   "w"                             ; 98F9 77                       w
-        .byte   $99,$80,$99                     ; 98FA 99 80 99                 ...
-        .byte   " "                             ; 98FD 20                        
-        .byte   $A4,$8C,$99,$92,$99,$98,$99,$9E ; 98FE A4 8C 99 92 99 98 99 9E  ........
-        .byte   $99,$A4,$99,$AA,$99,$B3,$99,$BD ; 9906 99 A4 99 AA 99 B3 99 BD  ........
-        .byte   $99,$C7,$99,$D1,$99,$D9,$99,$E3 ; 990E 99 C7 99 D1 99 D9 99 E3  ........
-        .byte   $99,$ED,$99,$F7,$99,$01,$9A,$0B ; 9916 99 ED 99 F7 99 01 9A 0B  ........
-        .byte   $9A,$15,$9A,$1F,$9A             ; 991E 9A 15 9A 1F 9A           .....
-        .byte   ")"                             ; 9923 29                       )
-        .byte   $9A                             ; 9924 9A                       .
+        .addr   L9925                           ; 98E5 25 99                    %.
+        .addr   L992B                           ; 98E7 2B 99                    +.
+        .addr   L9933                           ; 98E9 33 99                    3.
+        .addr   L993D                           ; 98EB 3D 99                    =.
+        .addr   L9947                           ; 98ED 47 99                    G.
+        .addr   L9951                           ; 98EF 51 99                    Q.
+        .addr   L9957                           ; 98F1 57 99                    W.
+        .addr   L995F                           ; 98F3 5F 99                    _.
+        .addr   L9967                           ; 98F5 67 99                    g.
+        .addr   L996E                           ; 98F7 6E 99                    n.
+        .addr   L9977                           ; 98F9 77 99                    w.
+        .addr   L9980                           ; 98FB 80 99                    ..
+        .addr   LA420                           ; 98FD 20 A4                     .
+        .addr   L998C                           ; 98FF 8C 99                    ..
+        .addr   L9992                           ; 9901 92 99                    ..
+        .addr   L9998                           ; 9903 98 99                    ..
+        .addr   L999E                           ; 9905 9E 99                    ..
+        .addr   L99A4                           ; 9907 A4 99                    ..
+        .addr   L99AA                           ; 9909 AA 99                    ..
+        .addr   L99B3                           ; 990B B3 99                    ..
+        .addr   L99BD                           ; 990D BD 99                    ..
+        .addr   L99C7                           ; 990F C7 99                    ..
+        .addr   L99D1                           ; 9911 D1 99                    ..
+        .addr   L99D9                           ; 9913 D9 99                    ..
+        .addr   L99E3                           ; 9915 E3 99                    ..
+        .addr   L99ED                           ; 9917 ED 99                    ..
+        .addr   L99F7                           ; 9919 F7 99                    ..
+        .addr   L9A01                           ; 991B 01 9A                    ..
+        .addr   L9A0B                           ; 991D 0B 9A                    ..
+        .addr   L9A15                           ; 991F 15 9A                    ..
+        .addr   L9A1F                           ; 9921 1F 9A                    ..
+        .addr   L9A29                           ; 9923 29 9A                    ).
+; ----------------------------------------------------------------------------
+L9925:
         .byte   "None"                          ; 9925 4E 6F 6E 65              None
         .byte   $0D,$0A                         ; 9929 0D 0A                    ..
+L992B:
         .byte   "Potion"                        ; 992B 50 6F 74 69 6F 6E        Potion
         .byte   $0D,$0A                         ; 9931 0D 0A                    ..
+L9933:
         .byte   "Hi-Potion"                     ; 9933 48 69 2D 50 6F 74 69 6F  Hi-Potio
                                                 ; 993B 6E                       n
         .byte   $0D                             ; 993C 0D                       .
+L993D:
         .byte   "Low-Mega"                      ; 993D 4C 6F 77 2D 4D 65 67 61  Low-Mega
         .byte   $0D,$0A                         ; 9945 0D 0A                    ..
+L9947:
         .byte   "X-Potion"                      ; 9947 58 2D 50 6F 74 69 6F 6E  X-Potion
         .byte   $0D,$0A                         ; 994F 0D 0A                    ..
+L9951:
         .byte   "Mega"                          ; 9951 4D 65 67 61              Mega
         .byte   $0D,$0A                         ; 9955 0D 0A                    ..
+L9957:
         .byte   "Hi-Mega"                       ; 9957 48 69 2D 4D 65 67 61     Hi-Mega
         .byte   $0D                             ; 995E 0D                       .
+L995F:
         .byte   "X-Mega"                        ; 995F 58 2D 4D 65 67 61        X-Mega
         .byte   $0D,$0A                         ; 9965 0D 0A                    ..
+L9967:
         .byte   "Ether"                         ; 9967 45 74 68 65 72           Ether
         .byte   $0D,$0A                         ; 996C 0D 0A                    ..
+L996E:
         .byte   "Hi-Ether"                      ; 996E 48 69 2D 45 74 68 65 72  Hi-Ether
         .byte   $0D                             ; 9976 0D                       .
+L9977:
         .byte   "Phoenix"                       ; 9977 50 68 6F 65 6E 69 78     Phoenix
         .byte   $0D,$0A                         ; 997E 0D 0A                    ..
+L9980:
         .byte   "Smoke"                         ; 9980 53 6D 6F 6B 65           Smoke
         .byte   $0D,$0A                         ; 9985 0D 0A                    ..
         .byte   "HP+"                           ; 9987 48 50 2B                 HP+
         .byte   $0D,$0A                         ; 998A 0D 0A                    ..
+L998C:
         .byte   "Str+"                          ; 998C 53 74 72 2B              Str+
         .byte   $0D,$0A                         ; 9990 0D 0A                    ..
+L9992:
         .byte   "Vit+"                          ; 9992 56 69 74 2B              Vit+
         .byte   $0D,$0A                         ; 9996 0D 0A                    ..
+L9998:
         .byte   "Int+"                          ; 9998 49 6E 74 2B              Int+
         .byte   $0D,$0A                         ; 999C 0D 0A                    ..
+L999E:
         .byte   "Spr+"                          ; 999E 53 70 72 2B              Spr+
         .byte   $0D,$0A                         ; 99A2 0D 0A                    ..
+L99A4:
         .byte   "Agl+"                          ; 99A4 41 67 6C 2B              Agl+
         .byte   $0D,$0A                         ; 99A8 0D 0A                    ..
+L99AA:
         .byte   "Battery"                       ; 99AA 42 61 74 74 65 72 79     Battery
         .byte   $0D,$0A                         ; 99B1 0D 0A                    ..
+L99B3:
         .byte   "ChocLure"                      ; 99B3 43 68 6F 63 4C 75 72 65  ChocLure
         .byte   $0D,$0A                         ; 99BB 0D 0A                    ..
+L99BD:
         .byte   "DynePend"                      ; 99BD 44 79 6E 65 50 65 6E 64  DynePend
         .byte   $0D,$0A                         ; 99C5 0D 0A                    ..
+L99C7:
         .byte   "KeyStone"                      ; 99C7 4B 65 79 53 74 6F 6E 65  KeyStone
         .byte   $0D,$0A                         ; 99CF 0D 0A                    ..
+L99D1:
         .byte   "Black"                         ; 99D1 42 6C 61 63 6B           Black
         .byte   $87,$0D,$0A                     ; 99D6 87 0D 0A                 ...
+L99D9:
         .byte   "LunrHarp"                      ; 99D9 4C 75 6E 72 48 61 72 70  LunrHarp
         .byte   $0D,$0A                         ; 99E1 0D 0A                    ..
+L99E3:
         .byte   "61F Card"                      ; 99E3 36 31 46 20 43 61 72 64  61F Card
         .byte   $0D,$0A                         ; 99EB 0D 0A                    ..
+L99ED:
         .byte   "62F Card"                      ; 99ED 36 32 46 20 43 61 72 64  62F Card
         .byte   $0D,$0A                         ; 99F5 0D 0A                    ..
+L99F7:
         .byte   "64F Card"                      ; 99F7 36 34 46 20 43 61 72 64  64F Card
         .byte   $0D,$0A                         ; 99FF 0D 0A                    ..
+L9A01:
         .byte   "65F Card"                      ; 9A01 36 35 46 20 43 61 72 64  65F Card
         .byte   $0D,$0A                         ; 9A09 0D 0A                    ..
+L9A0B:
         .byte   "66F Card"                      ; 9A0B 36 36 46 20 43 61 72 64  66F Card
         .byte   $0D,$0A                         ; 9A13 0D 0A                    ..
+L9A15:
         .byte   "68F Card"                      ; 9A15 36 38 46 20 43 61 72 64  68F Card
         .byte   $0D,$0A                         ; 9A1D 0D 0A                    ..
+L9A1F:
         .byte   "Snowbord"                      ; 9A1F 53 6E 6F 77 62 6F 72 64  Snowbord
         .byte   $0D,$0A                         ; 9A27 0D 0A                    ..
+L9A29:
         .byte   "Map"                           ; 9A29 4D 61 70                 Map
         .byte   $0D,$0A,$FF,$FF                 ; 9A2C 0D 0A FF FF              ....
+; ----------------------------------------------------------------------------
 L9A30:
-        .byte   "p"                             ; 9A30 70                       p
-        .byte   $9A                             ; 9A31 9A                       .
-        .byte   "R"                             ; 9A32 52                       R
-        .byte   $A4                             ; 9A33 A4                       .
-        .byte   "s"                             ; 9A34 73                       s
-        .byte   $A4,$BB,$A4,$97,$A4,$D9,$A4,$F7 ; 9A35 A4 BB A4 97 A4 D9 A4 F7  ........
-        .byte   $A4,$15,$A5                     ; 9A3D A4 15 A5                 ...
-        .byte   "6"                             ; 9A40 36                       6
-        .byte   $A5                             ; 9A41 A5                       .
-        .byte   "V"                             ; 9A42 56                       V
-        .byte   $A5                             ; 9A43 A5                       .
-        .byte   "{"                             ; 9A44 7B                       {
-        .byte   $A5,$AA,$A5                     ; 9A45 A5 AA A5                 ...
-        .byte   "+"                             ; 9A48 2B                       +
-        .byte   $A4,$87,$9B,$94,$9B,$A1,$9B,$B2 ; 9A49 A4 87 9B 94 9B A1 9B B2  ........
-        .byte   $9B,$BD,$9B,$C9,$9B,$DE,$9B,$FA ; 9A51 9B BD 9B C9 9B DE 9B FA  ........
-        .byte   $9B,$0A,$9C                     ; 9A59 9B 0A 9C                 ...
-        .byte   "'"                             ; 9A5C 27                       '
-        .byte   $9C                             ; 9A5D 9C                       .
-        .byte   "K"                             ; 9A5E 4B                       K
-        .byte   $9C                             ; 9A5F 9C                       .
-        .byte   "f"                             ; 9A60 66                       f
-        .byte   $9C                             ; 9A61 9C                       .
-        .byte   "r"                             ; 9A62 72                       r
-        .byte   $9C                             ; 9A63 9C                       .
-        .byte   "~"                             ; 9A64 7E                       ~
-        .byte   $9C,$8A,$9C,$96,$9C,$A2,$9C,$AE ; 9A65 9C 8A 9C 96 9C A2 9C AE  ........
-        .byte   $9C,$CA,$9C                     ; 9A6D 9C CA 9C                 ...
+        .addr   L9A70                           ; 9A30 70 9A                    p.
+        .addr   LA452                           ; 9A32 52 A4                    R.
+        .addr   LA473                           ; 9A34 73 A4                    s.
+        .addr   LA4BB                           ; 9A36 BB A4                    ..
+        .addr   LA497                           ; 9A38 97 A4                    ..
+        .addr   LA4D9                           ; 9A3A D9 A4                    ..
+        .addr   LA4F7                           ; 9A3C F7 A4                    ..
+        .addr   LA515                           ; 9A3E 15 A5                    ..
+        .addr   LA536                           ; 9A40 36 A5                    6.
+        .addr   LA556                           ; 9A42 56 A5                    V.
+        .addr   LA57B                           ; 9A44 7B A5                    {.
+        .addr   LA5AA                           ; 9A46 AA A5                    ..
+        .addr   LA42B                           ; 9A48 2B A4                    +.
+        .addr   L9B87                           ; 9A4A 87 9B                    ..
+        .addr   L9B94                           ; 9A4C 94 9B                    ..
+        .addr   L9BA1                           ; 9A4E A1 9B                    ..
+        .addr   L9BB2                           ; 9A50 B2 9B                    ..
+        .addr   L9BBD                           ; 9A52 BD 9B                    ..
+        .addr   L9BC9                           ; 9A54 C9 9B                    ..
+        .addr   L9BDE                           ; 9A56 DE 9B                    ..
+        .addr   L9BFA                           ; 9A58 FA 9B                    ..
+        .addr   L9C0A                           ; 9A5A 0A 9C                    ..
+        .addr   L9C27                           ; 9A5C 27 9C                    '.
+        .addr   L9C4B                           ; 9A5E 4B 9C                    K.
+        .addr   L9C66                           ; 9A60 66 9C                    f.
+        .addr   L9C72                           ; 9A62 72 9C                    r.
+        .addr   L9C7E                           ; 9A64 7E 9C                    ~.
+        .addr   L9C8A                           ; 9A66 8A 9C                    ..
+        .addr   L9C96                           ; 9A68 96 9C                    ..
+        .addr   L9CA2                           ; 9A6A A2 9C                    ..
+        .addr   L9CAE                           ; 9A6C AE 9C                    ..
+        .addr   L9CCA                           ; 9A6E CA 9C                    ..
+; ----------------------------------------------------------------------------
+L9A70:
         .byte   "Nothing__"                     ; 9A70 4E 6F 74 68 69 6E 67 5F  Nothing_
                                                 ; 9A78 5F                       _
         .byte   $0D,$0A                         ; 9A79 0D 0A                    ..
@@ -2358,230 +2905,306 @@ L9A30:
         .byte   "Max HP +50"                    ; 9B7C 4D 61 78 20 48 50 20 2B  Max HP +
                                                 ; 9B84 35 30                    50
         .byte   $0D                             ; 9B86 0D                       .
+L9B87:
         .byte   "Strength +1 "                  ; 9B87 53 74 72 65 6E 67 74 68  Strength
                                                 ; 9B8F 20 2B 31 20               +1 
         .byte   $0D                             ; 9B93 0D                       .
+L9B94:
         .byte   "Vitality +1 "                  ; 9B94 56 69 74 61 6C 69 74 79  Vitality
                                                 ; 9B9C 20 2B 31 20               +1 
         .byte   $0D                             ; 9BA0 0D                       .
+L9BA1:
         .byte   "Intelligence +1 "              ; 9BA1 49 6E 74 65 6C 6C 69 67  Intellig
                                                 ; 9BA9 65 6E 63 65 20 2B 31 20  ence +1 
         .byte   $0D                             ; 9BB1 0D                       .
+L9BB2:
         .byte   "Spirit +1 "                    ; 9BB2 53 70 69 72 69 74 20 2B  Spirit +
                                                 ; 9BBA 31 20                    1 
         .byte   $0D                             ; 9BBC 0D                       .
+L9BBD:
         .byte   "Agility +1 "                   ; 9BBD 41 67 69 6C 69 74 79 20  Agility 
                                                 ; 9BC5 2B 31 20                 +1 
         .byte   $0D                             ; 9BC8 0D                       .
+L9BC9:
         .byte   "Provide electricity"           ; 9BC9 50 72 6F 76 69 64 65 20  Provide 
                                                 ; 9BD1 65 6C 65 63 74 72 69 63  electric
                                                 ; 9BD9 69 74 79                 ity
         .byte   $0D,$0A                         ; 9BDC 0D 0A                    ..
+L9BDE:
         .byte   "Need this to catch chocobo"    ; 9BDE 4E 65 65 64 20 74 68 69  Need thi
                                                 ; 9BE6 73 20 74 6F 20 63 61 74  s to cat
                                                 ; 9BEE 63 68 20 63 68 6F 63 6F  ch choco
                                                 ; 9BF6 62 6F                    bo
         .byte   $0D,$0A                         ; 9BF8 0D 0A                    ..
+L9BFA:
         .byte   "Dyne's Pendant"                ; 9BFA 44 79 6E 65 27 73 20 50  Dyne's P
                                                 ; 9C02 65 6E 64 61 6E 74        endant
         .byte   $0D,$0A                         ; 9C08 0D 0A                    ..
+L9C0A:
         .byte   "Enter Temple of theAncients"   ; 9C0A 45 6E 74 65 72 20 54 65  Enter Te
                                                 ; 9C12 6D 70 6C 65 20 6F 66 20  mple of 
                                                 ; 9C1A 74 68 65 41 6E 63 69 65  theAncie
                                                 ; 9C22 6E 74 73                 nts
         .byte   $0D,$0A                         ; 9C25 0D 0A                    ..
+L9C27:
         .byte   "Summon Meteor      __Don't do t"; 9C27 53 75 6D 6D 6F 6E 20 4D Summon M
                                                 ; 9C2F 65 74 65 6F 72 20 20 20  eteor   
                                                 ; 9C37 20 20 20 5F 5F 44 6F 6E     __Don
                                                 ; 9C3F 27 74 20 64 6F 20 74     't do t
         .byte   "hat"                           ; 9C46 68 61 74                 hat
         .byte   $0D,$0A                         ; 9C49 0D 0A                    ..
+L9C4B:
         .byte   "Awaken Sleeping    Forest"     ; 9C4B 41 77 61 6B 65 6E 20 53  Awaken S
                                                 ; 9C53 6C 65 65 70 69 6E 67 20  leeping 
                                                 ; 9C5B 20 20 20 46 6F 72 65 73     Fores
                                                 ; 9C63 74                       t
         .byte   $0D,$0A                         ; 9C64 0D 0A                    ..
+L9C66:
         .byte   "Access 61F"                    ; 9C66 41 63 63 65 73 73 20 36  Access 6
                                                 ; 9C6E 31 46                    1F
         .byte   $0D,$0A                         ; 9C70 0D 0A                    ..
+L9C72:
         .byte   "Access 62F"                    ; 9C72 41 63 63 65 73 73 20 36  Access 6
                                                 ; 9C7A 32 46                    2F
         .byte   $0D,$0A                         ; 9C7C 0D 0A                    ..
+L9C7E:
         .byte   "Access 64F"                    ; 9C7E 41 63 63 65 73 73 20 36  Access 6
                                                 ; 9C86 34 46                    4F
         .byte   $0D,$0A                         ; 9C88 0D 0A                    ..
+L9C8A:
         .byte   "Access 65F"                    ; 9C8A 41 63 63 65 73 73 20 36  Access 6
                                                 ; 9C92 35 46                    5F
         .byte   $0D,$0A                         ; 9C94 0D 0A                    ..
+L9C96:
         .byte   "Access 66F"                    ; 9C96 41 63 63 65 73 73 20 36  Access 6
                                                 ; 9C9E 36 46                    6F
         .byte   $0D,$0A                         ; 9CA0 0D 0A                    ..
+L9CA2:
         .byte   "Access 68F"                    ; 9CA2 41 63 63 65 73 73 20 36  Access 6
                                                 ; 9CAA 38 46                    8F
         .byte   $0D,$0A                         ; 9CAC 0D 0A                    ..
+L9CAE:
         .byte   "Get to Great       Glacier"    ; 9CAE 47 65 74 20 74 6F 20 47  Get to G
                                                 ; 9CB6 72 65 61 74 20 20 20 20  reat    
                                                 ; 9CBE 20 20 20 47 6C 61 63 69     Glaci
                                                 ; 9CC6 65 72                    er
         .byte   $0D,$0A                         ; 9CC8 0D 0A                    ..
+L9CCA:
         .byte   "Map of Great       Glacier"    ; 9CCA 4D 61 70 20 6F 66 20 47  Map of G
                                                 ; 9CD2 72 65 61 74 20 20 20 20  reat    
                                                 ; 9CDA 20 20 20 47 6C 61 63 69     Glaci
                                                 ; 9CE2 65 72                    er
         .byte   $0D,$0A,$FF,$FF                 ; 9CE4 0D 0A FF FF              ....
+; ----------------------------------------------------------------------------
 L9CE8:
-        .byte   $B0,$9D,$B9,$9D,$C0,$9D,$C8,$9D ; 9CE8 B0 9D B9 9D C0 9D C8 9D  ........
-        .byte   $CE,$9D,$D5,$9D,$DC,$9D,$E6,$9D ; 9CF0 CE 9D D5 9D DC 9D E6 9D  ........
-        .byte   $EB,$9D,$F4,$9D,$FE,$9D,$08,$9E ; 9CF8 EB 9D F4 9D FE 9D 08 9E  ........
-        .byte   $0E,$9E,$16,$9E,$B0,$9D         ; 9D00 0E 9E 16 9E B0 9D        ......
-        .byte   "%"                             ; 9D06 25                       %
-        .byte   $9E                             ; 9D07 9E                       .
-        .byte   "*"                             ; 9D08 2A                       *
-        .byte   $9E                             ; 9D09 9E                       .
-        .byte   "4"                             ; 9D0A 34                       4
-        .byte   $9E                             ; 9D0B 9E                       .
-        .byte   ">"                             ; 9D0C 3E                       >
-        .byte   $9E                             ; 9D0D 9E                       .
-        .byte   "E"                             ; 9D0E 45                       E
-        .byte   $9E                             ; 9D0F 9E                       .
-        .byte   "O"                             ; 9D10 4F                       O
-        .byte   $9E                             ; 9D11 9E                       .
-        .byte   "Y"                             ; 9D12 59                       Y
-        .byte   $9E                             ; 9D13 9E                       .
-        .byte   "c"                             ; 9D14 63                       c
-        .byte   $9E                             ; 9D15 9E                       .
-        .byte   "k"                             ; 9D16 6B                       k
-        .byte   $9E                             ; 9D17 9E                       .
-        .byte   "q"                             ; 9D18 71                       q
-        .byte   $9E                             ; 9D19 9E                       .
-        .byte   "w"                             ; 9D1A 77                       w
-        .byte   $9E,$81,$9E,$85,$9E,$8D,$9E,$97 ; 9D1B 9E 81 9E 85 9E 8D 9E 97  ........
-        .byte   $9E,$A1,$9E,$A8,$9E,$B2,$9E,$BB ; 9D23 9E A1 9E A8 9E B2 9E BB  ........
-        .byte   $9E,$C5,$9E,$CB,$A1,$D4,$9E,$DC ; 9D2B 9E C5 9E CB A1 D4 9E DC  ........
-        .byte   $A1,$E6,$A1,$F0,$A1,$F9,$A1,$01 ; 9D33 A1 E6 A1 F0 A1 F9 A1 01  ........
-        .byte   $A2,$0B,$A2,$15,$A2,$1E,$A2     ; 9D3B A2 0B A2 15 A2 1E A2     .......
-        .byte   "'"                             ; 9D42 27                       '
-        .byte   $A2                             ; 9D43 A2                       .
-        .byte   "/"                             ; 9D44 2F                       /
-        .byte   $A2                             ; 9D45 A2                       .
-        .byte   "7"                             ; 9D46 37                       7
-        .byte   $A2                             ; 9D47 A2                       .
-        .byte   "?"                             ; 9D48 3F                       ?
-        .byte   $A2                             ; 9D49 A2                       .
-        .byte   "H"                             ; 9D4A 48                       H
-        .byte   $A2                             ; 9D4B A2                       .
-        .byte   "R"                             ; 9D4C 52                       R
-        .byte   $A2                             ; 9D4D A2                       .
-        .byte   "\"                             ; 9D4E 5C                       \
-        .byte   $A2                             ; 9D4F A2                       .
-        .byte   "f"                             ; 9D50 66                       f
-        .byte   $A2                             ; 9D51 A2                       .
-        .byte   "o"                             ; 9D52 6F                       o
-        .byte   $A2                             ; 9D53 A2                       .
-        .byte   "s"                             ; 9D54 73                       s
-        .byte   $A2                             ; 9D55 A2                       .
-        .byte   "}"                             ; 9D56 7D                       }
-        .byte   $A2,$84,$A2,$8E,$A2,$98,$A2,$A2 ; 9D57 A2 84 A2 8E A2 98 A2 A2  ........
-        .byte   $A2,$AC,$A2,$B6,$A2,$BF,$A2,$C5 ; 9D5F A2 AC A2 B6 A2 BF A2 C5  ........
-        .byte   $A2,$CF,$A2,$D8,$A2,$DF,$A2,$E9 ; 9D67 A2 CF A2 D8 A2 DF A2 E9  ........
-        .byte   $A2,$F3,$A2,$FD,$A2,$07,$A3,$10 ; 9D6F A2 F3 A2 FD A2 07 A3 10  ........
-        .byte   $A3,$18,$A3,$22,$A3             ; 9D77 A3 18 A3 22 A3           ...".
-        .byte   "+"                             ; 9D7C 2B                       +
-        .byte   $A3                             ; 9D7D A3                       .
-        .byte   "5"                             ; 9D7E 35                       5
-        .byte   $A3                             ; 9D7F A3                       .
-        .byte   ";"                             ; 9D80 3B                       ;
-        .byte   $A3                             ; 9D81 A3                       .
-        .byte   "B"                             ; 9D82 42                       B
-        .byte   $A3                             ; 9D83 A3                       .
-        .byte   "J"                             ; 9D84 4A                       J
-        .byte   $A3                             ; 9D85 A3                       .
-        .byte   "T"                             ; 9D86 54                       T
-        .byte   $A3                             ; 9D87 A3                       .
-        .byte   "]"                             ; 9D88 5D                       ]
-        .byte   $A3                             ; 9D89 A3                       .
-        .byte   "e"                             ; 9D8A 65                       e
-        .byte   $A3                             ; 9D8B A3                       .
-        .byte   "o"                             ; 9D8C 6F                       o
-        .byte   $A3                             ; 9D8D A3                       .
-        .byte   "y"                             ; 9D8E 79                       y
-        .byte   $A3,$83,$A3,$8C,$A3,$96,$A3,$9F ; 9D8F A3 83 A3 8C A3 96 A3 9F  ........
-        .byte   $A3,$A9,$A3,$B1,$A3,$BB,$A3,$C4 ; 9D97 A3 A9 A3 B1 A3 BB A3 C4  ........
-        .byte   $A3,$CE,$A3,$D8,$A3,$E0,$A3,$EA ; 9D9F A3 CE A3 D8 A3 E0 A3 EA  ........
-        .byte   $A3,$F4,$A3,$FE,$A3,$08,$A4,$11 ; 9DA7 A3 F4 A3 FE A3 08 A4 11  ........
-        .byte   $A4                             ; 9DAF A4                       .
+        .addr   L9DB0                           ; 9CE8 B0 9D                    ..
+        .addr   L9DB9                           ; 9CEA B9 9D                    ..
+        .addr   L9DC0                           ; 9CEC C0 9D                    ..
+        .addr   L9DC8                           ; 9CEE C8 9D                    ..
+        .addr   L9DCE                           ; 9CF0 CE 9D                    ..
+        .addr   L9DD5                           ; 9CF2 D5 9D                    ..
+        .addr   L9DDC                           ; 9CF4 DC 9D                    ..
+        .addr   L9DE6                           ; 9CF6 E6 9D                    ..
+        .addr   L9DEB                           ; 9CF8 EB 9D                    ..
+        .addr   L9DF4                           ; 9CFA F4 9D                    ..
+        .addr   L9DFE                           ; 9CFC FE 9D                    ..
+        .addr   L9E08                           ; 9CFE 08 9E                    ..
+        .addr   L9E0E                           ; 9D00 0E 9E                    ..
+        .addr   L9E16                           ; 9D02 16 9E                    ..
+        .addr   L9DB0                           ; 9D04 B0 9D                    ..
+        .addr   L9E25                           ; 9D06 25 9E                    %.
+        .addr   L9E2A                           ; 9D08 2A 9E                    *.
+        .addr   L9E34                           ; 9D0A 34 9E                    4.
+        .addr   L9E3E                           ; 9D0C 3E 9E                    >.
+        .addr   L9E45                           ; 9D0E 45 9E                    E.
+        .addr   L9E4F                           ; 9D10 4F 9E                    O.
+        .addr   L9E59                           ; 9D12 59 9E                    Y.
+        .addr   L9E63                           ; 9D14 63 9E                    c.
+        .addr   L9E6B                           ; 9D16 6B 9E                    k.
+        .addr   L9E71                           ; 9D18 71 9E                    q.
+        .addr   L9E77                           ; 9D1A 77 9E                    w.
+        .addr   L9E81                           ; 9D1C 81 9E                    ..
+        .addr   L9E85                           ; 9D1E 85 9E                    ..
+        .addr   L9E8D                           ; 9D20 8D 9E                    ..
+        .addr   L9E97                           ; 9D22 97 9E                    ..
+        .addr   L9EA1                           ; 9D24 A1 9E                    ..
+        .addr   L9EA8                           ; 9D26 A8 9E                    ..
+        .addr   L9EB2                           ; 9D28 B2 9E                    ..
+        .addr   L9EBB                           ; 9D2A BB 9E                    ..
+        .addr   L9EC5                           ; 9D2C C5 9E                    ..
+        .addr   LA1CB                           ; 9D2E CB A1                    ..
+        .addr   L9ED4                           ; 9D30 D4 9E                    ..
+        .addr   LA1DC                           ; 9D32 DC A1                    ..
+        .addr   LA1E6                           ; 9D34 E6 A1                    ..
+        .addr   LA1F0                           ; 9D36 F0 A1                    ..
+        .addr   LA1F9                           ; 9D38 F9 A1                    ..
+        .addr   LA201                           ; 9D3A 01 A2                    ..
+        .addr   LA20B                           ; 9D3C 0B A2                    ..
+        .addr   LA215                           ; 9D3E 15 A2                    ..
+        .addr   LA21E                           ; 9D40 1E A2                    ..
+        .addr   LA227                           ; 9D42 27 A2                    '.
+        .addr   LA22F                           ; 9D44 2F A2                    /.
+        .addr   LA237                           ; 9D46 37 A2                    7.
+        .addr   LA23F                           ; 9D48 3F A2                    ?.
+        .addr   LA248                           ; 9D4A 48 A2                    H.
+        .addr   LA252                           ; 9D4C 52 A2                    R.
+        .addr   LA25C                           ; 9D4E 5C A2                    \.
+        .addr   LA266                           ; 9D50 66 A2                    f.
+        .addr   LA26F                           ; 9D52 6F A2                    o.
+        .addr   LA273                           ; 9D54 73 A2                    s.
+        .addr   LA27D                           ; 9D56 7D A2                    }.
+        .addr   LA284                           ; 9D58 84 A2                    ..
+        .addr   LA28E                           ; 9D5A 8E A2                    ..
+        .addr   LA298                           ; 9D5C 98 A2                    ..
+        .addr   LA2A2                           ; 9D5E A2 A2                    ..
+        .addr   LA2AC                           ; 9D60 AC A2                    ..
+        .addr   LA2B6                           ; 9D62 B6 A2                    ..
+        .addr   LA2BF                           ; 9D64 BF A2                    ..
+        .addr   LA2C5                           ; 9D66 C5 A2                    ..
+        .addr   LA2CF                           ; 9D68 CF A2                    ..
+        .addr   LA2D8                           ; 9D6A D8 A2                    ..
+        .addr   LA2DF                           ; 9D6C DF A2                    ..
+        .addr   LA2E9                           ; 9D6E E9 A2                    ..
+        .addr   LA2F3                           ; 9D70 F3 A2                    ..
+        .addr   LA2FD                           ; 9D72 FD A2                    ..
+        .addr   LA307                           ; 9D74 07 A3                    ..
+        .addr   LA310                           ; 9D76 10 A3                    ..
+        .addr   LA318                           ; 9D78 18 A3                    ..
+        .addr   LA322                           ; 9D7A 22 A3                    ".
+        .addr   LA32B                           ; 9D7C 2B A3                    +.
+        .addr   LA335                           ; 9D7E 35 A3                    5.
+        .addr   LA33B                           ; 9D80 3B A3                    ;.
+        .addr   LA342                           ; 9D82 42 A3                    B.
+        .addr   LA34A                           ; 9D84 4A A3                    J.
+        .addr   LA354                           ; 9D86 54 A3                    T.
+        .addr   LA35D                           ; 9D88 5D A3                    ].
+        .addr   LA365                           ; 9D8A 65 A3                    e.
+        .addr   LA36F                           ; 9D8C 6F A3                    o.
+        .addr   LA379                           ; 9D8E 79 A3                    y.
+        .addr   LA383                           ; 9D90 83 A3                    ..
+        .addr   LA38C                           ; 9D92 8C A3                    ..
+        .addr   LA396                           ; 9D94 96 A3                    ..
+        .addr   LA39F                           ; 9D96 9F A3                    ..
+        .addr   LA3A9                           ; 9D98 A9 A3                    ..
+        .addr   LA3B1                           ; 9D9A B1 A3                    ..
+        .addr   LA3BB                           ; 9D9C BB A3                    ..
+        .addr   LA3C4                           ; 9D9E C4 A3                    ..
+        .addr   LA3CE                           ; 9DA0 CE A3                    ..
+        .addr   LA3D8                           ; 9DA2 D8 A3                    ..
+        .addr   LA3E0                           ; 9DA4 E0 A3                    ..
+        .addr   LA3EA                           ; 9DA6 EA A3                    ..
+        .addr   LA3F4                           ; 9DA8 F4 A3                    ..
+        .addr   LA3FE                           ; 9DAA FE A3                    ..
+        .addr   LA408                           ; 9DAC 08 A4                    ..
+        .addr   LA411                           ; 9DAE 11 A4                    ..
+; ----------------------------------------------------------------------------
+L9DB0:
         .byte   "Lugia209"                      ; 9DB0 4C 75 67 69 61 32 30 39  Lugia209
         .byte   $0D                             ; 9DB8 0D                       .
+L9DB9:
         .byte   "Cloud"                         ; 9DB9 43 6C 6F 75 64           Cloud
         .byte   $0D,$0A                         ; 9DBE 0D 0A                    ..
+L9DC0:
         .byte   "Barret"                        ; 9DC0 42 61 72 72 65 74        Barret
         .byte   $0D,$0A                         ; 9DC6 0D 0A                    ..
+L9DC8:
         .byte   "Tifa"                          ; 9DC8 54 69 66 61              Tifa
         .byte   $0D,$0A                         ; 9DCC 0D 0A                    ..
+L9DCE:
         .byte   "Aeris"                         ; 9DCE 41 65 72 69 73           Aeris
         .byte   $0D,$0A                         ; 9DD3 0D 0A                    ..
+L9DD5:
         .byte   "RedX`"                         ; 9DD5 52 65 64 58 60           RedX`
         .byte   $0D,$0A                         ; 9DDA 0D 0A                    ..
+L9DDC:
         .byte   "CaitSith"                      ; 9DDC 43 61 69 74 53 69 74 68  CaitSith
         .byte   $0D,$0A                         ; 9DE4 0D 0A                    ..
+L9DE6:
         .byte   "Cid"                           ; 9DE6 43 69 64                 Cid
         .byte   $0D,$0A                         ; 9DE9 0D 0A                    ..
+L9DEB:
         .byte   "Guard"                         ; 9DEB 47 75 61 72 64           Guard
         .byte   $0D,$0A                         ; 9DF0 0D 0A                    ..
-        .byte   "00Scorpion"                    ; 9DF2 30 30 53 63 6F 72 70 69  00Scorpi
-                                                ; 9DFA 6F 6E                    on
+        .byte   "00"                            ; 9DF2 30 30                    00
+L9DF4:
+        .byte   "Scorpion"                      ; 9DF4 53 63 6F 72 70 69 6F 6E  Scorpion
         .byte   $0D,$0A                         ; 9DFC 0D 0A                    ..
+L9DFE:
         .byte   "AirBustr"                      ; 9DFE 41 69 72 42 75 73 74 72  AirBustr
         .byte   $0D,$0A                         ; 9E06 0D 0A                    ..
+L9E08:
         .byte   "Reno"                          ; 9E08 52 65 6E 6F              Reno
         .byte   $0D,$0A                         ; 9E0C 0D 0A                    ..
+L9E0E:
         .byte   "Flunky"                        ; 9E0E 46 6C 75 6E 6B 79        Flunky
         .byte   $0D,$0A                         ; 9E14 0D 0A                    ..
+L9E16:
         .byte   "General"                       ; 9E16 47 65 6E 65 72 61 6C     General
         .byte   $0D,$0A                         ; 9E1D 0D 0A                    ..
-        .byte   "000000Aps"                     ; 9E1F 30 30 30 30 30 30 41 70  000000Ap
-                                                ; 9E27 73                       s
+        .byte   "000000"                        ; 9E1F 30 30 30 30 30 30        000000
+L9E25:
+        .byte   "Aps"                           ; 9E25 41 70 73                 Aps
         .byte   $0D,$0A                         ; 9E28 0D 0A                    ..
+L9E2A:
         .byte   "Specimen"                      ; 9E2A 53 70 65 63 69 6D 65 6E  Specimen
         .byte   $0D,$0A                         ; 9E32 0D 0A                    ..
+L9E34:
         .byte   "H.Gunner"                      ; 9E34 48 2E 47 75 6E 6E 65 72  H.Gunner
         .byte   $0D,$0A                         ; 9E3C 0D 0A                    ..
+L9E3E:
         .byte   "Rufus"                         ; 9E3E 52 75 66 75 73           Rufus
         .byte   $0D,$0A                         ; 9E43 0D 0A                    ..
+L9E45:
         .byte   "DarkNatn"                      ; 9E45 44 61 72 6B 4E 61 74 6E  DarkNatn
         .byte   $0D,$0A                         ; 9E4D 0D 0A                    ..
+L9E4F:
         .byte   "MotorBal"                      ; 9E4F 4D 6F 74 6F 72 42 61 6C  MotorBal
         .byte   $0D,$0A                         ; 9E57 0D 0A                    ..
+L9E59:
         .byte   "BotmSwel"                      ; 9E59 42 6F 74 6D 53 77 65 6C  BotmSwel
         .byte   $0D,$0A                         ; 9E61 0D 0A                    ..
+L9E63:
         .byte   "Jenova"                        ; 9E63 4A 65 6E 6F 76 61        Jenova
         .byte   $0D,$0A                         ; 9E69 0D 0A                    ..
+L9E6B:
         .byte   "Dyne"                          ; 9E6B 44 79 6E 65              Dyne
         .byte   $0D,$0A                         ; 9E6F 0D 0A                    ..
+L9E71:
         .byte   "Rude"                          ; 9E71 52 75 64 65              Rude
         .byte   $0D,$0A                         ; 9E75 0D 0A                    ..
+L9E77:
         .byte   "GiNattak"                      ; 9E77 47 69 4E 61 74 74 61 6B  GiNattak
         .byte   $0D,$0A                         ; 9E7F 0D 0A                    ..
+L9E81:
         .byte   "Gi"                            ; 9E81 47 69                    Gi
         .byte   $0D,$0A                         ; 9E83 0D 0A                    ..
+L9E85:
         .byte   "Palmer"                        ; 9E85 50 61 6C 6D 65 72        Palmer
         .byte   $0D,$0A                         ; 9E8B 0D 0A                    ..
+L9E8D:
         .byte   "R.Dragon"                      ; 9E8D 52 2E 44 72 61 67 6F 6E  R.Dragon
         .byte   $0D,$0A                         ; 9E95 0D 0A                    ..
+L9E97:
         .byte   "DemnGate"                      ; 9E97 44 65 6D 6E 47 61 74 65  DemnGate
         .byte   $0D,$0A                         ; 9E9F 0D 0A                    ..
+L9EA1:
         .byte   "Schizo"                        ; 9EA1 53 63 68 69 7A 6F        Schizo
         .byte   $0D                             ; 9EA7 0D                       .
+L9EA8:
         .byte   "Sephirot"                      ; 9EA8 53 65 70 68 69 72 6F 74  Sephirot
         .byte   $0D,$0D                         ; 9EB0 0D 0D                    ..
+L9EB2:
         .byte   "Sephirot"                      ; 9EB2 53 65 70 68 69 72 6F 74  Sephirot
         .byte   $0D                             ; 9EBA 0D                       .
+L9EBB:
         .byte   "1WngAngl"                      ; 9EBB 31 57 6E 67 41 6E 67 6C  1WngAngl
         .byte   $0D,$0A                         ; 9EC3 0D 0A                    ..
+L9EC5:
         .byte   "Zolom"                         ; 9EC5 5A 6F 6C 6F 6D           Zolom
         .byte   $0D,$0A                         ; 9ECA 0D 0A                    ..
         .byte   "Hornet"                        ; 9ECC 48 6F 72 6E 65 74        Hornet
         .byte   $0D,$0A                         ; 9ED2 0D 0A                    ..
+L9ED4:
         .byte   "Goblin"                        ; 9ED4 47 6F 62 6C 69 6E        Goblin
         .byte   $0D,$0A                         ; 9EDA 0D 0A                    ..
         .byte   "BigRat"                        ; 9EDC 42 69 67 52 61 74        BigRat
@@ -2736,196 +3359,272 @@ L9CE8:
         .byte   $C6,$B2,$C1,$0D,$0A,$B0,$E5,$B0 ; A1B3 C6 B2 C1 0D 0A B0 E5 B0  ........
         .byte   $B0,$B4,$F4,$B0,$B1,$0D,$0A,$BC ; A1BB B0 B4 F4 B0 B1 0D 0A BC  ........
         .byte   $DC,$B8,$EA,$0D,$0A,$FF,$FF,$FF ; A1C3 DC B8 EA 0D 0A FF FF FF  ........
+LA1CB:
         .byte   "B.Float"                       ; A1CB 42 2E 46 6C 6F 61 74     B.Float
         .byte   $0D,$0A                         ; A1D2 0D 0A                    ..
         .byte   "Goblin"                        ; A1D4 47 6F 62 6C 69 6E        Goblin
         .byte   $0D,$0A                         ; A1DA 0D 0A                    ..
+LA1DC:
         .byte   "Gargoyle"                      ; A1DC 47 61 72 67 6F 79 6C 65  Gargoyle
         .byte   $0D,$0A                         ; A1E4 0D 0A                    ..
+LA1E6:
         .byte   "Tonberry"                      ; A1E6 54 6F 6E 62 65 72 72 79  Tonberry
         .byte   $0D,$0A                         ; A1EE 0D 0A                    ..
+LA1F0:
         .byte   "Gremlin"                       ; A1F0 47 72 65 6D 6C 69 6E     Gremlin
         .byte   $0D,$0A                         ; A1F7 0D 0A                    ..
+LA1F9:
         .byte   "Needle"                        ; A1F9 4E 65 65 64 6C 65        Needle
         .byte   $0D,$0A                         ; A1FF 0D 0A                    ..
+LA201:
         .byte   "Zolkartr"                      ; A201 5A 6F 6C 6B 61 72 74 72  Zolkartr
         .byte   $0D,$0A                         ; A209 0D 0A                    ..
+LA20B:
         .byte   "Launcher"                      ; A20B 4C 61 75 6E 63 68 65 72  Launcher
         .byte   $0D,$0A                         ; A213 0D 0A                    ..
+LA215:
         .byte   "M.Drive"                       ; A215 4D 2E 44 72 69 76 65     M.Drive
         .byte   $0D,$0A                         ; A21C 0D 0A                    ..
+LA21E:
         .byte   "Crawler"                       ; A21E 43 72 61 77 6C 65 72     Crawler
         .byte   $0D,$0A                         ; A225 0D 0A                    ..
+LA227:
         .byte   "Mirage"                        ; A227 4D 69 72 61 67 65        Mirage
         .byte   $0D,$0A                         ; A22D 0D 0A                    ..
+LA22F:
         .byte   "Ceasar"                        ; A22F 43 65 61 73 61 72        Ceasar
         .byte   $0D,$0A                         ; A235 0D 0A                    ..
+LA237:
         .byte   "Ninja"                         ; A237 4E 69 6E 6A 61           Ninja
         .byte   $0D,$0A,$0A                     ; A23C 0D 0A 0A                 ...
+LA23F:
         .byte   "Cactuar"                       ; A23F 43 61 63 74 75 61 72     Cactuar
         .byte   $0D,$0A                         ; A246 0D 0A                    ..
+LA248:
         .byte   "HedgePie"                      ; A248 48 65 64 67 65 50 69 65  HedgePie
         .byte   $0D,$0A                         ; A250 0D 0A                    ..
+LA252:
         .byte   "RazrWeed"                      ; A252 52 61 7A 72 57 65 65 64  RazrWeed
         .byte   $0D,$0A                         ; A25A 0D 0A                    ..
+LA25C:
         .byte   "Jayjujay"                      ; A25C 4A 61 79 6A 75 6A 61 79  Jayjujay
         .byte   $0D,$0A                         ; A264 0D 0A                    ..
+LA266:
         .byte   "Warning"                       ; A266 57 61 72 6E 69 6E 67     Warning
         .byte   $0D,$0A                         ; A26D 0D 0A                    ..
+LA26F:
         .byte   "Mu"                            ; A26F 4D 75                    Mu
         .byte   $0D,$0A                         ; A271 0D 0A                    ..
+LA273:
         .byte   "Jemnezmy"                      ; A273 4A 65 6D 6E 65 7A 6D 79  Jemnezmy
         .byte   $0D,$0A                         ; A27B 0D 0A                    ..
+LA27D:
         .byte   "Joker"                         ; A27D 4A 6F 6B 65 72           Joker
         .byte   $0D,$0A                         ; A282 0D 0A                    ..
+LA284:
         .byte   "BrainPod"                      ; A284 42 72 61 69 6E 50 6F 64  BrainPod
         .byte   $0D,$0A                         ; A28C 0D 0A                    ..
+LA28E:
         .byte   "Screamer"                      ; A28E 53 63 72 65 61 6D 65 72  Screamer
         .byte   $0D,$0A                         ; A296 0D 0A                    ..
+LA298:
         .byte   "SneakStp"                      ; A298 53 6E 65 61 6B 53 74 70  SneakStp
         .byte   $0D,$0A                         ; A2A0 0D 0A                    ..
+LA2A2:
         .byte   "BatryCap"                      ; A2A2 42 61 74 72 79 43 61 70  BatryCap
         .byte   $0D,$0A                         ; A2AA 0D 0A                    ..
+LA2AC:
         .byte   "Ghroflgo"                      ; A2AC 47 68 72 6F 66 6C 67 6F  Ghroflgo
         .byte   $0D,$0A                         ; A2B4 0D 0A                    ..
+LA2B6:
         .byte   "Sweeper"                       ; A2B6 53 77 65 65 70 65 72     Sweeper
         .byte   $0D,$0A                         ; A2BD 0D 0A                    ..
+LA2BF:
         .byte   "Bomb"                          ; A2BF 42 6F 6D 62              Bomb
         .byte   $0D,$0A                         ; A2C3 0D 0A                    ..
+LA2C5:
         .byte   "Alemange"                      ; A2C5 41 6C 65 6D 61 6E 67 65  Alemange
         .byte   $0D,$0A                         ; A2CD 0D 0A                    ..
+LA2CF:
         .byte   "Spector"                       ; A2CF 53 70 65 63 74 6F 72     Spector
         .byte   $0D,$0A                         ; A2D6 0D 0A                    ..
+LA2D8:
         .byte   "Cuahl"                         ; A2D8 43 75 61 68 6C           Cuahl
         .byte   $0D,$0A                         ; A2DD 0D 0A                    ..
+LA2DF:
         .byte   "Zemzelet"                      ; A2DF 5A 65 6D 7A 65 6C 65 74  Zemzelet
         .byte   $0D,$0A                         ; A2E7 0D 0A                    ..
+LA2E9:
         .byte   "Elfadunk"                      ; A2E9 45 6C 66 61 64 75 6E 6B  Elfadunk
         .byte   $0D,$0A                         ; A2F1 0D 0A                    ..
+LA2F3:
         .byte   "Doorbull"                      ; A2F3 44 6F 6F 72 62 75 6C 6C  Doorbull
         .byte   $0D,$0A                         ; A2FB 0D 0A                    ..
+LA2FD:
         .byte   "BlackBat"                      ; A2FD 42 6C 61 63 6B 42 61 74  BlackBat
         .byte   $0D,$0A                         ; A305 0D 0A                    ..
+LA307:
         .byte   "Malboro"                       ; A307 4D 61 6C 62 6F 72 6F     Malboro
         .byte   $0D,$0A                         ; A30E 0D 0A                    ..
+LA310:
         .byte   "Diablo"                        ; A310 44 69 61 62 6C 6F        Diablo
         .byte   $0D,$0A                         ; A316 0D 0A                    ..
+LA318:
         .byte   "Chrstofr"                      ; A318 43 68 72 73 74 6F 66 72  Chrstofr
         .byte   $0D,$0A                         ; A320 0D 0A                    ..
+LA322:
         .byte   "Ironite"                       ; A322 49 72 6F 6E 69 74 65     Ironite
         .byte   $0D,$0A                         ; A329 0D 0A                    ..
+LA32B:
         .byte   "Hellhous"                      ; A32B 48 65 6C 6C 68 6F 75 73  Hellhous
         .byte   $0D,$0A                         ; A333 0D 0A                    ..
+LA335:
         .byte   "Ochu"                          ; A335 4F 63 68 75              Ochu
         .byte   $0D,$0A                         ; A339 0D 0A                    ..
+LA33B:
         .byte   "8-Eye"                         ; A33B 38 2D 45 79 65           8-Eye
         .byte   $0D,$0A                         ; A340 0D 0A                    ..
+LA342:
         .byte   "D.Claw"                        ; A342 44 2E 43 6C 61 77        D.Claw
         .byte   $0D,$0A                         ; A348 0D 0A                    ..
+LA34A:
         .byte   "Bndrsnch"                      ; A34A 42 6E 64 72 73 6E 63 68  Bndrsnch
         .byte   $0D,$0A                         ; A352 0D 0A                    ..
+LA354:
         .byte   "Bad Rap"                       ; A354 42 61 64 20 52 61 70     Bad Rap
         .byte   $0D,$0A                         ; A35B 0D 0A                    ..
+LA35D:
         .byte   "Bandit"                        ; A35D 42 61 6E 64 69 74        Bandit
         .byte   $0D,$0A                         ; A363 0D 0A                    ..
+LA365:
         .byte   "Bgndrana"                      ; A365 42 67 6E 64 72 61 6E 61  Bgndrana
         .byte   $0D,$0A                         ; A36D 0D 0A                    ..
+LA36F:
         .byte   "DorkFace"                      ; A36F 44 6F 72 6B 46 61 63 65  DorkFace
         .byte   $0D,$0A                         ; A377 0D 0A                    ..
+LA379:
         .byte   "GrndHorn"                      ; A379 47 72 6E 64 48 6F 72 6E  GrndHorn
         .byte   $0D,$0A                         ; A381 0D 0A                    ..
+LA383:
         .byte   "Unknown"                       ; A383 55 6E 6B 6E 6F 77 6E     Unknown
         .byte   $0D,$0A                         ; A38A 0D 0A                    ..
+LA38C:
         .byte   "Grangaln"                      ; A38C 47 72 61 6E 67 61 6C 6E  Grangaln
         .byte   $0D,$0A                         ; A394 0D 0A                    ..
+LA396:
         .byte   "X-Canon"                       ; A396 58 2D 43 61 6E 6F 6E     X-Canon
         .byte   $0D,$0A                         ; A39D 0D 0A                    ..
+LA39F:
         .byte   "U.Lizard"                      ; A39F 55 2E 4C 69 7A 61 72 64  U.Lizard
         .byte   $0D,$0A                         ; A3A7 0D 0A                    ..
+LA3A9:
         .byte   "Kimara"                        ; A3A9 4B 69 6D 61 72 61        Kimara
         .byte   $0D,$0A                         ; A3AF 0D 0A                    ..
+LA3B1:
         .byte   "A.Dragon"                      ; A3B1 41 2E 44 72 61 67 6F 6E  A.Dragon
         .byte   $0D,$0A                         ; A3B9 0D 0A                    ..
+LA3BB:
         .byte   "Sahagin"                       ; A3BB 53 61 68 61 67 69 6E     Sahagin
         .byte   $0D,$0A                         ; A3C2 0D 0A                    ..
+LA3C4:
         .byte   "SwrdDanc"                      ; A3C4 53 77 72 64 44 61 6E 63  SwrdDanc
         .byte   $0D,$0A                         ; A3CC 0D 0A                    ..
+LA3CE:
         .byte   "DverNest"                      ; A3CE 44 76 65 72 4E 65 73 74  DverNest
         .byte   $0D,$0A                         ; A3D6 0D 0A                    ..
+LA3D8:
         .byte   "Eligor"                        ; A3D8 45 6C 69 67 6F 72        Eligor
         .byte   $0D,$0A                         ; A3DE 0D 0A                    ..
+LA3E0:
         .byte   "Epiolnis"                      ; A3E0 45 70 69 6F 6C 6E 69 73  Epiolnis
         .byte   $0D,$0A                         ; A3E8 0D 0A                    ..
+LA3EA:
         .byte   "A.Combat"                      ; A3EA 41 2E 43 6F 6D 62 61 74  A.Combat
         .byte   $0D,$0A                         ; A3F2 0D 0A                    ..
+LA3F4:
         .byte   "DevlRide"                      ; A3F4 44 65 76 6C 52 69 64 65  DevlRide
         .byte   $0D,$0A                         ; A3FC 0D 0A                    ..
+LA3FE:
         .byte   "HeadHunt"                      ; A3FE 48 65 61 64 48 75 6E 74  HeadHunt
         .byte   $0D,$0A                         ; A406 0D 0A                    ..
+LA408:
         .byte   "Rilfsak"                       ; A408 52 69 6C 66 73 61 6B     Rilfsak
         .byte   $0D,$0A                         ; A40F 0D 0A                    ..
+LA411:
         .byte   "Spiral"                        ; A411 53 70 69 72 61 6C        Spiral
         .byte   $0D,$0A,$FF,$FF,$FF,$FF,$FF,$FF ; A417 0D 0A FF FF FF FF FF FF  ........
         .byte   $FF                             ; A41F FF                       .
+LA420:
         .byte   "Hero Drink"                    ; A420 48 65 72 6F 20 44 72 69  Hero Dri
                                                 ; A428 6E 6B                    nk
         .byte   $0D                             ; A42A 0D                       .
+LA42B:
         .byte   "Temporarilly       Increases HP"; A42B 54 65 6D 70 6F 72 61 72 Temporar
                                                 ; A433 69 6C 6C 79 20 20 20 20  illy    
                                                 ; A43B 20 20 20 49 6E 63 72 65     Incre
                                                 ; A443 61 73 65 73 20 48 50     ases HP
         .byte   " by 250"                       ; A44A 20 62 79 20 32 35 30      by 250
         .byte   $0D                             ; A451 0D                       .
+LA452:
         .byte   "Restores 500 HP to a single all"; A452 52 65 73 74 6F 72 65 73 Restores
                                                 ; A45A 20 35 30 30 20 48 50 20   500 HP 
                                                 ; A462 74 6F 20 61 20 73 69 6E  to a sin
                                                 ; A46A 67 6C 65 20 61 6C 6C     gle all
         .byte   "y"                             ; A471 79                       y
         .byte   $0D                             ; A472 0D                       .
+LA473:
         .byte   "Restores 1000 HP   to a single "; A473 52 65 73 74 6F 72 65 73 Restores
                                                 ; A47B 20 31 30 30 30 20 48 50   1000 HP
                                                 ; A483 20 20 20 74 6F 20 61 20     to a 
                                                 ; A48B 73 69 6E 67 6C 65 20     single 
         .byte   "ally"                          ; A492 61 6C 6C 79              ally
         .byte   $0D                             ; A496 0D                       .
+LA497:
         .byte   "Fully restores HP  to a single "; A497 46 75 6C 6C 79 20 72 65 Fully re
                                                 ; A49F 73 74 6F 72 65 73 20 48  stores H
                                                 ; A4A7 50 20 20 74 6F 20 61 20  P  to a 
                                                 ; A4AF 73 69 6E 67 6C 65 20     single 
         .byte   "ally"                          ; A4B6 61 6C 6C 79              ally
         .byte   $0D                             ; A4BA 0D                       .
+LA4BB:
         .byte   "Restores 200 HP to all allies" ; A4BB 52 65 73 74 6F 72 65 73  Restores
                                                 ; A4C3 20 32 30 30 20 48 50 20   200 HP 
                                                 ; A4CB 74 6F 20 61 6C 6C 20 61  to all a
                                                 ; A4D3 6C 6C 69 65 73           llies
         .byte   $0D                             ; A4D8 0D                       .
+LA4D9:
         .byte   "Restores 500 HP to all allies" ; A4D9 52 65 73 74 6F 72 65 73  Restores
                                                 ; A4E1 20 35 30 30 20 48 50 20   500 HP 
                                                 ; A4E9 74 6F 20 61 6C 6C 20 61  to all a
                                                 ; A4F1 6C 6C 69 65 73           llies
         .byte   $0D                             ; A4F6 0D                       .
+LA4F7:
         .byte   "Restores 1000 HP toall allies" ; A4F7 52 65 73 74 6F 72 65 73  Restores
                                                 ; A4FF 20 31 30 30 30 20 48 50   1000 HP
                                                 ; A507 20 74 6F 61 6C 6C 20 61   toall a
                                                 ; A50F 6C 6C 69 65 73           llies
         .byte   $0D                             ; A514 0D                       .
+LA515:
         .byte   "Fully restores HP  to all allie"; A515 46 75 6C 6C 79 20 72 65 Fully re
                                                 ; A51D 73 74 6F 72 65 73 20 48  stores H
                                                 ; A525 50 20 20 74 6F 20 61 6C  P  to al
                                                 ; A52D 6C 20 61 6C 6C 69 65     l allie
         .byte   "s"                             ; A534 73                       s
         .byte   $0D                             ; A535 0D                       .
+LA536:
         .byte   "Restores 5 MP to a single spell"; A536 52 65 73 74 6F 72 65 73 Restores
                                                 ; A53E 20 35 20 4D 50 20 74 6F   5 MP to
                                                 ; A546 20 61 20 73 69 6E 67 6C   a singl
                                                 ; A54E 65 20 73 70 65 6C 6C     e spell
         .byte   $0D                             ; A555 0D                       .
+LA556:
         .byte   "Fully restores MP  to a single "; A556 46 75 6C 6C 79 20 72 65 Fully re
                                                 ; A55E 73 74 6F 72 65 73 20 4D  stores M
                                                 ; A566 50 20 20 74 6F 20 61 20  P  to a 
                                                 ; A56E 73 69 6E 67 6C 65 20     single 
         .byte   "spell"                         ; A575 73 70 65 6C 6C           spell
         .byte   $0D                             ; A57A 0D                       .
+LA57B:
         .byte   "Revives an ally    with 25% of "; A57B 52 65 76 69 76 65 73 20 Revives 
                                                 ; A583 61 6E 20 61 6C 6C 79 20  an ally 
                                                 ; A58B 20 20 20 77 69 74 68 20     with 
@@ -2935,6 +3634,7 @@ L9CE8:
         .byte   "irHP"                          ; A59D 69 72 48 50              irHP
         .byte   $0D,$00,$00,$00,$00,$00,$00,$00 ; A5A1 0D 00 00 00 00 00 00 00  ........
         .byte   $00                             ; A5A9 00                       .
+LA5AA:
         .byte   "Easily escape from a fight"    ; A5AA 45 61 73 69 6C 79 20 65  Easily e
                                                 ; A5B2 73 63 61 70 65 20 66 72  scape fr
                                                 ; A5BA 6F 6D 20 61 20 66 69 67  om a fig
