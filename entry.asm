@@ -11,19 +11,9 @@
 .include "src/bank02.asm"
 .endscope
 
-.scope bank03
-.segment "PRG03"
-.include "src/bank03.asm"
-.endscope
-
 .scope bank04
 .segment "PRG04"
 .include "src/bank04.asm"
-.endscope
-
-.scope bank05
-.segment "PRG05"
-.include "src/bank05.asm"
 .endscope
 
 .scope bank06
@@ -36,19 +26,9 @@
 .include "src/bank08.asm"
 .endscope
 
-.scope bank09
-.segment "PRG09"
-.include "src/bank09.asm"
-.endscope
-
 .scope bank0a
 .segment "PRG0a"
 .include "src/bank0a.asm"
-.endscope
-
-.scope bank0b
-.segment "PRG0b"
-.include "src/bank0b.asm"
 .endscope
 
 .scope bank0c
@@ -63,22 +43,12 @@
 
 .scope bank10
 .segment "PRG10"
-.include "src/font/bank10.asm"
-.endscope
-
-.scope bank11
-.segment "PRG11"
-.include "src/font/bank11.asm"
+.incbin "src/chinese_font/bank10.chr"
 .endscope
 
 .scope bank12
 .segment "PRG12"
-.include "src/font/bank12.asm"
-.endscope
-
-.scope bank13
-.segment "PRG13"
-.include "src/font/bank13.asm"
+.incbin "src/chinese_font/bank12.chr"
 .endscope
 
 .scope bank14
@@ -106,11 +76,6 @@
 .include "src/bank1c.asm"
 .endscope
 
-.scope bank1d
-.segment "PRG1d"
-.include "src/bank1d.asm"
-.endscope
-
 .scope bank1e
 .segment "PRG1e"
 .include "src/strings/bank1e.asm"
@@ -119,11 +84,6 @@
 .scope bank20
 .segment "PRG20"
 .include "src/world/bank20.asm"
-.endscope
-
-.scope bank21
-.segment "PRG21"
-.include "src/world/bank21.asm"
 .endscope
 
 .scope bank22
@@ -293,17 +253,17 @@
 
 .scope bank64
 .segment "PRG64"
-.include "src/bank64.asm"
+.include "src/sprites/bank64.asm"
 .endscope
 
 .scope bank66
 .segment "PRG66"
-.include "src/bank66.asm"
+.include "src/sprites/bank66.asm"
 .endscope
 
 .scope bank68
 .segment "PRG68"
-.include "src/bank68.asm"
+.include "src/sprites/bank68.asm"
 .endscope
 
 .scope bank6a
