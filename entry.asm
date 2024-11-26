@@ -18,7 +18,7 @@
 
 .scope bank06
 .segment "PRG06"
-.include "src/bank06.asm"
+.include "src/bank06_sound.asm"
 .endscope
 
 .scope bank08
@@ -43,12 +43,13 @@
 
 .scope bank10
 .segment "PRG10"
-.incbin "src/chinese_font/bank10.chr"
+.incbin "src/gfx/bank10_chinesefont1.chr"
 .endscope
 
 .scope bank12
 .segment "PRG12"
-.incbin "src/chinese_font/bank12.chr"
+.incbin "src/gfx/bank12_chinesefont2_8000.chr"
+.incbin "src/gfx/bank12_unknown_e300.chr"
 .endscope
 
 .scope bank14
@@ -243,32 +244,32 @@
 
 .scope bank60
 .segment "PRG60"
-.include "src/bank60.asm"
+.include "src/bank60_empty.asm"
 .endscope
 
 .scope bank62
 .segment "PRG62"
-.include "src/bank62.asm"
+.include "src/bank62_empty.asm"
 .endscope
 
 .scope bank64
 .segment "PRG64"
-.include "src/sprites/bank64.asm"
+.include "src/bank64_sprite_magic.asm"
 .endscope
 
 .scope bank66
 .segment "PRG66"
-.include "src/sprites/bank66.asm"
+.include "src/bank66_sprite_entity.asm"
 .endscope
 
 .scope bank68
 .segment "PRG68"
-.include "src/sprites/bank68.asm"
+.include "src/bank68_sprite_entity.asm"
 .endscope
 
 .scope bank6a
 .segment "PRG6a"
-.include "src/bank6a.asm"
+.include "src/bank6a_portrait.asm"
 .endscope
 
 .scope bank6c
