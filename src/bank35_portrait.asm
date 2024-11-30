@@ -111,178 +111,178 @@ L8079:
 L817D:
         .byte   $03,$03,$03,$03                 ; 817D 03 03 03 03
         
-        .INCBIN "gfx/portrait/bank6a_portrait_barret_8181.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_barret_8181.chr"
 L8281:
         .byte   $03,$03,$03,$03                 ; 8281 03 03 03 03
         
-        .INCBIN "gfx/portrait/bank6a_portrait_tifa_8285.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_tifa_8285.chr"
 L8385:
         .byte   $03,$03,$03,$03                 ; 8385 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_aeris_8389.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_aeris_8389.chr"
 L8489:
         .byte   $03,$03,$03,$03                 ; 8489 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_red_xiii_848d.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_red_xiii_848d.chr"
 L858D:
         .byte   $01,$01,$01,$01                 ; 858D 01 01 01 01
 
-        .INCBIN "gfx/portrait/bank6a_portrait_cait_sith_8591.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_cait_sith_8591.chr"
 L8691:
         .byte   $00,$00,$03,$03                 ; 8691 00 00 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_cid_8695.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_cid_8695.chr"
 L8795:
         .byte   $02,$02,$02,$03                 ; 8795 02 02 02 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_biggs_8799.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_biggs_8799.chr"
 L8899:
         .byte   $03,$03,$03,$03                 ; 8899 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_jessie_889d.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_jessie_889d.chr"
 L899D:
         .byte   $02,$02,$03,$03                 ; 899D 02 02 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_wedge_89a1.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_wedge_89a1.chr"
 L8AA1:
         .byte   $03,$03,$03,$03                 ; 8AA1 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_marlene_8aa5.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_marlene_8aa5.chr"
 L8BA5:
         .byte   $01,$01,$01,$01                 ; 8BA5 01 01 01 01
 
-        .INCBIN "gfx/portrait/bank6a_portrait_sephiroth_8ba9.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_sephiroth_8ba9.chr"
 L8CA9:
         .byte   $03,$03,$03,$03                 ; 8CA9 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_president_shinra_8cad.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_president_shinra_8cad.chr"
 L8DAD:
         .byte   $03,$03,$03,$03                 ; 8DAD 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_rufus_8db1.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_rufus_8db1.chr"
 L8EB1:
         .byte   $03,$03,$03,$03                 ; 8EB1 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_heidegger_8eb5.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_heidegger_8eb5.chr"
 L8FB5:
         .byte   $03,$03,$03,$03                 ; 8FB5 03 03 03 03
 
-       .INCBIN "gfx/portrait/bank6a_portrait_scarlet_8fb9.chr"
+       .INCBIN "gfx/portrait/bank35_portrait_scarlet_8fb9.chr"
 L90B9:
         .byte   $03,$03,$03,$03                 ; 90B9 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_hojo_90bd.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_hojo_90bd.chr"
 L91BD:
         .byte   $03,$03,$03,$03                 ; 91BD 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_reeve_91c1.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_reeve_91c1.chr"
 L92C1:
         .byte   $03,$03,$03,$03                 ; 92C1 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_tseng_92c5.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_tseng_92c5.chr"
 L93C5:
         .byte   $03,$03,$03,$03                 ; 93C5 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_reno_93c9.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_reno_93c9.chr"
 L94C9:
         .byte   $03,$03,$03,$03                 ; 94C9 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_rude_94cd.chr"  
+        .INCBIN "gfx/portrait/bank35_portrait_rude_94cd.chr"  
 L95CD:
         .byte   $03,$03,$03,$03                 ; 95CD 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_elena_95d1.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_elena_95d1.chr"
 L96D1:
         .byte   $03,$03,$03,$03                 ; 96D1 03 03 03 03
         
-        .INCBIN "gfx/portrait/bank6a_portrait_johnny_96d5.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_johnny_96d5.chr"
 L97D5:
         .byte   $03,$03,$03,$03                 ; 97D5 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_domino_97d9.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_domino_97d9.chr"
 L98D9:
         .byte   $03,$03,$03,$03                 ; 98D9 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_hart_98dd.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_hart_98dd.chr"
 L99DD:
         .byte   $02,$03,$03,$03                 ; 99DD 02 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_dyne_99e1.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_dyne_99e1.chr"
 L9AE1:
         .byte   $03,$03,$03,$03                 ; 9AE1 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_captain_9ae5.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_captain_9ae5.chr"
 L9BE5:
         .byte   $01,$01,$01,$01                 ; 9BE5 01 01 01 01
 
-        .INCBIN "gfx/portrait/bank6a_portrait_guard_9be9.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_guard_9be9.chr"
 L9CE9:
         .byte   $00,$00,$03,$03                 ; 9CE9 00 00 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_doorman_9ced.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_doorman_9ced.chr"
 L9DED:
         .byte   $03,$03,$03,$03                 ; 9DED 03 03 03 03
         
-        .INCBIN "gfx/portrait/bank6a_portrait_elmyra_9df1.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_elmyra_9df1.chr"
 L9EF1:
         .byte   $03,$03,$03,$03                 ; 9EF1 03 03 03 03
         
-        .INCBIN "gfx/portrait/bank6a_portrait_don_corneo_9ef5.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_don_corneo_9ef5.chr"
 L9FF5:
         .byte   $03,$03,$03,$03                 ; 9FF5 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_priscilla_9ff9.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_priscilla_9ff9.chr"
 LA0F9:
         .byte   $03,$03,$03,$03                 ; A0F9 03 03 03 03
 
-        .INCBIN "gfx/portrait/bank6a_portrait_dio_a0fd.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_dio_a0fd.chr"
 LA1FD:
         .byte   $03,$03,$03,$03                 ; A1FD 03 03 03 03
         
-        .INCBIN "gfx/portrait/bank6a_portrait_yuffie_a201.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_yuffie_a201.chr"
 LA301:
         .byte   $03,$03,$03,$01                 ; A301 03 03 03 01
 
-        .INCBIN "gfx/portrait/bank6a_portrait_bugenhagen_a305.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_bugenhagen_a305.chr"
 LA405:
         .byte   $03,$03,$03,$03                 ; A405 03 03 03 03
         
-        .INCBIN "gfx/portrait/bank6a_portrait_intercom_a409.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_intercom_a409.chr"
 LA509:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; A509 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$12,$0F,$00,$00,$01,$02 ; A511 0F 36 12 0F 00 00 01 02  .6......
 
-        .INCBIN "gfx/portrait/bank6a_portrait2_cloud_a519.chr"
+        .INCBIN "gfx/portrait/bank35_portrait2_cloud_a519.chr"
 LA619:
         .byte   $0F,$36,$17,$0F,$0F,$30,$30,$30 ; A619 0F 36 17 0F 0F 30 30 30  .6...000
         .byte   $0F,$30,$30,$30,$00,$00,$00,$00 ; A621 0F 30 30 30 00 00 00 00  .000....
         
-        .INCBIN "gfx/portrait/bank6a_portrait2_barret_a629.chr"
+        .INCBIN "gfx/portrait/bank35_portrait2_barret_a629.chr"
 LA729:
         .byte   $0F,$36,$17,$0F,$0F,$36,$17,$0F ; A729 0F 36 17 0F 0F 36 17 0F  .6...6..
         .byte   $0F,$30,$30,$30,$00,$00,$00,$01 ; A731 0F 30 30 30 00 00 00 01  .000....
         
-        .INCBIN "gfx/portrait/bank6a_portrait2_tifa_a739.chr"
+        .INCBIN "gfx/portrait/bank35_portrait2_tifa_a739.chr"
 LA839:
         .byte   $0F,$36,$17,$0F,$0F,$36,$17,$0F ; A839 0F 36 17 0F 0F 36 17 0F  .6...6..
         .byte   $0F,$30,$30,$30,$00,$01,$00,$01 ; A841 0F 30 30 30 00 01 00 01  .000....
 
-        .INCBIN "gfx/portrait/bank6a_portrait2_aeris_a849.chr"
+        .INCBIN "gfx/portrait/bank35_portrait2_aeris_a849.chr"
 LA949:
         .byte   $0F,$36,$17,$0F,$0F,$30,$30,$30 ; A949 0F 36 17 0F 0F 30 30 30  .6...000
         .byte   $0F,$30,$30,$30,$00,$00,$00,$00 ; A951 0F 30 30 30 00 00 00 00  .000....
 
-        .INCBIN "gfx/portrait/bank6a_portrait2_red_xiii_a959.chr"
+        .INCBIN "gfx/portrait/bank35_portrait2_red_xiii_a959.chr"
 LAA59:
         .byte   $0F,$36,$12,$0F,$0F,$30,$30,$30 ; AA59 0F 36 12 0F 0F 30 30 30  .6...000
         .byte   $0F,$30,$30,$30,$00,$00,$00,$00 ; AA61 0F 30 30 30 00 00 00 00  .000....
         
-        .INCBIN "gfx/portrait/bank6a_portrait2_cait_sith_aa69.chr"
+        .INCBIN "gfx/portrait/bank35_portrait2_cait_sith_aa69.chr"
 LAB69:
         .byte   $0F,$36,$17,$0F,$0F,$36,$12,$0F ; AB69 0F 36 17 0F 0F 36 12 0F  .6...6..
         .byte   $0F,$36,$28,$0F,$02,$02,$00,$00 ; AB71 0F 36 28 0F 02 02 00 00  .6(.....
         
-        .INCBIN "gfx/portrait/bank6a_portrait2_cid_ab79.chr"
+        .INCBIN "gfx/portrait/bank35_portrait2_cid_ab79.chr"
 LAC79:
         .byte   $04,$04,$2F,$4C,$39,$3C,$09,$19 ; AC79 04 04 2F 4C 39 3C 09 19  ../L9<..
         .byte   $29
@@ -301,7 +301,7 @@ LAC79:
         .byte   $0F,$27,$19,$18
         .byte   $0F,$36,$16,$18
 
-        .INCBIN "gfx/portrait/bank6a_acc5.chr"
+        .INCBIN "gfx/portrait/bank35_acc5.chr"
 LAFB5:
         .byte   $04,$04,$2C,$4C,$39,$3C,$09,$19 ; AFB5 04 04 2C 4C 39 3C 09 19  ..,L9<..
         .byte   $29,$00,$01,$02,$03,$04,$05,$06 ; AFBD 29 00 01 02 03 04 05 06  ).......
@@ -1433,7 +1433,7 @@ LD151:
 LD250:
         .byte   $00,$00,$01,$01                 ; D250 00 00 01 01
 
-        .INCBIN "gfx/portrait/bank6a_portrait_cloud_d254.chr"
+        .INCBIN "gfx/portrait/bank35_portrait_cloud_d254.chr"
 LD354:
         .byte   $00,$00,$01,$01,$C0,$82,$A2,$C4 ; D354 00 00 01 01 C0 82 A2 C4  ........
         .byte   $C4,$C8,$C9,$89,$FF,$FF,$FF,$FF ; D35C C4 C8 C9 89 FF FF FF FF  ........

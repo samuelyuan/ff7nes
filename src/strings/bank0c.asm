@@ -1,6531 +1,5428 @@
         .setcpu "6502"
 
 ; ----------------------------------------------------------------------------
+L0000           := $0000
 ; ----------------------------------------------------------------------------
-        .addr   L8019                           ; 8000 19 80                    ..
-        .addr   L8331                           ; 8002 31 83                    1.
-        .addr   L8578                           ; 8004 78 85                    x.
-        .addr   L8AB8                           ; 8006 B8 8A                    ..
-        .addr   L8F10                           ; 8008 10 8F                    ..
-        .addr   L9175                           ; 800A 75 91                    u.
-        .addr   L95C6                           ; 800C C6 95                    ..
-        .addr   L9612                           ; 800E 12 96                    ..
-        .addr   L98E5                           ; 8010 E5 98                    ..
-        .addr   L9A30                           ; 8012 30 9A                    0.
-        .addr   L9CE8                           ; 8014 E8 9C                    ..
+        .addr   L8007                           ; 8000 07 80                    ..
+        .addr   LA925                           ; 8002 25 A9                    %.
 ; ----------------------------------------------------------------------------
-        .byte   $FF,$FF,$40                     ; 8016 FF FF 40                 ..@
+        .byte   $FF,$FF,$40                     ; 8004 FF FF 40                 ..@
 ; ----------------------------------------------------------------------------
-L8019:
-        .addr   L80B9                           ; 8019 B9 80                    ..
-        .addr   L80C1                           ; 801B C1 80                    ..
-        .addr   L80D3                           ; 801D D3 80                    ..
-        .addr   L80DD                           ; 801F DD 80                    ..
-        .addr   L80E7                           ; 8021 E7 80                    ..
-        .addr   L80F1                           ; 8023 F1 80                    ..
-        .addr   L80FB                           ; 8025 FB 80                    ..
-        .addr   L8103                           ; 8027 03 81                    ..
-        .addr   L810D                           ; 8029 0D 81                    ..
-        .addr   L8117                           ; 802B 17 81                    ..
-        .addr   L811B                           ; 802D 1B 81                    ..
-        .addr   L811F                           ; 802F 1F 81                    ..
-        .addr   L8123                           ; 8031 23 81                    #.
-        .addr   L8127                           ; 8033 27 81                    '.
-        .addr   L8131                           ; 8035 31 81                    1.
-        .addr   L8136                           ; 8037 36 81                    6.
-        .addr   L813B                           ; 8039 3B 81                    ;.
-        .addr   L8140                           ; 803B 40 81                    @.
-        .addr   L8145                           ; 803D 45 81                    E.
-        .addr   L814A                           ; 803F 4A 81                    J.
-        .addr   L814F                           ; 8041 4F 81                    O.
-        .addr   L8153                           ; 8043 53 81                    S.
-        .addr   L815F                           ; 8045 5F 81                    _.
-        .addr   L816B                           ; 8047 6B 81                    k.
-        .addr   L8174                           ; 8049 74 81                    t.
-        .addr   L817D                           ; 804B 7D 81                    }.
-        .addr   L8183                           ; 804D 83 81                    ..
-        .addr   L818A                           ; 804F 8A 81                    ..
-        .addr   L8192                           ; 8051 92 81                    ..
-        .addr   L8198                           ; 8053 98 81                    ..
-        .addr   L819F                           ; 8055 9F 81                    ..
-        .addr   L81A6                           ; 8057 A6 81                    ..
-        .addr   L81B0                           ; 8059 B0 81                    ..
-        .addr   L81B5                           ; 805B B5 81                    ..
-        .addr   L81BB                           ; 805D BB 81                    ..
-        .addr   L81C1                           ; 805F C1 81                    ..
-        .addr   L81C7                           ; 8061 C7 81                    ..
-        .addr   L81CD                           ; 8063 CD 81                    ..
-        .addr   L81D4                           ; 8065 D4 81                    ..
-        .addr   L81DE                           ; 8067 DE 81                    ..
-        .addr   L81EB                           ; 8069 EB 81                    ..
-        .addr   L81F8                           ; 806B F8 81                    ..
-        .addr   L8206                           ; 806D 06 82                    ..
-        .addr   L820F                           ; 806F 0F 82                    ..
-        .addr   L821B                           ; 8071 1B 82                    ..
-        .addr   L8227                           ; 8073 27 82                    '.
-        .addr   L822E                           ; 8075 2E 82                    ..
-        .addr   L823C                           ; 8077 3C 82                    <.
-        .addr   L824A                           ; 8079 4A 82                    J.
-        .addr   L8250                           ; 807B 50 82                    P.
-        .addr   L825A                           ; 807D 5A 82                    Z.
-        .addr   L8264                           ; 807F 64 82                    d.
-        .addr   L826A                           ; 8081 6A 82                    j.
-        .addr   L8270                           ; 8083 70 82                    p.
-        .addr   L827B                           ; 8085 7B 82                    {.
-        .addr   L8281                           ; 8087 81 82                    ..
-        .addr   L8287                           ; 8089 87 82                    ..
-        .addr   L828E                           ; 808B 8E 82                    ..
-        .addr   L8295                           ; 808D 95 82                    ..
-        .addr   L829D                           ; 808F 9D 82                    ..
-        .addr   L82AE                           ; 8091 AE 82                    ..
-        .addr   L82B3                           ; 8093 B3 82                    ..
-        .addr   L82B8                           ; 8095 B8 82                    ..
-        .addr   L82BD                           ; 8097 BD 82                    ..
-        .addr   L82C2                           ; 8099 C2 82                    ..
-        .addr   L82C7                           ; 809B C7 82                    ..
-        .addr   L82CC                           ; 809D CC 82                    ..
-        .addr   L82CF                           ; 809F CF 82                    ..
-        .addr   L82D5                           ; 80A1 D5 82                    ..
-        .addr   L82E0                           ; 80A3 E0 82                    ..
-        .addr   L82F1                           ; 80A5 F1 82                    ..
-        .addr   L82FC                           ; 80A7 FC 82                    ..
-        .addr   L8301                           ; 80A9 01 83                    ..
-        .addr   L830C                           ; 80AB 0C 83                    ..
-        .addr   L8311                           ; 80AD 11 83                    ..
-        .addr   L8316                           ; 80AF 16 83                    ..
-        .addr   L831B                           ; 80B1 1B 83                    ..
-        .addr   L8320                           ; 80B3 20 83                     .
-        .addr   L8325                           ; 80B5 25 83                    %.
-        .addr   L832A                           ; 80B7 2A 83                    *.
+L8007:
+        .addr   L81FD                           ; 8007 FD 81                    ..
+        .addr   L828C                           ; 8009 8C 82                    ..
+        .addr   L8298                           ; 800B 98 82                    ..
+        .addr   L835D                           ; 800D 5D 83                    ].
+        .addr   L837C                           ; 800F 7C 83                    |.
+        .addr   L83B9                           ; 8011 B9 83                    ..
+        .addr   L83D3                           ; 8013 D3 83                    ..
+        .addr   L848C                           ; 8015 8C 84                    ..
+        .addr   L84A5                           ; 8017 A5 84                    ..
+        .addr   L8524                           ; 8019 24 85                    $.
+        .addr   L853B                           ; 801B 3B 85                    ;.
+        .addr   L8621                           ; 801D 21 86                    !.
+        .addr   L8640                           ; 801F 40 86                    @.
+        .addr   L866D                           ; 8021 6D 86                    m.
+        .addr   L8689                           ; 8023 89 86                    ..
+        .addr   L86E4                           ; 8025 E4 86                    ..
+        .addr   L86FA                           ; 8027 FA 86                    ..
+        .addr   L873B                           ; 8029 3B 87                    ;.
+        .addr   L8759                           ; 802B 59 87                    Y.
+        .addr   L87D3                           ; 802D D3 87                    ..
+        .addr   L87E4                           ; 802F E4 87                    ..
+        .addr   L8801                           ; 8031 01 88                    ..
+        .addr   L881D                           ; 8033 1D 88                    ..
+        .addr   L88C2                           ; 8035 C2 88                    ..
+        .addr   L890F                           ; 8037 0F 89                    ..
+        .addr   L891D                           ; 8039 1D 89                    ..
+        .addr   L894A                           ; 803B 4A 89                    J.
+        .addr   L898D                           ; 803D 8D 89                    ..
+        .addr   L8995                           ; 803F 95 89                    ..
+        .addr   L89E8                           ; 8041 E8 89                    ..
+        .addr   L89F8                           ; 8043 F8 89                    ..
+        .addr   L8A0C                           ; 8045 0C 8A                    ..
+        .addr   L8A70                           ; 8047 70 8A                    p.
+        .addr   L8AA3                           ; 8049 A3 8A                    ..
+        .addr   L8B67                           ; 804B 67 8B                    g.
+        .addr   L8B7E                           ; 804D 7E 8B                    ~.
+        .addr   L8BFF                           ; 804F FF 8B                    ..
+        .addr   L8C20                           ; 8051 20 8C                     .
+        .addr   L8C70                           ; 8053 70 8C                    p.
+        .addr   L8C85                           ; 8055 85 8C                    ..
+        .addr   L8CF2                           ; 8057 F2 8C                    ..
+        .addr   L8D45                           ; 8059 45 8D                    E.
+        .addr   L8D66                           ; 805B 66 8D                    f.
+        .addr   L8E5B                           ; 805D 5B 8E                    [.
+        .addr   L8E78                           ; 805F 78 8E                    x.
+        .addr   L8E86                           ; 8061 86 8E                    ..
+        .addr   L8EE4                           ; 8063 E4 8E                    ..
+        .addr   L8F13                           ; 8065 13 8F                    ..
+        .addr   L8F29                           ; 8067 29 8F                    ).
+        .addr   L8F7A                           ; 8069 7A 8F                    z.
+        .addr   L8FE1                           ; 806B E1 8F                    ..
+        .addr   L9011                           ; 806D 11 90                    ..
+        .addr   L9030                           ; 806F 30 90                    0.
+        .addr   L908A                           ; 8071 8A 90                    ..
+        .addr   L90A7                           ; 8073 A7 90                    ..
+        .addr   L9167                           ; 8075 67 91                    g.
+        .addr   L9196                           ; 8077 96 91                    ..
+        .addr   L91D9                           ; 8079 D9 91                    ..
+        .addr   L9223                           ; 807B 23 92                    #.
+        .addr   L9251                           ; 807D 51 92                    Q.
+        .addr   L928F                           ; 807F 8F 92                    ..
+        .addr   L9299                           ; 8081 99 92                    ..
+        .addr   L92C3                           ; 8083 C3 92                    ..
+        .addr   L930E                           ; 8085 0E 93                    ..
+        .addr   L9316                           ; 8087 16 93                    ..
+        .addr   L9323                           ; 8089 23 93                    #.
+        .addr   L932D                           ; 808B 2D 93                    -.
+        .addr   L9348                           ; 808D 48 93                    H.
+        .addr   L9350                           ; 808F 50 93                    P.
+        .addr   L9378                           ; 8091 78 93                    x.
+        .addr   L93B5                           ; 8093 B5 93                    ..
+        .addr   L93C4                           ; 8095 C4 93                    ..
+        .addr   L93CF                           ; 8097 CF 93                    ..
+        .addr   L93DF                           ; 8099 DF 93                    ..
+        .addr   L93FA                           ; 809B FA 93                    ..
+        .addr   L9402                           ; 809D 02 94                    ..
+        .addr   L942D                           ; 809F 2D 94                    -.
+        .addr   L9445                           ; 80A1 45 94                    E.
+        .addr   L9460                           ; 80A3 60 94                    `.
+        .addr   L947D                           ; 80A5 7D 94                    }.
+        .addr   L9484                           ; 80A7 84 94                    ..
+        .addr   L950C                           ; 80A9 0C 95                    ..
+        .addr   L9520                           ; 80AB 20 95                     .
+        .addr   L954F                           ; 80AD 4F 95                    O.
+        .addr   L957A                           ; 80AF 7A 95                    z.
+        .addr   L9581                           ; 80B1 81 95                    ..
+        .addr   L95F3                           ; 80B3 F3 95                    ..
+        .addr   L95FC                           ; 80B5 FC 95                    ..
+        .addr   L962F                           ; 80B7 2F 96                    /.
+        .addr   L970B                           ; 80B9 0B 97                    ..
+        .addr   L973D                           ; 80BB 3D 97                    =.
+        .addr   L9756                           ; 80BD 56 97                    V.
+        .addr   L975C                           ; 80BF 5C 97                    \.
+        .addr   L976E                           ; 80C1 6E 97                    n.
+        .addr   L97AC                           ; 80C3 AC 97                    ..
+        .addr   L97D0                           ; 80C5 D0 97                    ..
+        .addr   L983B                           ; 80C7 3B 98                    ;.
+        .addr   L9866                           ; 80C9 66 98                    f.
+        .addr   L98CD                           ; 80CB CD 98                    ..
+        .addr   L992B                           ; 80CD 2B 99                    +.
+        .addr   L9971                           ; 80CF 71 99                    q.
+        .addr   L998D                           ; 80D1 8D 99                    ..
+        .addr   L99EE                           ; 80D3 EE 99                    ..
+        .addr   L9A1A                           ; 80D5 1A 9A                    ..
+        .addr   L9A2F                           ; 80D7 2F 9A                    /.
+        .addr   L9A87                           ; 80D9 87 9A                    ..
+        .addr   L9AB7                           ; 80DB B7 9A                    ..
+        .addr   L9AD8                           ; 80DD D8 9A                    ..
+        .addr   L9B38                           ; 80DF 38 9B                    8.
+        .addr   L9B80                           ; 80E1 80 9B                    ..
+        .addr   L9B94                           ; 80E3 94 9B                    ..
+        .addr   L9C0D                           ; 80E5 0D 9C                    ..
+        .addr   L9C29                           ; 80E7 29 9C                    ).
+        .addr   L9C2F                           ; 80E9 2F 9C                    /.
+        .addr   L9C45                           ; 80EB 45 9C                    E.
+        .addr   L9C61                           ; 80ED 61 9C                    a.
+        .addr   L9D1A                           ; 80EF 1A 9D                    ..
+        .addr   L9D32                           ; 80F1 32 9D                    2.
+        .addr   L9D4B                           ; 80F3 4B 9D                    K.
+        .addr   L9D6C                           ; 80F5 6C 9D                    l.
+        .addr   L9D72                           ; 80F7 72 9D                    r.
+        .addr   L9D88                           ; 80F9 88 9D                    ..
+        .addr   L9D9E                           ; 80FB 9E 9D                    ..
+        .addr   L9DDB                           ; 80FD DB 9D                    ..
+        .addr   L9DE7                           ; 80FF E7 9D                    ..
+        .addr   L9DEC                           ; 8101 EC 9D                    ..
+        .addr   L9E10                           ; 8103 10 9E                    ..
+        .addr   L9E3E                           ; 8105 3E 9E                    >.
+        .addr   L9E7F                           ; 8107 7F 9E                    ..
+        .addr   L9ECD                           ; 8109 CD 9E                    ..
+        .addr   L9F68                           ; 810B 68 9F                    h.
+        .addr   L9F95                           ; 810D 95 9F                    ..
+        .addr   L9FB8                           ; 810F B8 9F                    ..
+        .addr   L9FC3                           ; 8111 C3 9F                    ..
+        .addr   L9FDC                           ; 8113 DC 9F                    ..
+        .addr   LA001                           ; 8115 01 A0                    ..
+        .addr   LCCF7                           ; 8117 F7 CC                    ..
+        .addr   LCD37                           ; 8119 37 CD                    7.
+        .addr   LE4BB                           ; 811B BB E4                    ..
+        .addr   LE548                           ; 811D 48 E5                    H.
+        .addr   LE5D7                           ; 811F D7 E5                    ..
+        .addr   LE607                           ; 8121 07 E6                    ..
+        .addr   LA074                           ; 8123 74 A0                    t.
+        .addr   LA0AF                           ; 8125 AF A0                    ..
+        .addr   LA0D8                           ; 8127 D8 A0                    ..
+        .addr   LA169                           ; 8129 69 A1                    i.
+        .addr   LA1B1                           ; 812B B1 A1                    ..
+        .addr   LEA70                           ; 812D 70 EA                    p.
+        .addr   LA1FD                           ; 812F FD A1                    ..
+        .addr   LEAF2                           ; 8131 F2 EA                    ..
+        .addr   LEB70                           ; 8133 70 EB                    p.
+        .addr   LEBFC                           ; 8135 FC EB                    ..
+        .addr   LEC21                           ; 8137 21 EC                    !.
+        .addr   LEC9B                           ; 8139 9B EC                    ..
+        .addr   LECD4                           ; 813B D4 EC                    ..
+        .addr   LECF6                           ; 813D F6 EC                    ..
+        .addr   LED1D                           ; 813F 1D ED                    ..
+        .addr   LED67                           ; 8141 67 ED                    g.
+        .addr   LED82                           ; 8143 82 ED                    ..
+        .addr   LEDEA                           ; 8145 EA ED                    ..
+        .addr   LEE1C                           ; 8147 1C EE                    ..
+        .addr   LEE7D                           ; 8149 7D EE                    }.
+        .addr   LEED5                           ; 814B D5 EE                    ..
+        .addr   LEF11                           ; 814D 11 EF                    ..
+        .addr   LEF2C                           ; 814F 2C EF                    ,.
+        .addr   LEF3D                           ; 8151 3D EF                    =.
+        .addr   LEF4D                           ; 8153 4D EF                    M.
+        .addr   LEF5C                           ; 8155 5C EF                    \.
+        .addr   LEF8C                           ; 8157 8C EF                    ..
+        .addr   LEF9D                           ; 8159 9D EF                    ..
+        .addr   LEFB2                           ; 815B B2 EF                    ..
+        .addr   LEFC4                           ; 815D C4 EF                    ..
+        .addr   LEFD5                           ; 815F D5 EF                    ..
+        .addr   LEFF7                           ; 8161 F7 EF                    ..
+        .addr   LF03A                           ; 8163 3A F0                    :.
+        .addr   LF095                           ; 8165 95 F0                    ..
+        .addr   LF125                           ; 8167 25 F1                    %.
+        .addr   LF13C                           ; 8169 3C F1                    <.
+        .addr   LF19D                           ; 816B 9D F1                    ..
+        .addr   LF1BD                           ; 816D BD F1                    ..
+        .addr   LF218                           ; 816F 18 F2                    ..
+        .addr   LF254                           ; 8171 54 F2                    T.
+        .addr   LF2B7                           ; 8173 B7 F2                    ..
+        .addr   LF2F6                           ; 8175 F6 F2                    ..
+        .addr   LF369                           ; 8177 69 F3                    i.
+        .addr   LF3B3                           ; 8179 B3 F3                    ..
+        .addr   LF42F                           ; 817B 2F F4                    /.
+        .addr   LF489                           ; 817D 89 F4                    ..
+        .addr   LF4D6                           ; 817F D6 F4                    ..
+        .addr   LF4F9                           ; 8181 F9 F4                    ..
+        .addr   LF553                           ; 8183 53 F5                    S.
+        .addr   LF564                           ; 8185 64 F5                    d.
+        .addr   LF5BE                           ; 8187 BE F5                    ..
+        .addr   LF5DA                           ; 8189 DA F5                    ..
+        .addr   LF605                           ; 818B 05 F6                    ..
+        .addr   LF64C                           ; 818D 4C F6                    L.
+        .addr   LF6A8                           ; 818F A8 F6                    ..
+        .addr   LF6C2                           ; 8191 C2 F6                    ..
 ; ----------------------------------------------------------------------------
-L80B9:
-        .byte   "Fight "                        ; 80B9 46 69 67 68 74 20        Fight 
-        .byte   $0D,$0A                         ; 80BF 0D 0A                    ..
-L80C1:
-        .byte   "Shenzhen Nanjing"              ; 80C1 53 68 65 6E 7A 68 65 6E  Shenzhen
-                                                ; 80C9 20 4E 61 6E 6A 69 6E 67   Nanjing
-        .byte   $0D,$0A                         ; 80D1 0D 0A                    ..
-L80D3:
-        .byte   "Cloud   "                      ; 80D3 43 6C 6F 75 64 20 20 20  Cloud   
-        .byte   $0D,$0A                         ; 80DB 0D 0A                    ..
-L80DD:
-        .byte   "Barret  "                      ; 80DD 42 61 72 72 65 74 20 20  Barret  
-        .byte   $0D,$0A                         ; 80E5 0D 0A                    ..
-L80E7:
-        .byte   "Tifa    "                      ; 80E7 54 69 66 61 20 20 20 20  Tifa    
-        .byte   $0D,$0A                         ; 80EF 0D 0A                    ..
-L80F1:
-        .byte   "Aeris   "                      ; 80F1 41 65 72 69 73 20 20 20  Aeris   
-        .byte   $0D,$0A                         ; 80F9 0D 0A                    ..
-L80FB:
-        .byte   "RedX` "                        ; 80FB 52 65 64 58 60 20        RedX` 
-        .byte   $0D,$0A                         ; 8101 0D 0A                    ..
-L8103:
-        .byte   "CaitSith"                      ; 8103 43 61 69 74 53 69 74 68  CaitSith
-        .byte   $0D,$0A                         ; 810B 0D 0A                    ..
-L810D:
-        .byte   "Cid     "                      ; 810D 43 69 64 20 20 20 20 20  Cid     
-        .byte   $0D,$0A                         ; 8115 0D 0A                    ..
-L8117:
-        .byte   $C0,$B7,$0D,$0A                 ; 8117 C0 B7 0D 0A              ....
-L811B:
-        .byte   $C0,$B8,$0D,$0A                 ; 811B C0 B8 0D 0A              ....
-L811F:
-        .byte   $C0,$B9,$0D,$0A                 ; 811F C0 B9 0D 0A              ....
-L8123:
-        .byte   $C0,$BA,$0D,$0A                 ; 8123 C0 BA 0D 0A              ....
-L8127:
-        .byte   "        "                      ; 8127 20 20 20 20 20 20 20 20          
-        .byte   $0D,$0A                         ; 812F 0D 0A                    ..
-L8131:
-        .byte   "HP "                           ; 8131 48 50 20                 HP 
-        .byte   $0D,$0A                         ; 8134 0D 0A                    ..
-L8136:
-        .byte   "Str"                           ; 8136 53 74 72                 Str
-        .byte   $0D,$0A                         ; 8139 0D 0A                    ..
-L813B:
-        .byte   "Vit"                           ; 813B 56 69 74                 Vit
-        .byte   $0D,$0A                         ; 813E 0D 0A                    ..
-L8140:
-        .byte   "Int"                           ; 8140 49 6E 74                 Int
-        .byte   $0D,$0A                         ; 8143 0D 0A                    ..
-L8145:
-        .byte   "Spr"                           ; 8145 53 70 72                 Spr
-        .byte   $0D,$0A                         ; 8148 0D 0A                    ..
-L814A:
-        .byte   "Agl"                           ; 814A 41 67 6C                 Agl
-        .byte   $0D,$0A                         ; 814D 0D 0A                    ..
-L814F:
-        .byte   "* "                            ; 814F 2A 20                    * 
-        .byte   $0D,$0A                         ; 8151 0D 0A                    ..
-L8153:
-        .byte   "Fight One "                    ; 8153 46 69 67 68 74 20 4F 6E  Fight On
-                                                ; 815B 65 20                    e 
-        .byte   $0D,$0A                         ; 815D 0D 0A                    ..
-L815F:
-        .byte   "Fight All "                    ; 815F 46 69 67 68 74 20 41 6C  Fight Al
-                                                ; 8167 6C 20                    l 
-        .byte   $0D,$0A                         ; 8169 0D 0A                    ..
-L816B:
-        .byte   "To One "                       ; 816B 54 6F 20 4F 6E 65 20     To One 
-        .byte   $0D,$0A                         ; 8172 0D 0A                    ..
-L8174:
-        .byte   "To All "                       ; 8174 54 6F 20 41 6C 6C 20     To All 
-        .byte   $0D,$0A                         ; 817B 0D 0A                    ..
-L817D:
-        .byte   "None"                          ; 817D 4E 6F 6E 65              None
-        .byte   $0D,$0A                         ; 8181 0D 0A                    ..
-L8183:
-        .byte   "Cloud"                         ; 8183 43 6C 6F 75 64           Cloud
-        .byte   $0D,$0A                         ; 8188 0D 0A                    ..
-L818A:
-        .byte   "Barret"                        ; 818A 42 61 72 72 65 74        Barret
-        .byte   $0D,$0A                         ; 8190 0D 0A                    ..
-L8192:
-        .byte   "Tifa"                          ; 8192 54 69 66 61              Tifa
-        .byte   $0D,$0A                         ; 8196 0D 0A                    ..
-L8198:
-        .byte   "Aeris"                         ; 8198 41 65 72 69 73           Aeris
-        .byte   $0D,$0A                         ; 819D 0D 0A                    ..
-L819F:
-        .byte   "RedX`"                         ; 819F 52 65 64 58 60           RedX`
-        .byte   $0D,$0A                         ; 81A4 0D 0A                    ..
-L81A6:
-        .byte   "CaitSith"                      ; 81A6 43 61 69 74 53 69 74 68  CaitSith
-        .byte   $0D,$0A                         ; 81AE 0D 0A                    ..
-L81B0:
-        .byte   "Cid"                           ; 81B0 43 69 64                 Cid
-        .byte   $0D,$0A                         ; 81B3 0D 0A                    ..
-L81B5:
-        .byte   $C0,$BB,$C0,$BC,$0D,$0A         ; 81B5 C0 BB C0 BC 0D 0A        ......
-L81BB:
-        .byte   $C0,$BD,$C0,$BE,$0D,$0A         ; 81BB C0 BD C0 BE 0D 0A        ......
-L81C1:
-        .byte   $C0,$BF,$C0,$C0,$0D,$0A         ; 81C1 C0 BF C0 C0 0D 0A        ......
-L81C7:
-        .byte   $C0,$C1,$C0,$C2,$0D,$0A         ; 81C7 C0 C1 C0 C2 0D 0A        ......
-L81CD:
-        .byte   "Used "                         ; 81CD 55 73 65 64 20           Used 
-        .byte   $0D,$0A                         ; 81D2 0D 0A                    ..
-L81D4:
-        .byte   "Escaped!"                      ; 81D4 45 73 63 61 70 65 64 21  Escaped!
-        .byte   $0D,$0A                         ; 81DC 0D 0A                    ..
-L81DE:
-        .byte   "No escape__"                   ; 81DE 4E 6F 20 65 73 63 61 70  No escap
-                                                ; 81E6 65 5F 5F                 e__
-        .byte   $0D,$0A                         ; 81E9 0D 0A                    ..
-L81EB:
-        .byte   "No effect__"                   ; 81EB 4E 6F 20 65 66 66 65 63  No effec
-                                                ; 81F3 74 5F 5F                 t__
-        .byte   $0D,$0A                         ; 81F6 0D 0A                    ..
-L81F8:
-        .byte   "Healed Self "                  ; 81F8 48 65 61 6C 65 64 20 53  Healed S
-                                                ; 8200 65 6C 66 20              elf 
-        .byte   $0D,$0A                         ; 8204 0D 0A                    ..
-L8206:
-        .byte   "Healed "                       ; 8206 48 65 61 6C 65 64 20     Healed 
-        .byte   $0D,$0A                         ; 820D 0D 0A                    ..
-L820F:
-        .byte   "Defeated__"                    ; 820F 44 65 66 65 61 74 65 64  Defeated
-                                                ; 8217 5F 5F                    __
-        .byte   $0D,$0A                         ; 8219 0D 0A                    ..
-L821B:
-        .byte   "Game Over!"                    ; 821B 47 61 6D 65 20 4F 76 65  Game Ove
-                                                ; 8223 72 21                    r!
-        .byte   $0D,$0A                         ; 8225 0D 0A                    ..
-L8227:
-        .byte   "Self "                         ; 8227 53 65 6C 66 20           Self 
-        .byte   $0D,$0A                         ; 822C 0D 0A                    ..
-L822E:
-        .byte   "HP Restored "                  ; 822E 48 50 20 52 65 73 74 6F  HP Resto
-                                                ; 8236 72 65 64 20              red 
-        .byte   $0D,$0A                         ; 823A 0D 0A                    ..
-L823C:
-        .byte   "MP Restored "                  ; 823C 4D 50 20 52 65 73 74 6F  MP Resto
-                                                ; 8244 72 65 64 20              red 
-        .byte   $0D,$0A                         ; 8248 0D 0A                    ..
-L824A:
-        .byte   "All "                          ; 824A 41 6C 6C 20              All 
-        .byte   $0D,$0A                         ; 824E 0D 0A                    ..
-L8250:
-        .byte   "Revived "                      ; 8250 52 65 76 69 76 65 64 20  Revived 
-        .byte   $0D,$0A                         ; 8258 0D 0A                    ..
-L825A:
-        .byte   "Victory!"                      ; 825A 56 69 63 74 6F 72 79 21  Victory!
-        .byte   $0D,$0A                         ; 8262 0D 0A                    ..
-L8264:
-        .byte   "EXP:"                          ; 8264 45 58 50 3A              EXP:
-        .byte   $0D,$0A                         ; 8268 0D 0A                    ..
-L826A:
-        .byte   "Gil:"                          ; 826A 47 69 6C 3A              Gil:
-        .byte   $0D,$0A                         ; 826E 0D 0A                    ..
-L8270:
-        .byte   "Level Up!"                     ; 8270 4C 65 76 65 6C 20 55 70  Level Up
-                                                ; 8278 21                       !
-        .byte   $0D,$0A                         ; 8279 0D 0A                    ..
-L827B:
-        .byte   "Got "                          ; 827B 47 6F 74 20              Got 
-        .byte   $0D,$0A                         ; 827F 0D 0A                    ..
-L8281:
-        .byte   "Buy?"                          ; 8281 42 75 79 3F              Buy?
-        .byte   $0D,$0A                         ; 8285 0D 0A                    ..
-L8287:
-        .byte   "Sell?"                         ; 8287 53 65 6C 6C 3F           Sell?
-        .byte   $0D,$0A                         ; 828C 0D 0A                    ..
-L828E:
-        .byte   "Deal!"                         ; 828E 44 65 61 6C 21           Deal!
-        .byte   $0D,$0A                         ; 8293 0D 0A                    ..
-L8295:
-        .byte   "Can't "                        ; 8295 43 61 6E 27 74 20        Can't 
-        .byte   $0D,$0A                         ; 829B 0D 0A                    ..
-L829D:
-        .byte   "Not enough Gil!"               ; 829D 4E 6F 74 20 65 6E 6F 75  Not enou
-                                                ; 82A5 67 68 20 47 69 6C 21     gh Gil!
-        .byte   $0D,$0A                         ; 82AC 0D 0A                    ..
-L82AE:
-        .byte   "HP "                           ; 82AE 48 50 20                 HP 
-        .byte   $0D,$0A                         ; 82B1 0D 0A                    ..
-L82B3:
-        .byte   "Str"                           ; 82B3 53 74 72                 Str
-        .byte   $0D,$0A                         ; 82B6 0D 0A                    ..
-L82B8:
-        .byte   "Vit"                           ; 82B8 56 69 74                 Vit
-        .byte   $0D,$0A                         ; 82BB 0D 0A                    ..
-L82BD:
-        .byte   "Int"                           ; 82BD 49 6E 74                 Int
-        .byte   $0D,$0A                         ; 82C0 0D 0A                    ..
-L82C2:
-        .byte   "Spr"                           ; 82C2 53 70 72                 Spr
-        .byte   $0D,$0A                         ; 82C5 0D 0A                    ..
-L82C7:
-        .byte   "Agl"                           ; 82C7 41 67 6C                 Agl
-        .byte   $0D,$0A                         ; 82CA 0D 0A                    ..
-L82CC:
-        .byte   " "                             ; 82CC 20                        
-        .byte   $0D,$0A                         ; 82CD 0D 0A                    ..
-L82CF:
-        .byte   "None"                          ; 82CF 4E 6F 6E 65              None
-        .byte   $0D,$0A                         ; 82D3 0D 0A                    ..
-L82D5:
-        .byte   "Mastered!"                     ; 82D5 4D 61 73 74 65 72 65 64  Mastered
-                                                ; 82DD 21                       !
-        .byte   $0D,$0A                         ; 82DE 0D 0A                    ..
-L82E0:
-        .byte   "Not enough EXP!"               ; 82E0 4E 6F 74 20 65 6E 6F 75  Not enou
-                                                ; 82E8 67 68 20 45 58 50 21     gh EXP!
-        .byte   $0D,$0A                         ; 82EF 0D 0A                    ..
-L82F1:
-        .byte   "Enhanced!"                     ; 82F1 45 6E 68 61 6E 63 65 64  Enhanced
-                                                ; 82F9 21                       !
-        .byte   $0D,$0A                         ; 82FA 0D 0A                    ..
-L82FC:
-        .byte   "To "                           ; 82FC 54 6F 20                 To 
-        .byte   $0D,$0A                         ; 82FF 0D 0A                    ..
-L8301:
-        .byte   "Equipped "                     ; 8301 45 71 75 69 70 70 65 64  Equipped
-                                                ; 8309 20                        
-        .byte   $0D,$0A                         ; 830A 0D 0A                    ..
-L830C:
-        .byte   "Clo"                           ; 830C 43 6C 6F                 Clo
-        .byte   $0D,$0A                         ; 830F 0D 0A                    ..
-L8311:
-        .byte   "Bar"                           ; 8311 42 61 72                 Bar
-        .byte   $0D,$0A                         ; 8314 0D 0A                    ..
-L8316:
-        .byte   "Tif"                           ; 8316 54 69 66                 Tif
-        .byte   $0D,$0A                         ; 8319 0D 0A                    ..
-L831B:
-        .byte   "Aer"                           ; 831B 41 65 72                 Aer
-        .byte   $0D,$0A                         ; 831E 0D 0A                    ..
-L8320:
-        .byte   "Red"                           ; 8320 52 65 64                 Red
-        .byte   $0D,$0A                         ; 8323 0D 0A                    ..
-L8325:
-        .byte   "Cat"                           ; 8325 43 61 74                 Cat
-        .byte   $0D,$0A                         ; 8328 0D 0A                    ..
-L832A:
-        .byte   "Cid"                           ; 832A 43 69 64                 Cid
-        .byte   $0D,$0A,$FF,$FF                 ; 832D 0D 0A FF FF              ....
+        .byte   $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D ; 8193 3D 3D 3D 3D 3D 3D 3D 3D  ========
+        .byte   $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D ; 819B 3D 3D 3D 3D 3D 3D 3D 3D  ========
+        .byte   $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D ; 81A3 3D 3D 3D 3D 3D 3D 3D 3D  ========
+        .byte   $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D ; 81AB 3D 3D 3D 3D 3D 3D 3D 3D  ========
+        .byte   $3D,$3D,$3D,$3D,$3D,$3D,$3D,$3D ; 81B3 3D 3D 3D 3D 3D 3D 3D 3D  ========
+        .byte   $3D,$3D,$3D,$3D,$30,$30         ; 81BB 3D 3D 3D 3D 30 30        ====00
 ; ----------------------------------------------------------------------------
-L8331:
-        .addr   L83A1                           ; 8331 A1 83                    ..
-        .addr   L83A7                           ; 8333 A7 83                    ..
-        .addr   L83AF                           ; 8335 AF 83                    ..
-        .addr   L83B7                           ; 8337 B7 83                    ..
-        .addr   L83BE                           ; 8339 BE 83                    ..
-        .addr   L83C6                           ; 833B C6 83                    ..
-        .addr   L83CE                           ; 833D CE 83                    ..
-        .addr   L83D7                           ; 833F D7 83                    ..
-        .addr   L83DF                           ; 8341 DF 83                    ..
-        .addr   L83E7                           ; 8343 E7 83                    ..
-        .addr   L83F1                           ; 8345 F1 83                    ..
-        .addr   L83F9                           ; 8347 F9 83                    ..
-        .addr   L8401                           ; 8349 01 84                    ..
-        .addr   L840A                           ; 834B 0A 84                    ..
-        .addr   L8412                           ; 834D 12 84                    ..
-        .addr   L841C                           ; 834F 1C 84                    ..
-        .addr   L8425                           ; 8351 25 84                    %.
-        .addr   L842F                           ; 8353 2F 84                    /.
-        .addr   L8437                           ; 8355 37 84                    7.
-        .addr   L843F                           ; 8357 3F 84                    ?.
-        .addr   L8446                           ; 8359 46 84                    F.
-        .addr   L844F                           ; 835B 4F 84                    O.
-        .addr   L8459                           ; 835D 59 84                    Y.
-        .addr   L8460                           ; 835F 60 84                    `.
-        .addr   L8467                           ; 8361 67 84                    g.
-        .addr   L846F                           ; 8363 6F 84                    o.
-        .addr   L8476                           ; 8365 76 84                    v.
-        .addr   L847E                           ; 8367 7E 84                    ~.
-        .addr   L8486                           ; 8369 86 84                    ..
-        .addr   L848F                           ; 836B 8F 84                    ..
-        .addr   L8497                           ; 836D 97 84                    ..
-        .addr   L849F                           ; 836F 9F 84                    ..
-        .addr   L84A8                           ; 8371 A8 84                    ..
-        .addr   L84B0                           ; 8373 B0 84                    ..
-        .addr   L84B7                           ; 8375 B7 84                    ..
-        .addr   L84BF                           ; 8377 BF 84                    ..
-        .addr   L84C9                           ; 8379 C9 84                    ..
-        .addr   L84D3                           ; 837B D3 84                    ..
-        .addr   L84DD                           ; 837D DD 84                    ..
-        .addr   L84E7                           ; 837F E7 84                    ..
-        .addr   L84F0                           ; 8381 F0 84                    ..
-        .addr   L84F7                           ; 8383 F7 84                    ..
-        .addr   L8500                           ; 8385 00 85                    ..
-        .addr   L8507                           ; 8387 07 85                    ..
-        .addr   L8510                           ; 8389 10 85                    ..
-        .addr   L8518                           ; 838B 18 85                    ..
-        .addr   L8521                           ; 838D 21 85                    !.
-        .addr   L8529                           ; 838F 29 85                    ).
-        .addr   L8533                           ; 8391 33 85                    3.
-        .addr   L853B                           ; 8393 3B 85                    ;.
-        .addr   L8544                           ; 8395 44 85                    D.
-        .addr   L854C                           ; 8397 4C 85                    L.
-        .addr   L8554                           ; 8399 54 85                    T.
-        .addr   L855D                           ; 839B 5D 85                    ].
-        .addr   L8565                           ; 839D 65 85                    e.
-        .addr   L856F                           ; 839F 6F 85                    o.
+        .addr   LA243                           ; 81C1 43 A2                    C.
+        .addr   LA271                           ; 81C3 71 A2                    q.
+        .addr   LA293                           ; 81C5 93 A2                    ..
+        .addr   LA2A4                           ; 81C7 A4 A2                    ..
+        .addr   LA2EB                           ; 81C9 EB A2                    ..
+        .addr   LA318                           ; 81CB 18 A3                    ..
+        .addr   LA334                           ; 81CD 34 A3                    4.
+        .addr   LA35C                           ; 81CF 5C A3                    \.
+        .addr   LA371                           ; 81D1 71 A3                    q.
+        .addr   LA37E                           ; 81D3 7E A3                    ~.
+        .addr   LA385                           ; 81D5 85 A3                    ..
+        .addr   LA3D7                           ; 81D7 D7 A3                    ..
+        .addr   LA3FE                           ; 81D9 FE A3                    ..
+        .addr   LA448                           ; 81DB 48 A4                    H.
+        .addr   LA491                           ; 81DD 91 A4                    ..
+        .addr   LA552                           ; 81DF 52 A5                    R.
+        .addr   LA587                           ; 81E1 87 A5                    ..
+        .addr   LA5A8                           ; 81E3 A8 A5                    ..
+        .addr   LA5C6                           ; 81E5 C6 A5                    ..
+        .addr   LA619                           ; 81E7 19 A6                    ..
+        .addr   LA632                           ; 81E9 32 A6                    2.
+        .addr   LA72B                           ; 81EB 2B A7                    +.
+        .addr   LA797                           ; 81ED 97 A7                    ..
+        .addr   LA7B1                           ; 81EF B1 A7                    ..
+        .addr   LA81C                           ; 81F1 1C A8                    ..
+        .addr   LA8A5                           ; 81F3 A5 A8                    ..
+        .addr   LA8B0                           ; 81F5 B0 A8                    ..
+        .addr   LA8C6                           ; 81F7 C6 A8                    ..
+        .addr   LA8EC                           ; 81F9 EC A8                    ..
+        .addr   LA90B                           ; 81FB 0B A9                    ..
 ; ----------------------------------------------------------------------------
-L83A1:
-        .byte   "None"                          ; 83A1 4E 6F 6E 65              None
-        .byte   $0D,$0A                         ; 83A5 0D 0A                    ..
-L83A7:
-        .byte   "{Wrath"                        ; 83A7 7B 57 72 61 74 68        {Wrath
-        .byte   $0D,$0A                         ; 83AD 0D 0A                    ..
-L83AF:
-        .byte   "{Force"                        ; 83AF 7B 46 6F 72 63 65        {Force
-        .byte   $0D,$0A                         ; 83B5 0D 0A                    ..
-L83B7:
-        .byte   "{Lion"                         ; 83B7 7B 4C 69 6F 6E           {Lion
-        .byte   $0D,$0A                         ; 83BC 0D 0A                    ..
-L83BE:
-        .byte   "{White"                        ; 83BE 7B 57 68 69 74 65        {White
-        .byte   $0D,$0A                         ; 83C4 0D 0A                    ..
-L83C6:
-        .byte   "{Light"                        ; 83C6 7B 4C 69 67 68 74        {Light
-        .byte   $0D,$0A                         ; 83CC 0D 0A                    ..
-L83CE:
-        .byte   "{Sierra"                       ; 83CE 7B 53 69 65 72 72 61     {Sierra
-        .byte   $0D,$0A                         ; 83D5 0D 0A                    ..
-L83D7:
-        .byte   "{Valor"                        ; 83D7 7B 56 61 6C 6F 72        {Valor
-        .byte   $0D,$0A                         ; 83DD 0D 0A                    ..
-L83DF:
-        .byte   "{Skull"                        ; 83DF 7B 53 6B 75 6C 6C        {Skull
-        .byte   $0D,$0A                         ; 83E5 0D 0A                    ..
-L83E7:
-        .byte   "{Warlord"                      ; 83E7 7B 57 61 72 6C 6F 72 64  {Warlord
-        .byte   $0D,$0A                         ; 83EF 0D 0A                    ..
-L83F1:
-        .byte   "{Beast"                        ; 83F1 7B 42 65 61 73 74        {Beast
-        .byte   $0D,$0A                         ; 83F7 0D 0A                    ..
-L83F9:
-        .byte   "{Blaze"                        ; 83F9 7B 42 6C 61 7A 65        {Blaze
-        .byte   $0D,$0A                         ; 83FF 0D 0A                    ..
-L8401:
-        .byte   "{Tyrant"                       ; 8401 7B 54 79 72 61 6E 74     {Tyrant
-        .byte   $0D,$0A                         ; 8408 0D 0A                    ..
-L840A:
-        .byte   "{Frost"                        ; 840A 7B 46 72 6F 73 74        {Frost
-        .byte   $0D,$0A                         ; 8410 0D 0A                    ..
-L8412:
-        .byte   "{Violent"                      ; 8412 7B 56 69 6F 6C 65 6E 74  {Violent
-        .byte   $0D,$0A                         ; 841A 0D 0A                    ..
-L841C:
-        .byte   "{Forest"                       ; 841C 7B 46 6F 72 65 73 74     {Forest
-        .byte   $0D,$0A                         ; 8423 0D 0A                    ..
-L8425:
-        .byte   "{Element"                      ; 8425 7B 45 6C 65 6D 65 6E 74  {Element
-        .byte   $0D,$0A                         ; 842D 0D 0A                    ..
-L842F:
-        .byte   "{Blaze"                        ; 842F 7B 42 6C 61 7A 65        {Blaze
-        .byte   $0D,$0A                         ; 8435 0D 0A                    ..
-L8437:
-        .byte   "{Scale"                        ; 8437 7B 53 63 61 6C 65        {Scale
-        .byte   $0D,$0A                         ; 843D 0D 0A                    ..
-L843F:
-        .byte   "{Dual"                         ; 843F 7B 44 75 61 6C           {Dual
-        .byte   $0D,$0A                         ; 8444 0D 0A                    ..
-L8446:
-        .byte   "{Basket"                       ; 8446 7B 42 61 73 6B 65 74     {Basket
-        .byte   $0D,$0A                         ; 844D 0D 0A                    ..
-L844F:
-        .byte   "{Marshal"                      ; 844F 7B 4D 61 72 73 68 61 6C  {Marshal
-        .byte   $0D,$0A                         ; 8457 0D 0A                    ..
-L8459:
-        .byte   "{Pale"                         ; 8459 7B 50 61 6C 65           {Pale
-        .byte   $0D,$0A                         ; 845E 0D 0A                    ..
-L8460:
-        .byte   "{Lark"                         ; 8460 7B 4C 61 72 6B           {Lark
-        .byte   $0D,$0A                         ; 8465 0D 0A                    ..
-L8467:
-        .byte   "{Thief"                        ; 8467 7B 54 68 69 65 66        {Thief
-        .byte   $0D,$0A                         ; 846D 0D 0A                    ..
-L846F:
-        .byte   "{Rune"                         ; 846F 7B 52 75 6E 65           {Rune
-        .byte   $0D,$0A                         ; 8474 0D 0A                    ..
-L8476:
-        .byte   "{Flame"                        ; 8476 7B 46 6C 61 6D 65        {Flame
-        .byte   $0D,$0A                         ; 847C 0D 0A                    ..
-L847E:
-        .byte   "{Flint"                        ; 847E 7B 46 6C 69 6E 74        {Flint
-        .byte   $0D,$0A                         ; 8484 0D 0A                    ..
-L8486:
-        .byte   "{Dragon"                       ; 8486 7B 44 72 61 67 6F 6E     {Dragon
-        .byte   $0D,$0A                         ; 848D 0D 0A                    ..
-L848F:
-        .byte   "{Storm"                        ; 848F 7B 53 74 6F 72 6D        {Storm
-        .byte   $0D,$0A                         ; 8495 0D 0A                    ..
-L8497:
-        .byte   "{Guard"                        ; 8497 7B 47 75 61 72 64        {Guard
-        .byte   $0D,$0A                         ; 849D 0D 0A                    ..
-L849F:
-        .byte   "{Arcane"                       ; 849F 7B 41 72 63 61 6E 65     {Arcane
-        .byte   $0D,$0A                         ; 84A6 0D 0A                    ..
-L84A8:
-        .byte   "{Satin"                        ; 84A8 7B 53 61 74 69 6E        {Satin
-        .byte   $0D,$0A                         ; 84AE 0D 0A                    ..
-L84B0:
-        .byte   "{Silk"                         ; 84B0 7B 53 69 6C 6B           {Silk
-        .byte   $0D,$0A                         ; 84B5 0D 0A                    ..
-L84B7:
-        .byte   "{Demon"                        ; 84B7 7B 44 65 6D 6F 6E        {Demon
-        .byte   $0D,$0A                         ; 84BD 0D 0A                    ..
-L84BF:
-        .byte   "}DarkEye"                      ; 84BF 7D 44 61 72 6B 45 79 65  }DarkEye
-        .byte   $0D,$0A                         ; 84C7 0D 0A                    ..
-L84C9:
-        .byte   "{Crystal"                      ; 84C9 7B 43 72 79 73 74 61 6C  {Crystal
-        .byte   $0D,$0A                         ; 84D1 0D 0A                    ..
-L84D3:
-        .byte   "{Prophet"                      ; 84D3 7B 50 72 6F 70 68 65 74  {Prophet
-        .byte   $0D,$0A                         ; 84DB 0D 0A                    ..
-L84DD:
-        .byte   "{Scholar"                      ; 84DD 7B 53 63 68 6F 6C 61 72  {Scholar
-        .byte   $0D,$0A                         ; 84E5 0D 0A                    ..
-L84E7:
-        .byte   "{Goggle"                       ; 84E7 7B 47 6F 67 67 6C 65     {Goggle
-        .byte   $0D,$0A                         ; 84EE 0D 0A                    ..
-L84F0:
-        .byte   "{Mist"                         ; 84F0 7B 4D 69 73 74           {Mist
-        .byte   $0D,$0A                         ; 84F5 0D 0A                    ..
-L84F7:
-        .byte   "{Shroud"                       ; 84F7 7B 53 68 72 6F 75 64     {Shroud
-        .byte   $0D,$0A                         ; 84FE 0D 0A                    ..
-L8500:
-        .byte   "{Pope"                         ; 8500 7B 50 6F 70 65           {Pope
-        .byte   $0D,$0A                         ; 8505 0D 0A                    ..
-L8507:
-        .byte   "{Devout"                       ; 8507 7B 44 65 76 6F 75 74     {Devout
-        .byte   $0D,$0A                         ; 850E 0D 0A                    ..
-L8510:
-        .byte   "{Major"                        ; 8510 7B 4D 61 6A 6F 72        {Major
-        .byte   $0D,$0A                         ; 8516 0D 0A                    ..
-L8518:
-        .byte   "{Sacred"                       ; 8518 7B 53 61 63 72 65 64     {Sacred
-        .byte   $0D,$0A                         ; 851F 0D 0A                    ..
-L8521:
-        .byte   "{Spark"                        ; 8521 7B 53 70 61 72 6B        {Spark
-        .byte   $0D,$0A                         ; 8527 0D 0A                    ..
-L8529:
-        .byte   "{Crimson"                      ; 8529 7B 43 72 69 6D 73 6F 6E  {Crimson
-        .byte   $0D,$0A                         ; 8531 0D 0A                    ..
-L8533:
-        .byte   "{Pearl"                        ; 8533 7B 50 65 61 72 6C        {Pearl
-        .byte   $0D,$0A                         ; 8539 0D 0A                    ..
+L81FD:
+        .byte   "Huh?Oh,another\customer.You sur"; 81FD 48 75 68 3F 4F 68 2C 61 Huh?Oh,a
+                                                ; 8205 6E 6F 74 68 65 72 5C 63  nother\c
+                                                ; 820D 75 73 74 6F 6D 65 72 2E  ustomer.
+                                                ; 8215 59 6F 75 20 73 75 72     You sur
+        .byte   "e\picked an out of\the way plac"; 821C 65 5C 70 69 63 6B 65 64 e\picked
+                                                ; 8224 20 61 6E 20 6F 75 74 20   an out 
+                                                ; 822C 6F 66 5C 74 68 65 20 77  of\the w
+                                                ; 8234 61 79 20 70 6C 61 63     ay plac
+        .byte   "e but__But if it's the\Keystone"; 823B 65 20 62 75 74 5F 5F 42 e but__B
+                                                ; 8243 75 74 20 69 66 20 69 74  ut if it
+                                                ; 824B 27 73 20 74 68 65 5C 4B  's the\K
+                                                ; 8253 65 79 73 74 6F 6E 65     eystone
+        .byte   " you're\looking for,you're\too "; 825A 20 79 6F 75 27 72 65 5C  you're\
+                                                ; 8262 6C 6F 6F 6B 69 6E 67 20  looking 
+                                                ; 826A 66 6F 72 2C 79 6F 75 27  for,you'
+                                                ; 8272 72 65 5C 74 6F 6F 20     re\too 
+        .byte   "late.Don't haveit."            ; 8279 6C 61 74 65 2E 44 6F 6E  late.Don
+                                                ; 8281 27 74 20 68 61 76 65 69  't havei
+                                                ; 8289 74 2E                    t.
+        .byte   $0A                             ; 828B 0A                       .
+L828C:
+        .byte   "@1Keystone?"                   ; 828C 40 31 4B 65 79 73 74 6F  @1Keysto
+                                                ; 8294 6E 65 3F                 ne?
+        .byte   $0A                             ; 8297 0A                       .
+L8298:
+        .byte   "What?You didn't\come here for t"; 8298 57 68 61 74 3F 59 6F 75 What?You
+                                                ; 82A0 20 64 69 64 6E 27 74 5C   didn't\
+                                                ; 82A8 63 6F 6D 65 20 68 65 72  come her
+                                                ; 82B0 65 20 66 6F 72 20 74     e for t
+        .byte   "hat?The Keystone is thekey that"; 82B7 68 61 74 3F 54 68 65 20 hat?The 
+                                                ; 82BF 4B 65 79 73 74 6F 6E 65  Keystone
+                                                ; 82C7 20 69 73 20 74 68 65 6B   is thek
+                                                ; 82CF 65 79 20 74 68 61 74     ey that
+        .byte   " unlocks\the gate to a very\old"; 82D6 20 75 6E 6C 6F 63 6B 73  unlocks
+                                                ; 82DE 5C 74 68 65 20 67 61 74  \the gat
+                                                ; 82E6 65 20 74 6F 20 61 20 76  e to a v
+                                                ; 82EE 65 72 79 5C 6F 6C 64     ery\old
+        .byte   " temple\somewhere.You're\not go"; 82F5 20 74 65 6D 70 6C 65 5C  temple\
+                                                ; 82FD 73 6F 6D 65 77 68 65 72  somewher
+                                                ; 8305 65 2E 59 6F 75 27 72 65  e.You're
+                                                ; 830D 5C 6E 6F 74 20 67 6F     \not go
+        .byte   "ing to\believe your ears,\But I"; 8314 69 6E 67 20 74 6F 5C 62 ing to\b
+                                                ; 831C 65 6C 69 65 76 65 20 79  elieve y
+                                                ; 8324 6F 75 72 20 65 61 72 73  our ears
+                                                ; 832C 2C 5C 42 75 74 20 49     ,\But I
+        .byte   " heard it was\the Temple of the"; 8333 20 68 65 61 72 64 20 69  heard i
+                                                ; 833B 74 20 77 61 73 5C 74 68  t was\th
+                                                ; 8343 65 20 54 65 6D 70 6C 65  e Temple
+                                                ; 834B 20 6F 66 20 74 68 65      of the
+        .byte   "\Ancients!"                    ; 8352 5C 41 6E 63 69 65 6E 74  \Ancient
+                                                ; 835A 73 21                    s!
+        .byte   $0A                             ; 835C 0A                       .
+L835D:
+        .byte   "@1The Temple of the\Ancients__"; 835D 40 31 54 68 65 20 54 65  @1The Te
+                                                ; 8365 6D 70 6C 65 20 6F 66 20  mple of 
+                                                ; 836D 74 68 65 5C 41 6E 63 69  the\Anci
+                                                ; 8375 65 6E 74 73 5F 5F        ents__
+        .byte   $0A                             ; 837B 0A                       .
+L837C:
+        .byte   "Kya,hah hah hah__\Don't take it"; 837C 4B 79 61 2C 68 61 68 20 Kya,hah 
+                                                ; 8384 68 61 68 20 68 61 68 5F  hah hah_
+                                                ; 838C 5F 5C 44 6F 6E 27 74 20  _\Don't 
+                                                ; 8394 74 61 6B 65 20 69 74     take it
+        .byte   "\seriously.It's justa legend!" ; 839B 5C 73 65 72 69 6F 75 73  \serious
+                                                ; 83A3 6C 79 2E 49 74 27 73 20  ly.It's 
+                                                ; 83AB 6A 75 73 74 61 20 6C 65  justa le
+                                                ; 83B3 67 65 6E 64 21           gend!
+        .byte   $0A                             ; 83B8 0A                       .
+L83B9:
+        .byte   "@1Where is this\Keystone?"     ; 83B9 40 31 57 68 65 72 65 20  @1Where 
+                                                ; 83C1 69 73 20 74 68 69 73 5C  is this\
+                                                ; 83C9 4B 65 79 73 74 6F 6E 65  Keystone
+                                                ; 83D1 3F                       ?
+        .byte   $0A                             ; 83D2 0A                       .
+L83D3:
+        .byte   "I sold it already.\Yeah well,to"; 83D3 49 20 73 6F 6C 64 20 69 I sold i
+                                                ; 83DB 74 20 61 6C 72 65 61 64  t alread
+                                                ; 83E3 79 2E 5C 59 65 61 68 20  y.\Yeah 
+                                                ; 83EB 77 65 6C 6C 2C 74 6F     well,to
+        .byte   " tell\the truth,I didn't\really"; 83F2 20 74 65 6C 6C 5C 74 68  tell\th
+                                                ; 83FA 65 20 74 72 75 74 68 2C  e truth,
+                                                ; 8402 49 20 64 69 64 6E 27 74  I didn't
+                                                ; 840A 5C 72 65 61 6C 6C 79     \really
+        .byte   " want to sellit but__That guy\h"; 8411 20 77 61 6E 74 20 74 6F  want to
+                                                ; 8419 20 73 65 6C 6C 69 74 20   sellit 
+                                                ; 8421 62 75 74 5F 5F 54 68 61  but__Tha
+                                                ; 8429 74 20 67 75 79 5C 68     t guy\h
+        .byte   "ad a way about himthat made you"; 8430 61 64 20 61 20 77 61 79 ad a way
+                                                ; 8438 20 61 62 6F 75 74 20 68   about h
+                                                ; 8440 69 6D 74 68 61 74 20 6D  imthat m
+                                                ; 8448 61 64 65 20 79 6F 75     ade you
+        .byte   " feel\like it may not be\a good"; 844F 20 66 65 65 6C 5C 6C 69  feel\li
+                                                ; 8457 6B 65 20 69 74 20 6D 61  ke it ma
+                                                ; 845F 79 20 6E 6F 74 20 62 65  y not be
+                                                ; 8467 5C 61 20 67 6F 6F 64     \a good
+        .byte   " idea NOT to\sell it to him__" ; 846E 20 69 64 65 61 20 4E 4F   idea NO
+                                                ; 8476 54 20 74 6F 5C 73 65 6C  T to\sel
+                                                ; 847E 6C 20 69 74 20 74 6F 20  l it to 
+                                                ; 8486 68 69 6D 5F 5F           him__
+        .byte   $0A                             ; 848B 0A                       .
+L848C:
+        .byte   "@1Who did you sell itto?"      ; 848C 40 31 57 68 6F 20 64 69  @1Who di
+                                                ; 8494 64 20 79 6F 75 20 73 65  d you se
+                                                ; 849C 6C 6C 20 69 74 74 6F 3F  ll itto?
+        .byte   $0A                             ; 84A4 0A                       .
+L84A5:
+        .byte   "The manager of the\Gold Saucer_"; 84A5 54 68 65 20 6D 61 6E 61 The mana
+                                                ; 84AD 67 65 72 20 6F 66 20 74  ger of t
+                                                ; 84B5 68 65 5C 47 6F 6C 64 20  he\Gold 
+                                                ; 84BD 53 61 75 63 65 72 5F     Saucer_
+        .byte   "_think\his name was Dio.\Said h"; 84C4 5F 74 68 69 6E 6B 5C 68 _think\h
+                                                ; 84CC 69 73 20 6E 61 6D 65 20  is name 
+                                                ; 84D4 77 61 73 20 44 69 6F 2E  was Dio.
+                                                ; 84DC 5C 53 61 69 64 20 68     \Said h
+        .byte   "e was going\to put it in his\mu"; 84E3 65 20 77 61 73 20 67 6F e was go
+                                                ; 84EB 69 6E 67 5C 74 6F 20 70  ing\to p
+                                                ; 84F3 75 74 20 69 74 20 69 6E  ut it in
+                                                ; 84FB 20 68 69 73 5C 6D 75      his\mu
+        .byte   "seum,then he tookoff out of her"; 8502 73 65 75 6D 2C 74 68 65 seum,the
+                                                ; 850A 6E 20 68 65 20 74 6F 6F  n he too
+                                                ; 8512 6B 6F 66 66 20 6F 75 74  koff out
+                                                ; 851A 20 6F 66 20 68 65 72      of her
+        .byte   "e."                            ; 8521 65 2E                    e.
+        .byte   $0A                             ; 8523 0A                       .
+L8524:
+        .byte   "@1Where is the\Temple?"        ; 8524 40 31 57 68 65 72 65 20  @1Where 
+                                                ; 852C 69 73 20 74 68 65 5C 54  is the\T
+                                                ; 8534 65 6D 70 6C 65 3F        emple?
+        .byte   $0A                             ; 853A 0A                       .
 L853B:
-        .byte   "{Bishop"                       ; 853B 7B 42 69 73 68 6F 70     {Bishop
-        .byte   $0D,$0A                         ; 8542 0D 0A                    ..
-L8544:
-        .byte   "{Scarf"                        ; 8544 7B 53 63 61 72 66        {Scarf
-        .byte   $0D,$0A                         ; 854A 0D 0A                    ..
-L854C:
-        .byte   "{Burqa"                        ; 854C 7B 42 75 72 71 61        {Burqa
-        .byte   $0D,$0A                         ; 8552 0D 0A                    ..
-L8554:
-        .byte   "{Rimmed"                       ; 8554 7B 52 69 6D 6D 65 64     {Rimmed
-        .byte   $0D,$0A                         ; 855B 0D 0A                    ..
-L855D:
-        .byte   "{Woven"                        ; 855D 7B 57 6F 76 65 6E        {Woven
-        .byte   $0D,$0A                         ; 8563 0D 0A                    ..
-L8565:
-        .byte   "{Knitted"                      ; 8565 7B 4B 6E 69 74 74 65 64  {Knitted
-        .byte   $0D,$0A                         ; 856D 0D 0A                    ..
-L856F:
-        .byte   "{Hood"                         ; 856F 7B 48 6F 6F 64           {Hood
-        .byte   $0D,$0A,$FF,$FF                 ; 8574 0D 0A FF FF              ....
-; ----------------------------------------------------------------------------
-L8578:
-        .addr   L867A                           ; 8578 7A 86                    z.
-        .addr   L8680                           ; 857A 80 86                    ..
-        .addr   L868A                           ; 857C 8A 86                    ..
-        .addr   L8690                           ; 857E 90 86                    ..
-        .addr   L8698                           ; 8580 98 86                    ..
-        .addr   L86A0                           ; 8582 A0 86                    ..
-        .addr   L86AA                           ; 8584 AA 86                    ..
-        .addr   L86B4                           ; 8586 B4 86                    ..
-        .addr   L86BC                           ; 8588 BC 86                    ..
-        .addr   L86C5                           ; 858A C5 86                    ..
-        .addr   L86CE                           ; 858C CE 86                    ..
-        .addr   L86D6                           ; 858E D6 86                    ..
-        .addr   L86DE                           ; 8590 DE 86                    ..
-        .addr   L86E6                           ; 8592 E6 86                    ..
-        .addr   L86EF                           ; 8594 EF 86                    ..
-        .addr   L86F6                           ; 8596 F6 86                    ..
-        .addr   L86FE                           ; 8598 FE 86                    ..
-        .addr   L8707                           ; 859A 07 87                    ..
-        .addr   L8711                           ; 859C 11 87                    ..
-        .addr   L871A                           ; 859E 1A 87                    ..
-        .addr   L8722                           ; 85A0 22 87                    ".
-        .addr   L872A                           ; 85A2 2A 87                    *.
-        .addr   L8732                           ; 85A4 32 87                    2.
-        .addr   L873A                           ; 85A6 3A 87                    :.
-        .addr   L8744                           ; 85A8 44 87                    D.
-        .addr   L874A                           ; 85AA 4A 87                    J.
-        .addr   L8754                           ; 85AC 54 87                    T.
-        .addr   L875C                           ; 85AE 5C 87                    \.
-        .addr   L8764                           ; 85B0 64 87                    d.
-        .addr   L876D                           ; 85B2 6D 87                    m.
-        .addr   L8776                           ; 85B4 76 87                    v.
-        .addr   L877F                           ; 85B6 7F 87                    ..
-        .addr   L8788                           ; 85B8 88 87                    ..
-        .addr   L878F                           ; 85BA 8F 87                    ..
-        .addr   L8796                           ; 85BC 96 87                    ..
-        .addr   L879F                           ; 85BE 9F 87                    ..
-        .addr   L87A8                           ; 85C0 A8 87                    ..
-        .addr   L87B1                           ; 85C2 B1 87                    ..
-        .addr   L87B9                           ; 85C4 B9 87                    ..
-        .addr   L87C3                           ; 85C6 C3 87                    ..
-        .addr   L87CB                           ; 85C8 CB 87                    ..
-        .addr   L87D5                           ; 85CA D5 87                    ..
-        .addr   L87DF                           ; 85CC DF 87                    ..
-        .addr   L87E9                           ; 85CE E9 87                    ..
-        .addr   L87F1                           ; 85D0 F1 87                    ..
-        .addr   L87F9                           ; 85D2 F9 87                    ..
-        .addr   L8801                           ; 85D4 01 88                    ..
-        .addr   L8809                           ; 85D6 09 88                    ..
-        .addr   L8813                           ; 85D8 13 88                    ..
-        .addr   L881B                           ; 85DA 1B 88                    ..
-        .addr   L8825                           ; 85DC 25 88                    %.
-        .addr   L882E                           ; 85DE 2E 88                    ..
-        .addr   L8836                           ; 85E0 36 88                    6.
-        .addr   L8840                           ; 85E2 40 88                    @.
-        .addr   L8847                           ; 85E4 47 88                    G.
-        .addr   L8851                           ; 85E6 51 88                    Q.
-        .addr   L8858                           ; 85E8 58 88                    X.
-        .addr   L885F                           ; 85EA 5F 88                    _.
-        .addr   L8866                           ; 85EC 66 88                    f.
-        .addr   L886D                           ; 85EE 6D 88                    m.
-        .addr   L8877                           ; 85F0 77 88                    w.
-        .addr   L8880                           ; 85F2 80 88                    ..
-        .addr   L888A                           ; 85F4 8A 88                    ..
-        .addr   L8893                           ; 85F6 93 88                    ..
-        .addr   L889B                           ; 85F8 9B 88                    ..
-        .addr   L88A4                           ; 85FA A4 88                    ..
-        .addr   L88AE                           ; 85FC AE 88                    ..
-        .addr   L88B6                           ; 85FE B6 88                    ..
-        .addr   L88BD                           ; 8600 BD 88                    ..
-        .addr   L88C7                           ; 8602 C7 88                    ..
-        .addr   L88CE                           ; 8604 CE 88                    ..
-        .addr   L88D7                           ; 8606 D7 88                    ..
-        .addr   L88DF                           ; 8608 DF 88                    ..
-        .addr   L88E7                           ; 860A E7 88                    ..
-        .addr   L88F0                           ; 860C F0 88                    ..
-        .addr   L88F7                           ; 860E F7 88                    ..
-        .addr   L88FE                           ; 8610 FE 88                    ..
-        .addr   L8908                           ; 8612 08 89                    ..
-        .addr   L8911                           ; 8614 11 89                    ..
-        .addr   L891A                           ; 8616 1A 89                    ..
-        .addr   L8924                           ; 8618 24 89                    $.
-        .addr   L892C                           ; 861A 2C 89                    ,.
-        .addr   L8935                           ; 861C 35 89                    5.
-        .addr   L893C                           ; 861E 3C 89                    <.
-        .addr   L8946                           ; 8620 46 89                    F.
-        .addr   L894F                           ; 8622 4F 89                    O.
-        .addr   L8956                           ; 8624 56 89                    V.
-        .addr   L895D                           ; 8626 5D 89                    ].
-        .addr   L8963                           ; 8628 63 89                    c.
-        .addr   L896B                           ; 862A 6B 89                    k.
-        .addr   L8974                           ; 862C 74 89                    t.
-        .addr   L897C                           ; 862E 7C 89                    |.
-        .addr   L8983                           ; 8630 83 89                    ..
-        .addr   L898D                           ; 8632 8D 89                    ..
-        .addr   L8997                           ; 8634 97 89                    ..
-        .addr   L899F                           ; 8636 9F 89                    ..
-        .addr   L89A7                           ; 8638 A7 89                    ..
-        .addr   L89AF                           ; 863A AF 89                    ..
-        .addr   L89B7                           ; 863C B7 89                    ..
-        .addr   L89C1                           ; 863E C1 89                    ..
-        .addr   L89C8                           ; 8640 C8 89                    ..
-        .addr   L89CF                           ; 8642 CF 89                    ..
-        .addr   L89D7                           ; 8644 D7 89                    ..
-        .addr   L89DE                           ; 8646 DE 89                    ..
-        .addr   L89E6                           ; 8648 E6 89                    ..
-        .addr   L89EE                           ; 864A EE 89                    ..
-        .addr   L89F4                           ; 864C F4 89                    ..
-        .addr   L89FB                           ; 864E FB 89                    ..
-        .addr   L8A03                           ; 8650 03 8A                    ..
-        .addr   L8A0B                           ; 8652 0B 8A                    ..
-        .addr   L8A14                           ; 8654 14 8A                    ..
-        .addr   L8A1C                           ; 8656 1C 8A                    ..
-        .addr   L8A25                           ; 8658 25 8A                    %.
-        .addr   L8A2D                           ; 865A 2D 8A                    -.
-        .addr   L8A37                           ; 865C 37 8A                    7.
-        .addr   L8A3E                           ; 865E 3E 8A                    >.
-        .addr   L8A45                           ; 8660 45 8A                    E.
-        .addr   L8A4C                           ; 8662 4C 8A                    L.
-        .addr   L8A56                           ; 8664 56 8A                    V.
-        .addr   L8A5F                           ; 8666 5F 8A                    _.
-        .addr   L8A69                           ; 8668 69 8A                    i.
-        .addr   L8A72                           ; 866A 72 8A                    r.
-        .addr   L8A78                           ; 866C 78 8A                    x.
-        .addr   L8A80                           ; 866E 80 8A                    ..
-        .addr   L8A87                           ; 8670 87 8A                    ..
-        .addr   L8A90                           ; 8672 90 8A                    ..
-        .addr   L8A99                           ; 8674 99 8A                    ..
-        .addr   L8AA3                           ; 8676 A3 8A                    ..
-        .addr   L8AAC                           ; 8678 AC 8A                    ..
-; ----------------------------------------------------------------------------
-L867A:
-        .byte   "None"                          ; 867A 4E 6F 6E 65              None
-        .byte   $0D,$0A                         ; 867E 0D 0A                    ..
-L8680:
-        .byte   "|Dragoon"                      ; 8680 7C 44 72 61 67 6F 6F 6E  |Dragoon
-        .byte   $0D,$0A                         ; 8688 0D 0A                    ..
-L868A:
-        .byte   "|Law"                          ; 868A 7C 4C 61 77              |Law
-        .byte   $0D,$0A                         ; 868E 0D 0A                    ..
-L8690:
-        .byte   "|Light"                        ; 8690 7C 4C 69 67 68 74        |Light
-        .byte   $0D,$0A                         ; 8696 0D 0A                    ..
-L8698:
-        .byte   "|Power"                        ; 8698 7C 50 6F 77 65 72        |Power
-        .byte   $0D,$0A                         ; 869E 0D 0A                    ..
-L86A0:
-        .byte   "|Hilltop"                      ; 86A0 7C 48 69 6C 6C 74 6F 70  |Hilltop
-        .byte   $0D,$0A                         ; 86A8 0D 0A                    ..
-L86AA:
-        .byte   "|Midgard"                      ; 86AA 7C 4D 69 64 67 61 72 64  |Midgard
-        .byte   $0D,$0A                         ; 86B2 0D 0A                    ..
-L86B4:
-        .byte   "|Alloy"                        ; 86B4 7C 41 6C 6C 6F 79        |Alloy
-        .byte   $0D,$0A                         ; 86BA 0D 0A                    ..
-L86BC:
-        .byte   "|Chrono"                       ; 86BC 7C 43 68 72 6F 6E 6F     |Chrono
-        .byte   $0D,$0A                         ; 86C3 0D 0A                    ..
-L86C5:
-        .byte   "|Shaman"                       ; 86C5 7C 53 68 61 6D 61 6E     |Shaman
-        .byte   $0D,$0A                         ; 86CC 0D 0A                    ..
-L86CE:
-        .byte   "|Crush"                        ; 86CE 7C 43 72 75 73 68        |Crush
-        .byte   $0D,$0A                         ; 86D4 0D 0A                    ..
-L86D6:
-        .byte   "|Death"                        ; 86D6 7C 44 65 61 74 68        |Death
-        .byte   $0D,$0A                         ; 86DC 0D 0A                    ..
-L86DE:
-        .byte   "|Valor"                        ; 86DE 7C 56 61 6C 6F 72        |Valor
-        .byte   $0D,$0A                         ; 86E4 0D 0A                    ..
-L86E6:
-        .byte   "|Silver"                       ; 86E6 7C 53 69 6C 76 65 72     |Silver
-        .byte   $0D,$0A                         ; 86ED 0D 0A                    ..
-L86EF:
-        .byte   "|Gear"                         ; 86EF 7C 47 65 61 72           |Gear
-        .byte   $0D,$0A                         ; 86F4 0D 0A                    ..
-L86F6:
-        .byte   "|Board"                        ; 86F6 7C 42 6F 61 72 64        |Board
-        .byte   $0D,$0A                         ; 86FC 0D 0A                    ..
-L86FE:
-        .byte   "|Defend"                       ; 86FE 7C 44 65 66 65 6E 64     |Defend
-        .byte   $0D,$0A                         ; 8705 0D 0A                    ..
-L8707:
-        .byte   "|Serpent"                      ; 8707 7C 53 65 72 70 65 6E 74  |Serpent
-        .byte   $0D,$0A                         ; 870F 0D 0A                    ..
-L8711:
-        .byte   "|Knight"                       ; 8711 7C 4B 6E 69 67 68 74     |Knight
-        .byte   $0D,$0A                         ; 8718 0D 0A                    ..
-L871A:
-        .byte   "|Demon"                        ; 871A 7C 44 65 6D 6F 6E        |Demon
-        .byte   $0D,$0A                         ; 8720 0D 0A                    ..
-L8722:
-        .byte   "|Ghost"                        ; 8722 7C 47 68 6F 73 74        |Ghost
-        .byte   $0D,$0A                         ; 8728 0D 0A                    ..
-L872A:
-        .byte   "|Noble"                        ; 872A 7C 4E 6F 62 6C 65        |Noble
-        .byte   $0D,$0A                         ; 8730 0D 0A                    ..
-L8732:
-        .byte   "|Titan"                        ; 8732 7C 54 69 74 61 6E        |Titan
-        .byte   $0D,$0A                         ; 8738 0D 0A                    ..
-L873A:
-        .byte   "|Templar"                      ; 873A 7C 54 65 6D 70 6C 61 72  |Templar
-        .byte   $0D,$0A                         ; 8742 0D 0A                    ..
-L8744:
-        .byte   "|Ice"                          ; 8744 7C 49 63 65              |Ice
-        .byte   $0D,$0A                         ; 8748 0D 0A                    ..
-L874A:
-        .byte   "|Warlord"                      ; 874A 7C 57 61 72 6C 6F 72 64  |Warlord
-        .byte   $0D,$0A                         ; 8752 0D 0A                    ..
-L8754:
-        .byte   "|Beast"                        ; 8754 7C 42 65 61 73 74        |Beast
-        .byte   $0D,$0A                         ; 875A 0D 0A                    ..
-L875C:
-        .byte   "|Evade"                        ; 875C 7C 45 76 61 64 65        |Evade
-        .byte   $0D,$0A                         ; 8762 0D 0A                    ..
-L8764:
-        .byte   "|Savage"                       ; 8764 7C 53 61 76 61 67 65     |Savage
-        .byte   $0D,$0A                         ; 876B 0D 0A                    ..
-L876D:
-        .byte   "|Pagoda"                       ; 876D 7C 50 61 67 6F 64 61     |Pagoda
-        .byte   $0D,$0A                         ; 8774 0D 0A                    ..
-L8776:
-        .byte   "|Anneal"                       ; 8776 7C 41 6E 6E 65 61 6C     |Anneal
-        .byte   $0D,$0A                         ; 877D 0D 0A                    ..
-L877F:
-        .byte   "|Avenge"                       ; 877F 7C 41 76 65 6E 67 65     |Avenge
-        .byte   $0D,$0A                         ; 8786 0D 0A                    ..
-L8788:
-        .byte   "|Pelt"                         ; 8788 7C 50 65 6C 74           |Pelt
-        .byte   $0D,$0A                         ; 878D 0D 0A                    ..
-L878F:
-        .byte   "|Bone"                         ; 878F 7C 42 6F 6E 65           |Bone
-        .byte   $0D,$0A                         ; 8794 0D 0A                    ..
-L8796:
-        .byte   "|Turtle"                       ; 8796 7C 54 75 72 74 6C 65     |Turtle
-        .byte   $0D,$0A                         ; 879D 0D 0A                    ..
-L879F:
-        .byte   "|Lamell"                       ; 879F 7C 4C 61 6D 65 6C 6C     |Lamell
-        .byte   $0D,$0A                         ; 87A6 0D 0A                    ..
-L87A8:
-        .byte   "|Mirage"                       ; 87A8 7C 4D 69 72 61 67 65     |Mirage
-        .byte   $0D,$0A                         ; 87AF 0D 0A                    ..
-L87B1:
-        .byte   "|Scale"                        ; 87B1 7C 53 63 61 6C 65        |Scale
-        .byte   $0D,$0A                         ; 87B7 0D 0A                    ..
-L87B9:
-        .byte   "|BluDrgn"                      ; 87B9 7C 42 6C 75 44 72 67 6E  |BluDrgn
-        .byte   $0D,$0A                         ; 87C1 0D 0A                    ..
-L87C3:
-        .byte   "|Green"                        ; 87C3 7C 47 72 65 65 6E        |Green
-        .byte   $0D,$0A                         ; 87C9 0D 0A                    ..
-L87CB:
-        .byte   "|Polishd"                      ; 87CB 7C 50 6F 6C 69 73 68 64  |Polishd
-        .byte   $0D,$0A                         ; 87D3 0D 0A                    ..
-L87D5:
-        .byte   "|Marshal"                      ; 87D5 7C 4D 61 72 73 68 61 6C  |Marshal
-        .byte   $0D,$0A                         ; 87DD 0D 0A                    ..
-L87DF:
-        .byte   "|SoulEat"                      ; 87DF 7C 53 6F 75 6C 45 61 74  |SoulEat
-        .byte   $0D,$0A                         ; 87E7 0D 0A                    ..
-L87E9:
-        .byte   "|Chain"                        ; 87E9 7C 43 68 61 69 6E        |Chain
-        .byte   $0D,$0A                         ; 87EF 0D 0A                    ..
-L87F1:
-        .byte   "|Frost"                        ; 87F1 7C 46 72 6F 73 74        |Frost
-        .byte   $0D,$0A                         ; 87F7 0D 0A                    ..
-L87F9:
-        .byte   "|Necro"                        ; 87F9 7C 4E 65 63 72 6F        |Necro
-        .byte   $0D,$0A                         ; 87FF 0D 0A                    ..
+        .byte   "Come on__it's only\a legend.But"; 853B 43 6F 6D 65 20 6F 6E 5F Come on_
+                                                ; 8543 5F 69 74 27 73 20 6F 6E  _it's on
+                                                ; 854B 6C 79 5C 61 20 6C 65 67  ly\a leg
+                                                ; 8553 65 6E 64 2E 42 75 74     end.But
+        .byte   " if it\were true,that surewould"; 855A 20 69 66 20 69 74 5C 77  if it\w
+                                                ; 8562 65 72 65 20 74 72 75 65  ere true
+                                                ; 856A 2C 74 68 61 74 20 73 75  ,that su
+                                                ; 8572 72 65 77 6F 75 6C 64     rewould
+        .byte   " be something,huh?Now that you\"; 8579 20 62 65 20 73 6F 6D 65  be some
+                                                ; 8581 74 68 69 6E 67 2C 68 75  thing,hu
+                                                ; 8589 68 3F 4E 6F 77 20 74 68  h?Now th
+                                                ; 8591 61 74 20 79 6F 75 5C     at you\
+        .byte   "mention it,I have\heard of some"; 8598 6D 65 6E 74 69 6F 6E 20 mention 
+                                                ; 85A0 69 74 2C 49 20 68 61 76  it,I hav
+                                                ; 85A8 65 5C 68 65 61 72 64 20  e\heard 
+                                                ; 85B0 6F 66 20 73 6F 6D 65     of some
+        .byte   "thing\called Ultimate\Destructi"; 85B7 74 68 69 6E 67 5C 63 61 thing\ca
+                                                ; 85BF 6C 6C 65 64 20 55 6C 74  lled Ult
+                                                ; 85C7 69 6D 61 74 65 5C 44 65  imate\De
+                                                ; 85CF 73 74 72 75 63 74 69     structi
+        .byte   "on Magic\was supposed to be\hid"; 85D6 6F 6E 20 4D 61 67 69 63 on Magic
+                                                ; 85DE 5C 77 61 73 20 73 75 70  \was sup
+                                                ; 85E6 70 6F 73 65 64 20 74 6F  posed to
+                                                ; 85EE 20 62 65 5C 68 69 64      be\hid
+        .byte   "den somewhere inthe Temple of t"; 85F5 64 65 6E 20 73 6F 6D 65 den some
+                                                ; 85FD 77 68 65 72 65 20 69 6E  where in
+                                                ; 8605 74 68 65 20 54 65 6D 70  the Temp
+                                                ; 860D 6C 65 20 6F 66 20 74     le of t
+        .byte   "he\Ancients."                  ; 8614 68 65 5C 41 6E 63 69 65  he\Ancie
+                                                ; 861C 6E 74 73 2E              nts.
+        .byte   $0A                             ; 8620 0A                       .
+L8621:
+        .byte   "@1Ultimate\Destruction Magic_?"; 8621 40 31 55 6C 74 69 6D 61  @1Ultima
+                                                ; 8629 74 65 5C 44 65 73 74 72  te\Destr
+                                                ; 8631 75 63 74 69 6F 6E 20 4D  uction M
+                                                ; 8639 61 67 69 63 5F 3F        agic_?
+        .byte   $0A                             ; 863F 0A                       .
+L8640:
+        .byte   "Come on!I told you\not to take "; 8640 43 6F 6D 65 20 6F 6E 21 Come on!
+                                                ; 8648 49 20 74 6F 6C 64 20 79  I told y
+                                                ; 8650 6F 75 5C 6E 6F 74 20 74  ou\not t
+                                                ; 8658 6F 20 74 61 6B 65 20     o take 
+        .byte   "it\seriously!"                 ; 865F 69 74 5C 73 65 72 69 6F  it\serio
+                                                ; 8667 75 73 6C 79 21           usly!
+        .byte   $0A                             ; 866C 0A                       .
+L866D:
+        .byte   "@1Let's change the\subject."   ; 866D 40 31 4C 65 74 27 73 20  @1Let's 
+                                                ; 8675 63 68 61 6E 67 65 20 74  change t
+                                                ; 867D 68 65 5C 73 75 62 6A 65  he\subje
+                                                ; 8685 63 74 2E                 ct.
+        .byte   $0A                             ; 8688 0A                       .
+L8689:
+        .byte   "All the weapons yousee here I m"; 8689 41 6C 6C 20 74 68 65 20 All the 
+                                                ; 8691 77 65 61 70 6F 6E 73 20  weapons 
+                                                ; 8699 79 6F 75 73 65 65 20 68  yousee h
+                                                ; 86A1 65 72 65 20 49 20 6D     ere I m
+        .byte   "ade\myself.But lately Ihaven't "; 86A8 61 64 65 5C 6D 79 73 65 ade\myse
+                                                ; 86B0 6C 66 2E 42 75 74 20 6C  lf.But l
+                                                ; 86B8 61 74 65 6C 79 20 49 68  ately Ih
+                                                ; 86C0 61 76 65 6E 27 74 20     aven't 
+        .byte   "been able\to get materials__"  ; 86C7 62 65 65 6E 20 61 62 6C  been abl
+                                                ; 86CF 65 5C 74 6F 20 67 65 74  e\to get
+                                                ; 86D7 20 6D 61 74 65 72 69 61   materia
+                                                ; 86DF 6C 73 5F 5F              ls__
+        .byte   $0A                             ; 86E3 0A                       .
+L86E4:
+        .byte   "@1It's the Keystone__"         ; 86E4 40 31 49 74 27 73 20 74  @1It's t
+                                                ; 86EC 68 65 20 4B 65 79 73 74  he Keyst
+                                                ; 86F4 6F 6E 65 5F 5F           one__
+        .byte   $0A                             ; 86F9 0A                       .
+L86FA:
+        .byte   "@QDio:Heh,heh,heh.\Long time no"; 86FA 40 51 44 69 6F 3A 48 65 @QDio:He
+                                                ; 8702 68 2C 68 65 68 2C 68 65  h,heh,he
+                                                ; 870A 68 2E 5C 4C 6F 6E 67 20  h.\Long 
+                                                ; 8712 74 69 6D 65 20 6E 6F     time no
+        .byte   " see,myboy.Hmm?You like\that,hu"; 8719 20 73 65 65 2C 6D 79 62  see,myb
+                                                ; 8721 6F 79 2E 48 6D 6D 3F 59  oy.Hmm?Y
+                                                ; 8729 6F 75 20 6C 69 6B 65 5C  ou like\
+                                                ; 8731 74 68 61 74 2C 68 75     that,hu
+        .byte   "h?"                            ; 8738 68 3F                    h?
+        .byte   $0A                             ; 873A 0A                       .
+L873B:
+        .byte   "@1Can you let me\borrow this?" ; 873B 40 31 43 61 6E 20 79 6F  @1Can yo
+                                                ; 8743 75 20 6C 65 74 20 6D 65  u let me
+                                                ; 874B 5C 62 6F 72 72 6F 77 20  \borrow 
+                                                ; 8753 74 68 69 73 3F           this?
+        .byte   $0A                             ; 8758 0A                       .
+L8759:
+        .byte   "@QHeh,heh,heh.but\it's not for "; 8759 40 51 48 65 68 2C 68 65 @QHeh,he
+                                                ; 8761 68 2C 68 65 68 2E 62 75  h,heh.bu
+                                                ; 8769 74 5C 69 74 27 73 20 6E  t\it's n
+                                                ; 8771 6F 74 20 66 6F 72 20     ot for 
+        .byte   "rent.\Hmm,Since you've\been goo"; 8778 72 65 6E 74 2E 5C 48 6D rent.\Hm
+                                                ; 8780 6D 2C 53 69 6E 63 65 20  m,Since 
+                                                ; 8788 79 6F 75 27 76 65 5C 62  you've\b
+                                                ; 8790 65 65 6E 20 67 6F 6F     een goo
+        .byte   "d to me in\the past,I CAN let\y"; 8797 64 20 74 6F 20 6D 65 20 d to me 
+                                                ; 879F 69 6E 5C 74 68 65 20 70  in\the p
+                                                ; 87A7 61 73 74 2C 49 20 43 41  ast,I CA
+                                                ; 87AF 4E 20 6C 65 74 5C 79     N let\y
+        .byte   "ou have it on one\condition."  ; 87B6 6F 75 20 68 61 76 65 20  ou have 
+                                                ; 87BE 69 74 20 6F 6E 20 6F 6E  it on on
+                                                ; 87C6 65 5C 63 6F 6E 64 69 74  e\condit
+                                                ; 87CE 69 6F 6E 2E              ion.
+        .byte   $0A                             ; 87D2 0A                       .
+L87D3:
+        .byte   "@1One condition?"              ; 87D3 40 31 4F 6E 65 20 63 6F  @1One co
+                                                ; 87DB 6E 64 69 74 69 6F 6E 3F  ndition?
+        .byte   $0A                             ; 87E3 0A                       .
+L87E4:
+        .byte   "@QHeh,heh,heh.\Entertain me!"  ; 87E4 40 51 48 65 68 2C 68 65  @QHeh,he
+                                                ; 87EC 68 2C 68 65 68 2E 5C 45  h,heh.\E
+                                                ; 87F4 6E 74 65 72 74 61 69 6E  ntertain
+                                                ; 87FC 20 6D 65 21               me!
+        .byte   $0A                             ; 8800 0A                       .
 L8801:
-        .byte   "|Dream"                        ; 8801 7C 44 72 65 61 6D        |Dream
-        .byte   $0D,$0A                         ; 8807 0D 0A                    ..
-L8809:
-        .byte   "|IronRib"                      ; 8809 7C 49 72 6F 6E 52 69 62  |IronRib
-        .byte   $0D,$0A                         ; 8811 0D 0A                    ..
-L8813:
-        .byte   "|Blood"                        ; 8813 7C 42 6C 6F 6F 64        |Blood
-        .byte   $0D,$0A                         ; 8819 0D 0A                    ..
-L881B:
-        .byte   "|Berserk"                      ; 881B 7C 42 65 72 73 65 72 6B  |Berserk
-        .byte   $0D,$0A                         ; 8823 0D 0A                    ..
-L8825:
-        .byte   "|Argent"                       ; 8825 7C 41 72 67 65 6E 74     |Argent
-        .byte   $0D,$0A                         ; 882C 0D 0A                    ..
-L882E:
-        .byte   "|Rohan"                        ; 882E 7C 52 6F 68 61 6E        |Rohan
-        .byte   $0D,$0A                         ; 8834 0D 0A                    ..
-L8836:
-        .byte   "|Vampire"                      ; 8836 7C 56 61 6D 70 69 72 65  |Vampire
-        .byte   $0D,$0A                         ; 883E 0D 0A                    ..
-L8840:
-        .byte   "|Bane"                         ; 8840 7C 42 61 6E 65           |Bane
-        .byte   $0D,$0A                         ; 8845 0D 0A                    ..
-L8847:
-        .byte   "|Leather"                      ; 8847 7C 4C 65 61 74 68 65 72  |Leather
-        .byte   $0D,$0A                         ; 884F 0D 0A                    ..
-L8851:
-        .byte   "|Lark"                         ; 8851 7C 4C 61 72 6B           |Lark
-        .byte   $0D,$0A                         ; 8856 0D 0A                    ..
-L8858:
-        .byte   "|Pale"                         ; 8858 7C 50 61 6C 65           |Pale
-        .byte   $0D,$0A                         ; 885D 0D 0A                    ..
-L885F:
-        .byte   "|Dark"                         ; 885F 7C 44 61 72 6B           |Dark
-        .byte   $0D,$0A                         ; 8864 0D 0A                    ..
-L8866:
-        .byte   "|Wolf"                         ; 8866 7C 57 6F 6C 66           |Wolf
-        .byte   $0D,$0A                         ; 886B 0D 0A                    ..
-L886D:
-        .byte   "|Thunder"                      ; 886D 7C 54 68 75 6E 64 65 72  |Thunder
-        .byte   $0D,$0A                         ; 8875 0D 0A                    ..
-L8877:
-        .byte   "|Ordeal"                       ; 8877 7C 4F 72 64 65 61 6C     |Ordeal
-        .byte   $0D,$0A                         ; 887E 0D 0A                    ..
-L8880:
-        .byte   "|Sorcery"                      ; 8880 7C 53 6F 72 63 65 72 79  |Sorcery
-        .byte   $0D,$0A                         ; 8888 0D 0A                    ..
-L888A:
-        .byte   "|Shroom"                       ; 888A 7C 53 68 72 6F 6F 6D     |Shroom
-        .byte   $0D,$0A                         ; 8891 0D 0A                    ..
-L8893:
-        .byte   "|Grave"                        ; 8893 7C 47 72 61 76 65        |Grave
-        .byte   $0D,$0A                         ; 8899 0D 0A                    ..
-L889B:
-        .byte   "|Serene"                       ; 889B 7C 53 65 72 65 6E 65     |Serene
-        .byte   $0D,$0A                         ; 88A2 0D 0A                    ..
-L88A4:
-        .byte   "|RawHide"                      ; 88A4 7C 52 61 77 48 69 64 65  |RawHide
-        .byte   $0D,$0A                         ; 88AC 0D 0A                    ..
-L88AE:
-        .byte   "|Night"                        ; 88AE 7C 4E 69 67 68 74        |Night
-        .byte   $0D,$0A                         ; 88B4 0D 0A                    ..
-L88B6:
-        .byte   "|Wind"                         ; 88B6 7C 57 69 6E 64           |Wind
-        .byte   $0D,$0A                         ; 88BB 0D 0A                    ..
-L88BD:
-        .byte   "|Feather"                      ; 88BD 7C 46 65 61 74 68 65 72  |Feather
-        .byte   $0D,$0A                         ; 88C5 0D 0A                    ..
-L88C7:
-        .byte   "|Star"                         ; 88C7 7C 53 74 61 72           |Star
-        .byte   $0D,$0A                         ; 88CC 0D 0A                    ..
-L88CE:
-        .byte   "|Shadow"                       ; 88CE 7C 53 68 61 64 6F 77     |Shadow
-        .byte   $0D,$0A                         ; 88D5 0D 0A                    ..
-L88D7:
-        .byte   "|Heart"                        ; 88D7 7C 48 65 61 72 74        |Heart
-        .byte   $0D,$0A                         ; 88DD 0D 0A                    ..
-L88DF:
-        .byte   "|Gloom"                        ; 88DF 7C 47 6C 6F 6F 6D        |Gloom
-        .byte   $0D,$0A                         ; 88E5 0D 0A                    ..
-L88E7:
-        .byte   "|Plumed"                       ; 88E7 7C 50 6C 75 6D 65 64     |Plumed
-        .byte   $0D,$0A                         ; 88EE 0D 0A                    ..
-L88F0:
-        .byte   "|Bear"                         ; 88F0 7C 42 65 61 72           |Bear
-        .byte   $0D,$0A                         ; 88F5 0D 0A                    ..
-L88F7:
-        .byte   "}Wave"                         ; 88F7 7D 57 61 76 65           }Wave
-        .byte   $0D,$0A                         ; 88FC 0D 0A                    ..
-L88FE:
-        .byte   "}Archaic"                      ; 88FE 7D 41 72 63 68 61 69 63  }Archaic
-        .byte   $0D,$0A                         ; 8906 0D 0A                    ..
-L8908:
-        .byte   "}Master"                       ; 8908 7D 4D 61 73 74 65 72     }Master
-        .byte   $0D,$0A                         ; 890F 0D 0A                    ..
-L8911:
-        .byte   "}Wisdom"                       ; 8911 7D 57 69 73 64 6F 6D     }Wisdom
-        .byte   $0D,$0A                         ; 8918 0D 0A                    ..
-L891A:
-        .byte   "}Chiffon"                      ; 891A 7D 43 68 69 66 66 6F 6E  }Chiffon
-        .byte   $0D,$0A                         ; 8922 0D 0A                    ..
-L8924:
-        .byte   "}Demon"                        ; 8924 7D 44 65 6D 6F 6E        }Demon
-        .byte   $0D,$0A                         ; 892A 0D 0A                    ..
-L892C:
-        .byte   "}Belief"                       ; 892C 7D 42 65 6C 69 65 66     }Belief
-        .byte   $0D,$0A                         ; 8933 0D 0A                    ..
-L8935:
-        .byte   "}Void"                         ; 8935 7D 56 6F 69 64           }Void
-        .byte   $0D,$0A                         ; 893A 0D 0A                    ..
-L893C:
-        .byte   "}Prophet"                      ; 893C 7D 50 72 6F 70 68 65 74  }Prophet
-        .byte   $0D,$0A                         ; 8944 0D 0A                    ..
-L8946:
-        .byte   "}Winter"                       ; 8946 7D 57 69 6E 74 65 72     }Winter
-        .byte   $0D,$0A                         ; 894D 0D 0A                    ..
-L894F:
-        .byte   "}Bone"                         ; 894F 7D 42 6F 6E 65           }Bone
-        .byte   $0D,$0A                         ; 8954 0D 0A                    ..
-L8956:
-        .byte   "}Mist"                         ; 8956 7D 4D 69 73 74           }Mist
-        .byte   $0D,$0A                         ; 895B 0D 0A                    ..
-L895D:
-        .byte   "}Ice"                          ; 895D 7D 49 63 65              }Ice
-        .byte   $0D,$0A                         ; 8961 0D 0A                    ..
-L8963:
-        .byte   "}Royal"                        ; 8963 7D 52 6F 79 61 6C        }Royal
-        .byte   $0D,$0A                         ; 8969 0D 0A                    ..
-L896B:
-        .byte   "}Legion"                       ; 896B 7D 4C 65 67 69 6F 6E     }Legion
-        .byte   $0D,$0A                         ; 8972 0D 0A                    ..
-L8974:
-        .byte   "}Piety"                        ; 8974 7D 50 69 65 74 79        }Piety
-        .byte   $0D,$0A                         ; 897A 0D 0A                    ..
-L897C:
-        .byte   "}Mind"                         ; 897C 7D 4D 69 6E 64           }Mind
-        .byte   $0D,$0A                         ; 8981 0D 0A                    ..
-L8983:
-        .byte   "}Eternal"                      ; 8983 7D 45 74 65 72 6E 61 6C  }Eternal
-        .byte   $0D,$0A                         ; 898B 0D 0A                    ..
+        .byte   "@1What'd you want me\to do?"   ; 8801 40 31 57 68 61 74 27 64  @1What'd
+                                                ; 8809 20 79 6F 75 20 77 61 6E   you wan
+                                                ; 8811 74 20 6D 65 5C 74 6F 20  t me\to 
+                                                ; 8819 64 6F 3F                 do?
+        .byte   $0A                             ; 881C 0A                       .
+L881D:
+        .byte   "@QHoo boy!Heh,heh,\heh.It's not"; 881D 40 51 48 6F 6F 20 62 6F @QHoo bo
+                                                ; 8825 79 21 48 65 68 2C 68 65  y!Heh,he
+                                                ; 882D 68 2C 5C 68 65 68 2E 49  h,\heh.I
+                                                ; 8835 74 27 73 20 6E 6F 74     t's not
+        .byte   "\something that's\really diffic"; 883C 5C 73 6F 6D 65 74 68 69 \somethi
+                                                ; 8844 6E 67 20 74 68 61 74 27  ng that'
+                                                ; 884C 73 5C 72 65 61 6C 6C 79  s\really
+                                                ; 8854 20 64 69 66 66 69 63      diffic
+        .byte   "ult.\This is the Battle\Arena.S"; 885B 75 6C 74 2E 5C 54 68 69 ult.\Thi
+                                                ; 8863 73 20 69 73 20 74 68 65  s is the
+                                                ; 886B 20 42 61 74 74 6C 65 5C   Battle\
+                                                ; 8873 41 72 65 6E 61 2E 53     Arena.S
+        .byte   "how me your\fighting skills.\Ju"; 887A 68 6F 77 20 6D 65 20 79 how me y
+                                                ; 8882 6F 75 72 5C 66 69 67 68  our\figh
+                                                ; 888A 74 69 6E 67 20 73 6B 69  ting ski
+                                                ; 8892 6C 6C 73 2E 5C 4A 75     lls.\Ju
+        .byte   "st you,my boy,I'mexpecting a go"; 8899 73 74 20 79 6F 75 2C 6D st you,m
+                                                ; 88A1 79 20 62 6F 79 2C 49 27  y boy,I'
+                                                ; 88A9 6D 65 78 70 65 63 74 69  mexpecti
+                                                ; 88B1 6E 67 20 61 20 67 6F     ng a go
+        .byte   "od\fight!"                     ; 88B8 6F 64 5C 66 69 67 68 74  od\fight
+                                                ; 88C0 21                       !
+        .byte   $0A                             ; 88C1 0A                       .
+L88C2:
+        .byte   "@QThat's the best youcould do?W"; 88C2 40 51 54 68 61 74 27 73 @QThat's
+                                                ; 88CA 20 74 68 65 20 62 65 73   the bes
+                                                ; 88D2 74 20 79 6F 75 63 6F 75  t youcou
+                                                ; 88DA 6C 64 20 64 6F 3F 57     ld do?W
+        .byte   "ell,a\promise is a\promise.Go a"; 88E1 65 6C 6C 2C 61 5C 70 72 ell,a\pr
+                                                ; 88E9 6F 6D 69 73 65 20 69 73  omise is
+                                                ; 88F1 20 61 5C 70 72 6F 6D 69   a\promi
+                                                ; 88F9 73 65 2E 47 6F 20 61     se.Go a
+        .byte   "head,\take it."                ; 8900 68 65 61 64 2C 5C 74 61  head,\ta
+                                                ; 8908 6B 65 20 69 74 2E        ke it.
+        .byte   $0A                             ; 890E 0A                       .
+L890F:
+        .byte   "Got Keystone."                 ; 890F 47 6F 74 20 4B 65 79 73  Got Keys
+                                                ; 8917 74 6F 6E 65 2E           tone.
+        .byte   $0A                             ; 891C 0A                       .
+L891D:
+        .byte   "@QWell then,we shall\meet again"; 891D 40 51 57 65 6C 6C 20 74 @QWell t
+                                                ; 8925 68 65 6E 2C 77 65 20 73  hen,we s
+                                                ; 892D 68 61 6C 6C 5C 6D 65 65  hall\mee
+                                                ; 8935 74 20 61 67 61 69 6E     t again
+        .byte   "!Heh,heh,heh."                 ; 893C 21 48 65 68 2C 68 65 68  !Heh,heh
+                                                ; 8944 2C 68 65 68 2E           ,heh.
+        .byte   $0A                             ; 8949 0A                       .
+L894A:
+        .byte   "Staff:Excuse me,\sir.I'm sorry."; 894A 53 74 61 66 66 3A 45 78 Staff:Ex
+                                                ; 8952 63 75 73 65 20 6D 65 2C  cuse me,
+                                                ; 895A 5C 73 69 72 2E 49 27 6D  \sir.I'm
+                                                ; 8962 20 73 6F 72 72 79 2E      sorry.
+        .byte   "The\Tram is out of\order right "; 8969 54 68 65 5C 54 72 61 6D The\Tram
+                                                ; 8971 20 69 73 20 6F 75 74 20   is out 
+                                                ; 8979 6F 66 5C 6F 72 64 65 72  of\order
+                                                ; 8981 20 72 69 67 68 74 20      right 
+        .byte   "now."                          ; 8988 6E 6F 77 2E              now.
+        .byte   $0A                             ; 898C 0A                       .
 L898D:
-        .byte   "}Courier"                      ; 898D 7D 43 6F 75 72 69 65 72  }Courier
-        .byte   $0D,$0A                         ; 8995 0D 0A                    ..
-L8997:
-        .byte   "}Lunar"                        ; 8997 7D 4C 75 6E 61 72        }Lunar
-        .byte   $0D,$0A                         ; 899D 0D 0A                    ..
-L899F:
-        .byte   "}Honor"                        ; 899F 7D 48 6F 6E 6F 72        }Honor
-        .byte   $0D,$0A                         ; 89A5 0D 0A                    ..
-L89A7:
-        .byte   "}Elder"                        ; 89A7 7D 45 6C 64 65 72        }Elder
-        .byte   $0D,$0A                         ; 89AD 0D 0A                    ..
-L89AF:
-        .byte   "}Vital"                        ; 89AF 7D 56 69 74 61 6C        }Vital
-        .byte   $0D,$0A                         ; 89B5 0D 0A                    ..
-L89B7:
-        .byte   "}Thistle"                      ; 89B7 7D 54 68 69 73 74 6C 65  }Thistle
-        .byte   $0D,$0A                         ; 89BF 0D 0A                    ..
-L89C1:
-        .byte   "}Dusk"                         ; 89C1 7D 44 75 73 6B           }Dusk
-        .byte   $0D,$0A                         ; 89C6 0D 0A                    ..
-L89C8:
-        .byte   "}Dark"                         ; 89C8 7D 44 61 72 6B           }Dark
-        .byte   $0D,$0A                         ; 89CD 0D 0A                    ..
-L89CF:
-        .byte   "}White"                        ; 89CF 7D 57 68 69 74 65        }White
-        .byte   $0D,$0A                         ; 89D5 0D 0A                    ..
-L89D7:
-        .byte   "}Warm"                         ; 89D7 7D 57 61 72 6D           }Warm
-        .byte   $0D,$0A                         ; 89DC 0D 0A                    ..
-L89DE:
-        .byte   "}Sheet"                        ; 89DE 7D 53 68 65 65 74        }Sheet
-        .byte   $0D,$0A                         ; 89E4 0D 0A                    ..
-L89E6:
-        .byte   "}Color"                        ; 89E6 7D 43 6F 6C 6F 72        }Color
-        .byte   $0D,$0A                         ; 89EC 0D 0A                    ..
-L89EE:
-        .byte   "}Red"                          ; 89EE 7D 52 65 64              }Red
-        .byte   $0D,$0A                         ; 89F2 0D 0A                    ..
-L89F4:
-        .byte   "}Snow"                         ; 89F4 7D 53 6E 6F 77           }Snow
-        .byte   $0D,$0A                         ; 89F9 0D 0A                    ..
-L89FB:
-        .byte   "}Cloth"                        ; 89FB 7D 43 6C 6F 74 68        }Cloth
-        .byte   $0D,$0A                         ; 8A01 0D 0A                    ..
-L8A03:
-        .byte   "}Woven"                        ; 8A03 7D 57 6F 76 65 6E        }Woven
-        .byte   $0D,$0A                         ; 8A09 0D 0A                    ..
-L8A0B:
-        .byte   "}Dressy"                       ; 8A0B 7D 44 72 65 73 73 79     }Dressy
-        .byte   $0D,$0A                         ; 8A12 0D 0A                    ..
-L8A14:
-        .byte   "}Linen"                        ; 8A14 7D 4C 69 6E 65 6E        }Linen
-        .byte   $0D,$0A                         ; 8A1A 0D 0A                    ..
-L8A1C:
-        .byte   "}Ragged"                       ; 8A1C 7D 52 61 67 67 65 64     }Ragged
-        .byte   $0D,$0A                         ; 8A23 0D 0A                    ..
-L8A25:
-        .byte   "}Plain"                        ; 8A25 7D 50 6C 61 69 6E        }Plain
-        .byte   $0D,$0A                         ; 8A2B 0D 0A                    ..
-L8A2D:
-        .byte   "}Burning"                      ; 8A2D 7D 42 75 72 6E 69 6E 67  }Burning
-        .byte   $0D,$0A                         ; 8A35 0D 0A                    ..
-L8A37:
-        .byte   "}Soft"                         ; 8A37 7D 53 6F 66 74           }Soft
-        .byte   $0D,$0A                         ; 8A3C 0D 0A                    ..
-L8A3E:
-        .byte   "}Silk"                         ; 8A3E 7D 53 69 6C 6B           }Silk
-        .byte   $0D,$0A                         ; 8A43 0D 0A                    ..
-L8A45:
-        .byte   "}Dual"                         ; 8A45 7D 44 75 61 6C           }Dual
-        .byte   $0D,$0A                         ; 8A4A 0D 0A                    ..
-L8A4C:
-        .byte   "}Student"                      ; 8A4C 7D 53 74 75 64 65 6E 74  }Student
-        .byte   $0D,$0A                         ; 8A54 0D 0A                    ..
-L8A56:
-        .byte   "}Wizard"                       ; 8A56 7D 57 69 7A 61 72 64     }Wizard
-        .byte   $0D,$0A                         ; 8A5D 0D 0A                    ..
-L8A5F:
-        .byte   "}Knitted"                      ; 8A5F 7D 4B 6E 69 74 74 65 64  }Knitted
-        .byte   $0D,$0A                         ; 8A67 0D 0A                    ..
-L8A69:
-        .byte   "}Flaxen"                       ; 8A69 7D 46 6C 61 78 65 6E     }Flaxen
-        .byte   $0D,$0A                         ; 8A70 0D 0A                    ..
-L8A72:
-        .byte   "}Web"                          ; 8A72 7D 57 65 62              }Web
-        .byte   $0D,$0A                         ; 8A76 0D 0A                    ..
-L8A78:
-        .byte   "}Twill"                        ; 8A78 7D 54 77 69 6C 6C        }Twill
-        .byte   $0D,$0A                         ; 8A7E 0D 0A                    ..
-L8A80:
-        .byte   "}Monk"                         ; 8A80 7D 4D 6F 6E 6B           }Monk
-        .byte   $0D,$0A                         ; 8A85 0D 0A                    ..
-L8A87:
-        .byte   "}Cotton"                       ; 8A87 7D 43 6F 74 74 6F 6E     }Cotton
-        .byte   $0D,$0A                         ; 8A8E 0D 0A                    ..
-L8A90:
-        .byte   "}Canvas"                       ; 8A90 7D 43 61 6E 76 61 73     }Canvas
-        .byte   $0D,$0A                         ; 8A97 0D 0A                    ..
-L8A99:
-        .byte   "}Apprent"                      ; 8A99 7D 41 70 70 72 65 6E 74  }Apprent
-        .byte   $0D,$0A                         ; 8AA1 0D 0A                    ..
+        .byte   "@1__so?"                       ; 898D 40 31 5F 5F 73 6F 3F     @1__so?
+        .byte   $0A                             ; 8994 0A                       .
+L8995:
+        .byte   "I'm really sorry!\I'm afraid yo"; 8995 49 27 6D 20 72 65 61 6C I'm real
+                                                ; 899D 6C 79 20 73 6F 72 72 79  ly sorry
+                                                ; 89A5 21 5C 49 27 6D 20 61 66  !\I'm af
+                                                ; 89AD 72 61 69 64 20 79 6F     raid yo
+        .byte   "u\won't be able to\leave until "; 89B4 75 5C 77 6F 6E 27 74 20 u\won't 
+                                                ; 89BC 62 65 20 61 62 6C 65 20  be able 
+                                                ; 89C4 74 6F 5C 6C 65 61 76 65  to\leave
+                                                ; 89CC 20 75 6E 74 69 6C 20      until 
+        .byte   "it's\fully repaired."          ; 89D3 69 74 27 73 5C 66 75 6C  it's\ful
+                                                ; 89DB 6C 79 20 72 65 70 61 69  ly repai
+                                                ; 89E3 72 65 64 2E              red.
+        .byte   $0A                             ; 89E7 0A                       .
+L89E8:
+        .byte   "@6What's wrong?"               ; 89E8 40 36 57 68 61 74 27 73  @6What's
+                                                ; 89F0 20 77 72 6F 6E 67 3F      wrong?
+        .byte   $0A                             ; 89F7 0A                       .
+L89F8:
+        .byte   "@1The Tram is down."           ; 89F8 40 31 54 68 65 20 54 72  @1The Tr
+                                                ; 8A00 61 6D 20 69 73 20 64 6F  am is do
+                                                ; 8A08 77 6E 2E                 wn.
+        .byte   $0A                             ; 8A0B 0A                       .
+L8A0C:
+        .byte   "@6Too bad.It happens,though.I k"; 8A0C 40 36 54 6F 6F 20 62 61 @6Too ba
+                                                ; 8A14 64 2E 49 74 20 68 61 70  d.It hap
+                                                ; 8A1C 70 65 6E 73 2C 74 68 6F  pens,tho
+                                                ; 8A24 75 67 68 2E 49 20 6B     ugh.I k
+        .byte   "now!Let'sstay at the hotel!\The"; 8A2B 6E 6F 77 21 4C 65 74 27 now!Let'
+                                                ; 8A33 73 73 74 61 79 20 61 74  sstay at
+                                                ; 8A3B 20 74 68 65 20 68 6F 74   the hot
+                                                ; 8A43 65 6C 21 5C 54 68 65     el!\The
+        .byte   "y know me here.\I'll go talk to"; 8A4A 79 20 6B 6E 6F 77 20 6D y know m
+                                                ; 8A52 65 20 68 65 72 65 2E 5C  e here.\
+                                                ; 8A5A 49 27 6C 6C 20 67 6F 20  I'll go 
+                                                ; 8A62 74 61 6C 6B 20 74 6F     talk to
+        .byte   "\them."                        ; 8A69 5C 74 68 65 6D 2E        \them.
+        .byte   $0A                             ; 8A6F 0A                       .
+L8A70:
+        .byte   "I will let you knowonce the rep"; 8A70 49 20 77 69 6C 6C 20 6C I will l
+                                                ; 8A78 65 74 20 79 6F 75 20 6B  et you k
+                                                ; 8A80 6E 6F 77 6F 6E 63 65 20  nowonce 
+                                                ; 8A88 74 68 65 20 72 65 70     the rep
+        .byte   "airs\are completed."           ; 8A8F 61 69 72 73 5C 61 72 65  airs\are
+                                                ; 8A97 20 63 6F 6D 70 6C 65 74   complet
+                                                ; 8A9F 65 64 2E                 ed.
+        .byte   $0A                             ; 8AA2 0A                       .
 L8AA3:
-        .byte   "}Novice"                       ; 8AA3 7D 4E 6F 76 69 63 65     }Novice
-        .byte   $0D,$0A                         ; 8AAA 0D 0A                    ..
-L8AAC:
-        .byte   "}Scholar"                      ; 8AAC 7D 53 63 68 6F 6C 61 72  }Scholar
-        .byte   $0D,$0A,$FF,$FF                 ; 8AB4 0D 0A FF FF              ....
-; ----------------------------------------------------------------------------
-L8AB8:
-        .addr   L8B8C                           ; 8AB8 8C 8B                    ..
-        .addr   L8B92                           ; 8ABA 92 8B                    ..
-        .addr   L8B9A                           ; 8ABC 9A 8B                    ..
-        .addr   L8BA2                           ; 8ABE A2 8B                    ..
-        .addr   L8BA8                           ; 8AC0 A8 8B                    ..
-        .addr   L8BB1                           ; 8AC2 B1 8B                    ..
-        .addr   L8BB9                           ; 8AC4 B9 8B                    ..
-        .addr   L8BC2                           ; 8AC6 C2 8B                    ..
-        .addr   L8BCB                           ; 8AC8 CB 8B                    ..
-        .addr   L8BD4                           ; 8ACA D4 8B                    ..
-        .addr   L8BDE                           ; 8ACC DE 8B                    ..
-        .addr   L8BE6                           ; 8ACE E6 8B                    ..
-        .addr   L8BEF                           ; 8AD0 EF 8B                    ..
-        .addr   L8BF7                           ; 8AD2 F7 8B                    ..
-        .addr   L8C01                           ; 8AD4 01 8C                    ..
-        .addr   L8C0A                           ; 8AD6 0A 8C                    ..
-        .addr   L8C13                           ; 8AD8 13 8C                    ..
-        .addr   L8C1B                           ; 8ADA 1B 8C                    ..
-        .addr   L8C22                           ; 8ADC 22 8C                    ".
-        .addr   L8C2C                           ; 8ADE 2C 8C                    ,.
-        .addr   L8C36                           ; 8AE0 36 8C                    6.
-        .addr   L8C3F                           ; 8AE2 3F 8C                    ?.
-        .addr   L8C49                           ; 8AE4 49 8C                    I.
-        .addr   L8C50                           ; 8AE6 50 8C                    P.
-        .addr   L8C58                           ; 8AE8 58 8C                    X.
-        .addr   L8C5F                           ; 8AEA 5F 8C                    _.
-        .addr   L8C68                           ; 8AEC 68 8C                    h.
-        .addr   L8C72                           ; 8AEE 72 8C                    r.
-        .addr   L8C79                           ; 8AF0 79 8C                    y.
-        .addr   L8C83                           ; 8AF2 83 8C                    ..
-        .addr   L8C8B                           ; 8AF4 8B 8C                    ..
-        .addr   L8C93                           ; 8AF6 93 8C                    ..
-        .addr   L8C9B                           ; 8AF8 9B 8C                    ..
-        .addr   L8CA4                           ; 8AFA A4 8C                    ..
-        .addr   L8CAD                           ; 8AFC AD 8C                    ..
-        .addr   L8CB4                           ; 8AFE B4 8C                    ..
-        .addr   L8CBB                           ; 8B00 BB 8C                    ..
-        .addr   L8CC3                           ; 8B02 C3 8C                    ..
-        .addr   L8CCB                           ; 8B04 CB 8C                    ..
-        .addr   L8CD3                           ; 8B06 D3 8C                    ..
-        .addr   L8CDD                           ; 8B08 DD 8C                    ..
-        .addr   L8CE6                           ; 8B0A E6 8C                    ..
-        .addr   L8CED                           ; 8B0C ED 8C                    ..
-        .addr   L8CF6                           ; 8B0E F6 8C                    ..
-        .addr   L8CFE                           ; 8B10 FE 8C                    ..
-        .addr   L8D07                           ; 8B12 07 8D                    ..
-        .addr   L8D10                           ; 8B14 10 8D                    ..
-        .addr   L8D18                           ; 8B16 18 8D                    ..
-        .addr   L8D21                           ; 8B18 21 8D                    !.
-        .addr   L8D2A                           ; 8B1A 2A 8D                    *.
-        .addr   L8D33                           ; 8B1C 33 8D                    3.
-        .addr   L8D3D                           ; 8B1E 3D 8D                    =.
-        .addr   L8D46                           ; 8B20 46 8D                    F.
-        .addr   L8D50                           ; 8B22 50 8D                    P.
-        .addr   L8D59                           ; 8B24 59 8D                    Y.
-        .addr   L8D62                           ; 8B26 62 8D                    b.
-        .addr   L8D6B                           ; 8B28 6B 8D                    k.
-        .addr   L8D72                           ; 8B2A 72 8D                    r.
-        .addr   L8D7B                           ; 8B2C 7B 8D                    {.
-        .addr   L8D82                           ; 8B2E 82 8D                    ..
-        .addr   L8D8B                           ; 8B30 8B 8D                    ..
-        .addr   L8D92                           ; 8B32 92 8D                    ..
-        .addr   L8D98                           ; 8B34 98 8D                    ..
-        .addr   L8DA2                           ; 8B36 A2 8D                    ..
-        .addr   L8DAC                           ; 8B38 AC 8D                    ..
-        .addr   L8DB4                           ; 8B3A B4 8D                    ..
-        .addr   L8DBB                           ; 8B3C BB 8D                    ..
-        .addr   L8DC3                           ; 8B3E C3 8D                    ..
-        .addr   L8DCB                           ; 8B40 CB 8D                    ..
-        .addr   L8DD5                           ; 8B42 D5 8D                    ..
-        .addr   L8DDC                           ; 8B44 DC 8D                    ..
-        .addr   L8DE6                           ; 8B46 E6 8D                    ..
-        .addr   L8DEF                           ; 8B48 EF 8D                    ..
-        .addr   L8DF7                           ; 8B4A F7 8D                    ..
-        .addr   L8DFE                           ; 8B4C FE 8D                    ..
-        .addr   L8E05                           ; 8B4E 05 8E                    ..
-        .addr   L8E0F                           ; 8B50 0F 8E                    ..
-        .addr   L8E18                           ; 8B52 18 8E                    ..
-        .addr   L8E21                           ; 8B54 21 8E                    !.
-        .addr   L8E28                           ; 8B56 28 8E                    (.
-        .addr   L8E31                           ; 8B58 31 8E                    1.
-        .addr   L8E3A                           ; 8B5A 3A 8E                    :.
-        .addr   L8E42                           ; 8B5C 42 8E                    B.
-        .addr   L8E48                           ; 8B5E 48 8E                    H.
-        .addr   L8E4F                           ; 8B60 4F 8E                    O.
-        .addr   L8E59                           ; 8B62 59 8E                    Y.
-        .addr   L8E63                           ; 8B64 63 8E                    c.
-        .addr   L8E6A                           ; 8B66 6A 8E                    j.
-        .addr   L8E72                           ; 8B68 72 8E                    r.
-        .addr   L8E7C                           ; 8B6A 7C 8E                    |.
-        .addr   L8E84                           ; 8B6C 84 8E                    ..
-        .addr   L8E8A                           ; 8B6E 8A 8E                    ..
-        .addr   L8E92                           ; 8B70 92 8E                    ..
-        .addr   L8E9A                           ; 8B72 9A 8E                    ..
-        .addr   L8EA3                           ; 8B74 A3 8E                    ..
-        .addr   L8EAA                           ; 8B76 AA 8E                    ..
-        .addr   L8EB3                           ; 8B78 B3 8E                    ..
-        .addr   L8EBC                           ; 8B7A BC 8E                    ..
-        .addr   L8EC5                           ; 8B7C C5 8E                    ..
-        .addr   L8ECF                           ; 8B7E CF 8E                    ..
-        .addr   L8ED8                           ; 8B80 D8 8E                    ..
-        .addr   L8EE2                           ; 8B82 E2 8E                    ..
-        .addr   L8EEA                           ; 8B84 EA 8E                    ..
-        .addr   L8EF3                           ; 8B86 F3 8E                    ..
-        .addr   L8EFD                           ; 8B88 FD 8E                    ..
-        .addr   L8F04                           ; 8B8A 04 8F                    ..
-; ----------------------------------------------------------------------------
-L8B8C:
-        .byte   "None"                          ; 8B8C 4E 6F 6E 65              None
-        .byte   $0D,$0A                         ; 8B90 0D 0A                    ..
-L8B92:
-        .byte   "~Cloud"                        ; 8B92 7E 43 6C 6F 75 64        ~Cloud
-        .byte   $0D,$0A                         ; 8B98 0D 0A                    ..
-L8B9A:
-        .byte   "~Arson"                        ; 8B9A 7E 41 72 73 6F 6E        ~Arson
-        .byte   $0D,$0A                         ; 8BA0 0D 0A                    ..
-L8BA2:
-        .byte   "~Law"                          ; 8BA2 7E 4C 61 77              ~Law
-        .byte   $0D,$0A                         ; 8BA6 0D 0A                    ..
-L8BA8:
-        .byte   "~Chitin"                       ; 8BA8 7E 43 68 69 74 69 6E     ~Chitin
-        .byte   $0D,$0A                         ; 8BAF 0D 0A                    ..
-L8BB1:
-        .byte   "~Light"                        ; 8BB1 7E 4C 69 67 68 74        ~Light
-        .byte   $0D,$0A                         ; 8BB7 0D 0A                    ..
-L8BB9:
-        .byte   "~Puppet"                       ; 8BB9 7E 50 75 70 70 65 74     ~Puppet
-        .byte   $0D,$0A                         ; 8BC0 0D 0A                    ..
-L8BC2:
-        .byte   "~Winged"                       ; 8BC2 7E 57 69 6E 67 65 64     ~Winged
-        .byte   $0D,$0A                         ; 8BC9 0D 0A                    ..
-L8BCB:
-        .byte   "~Silver"                       ; 8BCB 7E 53 69 6C 76 65 72     ~Silver
-        .byte   $0D,$0A                         ; 8BD2 0D 0A                    ..
-L8BD4:
-        .byte   "~Eternal"                      ; 8BD4 7E 45 74 65 72 6E 61 6C  ~Eternal
-        .byte   $0D,$0A                         ; 8BDC 0D 0A                    ..
-L8BDE:
-        .byte   "~Valor"                        ; 8BDE 7E 56 61 6C 6F 72        ~Valor
-        .byte   $0D,$0A                         ; 8BE4 0D 0A                    ..
-L8BE6:
-        .byte   "~Elemnt"                       ; 8BE6 7E 45 6C 65 6D 6E 74     ~Elemnt
-        .byte   $0D,$0A                         ; 8BED 0D 0A                    ..
-L8BEF:
-        .byte   "~Wrath"                        ; 8BEF 7E 57 72 61 74 68        ~Wrath
-        .byte   $0D,$0A                         ; 8BF5 0D 0A                    ..
-L8BF7:
-        .byte   "~Command"                      ; 8BF7 7E 43 6F 6D 6D 61 6E 64  ~Command
-        .byte   $0D,$0A                         ; 8BFF 0D 0A                    ..
-L8C01:
-        .byte   "~Emblem"                       ; 8C01 7E 45 6D 62 6C 65 6D     ~Emblem
-        .byte   $0D,$0A                         ; 8C08 0D 0A                    ..
-L8C0A:
-        .byte   "~Halite"                       ; 8C0A 7E 48 61 6C 69 74 65     ~Halite
-        .byte   $0D,$0A                         ; 8C11 0D 0A                    ..
-L8C13:
-        .byte   "~Envoy"                        ; 8C13 7E 45 6E 76 6F 79        ~Envoy
-        .byte   $0D,$0A                         ; 8C19 0D 0A                    ..
-L8C1B:
-        .byte   "~Easy"                         ; 8C1B 7E 45 61 73 79           ~Easy
-        .byte   $0D,$0A                         ; 8C20 0D 0A                    ..
-L8C22:
-        .byte   "~Defiant"                      ; 8C22 7E 44 65 66 69 61 6E 74  ~Defiant
-        .byte   $0D,$0A                         ; 8C2A 0D 0A                    ..
-L8C2C:
-        .byte   "~General"                      ; 8C2C 7E 47 65 6E 65 72 61 6C  ~General
-        .byte   $0D,$0A                         ; 8C34 0D 0A                    ..
-L8C36:
-        .byte   "~Valued"                       ; 8C36 7E 56 61 6C 75 65 64     ~Valued
-        .byte   $0D,$0A                         ; 8C3D 0D 0A                    ..
-L8C3F:
-        .byte   "~Destryr"                      ; 8C3F 7E 44 65 73 74 72 79 72  ~Destryr
-        .byte   $0D,$0A                         ; 8C47 0D 0A                    ..
-L8C49:
-        .byte   "~Fire"                         ; 8C49 7E 46 69 72 65           ~Fire
-        .byte   $0D,$0A                         ; 8C4E 0D 0A                    ..
-L8C50:
-        .byte   "~Dream"                        ; 8C50 7E 44 72 65 61 6D        ~Dream
-        .byte   $0D,$0A                         ; 8C56 0D 0A                    ..
-L8C58:
-        .byte   "~Dual"                         ; 8C58 7E 44 75 61 6C           ~Dual
-        .byte   $0D,$0A                         ; 8C5D 0D 0A                    ..
-L8C5F:
-        .byte   "~Vortex"                       ; 8C5F 7E 56 6F 72 74 65 78     ~Vortex
-        .byte   $0D,$0A                         ; 8C66 0D 0A                    ..
-L8C68:
-        .byte   "~Crescnt"                      ; 8C68 7E 43 72 65 73 63 6E 74  ~Crescnt
-        .byte   $0D,$0A                         ; 8C70 0D 0A                    ..
-L8C72:
-        .byte   "~Wind"                         ; 8C72 7E 57 69 6E 64           ~Wind
-        .byte   $0D,$0A                         ; 8C77 0D 0A                    ..
-L8C79:
-        .byte   "~Miracle"                      ; 8C79 7E 4D 69 72 61 63 6C 65  ~Miracle
-        .byte   $0D,$0A                         ; 8C81 0D 0A                    ..
-L8C83:
-        .byte   "~Color"                        ; 8C83 7E 43 6F 6C 6F 72        ~Color
-        .byte   $0D,$0A                         ; 8C89 0D 0A                    ..
-L8C8B:
-        .byte   "~Scute"                        ; 8C8B 7E 53 63 75 74 65        ~Scute
-        .byte   $0D,$0A                         ; 8C91 0D 0A                    ..
-L8C93:
-        .byte   "~Heavy"                        ; 8C93 7E 48 65 61 76 79        ~Heavy
-        .byte   $0D,$0A                         ; 8C99 0D 0A                    ..
-L8C9B:
-        .byte   "~Strong"                       ; 8C9B 7E 53 74 72 6F 6E 67     ~Strong
-        .byte   $0D,$0A                         ; 8CA2 0D 0A                    ..
-L8CA4:
-        .byte   "~Bright"                       ; 8CA4 7E 42 72 69 67 68 74     ~Bright
-        .byte   $0D,$0A                         ; 8CAB 0D 0A                    ..
-L8CAD:
-        .byte   "~Bear"                         ; 8CAD 7E 42 65 61 72           ~Bear
-        .byte   $0D,$0A                         ; 8CB2 0D 0A                    ..
-L8CB4:
-        .byte   "~Mail"                         ; 8CB4 7E 4D 61 69 6C           ~Mail
-        .byte   $0D,$0A                         ; 8CB9 0D 0A                    ..
-L8CBB:
-        .byte   "~Scale"                        ; 8CBB 7E 53 63 61 6C 65        ~Scale
-        .byte   $0D,$0A                         ; 8CC1 0D 0A                    ..
-L8CC3:
-        .byte   "~Loose"                        ; 8CC3 7E 4C 6F 6F 73 65        ~Loose
-        .byte   $0D,$0A                         ; 8CC9 0D 0A                    ..
-L8CCB:
-        .byte   "~Chain"                        ; 8CCB 7E 43 68 61 69 6E        ~Chain
-        .byte   $0D,$0A                         ; 8CD1 0D 0A                    ..
-L8CD3:
-        .byte   "~Control"                      ; 8CD3 7E 43 6F 6E 74 72 6F 6C  ~Control
-        .byte   $0D,$0A                         ; 8CDB 0D 0A                    ..
-L8CDD:
-        .byte   "~Connor"                       ; 8CDD 7E 43 6F 6E 6E 6F 72     ~Connor
-        .byte   $0D,$0A                         ; 8CE4 0D 0A                    ..
-L8CE6:
-        .byte   "~Bane"                         ; 8CE6 7E 42 61 6E 65           ~Bane
-        .byte   $0D,$0A                         ; 8CEB 0D 0A                    ..
-L8CED:
-        .byte   "~Killer"                       ; 8CED 7E 4B 69 6C 6C 65 72     ~Killer
-        .byte   $0D,$0A                         ; 8CF4 0D 0A                    ..
-L8CF6:
-        .byte   "~World"                        ; 8CF6 7E 57 6F 72 6C 64        ~World
-        .byte   $0D,$0A                         ; 8CFC 0D 0A                    ..
-L8CFE:
-        .byte   "~Wanton"                       ; 8CFE 7E 57 61 6E 74 6F 6E     ~Wanton
-        .byte   $0D,$0A                         ; 8D05 0D 0A                    ..
-L8D07:
-        .byte   "~Aeolus"                       ; 8D07 7E 41 65 6F 6C 75 73     ~Aeolus
-        .byte   $0D,$0A                         ; 8D0E 0D 0A                    ..
-L8D10:
-        .byte   "~Ghost"                        ; 8D10 7E 47 68 6F 73 74        ~Ghost
-        .byte   $0D,$0A                         ; 8D16 0D 0A                    ..
-L8D18:
-        .byte   "~Canine"                       ; 8D18 7E 43 61 6E 69 6E 65     ~Canine
-        .byte   $0D,$0A                         ; 8D1F 0D 0A                    ..
-L8D21:
-        .byte   "~Kensei"                       ; 8D21 7E 4B 65 6E 73 65 69     ~Kensei
-        .byte   $0D,$0A                         ; 8D28 0D 0A                    ..
-L8D2A:
-        .byte   "~Raptor"                       ; 8D2A 7E 52 61 70 74 6F 72     ~Raptor
-        .byte   $0D,$0A                         ; 8D31 0D 0A                    ..
-L8D33:
-        .byte   "~Baptist"                      ; 8D33 7E 42 61 70 74 69 73 74  ~Baptist
-        .byte   $0D,$0A                         ; 8D3B 0D 0A                    ..
-L8D3D:
-        .byte   "~Slayer"                       ; 8D3D 7E 53 6C 61 79 65 72     ~Slayer
-        .byte   $0D,$0A                         ; 8D44 0D 0A                    ..
-L8D46:
-        .byte   "~Thunder"                      ; 8D46 7E 54 68 75 6E 64 65 72  ~Thunder
-        .byte   $0D,$0A                         ; 8D4E 0D 0A                    ..
-L8D50:
-        .byte   "~Travel"                       ; 8D50 7E 54 72 61 76 65 6C     ~Travel
-        .byte   $0D,$0A                         ; 8D57 0D 0A                    ..
-L8D59:
-        .byte   "~Voodoo"                       ; 8D59 7E 56 6F 6F 64 6F 6F     ~Voodoo
-        .byte   $0D,$0A                         ; 8D60 0D 0A                    ..
-L8D62:
-        .byte   "~Lamell"                       ; 8D62 7E 4C 61 6D 65 6C 6C     ~Lamell
-        .byte   $0D,$0A                         ; 8D69 0D 0A                    ..
-L8D6B:
-        .byte   "~Fate"                         ; 8D6B 7E 46 61 74 65           ~Fate
-        .byte   $0D,$0A                         ; 8D70 0D 0A                    ..
-L8D72:
-        .byte   "~Lizard"                       ; 8D72 7E 4C 69 7A 61 72 64     ~Lizard
-        .byte   $0D,$0A                         ; 8D79 0D 0A                    ..
-L8D7B:
-        .byte   "~Moss"                         ; 8D7B 7E 4D 6F 73 73           ~Moss
-        .byte   $0D,$0A                         ; 8D80 0D 0A                    ..
-L8D82:
-        .byte   "~Shadow"                       ; 8D82 7E 53 68 61 64 6F 77     ~Shadow
-        .byte   $0D,$0A                         ; 8D89 0D 0A                    ..
-L8D8B:
-        .byte   "~Kuma"                         ; 8D8B 7E 4B 75 6D 61           ~Kuma
-        .byte   $0D,$0A                         ; 8D90 0D 0A                    ..
-L8D92:
-        .byte   "~War"                          ; 8D92 7E 57 61 72              ~War
-        .byte   $0D,$0A                         ; 8D96 0D 0A                    ..
-L8D98:
-        .byte   "~Bristle"                      ; 8D98 7E 42 72 69 73 74 6C 65  ~Bristle
-        .byte   $0D,$0A                         ; 8DA0 0D 0A                    ..
-L8DA2:
-        .byte   "~Archaic"                      ; 8DA2 7E 41 72 63 68 61 69 63  ~Archaic
-        .byte   $0D,$0A                         ; 8DAA 0D 0A                    ..
-L8DAC:
-        .byte   "~Demon"                        ; 8DAC 7E 44 65 6D 6F 6E        ~Demon
-        .byte   $0D,$0A                         ; 8DB2 0D 0A                    ..
-L8DB4:
-        .byte   "~Mana"                         ; 8DB4 7E 4D 61 6E 61           ~Mana
-        .byte   $0D,$0A                         ; 8DB9 0D 0A                    ..
-L8DBB:
-        .byte   "~Storm"                        ; 8DBB 7E 53 74 6F 72 6D        ~Storm
-        .byte   $0D,$0A                         ; 8DC1 0D 0A                    ..
-L8DC3:
-        .byte   "~Magic"                        ; 8DC3 7E 4D 61 67 69 63        ~Magic
-        .byte   $0D,$0A                         ; 8DC9 0D 0A                    ..
-L8DCB:
-        .byte   "~Prophet"                      ; 8DCB 7E 50 72 6F 70 68 65 74  ~Prophet
-        .byte   $0D,$0A                         ; 8DD3 0D 0A                    ..
-L8DD5:
-        .byte   "~Mare"                         ; 8DD5 7E 4D 61 72 65           ~Mare
-        .byte   $0D,$0A                         ; 8DDA 0D 0A                    ..
-L8DDC:
-        .byte   "~Acclaim"                      ; 8DDC 7E 41 63 63 6C 61 69 6D  ~Acclaim
-        .byte   $0D,$0A                         ; 8DE4 0D 0A                    ..
-L8DE6:
-        .byte   "~Valley"                       ; 8DE6 7E 56 61 6C 6C 65 79     ~Valley
-        .byte   $0D,$0A                         ; 8DED 0D 0A                    ..
-L8DEF:
-        .byte   "~Ashen"                        ; 8DEF 7E 41 73 68 65 6E        ~Ashen
-        .byte   $0D,$0A                         ; 8DF5 0D 0A                    ..
-L8DF7:
-        .byte   "~Hope"                         ; 8DF7 7E 48 6F 70 65           ~Hope
-        .byte   $0D,$0A                         ; 8DFC 0D 0A                    ..
-L8DFE:
-        .byte   "~Mist"                         ; 8DFE 7E 4D 69 73 74           ~Mist
-        .byte   $0D,$0A                         ; 8E03 0D 0A                    ..
-L8E05:
-        .byte   "~Binding"                      ; 8E05 7E 42 69 6E 64 69 6E 67  ~Binding
-        .byte   $0D,$0A                         ; 8E0D 0D 0A                    ..
-L8E0F:
-        .byte   "~Barren"                       ; 8E0F 7E 42 61 72 72 65 6E     ~Barren
-        .byte   $0D,$0A                         ; 8E16 0D 0A                    ..
-L8E18:
-        .byte   "~Cleric"                       ; 8E18 7E 43 6C 65 72 69 63     ~Cleric
-        .byte   $0D,$0A                         ; 8E1F 0D 0A                    ..
-L8E21:
-        .byte   "~Fang"                         ; 8E21 7E 46 61 6E 67           ~Fang
-        .byte   $0D,$0A                         ; 8E26 0D 0A                    ..
-L8E28:
-        .byte   "~Devout"                       ; 8E28 7E 44 65 76 6F 75 74     ~Devout
-        .byte   $0D,$0A                         ; 8E2F 0D 0A                    ..
-L8E31:
-        .byte   "~Sacred"                       ; 8E31 7E 53 61 63 72 65 64     ~Sacred
-        .byte   $0D,$0A                         ; 8E38 0D 0A                    ..
-L8E3A:
-        .byte   "~Stone"                        ; 8E3A 7E 53 74 6F 6E 65        ~Stone
-        .byte   $0D,$0A                         ; 8E40 0D 0A                    ..
-L8E42:
-        .byte   "~Sky"                          ; 8E42 7E 53 6B 79              ~Sky
-        .byte   $0D,$0A                         ; 8E46 0D 0A                    ..
-L8E48:
-        .byte   "~Mage"                         ; 8E48 7E 4D 61 67 65           ~Mage
-        .byte   $0D,$0A                         ; 8E4D 0D 0A                    ..
-L8E4F:
-        .byte   "~Vampire"                      ; 8E4F 7E 56 61 6D 70 69 72 65  ~Vampire
-        .byte   $0D,$0A                         ; 8E57 0D 0A                    ..
-L8E59:
-        .byte   "~Courier"                      ; 8E59 7E 43 6F 75 72 69 65 72  ~Courier
-        .byte   $0D,$0A                         ; 8E61 0D 0A                    ..
-L8E63:
-        .byte   "~Rain"                         ; 8E63 7E 52 61 69 6E           ~Rain
-        .byte   $0D,$0A                         ; 8E68 0D 0A                    ..
-L8E6A:
-        .byte   "~Lunar"                        ; 8E6A 7E 4C 75 6E 61 72        ~Lunar
-        .byte   $0D,$0A                         ; 8E70 0D 0A                    ..
-L8E72:
-        .byte   "~Natural"                      ; 8E72 7E 4E 61 74 75 72 61 6C  ~Natural
-        .byte   $0D,$0A                         ; 8E7A 0D 0A                    ..
-L8E7C:
-        .byte   "~Sheet"                        ; 8E7C 7E 53 68 65 65 74        ~Sheet
-        .byte   $0D,$0A                         ; 8E82 0D 0A                    ..
-L8E84:
-        .byte   "~Red"                          ; 8E84 7E 52 65 64              ~Red
-        .byte   $0D,$0A                         ; 8E88 0D 0A                    ..
-L8E8A:
-        .byte   "~Thick"                        ; 8E8A 7E 54 68 69 63 6B        ~Thick
-        .byte   $0D,$0A                         ; 8E90 0D 0A                    ..
-L8E92:
-        .byte   "~Woven"                        ; 8E92 7E 57 6F 76 65 6E        ~Woven
-        .byte   $0D,$0A                         ; 8E98 0D 0A                    ..
-L8E9A:
-        .byte   "~Flaxen"                       ; 8E9A 7E 46 6C 61 78 65 6E     ~Flaxen
-        .byte   $0D,$0A                         ; 8EA1 0D 0A                    ..
-L8EA3:
-        .byte   "~Firm"                         ; 8EA3 7E 46 69 72 6D           ~Firm
-        .byte   $0D,$0A                         ; 8EA8 0D 0A                    ..
-L8EAA:
-        .byte   "~Dressy"                       ; 8EAA 7E 44 72 65 73 73 79     ~Dressy
-        .byte   $0D,$0A                         ; 8EB1 0D 0A                    ..
-L8EB3:
-        .byte   "~Ragged"                       ; 8EB3 7E 52 61 67 67 65 64     ~Ragged
-        .byte   $0D,$0A                         ; 8EBA 0D 0A                    ..
-L8EBC:
-        .byte   "~Broken"                       ; 8EBC 7E 42 72 6F 6B 65 6E     ~Broken
-        .byte   $0D,$0A                         ; 8EC3 0D 0A                    ..
-L8EC5:
-        .byte   "~Hunting"                      ; 8EC5 7E 48 75 6E 74 69 6E 67  ~Hunting
-        .byte   $0D,$0A                         ; 8ECD 0D 0A                    ..
-L8ECF:
-        .byte   "~Novice"                       ; 8ECF 7E 4E 6F 76 69 63 65     ~Novice
-        .byte   $0D,$0A                         ; 8ED6 0D 0A                    ..
-L8ED8:
-        .byte   "~Assasin"                      ; 8ED8 7E 41 73 73 61 73 69 6E  ~Assasin
-        .byte   $0D,$0A                         ; 8EE0 0D 0A                    ..
-L8EE2:
-        .byte   "~Thief"                        ; 8EE2 7E 54 68 69 65 66        ~Thief
-        .byte   $0D,$0A                         ; 8EE8 0D 0A                    ..
-L8EEA:
-        .byte   "~Cotton"                       ; 8EEA 7E 43 6F 74 74 6F 6E     ~Cotton
-        .byte   $0D,$0A                         ; 8EF1 0D 0A                    ..
-L8EF3:
-        .byte   "~Servant"                      ; 8EF3 7E 53 65 72 76 61 6E 74  ~Servant
-        .byte   $0D,$0A                         ; 8EFB 0D 0A                    ..
-L8EFD:
-        .byte   "~Monk"                         ; 8EFD 7E 4D 6F 6E 6B           ~Monk
-        .byte   $0D,$0A                         ; 8F02 0D 0A                    ..
-L8F04:
-        .byte   "~Recruit"                      ; 8F04 7E 52 65 63 72 75 69 74  ~Recruit
-        .byte   $0D,$0A,$FF,$FF                 ; 8F0C 0D 0A FF FF              ....
-; ----------------------------------------------------------------------------
-L8F10:
-        .addr   L8F86                           ; 8F10 86 8F                    ..
-        .addr   L8F8C                           ; 8F12 8C 8F                    ..
-        .addr   L8F96                           ; 8F14 96 8F                    ..
-        .addr   L8F9F                           ; 8F16 9F 8F                    ..
-        .addr   L8FA6                           ; 8F18 A6 8F                    ..
-        .addr   L8FAF                           ; 8F1A AF 8F                    ..
-        .addr   L8FB9                           ; 8F1C B9 8F                    ..
-        .addr   L8FC3                           ; 8F1E C3 8F                    ..
-        .addr   L8FCD                           ; 8F20 CD 8F                    ..
-        .addr   L8FD5                           ; 8F22 D5 8F                    ..
-        .addr   L8FDE                           ; 8F24 DE 8F                    ..
-        .addr   L8FE6                           ; 8F26 E6 8F                    ..
-        .addr   L8FEF                           ; 8F28 EF 8F                    ..
-        .addr   L8FF8                           ; 8F2A F8 8F                    ..
-        .addr   L9000                           ; 8F2C 00 90                    ..
-        .addr   L900A                           ; 8F2E 0A 90                    ..
-        .addr   L9013                           ; 8F30 13 90                    ..
-        .addr   L901C                           ; 8F32 1C 90                    ..
-        .addr   L9024                           ; 8F34 24 90                    $.
-        .addr   L902C                           ; 8F36 2C 90                    ,.
-        .addr   L9035                           ; 8F38 35 90                    5.
-        .addr   L903D                           ; 8F3A 3D 90                    =.
-        .addr   L9044                           ; 8F3C 44 90                    D.
-        .addr   L904C                           ; 8F3E 4C 90                    L.
-        .addr   L9054                           ; 8F40 54 90                    T.
-        .addr   L905D                           ; 8F42 5D 90                    ].
-        .addr   L9065                           ; 8F44 65 90                    e.
-        .addr   L906D                           ; 8F46 6D 90                    m.
-        .addr   L9074                           ; 8F48 74 90                    t.
-        .addr   L907B                           ; 8F4A 7B 90                    {.
-        .addr   L9083                           ; 8F4C 83 90                    ..
-        .addr   L908B                           ; 8F4E 8B 90                    ..
-        .addr   L9093                           ; 8F50 93 90                    ..
-        .addr   L909C                           ; 8F52 9C 90                    ..
-        .addr   L90A3                           ; 8F54 A3 90                    ..
-        .addr   L90AC                           ; 8F56 AC 90                    ..
-        .addr   L90B5                           ; 8F58 B5 90                    ..
-        .addr   L90BD                           ; 8F5A BD 90                    ..
-        .addr   L90C4                           ; 8F5C C4 90                    ..
-        .addr   L90CE                           ; 8F5E CE 90                    ..
-        .addr   L90D8                           ; 8F60 D8 90                    ..
-        .addr   L90DF                           ; 8F62 DF 90                    ..
-        .addr   L90E6                           ; 8F64 E6 90                    ..
-        .addr   L90ED                           ; 8F66 ED 90                    ..
-        .addr   L90F4                           ; 8F68 F4 90                    ..
-        .addr   L90FD                           ; 8F6A FD 90                    ..
-        .addr   L9105                           ; 8F6C 05 91                    ..
-        .addr   L910C                           ; 8F6E 0C 91                    ..
-        .addr   L9113                           ; 8F70 13 91                    ..
-        .addr   L911D                           ; 8F72 1D 91                    ..
-        .addr   L9127                           ; 8F74 27 91                    '.
-        .addr   L9130                           ; 8F76 30 91                    0.
-        .addr   L9137                           ; 8F78 37 91                    7.
-        .addr   L913E                           ; 8F7A 3E 91                    >.
-        .addr   L9147                           ; 8F7C 47 91                    G.
-        .addr   L9150                           ; 8F7E 50 91                    P.
-        .addr   L9158                           ; 8F80 58 91                    X.
-        .addr   L9161                           ; 8F82 61 91                    a.
-        .addr   L916B                           ; 8F84 6B 91                    k.
-; ----------------------------------------------------------------------------
-L8F86:
-        .byte   "None"                          ; 8F86 4E 6F 6E 65              None
-        .byte   $0D,$0A                         ; 8F8A 0D 0A                    ..
-L8F8C:
-        .byte   $7F                             ; 8F8C 7F                       .
-        .byte   "Blessed"                       ; 8F8D 42 6C 65 73 73 65 64     Blessed
-        .byte   $0D,$0A                         ; 8F94 0D 0A                    ..
-L8F96:
-        .byte   $7F                             ; 8F96 7F                       .
-        .byte   "Change"                        ; 8F97 43 68 61 6E 67 65        Change
-        .byte   $0D,$0A                         ; 8F9D 0D 0A                    ..
-L8F9F:
-        .byte   $7F                             ; 8F9F 7F                       .
-        .byte   "Hide"                          ; 8FA0 48 69 64 65              Hide
-        .byte   $0D,$0A                         ; 8FA4 0D 0A                    ..
-L8FA6:
-        .byte   $7F                             ; 8FA6 7F                       .
-        .byte   "Strong"                        ; 8FA7 53 74 72 6F 6E 67        Strong
-        .byte   $0D,$0A                         ; 8FAD 0D 0A                    ..
-L8FAF:
-        .byte   $7F                             ; 8FAF 7F                       .
-        .byte   "Eclipse"                       ; 8FB0 45 63 6C 69 70 73 65     Eclipse
-        .byte   $0D,$0A                         ; 8FB7 0D 0A                    ..
-L8FB9:
-        .byte   $7F                             ; 8FB9 7F                       .
-        .byte   "Barrier"                       ; 8FBA 42 61 72 72 69 65 72     Barrier
-        .byte   $0D,$0A                         ; 8FC1 0D 0A                    ..
-L8FC3:
-        .byte   $7F                             ; 8FC3 7F                       .
-        .byte   "Harmony"                       ; 8FC4 48 61 72 6D 6F 6E 79     Harmony
-        .byte   $0D,$0A                         ; 8FCB 0D 0A                    ..
-L8FCD:
-        .byte   $7F                             ; 8FCD 7F                       .
-        .byte   "Pulse"                         ; 8FCE 50 75 6C 73 65           Pulse
-        .byte   $0D,$0A                         ; 8FD3 0D 0A                    ..
-L8FD5:
-        .byte   $7F                             ; 8FD5 7F                       .
-        .byte   "Sentry"                        ; 8FD6 53 65 6E 74 72 79        Sentry
-        .byte   $0D,$0A                         ; 8FDC 0D 0A                    ..
-L8FDE:
-        .byte   $7F                             ; 8FDE 7F                       .
-        .byte   "Guard"                         ; 8FDF 47 75 61 72 64           Guard
-        .byte   $0D,$0A                         ; 8FE4 0D 0A                    ..
-L8FE6:
-        .byte   $7F                             ; 8FE6 7F                       .
-        .byte   "Oracle"                        ; 8FE7 4F 72 61 63 6C 65        Oracle
-        .byte   $0D,$0A                         ; 8FED 0D 0A                    ..
-L8FEF:
-        .byte   $7F                             ; 8FEF 7F                       .
-        .byte   "Statue"                        ; 8FF0 53 74 61 74 75 65        Statue
-        .byte   $0D,$0A                         ; 8FF6 0D 0A                    ..
-L8FF8:
-        .byte   $7F                             ; 8FF8 7F                       .
-        .byte   "Frost"                         ; 8FF9 46 72 6F 73 74           Frost
-        .byte   $0D,$0A                         ; 8FFE 0D 0A                    ..
-L9000:
-        .byte   $7F                             ; 9000 7F                       .
-        .byte   "Redmoon"                       ; 9001 52 65 64 6D 6F 6F 6E     Redmoon
-        .byte   $0D,$0A                         ; 9008 0D 0A                    ..
-L900A:
-        .byte   $7F                             ; 900A 7F                       .
-        .byte   "Spirit"                        ; 900B 53 70 69 72 69 74        Spirit
-        .byte   $0D,$0A                         ; 9011 0D 0A                    ..
-L9013:
-        .byte   $7F                             ; 9013 7F                       .
-        .byte   "Roland"                        ; 9014 52 6F 6C 61 6E 64        Roland
-        .byte   $0D,$0A                         ; 901A 0D 0A                    ..
-L901C:
-        .byte   $7F                             ; 901C 7F                       .
-        .byte   "Flame"                         ; 901D 46 6C 61 6D 65           Flame
-        .byte   $0D,$0A                         ; 9022 0D 0A                    ..
-L9024:
-        .byte   $7F                             ; 9024 7F                       .
-        .byte   "Noble"                         ; 9025 4E 6F 62 6C 65           Noble
-        .byte   $0D,$0A                         ; 902A 0D 0A                    ..
-L902C:
-        .byte   $7F                             ; 902C 7F                       .
-        .byte   "Mirage"                        ; 902D 4D 69 72 61 67 65        Mirage
-        .byte   $0D,$0A                         ; 9033 0D 0A                    ..
-L9035:
-        .byte   $7F                             ; 9035 7F                       .
-        .byte   "Royal"                         ; 9036 52 6F 79 61 6C           Royal
-        .byte   $0D,$0A                         ; 903B 0D 0A                    ..
-L903D:
-        .byte   $7F                             ; 903D 7F                       .
-        .byte   "Pyro"                          ; 903E 50 79 72 6F              Pyro
-        .byte   $0D,$0A                         ; 9042 0D 0A                    ..
-L9044:
-        .byte   $7F                             ; 9044 7F                       .
-        .byte   "Flame"                         ; 9045 46 6C 61 6D 65           Flame
-        .byte   $0D,$0A                         ; 904A 0D 0A                    ..
-L904C:
-        .byte   $7F                             ; 904C 7F                       .
-        .byte   "Blaze"                         ; 904D 42 6C 61 7A 65           Blaze
-        .byte   $0D,$0A                         ; 9052 0D 0A                    ..
-L9054:
-        .byte   $7F                             ; 9054 7F                       .
-        .byte   "Wooden"                        ; 9055 57 6F 6F 64 65 6E        Wooden
-        .byte   $0D,$0A                         ; 905B 0D 0A                    ..
-L905D:
-        .byte   $7F                             ; 905D 7F                       .
-        .byte   "Tiger"                         ; 905E 54 69 67 65 72           Tiger
-        .byte   $0D,$0A                         ; 9063 0D 0A                    ..
-L9065:
-        .byte   $7F                             ; 9065 7F                       .
-        .byte   "Sarge"                         ; 9066 53 61 72 67 65           Sarge
-        .byte   $0D,$0A                         ; 906B 0D 0A                    ..
-L906D:
-        .byte   $7F                             ; 906D 7F                       .
-        .byte   "Warm"                          ; 906E 57 61 72 6D              Warm
-        .byte   $0D,$0A                         ; 9072 0D 0A                    ..
-L9074:
-        .byte   $7F                             ; 9074 7F                       .
-        .byte   "Thin"                          ; 9075 54 68 69 6E              Thin
-        .byte   $0D,$0A                         ; 9079 0D 0A                    ..
-L907B:
-        .byte   $7F                             ; 907B 7F                       .
-        .byte   "Woven"                         ; 907C 57 6F 76 65 6E           Woven
-        .byte   $0D,$0A                         ; 9081 0D 0A                    ..
-L9083:
-        .byte   $7F                             ; 9083 7F                       .
-        .byte   "Grunt"                         ; 9084 47 72 75 6E 74           Grunt
-        .byte   $0D,$0A                         ; 9089 0D 0A                    ..
-L908B:
-        .byte   $7F                             ; 908B 7F                       .
-        .byte   "Demon"                         ; 908C 44 65 6D 6F 6E           Demon
-        .byte   $0D,$0A                         ; 9091 0D 0A                    ..
-L9093:
-        .byte   $7F                             ; 9093 7F                       .
-        .byte   "Cortex"                        ; 9094 43 6F 72 74 65 78        Cortex
-        .byte   $0D,$0A                         ; 909A 0D 0A                    ..
-L909C:
-        .byte   $7F                             ; 909C 7F                       .
-        .byte   "Mage"                          ; 909D 4D 61 67 65              Mage
-        .byte   $0D,$0A                         ; 90A1 0D 0A                    ..
-L90A3:
-        .byte   $7F                             ; 90A3 7F                       .
-        .byte   "Simple"                        ; 90A4 53 69 6D 70 6C 65        Simple
-        .byte   $0D,$0A                         ; 90AA 0D 0A                    ..
-L90AC:
-        .byte   $7F                             ; 90AC 7F                       .
-        .byte   "Emblem"                        ; 90AD 45 6D 62 6C 65 6D        Emblem
-        .byte   $0D,$0A                         ; 90B3 0D 0A                    ..
-L90B5:
-        .byte   $7F                             ; 90B5 7F                       .
-        .byte   "Troop"                         ; 90B6 54 72 6F 6F 70           Troop
-        .byte   $0D,$0A                         ; 90BB 0D 0A                    ..
-L90BD:
-        .byte   $7F                             ; 90BD 7F                       .
-        .byte   "Lore"                          ; 90BE 4C 6F 72 65              Lore
-        .byte   $0D,$0A                         ; 90C2 0D 0A                    ..
-L90C4:
-        .byte   $7F                             ; 90C4 7F                       .
-        .byte   "Militry"                       ; 90C5 4D 69 6C 69 74 72 79     Militry
-        .byte   $0D,$0A                         ; 90CC 0D 0A                    ..
-L90CE:
-        .byte   $7F                             ; 90CE 7F                       .
-        .byte   "Soldier"                       ; 90CF 53 6F 6C 64 69 65 72     Soldier
-        .byte   $0D,$0A                         ; 90D6 0D 0A                    ..
-L90D8:
-        .byte   $7F                             ; 90D8 7F                       .
-        .byte   "Wave"                          ; 90D9 57 61 76 65              Wave
-        .byte   $0D,$0A                         ; 90DD 0D 0A                    ..
-L90DF:
-        .byte   $7F                             ; 90DF 7F                       .
-        .byte   "Spun"                          ; 90E0 53 70 75 6E              Spun
-        .byte   $0D,$0A                         ; 90E4 0D 0A                    ..
-L90E6:
-        .byte   $7F                             ; 90E6 7F                       .
-        .byte   "Worn"                          ; 90E7 57 6F 72 6E              Worn
-        .byte   $0D,$0A                         ; 90EB 0D 0A                    ..
-L90ED:
-        .byte   $7F                             ; 90ED 7F                       .
-        .byte   "Torn"                          ; 90EE 54 6F 72 6E              Torn
-        .byte   $0D,$0A                         ; 90F2 0D 0A                    ..
-L90F4:
-        .byte   $7F                             ; 90F4 7F                       .
-        .byte   "Daylit"                        ; 90F5 44 61 79 6C 69 74        Daylit
-        .byte   $0D,$0A                         ; 90FB 0D 0A                    ..
-L90FD:
-        .byte   $7F                             ; 90FD 7F                       .
-        .byte   "Mount"                         ; 90FE 4D 6F 75 6E 74           Mount
-        .byte   $0D,$0A                         ; 9103 0D 0A                    ..
-L9105:
-        .byte   $7F                             ; 9105 7F                       .
-        .byte   "Work"                          ; 9106 57 6F 72 6B              Work
-        .byte   $0D,$0A                         ; 910A 0D 0A                    ..
-L910C:
-        .byte   $7F                             ; 910C 7F                       .
-        .byte   "Reed"                          ; 910D 52 65 65 64              Reed
-        .byte   $0D,$0A                         ; 9111 0D 0A                    ..
-L9113:
-        .byte   $7F                             ; 9113 7F                       .
-        .byte   "Hunting"                       ; 9114 48 75 6E 74 69 6E 67     Hunting
-        .byte   $0D,$0A                         ; 911B 0D 0A                    ..
-L911D:
-        .byte   $7F                             ; 911D 7F                       .
-        .byte   "Natural"                       ; 911E 4E 61 74 75 72 61 6C     Natural
-        .byte   $0D,$0A                         ; 9125 0D 0A                    ..
-L9127:
-        .byte   $7F                             ; 9127 7F                       .
-        .byte   "Native"                        ; 9128 4E 61 74 69 76 65        Native
-        .byte   $0D,$0A                         ; 912E 0D 0A                    ..
-L9130:
-        .byte   $7F                             ; 9130 7F                       .
-        .byte   "Snow"                          ; 9131 53 6E 6F 77              Snow
-        .byte   $0D,$0A                         ; 9135 0D 0A                    ..
-L9137:
-        .byte   $7F                             ; 9137 7F                       .
-        .byte   "Wool"                          ; 9138 57 6F 6F 6C              Wool
-        .byte   $0D,$0A                         ; 913C 0D 0A                    ..
-L913E:
-        .byte   $7F                             ; 913E 7F                       .
-        .byte   "Flaxen"                        ; 913F 46 6C 61 78 65 6E        Flaxen
-        .byte   $0D,$0A                         ; 9145 0D 0A                    ..
-L9147:
-        .byte   $7F                             ; 9147 7F                       .
-        .byte   "Primal"                        ; 9148 50 72 69 6D 61 6C        Primal
-        .byte   $0D,$0A                         ; 914E 0D 0A                    ..
-L9150:
-        .byte   $7F                             ; 9150 7F                       .
-        .byte   "Scale"                         ; 9151 53 63 61 6C 65           Scale
-        .byte   $0D,$0A                         ; 9156 0D 0A                    ..
-L9158:
-        .byte   $7F                             ; 9158 7F                       .
-        .byte   "Canvas"                        ; 9159 43 61 6E 76 61 73        Canvas
-        .byte   $0D,$0A                         ; 915F 0D 0A                    ..
-L9161:
-        .byte   $7F                             ; 9161 7F                       .
-        .byte   "Ancient"                       ; 9162 41 6E 63 69 65 6E 74     Ancient
-        .byte   $0D,$0A                         ; 9169 0D 0A                    ..
-L916B:
-        .byte   $7F                             ; 916B 7F                       .
-        .byte   "Lowly"                         ; 916C 4C 6F 77 6C 79           Lowly
-        .byte   $0D,$0A,$FF,$FF                 ; 9171 0D 0A FF FF              ....
-; ----------------------------------------------------------------------------
-L9175:
-        .addr   L923F                           ; 9175 3F 92                    ?.
-        .addr   L9245                           ; 9177 45 92                    E.
-        .addr   L924E                           ; 9179 4E 92                    N.
-        .addr   L9258                           ; 917B 58 92                    X.
-        .addr   L925F                           ; 917D 5F 92                    _.
-        .addr   L9269                           ; 917F 69 92                    i.
-        .addr   L9273                           ; 9181 73 92                    s.
-        .addr   L927D                           ; 9183 7D 92                    }.
-        .addr   L9287                           ; 9185 87 92                    ..
-        .addr   L928F                           ; 9187 8F 92                    ..
-        .addr   L9296                           ; 9189 96 92                    ..
-        .addr   L92A0                           ; 918B A0 92                    ..
-        .addr   L92AA                           ; 918D AA 92                    ..
-        .addr   L92B4                           ; 918F B4 92                    ..
-        .addr   L92BE                           ; 9191 BE 92                    ..
-        .addr   L92C7                           ; 9193 C7 92                    ..
-        .addr   L92D1                           ; 9195 D1 92                    ..
-        .addr   L92DA                           ; 9197 DA 92                    ..
-        .addr   L92E4                           ; 9199 E4 92                    ..
-        .addr   L92EE                           ; 919B EE 92                    ..
-        .addr   L92F7                           ; 919D F7 92                    ..
-        .addr   L9300                           ; 919F 00 93                    ..
-        .addr   L930A                           ; 91A1 0A 93                    ..
-        .addr   L9314                           ; 91A3 14 93                    ..
-        .addr   L931E                           ; 91A5 1E 93                    ..
-        .addr   L9323                           ; 91A7 23 93                    #.
-        .addr   L932D                           ; 91A9 2D 93                    -.
-        .addr   L9335                           ; 91AB 35 93                    5.
-        .addr   L933F                           ; 91AD 3F 93                    ?.
-        .addr   L9348                           ; 91AF 48 93                    H.
-        .addr   L9352                           ; 91B1 52 93                    R.
-        .addr   L9359                           ; 91B3 59 93                    Y.
-        .addr   L9362                           ; 91B5 62 93                    b.
-        .addr   L936B                           ; 91B7 6B 93                    k.
-        .addr   L9375                           ; 91B9 75 93                    u.
-        .addr   L937D                           ; 91BB 7D 93                    }.
-        .addr   L9387                           ; 91BD 87 93                    ..
-        .addr   L938F                           ; 91BF 8F 93                    ..
-        .addr   L9397                           ; 91C1 97 93                    ..
-        .addr   L93A1                           ; 91C3 A1 93                    ..
-        .addr   L93AA                           ; 91C5 AA 93                    ..
-        .addr   L93B4                           ; 91C7 B4 93                    ..
-        .addr   L93BC                           ; 91C9 BC 93                    ..
-        .addr   L93C6                           ; 91CB C6 93                    ..
-        .addr   L93CF                           ; 91CD CF 93                    ..
-        .addr   L93D6                           ; 91CF D6 93                    ..
-        .addr   L93E0                           ; 91D1 E0 93                    ..
-        .addr   L93E9                           ; 91D3 E9 93                    ..
-        .addr   L93F1                           ; 91D5 F1 93                    ..
-        .addr   L93F9                           ; 91D7 F9 93                    ..
-        .addr   L9401                           ; 91D9 01 94                    ..
-        .addr   L940B                           ; 91DB 0B 94                    ..
-        .addr   L9415                           ; 91DD 15 94                    ..
-        .addr   L941E                           ; 91DF 1E 94                    ..
-        .addr   L9426                           ; 91E1 26 94                    &.
-        .addr   L942F                           ; 91E3 2F 94                    /.
-        .addr   L9438                           ; 91E5 38 94                    8.
-        .addr   L9440                           ; 91E7 40 94                    @.
-        .addr   L944A                           ; 91E9 4A 94                    J.
-        .addr   L9454                           ; 91EB 54 94                    T.
-        .addr   L945E                           ; 91ED 5E 94                    ^.
-        .addr   L9468                           ; 91EF 68 94                    h.
-        .addr   L9472                           ; 91F1 72 94                    r.
-        .addr   L947B                           ; 91F3 7B 94                    {.
-        .addr   L9482                           ; 91F5 82 94                    ..
-        .addr   L948B                           ; 91F7 8B 94                    ..
-        .addr   L9495                           ; 91F9 95 94                    ..
-        .addr   L949D                           ; 91FB 9D 94                    ..
-        .addr   L94A4                           ; 91FD A4 94                    ..
-        .addr   L94AB                           ; 91FF AB 94                    ..
-        .addr   L94B5                           ; 9201 B5 94                    ..
-        .addr   L94BE                           ; 9203 BE 94                    ..
-        .addr   L94C8                           ; 9205 C8 94                    ..
-        .addr   L94D2                           ; 9207 D2 94                    ..
-        .addr   L94DC                           ; 9209 DC 94                    ..
-        .addr   L94E5                           ; 920B E5 94                    ..
-        .addr   L94ED                           ; 920D ED 94                    ..
-        .addr   L94F4                           ; 920F F4 94                    ..
-        .addr   L94FA                           ; 9211 FA 94                    ..
-        .addr   L9504                           ; 9213 04 95                    ..
-        .addr   L950C                           ; 9215 0C 95                    ..
-        .addr   L9514                           ; 9217 14 95                    ..
-        .addr   L951D                           ; 9219 1D 95                    ..
-        .addr   L9527                           ; 921B 27 95                    '.
-        .addr   L952E                           ; 921D 2E 95                    ..
-        .addr   L9537                           ; 921F 37 95                    7.
-        .addr   L9541                           ; 9221 41 95                    A.
-        .addr   L9549                           ; 9223 49 95                    I.
-        .addr   L9551                           ; 9225 51 95                    Q.
-        .addr   L9559                           ; 9227 59 95                    Y.
-        .addr   L9563                           ; 9229 63 95                    c.
-        .addr   L956D                           ; 922B 6D 95                    m.
-        .addr   L9577                           ; 922D 77 95                    w.
-        .addr   L957F                           ; 922F 7F 95                    ..
-        .addr   L9589                           ; 9231 89 95                    ..
-        .addr   L9590                           ; 9233 90 95                    ..
-        .addr   L9596                           ; 9235 96 95                    ..
-        .addr   L95A0                           ; 9237 A0 95                    ..
-        .addr   L95AA                           ; 9239 AA 95                    ..
-        .addr   L95B3                           ; 923B B3 95                    ..
-        .addr   L95BC                           ; 923D BC 95                    ..
-; ----------------------------------------------------------------------------
-L923F:
-        .byte   "None"                          ; 923F 4E 6F 6E 65              None
-        .byte   $0D,$0A                         ; 9243 0D 0A                    ..
-L9245:
-        .byte   $80                             ; 9245 80                       .
-        .byte   "Buster"                        ; 9246 42 75 73 74 65 72        Buster
-        .byte   $0D,$0A                         ; 924C 0D 0A                    ..
-L924E:
-        .byte   $80                             ; 924E 80                       .
-        .byte   "Mythril"                       ; 924F 4D 79 74 68 72 69 6C     Mythril
-        .byte   $0D,$0A                         ; 9256 0D 0A                    ..
-L9258:
-        .byte   $80                             ; 9258 80                       .
-        .byte   "Hard"                          ; 9259 48 61 72 64              Hard
-        .byte   $0D,$0A                         ; 925D 0D 0A                    ..
-L925F:
-        .byte   $80                             ; 925F 80                       .
-        .byte   "Butrfly"                       ; 9260 42 75 74 72 66 6C 79     Butrfly
-        .byte   $0D,$0A                         ; 9267 0D 0A                    ..
-L9269:
-        .byte   $80                             ; 9269 80                       .
-        .byte   "Enhance"                       ; 926A 45 6E 68 61 6E 63 65     Enhance
-        .byte   $0D,$0A                         ; 9271 0D 0A                    ..
-L9273:
-        .byte   $80                             ; 9273 80                       .
-        .byte   "Organic"                       ; 9274 4F 72 67 61 6E 69 63     Organic
-        .byte   $0D,$0A                         ; 927B 0D 0A                    ..
-L927D:
-        .byte   $80                             ; 927D 80                       .
-        .byte   "Crystal"                       ; 927E 43 72 79 73 74 61 6C     Crystal
-        .byte   $0D,$0A                         ; 9285 0D 0A                    ..
-L9287:
-        .byte   $80                             ; 9287 80                       .
-        .byte   "Force"                         ; 9288 46 6F 72 63 65           Force
-        .byte   $0D,$0A                         ; 928D 0D 0A                    ..
+        .byte   "@6We don't usually\get the chan"; 8AA3 40 36 57 65 20 64 6F 6E @6We don
+                                                ; 8AAB 27 74 20 75 73 75 61 6C  't usual
+                                                ; 8AB3 6C 79 5C 67 65 74 20 74  ly\get t
+                                                ; 8ABB 68 65 20 63 68 61 6E     he chan
+        .byte   "ce to\be together like\this,huh"; 8AC2 63 65 20 74 6F 5C 62 65 ce to\be
+                                                ; 8ACA 20 74 6F 67 65 74 68 65   togethe
+                                                ; 8AD2 72 20 6C 69 6B 65 5C 74  r like\t
+                                                ; 8ADA 68 69 73 2C 68 75 68     his,huh
+        .byte   "?Cloud,how\'bout it?Can you\tel"; 8AE1 3F 43 6C 6F 75 64 2C 68 ?Cloud,h
+                                                ; 8AE9 6F 77 5C 27 62 6F 75 74  ow\'bout
+                                                ; 8AF1 20 69 74 3F 43 61 6E 20   it?Can 
+                                                ; 8AF9 79 6F 75 5C 74 65 6C     you\tel
+        .byte   "l us what's\happened so far?I\d"; 8B00 6C 20 75 73 20 77 68 61 l us wha
+                                                ; 8B08 74 27 73 5C 68 61 70 70  t's\happ
+                                                ; 8B10 65 6E 65 64 20 73 6F 20  ened so 
+                                                ; 8B18 66 61 72 3F 49 5C 64     far?I\d
+        .byte   "on't really know\what's gon' on"; 8B1F 6F 6E 27 74 20 72 65 61 on't rea
+                                                ; 8B27 6C 6C 79 20 6B 6E 6F 77  lly know
+                                                ; 8B2F 5C 77 68 61 74 27 73 20  \what's 
+                                                ; 8B37 67 6F 6E 27 20 6F 6E     gon' on
+        .byte   "\because I wasn't\here in the\b"; 8B3E 5C 62 65 63 61 75 73 65 \because
+                                                ; 8B46 20 49 20 77 61 73 6E 27   I wasn'
+                                                ; 8B4E 74 5C 68 65 72 65 20 69  t\here i
+                                                ; 8B56 6E 20 74 68 65 5C 62     n the\b
+        .byte   "eginning."                     ; 8B5D 65 67 69 6E 6E 69 6E 67  eginning
+                                                ; 8B65 2E                       .
+        .byte   $0A                             ; 8B66 0A                       .
+L8B67:
+        .byte   "@7Yeah!I'm all for\it!"        ; 8B67 40 37 59 65 61 68 21 49  @7Yeah!I
+                                                ; 8B6F 27 6D 20 61 6C 6C 20 66  'm all f
+                                                ; 8B77 6F 72 5C 69 74 21        or\it!
+        .byte   $0A                             ; 8B7D 0A                       .
+L8B7E:
+        .byte   "@2I been here since\the beginni"; 8B7E 40 32 49 20 62 65 65 6E @2I been
+                                                ; 8B86 20 68 65 72 65 20 73 69   here si
+                                                ; 8B8E 6E 63 65 5C 74 68 65 20  nce\the 
+                                                ; 8B96 62 65 67 69 6E 6E 69     beginni
+        .byte   "n',an' Istill don't know\what t"; 8B9D 6E 27 2C 61 6E 27 20 49 n',an' I
+                                                ; 8BA5 73 74 69 6C 6C 20 64 6F  still do
+                                                ; 8BAD 6E 27 74 20 6B 6E 6F 77  n't know
+                                                ; 8BB5 5C 77 68 61 74 20 74     \what t
+        .byte   "he hell's\goin' on either.\Clou"; 8BBC 68 65 20 68 65 6C 6C 27 he hell'
+                                                ; 8BC4 73 5C 67 6F 69 6E 27 20  s\goin' 
+                                                ; 8BCC 6F 6E 20 65 69 74 68 65  on eithe
+                                                ; 8BD4 72 2E 5C 43 6C 6F 75     r.\Clou
+        .byte   "d,the hell's\goin' on?C'mon,tel"; 8BDB 64 2C 74 68 65 20 68 65 d,the he
+                                                ; 8BE3 6C 6C 27 73 5C 67 6F 69  ll's\goi
+                                                ; 8BEB 6E 27 20 6F 6E 3F 43 27  n' on?C'
+                                                ; 8BF3 6D 6F 6E 2C 74 65 6C     mon,tel
+        .byte   "lus!"                          ; 8BFA 6C 75 73 21              lus!
+        .byte   $0A                             ; 8BFE 0A                       .
+L8BFF:
+        .byte   "@1All right,I'll giveit a shot_"; 8BFF 40 31 41 6C 6C 20 72 69 @1All ri
+                                                ; 8C07 67 68 74 2C 49 27 6C 6C  ght,I'll
+                                                ; 8C0F 20 67 69 76 65 69 74 20   giveit 
+                                                ; 8C17 61 20 73 68 6F 74 5F     a shot_
+        .byte   "_"                             ; 8C1E 5F                       _
+        .byte   $0A                             ; 8C1F 0A                       .
+L8C20:
+        .byte   "@1We are going after\Sephiroth."; 8C20 40 31 57 65 20 61 72 65 @1We are
+                                                ; 8C28 20 67 6F 69 6E 67 20 61   going a
+                                                ; 8C30 66 74 65 72 5C 53 65 70  fter\Sep
+                                                ; 8C38 68 69 72 6F 74 68 2E     hiroth.
+        .byte   "Sephirothmust be in search\of t"; 8C3F 53 65 70 68 69 72 6F 74 Sephirot
+                                                ; 8C47 68 6D 75 73 74 20 62 65  hmust be
+                                                ; 8C4F 20 69 6E 20 73 65 61 72   in sear
+                                                ; 8C57 63 68 5C 6F 66 20 74     ch\of t
+        .byte   "he Promised\Land."             ; 8C5E 68 65 20 50 72 6F 6D 69  he Promi
+                                                ; 8C66 73 65 64 5C 4C 61 6E 64  sed\Land
+                                                ; 8C6E 2E                       .
+        .byte   $0A                             ; 8C6F 0A                       .
+L8C70:
+        .byte   "@7The Promised Land?"          ; 8C70 40 37 54 68 65 20 50 72  @7The Pr
+                                                ; 8C78 6F 6D 69 73 65 64 20 4C  omised L
+                                                ; 8C80 61 6E 64 3F              and?
+        .byte   $0A                             ; 8C84 0A                       .
+L8C85:
+        .byte   "@1A land full of Makoenergy,__o"; 8C85 40 31 41 20 6C 61 6E 64 @1A land
+                                                ; 8C8D 20 66 75 6C 6C 20 6F 66   full of
+                                                ; 8C95 20 4D 61 6B 6F 65 6E 65   Makoene
+                                                ; 8C9D 72 67 79 2C 5F 5F 6F     rgy,__o
+        .byte   "r at\least that's what\the Shin"; 8CA4 72 20 61 74 5C 6C 65 61 r at\lea
+                                                ; 8CAC 73 74 20 74 68 61 74 27  st that'
+                                                ; 8CB4 73 20 77 68 61 74 5C 74  s what\t
+                                                ; 8CBC 68 65 20 53 68 69 6E     he Shin
+        .byte   "ra believe.I don't know if it\a"; 8CC3 72 61 20 62 65 6C 69 65 ra belie
+                                                ; 8CCB 76 65 2E 49 20 64 6F 6E  ve.I don
+                                                ; 8CD3 27 74 20 6B 6E 6F 77 20  't know 
+                                                ; 8CDB 69 66 20 69 74 5C 61     if it\a
+        .byte   "ctually exists."               ; 8CE2 63 74 75 61 6C 6C 79 20  ctually 
+                                                ; 8CEA 65 78 69 73 74 73 2E     exists.
+        .byte   $0A                             ; 8CF1 0A                       .
+L8CF2:
+        .byte   "@4The Cetras return\to the Prom"; 8CF2 40 34 54 68 65 20 43 65 @4The Ce
+                                                ; 8CFA 74 72 61 73 20 72 65 74  tras ret
+                                                ; 8D02 75 72 6E 5C 74 6F 20 74  urn\to t
+                                                ; 8D0A 68 65 20 50 72 6F 6D     he Prom
+        .byte   "ised\Land.A land that\promises "; 8D11 69 73 65 64 5C 4C 61 6E ised\Lan
+                                                ; 8D19 64 2E 41 20 6C 61 6E 64  d.A land
+                                                ; 8D21 20 74 68 61 74 5C 70 72   that\pr
+                                                ; 8D29 6F 6D 69 73 65 73 20     omises 
+        .byte   "boundless\happiness."          ; 8D30 62 6F 75 6E 64 6C 65 73  boundles
+                                                ; 8D38 73 5C 68 61 70 70 69 6E  s\happin
+                                                ; 8D40 65 73 73 2E              ess.
+        .byte   $0A                             ; 8D44 0A                       .
+L8D45:
+        .byte   "@2Cetra?That some\kinda disease"; 8D45 40 32 43 65 74 72 61 3F @2Cetra?
+                                                ; 8D4D 54 68 61 74 20 73 6F 6D  That som
+                                                ; 8D55 65 5C 6B 69 6E 64 61 20  e\kinda 
+                                                ; 8D5D 64 69 73 65 61 73 65     disease
+        .byte   "?"                             ; 8D64 3F                       ?
+        .byte   $0A                             ; 8D65 0A                       .
+L8D66:
+        .byte   "@4That's what the\Ancients call"; 8D66 40 34 54 68 61 74 27 73 @4That's
+                                                ; 8D6E 20 77 68 61 74 20 74 68   what th
+                                                ; 8D76 65 5C 41 6E 63 69 65 6E  e\Ancien
+                                                ; 8D7E 74 73 20 63 61 6C 6C     ts call
+        .byte   "\themselves.Hey,\didn't you lis"; 8D85 5C 74 68 65 6D 73 65 6C \themsel
+                                                ; 8D8D 76 65 73 2E 48 65 79 2C  ves.Hey,
+                                                ; 8D95 5C 64 69 64 6E 27 74 20  \didn't 
+                                                ; 8D9D 79 6F 75 20 6C 69 73     you lis
+        .byte   "ten\to the elders at\Cosmo Cany"; 8DA4 74 65 6E 5C 74 6F 20 74 ten\to t
+                                                ; 8DAC 68 65 20 65 6C 64 65 72  he elder
+                                                ; 8DB4 73 20 61 74 5C 43 6F 73  s at\Cos
+                                                ; 8DBC 6D 6F 20 43 61 6E 79     mo Cany
+        .byte   "on?__You\don't "               ; 8DC3 6F 6E 3F 5F 5F 59 6F 75  on?__You
+                                                ; 8DCB 5C 64 6F 6E 27 74 20     \don't 
+        .byte   $22                             ; 8DD2 22                       "
+        .byte   "know"                          ; 8DD3 6B 6E 6F 77              know
+        .byte   $22                             ; 8DD7 22                       "
+        .byte   " where\the Promised Land\of the"; 8DD8 20 77 68 65 72 65 5C 74  where\t
+                                                ; 8DE0 68 65 20 50 72 6F 6D 69  he Promi
+                                                ; 8DE8 73 65 64 20 4C 61 6E 64  sed Land
+                                                ; 8DF0 5C 6F 66 20 74 68 65     \of the
+        .byte   " Ancients is.You search and\tra"; 8DF7 20 41 6E 63 69 65 6E 74  Ancient
+                                                ; 8DFF 73 20 69 73 2E 59 6F 75  s is.You
+                                                ; 8E07 20 73 65 61 72 63 68 20   search 
+                                                ; 8E0F 61 6E 64 5C 74 72 61     and\tra
+        .byte   "vel,until you\feel it.Like you\"; 8E16 76 65 6C 2C 75 6E 74 69 vel,unti
+                                                ; 8E1E 6C 20 79 6F 75 5C 66 65  l you\fe
+                                                ; 8E26 65 6C 20 69 74 2E 4C 69  el it.Li
+                                                ; 8E2E 6B 65 20 79 6F 75 5C     ke you\
+        .byte   "just know,__this isthe Promised"; 8E35 6A 75 73 74 20 6B 6E 6F just kno
+                                                ; 8E3D 77 2C 5F 5F 74 68 69 73  w,__this
+                                                ; 8E45 20 69 73 74 68 65 20 50   isthe P
+                                                ; 8E4D 72 6F 6D 69 73 65 64     romised
+        .byte   " Land."                        ; 8E54 20 4C 61 6E 64 2E         Land.
+        .byte   $0A                             ; 8E5A 0A                       .
+L8E5B:
+        .byte   "@1Aeris__can you feelit too?"  ; 8E5B 40 31 41 65 72 69 73 5F  @1Aeris_
+                                                ; 8E63 5F 63 61 6E 20 79 6F 75  _can you
+                                                ; 8E6B 20 66 65 65 6C 69 74 20   feelit 
+                                                ; 8E73 74 6F 6F 3F              too?
+        .byte   $0A                             ; 8E77 0A                       .
+L8E78:
+        .byte   "@4I think so."                 ; 8E78 40 34 49 20 74 68 69 6E  @4I thin
+                                                ; 8E80 6B 20 73 6F 2E           k so.
+        .byte   $0A                             ; 8E85 0A                       .
+L8E86:
+        .byte   "@3So Sephiroth is\traveling the"; 8E86 40 33 53 6F 20 53 65 70 @3So Sep
+                                                ; 8E8E 68 69 72 6F 74 68 20 69  hiroth i
+                                                ; 8E96 73 5C 74 72 61 76 65 6C  s\travel
+                                                ; 8E9E 69 6E 67 20 74 68 65     ing the
+        .byte   " worldbecause he's\searching fo"; 8EA5 20 77 6F 72 6C 64 62 65  worldbe
+                                                ; 8EAD 63 61 75 73 65 20 68 65  cause he
+                                                ; 8EB5 27 73 5C 73 65 61 72 63  's\searc
+                                                ; 8EBD 68 69 6E 67 20 66 6F     hing fo
+        .byte   "r the\Promised Land?Is\that it?"; 8EC4 72 20 74 68 65 5C 50 72 r the\Pr
+                                                ; 8ECC 6F 6D 69 73 65 64 20 4C  omised L
+                                                ; 8ED4 61 6E 64 3F 49 73 5C 74  and?Is\t
+                                                ; 8EDC 68 61 74 20 69 74 3F     hat it?
+        .byte   $0A                             ; 8EE3 0A                       .
+L8EE4:
+        .byte   "@4That,and one other\thing he's"; 8EE4 40 34 54 68 61 74 2C 61 @4That,a
+                                                ; 8EEC 6E 64 20 6F 6E 65 20 6F  nd one o
+                                                ; 8EF4 74 68 65 72 5C 74 68 69  ther\thi
+                                                ; 8EFC 6E 67 20 68 65 27 73     ng he's
+        .byte   "\searching for."               ; 8F03 5C 73 65 61 72 63 68 69  \searchi
+                                                ; 8F0B 6E 67 20 66 6F 72 2E     ng for.
+        .byte   $0A                             ; 8F12 0A                       .
+L8F13:
+        .byte   "@1The Black Materia__"         ; 8F13 40 31 54 68 65 20 42 6C  @1The Bl
+                                                ; 8F1B 61 63 6B 20 4D 61 74 65  ack Mate
+                                                ; 8F23 72 69 61 5F 5F           ria__
+        .byte   $0A                             ; 8F28 0A                       .
+L8F29:
+        .byte   "@6I heard from Dio\that a man i"; 8F29 40 36 49 20 68 65 61 72 @6I hear
+                                                ; 8F31 64 20 66 72 6F 6D 20 44  d from D
+                                                ; 8F39 69 6F 5C 74 68 61 74 20  io\that 
+                                                ; 8F41 61 20 6D 61 6E 20 69     a man i
+        .byte   "n a\Black Cape was\lookin' for "; 8F48 6E 20 61 5C 42 6C 61 63 n a\Blac
+                                                ; 8F50 6B 20 43 61 70 65 20 77  k Cape w
+                                                ; 8F58 61 73 5C 6C 6F 6F 6B 69  as\looki
+                                                ; 8F60 6E 27 20 66 6F 72 20     n' for 
+        .byte   "the\Black Materia."            ; 8F67 74 68 65 5C 42 6C 61 63  the\Blac
+                                                ; 8F6F 6B 20 4D 61 74 65 72 69  k Materi
+                                                ; 8F77 61 2E                    a.
+        .byte   $0A                             ; 8F79 0A                       .
+L8F7A:
+        .byte   "@3I don't even know\what the Bl"; 8F7A 40 33 49 20 64 6F 6E 27 @3I don'
+                                                ; 8F82 74 20 65 76 65 6E 20 6B  t even k
+                                                ; 8F8A 6E 6F 77 5C 77 68 61 74  now\what
+                                                ; 8F92 20 74 68 65 20 42 6C      the Bl
+        .byte   "ack Capeis__How many men\with B"; 8F99 61 63 6B 20 43 61 70 65 ack Cape
+                                                ; 8FA1 69 73 5F 5F 48 6F 77 20  is__How 
+                                                ; 8FA9 6D 61 6E 79 20 6D 65 6E  many men
+                                                ; 8FB1 5C 77 69 74 68 20 42     \with B
+        .byte   "lack Capes\and number tattoos\a"; 8FB8 6C 61 63 6B 20 43 61 70 lack Cap
+                                                ; 8FC0 65 73 5C 61 6E 64 20 6E  es\and n
+                                                ; 8FC8 75 6D 62 65 72 20 74 61  umber ta
+                                                ; 8FD0 74 74 6F 6F 73 5C 61     ttoos\a
+        .byte   "re there?"                     ; 8FD7 72 65 20 74 68 65 72 65  re there
+                                                ; 8FDF 3F                       ?
+        .byte   $0A                             ; 8FE0 0A                       .
+L8FE1:
+        .byte   "@5__you know,of\course__My tatt"; 8FE1 40 35 5F 5F 79 6F 75 20 @5__you 
+                                                ; 8FE9 6B 6E 6F 77 2C 6F 66 5C  know,of\
+                                                ; 8FF1 63 6F 75 72 73 65 5F 5F  course__
+                                                ; 8FF9 4D 79 20 74 61 74 74     My tatt
+        .byte   "oo\is number 13."              ; 9000 6F 6F 5C 69 73 20 6E 75  oo\is nu
+                                                ; 9008 6D 62 65 72 20 31 33 2E  mber 13.
+        .byte   $0A                             ; 9010 0A                       .
+L9011:
+        .byte   "@1How did you get\that tattoo?"; 9011 40 31 48 6F 77 20 64 69  @1How di
+                                                ; 9019 64 20 79 6F 75 20 67 65  d you ge
+                                                ; 9021 74 5C 74 68 61 74 20 74  t\that t
+                                                ; 9029 61 74 74 6F 6F 3F        attoo?
+        .byte   $0A                             ; 902F 0A                       .
+L9030:
+        .byte   "@5__Hojo put it on\me.Everythin"; 9030 40 35 5F 5F 48 6F 6A 6F @5__Hojo
+                                                ; 9038 20 70 75 74 20 69 74 20   put it 
+                                                ; 9040 6F 6E 5C 6D 65 2E 45 76  on\me.Ev
+                                                ; 9048 65 72 79 74 68 69 6E     erythin
+        .byte   "g else\is just war scars,\but t"; 904F 67 20 65 6C 73 65 5C 69 g else\i
+                                                ; 9057 73 20 6A 75 73 74 20 77  s just w
+                                                ; 905F 61 72 20 73 63 61 72 73  ar scars
+                                                ; 9067 2C 5C 62 75 74 20 74     ,\but t
+        .byte   "he number was\done by Hojo."   ; 906E 68 65 20 6E 75 6D 62 65  he numbe
+                                                ; 9076 72 20 77 61 73 5C 64 6F  r was\do
+                                                ; 907E 6E 65 20 62 79 20 48 6F  ne by Ho
+                                                ; 9086 6A 6F 2E                 jo.
+        .byte   $0A                             ; 9089 0A                       .
+L908A:
+        .byte   "@3So there are at\least 13!?"  ; 908A 40 33 53 6F 20 74 68 65  @3So the
+                                                ; 9092 72 65 20 61 72 65 20 61  re are a
+                                                ; 909A 74 5C 6C 65 61 73 74 20  t\least 
+                                                ; 90A2 31 33 21 3F              13!?
+        .byte   $0A                             ; 90A6 0A                       .
+L90A7:
+        .byte   "@4__You know__I thinkHojo did s"; 90A7 40 34 5F 5F 59 6F 75 20 @4__You 
+                                                ; 90AF 6B 6E 6F 77 5F 5F 49 20  know__I 
+                                                ; 90B7 74 68 69 6E 6B 48 6F 6A  thinkHoj
+                                                ; 90BF 6F 20 64 69 64 20 73     o did s
+        .byte   "omething\to those men in theBla"; 90C6 6F 6D 65 74 68 69 6E 67 omething
+                                                ; 90CE 5C 74 6F 20 74 68 6F 73  \to thos
+                                                ; 90D6 65 20 6D 65 6E 20 69 6E  e men in
+                                                ; 90DE 20 74 68 65 42 6C 61      theBla
+        .byte   "ck Capes.But I\don't know what "; 90E5 63 6B 20 43 61 70 65 73 ck Capes
+                                                ; 90ED 2E 42 75 74 20 49 5C 64  .But I\d
+                                                ; 90F5 6F 6E 27 74 20 6B 6E 6F  on't kno
+                                                ; 90FD 77 20 77 68 61 74 20     w what 
+        .byte   "it\has to do with\Sephiroth tho"; 9104 69 74 5C 68 61 73 20 74 it\has t
+                                                ; 910C 6F 20 64 6F 20 77 69 74  o do wit
+                                                ; 9114 68 5C 53 65 70 68 69 72  h\Sephir
+                                                ; 911C 6F 74 68 20 74 68 6F     oth tho
+        .byte   "ugh__\That's why I think\we sho"; 9123 75 67 68 5F 5F 5C 54 68 ugh__\Th
+                                                ; 912B 61 74 27 73 20 77 68 79  at's why
+                                                ; 9133 20 49 20 74 68 69 6E 6B   I think
+                                                ; 913B 5C 77 65 20 73 68 6F     \we sho
+        .byte   "uld just go\after Sephiroth\him"; 9142 75 6C 64 20 6A 75 73 74 uld just
+                                                ; 914A 20 67 6F 5C 61 66 74 65   go\afte
+                                                ; 9152 72 20 53 65 70 68 69 72  r Sephir
+                                                ; 915A 6F 74 68 5C 68 69 6D     oth\him
+        .byte   "self."                         ; 9161 73 65 6C 66 2E           self.
+        .byte   $0A                             ; 9166 0A                       .
+L9167:
+        .byte   "@2Yeah,me too!It's\all just to "; 9167 40 32 59 65 61 68 2C 6D @2Yeah,m
+                                                ; 916F 65 20 74 6F 6F 21 49 74  e too!It
+                                                ; 9177 27 73 5C 61 6C 6C 20 6A  's\all j
+                                                ; 917F 75 73 74 20 74 6F 20     ust to 
+        .byte   "damn\confusin'."               ; 9186 64 61 6D 6E 5C 63 6F 6E  damn\con
+                                                ; 918E 66 75 73 69 6E 27 2E     fusin'.
+        .byte   $0A                             ; 9195 0A                       .
+L9196:
+        .byte   "@4And__I'm sorry,\forget it!I t"; 9196 40 34 41 6E 64 5F 5F 49 @4And__I
+                                                ; 919E 27 6D 20 73 6F 72 72 79  'm sorry
+                                                ; 91A6 2C 5C 66 6F 72 67 65 74  ,\forget
+                                                ; 91AE 20 69 74 21 49 20 74      it!I t
+        .byte   "hink\I'm tired.I'm goingto bed "; 91B5 68 69 6E 6B 5C 49 27 6D hink\I'm
+                                                ; 91BD 20 74 69 72 65 64 2E 49   tired.I
+                                                ; 91C5 27 6D 20 67 6F 69 6E 67  'm going
+                                                ; 91CD 74 6F 20 62 65 64 20     to bed 
+        .byte   "now."                          ; 91D4 6E 6F 77 2E              now.
+        .byte   $0A                             ; 91D8 0A                       .
+L91D9:
+        .byte   "@6What was that,all\of a sudden"; 91D9 40 36 57 68 61 74 20 77 @6What w
+                                                ; 91E1 61 73 20 74 68 61 74 2C  as that,
+                                                ; 91E9 61 6C 6C 5C 6F 66 20 61  all\of a
+                                                ; 91F1 20 73 75 64 64 65 6E      sudden
+        .byte   "!?Is\that all?How 'bout\the Bla"; 91F8 21 3F 49 73 5C 74 68 61 !?Is\tha
+                                                ; 9200 74 20 61 6C 6C 3F 48 6F  t all?Ho
+                                                ; 9208 77 20 27 62 6F 75 74 5C  w 'bout\
+                                                ; 9210 74 68 65 20 42 6C 61     the Bla
+        .byte   "ck Materia?"                   ; 9217 63 6B 20 4D 61 74 65 72  ck Mater
+                                                ; 921F 69 61 3F                 ia?
+        .byte   $0A                             ; 9222 0A                       .
+L9223:
+        .byte   "@1You wouldn't\understand even "; 9223 40 31 59 6F 75 20 77 6F @1You wo
+                                                ; 922B 75 6C 64 6E 27 74 5C 75  uldn't\u
+                                                ; 9233 6E 64 65 72 73 74 61 6E  nderstan
+                                                ; 923B 64 20 65 76 65 6E 20     d even 
+        .byte   "if\I told you."                ; 9242 69 66 5C 49 20 74 6F 6C  if\I tol
+                                                ; 924A 64 20 79 6F 75 2E        d you.
+        .byte   $0A                             ; 9250 0A                       .
+L9251:
+        .byte   "@2Now all we gotta dois take ac"; 9251 40 32 4E 6F 77 20 61 6C @2Now al
+                                                ; 9259 6C 20 77 65 20 67 6F 74  l we got
+                                                ; 9261 74 61 20 64 6F 69 73 20  ta dois 
+                                                ; 9269 74 61 6B 65 20 61 63     take ac
+        .byte   "tion!\We're startin'\tomorrow!"; 9270 74 69 6F 6E 21 5C 57 65  tion!\We
+                                                ; 9278 27 72 65 20 73 74 61 72  're star
+                                                ; 9280 74 69 6E 27 5C 74 6F 6D  tin'\tom
+                                                ; 9288 6F 72 72 6F 77 21        orrow!
+        .byte   $0A                             ; 928E 0A                       .
 L928F:
-        .byte   $80                             ; 928F 80                       .
-        .byte   "Rune"                          ; 9290 52 75 6E 65              Rune
-        .byte   $0D,$0A                         ; 9294 0D 0A                    ..
-L9296:
-        .byte   $80                             ; 9296 80                       .
-        .byte   "Murasam"                       ; 9297 4D 75 72 61 73 61 6D     Murasam
-        .byte   $0D,$0A                         ; 929E 0D 0A                    ..
-L92A0:
-        .byte   $80                             ; 92A0 80                       .
-        .byte   "Nailbat"                       ; 92A1 4E 61 69 6C 62 61 74     Nailbat
-        .byte   $0D,$0A                         ; 92A8 0D 0A                    ..
-L92AA:
-        .byte   $80                             ; 92AA 80                       .
-        .byte   "Yoshiyu"                       ; 92AB 59 6F 73 68 69 79 75     Yoshiyu
-        .byte   $0D,$0A                         ; 92B2 0D 0A                    ..
-L92B4:
-        .byte   $80                             ; 92B4 80                       .
-        .byte   "Apocaly"                       ; 92B5 41 70 6F 63 61 6C 79     Apocaly
-        .byte   $0D,$0A                         ; 92BC 0D 0A                    ..
-L92BE:
-        .byte   $80                             ; 92BE 80                       .
-        .byte   "Heaven"                        ; 92BF 48 65 61 76 65 6E        Heaven
-        .byte   $0D,$0A                         ; 92C5 0D 0A                    ..
-L92C7:
-        .byte   $80                             ; 92C7 80                       .
-        .byte   "Ragnrok"                       ; 92C8 52 61 67 6E 72 6F 6B     Ragnrok
-        .byte   $0D,$0A                         ; 92CF 0D 0A                    ..
-L92D1:
-        .byte   $80                             ; 92D1 80                       .
-        .byte   "Ultima"                        ; 92D2 55 6C 74 69 6D 61        Ultima
-        .byte   $0D,$0A                         ; 92D8 0D 0A                    ..
-L92DA:
-        .byte   $81                             ; 92DA 81                       .
-        .byte   "Gatling"                       ; 92DB 47 61 74 6C 69 6E 67     Gatling
-        .byte   $0D,$0A                         ; 92E2 0D 0A                    ..
-L92E4:
-        .byte   $81                             ; 92E4 81                       .
-        .byte   "Assault"                       ; 92E5 41 73 73 61 75 6C 74     Assault
-        .byte   $0D,$0A                         ; 92EC 0D 0A                    ..
-L92EE:
-        .byte   $81                             ; 92EE 81                       .
-        .byte   "Cannon"                        ; 92EF 43 61 6E 6E 6F 6E        Cannon
-        .byte   $0D,$0A                         ; 92F5 0D 0A                    ..
-L92F7:
-        .byte   $81                             ; 92F7 81                       .
-        .byte   "Atomic"                        ; 92F8 41 74 6F 6D 69 63        Atomic
-        .byte   $0D,$0A                         ; 92FE 0D 0A                    ..
-L9300:
-        .byte   $81                             ; 9300 81                       .
-        .byte   "HVulcan"                       ; 9301 48 56 75 6C 63 61 6E     HVulcan
-        .byte   $0D,$0A                         ; 9308 0D 0A                    ..
-L930A:
-        .byte   $81                             ; 930A 81                       .
-        .byte   "ChainSw"                       ; 930B 43 68 61 69 6E 53 77     ChainSw
-        .byte   $0D,$0A                         ; 9312 0D 0A                    ..
-L9314:
-        .byte   $81                             ; 9314 81                       .
-        .byte   "MicroLS"                       ; 9315 4D 69 63 72 6F 4C 53     MicroLS
-        .byte   $0D,$0A                         ; 931C 0D 0A                    ..
-L931E:
-        .byte   $81                             ; 931E 81                       .
-        .byte   "AM"                            ; 931F 41 4D                    AM
-        .byte   $0D,$0A                         ; 9321 0D 0A                    ..
+        .byte   "@5Cloud__"                     ; 928F 40 35 43 6C 6F 75 64 5F  @5Cloud_
+                                                ; 9297 5F                       _
+        .byte   $0A                             ; 9298 0A                       .
+L9299:
+        .byte   "@5I'm number 13.Am I\going to g"; 9299 40 35 49 27 6D 20 6E 75 @5I'm nu
+                                                ; 92A1 6D 62 65 72 20 31 33 2E  mber 13.
+                                                ; 92A9 41 6D 20 49 5C 67 6F 69  Am I\goi
+                                                ; 92B1 6E 67 20 74 6F 20 67     ng to g
+        .byte   "o mad\too?"                    ; 92B8 6F 20 6D 61 64 5C 74 6F  o mad\to
+                                                ; 92C0 6F 3F                    o?
+        .byte   $0A                             ; 92C2 0A                       .
+L92C3:
+        .byte   "@3I don't know what\Hojo did to"; 92C3 40 33 49 20 64 6F 6E 27 @3I don'
+                                                ; 92CB 74 20 6B 6E 6F 77 20 77  t know w
+                                                ; 92D3 68 61 74 5C 48 6F 6A 6F  hat\Hojo
+                                                ; 92DB 20 64 69 64 20 74 6F      did to
+        .byte   " you,butyou've been all\right s"; 92E2 20 79 6F 75 2C 62 75 74  you,but
+                                                ; 92EA 79 6F 75 27 76 65 20 62  you've b
+                                                ; 92F2 65 65 6E 20 61 6C 6C 5C  een all\
+                                                ; 92FA 72 69 67 68 74 20 73     right s
+        .byte   "o far,right?"                  ; 9301 6F 20 66 61 72 2C 72 69  o far,ri
+                                                ; 9309 67 68 74 3F              ght?
+        .byte   $0A                             ; 930D 0A                       .
+L930E:
+        .byte   "@5But__"                       ; 930E 40 35 42 75 74 5F 5F     @5But__
+        .byte   $0A                             ; 9315 0A                       .
+L9316:
+        .byte   "@3Be strong."                  ; 9316 40 33 42 65 20 73 74 72  @3Be str
+                                                ; 931E 6F 6E 67 2E              ong.
+        .byte   $0A                             ; 9322 0A                       .
 L9323:
-        .byte   $81                             ; 9323 81                       .
-        .byte   "Machine"                       ; 9324 4D 61 63 68 69 6E 65     Machine
-        .byte   $0D,$0A                         ; 932B 0D 0A                    ..
+        .byte   "@5But,I__"                     ; 9323 40 35 42 75 74 2C 49 5F  @5But,I_
+                                                ; 932B 5F                       _
+        .byte   $0A                             ; 932C 0A                       .
 L932D:
-        .byte   $81                             ; 932D 81                       .
-        .byte   "Drill"                         ; 932E 44 72 69 6C 6C           Drill
-        .byte   $0D,$0A                         ; 9333 0D 0A                    ..
-L9335:
-        .byte   $81                             ; 9335 81                       .
-        .byte   "Bazooka"                       ; 9336 42 61 7A 6F 6F 6B 61     Bazooka
-        .byte   $0D,$0A                         ; 933D 0D 0A                    ..
-L933F:
-        .byte   $81                             ; 933F 81                       .
-        .byte   "Rocket"                        ; 9340 52 6F 63 6B 65 74        Rocket
-        .byte   $0D,$0A                         ; 9346 0D 0A                    ..
+        .byte   "@3Stop it,RedX`!Be\strong!"    ; 932D 40 33 53 74 6F 70 20 69  @3Stop i
+                                                ; 9335 74 2C 52 65 64 58 60 21  t,RedX`!
+                                                ; 933D 42 65 5C 73 74 72 6F 6E  Be\stron
+                                                ; 9345 67 21                    g!
+        .byte   $0A                             ; 9347 0A                       .
 L9348:
-        .byte   $81                             ; 9348 81                       .
-        .byte   "Launchr"                       ; 9349 4C 61 75 6E 63 68 72     Launchr
-        .byte   $0D,$0A                         ; 9350 0D 0A                    ..
-L9352:
-        .byte   $81                             ; 9352 81                       .
-        .byte   "Pile"                          ; 9353 50 69 6C 65              Pile
-        .byte   $0D,$0A                         ; 9357 0D 0A                    ..
-L9359:
-        .byte   $81                             ; 9359 81                       .
-        .byte   "MaxRay"                        ; 935A 4D 61 78 52 61 79        MaxRay
-        .byte   $0D,$0A                         ; 9360 0D 0A                    ..
-L9362:
-        .byte   $81                             ; 9362 81                       .
-        .byte   "MScore"                        ; 9363 4D 53 63 6F 72 65        MScore
-        .byte   $0D,$0A                         ; 9369 0D 0A                    ..
-L936B:
-        .byte   $82                             ; 936B 82                       .
-        .byte   "Leather"                       ; 936C 4C 65 61 74 68 65 72     Leather
-        .byte   $0D,$0A                         ; 9373 0D 0A                    ..
-L9375:
-        .byte   $82                             ; 9375 82                       .
-        .byte   "Metal"                         ; 9376 4D 65 74 61 6C           Metal
-        .byte   $0D,$0A                         ; 937B 0D 0A                    ..
-L937D:
-        .byte   $82                             ; 937D 82                       .
-        .byte   "Mythril"                       ; 937E 4D 79 74 68 72 69 6C     Mythril
-        .byte   $0D,$0A                         ; 9385 0D 0A                    ..
-L9387:
-        .byte   $82                             ; 9387 82                       .
-        .byte   "Grand"                         ; 9388 47 72 61 6E 64           Grand
-        .byte   $0D,$0A                         ; 938D 0D 0A                    ..
-L938F:
-        .byte   $82                             ; 938F 82                       .
-        .byte   "Tiger"                         ; 9390 54 69 67 65 72           Tiger
-        .byte   $0D,$0A                         ; 9395 0D 0A                    ..
-L9397:
-        .byte   $82                             ; 9397 82                       .
-        .byte   "Diamond"                       ; 9398 44 69 61 6D 6F 6E 64     Diamond
-        .byte   $0D,$0A                         ; 939F 0D 0A                    ..
-L93A1:
-        .byte   $82                             ; 93A1 82                       .
-        .byte   "Dragon"                        ; 93A2 44 72 61 67 6F 6E        Dragon
-        .byte   $0D,$0A                         ; 93A8 0D 0A                    ..
-L93AA:
-        .byte   $82                             ; 93AA 82                       .
-        .byte   "Crystal"                       ; 93AB 43 72 79 73 74 61 6C     Crystal
-        .byte   $0D,$0A                         ; 93B2 0D 0A                    ..
-L93B4:
-        .byte   $82                             ; 93B4 82                       .
-        .byte   "Motor"                         ; 93B5 4D 6F 74 6F 72           Motor
-        .byte   $0D,$0A                         ; 93BA 0D 0A                    ..
-L93BC:
-        .byte   $82                             ; 93BC 82                       .
-        .byte   "Platnum"                       ; 93BD 50 6C 61 74 6E 75 6D     Platnum
-        .byte   $0D,$0A                         ; 93C4 0D 0A                    ..
-L93C6:
-        .byte   $82                             ; 93C6 82                       .
-        .byte   "Kaiser"                        ; 93C7 4B 61 69 73 65 72        Kaiser
-        .byte   $0D,$0A                         ; 93CD 0D 0A                    ..
+        .byte   "@1Tifa?"                       ; 9348 40 31 54 69 66 61 3F     @1Tifa?
+        .byte   $0A                             ; 934F 0A                       .
+L9350:
+        .byte   "@3You're not the onlyone who's "; 9350 40 33 59 6F 75 27 72 65 @3You're
+                                                ; 9358 20 6E 6F 74 20 74 68 65   not the
+                                                ; 9360 20 6F 6E 6C 79 6F 6E 65   onlyone
+                                                ; 9368 20 77 68 6F 27 73 20      who's 
+        .byte   "worried!"                      ; 936F 77 6F 72 72 69 65 64 21  worried!
+        .byte   $0A                             ; 9377 0A                       .
+L9378:
+        .byte   "@6I don't know what'sgoin' on,b"; 9378 40 36 49 20 64 6F 6E 27 @6I don'
+                                                ; 9380 74 20 6B 6E 6F 77 20 77  t know w
+                                                ; 9388 68 61 74 27 73 67 6F 69  hat'sgoi
+                                                ; 9390 6E 27 20 6F 6E 2C 62     n' on,b
+        .byte   "ut we're\in a bad\situation__" ; 9397 75 74 20 77 65 27 72 65  ut we're
+                                                ; 939F 5C 69 6E 20 61 20 62 61  \in a ba
+                                                ; 93A7 64 5C 73 69 74 75 61 74  d\situat
+                                                ; 93AF 69 6F 6E 5F 5F           ion__
+        .byte   $0A                             ; 93B4 0A                       .
+L93B5:
+        .byte   "@7__zzz__zzz__"                ; 93B5 40 37 5F 5F 7A 7A 7A 5F  @7__zzz_
+                                                ; 93BD 5F 7A 7A 7A 5F 5F        _zzz__
+        .byte   $0A                             ; 93C3 0A                       .
+L93C4:
+        .byte   "@4Hee,hee!"                    ; 93C4 40 34 48 65 65 2C 68 65  @4Hee,he
+                                                ; 93CC 65 21                    e!
+        .byte   $0A                             ; 93CE 0A                       .
 L93CF:
-        .byte   $82                             ; 93CF 82                       .
-        .byte   "Work"                          ; 93D0 57 6F 72 6B              Work
-        .byte   $0D,$0A                         ; 93D4 0D 0A                    ..
-L93D6:
-        .byte   $82                             ; 93D6 82                       .
-        .byte   "PwrSoul"                       ; 93D7 50 77 72 53 6F 75 6C     PwrSoul
-        .byte   $0D,$0A                         ; 93DE 0D 0A                    ..
-L93E0:
-        .byte   $82                             ; 93E0 82                       .
-        .byte   "Master"                        ; 93E1 4D 61 73 74 65 72        Master
-        .byte   $0D,$0A                         ; 93E7 0D 0A                    ..
-L93E9:
-        .byte   $82                             ; 93E9 82                       .
-        .byte   "God's"                         ; 93EA 47 6F 64 27 73           God's
-        .byte   $0D,$0A                         ; 93EF 0D 0A                    ..
-L93F1:
-        .byte   $82                             ; 93F1 82                       .
-        .byte   "Heart"                         ; 93F2 48 65 61 72 74           Heart
-        .byte   $0D,$0A                         ; 93F7 0D 0A                    ..
-L93F9:
-        .byte   $83                             ; 93F9 83                       .
-        .byte   "Guard"                         ; 93FA 47 75 61 72 64           Guard
-        .byte   $0D,$0A                         ; 93FF 0D 0A                    ..
-L9401:
-        .byte   $83                             ; 9401 83                       .
-        .byte   "Mythril"                       ; 9402 4D 79 74 68 72 69 6C     Mythril
-        .byte   $0D,$0A                         ; 9409 0D 0A                    ..
-L940B:
-        .byte   $83                             ; 940B 83                       .
-        .byte   "FulMetl"                       ; 940C 46 75 6C 4D 65 74 6C     FulMetl
-        .byte   $0D,$0A                         ; 9413 0D 0A                    ..
-L9415:
-        .byte   $83                             ; 9415 83                       .
-        .byte   "Strike"                        ; 9416 53 74 72 69 6B 65        Strike
-        .byte   $0D,$0A                         ; 941C 0D 0A                    ..
-L941E:
-        .byte   $83                             ; 941E 83                       .
-        .byte   "Prism"                         ; 941F 50 72 69 73 6D           Prism
-        .byte   $0D,$0A                         ; 9424 0D 0A                    ..
-L9426:
-        .byte   $83                             ; 9426 83                       .
-        .byte   "Aurora"                        ; 9427 41 75 72 6F 72 61        Aurora
-        .byte   $0D,$0A                         ; 942D 0D 0A                    ..
-L942F:
-        .byte   $83                             ; 942F 83                       .
-        .byte   "Wizard"                        ; 9430 57 69 7A 61 72 64        Wizard
-        .byte   $0D,$0A                         ; 9436 0D 0A                    ..
-L9438:
-        .byte   $83                             ; 9438 83                       .
-        .byte   "Wiser"                         ; 9439 57 69 73 65 72           Wiser
-        .byte   $0D,$0A                         ; 943E 0D 0A                    ..
-L9440:
-        .byte   $83                             ; 9440 83                       .
-        .byte   "FairyTl"                       ; 9441 46 61 69 72 79 54 6C     FairyTl
-        .byte   $0D,$0A                         ; 9448 0D 0A                    ..
-L944A:
-        .byte   $83                             ; 944A 83                       .
-        .byte   "Umbrela"                       ; 944B 55 6D 62 72 65 6C 61     Umbrela
-        .byte   $0D,$0A                         ; 9452 0D 0A                    ..
-L9454:
-        .byte   $83                             ; 9454 83                       .
-        .byte   "Princss"                       ; 9455 50 72 69 6E 63 73 73     Princss
-        .byte   $0D,$0A                         ; 945C 0D 0A                    ..
-L945E:
-        .byte   $84                             ; 945E 84                       .
-        .byte   "Mythril"                       ; 945F 4D 79 74 68 72 69 6C     Mythril
-        .byte   $0D,$0A                         ; 9466 0D 0A                    ..
-L9468:
-        .byte   $84                             ; 9468 84                       .
-        .byte   "Diamond"                       ; 9469 44 69 61 6D 6F 6E 64     Diamond
-        .byte   $0D,$0A                         ; 9470 0D 0A                    ..
-L9472:
-        .byte   $84                             ; 9472 84                       .
-        .byte   "Silver"                        ; 9473 53 69 6C 76 65 72        Silver
-        .byte   $0D,$0A                         ; 9479 0D 0A                    ..
-L947B:
-        .byte   $84                             ; 947B 84                       .
-        .byte   "Gold"                          ; 947C 47 6F 6C 64              Gold
-        .byte   $0D,$0A                         ; 9480 0D 0A                    ..
-L9482:
-        .byte   $84                             ; 9482 84                       .
-        .byte   "Adaman"                        ; 9483 41 64 61 6D 61 6E        Adaman
-        .byte   $0D,$0A                         ; 9489 0D 0A                    ..
-L948B:
-        .byte   $84                             ; 948B 84                       .
-        .byte   "Crystal"                       ; 948C 43 72 79 73 74 61 6C     Crystal
-        .byte   $0D,$0A                         ; 9493 0D 0A                    ..
-L9495:
-        .byte   $84                             ; 9495 84                       .
-        .byte   "Magic"                         ; 9496 4D 61 67 69 63           Magic
-        .byte   $0D,$0A                         ; 949B 0D 0A                    ..
-L949D:
-        .byte   $84                             ; 949D 84                       .
-        .byte   "Plus"                          ; 949E 50 6C 75 73              Plus
-        .byte   $0D,$0A                         ; 94A2 0D 0A                    ..
-L94A4:
-        .byte   $84                             ; 94A4 84                       .
-        .byte   "Cent"                          ; 94A5 43 65 6E 74              Cent
-        .byte   $0D,$0A                         ; 94A9 0D 0A                    ..
-L94AB:
-        .byte   $94                             ; 94AB 94                       .
-        .byte   "Hairpin"                       ; 94AC 48 61 69 72 70 69 6E     Hairpin
-        .byte   $0D,$0A                         ; 94B3 0D 0A                    ..
-L94B5:
-        .byte   $84                             ; 94B5 84                       .
-        .byte   "Seraph"                        ; 94B6 53 65 72 61 70 68        Seraph
-        .byte   $0D,$0A                         ; 94BC 0D 0A                    ..
-L94BE:
-        .byte   $84                             ; 94BE 84                       .
-        .byte   "Behemot"                       ; 94BF 42 65 68 65 6D 6F 74     Behemot
-        .byte   $0D,$0A                         ; 94C6 0D 0A                    ..
-L94C8:
-        .byte   $84                             ; 94C8 84                       .
-        .byte   "SprnGun"                       ; 94C9 53 70 72 6E 47 75 6E     SprnGun
-        .byte   $0D,$0A                         ; 94D0 0D 0A                    ..
-L94D2:
-        .byte   $84                             ; 94D2 84                       .
-        .byte   "LimMoon"                       ; 94D3 4C 69 6D 4D 6F 6F 6E     LimMoon
-        .byte   $0D,$0A                         ; 94DA 0D 0A                    ..
-L94DC:
-        .byte   $85                             ; 94DC 85                       .
-        .byte   "Yellow"                        ; 94DD 59 65 6C 6C 6F 77        Yellow
-        .byte   $0D,$0A                         ; 94E3 0D 0A                    ..
-L94E5:
-        .byte   $85                             ; 94E5 85                       .
-        .byte   "Green"                         ; 94E6 47 72 65 65 6E           Green
-        .byte   $0D,$0A                         ; 94EB 0D 0A                    ..
-L94ED:
-        .byte   $85                             ; 94ED 85                       .
-        .byte   "Blue"                          ; 94EE 42 6C 75 65              Blue
-        .byte   $0D,$0A                         ; 94F2 0D 0A                    ..
-L94F4:
-        .byte   $85                             ; 94F4 85                       .
-        .byte   "Red"                           ; 94F5 52 65 64                 Red
-        .byte   $0D,$0A                         ; 94F8 0D 0A                    ..
-L94FA:
-        .byte   $85                             ; 94FA 85                       .
-        .byte   "Crystal"                       ; 94FB 43 72 79 73 74 61 6C     Crystal
-        .byte   $0D,$0A                         ; 9502 0D 0A                    ..
-L9504:
-        .byte   $85                             ; 9504 85                       .
-        .byte   "White"                         ; 9505 57 68 69 74 65           White
-        .byte   $0D,$0A                         ; 950A 0D 0A                    ..
+        .byte   "@1What's wrong?"               ; 93CF 40 31 57 68 61 74 27 73  @1What's
+                                                ; 93D7 20 77 72 6F 6E 67 3F      wrong?
+        .byte   $0A                             ; 93DE 0A                       .
+L93DF:
+        .byte   "@4You want to go on adate?"    ; 93DF 40 34 59 6F 75 20 77 61  @4You wa
+                                                ; 93E7 6E 74 20 74 6F 20 67 6F  nt to go
+                                                ; 93EF 20 6F 6E 20 61 64 61 74   on adat
+                                                ; 93F7 65 3F                    e?
+        .byte   $0A                             ; 93F9 0A                       .
+L93FA:
+        .byte   "@1What?"                       ; 93FA 40 31 57 68 61 74 3F     @1What?
+        .byte   $0A                             ; 9401 0A                       .
+L9402:
+        .byte   "@4A DA-TE!Or haven't\you ever g"; 9402 40 34 41 20 44 41 2D 54 @4A DA-T
+                                                ; 940A 45 21 4F 72 20 68 61 76  E!Or hav
+                                                ; 9412 65 6E 27 74 5C 79 6F 75  en't\you
+                                                ; 941A 20 65 76 65 72 20 67      ever g
+        .byte   "one on\one?"                   ; 9421 6F 6E 65 20 6F 6E 5C 6F  one on\o
+                                                ; 9429 6E 65 3F                 ne?
+        .byte   $0A                             ; 942C 0A                       .
+L942D:
+        .byte   "@1Well,not a real\one__"       ; 942D 40 31 57 65 6C 6C 2C 6E  @1Well,n
+                                                ; 9435 6F 74 20 61 20 72 65 61  ot a rea
+                                                ; 943D 6C 5C 6F 6E 65 5F 5F     l\one__
+        .byte   $0A                             ; 9444 0A                       .
+L9445:
+        .byte   "@4No,just a mixed-up\kid__"    ; 9445 40 34 4E 6F 2C 6A 75 73  @4No,jus
+                                                ; 944D 74 20 61 20 6D 69 78 65  t a mixe
+                                                ; 9455 64 2D 75 70 5C 6B 69 64  d-up\kid
+                                                ; 945D 5F 5F                    __
+        .byte   $0A                             ; 945F 0A                       .
+L9460:
+        .byte   "@4Oh well.Come on,\let's go."  ; 9460 40 34 4F 68 20 77 65 6C  @4Oh wel
+                                                ; 9468 6C 2E 43 6F 6D 65 20 6F  l.Come o
+                                                ; 9470 6E 2C 5C 6C 65 74 27 73  n,\let's
+                                                ; 9478 20 67 6F 2E               go.
+        .byte   $0A                             ; 947C 0A                       .
+L947D:
+        .byte   "@1Hey."                        ; 947D 40 31 48 65 79 2E        @1Hey.
+        .byte   $0A                             ; 9483 0A                       .
+L9484:
+        .byte   "Tonight's\Enchantment Night!\Al"; 9484 54 6F 6E 69 67 68 74 27 Tonight'
+                                                ; 948C 73 5C 45 6E 63 68 61 6E  s\Enchan
+                                                ; 9494 74 6D 65 6E 74 20 4E 69  tment Ni
+                                                ; 949C 67 68 74 21 5C 41 6C     ght!\Al
+        .byte   "l the attractionsare free.How '"; 94A3 6C 20 74 68 65 20 61 74 l the at
+                                                ; 94AB 74 72 61 63 74 69 6F 6E  traction
+                                                ; 94B3 73 61 72 65 20 66 72 65  sare fre
+                                                ; 94BB 65 2E 48 6F 77 20 27     e.How '
+        .byte   "bout\it you two?There's\going t"; 94C2 62 6F 75 74 5C 69 74 20 bout\it 
+                                                ; 94CA 79 6F 75 20 74 77 6F 3F  you two?
+                                                ; 94D2 54 68 65 72 65 27 73 5C  There's\
+                                                ; 94DA 67 6F 69 6E 67 20 74     going t
+        .byte   "o be an\entertaining show\in Ev"; 94E1 6F 20 62 65 20 61 6E 5C o be an\
+                                                ; 94E9 65 6E 74 65 72 74 61 69  entertai
+                                                ; 94F1 6E 69 6E 67 20 73 68 6F  ning sho
+                                                ; 94F9 77 5C 69 6E 20 45 76     w\in Ev
+        .byte   "ent Square!"                   ; 9500 65 6E 74 20 53 71 75 61  ent Squa
+                                                ; 9508 72 65 21                 re!
+        .byte   $0A                             ; 950B 0A                       .
 L950C:
-        .byte   $85                             ; 950C 85                       .
-        .byte   "Black"                         ; 950D 42 6C 61 63 6B           Black
-        .byte   $0D,$0A                         ; 9512 0D 0A                    ..
-L9514:
-        .byte   $85                             ; 9514 85                       .
-        .byte   "Silver"                        ; 9515 53 69 6C 76 65 72        Silver
-        .byte   $0D,$0A                         ; 951B 0D 0A                    ..
-L951D:
-        .byte   $85                             ; 951D 85                       .
-        .byte   "Trumpet"                       ; 951E 54 72 75 6D 70 65 74     Trumpet
-        .byte   $0D,$0A                         ; 9525 0D 0A                    ..
-L9527:
-        .byte   $85                             ; 9527 85                       .
-        .byte   "Gold"                          ; 9528 47 6F 6C 64              Gold
-        .byte   $0D,$0A                         ; 952C 0D 0A                    ..
-L952E:
-        .byte   $85                             ; 952E 85                       .
-        .byte   "Battle"                        ; 952F 42 61 74 74 6C 65        Battle
-        .byte   $0D,$0A                         ; 9535 0D 0A                    ..
-L9537:
-        .byte   $85                             ; 9537 85                       .
-        .byte   "Starlit"                       ; 9538 53 74 61 72 6C 69 74     Starlit
-        .byte   $0D,$0A                         ; 953F 0D 0A                    ..
-L9541:
-        .byte   $85                             ; 9541 85                       .
-        .byte   "Shout"                         ; 9542 53 68 6F 75 74           Shout
-        .byte   $0D,$0A                         ; 9547 0D 0A                    ..
-L9549:
-        .byte   $86                             ; 9549 86                       .
-        .byte   "Spear"                         ; 954A 53 70 65 61 72           Spear
-        .byte   $0D,$0A                         ; 954F 0D 0A                    ..
-L9551:
-        .byte   $86                             ; 9551 86                       .
-        .byte   "Slash"                         ; 9552 53 6C 61 73 68           Slash
-        .byte   $0D,$0A                         ; 9557 0D 0A                    ..
-L9559:
-        .byte   $86                             ; 9559 86                       .
-        .byte   "Trident"                       ; 955A 54 72 69 64 65 6E 74     Trident
-        .byte   $0D,$0A                         ; 9561 0D 0A                    ..
-L9563:
-        .byte   $86                             ; 9563 86                       .
-        .byte   "MastAxe"                       ; 9564 4D 61 73 74 41 78 65     MastAxe
-        .byte   $0D,$0A                         ; 956B 0D 0A                    ..
-L956D:
-        .byte   $86                             ; 956D 86                       .
-        .byte   "Partsan"                       ; 956E 50 61 72 74 73 61 6E     Partsan
-        .byte   $0D,$0A                         ; 9575 0D 0A                    ..
-L9577:
-        .byte   $86                             ; 9577 86                       .
-        .byte   "Viper"                         ; 9578 56 69 70 65 72           Viper
-        .byte   $0D,$0A                         ; 957D 0D 0A                    ..
-L957F:
-        .byte   $86                             ; 957F 86                       .
-        .byte   "Javelin"                       ; 9580 4A 61 76 65 6C 69 6E     Javelin
-        .byte   $0D,$0A                         ; 9587 0D 0A                    ..
-L9589:
-        .byte   $86                             ; 9589 86                       .
-        .byte   "Grow"                          ; 958A 47 72 6F 77              Grow
-        .byte   $0D,$0A                         ; 958E 0D 0A                    ..
-L9590:
-        .byte   $86                             ; 9590 86                       .
-        .byte   "Mop"                           ; 9591 4D 6F 70                 Mop
-        .byte   $0D,$0A                         ; 9594 0D 0A                    ..
-L9596:
-        .byte   $86                             ; 9596 86                       .
-        .byte   "Dragoon"                       ; 9597 44 72 61 67 6F 6F 6E     Dragoon
-        .byte   $0D,$0A                         ; 959E 0D 0A                    ..
-L95A0:
-        .byte   $86                             ; 95A0 86                       .
-        .byte   "Scimitr"                       ; 95A1 53 63 69 6D 69 74 72     Scimitr
-        .byte   $0D,$0A                         ; 95A8 0D 0A                    ..
-L95AA:
-        .byte   $86                             ; 95AA 86                       .
-        .byte   "Flayer"                        ; 95AB 46 6C 61 79 65 72        Flayer
-        .byte   $0D,$0A                         ; 95B1 0D 0A                    ..
-L95B3:
-        .byte   $86                             ; 95B3 86                       .
-        .byte   "Spirit"                        ; 95B4 53 70 69 72 69 74        Spirit
-        .byte   $0D,$0A                         ; 95BA 0D 0A                    ..
-L95BC:
-        .byte   $86                             ; 95BC 86                       .
-        .byte   "Venus"                         ; 95BD 56 65 6E 75 73           Venus
-        .byte   $0D,$0A,$FF,$FF                 ; 95C2 0D 0A FF FF              ....
-; ----------------------------------------------------------------------------
-L95C6:
-        .addr   L95D6                           ; 95C6 D6 95                    ..
-        .addr   L95DC                           ; 95C8 DC 95                    ..
-        .addr   L95E3                           ; 95CA E3 95                    ..
-        .addr   L95EB                           ; 95CC EB 95                    ..
-        .addr   L95F2                           ; 95CE F2 95                    ..
-        .addr   L95F9                           ; 95D0 F9 95                    ..
-        .addr   L9601                           ; 95D2 01 96                    ..
-        .addr   L9609                           ; 95D4 09 96                    ..
-; ----------------------------------------------------------------------------
-L95D6:
-        .byte   "None"                          ; 95D6 4E 6F 6E 65              None
-        .byte   $0D,$0A                         ; 95DA 0D 0A                    ..
-L95DC:
-        .byte   $87                             ; 95DC 87                       .
-        .byte   "Fire"                          ; 95DD 46 69 72 65              Fire
-        .byte   $0D,$0A                         ; 95E1 0D 0A                    ..
-L95E3:
-        .byte   $87                             ; 95E3 87                       .
-        .byte   "Water"                         ; 95E4 57 61 74 65 72           Water
-        .byte   $0D,$0A                         ; 95E9 0D 0A                    ..
-L95EB:
-        .byte   $87                             ; 95EB 87                       .
-        .byte   "Bolt"                          ; 95EC 42 6F 6C 74              Bolt
-        .byte   $0D,$0A                         ; 95F0 0D 0A                    ..
-L95F2:
-        .byte   $87                             ; 95F2 87                       .
-        .byte   "Wind"                          ; 95F3 57 69 6E 64              Wind
-        .byte   $0D,$0A                         ; 95F7 0D 0A                    ..
-L95F9:
-        .byte   $87                             ; 95F9 87                       .
-        .byte   "Earth"                         ; 95FA 45 61 72 74 68           Earth
-        .byte   $0D,$0A                         ; 95FF 0D 0A                    ..
-L9601:
-        .byte   $87                             ; 9601 87                       .
-        .byte   "Light"                         ; 9602 4C 69 67 68 74           Light
-        .byte   $0D,$0A                         ; 9607 0D 0A                    ..
-L9609:
-        .byte   $87                             ; 9609 87                       .
-        .byte   "Ice "                          ; 960A 49 63 65 20              Ice 
-        .byte   $0D,$0A,$FF,$FF                 ; 960E 0D 0A FF FF              ....
-; ----------------------------------------------------------------------------
-L9612:
-        .addr   L9692                           ; 9612 92 96                    ..
-        .addr   L9698                           ; 9614 98 96                    ..
-        .addr   L96A1                           ; 9616 A1 96                    ..
-        .addr   L96AB                           ; 9618 AB 96                    ..
-        .addr   L96B4                           ; 961A B4 96                    ..
-        .addr   L96BE                           ; 961C BE 96                    ..
-        .addr   L96C7                           ; 961E C7 96                    ..
-        .addr   L96D1                           ; 9620 D1 96                    ..
-        .addr   L96DA                           ; 9622 DA 96                    ..
-        .addr   L96E4                           ; 9624 E4 96                    ..
-        .addr   L96ED                           ; 9626 ED 96                    ..
-        .addr   L96F7                           ; 9628 F7 96                    ..
-        .addr   L9700                           ; 962A 00 97                    ..
-        .addr   L970A                           ; 962C 0A 97                    ..
-        .addr   L9713                           ; 962E 13 97                    ..
-        .addr   L971D                           ; 9630 1D 97                    ..
-        .addr   L9726                           ; 9632 26 97                    &.
-        .addr   L9730                           ; 9634 30 97                    0.
-        .addr   L9739                           ; 9636 39 97                    9.
-        .addr   L9743                           ; 9638 43 97                    C.
-        .addr   L974C                           ; 963A 4C 97                    L.
-        .addr   L9755                           ; 963C 55 97                    U.
-        .addr   L975E                           ; 963E 5E 97                    ^.
-        .addr   L9767                           ; 9640 67 97                    g.
-        .addr   L9770                           ; 9642 70 97                    p.
-        .addr   L9779                           ; 9644 79 97                    y.
-        .addr   L9782                           ; 9646 82 97                    ..
-        .addr   L978B                           ; 9648 8B 97                    ..
-        .addr   L9794                           ; 964A 94 97                    ..
-        .addr   L979D                           ; 964C 9D 97                    ..
-        .addr   L97A7                           ; 964E A7 97                    ..
-        .addr   L97B0                           ; 9650 B0 97                    ..
-        .addr   L97B9                           ; 9652 B9 97                    ..
-        .addr   L97C2                           ; 9654 C2 97                    ..
-        .addr   L97CC                           ; 9656 CC 97                    ..
-        .addr   L97D5                           ; 9658 D5 97                    ..
-        .addr   L97DE                           ; 965A DE 97                    ..
-        .addr   L97E8                           ; 965C E8 97                    ..
-        .addr   L97F1                           ; 965E F1 97                    ..
-        .addr   L97FB                           ; 9660 FB 97                    ..
-        .addr   L9804                           ; 9662 04 98                    ..
-        .addr   L980E                           ; 9664 0E 98                    ..
-        .addr   L9817                           ; 9666 17 98                    ..
-        .addr   L9821                           ; 9668 21 98                    !.
-        .addr   L982A                           ; 966A 2A 98                    *.
-        .addr   L9834                           ; 966C 34 98                    4.
-        .addr   L983D                           ; 966E 3D 98                    =.
-        .addr   L9846                           ; 9670 46 98                    F.
-        .addr   L984F                           ; 9672 4F 98                    O.
-        .addr   L9858                           ; 9674 58 98                    X.
-        .addr   L9861                           ; 9676 61 98                    a.
-        .addr   L986A                           ; 9678 6A 98                    j.
-        .addr   L9873                           ; 967A 73 98                    s.
-        .addr   L987C                           ; 967C 7C 98                    |.
-        .addr   L9885                           ; 967E 85 98                    ..
-        .addr   L988F                           ; 9680 8F 98                    ..
-        .addr   L9898                           ; 9682 98 98                    ..
-        .addr   L98A2                           ; 9684 A2 98                    ..
-        .addr   L98AB                           ; 9686 AB 98                    ..
-        .addr   L98B5                           ; 9688 B5 98                    ..
-        .addr   L98BE                           ; 968A BE 98                    ..
-        .addr   L98C8                           ; 968C C8 98                    ..
-        .addr   L98D1                           ; 968E D1 98                    ..
-        .addr   L98DB                           ; 9690 DB 98                    ..
-; ----------------------------------------------------------------------------
-L9692:
-        .byte   "None"                          ; 9692 4E 6F 6E 65              None
-        .byte   $0D,$0A                         ; 9696 0D 0A                    ..
-L9698:
-        .byte   $C0,$AF                         ; 9698 C0 AF                    ..
-        .byte   "Fire"                          ; 969A 46 69 72 65              Fire
-        .byte   $0D,$0A                         ; 969E 0D 0A                    ..
-        .byte   "0"                             ; 96A0 30                       0
-L96A1:
-        .byte   $C0,$AF                         ; 96A1 C0 AF                    ..
-        .byte   "Blaze "                        ; 96A3 42 6C 61 7A 65 20        Blaze 
-        .byte   $0D,$0A                         ; 96A9 0D 0A                    ..
-L96AB:
-        .byte   $C0,$AF                         ; 96AB C0 AF                    ..
-        .byte   "Fire2"                         ; 96AD 46 69 72 65 32           Fire2
-        .byte   $0D,$0A                         ; 96B2 0D 0A                    ..
-L96B4:
-        .byte   $C0,$AF                         ; 96B4 C0 AF                    ..
-        .byte   "Blaze2"                        ; 96B6 42 6C 61 7A 65 32        Blaze2
-        .byte   $0D,$0A                         ; 96BC 0D 0A                    ..
-L96BE:
-        .byte   $C0,$AF                         ; 96BE C0 AF                    ..
-        .byte   "Fire3"                         ; 96C0 46 69 72 65 33           Fire3
-        .byte   $0D,$0A                         ; 96C5 0D 0A                    ..
-L96C7:
-        .byte   $C0,$AF                         ; 96C7 C0 AF                    ..
-        .byte   "Blaze3"                        ; 96C9 42 6C 61 7A 65 33        Blaze3
-        .byte   $0D,$0A                         ; 96CF 0D 0A                    ..
-L96D1:
-        .byte   $C0,$AF                         ; 96D1 C0 AF                    ..
-        .byte   "Fire4"                         ; 96D3 46 69 72 65 34           Fire4
-        .byte   $0D,$0A                         ; 96D8 0D 0A                    ..
-L96DA:
-        .byte   $C0,$AF                         ; 96DA C0 AF                    ..
-        .byte   "Blaze4"                        ; 96DC 42 6C 61 7A 65 34        Blaze4
-        .byte   $0D,$0A                         ; 96E2 0D 0A                    ..
-L96E4:
-        .byte   $C0,$AF                         ; 96E4 C0 AF                    ..
-        .byte   "Ifrit"                         ; 96E6 49 66 72 69 74           Ifrit
-        .byte   $0D,$0A                         ; 96EB 0D 0A                    ..
-L96ED:
-        .byte   $C0,$B0                         ; 96ED C0 B0                    ..
-        .byte   "Water "                        ; 96EF 57 61 74 65 72 20        Water 
-        .byte   $0D,$0A                         ; 96F5 0D 0A                    ..
-L96F7:
-        .byte   $C0,$B0                         ; 96F7 C0 B0                    ..
-        .byte   "Flood"                         ; 96F9 46 6C 6F 6F 64           Flood
-        .byte   $0D,$0A                         ; 96FE 0D 0A                    ..
-L9700:
-        .byte   $C0,$B0                         ; 9700 C0 B0                    ..
-        .byte   "Water2"                        ; 9702 57 61 74 65 72 32        Water2
-        .byte   $0D,$0A                         ; 9708 0D 0A                    ..
-L970A:
-        .byte   $C0,$B0                         ; 970A C0 B0                    ..
-        .byte   "Cure2"                         ; 970C 43 75 72 65 32           Cure2
-        .byte   $0D,$0A                         ; 9711 0D 0A                    ..
-L9713:
-        .byte   $C0,$B0                         ; 9713 C0 B0                    ..
-        .byte   "Water3"                        ; 9715 57 61 74 65 72 33        Water3
-        .byte   $0D,$0A                         ; 971B 0D 0A                    ..
-L971D:
-        .byte   $C0,$B0                         ; 971D C0 B0                    ..
-        .byte   "Flood2"                        ; 971F 46 6C 6F 6F 64 32        Flood2
-        .byte   $0D                             ; 9725 0D                       .
-L9726:
-        .byte   $C0,$B0                         ; 9726 C0 B0                    ..
-        .byte   "Water4"                        ; 9728 57 61 74 65 72 34        Water4
-        .byte   $0D,$0A                         ; 972E 0D 0A                    ..
-L9730:
-        .byte   $C0,$B0                         ; 9730 C0 B0                    ..
-        .byte   "Cure3"                         ; 9732 43 75 72 65 33           Cure3
-        .byte   $0D,$0A                         ; 9737 0D 0A                    ..
-L9739:
-        .byte   $C0,$B0                         ; 9739 C0 B0                    ..
-        .byte   "Leviat"                        ; 973B 4C 65 76 69 61 74        Leviat
-        .byte   $0D,$0A                         ; 9741 0D 0A                    ..
-L9743:
-        .byte   $C0,$B1                         ; 9743 C0 B1                    ..
-        .byte   "Bolt "                         ; 9745 42 6F 6C 74 20           Bolt 
-        .byte   $0D,$0A                         ; 974A 0D 0A                    ..
-L974C:
-        .byte   $C0,$B1                         ; 974C C0 B1                    ..
-        .byte   "Shock"                         ; 974E 53 68 6F 63 6B           Shock
-        .byte   $0D,$0A                         ; 9753 0D 0A                    ..
-L9755:
-        .byte   $C0,$B1                         ; 9755 C0 B1                    ..
-        .byte   "Bolt2"                         ; 9757 42 6F 6C 74 32           Bolt2
-        .byte   $0D,$0A                         ; 975C 0D 0A                    ..
-L975E:
-        .byte   $C0,$B1                         ; 975E C0 B1                    ..
-        .byte   "Shock2"                        ; 9760 53 68 6F 63 6B 32        Shock2
-        .byte   $0D                             ; 9766 0D                       .
-L9767:
-        .byte   $C0,$B1                         ; 9767 C0 B1                    ..
-        .byte   "Bolt3"                         ; 9769 42 6F 6C 74 33           Bolt3
-        .byte   $0D,$0A                         ; 976E 0D 0A                    ..
-L9770:
-        .byte   $C0,$B1                         ; 9770 C0 B1                    ..
-        .byte   "Shock3"                        ; 9772 53 68 6F 63 6B 33        Shock3
-        .byte   $0D                             ; 9778 0D                       .
-L9779:
-        .byte   $C0,$B1                         ; 9779 C0 B1                    ..
-        .byte   "Bolt4"                         ; 977B 42 6F 6C 74 34           Bolt4
-        .byte   $0D,$0A                         ; 9780 0D 0A                    ..
-L9782:
-        .byte   $C0,$B1                         ; 9782 C0 B1                    ..
-        .byte   "Shock4"                        ; 9784 53 68 6F 63 6B 34        Shock4
-        .byte   $0D                             ; 978A 0D                       .
-L978B:
-        .byte   $C0,$B1                         ; 978B C0 B1                    ..
-        .byte   "Ramuh"                         ; 978D 52 61 6D 75 68           Ramuh
-        .byte   $0D,$0A                         ; 9792 0D 0A                    ..
-L9794:
-        .byte   $C0,$B2                         ; 9794 C0 B2                    ..
-        .byte   "Aero "                         ; 9796 41 65 72 6F 20           Aero 
-        .byte   $0D,$0A                         ; 979B 0D 0A                    ..
-L979D:
-        .byte   $C0,$B2                         ; 979D C0 B2                    ..
-        .byte   "Gale"                          ; 979F 47 61 6C 65              Gale
-        .byte   $0D,$0A,$0D,$0A                 ; 97A3 0D 0A 0D 0A              ....
-L97A7:
-        .byte   $C0,$B2                         ; 97A7 C0 B2                    ..
-        .byte   "Aero2"                         ; 97A9 41 65 72 6F 32           Aero2
-        .byte   $0D,$0A                         ; 97AE 0D 0A                    ..
-L97B0:
-        .byte   $C0,$B2                         ; 97B0 C0 B2                    ..
-        .byte   "Cure2"                         ; 97B2 43 75 72 65 32           Cure2
-        .byte   $0D,$0A                         ; 97B7 0D 0A                    ..
-L97B9:
-        .byte   $C0,$B2                         ; 97B9 C0 B2                    ..
-        .byte   "Aero3"                         ; 97BB 41 65 72 6F 33           Aero3
-        .byte   $0D,$0A                         ; 97C0 0D 0A                    ..
-L97C2:
-        .byte   $C0,$B2                         ; 97C2 C0 B2                    ..
-        .byte   "Gale2"                         ; 97C4 47 61 6C 65 32           Gale2
-        .byte   $0D,$0A                         ; 97C9 0D 0A                    ..
-        .byte   " "                             ; 97CB 20                        
-L97CC:
-        .byte   $C0,$B2                         ; 97CC C0 B2                    ..
-        .byte   "Aero4"                         ; 97CE 41 65 72 6F 34           Aero4
-        .byte   $0D,$0A                         ; 97D3 0D 0A                    ..
-L97D5:
-        .byte   $C0,$B2                         ; 97D5 C0 B2                    ..
-        .byte   "Cure3"                         ; 97D7 43 75 72 65 33           Cure3
-        .byte   $0D,$0A                         ; 97DC 0D 0A                    ..
-L97DE:
-        .byte   $C0,$B2                         ; 97DE C0 B2                    ..
-        .byte   "Typhon"                        ; 97E0 54 79 70 68 6F 6E        Typhon
-        .byte   $0D,$0A                         ; 97E6 0D 0A                    ..
-L97E8:
-        .byte   $C0,$B3                         ; 97E8 C0 B3                    ..
-        .byte   "Stone"                         ; 97EA 53 74 6F 6E 65           Stone
-        .byte   $0D,$0A                         ; 97EF 0D 0A                    ..
-L97F1:
-        .byte   $C0,$B3                         ; 97F1 C0 B3                    ..
-        .byte   "Quake "                        ; 97F3 51 75 61 6B 65 20        Quake 
-        .byte   $0D,$0A                         ; 97F9 0D 0A                    ..
-L97FB:
-        .byte   $C0,$B3                         ; 97FB C0 B3                    ..
-        .byte   "Stone2"                        ; 97FD 53 74 6F 6E 65 32        Stone2
-        .byte   $0D                             ; 9803 0D                       .
-L9804:
-        .byte   $C0,$B3                         ; 9804 C0 B3                    ..
-        .byte   "Quake2"                        ; 9806 51 75 61 6B 65 32        Quake2
-        .byte   $0D,$0A                         ; 980C 0D 0A                    ..
-L980E:
-        .byte   $C0,$B3                         ; 980E C0 B3                    ..
-        .byte   "Stone3"                        ; 9810 53 74 6F 6E 65 33        Stone3
-        .byte   $0D                             ; 9816 0D                       .
-L9817:
-        .byte   $C0,$B3                         ; 9817 C0 B3                    ..
-        .byte   "Quake3"                        ; 9819 51 75 61 6B 65 33        Quake3
-        .byte   $0D,$0A                         ; 981F 0D 0A                    ..
-L9821:
-        .byte   $C0,$B3                         ; 9821 C0 B3                    ..
-        .byte   "Stone4"                        ; 9823 53 74 6F 6E 65 34        Stone4
-        .byte   $0D                             ; 9829 0D                       .
-L982A:
-        .byte   $C0,$B3                         ; 982A C0 B3                    ..
-        .byte   "Quake4"                        ; 982C 51 75 61 6B 65 34        Quake4
-        .byte   $0D,$0A                         ; 9832 0D 0A                    ..
-L9834:
-        .byte   $C0,$B3                         ; 9834 C0 B3                    ..
-        .byte   "Titan"                         ; 9836 54 69 74 61 6E           Titan
-        .byte   $0D,$0A                         ; 983B 0D 0A                    ..
-L983D:
-        .byte   $C0,$B4                         ; 983D C0 B4                    ..
-        .byte   "Cure "                         ; 983F 43 75 72 65 20           Cure 
-        .byte   $0D,$0A                         ; 9844 0D 0A                    ..
-L9846:
-        .byte   $C0,$B4                         ; 9846 C0 B4                    ..
-        .byte   "Dia"                           ; 9848 44 69 61                 Dia
-        .byte   $0D,$0A,$00,$00                 ; 984B 0D 0A 00 00              ....
-L984F:
-        .byte   $C0,$B4                         ; 984F C0 B4                    ..
-        .byte   "Cure2"                         ; 9851 43 75 72 65 32           Cure2
-        .byte   $0D,$0A                         ; 9856 0D 0A                    ..
-L9858:
-        .byte   $C0,$B4                         ; 9858 C0 B4                    ..
-        .byte   "Heal "                         ; 985A 48 65 61 6C 20           Heal 
-        .byte   $0D,$0A                         ; 985F 0D 0A                    ..
-L9861:
-        .byte   $C0,$B4                         ; 9861 C0 B4                    ..
-        .byte   "Cure3"                         ; 9863 43 75 72 65 33           Cure3
-        .byte   $0D,$0A                         ; 9868 0D 0A                    ..
-L986A:
-        .byte   $C0,$B4                         ; 986A C0 B4                    ..
-        .byte   "Dia2"                          ; 986C 44 69 61 32              Dia2
-        .byte   $0D,$0A,$00                     ; 9870 0D 0A 00                 ...
-L9873:
-        .byte   $C0,$B4                         ; 9873 C0 B4                    ..
-        .byte   "Cure4"                         ; 9875 43 75 72 65 34           Cure4
-        .byte   $0D,$0A                         ; 987A 0D 0A                    ..
-L987C:
-        .byte   $C0,$B4                         ; 987C C0 B4                    ..
-        .byte   "Heal2"                         ; 987E 48 65 61 6C 32           Heal2
-        .byte   $0D,$0A                         ; 9883 0D 0A                    ..
-L9885:
-        .byte   $C0,$B4                         ; 9885 C0 B4                    ..
-        .byte   "Bahamt"                        ; 9887 42 61 68 61 6D 74        Bahamt
-        .byte   $0D,$0A                         ; 988D 0D 0A                    ..
-L988F:
-        .byte   $C0,$B5                         ; 988F C0 B5                    ..
-        .byte   "Ice  "                         ; 9891 49 63 65 20 20           Ice  
-        .byte   $0D,$0A                         ; 9896 0D 0A                    ..
-L9898:
-        .byte   $C0,$B5                         ; 9898 C0 B5                    ..
-        .byte   "Hail  "                        ; 989A 48 61 69 6C 20 20        Hail  
-        .byte   $0D,$0A                         ; 98A0 0D 0A                    ..
-L98A2:
-        .byte   $C0,$B5                         ; 98A2 C0 B5                    ..
-        .byte   "Ice2 "                         ; 98A4 49 63 65 32 20           Ice2 
-        .byte   $0D,$0A                         ; 98A9 0D 0A                    ..
-L98AB:
-        .byte   $C0,$B5                         ; 98AB C0 B5                    ..
-        .byte   "Hail2 "                        ; 98AD 48 61 69 6C 32 20        Hail2 
-        .byte   $0D,$0A                         ; 98B3 0D 0A                    ..
-L98B5:
-        .byte   $C0,$B5                         ; 98B5 C0 B5                    ..
-        .byte   "Ice3 "                         ; 98B7 49 63 65 33 20           Ice3 
-        .byte   $0D,$0A                         ; 98BC 0D 0A                    ..
-L98BE:
-        .byte   $C0,$B5                         ; 98BE C0 B5                    ..
-        .byte   "Hail3 "                        ; 98C0 48 61 69 6C 33 20        Hail3 
-        .byte   $0D,$0A                         ; 98C6 0D 0A                    ..
-L98C8:
-        .byte   $C0,$B5                         ; 98C8 C0 B5                    ..
-        .byte   "Ice4 "                         ; 98CA 49 63 65 34 20           Ice4 
-        .byte   $0D,$0A                         ; 98CF 0D 0A                    ..
-L98D1:
-        .byte   $C0,$B5                         ; 98D1 C0 B5                    ..
-        .byte   "Hail4 "                        ; 98D3 48 61 69 6C 34 20        Hail4 
-        .byte   $0D,$0A                         ; 98D9 0D 0A                    ..
-L98DB:
-        .byte   $C0,$B5                         ; 98DB C0 B5                    ..
-        .byte   "Shiva"                         ; 98DD 53 68 69 76 61           Shiva
-        .byte   $0D,$FF,$FF                     ; 98E2 0D FF FF                 ...
-; ----------------------------------------------------------------------------
-L98E5:
-        .addr   L9925                           ; 98E5 25 99                    %.
-        .addr   L992B                           ; 98E7 2B 99                    +.
-        .addr   L9933                           ; 98E9 33 99                    3.
-        .addr   L993D                           ; 98EB 3D 99                    =.
-        .addr   L9947                           ; 98ED 47 99                    G.
-        .addr   L9951                           ; 98EF 51 99                    Q.
-        .addr   L9957                           ; 98F1 57 99                    W.
-        .addr   L995F                           ; 98F3 5F 99                    _.
-        .addr   L9967                           ; 98F5 67 99                    g.
-        .addr   L996E                           ; 98F7 6E 99                    n.
-        .addr   L9977                           ; 98F9 77 99                    w.
-        .addr   L9980                           ; 98FB 80 99                    ..
-        .addr   LA420                           ; 98FD 20 A4                     .
-        .addr   L998C                           ; 98FF 8C 99                    ..
-        .addr   L9992                           ; 9901 92 99                    ..
-        .addr   L9998                           ; 9903 98 99                    ..
-        .addr   L999E                           ; 9905 9E 99                    ..
-        .addr   L99A4                           ; 9907 A4 99                    ..
-        .addr   L99AA                           ; 9909 AA 99                    ..
-        .addr   L99B3                           ; 990B B3 99                    ..
-        .addr   L99BD                           ; 990D BD 99                    ..
-        .addr   L99C7                           ; 990F C7 99                    ..
-        .addr   L99D1                           ; 9911 D1 99                    ..
-        .addr   L99D9                           ; 9913 D9 99                    ..
-        .addr   L99E3                           ; 9915 E3 99                    ..
-        .addr   L99ED                           ; 9917 ED 99                    ..
-        .addr   L99F7                           ; 9919 F7 99                    ..
-        .addr   L9A01                           ; 991B 01 9A                    ..
-        .addr   L9A0B                           ; 991D 0B 9A                    ..
-        .addr   L9A15                           ; 991F 15 9A                    ..
-        .addr   L9A1F                           ; 9921 1F 9A                    ..
-        .addr   L9A29                           ; 9923 29 9A                    ).
-; ----------------------------------------------------------------------------
-L9925:
-        .byte   "None"                          ; 9925 4E 6F 6E 65              None
-        .byte   $0D,$0A                         ; 9929 0D 0A                    ..
+        .byte   "@4Come on,let's go."           ; 950C 40 34 43 6F 6D 65 20 6F  @4Come o
+                                                ; 9514 6E 2C 6C 65 74 27 73 20  n,let's 
+                                                ; 951C 67 6F 2E                 go.
+        .byte   $0A                             ; 951F 0A                       .
+L9520:
+        .byte   "Congratulations!Youare our 100t"; 9520 43 6F 6E 67 72 61 74 75 Congratu
+                                                ; 9528 6C 61 74 69 6F 6E 73 21  lations!
+                                                ; 9530 59 6F 75 61 72 65 20 6F  Youare o
+                                                ; 9538 75 72 20 31 30 30 74     ur 100t
+        .byte   "h\couple today!"               ; 953F 68 5C 63 6F 75 70 6C 65  h\couple
+                                                ; 9547 20 74 6F 64 61 79 21      today!
+        .byte   $0A                             ; 954E 0A                       .
+L954F:
+        .byte   "You 2 will be the\leads in toni"; 954F 59 6F 75 20 32 20 77 69 You 2 wi
+                                                ; 9557 6C 6C 20 62 65 20 74 68  ll be th
+                                                ; 955F 65 5C 6C 65 61 64 73 20  e\leads 
+                                                ; 9567 69 6E 20 74 6F 6E 69     in toni
+        .byte   "ght's\show!"                   ; 956E 67 68 74 27 73 5C 73 68  ght's\sh
+                                                ; 9576 6F 77 21                 ow!
+        .byte   $0A                             ; 9579 0A                       .
+L957A:
+        .byte   "@1Wha?"                        ; 957A 40 31 57 68 61 3F        @1Wha?
+        .byte   $0A                             ; 9580 0A                       .
+L9581:
+        .byte   "Oh,now,it's not\hard.Just play "; 9581 4F 68 2C 6E 6F 77 2C 69 Oh,now,i
+                                                ; 9589 74 27 73 20 6E 6F 74 5C  t's not\
+                                                ; 9591 68 61 72 64 2E 4A 75 73  hard.Jus
+                                                ; 9599 74 20 70 6C 61 79 20     t play 
+        .byte   "it\however you want toand the r"; 95A0 69 74 5C 68 6F 77 65 76 it\howev
+                                                ; 95A8 65 72 20 79 6F 75 20 77  er you w
+                                                ; 95B0 61 6E 74 20 74 6F 61 6E  ant toan
+                                                ; 95B8 64 20 74 68 65 20 72     d the r
+        .byte   "est of thecast will cover up\fo"; 95BF 65 73 74 20 6F 66 20 74 est of t
+                                                ; 95C7 68 65 63 61 73 74 20 77  hecast w
+                                                ; 95CF 69 6C 6C 20 63 6F 76 65  ill cove
+                                                ; 95D7 72 20 75 70 5C 66 6F     r up\fo
+        .byte   "r you.Come this\way."          ; 95DE 72 20 79 6F 75 2E 43 6F  r you.Co
+                                                ; 95E6 6D 65 20 74 68 69 73 5C  me this\
+                                                ; 95EE 77 61 79 2E              way.
+        .byte   $0A                             ; 95F2 0A                       .
+L95F3:
+        .byte   "@1H,hey!"                      ; 95F3 40 31 48 2C 68 65 79 21  @1H,hey!
+        .byte   $0A                             ; 95FB 0A                       .
+L95FC:
+        .byte   "@4This sounds like\fun.Come on "; 95FC 40 34 54 68 69 73 20 73 @4This s
+                                                ; 9604 6F 75 6E 64 73 20 6C 69  ounds li
+                                                ; 960C 6B 65 5C 66 75 6E 2E 43  ke\fun.C
+                                                ; 9614 6F 6D 65 20 6F 6E 20     ome on 
+        .byte   "Cloud,\let's do it."           ; 961B 43 6C 6F 75 64 2C 5C 6C  Cloud,\l
+                                                ; 9623 65 74 27 73 20 64 6F 20  et's do 
+                                                ; 962B 69 74 2E                 it.
+        .byte   $0A                             ; 962E 0A                       .
+L962F:
+        .byte   "Narration:Long,longago__An evil"; 962F 4E 61 72 72 61 74 69 6F Narratio
+                                                ; 9637 6E 3A 4C 6F 6E 67 2C 6C  n:Long,l
+                                                ; 963F 6F 6E 67 61 67 6F 5F 5F  ongago__
+                                                ; 9647 41 6E 20 65 76 69 6C     An evil
+        .byte   " shadowappeared over the\peacef"; 964E 20 73 68 61 64 6F 77 61  shadowa
+                                                ; 9656 70 70 65 61 72 65 64 20  ppeared 
+                                                ; 965E 6F 76 65 72 20 74 68 65  over the
+                                                ; 9666 5C 70 65 61 63 65 66     \peacef
+        .byte   "ul kingdom ofGaldia__Princess\R"; 966D 75 6C 20 6B 69 6E 67 64 ul kingd
+                                                ; 9675 6F 6D 20 6F 66 47 61 6C  om ofGal
+                                                ; 967D 64 69 61 5F 5F 50 72 69  dia__Pri
+                                                ; 9685 6E 63 65 73 73 5C 52     ncess\R
+        .byte   "osa was just\kidnapped by the\E"; 968C 6F 73 61 20 77 61 73 20 osa was 
+                                                ; 9694 6A 75 73 74 5C 6B 69 64  just\kid
+                                                ; 969C 6E 61 70 70 65 64 20 62  napped b
+                                                ; 96A4 79 20 74 68 65 5C 45     y the\E
+        .byte   "vil Dragon King,\Valvados.What "; 96AB 76 69 6C 20 44 72 61 67 vil Drag
+                                                ; 96B3 6F 6E 20 4B 69 6E 67 2C  on King,
+                                                ; 96BB 5C 56 61 6C 76 61 64 6F  \Valvado
+                                                ; 96C3 73 2E 57 68 61 74 20     s.What 
+        .byte   "will\become of her?Just\then,th"; 96CA 77 69 6C 6C 5C 62 65 63 will\bec
+                                                ; 96D2 6F 6D 65 20 6F 66 20 68  ome of h
+                                                ; 96DA 65 72 3F 4A 75 73 74 5C  er?Just\
+                                                ; 96E2 74 68 65 6E 2C 74 68     then,th
+        .byte   "e legendary\hero,Alfred,\appear"; 96E9 65 20 6C 65 67 65 6E 64 e legend
+                                                ; 96F1 61 72 79 5C 68 65 72 6F  ary\hero
+                                                ; 96F9 2C 41 6C 66 72 65 64 2C  ,Alfred,
+                                                ; 9701 5C 61 70 70 65 61 72     \appear
+        .byte   "s!"                            ; 9708 73 21                    s!
+        .byte   $0A                             ; 970A 0A                       .
+L970B:
+        .byte   "Wizard:Oh__You mustbe the legen"; 970B 57 69 7A 61 72 64 3A 4F Wizard:O
+                                                ; 9713 68 5F 5F 59 6F 75 20 6D  h__You m
+                                                ; 971B 75 73 74 62 65 20 74 68  ustbe th
+                                                ; 9723 65 20 6C 65 67 65 6E     e legen
+        .byte   "dary\hero__Alfred!"            ; 972A 64 61 72 79 5C 68 65 72  dary\her
+                                                ; 9732 6F 5F 5F 41 6C 66 72 65  o__Alfre
+                                                ; 973A 64 21                    d!
+        .byte   $0A                             ; 973C 0A                       .
+L973D:
+        .byte   "__(Hey! It's your\line!)"      ; 973D 5F 5F 28 48 65 79 21 20  __(Hey! 
+                                                ; 9745 49 74 27 73 20 79 6F 75  It's you
+                                                ; 974D 72 5C 6C 69 6E 65 21 29  r\line!)
+        .byte   $0A                             ; 9755 0A                       .
+L9756:
+        .byte   "@1Me?"                         ; 9756 40 31 4D 65 3F           @1Me?
+        .byte   $0A                             ; 975B 0A                       .
+L975C:
+        .byte   "(Yeah you!) Ahem!"             ; 975C 28 59 65 61 68 20 79 6F  (Yeah yo
+                                                ; 9764 75 21 29 20 41 68 65 6D  u!) Ahem
+                                                ; 976C 21                       !
+        .byte   $0A                             ; 976D 0A                       .
+L976E:
+        .byte   "Oh__You must be\the legendary\h"; 976E 4F 68 5F 5F 59 6F 75 20 Oh__You 
+                                                ; 9776 6D 75 73 74 20 62 65 5C  must be\
+                                                ; 977E 74 68 65 20 6C 65 67 65  the lege
+                                                ; 9786 6E 64 61 72 79 5C 68     ndary\h
+        .byte   "ero__Alfred!\I know in my soul"; 978D 65 72 6F 5F 5F 41 6C 66  ero__Alf
+                                                ; 9795 72 65 64 21 5C 49 20 6B  red!\I k
+                                                ; 979D 6E 6F 77 20 69 6E 20 6D  now in m
+                                                ; 97A5 79 20 73 6F 75 6C        y soul
+        .byte   $0A                             ; 97AB 0A                       .
+L97AC:
+        .byte   " Please__please\save Princess R"; 97AC 20 50 6C 65 61 73 65 5F  Please_
+                                                ; 97B4 5F 70 6C 65 61 73 65 5C  _please\
+                                                ; 97BC 73 61 76 65 20 50 72 69  save Pri
+                                                ; 97C4 6E 63 65 73 73 20 52     ncess R
+        .byte   "osa!"                          ; 97CB 6F 73 61 21              osa!
+        .byte   $0A                             ; 97CF 0A                       .
+L97D0:
+        .byte   "On the peak of a\dangerous moun"; 97D0 4F 6E 20 74 68 65 20 70 On the p
+                                                ; 97D8 65 61 6B 20 6F 66 20 61  eak of a
+                                                ; 97E0 5C 64 61 6E 67 65 72 6F  \dangero
+                                                ; 97E8 75 73 20 6D 6F 75 6E     us moun
+        .byte   "tain\__lives the Evil\Dragon Ki"; 97EF 74 61 69 6E 5C 5F 5F 6C tain\__l
+                                                ; 97F7 69 76 65 73 20 74 68 65  ives the
+                                                ; 97FF 20 45 76 69 6C 5C 44 72   Evil\Dr
+                                                ; 9807 61 67 6F 6E 20 4B 69     agon Ki
+        .byte   "ng,\Valvados__who's\kidnapped P"; 980E 6E 67 2C 5C 56 61 6C 76 ng,\Valv
+                                                ; 9816 61 64 6F 73 5F 5F 77 68  ados__wh
+                                                ; 981E 6F 27 73 5C 6B 69 64 6E  o's\kidn
+                                                ; 9826 61 70 70 65 64 20 50     apped P
+        .byte   "rincess Rosa!"                 ; 982D 72 69 6E 63 65 73 73 20  rincess 
+                                                ; 9835 52 6F 73 61 21           Rosa!
+        .byte   $0A                             ; 983A 0A                       .
+L983B:
+        .byte   "@1What is the Evil\Dragon King'"; 983B 40 31 57 68 61 74 20 69 @1What i
+                                                ; 9843 73 20 74 68 65 20 45 76  s the Ev
+                                                ; 984B 69 6C 5C 44 72 61 67 6F  il\Drago
+                                                ; 9853 6E 20 4B 69 6E 67 27     n King'
+        .byte   "s\weakness?"                   ; 985A 73 5C 77 65 61 6B 6E 65  s\weakne
+                                                ; 9862 73 73 3F                 ss?
+        .byte   $0A                             ; 9865 0A                       .
+L9866:
+        .byte   "Wizard: Ahh, the\weakness of th"; 9866 57 69 7A 61 72 64 3A 20 Wizard: 
+                                                ; 986E 41 68 68 2C 20 74 68 65  Ahh, the
+                                                ; 9876 5C 77 65 61 6B 6E 65 73  \weaknes
+                                                ; 987E 73 20 6F 66 20 74 68     s of th
+        .byte   "e\Evil Dragon King.\It must be,"; 9885 65 5C 45 76 69 6C 20 44 e\Evil D
+                                                ; 988D 72 61 67 6F 6E 20 4B 69  ragon Ki
+                                                ; 9895 6E 67 2E 5C 49 74 20 6D  ng.\It m
+                                                ; 989D 75 73 74 20 62 65 2C     ust be,
+        .byte   " it\must be__Yes, it\must be__T"; 98A4 20 69 74 5C 6D 75 73 74  it\must
+                                                ; 98AC 20 62 65 5F 5F 59 65 73   be__Yes
+                                                ; 98B4 2C 20 69 74 5C 6D 75 73  , it\mus
+                                                ; 98BC 74 20 62 65 5F 5F 54     t be__T
+        .byte   "rue love!"                     ; 98C3 72 75 65 20 6C 6F 76 65  rue love
+                                                ; 98CB 21                       !
+        .byte   $0A                             ; 98CC 0A                       .
+L98CD:
+        .byte   "The power of love__is the only "; 98CD 54 68 65 20 70 6F 77 65 The powe
+                                                ; 98D5 72 20 6F 66 20 6C 6F 76  r of lov
+                                                ; 98DD 65 5F 5F 69 73 20 74 68  e__is th
+                                                ; 98E5 65 20 6F 6E 6C 79 20     e only 
+        .byte   "weapon that can withstand the f"; 98EC 77 65 61 70 6F 6E 20 74 weapon t
+                                                ; 98F4 68 61 74 20 63 61 6E 20  hat can 
+                                                ; 98FC 77 69 74 68 73 74 61 6E  withstan
+                                                ; 9904 64 20 74 68 65 20 66     d the f
+        .byte   "angs of the\Evil Dragon King__!"; 990B 61 6E 67 73 20 6F 66 20 angs of 
+                                                ; 9913 74 68 65 5C 45 76 69 6C  the\Evil
+                                                ; 991B 20 44 72 61 67 6F 6E 20   Dragon 
+                                                ; 9923 4B 69 6E 67 5F 5F 21     King__!
+        .byte   $0A                             ; 992A 0A                       .
 L992B:
-        .byte   "Potion"                        ; 992B 50 6F 74 69 6F 6E        Potion
-        .byte   $0D,$0A                         ; 9931 0D 0A                    ..
-L9933:
-        .byte   "Hi-Potion"                     ; 9933 48 69 2D 50 6F 74 69 6F  Hi-Potio
-                                                ; 993B 6E                       n
-        .byte   $0D                             ; 993C 0D                       .
-L993D:
-        .byte   "Low-Mega"                      ; 993D 4C 6F 77 2D 4D 65 67 61  Low-Mega
-        .byte   $0D,$0A                         ; 9945 0D 0A                    ..
-L9947:
-        .byte   "X-Potion"                      ; 9947 58 2D 50 6F 74 69 6F 6E  X-Potion
-        .byte   $0D,$0A                         ; 994F 0D 0A                    ..
-L9951:
-        .byte   "Mega"                          ; 9951 4D 65 67 61              Mega
-        .byte   $0D,$0A                         ; 9955 0D 0A                    ..
-L9957:
-        .byte   "Hi-Mega"                       ; 9957 48 69 2D 4D 65 67 61     Hi-Mega
-        .byte   $0D                             ; 995E 0D                       .
-L995F:
-        .byte   "X-Mega"                        ; 995F 58 2D 4D 65 67 61        X-Mega
-        .byte   $0D,$0A                         ; 9965 0D 0A                    ..
-L9967:
-        .byte   "Ether"                         ; 9967 45 74 68 65 72           Ether
-        .byte   $0D,$0A                         ; 996C 0D 0A                    ..
-L996E:
-        .byte   "Hi-Ether"                      ; 996E 48 69 2D 45 74 68 65 72  Hi-Ether
-        .byte   $0D                             ; 9976 0D                       .
-L9977:
-        .byte   "Phoenix"                       ; 9977 50 68 6F 65 6E 69 78     Phoenix
-        .byte   $0D,$0A                         ; 997E 0D 0A                    ..
-L9980:
-        .byte   "Smoke"                         ; 9980 53 6D 6F 6B 65           Smoke
-        .byte   $0D,$0A                         ; 9985 0D 0A                    ..
-        .byte   "HP+"                           ; 9987 48 50 2B                 HP+
-        .byte   $0D,$0A                         ; 998A 0D 0A                    ..
-L998C:
-        .byte   "Str+"                          ; 998C 53 74 72 2B              Str+
-        .byte   $0D,$0A                         ; 9990 0D 0A                    ..
-L9992:
-        .byte   "Vit+"                          ; 9992 56 69 74 2B              Vit+
-        .byte   $0D,$0A                         ; 9996 0D 0A                    ..
-L9998:
-        .byte   "Int+"                          ; 9998 49 6E 74 2B              Int+
-        .byte   $0D,$0A                         ; 999C 0D 0A                    ..
-L999E:
-        .byte   "Spr+"                          ; 999E 53 70 72 2B              Spr+
-        .byte   $0D,$0A                         ; 99A2 0D 0A                    ..
-L99A4:
-        .byte   "Agl+"                          ; 99A4 41 67 6C 2B              Agl+
-        .byte   $0D,$0A                         ; 99A8 0D 0A                    ..
-L99AA:
-        .byte   "Battery"                       ; 99AA 42 61 74 74 65 72 79     Battery
-        .byte   $0D,$0A                         ; 99B1 0D 0A                    ..
-L99B3:
-        .byte   "ChocLure"                      ; 99B3 43 68 6F 63 4C 75 72 65  ChocLure
-        .byte   $0D,$0A                         ; 99BB 0D 0A                    ..
-L99BD:
-        .byte   "DynePend"                      ; 99BD 44 79 6E 65 50 65 6E 64  DynePend
-        .byte   $0D,$0A                         ; 99C5 0D 0A                    ..
-L99C7:
-        .byte   "KeyStone"                      ; 99C7 4B 65 79 53 74 6F 6E 65  KeyStone
-        .byte   $0D,$0A                         ; 99CF 0D 0A                    ..
-L99D1:
-        .byte   "Black"                         ; 99D1 42 6C 61 63 6B           Black
-        .byte   $87,$0D,$0A                     ; 99D6 87 0D 0A                 ...
-L99D9:
-        .byte   "LunrHarp"                      ; 99D9 4C 75 6E 72 48 61 72 70  LunrHarp
-        .byte   $0D,$0A                         ; 99E1 0D 0A                    ..
-L99E3:
-        .byte   "61F Card"                      ; 99E3 36 31 46 20 43 61 72 64  61F Card
-        .byte   $0D,$0A                         ; 99EB 0D 0A                    ..
-L99ED:
-        .byte   "62F Card"                      ; 99ED 36 32 46 20 43 61 72 64  62F Card
-        .byte   $0D,$0A                         ; 99F5 0D 0A                    ..
-L99F7:
-        .byte   "64F Card"                      ; 99F7 36 34 46 20 43 61 72 64  64F Card
-        .byte   $0D,$0A                         ; 99FF 0D 0A                    ..
-L9A01:
-        .byte   "65F Card"                      ; 9A01 36 35 46 20 43 61 72 64  65F Card
-        .byte   $0D,$0A                         ; 9A09 0D 0A                    ..
-L9A0B:
-        .byte   "66F Card"                      ; 9A0B 36 36 46 20 43 61 72 64  66F Card
-        .byte   $0D,$0A                         ; 9A13 0D 0A                    ..
-L9A15:
-        .byte   "68F Card"                      ; 9A15 36 38 46 20 43 61 72 64  68F Card
-        .byte   $0D,$0A                         ; 9A1D 0D 0A                    ..
-L9A1F:
-        .byte   "Snowbord"                      ; 9A1F 53 6E 6F 77 62 6F 72 64  Snowbord
-        .byte   $0D,$0A                         ; 9A27 0D 0A                    ..
-L9A29:
-        .byte   "Map"                           ; 9A29 4D 61 70                 Map
-        .byte   $0D,$0A,$FF,$FF                 ; 9A2C 0D 0A FF FF              ....
-; ----------------------------------------------------------------------------
-L9A30:
-        .addr   L9A70                           ; 9A30 70 9A                    p.
-        .addr   LA452                           ; 9A32 52 A4                    R.
-        .addr   LA473                           ; 9A34 73 A4                    s.
-        .addr   LA4BB                           ; 9A36 BB A4                    ..
-        .addr   LA497                           ; 9A38 97 A4                    ..
-        .addr   LA4D9                           ; 9A3A D9 A4                    ..
-        .addr   LA4F7                           ; 9A3C F7 A4                    ..
-        .addr   LA515                           ; 9A3E 15 A5                    ..
-        .addr   LA536                           ; 9A40 36 A5                    6.
-        .addr   LA556                           ; 9A42 56 A5                    V.
-        .addr   LA57B                           ; 9A44 7B A5                    {.
-        .addr   LA5AA                           ; 9A46 AA A5                    ..
-        .addr   LA42B                           ; 9A48 2B A4                    +.
-        .addr   L9B87                           ; 9A4A 87 9B                    ..
-        .addr   L9B94                           ; 9A4C 94 9B                    ..
-        .addr   L9BA1                           ; 9A4E A1 9B                    ..
-        .addr   L9BB2                           ; 9A50 B2 9B                    ..
-        .addr   L9BBD                           ; 9A52 BD 9B                    ..
-        .addr   L9BC9                           ; 9A54 C9 9B                    ..
-        .addr   L9BDE                           ; 9A56 DE 9B                    ..
-        .addr   L9BFA                           ; 9A58 FA 9B                    ..
-        .addr   L9C0A                           ; 9A5A 0A 9C                    ..
-        .addr   L9C27                           ; 9A5C 27 9C                    '.
-        .addr   L9C4B                           ; 9A5E 4B 9C                    K.
-        .addr   L9C66                           ; 9A60 66 9C                    f.
-        .addr   L9C72                           ; 9A62 72 9C                    r.
-        .addr   L9C7E                           ; 9A64 7E 9C                    ~.
-        .addr   L9C8A                           ; 9A66 8A 9C                    ..
-        .addr   L9C96                           ; 9A68 96 9C                    ..
-        .addr   L9CA2                           ; 9A6A A2 9C                    ..
-        .addr   L9CAE                           ; 9A6C AE 9C                    ..
-        .addr   L9CCA                           ; 9A6E CA 9C                    ..
-; ----------------------------------------------------------------------------
-L9A70:
-        .byte   "Nothing__"                     ; 9A70 4E 6F 74 68 69 6E 67 5F  Nothing_
-                                                ; 9A78 5F                       _
-        .byte   $0D,$0A                         ; 9A79 0D 0A                    ..
-        .byte   "Restore 500 HP to  ally"       ; 9A7B 52 65 73 74 6F 72 65 20  Restore 
-                                                ; 9A83 35 30 30 20 48 50 20 74  500 HP t
-                                                ; 9A8B 6F 20 20 61 6C 6C 79     o  ally
-        .byte   $0D,$0A                         ; 9A92 0D 0A                    ..
-        .byte   "Restore 1000 HP to ally"       ; 9A94 52 65 73 74 6F 72 65 20  Restore 
-                                                ; 9A9C 31 30 30 30 20 48 50 20  1000 HP 
-                                                ; 9AA4 74 6F 20 61 6C 6C 79     to ally
-        .byte   $0D,$0A                         ; 9AAB 0D 0A                    ..
-        .byte   "Restore 200 HP to  all "       ; 9AAD 52 65 73 74 6F 72 65 20  Restore 
-                                                ; 9AB5 32 30 30 20 48 50 20 74  200 HP t
-                                                ; 9ABD 6F 20 20 61 6C 6C 20     o  all 
-        .byte   $0D,$0A                         ; 9AC4 0D 0A                    ..
-        .byte   "Restore all HP to  ally"       ; 9AC6 52 65 73 74 6F 72 65 20  Restore 
-                                                ; 9ACE 61 6C 6C 20 48 50 20 74  all HP t
-                                                ; 9AD6 6F 20 20 61 6C 6C 79     o  ally
-        .byte   $0D,$0A                         ; 9ADD 0D 0A                    ..
-        .byte   "Restore 500 HP to  all"        ; 9ADF 52 65 73 74 6F 72 65 20  Restore 
-                                                ; 9AE7 35 30 30 20 48 50 20 74  500 HP t
-                                                ; 9AEF 6F 20 20 61 6C 6C        o  all
-        .byte   $0D,$0A                         ; 9AF5 0D 0A                    ..
-        .byte   "Restore 1000 HP to all"        ; 9AF7 52 65 73 74 6F 72 65 20  Restore 
-                                                ; 9AFF 31 30 30 30 20 48 50 20  1000 HP 
-                                                ; 9B07 74 6F 20 61 6C 6C        to all
-        .byte   $0D,$0A                         ; 9B0D 0D 0A                    ..
-        .byte   "Recover 100% HP to all"        ; 9B0F 52 65 63 6F 76 65 72 20  Recover 
-                                                ; 9B17 31 30 30 25 20 48 50 20  100% HP 
-                                                ; 9B1F 74 6F 20 61 6C 6C        to all
-        .byte   $0D,$0A                         ; 9B25 0D 0A                    ..
-        .byte   "Restore 5 MP to a  spell"      ; 9B27 52 65 73 74 6F 72 65 20  Restore 
-                                                ; 9B2F 35 20 4D 50 20 74 6F 20  5 MP to 
-                                                ; 9B37 61 20 20 73 70 65 6C 6C  a  spell
-        .byte   $0D,$0A                         ; 9B3F 0D 0A                    ..
-        .byte   "Restore all MP to aspell"      ; 9B41 52 65 73 74 6F 72 65 20  Restore 
-                                                ; 9B49 61 6C 6C 20 4D 50 20 74  all MP t
-                                                ; 9B51 6F 20 61 73 70 65 6C 6C  o aspell
-        .byte   $0D,$0A                         ; 9B59 0D 0A                    ..
-        .byte   "Revive ally"                   ; 9B5B 52 65 76 69 76 65 20 61  Revive a
-                                                ; 9B63 6C 6C 79                 lly
-        .byte   $0D,$0A                         ; 9B66 0D 0A                    ..
-        .byte   "Escape from battle"            ; 9B68 45 73 63 61 70 65 20 66  Escape f
-                                                ; 9B70 72 6F 6D 20 62 61 74 74  rom batt
-                                                ; 9B78 6C 65                    le
-        .byte   $0D,$0A                         ; 9B7A 0D 0A                    ..
-        .byte   "Max HP +50"                    ; 9B7C 4D 61 78 20 48 50 20 2B  Max HP +
-                                                ; 9B84 35 30                    50
-        .byte   $0D                             ; 9B86 0D                       .
-L9B87:
-        .byte   "Strength +1 "                  ; 9B87 53 74 72 65 6E 67 74 68  Strength
-                                                ; 9B8F 20 2B 31 20               +1 
-        .byte   $0D                             ; 9B93 0D                       .
+        .byte   "Narrator:Oh what\is going to ha"; 992B 4E 61 72 72 61 74 6F 72 Narrator
+                                                ; 9933 3A 4F 68 20 77 68 61 74  :Oh what
+                                                ; 993B 5C 69 73 20 67 6F 69 6E  \is goin
+                                                ; 9943 67 20 74 6F 20 68 61     g to ha
+        .byte   "ppen\next__!\Oh__Legendary\Hero"; 994A 70 70 65 6E 5C 6E 65 78 ppen\nex
+                                                ; 9952 74 5F 5F 21 5C 4F 68 5F  t__!\Oh_
+                                                ; 995A 5F 4C 65 67 65 6E 64 61  _Legenda
+                                                ; 9962 72 79 5C 48 65 72 6F     ry\Hero
+        .byte   "__look!"                       ; 9969 5F 5F 6C 6F 6F 6B 21     __look!
+        .byte   $0A                             ; 9970 0A                       .
+L9971:
+        .byte   "Evil Dragon King:\Gaaaaaah!"   ; 9971 45 76 69 6C 20 44 72 61  Evil Dra
+                                                ; 9979 67 6F 6E 20 4B 69 6E 67  gon King
+                                                ; 9981 3A 5C 47 61 61 61 61 61  :\Gaaaaa
+                                                ; 9989 61 68 21                 ah!
+        .byte   $0A                             ; 998C 0A                       .
+L998D:
+        .byte   "I am the Evil\Dragon King \Valv"; 998D 49 20 61 6D 20 74 68 65 I am the
+                                                ; 9995 20 45 76 69 6C 5C 44 72   Evil\Dr
+                                                ; 999D 61 67 6F 6E 20 4B 69 6E  agon Kin
+                                                ; 99A5 67 20 5C 56 61 6C 76     g \Valv
+        .byte   "ados! I have\not harmed the\Pri"; 99AC 61 64 6F 73 21 20 49 20 ados! I 
+                                                ; 99B4 68 61 76 65 5C 6E 6F 74  have\not
+                                                ; 99BC 20 68 61 72 6D 65 64 20   harmed 
+                                                ; 99C4 74 68 65 5C 50 72 69     the\Pri
+        .byte   "ncess__I have\been expecting \y"; 99CB 6E 63 65 73 73 5F 5F 49 ncess__I
+                                                ; 99D3 20 68 61 76 65 5C 62 65   have\be
+                                                ; 99DB 65 6E 20 65 78 70 65 63  en expec
+                                                ; 99E3 74 69 6E 67 20 5C 79     ting \y
+        .byte   "ou!"                           ; 99EA 6F 75 21                 ou!
+        .byte   $0A                             ; 99ED 0A                       .
+L99EE:
+        .byte   "@4Princess: Please\help me__Leg"; 99EE 40 34 50 72 69 6E 63 65 @4Prince
+                                                ; 99F6 73 73 3A 20 50 6C 65 61  ss: Plea
+                                                ; 99FE 73 65 5C 68 65 6C 70 20  se\help 
+                                                ; 9A06 6D 65 5F 5F 4C 65 67     me__Leg
+        .byte   "endary\Hero!"                  ; 9A0D 65 6E 64 61 72 79 5C 48  endary\H
+                                                ; 9A15 65 72 6F 21              ero!
+        .byte   $0A                             ; 9A19 0A                       .
+L9A1A:
+        .byte   "@4(Psst__like\that?)"          ; 9A1A 40 34 28 50 73 73 74 5F  @4(Psst_
+                                                ; 9A22 5F 6C 69 6B 65 5C 74 68  _like\th
+                                                ; 9A2A 61 74 3F 29              at?)
+        .byte   $0A                             ; 9A2E 0A                       .
+L9A2F:
+        .byte   "Valvados: Gaaah!\Here I come\Le"; 9A2F 56 61 6C 76 61 64 6F 73 Valvados
+                                                ; 9A37 3A 20 47 61 61 61 68 21  : Gaaah!
+                                                ; 9A3F 5C 48 65 72 65 20 49 20  \Here I 
+                                                ; 9A47 63 6F 6D 65 5C 4C 65     come\Le
+        .byte   "gendary Hero \Alfred! I already"; 9A4E 67 65 6E 64 61 72 79 20 gendary 
+                                                ; 9A56 48 65 72 6F 20 5C 41 6C  Hero \Al
+                                                ; 9A5E 66 72 65 64 21 20 49 20  fred! I 
+                                                ; 9A66 61 6C 72 65 61 64 79     already
+        .byte   "\know__your name!\Gaaaah!"     ; 9A6D 5C 6B 6E 6F 77 5F 5F 79  \know__y
+                                                ; 9A75 6F 75 72 20 6E 61 6D 65  our name
+                                                ; 9A7D 21 5C 47 61 61 61 61 68  !\Gaaaah
+                                                ; 9A85 21                       !
+        .byte   $0A                             ; 9A86 0A                       .
+L9A87:
+        .byte   "Wizard: Hurry! A\kiss! The powe"; 9A87 57 69 7A 61 72 64 3A 20 Wizard: 
+                                                ; 9A8F 48 75 72 72 79 21 20 41  Hurry! A
+                                                ; 9A97 5C 6B 69 73 73 21 20 54  \kiss! T
+                                                ; 9A9F 68 65 20 70 6F 77 65     he powe
+        .byte   "r of True Love!!"              ; 9AA6 72 20 6F 66 20 54 72 75  r of Tru
+                                                ; 9AAE 65 20 4C 6F 76 65 21 21  e Love!!
+        .byte   $0A                             ; 9AB6 0A                       .
+L9AB7:
+        .byte   "Valvados:Wh,what!?\____URRRRGH!"; 9AB7 56 61 6C 76 61 64 6F 73 Valvados
+                                                ; 9ABF 3A 57 68 2C 77 68 61 74  :Wh,what
+                                                ; 9AC7 21 3F 5C 5F 5F 5F 5F 55  !?\____U
+                                                ; 9ACF 52 52 52 52 47 48 21     RRRRGH!
+        .byte   "!"                             ; 9AD6 21                       !
+        .byte   $0A                             ; 9AD7 0A                       .
+L9AD8:
+        .byte   "Beautiful Girl:\Thank you, You'"; 9AD8 42 65 61 75 74 69 66 75 Beautifu
+                                                ; 9AE0 6C 20 47 69 72 6C 3A 5C  l Girl:\
+                                                ; 9AE8 54 68 61 6E 6B 20 79 6F  Thank yo
+                                                ; 9AF0 75 2C 20 59 6F 75 27     u, You'
+        .byte   "ve\released me__from\the spell "; 9AF7 76 65 5C 72 65 6C 65 61 ve\relea
+                                                ; 9AFF 73 65 64 20 6D 65 5F 5F  sed me__
+                                                ; 9B07 66 72 6F 6D 5C 74 68 65  from\the
+                                                ; 9B0F 20 73 70 65 6C 6C 20      spell 
+        .byte   "and I\am back to my\normal self"; 9B16 61 6E 64 20 49 5C 61 6D and I\am
+                                                ; 9B1E 20 62 61 63 6B 20 74 6F   back to
+                                                ; 9B26 20 6D 79 5C 6E 6F 72 6D   my\norm
+                                                ; 9B2E 61 6C 20 73 65 6C 66     al self
+        .byte   "__"                            ; 9B35 5F 5F                    __
+        .byte   $0A                             ; 9B37 0A                       .
+L9B38:
+        .byte   "Wizard:Oh look!\Love has triump"; 9B38 57 69 7A 61 72 64 3A 4F Wizard:O
+                                                ; 9B40 68 20 6C 6F 6F 6B 21 5C  h look!\
+                                                ; 9B48 4C 6F 76 65 20 68 61 73  Love has
+                                                ; 9B50 20 74 72 69 75 6D 70      triump
+        .byte   "hed!Now let's all\return to\cel"; 9B57 68 65 64 21 4E 6F 77 20 hed!Now 
+                                                ; 9B5F 6C 65 74 27 73 20 61 6C  let's al
+                                                ; 9B67 6C 5C 72 65 74 75 72 6E  l\return
+                                                ; 9B6F 20 74 6F 5C 63 65 6C      to\cel
+        .byte   "ebrate!  "                     ; 9B76 65 62 72 61 74 65 21 20  ebrate! 
+                                                ; 9B7E 20                        
+        .byte   $0A                             ; 9B7F 0A                       .
+L9B80:
+        .byte   "@4Wh,what is this!?"           ; 9B80 40 34 57 68 2C 77 68 61  @4Wh,wha
+                                                ; 9B88 74 20 69 73 20 74 68 69  t is thi
+                                                ; 9B90 73 21 3F                 s!?
+        .byte   $0A                             ; 9B93 0A                       .
 L9B94:
-        .byte   "Vitality +1 "                  ; 9B94 56 69 74 61 6C 69 74 79  Vitality
-                                                ; 9B9C 20 2B 31 20               +1 
-        .byte   $0D                             ; 9BA0 0D                       .
-L9BA1:
-        .byte   "Intelligence +1 "              ; 9BA1 49 6E 74 65 6C 6C 69 67  Intellig
-                                                ; 9BA9 65 6E 63 65 20 2B 31 20  ence +1 
-        .byte   $0D                             ; 9BB1 0D                       .
-L9BB2:
-        .byte   "Spirit +1 "                    ; 9BB2 53 70 69 72 69 74 20 2B  Spirit +
-                                                ; 9BBA 31 20                    1 
-        .byte   $0D                             ; 9BBC 0D                       .
-L9BBD:
-        .byte   "Agility +1 "                   ; 9BBD 41 67 69 6C 69 74 79 20  Agility 
-                                                ; 9BC5 2B 31 20                 +1 
-        .byte   $0D                             ; 9BC8 0D                       .
-L9BC9:
-        .byte   "Provide electricity"           ; 9BC9 50 72 6F 76 69 64 65 20  Provide 
-                                                ; 9BD1 65 6C 65 63 74 72 69 63  electric
-                                                ; 9BD9 69 74 79                 ity
-        .byte   $0D,$0A                         ; 9BDC 0D 0A                    ..
-L9BDE:
-        .byte   "Need this to catch chocobo"    ; 9BDE 4E 65 65 64 20 74 68 69  Need thi
-                                                ; 9BE6 73 20 74 6F 20 63 61 74  s to cat
-                                                ; 9BEE 63 68 20 63 68 6F 63 6F  ch choco
-                                                ; 9BF6 62 6F                    bo
-        .byte   $0D,$0A                         ; 9BF8 0D 0A                    ..
-L9BFA:
-        .byte   "Dyne's Pendant"                ; 9BFA 44 79 6E 65 27 73 20 50  Dyne's P
-                                                ; 9C02 65 6E 64 61 6E 74        endant
-        .byte   $0D,$0A                         ; 9C08 0D 0A                    ..
-L9C0A:
-        .byte   "Enter Temple of theAncients"   ; 9C0A 45 6E 74 65 72 20 54 65  Enter Te
-                                                ; 9C12 6D 70 6C 65 20 6F 66 20  mple of 
-                                                ; 9C1A 74 68 65 41 6E 63 69 65  theAncie
-                                                ; 9C22 6E 74 73                 nts
-        .byte   $0D,$0A                         ; 9C25 0D 0A                    ..
-L9C27:
-        .byte   "Summon Meteor      __Don't do t"; 9C27 53 75 6D 6D 6F 6E 20 4D Summon M
-                                                ; 9C2F 65 74 65 6F 72 20 20 20  eteor   
-                                                ; 9C37 20 20 20 5F 5F 44 6F 6E     __Don
-                                                ; 9C3F 27 74 20 64 6F 20 74     't do t
-        .byte   "hat"                           ; 9C46 68 61 74                 hat
-        .byte   $0D,$0A                         ; 9C49 0D 0A                    ..
-L9C4B:
-        .byte   "Awaken Sleeping    Forest"     ; 9C4B 41 77 61 6B 65 6E 20 53  Awaken S
-                                                ; 9C53 6C 65 65 70 69 6E 67 20  leeping 
-                                                ; 9C5B 20 20 20 46 6F 72 65 73     Fores
-                                                ; 9C63 74                       t
-        .byte   $0D,$0A                         ; 9C64 0D 0A                    ..
-L9C66:
-        .byte   "Access 61F"                    ; 9C66 41 63 63 65 73 73 20 36  Access 6
-                                                ; 9C6E 31 46                    1F
-        .byte   $0D,$0A                         ; 9C70 0D 0A                    ..
-L9C72:
-        .byte   "Access 62F"                    ; 9C72 41 63 63 65 73 73 20 36  Access 6
-                                                ; 9C7A 32 46                    2F
-        .byte   $0D,$0A                         ; 9C7C 0D 0A                    ..
-L9C7E:
-        .byte   "Access 64F"                    ; 9C7E 41 63 63 65 73 73 20 36  Access 6
-                                                ; 9C86 34 46                    4F
-        .byte   $0D,$0A                         ; 9C88 0D 0A                    ..
-L9C8A:
-        .byte   "Access 65F"                    ; 9C8A 41 63 63 65 73 73 20 36  Access 6
-                                                ; 9C92 35 46                    5F
-        .byte   $0D,$0A                         ; 9C94 0D 0A                    ..
-L9C96:
-        .byte   "Access 66F"                    ; 9C96 41 63 63 65 73 73 20 36  Access 6
-                                                ; 9C9E 36 46                    6F
-        .byte   $0D,$0A                         ; 9CA0 0D 0A                    ..
-L9CA2:
-        .byte   "Access 68F"                    ; 9CA2 41 63 63 65 73 73 20 36  Access 6
-                                                ; 9CAA 38 46                    8F
-        .byte   $0D,$0A                         ; 9CAC 0D 0A                    ..
-L9CAE:
-        .byte   "Get to Great       Glacier"    ; 9CAE 47 65 74 20 74 6F 20 47  Get to G
-                                                ; 9CB6 72 65 61 74 20 20 20 20  reat    
-                                                ; 9CBE 20 20 20 47 6C 61 63 69     Glaci
-                                                ; 9CC6 65 72                    er
-        .byte   $0D,$0A                         ; 9CC8 0D 0A                    ..
-L9CCA:
-        .byte   "Map of Great       Glacier"    ; 9CCA 4D 61 70 20 6F 66 20 47  Map of G
-                                                ; 9CD2 72 65 61 74 20 20 20 20  reat    
-                                                ; 9CDA 20 20 20 47 6C 61 63 69     Glaci
-                                                ; 9CE2 65 72                    er
-        .byte   $0D,$0A,$FF,$FF                 ; 9CE4 0D 0A FF FF              ....
-; ----------------------------------------------------------------------------
-L9CE8:
-        .addr   L9DB0                           ; 9CE8 B0 9D                    ..
-        .addr   L9DB9                           ; 9CEA B9 9D                    ..
-        .addr   L9DC0                           ; 9CEC C0 9D                    ..
-        .addr   L9DC8                           ; 9CEE C8 9D                    ..
-        .addr   L9DCE                           ; 9CF0 CE 9D                    ..
-        .addr   L9DD5                           ; 9CF2 D5 9D                    ..
-        .addr   L9DDC                           ; 9CF4 DC 9D                    ..
-        .addr   L9DE6                           ; 9CF6 E6 9D                    ..
-        .addr   L9DEB                           ; 9CF8 EB 9D                    ..
-        .addr   L9DF4                           ; 9CFA F4 9D                    ..
-        .addr   L9DFE                           ; 9CFC FE 9D                    ..
-        .addr   L9E08                           ; 9CFE 08 9E                    ..
-        .addr   L9E0E                           ; 9D00 0E 9E                    ..
-        .addr   L9E16                           ; 9D02 16 9E                    ..
-        .addr   L9DB0                           ; 9D04 B0 9D                    ..
-        .addr   L9E25                           ; 9D06 25 9E                    %.
-        .addr   L9E2A                           ; 9D08 2A 9E                    *.
-        .addr   L9E34                           ; 9D0A 34 9E                    4.
-        .addr   L9E3E                           ; 9D0C 3E 9E                    >.
-        .addr   L9E45                           ; 9D0E 45 9E                    E.
-        .addr   L9E4F                           ; 9D10 4F 9E                    O.
-        .addr   L9E59                           ; 9D12 59 9E                    Y.
-        .addr   L9E63                           ; 9D14 63 9E                    c.
-        .addr   L9E6B                           ; 9D16 6B 9E                    k.
-        .addr   L9E71                           ; 9D18 71 9E                    q.
-        .addr   L9E77                           ; 9D1A 77 9E                    w.
-        .addr   L9E81                           ; 9D1C 81 9E                    ..
-        .addr   L9E85                           ; 9D1E 85 9E                    ..
-        .addr   L9E8D                           ; 9D20 8D 9E                    ..
-        .addr   L9E97                           ; 9D22 97 9E                    ..
-        .addr   L9EA1                           ; 9D24 A1 9E                    ..
-        .addr   L9EA8                           ; 9D26 A8 9E                    ..
-        .addr   L9EB2                           ; 9D28 B2 9E                    ..
-        .addr   L9EBB                           ; 9D2A BB 9E                    ..
-        .addr   L9EC5                           ; 9D2C C5 9E                    ..
-        .addr   LA1CB                           ; 9D2E CB A1                    ..
-        .addr   L9ED4                           ; 9D30 D4 9E                    ..
-        .addr   LA1DC                           ; 9D32 DC A1                    ..
-        .addr   LA1E6                           ; 9D34 E6 A1                    ..
-        .addr   LA1F0                           ; 9D36 F0 A1                    ..
-        .addr   LA1F9                           ; 9D38 F9 A1                    ..
-        .addr   LA201                           ; 9D3A 01 A2                    ..
-        .addr   LA20B                           ; 9D3C 0B A2                    ..
-        .addr   LA215                           ; 9D3E 15 A2                    ..
-        .addr   LA21E                           ; 9D40 1E A2                    ..
-        .addr   LA227                           ; 9D42 27 A2                    '.
-        .addr   LA22F                           ; 9D44 2F A2                    /.
-        .addr   LA237                           ; 9D46 37 A2                    7.
-        .addr   LA23F                           ; 9D48 3F A2                    ?.
-        .addr   LA248                           ; 9D4A 48 A2                    H.
-        .addr   LA252                           ; 9D4C 52 A2                    R.
-        .addr   LA25C                           ; 9D4E 5C A2                    \.
-        .addr   LA266                           ; 9D50 66 A2                    f.
-        .addr   LA26F                           ; 9D52 6F A2                    o.
-        .addr   LA273                           ; 9D54 73 A2                    s.
-        .addr   LA27D                           ; 9D56 7D A2                    }.
-        .addr   LA284                           ; 9D58 84 A2                    ..
-        .addr   LA28E                           ; 9D5A 8E A2                    ..
-        .addr   LA298                           ; 9D5C 98 A2                    ..
-        .addr   LA2A2                           ; 9D5E A2 A2                    ..
-        .addr   LA2AC                           ; 9D60 AC A2                    ..
-        .addr   LA2B6                           ; 9D62 B6 A2                    ..
-        .addr   LA2BF                           ; 9D64 BF A2                    ..
-        .addr   LA2C5                           ; 9D66 C5 A2                    ..
-        .addr   LA2CF                           ; 9D68 CF A2                    ..
-        .addr   LA2D8                           ; 9D6A D8 A2                    ..
-        .addr   LA2DF                           ; 9D6C DF A2                    ..
-        .addr   LA2E9                           ; 9D6E E9 A2                    ..
-        .addr   LA2F3                           ; 9D70 F3 A2                    ..
-        .addr   LA2FD                           ; 9D72 FD A2                    ..
-        .addr   LA307                           ; 9D74 07 A3                    ..
-        .addr   LA310                           ; 9D76 10 A3                    ..
-        .addr   LA318                           ; 9D78 18 A3                    ..
-        .addr   LA322                           ; 9D7A 22 A3                    ".
-        .addr   LA32B                           ; 9D7C 2B A3                    +.
-        .addr   LA335                           ; 9D7E 35 A3                    5.
-        .addr   LA33B                           ; 9D80 3B A3                    ;.
-        .addr   LA342                           ; 9D82 42 A3                    B.
-        .addr   LA34A                           ; 9D84 4A A3                    J.
-        .addr   LA354                           ; 9D86 54 A3                    T.
-        .addr   LA35D                           ; 9D88 5D A3                    ].
-        .addr   LA365                           ; 9D8A 65 A3                    e.
-        .addr   LA36F                           ; 9D8C 6F A3                    o.
-        .addr   LA379                           ; 9D8E 79 A3                    y.
-        .addr   LA383                           ; 9D90 83 A3                    ..
-        .addr   LA38C                           ; 9D92 8C A3                    ..
-        .addr   LA396                           ; 9D94 96 A3                    ..
-        .addr   LA39F                           ; 9D96 9F A3                    ..
-        .addr   LA3A9                           ; 9D98 A9 A3                    ..
-        .addr   LA3B1                           ; 9D9A B1 A3                    ..
-        .addr   LA3BB                           ; 9D9C BB A3                    ..
-        .addr   LA3C4                           ; 9D9E C4 A3                    ..
-        .addr   LA3CE                           ; 9DA0 CE A3                    ..
-        .addr   LA3D8                           ; 9DA2 D8 A3                    ..
-        .addr   LA3E0                           ; 9DA4 E0 A3                    ..
-        .addr   LA3EA                           ; 9DA6 EA A3                    ..
-        .addr   LA3F4                           ; 9DA8 F4 A3                    ..
-        .addr   LA3FE                           ; 9DAA FE A3                    ..
-        .addr   LA408                           ; 9DAC 08 A4                    ..
-        .addr   LA411                           ; 9DAE 11 A4                    ..
-; ----------------------------------------------------------------------------
-L9DB0:
-        .byte   "Lugia209"                      ; 9DB0 4C 75 67 69 61 32 30 39  Lugia209
-        .byte   $0D                             ; 9DB8 0D                       .
-L9DB9:
-        .byte   "Cloud"                         ; 9DB9 43 6C 6F 75 64           Cloud
-        .byte   $0D,$0A                         ; 9DBE 0D 0A                    ..
-L9DC0:
-        .byte   "Barret"                        ; 9DC0 42 61 72 72 65 74        Barret
-        .byte   $0D,$0A                         ; 9DC6 0D 0A                    ..
-L9DC8:
-        .byte   "Tifa"                          ; 9DC8 54 69 66 61              Tifa
-        .byte   $0D,$0A                         ; 9DCC 0D 0A                    ..
-L9DCE:
-        .byte   "Aeris"                         ; 9DCE 41 65 72 69 73           Aeris
-        .byte   $0D,$0A                         ; 9DD3 0D 0A                    ..
-L9DD5:
-        .byte   "RedX`"                         ; 9DD5 52 65 64 58 60           RedX`
-        .byte   $0D,$0A                         ; 9DDA 0D 0A                    ..
-L9DDC:
-        .byte   "CaitSith"                      ; 9DDC 43 61 69 74 53 69 74 68  CaitSith
-        .byte   $0D,$0A                         ; 9DE4 0D 0A                    ..
-L9DE6:
-        .byte   "Cid"                           ; 9DE6 43 69 64                 Cid
-        .byte   $0D,$0A                         ; 9DE9 0D 0A                    ..
-L9DEB:
-        .byte   "Guard"                         ; 9DEB 47 75 61 72 64           Guard
-        .byte   $0D,$0A                         ; 9DF0 0D 0A                    ..
-        .byte   "00"                            ; 9DF2 30 30                    00
-L9DF4:
-        .byte   "Scorpion"                      ; 9DF4 53 63 6F 72 70 69 6F 6E  Scorpion
-        .byte   $0D,$0A                         ; 9DFC 0D 0A                    ..
-L9DFE:
-        .byte   "AirBustr"                      ; 9DFE 41 69 72 42 75 73 74 72  AirBustr
-        .byte   $0D,$0A                         ; 9E06 0D 0A                    ..
-L9E08:
-        .byte   "Reno"                          ; 9E08 52 65 6E 6F              Reno
-        .byte   $0D,$0A                         ; 9E0C 0D 0A                    ..
-L9E0E:
-        .byte   "Flunky"                        ; 9E0E 46 6C 75 6E 6B 79        Flunky
-        .byte   $0D,$0A                         ; 9E14 0D 0A                    ..
-L9E16:
-        .byte   "General"                       ; 9E16 47 65 6E 65 72 61 6C     General
-        .byte   $0D,$0A                         ; 9E1D 0D 0A                    ..
-        .byte   "000000"                        ; 9E1F 30 30 30 30 30 30        000000
-L9E25:
-        .byte   "Aps"                           ; 9E25 41 70 73                 Aps
-        .byte   $0D,$0A                         ; 9E28 0D 0A                    ..
-L9E2A:
-        .byte   "Specimen"                      ; 9E2A 53 70 65 63 69 6D 65 6E  Specimen
-        .byte   $0D,$0A                         ; 9E32 0D 0A                    ..
-L9E34:
-        .byte   "H.Gunner"                      ; 9E34 48 2E 47 75 6E 6E 65 72  H.Gunner
-        .byte   $0D,$0A                         ; 9E3C 0D 0A                    ..
+        .byte   "Narrator: Oh, how\profound the "; 9B94 4E 61 72 72 61 74 6F 72 Narrator
+                                                ; 9B9C 3A 20 4F 68 2C 20 68 6F  : Oh, ho
+                                                ; 9BA4 77 5C 70 72 6F 66 6F 75  w\profou
+                                                ; 9BAC 6E 64 20 74 68 65 20     nd the 
+        .byte   "power of love__And so thelegend"; 9BB3 70 6F 77 65 72 20 6F 66 power of
+                                                ; 9BBB 20 6C 6F 76 65 5F 5F 41   love__A
+                                                ; 9BC3 6E 64 20 73 6F 20 74 68  nd so th
+                                                ; 9BCB 65 6C 65 67 65 6E 64     elegend
+        .byte   "ary hero \Alfred and our\story "; 9BD2 61 72 79 20 68 65 72 6F ary hero
+                                                ; 9BDA 20 5C 41 6C 66 72 65 64   \Alfred
+                                                ; 9BE2 20 61 6E 64 20 6F 75 72   and our
+                                                ; 9BEA 5C 73 74 6F 72 79 20     \story 
+        .byte   "live on\happily ever after."   ; 9BF1 6C 69 76 65 20 6F 6E 5C  live on\
+                                                ; 9BF9 68 61 70 70 69 6C 79 20  happily 
+                                                ; 9C01 65 76 65 72 20 61 66 74  ever aft
+                                                ; 9C09 65 72 2E                 er.
+        .byte   $0A                             ; 9C0C 0A                       .
+L9C0D:
+        .byte   "@4But!__You can't do this!!"   ; 9C0D 40 34 42 75 74 21 5F 5F  @4But!__
+                                                ; 9C15 59 6F 75 20 63 61 6E 27  You can'
+                                                ; 9C1D 74 20 64 6F 20 74 68 69  t do thi
+                                                ; 9C25 73 21 21                 s!!
+        .byte   $0A                             ; 9C28 0A                       .
+L9C29:
+        .byte   "@4___"                         ; 9C29 40 34 5F 5F 5F           @4___
+        .byte   $0A                             ; 9C2E 0A                       .
+L9C2F:
+        .byte   "@1What's wrong Aeris?"         ; 9C2F 40 31 57 68 61 74 27 73  @1What's
+                                                ; 9C37 20 77 72 6F 6E 67 20 41   wrong A
+                                                ; 9C3F 65 72 69 73 3F           eris?
+        .byte   $0A                             ; 9C44 0A                       .
+L9C45:
+        .byte   "@4It's beautiful,\isn't it?"   ; 9C45 40 34 49 74 27 73 20 62  @4It's b
+                                                ; 9C4D 65 61 75 74 69 66 75 6C  eautiful
+                                                ; 9C55 2C 5C 69 73 6E 27 74 20  ,\isn't 
+                                                ; 9C5D 69 74 3F                 it?
+        .byte   $0A                             ; 9C60 0A                       .
+L9C61:
+        .byte   "@4__first off,it\bothered me ho"; 9C61 40 34 5F 5F 66 69 72 73 @4__firs
+                                                ; 9C69 74 20 6F 66 66 2C 69 74  t off,it
+                                                ; 9C71 5C 62 6F 74 68 65 72 65  \bothere
+                                                ; 9C79 64 20 6D 65 20 68 6F     d me ho
+        .byte   "w youlooked exactly\alike.Two\c"; 9C80 77 20 79 6F 75 6C 6F 6F w youloo
+                                                ; 9C88 6B 65 64 20 65 78 61 63  ked exac
+                                                ; 9C90 74 6C 79 5C 61 6C 69 6B  tly\alik
+                                                ; 9C98 65 2E 54 77 6F 5C 63     e.Two\c
+        .byte   "ompletely\different people,\but"; 9C9F 6F 6D 70 6C 65 74 65 6C ompletel
+                                                ; 9CA7 79 5C 64 69 66 66 65 72  y\differ
+                                                ; 9CAF 65 6E 74 20 70 65 6F 70  ent peop
+                                                ; 9CB7 6C 65 2C 5C 62 75 74     le,\but
+        .byte   " look exactly\the same.The way\"; 9CBE 20 6C 6F 6F 6B 20 65 78  look ex
+                                                ; 9CC6 61 63 74 6C 79 5C 74 68  actly\th
+                                                ; 9CCE 65 20 73 61 6D 65 2E 54  e same.T
+                                                ; 9CD6 68 65 20 77 61 79 5C     he way\
+        .byte   "you walk,gesture__Ithink I must"; 9CDD 79 6F 75 20 77 61 6C 6B you walk
+                                                ; 9CE5 2C 67 65 73 74 75 72 65  ,gesture
+                                                ; 9CED 5F 5F 49 74 68 69 6E 6B  __Ithink
+                                                ; 9CF5 20 49 20 6D 75 73 74      I must
+        .byte   " have\seen him again,in\you__" ; 9CFC 20 68 61 76 65 5C 73 65   have\se
+                                                ; 9D04 65 6E 20 68 69 6D 20 61  en him a
+                                                ; 9D0C 67 61 69 6E 2C 69 6E 5C  gain,in\
+                                                ; 9D14 79 6F 75 5F 5F           you__
+        .byte   $0A                             ; 9D19 0A                       .
+L9D1A:
+        .byte   "@4But you're\different."       ; 9D1A 40 34 42 75 74 20 79 6F  @4But yo
+                                                ; 9D22 75 27 72 65 5C 64 69 66  u're\dif
+                                                ; 9D2A 66 65 72 65 6E 74 2E     ferent.
+        .byte   $0A                             ; 9D31 0A                       .
+L9D32:
+        .byte   "@4Things are\different__"      ; 9D32 40 34 54 68 69 6E 67 73  @4Things
+                                                ; 9D3A 20 61 72 65 5C 64 69 66   are\dif
+                                                ; 9D42 66 65 72 65 6E 74 5F 5F  ferent__
+        .byte   $0A                             ; 9D4A 0A                       .
+L9D4B:
+        .byte   "@4Cloud__I'm\searching for you_"; 9D4B 40 34 43 6C 6F 75 64 5F @4Cloud_
+                                                ; 9D53 5F 49 27 6D 5C 73 65 61  _I'm\sea
+                                                ; 9D5B 72 63 68 69 6E 67 20 66  rching f
+                                                ; 9D63 6F 72 20 79 6F 75 5F     or you_
+        .byte   "_"                             ; 9D6A 5F                       _
+        .byte   $0A                             ; 9D6B 0A                       .
+L9D6C:
+        .byte   "@1__?"                         ; 9D6C 40 31 5F 5F 3F           @1__?
+        .byte   $0A                             ; 9D71 0A                       .
+L9D72:
+        .byte   "@4I want to meet you."         ; 9D72 40 34 49 20 77 61 6E 74  @4I want
+                                                ; 9D7A 20 74 6F 20 6D 65 65 74   to meet
+                                                ; 9D82 20 79 6F 75 2E            you.
+        .byte   $0A                             ; 9D87 0A                       .
+L9D88:
+        .byte   "@1But I'm right here."         ; 9D88 40 31 42 75 74 20 49 27  @1But I'
+                                                ; 9D90 6D 20 72 69 67 68 74 20  m right 
+                                                ; 9D98 68 65 72 65 2E           here.
+        .byte   $0A                             ; 9D9D 0A                       .
+L9D9E:
+        .byte   "@4I know, I know, but what I me"; 9D9E 40 34 49 20 6B 6E 6F 77 @4I know
+                                                ; 9DA6 2C 20 49 20 6B 6E 6F 77  , I know
+                                                ; 9DAE 2C 20 62 75 74 20 77 68  , but wh
+                                                ; 9DB6 61 74 20 49 20 6D 65     at I me
+        .byte   "an is___I want to meet__\you." ; 9DBD 61 6E 20 69 73 5F 5F 5F  an is___
+                                                ; 9DC5 49 20 77 61 6E 74 20 74  I want t
+                                                ; 9DCD 6F 20 6D 65 65 74 5F 5F  o meet__
+                                                ; 9DD5 5C 79 6F 75 2E           \you.
+        .byte   $0A                             ; 9DDA 0A                       .
+L9DDB:
+        .byte   "@1___Aeris?"                   ; 9DDB 40 31 5F 5F 5F 41 65 72  @1___Aer
+                                                ; 9DE3 69 73 3F                 is?
+        .byte   $0A                             ; 9DE6 0A                       .
+L9DE7:
+        .byte   "@4__"                          ; 9DE7 40 34 5F 5F              @4__
+        .byte   $0A                             ; 9DEB 0A                       .
+L9DEC:
+        .byte   "Hello, welcome\to the battle\ar"; 9DEC 48 65 6C 6C 6F 2C 20 77 Hello, w
+                                                ; 9DF4 65 6C 63 6F 6D 65 5C 74  elcome\t
+                                                ; 9DFC 6F 20 74 68 65 20 62 61  o the ba
+                                                ; 9E04 74 74 6C 65 5C 61 72     ttle\ar
+        .byte   "ena."                          ; 9E0B 65 6E 61 2E              ena.
+        .byte   $0A                             ; 9E0F 0A                       .
+L9E10:
+        .byte   "Let me explain the rules of the"; 9E10 4C 65 74 20 6D 65 20 65 Let me e
+                                                ; 9E18 78 70 6C 61 69 6E 20 74  xplain t
+                                                ; 9E20 68 65 20 72 75 6C 65 73  he rules
+                                                ; 9E28 20 6F 66 20 74 68 65      of the
+        .byte   " battlearena."                 ; 9E2F 20 62 61 74 74 6C 65 61   battlea
+                                                ; 9E37 72 65 6E 61 2E           rena.
+        .byte   $0A,$00                         ; 9E3C 0A 00                    ..
 L9E3E:
-        .byte   "Rufus"                         ; 9E3E 52 75 66 75 73           Rufus
-        .byte   $0D,$0A                         ; 9E43 0D 0A                    ..
-L9E45:
-        .byte   "DarkNatn"                      ; 9E45 44 61 72 6B 4E 61 74 6E  DarkNatn
-        .byte   $0D,$0A                         ; 9E4D 0D 0A                    ..
-L9E4F:
-        .byte   "MotorBal"                      ; 9E4F 4D 6F 74 6F 72 42 61 6C  MotorBal
-        .byte   $0D,$0A                         ; 9E57 0D 0A                    ..
-L9E59:
-        .byte   "BotmSwel"                      ; 9E59 42 6F 74 6D 53 77 65 6C  BotmSwel
-        .byte   $0D,$0A                         ; 9E61 0D 0A                    ..
-L9E63:
-        .byte   "Jenova"                        ; 9E63 4A 65 6E 6F 76 61        Jenova
-        .byte   $0D,$0A                         ; 9E69 0D 0A                    ..
-L9E6B:
-        .byte   "Dyne"                          ; 9E6B 44 79 6E 65              Dyne
-        .byte   $0D,$0A                         ; 9E6F 0D 0A                    ..
-L9E71:
-        .byte   "Rude"                          ; 9E71 52 75 64 65              Rude
-        .byte   $0D,$0A                         ; 9E75 0D 0A                    ..
-L9E77:
-        .byte   "GiNattak"                      ; 9E77 47 69 4E 61 74 74 61 6B  GiNattak
-        .byte   $0D,$0A                         ; 9E7F 0D 0A                    ..
-L9E81:
-        .byte   "Gi"                            ; 9E81 47 69                    Gi
-        .byte   $0D,$0A                         ; 9E83 0D 0A                    ..
-L9E85:
-        .byte   "Palmer"                        ; 9E85 50 61 6C 6D 65 72        Palmer
-        .byte   $0D,$0A                         ; 9E8B 0D 0A                    ..
-L9E8D:
-        .byte   "R.Dragon"                      ; 9E8D 52 2E 44 72 61 67 6F 6E  R.Dragon
-        .byte   $0D,$0A                         ; 9E95 0D 0A                    ..
-L9E97:
-        .byte   "DemnGate"                      ; 9E97 44 65 6D 6E 47 61 74 65  DemnGate
-        .byte   $0D,$0A                         ; 9E9F 0D 0A                    ..
-L9EA1:
-        .byte   "Schizo"                        ; 9EA1 53 63 68 69 7A 6F        Schizo
-        .byte   $0D                             ; 9EA7 0D                       .
-L9EA8:
-        .byte   "Sephirot"                      ; 9EA8 53 65 70 68 69 72 6F 74  Sephirot
-        .byte   $0D,$0D                         ; 9EB0 0D 0D                    ..
-L9EB2:
-        .byte   "Sephirot"                      ; 9EB2 53 65 70 68 69 72 6F 74  Sephirot
-        .byte   $0D                             ; 9EBA 0D                       .
-L9EBB:
-        .byte   "1WngAngl"                      ; 9EBB 31 57 6E 67 41 6E 67 6C  1WngAngl
-        .byte   $0D,$0A                         ; 9EC3 0D 0A                    ..
-L9EC5:
-        .byte   "Zolom"                         ; 9EC5 5A 6F 6C 6F 6D           Zolom
-        .byte   $0D,$0A                         ; 9ECA 0D 0A                    ..
-        .byte   "Hornet"                        ; 9ECC 48 6F 72 6E 65 74        Hornet
-        .byte   $0D,$0A                         ; 9ED2 0D 0A                    ..
-L9ED4:
-        .byte   "Goblin"                        ; 9ED4 47 6F 62 6C 69 6E        Goblin
-        .byte   $0D,$0A                         ; 9EDA 0D 0A                    ..
-        .byte   "BigRat"                        ; 9EDC 42 69 67 52 61 74        BigRat
-        .byte   $0D,$0A                         ; 9EE2 0D 0A                    ..
-        .byte   "Stingray"                      ; 9EE4 53 74 69 6E 67 72 61 79  Stingray
-        .byte   $0D,$0A                         ; 9EEC 0D 0A                    ..
-        .byte   "Pygman"                        ; 9EEE 50 79 67 6D 61 6E        Pygman
-        .byte   $0D,$0A                         ; 9EF4 0D 0A                    ..
-        .byte   "RedWisp"                       ; 9EF6 52 65 64 57 69 73 70     RedWisp
-        .byte   $0D,$0A                         ; 9EFD 0D 0A                    ..
-        .byte   "KillrBee"                      ; 9EFF 4B 69 6C 6C 72 42 65 65  KillrBee
-        .byte   $0D,$0A                         ; 9F07 0D 0A                    ..
-        .byte   "Helcan"                        ; 9F09 48 65 6C 63 61 6E        Helcan
-        .byte   $0D,$0A                         ; 9F0F 0D 0A                    ..
-        .byte   "Needler"                       ; 9F11 4E 65 65 64 6C 65 72     Needler
-        .byte   $0D,$0A                         ; 9F18 0D 0A                    ..
-        .byte   "DarkFace"                      ; 9F1A 44 61 72 6B 46 61 63 65  DarkFace
-        .byte   $0D,$0A                         ; 9F22 0D 0A                    ..
-        .byte   "Flyer"                         ; 9F24 46 6C 79 65 72           Flyer
-        .byte   $0D,$0A                         ; 9F29 0D 0A                    ..
-        .byte   "Sahuagin"                      ; 9F2B 53 61 68 75 61 67 69 6E  Sahuagin
-        .byte   $0D,$0A                         ; 9F33 0D 0A                    ..
-        .byte   "Basilisk"                      ; 9F35 42 61 73 69 6C 69 73 6B  Basilisk
-        .byte   $0D,$0A                         ; 9F3D 0D 0A                    ..
-        .byte   "BigToad"                       ; 9F3F 42 69 67 54 6F 61 64     BigToad
-        .byte   $0D,$0A                         ; 9F46 0D 0A                    ..
-        .byte   "RedWorm"                       ; 9F48 52 65 64 57 6F 72 6D     RedWorm
-        .byte   $0D,$0A                         ; 9F4F 0D 0A                    ..
-        .byte   "Mage"                          ; 9F51 4D 61 67 65              Mage
-        .byte   $0D,$0A                         ; 9F55 0D 0A                    ..
-        .byte   "Scyther"                       ; 9F57 53 63 79 74 68 65 72     Scyther
-        .byte   $0D,$0A                         ; 9F5E 0D 0A                    ..
-        .byte   "Bear"                          ; 9F60 42 65 61 72              Bear
-        .byte   $0D,$0A                         ; 9F64 0D 0A                    ..
-        .byte   "EyeFang"                       ; 9F66 45 79 65 46 61 6E 67     EyeFang
-        .byte   $0D,$0A                         ; 9F6D 0D 0A                    ..
-        .byte   "Spider"                        ; 9F6F 53 70 69 64 65 72        Spider
-        .byte   $0D,$0A                         ; 9F75 0D 0A                    ..
-        .byte   "Naga"                          ; 9F77 4E 61 67 61              Naga
-        .byte   $0D,$0A                         ; 9F7B 0D 0A                    ..
-        .byte   "Puti"                          ; 9F7D 50 75 74 69              Puti
-        .byte   $0D,$0A                         ; 9F81 0D 0A                    ..
-        .byte   "Mummy"                         ; 9F83 4D 75 6D 6D 79           Mummy
-        .byte   $0D,$0A                         ; 9F88 0D 0A                    ..
-        .byte   "Zombie"                        ; 9F8A 5A 6F 6D 62 69 65        Zombie
-        .byte   $0D,$0A                         ; 9F90 0D 0A                    ..
-        .byte   "Ninja"                         ; 9F92 4E 69 6E 6A 61           Ninja
-        .byte   $0D,$0A                         ; 9F97 0D 0A                    ..
-        .byte   "Kraken"                        ; 9F99 4B 72 61 6B 65 6E        Kraken
-        .byte   $0D,$0A                         ; 9F9F 0D 0A                    ..
-        .byte   "Bird"                          ; 9FA1 42 69 72 64              Bird
-        .byte   $0D,$0A                         ; 9FA5 0D 0A                    ..
-        .byte   "Gargoyle"                      ; 9FA7 47 61 72 67 6F 79 6C 65  Gargoyle
-        .byte   $0D,$0A                         ; 9FAF 0D 0A                    ..
-        .byte   "Bluk"                          ; 9FB1 42 6C 75 6B              Bluk
-        .byte   $0D,$0A                         ; 9FB5 0D 0A                    ..
-        .byte   "Liger"                         ; 9FB7 4C 69 67 65 72           Liger
-        .byte   $0D,$0A                         ; 9FBC 0D 0A                    ..
-        .byte   "Thor"                          ; 9FBE 54 68 6F 72              Thor
-        .byte   $0D,$0A                         ; 9FC2 0D 0A                    ..
-        .byte   "Griffin"                       ; 9FC4 47 72 69 66 66 69 6E     Griffin
-        .byte   $0D,$0A                         ; 9FCB 0D 0A                    ..
-        .byte   "Pteragon"                      ; 9FCD 50 74 65 72 61 67 6F 6E  Pteragon
-        .byte   $0D,$0A                         ; 9FD5 0D 0A                    ..
-        .byte   "Peryton"                       ; 9FD7 50 65 72 79 74 6F 6E     Peryton
-        .byte   $0D,$0A                         ; 9FDE 0D 0A                    ..
-        .byte   "SeaLion"                       ; 9FE0 53 65 61 4C 69 6F 6E     SeaLion
-        .byte   $0D,$0A                         ; 9FE7 0D 0A                    ..
-        .byte   "Manticor"                      ; 9FE9 4D 61 6E 74 69 63 6F 72  Manticor
-        .byte   $0D,$0A                         ; 9FF1 0D 0A                    ..
-        .byte   "TwinHead"                      ; 9FF3 54 77 69 6E 48 65 61 64  TwinHead
-        .byte   $0D,$0A                         ; 9FFB 0D 0A                    ..
-        .byte   "Eagle"                         ; 9FFD 45 61 67 6C 65           Eagle
-        .byte   $0D,$0A                         ; A002 0D 0A                    ..
-        .byte   "Ogre"                          ; A004 4F 67 72 65              Ogre
-        .byte   $0D,$0A                         ; A008 0D 0A                    ..
-        .byte   "Azrael"                        ; A00A 41 7A 72 61 65 6C        Azrael
-        .byte   $0D,$0A                         ; A010 0D 0A                    ..
-        .byte   "Caprcorn"                      ; A012 43 61 70 72 63 6F 72 6E  Caprcorn
-        .byte   $0D,$0A                         ; A01A 0D 0A                    ..
-        .byte   "Hermit"                        ; A01C 48 65 72 6D 69 74        Hermit
-        .byte   $0D,$0A                         ; A022 0D 0A                    ..
-        .byte   "Serpent"                       ; A024 53 65 72 70 65 6E 74     Serpent
-        .byte   $0D,$0A                         ; A02B 0D 0A                    ..
-        .byte   "Coral"                         ; A02D 43 6F 72 61 6C           Coral
-        .byte   $0D,$0A                         ; A032 0D 0A                    ..
-        .byte   "Angler"                        ; A034 41 6E 67 6C 65 72        Angler
-        .byte   $0D,$0A                         ; A03A 0D 0A                    ..
-        .byte   "Adaman"                        ; A03C 41 64 61 6D 61 6E        Adaman
-        .byte   $0D,$0A                         ; A042 0D 0A                    ..
-        .byte   "Seahorse"                      ; A044 53 65 61 68 6F 72 73 65  Seahorse
-        .byte   $0D,$0A                         ; A04C 0D 0A                    ..
-        .byte   "Nitemare"                      ; A04E 4E 69 74 65 6D 61 72 65  Nitemare
-        .byte   $0D,$0A                         ; A056 0D 0A                    ..
-        .byte   "Crocotta"                      ; A058 43 72 6F 63 6F 74 74 61  Crocotta
-        .byte   $0D,$0A                         ; A060 0D 0A                    ..
-        .byte   "Lizalfos"                      ; A062 4C 69 7A 61 6C 66 6F 73  Lizalfos
-        .byte   $0D,$0A                         ; A06A 0D 0A                    ..
-        .byte   "Cerberus"                      ; A06C 43 65 72 62 65 72 75 73  Cerberus
-        .byte   $0D,$0A                         ; A074 0D 0A                    ..
-        .byte   "Minotaur"                      ; A076 4D 69 6E 6F 74 61 75 72  Minotaur
-        .byte   $0D,$0A                         ; A07E 0D 0A                    ..
-        .byte   "Chimera"                       ; A080 43 68 69 6D 65 72 61     Chimera
-        .byte   $0D,$0A                         ; A087 0D 0A                    ..
-        .byte   "Cyclops"                       ; A089 43 79 63 6C 6F 70 73     Cyclops
-        .byte   $0D,$0A                         ; A090 0D 0A                    ..
-        .byte   "Devil"                         ; A092 44 65 76 69 6C           Devil
-        .byte   $0D,$0A                         ; A097 0D 0A                    ..
-        .byte   "Paralyma"                      ; A099 50 61 72 61 6C 79 6D 61  Paralyma
-        .byte   $0D,$0A                         ; A0A1 0D 0A                    ..
-        .byte   "Catoblep"                      ; A0A3 43 61 74 6F 62 6C 65 70  Catoblep
-        .byte   $0D,$0A                         ; A0AB 0D 0A                    ..
-        .byte   "Clawgrip"                      ; A0AD 43 6C 61 77 67 72 69 70  Clawgrip
-        .byte   $0D,$0A                         ; A0B5 0D 0A                    ..
-        .byte   "Cronos"                        ; A0B7 43 72 6F 6E 6F 73        Cronos
-        .byte   $0D,$0A                         ; A0BD 0D 0A                    ..
-        .byte   "Mutant"                        ; A0BF 4D 75 74 61 6E 74        Mutant
-        .byte   $0D,$0A                         ; A0C5 0D 0A                    ..
-        .byte   "Stroper"                       ; A0C7 53 74 72 6F 70 65 72     Stroper
-        .byte   $0D,$0A                         ; A0CE 0D 0A                    ..
-        .byte   "Witch"                         ; A0D0 57 69 74 63 68           Witch
-        .byte   $0D,$0A                         ; A0D5 0D 0A                    ..
-        .byte   "Sleipnir"                      ; A0D7 53 6C 65 69 70 6E 69 72  Sleipnir
-        .byte   $0D,$0A                         ; A0DF 0D 0A                    ..
-        .byte   "Ophiuchs"                      ; A0E1 4F 70 68 69 75 63 68 73  Ophiuchs
-        .byte   $0D,$0A                         ; A0E9 0D 0A                    ..
-        .byte   "Mandrake"                      ; A0EB 4D 61 6E 64 72 61 6B 65  Mandrake
-        .byte   $0D,$0A,$FF,$FF,$FF,$BD,$DE,$0D ; A0F3 0D 0A FF FF FF BD DE 0D  ........
-        .byte   $0A,$BA,$F9,$B0,$B9,$0D,$0A,$B4 ; A0FB 0A BA F9 B0 B9 0D 0A B4  ........
-        .byte   $B6,$B4,$F3,$B0,$FE,$0D,$0A,$BA ; A103 B6 B4 F3 B0 FE 0D 0A BA  ........
-        .byte   $D2,$BA,$B1,$0D,$0A,$BC,$EA,$B3 ; A10B D2 BA B1 0D 0A BC EA B3  ........
-        .byte   $D3,$0D,$0A,$BA,$D2,$B1,$A4,$BA ; A113 D3 0D 0A BA D2 B1 A4 BA  ........
-        .byte   $B1,$0D,$0A,$BD,$DF,$BD,$E0,$B3 ; A11B B1 0D 0A BD DF BD E0 B3  ........
-        .byte   $D3,$0D,$0A,$BB,$AE,$BC,$E8,$BD ; A123 D3 0D 0A BB AE BC E8 BD  ........
-        .byte   $D2,$0D,$0A,$BB,$A2,$B7,$F8,$0D ; A12B D2 0D 0A BB A2 B7 F8 0D  ........
-        .byte   $0A,$BA,$ED,$B2,$C1,$B7,$F8,$0D ; A133 0A BA ED B2 C1 B7 F8 0D  ........
-        .byte   $0A,$B5,$BE,$B2,$C1,$0D,$0A,$B5 ; A13B 0A B5 BE B2 C1 0D 0A B5  ........
-        .byte   $B0,$BC,$E8,$BA,$B1,$0D,$0A,$BB ; A143 B0 BC E8 BA B1 0D 0A BB  ........
-        .byte   $F5,$BB,$F6,$B3,$B0,$B0,$C2,$0D ; A14B F5 BB F6 B3 B0 B0 C2 0D  ........
-        .byte   $0A,$B4,$B6,$B1,$AB,$B8,$C5,$0D ; A153 0A B4 B6 B1 AB B8 C5 0D  ........
-        .byte   $0A,$BB,$B4,$B1,$AB,$B0,$B9,$0D ; A15B 0A BB B4 B1 AB B0 B9 0D  ........
-        .byte   $0A,$B4,$B6,$B1,$D9,$B3,$D3,$0D ; A163 0A B4 B6 B1 D9 B3 D3 0D  ........
-        .byte   $0A,$B6,$F4,$B0,$C2,$0D,$0A,$BA ; A16B 0A B6 F4 B0 C2 0D 0A BA  ........
-        .byte   $AD,$B1,$A4,$0D,$0A,$BD,$D2,$B1 ; A173 AD B1 A4 0D 0A BD D2 B1  ........
-        .byte   $A4,$0D,$0A,$B1,$D6,$BB,$B4,$0D ; A17B A4 0D 0A B1 D6 BB B4 0D  ........
-        .byte   $0A,$B5,$BE,$B1,$D6,$BD,$E1,$0D ; A183 0A B5 BE B1 D6 BD E1 0D  ........
-        .byte   $0A,$BA,$EE,$B0,$B9,$B3,$B0,$B0 ; A18B 0A BA EE B0 B9 B3 B0 B0  ........
-        .byte   $C2,$0D,$0A,$BD,$E2,$B4,$EE,$BA ; A193 C2 0D 0A BD E2 B4 EE BA  ........
-        .byte   $BB,$B8,$DD,$0D,$0A,$BC,$E4,$BD ; A19B BB B8 DD 0D 0A BC E4 BD  ........
-        .byte   $E3,$B3,$D3,$0D,$0A,$B5,$E2,$BC ; A1A3 E3 B3 D3 0D 0A B5 E2 BC  ........
-        .byte   $B4,$B0,$AE,$0D,$0A,$BA,$F0,$BA ; A1AB B4 B0 AE 0D 0A BA F0 BA  ........
-        .byte   $C6,$B2,$C1,$0D,$0A,$B0,$E5,$B0 ; A1B3 C6 B2 C1 0D 0A B0 E5 B0  ........
-        .byte   $B0,$B4,$F4,$B0,$B1,$0D,$0A,$BC ; A1BB B0 B4 F4 B0 B1 0D 0A BC  ........
-        .byte   $DC,$B8,$EA,$0D,$0A,$FF,$FF,$FF ; A1C3 DC B8 EA 0D 0A FF FF FF  ........
-LA1CB:
-        .byte   "B.Float"                       ; A1CB 42 2E 46 6C 6F 61 74     B.Float
-        .byte   $0D,$0A                         ; A1D2 0D 0A                    ..
-        .byte   "Goblin"                        ; A1D4 47 6F 62 6C 69 6E        Goblin
-        .byte   $0D,$0A                         ; A1DA 0D 0A                    ..
-LA1DC:
-        .byte   "Gargoyle"                      ; A1DC 47 61 72 67 6F 79 6C 65  Gargoyle
-        .byte   $0D,$0A                         ; A1E4 0D 0A                    ..
-LA1E6:
-        .byte   "Tonberry"                      ; A1E6 54 6F 6E 62 65 72 72 79  Tonberry
-        .byte   $0D,$0A                         ; A1EE 0D 0A                    ..
-LA1F0:
-        .byte   "Gremlin"                       ; A1F0 47 72 65 6D 6C 69 6E     Gremlin
-        .byte   $0D,$0A                         ; A1F7 0D 0A                    ..
-LA1F9:
-        .byte   "Needle"                        ; A1F9 4E 65 65 64 6C 65        Needle
-        .byte   $0D,$0A                         ; A1FF 0D 0A                    ..
-LA201:
-        .byte   "Zolkartr"                      ; A201 5A 6F 6C 6B 61 72 74 72  Zolkartr
-        .byte   $0D,$0A                         ; A209 0D 0A                    ..
-LA20B:
-        .byte   "Launcher"                      ; A20B 4C 61 75 6E 63 68 65 72  Launcher
-        .byte   $0D,$0A                         ; A213 0D 0A                    ..
-LA215:
-        .byte   "M.Drive"                       ; A215 4D 2E 44 72 69 76 65     M.Drive
-        .byte   $0D,$0A                         ; A21C 0D 0A                    ..
-LA21E:
-        .byte   "Crawler"                       ; A21E 43 72 61 77 6C 65 72     Crawler
-        .byte   $0D,$0A                         ; A225 0D 0A                    ..
-LA227:
-        .byte   "Mirage"                        ; A227 4D 69 72 61 67 65        Mirage
-        .byte   $0D,$0A                         ; A22D 0D 0A                    ..
-LA22F:
-        .byte   "Ceasar"                        ; A22F 43 65 61 73 61 72        Ceasar
-        .byte   $0D,$0A                         ; A235 0D 0A                    ..
-LA237:
-        .byte   "Ninja"                         ; A237 4E 69 6E 6A 61           Ninja
-        .byte   $0D,$0A,$0A                     ; A23C 0D 0A 0A                 ...
-LA23F:
-        .byte   "Cactuar"                       ; A23F 43 61 63 74 75 61 72     Cactuar
-        .byte   $0D,$0A                         ; A246 0D 0A                    ..
-LA248:
-        .byte   "HedgePie"                      ; A248 48 65 64 67 65 50 69 65  HedgePie
-        .byte   $0D,$0A                         ; A250 0D 0A                    ..
-LA252:
-        .byte   "RazrWeed"                      ; A252 52 61 7A 72 57 65 65 64  RazrWeed
-        .byte   $0D,$0A                         ; A25A 0D 0A                    ..
-LA25C:
-        .byte   "Jayjujay"                      ; A25C 4A 61 79 6A 75 6A 61 79  Jayjujay
-        .byte   $0D,$0A                         ; A264 0D 0A                    ..
-LA266:
-        .byte   "Warning"                       ; A266 57 61 72 6E 69 6E 67     Warning
-        .byte   $0D,$0A                         ; A26D 0D 0A                    ..
-LA26F:
-        .byte   "Mu"                            ; A26F 4D 75                    Mu
-        .byte   $0D,$0A                         ; A271 0D 0A                    ..
-LA273:
-        .byte   "Jemnezmy"                      ; A273 4A 65 6D 6E 65 7A 6D 79  Jemnezmy
-        .byte   $0D,$0A                         ; A27B 0D 0A                    ..
-LA27D:
-        .byte   "Joker"                         ; A27D 4A 6F 6B 65 72           Joker
-        .byte   $0D,$0A                         ; A282 0D 0A                    ..
-LA284:
-        .byte   "BrainPod"                      ; A284 42 72 61 69 6E 50 6F 64  BrainPod
-        .byte   $0D,$0A                         ; A28C 0D 0A                    ..
-LA28E:
-        .byte   "Screamer"                      ; A28E 53 63 72 65 61 6D 65 72  Screamer
-        .byte   $0D,$0A                         ; A296 0D 0A                    ..
-LA298:
-        .byte   "SneakStp"                      ; A298 53 6E 65 61 6B 53 74 70  SneakStp
-        .byte   $0D,$0A                         ; A2A0 0D 0A                    ..
-LA2A2:
-        .byte   "BatryCap"                      ; A2A2 42 61 74 72 79 43 61 70  BatryCap
-        .byte   $0D,$0A                         ; A2AA 0D 0A                    ..
-LA2AC:
-        .byte   "Ghroflgo"                      ; A2AC 47 68 72 6F 66 6C 67 6F  Ghroflgo
-        .byte   $0D,$0A                         ; A2B4 0D 0A                    ..
-LA2B6:
-        .byte   "Sweeper"                       ; A2B6 53 77 65 65 70 65 72     Sweeper
-        .byte   $0D,$0A                         ; A2BD 0D 0A                    ..
-LA2BF:
-        .byte   "Bomb"                          ; A2BF 42 6F 6D 62              Bomb
-        .byte   $0D,$0A                         ; A2C3 0D 0A                    ..
-LA2C5:
-        .byte   "Alemange"                      ; A2C5 41 6C 65 6D 61 6E 67 65  Alemange
-        .byte   $0D,$0A                         ; A2CD 0D 0A                    ..
-LA2CF:
-        .byte   "Spector"                       ; A2CF 53 70 65 63 74 6F 72     Spector
-        .byte   $0D,$0A                         ; A2D6 0D 0A                    ..
-LA2D8:
-        .byte   "Cuahl"                         ; A2D8 43 75 61 68 6C           Cuahl
-        .byte   $0D,$0A                         ; A2DD 0D 0A                    ..
-LA2DF:
-        .byte   "Zemzelet"                      ; A2DF 5A 65 6D 7A 65 6C 65 74  Zemzelet
-        .byte   $0D,$0A                         ; A2E7 0D 0A                    ..
-LA2E9:
-        .byte   "Elfadunk"                      ; A2E9 45 6C 66 61 64 75 6E 6B  Elfadunk
-        .byte   $0D,$0A                         ; A2F1 0D 0A                    ..
-LA2F3:
-        .byte   "Doorbull"                      ; A2F3 44 6F 6F 72 62 75 6C 6C  Doorbull
-        .byte   $0D,$0A                         ; A2FB 0D 0A                    ..
-LA2FD:
-        .byte   "BlackBat"                      ; A2FD 42 6C 61 63 6B 42 61 74  BlackBat
-        .byte   $0D,$0A                         ; A305 0D 0A                    ..
-LA307:
-        .byte   "Malboro"                       ; A307 4D 61 6C 62 6F 72 6F     Malboro
-        .byte   $0D,$0A                         ; A30E 0D 0A                    ..
-LA310:
-        .byte   "Diablo"                        ; A310 44 69 61 62 6C 6F        Diablo
-        .byte   $0D,$0A                         ; A316 0D 0A                    ..
+        .byte   "You will be\challenged by a\ser"; 9E3E 59 6F 75 20 77 69 6C 6C You will
+                                                ; 9E46 20 62 65 5C 63 68 61 6C   be\chal
+                                                ; 9E4E 6C 65 6E 67 65 64 20 62  lenged b
+                                                ; 9E56 79 20 61 5C 73 65 72     y a\ser
+        .byte   "ies of ten\battles\consecutivel"; 9E5D 69 65 73 20 6F 66 20 74 ies of t
+                                                ; 9E65 65 6E 5C 62 61 74 74 6C  en\battl
+                                                ; 9E6D 65 73 5C 63 6F 6E 73 65  es\conse
+                                                ; 9E75 63 75 74 69 76 65 6C     cutivel
+        .byte   "y."                            ; 9E7C 79 2E                    y.
+        .byte   $0A                             ; 9E7E 0A                       .
+L9E7F:
+        .byte   "If you manage to\win all ten\ba"; 9E7F 49 66 20 79 6F 75 20 6D If you m
+                                                ; 9E87 61 6E 61 67 65 20 74 6F  anage to
+                                                ; 9E8F 5C 77 69 6E 20 61 6C 6C  \win all
+                                                ; 9E97 20 74 65 6E 5C 62 61      ten\ba
+        .byte   "ttles, then you\will recieve a\"; 9E9E 74 74 6C 65 73 2C 20 74 ttles, t
+                                                ; 9EA6 68 65 6E 20 79 6F 75 5C  hen you\
+                                                ; 9EAE 77 69 6C 6C 20 72 65 63  will rec
+                                                ; 9EB6 69 65 76 65 20 61 5C     ieve a\
+        .byte   "fabulous prize."               ; 9EBD 66 61 62 75 6C 6F 75 73  fabulous
+                                                ; 9EC5 20 70 72 69 7A 65 2E      prize.
+        .byte   $0A                             ; 9ECC 0A                       .
+L9ECD:
+        .byte   "But keep in mind\that these are"; 9ECD 42 75 74 20 6B 65 65 70 But keep
+                                                ; 9ED5 20 69 6E 20 6D 69 6E 64   in mind
+                                                ; 9EDD 5C 74 68 61 74 20 74 68  \that th
+                                                ; 9EE5 65 73 65 20 61 72 65     ese are
+        .byte   " realmonsters you will\be battl"; 9EEC 20 72 65 61 6C 6D 6F 6E  realmon
+                                                ; 9EF4 73 74 65 72 73 20 79 6F  sters yo
+                                                ; 9EFC 75 20 77 69 6C 6C 5C 62  u will\b
+                                                ; 9F04 65 20 62 61 74 74 6C     e battl
+        .byte   "ing, so we cannot guarantee\you"; 9F0B 69 6E 67 2C 20 73 6F 20 ing, so 
+                                                ; 9F13 77 65 20 63 61 6E 6E 6F  we canno
+                                                ; 9F1B 74 20 67 75 61 72 61 6E  t guaran
+                                                ; 9F23 74 65 65 5C 79 6F 75     tee\you
+        .byte   "r saftey, so we recommend you s"; 9F2A 72 20 73 61 66 74 65 79 r saftey
+                                                ; 9F32 2C 20 73 6F 20 77 65 20  , so we 
+                                                ; 9F3A 72 65 63 6F 6D 6D 65 6E  recommen
+                                                ; 9F42 64 20 79 6F 75 20 73     d you s
+        .byte   "ave your game before\entering."; 9F49 61 76 65 20 79 6F 75 72  ave your
+                                                ; 9F51 20 67 61 6D 65 20 62 65   game be
+                                                ; 9F59 66 6F 72 65 5C 65 6E 74  fore\ent
+                                                ; 9F61 65 72 69 6E 67 2E        ering.
+        .byte   $0A                             ; 9F67 0A                       .
+L9F68:
+        .byte   "So would you like\to enter the "; 9F68 53 6F 20 77 6F 75 6C 64 So would
+                                                ; 9F70 20 79 6F 75 20 6C 69 6B   you lik
+                                                ; 9F78 65 5C 74 6F 20 65 6E 74  e\to ent
+                                                ; 9F80 65 72 20 74 68 65 20     er the 
+        .byte   "battlearena? "                 ; 9F87 62 61 74 74 6C 65 61 72  battlear
+                                                ; 9F8F 65 6E 61 3F 20           ena? 
+        .byte   $0A                             ; 9F94 0A                       .
+L9F95:
+        .byte   "Enter           Don't Enter    "; 9F95 45 6E 74 65 72 20 20 20 Enter   
+                                                ; 9F9D 20 20 20 20 20 20 20 20          
+                                                ; 9FA5 44 6F 6E 27 74 20 45 6E  Don't En
+                                                ; 9FAD 74 65 72 20 20 20 20     ter    
+        .byte   "   "                           ; 9FB4 20 20 20                    
+        .byte   $0A                             ; 9FB7 0A                       .
+L9FB8:
+        .byte   "Good Luck!"                    ; 9FB8 47 6F 6F 64 20 4C 75 63  Good Luc
+                                                ; 9FC0 6B 21                    k!
+        .byte   $0A                             ; 9FC2 0A                       .
+L9FC3:
+        .byte   "Okay, come back anytime."      ; 9FC3 4F 6B 61 79 2C 20 63 6F  Okay, co
+                                                ; 9FCB 6D 65 20 62 61 63 6B 20  me back 
+                                                ; 9FD3 61 6E 79 74 69 6D 65 2E  anytime.
+        .byte   $0A                             ; 9FDB 0A                       .
+L9FDC:
+        .byte   "Congratulations,\here is your p"; 9FDC 43 6F 6E 67 72 61 74 75 Congratu
+                                                ; 9FE4 6C 61 74 69 6F 6E 73 2C  lations,
+                                                ; 9FEC 5C 68 65 72 65 20 69 73  \here is
+                                                ; 9FF4 20 79 6F 75 72 20 70      your p
+        .byte   "rize."                         ; 9FFB 72 69 7A 65 2E           rize.
+        .byte   $0A                             ; A000 0A                       .
+LA001:
+        .byte   "Recieved\10,000 Gil!!! "       ; A001 52 65 63 69 65 76 65 64  Recieved
+                                                ; A009 5C 31 30 2C 30 30 30 20  \10,000 
+                                                ; A011 47 69 6C 21 21 21 20     Gil!!! 
+        .byte   $0A                             ; A018 0A                       .
+LA019:
+        .byte   "@6Oops! This looks\like I came "; A019 40 36 4F 6F 70 73 21 20 @6Oops! 
+                                                ; A021 54 68 69 73 20 6C 6F 6F  This loo
+                                                ; A029 6B 73 5C 6C 69 6B 65 20  ks\like 
+                                                ; A031 49 20 63 61 6D 65 20     I came 
+        .byte   "at a\bad time!"                ; A038 61 74 20 61 5C 62 61 64  at a\bad
+                                                ; A040 20 74 69 6D 65 21         time!
+        .byte   $0A                             ; A046 0A                       .
+LA047:
+        .byte   "@6I'm Cait Sith No.2.Pleased to"; A047 40 36 49 27 6D 20 43 61 @6I'm Ca
+                                                ; A04F 69 74 20 53 69 74 68 20  it Sith 
+                                                ; A057 4E 6F 2E 32 2E 50 6C 65  No.2.Ple
+                                                ; A05F 61 73 65 64 20 74 6F     ased to
+        .byte   " meet youall!"                 ; A066 20 6D 65 65 74 20 79 6F   meet yo
+                                                ; A06E 75 61 6C 6C 21           uall!
+        .byte   $0A                             ; A073 0A                       .
+LA074:
+        .byte   "@tLugia2009:Why hellothere. Car"; A074 40 74 4C 75 67 69 61 32 @tLugia2
+                                                ; A07C 30 30 39 3A 57 68 79 20  009:Why 
+                                                ; A084 68 65 6C 6C 6F 74 68 65  hellothe
+                                                ; A08C 72 65 2E 20 43 61 72     re. Car
+        .byte   "e to\purchase something?   "   ; A093 65 20 74 6F 5C 70 75 72  e to\pur
+                                                ; A09B 63 68 61 73 65 20 73 6F  chase so
+                                                ; A0A3 6D 65 74 68 69 6E 67 3F  mething?
+                                                ; A0AB 20 20 20                    
+        .byte   $0A                             ; A0AE 0A                       .
+LA0AF:
+        .byte   "@tLugia2009: Thank\you! Come ag"; A0AF 40 74 4C 75 67 69 61 32 @tLugia2
+                                                ; A0B7 30 30 39 3A 20 54 68 61  009: Tha
+                                                ; A0BF 6E 6B 5C 79 6F 75 21 20  nk\you! 
+                                                ; A0C7 43 6F 6D 65 20 61 67     Come ag
+        .byte   "ain\soon!"                     ; A0CE 61 69 6E 5C 73 6F 6F 6E  ain\soon
+                                                ; A0D6 21                       !
+        .byte   $0A                             ; A0D7 0A                       .
+LA0D8:
+        .byte   "@tLugia2009: Hm? Why am I here?"; A0D8 40 74 4C 75 67 69 61 32 @tLugia2
+                                                ; A0E0 30 30 39 3A 20 48 6D 3F  009: Hm?
+                                                ; A0E8 20 57 68 79 20 61 6D 20   Why am 
+                                                ; A0F0 49 20 68 65 72 65 3F     I here?
+        .byte   " There\was no item shop inthis "; A0F7 20 54 68 65 72 65 5C 77  There\w
+                                                ; A0FF 61 73 20 6E 6F 20 69 74  as no it
+                                                ; A107 65 6D 20 73 68 6F 70 20  em shop 
+                                                ; A10F 69 6E 74 68 69 73 20     inthis 
+        .byte   "entire\building. Can you\believ"; A116 65 6E 74 69 72 65 5C 62 entire\b
+                                                ; A11E 75 69 6C 64 69 6E 67 2E  uilding.
+                                                ; A126 20 43 61 6E 20 79 6F 75   Can you
+                                                ; A12E 5C 62 65 6C 69 65 76     \believ
+        .byte   "e it? ThoughtI'd set up one her"; A135 65 20 69 74 3F 20 54 68 e it? Th
+                                                ; A13D 6F 75 67 68 74 49 27 64  oughtI'd
+                                                ; A145 20 73 65 74 20 75 70 20   set up 
+                                                ; A14D 6F 6E 65 20 68 65 72     one her
+        .byte   "eand help you out."            ; A154 65 61 6E 64 20 68 65 6C  eand hel
+                                                ; A15C 70 20 79 6F 75 20 6F 75  p you ou
+                                                ; A164 74 2E                    t.
+        .byte   $0A,$0A                         ; A166 0A 0A                    ..
+        .byte   "0"                             ; A168 30                       0
+LA169:
+        .byte   "@tAnyway, come find\me later in"; A169 40 74 41 6E 79 77 61 79 @tAnyway
+                                                ; A171 2C 20 63 6F 6D 65 20 66  , come f
+                                                ; A179 69 6E 64 5C 6D 65 20 6C  ind\me l
+                                                ; A181 61 74 65 72 20 69 6E     ater in
+        .byte   " the\game. I want to\give you s"; A188 20 74 68 65 5C 67 61 6D  the\gam
+                                                ; A190 65 2E 20 49 20 77 61 6E  e. I wan
+                                                ; A198 74 20 74 6F 5C 67 69 76  t to\giv
+                                                ; A1A0 65 20 79 6F 75 20 73     e you s
+        .byte   "omething."                     ; A1A7 6F 6D 65 74 68 69 6E 67  omething
+                                                ; A1AF 2E                       .
+        .byte   $0A                             ; A1B0 0A                       .
+LA1B1:
+        .byte   "Hello, I run the\magic shop. Ca"; A1B1 48 65 6C 6C 6F 2C 20 49 Hello, I
+                                                ; A1B9 20 72 75 6E 20 74 68 65   run the
+                                                ; A1C1 5C 6D 61 67 69 63 20 73  \magic s
+                                                ; A1C9 68 6F 70 2E 20 43 61     hop. Ca
+        .byte   "n I\help you?"                 ; A1D0 6E 20 49 5C 68 65 6C 70  n I\help
+                                                ; A1D8 20 79 6F 75 3F            you?
+        .byte   $0A                             ; A1DD 0A                       .
+        .byte   "0000000000000000000000000000000"; A1DE 30 30 30 30 30 30 30 30 00000000
+                                                ; A1E6 30 30 30 30 30 30 30 30  00000000
+                                                ; A1EE 30 30 30 30 30 30 30 30  00000000
+                                                ; A1F6 30 30 30 30 30 30 30     0000000
+LA1FD:
+        .byte   "Hi,I manage the\weapon shop. Ca"; A1FD 48 69 2C 49 20 6D 61 6E Hi,I man
+                                                ; A205 61 67 65 20 74 68 65 5C  age the\
+                                                ; A20D 77 65 61 70 6F 6E 20 73  weapon s
+                                                ; A215 68 6F 70 2E 20 43 61     hop. Ca
+        .byte   "n\I help you?"                 ; A21C 6E 5C 49 20 68 65 6C 70  n\I help
+                                                ; A224 20 79 6F 75 3F            you?
+        .byte   $0A                             ; A229 0A                       .
+        .byte   "0000000000000000000000000"     ; A22A 30 30 30 30 30 30 30 30  00000000
+                                                ; A232 30 30 30 30 30 30 30 30  00000000
+                                                ; A23A 30 30 30 30 30 30 30 30  00000000
+                                                ; A242 30                       0
+LA243:
+        .byte   "@4I had fun tonight"           ; A243 40 34 49 20 68 61 64 20  @4I had 
+                                                ; A24B 66 75 6E 20 74 6F 6E 69  fun toni
+                                                ; A253 67 68 74                 ght
+        .byte   $00                             ; A256 00                       .
+        .byte   "\Let's go together\again."     ; A257 5C 4C 65 74 27 73 20 67  \Let's g
+                                                ; A25F 6F 20 74 6F 67 65 74 68  o togeth
+                                                ; A267 65 72 5C 61 67 61 69 6E  er\again
+                                                ; A26F 2E                       .
+        .byte   $0A                             ; A270 0A                       .
+LA271:
+        .byte   "@4__You don't\like being with m"; A271 40 34 5F 5F 59 6F 75 20 @4__You 
+                                                ; A279 64 6F 6E 27 74 5C 6C 69  don't\li
+                                                ; A281 6B 65 20 62 65 69 6E 67  ke being
+                                                ; A289 20 77 69 74 68 20 6D      with m
+        .byte   "e?"                            ; A290 65 3F                    e?
+        .byte   $0A                             ; A292 0A                       .
+LA293:
+        .byte   "@1That's not it."              ; A293 40 31 54 68 61 74 27 73  @1That's
+                                                ; A29B 20 6E 6F 74 20 69 74 2E   not it.
+        .byte   $0A                             ; A2A3 0A                       .
+LA2A4:
+        .byte   "@4I'm glad.Next time\we come,le"; A2A4 40 34 49 27 6D 20 67 6C @4I'm gl
+                                                ; A2AC 61 64 2E 4E 65 78 74 20  ad.Next 
+                                                ; A2B4 74 69 6D 65 5C 77 65 20  time\we 
+                                                ; A2BC 63 6F 6D 65 2C 6C 65     come,le
+        .byte   "t's take\our time and go on\mor"; A2C3 74 27 73 20 74 61 6B 65 t's take
+                                                ; A2CB 5C 6F 75 72 20 74 69 6D  \our tim
+                                                ; A2D3 65 20 61 6E 64 20 67 6F  e and go
+                                                ; A2DB 20 6F 6E 5C 6D 6F 72      on\mor
+        .byte   "e rides."                      ; A2E2 65 20 72 69 64 65 73 2E  e rides.
+        .byte   $0A                             ; A2EA 0A                       .
+LA2EB:
+        .byte   "@4Oh,look at the\time.We'd bett"; A2EB 40 34 4F 68 2C 6C 6F 6F @4Oh,loo
+                                                ; A2F3 6B 20 61 74 20 74 68 65  k at the
+                                                ; A2FB 5C 74 69 6D 65 2E 57 65  \time.We
+                                                ; A303 27 64 20 62 65 74 74     'd bett
+        .byte   "er\get going."                 ; A30A 65 72 5C 67 65 74 20 67  er\get g
+                                                ; A312 6F 69 6E 67 2E           oing.
+        .byte   $0A                             ; A317 0A                       .
 LA318:
-        .byte   "Chrstofr"                      ; A318 43 68 72 73 74 6F 66 72  Chrstofr
-        .byte   $0D,$0A                         ; A320 0D 0A                    ..
-LA322:
-        .byte   "Ironite"                       ; A322 49 72 6F 6E 69 74 65     Ironite
-        .byte   $0D,$0A                         ; A329 0D 0A                    ..
-LA32B:
-        .byte   "Hellhous"                      ; A32B 48 65 6C 6C 68 6F 75 73  Hellhous
-        .byte   $0D,$0A                         ; A333 0D 0A                    ..
-LA335:
-        .byte   "Ochu"                          ; A335 4F 63 68 75              Ochu
-        .byte   $0D,$0A                         ; A339 0D 0A                    ..
-LA33B:
-        .byte   "8-Eye"                         ; A33B 38 2D 45 79 65           8-Eye
-        .byte   $0D,$0A                         ; A340 0D 0A                    ..
-LA342:
-        .byte   "D.Claw"                        ; A342 44 2E 43 6C 61 77        D.Claw
-        .byte   $0D,$0A                         ; A348 0D 0A                    ..
-LA34A:
-        .byte   "Bndrsnch"                      ; A34A 42 6E 64 72 73 6E 63 68  Bndrsnch
-        .byte   $0D,$0A                         ; A352 0D 0A                    ..
-LA354:
-        .byte   "Bad Rap"                       ; A354 42 61 64 20 52 61 70     Bad Rap
-        .byte   $0D,$0A                         ; A35B 0D 0A                    ..
-LA35D:
-        .byte   "Bandit"                        ; A35D 42 61 6E 64 69 74        Bandit
-        .byte   $0D,$0A                         ; A363 0D 0A                    ..
-LA365:
-        .byte   "Bgndrana"                      ; A365 42 67 6E 64 72 61 6E 61  Bgndrana
-        .byte   $0D,$0A                         ; A36D 0D 0A                    ..
-LA36F:
-        .byte   "DorkFace"                      ; A36F 44 6F 72 6B 46 61 63 65  DorkFace
-        .byte   $0D,$0A                         ; A377 0D 0A                    ..
-LA379:
-        .byte   "GrndHorn"                      ; A379 47 72 6E 64 48 6F 72 6E  GrndHorn
-        .byte   $0D,$0A                         ; A381 0D 0A                    ..
-LA383:
-        .byte   "Unknown"                       ; A383 55 6E 6B 6E 6F 77 6E     Unknown
-        .byte   $0D,$0A                         ; A38A 0D 0A                    ..
-LA38C:
-        .byte   "Grangaln"                      ; A38C 47 72 61 6E 67 61 6C 6E  Grangaln
-        .byte   $0D,$0A                         ; A394 0D 0A                    ..
-LA396:
-        .byte   "X-Canon"                       ; A396 58 2D 43 61 6E 6F 6E     X-Canon
-        .byte   $0D,$0A                         ; A39D 0D 0A                    ..
-LA39F:
-        .byte   "U.Lizard"                      ; A39F 55 2E 4C 69 7A 61 72 64  U.Lizard
-        .byte   $0D,$0A                         ; A3A7 0D 0A                    ..
-LA3A9:
-        .byte   "Kimara"                        ; A3A9 4B 69 6D 61 72 61        Kimara
-        .byte   $0D,$0A                         ; A3AF 0D 0A                    ..
-LA3B1:
-        .byte   "A.Dragon"                      ; A3B1 41 2E 44 72 61 67 6F 6E  A.Dragon
-        .byte   $0D,$0A                         ; A3B9 0D 0A                    ..
-LA3BB:
-        .byte   "Sahagin"                       ; A3BB 53 61 68 61 67 69 6E     Sahagin
-        .byte   $0D,$0A                         ; A3C2 0D 0A                    ..
-LA3C4:
-        .byte   "SwrdDanc"                      ; A3C4 53 77 72 64 44 61 6E 63  SwrdDanc
-        .byte   $0D,$0A                         ; A3CC 0D 0A                    ..
-LA3CE:
-        .byte   "DverNest"                      ; A3CE 44 76 65 72 4E 65 73 74  DverNest
-        .byte   $0D,$0A                         ; A3D6 0D 0A                    ..
-LA3D8:
-        .byte   "Eligor"                        ; A3D8 45 6C 69 67 6F 72        Eligor
-        .byte   $0D,$0A                         ; A3DE 0D 0A                    ..
-LA3E0:
-        .byte   "Epiolnis"                      ; A3E0 45 70 69 6F 6C 6E 69 73  Epiolnis
-        .byte   $0D,$0A                         ; A3E8 0D 0A                    ..
-LA3EA:
-        .byte   "A.Combat"                      ; A3EA 41 2E 43 6F 6D 62 61 74  A.Combat
-        .byte   $0D,$0A                         ; A3F2 0D 0A                    ..
-LA3F4:
-        .byte   "DevlRide"                      ; A3F4 44 65 76 6C 52 69 64 65  DevlRide
-        .byte   $0D,$0A                         ; A3FC 0D 0A                    ..
+        .byte   "@4Hey?What's CaitSithdoing?"   ; A318 40 34 48 65 79 3F 57 68  @4Hey?Wh
+                                                ; A320 61 74 27 73 20 43 61 69  at's Cai
+                                                ; A328 74 53 69 74 68 64 6F 69  tSithdoi
+                                                ; A330 6E 67 3F                 ng?
+        .byte   $0A                             ; A333 0A                       .
+LA334:
+        .byte   "@1Is that the__\Keystone!Hey!\C"; A334 40 31 49 73 20 74 68 61 @1Is tha
+                                                ; A33C 74 20 74 68 65 5F 5F 5C  t the__\
+                                                ; A344 4B 65 79 73 74 6F 6E 65  Keystone
+                                                ; A34C 21 48 65 79 21 5C 43     !Hey!\C
+        .byte   "aitSith!"                      ; A353 61 69 74 53 69 74 68 21  aitSith!
+        .byte   $0A                             ; A35B 0A                       .
+LA35C:
+        .byte   "@6Here!The Keystone!"          ; A35C 40 36 48 65 72 65 21 54  @6Here!T
+                                                ; A364 68 65 20 4B 65 79 73 74  he Keyst
+                                                ; A36C 6F 6E 65 21              one!
+        .byte   $0A                             ; A370 0A                       .
+LA371:
+        .byte   "@CWell done."                  ; A371 40 43 57 65 6C 6C 20 64  @CWell d
+                                                ; A379 6F 6E 65 2E              one.
+        .byte   $0A                             ; A37D 0A                       .
+LA37E:
+        .byte   "@1Hey!"                        ; A37E 40 31 48 65 79 21        @1Hey!
+        .byte   $0A                             ; A384 0A                       .
+LA385:
+        .byte   "@6W,wait a second.I\won't run o"; A385 40 36 57 2C 77 61 69 74 @6W,wait
+                                                ; A38D 20 61 20 73 65 63 6F 6E   a secon
+                                                ; A395 64 2E 49 5C 77 6F 6E 27  d.I\won'
+                                                ; A39D 74 20 72 75 6E 20 6F     t run o
+        .byte   "r hide.\Yes,I was a spy.I\was h"; A3A4 72 20 68 69 64 65 2E 5C r hide.\
+                                                ; A3AC 59 65 73 2C 49 20 77 61  Yes,I wa
+                                                ; A3B4 73 20 61 20 73 70 79 2E  s a spy.
+                                                ; A3BC 49 5C 77 61 73 20 68     I\was h
+        .byte   "ired by the\Shinra."           ; A3C3 69 72 65 64 20 62 79 20  ired by 
+                                                ; A3CB 74 68 65 5C 53 68 69 6E  the\Shin
+                                                ; A3D3 72 61 2E                 ra.
+        .byte   $0A                             ; A3D6 0A                       .
+LA3D7:
+        .byte   "@4__I trusted you.I\can't belie"; A3D7 40 34 5F 5F 49 20 74 72 @4__I tr
+                                                ; A3DF 75 73 74 65 64 20 79 6F  usted yo
+                                                ; A3E7 75 2E 49 5C 63 61 6E 27  u.I\can'
+                                                ; A3EF 74 20 62 65 6C 69 65     t belie
+        .byte   "ve you!"                       ; A3F6 76 65 20 79 6F 75 21     ve you!
+        .byte   $0A                             ; A3FD 0A                       .
 LA3FE:
-        .byte   "HeadHunt"                      ; A3FE 48 65 61 64 48 75 6E 74  HeadHunt
-        .byte   $0D,$0A                         ; A406 0D 0A                    ..
-LA408:
-        .byte   "Rilfsak"                       ; A408 52 69 6C 66 73 61 6B     Rilfsak
-        .byte   $0D,$0A                         ; A40F 0D 0A                    ..
-LA411:
-        .byte   "Spiral"                        ; A411 53 70 69 72 61 6C        Spiral
-        .byte   $0D,$0A,$FF,$FF,$FF,$FF,$FF,$FF ; A417 0D 0A FF FF FF FF FF FF  ........
-        .byte   $FF                             ; A41F FF                       .
-LA420:
-        .byte   "Hero Drink"                    ; A420 48 65 72 6F 20 44 72 69  Hero Dri
-                                                ; A428 6E 6B                    nk
-        .byte   $0D                             ; A42A 0D                       .
-LA42B:
-        .byte   "Temporarilly       Increases HP"; A42B 54 65 6D 70 6F 72 61 72 Temporar
-                                                ; A433 69 6C 6C 79 20 20 20 20  illy    
-                                                ; A43B 20 20 20 49 6E 63 72 65     Incre
-                                                ; A443 61 73 65 73 20 48 50     ases HP
-        .byte   " by 250"                       ; A44A 20 62 79 20 32 35 30      by 250
-        .byte   $0D                             ; A451 0D                       .
-LA452:
-        .byte   "Restores 500 HP to a single all"; A452 52 65 73 74 6F 72 65 73 Restores
-                                                ; A45A 20 35 30 30 20 48 50 20   500 HP 
-                                                ; A462 74 6F 20 61 20 73 69 6E  to a sin
-                                                ; A46A 67 6C 65 20 61 6C 6C     gle all
-        .byte   "y"                             ; A471 79                       y
-        .byte   $0D                             ; A472 0D                       .
-LA473:
-        .byte   "Restores 1000 HP   to a single "; A473 52 65 73 74 6F 72 65 73 Restores
-                                                ; A47B 20 31 30 30 30 20 48 50   1000 HP
-                                                ; A483 20 20 20 74 6F 20 61 20     to a 
-                                                ; A48B 73 69 6E 67 6C 65 20     single 
-        .byte   "ally"                          ; A492 61 6C 6C 79              ally
-        .byte   $0D                             ; A496 0D                       .
-LA497:
-        .byte   "Fully restores HP  to a single "; A497 46 75 6C 6C 79 20 72 65 Fully re
-                                                ; A49F 73 74 6F 72 65 73 20 48  stores H
-                                                ; A4A7 50 20 20 74 6F 20 61 20  P  to a 
-                                                ; A4AF 73 69 6E 67 6C 65 20     single 
-        .byte   "ally"                          ; A4B6 61 6C 6C 79              ally
-        .byte   $0D                             ; A4BA 0D                       .
-LA4BB:
-        .byte   "Restores 200 HP to all allies" ; A4BB 52 65 73 74 6F 72 65 73  Restores
-                                                ; A4C3 20 32 30 30 20 48 50 20   200 HP 
-                                                ; A4CB 74 6F 20 61 6C 6C 20 61  to all a
-                                                ; A4D3 6C 6C 69 65 73           llies
-        .byte   $0D                             ; A4D8 0D                       .
-LA4D9:
-        .byte   "Restores 500 HP to all allies" ; A4D9 52 65 73 74 6F 72 65 73  Restores
-                                                ; A4E1 20 35 30 30 20 48 50 20   500 HP 
-                                                ; A4E9 74 6F 20 61 6C 6C 20 61  to all a
-                                                ; A4F1 6C 6C 69 65 73           llies
-        .byte   $0D                             ; A4F6 0D                       .
-LA4F7:
-        .byte   "Restores 1000 HP toall allies" ; A4F7 52 65 73 74 6F 72 65 73  Restores
-                                                ; A4FF 20 31 30 30 30 20 48 50   1000 HP
-                                                ; A507 20 74 6F 61 6C 6C 20 61   toall a
-                                                ; A50F 6C 6C 69 65 73           llies
-        .byte   $0D                             ; A514 0D                       .
-LA515:
-        .byte   "Fully restores HP  to all allie"; A515 46 75 6C 6C 79 20 72 65 Fully re
-                                                ; A51D 73 74 6F 72 65 73 20 48  stores H
-                                                ; A525 50 20 20 74 6F 20 61 6C  P  to al
-                                                ; A52D 6C 20 61 6C 6C 69 65     l allie
-        .byte   "s"                             ; A534 73                       s
-        .byte   $0D                             ; A535 0D                       .
-LA536:
-        .byte   "Restores 5 MP to a single spell"; A536 52 65 73 74 6F 72 65 73 Restores
-                                                ; A53E 20 35 20 4D 50 20 74 6F   5 MP to
-                                                ; A546 20 61 20 73 69 6E 67 6C   a singl
-                                                ; A54E 65 20 73 70 65 6C 6C     e spell
-        .byte   $0D                             ; A555 0D                       .
-LA556:
-        .byte   "Fully restores MP  to a single "; A556 46 75 6C 6C 79 20 72 65 Fully re
-                                                ; A55E 73 74 6F 72 65 73 20 4D  stores M
-                                                ; A566 50 20 20 74 6F 20 61 20  P  to a 
-                                                ; A56E 73 69 6E 67 6C 65 20     single 
-        .byte   "spell"                         ; A575 73 70 65 6C 6C           spell
-        .byte   $0D                             ; A57A 0D                       .
-LA57B:
-        .byte   "Revives an ally    with 25% of "; A57B 52 65 76 69 76 65 73 20 Revives 
-                                                ; A583 61 6E 20 61 6C 6C 79 20  an ally 
-                                                ; A58B 20 20 20 77 69 74 68 20     with 
-                                                ; A593 32 35 25 20 6F 66 20     25% of 
-        .byte   "HP"                            ; A59A 48 50                    HP
-        .byte   $0D                             ; A59C 0D                       .
-        .byte   "irHP"                          ; A59D 69 72 48 50              irHP
-        .byte   $0D,$00,$00,$00,$00,$00,$00,$00 ; A5A1 0D 00 00 00 00 00 00 00  ........
-        .byte   $00                             ; A5A9 00                       .
-LA5AA:
-        .byte   "Easily escape from a fight"    ; A5AA 45 61 73 69 6C 79 20 65  Easily e
-                                                ; A5B2 73 63 61 70 65 20 66 72  scape fr
-                                                ; A5BA 6F 6D 20 61 20 66 69 67  om a fig
-                                                ; A5C2 68 74                    ht
-        .byte   $0D,$00                         ; A5C4 0D 00                    ..
+        .byte   "@6I couldn't help it.How 'bout "; A3FE 40 36 49 20 63 6F 75 6C @6I coul
+                                                ; A406 64 6E 27 74 20 68 65 6C  dn't hel
+                                                ; A40E 70 20 69 74 2E 48 6F 77  p it.How
+                                                ; A416 20 27 62 6F 75 74 20      'bout 
+        .byte   "if we\continue like\nothing eve"; A41D 69 66 20 77 65 5C 63 6F if we\co
+                                                ; A425 6E 74 69 6E 75 65 20 6C  ntinue l
+                                                ; A42D 69 6B 65 5C 6E 6F 74 68  ike\noth
+                                                ; A435 69 6E 67 20 65 76 65     ing eve
+        .byte   "r\happened?"                   ; A43C 72 5C 68 61 70 70 65 6E  r\happen
+                                                ; A444 65 64 3F                 ed?
+        .byte   $0A                             ; A447 0A                       .
+LA448:
+        .byte   "@1No way,cat!You\gotta lot of g"; A448 40 31 4E 6F 20 77 61 79 @1No way
+                                                ; A450 2C 63 61 74 21 59 6F 75  ,cat!You
+                                                ; A458 5C 67 6F 74 74 61 20 6C  \gotta l
+                                                ; A460 6F 74 20 6F 66 20 67     ot of g
+        .byte   "uts\acting like a\friend but be"; A467 75 74 73 5C 61 63 74 69 uts\acti
+                                                ; A46F 6E 67 20 6C 69 6B 65 20  ng like 
+                                                ; A477 61 5C 66 72 69 65 6E 64  a\friend
+                                                ; A47F 20 62 75 74 20 62 65      but be
+        .byte   "ing a\spy!"                    ; A486 69 6E 67 20 61 5C 73 70  ing a\sp
+                                                ; A48E 79 21                    y!
+        .byte   $0A                             ; A490 0A                       .
+LA491:
+        .byte   "@6Then what are you\goin' to do"; A491 40 36 54 68 65 6E 20 77 @6Then w
+                                                ; A499 68 61 74 20 61 72 65 20  hat are 
+                                                ; A4A1 79 6F 75 5C 67 6F 69 6E  you\goin
+                                                ; A4A9 27 20 74 6F 20 64 6F     ' to do
+        .byte   "?Kill\me?You'd just be\wastin' "; A4B0 3F 4B 69 6C 6C 5C 6D 65 ?Kill\me
+                                                ; A4B8 3F 59 6F 75 27 64 20 6A  ?You'd j
+                                                ; A4C0 75 73 74 20 62 65 5C 77  ust be\w
+                                                ; A4C8 61 73 74 69 6E 27 20     astin' 
+        .byte   "your time\if you tried.This\bod"; A4CF 79 6F 75 72 20 74 69 6D your tim
+                                                ; A4D7 65 5C 69 66 20 79 6F 75  e\if you
+                                                ; A4DF 20 74 72 69 65 64 2E 54   tried.T
+                                                ; A4E7 68 69 73 5C 62 6F 64     his\bod
+        .byte   "y's just a toy\anyway.My real\b"; A4EE 79 27 73 20 6A 75 73 74 y's just
+                                                ; A4F6 20 61 20 74 6F 79 5C 61   a toy\a
+                                                ; A4FE 6E 79 77 61 79 2E 4D 79  nyway.My
+                                                ; A506 20 72 65 61 6C 5C 62      real\b
+        .byte   "ody's at Shinra HQin Midgar.I'm"; A50D 6F 64 79 27 73 20 61 74 ody's at
+                                                ; A515 20 53 68 69 6E 72 61 20   Shinra 
+                                                ; A51D 48 51 69 6E 20 4D 69 64  HQin Mid
+                                                ; A525 67 61 72 2E 49 27 6D     gar.I'm
+        .byte   "\controllin' this\toy cat from "; A52C 5C 63 6F 6E 74 72 6F 6C \control
+                                                ; A534 6C 69 6E 27 20 74 68 69  lin' thi
+                                                ; A53C 73 5C 74 6F 79 20 63 61  s\toy ca
+                                                ; A544 74 20 66 72 6F 6D 20     t from 
+        .byte   "there."                        ; A54B 74 68 65 72 65 2E        there.
+        .byte   $0A                             ; A551 0A                       .
+LA552:
+        .byte   "@4So you're from the\Shinra.Who"; A552 40 34 53 6F 20 79 6F 75 @4So you
+                                                ; A55A 27 72 65 20 66 72 6F 6D  're from
+                                                ; A562 20 74 68 65 5C 53 68 69   the\Shi
+                                                ; A56A 6E 72 61 2E 57 68 6F     nra.Who
+        .byte   "?Who are\you!Tell me!"         ; A571 3F 57 68 6F 20 61 72 65  ?Who are
+                                                ; A579 5C 79 6F 75 21 54 65 6C  \you!Tel
+                                                ; A581 6C 20 6D 65 21           l me!
+        .byte   $0A                             ; A586 0A                       .
+LA587:
+        .byte   "@6Whoa,I can't tell\you my name"; A587 40 36 57 68 6F 61 2C 49 @6Whoa,I
+                                                ; A58F 20 63 61 6E 27 74 20 74   can't t
+                                                ; A597 65 6C 6C 5C 79 6F 75 20  ell\you 
+                                                ; A59F 6D 79 20 6E 61 6D 65     my name
+        .byte   "."                             ; A5A6 2E                       .
+        .byte   $0A                             ; A5A7 0A                       .
+LA5A8:
+        .byte   "@1We're not gettin'\anywhere." ; A5A8 40 31 57 65 27 72 65 20  @1We're 
+                                                ; A5B0 6E 6F 74 20 67 65 74 74  not gett
+                                                ; A5B8 69 6E 27 5C 61 6E 79 77  in'\anyw
+                                                ; A5C0 68 65 72 65 2E           here.
+        .byte   $0A                             ; A5C5 0A                       .
+LA5C6:
+        .byte   "@6See?I told you!\Talking won't"; A5C6 40 36 53 65 65 3F 49 20 @6See?I 
+                                                ; A5CE 74 6F 6C 64 20 79 6F 75  told you
+                                                ; A5D6 21 5C 54 61 6C 6B 69 6E  !\Talkin
+                                                ; A5DE 67 20 77 6F 6E 27 74     g won't
+        .byte   " do\any good,so can't\we just c"; A5E5 20 64 6F 5C 61 6E 79 20  do\any 
+                                                ; A5ED 67 6F 6F 64 2C 73 6F 20  good,so 
+                                                ; A5F5 63 61 6E 27 74 5C 77 65  can't\we
+                                                ; A5FD 20 6A 75 73 74 20 63      just c
+        .byte   "ontinue\our journey?"          ; A604 6F 6E 74 69 6E 75 65 5C  ontinue\
+                                                ; A60C 6F 75 72 20 6A 6F 75 72  our jour
+                                                ; A614 6E 65 79 3F              ney?
+        .byte   $0A                             ; A618 0A                       .
+LA619:
+        .byte   "@1You think I'm\jokin'!?"      ; A619 40 31 59 6F 75 20 74 68  @1You th
+                                                ; A621 69 6E 6B 20 49 27 6D 5C  ink I'm\
+                                                ; A629 6A 6F 6B 69 6E 27 21 3F  jokin'!?
+        .byte   $0A                             ; A631 0A                       .
+LA632:
+        .byte   "@6__Alright,yes,I am\a Shinra e"; A632 40 36 5F 5F 41 6C 72 69 @6__Alri
+                                                ; A63A 67 68 74 2C 79 65 73 2C  ght,yes,
+                                                ; A642 49 20 61 6D 5C 61 20 53  I am\a S
+                                                ; A64A 68 69 6E 72 61 20 65     hinra e
+        .byte   "mployee.\But we're not\entirely"; A651 6D 70 6C 6F 79 65 65 2E mployee.
+                                                ; A659 5C 42 75 74 20 77 65 27  \But we'
+                                                ; A661 72 65 20 6E 6F 74 5C 65  re not\e
+                                                ; A669 6E 74 69 72 65 6C 79     ntirely
+        .byte   " enemies__\Something bothers\me"; A670 20 65 6E 65 6D 69 65 73  enemies
+                                                ; A678 5F 5F 5C 53 6F 6D 65 74  __\Somet
+                                                ; A680 68 69 6E 67 20 62 6F 74  hing bot
+                                                ; A688 68 65 72 73 5C 6D 65     hers\me
+        .byte   ".I think it's\your way of life."; A68F 2E 49 20 74 68 69 6E 6B .I think
+                                                ; A697 20 69 74 27 73 5C 79 6F   it's\yo
+                                                ; A69F 75 72 20 77 61 79 20 6F  ur way o
+                                                ; A6A7 66 20 6C 69 66 65 2E     f life.
+        .byte   "\You don't get paid.You don't g"; A6AE 5C 59 6F 75 20 64 6F 6E \You don
+                                                ; A6B6 27 74 20 67 65 74 20 70  't get p
+                                                ; A6BE 61 69 64 2E 59 6F 75 20  aid.You 
+                                                ; A6C6 64 6F 6E 27 74 20 67     don't g
+        .byte   "et\praised.Yet,you\still risk y"; A6CD 65 74 5C 70 72 61 69 73 et\prais
+                                                ; A6D5 65 64 2E 59 65 74 2C 79  ed.Yet,y
+                                                ; A6DD 6F 75 5C 73 74 69 6C 6C  ou\still
+                                                ; A6E5 20 72 69 73 6B 20 79      risk y
+        .byte   "our\lives and continue\on your "; A6EC 6F 75 72 5C 6C 69 76 65 our\live
+                                                ; A6F4 73 20 61 6E 64 20 63 6F  s and co
+                                                ; A6FC 6E 74 69 6E 75 65 5C 6F  ntinue\o
+                                                ; A704 6E 20 79 6F 75 72 20     n your 
+        .byte   "journey.\Seeing that makes\me__"; A70B 6A 6F 75 72 6E 65 79 2E journey.
+                                                ; A713 5C 53 65 65 69 6E 67 20  \Seeing 
+                                                ; A71B 74 68 61 74 20 6D 61 6B  that mak
+                                                ; A723 65 73 5C 6D 65 5F 5F     es\me__
+        .byte   $0A                             ; A72A 0A                       .
+LA72B:
+        .byte   "@6It just makes me\think about "; A72B 40 36 49 74 20 6A 75 73 @6It jus
+                                                ; A733 74 20 6D 61 6B 65 73 20  t makes 
+                                                ; A73B 6D 65 5C 74 68 69 6E 6B  me\think
+                                                ; A743 20 61 62 6F 75 74 20      about 
+        .byte   "my\life.I don't think\I'd feel "; A74A 6D 79 5C 6C 69 66 65 2E my\life.
+                                                ; A752 49 20 64 6F 6E 27 74 20  I don't 
+                                                ; A75A 74 68 69 6E 6B 5C 49 27  think\I'
+                                                ; A762 64 20 66 65 65 6C 20     d feel 
+        .byte   "too good\if things ended theway"; A769 74 6F 6F 20 67 6F 6F 64 too good
+                                                ; A771 5C 69 66 20 74 68 69 6E  \if thin
+                                                ; A779 67 73 20 65 6E 64 65 64  gs ended
+                                                ; A781 20 74 68 65 77 61 79      theway
+        .byte   " they are now."                ; A788 20 74 68 65 79 20 61 72   they ar
+                                                ; A790 65 20 6E 6F 77 2E        e now.
+        .byte   $0A                             ; A796 0A                       .
+LA797:
+        .byte   "@4__And so on,and so\on__"     ; A797 40 34 5F 5F 41 6E 64 20  @4__And 
+                                                ; A79F 73 6F 20 6F 6E 2C 61 6E  so on,an
+                                                ; A7A7 64 20 73 6F 5C 6F 6E 5F  d so\on_
+                                                ; A7AF 5F                       _
+        .byte   $0A                             ; A7B0 0A                       .
+LA7B1:
+        .byte   "@1He'll never tell\the truth.On"; A7B1 40 31 48 65 27 6C 6C 20 @1He'll 
+                                                ; A7B9 6E 65 76 65 72 20 74 65  never te
+                                                ; A7C1 6C 6C 5C 74 68 65 20 74  ll\the t
+                                                ; A7C9 72 75 74 68 2E 4F 6E     ruth.On
+        .byte   "ce a\spy,always a spy.Wecan't g"; A7D0 63 65 20 61 5C 73 70 79 ce a\spy
+                                                ; A7D8 2C 61 6C 77 61 79 73 20  ,always 
+                                                ; A7E0 61 20 73 70 79 2E 57 65  a spy.We
+                                                ; A7E8 63 61 6E 27 74 20 67     can't g
+        .byte   "o on with\someone like that.\C'"; A7EF 6F 20 6F 6E 20 77 69 74 o on wit
+                                                ; A7F7 68 5C 73 6F 6D 65 6F 6E  h\someon
+                                                ; A7FF 65 20 6C 69 6B 65 20 74  e like t
+                                                ; A807 68 61 74 2E 5C 43 27     hat.\C'
+        .byte   "mon,get real!"                 ; A80E 6D 6F 6E 2C 67 65 74 20  mon,get 
+                                                ; A816 72 65 61 6C 21           real!
+        .byte   $0A                             ; A81B 0A                       .
+LA81C:
+        .byte   "@6__just as I\thought.Talking\w"; A81C 40 36 5F 5F 6A 75 73 74 @6__just
+                                                ; A824 20 61 73 20 49 5C 74 68   as I\th
+                                                ; A82C 6F 75 67 68 74 2E 54 61  ought.Ta
+                                                ; A834 6C 6B 69 6E 67 5C 77     lking\w
+        .byte   "on't make a bit ofdifference.Bu"; A83B 6F 6E 27 74 20 6D 61 6B on't mak
+                                                ; A843 65 20 61 20 62 69 74 20  e a bit 
+                                                ; A84B 6F 66 64 69 66 66 65 72  ofdiffer
+                                                ; A853 65 6E 63 65 2E 42 75     ence.Bu
+        .byte   "t I\prepared something\in case "; A85A 74 20 49 5C 70 72 65 70 t I\prep
+                                                ; A862 61 72 65 64 20 73 6F 6D  ared som
+                                                ; A86A 65 74 68 69 6E 67 5C 69  ething\i
+                                                ; A872 6E 20 63 61 73 65 20     n case 
+        .byte   "this\happened.Why don't\you lis"; A879 74 68 69 73 5C 68 61 70 this\hap
+                                                ; A881 70 65 6E 65 64 2E 57 68  pened.Wh
+                                                ; A889 79 20 64 6F 6E 27 74 5C  y don't\
+                                                ; A891 79 6F 75 20 6C 69 73     you lis
+        .byte   "ten to this?"                  ; A898 74 65 6E 20 74 6F 20 74  ten to t
+                                                ; A8A0 68 69 73 3F              his?
+        .byte   $0A                             ; A8A4 0A                       .
+LA8A5:
+        .byte   "Papa!Tifa!"                    ; A8A5 50 61 70 61 21 54 69 66  Papa!Tif
+                                                ; A8AD 61 21                    a!
+        .byte   $0A                             ; A8AF 0A                       .
+LA8B0:
+        .byte   "@4Hey!That's Marlene!"         ; A8B0 40 34 48 65 79 21 54 68  @4Hey!Th
+                                                ; A8B8 61 74 27 73 20 4D 61 72  at's Mar
+                                                ; A8C0 6C 65 6E 65 21           lene!
+        .byte   $0A                             ; A8C5 0A                       .
+LA8C6:
+        .byte   "Hey!It's the flowerlady!Flower "; A8C6 48 65 79 21 49 74 27 73 Hey!It's
+                                                ; A8CE 20 74 68 65 20 66 6C 6F   the flo
+                                                ; A8D6 77 65 72 6C 61 64 79 21  werlady!
+                                                ; A8DE 46 6C 6F 77 65 72 20     Flower 
+        .byte   "lady__"                        ; A8E5 6C 61 64 79 5F 5F        lady__
+        .byte   $0A                             ; A8EB 0A                       .
+LA8EC:
+        .byte   "@6__So,you have to doas I say."; A8EC 40 36 5F 5F 53 6F 2C 79  @6__So,y
+                                                ; A8F4 6F 75 20 68 61 76 65 20  ou have 
+                                                ; A8FC 74 6F 20 64 6F 61 73 20  to doas 
+                                                ; A904 49 20 73 61 79 2E        I say.
+        .byte   $0A                             ; A90A 0A                       .
+LA90B:
+        .byte   "@1__you're the\lowest__"       ; A90B 40 31 5F 5F 79 6F 75 27  @1__you'
+                                                ; A913 72 65 20 74 68 65 5C 6C  re the\l
+                                                ; A91B 6F 77 65 73 74 5F 5F     owest__
 ; ----------------------------------------------------------------------------
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A5C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A5CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A5D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A5DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A5E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A5EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A5F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A5FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A606 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A60E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A616 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A61E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A626 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A62E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A636 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A63E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A646 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A64E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A656 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A65E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A666 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A66E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A676 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A67E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A686 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A68E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A696 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A69E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A6A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A6AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A6B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A6BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A6C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A6CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A6D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A6DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A6E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A6EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A6F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A6FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A706 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A70E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A716 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A71E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A726 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A72E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A736 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A73E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A746 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A74E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A756 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A75E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A766 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A76E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A776 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A77E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A786 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A78E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A796 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A79E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A7A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A7AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A7B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A7BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A7C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A7CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A7D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A7DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A7E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A7EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A7F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A7FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A806 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A80E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A816 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A81E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A826 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A82E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A836 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A83E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A846 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A84E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A856 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A85E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A866 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A86E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A876 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A87E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A886 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A88E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A896 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A89E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A8A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A8AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A8B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A8BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A8C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A8CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A8D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A8DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A8E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A8EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A8F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A8FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A906 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A90E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A916 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A91E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A926 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A92E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A936 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A93E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A946 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A94E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A956 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A95E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A966 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A96E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A976 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A97E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A986 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A98E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A996 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A99E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A9A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A9AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A9B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A9BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A9C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A9CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A9D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A9DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A9E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A9EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A9F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A9FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AA9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AAA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AAAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AAB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AABE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AAC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AACE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AAD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AADE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AAE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AAEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AAF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AAFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AB9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ABA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ABAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ABB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ABBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ABC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ABCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ABD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ABDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ABE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ABEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ABF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ABFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AC9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ACA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ACAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ACB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ACBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ACC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ACCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ACD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ACDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ACE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ACEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ACF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ACFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AD9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ADA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ADAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ADB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ADBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ADC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ADCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ADD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ADDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ADE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ADEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ADF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ADFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AEA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AEAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AEB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AEBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AEC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AECE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AED6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AEDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AEE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AEEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AEF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AEFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AF9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AFA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AFAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AFB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AFBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AFC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AFCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AFD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AFDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AFE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AFEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AFF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AFFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B006 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B00E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B016 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B01E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B026 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B02E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B036 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B03E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B046 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B04E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B056 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B05E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B066 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B06E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B076 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B07E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B086 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B08E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B096 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B09E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B0A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B0AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B0B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B0BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B0C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B0CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B0D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B0DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B0E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B0EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B0F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B0FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B106 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B10E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B116 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B11E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B126 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B12E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B136 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B13E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B146 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B14E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B156 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B15E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B166 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B16E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B176 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B17E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B186 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B18E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B196 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B19E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B1A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B1AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B1B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B1BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B1C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B1CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B1D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B1DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B1E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B1EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B1F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B1FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B206 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B20E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B216 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B21E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B226 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B22E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B236 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B23E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B246 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B24E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B256 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B25E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B266 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B26E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B276 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B27E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B286 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B28E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B296 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B29E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B2A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B2AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B2B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B2BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B2C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B2CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B2D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B2DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B2E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B2EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B2F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B2FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B306 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B30E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B316 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B31E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B326 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B32E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B336 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B33E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B346 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B34E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B356 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B35E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B366 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B36E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B376 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B37E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B386 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B38E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B396 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B39E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B3A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B3AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B3B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B3BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B3C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B3CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B3D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B3DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B3E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B3EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B3F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B3FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B406 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B40E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B416 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B41E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B426 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B42E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B436 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B43E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B446 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B44E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B456 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B45E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B466 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B46E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B476 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B47E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B486 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B48E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B496 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B49E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B4A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B4AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B4B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B4BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B4C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B4CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B4D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B4DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B4E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B4EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B4F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B4FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B506 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B50E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B516 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B51E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B526 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B52E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B536 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B53E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B546 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B54E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B556 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B55E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B566 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B56E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B576 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B57E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B586 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B58E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B596 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B59E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B5A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B5AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B5B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B5BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B5C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B5CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B5D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B5DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B5E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B5EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B5F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B5FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B606 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B60E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B616 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B61E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B626 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B62E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B636 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B63E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B646 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B64E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B656 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B65E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B666 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B66E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B676 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B67E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B686 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B68E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B696 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B69E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B6A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B6AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B6B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B6BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B6C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B6CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B6D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B6DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B6E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B6EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B6F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B6FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B706 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B70E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B716 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B71E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B726 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B72E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B736 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B73E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B746 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B74E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B756 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B75E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B766 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B76E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B776 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B77E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B786 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B78E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B796 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B79E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B7A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B7AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B7B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B7BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B7C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B7CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B7D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B7DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B7E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B7EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B7F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B7FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B806 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B80E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B816 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B81E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B826 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B82E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B836 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B83E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B846 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B84E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B856 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B85E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B866 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B86E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B876 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B87E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B886 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B88E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B896 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B89E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B8A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B8AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B8B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B8BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B8C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B8CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B8D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B8DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B8E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B8EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B8F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B8FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B906 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B90E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B916 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B91E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B926 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B92E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B936 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B93E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B946 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B94E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B956 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B95E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B966 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B96E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B976 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B97E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B986 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B98E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B996 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B99E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B9A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B9AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B9B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B9BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B9C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B9CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B9D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B9DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B9E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B9EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B9F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B9FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BA9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BAA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BAAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BAB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BABE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BAC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BACE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BAD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BADE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BAE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BAEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BAF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BAFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BB9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BBA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BBAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BBB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BBBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BBC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BBCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BBD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BBDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BBE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BBEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BBF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BBFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BCA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BCAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BCB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BCBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BCC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BCCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BCD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BCDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BCE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BCEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BCF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BCFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BD9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BDA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BDAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BDB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BDBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BDC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BDCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BDD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BDDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BDE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BDEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BDF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BDFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BEA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BEAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BEB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BEBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BEC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BECE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BED6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BEDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BEE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BEEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BEF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BEFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BF9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BFA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BFAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BFB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BFBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BFC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BFCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BFD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BFDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BFE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BFEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BFF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BFFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C006 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C00E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C016 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C01E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C026 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C02E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C036 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C03E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C046 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C04E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C056 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C05E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C066 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C06E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C076 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C07E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C086 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C08E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C096 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C09E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C0A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C0AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C0B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C0BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C0C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C0CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C0D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C0DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C0E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C0EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C0F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C0FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C106 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C10E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C116 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C11E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C126 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C12E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C136 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C13E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C146 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C14E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C156 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C15E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C166 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C16E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C176 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C17E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C186 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C18E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C196 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C19E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C1A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C1AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C1B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C1BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C1C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C1CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C1D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C1DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C1E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C1EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C1F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C1FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C206 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C20E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C216 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C21E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C226 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C22E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C236 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C23E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C246 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C24E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C256 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C25E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C266 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C26E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C276 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C27E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C286 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C28E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C296 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C29E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C2A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C2AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C2B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C2BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C2C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C2CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C2D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C2DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C2E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C2EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C2F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C2FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C306 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C30E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C316 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C31E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C326 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C32E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C336 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C33E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C346 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C34E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C356 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C35E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C366 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C36E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C376 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C37E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C386 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C38E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C396 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C39E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C3A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C3AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C3B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C3BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C3C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C3CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C3D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C3DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C3E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C3EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C3F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C3FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C406 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C40E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C416 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C41E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C426 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C42E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C436 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C43E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C446 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C44E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C456 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C45E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C466 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C46E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C476 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C47E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C486 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C48E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C496 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C49E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C4A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C4AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C4B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C4BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C4C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C4CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C4D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C4DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C4E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C4EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C4F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C4FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C506 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C50E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C516 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C51E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C526 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C52E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C536 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C53E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C546 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C54E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C556 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C55E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C566 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C56E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C576 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C57E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C586 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C58E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C596 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C59E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C5A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C5AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C5B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C5BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C5C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C5CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C5D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C5DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C5E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C5EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C5F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C5FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C606 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C60E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C616 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C61E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C626 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C62E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C636 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C63E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C646 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C64E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C656 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C65E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C666 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C66E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C676 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C67E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C686 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C68E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C696 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C69E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C6A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C6AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C6B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C6BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C6C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C6CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C6D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C6DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C6E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C6EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C6F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C6FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C706 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C70E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C716 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C71E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C726 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C72E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C736 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C73E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C746 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C74E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C756 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C75E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C766 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C76E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C776 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C77E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C786 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C78E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C796 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C79E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C7A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C7AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C7B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C7BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C7C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C7CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C7D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C7DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C7E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C7EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C7F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C7FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C806 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C80E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C816 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C81E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C826 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C82E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C836 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C83E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C846 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C84E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C856 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C85E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C866 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C86E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C876 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C87E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C886 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C88E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C896 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C89E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C8A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C8AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C8B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C8BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C8C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C8CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C8D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C8DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C8E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C8EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C8F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C8FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C906 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C90E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C916 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C91E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C926 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C92E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C936 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C93E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C946 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C94E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C956 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C95E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C966 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C96E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C976 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C97E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C986 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C98E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C996 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C99E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C9A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C9AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C9B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C9BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C9C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C9CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C9D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C9DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C9E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C9EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C9F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C9FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CAA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CAAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CAB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CABE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CAC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CACE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CAD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CADE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CAE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CAEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CAF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CAFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CBA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CBAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CBB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CBBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CBC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CBCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CBD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CBDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CBE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CBEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CBF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CBFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CC9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CCA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CCAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CCB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CCBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CCC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CCCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CCD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CCDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CCE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CCEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CCF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CCFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CD9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CDA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CDAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CDB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CDBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CDC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CDCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CDD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CDDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CDE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CDEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CDF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CDFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CEA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CEAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CEB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CEBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CEC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CECE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CED6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CEDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CEE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CEEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CEF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CEFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CF9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CFA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CFAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CFB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CFBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CFC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CFCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CFD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CFDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CFE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CFEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CFF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CFFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D006 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D00E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D016 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D01E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D026 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D02E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D036 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D03E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D046 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D04E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D056 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D05E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D066 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D06E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D076 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D07E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D086 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D08E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D096 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D09E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D0A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D0AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D0B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D0BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D0C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D0CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D0D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D0DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D0E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D0EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D0F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D0FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D106 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D10E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D116 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D11E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D126 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D12E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D136 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D13E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D146 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D14E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D156 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D15E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D166 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D16E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D176 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D17E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D186 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D18E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D196 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D19E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D1A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D1AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D1B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D1BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D1C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D1CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D1D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D1DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D1E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D1EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D1F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D1FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D206 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D20E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D216 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D21E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D226 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D22E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D236 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D23E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D246 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D24E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D256 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D25E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D266 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D26E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D276 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D27E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D286 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D28E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D296 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D29E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D2A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D2AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D2B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D2BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D2C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D2CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D2D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D2DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D2E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D2EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D2F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D2FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D306 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D30E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D316 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D31E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D326 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D32E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D336 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D33E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D346 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D34E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D356 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D35E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D366 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D36E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D376 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D37E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D386 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D38E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D396 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D39E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D3A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D3AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D3B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D3BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D3C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D3CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D3D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D3DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D3E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D3EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D3F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D3FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D406 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D40E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D416 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D41E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D426 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D42E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D436 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D43E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D446 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D44E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D456 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D45E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D466 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D46E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D476 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D47E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D486 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D48E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D496 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D49E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D4A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D4AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D4B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D4BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D4C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D4CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D4D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D4DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D4E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D4EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D4F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D4FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D506 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D50E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D516 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D51E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D526 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D52E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D536 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D53E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D546 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D54E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D556 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D55E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D566 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D56E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D576 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D57E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D586 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D58E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D596 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D59E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D5A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D5AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D5B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D5BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D5C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D5CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D5D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D5DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D5E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D5EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D5F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D5FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D606 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D60E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D616 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D61E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D626 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D62E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D636 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D63E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D646 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D64E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D656 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D65E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D666 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D66E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D676 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D67E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D686 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D68E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D696 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D69E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D6A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D6AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D6B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D6BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D6C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D6CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D6D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D6DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D6E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D6EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D6F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D6FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D706 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D70E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D716 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D71E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D726 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D72E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D736 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D73E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D746 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D74E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D756 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D75E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D766 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D76E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D776 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D77E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D786 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D78E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D796 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D79E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D7A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D7AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D7B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D7BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D7C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D7CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D7D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D7DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D7E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D7EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D7F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D7FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D806 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D80E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D816 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D81E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D826 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D82E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D836 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D83E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D846 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D84E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D856 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D85E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D866 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D86E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D876 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D87E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D886 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D88E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D896 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D89E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D8A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D8AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D8B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D8BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D8C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D8CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D8D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D8DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D8E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D8EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D8F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D8FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D906 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D90E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D916 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D91E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D926 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D92E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D936 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D93E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D946 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D94E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D956 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D95E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D966 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D96E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D976 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D97E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D986 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D98E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D996 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D99E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DA9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DAA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DAAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DAB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DABE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DAC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DACE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DAD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DADE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DAE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DAEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DAF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DAFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DB9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DBA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DBAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DBB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DBBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DBC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DBCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DBD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DBDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DBE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DBEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DBF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DBFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DCA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DCAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DCB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DCBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DCC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DCCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DCD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DCDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DCE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DCEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DCF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DCFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DD9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DDA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DDAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DDB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DDBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DDC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DDCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DDD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DDDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DDE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DDEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DDF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DDFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DE9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DEA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DEAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DEB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DEBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DEC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DECE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DED6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DEDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DEE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DEEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DEF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DEFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DFA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DFAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DFB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DFBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DFC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DFCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DFD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DFDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DFE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DFEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DFF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DFFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E006 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E00E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E016 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E01E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E026 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E02E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E036 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E03E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E046 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E04E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E056 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E05E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E066 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E06E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E076 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E07E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E086 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E08E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E096 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E09E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E0A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E0AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E0B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E0BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E0C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E0CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E0D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E0DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E0E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E0EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E0F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E0FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E106 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E10E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E116 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E11E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E126 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E12E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E136 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E13E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E146 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E14E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E156 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E15E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E166 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E16E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E176 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E17E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E186 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E18E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E196 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E19E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E1A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E1AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E1B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E1BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E1C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E1CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E1D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E1DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E1E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E1EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E1F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E1FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E206 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E20E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E216 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E21E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E226 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E22E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E236 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E23E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E246 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E24E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E256 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E25E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E266 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E26E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E276 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E27E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E286 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E28E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E296 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E29E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E2A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E2AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E2B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E2BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E2C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E2CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E2D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E2DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E2E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E2EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E2F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E2FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E306 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E30E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E316 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E31E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E326 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E32E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E336 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E33E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E346 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E34E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E356 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E35E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E366 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E36E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E376 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E37E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E386 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E38E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E396 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E39E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E3A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E3AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E3B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E3BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E3C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E3CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E3D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E3DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E3E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E3EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E3F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E3FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E406 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E40E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E416 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E41E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E426 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E42E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E436 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E43E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E446 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E44E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E456 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E45E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E466 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E46E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E476 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E47E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E486 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E48E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E496 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E49E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E4A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E4AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E4B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E4BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E4C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E4CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E4D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E4DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E4E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E4EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E4F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E4FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E506 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E50E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E516 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E51E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E526 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E52E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E536 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E53E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E546 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E54E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E556 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E55E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E566 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E56E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E576 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E57E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E586 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E58E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E596 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E59E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E5A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E5AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E5B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E5BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E5C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E5CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E5D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E5DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E5E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E5EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E5F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E5FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E606 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E60E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E616 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E61E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E626 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E62E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E636 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E63E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E646 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E64E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E656 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E65E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E666 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E66E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E676 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E67E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E686 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E68E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E696 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E69E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E6A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E6AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E6B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E6BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E6C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E6CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E6D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E6DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E6E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E6EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E6F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E6FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E706 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E70E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E716 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E71E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E726 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E72E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E736 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E73E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E746 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E74E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E756 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E75E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E766 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E76E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E776 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E77E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E786 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E78E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E796 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E79E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E7A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E7AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E7B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E7BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E7C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E7CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E7D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E7DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E7E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E7EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E7F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E7FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E806 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E80E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E816 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E81E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E826 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E82E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E836 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E83E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E846 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E84E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E856 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E85E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E866 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E86E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E876 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E87E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E886 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E88E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E896 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E89E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E8A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E8AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E8B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E8BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E8C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E8CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E8D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E8DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E8E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E8EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E8F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E8FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E906 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E90E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E916 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E91E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E926 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E92E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E936 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E93E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E946 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E94E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E956 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E95E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E966 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E96E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E976 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E97E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E986 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E98E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E996 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E99E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E9A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E9AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E9B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E9BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E9C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E9CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E9D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E9DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E9E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E9EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E9F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E9FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EA9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EAA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EAAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EAB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EABE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EAC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EACE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EAD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EADE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EAE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EAEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EAF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EAFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EBA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EBAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EBB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EBBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EBC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EBCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EBD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EBDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EBE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EBEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EBF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EBFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EC9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ECA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ECAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ECB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ECBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ECC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ECCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ECD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ECDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ECE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ECEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ECF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ECFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ED9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EDA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EDAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EDB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EDBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EDC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EDCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EDD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EDDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EDE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EDEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EDF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EDFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EEA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EEAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EEB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EEBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EEC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EECE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EED6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EEDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EEE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EEEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EEF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EEFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EF9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EFA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EFAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EFB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EFBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EFC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EFCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EFD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EFDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EFE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EFEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EFF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EFFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F006 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F00E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F016 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F01E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F026 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F02E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F036 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F03E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F046 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F04E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F056 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F05E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F066 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F06E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F076 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F07E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F086 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F08E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F096 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F09E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F0A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F0AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F0B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F0BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F0C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F0CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F0D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F0DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F0E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F0EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F0F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F0FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F106 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F10E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F116 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F11E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F126 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F12E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F136 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F13E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F146 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F14E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F156 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F15E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F166 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F16E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F176 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F17E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F186 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F18E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F196 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F19E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F1A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F1AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F1B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F1BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F1C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F1CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F1D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F1DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F1E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F1EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F1F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F1FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F206 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F20E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F216 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F21E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F226 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F22E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F236 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F23E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F246 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F24E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F256 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F25E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F266 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F26E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F276 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F27E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F286 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F28E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F296 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F29E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F2A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F2AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F2B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F2BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F2C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F2CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F2D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F2DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F2E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F2EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F2F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F2FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F306 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F30E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F316 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F31E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F326 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F32E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F336 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F33E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F346 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F34E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F356 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F35E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F366 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F36E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F376 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F37E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F386 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F38E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F396 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F39E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F3A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F3AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F3B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F3BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F3C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F3CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F3D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F3DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F3E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F3EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F3F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F3FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F406 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F40E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F416 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F41E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F426 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F42E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F436 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F43E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F446 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F44E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F456 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F45E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F466 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F46E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F476 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F47E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F486 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F48E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F496 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F49E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F4A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F4AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F4B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F4BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F4C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F4CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F4D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F4DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F4E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F4EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F4F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F4FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F506 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F50E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F516 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F51E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F526 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F52E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F536 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F53E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F546 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F54E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F556 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F55E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F566 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F56E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F576 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F57E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F586 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F58E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F596 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F59E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F5A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F5AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F5B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F5BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F5C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F5CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F5D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F5DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F5E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F5EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F5F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F5FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F606 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F60E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F616 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F61E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F626 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F62E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F636 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F63E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F646 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F64E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F656 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F65E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F666 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F66E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F676 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F67E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F686 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F68E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F696 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F69E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F6A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F6AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F6B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F6BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F6C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F6CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F6D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F6DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F6E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F6EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F6F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F6FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F706 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F70E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F716 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F71E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F726 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F72E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F736 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F73E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F746 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F74E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F756 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F75E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F766 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F76E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F776 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F77E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F786 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F78E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F796 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F79E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F7A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F7AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F7B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F7BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F7C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F7CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F7D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F7DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F7E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F7EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F7F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F7FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F806 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F80E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F816 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F81E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F826 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F82E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F836 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F83E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F846 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F84E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F856 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F85E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F866 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F86E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F876 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F87E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F886 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F88E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F896 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F89E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F8A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F8AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F8B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F8BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F8C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F8CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F8D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F8DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F8E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F8EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F8F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F8FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F906 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F90E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F916 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F91E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F926 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F92E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F936 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F93E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F946 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F94E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F956 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F95E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F966 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F96E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F976 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F97E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F986 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F98E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F996 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F99E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F9A6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F9AE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F9B6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F9BE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F9C6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F9CE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F9D6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F9DE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F9E6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F9EE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F9F6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F9FE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FA9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FAA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FAAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FAB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FABE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FAC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FACE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FAD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FADE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FAE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FAEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FAF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FAFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FB9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FBA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FBAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FBB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FBBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FBC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FBCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FBD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FBDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FBE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FBEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FBF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FBFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FC9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FCA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FCAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FCB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FCBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FCC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FCCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FCD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FCDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FCE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FCEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FCF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FCFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FD9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FDA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FDAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FDB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FDBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FDC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FDCE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FDD6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FDDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FDE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FDEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FDF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FDFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FE9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FEA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FEAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FEB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FEBE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FEC6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FECE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FED6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FEDE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FEE6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FEEE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FEF6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FEFE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF06 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF0E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF16 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF1E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF26 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF2E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF36 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF3E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF46 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF4E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF56 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF5E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF66 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF6E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF76 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF7E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF86 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF8E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF96 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FF9E 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FFA6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FFAE 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FFB6 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$78,$D8,$A9,$00,$8D,$00 ; FFBE 00 00 78 D8 A9 00 8D 00  ..x.....
-        .byte   $20,$8D,$01,$20,$A2,$0A,$AD,$02 ; FFC6 20 8D 01 20 A2 0A AD 02   .. ....
-        .byte   $20,$30,$FB,$AD,$02,$20,$10,$FB ; FFCE 20 30 FB AD 02 20 10 FB   0... ..
-        .byte   $CA,$D0,$F3,$A2,$00,$BD,$E7,$FF ; FFD6 CA D0 F3 A2 00 BD E7 FF  ........
-        .byte   $9D,$00,$04,$E8,$D0,$F7,$4C,$00 ; FFDE 9D 00 04 E8 D0 F7 4C 00  ......L.
-        .byte   $04,$A9,$04,$8D,$00,$53,$A9,$00 ; FFE6 04 A9 04 8D 00 53 A9 00  .....S..
-        .byte   $8D,$00,$50,$8D,$00,$52,$6C,$FC ; FFEE 8D 00 50 8D 00 52 6C FC  ..P..Rl.
-        .byte   $FF,$EA,$EA,$40,$F9,$FF,$B0,$FF ; FFF6 FF EA EA 40 F9 FF B0 FF  ...@....
-        .byte   $F9,$FF                         ; FFFE F9 FF                    ..
+        .byte   $0A,$FF,$FF                     ; A922 0A FF FF                 ...
+; ----------------------------------------------------------------------------
+LA925:
+        .addr   LAA6D                           ; A925 6D AA                    m.
+        .addr   LAAFD                           ; A927 FD AA                    ..
+        .addr   LABA5                           ; A929 A5 AB                    ..
+        .addr   LABDA                           ; A92B DA AB                    ..
+        .addr   LAC1C                           ; A92D 1C AC                    ..
+        .addr   LACE5                           ; A92F E5 AC                    ..
+        .addr   LADB7                           ; A931 B7 AD                    ..
+        .addr   LADE0                           ; A933 E0 AD                    ..
+        .addr   LAE3F                           ; A935 3F AE                    ?.
+        .addr   LAE51                           ; A937 51 AE                    Q.
+        .addr   LAE67                           ; A939 67 AE                    g.
+        .addr   LAE7C                           ; A93B 7C AE                    |.
+        .addr   LAEB7                           ; A93D B7 AE                    ..
+        .addr   LAED1                           ; A93F D1 AE                    ..
+        .addr   LAEE8                           ; A941 E8 AE                    ..
+        .addr   LAF3D                           ; A943 3D AF                    =.
+        .addr   LAF7B                           ; A945 7B AF                    {.
+        .addr   LAFCA                           ; A947 CA AF                    ..
+        .addr   LAFFE                           ; A949 FE AF                    ..
+        .addr   LB027                           ; A94B 27 B0                    '.
+        .addr   LB035                           ; A94D 35 B0                    5.
+        .addr   LB043                           ; A94F 43 B0                    C.
+        .addr   LB115                           ; A951 15 B1                    ..
+        .addr   LB132                           ; A953 32 B1                    2.
+        .addr   LB15A                           ; A955 5A B1                    Z.
+        .addr   LB192                           ; A957 92 B1                    ..
+        .addr   LB1DB                           ; A959 DB B1                    ..
+        .addr   LB1E7                           ; A95B E7 B1                    ..
+        .addr   LB208                           ; A95D 08 B2                    ..
+        .addr   LB231                           ; A95F 31 B2                    1.
+        .addr   LB23E                           ; A961 3E B2                    >.
+        .addr   LB24A                           ; A963 4A B2                    J.
+        .addr   LB275                           ; A965 75 B2                    u.
+        .addr   LB29A                           ; A967 9A B2                    ..
+        .addr   LB2CE                           ; A969 CE B2                    ..
+        .addr   LB301                           ; A96B 01 B3                    ..
+        .addr   LB354                           ; A96D 54 B3                    T.
+        .addr   LB396                           ; A96F 96 B3                    ..
+        .addr   LB416                           ; A971 16 B4                    ..
+        .addr   LB475                           ; A973 75 B4                    u.
+        .addr   LB53E                           ; A975 3E B5                    >.
+        .addr   LB584                           ; A977 84 B5                    ..
+        .addr   LB5C1                           ; A979 C1 B5                    ..
+        .addr   LB5D9                           ; A97B D9 B5                    ..
+        .addr   LB5F5                           ; A97D F5 B5                    ..
+        .addr   LB603                           ; A97F 03 B6                    ..
+        .addr   LB60C                           ; A981 0C B6                    ..
+        .addr   LB619                           ; A983 19 B6                    ..
+        .addr   LB64B                           ; A985 4B B6                    K.
+        .addr   LB66A                           ; A987 6A B6                    j.
+        .addr   LB680                           ; A989 80 B6                    ..
+        .addr   LB690                           ; A98B 90 B6                    ..
+        .addr   LB6B2                           ; A98D B2 B6                    ..
+        .addr   LB6BD                           ; A98F BD B6                    ..
+        .addr   LB6E3                           ; A991 E3 B6                    ..
+        .addr   LB70D                           ; A993 0D B7                    ..
+        .addr   LB729                           ; A995 29 B7                    ).
+        .addr   LB73F                           ; A997 3F B7                    ?.
+        .addr   LB778                           ; A999 78 B7                    x.
+        .addr   LB798                           ; A99B 98 B7                    ..
+        .addr   LB7C3                           ; A99D C3 B7                    ..
+        .addr   LB7FA                           ; A99F FA B7                    ..
+        .addr   LB853                           ; A9A1 53 B8                    S.
+        .addr   LB89C                           ; A9A3 9C B8                    ..
+        .addr   LB8AA                           ; A9A5 AA B8                    ..
+        .addr   LB8C3                           ; A9A7 C3 B8                    ..
+        .addr   LB8D3                           ; A9A9 D3 B8                    ..
+        .addr   LB8F6                           ; A9AB F6 B8                    ..
+        .addr   LB914                           ; A9AD 14 B9                    ..
+        .addr   LB925                           ; A9AF 25 B9                    %.
+        .addr   LB953                           ; A9B1 53 B9                    S.
+        .addr   LB95F                           ; A9B3 5F B9                    _.
+        .addr   LB979                           ; A9B5 79 B9                    y.
+        .addr   LB990                           ; A9B7 90 B9                    ..
+        .addr   LB99F                           ; A9B9 9F B9                    ..
+        .addr   LB9D8                           ; A9BB D8 B9                    ..
+        .addr   LB9ED                           ; A9BD ED B9                    ..
+        .addr   LBA1C                           ; A9BF 1C BA                    ..
+        .addr   LBA66                           ; A9C1 66 BA                    f.
+        .addr   LBB5A                           ; A9C3 5A BB                    Z.
+        .addr   LBBBD                           ; A9C5 BD BB                    ..
+        .addr   LBC46                           ; A9C7 46 BC                    F.
+        .addr   LBCA0                           ; A9C9 A0 BC                    ..
+        .addr   LBCBA                           ; A9CB BA BC                    ..
+        .addr   LBD62                           ; A9CD 62 BD                    b.
+        .addr   LBD7B                           ; A9CF 7B BD                    {.
+        .addr   LBD99                           ; A9D1 99 BD                    ..
+        .addr   LBE12                           ; A9D3 12 BE                    ..
+        .addr   LBE83                           ; A9D5 83 BE                    ..
+        .addr   LBED0                           ; A9D7 D0 BE                    ..
+        .addr   LBEED                           ; A9D9 ED BE                    ..
+        .addr   LBF5B                           ; A9DB 5B BF                    [.
+        .addr   LBF69                           ; A9DD 69 BF                    i.
+        .addr   LBF7D                           ; A9DF 7D BF                    }.
+        .addr   LBF92                           ; A9E1 92 BF                    ..
+        .addr   LBFCD                           ; A9E3 CD BF                    ..
+        .addr   LBFF6                           ; A9E5 F6 BF                    ..
+        .addr   LC003                           ; A9E7 03 C0                    ..
+        .addr   LC023                           ; A9E9 23 C0                    #.
+        .addr   LC03B                           ; A9EB 3B C0                    ;.
+        .addr   LC063                           ; A9ED 63 C0                    c.
+        .addr   LC086                           ; A9EF 86 C0                    ..
+        .addr   LC10D                           ; A9F1 0D C1                    ..
+        .addr   LC13D                           ; A9F3 3D C1                    =.
+        .addr   LC162                           ; A9F5 62 C1                    b.
+        .addr   LC16F                           ; A9F7 6F C1                    o.
+        .addr   LC19B                           ; A9F9 9B C1                    ..
+        .addr   LC1C2                           ; A9FB C2 C1                    ..
+        .addr   LC2B0                           ; A9FD B0 C2                    ..
+        .addr   LC30C                           ; A9FF 0C C3                    ..
+        .addr   LC322                           ; AA01 22 C3                    ".
+        .addr   LE93C                           ; AA03 3C E9                    <.
+        .addr   LE62E                           ; AA05 2E E6                    ..
+        .addr   LC37B                           ; AA07 7B C3                    {.
+        .addr   LC3BA                           ; AA09 BA C3                    ..
+        .addr   LC3F1                           ; AA0B F1 C3                    ..
+        .addr   LC43F                           ; AA0D 3F C4                    ?.
+        .addr   LC477                           ; AA0F 77 C4                    w.
+        .addr   LC4AC                           ; AA11 AC C4                    ..
+        .addr   LC4C9                           ; AA13 C9 C4                    ..
+        .addr   LC50A                           ; AA15 0A C5                    ..
+        .addr   LC516                           ; AA17 16 C5                    ..
+        .addr   LC531                           ; AA19 31 C5                    1.
+        .addr   LC57C                           ; AA1B 7C C5                    |.
+        .addr   LC5A1                           ; AA1D A1 C5                    ..
+        .addr   LC630                           ; AA1F 30 C6                    0.
+        .addr   LC64E                           ; AA21 4E C6                    N.
+        .addr   LC67C                           ; AA23 7C C6                    |.
+        .addr   LC6AE                           ; AA25 AE C6                    ..
+        .addr   LC6C1                           ; AA27 C1 C6                    ..
+        .addr   LC7B4                           ; AA29 B4 C7                    ..
+        .addr   LC7EA                           ; AA2B EA C7                    ..
+        .addr   LC800                           ; AA2D 00 C8                    ..
+        .addr   LC80B                           ; AA2F 0B C8                    ..
+        .addr   LC81A                           ; AA31 1A C8                    ..
+        .addr   LC833                           ; AA33 33 C8                    3.
+        .addr   LC842                           ; AA35 42 C8                    B.
+        .addr   LC84F                           ; AA37 4F C8                    O.
+        .addr   LC85E                           ; AA39 5E C8                    ^.
+        .addr   LC879                           ; AA3B 79 C8                    y.
+        .addr   LC8A5                           ; AA3D A5 C8                    ..
+        .addr   LC8CA                           ; AA3F CA C8                    ..
+        .addr   LC8E2                           ; AA41 E2 C8                    ..
+        .addr   LC900                           ; AA43 00 C9                    ..
+        .addr   LA019                           ; AA45 19 A0                    ..
+        .addr   LA047                           ; AA47 47 A0                    G.
+        .addr   LC970                           ; AA49 70 C9                    p.
+        .addr   L0000                           ; AA4B 00 00                    ..
+        .addr   LC9ED                           ; AA4D ED C9                    ..
+        .addr   LCA06                           ; AA4F 06 CA                    ..
+        .addr   LCA32                           ; AA51 32 CA                    2.
+        .addr   LCA4A                           ; AA53 4A CA                    J.
+        .addr   LCA60                           ; AA55 60 CA                    `.
+        .addr   LCA67                           ; AA57 67 CA                    g.
+        .addr   LCA93                           ; AA59 93 CA                    ..
+        .addr   LCAB2                           ; AA5B B2 CA                    ..
+        .addr   LCAD9                           ; AA5D D9 CA                    ..
+        .addr   LCAFE                           ; AA5F FE CA                    ..
+        .addr   LCBD8                           ; AA61 D8 CB                    ..
+        .addr   LCBF6                           ; AA63 F6 CB                    ..
+        .addr   LCC43                           ; AA65 43 CC                    C.
+        .addr   LCC7F                           ; AA67 7F CC                    ..
+        .addr   LCC88                           ; AA69 88 CC                    ..
+        .addr   LCCD8                           ; AA6B D8 CC                    ..
+; ----------------------------------------------------------------------------
+LAA6D:
+        .byte   "@6I didn't want to dothis__usin"; AA6D 40 36 49 20 64 69 64 6E @6I didn
+                                                ; AA75 27 74 20 77 61 6E 74 20  't want 
+                                                ; AA7D 74 6F 20 64 6F 74 68 69  to dothi
+                                                ; AA85 73 5F 5F 75 73 69 6E     s__usin
+        .byte   "g dirty\tricks and taking\hosta"; AA8C 67 20 64 69 72 74 79 5C g dirty\
+                                                ; AA94 74 72 69 63 6B 73 20 61  tricks a
+                                                ; AA9C 6E 64 20 74 61 6B 69 6E  nd takin
+                                                ; AAA4 67 5C 68 6F 73 74 61     g\hosta
+        .byte   "ges__But this\is how it is__no\"; AAAB 67 65 73 5F 5F 42 75 74 ges__But
+                                                ; AAB3 20 74 68 69 73 5C 69 73   this\is
+                                                ; AABB 20 68 6F 77 20 69 74 20   how it 
+                                                ; AAC3 69 73 5F 5F 6E 6F 5C     is__no\
+        .byte   "compromises.So why\don't we con"; AACA 63 6F 6D 70 72 6F 6D 69 compromi
+                                                ; AAD2 73 65 73 2E 53 6F 20 77  ses.So w
+                                                ; AADA 68 79 5C 64 6F 6E 27 74  hy\don't
+                                                ; AAE2 20 77 65 20 63 6F 6E      we con
+        .byte   "tinue\on as we did?"           ; AAE9 74 69 6E 75 65 5C 6F 6E  tinue\on
+                                                ; AAF1 20 61 73 20 77 65 20 64   as we d
+                                                ; AAF9 69 64 3F                 id?
+        .byte   $0A                             ; AAFC 0A                       .
+LAAFD:
+        .byte   "@6Tomorrow is the\Temple of the"; AAFD 40 36 54 6F 6D 6F 72 72 @6Tomorr
+                                                ; AB05 6F 77 20 69 73 20 74 68  ow is th
+                                                ; AB0D 65 5C 54 65 6D 70 6C 65  e\Temple
+                                                ; AB15 20 6F 66 20 74 68 65      of the
+        .byte   "\Ancients,right?I\know where it"; AB1C 5C 41 6E 63 69 65 6E 74 \Ancient
+                                                ; AB24 73 2C 72 69 67 68 74 3F  s,right?
+                                                ; AB2C 49 5C 6B 6E 6F 77 20 77  I\know w
+                                                ; AB34 68 65 72 65 20 69 74     here it
+        .byte   " is soI'll tell you\later.Of co"; AB3B 20 69 73 20 73 6F 49 27  is soI'
+                                                ; AB43 6C 6C 20 74 65 6C 6C 20  ll tell 
+                                                ; AB4B 79 6F 75 5C 6C 61 74 65  you\late
+                                                ; AB53 72 2E 4F 66 20 63 6F     r.Of co
+        .byte   "urse,\we'll get there\after the"; AB5A 75 72 73 65 2C 5C 77 65 urse,\we
+                                                ; AB62 27 6C 6C 20 67 65 74 20  'll get 
+                                                ; AB6A 74 68 65 72 65 5C 61 66  there\af
+                                                ; AB72 74 65 72 20 74 68 65     ter the
+        .byte   " Shinra,\but you'll have to\dea"; AB79 20 53 68 69 6E 72 61 2C  Shinra,
+                                                ; AB81 5C 62 75 74 20 79 6F 75  \but you
+                                                ; AB89 27 6C 6C 20 68 61 76 65  'll have
+                                                ; AB91 20 74 6F 5C 64 65 61      to\dea
+        .byte   "l with that."                  ; AB98 6C 20 77 69 74 68 20 74  l with t
+                                                ; ABA0 68 61 74 2E              hat.
+        .byte   $0A                             ; ABA4 0A                       .
+LABA5:
+        .byte   "@1__Well,we're\stuck__We'll hav"; ABA5 40 31 5F 5F 57 65 6C 6C @1__Well
+                                                ; ABAD 2C 77 65 27 72 65 5C 73  ,we're\s
+                                                ; ABB5 74 75 63 6B 5F 5F 57 65  tuck__We
+                                                ; ABBD 27 6C 6C 20 68 61 76     'll hav
+        .byte   "e\to do what he says."         ; ABC4 65 5C 74 6F 20 64 6F 20  e\to do 
+                                                ; ABCC 77 68 61 74 20 68 65 20  what he 
+                                                ; ABD4 73 61 79 73 2E           says.
+        .byte   $0A                             ; ABD9 0A                       .
+LABDA:
+        .byte   "@4I wonder if Marleneis all rig"; ABDA 40 34 49 20 77 6F 6E 64 @4I wond
+                                                ; ABE2 65 72 20 69 66 20 4D 61  er if Ma
+                                                ; ABEA 72 6C 65 6E 65 69 73 20  rleneis 
+                                                ; ABF2 61 6C 6C 20 72 69 67     all rig
+        .byte   "ht__I\wonder what\happened to M"; ABF9 68 74 5F 5F 49 5C 77 6F ht__I\wo
+                                                ; AC01 6E 64 65 72 20 77 68 61  nder wha
+                                                ; AC09 74 5C 68 61 70 70 65 6E  t\happen
+                                                ; AC11 65 64 20 74 6F 20 4D     ed to M
+        .byte   "om."                           ; AC18 6F 6D 2E                 om.
+        .byte   $0A                             ; AC1B 0A                       .
+LAC1C:
+        .byte   "@6What took you so\long,Cloud?O"; AC1C 40 36 57 68 61 74 20 74 @6What t
+                                                ; AC24 6F 6F 6B 20 79 6F 75 20  ook you 
+                                                ; AC2C 73 6F 5C 6C 6F 6E 67 2C  so\long,
+                                                ; AC34 43 6C 6F 75 64 3F 4F     Cloud?O
+        .byte   "h yeah,about the Temple ofthe A"; AC3B 68 20 79 65 61 68 2C 61 h yeah,a
+                                                ; AC43 62 6F 75 74 20 74 68 65  bout the
+                                                ; AC4B 20 54 65 6D 70 6C 65 20   Temple 
+                                                ; AC53 6F 66 74 68 65 20 41     ofthe A
+        .byte   "ncients.I\think if we take\the "; AC5A 6E 63 69 65 6E 74 73 2E ncients.
+                                                ; AC62 49 5C 74 68 69 6E 6B 20  I\think 
+                                                ; AC6A 69 66 20 77 65 20 74 61  if we ta
+                                                ; AC72 6B 65 5C 74 68 65 20     ke\the 
+        .byte   "Tiny Bronco\East towards the\se"; AC79 54 69 6E 79 20 42 72 6F Tiny Bro
+                                                ; AC81 6E 63 6F 5C 45 61 73 74  nco\East
+                                                ; AC89 20 74 6F 77 61 72 64 73   towards
+                                                ; AC91 20 74 68 65 5C 73 65      the\se
+        .byte   "a,we should be\able to find it."; AC98 61 2C 77 65 20 73 68 6F a,we sho
+                                                ; ACA0 75 6C 64 20 62 65 5C 61  uld be\a
+                                                ; ACA8 62 6C 65 20 74 6F 20 66  ble to f
+                                                ; ACB0 69 6E 64 20 69 74 2E     ind it.
+        .byte   "\Well then,shall we\get goin? T"; ACB7 5C 57 65 6C 6C 20 74 68 \Well th
+                                                ; ACBF 65 6E 2C 73 68 61 6C 6C  en,shall
+                                                ; ACC7 20 77 65 5C 67 65 74 20   we\get 
+                                                ; ACCF 67 6F 69 6E 3F 20 54     goin? T
+        .byte   "ime's a wastin"                ; ACD6 69 6D 65 27 73 20 61 20  ime's a 
+                                                ; ACDE 77 61 73 74 69 6E        wastin
+        .byte   $0A                             ; ACE4 0A                       .
+LACE5:
+        .byte   "@4This is__the Templeof the Anc"; ACE5 40 34 54 68 69 73 20 69 @4This i
+                                                ; ACED 73 5F 5F 74 68 65 20 54  s__the T
+                                                ; ACF5 65 6D 70 6C 65 6F 66 20  empleof 
+                                                ; ACFD 74 68 65 20 41 6E 63     the Anc
+        .byte   "ients__\I__I know__I feel\it__t"; AD04 69 65 6E 74 73 5F 5F 5C ients__\
+                                                ; AD0C 49 5F 5F 49 20 6B 6E 6F  I__I kno
+                                                ; AD14 77 5F 5F 49 20 66 65 65  w__I fee
+                                                ; AD1C 6C 5C 69 74 5F 5F 74     l\it__t
+        .byte   "he knowledge\of the Ancients__\"; AD23 68 65 20 6B 6E 6F 77 6C he knowl
+                                                ; AD2B 65 64 67 65 5C 6F 66 20  edge\of 
+                                                ; AD33 74 68 65 20 41 6E 63 69  the Anci
+                                                ; AD3B 65 6E 74 73 5F 5F 5C     ents__\
+        .byte   "floating__You couldbecome one w"; AD42 66 6C 6F 61 74 69 6E 67 floating
+                                                ; AD4A 5F 5F 59 6F 75 20 63 6F  __You co
+                                                ; AD52 75 6C 64 62 65 63 6F 6D  uldbecom
+                                                ; AD5A 65 20 6F 6E 65 20 77     e one w
+        .byte   "ith thePlanet,but you're\stoppi"; AD61 69 74 68 20 74 68 65 50 ith theP
+                                                ; AD69 6C 61 6E 65 74 2C 62 75  lanet,bu
+                                                ; AD71 74 20 79 6F 75 27 72 65  t you're
+                                                ; AD79 5C 73 74 6F 70 70 69     \stoppi
+        .byte   "ng it with\the strength of\will"; AD80 6E 67 20 69 74 20 77 69 ng it wi
+                                                ; AD88 74 68 5C 74 68 65 20 73  th\the s
+                                                ; AD90 74 72 65 6E 67 74 68 20  trength 
+                                                ; AD98 6F 66 5C 77 69 6C 6C     of\will
+        .byte   ".For the\future?For us?"       ; AD9F 2E 46 6F 72 20 74 68 65  .For the
+                                                ; ADA7 5C 66 75 74 75 72 65 3F  \future?
+                                                ; ADAF 46 6F 72 20 75 73 3F     For us?
+        .byte   $0A                             ; ADB6 0A                       .
+LADB7:
+        .byte   "@1What are you\saying?Do you\un"; ADB7 40 31 57 68 61 74 20 61 @1What a
+                                                ; ADBF 72 65 20 79 6F 75 5C 73  re you\s
+                                                ; ADC7 61 79 69 6E 67 3F 44 6F  aying?Do
+                                                ; ADCF 20 79 6F 75 5C 75 6E      you\un
+        .byte   "derstand?"                     ; ADD6 64 65 72 73 74 61 6E 64  derstand
+                                                ; ADDE 3F                       ?
+        .byte   $0A                             ; ADDF 0A                       .
+LADE0:
+        .byte   "@4You're uneasy__But\happy?Beca"; ADE0 40 34 59 6F 75 27 72 65 @4You're
+                                                ; ADE8 20 75 6E 65 61 73 79 5F   uneasy_
+                                                ; ADF0 5F 42 75 74 5C 68 61 70  _But\hap
+                                                ; ADF8 70 79 3F 42 65 63 61     py?Beca
+        .byte   "use I'm\here?I'm sorry__I\don't"; ADFF 75 73 65 20 49 27 6D 5C use I'm\
+                                                ; AE07 68 65 72 65 3F 49 27 6D  here?I'm
+                                                ; AE0F 20 73 6F 72 72 79 5F 5F   sorry__
+                                                ; AE17 49 5C 64 6F 6E 27 74     I\don't
+        .byte   " understand.I\want to go inside"; AE1E 20 75 6E 64 65 72 73 74  underst
+                                                ; AE26 61 6E 64 2E 49 5C 77 61  and.I\wa
+                                                ; AE2E 6E 74 20 74 6F 20 67 6F  nt to go
+                                                ; AE36 20 69 6E 73 69 64 65      inside
+        .byte   "!"                             ; AE3D 21                       !
+        .byte   $0A                             ; AE3E 0A                       .
+LAE3F:
+        .byte   "@4Hey!It's Tseng!"             ; AE3F 40 34 48 65 79 21 49 74  @4Hey!It
+                                                ; AE47 27 73 20 54 73 65 6E 67  's Tseng
+                                                ; AE4F 21                       !
+        .byte   $0A                             ; AE50 0A                       .
+LAE51:
+        .byte   "@1Tseng?Of the Turks?"         ; AE51 40 31 54 73 65 6E 67 3F  @1Tseng?
+                                                ; AE59 4F 66 20 74 68 65 20 54  Of the T
+                                                ; AE61 75 72 6B 73 3F           urks?
+        .byte   $0A                             ; AE66 0A                       .
+LAE67:
+        .byte   "@CUh__I've been had."          ; AE67 40 43 55 68 5F 5F 49 27  @CUh__I'
+                                                ; AE6F 76 65 20 62 65 65 6E 20  ve been 
+                                                ; AE77 68 61 64 2E              had.
+        .byte   $0A                             ; AE7B 0A                       .
+LAE7C:
+        .byte   "@CIt's not the\Promised Land__\"; AE7C 40 43 49 74 27 73 20 6E @CIt's n
+                                                ; AE84 6F 74 20 74 68 65 5C 50  ot the\P
+                                                ; AE8C 72 6F 6D 69 73 65 64 20  romised 
+                                                ; AE94 4C 61 6E 64 5F 5F 5C     Land__\
+        .byte   "Sephiroth's\searching for__"   ; AE9B 53 65 70 68 69 72 6F 74  Sephirot
+                                                ; AEA3 68 27 73 5C 73 65 61 72  h's\sear
+                                                ; AEAB 63 68 69 6E 67 20 66 6F  ching fo
+                                                ; AEB3 72 5F 5F                 r__
+        .byte   $0A                             ; AEB6 0A                       .
+LAEB7:
+        .byte   "@1Sephiroth?He's\inside!?"     ; AEB7 40 31 53 65 70 68 69 72  @1Sephir
+                                                ; AEBF 6F 74 68 3F 48 65 27 73  oth?He's
+                                                ; AEC7 5C 69 6E 73 69 64 65 21  \inside!
+                                                ; AECF 3F                       ?
+        .byte   $0A                             ; AED0 0A                       .
+LAED1:
+        .byte   "@CLook__for\yourself__"        ; AED1 40 43 4C 6F 6F 6B 5F 5F  @CLook__
+                                                ; AED9 66 6F 72 5C 79 6F 75 72  for\your
+                                                ; AEE1 73 65 6C 66 5F 5F        self__
+        .byte   $0A                             ; AEE7 0A                       .
+LAEE8:
+        .byte   "@CDamn__Letting Aerisgo was the"; AEE8 40 43 44 61 6D 6E 5F 5F @CDamn__
+                                                ; AEF0 4C 65 74 74 69 6E 67 20  Letting 
+                                                ; AEF8 41 65 72 69 73 67 6F 20  Aerisgo 
+                                                ; AF00 77 61 73 20 74 68 65     was the
+        .byte   " start__\of my__bad luck__\The "; AF07 20 73 74 61 72 74 5F 5F  start__
+                                                ; AF0F 5C 6F 66 20 6D 79 5F 5F  \of my__
+                                                ; AF17 62 61 64 20 6C 75 63 6B  bad luck
+                                                ; AF1F 5F 5F 5C 54 68 65 20     __\The 
+        .byte   "President__was\wrong__"        ; AF26 50 72 65 73 69 64 65 6E  Presiden
+                                                ; AF2E 74 5F 5F 77 61 73 5C 77  t__was\w
+                                                ; AF36 72 6F 6E 67 5F 5F        rong__
+        .byte   $0A                             ; AF3C 0A                       .
+LAF3D:
+        .byte   "@4You're wrong.The\Promised Lan"; AF3D 40 34 59 6F 75 27 72 65 @4You're
+                                                ; AF45 20 77 72 6F 6E 67 2E 54   wrong.T
+                                                ; AF4D 68 65 5C 50 72 6F 6D 69  he\Promi
+                                                ; AF55 73 65 64 20 4C 61 6E     sed Lan
+        .byte   "d isn'tlike what you\imagined."; AF5C 64 20 69 73 6E 27 74 6C  d isn'tl
+                                                ; AF64 69 6B 65 20 77 68 61 74  ike what
+                                                ; AF6C 20 79 6F 75 5C 69 6D 61   you\ima
+                                                ; AF74 67 69 6E 65 64 2E        gined.
+        .byte   $0A                             ; AF7A 0A                       .
+LAF7B:
+        .byte   "@4And,I'm not going\to help.Eit"; AF7B 40 34 41 6E 64 2C 49 27 @4And,I'
+                                                ; AF83 6D 20 6E 6F 74 20 67 6F  m not go
+                                                ; AF8B 69 6E 67 5C 74 6F 20 68  ing\to h
+                                                ; AF93 65 6C 70 2E 45 69 74     elp.Eit
+        .byte   "her way,there was no way\Shinra"; AF9A 68 65 72 20 77 61 79 2C her way,
+                                                ; AFA2 74 68 65 72 65 20 77 61  there wa
+                                                ; AFAA 73 20 6E 6F 20 77 61 79  s no way
+                                                ; AFB2 5C 53 68 69 6E 72 61     \Shinra
+        .byte   " could have\won."              ; AFB9 20 63 6F 75 6C 64 20 68   could h
+                                                ; AFC1 61 76 65 5C 77 6F 6E 2E  ave\won.
+        .byte   $0A                             ; AFC9 0A                       .
+LAFCA:
+        .byte   "@C__pretty harsh.\Sounds like\s"; AFCA 40 43 5F 5F 70 72 65 74 @C__pret
+                                                ; AFD2 74 79 20 68 61 72 73 68  ty harsh
+                                                ; AFDA 2E 5C 53 6F 75 6E 64 73  .\Sounds
+                                                ; AFE2 20 6C 69 6B 65 5C 73      like\s
+        .byte   "omething__you'd\say."          ; AFE9 6F 6D 65 74 68 69 6E 67  omething
+                                                ; AFF1 5F 5F 79 6F 75 27 64 5C  __you'd\
+                                                ; AFF9 73 61 79 2E              say.
+        .byte   $0A                             ; AFFD 0A                       .
+LAFFE:
+        .byte   "@CThe Keystone__placeit__on__th"; AFFE 40 43 54 68 65 20 4B 65 @CThe Ke
+                                                ; B006 79 73 74 6F 6E 65 5F 5F  ystone__
+                                                ; B00E 70 6C 61 63 65 69 74 5F  placeit_
+                                                ; B016 5F 6F 6E 5F 5F 74 68     _on__th
+        .byte   "e altar__"                     ; B01D 65 20 61 6C 74 61 72 5F  e altar_
+                                                ; B025 5F                       _
+        .byte   $0A                             ; B026 0A                       .
+LB027:
+        .byte   "Got Keystone."                 ; B027 47 6F 74 20 4B 65 79 73  Got Keys
+                                                ; B02F 74 6F 6E 65 2E           tone.
+        .byte   $0A                             ; B034 0A                       .
+LB035:
+        .byte   "@1You crying?"                 ; B035 40 31 59 6F 75 20 63 72  @1You cr
+                                                ; B03D 79 69 6E 67 3F           ying?
+        .byte   $0A                             ; B042 0A                       .
+LB043:
+        .byte   "@4__Tseng's with our\enemy,the "; B043 40 34 5F 5F 54 73 65 6E @4__Tsen
+                                                ; B04B 67 27 73 20 77 69 74 68  g's with
+                                                ; B053 20 6F 75 72 5C 65 6E 65   our\ene
+                                                ; B05B 6D 79 2C 74 68 65 20     my,the 
+        .byte   "Turks,butI've known him\since w"; B062 54 75 72 6B 73 2C 62 75 Turks,bu
+                                                ; B06A 74 49 27 76 65 20 6B 6E  tI've kn
+                                                ; B072 6F 77 6E 20 68 69 6D 5C  own him\
+                                                ; B07A 73 69 6E 63 65 20 77     since w
+        .byte   "e were\little__There's nota lot"; B081 65 20 77 65 72 65 5C 6C e were\l
+                                                ; B089 69 74 74 6C 65 5F 5F 54  ittle__T
+                                                ; B091 68 65 72 65 27 73 20 6E  here's n
+                                                ; B099 6F 74 61 20 6C 6F 74     ota lot
+        .byte   " of people I\can say that about"; B0A0 20 6F 66 20 70 65 6F 70  of peop
+                                                ; B0A8 6C 65 20 49 5C 63 61 6E  le I\can
+                                                ; B0B0 20 73 61 79 20 74 68 61   say tha
+                                                ; B0B8 74 20 61 62 6F 75 74     t about
+        .byte   ".In fact,there are\probably onl"; B0BF 2E 49 6E 20 66 61 63 74 .In fact
+                                                ; B0C7 2C 74 68 65 72 65 20 61  ,there a
+                                                ; B0CF 72 65 5C 70 72 6F 62 61  re\proba
+                                                ; B0D7 62 6C 79 20 6F 6E 6C     bly onl
+        .byte   "y a\handful of people\in the wo"; B0DE 79 20 61 5C 68 61 6E 64 y a\hand
+                                                ; B0E6 66 75 6C 20 6F 66 20 70  ful of p
+                                                ; B0EE 65 6F 70 6C 65 5C 69 6E  eople\in
+                                                ; B0F6 20 74 68 65 20 77 6F      the wo
+        .byte   "rld who\really know me."       ; B0FD 72 6C 64 20 77 68 6F 5C  rld who\
+                                                ; B105 72 65 61 6C 6C 79 20 6B  really k
+                                                ; B10D 6E 6F 77 20 6D 65 2E     now me.
+        .byte   $0A                             ; B114 0A                       .
+LB115:
+        .byte   "@1Let's put the\Keystone in."  ; B115 40 31 4C 65 74 27 73 20  @1Let's 
+                                                ; B11D 70 75 74 20 74 68 65 5C  put the\
+                                                ; B125 4B 65 79 73 74 6F 6E 65  Keystone
+                                                ; B12D 20 69 6E 2E               in.
+        .byte   $0A                             ; B131 0A                       .
+LB132:
+        .byte   "@4Words__feelings__Somany of th"; B132 40 34 57 6F 72 64 73 5F @4Words_
+                                                ; B13A 5F 66 65 65 6C 69 6E 67  _feeling
+                                                ; B142 73 5F 5F 53 6F 6D 61 6E  s__Soman
+                                                ; B14A 79 20 6F 66 20 74 68     y of th
+        .byte   "em here."                      ; B151 65 6D 20 68 65 72 65 2E  em here.
+        .byte   $0A                             ; B159 0A                       .
+LB15A:
+        .byte   "@3What a strange\place.Do you t"; B15A 40 33 57 68 61 74 20 61 @3What a
+                                                ; B162 20 73 74 72 61 6E 67 65   strange
+                                                ; B16A 5C 70 6C 61 63 65 2E 44  \place.D
+                                                ; B172 6F 20 79 6F 75 20 74     o you t
+        .byte   "hink\we're welcome here?"      ; B179 68 69 6E 6B 5C 77 65 27  hink\we'
+                                                ; B181 72 65 20 77 65 6C 63 6F  re welco
+                                                ; B189 6D 65 20 68 65 72 65 3F  me here?
+        .byte   $0A                             ; B191 0A                       .
+LB192:
+        .byte   "@4__Cloud!I know it'sgoing to b"; B192 40 34 5F 5F 43 6C 6F 75 @4__Clou
+                                                ; B19A 64 21 49 20 6B 6E 6F 77  d!I know
+                                                ; B1A2 20 69 74 27 73 67 6F 69   it'sgoi
+                                                ; B1AA 6E 67 20 74 6F 20 62     ng to b
+        .byte   "e tough,\but__Don't give up!We "; B1B1 65 20 74 6F 75 67 68 2C e tough,
+                                                ; B1B9 5C 62 75 74 5F 5F 44 6F  \but__Do
+                                                ; B1C1 6E 27 74 20 67 69 76 65  n't give
+                                                ; B1C9 20 75 70 21 57 65 20      up!We 
+        .byte   "can do it!"                    ; B1D0 63 61 6E 20 64 6F 20 69  can do i
+                                                ; B1D8 74 21                    t!
+        .byte   $0A                             ; B1DA 0A                       .
+LB1DB:
+        .byte   "@<Splendid."                   ; B1DB 40 3C 53 70 6C 65 6E 64  @<Splend
+                                                ; B1E3 69 64 2E                 id.
+        .byte   $0A                             ; B1E6 0A                       .
+LB1E7:
+        .byte   "@<A treasure house ofknowledge_"; B1E7 40 3C 41 20 74 72 65 61 @<A trea
+                                                ; B1EF 73 75 72 65 20 68 6F 75  sure hou
+                                                ; B1F7 73 65 20 6F 66 6B 6E 6F  se ofkno
+                                                ; B1FF 77 6C 65 64 67 65 5F     wledge_
+        .byte   "_"                             ; B206 5F                       _
+        .byte   $0A                             ; B207 0A                       .
+LB208:
+        .byte   "@1I don't understand\what you'r"; B208 40 31 49 20 64 6F 6E 27 @1I don'
+                                                ; B210 74 20 75 6E 64 65 72 73  t unders
+                                                ; B218 74 61 6E 64 5C 77 68 61  tand\wha
+                                                ; B220 74 20 79 6F 75 27 72     t you'r
+        .byte   "e saying!"                     ; B227 65 20 73 61 79 69 6E 67  e saying
+                                                ; B22F 21                       !
+        .byte   $0A                             ; B230 0A                       .
+LB231:
+        .byte   "@<Look well."                  ; B231 40 3C 4C 6F 6F 6B 20 77  @<Look w
+                                                ; B239 65 6C 6C 2E              ell.
+        .byte   $0A                             ; B23D 0A                       .
+LB23E:
+        .byte   "@1At what!?"                   ; B23E 40 31 41 74 20 77 68 61  @1At wha
+                                                ; B246 74 21 3F                 t!?
+        .byte   $0A                             ; B249 0A                       .
+LB24A:
+        .byte   "@<At that which adds\to the kno"; B24A 40 3C 41 74 20 74 68 61 @<At tha
+                                                ; B252 74 20 77 68 69 63 68 20  t which 
+                                                ; B25A 61 64 64 73 5C 74 6F 20  adds\to 
+                                                ; B262 74 68 65 20 6B 6E 6F     the kno
+        .byte   "wledge\of__"                   ; B269 77 6C 65 64 67 65 5C 6F  wledge\o
+                                                ; B271 66 5F 5F                 f__
+        .byte   $0A                             ; B274 0A                       .
+LB275:
+        .byte   "@<I am becoming one\with the Pl"; B275 40 3C 49 20 61 6D 20 62 @<I am b
+                                                ; B27D 65 63 6F 6D 69 6E 67 20  ecoming 
+                                                ; B285 6F 6E 65 5C 77 69 74 68  one\with
+                                                ; B28D 20 74 68 65 20 50 6C      the Pl
+        .byte   "anet."                         ; B294 61 6E 65 74 2E           anet.
+        .byte   $0A                             ; B299 0A                       .
+LB29A:
+        .byte   "@<Mother__it's almosttime__Soon"; B29A 40 3C 4D 6F 74 68 65 72 @<Mother
+                                                ; B2A2 5F 5F 69 74 27 73 20 61  __it's a
+                                                ; B2AA 6C 6D 6F 73 74 74 69 6D  lmosttim
+                                                ; B2B2 65 5F 5F 53 6F 6F 6E     e__Soon
+        .byte   "__we willbecome one."          ; B2B9 5F 5F 77 65 20 77 69 6C  __we wil
+                                                ; B2C1 6C 62 65 63 6F 6D 65 20  lbecome 
+                                                ; B2C9 6F 6E 65 2E              one.
+        .byte   $0A                             ; B2CD 0A                       .
+LB2CE:
+        .byte   "@4How do you intend\to become o"; B2CE 40 34 48 6F 77 20 64 6F @4How do
+                                                ; B2D6 20 79 6F 75 20 69 6E 74   you int
+                                                ; B2DE 65 6E 64 5C 74 6F 20 62  end\to b
+                                                ; B2E6 65 63 6F 6D 65 20 6F     ecome o
+        .byte   "ne with\the Planet?"           ; B2ED 6E 65 20 77 69 74 68 5C  ne with\
+                                                ; B2F5 74 68 65 20 50 6C 61 6E  the Plan
+                                                ; B2FD 65 74 3F                 et?
+        .byte   $0A                             ; B300 0A                       .
+LB301:
+        .byte   "@<It's simple.Once\the Planet i"; B301 40 3C 49 74 27 73 20 73 @<It's s
+                                                ; B309 69 6D 70 6C 65 2E 4F 6E  imple.On
+                                                ; B311 63 65 5C 74 68 65 20 50  ce\the P
+                                                ; B319 6C 61 6E 65 74 20 69     lanet i
+        .byte   "s hurt,it gathers Spirit\Energy"; B320 73 20 68 75 72 74 2C 69 s hurt,i
+                                                ; B328 74 20 67 61 74 68 65 72  t gather
+                                                ; B330 73 20 53 70 69 72 69 74  s Spirit
+                                                ; B338 5C 45 6E 65 72 67 79     \Energy
+        .byte   " to heal the\injury."          ; B33F 20 74 6F 20 68 65 61 6C   to heal
+                                                ; B347 20 74 68 65 5C 69 6E 6A   the\inj
+                                                ; B34F 75 72 79 2E              ury.
+        .byte   $0A                             ; B353 0A                       .
+LB354:
+        .byte   "@<The amount of\energy gathered"; B354 40 3C 54 68 65 20 61 6D @<The am
+                                                ; B35C 6F 75 6E 74 20 6F 66 5C  ount of\
+                                                ; B364 65 6E 65 72 67 79 20 67  energy g
+                                                ; B36C 61 74 68 65 72 65 64     athered
+        .byte   "\depends on the sizeof the inju"; B373 5C 64 65 70 65 6E 64 73 \depends
+                                                ; B37B 20 6F 6E 20 74 68 65 20   on the 
+                                                ; B383 73 69 7A 65 6F 66 20 74  sizeof t
+                                                ; B38B 68 65 20 69 6E 6A 75     he inju
+        .byte   "ry."                           ; B392 72 79 2E                 ry.
+        .byte   $0A                             ; B395 0A                       .
+LB396:
+        .byte   "@<__What would happenif there w"; B396 40 3C 5F 5F 57 68 61 74 @<__What
+                                                ; B39E 20 77 6F 75 6C 64 20 68   would h
+                                                ; B3A6 61 70 70 65 6E 69 66 20  appenif 
+                                                ; B3AE 74 68 65 72 65 20 77     there w
+        .byte   "as an\injury that\threatened th"; B3B5 61 73 20 61 6E 5C 69 6E as an\in
+                                                ; B3BD 6A 75 72 79 20 74 68 61  jury tha
+                                                ; B3C5 74 5C 74 68 72 65 61 74  t\threat
+                                                ; B3CD 65 6E 65 64 20 74 68     ened th
+        .byte   "e verylife of the Planet?Think "; B3D4 65 20 76 65 72 79 6C 69 e veryli
+                                                ; B3DC 66 65 20 6F 66 20 74 68  fe of th
+                                                ; B3E4 65 20 50 6C 61 6E 65 74  e Planet
+                                                ; B3EC 3F 54 68 69 6E 6B 20     ?Think 
+        .byte   "how much\energy would be\gather"; B3F3 68 6F 77 20 6D 75 63 68 how much
+                                                ; B3FB 5C 65 6E 65 72 67 79 20  \energy 
+                                                ; B403 77 6F 75 6C 64 20 62 65  would be
+                                                ; B40B 5C 67 61 74 68 65 72     \gather
+        .byte   "ed!"                           ; B412 65 64 21                 ed!
+        .byte   $0A                             ; B415 0A                       .
+LB416:
+        .byte   "@<Ha ha ha.And at thecenter of "; B416 40 3C 48 61 20 68 61 20 @<Ha ha 
+                                                ; B41E 68 61 2E 41 6E 64 20 61  ha.And a
+                                                ; B426 74 20 74 68 65 63 65 6E  t thecen
+                                                ; B42E 74 65 72 20 6F 66 20     ter of 
+        .byte   "that\injury,will be me.\All tha"; B435 74 68 61 74 5C 69 6E 6A that\inj
+                                                ; B43D 75 72 79 2C 77 69 6C 6C  ury,will
+                                                ; B445 20 62 65 20 6D 65 2E 5C   be me.\
+                                                ; B44D 41 6C 6C 20 74 68 61     All tha
+        .byte   "t boundless\energy will be\mine"; B454 74 20 62 6F 75 6E 64 6C t boundl
+                                                ; B45C 65 73 73 5C 65 6E 65 72  ess\ener
+                                                ; B464 67 79 20 77 69 6C 6C 20  gy will 
+                                                ; B46C 62 65 5C 6D 69 6E 65     be\mine
+        .byte   "."                             ; B473 2E                       .
+        .byte   $0A                             ; B474 0A                       .
+LB475:
+        .byte   "@<By merging with allthe energy"; B475 40 3C 42 79 20 6D 65 72 @<By mer
+                                                ; B47D 67 69 6E 67 20 77 69 74  ging wit
+                                                ; B485 68 20 61 6C 6C 74 68 65  h allthe
+                                                ; B48D 20 65 6E 65 72 67 79      energy
+        .byte   " of the\Planet,I will\become a "; B494 20 6F 66 20 74 68 65 5C  of the\
+                                                ; B49C 50 6C 61 6E 65 74 2C 49  Planet,I
+                                                ; B4A4 20 77 69 6C 6C 5C 62 65   will\be
+                                                ; B4AC 63 6F 6D 65 20 61 20     come a 
+        .byte   "new life\form,a new\existence.M"; B4B3 6E 65 77 20 6C 69 66 65 new life
+                                                ; B4BB 5C 66 6F 72 6D 2C 61 20  \form,a 
+                                                ; B4C3 6E 65 77 5C 65 78 69 73  new\exis
+                                                ; B4CB 74 65 6E 63 65 2E 4D     tence.M
+        .byte   "elding\with the Planet__I\will "; B4D2 65 6C 64 69 6E 67 5C 77 elding\w
+                                                ; B4DA 69 74 68 20 74 68 65 20  ith the 
+                                                ; B4E2 50 6C 61 6E 65 74 5F 5F  Planet__
+                                                ; B4EA 49 5C 77 69 6C 6C 20     I\will 
+        .byte   "cease to existas I am now.Only "; B4F1 63 65 61 73 65 20 74 6F cease to
+                                                ; B4F9 20 65 78 69 73 74 61 73   existas
+                                                ; B501 20 49 20 61 6D 20 6E 6F   I am no
+                                                ; B509 77 2E 4F 6E 6C 79 20     w.Only 
+        .byte   "tobe reborn as a God\to rule ov"; B510 74 6F 62 65 20 72 65 62 tobe reb
+                                                ; B518 6F 72 6E 20 61 73 20 61  orn as a
+                                                ; B520 20 47 6F 64 5C 74 6F 20   God\to 
+                                                ; B528 72 75 6C 65 20 6F 76     rule ov
+        .byte   "er every\soul."                ; B52F 65 72 20 65 76 65 72 79  er every
+                                                ; B537 5C 73 6F 75 6C 2E        \soul.
+        .byte   $0A                             ; B53D 0A                       .
+LB53E:
+        .byte   "@4An injury powerful\enough to "; B53E 40 34 41 6E 20 69 6E 6A @4An inj
+                                                ; B546 75 72 79 20 70 6F 77 65  ury powe
+                                                ; B54E 72 66 75 6C 5C 65 6E 6F  rful\eno
+                                                ; B556 75 67 68 20 74 6F 20     ugh to 
+        .byte   "destroy\the Planet?Injure__the "; B55D 64 65 73 74 72 6F 79 5C destroy\
+                                                ; B565 74 68 65 20 50 6C 61 6E  the Plan
+                                                ; B56D 65 74 3F 49 6E 6A 75 72  et?Injur
+                                                ; B575 65 5F 5F 74 68 65 20     e__the 
+        .byte   "Planet?"                       ; B57C 50 6C 61 6E 65 74 3F     Planet?
+        .byte   $0A                             ; B583 0A                       .
+LB584:
+        .byte   "@<Behold that mural.\The Ultima"; B584 40 3C 42 65 68 6F 6C 64 @<Behold
+                                                ; B58C 20 74 68 61 74 20 6D 75   that mu
+                                                ; B594 72 61 6C 2E 5C 54 68 65  ral.\The
+                                                ; B59C 20 55 6C 74 69 6D 61      Ultima
+        .byte   "te\Destructive Magic__Meteor." ; B5A3 74 65 5C 44 65 73 74 72  te\Destr
+                                                ; B5AB 75 63 74 69 76 65 20 4D  uctive M
+                                                ; B5B3 61 67 69 63 5F 5F 4D 65  agic__Me
+                                                ; B5BB 74 65 6F 72 2E           teor.
+        .byte   $0A                             ; B5C0 0A                       .
+LB5C1:
+        .byte   "@1That'll never\happen!"       ; B5C1 40 31 54 68 61 74 27 6C  @1That'l
+                                                ; B5C9 6C 20 6E 65 76 65 72 5C  l never\
+                                                ; B5D1 68 61 70 70 65 6E 21     happen!
+        .byte   $0A                             ; B5D8 0A                       .
+LB5D9:
+        .byte   "@1Where are you!\Sephiroth!"   ; B5D9 40 31 57 68 65 72 65 20  @1Where 
+                                                ; B5E1 61 72 65 20 79 6F 75 21  are you!
+                                                ; B5E9 5C 53 65 70 68 69 72 6F  \Sephiro
+                                                ; B5F1 74 68 21                 th!
+        .byte   $0A                             ; B5F4 0A                       .
+LB5F5:
+        .byte   "@4Wait!Cloud!"                 ; B5F5 40 34 57 61 69 74 21 43  @4Wait!C
+                                                ; B5FD 6C 6F 75 64 21           loud!
+        .byte   $0A                             ; B602 0A                       .
+LB603:
+        .byte   "@4Cloud!"                      ; B603 40 34 43 6C 6F 75 64 21  @4Cloud!
+        .byte   $0A                             ; B60B 0A                       .
+LB60C:
+        .byte   "@3Hey,Cloud!"                  ; B60C 40 33 48 65 79 2C 43 6C  @3Hey,Cl
+                                                ; B614 6F 75 64 21              oud!
+        .byte   $0A                             ; B618 0A                       .
+LB619:
+        .byte   "@1Ha ha ha__Black\Materia.Ha ha"; B619 40 31 48 61 20 68 61 20 @1Ha ha 
+                                                ; B621 68 61 5F 5F 42 6C 61 63  ha__Blac
+                                                ; B629 6B 5C 4D 61 74 65 72 69  k\Materi
+                                                ; B631 61 2E 48 61 20 68 61     a.Ha ha
+        .byte   " ha__\Call Meteor."            ; B638 20 68 61 5F 5F 5C 43 61   ha__\Ca
+                                                ; B640 6C 6C 20 4D 65 74 65 6F  ll Meteo
+                                                ; B648 72 2E                    r.
+        .byte   $0A                             ; B64A 0A                       .
+LB64B:
+        .byte   "@4Cloud!Get a hold ofyourself!"; B64B 40 34 43 6C 6F 75 64 21  @4Cloud!
+                                                ; B653 47 65 74 20 61 20 68 6F  Get a ho
+                                                ; B65B 6C 64 20 6F 66 79 6F 75  ld ofyou
+                                                ; B663 72 73 65 6C 66 21        rself!
+        .byte   $0A                             ; B669 0A                       .
+LB66A:
+        .byte   "@1Cloud__I'm__Cloud__"         ; B66A 40 31 43 6C 6F 75 64 5F  @1Cloud_
+                                                ; B672 5F 49 27 6D 5F 5F 43 6C  _I'm__Cl
+                                                ; B67A 6F 75 64 5F 5F           oud__
+        .byte   $0A                             ; B67F 0A                       .
+LB680:
+        .byte   "@1How should I?"               ; B680 40 31 48 6F 77 20 73 68  @1How sh
+                                                ; B688 6F 75 6C 64 20 49 3F     ould I?
+        .byte   $0A                             ; B68F 0A                       .
+LB690:
+        .byte   "@1__I remember!I\remember my wa"; B690 40 31 5F 5F 49 20 72 65 @1__I re
+                                                ; B698 6D 65 6D 62 65 72 21 49  member!I
+                                                ; B6A0 5C 72 65 6D 65 6D 62 65  \remembe
+                                                ; B6A8 72 20 6D 79 20 77 61     r my wa
+        .byte   "y."                            ; B6AF 79 2E                    y.
+        .byte   $0A                             ; B6B1 0A                       .
+LB6B2:
+        .byte   "@4__Cloud."                    ; B6B2 40 34 5F 5F 43 6C 6F 75  @4__Clou
+                                                ; B6BA 64 2E                    d.
+        .byte   $0A                             ; B6BC 0A                       .
+LB6BD:
+        .byte   "@1Mm?What's wrong?Is\something "; B6BD 40 31 4D 6D 3F 57 68 61 @1Mm?Wha
+                                                ; B6C5 74 27 73 20 77 72 6F 6E  t's wron
+                                                ; B6CD 67 3F 49 73 5C 73 6F 6D  g?Is\som
+                                                ; B6D5 65 74 68 69 6E 67 20     ething 
+        .byte   "wrong?"                        ; B6DC 77 72 6F 6E 67 3F        wrong?
+        .byte   $0A                             ; B6E2 0A                       .
+LB6E3:
+        .byte   "@4__It's nothing so\don't worry"; B6E3 40 34 5F 5F 49 74 27 73 @4__It's
+                                                ; B6EB 20 6E 6F 74 68 69 6E 67   nothing
+                                                ; B6F3 20 73 6F 5C 64 6F 6E 27   so\don'
+                                                ; B6FB 74 20 77 6F 72 72 79     t worry
+        .byte   " about\it."                    ; B702 20 61 62 6F 75 74 5C 69   about\i
+                                                ; B70A 74 2E                    t.
+        .byte   $0A                             ; B70C 0A                       .
+LB70D:
+        .byte   "@4Right,Cloud!It's\nothing."   ; B70D 40 34 52 69 67 68 74 2C  @4Right,
+                                                ; B715 43 6C 6F 75 64 21 49 74  Cloud!It
+                                                ; B71D 27 73 5C 6E 6F 74 68 69  's\nothi
+                                                ; B725 6E 67 2E                 ng.
+        .byte   $0A                             ; B728 0A                       .
+LB729:
+        .byte   "@4Sephiroth got away."         ; B729 40 34 53 65 70 68 69 72  @4Sephir
+                                                ; B731 6F 74 68 20 67 6F 74 20  oth got 
+                                                ; B739 61 77 61 79 2E           away.
+        .byte   $0A                             ; B73E 0A                       .
+LB73F:
+        .byte   "@1__Don't worry aboutit.I under"; B73F 40 31 5F 5F 44 6F 6E 27 @1__Don'
+                                                ; B747 74 20 77 6F 72 72 79 20  t worry 
+                                                ; B74F 61 62 6F 75 74 69 74 2E  aboutit.
+                                                ; B757 49 20 75 6E 64 65 72     I under
+        .byte   "stood\what he was saying."     ; B75E 73 74 6F 6F 64 5C 77 68  stood\wh
+                                                ; B766 61 74 20 68 65 20 77 61  at he wa
+                                                ; B76E 73 20 73 61 79 69 6E 67  s saying
+                                                ; B776 2E                       .
+        .byte   $0A                             ; B777 0A                       .
+LB778:
+        .byte   "@1So this must be\Meteor,right?"; B778 40 31 53 6F 20 74 68 69 @1So thi
+                                                ; B780 73 20 6D 75 73 74 20 62  s must b
+                                                ; B788 65 5C 4D 65 74 65 6F 72  e\Meteor
+                                                ; B790 2C 72 69 67 68 74 3F     ,right?
+        .byte   $0A                             ; B797 0A                       .
+LB798:
+        .byte   "@3Is something going\to fall fr"; B798 40 33 49 73 20 73 6F 6D @3Is som
+                                                ; B7A0 65 74 68 69 6E 67 20 67  ething g
+                                                ; B7A8 6F 69 6E 67 5C 74 6F 20  oing\to 
+                                                ; B7B0 66 61 6C 6C 20 66 72     fall fr
+        .byte   "om the\sky?"                   ; B7B7 6F 6D 20 74 68 65 5C 73  om the\s
+                                                ; B7BF 6B 79 3F                 ky?
+        .byte   $0A                             ; B7C2 0A                       .
+LB7C3:
+        .byte   "@4__this must be\magic.Just wha"; B7C3 40 34 5F 5F 74 68 69 73 @4__this
+                                                ; B7CB 20 6D 75 73 74 20 62 65   must be
+                                                ; B7D3 5C 6D 61 67 69 63 2E 4A  \magic.J
+                                                ; B7DB 75 73 74 20 77 68 61     ust wha
+        .byte   "t\Sephiroth was\saying."       ; B7E2 74 5C 53 65 70 68 69 72  t\Sephir
+                                                ; B7EA 6F 74 68 20 77 61 73 5C  oth was\
+                                                ; B7F2 73 61 79 69 6E 67 2E     saying.
+        .byte   $0A                             ; B7F9 0A                       .
+LB7FA:
+        .byte   "@4The Ultimate\Destructive Magi"; B7FA 40 34 54 68 65 20 55 6C @4The Ul
+                                                ; B802 74 69 6D 61 74 65 5C 44  timate\D
+                                                ; B80A 65 73 74 72 75 63 74 69  estructi
+                                                ; B812 76 65 20 4D 61 67 69     ve Magi
+        .byte   "c,\Meteor.It finds\small drifti"; B819 63 2C 5C 4D 65 74 65 6F c,\Meteo
+                                                ; B821 72 2E 49 74 20 66 69 6E  r.It fin
+                                                ; B829 64 73 5C 73 6D 61 6C 6C  ds\small
+                                                ; B831 20 64 72 69 66 74 69      drifti
+        .byte   "ng\planets with its\magic."    ; B838 6E 67 5C 70 6C 61 6E 65  ng\plane
+                                                ; B840 74 73 20 77 69 74 68 20  ts with 
+                                                ; B848 69 74 73 5C 6D 61 67 69  its\magi
+                                                ; B850 63 2E                    c.
+        .byte   $0A                             ; B852 0A                       .
+LB853:
+        .byte   "@4And then collides\with them.T"; B853 40 34 41 6E 64 20 74 68 @4And th
+                                                ; B85B 65 6E 20 63 6F 6C 6C 69  en colli
+                                                ; B863 64 65 73 5C 77 69 74 68  des\with
+                                                ; B86B 20 74 68 65 6D 2E 54      them.T
+        .byte   "his\Planet might get\wiped out\"; B872 68 69 73 5C 50 6C 61 6E his\Plan
+                                                ; B87A 65 74 20 6D 69 67 68 74  et might
+                                                ; B882 20 67 65 74 5C 77 69 70   get\wip
+                                                ; B88A 65 64 20 6F 75 74 5C     ed out\
+        .byte   "entirely__"                    ; B891 65 6E 74 69 72 65 6C 79  entirely
+                                                ; B899 5F 5F                    __
+        .byte   $0A                             ; B89B 0A                       .
+LB89C:
+        .byte   "@1Sephiroth!?"                 ; B89C 40 31 53 65 70 68 69 72  @1Sephir
+                                                ; B8A4 6F 74 68 21 3F           oth!?
+        .byte   $0A                             ; B8A9 0A                       .
+LB8AA:
+        .byte   "@<Ha ha ha__It is notme."      ; B8AA 40 3C 48 61 20 68 61 20  @<Ha ha 
+                                                ; B8B2 68 61 5F 5F 49 74 20 69  ha__It i
+                                                ; B8BA 73 20 6E 6F 74 6D 65 2E  s notme.
+        .byte   $0A                             ; B8C2 0A                       .
+LB8C3:
+        .byte   "@1What is this?"               ; B8C3 40 31 57 68 61 74 20 69  @1What i
+                                                ; B8CB 73 20 74 68 69 73 3F     s this?
+        .byte   $0A                             ; B8D2 0A                       .
+LB8D3:
+        .byte   "@4There's something\written on "; B8D3 40 34 54 68 65 72 65 27 @4There'
+                                                ; B8DB 73 20 73 6F 6D 65 74 68  s someth
+                                                ; B8E3 69 6E 67 5C 77 72 69 74  ing\writ
+                                                ; B8EB 74 65 6E 20 6F 6E 20     ten on 
+        .byte   "it."                           ; B8F2 69 74 2E                 it.
+        .byte   $0A                             ; B8F5 0A                       .
+LB8F6:
+        .byte   "@4__B.l.a.c.k__M.a.t.e.r.i.a." ; B8F6 40 34 5F 5F 42 2E 6C 2E  @4__B.l.
+                                                ; B8FE 61 2E 63 2E 6B 5F 5F 4D  a.c.k__M
+                                                ; B906 2E 61 2E 74 2E 65 2E 72  .a.t.e.r
+                                                ; B90E 2E 69 2E 61 2E           .i.a.
+        .byte   $0A                             ; B913 0A                       .
+LB914:
+        .byte   "@1Black Materia?"              ; B914 40 31 42 6C 61 63 6B 20  @1Black 
+                                                ; B91C 4D 61 74 65 72 69 61 3F  Materia?
+        .byte   $0A                             ; B924 0A                       .
+LB925:
+        .byte   "@4Hey!__Black\Materia.What shou"; B925 40 34 48 65 79 21 5F 5F @4Hey!__
+                                                ; B92D 42 6C 61 63 6B 5C 4D 61  Black\Ma
+                                                ; B935 74 65 72 69 61 2E 57 68  teria.Wh
+                                                ; B93D 61 74 20 73 68 6F 75     at shou
+        .byte   "ldwe do,Cloud?"                ; B944 6C 64 77 65 20 64 6F 2C  ldwe do,
+                                                ; B94C 43 6C 6F 75 64 3F        Cloud?
+        .byte   $0A                             ; B952 0A                       .
+LB953:
+        .byte   "@1Shake it?"                   ; B953 40 31 53 68 61 6B 65 20  @1Shake 
+                                                ; B95B 69 74 3F                 it?
+        .byte   $0A                             ; B95E 0A                       .
+LB95F:
+        .byte   "@4Wait a minute.I'll\ask!"     ; B95F 40 34 57 61 69 74 20 61  @4Wait a
+                                                ; B967 20 6D 69 6E 75 74 65 2E   minute.
+                                                ; B96F 49 27 6C 6C 5C 61 73 6B  I'll\ask
+                                                ; B977 21                       !
+        .byte   $0A                             ; B978 0A                       .
+LB979:
+        .byte   "@4I don't\understand__"        ; B979 40 34 49 20 64 6F 6E 27  @4I don'
+                                                ; B981 74 5C 75 6E 64 65 72 73  t\unders
+                                                ; B989 74 61 6E 64 5F 5F        tand__
+        .byte   $0A                             ; B98F 0A                       .
+LB990:
+        .byte   "@4What?Really?"                ; B990 40 34 57 68 61 74 3F 52  @4What?R
+                                                ; B998 65 61 6C 6C 79 3F        eally?
+        .byte   $0A                             ; B99E 0A                       .
+LB99F:
+        .byte   "@4They said that the\Temple its"; B99F 40 34 54 68 65 79 20 73 @4They s
+                                                ; B9A7 61 69 64 20 74 68 61 74  aid that
+                                                ; B9AF 20 74 68 65 5C 54 65 6D   the\Tem
+                                                ; B9B7 70 6C 65 20 69 74 73     ple its
+        .byte   "elf is\the Black Materia."     ; B9BE 65 6C 66 20 69 73 5C 74  elf is\t
+                                                ; B9C6 68 65 20 42 6C 61 63 6B  he Black
+                                                ; B9CE 20 4D 61 74 65 72 69 61   Materia
+                                                ; B9D6 2E                       .
+        .byte   $0A                             ; B9D7 0A                       .
+LB9D8:
+        .byte   "@1What do they mean?"          ; B9D8 40 31 57 68 61 74 20 64  @1What d
+                                                ; B9E0 6F 20 74 68 65 79 20 6D  o they m
+                                                ; B9E8 65 61 6E 3F              ean?
+        .byte   $0A                             ; B9EC 0A                       .
+LB9ED:
+        .byte   "@4So,this whole\building is the"; B9ED 40 34 53 6F 2C 74 68 69 @4So,thi
+                                                ; B9F5 73 20 77 68 6F 6C 65 5C  s whole\
+                                                ; B9FD 62 75 69 6C 64 69 6E 67  building
+                                                ; BA05 20 69 73 20 74 68 65      is the
+        .byte   "\Black Materia?"               ; BA0C 5C 42 6C 61 63 6B 20 4D  \Black M
+                                                ; BA14 61 74 65 72 69 61 3F     ateria?
+        .byte   $0A                             ; BA1B 0A                       .
+LBA1C:
+        .byte   "@1This huge Temple?\This is the"; BA1C 40 31 54 68 69 73 20 68 @1This h
+                                                ; BA24 75 67 65 20 54 65 6D 70  uge Temp
+                                                ; BA2C 6C 65 3F 5C 54 68 69 73  le?\This
+                                                ; BA34 20 69 73 20 74 68 65      is the
+        .byte   " Black\Materia!?Then no\one cou"; BA3B 20 42 6C 61 63 6B 5C 4D  Black\M
+                                                ; BA43 61 74 65 72 69 61 21 3F  ateria!?
+                                                ; BA4B 54 68 65 6E 20 6E 6F 5C  Then no\
+                                                ; BA53 6F 6E 65 20 63 6F 75     one cou
+        .byte   "ld take it."                   ; BA5A 6C 64 20 74 61 6B 65 20  ld take 
+                                                ; BA62 69 74 2E                 it.
+        .byte   $0A                             ; BA65 0A                       .
+LBA66:
+        .byte   "@4Hmm,it's pretty\hard.You see "; BA66 40 34 48 6D 6D 2C 69 74 @4Hmm,it
+                                                ; BA6E 27 73 20 70 72 65 74 74  's prett
+                                                ; BA76 79 5C 68 61 72 64 2E 59  y\hard.Y
+                                                ; BA7E 6F 75 20 73 65 65 20     ou see 
+        .byte   "this\is a model of the\Temple.A"; BA85 74 68 69 73 5C 69 73 20 this\is 
+                                                ; BA8D 61 20 6D 6F 64 65 6C 20  a model 
+                                                ; BA95 6F 66 20 74 68 65 5C 54  of the\T
+                                                ; BA9D 65 6D 70 6C 65 2E 41     emple.A
+        .byte   "nd inside\it is a device,\which"; BAA4 6E 64 20 69 6E 73 69 64 nd insid
+                                                ; BAAC 65 5C 69 74 20 69 73 20  e\it is 
+                                                ; BAB4 61 20 64 65 76 69 63 65  a device
+                                                ; BABC 2C 5C 77 68 69 63 68     ,\which
+        .byte   " gets smaller\each time you sol"; BAC3 20 67 65 74 73 20 73 6D  gets sm
+                                                ; BACB 61 6C 6C 65 72 5C 65 61  aller\ea
+                                                ; BAD3 63 68 20 74 69 6D 65 20  ch time 
+                                                ; BADB 79 6F 75 20 73 6F 6C     you sol
+        .byte   "vea puzzle.As the\model becomes"; BAE2 76 65 61 20 70 75 7A 7A vea puzz
+                                                ; BAEA 6C 65 2E 41 73 20 74 68  le.As th
+                                                ; BAF2 65 5C 6D 6F 64 65 6C 20  e\model 
+                                                ; BAFA 62 65 63 6F 6D 65 73     becomes
+        .byte   "\smaller,you become\smaller too"; BB01 5C 73 6D 61 6C 6C 65 72 \smaller
+                                                ; BB09 2C 79 6F 75 20 62 65 63  ,you bec
+                                                ; BB11 6F 6D 65 5C 73 6D 61 6C  ome\smal
+                                                ; BB19 6C 65 72 20 74 6F 6F     ler too
+        .byte   ".Until\it's small enough\to fit"; BB20 2E 55 6E 74 69 6C 5C 69 .Until\i
+                                                ; BB28 74 27 73 20 73 6D 61 6C  t's smal
+                                                ; BB30 6C 20 65 6E 6F 75 67 68  l enough
+                                                ; BB38 5C 74 6F 20 66 69 74     \to fit
+        .byte   " in the palm\of your hand."    ; BB3F 20 69 6E 20 74 68 65 20   in the 
+                                                ; BB47 70 61 6C 6D 5C 6F 66 20  palm\of 
+                                                ; BB4F 79 6F 75 72 20 68 61 6E  your han
+                                                ; BB57 64 2E                    d.
+        .byte   $0A                             ; BB59 0A                       .
+LBB5A:
+        .byte   "@1So,if we solve the\puzzles,th"; BB5A 40 31 53 6F 2C 69 66 20 @1So,if 
+                                                ; BB62 77 65 20 73 6F 6C 76 65  we solve
+                                                ; BB6A 20 74 68 65 5C 70 75 7A   the\puz
+                                                ; BB72 7A 6C 65 73 2C 74 68     zles,th
+        .byte   "e Black\Materia will get\smalle"; BB79 65 20 42 6C 61 63 6B 5C e Black\
+                                                ; BB81 4D 61 74 65 72 69 61 20  Materia 
+                                                ; BB89 77 69 6C 6C 20 67 65 74  will get
+                                                ; BB91 5C 73 6D 61 6C 6C 65     \smalle
+        .byte   "r and smallerand we can take it"; BB98 72 20 61 6E 64 20 73 6D r and sm
+                                                ; BBA0 61 6C 6C 65 72 61 6E 64  allerand
+                                                ; BBA8 20 77 65 20 63 61 6E 20   we can 
+                                                ; BBB0 74 61 6B 65 20 69 74     take it
+        .byte   "\out?"                         ; BBB7 5C 6F 75 74 3F           \out?
+        .byte   $0A                             ; BBBC 0A                       .
+LBBBD:
+        .byte   "@4Yes,but there's onething__You"; BBBD 40 34 59 65 73 2C 62 75 @4Yes,bu
+                                                ; BBC5 74 20 74 68 65 72 65 27  t there'
+                                                ; BBCD 73 20 6F 6E 65 74 68 69  s onethi
+                                                ; BBD5 6E 67 5F 5F 59 6F 75     ng__You
+        .byte   " can onlyanswer puzzles\inside "; BBDC 20 63 61 6E 20 6F 6E 6C  can onl
+                                                ; BBE4 79 61 6E 73 77 65 72 20  yanswer 
+                                                ; BBEC 70 75 7A 7A 6C 65 73 5C  puzzles\
+                                                ; BBF4 69 6E 73 69 64 65 20     inside 
+        .byte   "the Temple.\So,anyone who\solve"; BBFB 74 68 65 20 54 65 6D 70 the Temp
+                                                ; BC03 6C 65 2E 5C 53 6F 2C 61  le.\So,a
+                                                ; BC0B 6E 79 6F 6E 65 20 77 68  nyone wh
+                                                ; BC13 6F 5C 73 6F 6C 76 65     o\solve
+        .byte   "s the puzzle\will be crushed by"; BC1A 73 20 74 68 65 20 70 75 s the pu
+                                                ; BC22 7A 7A 6C 65 5C 77 69 6C  zzle\wil
+                                                ; BC2A 6C 20 62 65 20 63 72 75  l be cru
+                                                ; BC32 73 68 65 64 20 62 79     shed by
+        .byte   "\the Temple."                  ; BC39 5C 74 68 65 20 54 65 6D  \the Tem
+                                                ; BC41 70 6C 65 2E              ple.
+        .byte   $0A                             ; BC45 0A                       .
+LBC46:
+        .byte   "@1I see__the Ancientsdidn't wan"; BC46 40 31 49 20 73 65 65 5F @1I see_
+                                                ; BC4E 5F 74 68 65 20 41 6E 63  _the Anc
+                                                ; BC56 69 65 6E 74 73 64 69 64  ientsdid
+                                                ; BC5E 6E 27 74 20 77 61 6E     n't wan
+        .byte   "t\dangerous magic to\be taken o"; BC65 74 5C 64 61 6E 67 65 72 t\danger
+                                                ; BC6D 6F 75 73 20 6D 61 67 69  ous magi
+                                                ; BC75 63 20 74 6F 5C 62 65 20  c to\be 
+                                                ; BC7D 74 61 6B 65 6E 20 6F     taken o
+        .byte   "ut of theTemple so easily__"   ; BC84 75 74 20 6F 66 20 74 68  ut of th
+                                                ; BC8C 65 54 65 6D 70 6C 65 20  eTemple 
+                                                ; BC94 73 6F 20 65 61 73 69 6C  so easil
+                                                ; BC9C 79 5F 5F                 y__
+        .byte   $0A                             ; BC9F 0A                       .
+LBCA0:
+        .byte   "@3Let's just leave\it,OK?"     ; BCA0 40 33 4C 65 74 27 73 20  @3Let's 
+                                                ; BCA8 6A 75 73 74 20 6C 65 61  just lea
+                                                ; BCB0 76 65 5C 69 74 2C 4F 4B  ve\it,OK
+                                                ; BCB8 3F                       ?
+        .byte   $0A                             ; BCB9 0A                       .
+LBCBA:
+        .byte   "@1No.We've got to\think of a wa"; BCBA 40 31 4E 6F 2E 57 65 27 @1No.We'
+                                                ; BCC2 76 65 20 67 6F 74 20 74  ve got t
+                                                ; BCCA 6F 5C 74 68 69 6E 6B 20  o\think 
+                                                ; BCD2 6F 66 20 61 20 77 61     of a wa
+        .byte   "y to\get it out.Because\Sephiro"; BCD9 79 20 74 6F 5C 67 65 74 y to\get
+                                                ; BCE1 20 69 74 20 6F 75 74 2E   it out.
+                                                ; BCE9 42 65 63 61 75 73 65 5C  Because\
+                                                ; BCF1 53 65 70 68 69 72 6F     Sephiro
+        .byte   "th has lots\of different\flunki"; BCF8 74 68 20 68 61 73 20 6C th has l
+                                                ; BD00 6F 74 73 5C 6F 66 20 64  ots\of d
+                                                ; BD08 69 66 66 65 72 65 6E 74  ifferent
+                                                ; BD10 5C 66 6C 75 6E 6B 69     \flunki
+        .byte   "es.It's\nothing to him to\throw"; BD17 65 73 2E 49 74 27 73 5C es.It's\
+                                                ; BD1F 6E 6F 74 68 69 6E 67 20  nothing 
+                                                ; BD27 74 6F 20 68 69 6D 20 74  to him t
+                                                ; BD2F 6F 5C 74 68 72 6F 77     o\throw
+        .byte   " their lives\away to get the\Bl"; BD36 20 74 68 65 69 72 20 6C  their l
+                                                ; BD3E 69 76 65 73 5C 61 77 61  ives\awa
+                                                ; BD46 79 20 74 6F 20 67 65 74  y to get
+                                                ; BD4E 20 74 68 65 5C 42 6C      the\Bl
+        .byte   "ack Materia."                  ; BD55 61 63 6B 20 4D 61 74 65  ack Mate
+                                                ; BD5D 72 69 61 2E              ria.
+        .byte   $0A                             ; BD61 0A                       .
+LBD62:
+        .byte   "@1This place isn't\safe."      ; BD62 40 31 54 68 69 73 20 70  @1This p
+                                                ; BD6A 6C 61 63 65 20 69 73 6E  lace isn
+                                                ; BD72 27 74 5C 73 61 66 65 2E  't\safe.
+        .byte   $0A                             ; BD7A 0A                       .
+LBD7B:
+        .byte   "@4So what are we\going to do?" ; BD7B 40 34 53 6F 20 77 68 61  @4So wha
+                                                ; BD83 74 20 61 72 65 20 77 65  t are we
+                                                ; BD8B 5C 67 6F 69 6E 67 20 74  \going t
+                                                ; BD93 6F 20 64 6F 3F           o do?
+        .byte   $0A                             ; BD98 0A                       .
+LBD99:
+        .byte   "@6Don't forget about\me.Everyth"; BD99 40 36 44 6F 6E 27 74 20 @6Don't 
+                                                ; BDA1 66 6F 72 67 65 74 20 61  forget a
+                                                ; BDA9 62 6F 75 74 5C 6D 65 2E  bout\me.
+                                                ; BDB1 45 76 65 72 79 74 68     Everyth
+        .byte   "ing you\said makes perfect\sens"; BDB8 69 6E 67 20 79 6F 75 5C ing you\
+                                                ; BDC0 73 61 69 64 20 6D 61 6B  said mak
+                                                ; BDC8 65 73 20 70 65 72 66 65  es perfe
+                                                ; BDD0 63 74 5C 73 65 6E 73     ct\sens
+        .byte   "e!You can use\my stuffed body f"; BDD7 65 21 59 6F 75 20 63 61 e!You ca
+                                                ; BDDF 6E 20 75 73 65 5C 6D 79  n use\my
+                                                ; BDE7 20 73 74 75 66 66 65 64   stuffed
+                                                ; BDEF 20 62 6F 64 79 20 66      body f
+        .byte   "orthe future of the\Planet."   ; BDF6 6F 72 74 68 65 20 66 75  orthe fu
+                                                ; BDFE 74 75 72 65 20 6F 66 20  ture of 
+                                                ; BE06 74 68 65 5C 50 6C 61 6E  the\Plan
+                                                ; BE0E 65 74 2E                 et.
+        .byte   $0A                             ; BE11 0A                       .
+LBE12:
+        .byte   "@1We can't let\Sephiroth get hi"; BE12 40 31 57 65 20 63 61 6E @1We can
+                                                ; BE1A 27 74 20 6C 65 74 5C 53  't let\S
+                                                ; BE22 65 70 68 69 72 6F 74 68  ephiroth
+                                                ; BE2A 20 67 65 74 20 68 69      get hi
+        .byte   "s\hands on the Black\Materia.An"; BE31 73 5C 68 61 6E 64 73 20 s\hands 
+                                                ; BE39 6F 6E 20 74 68 65 20 42  on the B
+                                                ; BE41 6C 61 63 6B 5C 4D 61 74  lack\Mat
+                                                ; BE49 65 72 69 61 2E 41 6E     eria.An
+        .byte   "d we\can't let the\Shinra get t"; BE50 64 20 77 65 5C 63 61 6E d we\can
+                                                ; BE58 27 74 20 6C 65 74 20 74  't let t
+                                                ; BE60 68 65 5C 53 68 69 6E 72  he\Shinr
+                                                ; BE68 61 20 67 65 74 20 74     a get t
+        .byte   "heirs\on it either."           ; BE6F 68 65 69 72 73 5C 6F 6E  heirs\on
+                                                ; BE77 20 69 74 20 65 69 74 68   it eith
+                                                ; BE7F 65 72 2E                 er.
+        .byte   $0A                             ; BE82 0A                       .
+LBE83:
+        .byte   "@6But Cloud.There's\really noth"; BE83 40 36 42 75 74 20 43 6C @6But Cl
+                                                ; BE8B 6F 75 64 2E 54 68 65 72  oud.Ther
+                                                ; BE93 65 27 73 5C 72 65 61 6C  e's\real
+                                                ; BE9B 6C 79 20 6E 6F 74 68     ly noth
+        .byte   "ing elseyou can do.\Everyone,pl"; BEA2 69 6E 67 20 65 6C 73 65 ing else
+                                                ; BEAA 79 6F 75 20 63 61 6E 20  you can 
+                                                ; BEB2 64 6F 2E 5C 45 76 65 72  do.\Ever
+                                                ; BEBA 79 6F 6E 65 2C 70 6C     yone,pl
+        .byte   "ease\trust me."                ; BEC1 65 61 73 65 5C 74 72 75  ease\tru
+                                                ; BEC9 73 74 20 6D 65 2E        st me.
+        .byte   $0A                             ; BECF 0A                       .
+LBED0:
+        .byte   "@1I guess we have no\choice."  ; BED0 40 31 49 20 67 75 65 73  @1I gues
+                                                ; BED8 73 20 77 65 20 68 61 76  s we hav
+                                                ; BEE0 65 20 6E 6F 5C 63 68 6F  e no\cho
+                                                ; BEE8 69 63 65 2E              ice.
+        .byte   $0A                             ; BEEC 0A                       .
+LBEED:
+        .byte   "@6All righty then!\Leave it all"; BEED 40 36 41 6C 6C 20 72 69 @6All ri
+                                                ; BEF5 67 68 74 79 20 74 68 65  ghty the
+                                                ; BEFD 6E 21 5C 4C 65 61 76 65  n!\Leave
+                                                ; BF05 20 69 74 20 61 6C 6C      it all
+        .byte   " to me!Please hurry,you'vegot t"; BF0C 20 74 6F 20 6D 65 21 50  to me!P
+                                                ; BF14 6C 65 61 73 65 20 68 75  lease hu
+                                                ; BF1C 72 72 79 2C 79 6F 75 27  rry,you'
+                                                ; BF24 76 65 67 6F 74 20 74     vegot t
+        .byte   "o get out of\there!I'll be\wait"; BF2B 6F 20 67 65 74 20 6F 75 o get ou
+                                                ; BF33 74 20 6F 66 5C 74 68 65  t of\the
+                                                ; BF3B 72 65 21 49 27 6C 6C 20  re!I'll 
+                                                ; BF43 62 65 5C 77 61 69 74     be\wait
+        .byte   "ing at the\exit!"              ; BF4A 69 6E 67 20 61 74 20 74  ing at t
+                                                ; BF52 68 65 5C 65 78 69 74 21  he\exit!
+        .byte   $0A                             ; BF5A 0A                       .
+LBF5B:
+        .byte   "@1It's warm__"                 ; BF5B 40 31 49 74 27 73 20 77  @1It's w
+                                                ; BF63 61 72 6D 5F 5F           arm__
+        .byte   $0A                             ; BF68 0A                       .
+LBF69:
+        .byte   "@1This isn't good__"           ; BF69 40 31 54 68 69 73 20 69  @1This i
+                                                ; BF71 73 6E 27 74 20 67 6F 6F  sn't goo
+                                                ; BF79 64 5F 5F                 d__
+        .byte   $0A                             ; BF7C 0A                       .
+LBF7D:
+        .byte   "@4Cloud__behind you."          ; BF7D 40 34 43 6C 6F 75 64 5F  @4Cloud_
+                                                ; BF85 5F 62 65 68 69 6E 64 20  _behind 
+                                                ; BF8D 79 6F 75 2E              you.
+        .byte   $0A                             ; BF91 0A                       .
+LBF92:
+        .byte   "@6Sorry to keep you\waiting!It'"; BF92 40 36 53 6F 72 72 79 20 @6Sorry 
+                                                ; BF9A 74 6F 20 6B 65 65 70 20  to keep 
+                                                ; BFA2 79 6F 75 5C 77 61 69 74  you\wait
+                                                ; BFAA 69 6E 67 21 49 74 27     ing!It'
+        .byte   "s me!\I'll handle the\rest!"   ; BFB1 73 20 6D 65 21 5C 49 27  s me!\I'
+                                                ; BFB9 6C 6C 20 68 61 6E 64 6C  ll handl
+                                                ; BFC1 65 20 74 68 65 5C 72 65  e the\re
+                                                ; BFC9 73 74 21                 st!
+        .byte   $0A                             ; BFCC 0A                       .
+LBFCD:
+        .byte   "@6Well,everyone__Takecare of yo"; BFCD 40 36 57 65 6C 6C 2C 65 @6Well,e
+                                                ; BFD5 76 65 72 79 6F 6E 65 5F  veryone_
+                                                ; BFDD 5F 54 61 6B 65 63 61 72  _Takecar
+                                                ; BFE5 65 20 6F 66 20 79 6F     e of yo
+        .byte   "urselves!"                     ; BFEC 75 72 73 65 6C 76 65 73  urselves
+                                                ; BFF4 21                       !
+        .byte   $0A                             ; BFF5 0A                       .
+LBFF6:
+        .byte   "@4CaitSith__"                  ; BFF6 40 34 43 61 69 74 53 69  @4CaitSi
+                                                ; BFFE 74 68 5F 5F              th__
+        .byte   $0A                             ; C002 0A                       .
+LC003:
+        .byte   "@4Come on,Cloud__Say\something."; C003 40 34 43 6F 6D 65 20 6F @4Come o
+                                                ; C00B 6E 2C 43 6C 6F 75 64 5F  n,Cloud_
+                                                ; C013 5F 53 61 79 5C 73 6F 6D  _Say\som
+                                                ; C01B 65 74 68 69 6E 67 2E     ething.
+        .byte   $0A                             ; C022 0A                       .
+LC023:
+        .byte   "@1I'm not good at\this."       ; C023 40 31 49 27 6D 20 6E 6F  @1I'm no
+                                                ; C02B 74 20 67 6F 6F 64 20 61  t good a
+                                                ; C033 74 5C 74 68 69 73 2E     t\this.
+        .byte   $0A                             ; C03A 0A                       .
+LC03B:
+        .byte   "@6Mmm,I understand.I\feel the s"; C03B 40 36 4D 6D 6D 2C 49 20 @6Mmm,I 
+                                                ; C043 75 6E 64 65 72 73 74 61  understa
+                                                ; C04B 6E 64 2E 49 5C 66 65 65  nd.I\fee
+                                                ; C053 6C 20 74 68 65 20 73     l the s
+        .byte   "ame too."                      ; C05A 61 6D 65 20 74 6F 6F 2E  ame too.
+        .byte   $0A                             ; C062 0A                       .
+LC063:
+        .byte   "@4Why don't you read\our fortun"; C063 40 34 57 68 79 20 64 6F @4Why do
+                                                ; C06B 6E 27 74 20 79 6F 75 20  n't you 
+                                                ; C073 72 65 61 64 5C 6F 75 72  read\our
+                                                ; C07B 20 66 6F 72 74 75 6E      fortun
+        .byte   "es?"                           ; C082 65 73 3F                 es?
+        .byte   $0A                             ; C085 0A                       .
+LC086:
+        .byte   "@6Say,that's right__Ihaven't do"; C086 40 36 53 61 79 2C 74 68 @6Say,th
+                                                ; C08E 61 74 27 73 20 72 69 67  at's rig
+                                                ; C096 68 74 5F 5F 49 68 61 76  ht__Ihav
+                                                ; C09E 65 6E 27 74 20 64 6F     en't do
+        .byte   "ne it in\a while,huh?I'm so\exc"; C0A5 6E 65 20 69 74 20 69 6E ne it in
+                                                ; C0AD 5C 61 20 77 68 69 6C 65  \a while
+                                                ; C0B5 2C 68 75 68 3F 49 27 6D  ,huh?I'm
+                                                ; C0BD 20 73 6F 5C 65 78 63      so\exc
+        .byte   "ited.Right or\wrong,I'm still t"; C0C4 69 74 65 64 2E 52 69 67 ited.Rig
+                                                ; C0CC 68 74 20 6F 72 5C 77 72  ht or\wr
+                                                ; C0D4 6F 6E 67 2C 49 27 6D 20  ong,I'm 
+                                                ; C0DC 73 74 69 6C 6C 20 74     still t
+        .byte   "hesame 'ol me.Now,\what should "; C0E3 68 65 73 61 6D 65 20 27 hesame '
+                                                ; C0EB 6F 6C 20 6D 65 2E 4E 6F  ol me.No
+                                                ; C0F3 77 2C 5C 77 68 61 74 20  w,\what 
+                                                ; C0FB 73 68 6F 75 6C 64 20     should 
+        .byte   "I\predict?"                    ; C102 49 5C 70 72 65 64 69 63  I\predic
+                                                ; C10A 74 3F                    t?
+        .byte   $0A                             ; C10C 0A                       .
+LC10D:
+        .byte   "@4Hmm,let's see how\compatible "; C10D 40 34 48 6D 6D 2C 6C 65 @4Hmm,le
+                                                ; C115 74 27 73 20 73 65 65 20  t's see 
+                                                ; C11D 68 6F 77 5C 63 6F 6D 70  how\comp
+                                                ; C125 61 74 69 62 6C 65 20     atible 
+        .byte   "Cloud\and I are!"              ; C12C 43 6C 6F 75 64 5C 61 6E  Cloud\an
+                                                ; C134 64 20 49 20 61 72 65 21  d I are!
+        .byte   $0A                             ; C13C 0A                       .
+LC13D:
+        .byte   "@6That'll cost ya.\Exactly one "; C13D 40 36 54 68 61 74 27 6C @6That'l
+                                                ; C145 6C 20 63 6F 73 74 20 79  l cost y
+                                                ; C14D 61 2E 5C 45 78 61 63 74  a.\Exact
+                                                ; C155 6C 79 20 6F 6E 65 20     ly one 
+        .byte   "date!"                         ; C15C 64 61 74 65 21           date!
+        .byte   $0A                             ; C161 0A                       .
+LC162:
+        .byte   "@6Here I go!"                  ; C162 40 36 48 65 72 65 20 49  @6Here I
+                                                ; C16A 20 67 6F 21               go!
+        .byte   $0A                             ; C16E 0A                       .
+LC16F:
+        .byte   "@6This isn't good.I\can't say i"; C16F 40 36 54 68 69 73 20 69 @6This i
+                                                ; C177 73 6E 27 74 20 67 6F 6F  sn't goo
+                                                ; C17F 64 2E 49 5C 63 61 6E 27  d.I\can'
+                                                ; C187 74 20 73 61 79 20 69     t say i
+        .byte   "t.Poor\Tifa."                  ; C18E 74 2E 50 6F 6F 72 5C 54  t.Poor\T
+                                                ; C196 69 66 61 2E              ifa.
+        .byte   $0A                             ; C19A 0A                       .
+LC19B:
+        .byte   "@4No!Tell me!I\promise I won't "; C19B 40 34 4E 6F 21 54 65 6C @4No!Tel
+                                                ; C1A3 6C 20 6D 65 21 49 5C 70  l me!I\p
+                                                ; C1AB 72 6F 6D 69 73 65 20 49  romise I
+                                                ; C1B3 20 77 6F 6E 27 74 20      won't 
+        .byte   "getmad!"                       ; C1BA 67 65 74 6D 61 64 21     getmad!
+        .byte   $0A                             ; C1C1 0A                       .
+LC1C2:
+        .byte   "@6Is that so?Then\I'll tell you"; C1C2 40 36 49 73 20 74 68 61 @6Is tha
+                                                ; C1CA 74 20 73 6F 3F 54 68 65  t so?The
+                                                ; C1D2 6E 5C 49 27 6C 6C 20 74  n\I'll t
+                                                ; C1DA 65 6C 6C 20 79 6F 75     ell you
+        .byte   ".Looksgood.You are\perfect for "; C1E1 2E 4C 6F 6F 6B 73 67 6F .Looksgo
+                                                ; C1E9 6F 64 2E 59 6F 75 20 61  od.You a
+                                                ; C1F1 72 65 5C 70 65 72 66 65  re\perfe
+                                                ; C1F9 63 74 20 66 6F 72 20     ct for 
+        .byte   "each\other!Aeris's star\and Clo"; C200 65 61 63 68 5C 6F 74 68 each\oth
+                                                ; C208 65 72 21 41 65 72 69 73  er!Aeris
+                                                ; C210 27 73 20 73 74 61 72 5C  's star\
+                                                ; C218 61 6E 64 20 43 6C 6F     and Clo
+        .byte   "ud's star!\They show a great\fu"; C21F 75 64 27 73 20 73 74 61 ud's sta
+                                                ; C227 72 21 5C 54 68 65 79 20  r!\They 
+                                                ; C22F 73 68 6F 77 20 61 20 67  show a g
+                                                ; C237 72 65 61 74 5C 66 75     reat\fu
+        .byte   "ture!Cloud,I'll\be your matchma"; C23E 74 75 72 65 21 43 6C 6F ture!Clo
+                                                ; C246 75 64 2C 49 27 6C 6C 5C  ud,I'll\
+                                                ; C24E 62 65 20 79 6F 75 72 20  be your 
+                                                ; C256 6D 61 74 63 68 6D 61     matchma
+        .byte   "ker,preacher__I'll do\whatever "; C25D 6B 65 72 2C 70 72 65 61 ker,prea
+                                                ; C265 63 68 65 72 5F 5F 49 27  cher__I'
+                                                ; C26D 6C 6C 20 64 6F 5C 77 68  ll do\wh
+                                                ; C275 61 74 65 76 65 72 20     atever 
+        .byte   "you want\me to!You just callme "; C27C 79 6F 75 20 77 61 6E 74 you want
+                                                ; C284 5C 6D 65 20 74 6F 21 59  \me to!Y
+                                                ; C28C 6F 75 20 6A 75 73 74 20  ou just 
+                                                ; C294 63 61 6C 6C 6D 65 20     callme 
+        .byte   "when it all\happens!"          ; C29B 77 68 65 6E 20 69 74 20  when it 
+                                                ; C2A3 61 6C 6C 5C 68 61 70 70  all\happ
+                                                ; C2AB 65 6E 73 21              ens!
+        .byte   $0A                             ; C2AF 0A                       .
+LC2B0:
+        .byte   "@6Thank you for\believing in me"; C2B0 40 36 54 68 61 6E 6B 20 @6Thank 
+                                                ; C2B8 79 6F 75 20 66 6F 72 5C  you for\
+                                                ; C2C0 62 65 6C 69 65 76 69 6E  believin
+                                                ; C2C8 67 20 69 6E 20 6D 65     g in me
+        .byte   ",\knowing that I was\a spy.This"; C2CF 2C 5C 6B 6E 6F 77 69 6E ,\knowin
+                                                ; C2D7 67 20 74 68 61 74 20 49  g that I
+                                                ; C2DF 20 77 61 73 5C 61 20 73   was\a s
+                                                ; C2E7 70 79 2E 54 68 69 73     py.This
+        .byte   " is the\final,final\farewell!" ; C2EE 20 69 73 20 74 68 65 5C   is the\
+                                                ; C2F6 66 69 6E 61 6C 2C 66 69  final,fi
+                                                ; C2FE 6E 61 6C 5C 66 61 72 65  nal\fare
+                                                ; C306 77 65 6C 6C 21           well!
+        .byte   $0A                             ; C30B 0A                       .
+LC30C:
+        .byte   "@4Be strong CaitSith!"         ; C30C 40 34 42 65 20 73 74 72  @4Be str
+                                                ; C314 6F 6E 67 20 43 61 69 74  ong Cait
+                                                ; C31C 53 69 74 68 21           Sith!
+        .byte   $0A                             ; C321 0A                       .
+LC322:
+        .byte   "@6She told me to 'Be\strong.' I"; C322 40 36 53 68 65 20 74 6F @6She to
+                                                ; C32A 6C 64 20 6D 65 20 74 6F  ld me to
+                                                ; C332 20 27 42 65 5C 73 74 72   'Be\str
+                                                ; C33A 6F 6E 67 2E 27 20 49     ong.' I
+        .byte   " feel so\happy."               ; C341 20 66 65 65 6C 20 73 6F   feel so
+                                                ; C349 5C 68 61 70 70 79 2E     \happy.
+        .byte   $0A                             ; C350 0A                       .
+        .byte   "0000000000000000000000000000000"; C351 30 30 30 30 30 30 30 30 00000000
+                                                ; C359 30 30 30 30 30 30 30 30  00000000
+                                                ; C361 30 30 30 30 30 30 30 30  00000000
+                                                ; C369 30 30 30 30 30 30 30     0000000
+        .byte   "00000000000"                   ; C370 30 30 30 30 30 30 30 30  00000000
+                                                ; C378 30 30 30                 000
+LC37B:
+        .byte   "@6This must be it!TheAncients s"; C37B 40 36 54 68 69 73 20 6D @6This m
+                                                ; C383 75 73 74 20 62 65 20 69  ust be i
+                                                ; C38B 74 21 54 68 65 41 6E 63  t!TheAnc
+                                                ; C393 69 65 6E 74 73 20 73     ients s
+        .byte   "ure did agreat job making\this."; C39A 75 72 65 20 64 69 64 20 ure did 
+                                                ; C3A2 61 67 72 65 61 74 20 6A  agreat j
+                                                ; C3AA 6F 62 20 6D 61 6B 69 6E  ob makin
+                                                ; C3B2 67 5C 74 68 69 73 2E     g\this.
+        .byte   $0A                             ; C3B9 0A                       .
+LC3BA:
+        .byte   "@6I can protect the\Planet too!"; C3BA 40 36 49 20 63 61 6E 20 @6I can 
+                                                ; C3C2 70 72 6F 74 65 63 74 20  protect 
+                                                ; C3CA 74 68 65 5C 50 6C 61 6E  the\Plan
+                                                ; C3D2 65 74 20 74 6F 6F 21     et too!
+        .byte   "I'm\kinda embarrassed__"       ; C3D9 49 27 6D 5C 6B 69 6E 64  I'm\kind
+                                                ; C3E1 61 20 65 6D 62 61 72 72  a embarr
+                                                ; C3E9 61 73 73 65 64 5F 5F     assed__
+        .byte   $0A                             ; C3F0 0A                       .
+LC3F1:
+        .byte   "@6There's plenty of\stuffed toy"; C3F1 40 36 54 68 65 72 65 27 @6There'
+                                                ; C3F9 73 20 70 6C 65 6E 74 79  s plenty
+                                                ; C401 20 6F 66 5C 73 74 75 66   of\stuf
+                                                ; C409 66 65 64 20 74 6F 79     fed toy
+        .byte   "s like\my body around,but\there"; C410 73 20 6C 69 6B 65 5C 6D s like\m
+                                                ; C418 79 20 62 6F 64 79 20 61  y body a
+                                                ; C420 72 6F 75 6E 64 2C 62 75  round,bu
+                                                ; C428 74 5C 74 68 65 72 65     t\there
+        .byte   "'s only one\me!"               ; C42F 27 73 20 6F 6E 6C 79 20  's only 
+                                                ; C437 6F 6E 65 5C 6D 65 21     one\me!
+        .byte   $0A                             ; C43E 0A                       .
+LC43F:
+        .byte   "@6Don't forget me\even if anoth"; C43F 40 36 44 6F 6E 27 74 20 @6Don't 
+                                                ; C447 66 6F 72 67 65 74 20 6D  forget m
+                                                ; C44F 65 5C 65 76 65 6E 20 69  e\even i
+                                                ; C457 66 20 61 6E 6F 74 68     f anoth
+        .byte   "er\CaitSith comes\along."      ; C45E 65 72 5C 43 61 69 74 53  er\CaitS
+                                                ; C466 69 74 68 20 63 6F 6D 65  ith come
+                                                ; C46E 73 5C 61 6C 6F 6E 67 2E  s\along.
+        .byte   $0A                             ; C476 0A                       .
+LC477:
+        .byte   "@6Good bye,then!I\guess I'm off"; C477 40 36 47 6F 6F 64 20 62 @6Good b
+                                                ; C47F 79 65 2C 74 68 65 6E 21  ye,then!
+                                                ; C487 49 5C 67 75 65 73 73 20  I\guess 
+                                                ; C48F 49 27 6D 20 6F 66 66     I'm off
+        .byte   " to\save the Planet__"         ; C496 20 74 6F 5C 73 61 76 65   to\save
+                                                ; C49E 20 74 68 65 20 50 6C 61   the Pla
+                                                ; C4A6 6E 65 74 5F 5F           net__
+        .byte   $0A                             ; C4AB 0A                       .
+LC4AC:
+        .byte   "@1This's the Black\Materia__"  ; C4AC 40 31 54 68 69 73 27 73  @1This's
+                                                ; C4B4 20 74 68 65 20 42 6C 61   the Bla
+                                                ; C4BC 63 6B 5C 4D 61 74 65 72  ck\Mater
+                                                ; C4C4 69 61 5F 5F              ia__
+        .byte   $0A                             ; C4C8 0A                       .
+LC4C9:
+        .byte   "@1As long as we have\this,Sephi"; C4C9 40 31 41 73 20 6C 6F 6E @1As lon
+                                                ; C4D1 67 20 61 73 20 77 65 20  g as we 
+                                                ; C4D9 68 61 76 65 5C 74 68 69  have\thi
+                                                ; C4E1 73 2C 53 65 70 68 69     s,Sephi
+        .byte   "roth\won't be able to\use Meteo"; C4E8 72 6F 74 68 5C 77 6F 6E roth\won
+                                                ; C4F0 27 74 20 62 65 20 61 62  't be ab
+                                                ; C4F8 6C 65 20 74 6F 5C 75 73  le to\us
+                                                ; C500 65 20 4D 65 74 65 6F     e Meteo
+        .byte   "r."                            ; C507 72 2E                    r.
+        .byte   $0A                             ; C509 0A                       .
+LC50A:
+        .byte   "Got Black"                     ; C50A 47 6F 74 20 42 6C 61 63  Got Blac
+                                                ; C512 6B                       k
+        .byte   $87                             ; C513 87                       .
+        .byte   "."                             ; C514 2E                       .
+        .byte   $0A                             ; C515 0A                       .
+LC516:
+        .byte   "@1Mmm? Can we use \it?"        ; C516 40 31 4D 6D 6D 3F 20 43  @1Mmm? C
+                                                ; C51E 61 6E 20 77 65 20 75 73  an we us
+                                                ; C526 65 20 5C 69 74 3F        e \it?
+        .byte   $0A                             ; C52C 0A                       .
+        .byte   "000"                           ; C52D 30 30 30                 000
+        .byte   $0A                             ; C530 0A                       .
+LC531:
+        .byte   "@4Nope,we can't use\it right no"; C531 40 34 4E 6F 70 65 2C 77 @4Nope,w
+                                                ; C539 65 20 63 61 6E 27 74 20  e can't 
+                                                ; C541 75 73 65 5C 69 74 20 72  use\it r
+                                                ; C549 69 67 68 74 20 6E 6F     ight no
+        .byte   "w.You\need great\spiritual powe"; C550 77 2E 59 6F 75 5C 6E 65 w.You\ne
+                                                ; C558 65 64 20 67 72 65 61 74  ed great
+                                                ; C560 5C 73 70 69 72 69 74 75  \spiritu
+                                                ; C568 61 6C 20 70 6F 77 65     al powe
+        .byte   "r to\use it."                  ; C56F 72 20 74 6F 5C 75 73 65  r to\use
+                                                ; C577 20 69 74 2E               it.
+        .byte   $0A                             ; C57B 0A                       .
+LC57C:
+        .byte   "@1You mean lots of\Spiritual en"; C57C 40 31 59 6F 75 20 6D 65 @1You me
+                                                ; C584 61 6E 20 6C 6F 74 73 20  an lots 
+                                                ; C58C 6F 66 5C 53 70 69 72 69  of\Spiri
+                                                ; C594 74 75 61 6C 20 65 6E     tual en
+        .byte   "ergy?"                         ; C59B 65 72 67 79 3F           ergy?
+        .byte   $0A                             ; C5A0 0A                       .
+LC5A1:
+        .byte   "@4That's right.One\person's pow"; C5A1 40 34 54 68 61 74 27 73 @4That's
+                                                ; C5A9 20 72 69 67 68 74 2E 4F   right.O
+                                                ; C5B1 6E 65 5C 70 65 72 73 6F  ne\perso
+                                                ; C5B9 6E 27 73 20 70 6F 77     n's pow
+        .byte   "er\alone won't do it.\Somewhere"; C5C0 65 72 5C 61 6C 6F 6E 65 er\alone
+                                                ; C5C8 20 77 6F 6E 27 74 20 64   won't d
+                                                ; C5D0 6F 20 69 74 2E 5C 53 6F  o it.\So
+                                                ; C5D8 6D 65 77 68 65 72 65     mewhere
+        .byte   " special.\Where there's\plenty "; C5DF 20 73 70 65 63 69 61 6C  special
+                                                ; C5E7 2E 5C 57 68 65 72 65 20  .\Where 
+                                                ; C5EF 74 68 65 72 65 27 73 5C  there's\
+                                                ; C5F7 70 6C 65 6E 74 79 20     plenty 
+        .byte   "of the\Planet's energy__Ohyeah!"; C5FE 6F 66 20 74 68 65 5C 50 of the\P
+                                                ; C606 6C 61 6E 65 74 27 73 20  lanet's 
+                                                ; C60E 65 6E 65 72 67 79 5F 5F  energy__
+                                                ; C616 4F 68 79 65 61 68 21     Ohyeah!
+        .byte   "The Promised\Land!"            ; C61D 54 68 65 20 50 72 6F 6D  The Prom
+                                                ; C625 69 73 65 64 5C 4C 61 6E  ised\Lan
+                                                ; C62D 64 21                    d!
+        .byte   $0A                             ; C62F 0A                       .
+LC630:
+        .byte   "@1The Promised Land?\No,but__" ; C630 40 31 54 68 65 20 50 72  @1The Pr
+                                                ; C638 6F 6D 69 73 65 64 20 4C  omised L
+                                                ; C640 61 6E 64 3F 5C 4E 6F 2C  and?\No,
+                                                ; C648 62 75 74 5F 5F           but__
+        .byte   $0A                             ; C64D 0A                       .
+LC64E:
+        .byte   "@4Sephiroth is\different.He's n"; C64E 40 34 53 65 70 68 69 72 @4Sephir
+                                                ; C656 6F 74 68 20 69 73 5C 64  oth is\d
+                                                ; C65E 69 66 66 65 72 65 6E 74  ifferent
+                                                ; C666 2E 48 65 27 73 20 6E     .He's n
+        .byte   "ot\an Ancient."                ; C66D 6F 74 5C 61 6E 20 41 6E  ot\an An
+                                                ; C675 63 69 65 6E 74 2E        cient.
+        .byte   $0A                             ; C67B 0A                       .
+LC67C:
+        .byte   "@1He shouldn't be\able to find "; C67C 40 31 48 65 20 73 68 6F @1He sho
+                                                ; C684 75 6C 64 6E 27 74 20 62  uldn't b
+                                                ; C68C 65 5C 61 62 6C 65 20 74  e\able t
+                                                ; C694 6F 20 66 69 6E 64 20     o find 
+        .byte   "the\Promised Land."            ; C69B 74 68 65 5C 50 72 6F 6D  the\Prom
+                                                ; C6A3 69 73 65 64 20 4C 61 6E  ised Lan
+                                                ; C6AB 64 2E                    d.
+        .byte   $0A                             ; C6AD 0A                       .
+LC6AE:
+        .byte   "@<__Ah,but I have."            ; C6AE 40 3C 5F 5F 41 68 2C 62  @<__Ah,b
+                                                ; C6B6 75 74 20 49 20 68 61 76  ut I hav
+                                                ; C6BE 65 2E                    e.
+        .byte   $0A                             ; C6C0 0A                       .
+LC6C1:
+        .byte   "@<I'm far superior tothe Ancien"; C6C1 40 3C 49 27 6D 20 66 61 @<I'm fa
+                                                ; C6C9 72 20 73 75 70 65 72 69  r superi
+                                                ; C6D1 6F 72 20 74 6F 74 68 65  or tothe
+                                                ; C6D9 20 41 6E 63 69 65 6E      Ancien
+        .byte   "ts.I\became a traveler\of the L"; C6E0 74 73 2E 49 5C 62 65 63 ts.I\bec
+                                                ; C6E8 61 6D 65 20 61 20 74 72  ame a tr
+                                                ; C6F0 61 76 65 6C 65 72 5C 6F  aveler\o
+                                                ; C6F8 66 20 74 68 65 20 4C     f the L
+        .byte   "ifestream\and gained the\knowle"; C6FF 69 66 65 73 74 72 65 61 ifestrea
+                                                ; C707 6D 5C 61 6E 64 20 67 61  m\and ga
+                                                ; C70F 69 6E 65 64 20 74 68 65  ined the
+                                                ; C717 5C 6B 6E 6F 77 6C 65     \knowle
+        .byte   "dge and\wisdom of the\Ancients."; C71E 64 67 65 20 61 6E 64 5C dge and\
+                                                ; C726 77 69 73 64 6F 6D 20 6F  wisdom o
+                                                ; C72E 66 20 74 68 65 5C 41 6E  f the\An
+                                                ; C736 63 69 65 6E 74 73 2E     cients.
+        .byte   "I also\gained the\knowledge and"; C73D 49 20 61 6C 73 6F 5C 67 I also\g
+                                                ; C745 61 69 6E 65 64 20 74 68  ained th
+                                                ; C74D 65 5C 6B 6E 6F 77 6C 65  e\knowle
+                                                ; C755 64 67 65 20 61 6E 64     dge and
+        .byte   "\wisdom of those\after the\exti"; C75C 5C 77 69 73 64 6F 6D 20 \wisdom 
+                                                ; C764 6F 66 20 74 68 6F 73 65  of those
+                                                ; C76C 5C 61 66 74 65 72 20 74  \after t
+                                                ; C774 68 65 5C 65 78 74 69     he\exti
+        .byte   "nction of the\Ancients.And soon"; C77B 6E 63 74 69 6F 6E 20 6F nction o
+                                                ; C783 66 20 74 68 65 5C 41 6E  f the\An
+                                                ; C78B 63 69 65 6E 74 73 2E 41  cients.A
+                                                ; C793 6E 64 20 73 6F 6F 6E     nd soon
+        .byte   ",Iwill create the\future."     ; C79A 2C 49 77 69 6C 6C 20 63  ,Iwill c
+                                                ; C7A2 72 65 61 74 65 20 74 68  reate th
+                                                ; C7AA 65 5C 66 75 74 75 72 65  e\future
+                                                ; C7B2 2E                       .
+        .byte   $0A                             ; C7B3 0A                       .
+LC7B4:
+        .byte   "@4I won't let you do\it!The fut"; C7B4 40 34 49 20 77 6F 6E 27 @4I won'
+                                                ; C7BC 74 20 6C 65 74 20 79 6F  t let yo
+                                                ; C7C4 75 20 64 6F 5C 69 74 21  u do\it!
+                                                ; C7CC 54 68 65 20 66 75 74     The fut
+        .byte   "ure is\not only yours!"        ; C7D3 75 72 65 20 69 73 5C 6E  ure is\n
+                                                ; C7DB 6F 74 20 6F 6E 6C 79 20  ot only 
+                                                ; C7E3 79 6F 75 72 73 21        yours!
+        .byte   $0A                             ; C7E9 0A                       .
+LC7EA:
+        .byte   "@<Ha,ha,ha__I wonder?"         ; C7EA 40 3C 48 61 2C 68 61 2C  @<Ha,ha,
+                                                ; C7F2 68 61 5F 5F 49 20 77 6F  ha__I wo
+                                                ; C7FA 6E 64 65 72 3F           nder?
+        .byte   $0A                             ; C7FF 0A                       .
+LC800:
+        .byte   "@<Wake up!"                    ; C800 40 3C 57 61 6B 65 20 75  @<Wake u
+                                                ; C808 70 21                    p!
+        .byte   $0A                             ; C80A 0A                       .
+LC80B:
+        .byte   "@1Sh__shut up!"                ; C80B 40 31 53 68 5F 5F 73 68  @1Sh__sh
+                                                ; C813 75 74 20 75 70 21        ut up!
+        .byte   $0A                             ; C819 0A                       .
+LC81A:
+        .byte   "@<There,Cloud__good\boy."      ; C81A 40 3C 54 68 65 72 65 2C  @<There,
+                                                ; C822 43 6C 6F 75 64 5F 5F 67  Cloud__g
+                                                ; C82A 6F 6F 64 5C 62 6F 79 2E  ood\boy.
+        .byte   $0A                             ; C832 0A                       .
+LC833:
+        .byte   "@1The__Noise__"                ; C833 40 31 54 68 65 5F 5F 4E  @1The__N
+                                                ; C83B 6F 69 73 65 5F 5F        oise__
+        .byte   $0A                             ; C841 0A                       .
+LC842:
+        .byte   "@1Wa__aa__aa"                  ; C842 40 31 57 61 5F 5F 61 61  @1Wa__aa
+                                                ; C84A 5F 5F 61 61              __aa
+        .byte   $0A                             ; C84E 0A                       .
+LC84F:
+        .byte   "@<__Well done."                ; C84F 40 3C 5F 5F 57 65 6C 6C  @<__Well
+                                                ; C857 20 64 6F 6E 65 2E         done.
+        .byte   $0A                             ; C85D 0A                       .
+LC85E:
+        .byte   "@4Cloud,are you all\right?"    ; C85E 40 34 43 6C 6F 75 64 2C  @4Cloud,
+                                                ; C866 61 72 65 20 79 6F 75 20  are you 
+                                                ; C86E 61 6C 6C 5C 72 69 67 68  all\righ
+                                                ; C876 74 3F                    t?
+        .byte   $0A                             ; C878 0A                       .
+LC879:
+        .byte   "@1__I gave the Black\Materia to"; C879 40 31 5F 5F 49 20 67 61 @1__I ga
+                                                ; C881 76 65 20 74 68 65 20 42  ve the B
+                                                ; C889 6C 61 63 6B 5C 4D 61 74  lack\Mat
+                                                ; C891 65 72 69 61 20 74 6F     eria to
+        .byte   "\Sephiroth_?"                  ; C898 5C 53 65 70 68 69 72 6F  \Sephiro
+                                                ; C8A0 74 68 5F 3F              th_?
+        .byte   $0A                             ; C8A4 0A                       .
+LC8A5:
+        .byte   "@1Wha__what did I\do__tell me,A"; C8A5 40 31 57 68 61 5F 5F 77 @1Wha__w
+                                                ; C8AD 68 61 74 20 64 69 64 20  hat did 
+                                                ; C8B5 49 5C 64 6F 5F 5F 74 65  I\do__te
+                                                ; C8BD 6C 6C 20 6D 65 2C 41     ll me,A
+        .byte   "eris."                         ; C8C4 65 72 69 73 2E           eris.
+        .byte   $0A                             ; C8C9 0A                       .
+LC8CA:
+        .byte   "@4Cloud__be strong,\OK?"       ; C8CA 40 34 43 6C 6F 75 64 5F  @4Cloud_
+                                                ; C8D2 5F 62 65 20 73 74 72 6F  _be stro
+                                                ; C8DA 6E 67 2C 5C 4F 4B 3F     ng,\OK?
+        .byte   $0A                             ; C8E1 0A                       .
+LC8E2:
+        .byte   "@1__Urrgh__What have\I done!?" ; C8E2 40 31 5F 5F 55 72 72 67  @1__Urrg
+                                                ; C8EA 68 5F 5F 57 68 61 74 20  h__What 
+                                                ; C8F2 68 61 76 65 5C 49 20 64  have\I d
+                                                ; C8FA 6F 6E 65 21 3F           one!?
+        .byte   $0A                             ; C8FF 0A                       .
+LC900:
+        .byte   "@4Cloud__you haven't\done anyth"; C900 40 34 43 6C 6F 75 64 5F @4Cloud_
+                                                ; C908 5F 79 6F 75 20 68 61 76  _you hav
+                                                ; C910 65 6E 27 74 5C 64 6F 6E  en't\don
+                                                ; C918 65 20 61 6E 79 74 68     e anyth
+        .byte   "ing.It's\not your fault."      ; C91F 69 6E 67 2E 49 74 27 73  ing.It's
+                                                ; C927 5C 6E 6F 74 20 79 6F 75  \not you
+                                                ; C92F 72 20 66 61 75 6C 74 2E  r fault.
+        .byte   $0A                             ; C937 0A                       .
+        .byte   "0000000000000000000000000000000"; C938 30 30 30 30 30 30 30 30 00000000
+                                                ; C940 30 30 30 30 30 30 30 30  00000000
+                                                ; C948 30 30 30 30 30 30 30 30  00000000
+                                                ; C950 30 30 30 30 30 30 30     0000000
+        .byte   "0000000000000000000000000"     ; C957 30 30 30 30 30 30 30 30  00000000
+                                                ; C95F 30 30 30 30 30 30 30 30  00000000
+                                                ; C967 30 30 30 30 30 30 30 30  00000000
+                                                ; C96F 30                       0
+LC970:
+        .byte   "@1Everything is\white__What did"; C970 40 31 45 76 65 72 79 74 @1Everyt
+                                                ; C978 68 69 6E 67 20 69 73 5C  hing is\
+                                                ; C980 77 68 69 74 65 5F 5F 57  white__W
+                                                ; C988 68 61 74 20 64 69 64     hat did
+        .byte   " I\do?I don't rememberanything_"; C98F 20 49 5C 64 6F 3F 49 20  I\do?I 
+                                                ; C997 64 6F 6E 27 74 20 72 65  don't re
+                                                ; C99F 6D 65 6D 62 65 72 61 6E  memberan
+                                                ; C9A7 79 74 68 69 6E 67 5F     ything_
+        .byte   "_My\memory__since\when_?If\ever"; C9AE 5F 4D 79 5C 6D 65 6D 6F _My\memo
+                                                ; C9B6 72 79 5F 5F 73 69 6E 63  ry__sinc
+                                                ; C9BE 65 5C 77 68 65 6E 5F 3F  e\when_?
+                                                ; C9C6 49 66 5C 65 76 65 72     If\ever
+        .byte   "ything's a\dream,don't wake\me."; C9CD 79 74 68 69 6E 67 27 73 ything's
+                                                ; C9D5 20 61 5C 64 72 65 61 6D   a\dream
+                                                ; C9DD 2C 64 6F 6E 27 74 20 77  ,don't w
+                                                ; C9E5 61 6B 65 5C 6D 65 2E     ake\me.
+        .byte   $0A                             ; C9EC 0A                       .
+LC9ED:
+        .byte   "@4Cloud,can you hear\me?"      ; C9ED 40 34 43 6C 6F 75 64 2C  @4Cloud,
+                                                ; C9F5 63 61 6E 20 79 6F 75 20  can you 
+                                                ; C9FD 68 65 61 72 5C 6D 65 3F  hear\me?
+        .byte   $0A                             ; CA05 0A                       .
+LCA06:
+        .byte   "@1Yeah,I hear you.\Sorry for wh"; CA06 40 31 59 65 61 68 2C 49 @1Yeah,I
+                                                ; CA0E 20 68 65 61 72 20 79 6F   hear yo
+                                                ; CA16 75 2E 5C 53 6F 72 72 79  u.\Sorry
+                                                ; CA1E 20 66 6F 72 20 77 68      for wh
+        .byte   "at\happened."                  ; CA25 61 74 5C 68 61 70 70 65  at\happe
+                                                ; CA2D 6E 65 64 2E              ned.
+        .byte   $0A                             ; CA31 0A                       .
+LCA32:
+        .byte   "@4Don't worry about\it."       ; CA32 40 34 44 6F 6E 27 74 20  @4Don't 
+                                                ; CA3A 77 6F 72 72 79 20 61 62  worry ab
+                                                ; CA42 6F 75 74 5C 69 74 2E     out\it.
+        .byte   $0A                             ; CA49 0A                       .
+LCA4A:
+        .byte   "@1__I can't help it__"         ; CA4A 40 31 5F 5F 49 20 63 61  @1__I ca
+                                                ; CA52 6E 27 74 20 68 65 6C 70  n't help
+                                                ; CA5A 20 69 74 5F 5F            it__
+        .byte   $0A                             ; CA5F 0A                       .
+LCA60:
+        .byte   "@4Oh__"                        ; CA60 40 34 4F 68 5F 5F        @4Oh__
+        .byte   $0A                             ; CA66 0A                       .
+LCA67:
+        .byte   "@4Then,why don't you\REALLY wor"; CA67 40 34 54 68 65 6E 2C 77 @4Then,w
+                                                ; CA6F 68 79 20 64 6F 6E 27 74  hy don't
+                                                ; CA77 20 79 6F 75 5C 52 45 41   you\REA
+                                                ; CA7F 4C 4C 59 20 77 6F 72     LLY wor
+        .byte   "ry about\it?"                  ; CA86 72 79 20 61 62 6F 75 74  ry about
+                                                ; CA8E 5C 69 74 3F              \it?
+        .byte   $0A                             ; CA92 0A                       .
+LCA93:
+        .byte   "@4And let me handle\Sephiroth."; CA93 40 34 41 6E 64 20 6C 65  @4And le
+                                                ; CA9B 74 20 6D 65 20 68 61 6E  t me han
+                                                ; CAA3 64 6C 65 5C 53 65 70 68  dle\Seph
+                                                ; CAAB 69 72 6F 74 68 2E        iroth.
+        .byte   $0A                             ; CAB1 0A                       .
+LCAB2:
+        .byte   "@4And Cloud,you take\care of yo"; CAB2 40 34 41 6E 64 20 43 6C @4And Cl
+                                                ; CABA 6F 75 64 2C 79 6F 75 20  oud,you 
+                                                ; CAC2 74 61 6B 65 5C 63 61 72  take\car
+                                                ; CACA 65 20 6F 66 20 79 6F     e of yo
+        .byte   "urself."                       ; CAD1 75 72 73 65 6C 66 2E     urself.
+        .byte   $0A                             ; CAD8 0A                       .
+LCAD9:
+        .byte   "@4So you don't have abreakdown,"; CAD9 40 34 53 6F 20 79 6F 75 @4So you
+                                                ; CAE1 20 64 6F 6E 27 74 20 68   don't h
+                                                ; CAE9 61 76 65 20 61 62 72 65  ave abre
+                                                ; CAF1 61 6B 64 6F 77 6E 2C     akdown,
+        .byte   "okay?"                         ; CAF8 6F 6B 61 79 3F           okay?
+        .byte   $0A                             ; CAFD 0A                       .
+LCAFE:
+        .byte   "@4This forest leads\to the City"; CAFE 40 34 54 68 69 73 20 66 @4This f
+                                                ; CB06 6F 72 65 73 74 20 6C 65  orest le
+                                                ; CB0E 61 64 73 5C 74 6F 20 74  ads\to t
+                                                ; CB16 68 65 20 43 69 74 79     he City
+        .byte   " of the\Ancients__and is\called"; CB1D 20 6F 66 20 74 68 65 5C  of the\
+                                                ; CB25 41 6E 63 69 65 6E 74 73  Ancients
+                                                ; CB2D 5F 5F 61 6E 64 20 69 73  __and is
+                                                ; CB35 5C 63 61 6C 6C 65 64     \called
+        .byte   " Sleeping\Forest.It's only a\ma"; CB3C 20 53 6C 65 65 70 69 6E  Sleepin
+                                                ; CB44 67 5C 46 6F 72 65 73 74  g\Forest
+                                                ; CB4C 2E 49 74 27 73 20 6F 6E  .It's on
+                                                ; CB54 6C 79 20 61 5C 6D 61     ly a\ma
+        .byte   "tter of time\before Sephiroth\u"; CB5B 74 74 65 72 20 6F 66 20 tter of 
+                                                ; CB63 74 69 6D 65 5C 62 65 66  time\bef
+                                                ; CB6B 6F 72 65 20 53 65 70 68  ore Seph
+                                                ; CB73 69 72 6F 74 68 5C 75     iroth\u
+        .byte   "ses Meteor.That's\why I'm going"; CB7A 73 65 73 20 4D 65 74 65 ses Mete
+                                                ; CB82 6F 72 2E 54 68 61 74 27  or.That'
+                                                ; CB8A 73 5C 77 68 79 20 49 27  s\why I'
+                                                ; CB92 6D 20 67 6F 69 6E 67     m going
+        .byte   " to\protect it.Only a\survivor "; CB99 20 74 6F 5C 70 72 6F 74  to\prot
+                                                ; CBA1 65 63 74 20 69 74 2E 4F  ect it.O
+                                                ; CBA9 6E 6C 79 20 61 5C 73 75  nly a\su
+                                                ; CBB1 72 76 69 76 6F 72 20     rvivor 
+        .byte   "of the\Cetra,like me,can\do it."; CBB8 6F 66 20 74 68 65 5C 43 of the\C
+                                                ; CBC0 65 74 72 61 2C 6C 69 6B  etra,lik
+                                                ; CBC8 65 20 6D 65 2C 63 61 6E  e me,can
+                                                ; CBD0 5C 64 6F 20 69 74 2E     \do it.
+        .byte   $0A                             ; CBD7 0A                       .
+LCBD8:
+        .byte   "@4The secret is just\up here." ; CBD8 40 34 54 68 65 20 73 65  @4The se
+                                                ; CBE0 63 72 65 74 20 69 73 20  cret is 
+                                                ; CBE8 6A 75 73 74 5C 75 70 20  just\up 
+                                                ; CBF0 68 65 72 65 2E           here.
+        .byte   $0A                             ; CBF5 0A                       .
+LCBF6:
+        .byte   "@4At least it should\be__I feel"; CBF6 40 34 41 74 20 6C 65 61 @4At lea
+                                                ; CBFE 73 74 20 69 74 20 73 68  st it sh
+                                                ; CC06 6F 75 6C 64 5C 62 65 5F  ould\be_
+                                                ; CC0E 5F 49 20 66 65 65 6C     _I feel
+        .byte   " it.It\feels like I'm\being led"; CC15 20 69 74 2E 49 74 5C 66  it.It\f
+                                                ; CC1D 65 65 6C 73 20 6C 69 6B  eels lik
+                                                ; CC25 65 20 49 27 6D 5C 62 65  e I'm\be
+                                                ; CC2D 69 6E 67 20 6C 65 64     ing led
+        .byte   " by\something."                ; CC34 20 62 79 5C 73 6F 6D 65   by\some
+                                                ; CC3C 74 68 69 6E 67 2E        thing.
+        .byte   $0A                             ; CC42 0A                       .
+LCC43:
+        .byte   "@4Then,I'll be going\now.I'll c"; CC43 40 34 54 68 65 6E 2C 49 @4Then,I
+                                                ; CC4B 27 6C 6C 20 62 65 20 67  'll be g
+                                                ; CC53 6F 69 6E 67 5C 6E 6F 77  oing\now
+                                                ; CC5B 2E 49 27 6C 6C 20 63     .I'll c
+        .byte   "ome back\when it's all over."  ; CC62 6F 6D 65 20 62 61 63 6B  ome back
+                                                ; CC6A 5C 77 68 65 6E 20 69 74  \when it
+                                                ; CC72 27 73 20 61 6C 6C 20 6F  's all o
+                                                ; CC7A 76 65 72 2E              ver.
+        .byte   $0A                             ; CC7E 0A                       .
+LCC7F:
+        .byte   "@1Aeris?"                      ; CC7F 40 31 41 65 72 69 73 3F  @1Aeris?
+        .byte   $0A                             ; CC87 0A                       .
+LCC88:
+        .byte   "@<Hmm__She's thinkingof interfe"; CC88 40 3C 48 6D 6D 5F 5F 53 @<Hmm__S
+                                                ; CC90 68 65 27 73 20 74 68 69  he's thi
+                                                ; CC98 6E 6B 69 6E 67 6F 66 20  nkingof 
+                                                ; CCA0 69 6E 74 65 72 66 65     interfe
+        .byte   "ring?She\will be a difficultone"; CCA7 72 69 6E 67 3F 53 68 65 ring?She
+                                                ; CCAF 5C 77 69 6C 6C 20 62 65  \will be
+                                                ; CCB7 20 61 20 64 69 66 66 69   a diffi
+                                                ; CCBF 63 75 6C 74 6F 6E 65     cultone
+        .byte   ",don't you\think?"             ; CCC6 2C 64 6F 6E 27 74 20 79  ,don't y
+                                                ; CCCE 6F 75 5C 74 68 69 6E 6B  ou\think
+                                                ; CCD6 3F                       ?
+        .byte   $0A                             ; CCD7 0A                       .
+LCCD8:
+        .byte   "@<We must stop that\girl soon."; CCD8 40 3C 57 65 20 6D 75 73  @<We mus
+                                                ; CCE0 74 20 73 74 6F 70 20 74  t stop t
+                                                ; CCE8 68 61 74 5C 67 69 72 6C  hat\girl
+                                                ; CCF0 20 73 6F 6F 6E 2E         soon.
+        .byte   $0A                             ; CCF6 0A                       .
+LCCF7:
+        .byte   "@1Hmm? A VCR and a\set of video"; CCF7 40 31 48 6D 6D 3F 20 41 @1Hmm? A
+                                                ; CCFF 20 56 43 52 20 61 6E 64   VCR and
+                                                ; CD07 20 61 5C 73 65 74 20 6F   a\set o
+                                                ; CD0F 66 20 76 69 64 65 6F     f video
+        .byte   " tapes.Let's see what's\on them"; CD16 20 74 61 70 65 73 2E 4C  tapes.L
+                                                ; CD1E 65 74 27 73 20 73 65 65  et's see
+                                                ; CD26 20 77 68 61 74 27 73 5C   what's\
+                                                ; CD2E 6F 6E 20 74 68 65 6D     on them
+        .byte   "."                             ; CD35 2E                       .
+        .byte   $0A                             ; CD36 0A                       .
+LCD37:
+        .byte   "Tape 1: The\original crisis\ \ "; CD37 54 61 70 65 20 31 3A 20 Tape 1: 
+                                                ; CD3F 54 68 65 5C 6F 72 69 67  The\orig
+                                                ; CD47 69 6E 61 6C 20 63 72 69  inal cri
+                                                ; CD4F 73 69 73 5C 20 5C 20     sis\ \ 
+        .byte   "\Gast: Camera's\ready!, Then\If"; CD56 5C 47 61 73 74 3A 20 43 \Gast: C
+                                                ; CD5E 61 6D 65 72 61 27 73 5C  amera's\
+                                                ; CD66 72 65 61 64 79 21 2C 20  ready!, 
+                                                ; CD6E 54 68 65 6E 5C 49 66     Then\If
+        .byte   "alna, please tellus about the C"; CD75 61 6C 6E 61 2C 20 70 6C alna, pl
+                                                ; CD7D 65 61 73 65 20 74 65 6C  ease tel
+                                                ; CD85 6C 75 73 20 61 62 6F 75  lus abou
+                                                ; CD8D 74 20 74 68 65 20 43     t the C
+        .byte   "etra.Ifalna: 2000 years ago, ou"; CD94 65 74 72 61 2E 49 66 61 etra.Ifa
+                                                ; CD9C 6C 6E 61 3A 20 32 30 30  lna: 200
+                                                ; CDA4 30 20 79 65 61 72 73 20  0 years 
+                                                ; CDAC 61 67 6F 2C 20 6F 75     ago, ou
+        .byte   "r ancestors,the Cetra, heard\th"; CDB3 72 20 61 6E 63 65 73 74 r ancest
+                                                ; CDBB 6F 72 73 2C 74 68 65 20  ors,the 
+                                                ; CDC3 43 65 74 72 61 2C 20 68  Cetra, h
+                                                ; CDCB 65 61 72 64 5C 74 68     eard\th
+        .byte   "e cries of the\Planet. The firs"; CDD2 65 20 63 72 69 65 73 20 e cries 
+                                                ; CDDA 6F 66 20 74 68 65 5C 50  of the\P
+                                                ; CDE2 6C 61 6E 65 74 2E 20 54  lanet. T
+                                                ; CDEA 68 65 20 66 69 72 73     he firs
+        .byte   "t\ones to discover\the Planet's"; CDF1 74 5C 6F 6E 65 73 20 74 t\ones t
+                                                ; CDF9 6F 20 64 69 73 63 6F 76  o discov
+                                                ; CE01 65 72 5C 74 68 65 20 50  er\the P
+                                                ; CE09 6C 61 6E 65 74 27 73     lanet's
+        .byte   " wound\were the Cetra at\the Kn"; CE10 20 77 6F 75 6E 64 5C 77  wound\w
+                                                ; CE18 65 72 65 20 74 68 65 20  ere the 
+                                                ; CE20 43 65 74 72 61 20 61 74  Cetra at
+                                                ; CE28 5C 74 68 65 20 4B 6E     \the Kn
+        .byte   "owlespole.\ \ \ \Gast: Tell us\"; CE2F 6F 77 6C 65 73 70 6F 6C owlespol
+                                                ; CE37 65 2E 5C 20 5C 20 5C 20  e.\ \ \ 
+                                                ; CE3F 5C 47 61 73 74 3A 20 54  \Gast: T
+                                                ; CE47 65 6C 6C 20 75 73 5C     ell us\
+        .byte   "Ifalna__where is\Knowlespole?\ "; CE4E 49 66 61 6C 6E 61 5F 5F Ifalna__
+                                                ; CE56 77 68 65 72 65 20 69 73  where is
+                                                ; CE5E 5C 4B 6E 6F 77 6C 65 73  \Knowles
+                                                ; CE66 70 6F 6C 65 3F 5C 20     pole?\ 
+        .byte   "\Ifalna: Knowlespolerefers to t"; CE6D 5C 49 66 61 6C 6E 61 3A \Ifalna:
+                                                ; CE75 20 4B 6E 6F 77 6C 65 73   Knowles
+                                                ; CE7D 70 6F 6C 65 72 65 66 65  polerefe
+                                                ; CE85 72 73 20 74 6F 20 74     rs to t
+        .byte   "his\area. The Cetra\then began "; CE8C 68 69 73 5C 61 72 65 61 his\area
+                                                ; CE94 2E 20 54 68 65 20 43 65  . The Ce
+                                                ; CE9C 74 72 61 5C 74 68 65 6E  tra\then
+                                                ; CEA4 20 62 65 67 61 6E 20      began 
+        .byte   "a\planet-reading.\ \ \ \Gast: I"; CEAB 61 5C 70 6C 61 6E 65 74 a\planet
+                                                ; CEB3 2D 72 65 61 64 69 6E 67  -reading
+                                                ; CEBB 2E 5C 20 5C 20 5C 20 5C  .\ \ \ \
+                                                ; CEC3 47 61 73 74 3A 20 49     Gast: I
+        .byte   "falna, what exactly does\Planet"; CECA 66 61 6C 6E 61 2C 20 77 falna, w
+                                                ; CED2 68 61 74 20 65 78 61 63  hat exac
+                                                ; CEDA 74 6C 79 20 64 6F 65 73  tly does
+                                                ; CEE2 5C 50 6C 61 6E 65 74     \Planet
+        .byte   "-reading\entail?\Ifalna: __I ca"; CEE9 2D 72 65 61 64 69 6E 67 -reading
+                                                ; CEF1 5C 65 6E 74 61 69 6C 3F  \entail?
+                                                ; CEF9 5C 49 66 61 6C 6E 61 3A  \Ifalna:
+                                                ; CF01 20 5F 5F 49 20 63 61      __I ca
+        .byte   "n't\explain it very\well, but i"; CF08 6E 27 74 5C 65 78 70 6C n't\expl
+                                                ; CF10 61 69 6E 20 69 74 20 76  ain it v
+                                                ; CF18 65 72 79 5C 77 65 6C 6C  ery\well
+                                                ; CF20 2C 20 62 75 74 20 69     , but i
+        .byte   "t's\like having a\conversation "; CF27 74 27 73 5C 6C 69 6B 65 t's\like
+                                                ; CF2F 20 68 61 76 69 6E 67 20   having 
+                                                ; CF37 61 5C 63 6F 6E 76 65 72  a\conver
+                                                ; CF3F 73 61 74 69 6F 6E 20     sation 
+        .byte   "with\the Planet__It saidsomethi"; CF46 77 69 74 68 5C 74 68 65 with\the
+                                                ; CF4E 20 50 6C 61 6E 65 74 5F   Planet_
+                                                ; CF56 5F 49 74 20 73 61 69 64  _It said
+                                                ; CF5E 73 6F 6D 65 74 68 69     somethi
+        .byte   "ng fell fromthe sky making a\la"; CF65 6E 67 20 66 65 6C 6C 20 ng fell 
+                                                ; CF6D 66 72 6F 6D 74 68 65 20  fromthe 
+                                                ; CF75 73 6B 79 20 6D 61 6B 69  sky maki
+                                                ; CF7D 6E 67 20 61 5C 6C 61     ng a\la
+        .byte   "rge wound.\Thousands of Cetra\p"; CF84 72 67 65 20 77 6F 75 6E rge woun
+                                                ; CF8C 64 2E 5C 54 68 6F 75 73  d.\Thous
+                                                ; CF94 61 6E 64 73 20 6F 66 20  ands of 
+                                                ; CF9C 43 65 74 72 61 5C 70     Cetra\p
+        .byte   "ulled together,\trying to heal "; CFA3 75 6C 6C 65 64 20 74 6F ulled to
+                                                ; CFAB 67 65 74 68 65 72 2C 5C  gether,\
+                                                ; CFB3 74 72 79 69 6E 67 20 74  trying t
+                                                ; CFBB 6F 20 68 65 61 6C 20     o heal 
+        .byte   "the\Planet__But, due tothe seve"; CFC2 74 68 65 5C 50 6C 61 6E the\Plan
+                                                ; CFCA 65 74 5F 5F 42 75 74 2C  et__But,
+                                                ; CFD2 20 64 75 65 20 74 6F 74   due tot
+                                                ; CFDA 68 65 20 73 65 76 65     he seve
+        .byte   "rity of thewound, it was only a"; CFE1 72 69 74 79 20 6F 66 20 rity of 
+                                                ; CFE9 74 68 65 77 6F 75 6E 64  thewound
+                                                ; CFF1 2C 20 69 74 20 77 61 73  , it was
+                                                ; CFF9 20 6F 6E 6C 79 20 61      only a
+        .byte   "ble to heal\itself, over many\y"; D000 62 6C 65 20 74 6F 20 68 ble to h
+                                                ; D008 65 61 6C 5C 69 74 73 65  eal\itse
+                                                ; D010 6C 66 2C 20 6F 76 65 72  lf, over
+                                                ; D018 20 6D 61 6E 79 5C 79      many\y
+        .byte   "ears.\ \ \Gast: Do the\Ancients"; D01F 65 61 72 73 2E 5C 20 5C ears.\ \
+                                                ; D027 20 5C 47 61 73 74 3A 20   \Gast: 
+                                                ; D02F 44 6F 20 74 68 65 5C 41  Do the\A
+                                                ; D037 6E 63 69 65 6E 74 73     ncients
+        .byte   ",rather,\the Cetra, have\specia"; D03E 2C 72 61 74 68 65 72 2C ,rather,
+                                                ; D046 5C 74 68 65 20 43 65 74  \the Cet
+                                                ; D04E 72 61 2C 20 68 61 76 65  ra, have
+                                                ; D056 5C 73 70 65 63 69 61     \specia
+        .byte   "l powers to\heal the Planet?\ \"; D05D 6C 20 70 6F 77 65 72 73 l powers
+                                                ; D065 20 74 6F 5C 68 65 61 6C   to\heal
+                                                ; D06D 20 74 68 65 20 50 6C 61   the Pla
+                                                ; D075 6E 65 74 3F 5C 20 5C     net?\ \
+        .byte   " \ \Ifalna: No,it's notthat kin"; D07C 20 5C 20 5C 49 66 61 6C  \ \Ifal
+                                                ; D084 6E 61 3A 20 4E 6F 2C 69  na: No,i
+                                                ; D08C 74 27 73 20 6E 6F 74 74  t's nott
+                                                ; D094 68 61 74 20 6B 69 6E     hat kin
+        .byte   "d of power.The life force of\al"; D09B 64 20 6F 66 20 70 6F 77 d of pow
+                                                ; D0A3 65 72 2E 54 68 65 20 6C  er.The l
+                                                ; D0AB 69 66 65 20 66 6F 72 63  ife forc
+                                                ; D0B3 65 20 6F 66 5C 61 6C     e of\al
+        .byte   "l living things\on this Planet\"; D0BA 6C 20 6C 69 76 69 6E 67 l living
+                                                ; D0C2 20 74 68 69 6E 67 73 5C   things\
+                                                ; D0CA 6F 6E 20 74 68 69 73 20  on this 
+                                                ; D0D2 50 6C 61 6E 65 74 5C     Planet\
+        .byte   "becomes the energy.The Cetra tr"; D0D9 62 65 63 6F 6D 65 73 20 becomes 
+                                                ; D0E1 74 68 65 20 65 6E 65 72  the ener
+                                                ; D0E9 67 79 2E 54 68 65 20 43  gy.The C
+                                                ; D0F1 65 74 72 61 20 74 72     etra tr
+        .byte   "ied\desperately to\cultivate th"; D0F8 69 65 64 5C 64 65 73 70 ied\desp
+                                                ; D100 65 72 61 74 65 6C 79 20  erately 
+                                                ; D108 74 6F 5C 63 75 6C 74 69  to\culti
+                                                ; D110 76 61 74 65 20 74 68     vate th
+        .byte   "e land so as not to\diminish th"; D117 65 20 6C 61 6E 64 20 73 e land s
+                                                ; D11F 6F 20 61 73 20 6E 6F 74  o as not
+                                                ; D127 20 74 6F 5C 64 69 6D 69   to\dimi
+                                                ; D12F 6E 69 73 68 20 74 68     nish th
+        .byte   "e neededenergy__\Gast: Hmm, eve"; D136 65 20 6E 65 65 64 65 64 e needed
+                                                ; D13E 65 6E 65 72 67 79 5F 5F  energy__
+                                                ; D146 5C 47 61 73 74 3A 20 48  \Gast: H
+                                                ; D14E 6D 6D 2C 20 65 76 65     mm, eve
+        .byte   "n\here so close to\the North Ca"; D155 6E 5C 68 65 72 65 20 73 n\here s
+                                                ; D15D 6F 20 63 6C 6F 73 65 20  o close 
+                                                ; D165 74 6F 5C 74 68 65 20 4E  to\the N
+                                                ; D16D 6F 72 74 68 20 43 61     orth Ca
+        .byte   "ve, thesnow never melts.\Is tha"; D174 76 65 2C 20 74 68 65 73 ve, thes
+                                                ; D17C 6E 6F 77 20 6E 65 76 65  now neve
+                                                ; D184 72 20 6D 65 6C 74 73 2E  r melts.
+                                                ; D18C 5C 49 73 20 74 68 61     \Is tha
+        .byte   "t because theplanet's energy is"; D193 74 20 62 65 63 61 75 73 t becaus
+                                                ; D19B 65 20 74 68 65 70 6C 61  e thepla
+                                                ; D1A3 6E 65 74 27 73 20 65 6E  net's en
+                                                ; D1AB 65 72 67 79 20 69 73     ergy is
+        .byte   " gathered here to\heal its inju"; D1B2 20 67 61 74 68 65 72 65  gathere
+                                                ; D1BA 64 20 68 65 72 65 20 74  d here t
+                                                ; D1C2 6F 5C 68 65 61 6C 20 69  o\heal i
+                                                ; D1CA 74 73 20 69 6E 6A 75     ts inju
+        .byte   "ry?\Ifalna: Yes, the\energy tha"; D1D1 72 79 3F 5C 49 66 61 6C ry?\Ifal
+                                                ; D1D9 6E 61 3A 20 59 65 73 2C  na: Yes,
+                                                ; D1E1 20 74 68 65 5C 65 6E 65   the\ene
+                                                ; D1E9 72 67 79 20 74 68 61     rgy tha
+        .byte   "t was\needed to heal the Planet"; D1F0 74 20 77 61 73 5C 6E 65 t was\ne
+                                                ; D1F8 65 64 65 64 20 74 6F 20  eded to 
+                                                ; D200 68 65 61 6C 20 74 68 65  heal the
+                                                ; D208 20 50 6C 61 6E 65 74      Planet
+        .byte   " withered\away the land__thenth"; D20F 20 77 69 74 68 65 72 65  withere
+                                                ; D217 64 5C 61 77 61 79 20 74  d\away t
+                                                ; D21F 68 65 20 6C 61 6E 64 5F  he land_
+                                                ; D227 5F 74 68 65 6E 74 68     _thenth
+        .byte   "e Planet__The\Planet tried to\p"; D22E 65 20 50 6C 61 6E 65 74 e Planet
+                                                ; D236 5F 5F 54 68 65 5C 50 6C  __The\Pl
+                                                ; D23E 61 6E 65 74 20 74 72 69  anet tri
+                                                ; D246 65 64 20 74 6F 5C 70     ed to\p
+        .byte   "ersuade the Cetra to leave the\"; D24D 65 72 73 75 61 64 65 20 ersuade 
+                                                ; D255 74 68 65 20 43 65 74 72  the Cetr
+                                                ; D25D 61 20 74 6F 20 6C 65 61  a to lea
+                                                ; D265 76 65 20 74 68 65 5C     ve the\
+        .byte   "Knowlespole, but__\When the Cet"; D26C 4B 6E 6F 77 6C 65 73 70 Knowlesp
+                                                ; D274 6F 6C 65 2C 20 62 75 74  ole, but
+                                                ; D27C 5F 5F 5C 57 68 65 6E 20  __\When 
+                                                ; D284 74 68 65 20 43 65 74     the Cet
+        .byte   "ra__\were preparing to\part wit"; D28B 72 61 5F 5F 5C 77 65 72 ra__\wer
+                                                ; D293 65 20 70 72 65 70 61 72  e prepar
+                                                ; D29B 69 6E 67 20 74 6F 5C 70  ing to\p
+                                                ; D2A3 61 72 74 20 77 69 74     art wit
+        .byte   "h the land they loved__That's w"; D2AA 68 20 74 68 65 20 6C 61 h the la
+                                                ; D2B2 6E 64 20 74 68 65 79 20  nd they 
+                                                ; D2BA 6C 6F 76 65 64 5F 5F 54  loved__T
+                                                ; D2C2 68 61 74 27 73 20 77     hat's w
+        .byte   "hen it appeared!\It looked like"; D2C9 68 65 6E 20 69 74 20 61 hen it a
+                                                ; D2D1 70 70 65 61 72 65 64 21  ppeared!
+                                                ; D2D9 5C 49 74 20 6C 6F 6F 6B  \It look
+                                                ; D2E1 65 64 20 6C 69 6B 65     ed like
+        .byte   "__our__our dead mothers\__and o"; D2E8 5F 5F 6F 75 72 5F 5F 6F __our__o
+                                                ; D2F0 75 72 20 64 65 61 64 20  ur dead 
+                                                ; D2F8 6D 6F 74 68 65 72 73 5C  mothers\
+                                                ; D300 5F 5F 61 6E 64 20 6F     __and o
+        .byte   "ur dead\brothers. Showing\us sp"; D307 75 72 20 64 65 61 64 5C ur dead\
+                                                ; D30F 62 72 6F 74 68 65 72 73  brothers
+                                                ; D317 2E 20 53 68 6F 77 69 6E  . Showin
+                                                ; D31F 67 5C 75 73 20 73 70     g\us sp
+        .byte   "ectres of\their past.\ \ \ \Gas"; D326 65 63 74 72 65 73 20 6F ectres o
+                                                ; D32E 66 5C 74 68 65 69 72 20  f\their 
+                                                ; D336 70 61 73 74 2E 5C 20 5C  past.\ \
+                                                ; D33E 20 5C 20 5C 47 61 73      \ \Gas
+        .byte   "t: Who is the\person that\appea"; D345 74 3A 20 57 68 6F 20 69 t: Who i
+                                                ; D34D 73 20 74 68 65 5C 70 65  s the\pe
+                                                ; D355 72 73 6F 6E 20 74 68 61  rson tha
+                                                ; D35D 74 5C 61 70 70 65 61     t\appea
+        .byte   "red at the\North Cave? I\haven'"; D364 72 65 64 20 61 74 20 74 red at t
+                                                ; D36C 68 65 5C 4E 6F 72 74 68  he\North
+                                                ; D374 20 43 61 76 65 3F 20 49   Cave? I
+                                                ; D37C 5C 68 61 76 65 6E 27     \haven'
+        .byte   "t any idea.\ \ \ \Ifalna:That's"; D383 74 20 61 6E 79 20 69 64 t any id
+                                                ; D38B 65 61 2E 5C 20 5C 20 5C  ea.\ \ \
+                                                ; D393 20 5C 49 66 61 6C 6E 61   \Ifalna
+                                                ; D39B 3A 54 68 61 74 27 73     :That's
+        .byte   "\when the one who\injured the P"; D3A2 5C 77 68 65 6E 20 74 68 \when th
+                                                ; D3AA 65 20 6F 6E 65 20 77 68  e one wh
+                                                ; D3B2 6F 5C 69 6E 6A 75 72 65  o\injure
+                                                ; D3BA 64 20 74 68 65 20 50     d the P
+        .byte   "lanet\__or the "               ; D3C1 6C 61 6E 65 74 5C 5F 5F  lanet\__
+                                                ; D3C9 6F 72 20 74 68 65 20     or the 
+        .byte   $22                             ; D3D0 22                       "
+        .byte   "Crisis\from the sky"           ; D3D1 43 72 69 73 69 73 5C 66  Crisis\f
+                                                ; D3D9 72 6F 6D 20 74 68 65 20  rom the 
+                                                ; D3E1 73 6B 79                 sky
+        .byte   $22                             ; D3E4 22                       "
+        .byte   " as wecall him, came.He\first a"; D3E5 20 61 73 20 77 65 63 61  as weca
+                                                ; D3ED 6C 6C 20 68 69 6D 2C 20  ll him, 
+                                                ; D3F5 63 61 6D 65 2E 48 65 5C  came.He\
+                                                ; D3FD 66 69 72 73 74 20 61     first a
+        .byte   "pproached asa friend, deceived\"; D404 70 70 72 6F 61 63 68 65 pproache
+                                                ; D40C 64 20 61 73 61 20 66 72  d asa fr
+                                                ; D414 69 65 6E 64 2C 20 64 65  iend, de
+                                                ; D41C 63 65 69 76 65 64 5C     ceived\
+        .byte   "them, and finally__gave them th"; D423 74 68 65 6D 2C 20 61 6E them, an
+                                                ; D42B 64 20 66 69 6E 61 6C 6C  d finall
+                                                ; D433 79 5F 5F 67 61 76 65 20  y__gave 
+                                                ; D43B 74 68 65 6D 20 74 68     them th
+        .byte   "e\virus. The Cetra\were attacke"; D442 65 5C 76 69 72 75 73 2E e\virus.
+                                                ; D44A 20 54 68 65 20 43 65 74   The Cet
+                                                ; D452 72 61 5C 77 65 72 65 20  ra\were 
+                                                ; D45A 61 74 74 61 63 6B 65     attacke
+        .byte   "d by\the virus and went mad__tr"; D461 64 20 62 79 5C 74 68 65 d by\the
+                                                ; D469 20 76 69 72 75 73 20 61   virus a
+                                                ; D471 6E 64 20 77 65 6E 74 20  nd went 
+                                                ; D479 6D 61 64 5F 5F 74 72     mad__tr
+        .byte   "ansforming\into monsters.\Then,"; D480 61 6E 73 66 6F 72 6D 69 ansformi
+                                                ; D488 6E 67 5C 69 6E 74 6F 20  ng\into 
+                                                ; D490 6D 6F 6E 73 74 65 72 73  monsters
+                                                ; D498 2E 5C 54 68 65 6E 2C     .\Then,
+        .byte   " just as he\had at the\Knowlesp"; D49F 20 6A 75 73 74 20 61 73  just as
+                                                ; D4A7 20 68 65 5C 68 61 64 20   he\had 
+                                                ; D4AF 61 74 20 74 68 65 5C 4B  at the\K
+                                                ; D4B7 6E 6F 77 6C 65 73 70     nowlesp
+        .byte   "ole. He\approached other\Cetra "; D4BE 6F 6C 65 2E 20 48 65 5C ole. He\
+                                                ; D4C6 61 70 70 72 6F 61 63 68  approach
+                                                ; D4CE 65 64 20 6F 74 68 65 72  ed other
+                                                ; D4D6 5C 43 65 74 72 61 20     \Cetra 
+        .byte   "clans__\infecting them\with__th"; D4DD 63 6C 61 6E 73 5F 5F 5C clans__\
+                                                ; D4E5 69 6E 66 65 63 74 69 6E  infectin
+                                                ; D4ED 67 20 74 68 65 6D 5C 77  g them\w
+                                                ; D4F5 69 74 68 5F 5F 74 68     ith__th
+        .byte   "e virus__\ \ \Gast: You don't\l"; D4FC 65 20 76 69 72 75 73 5F e virus_
+                                                ; D504 5F 5C 20 5C 20 5C 47 61  _\ \ \Ga
+                                                ; D50C 73 74 3A 20 59 6F 75 20  st: You 
+                                                ; D514 64 6F 6E 27 74 5C 6C     don't\l
+        .byte   "ook well__Let's\call it a day.\"; D51B 6F 6F 6B 20 77 65 6C 6C ook well
+                                                ; D523 5F 5F 4C 65 74 27 73 5C  __Let's\
+                                                ; D52B 63 61 6C 6C 20 69 74 20  call it 
+                                                ; D533 61 20 64 61 79 2E 5C     a day.\
+        .byte   " \ \ \ \ \Tape 2:\What is Weapo"; D53A 20 5C 20 5C 20 5C 20 5C  \ \ \ \
+                                                ; D542 20 5C 54 61 70 65 20 32   \Tape 2
+                                                ; D54A 3A 5C 57 68 61 74 20 69  :\What i
+                                                ; D552 73 20 57 65 61 70 6F     s Weapo
+        .byte   "n?\ \ \Gast: Ifalna, can\you co"; D559 6E 3F 5C 20 5C 20 5C 47 n?\ \ \G
+                                                ; D561 61 73 74 3A 20 49 66 61  ast: Ifa
+                                                ; D569 6C 6E 61 2C 20 63 61 6E  lna, can
+                                                ; D571 5C 79 6F 75 20 63 6F     \you co
+        .byte   "mment on the thing called\Weapo"; D578 6D 6D 65 6E 74 20 6F 6E mment on
+                                                ; D580 20 74 68 65 20 74 68 69   the thi
+                                                ; D588 6E 67 20 63 61 6C 6C 65  ng calle
+                                                ; D590 64 5C 57 65 61 70 6F     d\Weapo
+        .byte   "n?\Ifalna: Yes,\Professor. The "; D597 6E 3F 5C 49 66 61 6C 6E n?\Ifaln
+                                                ; D59F 61 3A 20 59 65 73 2C 5C  a: Yes,\
+                                                ; D5A7 50 72 6F 66 65 73 73 6F  Professo
+                                                ; D5AF 72 2E 20 54 68 65 20     r. The 
+        .byte   "one the Professor\mistook for a"; D5B6 6F 6E 65 20 74 68 65 20 one the 
+                                                ; D5BE 50 72 6F 66 65 73 73 6F  Professo
+                                                ; D5C6 72 5C 6D 69 73 74 6F 6F  r\mistoo
+                                                ; D5CE 6B 20 66 6F 72 20 61     k for a
+        .byte   "\Cetra__was named\Jenova. That "; D5D5 5C 43 65 74 72 61 5F 5F \Cetra__
+                                                ; D5DD 77 61 73 20 6E 61 6D 65  was name
+                                                ; D5E5 64 5C 4A 65 6E 6F 76 61  d\Jenova
+                                                ; D5ED 2E 20 54 68 61 74 20     . That 
+        .byte   "is the"                        ; D5F4 69 73 20 74 68 65        is the
+        .byte   $22                             ; D5FA 22                       "
+        .byte   "Crisis from the\Sky"           ; D5FB 43 72 69 73 69 73 20 66  Crisis f
+                                                ; D603 72 6F 6D 20 74 68 65 5C  rom the\
+                                                ; D60B 53 6B 79                 Sky
+        .byte   $22                             ; D60E 22                       "
+        .byte   ". The Planet\knew it had to\des"; D60F 2E 20 54 68 65 20 50 6C . The Pl
+                                                ; D617 61 6E 65 74 5C 6B 6E 65  anet\kne
+                                                ; D61F 77 20 69 74 20 68 61 64  w it had
+                                                ; D627 20 74 6F 5C 64 65 73      to\des
+        .byte   "troy the\"                     ; D62E 74 72 6F 79 20 74 68 65  troy the
+                                                ; D636 5C                       \
+        .byte   $22                             ; D637 22                       "
+        .byte   "Crisis from the\sky"           ; D638 43 72 69 73 69 73 20 66  Crisis f
+                                                ; D640 72 6F 6D 20 74 68 65 5C  rom the\
+                                                ; D648 73 6B 79                 sky
+        .byte   $22                             ; D64B 22                       "
+        .byte   " You see, as\long as Jenova\exi"; D64C 20 59 6F 75 20 73 65 65  You see
+                                                ; D654 2C 20 61 73 5C 6C 6F 6E  , as\lon
+                                                ; D65C 67 20 61 73 20 4A 65 6E  g as Jen
+                                                ; D664 6F 76 61 5C 65 78 69     ova\exi
+        .byte   "sts, the Planet will never be a"; D66B 73 74 73 2C 20 74 68 65 sts, the
+                                                ; D673 20 50 6C 61 6E 65 74 20   Planet 
+                                                ; D67B 77 69 6C 6C 20 6E 65 76  will nev
+                                                ; D683 65 72 20 62 65 20 61     er be a
+        .byte   "ble to fully heal\itself.\ \ \ "; D68A 62 6C 65 20 74 6F 20 66 ble to f
+                                                ; D692 75 6C 6C 79 20 68 65 61  ully hea
+                                                ; D69A 6C 5C 69 74 73 65 6C 66  l\itself
+                                                ; D6A2 2E 5C 20 5C 20 5C 20     .\ \ \ 
+        .byte   "\Gast: Back then,\Weapon was a\"; D6A9 5C 47 61 73 74 3A 20 42 \Gast: B
+                                                ; D6B1 61 63 6B 20 74 68 65 6E  ack then
+                                                ; D6B9 2C 5C 57 65 61 70 6F 6E  ,\Weapon
+                                                ; D6C1 20 77 61 73 20 61 5C      was a\
+        .byte   "weapon the Planet\produced of i"; D6C8 77 65 61 70 6F 6E 20 74 weapon t
+                                                ; D6D0 68 65 20 50 6C 61 6E 65  he Plane
+                                                ; D6D8 74 5C 70 72 6F 64 75 63  t\produc
+                                                ; D6E0 65 64 20 6F 66 20 69     ed of i
+        .byte   "ts ownwill?\ \ \ \Ifalna: Yes, "; D6E7 74 73 20 6F 77 6E 77 69 ts ownwi
+                                                ; D6EF 6C 6C 3F 5C 20 5C 20 5C  ll?\ \ \
+                                                ; D6F7 20 5C 49 66 61 6C 6E 61   \Ifalna
+                                                ; D6FF 3A 20 59 65 73 2C 20     : Yes, 
+        .byte   "but__\There is no record of Wea"; D706 62 75 74 5F 5F 5C 54 68 but__\Th
+                                                ; D70E 65 72 65 20 69 73 20 6E  ere is n
+                                                ; D716 6F 20 72 65 63 6F 72 64  o record
+                                                ; D71E 20 6F 66 20 57 65 61      of Wea
+        .byte   "pon ever\being used. A smallnum"; D725 70 6F 6E 20 65 76 65 72 pon ever
+                                                ; D72D 5C 62 65 69 6E 67 20 75  \being u
+                                                ; D735 73 65 64 2E 20 41 20 73  sed. A s
+                                                ; D73D 6D 61 6C 6C 6E 75 6D     mallnum
+        .byte   "ber of the\surviving Cetra\defe"; D744 62 65 72 20 6F 66 20 74 ber of t
+                                                ; D74C 68 65 5C 73 75 72 76 69  he\survi
+                                                ; D754 76 69 6E 67 20 43 65 74  ving Cet
+                                                ; D75C 72 61 5C 64 65 66 65     ra\defe
+        .byte   "ated Jenova andconfined it. The"; D763 61 74 65 64 20 4A 65 6E ated Jen
+                                                ; D76B 6F 76 61 20 61 6E 64 63  ova andc
+                                                ; D773 6F 6E 66 69 6E 65 64 20  onfined 
+                                                ; D77B 69 74 2E 20 54 68 65     it. The
+        .byte   "\Planet produced\Weapon__But it"; D782 5C 50 6C 61 6E 65 74 20 \Planet 
+                                                ; D78A 70 72 6F 64 75 63 65 64  produced
+                                                ; D792 5C 57 65 61 70 6F 6E 5F  \Weapon_
+                                                ; D79A 5F 42 75 74 20 69 74     _But it
+        .byte   " was no longer necessaryto use "; D7A1 20 77 61 73 20 6E 6F 20  was no 
+                                                ; D7A9 6C 6F 6E 67 65 72 20 6E  longer n
+                                                ; D7B1 65 63 65 73 73 61 72 79  ecessary
+                                                ; D7B9 74 6F 20 75 73 65 20     to use 
+        .byte   "it. To this day Weapon remains "; D7C0 69 74 2E 20 54 6F 20 74 it. To t
+                                                ; D7C8 68 69 73 20 64 61 79 20  his day 
+                                                ; D7D0 57 65 61 70 6F 6E 20 72  Weapon r
+                                                ; D7D8 65 6D 61 69 6E 73 20     emains 
+        .byte   "asleep somewhere onthe Planet. "; D7DF 61 73 6C 65 65 70 20 73 asleep s
+                                                ; D7E7 6F 6D 65 77 68 65 72 65  omewhere
+                                                ; D7EF 20 6F 6E 74 68 65 20 50   onthe P
+                                                ; D7F7 6C 61 6E 65 74 2E 20     lanet. 
+        .byte   "Even\though Jenova is\confined,"; D7FE 45 76 65 6E 5C 74 68 6F Even\tho
+                                                ; D806 75 67 68 20 4A 65 6E 6F  ugh Jeno
+                                                ; D80E 76 61 20 69 73 5C 63 6F  va is\co
+                                                ; D816 6E 66 69 6E 65 64 2C     nfined,
+        .byte   " it could come back to life\at "; D81D 20 69 74 20 63 6F 75 6C  it coul
+                                                ; D825 64 20 63 6F 6D 65 20 62  d come b
+                                                ; D82D 61 63 6B 20 74 6F 20 6C  ack to l
+                                                ; D835 69 66 65 5C 61 74 20     ife\at 
+        .byte   "some time__The\Planet has not\f"; D83C 73 6F 6D 65 20 74 69 6D some tim
+                                                ; D844 65 5F 5F 54 68 65 5C 50  e__The\P
+                                                ; D84C 6C 61 6E 65 74 20 68 61  lanet ha
+                                                ; D854 73 20 6E 6F 74 5C 66     s not\f
+        .byte   "ully healed itselfyet. It is st"; D85B 75 6C 6C 79 20 68 65 61 ully hea
+                                                ; D863 6C 65 64 20 69 74 73 65  led itse
+                                                ; D86B 6C 66 79 65 74 2E 20 49  lfyet. I
+                                                ; D873 74 20 69 73 20 73 74     t is st
+        .byte   "ill\watching Jenova.\ \Gast: Wh"; D87A 69 6C 6C 5C 77 61 74 63 ill\watc
+                                                ; D882 68 69 6E 67 20 4A 65 6E  hing Jen
+                                                ; D88A 6F 76 61 2E 5C 20 5C 47  ova.\ \G
+                                                ; D892 61 73 74 3A 20 57 68     ast: Wh
+        .byte   "ere is\Weapon?\ \ \Ifalna: I do"; D899 65 72 65 20 69 73 5C 57 ere is\W
+                                                ; D8A1 65 61 70 6F 6E 3F 5C 20  eapon?\ 
+                                                ; D8A9 5C 20 5C 49 66 61 6C 6E  \ \Ifaln
+                                                ; D8B1 61 3A 20 49 20 64 6F     a: I do
+        .byte   "n't\know__I can't hear the voic"; D8B8 6E 27 74 5C 6B 6E 6F 77 n't\know
+                                                ; D8C0 5F 5F 49 20 63 61 6E 27  __I can'
+                                                ; D8C8 74 20 68 65 61 72 20 74  t hear t
+                                                ; D8D0 68 65 20 76 6F 69 63     he voic
+        .byte   "e of the\Planet well__Times\__h"; D8D7 65 20 6F 66 20 74 68 65 e of the
+                                                ; D8DF 5C 50 6C 61 6E 65 74 20  \Planet 
+                                                ; D8E7 77 65 6C 6C 5F 5F 54 69  well__Ti
+                                                ; D8EF 6D 65 73 5C 5F 5F 68     mes\__h
+        .byte   "ave changed. ThePlanet__is\prob"; D8F6 61 76 65 20 63 68 61 6E ave chan
+                                                ; D8FE 67 65 64 2E 20 54 68 65  ged. The
+                                                ; D906 50 6C 61 6E 65 74 5F 5F  Planet__
+                                                ; D90E 69 73 5C 70 72 6F 62     is\prob
+        .byte   "ably watching\this situation\cl"; D915 61 62 6C 79 20 77 61 74 ably wat
+                                                ; D91D 63 68 69 6E 67 5C 74 68  ching\th
+                                                ; D925 69 73 20 73 69 74 75 61  is situa
+                                                ; D92D 74 69 6F 6E 5C 63 6C     tion\cl
+        .byte   "osely.\ \ \ \Gast: __Thank you,"; D934 6F 73 65 6C 79 2E 5C 20 osely.\ 
+                                                ; D93C 5C 20 5C 20 5C 47 61 73  \ \ \Gas
+                                                ; D944 74 3A 20 5F 5F 54 68 61  t: __Tha
+                                                ; D94C 6E 6B 20 79 6F 75 2C     nk you,
+        .byte   " Ifalna, that will\be all for t"; D953 20 49 66 61 6C 6E 61 2C  Ifalna,
+                                                ; D95B 20 74 68 61 74 20 77 69   that wi
+                                                ; D963 6C 6C 5C 62 65 20 61 6C  ll\be al
+                                                ; D96B 6C 20 66 6F 72 20 74     l for t
+        .byte   "oday.\ \ \ \ \ \Tape 3:\Daughte"; D972 6F 64 61 79 2E 5C 20 5C oday.\ \
+                                                ; D97A 20 5C 20 5C 20 5C 20 5C   \ \ \ \
+                                                ; D982 54 61 70 65 20 33 3A 5C  Tape 3:\
+                                                ; D98A 44 61 75 67 68 74 65     Daughte
+        .byte   "r's Record: 10th Day after\birt"; D991 72 27 73 20 52 65 63 6F r's Reco
+                                                ; D999 72 64 3A 20 31 30 74 68  rd: 10th
+                                                ; D9A1 20 44 61 79 20 61 66 74   Day aft
+                                                ; D9A9 65 72 5C 62 69 72 74     er\birt
+        .byte   "h\Ifalna: What are\you doing, P"; D9B0 68 5C 49 66 61 6C 6E 61 h\Ifalna
+                                                ; D9B8 3A 20 57 68 61 74 20 61  : What a
+                                                ; D9C0 72 65 5C 79 6F 75 20 64  re\you d
+                                                ; D9C8 6F 69 6E 67 2C 20 50     oing, P
+        .byte   "rofes__I mean, honey?\ \Gast: O"; D9CF 72 6F 66 65 73 5F 5F 49 rofes__I
+                                                ; D9D7 20 6D 65 61 6E 2C 20 68   mean, h
+                                                ; D9DF 6F 6E 65 79 3F 5C 20 5C  oney?\ \
+                                                ; D9E7 47 61 73 74 3A 20 4F     Gast: O
+        .byte   "h, I'm\thinking of taping it on"; D9EE 68 2C 20 49 27 6D 5C 74 h, I'm\t
+                                                ; D9F6 68 69 6E 6B 69 6E 67 20  hinking 
+                                                ; D9FE 6F 66 20 74 61 70 69 6E  of tapin
+                                                ; DA06 67 20 69 74 20 6F 6E     g it on
+        .byte   " video. But,\the video's not\wo"; DA0D 20 76 69 64 65 6F 2E 20  video. 
+                                                ; DA15 42 75 74 2C 5C 74 68 65  But,\the
+                                                ; DA1D 20 76 69 64 65 6F 27 73   video's
+                                                ; DA25 20 6E 6F 74 5C 77 6F      not\wo
+        .byte   "rking right__\ \ \ \Ifalna: Wha"; DA2C 72 6B 69 6E 67 20 72 69 rking ri
+                                                ; DA34 67 68 74 5F 5F 5C 20 5C  ght__\ \
+                                                ; DA3C 20 5C 20 5C 49 66 61 6C   \ \Ifal
+                                                ; DA44 6E 61 3A 20 57 68 61     na: Wha
+        .byte   "t are\you going to tape? Is the"; DA4B 74 20 61 72 65 5C 79 6F t are\yo
+                                                ; DA53 75 20 67 6F 69 6E 67 20  u going 
+                                                ; DA5B 74 6F 20 74 61 70 65 3F  to tape?
+                                                ; DA63 20 49 73 20 74 68 65      Is the
+        .byte   "re still\something I haven'tmen"; DA6A 72 65 20 73 74 69 6C 6C re still
+                                                ; DA72 5C 73 6F 6D 65 74 68 69  \somethi
+                                                ; DA7A 6E 67 20 49 20 68 61 76  ng I hav
+                                                ; DA82 65 6E 27 74 6D 65 6E     en'tmen
+        .byte   "tioned?\ \ \ \Gast: No, that's\"; DA89 74 69 6F 6E 65 64 3F 5C tioned?\
+                                                ; DA91 20 5C 20 5C 20 5C 47 61   \ \ \Ga
+                                                ; DA99 73 74 3A 20 4E 6F 2C 20  st: No, 
+                                                ; DAA1 74 68 61 74 27 73 5C     that's\
+        .byte   "not it. I'm going\to record my\"; DAA8 6E 6F 74 20 69 74 2E 20 not it. 
+                                                ; DAB0 49 27 6D 20 67 6F 69 6E  I'm goin
+                                                ; DAB8 67 5C 74 6F 20 72 65 63  g\to rec
+                                                ; DAC0 6F 72 64 20 6D 79 5C     ord my\
+        .byte   "beautiful daughter.And when she"; DAC7 62 65 61 75 74 69 66 75 beautifu
+                                                ; DACF 6C 20 64 61 75 67 68 74  l daught
+                                                ; DAD7 65 72 2E 41 6E 64 20 77  er.And w
+                                                ; DADF 68 65 6E 20 73 68 65     hen she
+        .byte   "'s\sleeping, her\face__looks li"; DAE6 27 73 5C 73 6C 65 65 70 's\sleep
+                                                ; DAEE 69 6E 67 2C 20 68 65 72  ing, her
+                                                ; DAF6 5C 66 61 63 65 5F 5F 6C  \face__l
+                                                ; DAFE 6F 6F 6B 73 20 6C 69     ooks li
+        .byte   "ke anangel.\Ifalna: First, we\h"; DB05 6B 65 20 61 6E 61 6E 67 ke anang
+                                                ; DB0D 65 6C 2E 5C 49 66 61 6C  el.\Ifal
+                                                ; DB15 6E 61 3A 20 46 69 72 73  na: Firs
+                                                ; DB1D 74 2C 20 77 65 5C 68     t, we\h
+        .byte   "ave to figure out her name. We "; DB24 61 76 65 20 74 6F 20 66 ave to f
+                                                ; DB2C 69 67 75 72 65 20 6F 75  igure ou
+                                                ; DB34 74 20 68 65 72 20 6E 61  t her na
+                                                ; DB3C 6D 65 2E 20 57 65 20     me. We 
+        .byte   "can\take the video\later!\ \ \ "; DB43 63 61 6E 5C 74 61 6B 65 can\take
+                                                ; DB4B 20 74 68 65 20 76 69 64   the vid
+                                                ; DB53 65 6F 5C 6C 61 74 65 72  eo\later
+                                                ; DB5B 21 5C 20 5C 20 5C 20     !\ \ \ 
+        .byte   "\Gast: I've already decided! He"; DB62 5C 47 61 73 74 3A 20 49 \Gast: I
+                                                ; DB6A 27 76 65 20 61 6C 72 65  've alre
+                                                ; DB72 61 64 79 20 64 65 63 69  ady deci
+                                                ; DB7A 64 65 64 21 20 48 65     ded! He
+        .byte   "r name\will be Aerith.         "; DB81 72 20 6E 61 6D 65 5C 77 r name\w
+                                                ; DB89 69 6C 6C 20 62 65 20 41  ill be A
+                                                ; DB91 65 72 69 74 68 2E 20 20  erith.  
+                                                ; DB99 20 20 20 20 20 20 20            
+        .byte   "   \That's that!\ \ \ \Ifalna: "; DBA0 20 20 20 5C 54 68 61 74    \That
+                                                ; DBA8 27 73 20 74 68 61 74 21  's that!
+                                                ; DBB0 5C 20 5C 20 5C 20 5C 49  \ \ \ \I
+                                                ; DBB8 66 61 6C 6E 61 3A 20     falna: 
+        .byte   "You are SO selfish! But Aerithi"; DBBF 59 6F 75 20 61 72 65 20 You are 
+                                                ; DBC7 53 4F 20 73 65 6C 66 69  SO selfi
+                                                ; DBCF 73 68 21 20 42 75 74 20  sh! But 
+                                                ; DBD7 41 65 72 69 74 68 69     Aerithi
+        .byte   "s a good name!\Hee hee__it's a\"; DBDE 73 20 61 20 67 6F 6F 64 s a good
+                                                ; DBE6 20 6E 61 6D 65 21 5C 48   name!\H
+                                                ; DBEE 65 65 20 68 65 65 5F 5F  ee hee__
+                                                ; DBF6 69 74 27 73 20 61 5C     it's a\
+        .byte   "good name,\considering it cameo"; DBFD 67 6F 6F 64 20 6E 61 6D good nam
+                                                ; DC05 65 2C 5C 63 6F 6E 73 69  e,\consi
+                                                ; DC0D 64 65 72 69 6E 67 20 69  dering i
+                                                ; DC15 74 20 63 61 6D 65 6F     t cameo
+        .byte   "ut of that\forgetful head of\yo"; DC1C 75 74 20 6F 66 20 74 68 ut of th
+                                                ; DC24 61 74 5C 66 6F 72 67 65  at\forge
+                                                ; DC2C 74 66 75 6C 20 68 65 61  tful hea
+                                                ; DC34 64 20 6F 66 5C 79 6F     d of\yo
+        .byte   "urs!\ \ \ \Gast: Right!? Oh,\th"; DC3B 75 72 73 21 5C 20 5C 20 urs!\ \ 
+                                                ; DC43 5C 20 5C 47 61 73 74 3A  \ \Gast:
+                                                ; DC4B 20 52 69 67 68 74 21 3F   Right!?
+                                                ; DC53 20 4F 68 2C 5C 74 68      Oh,\th
+        .byte   "e video tape__\ \ \ \ \ \ \Tape"; DC5A 65 20 76 69 64 65 6F 20 e video 
+                                                ; DC62 74 61 70 65 5F 5F 5C 20  tape__\ 
+                                                ; DC6A 5C 20 5C 20 5C 20 5C 20  \ \ \ \ 
+                                                ; DC72 5C 20 5C 54 61 70 65     \ \Tape
+        .byte   " 4:\Daughter's Record: 20th Day"; DC79 20 34 3A 5C 44 61 75 67  4:\Daug
+                                                ; DC81 68 74 65 72 27 73 20 52  hter's R
+                                                ; DC89 65 63 6F 72 64 3A 20 32  ecord: 2
+                                                ; DC91 30 74 68 20 44 61 79     0th Day
+        .byte   " after\birth\Ifalna: Video\agai"; DC98 20 61 66 74 65 72 5C 62  after\b
+                                                ; DCA0 69 72 74 68 5C 49 66 61  irth\Ifa
+                                                ; DCA8 6C 6E 61 3A 20 56 69 64  lna: Vid
+                                                ; DCB0 65 6F 5C 61 67 61 69     eo\agai
+        .byte   "n? You just gotthrough taping!\"; DCB7 6E 3F 20 59 6F 75 20 6A n? You j
+                                                ; DCBF 75 73 74 20 67 6F 74 74  ust gott
+                                                ; DCC7 68 72 6F 75 67 68 20 74  hrough t
+                                                ; DCCF 61 70 69 6E 67 21 5C     aping!\
+        .byte   " \Gast: __Please\don't say it t"; DCD6 20 5C 47 61 73 74 3A 20  \Gast: 
+                                                ; DCDE 5F 5F 50 6C 65 61 73 65  __Please
+                                                ; DCE6 5C 64 6F 6E 27 74 20 73  \don't s
+                                                ; DCEE 61 79 20 69 74 20 74     ay it t
+        .byte   "hat\way. It's our\lovely daught"; DCF5 68 61 74 5C 77 61 79 2E hat\way.
+                                                ; DCFD 20 49 74 27 73 20 6F 75   It's ou
+                                                ; DD05 72 5C 6C 6F 76 65 6C 79  r\lovely
+                                                ; DD0D 20 64 61 75 67 68 74      daught
+        .byte   "er,\both yours__and\mine! Don't"; DD14 65 72 2C 5C 62 6F 74 68 er,\both
+                                                ; DD1C 20 79 6F 75 72 73 5F 5F   yours__
+                                                ; DD24 61 6E 64 5C 6D 69 6E 65  and\mine
+                                                ; DD2C 21 20 44 6F 6E 27 74     ! Don't
+        .byte   " you\want to capture herchildho"; DD33 20 79 6F 75 5C 77 61 6E  you\wan
+                                                ; DD3B 74 20 74 6F 20 63 61 70  t to cap
+                                                ; DD43 74 75 72 65 20 68 65 72  ture her
+                                                ; DD4B 63 68 69 6C 64 68 6F     childho
+        .byte   "od on\videotape?\ \ \ \Ifalna: "; DD52 6F 64 20 6F 6E 5C 76 69 od on\vi
+                                                ; DD5A 64 65 6F 74 61 70 65 3F  deotape?
+                                                ; DD62 5C 20 5C 20 5C 20 5C 49  \ \ \ \I
+                                                ; DD6A 66 61 6C 6E 61 3A 20     falna: 
+        .byte   "If you keepdoting on her like t"; DD71 49 66 20 79 6F 75 20 6B If you k
+                                                ; DD79 65 65 70 64 6F 74 69 6E  eepdotin
+                                                ; DD81 67 20 6F 6E 20 68 65 72  g on her
+                                                ; DD89 20 6C 69 6B 65 20 74      like t
+        .byte   "hat, she won't\grow up to be\st"; DD90 68 61 74 2C 20 73 68 65 hat, she
+                                                ; DD98 20 77 6F 6E 27 74 5C 67   won't\g
+                                                ; DDA0 72 6F 77 20 75 70 20 74  row up t
+                                                ; DDA8 6F 20 62 65 5C 73 74     o be\st
+        .byte   "rong__Aerith is\different from "; DDAF 72 6F 6E 67 5F 5F 41 65 rong__Ae
+                                                ; DDB7 72 69 74 68 20 69 73 5C  rith is\
+                                                ; DDBF 64 69 66 66 65 72 65 6E  differen
+                                                ; DDC7 74 20 66 72 6F 6D 20     t from 
+        .byte   "the other children. I\wonder wh"; DDCE 74 68 65 20 6F 74 68 65 the othe
+                                                ; DDD6 72 20 63 68 69 6C 64 72  r childr
+                                                ; DDDE 65 6E 2E 20 49 5C 77 6F  en. I\wo
+                                                ; DDE6 6E 64 65 72 20 77 68     nder wh
+        .byte   "at dangersawait her__\ \ \ \Gas"; DDED 61 74 20 64 61 6E 67 65 at dange
+                                                ; DDF5 72 73 61 77 61 69 74 20  rsawait 
+                                                ; DDFD 68 65 72 5F 5F 5C 20 5C  her__\ \
+                                                ; DE05 20 5C 20 5C 47 61 73      \ \Gas
+        .byte   "t: Never say\that! I will\prote"; DE0C 74 3A 20 4E 65 76 65 72 t: Never
+                                                ; DE14 20 73 61 79 5C 74 68 61   say\tha
+                                                ; DE1C 74 21 20 49 20 77 69 6C  t! I wil
+                                                ; DE24 6C 5C 70 72 6F 74 65     l\prote
+        .byte   "ct you and\Aerith no matter\wha"; DE2B 63 74 20 79 6F 75 20 61 ct you a
+                                                ; DE33 6E 64 5C 41 65 72 69 74  nd\Aerit
+                                                ; DE3B 68 20 6E 6F 20 6D 61 74  h no mat
+                                                ; DE43 74 65 72 5C 77 68 61     ter\wha
+        .byte   "t!! You and\Aerith are my only "; DE4A 74 21 21 20 59 6F 75 20 t!! You 
+                                                ; DE52 61 6E 64 5C 41 65 72 69  and\Aeri
+                                                ; DE5A 74 68 20 61 72 65 20 6D  th are m
+                                                ; DE62 79 20 6F 6E 6C 79 20     y only 
+        .byte   "treasures. I'll\never let you g"; DE69 74 72 65 61 73 75 72 65 treasure
+                                                ; DE71 73 2E 20 49 27 6C 6C 5C  s. I'll\
+                                                ; DE79 6E 65 76 65 72 20 6C 65  never le
+                                                ; DE81 74 20 79 6F 75 20 67     t you g
+        .byte   "o!!\Ifalna: I feel so\much bett"; DE88 6F 21 21 5C 49 66 61 6C o!!\Ifal
+                                                ; DE90 6E 61 3A 20 49 20 66 65  na: I fe
+                                                ; DE98 65 6C 20 73 6F 5C 6D 75  el so\mu
+                                                ; DEA0 63 68 20 62 65 74 74     ch bett
+        .byte   "er now,\darling. If I\hadn't me"; DEA7 65 72 20 6E 6F 77 2C 5C er now,\
+                                                ; DEAF 64 61 72 6C 69 6E 67 2E  darling.
+                                                ; DEB7 20 49 66 20 49 5C 68 61   If I\ha
+                                                ; DEBF 64 6E 27 74 20 6D 65     dn't me
+        .byte   "t you, I____(Knock,Knock)\ \ \ "; DEC6 74 20 79 6F 75 2C 20 49 t you, I
+                                                ; DECE 5F 5F 5F 5F 28 4B 6E 6F  ____(Kno
+                                                ; DED6 63 6B 2C 4B 6E 6F 63 6B  ck,Knock
+                                                ; DEDE 29 5C 20 5C 20 5C 20     )\ \ \ 
+        .byte   "\Gast: Who could\that--! I was "; DEE5 5C 47 61 73 74 3A 20 57 \Gast: W
+                                                ; DEED 68 6F 20 63 6F 75 6C 64  ho could
+                                                ; DEF5 5C 74 68 61 74 2D 2D 21  \that--!
+                                                ; DEFD 20 49 20 77 61 73 20      I was 
+        .byte   "just about to__Damn!!\How dare "; DF04 6A 75 73 74 20 61 62 6F just abo
+                                                ; DF0C 75 74 20 74 6F 5F 5F 44  ut to__D
+                                                ; DF14 61 6D 6E 21 21 5C 48 6F  amn!!\Ho
+                                                ; DF1C 77 20 64 61 72 65 20     w dare 
+        .byte   "they\intrude on our\"          ; DF23 74 68 65 79 5C 69 6E 74  they\int
+                                                ; DF2B 72 75 64 65 20 6F 6E 20  rude on 
+                                                ; DF33 6F 75 72 5C              our\
+        .byte   $22                             ; DF37 22                       "
+        .byte   "private time"                  ; DF38 70 72 69 76 61 74 65 20  private 
+                                                ; DF40 74 69 6D 65              time
+        .byte   $22                             ; DF44 22                       "
+        .byte   "\together!__I'll\send them away"; DF45 5C 74 6F 67 65 74 68 65 \togethe
+                                                ; DF4D 72 21 5F 5F 49 27 6C 6C  r!__I'll
+                                                ; DF55 5C 73 65 6E 64 20 74 68  \send th
+                                                ; DF5D 65 6D 20 61 77 61 79     em away
+        .byte   ".\Ifalna: Yes, at\once!!__Who t"; DF64 2E 5C 49 66 61 6C 6E 61 .\Ifalna
+                                                ; DF6C 3A 20 59 65 73 2C 20 61  : Yes, a
+                                                ; DF74 74 5C 6F 6E 63 65 21 21  t\once!!
+                                                ; DF7C 5F 5F 57 68 6F 20 74     __Who t
+        .byte   "he\devil?\ \Gast: It, it's\them"; DF83 68 65 5C 64 65 76 69 6C he\devil
+                                                ; DF8B 3F 5C 20 5C 47 61 73 74  ?\ \Gast
+                                                ; DF93 3A 20 49 74 2C 20 69 74  : It, it
+                                                ; DF9B 27 73 5C 74 68 65 6D     's\them
+        .byte   "!!\ \ \ \ \ \ \Hojo: Heh, heh, "; DFA2 21 21 5C 20 5C 20 5C 20 !!\ \ \ 
+                                                ; DFAA 5C 20 5C 20 5C 20 5C 48  \ \ \ \H
+                                                ; DFB2 6F 6A 6F 3A 20 48 65 68  ojo: Heh
+                                                ; DFBA 2C 20 68 65 68 2C 20     , heh, 
+        .byte   "heh__I've been\searching for yo"; DFC1 68 65 68 5F 5F 49 27 76 heh__I'v
+                                                ; DFC9 65 20 62 65 65 6E 5C 73  e been\s
+                                                ; DFD1 65 61 72 63 68 69 6E 67  earching
+                                                ; DFD9 20 66 6F 72 20 79 6F      for yo
+        .byte   "u, Ifalna__or should\I say, Cet"; DFE0 75 2C 20 49 66 61 6C 6E u, Ifaln
+                                                ; DFE8 61 5F 5F 6F 72 20 73 68  a__or sh
+                                                ; DFF0 6F 75 6C 64 5C 49 20 73  ould\I s
+                                                ; DFF8 61 79 2C 20 43 65 74     ay, Cet
+        .byte   "ra! Long time no see,\Professor"; DFFF 72 61 21 20 4C 6F 6E 67 ra! Long
+                                                ; E007 20 74 69 6D 65 20 6E 6F   time no
+                                                ; E00F 20 73 65 65 2C 5C 50 72   see,\Pr
+                                                ; E017 6F 66 65 73 73 6F 72     ofessor
+        .byte   " Gast!\ \Gast: Hojo__How didyou"; E01E 20 47 61 73 74 21 5C 20  Gast!\ 
+                                                ; E026 5C 47 61 73 74 3A 20 48  \Gast: H
+                                                ; E02E 6F 6A 6F 5F 5F 48 6F 77  ojo__How
+                                                ; E036 20 64 69 64 79 6F 75      didyou
+        .byte   " know?\ \ \Hojo: Believe me, Ih"; E03D 20 6B 6E 6F 77 3F 5C 20  know?\ 
+                                                ; E045 5C 20 5C 48 6F 6A 6F 3A  \ \Hojo:
+                                                ; E04D 20 42 65 6C 69 65 76 65   Believe
+                                                ; E055 20 6D 65 2C 20 49 68      me, Ih
+        .byte   "ad to turn over a stone or two "; E05C 61 64 20 74 6F 20 74 75 ad to tu
+                                                ; E064 72 6E 20 6F 76 65 72 20  rn over 
+                                                ; E06C 61 20 73 74 6F 6E 65 20  a stone 
+                                                ; E074 6F 72 20 74 77 6F 20     or two 
+        .byte   "to\find you. Two\years I waited"; E07B 74 6F 5C 66 69 6E 64 20 to\find 
+                                                ; E083 79 6F 75 2E 20 54 77 6F  you. Two
+                                                ; E08B 5C 79 65 61 72 73 20 49  \years I
+                                                ; E093 20 77 61 69 74 65 64      waited
+        .byte   "__\That's how much I\wanted thi"; E09A 5F 5F 5C 54 68 61 74 27 __\That'
+                                                ; E0A2 73 20 68 6F 77 20 6D 75  s how mu
+                                                ; E0AA 63 68 20 49 5C 77 61 6E  ch I\wan
+                                                ; E0B2 74 65 64 20 74 68 69     ted thi
+        .byte   "s new\sample__Ha, ha, ha.Gast: "; E0B9 73 20 6E 65 77 5C 73 61 s new\sa
+                                                ; E0C1 6D 70 6C 65 5F 5F 48 61  mple__Ha
+                                                ; E0C9 2C 20 68 61 2C 20 68 61  , ha, ha
+                                                ; E0D1 2E 47 61 73 74 3A 20     .Gast: 
+        .byte   "__New sample?You don't mean\Aer"; E0D8 5F 5F 4E 65 77 20 73 61 __New sa
+                                                ; E0E0 6D 70 6C 65 3F 59 6F 75  mple?You
+                                                ; E0E8 20 64 6F 6E 27 74 20 6D   don't m
+                                                ; E0F0 65 61 6E 5C 41 65 72     ean\Aer
+        .byte   "ith!?\ \Hojo: Hmm, Aerith? What"; E0F7 69 74 68 21 3F 5C 20 5C ith!?\ \
+                                                ; E0FF 48 6F 6A 6F 3A 20 48 6D  Hojo: Hm
+                                                ; E107 6D 2C 20 41 65 72 69 74  m, Aerit
+                                                ; E10F 68 3F 20 57 68 61 74     h? What
+        .byte   " a nice\name__Ha, ha, ha.\ \Gas"; E116 20 61 20 6E 69 63 65 5C  a nice\
+                                                ; E11E 6E 61 6D 65 5F 5F 48 61  name__Ha
+                                                ; E126 2C 20 68 61 2C 20 68 61  , ha, ha
+                                                ; E12E 2E 5C 20 5C 47 61 73     .\ \Gas
+        .byte   "t: That's it!\I'm severing all\"; E135 74 3A 20 54 68 61 74 27 t: That'
+                                                ; E13D 73 20 69 74 21 5C 49 27  s it!\I'
+                                                ; E145 6D 20 73 65 76 65 72 69  m severi
+                                                ; E14D 6E 67 20 61 6C 6C 5C     ng all\
+        .byte   "ties with the\Shinra. Hojo,\ple"; E154 74 69 65 73 20 77 69 74 ties wit
+                                                ; E15C 68 20 74 68 65 5C 53 68  h the\Sh
+                                                ; E164 69 6E 72 61 2E 20 48 6F  inra. Ho
+                                                ; E16C 6A 6F 2C 5C 70 6C 65     jo,\ple
+        .byte   "ase leave.\ \ \ \Ifalna: Please"; E173 61 73 65 20 6C 65 61 76 ase leav
+                                                ; E17B 65 2E 5C 20 5C 20 5C 20  e.\ \ \ 
+                                                ; E183 5C 49 66 61 6C 6E 61 3A  \Ifalna:
+                                                ; E18B 20 50 6C 65 61 73 65      Please
+        .byte   ",\Aerith has nothing to do with"; E192 2C 5C 41 65 72 69 74 68 ,\Aerith
+                                                ; E19A 20 68 61 73 20 6E 6F 74   has not
+                                                ; E1A2 68 69 6E 67 20 74 6F 20  hing to 
+                                                ; E1AA 64 6F 20 77 69 74 68     do with
+        .byte   " it!\All you want is\me, right?"; E1B1 20 69 74 21 5C 41 6C 6C  it!\All
+                                                ; E1B9 20 79 6F 75 20 77 61 6E   you wan
+                                                ; E1C1 74 20 69 73 5C 6D 65 2C  t is\me,
+                                                ; E1C9 20 72 69 67 68 74 3F      right?
+        .byte   "\ \ \ \Gast: Ifalna!\ \ \ \Hojo"; E1D0 5C 20 5C 20 5C 20 5C 47 \ \ \ \G
+                                                ; E1D8 61 73 74 3A 20 49 66 61  ast: Ifa
+                                                ; E1E0 6C 6E 61 21 5C 20 5C 20  lna!\ \ 
+                                                ; E1E8 5C 20 5C 48 6F 6A 6F     \ \Hojo
+        .byte   ": I'll need\all of you for my\e"; E1EF 3A 20 49 27 6C 6C 20 6E : I'll n
+                                                ; E1F7 65 65 64 5C 61 6C 6C 20  eed\all 
+                                                ; E1FF 6F 66 20 79 6F 75 20 66  of you f
+                                                ; E207 6F 72 20 6D 79 5C 65     or my\e
+        .byte   "xperiment.  You\understand, don"; E20E 78 70 65 72 69 6D 65 6E xperimen
+                                                ; E216 74 2E 20 20 59 6F 75 5C  t.  You\
+                                                ; E21E 75 6E 64 65 72 73 74 61  understa
+                                                ; E226 6E 64 2C 20 64 6F 6E     nd, don
+        .byte   "'t\you, Professor\Gast? We can "; E22D 27 74 5C 79 6F 75 2C 20 't\you, 
+                                                ; E235 50 72 6F 66 65 73 73 6F  Professo
+                                                ; E23D 72 5C 47 61 73 74 3F 20  r\Gast? 
+                                                ; E245 57 65 20 63 61 6E 20     We can 
+        .byte   "changethe future of the\Planet!"; E24C 63 68 61 6E 67 65 74 68 changeth
+                                                ; E254 65 20 66 75 74 75 72 65  e future
+                                                ; E25C 20 6F 66 20 74 68 65 5C   of the\
+                                                ; E264 50 6C 61 6E 65 74 21     Planet!
+        .byte   "\Gast: Don't worry, Ifalna. I'l"; E26B 5C 47 61 73 74 3A 20 44 \Gast: D
+                                                ; E273 6F 6E 27 74 20 77 6F 72  on't wor
+                                                ; E27B 72 79 2C 20 49 66 61 6C  ry, Ifal
+                                                ; E283 6E 61 2E 20 49 27 6C     na. I'l
+        .byte   "l take\care of this!\ \Hojo: Pl"; E28A 6C 20 74 61 6B 65 5C 63 l take\c
+                                                ; E292 61 72 65 20 6F 66 20 74  are of t
+                                                ; E29A 68 69 73 21 5C 20 5C 48  his!\ \H
+                                                ; E2A2 6F 6A 6F 3A 20 50 6C     ojo: Pl
+        .byte   "ease don't put up a fight. I\do"; E2A9 65 61 73 65 20 64 6F 6E ease don
+                                                ; E2B1 27 74 20 70 75 74 20 75  't put u
+                                                ; E2B9 70 20 61 20 66 69 67 68  p a figh
+                                                ; E2C1 74 2E 20 49 5C 64 6F     t. I\do
+        .byte   "n't want any harmto come to my\"; E2C8 6E 27 74 20 77 61 6E 74 n't want
+                                                ; E2D0 20 61 6E 79 20 68 61 72   any har
+                                                ; E2D8 6D 74 6F 20 63 6F 6D 65  mto come
+                                                ; E2E0 20 74 6F 20 6D 79 5C      to my\
+        .byte   "precious sample__\Mmm? What a f"; E2E7 70 72 65 63 69 6F 75 73 precious
+                                                ; E2EF 20 73 61 6D 70 6C 65 5F   sample_
+                                                ; E2F7 5F 5C 4D 6D 6D 3F 20 57  _\Mmm? W
+                                                ; E2FF 68 61 74 20 61 20 66     hat a f
+        .byte   "unny\looking camera.\Guard! Des"; E306 75 6E 6E 79 5C 6C 6F 6F unny\loo
+                                                ; E30E 6B 69 6E 67 20 63 61 6D  king cam
+                                                ; E316 65 72 61 2E 5C 47 75 61  era.\Gua
+                                                ; E31E 72 64 21 20 44 65 73     rd! Des
+        .byte   "troy it!\__*Crash*\(The video i"; E325 74 72 6F 79 20 69 74 21 troy it!
+                                                ; E32D 5C 5F 5F 2A 43 72 61 73  \__*Cras
+                                                ; E335 68 2A 5C 28 54 68 65 20  h*\(The 
+                                                ; E33D 76 69 64 65 6F 20 69     video i
+        .byte   "s out\but sound can stillbe hea"; E344 73 20 6F 75 74 5C 62 75 s out\bu
+                                                ; E34C 74 20 73 6F 75 6E 64 20  t sound 
+                                                ; E354 63 61 6E 20 73 74 69 6C  can stil
+                                                ; E35C 6C 62 65 20 68 65 61     lbe hea
+        .byte   "rd)\Hojo: Be careful\with her!!"; E363 72 64 29 5C 48 6F 6A 6F rd)\Hojo
+                                                ; E36B 3A 20 42 65 20 63 61 72  : Be car
+                                                ; E373 65 66 75 6C 5C 77 69 74  eful\wit
+                                                ; E37B 68 20 68 65 72 21 21     h her!!
+        .byte   " Ha, ha, ha__\ \Gast: Wh__what "; E382 20 48 61 2C 20 68 61 2C  Ha, ha,
+                                                ; E38A 20 68 61 5F 5F 5C 20 5C   ha__\ \
+                                                ; E392 47 61 73 74 3A 20 57 68  Gast: Wh
+                                                ; E39A 5F 5F 77 68 61 74 20     __what 
+        .byte   "are you doing,\Professor!? Ifal"; E3A1 61 72 65 20 79 6F 75 20 are you 
+                                                ; E3A9 64 6F 69 6E 67 2C 5C 50  doing,\P
+                                                ; E3B1 72 6F 66 65 73 73 6F 72  rofessor
+                                                ; E3B9 21 3F 20 49 66 61 6C     !? Ifal
+        .byte   "na!Take Aerith and\run!!\ \ \ \"; E3C0 6E 61 21 54 61 6B 65 20 na!Take 
+                                                ; E3C8 41 65 72 69 74 68 20 61  Aerith a
+                                                ; E3D0 6E 64 5C 72 75 6E 21 21  nd\run!!
+                                                ; E3D8 5C 20 5C 20 5C 20 5C     \ \ \ \
+        .byte   "*Bang*\ \ \ \Gast: Eyaaaaah__\D"; E3DF 2A 42 61 6E 67 2A 5C 20 *Bang*\ 
+                                                ; E3E7 5C 20 5C 20 5C 47 61 73  \ \ \Gas
+                                                ; E3EF 74 3A 20 45 79 61 61 61  t: Eyaaa
+                                                ; E3F7 61 61 68 5F 5F 5C 44     aah__\D
+        .byte   "arling__!\ \ \ \ \ \ \Hojo: __O"; E3FE 61 72 6C 69 6E 67 5F 5F arling__
+                                                ; E406 21 5C 20 5C 20 5C 20 5C  !\ \ \ \
+                                                ; E40E 20 5C 20 5C 20 5C 48 6F   \ \ \Ho
+                                                ; E416 6A 6F 3A 20 5F 5F 4F     jo: __O
+        .byte   "h, and\uh__don't forget\the chi"; E41D 68 2C 20 61 6E 64 5C 75 h, and\u
+                                                ; E425 68 5F 5F 64 6F 6E 27 74  h__don't
+                                                ; E42D 20 66 6F 72 67 65 74 5C   forget\
+                                                ; E435 74 68 65 20 63 68 69     the chi
+        .byte   "ld!__Hmm, a\video? The\Ancients"; E43C 6C 64 21 5F 5F 48 6D 6D ld!__Hmm
+                                                ; E444 2C 20 61 5C 76 69 64 65  , a\vide
+                                                ; E44C 6F 3F 20 54 68 65 5C 41  o? The\A
+                                                ; E454 6E 63 69 65 6E 74 73     ncients
+        .byte   "__Weapon!? Heh, heh, heh__a\mou"; E45B 5F 5F 57 65 61 70 6F 6E __Weapon
+                                                ; E463 21 3F 20 48 65 68 2C 20  !? Heh, 
+                                                ; E46B 68 65 68 2C 20 68 65 68  heh, heh
+                                                ; E473 5F 5F 61 5C 6D 6F 75     __a\mou
+        .byte   "ntain of\treasure! Thank\you, P"; E47A 6E 74 61 69 6E 20 6F 66 ntain of
+                                                ; E482 5C 74 72 65 61 73 75 72  \treasur
+                                                ; E48A 65 21 20 54 68 61 6E 6B  e! Thank
+                                                ; E492 5C 79 6F 75 2C 20 50     \you, P
+        .byte   "rofessor\__Ha,ha, ha.\ \ \ \ \ "; E499 72 6F 66 65 73 73 6F 72 rofessor
+                                                ; E4A1 5C 5F 5F 48 61 2C 68 61  \__Ha,ha
+                                                ; E4A9 2C 20 68 61 2E 5C 20 5C  , ha.\ \
+                                                ; E4B1 20 5C 20 5C 20 5C 20      \ \ \ 
+        .byte   "\ "                            ; E4B8 5C 20                    \ 
+        .byte   $0A                             ; E4BA 0A                       .
+LE4BB:
+        .byte   "@1__the master of my\own illusi"; E4BB 40 31 5F 5F 74 68 65 20 @1__the 
+                                                ; E4C3 6D 61 73 74 65 72 20 6F  master o
+                                                ; E4CB 66 20 6D 79 5C 6F 77 6E  f my\own
+                                                ; E4D3 20 69 6C 6C 75 73 69      illusi
+        .byte   "onary\world.But I can't\remain "; E4DA 6F 6E 61 72 79 5C 77 6F onary\wo
+                                                ; E4E2 72 6C 64 2E 42 75 74 20  rld.But 
+                                                ; E4EA 49 20 63 61 6E 27 74 5C  I can't\
+                                                ; E4F2 72 65 6D 61 69 6E 20     remain 
+        .byte   "trapped in\an illusion any\more"; E4F9 74 72 61 70 70 65 64 20 trapped 
+                                                ; E501 69 6E 5C 61 6E 20 69 6C  in\an il
+                                                ; E509 6C 75 73 69 6F 6E 20 61  lusion a
+                                                ; E511 6E 79 5C 6D 6F 72 65     ny\more
+        .byte   "__I'm going to\live my life\wit"; E518 5F 5F 49 27 6D 20 67 6F __I'm go
+                                                ; E520 69 6E 67 20 74 6F 5C 6C  ing to\l
+                                                ; E528 69 76 65 20 6D 79 20 6C  ive my l
+                                                ; E530 69 66 65 5C 77 69 74     ife\wit
+        .byte   "hout pretending."              ; E537 68 6F 75 74 20 70 72 65  hout pre
+                                                ; E53F 74 65 6E 64 69 6E 67 2E  tending.
+        .byte   $0A                             ; E547 0A                       .
+LE548:
+        .byte   "@1We must stop\Sephiroth.\__I'm"; E548 40 31 57 65 20 6D 75 73 @1We mus
+                                                ; E550 74 20 73 74 6F 70 5C 53  t stop\S
+                                                ; E558 65 70 68 69 72 6F 74 68  ephiroth
+                                                ; E560 2E 5C 5F 5F 49 27 6D     .\__I'm
+        .byte   " the reason\why Meteor is\falli"; E567 20 74 68 65 20 72 65 61  the rea
+                                                ; E56F 73 6F 6E 5C 77 68 79 20  son\why 
+                                                ; E577 4D 65 74 65 6F 72 20 69  Meteor i
+                                                ; E57F 73 5C 66 61 6C 6C 69     s\falli
+        .byte   "ng towards us.That's why I have"; E586 6E 67 20 74 6F 77 61 72 ng towar
+                                                ; E58E 64 73 20 75 73 2E 54 68  ds us.Th
+                                                ; E596 61 74 27 73 20 77 68 79  at's why
+                                                ; E59E 20 49 20 68 61 76 65      I have
+        .byte   "\to do everything inmy power to"; E5A5 5C 74 6F 20 64 6F 20 65 \to do e
+                                                ; E5AD 76 65 72 79 74 68 69 6E  verythin
+                                                ; E5B5 67 20 69 6E 6D 79 20 70  g inmy p
+                                                ; E5BD 6F 77 65 72 20 74 6F     ower to
+        .byte   " fight\this thing."            ; E5C4 20 66 69 67 68 74 5C 74   fight\t
+                                                ; E5CC 68 69 73 20 74 68 69 6E  his thin
+                                                ; E5D4 67 2E                    g.
+        .byte   $0A                             ; E5D6 0A                       .
+LE5D7:
+        .byte   "@1There ain't no\gettin' offa t"; E5D7 40 31 54 68 65 72 65 20 @1There 
+                                                ; E5DF 61 69 6E 27 74 20 6E 6F  ain't no
+                                                ; E5E7 5C 67 65 74 74 69 6E 27  \gettin'
+                                                ; E5EF 20 6F 66 66 61 20 74      offa t
+        .byte   "his\train we on!"              ; E5F6 68 69 73 5C 74 72 61 69  his\trai
+                                                ; E5FE 6E 20 77 65 20 6F 6E 21  n we on!
+        .byte   $0A                             ; E606 0A                       .
+LE607:
+        .byte   "@2The train we on\don't make no"; E607 40 32 54 68 65 20 74 72 @2The tr
+                                                ; E60F 61 69 6E 20 77 65 20 6F  ain we o
+                                                ; E617 6E 5C 64 6F 6E 27 74 20  n\don't 
+                                                ; E61F 6D 61 6B 65 20 6E 6F     make no
+        .byte   "\stops!"                       ; E626 5C 73 74 6F 70 73 21     \stops!
+        .byte   $0A                             ; E62D 0A                       .
+LE62E:
+        .byte   "Sephiroth was\created to be a\h"; E62E 53 65 70 68 69 72 6F 74 Sephirot
+                                                ; E636 68 20 77 61 73 5C 63 72  h was\cr
+                                                ; E63E 65 61 74 65 64 20 74 6F  eated to
+                                                ; E646 20 62 65 20 61 5C 68      be a\h
+        .byte   "ero. Shinra's\terrible\experime"; E64D 65 72 6F 2E 20 53 68 69 ero. Shi
+                                                ; E655 6E 72 61 27 73 5C 74 65  nra's\te
+                                                ; E65D 72 72 69 62 6C 65 5C 65  rrible\e
+                                                ; E665 78 70 65 72 69 6D 65     xperime
+        .byte   "nts twistedhis soul, though,\co"; E66C 6E 74 73 20 74 77 69 73 nts twis
+                                                ; E674 74 65 64 68 69 73 20 73  tedhis s
+                                                ; E67C 6F 75 6C 2C 20 74 68 6F  oul, tho
+                                                ; E684 75 67 68 2C 5C 63 6F     ugh,\co
+        .byte   "nsuming him with unquenchable\h"; E68B 6E 73 75 6D 69 6E 67 20 nsuming 
+                                                ; E693 68 69 6D 20 77 69 74 68  him with
+                                                ; E69B 20 75 6E 71 75 65 6E 63   unquenc
+                                                ; E6A3 68 61 62 6C 65 5C 68     hable\h
+        .byte   "atred. Using the\power endowed "; E6AA 61 74 72 65 64 2E 20 55 atred. U
+                                                ; E6B2 73 69 6E 67 20 74 68 65  sing the
+                                                ; E6BA 5C 70 6F 77 65 72 20 65  \power e
+                                                ; E6C2 6E 64 6F 77 65 64 20     ndowed 
+        .byte   "to\him, he manipulatedthe ancie"; E6C9 74 6F 5C 68 69 6D 2C 20 to\him, 
+                                                ; E6D1 68 65 20 6D 61 6E 69 70  he manip
+                                                ; E6D9 75 6C 61 74 65 64 74 68  ulatedth
+                                                ; E6E1 65 20 61 6E 63 69 65     e ancie
+        .byte   "nt\creature Jenova,\intending t"; E6E8 6E 74 5C 63 72 65 61 74 nt\creat
+                                                ; E6F0 75 72 65 20 4A 65 6E 6F  ure Jeno
+                                                ; E6F8 76 61 2C 5C 69 6E 74 65  va,\inte
+                                                ; E700 6E 64 69 6E 67 20 74     nding t
+        .byte   "o\destroy the planet.  \Cloud w"; E707 6F 5C 64 65 73 74 72 6F o\destro
+                                                ; E70F 79 20 74 68 65 20 70 6C  y the pl
+                                                ; E717 61 6E 65 74 2E 20 20 5C  anet.  \
+                                                ; E71F 43 6C 6F 75 64 20 77     Cloud w
+        .byte   "as meant to be a pawn, a Shinra"; E726 61 73 20 6D 65 61 6E 74 as meant
+                                                ; E72E 20 74 6F 20 62 65 20 61   to be a
+                                                ; E736 20 70 61 77 6E 2C 20 61   pawn, a
+                                                ; E73E 20 53 68 69 6E 72 61      Shinra
+        .byte   "drone to be used\and discarded "; E745 64 72 6F 6E 65 20 74 6F drone to
+                                                ; E74D 20 62 65 20 75 73 65 64   be used
+                                                ; E755 5C 61 6E 64 20 64 69 73  \and dis
+                                                ; E75D 63 61 72 64 65 64 20     carded 
+        .byte   "by\Sephiroth. Cloud\found a pow"; E764 62 79 5C 53 65 70 68 69 by\Sephi
+                                                ; E76C 72 6F 74 68 2E 20 43 6C  roth. Cl
+                                                ; E774 6F 75 64 5C 66 6F 75 6E  oud\foun
+                                                ; E77C 64 20 61 20 70 6F 77     d a pow
+        .byte   "er,\however, Sephiroth had no h"; E783 65 72 2C 5C 68 6F 77 65 er,\howe
+                                                ; E78B 76 65 72 2C 20 53 65 70  ver, Sep
+                                                ; E793 68 69 72 6F 74 68 20 68  hiroth h
+                                                ; E79B 61 64 20 6E 6F 20 68     ad no h
+        .byte   "ope of\besting: Friendshipand l"; E7A2 6F 70 65 20 6F 66 5C 62 ope of\b
+                                                ; E7AA 65 73 74 69 6E 67 3A 20  esting: 
+                                                ; E7B2 46 72 69 65 6E 64 73 68  Friendsh
+                                                ; E7BA 69 70 61 6E 64 20 6C     ipand l
+        .byte   "ove. Aided by friends, Cloud\en"; E7C1 6F 76 65 2E 20 41 69 64 ove. Aid
+                                                ; E7C9 65 64 20 62 79 20 66 72  ed by fr
+                                                ; E7D1 69 65 6E 64 73 2C 20 43  iends, C
+                                                ; E7D9 6C 6F 75 64 5C 65 6E     loud\en
+        .byte   "gaged in a fiercebattle against"; E7E0 67 61 67 65 64 20 69 6E gaged in
+                                                ; E7E8 20 61 20 66 69 65 72 63   a fierc
+                                                ; E7F0 65 62 61 74 74 6C 65 20  ebattle 
+                                                ; E7F8 61 67 61 69 6E 73 74     against
+        .byte   "\Sephiroth__Body\and mind exhau"; E7FF 5C 53 65 70 68 69 72 6F \Sephiro
+                                                ; E807 74 68 5F 5F 42 6F 64 79  th__Body
+                                                ; E80F 5C 61 6E 64 20 6D 69 6E  \and min
+                                                ; E817 64 20 65 78 68 61 75     d exhau
+        .byte   "sted,he bested the evil and exo"; E81E 73 74 65 64 2C 68 65 20 sted,he 
+                                                ; E826 62 65 73 74 65 64 20 74  bested t
+                                                ; E82E 68 65 20 65 76 69 6C 20  he evil 
+                                                ; E836 61 6E 64 20 65 78 6F     and exo
+        .byte   "rcised\Sephiroth from his heart"; E83D 72 63 69 73 65 64 5C 53 rcised\S
+                                                ; E845 65 70 68 69 72 6F 74 68  ephiroth
+                                                ; E84D 20 66 72 6F 6D 20 68 69   from hi
+                                                ; E855 73 20 68 65 61 72 74     s heart
+        .byte   ".\ \This struggle has\proved hu"; E85C 2E 5C 20 5C 54 68 69 73 .\ \This
+                                                ; E864 20 73 74 72 75 67 67 6C   struggl
+                                                ; E86C 65 20 68 61 73 5C 70 72  e has\pr
+                                                ; E874 6F 76 65 64 20 68 75     oved hu
+        .byte   "manity's\worth. In\obliterating"; E87B 6D 61 6E 69 74 79 27 73 manity's
+                                                ; E883 5C 77 6F 72 74 68 2E 20  \worth. 
+                                                ; E88B 49 6E 5C 6F 62 6C 69 74  In\oblit
+                                                ; E893 65 72 61 74 69 6E 67     erating
+        .byte   " the\Meteor, Holy has\given man"; E89A 20 74 68 65 5C 4D 65 74  the\Met
+                                                ; E8A2 65 6F 72 2C 20 48 6F 6C  eor, Hol
+                                                ; E8AA 79 20 68 61 73 5C 67 69  y has\gi
+                                                ; E8B2 76 65 6E 20 6D 61 6E     ven man
+        .byte   " a second chance. And so__\Clou"; E8B9 20 61 20 73 65 63 6F 6E  a secon
+                                                ; E8C1 64 20 63 68 61 6E 63 65  d chance
+                                                ; E8C9 2E 20 41 6E 64 20 73 6F  . And so
+                                                ; E8D1 5F 5F 5C 43 6C 6F 75     __\Clou
+        .byte   "d,Tifa,Barret, RedX`, Cait Sith"; E8D8 64 2C 54 69 66 61 2C 42 d,Tifa,B
+                                                ; E8E0 61 72 72 65 74 2C 20 52  arret, R
+                                                ; E8E8 65 64 58 60 2C 20 43 61  edX`, Ca
+                                                ; E8F0 69 74 20 53 69 74 68     it Sith
+        .byte   ",\and Cid journey\home to rebui"; E8F7 2C 5C 61 6E 64 20 43 69 ,\and Ci
+                                                ; E8FF 64 20 6A 6F 75 72 6E 65  d journe
+                                                ; E907 79 5C 68 6F 6D 65 20 74  y\home t
+                                                ; E90F 6F 20 72 65 62 75 69     o rebui
+        .byte   "ld.\__To live out theirdays in "; E916 6C 64 2E 5C 5F 5F 54 6F ld.\__To
+                                                ; E91E 20 6C 69 76 65 20 6F 75   live ou
+                                                ; E926 74 20 74 68 65 69 72 64  t theird
+                                                ; E92E 61 79 73 20 69 6E 20     ays in 
+        .byte   "peace."                        ; E935 70 65 61 63 65 2E        peace.
+        .byte   $0A                             ; E93B 0A                       .
+LE93C:
+        .byte   "It is Holy, the\ultimate magic,"; E93C 49 74 20 69 73 20 48 6F It is Ho
+                                                ; E944 6C 79 2C 20 74 68 65 5C  ly, the\
+                                                ; E94C 75 6C 74 69 6D 61 74 65  ultimate
+                                                ; E954 20 6D 61 67 69 63 2C      magic,
+        .byte   "\summoned to resist the Meteor."; E95B 5C 73 75 6D 6D 6F 6E 65 \summone
+                                                ; E963 64 20 74 6F 20 72 65 73  d to res
+                                                ; E96B 69 73 74 20 74 68 65 20  ist the 
+                                                ; E973 4D 65 74 65 6F 72 2E     Meteor.
+        .byte   "\Cloud and the\others watch wit"; E97A 5C 43 6C 6F 75 64 20 61 \Cloud a
+                                                ; E982 6E 64 20 74 68 65 5C 6F  nd the\o
+                                                ; E98A 74 68 65 72 73 20 77 61  thers wa
+                                                ; E992 74 63 68 20 77 69 74     tch wit
+        .byte   "h\wide eyes as\Lifestream gushe"; E999 68 5C 77 69 64 65 20 65 h\wide e
+                                                ; E9A1 79 65 73 20 61 73 5C 4C  yes as\L
+                                                ; E9A9 69 66 65 73 74 72 65 61  ifestrea
+                                                ; E9B1 6D 20 67 75 73 68 65     m gushe
+        .byte   "s\from the wounded\planet. Cont"; E9B8 73 5C 66 72 6F 6D 20 74 s\from t
+                                                ; E9C0 68 65 20 77 6F 75 6E 64  he wound
+                                                ; E9C8 65 64 5C 70 6C 61 6E 65  ed\plane
+                                                ; E9D0 74 2E 20 43 6F 6E 74     t. Cont
+        .byte   "rolled by Aerith's will,\Lifest"; E9D7 72 6F 6C 6C 65 64 20 62 rolled b
+                                                ; E9DF 79 20 41 65 72 69 74 68  y Aerith
+                                                ; E9E7 27 73 20 77 69 6C 6C 2C  's will,
+                                                ; E9EF 5C 4C 69 66 65 73 74     \Lifest
+        .byte   "ream\amplifies the Holy.Togethe"; E9F6 72 65 61 6D 5C 61 6D 70 ream\amp
+                                                ; E9FE 6C 69 66 69 65 73 20 74  lifies t
+                                                ; EA06 68 65 20 48 6F 6C 79 2E  he Holy.
+                                                ; EA0E 54 6F 67 65 74 68 65     Togethe
+        .byte   "r, Light\smites Darkness.\Dazzl"; EA15 72 2C 20 4C 69 67 68 74 r, Light
+                                                ; EA1D 5C 73 6D 69 74 65 73 20  \smites 
+                                                ; EA25 44 61 72 6B 6E 65 73 73  Darkness
+                                                ; EA2D 2E 5C 44 61 7A 7A 6C     .\Dazzl
+        .byte   "ing light\blinds onlooking\eyes"; EA34 69 6E 67 20 6C 69 67 68 ing ligh
+                                                ; EA3C 74 5C 62 6C 69 6E 64 73  t\blinds
+                                                ; EA44 20 6F 6E 6C 6F 6F 6B 69   onlooki
+                                                ; EA4C 6E 67 5C 65 79 65 73     ng\eyes
+        .byte   " as the Meteor is destroyed."  ; EA53 20 61 73 20 74 68 65 20   as the 
+                                                ; EA5B 4D 65 74 65 6F 72 20 69  Meteor i
+                                                ; EA63 73 20 64 65 73 74 72 6F  s destro
+                                                ; EA6B 79 65 64 2E              yed.
+        .byte   $0A                             ; EA6F 0A                       .
+LEA70:
+        .byte   "Hm? Why am I here?\There was so"; EA70 48 6D 3F 20 57 68 79 20 Hm? Why 
+                                                ; EA78 61 6D 20 49 20 68 65 72  am I her
+                                                ; EA80 65 3F 5C 54 68 65 72 65  e?\There
+                                                ; EA88 20 77 61 73 20 73 6F      was so
+        .byte   "me\commotion down-\stairs and I"; EA8F 6D 65 5C 63 6F 6D 6D 6F me\commo
+                                                ; EA97 74 69 6F 6E 20 64 6F 77  tion dow
+                                                ; EA9F 6E 2D 5C 73 74 61 69 72  n-\stair
+                                                ; EAA7 73 20 61 6E 64 20 49     s and I
+        .byte   " was\sent up here until further"; EAAE 20 77 61 73 5C 73 65 6E  was\sen
+                                                ; EAB6 74 20 75 70 20 68 65 72  t up her
+                                                ; EABE 65 20 75 6E 74 69 6C 20  e until 
+                                                ; EAC6 66 75 72 74 68 65 72     further
+        .byte   " notice.\Anyway, enjoy your day"; EACD 20 6E 6F 74 69 63 65 2E  notice.
+                                                ; EAD5 5C 41 6E 79 77 61 79 2C  \Anyway,
+                                                ; EADD 20 65 6E 6A 6F 79 20 79   enjoy y
+                                                ; EAE5 6F 75 72 20 64 61 79     our day
+        .byte   " sir."                         ; EAEC 20 73 69 72 2E            sir.
+        .byte   $0A                             ; EAF1 0A                       .
+LEAF2:
+        .byte   "Huh? Why am I here?There was a\"; EAF2 48 75 68 3F 20 57 68 79 Huh? Why
+                                                ; EAFA 20 61 6D 20 49 20 68 65   am I he
+                                                ; EB02 72 65 3F 54 68 65 72 65  re?There
+                                                ; EB0A 20 77 61 73 20 61 5C      was a\
+        .byte   "security breach\downstairs, I w"; EB11 73 65 63 75 72 69 74 79 security
+                                                ; EB19 20 62 72 65 61 63 68 5C   breach\
+                                                ; EB21 64 6F 77 6E 73 74 61 69  downstai
+                                                ; EB29 72 73 2C 20 49 20 77     rs, I w
+        .byte   "as\sent here until\further noti"; EB30 61 73 5C 73 65 6E 74 20 as\sent 
+                                                ; EB38 68 65 72 65 20 75 6E 74  here unt
+                                                ; EB40 69 6C 5C 66 75 72 74 68  il\furth
+                                                ; EB48 65 72 20 6E 6F 74 69     er noti
+        .byte   "ce.\Anyway__Have a\good day sir"; EB4F 63 65 2E 5C 41 6E 79 77 ce.\Anyw
+                                                ; EB57 61 79 5F 5F 48 61 76 65  ay__Have
+                                                ; EB5F 20 61 5C 67 6F 6F 64 20   a\good 
+                                                ; EB67 64 61 79 20 73 69 72     day sir
+        .byte   "."                             ; EB6E 2E                       .
+        .byte   $0A                             ; EB6F 0A                       .
+LEB70:
+        .byte   "@<It's your first\time back to "; EB70 40 3C 49 74 27 73 20 79 @<It's y
+                                                ; EB78 6F 75 72 20 66 69 72 73  our firs
+                                                ; EB80 74 5C 74 69 6D 65 20 62  t\time b
+                                                ; EB88 61 63 6B 20 74 6F 20     ack to 
+        .byte   "your\hometown in a long time,ri"; EB8F 79 6F 75 72 5C 68 6F 6D your\hom
+                                                ; EB97 65 74 6F 77 6E 20 69 6E  etown in
+                                                ; EB9F 20 61 20 6C 6F 6E 67 20   a long 
+                                                ; EBA7 74 69 6D 65 2C 72 69     time,ri
+        .byte   "ght? So how does it feel?\__I w"; EBAE 67 68 74 3F 20 53 6F 20 ght? So 
+                                                ; EBB6 68 6F 77 20 64 6F 65 73  how does
+                                                ; EBBE 20 69 74 20 66 65 65 6C   it feel
+                                                ; EBC6 3F 5C 5F 5F 49 20 77     ?\__I w
+        .byte   "ouldn't know\because I don't\ha"; EBCD 6F 75 6C 64 6E 27 74 20 ouldn't 
+                                                ; EBD5 6B 6E 6F 77 5C 62 65 63  know\bec
+                                                ; EBDD 61 75 73 65 20 49 20 64  ause I d
+                                                ; EBE5 6F 6E 27 74 5C 68 61     on't\ha
+        .byte   "ve a hometown__"               ; EBEC 76 65 20 61 20 68 6F 6D  ve a hom
+                                                ; EBF4 65 74 6F 77 6E 5F 5F     etown__
+        .byte   $0A                             ; EBFB 0A                       .
+LEBFC:
+        .byte   "@vZack:Ummm__how\'bout your par"; EBFC 40 76 5A 61 63 6B 3A 55 @vZack:U
+                                                ; EC04 6D 6D 6D 5F 5F 68 6F 77  mmm__how
+                                                ; EC0C 5C 27 62 6F 75 74 20 79  \'bout y
+                                                ; EC14 6F 75 72 20 70 61 72     our par
+        .byte   "ents?"                         ; EC1B 65 6E 74 73 3F           ents?
+        .byte   $0A                             ; EC20 0A                       .
+LEC21:
+        .byte   "@<My mother is\Jenova.She died\"; EC21 40 3C 4D 79 20 6D 6F 74 @<My mot
+                                                ; EC29 68 65 72 20 69 73 5C 4A  her is\J
+                                                ; EC31 65 6E 6F 76 61 2E 53 68  enova.Sh
+                                                ; EC39 65 20 64 69 65 64 5C     e died\
+        .byte   "right after she\gave birth to m"; EC40 72 69 67 68 74 20 61 66 right af
+                                                ; EC48 74 65 72 20 73 68 65 5C  ter she\
+                                                ; EC50 67 61 76 65 20 62 69 72  gave bir
+                                                ; EC58 74 68 20 74 6F 20 6D     th to m
+        .byte   "e.\My father__ha,ha,ha__Ha,Ha,H"; EC5F 65 2E 5C 4D 79 20 66 61 e.\My fa
+                                                ; EC67 74 68 65 72 5F 5F 68 61  ther__ha
+                                                ; EC6F 2C 68 61 2C 68 61 5F 5F  ,ha,ha__
+                                                ; EC77 48 61 2C 48 61 2C 48     Ha,Ha,H
+        .byte   "a!\___What does it\matter__?"  ; EC7E 61 21 5C 5F 5F 5F 57 68  a!\___Wh
+                                                ; EC86 61 74 20 64 6F 65 73 20  at does 
+                                                ; EC8E 69 74 5C 6D 61 74 74 65  it\matte
+                                                ; EC96 72 5F 5F 3F              r__?
+        .byte   $0A                             ; EC9A 0A                       .
+LEC9B:
+        .byte   "@<The Mako smell is\pretty bad "; EC9B 40 3C 54 68 65 20 4D 61 @<The Ma
+                                                ; ECA3 6B 6F 20 73 6D 65 6C 6C  ko smell
+                                                ; ECAB 20 69 73 5C 70 72 65 74   is\pret
+                                                ; ECB3 74 79 20 62 61 64 20     ty bad 
+        .byte   "here\__Alright, let's\go!"     ; ECBA 68 65 72 65 5C 5F 5F 41  here\__A
+                                                ; ECC2 6C 72 69 67 68 74 2C 20  lright, 
+                                                ; ECCA 6C 65 74 27 73 5C 67 6F  let's\go
+                                                ; ECD2 21                       !
+        .byte   $0A                             ; ECD3 0A                       .
+LECD4:
+        .byte   "@uIt's so boring,\being on watc"; ECD4 40 75 49 74 27 73 20 73 @uIt's s
+                                                ; ECDC 6F 20 62 6F 72 69 6E 67  o boring
+                                                ; ECE4 2C 5C 62 65 69 6E 67 20  ,\being 
+                                                ; ECEC 6F 6E 20 77 61 74 63     on watc
+        .byte   "h."                            ; ECF3 68 2E                    h.
+        .byte   $0A                             ; ECF5 0A                       .
+LECF6:
+        .byte   "@vJust sit tight,\it's you job,"; ECF6 40 76 4A 75 73 74 20 73 @vJust s
+                                                ; ECFE 69 74 20 74 69 67 68 74  it tight
+                                                ; ED06 2C 5C 69 74 27 73 20 79  ,\it's y
+                                                ; ED0E 6F 75 20 6A 6F 62 2C     ou job,
+        .byte   "\right?"                       ; ED15 5C 72 69 67 68 74 3F     \right?
+        .byte   $0A                             ; ED1C 0A                       .
+LED1D:
+        .byte   "@1Hmm__Something\tells me I sho"; ED1D 40 31 48 6D 6D 5F 5F 53 @1Hmm__S
+                                                ; ED25 6F 6D 65 74 68 69 6E 67  omething
+                                                ; ED2D 5C 74 65 6C 6C 73 20 6D  \tells m
+                                                ; ED35 65 20 49 20 73 68 6F     e I sho
+        .byte   "uld\save my game\before I go an"; ED3C 75 6C 64 5C 73 61 76 65 uld\save
+                                                ; ED44 20 6D 79 20 67 61 6D 65   my game
+                                                ; ED4C 5C 62 65 66 6F 72 65 20  \before 
+                                                ; ED54 49 20 67 6F 20 61 6E     I go an
+        .byte   "y\further__"                   ; ED5B 79 5C 66 75 72 74 68 65  y\furthe
+                                                ; ED63 72 5F 5F                 r__
+        .byte   $0A                             ; ED66 0A                       .
+LED67:
+        .byte   "@tLugia2009: Hello\friend!"    ; ED67 40 74 4C 75 67 69 61 32  @tLugia2
+                                                ; ED6F 30 30 39 3A 20 48 65 6C  009: Hel
+                                                ; ED77 6C 6F 5C 66 72 69 65 6E  lo\frien
+                                                ; ED7F 64 21                    d!
+        .byte   $0A                             ; ED81 0A                       .
+LED82:
+        .byte   "@tI'm Lugia2009,the\lead hacker"; ED82 40 74 49 27 6D 20 4C 75 @tI'm Lu
+                                                ; ED8A 67 69 61 32 30 30 39 2C  gia2009,
+                                                ; ED92 74 68 65 5C 6C 65 61 64  the\lead
+                                                ; ED9A 20 68 61 63 6B 65 72      hacker
+        .byte   " for\this game.I was\hoping to "; EDA1 20 66 6F 72 5C 74 68 69  for\thi
+                                                ; EDA9 73 20 67 61 6D 65 2E 49  s game.I
+                                                ; EDB1 20 77 61 73 5C 68 6F 70   was\hop
+                                                ; EDB9 69 6E 67 20 74 6F 20     ing to 
+        .byte   "see you\again,remember me\from "; EDC0 73 65 65 20 79 6F 75 5C see you\
+                                                ; EDC8 61 67 61 69 6E 2C 72 65  again,re
+                                                ; EDD0 6D 65 6D 62 65 72 20 6D  member m
+                                                ; EDD8 65 5C 66 72 6F 6D 20     e\from 
+        .byte   "Shinra HQ?"                    ; EDDF 53 68 69 6E 72 61 20 48  Shinra H
+                                                ; EDE7 51 3F                    Q?
+        .byte   $0A                             ; EDE9 0A                       .
+LEDEA:
+        .byte   "@tI'm glad you came, I want to "; EDEA 40 74 49 27 6D 20 67 6C @tI'm gl
+                                                ; EDF2 61 64 20 79 6F 75 20 63  ad you c
+                                                ; EDFA 61 6D 65 2C 20 49 20 77  ame, I w
+                                                ; EE02 61 6E 74 20 74 6F 20     ant to 
+        .byte   "give you\a reward!"            ; EE09 67 69 76 65 20 79 6F 75  give you
+                                                ; EE11 5C 61 20 72 65 77 61 72  \a rewar
+                                                ; EE19 64 21                    d!
+        .byte   $0A                             ; EE1B 0A                       .
+LEE1C:
+        .byte   "@tLet's see__I know! How about "; EE1C 40 74 4C 65 74 27 73 20 @tLet's 
+                                                ; EE24 73 65 65 5F 5F 49 20 6B  see__I k
+                                                ; EE2C 6E 6F 77 21 20 48 6F 77  now! How
+                                                ; EE34 20 61 62 6F 75 74 20      about 
+        .byte   "some\money so you can\buy some "; EE3B 73 6F 6D 65 5C 6D 6F 6E some\mon
+                                                ; EE43 65 79 20 73 6F 20 79 6F  ey so yo
+                                                ; EE4B 75 20 63 61 6E 5C 62 75  u can\bu
+                                                ; EE53 79 20 73 6F 6D 65 20     y some 
+        .byte   "new\equipment for your characte"; EE5A 6E 65 77 5C 65 71 75 69 new\equi
+                                                ; EE62 70 6D 65 6E 74 20 66 6F  pment fo
+                                                ; EE6A 72 20 79 6F 75 72 20 63  r your c
+                                                ; EE72 68 61 72 61 63 74 65     haracte
+        .byte   "rs?"                           ; EE79 72 73 3F                 rs?
+        .byte   $0A                             ; EE7C 0A                       .
+LEE7D:
+        .byte   "@tLet me just hack\the Gil amou"; EE7D 40 74 4C 65 74 20 6D 65 @tLet me
+                                                ; EE85 20 6A 75 73 74 20 68 61   just ha
+                                                ; EE8D 63 6B 5C 74 68 65 20 47  ck\the G
+                                                ; EE95 69 6C 20 61 6D 6F 75     il amou
+        .byte   "nt in\your inventory__\Let's se"; EE9C 6E 74 20 69 6E 5C 79 6F nt in\yo
+                                                ; EEA4 75 72 20 69 6E 76 65 6E  ur inven
+                                                ; EEAC 74 6F 72 79 5F 5F 5C 4C  tory__\L
+                                                ; EEB4 65 74 27 73 20 73 65     et's se
+        .byte   "e__\aaaaaannnddd__\Done!!"     ; EEBB 65 5F 5F 5C 61 61 61 61  e__\aaaa
+                                                ; EEC3 61 61 6E 6E 6E 64 64 64  aannnddd
+                                                ; EECB 5F 5F 5C 44 6F 6E 65 21  __\Done!
+                                                ; EED3 21                       !
+        .byte   $0A                             ; EED4 0A                       .
+LEED5:
+        .byte   "@tWh,what?!\Something's wrong\w"; EED5 40 74 57 68 2C 77 68 61 @tWh,wha
+                                                ; EEDD 74 3F 21 5C 53 6F 6D 65  t?!\Some
+                                                ; EEE5 74 68 69 6E 67 27 73 20  thing's 
+                                                ; EEED 77 72 6F 6E 67 5C 77     wrong\w
+        .byte   "ith the computer! __A virus?"  ; EEF4 69 74 68 20 74 68 65 20  ith the 
+                                                ; EEFC 63 6F 6D 70 75 74 65 72  computer
+                                                ; EF04 21 20 5F 5F 41 20 76 69  ! __A vi
+                                                ; EF0C 72 75 73 3F              rus?
+        .byte   $0A                             ; EF10 0A                       .
+LEF11:
+        .byte   "@tC'mon__\Ctrl,Alt,Delete!"    ; EF11 40 74 43 27 6D 6F 6E 5F  @tC'mon_
+                                                ; EF19 5F 5C 43 74 72 6C 2C 41  _\Ctrl,A
+                                                ; EF21 6C 74 2C 44 65 6C 65 74  lt,Delet
+                                                ; EF29 65 21                    e!
+        .byte   $0A                             ; EF2B 0A                       .
+LEF2C:
+        .byte   "@m__I'm__Cloud_!"              ; EF2C 40 6D 5F 5F 49 27 6D 5F  @m__I'm_
+                                                ; EF34 5F 43 6C 6F 75 64 5F 21  _Cloud_!
+        .byte   $0A                             ; EF3C 0A                       .
+LEF3D:
+        .byte   "@o__I'm__Tifa_!"               ; EF3D 40 6F 5F 5F 49 27 6D 5F  @o__I'm_
+                                                ; EF45 5F 54 69 66 61 5F 21     _Tifa_!
+        .byte   $0A                             ; EF4C 0A                       .
+LEF4D:
+        .byte   "@s__I'm__Cid_!"                ; EF4D 40 73 5F 5F 49 27 6D 5F  @s__I'm_
+                                                ; EF55 5F 43 69 64 5F 21        _Cid_!
+        .byte   $0A                             ; EF5B 0A                       .
+LEF5C:
+        .byte   "@tHuh? Those are the old charac"; EF5C 40 74 48 75 68 3F 20 54 @tHuh? T
+                                                ; EF64 68 6F 73 65 20 61 72 65  hose are
+                                                ; EF6C 20 74 68 65 20 6F 6C 64   the old
+                                                ; EF74 20 63 68 61 72 61 63      charac
+        .byte   "ters I\replaced!"              ; EF7B 74 65 72 73 20 49 5C 72  ters I\r
+                                                ; EF83 65 70 6C 61 63 65 64 21  eplaced!
+        .byte   $0A                             ; EF8B 0A                       .
+LEF8C:
+        .byte   "@p__I'm__Aeris_!"              ; EF8C 40 70 5F 5F 49 27 6D 5F  @p__I'm_
+                                                ; EF94 5F 41 65 72 69 73 5F 21  _Aeris_!
+        .byte   $0A                             ; EF9C 0A                       .
+LEF9D:
+        .byte   "@r__I'm__Cait Sith_!"          ; EF9D 40 72 5F 5F 49 27 6D 5F  @r__I'm_
+                                                ; EFA5 5F 43 61 69 74 20 53 69  _Cait Si
+                                                ; EFAD 74 68 5F 21              th_!
+        .byte   $0A                             ; EFB1 0A                       .
+LEFB2:
+        .byte   "@n__I'm__Barret_!"             ; EFB2 40 6E 5F 5F 49 27 6D 5F  @n__I'm_
+                                                ; EFBA 5F 42 61 72 72 65 74 5F  _Barret_
+                                                ; EFC2 21                       !
+        .byte   $0A                             ; EFC3 0A                       .
+LEFC4:
+        .byte   "@q__I'm__RedX`_!"              ; EFC4 40 71 5F 5F 49 27 6D 5F  @q__I'm_
+                                                ; EFCC 5F 52 65 64 58 60 5F 21  _RedX`_!
+        .byte   $0A                             ; EFD4 0A                       .
+LEFD5:
+        .byte   "@tI can't believe\what happened"; EFD5 40 74 49 20 63 61 6E 27 @tI can'
+                                                ; EFDD 74 20 62 65 6C 69 65 76  t believ
+                                                ; EFE5 65 5C 77 68 61 74 20 68  e\what h
+                                                ; EFED 61 70 70 65 6E 65 64     appened
+        .byte   "__"                            ; EFF4 5F 5F                    __
+        .byte   $0A                             ; EFF6 0A                       .
+LEFF7:
+        .byte   "@tHeh,they were\pretty weak,I'm"; EFF7 40 74 48 65 68 2C 74 68 @tHeh,th
+                                                ; EFFF 65 79 20 77 65 72 65 5C  ey were\
+                                                ; F007 70 72 65 74 74 79 20 77  pretty w
+                                                ; F00F 65 61 6B 2C 49 27 6D     eak,I'm
+        .byte   "\glad I replaced\them.___Hmm__ "; F016 5C 67 6C 61 64 20 49 20 \glad I 
+                                                ; F01E 72 65 70 6C 61 63 65 64  replaced
+                                                ; F026 5C 74 68 65 6D 2E 5F 5F  \them.__
+                                                ; F02E 5F 48 6D 6D 5F 5F 20     _Hmm__ 
+        .byte   "    "                          ; F035 20 20 20 20                  
+        .byte   $0A                             ; F039 0A                       .
+LF03A:
+        .byte   "@tHey,y'know what?\I wish to ch"; F03A 40 74 48 65 79 2C 79 27 @tHey,y'
+                                                ; F042 6B 6E 6F 77 20 77 68 61  know wha
+                                                ; F04A 74 3F 5C 49 20 77 69 73  t?\I wis
+                                                ; F052 68 20 74 6F 20 63 68     h to ch
+        .byte   "allengeyou! Hope your\character"; F059 61 6C 6C 65 6E 67 65 79 allengey
+                                                ; F061 6F 75 21 20 48 6F 70 65  ou! Hope
+                                                ; F069 20 79 6F 75 72 5C 63 68   your\ch
+                                                ; F071 61 72 61 63 74 65 72     aracter
+        .byte   "s are\on a high level!"        ; F078 73 20 61 72 65 5C 6F 6E  s are\on
+                                                ; F080 20 61 20 68 69 67 68 20   a high 
+                                                ; F088 6C 65 76 65 6C 21        level!
+        .byte   $0A                             ; F08E 0A                       .
+        .byte   "000000"                        ; F08F 30 30 30 30 30 30        000000
+LF095:
+        .byte   "@tGood job! I think\you've earn"; F095 40 74 47 6F 6F 64 20 6A @tGood j
+                                                ; F09D 6F 62 21 20 49 20 74 68  ob! I th
+                                                ; F0A5 69 6E 6B 5C 79 6F 75 27  ink\you'
+                                                ; F0AD 76 65 20 65 61 72 6E     ve earn
+        .byte   "ed\every bit of Gil\I've given "; F0B4 65 64 5C 65 76 65 72 79 ed\every
+                                                ; F0BC 20 62 69 74 20 6F 66 20   bit of 
+                                                ; F0C4 47 69 6C 5C 49 27 76 65  Gil\I've
+                                                ; F0CC 20 67 69 76 65 6E 20      given 
+        .byte   "you.\Well,I've got otherproject"; F0D3 79 6F 75 2E 5C 57 65 6C you.\Wel
+                                                ; F0DB 6C 2C 49 27 76 65 20 67  l,I've g
+                                                ; F0E3 6F 74 20 6F 74 68 65 72  ot other
+                                                ; F0EB 70 72 6F 6A 65 63 74     project
+        .byte   "s to work\on. Hope you enjoy th"; F0F2 73 20 74 6F 20 77 6F 72 s to wor
+                                                ; F0FA 6B 5C 6F 6E 2E 20 48 6F  k\on. Ho
+                                                ; F102 70 65 20 79 6F 75 20 65  pe you e
+                                                ; F10A 6E 6A 6F 79 20 74 68     njoy th
+        .byte   "e rest of the\game!"           ; F111 65 20 72 65 73 74 20 6F  e rest o
+                                                ; F119 66 20 74 68 65 5C 67 61  f the\ga
+                                                ; F121 6D 65 21                 me!
+        .byte   $0A                             ; F124 0A                       .
+LF125:
+        .byte   "@tHave a pleasant\day!"        ; F125 40 74 48 61 76 65 20 61  @tHave a
+                                                ; F12D 20 70 6C 65 61 73 61 6E   pleasan
+                                                ; F135 74 5C 64 61 79 21        t\day!
+        .byte   $0A                             ; F13B 0A                       .
+LF13C:
+        .byte   "@1__This place looks abandoned_"; F13C 40 31 5F 5F 54 68 69 73 @1__This
+                                                ; F144 20 70 6C 61 63 65 20 6C   place l
+                                                ; F14C 6F 6F 6B 73 20 61 62 61  ooks aba
+                                                ; F154 6E 64 6F 6E 65 64 5F     ndoned_
+        .byte   "_\It looks like the\TV is still"; F15B 5F 5C 49 74 20 6C 6F 6F _\It loo
+                                                ; F163 6B 73 20 6C 69 6B 65 20  ks like 
+                                                ; F16B 74 68 65 5C 54 56 20 69  the\TV i
+                                                ; F173 73 20 73 74 69 6C 6C     s still
+        .byte   " on.\Maybe I should\check it ou"; F17A 20 6F 6E 2E 5C 4D 61 79  on.\May
+                                                ; F182 62 65 20 49 20 73 68 6F  be I sho
+                                                ; F18A 75 6C 64 5C 63 68 65 63  uld\chec
+                                                ; F192 6B 20 69 74 20 6F 75     k it ou
+        .byte   "t__"                           ; F199 74 5F 5F                 t__
+        .byte   $0A                             ; F19C 0A                       .
+LF19D:
+        .byte   "@1We shouldn't leave just yet__"; F19D 40 31 57 65 20 73 68 6F @1We sho
+                                                ; F1A5 75 6C 64 6E 27 74 20 6C  uldn't l
+                                                ; F1AD 65 61 76 65 20 6A 75 73  eave jus
+                                                ; F1B5 74 20 79 65 74 5F 5F     t yet__
+        .byte   $0A                             ; F1BC 0A                       .
+LF1BD:
+        .byte   "Welcome to our Itemshop,we've b"; F1BD 57 65 6C 63 6F 6D 65 20 Welcome 
+                                                ; F1C5 74 6F 20 6F 75 72 20 49  to our I
+                                                ; F1CD 74 65 6D 73 68 6F 70 2C  temshop,
+                                                ; F1D5 77 65 27 76 65 20 62     we've b
+        .byte   "een in\business here for\over 1"; F1DC 65 65 6E 20 69 6E 5C 62 een in\b
+                                                ; F1E4 75 73 69 6E 65 73 73 20  usiness 
+                                                ; F1EC 68 65 72 65 20 66 6F 72  here for
+                                                ; F1F4 5C 6F 76 65 72 20 31     \over 1
+        .byte   "0 years! Whatwould you like?"  ; F1FB 30 20 79 65 61 72 73 21  0 years!
+                                                ; F203 20 57 68 61 74 77 6F 75   Whatwou
+                                                ; F20B 6C 64 20 79 6F 75 20 6C  ld you l
+                                                ; F213 69 6B 65 3F              ike?
+        .byte   $0A                             ; F217 0A                       .
+LF218:
+        .byte   "Thanks,come again!\__Huh? Burnt"; F218 54 68 61 6E 6B 73 2C 63 Thanks,c
+                                                ; F220 6F 6D 65 20 61 67 61 69  ome agai
+                                                ; F228 6E 21 5C 5F 5F 48 75 68  n!\__Huh
+                                                ; F230 3F 20 42 75 72 6E 74     ? Burnt
+        .byte   " down?\ \______Please leave!"  ; F237 20 64 6F 77 6E 3F 5C 20   down?\ 
+                                                ; F23F 5C 5F 5F 5F 5F 5F 5F 50  \______P
+                                                ; F247 6C 65 61 73 65 20 6C 65  lease le
+                                                ; F24F 61 76 65 21              ave!
+        .byte   $0A                             ; F253 0A                       .
+LF254:
+        .byte   "Welcome to the \Nibelheim Armor"; F254 57 65 6C 63 6F 6D 65 20 Welcome 
+                                                ; F25C 74 6F 20 74 68 65 20 5C  to the \
+                                                ; F264 4E 69 62 65 6C 68 65 69  Nibelhei
+                                                ; F26C 6D 20 41 72 6D 6F 72     m Armor
+        .byte   "\shop, we've been inbusiness fo"; F273 5C 73 68 6F 70 2C 20 77 \shop, w
+                                                ; F27B 65 27 76 65 20 62 65 65  e've bee
+                                                ; F283 6E 20 69 6E 62 75 73 69  n inbusi
+                                                ; F28B 6E 65 73 73 20 66 6F     ness fo
+        .byte   "r over\10 years! What can I get"; F292 72 20 6F 76 65 72 5C 31 r over\1
+                                                ; F29A 30 20 79 65 61 72 73 21  0 years!
+                                                ; F2A2 20 57 68 61 74 20 63 61   What ca
+                                                ; F2AA 6E 20 49 20 67 65 74     n I get
+        .byte   " you?"                         ; F2B1 20 79 6F 75 3F            you?
+        .byte   $0A                             ; F2B6 0A                       .
+LF2B7:
+        .byte   "Thank you!__Huh?\Burnt down?__P"; F2B7 54 68 61 6E 6B 20 79 6F Thank yo
+                                                ; F2BF 75 21 5F 5F 48 75 68 3F  u!__Huh?
+                                                ; F2C7 5C 42 75 72 6E 74 20 64  \Burnt d
+                                                ; F2CF 6F 77 6E 3F 5F 5F 50     own?__P
+        .byte   "leasesir, don't say suchthings!"; F2D6 6C 65 61 73 65 73 69 72 leasesir
+                                                ; F2DE 2C 20 64 6F 6E 27 74 20  , don't 
+                                                ; F2E6 73 61 79 20 73 75 63 68  say such
+                                                ; F2EE 74 68 69 6E 67 73 21     things!
+        .byte   $0A                             ; F2F5 0A                       .
+LF2F6:
+        .byte   "Welcome to the\Nibelheim weapon"; F2F6 57 65 6C 63 6F 6D 65 20 Welcome 
+                                                ; F2FE 74 6F 20 74 68 65 5C 4E  to the\N
+                                                ; F306 69 62 65 6C 68 65 69 6D  ibelheim
+                                                ; F30E 20 77 65 61 70 6F 6E      weapon
+        .byte   "\shop, we've been\in business f"; F315 5C 73 68 6F 70 2C 20 77 \shop, w
+                                                ; F31D 65 27 76 65 20 62 65 65  e've bee
+                                                ; F325 6E 5C 69 6E 20 62 75 73  n\in bus
+                                                ; F32D 69 6E 65 73 73 20 66     iness f
+        .byte   "or\years! Would you\like me to "; F334 6F 72 5C 79 65 61 72 73 or\years
+                                                ; F33C 21 20 57 6F 75 6C 64 20  ! Would 
+                                                ; F344 79 6F 75 5C 6C 69 6B 65  you\like
+                                                ; F34C 20 6D 65 20 74 6F 20      me to 
+        .byte   "upgrade your weapons?"         ; F353 75 70 67 72 61 64 65 20  upgrade 
+                                                ; F35B 79 6F 75 72 20 77 65 61  your wea
+                                                ; F363 70 6F 6E 73 3F           pons?
+        .byte   $0A                             ; F368 0A                       .
+LF369:
+        .byte   "Have a nice--Huh?\Burnt down? T"; F369 48 61 76 65 20 61 20 6E Have a n
+                                                ; F371 69 63 65 2D 2D 48 75 68  ice--Huh
+                                                ; F379 3F 5C 42 75 72 6E 74 20  ?\Burnt 
+                                                ; F381 64 6F 77 6E 3F 20 54     down? T
+        .byte   "hat\NEVER happened!\Don't say s"; F388 68 61 74 5C 4E 45 56 45 hat\NEVE
+                                                ; F390 52 20 68 61 70 70 65 6E  R happen
+                                                ; F398 65 64 21 5C 44 6F 6E 27  ed!\Don'
+                                                ; F3A0 74 20 73 61 79 20 73     t say s
+        .byte   "uch\things!"                   ; F3A7 75 63 68 5C 74 68 69 6E  uch\thin
+                                                ; F3AF 67 73 21                 gs!
+        .byte   $0A                             ; F3B2 0A                       .
+LF3B3:
+        .byte   "Welcome to the\Nibelheim Magic\"; F3B3 57 65 6C 63 6F 6D 65 20 Welcome 
+                                                ; F3BB 74 6F 20 74 68 65 5C 4E  to the\N
+                                                ; F3C3 69 62 65 6C 68 65 69 6D  ibelheim
+                                                ; F3CB 20 4D 61 67 69 63 5C      Magic\
+        .byte   "Shop, our family's been in busi"; F3D2 53 68 6F 70 2C 20 6F 75 Shop, ou
+                                                ; F3DA 72 20 66 61 6D 69 6C 79  r family
+                                                ; F3E2 27 73 20 62 65 65 6E 20  's been 
+                                                ; F3EA 69 6E 20 62 75 73 69     in busi
+        .byte   "ness\here for years!\Would you "; F3F1 6E 65 73 73 5C 68 65 72 ness\her
+                                                ; F3F9 65 20 66 6F 72 20 79 65  e for ye
+                                                ; F401 61 72 73 21 5C 57 6F 75  ars!\Wou
+                                                ; F409 6C 64 20 79 6F 75 20     ld you 
+        .byte   "like us\to upgrade your\magic?"; F410 6C 69 6B 65 20 75 73 5C  like us\
+                                                ; F418 74 6F 20 75 70 67 72 61  to upgra
+                                                ; F420 64 65 20 79 6F 75 72 5C  de your\
+                                                ; F428 6D 61 67 69 63 3F        magic?
+        .byte   $0A                             ; F42E 0A                       .
+LF42F:
+        .byte   "Thank you, come\again!__Wha!?\B"; F42F 54 68 61 6E 6B 20 79 6F Thank yo
+                                                ; F437 75 2C 20 63 6F 6D 65 5C  u, come\
+                                                ; F43F 61 67 61 69 6E 21 5F 5F  again!__
+                                                ; F447 57 68 61 21 3F 5C 42     Wha!?\B
+        .byte   "urnt down? Are yousick__saying "; F44E 75 72 6E 74 20 64 6F 77 urnt dow
+                                                ; F456 6E 3F 20 41 72 65 20 79  n? Are y
+                                                ; F45E 6F 75 73 69 63 6B 5F 5F  ousick__
+                                                ; F466 73 61 79 69 6E 67 20     saying 
+        .byte   "those things! Please\leave!"   ; F46D 74 68 6F 73 65 20 74 68  those th
+                                                ; F475 69 6E 67 73 21 20 50 6C  ings! Pl
+                                                ; F47D 65 61 73 65 5C 6C 65 61  ease\lea
+                                                ; F485 76 65 21                 ve!
+        .byte   $0A                             ; F488 0A                       .
+LF489:
+        .byte   "@1Hmm__It looks like something "; F489 40 31 48 6D 6D 5F 5F 49 @1Hmm__I
+                                                ; F491 74 20 6C 6F 6F 6B 73 20  t looks 
+                                                ; F499 6C 69 6B 65 20 73 6F 6D  like som
+                                                ; F4A1 65 74 68 69 6E 67 20     ething 
+        .byte   "gets\inserted here.\Something's"; F4A8 67 65 74 73 5C 69 6E 73 gets\ins
+                                                ; F4B0 65 72 74 65 64 20 68 65  erted he
+                                                ; F4B8 72 65 2E 5C 53 6F 6D 65  re.\Some
+                                                ; F4C0 74 68 69 6E 67 27 73     thing's
+        .byte   " writtenhere__"                ; F4C7 20 77 72 69 74 74 65 6E   written
+                                                ; F4CF 68 65 72 65 5F 5F        here__
+        .byte   $0A                             ; F4D5 0A                       .
+LF4D6:
+        .byte   "@4Let me see____\K.E.Y.S.T.O.N."; F4D6 40 34 4C 65 74 20 6D 65 @4Let me
+                                                ; F4DE 20 73 65 65 5F 5F 5F 5F   see____
+                                                ; F4E6 5C 4B 2E 45 2E 59 2E 53  \K.E.Y.S
+                                                ; F4EE 2E 54 2E 4F 2E 4E 2E     .T.O.N.
+        .byte   "E.?"                           ; F4F5 45 2E 3F                 E.?
+        .byte   $0A                             ; F4F8 0A                       .
+LF4F9:
+        .byte   "@5Key Stone? Hey,\While we were"; F4F9 40 35 4B 65 79 20 53 74 @5Key St
+                                                ; F501 6F 6E 65 3F 20 48 65 79  one? Hey
+                                                ; F509 2C 5C 57 68 69 6C 65 20  ,\While 
+                                                ; F511 77 65 20 77 65 72 65     we were
+        .byte   " in\the Gold Saucer, I heard Di"; F518 20 69 6E 5C 74 68 65 20  in\the 
+                                                ; F520 47 6F 6C 64 20 53 61 75  Gold Sau
+                                                ; F528 63 65 72 2C 20 49 20 68  cer, I h
+                                                ; F530 65 61 72 64 20 44 69     eard Di
+        .byte   "o talking\about a Keystone."   ; F537 6F 20 74 61 6C 6B 69 6E  o talkin
+                                                ; F53F 67 5C 61 62 6F 75 74 20  g\about 
+                                                ; F547 61 20 4B 65 79 73 74 6F  a Keysto
+                                                ; F54F 6E 65 2E                 ne.
+        .byte   $0A                             ; F552 0A                       .
+LF553:
+        .byte   "@2What'd he say?"              ; F553 40 32 57 68 61 74 27 64  @2What'd
+                                                ; F55B 20 68 65 20 73 61 79 3F   he say?
+        .byte   $0A                             ; F563 0A                       .
+LF564:
+        .byte   "@5He wants to add it to his mus"; F564 40 35 48 65 20 77 61 6E @5He wan
+                                                ; F56C 74 73 20 74 6F 20 61 64  ts to ad
+                                                ; F574 64 20 69 74 20 74 6F 20  d it to 
+                                                ; F57C 68 69 73 20 6D 75 73     his mus
+        .byte   "eum, thatthere's a man who\live"; F583 65 75 6D 2C 20 74 68 61 eum, tha
+                                                ; F58B 74 74 68 65 72 65 27 73  tthere's
+                                                ; F593 20 61 20 6D 61 6E 20 77   a man w
+                                                ; F59B 68 6F 5C 6C 69 76 65     ho\live
+        .byte   "s near Gongaga that has it."   ; F5A2 73 20 6E 65 61 72 20 47  s near G
+                                                ; F5AA 6F 6E 67 61 67 61 20 74  ongaga t
+                                                ; F5B2 68 61 74 20 68 61 73 20  hat has 
+                                                ; F5BA 69 74 2E                 it.
+        .byte   $0A                             ; F5BD 0A                       .
+LF5BE:
+        .byte   "@3Hope we're not too late__"   ; F5BE 40 33 48 6F 70 65 20 77  @3Hope w
+                                                ; F5C6 65 27 72 65 20 6E 6F 74  e're not
+                                                ; F5CE 20 74 6F 6F 20 6C 61 74   too lat
+                                                ; F5D6 65 5F 5F                 e__
+        .byte   $0A                             ; F5D9 0A                       .
+LF5DA:
+        .byte   "@7What're we waitin' for? Let's"; F5DA 40 37 57 68 61 74 27 72 @7What'r
+                                                ; F5E2 65 20 77 65 20 77 61 69  e we wai
+                                                ; F5EA 74 69 6E 27 20 66 6F 72  tin' for
+                                                ; F5F2 3F 20 4C 65 74 27 73     ? Let's
+        .byte   " get\goin'!"                   ; F5F9 20 67 65 74 5C 67 6F 69   get\goi
+                                                ; F601 6E 27 21                 n'!
+        .byte   $0A                             ; F604 0A                       .
+LF605:
+        .byte   "@6I wonder if the guywould even"; F605 40 36 49 20 77 6F 6E 64 @6I wond
+                                                ; F60D 65 72 20 69 66 20 74 68  er if th
+                                                ; F615 65 20 67 75 79 77 6F 75  e guywou
+                                                ; F61D 6C 64 20 65 76 65 6E     ld even
+        .byte   " sell it to him__or us for\that"; F624 20 73 65 6C 6C 20 69 74  sell it
+                                                ; F62C 20 74 6F 20 68 69 6D 5F   to him_
+                                                ; F634 5F 6F 72 20 75 73 20 66  _or us f
+                                                ; F63C 6F 72 5C 74 68 61 74     or\that
+        .byte   " matter."                      ; F643 20 6D 61 74 74 65 72 2E   matter.
+        .byte   $0A                             ; F64B 0A                       .
+LF64C:
+        .byte   "@tHey! You can use\that to rest"; F64C 40 74 48 65 79 21 20 59 @tHey! Y
+                                                ; F654 6F 75 20 63 61 6E 20 75  ou can u
+                                                ; F65C 73 65 5C 74 68 61 74 20  se\that 
+                                                ; F664 74 6F 20 72 65 73 74     to rest
+        .byte   "ore\your HP and MP\anytime you "; F66B 6F 72 65 5C 79 6F 75 72 ore\your
+                                                ; F673 20 48 50 20 61 6E 64 20   HP and 
+                                                ; F67B 4D 50 5C 61 6E 79 74 69  MP\anyti
+                                                ; F683 6D 65 20 79 6F 75 20     me you 
+        .byte   "wish.\Just let me turn iton__" ; F68A 77 69 73 68 2E 5C 4A 75  wish.\Ju
+                                                ; F692 73 74 20 6C 65 74 20 6D  st let m
+                                                ; F69A 65 20 74 75 72 6E 20 69  e turn i
+                                                ; F6A2 74 6F 6E 5F 5F           ton__
+        .byte   $0A                             ; F6A7 0A                       .
+LF6A8:
+        .byte   "@tThere you are!\All set!"     ; F6A8 40 74 54 68 65 72 65 20  @tThere 
+                                                ; F6B0 79 6F 75 20 61 72 65 21  you are!
+                                                ; F6B8 5C 41 6C 6C 20 73 65 74  \All set
+                                                ; F6C0 21                       !
+        .byte   $0A                             ; F6C1 0A                       .
+LF6C2:
+        .byte   "@tGood luck!"                  ; F6C2 40 74 47 6F 6F 64 20 6C  @tGood l
+                                                ; F6CA 75 63 6B 21              uck!
+        .byte   $0A                             ; F6CE 0A                       .
+; ----------------------------------------------------------------------------
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F6CF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F6D7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F6DF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F6E7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F6EF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F6F7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F6FF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F707 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F70F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F717 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F71F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F727 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F72F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F737 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F73F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F747 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F74F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F757 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F75F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F767 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F76F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F777 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F77F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F787 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F78F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F797 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F79F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F7A7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F7AF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F7B7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F7BF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F7C7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F7CF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F7D7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F7DF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F7E7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F7EF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F7F7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F7FF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F807 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F80F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F817 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F81F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F827 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F82F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F837 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F83F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F847 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F84F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F857 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F85F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F867 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F86F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F877 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F87F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F887 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F88F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F897 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F89F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F8A7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F8AF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F8B7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F8BF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F8C7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F8CF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F8D7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F8DF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F8E7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F8EF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F8F7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F8FF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F907 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F90F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F917 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F91F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F927 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F92F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F937 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F93F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F947 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F94F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F957 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F95F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F967 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F96F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F977 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F97F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F987 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F98F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F997 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F99F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F9A7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F9AF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F9B7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F9BF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F9C7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F9CF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F9D7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F9DF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F9E7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F9EF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F9F7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; F9FF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA07 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA0F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA17 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA1F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA27 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA2F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA37 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA3F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA47 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA4F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA57 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA5F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA67 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA6F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA77 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA7F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA87 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA8F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA97 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FA9F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FAA7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FAAF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FAB7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FABF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FAC7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FACF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FAD7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FADF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FAE7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FAEF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FAF7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FAFF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB07 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB0F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB17 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB1F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB27 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB2F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB37 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB3F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB47 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB4F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB57 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB5F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB67 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB6F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB77 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB7F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB87 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB8F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB97 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FB9F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FBA7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FBAF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FBB7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FBBF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FBC7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FBCF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FBD7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FBDF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FBE7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FBEF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FBF7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FBFF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC07 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC0F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC17 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC1F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC27 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC2F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC37 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC3F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC47 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC4F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC57 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC5F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC67 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC6F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC77 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC7F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC87 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC8F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC97 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FC9F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FCA7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FCAF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FCB7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FCBF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FCC7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FCCF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FCD7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FCDF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FCE7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FCEF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FCF7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FCFF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD07 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD0F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD17 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD1F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD27 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD2F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD37 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD3F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD47 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD4F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD57 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD5F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD67 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD6F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD77 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD7F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD87 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD8F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD97 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FD9F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FDA7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FDAF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FDB7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FDBF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FDC7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FDCF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FDD7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FDDF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FDE7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FDEF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FDF7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FDFF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE07 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE0F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE17 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE1F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE27 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE2F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE37 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE3F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE47 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE4F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE57 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE5F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE67 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE6F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE77 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE7F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE87 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE8F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE97 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FE9F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FEA7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FEAF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FEB7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FEBF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FEC7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FECF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FED7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FEDF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FEE7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FEEF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FEF7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FEFF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF07 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF0F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF17 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF1F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF27 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF2F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF37 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF3F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF47 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF4F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF57 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF5F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF67 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF6F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF77 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF7F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF87 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF8F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF97 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FF9F 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FFA7 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; FFAF 30 30 30 30 30 30 30 30  00000000
+        .byte   $30,$30,$30,$30,$30,$FF,$FF,$FF ; FFB7 30 30 30 30 30 FF FF FF  00000...
+        .byte   $FF,$78,$D8,$A9,$00,$8D,$00,$20 ; FFBF FF 78 D8 A9 00 8D 00 20  .x..... 
+        .byte   $8D,$01,$20,$A2,$0A,$AD,$02,$20 ; FFC7 8D 01 20 A2 0A AD 02 20  .. .... 
+        .byte   $30,$FB,$AD,$02,$20,$10,$FB,$CA ; FFCF 30 FB AD 02 20 10 FB CA  0... ...
+        .byte   $D0,$F3,$A2,$00,$BD,$E7,$FF,$9D ; FFD7 D0 F3 A2 00 BD E7 FF 9D  ........
+        .byte   $00,$04,$E8,$D0,$F7,$4C,$00,$04 ; FFDF 00 04 E8 D0 F7 4C 00 04  .....L..
+        .byte   $A9,$04,$8D,$00,$53,$A9,$00,$8D ; FFE7 A9 04 8D 00 53 A9 00 8D  ....S...
+        .byte   $00,$50,$8D,$00,$52,$6C,$FC,$FF ; FFEF 00 50 8D 00 52 6C FC FF  .P..Rl..
+        .byte   $EA,$EA,$40,$F9,$FF,$B0,$FF,$F9 ; FFF7 EA EA 40 F9 FF B0 FF F9  ..@.....
+        .byte   $FF                             ; FFFF FF                       .

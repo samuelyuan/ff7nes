@@ -73,7 +73,7 @@ L806D:
         .byte   $0F,$02,$32,$10
         .byte   $0F,$22,$12,$27
 
-        .INCBIN "gfx/sprite_battle/bank68_guard_80a4.chr"
+        .INCBIN "gfx/sprite_battle/bank34_guard_80a4.chr"
 L8212:
         .byte   $06,$06,$21,$37,$2B,$2F,$07     ; 8212 06 06 21 37 2B 2F 07  ..!7+/.
         
@@ -90,7 +90,7 @@ L8212:
         .byte   $0F,$16,$27,$2D
         .byte   $0F,$1B,$3B,$2D
 
-        .INCBIN "gfx/sprite_battle/bank68_scorpion_8249.chr"
+        .INCBIN "gfx/sprite_battle/bank34_scorpion_8249.chr"
 L8459:
         .byte   $06,$06,$23,$37,$2B,$2F,$07     ; 8459 06 06 23 37 2B 2F 07     ..#7+/.
 
@@ -107,7 +107,7 @@ L8459:
         .byte   $0F,$00,$21,$30
         .byte   $0F,$32,$00,$21
         
-        .INCBIN "gfx/sprite_battle/bank68_airbuster_8490.chr"
+        .INCBIN "gfx/sprite_battle/bank34_airbuster_8490.chr"
 L86C0:
         .byte   $0C,$06,$44,$5D,$4F,$55,$07     ; 86C0 0C 06 44 5D 4F 55 07  ..D]OU.
         
@@ -131,7 +131,7 @@ L86C0:
         .byte   $0F,$16,$12,$37
         .byte   $0F,$22,$12,$27
 
-        .INCBIN "gfx/sprite_battle/bank68_reno_871d.chr"
+        .INCBIN "gfx/sprite_battle/bank34_reno_871d.chr"
 L8B5D:
         .byte   $06,$06,$11,$37,$2B,$2F,$07,$00 ; 8B5D 06 06 11 37 2B 2F 07 00  ...7+/..
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8B65 00 00 00 00 00 00 00 00  ........
@@ -390,7 +390,7 @@ L9299:
         .byte   $0F,$14,$29,$30
         .byte   $0F,$16,$19,$28
 
-        .INCBIN "gfx/sprite_battle/bank68_specimen_938f.chr"
+        .INCBIN "gfx/sprite_battle/bank34_specimen_938f.chr"
 
 L9670:
         .byte   $06,$06,$1F,$37,$2B,$2F,$07     ; 9670 06 06 1F 37 2B 2F 07   ...7+/.
@@ -408,7 +408,7 @@ L9670:
         .byte   $0F,$27,$19,$18
         .byte   $0F,$36,$16,$18
 
-        .INCBIN "gfx/sprite_battle/bank68_original_barret_96a7.chr"
+        .INCBIN "gfx/sprite_battle/bank34_original_barret_96a7.chr"
 
 L975E:
         .byte   $06,$06,$1F,$37,$2B,$2F,$07     ; 975E 06 06 1F 37 2B 2F 07  ...7+/.
@@ -426,7 +426,7 @@ L975E:
         .byte   $0F,$36,$28,$12
         .byte   $0F,$36,$30,$17
 
-        .INCBIN "gfx/sprite_battle/bank68_original_aeris_9795.chr"
+        .INCBIN "gfx/sprite_battle/bank34_original_aeris_9795.chr"
 
 L984C:
         .byte   $06,$06,$1F,$37,$2B,$2F,$07     ; 984C 06 06 1F 37 2B 2F 07 ...7+/.
@@ -444,7 +444,7 @@ L984C:
         .byte   $0F,$36,$28,$12
         .byte   $0F,$36,$30,$16
 
-        .INCBIN "gfx/sprite_battle/bank68_original_red_xiii_9883.chr"
+        .INCBIN "gfx/sprite_battle/bank34_original_red_xiii_9883.chr"
 L993A:
         .byte   $06,$06,$1F,$37,$2B,$2F,$07,$00 ; 993A 06 06 1F 37 2B 2F 07 00  ...7+/..
         .byte   $00,$00,$00,$00,$00,$00,$00,$01 ; 9942 00 00 00 00 00 00 00 01  ........
@@ -512,7 +512,7 @@ L9A8F:
         .byte   $0F,$00,$27,$10
         .byte   $0F,$30,$00,$22
       
-        .INCBIN "gfx/sprite_battle/bank68_hundred_gunner_9b85.chr"
+        .INCBIN "gfx/sprite_battle/bank34_hundred_gunner_9b85.chr"
 L9FF5:
         .byte   $0C,$06,$39,$5D,$4F,$55,$07,$00 ; 9FF5 0C 06 39 5D 4F 55 07 00  ..9]OU..
         .byte   $00,$00,$01,$00,$00,$00,$00,$02 ; 9FFD 00 00 01 00 00 00 00 02  ........
@@ -627,7 +627,7 @@ LA2F0:
         .byte   $0F,$36,$28,$12
         .byte   $0F,$36,$30,$16
 
-        .INCBIN "gfx/sprite_battle/bank68_original_tifa_a327.chr"
+        .INCBIN "gfx/sprite_battle/bank34_original_tifa_a327.chr"
 
 LA3E2:
         .byte   $06,$06,$18,$37,$2B,$2F,$07,$00 ; A3E2 06 06 18 37 2B 2F 07 00  ...7+/..
@@ -1350,7 +1350,7 @@ LB997:
         .byte   $0F,$36,$28,$12
         .byte   $0F,$36,$30,$16
 
-        .INCBIN "gfx/sprite_battle/bank68_original_cloud_b9ce.chr"
+        .INCBIN "gfx/sprite_battle/bank34_original_cloud_b9ce.chr"
 
 LBA76:
         .byte   $0C,$12,$51,$F6,$DF,$EE,$07,$00 ; BA76 0C 12 51 F6 DF EE 07 00  ..Q.....

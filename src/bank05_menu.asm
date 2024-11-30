@@ -51,7 +51,7 @@ L801F:
         .addr   LC027                           ; 8055 27 C0                    '.
 ; ----------------------------------------------------------------------------
 L8057:
-        .INCBIN "gfx/menu/bank0a_player_menu_home_8057.chr"
+        .INCBIN "gfx/menu/bank05_player_menu_home_8057.chr"
 L8467:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8467 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 846F 00 00 00 00 00 00 00 00  ........
@@ -187,7 +187,7 @@ L8867:
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; 8877 0F 17 30 36 0F 17 30 36  ..06..06
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; 887F 0F 17 30 36 0F 17 30 36  ..06..06
 L8887:
-        .INCBIN "gfx/menu/bank0a_player_menu_status_8887.chr"
+        .INCBIN "gfx/menu/bank05_player_menu_status_8887.chr"
 L8D47:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8D47 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$01,$02,$02,$02,$02 ; 8D4F 00 00 00 01 02 02 02 02  ........
@@ -323,9 +323,9 @@ L9147:
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; 9157 0F 17 30 36 0F 17 30 36  ..06..06
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; 915F 0F 17 30 36 0F 17 30 36  ..06..06
 L9167:
-        .INCBIN "gfx/menu/bank0a_player_menu_equip_icons_9167.chr"
+        .INCBIN "gfx/menu/bank05_player_menu_equip_icons_9167.chr"
 L9527:
-        .INCBIN "gfx/menu/bank0a_player_menu_equip_9527.chr"
+        .INCBIN "gfx/menu/bank05_player_menu_equip_9527.chr"
 L98E7:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 98E7 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$01,$02,$02,$02,$02 ; 98EF 00 00 00 01 02 02 02 02  ........
@@ -461,7 +461,7 @@ L9CE7:
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; 9CF7 0F 17 30 36 0F 17 30 36  ..06..06
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; 9CFF 0F 17 30 36 0F 17 30 36  ..06..06
 L9D07:
-        .INCBIN "gfx/menu/bank0a_player_menu_item_9d07.chr"
+        .INCBIN "gfx/menu/bank05_player_menu_item_9d07.chr"
 L9FB7:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 9FB7 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 9FBF 00 00 00 00 00 00 00 00  ........
@@ -597,7 +597,7 @@ LA3B7:
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; A3C7 0F 17 30 36 0F 17 30 36  ..06..06
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; A3CF 0F 17 30 36 0F 17 30 36  ..06..06
 LA3D7:
-        .INCBIN "gfx/menu/bank0a_player_menu_magic_a3d7.chr"
+        .INCBIN "gfx/menu/bank05_player_menu_magic_a3d7.chr"
 LA617:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A617 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$01,$02,$02,$02,$02 ; A61F 00 00 00 01 02 02 02 02  ........
@@ -733,9 +733,9 @@ LAA17:
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; AA27 0F 17 30 36 0F 17 30 36  ..06..06
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; AA2F 0F 17 30 36 0F 17 30 36  ..06..06
 LAA37:
-        .INCBIN "gfx/menu/bank0a_battle_screen_characters_aa37.chr"
+        .INCBIN "gfx/menu/bank05_battle_screen_characters_aa37.chr"
 LB497:
-        .INCBIN "gfx/menu/bank0a_battle_screen_menu_b497.chr"
+        .INCBIN "gfx/menu/bank05_battle_screen_menu_b497.chr"
 LB667:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B667 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B66F 00 00 00 00 00 00 00 00  ........
@@ -871,7 +871,7 @@ LBA67:
         .byte   $0F,$36,$28,$12,$0F,$36,$30,$16 ; BA77 0F 36 28 12 0F 36 30 16  .6(..60.
         .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; BA7F 0F 27 19 18 0F 36 16 18  .'...6..
 LBA87:
-        .INCBIN "gfx/menu/bank0a_general_shop_menu_ba87.chr"
+        .INCBIN "gfx/menu/bank05_general_shop_menu_ba87.chr"
 LBC27:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC27 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC2F 00 00 00 00 00 00 00 00  ........
