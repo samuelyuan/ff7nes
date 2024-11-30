@@ -18,7 +18,7 @@
 
 .scope bank06
 .segment "PRG06"
-.include "src/bank06_sound.asm"
+.include "src/bank06.asm"
 .endscope
 
 .scope bank08
