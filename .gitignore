@@ -3,3 +3,5 @@
 *.nes.dbg
 *.o
 *.o.dep
+
+assets/
