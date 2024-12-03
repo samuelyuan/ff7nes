@@ -269,55 +269,55 @@
 
 .scope bank6a
 .segment "PRG6a"
-.include "src/bank35_portrait.asm"
+.include "src/bank35_sprite.asm"
 .endscope
 
 .scope bank6c
 .segment "PRG6c"
-.include "src/bank36.asm"
+.include "src/overworld/bank36.asm"
 .endscope
 
 .scope bank6e
 .segment "PRG6e"
-.include "src/bank37.asm"
+.include "src/overworld/bank37_tilemap.asm"
 .endscope
 
 .scope bank70
 .segment "PRG70"
-.include "src/bank38.asm"
+.include "src/overworld/bank38_tilemap.asm"
 .endscope
 
 .scope bank72
 .segment "PRG72"
-.include "src/bank39.asm"
+.include "src/overworld/bank39_tilemap.asm"
 .endscope
 
 .scope bank74
 .segment "PRG74"
-.include "src/bank3a.asm"
+.include "src/overworld/bank3a_tilemap.asm"
 .endscope
 
 .scope bank76
 .segment "PRG76"
-.include "src/bank3b.asm"
+.include "src/overworld/bank3b_tilemap.asm"
 .endscope
 
 .scope bank78
 .segment "PRG78"
-.include "src/bank3c.asm"
+.include "src/overworld/bank3c_tilemap.asm"
 .endscope
 
 .scope bank7a
 .segment "PRG7a"
-.include "src/bank3d.asm"
+.include "src/overworld/bank3d_tilemap.asm"
 .endscope
 
 .scope bank7c
 .segment "PRG7c"
-.include "src/bank3e.asm"
+.include "src/overworld/bank3e_tilemap.asm"
 .endscope
 
 .scope bank7e
 .segment "PRG7e"
-.include "src/bank3f.asm"
+.include "src/overworld/bank3f_collision.asm"
 .endscope
