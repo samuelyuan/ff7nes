@@ -5,74 +5,18 @@ L0002           := $0002
 L00C1           := $00C1
 L00C5           := $00C5
 L0100           := $0100
-L0108           := $0108
 L0110           := $0110
 L0120           := $0120
 L0130           := $0130
 L0140           := $0140
 L0161           := $0161
-L01C9           := $01C9
 L0200           := $0200
-L026C           := $026C
-L0301           := $0301
-L036C           := $036C
 L0400           := $0400
-L046E           := $046E
-L04CE           := $04CE
-L0867           := $0867
-L086A           := $086A
-L0873           := $0873
-L0875           := $0875
-L0A68           := $0A68
-L0C6E           := $0C6E
-L0D6A           := $0D6A
-L1057           := $1057
-L186A           := $186A
-L206A           := $206A
-L206E           := $206E
-L24C9           := $24C9
-L464D           := $464D
-L494B           := $494B
-L4A01           := $4A01
-L504D           := $504D
 L5252           := $5252
-L5302           := $5302
 L5A01           := $5A01
 L5CA8           := $5CA8
 L5F01           := $5F01
-L60C9           := $60C9
-L6565           := $6565
-L6569           := $6569
-L6767           := $6767
-L6802           := $6802
-L686A           := $686A
-L6968           := $6968
-L6A01           := $6A01
-L6A0C           := $6A0C
-L6A21           := $6A21
-L6B01           := $6B01
-L6B10           := $6B10
-L6C02           := $6C02
-L6C03           := $6C03
-L6C04           := $6C04
-L6C6C           := $6C6C
-L6C6E           := $6C6E
-L6CC9           := $6CC9
-L6D04           := $6D04
-L6E18           := $6E18
-L6E6F           := $6E6F
 L6EF0           := $6EF0
-L6F03           := $6F03
-L6F04           := $6F04
-L6F06           := $6F06
-L6F67           := $6F67
-L6F6E           := $6F6E
-L706E           := $706E
-L7167           := $7167
-L7173           := $7173
-L7308           := $7308
-L7314           := $7314
-L7504           := $7504
 ; ----------------------------------------------------------------------------
         nop                                     ; 8000 EA                       .
         brk                                     ; 8001 00                       .
@@ -1108,7 +1052,6 @@ L86C0:
         sbc     $5F                             ; 86FC E5 5F                    ._
         sta     $5F                             ; 86FE 85 5F                    ._
         iny                                     ; 8700 C8                       .
-L8703           := * + 2
         lda     $0300,y                         ; 8701 B9 00 03                 ...
         sbc     $60                             ; 8704 E5 60                    .`
 L8706:
@@ -1275,7 +1218,6 @@ L87F6:
         sta     $61                             ; 87FD 85 61                    .a
         iny                                     ; 87FF C8                       .
         lda     $0300,y                         ; 8800 B9 00 03                 ...
-L8804           := * + 1
         sbc     $62                             ; 8803 E5 62                    .b
         sta     $62                             ; 8805 85 62                    .b
         bcs     L8820                           ; 8807 B0 17                    ..
@@ -2219,7 +2161,6 @@ L8DEE:
         lda     $04                             ; 8E01 A5 04                    ..
         clc                                     ; 8E03 18                       .
         adc     $0A                             ; 8E04 65 0A                    e.
-L8E06:
         sta     $04                             ; 8E06 85 04                    ..
         lda     $05                             ; 8E08 A5 05                    ..
         adc     $09                             ; 8E0A 65 09                    e.
@@ -4554,7 +4495,7 @@ L9DA8:
         adc     $6F02                           ; 9DEB 6D 02 6F                 m.o
         tax                                     ; 9DEE AA                       .
         lda     LB142,x                         ; 9DEF BD 42 B1                 .B.
-        sta     L6F03                           ; 9DF2 8D 03 6F                 ..o
+        sta     $6F03                           ; 9DF2 8D 03 6F                 ..o
         inx                                     ; 9DF5 E8                       .
         lda     LB142,x                         ; 9DF6 BD 42 B1                 .B.
         sta     $C7                             ; 9DF9 85 C7                    ..
@@ -4564,7 +4505,7 @@ L9DA8:
         lda     $6EFE                           ; 9E01 AD FE 6E                 ..n
         and     #$7F                            ; 9E04 29 7F                    ).
         sta     $6EFE                           ; 9E06 8D FE 6E                 ..n
-        lda     L6F03                           ; 9E09 AD 03 6F                 ..o
+        lda     $6F03                           ; 9E09 AD 03 6F                 ..o
         jsr     L9F7C                           ; 9E0C 20 7C 9F                  |.
         pla                                     ; 9E0F 68                       h
         lda     #$00                            ; 9E10 A9 00                    ..
@@ -4589,7 +4530,7 @@ L9DA8:
         adc     $6F02                           ; 9E36 6D 02 6F                 m.o
         tax                                     ; 9E39 AA                       .
         lda     LB142,x                         ; 9E3A BD 42 B1                 .B.
-        sta     L6F03                           ; 9E3D 8D 03 6F                 ..o
+        sta     $6F03                           ; 9E3D 8D 03 6F                 ..o
         inx                                     ; 9E40 E8                       .
         lda     LB142,x                         ; 9E41 BD 42 B1                 .B.
         sta     $C7                             ; 9E44 85 C7                    ..
@@ -4599,7 +4540,7 @@ L9DA8:
         lda     $6EFE                           ; 9E4C AD FE 6E                 ..n
         and     #$7F                            ; 9E4F 29 7F                    ).
         sta     $6EFE                           ; 9E51 8D FE 6E                 ..n
-        lda     L6F03                           ; 9E54 AD 03 6F                 ..o
+        lda     $6F03                           ; 9E54 AD 03 6F                 ..o
         jsr     L9F7C                           ; 9E57 20 7C 9F                  |.
         pla                                     ; 9E5A 68                       h
         lda     #$FF                            ; 9E5B A9 FF                    ..
@@ -4769,7 +4710,7 @@ L9F7C:
         sta     L00C5                           ; 9F82 85 C5                    ..
         lda     $C7                             ; 9F84 A5 C7                    ..
         sta     $6E02                           ; 9F86 8D 02 6E                 ..n
-        sta     L6E18                           ; 9F89 8D 18 6E                 ..n
+        sta     $6E18                           ; 9F89 8D 18 6E                 ..n
         lda     $C8                             ; 9F8C A5 C8                    ..
         sta     $6E03                           ; 9F8E 8D 03 6E                 ..n
         sta     $6E19                           ; 9F91 8D 19 6E                 ..n
@@ -4819,7 +4760,7 @@ L9FCC:
         sta     $6EFE                           ; 9FE1 8D FE 6E                 ..n
         lda     $C7                             ; 9FE4 A5 C7                    ..
         sta     $6E00                           ; 9FE6 8D 00 6E                 ..n
-        sta     L6E18                           ; 9FE9 8D 18 6E                 ..n
+        sta     $6E18                           ; 9FE9 8D 18 6E                 ..n
         lda     $C8                             ; 9FEC A5 C8                    ..
         sta     $6E01                           ; 9FEE 8D 01 6E                 ..n
         sta     $6E19                           ; 9FF1 8D 19 6E                 ..n
@@ -4854,7 +4795,7 @@ LA024:
         iny                                     ; A024 C8                       .
         lda     ($C7),y                         ; A025 B1 C7                    ..
         clc                                     ; A027 18                       .
-        adc     L6E18                           ; A028 6D 18 6E                 m.n
+        adc     $6E18                           ; A028 6D 18 6E                 m.n
         sta     $6E3C,x                         ; A02B 9D 3C 6E                 .<n
         iny                                     ; A02E C8                       .
         lda     ($C7),y                         ; A02F B1 C7                    ..
@@ -4970,10 +4911,10 @@ LA0BD:
         lda     #$FF                            ; A107 A9 FF                    ..
         sta     $6E0B                           ; A109 8D 0B 6E                 ..n
         lda     $6F10                           ; A10C AD 10 6F                 ..o
-        sta     L6F03                           ; A10F 8D 03 6F                 ..o
+        sta     $6F03                           ; A10F 8D 03 6F                 ..o
         lda     $6F0F                           ; A112 AD 0F 6F                 ..o
         pha                                     ; A115 48                       H
-        lda     L6F03                           ; A116 AD 03 6F                 ..o
+        lda     $6F03                           ; A116 AD 03 6F                 ..o
         lda     #$7F                            ; A119 A9 7F                    ..
         sta     $6EFF                           ; A11B 8D FF 6E                 ..n
         jsr     L9EED                           ; A11E 20 ED 9E                  ..
@@ -5322,7 +5263,7 @@ LA388:
         beq     LA39D                           ; A38C F0 0F                    ..
         lda     #$FF                            ; A38E A9 FF                    ..
         sta     $6E9C,x                         ; A390 9D 9C 6E                 ..n
-        lda     L6F06,x                         ; A393 BD 06 6F                 ..o
+        lda     $6F06,x                         ; A393 BD 06 6F                 ..o
         bne     LA39D                           ; A396 D0 05                    ..
         lda     #$00                            ; A398 A9 00                    ..
         sta     $6EBC,x                         ; A39A 9D BC 6E                 ..n
@@ -5336,7 +5277,7 @@ LA39D:
 LA3AB:
         cpx     #$03                            ; A3AB E0 03                    ..
         bcs     LA3B9                           ; A3AD B0 0A                    ..
-        lda     L6F06,x                         ; A3AF BD 06 6F                 ..o
+        lda     $6F06,x                         ; A3AF BD 06 6F                 ..o
         bne     LA3C7                           ; A3B2 D0 13                    ..
         lda     #$00                            ; A3B4 A9 00                    ..
         sta     $6EBC,x                         ; A3B6 9D BC 6E                 ..n
@@ -5349,7 +5290,7 @@ LA3B9:
         jsr     LACF5                           ; A3C4 20 F5 AC                  ..
 LA3C7:
         lda     #$00                            ; A3C7 A9 00                    ..
-        sta     L6F06,x                         ; A3C9 9D 06 6F                 ..o
+        sta     $6F06,x                         ; A3C9 9D 06 6F                 ..o
 LA3CC:
         lda     $6E28,x                         ; A3CC BD 28 6E                 .(n
         ora     #$30                            ; A3CF 09 30                    .0
@@ -5570,7 +5511,7 @@ LA511:
         pha                                     ; A519 48                       H
         lda     $6E0C                           ; A51A AD 0C 6E                 ..n
         bpl     LA546                           ; A51D 10 27                    .'
-        lda     L6F03                           ; A51F AD 03 6F                 ..o
+        lda     $6F03                           ; A51F AD 03 6F                 ..o
         pha                                     ; A522 48                       H
         lda     $6E0C                           ; A523 AD 0C 6E                 ..n
         and     #$3F                            ; A526 29 3F                    )?
@@ -5748,7 +5689,7 @@ LA619:
 ; ----------------------------------------------------------------------------
 LA63E:
         lda     $6E00                           ; A63E AD 00 6E                 ..n
-        sta     L6E18                           ; A641 8D 18 6E                 ..n
+        sta     $6E18                           ; A641 8D 18 6E                 ..n
         sta     $C7                             ; A644 85 C7                    ..
         lda     $6E01                           ; A646 AD 01 6E                 ..n
         sta     $6E19                           ; A649 8D 19 6E                 ..n
@@ -6075,7 +6016,6 @@ LA82A:
         ora     #$40                            ; A83E 09 40                    .@
         sta     $6E28,x                         ; A840 9D 28 6E                 .(n
         clc                                     ; A843 18                       .
-LA844:
         iny                                     ; A844 C8                       .
 LA845:
         rts                                     ; A845 60                       `
@@ -6150,7 +6090,7 @@ LA894:
 ; ----------------------------------------------------------------------------
 LA89F:
         lda     #$80                            ; A89F A9 80                    ..
-        sta     L6F06,x                         ; A8A1 9D 06 6F                 ..o
+        sta     $6F06,x                         ; A8A1 9D 06 6F                 ..o
         rts                                     ; A8A4 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -6241,7 +6181,7 @@ LA926:
 
 ; ----------------------------------------------------------------------------
 LA929:
-        lda     L6F03                           ; A929 AD 03 6F                 ..o
+        lda     $6F03                           ; A929 AD 03 6F                 ..o
         pha                                     ; A92C 48                       H
         lda     $6E1A,x                         ; A92D BD 1A 6E                 ..n
         and     #$40                            ; A930 29 40                    )@
@@ -7409,10 +7349,10 @@ LB822:
         .byte   $02,$E1,$19,$E4,$02,$CB,$D3     ; B89A 02 E1 19 E4 02 CB D3     .......
 ; ----------------------------------------------------------------------------
 LB8A1:
-        .addr   LB980                           ; B8A1 80 B9                    ..
-        .addr   LB8DF                           ; B8A3 DF B8                    ..
-        .addr   LC44A                           ; B8A5 4A C4                    J.
-        .addr   LD9D0                           ; B8A7 D0 D9                    ..
+        .addr   MusicOpeningMakoReactorTheme    ; B8A1 80 B9                    ..
+        .addr   MusicTitleScreenTheme           ; B8A3 DF B8                    ..
+        .addr   MusicTownTheme                  ; B8A5 4A C4                    J.
+        .addr   MusicOverworldTheme             ; B8A7 D0 D9                    ..
         .addr   LDBB6                           ; B8A9 B6 DB                    ..
         .addr   LDCA3                           ; B8AB A3 DC                    ..
         .addr   LBB58                           ; B8AD 58 BB                    X.
@@ -7421,17 +7361,17 @@ LB8A1:
         .addr   LDDDF                           ; B8B3 DF DD                    ..
         .addr   LE123                           ; B8B5 23 E1                    #.
         .addr   LE251                           ; B8B7 51 E2                    Q.
-        .addr   LE42C                           ; B8B9 2C E4                    ,.
+        .addr   MusicNibelheimTheme             ; B8B9 2C E4                    ,.
         .addr   LE57D                           ; B8BB 7D E5                    }.
-        .addr   LE88D                           ; B8BD 8D E8                    ..
+        .addr   MusicTifaTheme                  ; B8BD 8D E8                    ..
         .addr   LEA6D                           ; B8BF 6D EA                    m.
         .addr   LEC2A                           ; B8C1 2A EC                    *.
-        .addr   LFB02                           ; B8C3 02 FB                    ..
+        .addr   MusicInfiltratingShinraTheme    ; B8C3 02 FB                    ..
         .addr   LEDF8                           ; B8C5 F8 ED                    ..
         .addr   LEEF2                           ; B8C7 F2 EE                    ..
-        .addr   LF09A                           ; B8C9 9A F0                    ..
-        .addr   LF24D                           ; B8CB 4D F2                    M.
-        .addr   LF321                           ; B8CD 21 F3                    !.
+        .addr   MusicAerithTheme                ; B8C9 9A F0                    ..
+        .addr   MusicForgottenCityTheme         ; B8CB 4D F2                    M.
+        .addr   MusicShinraCompanyTheme         ; B8CD 21 F3                    !.
         .addr   LC563                           ; B8CF 63 C5                    c.
         .addr   LF410                           ; B8D1 10 F4                    ..
         .addr   LF505                           ; B8D3 05 F5                    ..
@@ -7441,7 +7381,7 @@ LB8A1:
         .addr   LC563                           ; B8DB 63 C5                    c.
 ; ----------------------------------------------------------------------------
         .byte   $00,$00                         ; B8DD 00 00                    ..
-LB8DF:
+MusicTitleScreenTheme:
         .byte   $FF,$00,$9D,$00,$01,$81,$00,$02 ; B8DF FF 00 9D 00 01 81 00 02  ........
         .byte   $0E,$00,$03,$9D,$00,$FF,$CC,$C8 ; B8E7 0E 00 03 9D 00 FF CC C8  ........
         .byte   $C7,$FF,$C4,$6B,$DB,$07,$00,$00 ; B8EF C7 FF C4 6B DB 07 00 00  ...k....
@@ -7463,7 +7403,7 @@ LB8DF:
         .byte   $0A,$D8,$00,$DF,$CE,$1D,$00,$02 ; B96F 0A D8 00 DF CE 1D 00 02  ........
         .byte   $C9,$CE,$02,$93,$00,$00,$C9,$C9 ; B977 C9 CE 02 93 00 00 C9 C9  ........
         .byte   $D0                             ; B97F D0                       .
-LB980:
+MusicOpeningMakoReactorTheme:
         .byte   $FF,$00,$0E,$00,$01,$A7,$00,$02 ; B980 FF 00 0E 00 01 A7 00 02  ........
         .byte   $06,$01,$03,$4A,$01,$FF,$CC,$EE ; B988 06 01 03 4A 01 FF CC EE  ...J....
         .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; B990 C7 FF C4 FF CD 03 00 DB  ........
@@ -7813,7 +7753,7 @@ LC2FF:
         .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; C437 07 00 1E 78 D8 00 DE 06  ...x....
         .byte   $CD,$03,$01,$D8,$00,$40,$C9,$C9 ; C43F CD 03 01 D8 00 40 C9 C9  .....@..
         .byte   $C9,$C9,$D0                     ; C447 C9 C9 D0                 ...
-LC44A:
+MusicTownTheme:
         .byte   $FF,$00,$0E,$00,$01,$9E,$00,$02 ; C44A FF 00 0E 00 01 9E 00 02  ........
         .byte   $DB,$00,$03,$F6,$00,$FF,$CC,$70 ; C452 DB 00 03 F6 00 FF CC 70  .......p
         .byte   $C7,$FF,$C4,$6E,$CD,$03,$00,$DB ; C45A C7 FF C4 6E CD 03 00 DB  ...n....
@@ -7985,7 +7925,6 @@ LC712:
         jsr     LD5AB                           ; C72A 20 AB D5                  ..
         ldx     $17                             ; C72D A6 17                    ..
         inx                                     ; C72F E8                       .
-LC730:
         txa                                     ; C730 8A                       .
         clc                                     ; C731 18                       .
         adc     $00                             ; C732 65 00                    e.
@@ -7999,7 +7938,6 @@ LC730:
         lda     $0780,x                         ; C73E BD 80 07                 ...
         sta     $03                             ; C741 85 03                    ..
         jsr     LD540                           ; C743 20 40 D5                  @.
-LC747           := * + 1
         lda     $14                             ; C746 A5 14                    ..
         bne     LC74D                           ; C748 D0 03                    ..
         jmp     LC7AC                           ; C74A 4C AC C7                 L..
@@ -8008,7 +7946,6 @@ LC747           := * + 1
 LC74D:
         lda     $14                             ; C74D A5 14                    ..
         lsr     a                               ; C74F 4A                       J
-LC750:
         lsr     a                               ; C750 4A                       J
         lsr     a                               ; C751 4A                       J
         sta     $08                             ; C752 85 08                    ..
@@ -8020,14 +7957,11 @@ LC750:
         adc     L0002                           ; C75A 65 02                    e.
         sta     L0002                           ; C75C 85 02                    ..
         pha                                     ; C75E 48                       H
-LC760           := * + 1
         lda     $03                             ; C75F A5 03                    ..
         adc     #$00                            ; C761 69 00                    i.
         sta     $03                             ; C763 85 03                    ..
         pha                                     ; C765 48                       H
-LC766:
         ldx     #$03                            ; C766 A2 03                    ..
-LC769           := * + 1
         ldy     #$00                            ; C768 A0 00                    ..
         lda     $08                             ; C76A A5 08                    ..
         sta     $06                             ; C76C 85 06                    ..
@@ -8036,18 +7970,15 @@ LC76E:
         jsr     L0100                           ; C76F 20 00 01                  ..
         sta     $0700,x                         ; C772 9D 00 07                 ...
         clc                                     ; C775 18                       .
-LC777           := * + 1
         lda     L0002                           ; C776 A5 02                    ..
         adc     #$20                            ; C778 69 20                    i 
         sta     L0002                           ; C77A 85 02                    ..
         lda     $03                             ; C77C A5 03                    ..
         adc     #$00                            ; C77E 69 00                    i.
-LC780:
         sta     $03                             ; C780 85 03                    ..
         dec     $06                             ; C782 C6 06                    ..
         bne     LC76E                           ; C784 D0 E8                    ..
         ldx     #$24                            ; C786 A2 24                    .$
-LC788:
         pla                                     ; C788 68                       h
         sta     $03                             ; C789 85 03                    ..
         pla                                     ; C78B 68                       h
@@ -8063,7 +7994,6 @@ LC799           := * + 1
         clc                                     ; C79B 18                       .
         lda     L0002                           ; C79C A5 02                    ..
         adc     #$20                            ; C79E 69 20                    i 
-LC7A0:
         sta     L0002                           ; C7A0 85 02                    ..
         lda     $03                             ; C7A2 A5 03                    ..
         adc     #$00                            ; C7A4 69 00                    i.
@@ -8088,7 +8018,6 @@ LC7BB:
         asl     a                               ; C7C2 0A                       .
         tax                                     ; C7C3 AA                       .
         lda     $07A8,x                         ; C7C4 BD A8 07                 ...
-LC7C8           := * + 1
         sta     L0002                           ; C7C7 85 02                    ..
         inx                                     ; C7C9 E8                       .
         lda     $07A8,x                         ; C7CA BD A8 07                 ...
@@ -8119,7 +8048,6 @@ LC7C8           := * + 1
         sta     $09                             ; C7F8 85 09                    ..
         lda     $08                             ; C7FA A5 08                    ..
         tay                                     ; C7FC A8                       .
-LC7FE           := * + 1
 LC7FF           := * + 2
         jsr     L0100                           ; C7FD 20 00 01                  ..
         inx                                     ; C800 E8                       .
@@ -8141,7 +8069,6 @@ LC815:
         lda     $09                             ; C81C A5 09                    ..
         sta     $0700,x                         ; C81E 9D 00 07                 ...
         inx                                     ; C821 E8                       .
-LC822:
         jsr     L0100                           ; C822 20 00 01                  ..
         sta     $0700,x                         ; C825 9D 00 07                 ...
         lda     L0002                           ; C828 A5 02                    ..
@@ -8269,21 +8196,11 @@ LC8F9:
         txa                                     ; C8FD 8A                       .
         asl     a                               ; C8FE 0A                       .
         tax                                     ; C8FF AA                       .
-LC901           := * + 1
-LC902           := * + 2
         lda     $0780,x                         ; C900 BD 80 07                 ...
-LC903:
-LC904           := * + 1
         sta     L0002                           ; C903 85 02                    ..
-LC905:
         inx                                     ; C905 E8                       .
-LC906:
-LC907           := * + 1
-LC908           := * + 2
         lda     $0780,x                         ; C906 BD 80 07                 ...
-LC909:
         sta     $03                             ; C909 85 03                    ..
-LC90C           := * + 1
         jsr     LD558                           ; C90B 20 58 D5                  X.
         lda     $13                             ; C90E A5 13                    ..
         lsr     a                               ; C910 4A                       J
@@ -8293,7 +8210,6 @@ LC90C           := * + 1
         sbc     #$02                            ; C914 E9 02                    ..
         tay                                     ; C916 A8                       .
         clc                                     ; C917 18                       .
-LC918:
         adc     L0002                           ; C918 65 02                    e.
         sta     L0002                           ; C91A 85 02                    ..
         pha                                     ; C91C 48                       H
@@ -8316,7 +8232,6 @@ LC918:
         sta     $06                             ; C93B 85 06                    ..
 LC93D:
         inx                                     ; C93D E8                       .
-LC93F           := * + 1
         jsr     L0100                           ; C93E 20 00 01                  ..
         sta     $0700,x                         ; C941 9D 00 07                 ...
         clc                                     ; C944 18                       .
@@ -8331,13 +8246,10 @@ LC93F           := * + 1
         inx                                     ; C955 E8                       .
         lda     #$9E                            ; C956 A9 9E                    ..
         sta     $0700,x                         ; C958 9D 00 07                 ...
-LC95B:
         inx                                     ; C95B E8                       .
         lda     $07                             ; C95C A5 07                    ..
-LC960           := * + 2
         sta     $0700,x                         ; C95E 9D 00 07                 ...
         inx                                     ; C961 E8                       .
-LC962:
         pla                                     ; C962 68                       h
         tay                                     ; C963 A8                       .
         iny                                     ; C964 C8                       .
@@ -8721,7 +8633,6 @@ LCBC9:
         jsr     LD58A                           ; CBFB 20 8A D5                  ..
         lda     $14                             ; CBFE A5 14                    ..
         bne     LCC05                           ; CC00 D0 03                    ..
-LCC02:
         jmp     LCC61                           ; CC02 4C 61 CC                 La.
 
 ; ----------------------------------------------------------------------------
@@ -8838,7 +8749,6 @@ LCCC5:
         sta     $0700,x                         ; CCC8 9D 00 07                 ...
         inx                                     ; CCCB E8                       .
         lda     $09                             ; CCCC A5 09                    ..
-LCCD0           := * + 2
         sta     $0700,x                         ; CCCE 9D 00 07                 ...
         inx                                     ; CCD1 E8                       .
         jsr     L0100                           ; CCD2 20 00 01                  ..
@@ -9072,7 +8982,6 @@ LCE44:
         adc     $00                             ; CE67 65 00                    e.
         asl     a                               ; CE69 0A                       .
         tax                                     ; CE6A AA                       .
-LCE6C           := * + 1
         lda     $07A8,x                         ; CE6B BD A8 07                 ...
         sta     $04                             ; CE6E 85 04                    ..
         inx                                     ; CE70 E8                       .
@@ -9132,7 +9041,6 @@ LCEAF:
         lda     $03                             ; CEC2 A5 03                    ..
         adc     #$00                            ; CEC4 69 00                    i.
         sta     $03                             ; CEC6 85 03                    ..
-LCEC9           := * + 1
         lda     $04                             ; CEC8 A5 04                    ..
         clc                                     ; CECA 18                       .
         adc     $0A                             ; CECB 65 0A                    e.
@@ -9217,8 +9125,6 @@ LCF62:
         jsr     L0110                           ; CF64 20 10 01                  ..
         inx                                     ; CF67 E8                       .
         sta     $0700,x                         ; CF68 9D 00 07                 ...
-LCF6B:
-LCF6C           := * + 1
         dec     $0B                             ; CF6B C6 0B                    ..
         beq     LCF7D                           ; CF6D F0 0E                    ..
 LCF6F:
@@ -9278,7 +9184,6 @@ LCF92:
         lda     $07                             ; CFC4 A5 07                    ..
         clc                                     ; CFC6 18                       .
         adc     $08                             ; CFC7 65 08                    e.
-LCFC9:
         sta     $0700,x                         ; CFC9 9D 00 07                 ...
         inx                                     ; CFCC E8                       .
         lda     $06                             ; CFCD A5 06                    ..
@@ -9309,10 +9214,8 @@ LCFD4:
 LCFFB:
         inx                                     ; CFFB E8                       .
         jsr     L0100                           ; CFFC 20 00 01                  ..
-LD000           := * + 1
         sta     $0700,x                         ; CFFF 9D 00 07                 ...
         iny                                     ; D002 C8                       .
-LD003:
         dec     $09                             ; D003 C6 09                    ..
         bne     LCFFB                           ; D005 D0 F4                    ..
         txa                                     ; D007 8A                       .
@@ -9370,7 +9273,6 @@ LD056:
         clc                                     ; D05A 18                       .
         adc     $0A                             ; D05B 65 0A                    e.
         sta     L0002                           ; D05D 85 02                    ..
-LD05F:
         lda     $03                             ; D05F A5 03                    ..
         adc     #$00                            ; D061 69 00                    i.
         sta     $03                             ; D063 85 03                    ..
@@ -9379,9 +9281,7 @@ LD05F:
         adc     $0A                             ; D068 65 0A                    e.
         sta     $04                             ; D06A 85 04                    ..
         lda     $05                             ; D06C A5 05                    ..
-LD06E:
         adc     #$00                            ; D06E 69 00                    i.
-LD071           := * + 1
         sta     $05                             ; D070 85 05                    ..
         pla                                     ; D072 68                       h
         tax                                     ; D073 AA                       .
@@ -9429,7 +9329,6 @@ LD0B4:
         ora     $0C                             ; D0C2 05 0C                    ..
         inx                                     ; D0C4 E8                       .
         sta     $0700,x                         ; D0C5 9D 00 07                 ...
-LD0C9           := * + 1
         jmp     LD12D                           ; D0C8 4C 2D D1                 L-.
 
 ; ----------------------------------------------------------------------------
@@ -10965,5523 +10864,1067 @@ LD9CC:
 
 ; ----------------------------------------------------------------------------
         brk                                     ; D9CF 00                       .
-LD9D0:
-        .byte   $FF                             ; D9D0 FF                       .
-        brk                                     ; D9D1 00                       .
-        asl     L0100                           ; D9D2 0E 00 01                 ...
-        .byte   $9F                             ; D9D5 9F                       .
-        brk                                     ; D9D6 00                       .
-        .byte   $02                             ; D9D7 02                       .
-        rol     L0301,x                         ; D9D8 3E 01 03                 >..
-        .byte   $C7                             ; D9DB C7                       .
-        ora     ($FF,x)                         ; D9DC 01 FF                    ..
-        cpy     LC747                           ; D9DE CC 47 C7                 .G.
-        .byte   $FF                             ; D9E1 FF                       .
-        cpy     $6D                             ; D9E2 C4 6D                    .m
-        cmp     a:$03                           ; D9E4 CD 03 00                 ...
-        .byte   $DB                             ; D9E7 DB                       .
-        .byte   $07                             ; D9E8 07                       .
-        brk                                     ; D9E9 00                       .
-        asl     LD878,x                         ; D9EA 1E 78 D8                 .x.
-        brk                                     ; D9ED 00                       .
-        dec     LCD06,x                         ; D9EE DE 06 CD                 ...
-        .byte   $03                             ; D9F1 03                       .
-        ora     ($D8,x)                         ; D9F2 01 D8                    ..
-        .byte   $0C                             ; D9F4 0C                       .
-        php                                     ; D9F5 08                       .
-        ora     $6C                             ; D9F6 05 6C                    .l
-        .byte   $02                             ; D9F8 02                       .
-        ror     $0470                           ; D9F9 6E 70 04                 np.
-        .byte   $77                             ; D9FC 77                       w
-        asl     $75                             ; D9FD 06 75                    .u
-        .byte   $02                             ; D9FF 02                       .
-        jmp     (L706E)                         ; DA00 6C 6E 70                 lnp
-
-; ----------------------------------------------------------------------------
-        .byte   $73                             ; DA03 73                       s
-        adc     ($6C),y                         ; DA04 71 6C                    ql
-        ror     L6C04                           ; DA06 6E 04 6C                 n.l
-        .byte   $02                             ; DA09 02                       .
-        ror     $0470                           ; DA0A 6E 70 04                 np.
-        .byte   $77                             ; DA0D 77                       w
-        asl     $75                             ; DA0E 06 75                    .u
-        .byte   $02                             ; DA10 02                       .
-        jmp     (L706E)                         ; DA11 6C 6E 70                 lnp
-
-; ----------------------------------------------------------------------------
-        .byte   $04                             ; DA14 04                       .
-        .byte   $73                             ; DA15 73                       s
-        .byte   $02                             ; DA16 02                       .
-        adc     ($69),y                         ; DA17 71 69                    qi
-        asl     $70                             ; DA19 06 70                    .p
-        .byte   $02                             ; DA1B 02                       .
-        ror     L6C04                           ; DA1C 6E 04 6C                 n.l
-        .byte   $6B                             ; DA1F 6B                       k
-        asl     a                               ; DA20 0A                       .
-        cmp     #$02                            ; DA21 C9 02                    ..
-        bvs     LDA96                           ; DA23 70 71                    pq
-        bvs     LDA28                           ; DA25 70 01                    p.
-LDA28           := * + 1
-        bvs     LDA97                           ; DA27 70 6E                    pn
-        ror     $0870                           ; DA29 6E 70 08                 np.
-        adc     (L0002),y                       ; DA2C 71 02                    q.
-        cmp     #$01                            ; DA2E C9 01                    ..
-        bvs     LDAA0                           ; DA30 70 6E                    pn
-        jmp     (L0C6E)                         ; DA32 6C 6E 0C                 ln.
-
-; ----------------------------------------------------------------------------
-        bvs     LDA39                           ; DA35 70 02                    p.
-        cmp     #$01                            ; DA37 C9 01                    ..
-LDA39:
-        .byte   $73                             ; DA39 73                       s
-        adc     ($73),y                         ; DA3A 71 73                    qs
-        adc     $08,x                           ; DA3C 75 08                    u.
-        jmp     (L6C02)                         ; DA3E 6C 02 6C                 l.l
-
-; ----------------------------------------------------------------------------
-        ror     $700B                           ; DA41 6E 0B 70                 n.p
-        ora     ($C9,x)                         ; DA44 01 C9                    ..
-        bvs     LDAB9                           ; DA46 70 71                    pq
-        bvs     LDABA                           ; DA48 70 70                    pp
-        ror     L706E                           ; DA4A 6E 6E 70                 nnp
-        php                                     ; DA4D 08                       .
-        adc     ($01),y                         ; DA4E 71 01                    q.
-        cmp     #$C9                            ; DA50 C9 C9                    ..
-        bvs     LDAC2                           ; DA52 70 6E                    pn
-        .byte   $04                             ; DA54 04                       .
-        adc     #$02                            ; DA55 69 02                    i.
-        .byte   $6B                             ; DA57 6B                       k
-        jmp     (L7504)                         ; DA58 6C 04 75                 l.u
-
-; ----------------------------------------------------------------------------
-        bvs     LDA5E                           ; DA5B 70 01                    p.
-        sei                                     ; DA5D 78                       x
-LDA5E:
-        .byte   $77                             ; DA5E 77                       w
-        .byte   $77                             ; DA5F 77                       w
-        adc     $08,x                           ; DA60 75 08                    u.
-        adc     $01,x                           ; DA62 75 01                    u.
-        cmp     #$75                            ; DA64 C9 75                    .u
-        .byte   $77                             ; DA66 77                       w
-        adc     $73,x                           ; DA67 75 73                    us
-        ror     L706E                           ; DA69 6E 6E 70                 nnp
-        ora     LD071                           ; DA6C 0D 71 D0                 .q.
-        cpy     LC747                           ; DA6F CC 47 C7                 .G.
-        .byte   $FF                             ; DA72 FF                       .
-        cpy     $66                             ; DA73 C4 66                    .f
-        cmp     a:$03                           ; DA75 CD 03 00                 ...
-        .byte   $DB                             ; DA78 DB                       .
-        .byte   $07                             ; DA79 07                       .
-        brk                                     ; DA7A 00                       .
-        asl     LD878,x                         ; DA7B 1E 78 D8                 .x.
-        brk                                     ; DA7E 00                       .
-        dec     LCD06,x                         ; DA7F DE 06 CD                 ...
-        .byte   $03                             ; DA82 03                       .
-        ora     ($D8,x)                         ; DA83 01 D8                    ..
-        .byte   $0C                             ; DA85 0C                       .
-        php                                     ; DA86 08                       .
-        ora     $60                             ; DA87 05 60                    .`
-        .byte   $02                             ; DA89 02                       .
-        .byte   $62                             ; DA8A 62                       b
-        .byte   $64                             ; DA8B 64                       d
-        .byte   $04                             ; DA8C 04                       .
-        .byte   $6B                             ; DA8D 6B                       k
-        asl     $69                             ; DA8E 06 69                    .i
-        .byte   $02                             ; DA90 02                       .
-        rts                                     ; DA91 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $62                             ; DA92 62                       b
-        .byte   $64                             ; DA93 64                       d
-        .byte   $67                             ; DA94 67                       g
-LDA96           := * + 1
-        adc     $60                             ; DA95 65 60                    e`
-LDA97:
-        .byte   $62                             ; DA97 62                       b
-        .byte   $04                             ; DA98 04                       .
-        rts                                     ; DA99 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; DA9A 02                       .
-        .byte   $62                             ; DA9B 62                       b
-        .byte   $64                             ; DA9C 64                       d
-        .byte   $04                             ; DA9D 04                       .
-        .byte   $6B                             ; DA9E 6B                       k
-LDAA0           := * + 1
-        asl     $69                             ; DA9F 06 69                    .i
-        .byte   $02                             ; DAA1 02                       .
-        rts                                     ; DAA2 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $62                             ; DAA3 62                       b
-        .byte   $64                             ; DAA4 64                       d
-        .byte   $04                             ; DAA5 04                       .
-        .byte   $67                             ; DAA6 67                       g
-        .byte   $02                             ; DAA7 02                       .
-        adc     $5D                             ; DAA8 65 5D                    e]
-        asl     $64                             ; DAAA 06 64                    .d
-        .byte   $02                             ; DAAC 02                       .
-        .byte   $62                             ; DAAD 62                       b
-        .byte   $04                             ; DAAE 04                       .
-        rts                                     ; DAAF 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $5F                             ; DAB0 5F                       _
-        ora     ($C9,x)                         ; DAB1 01 C9                    ..
-        rts                                     ; DAB3 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $64                             ; DAB4 64                       d
-        rts                                     ; DAB5 60                       `
-
-; ----------------------------------------------------------------------------
-        dec     LE104                           ; DAB6 CE 04 E1                 ...
-LDAB9:
-        brk                                     ; DAB9 00                       .
-LDABA:
-        lsr     $5D,x                           ; DABA 56 5D                    V]
-        .byte   $62                             ; DABC 62                       b
-        eor     $04CF,x                         ; DABD 5D CF 04                 ]..
-        nop                                     ; DAC0 EA                       .
-        brk                                     ; DAC1 00                       .
-LDAC2:
-        cmp     #$5B                            ; DAC2 C9 5B                    .[
-        rts                                     ; DAC4 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $5B                             ; DAC5 5B                       [
-        .byte   $54                             ; DAC6 54                       T
-        dec     LF303                           ; DAC7 CE 03 F3                 ...
-        brk                                     ; DACA 00                       .
-        .byte   $5B                             ; DACB 5B                       [
-        rts                                     ; DACC 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $5B                             ; DACD 5B                       [
-        eor     $605D,y                         ; DACE 59 5D 60                 Y]`
-        eor     $5D59,x                         ; DAD1 5D 59 5D                 ]Y]
-        rts                                     ; DAD4 60                       `
-
-; ----------------------------------------------------------------------------
-        eor     L60C9,x                         ; DAD5 5D C9 60                 ].`
-        adc     $60                             ; DAD8 65 60                    e`
-        cmp     #$60                            ; DADA C9 60                    .`
-        adc     $60                             ; DADC 65 60                    e`
-        .byte   $04                             ; DADE 04                       .
-        .byte   $5B                             ; DADF 5B                       [
-        .byte   $02                             ; DAE0 02                       .
-        rts                                     ; DAE1 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $64                             ; DAE2 64                       d
-        .byte   $04                             ; DAE3 04                       .
-        .byte   $5F                             ; DAE4 5F                       _
-        .byte   $0C                             ; DAE5 0C                       .
-        rts                                     ; DAE6 60                       `
-
-; ----------------------------------------------------------------------------
-        ora     ($C9,x)                         ; DAE7 01 C9                    ..
-        .byte   $62                             ; DAE9 62                       b
-        adc     $62                             ; DAEA 65 62                    eb
-        cmp     #$62                            ; DAEC C9 62                    .b
-        adc     $62                             ; DAEE 65 62                    eb
-        cmp     #$60                            ; DAF0 C9 60                    .`
-        .byte   $64                             ; DAF2 64                       d
-        rts                                     ; DAF3 60                       `
-
-; ----------------------------------------------------------------------------
-        cmp     #$60                            ; DAF4 C9 60                    .`
-        .byte   $64                             ; DAF6 64                       d
-        rts                                     ; DAF7 60                       `
-
-; ----------------------------------------------------------------------------
-        cmp     #$60                            ; DAF8 C9 60                    .`
-        .byte   $64                             ; DAFA 64                       d
-        rts                                     ; DAFB 60                       `
-
-; ----------------------------------------------------------------------------
-        cmp     #$60                            ; DAFC C9 60                    .`
-        .byte   $64                             ; DAFE 64                       d
-        rts                                     ; DAFF 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $04                             ; DB00 04                       .
-        eor     $6002,x                         ; DB01 5D 02 60                 ].`
-        .byte   $67                             ; DB04 67                       g
-        php                                     ; DB05 08                       .
-        adc     $03                             ; DB06 65 03                    e.
-        .byte   $62                             ; DB08 62                       b
-        ora     ($60,x)                         ; DB09 01 60                    .`
-        ora     LD05F                           ; DB0B 0D 5F D0                 ._.
-        cpy     LC747                           ; DB0E CC 47 C7                 .G.
-        .byte   $FF                             ; DB11 FF                       .
-        cpy     $6D                             ; DB12 C4 6D                    .m
-        cmp     a:$03                           ; DB14 CD 03 00                 ...
-        .byte   $DB                             ; DB17 DB                       .
-        .byte   $07                             ; DB18 07                       .
-        brk                                     ; DB19 00                       .
-        asl     LD878,x                         ; DB1A 1E 78 D8                 .x.
-        brk                                     ; DB1D 00                       .
-        dec     LCD06,x                         ; DB1E DE 06 CD                 ...
-        .byte   $03                             ; DB21 03                       .
-        ora     ($D8,x)                         ; DB22 01 D8                    ..
-        .byte   $0C                             ; DB24 0C                       .
-        php                                     ; DB25 08                       .
-        ora     #$54                            ; DB26 09 54                    .T
-        php                                     ; DB28 08                       .
-        eor     ($54),y                         ; DB29 51 54                    QT
-        .byte   $04                             ; DB2B 04                       .
-        bvc     LDB80                           ; DB2C 50 52                    PR
-        php                                     ; DB2E 08                       .
-        .byte   $54                             ; DB2F 54                       T
-        eor     ($54),y                         ; DB30 51 54                    QT
-        eor     $4F56                           ; DB32 4D 56 4F                 MVO
-        ora     ($54,x)                         ; DB35 01 54                    .T
-        .byte   $5B                             ; DB37 5B                       [
-        rts                                     ; DB38 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $5B                             ; DB39 5B                       [
-        dec     $6604                           ; DB3A CE 04 66                 ..f
-        ora     ($10,x)                         ; DB3D 01 10                    ..
-        eor     $5404,x                         ; DB3F 5D 04 54                 ].T
-        .byte   $02                             ; DB42 02                       .
-        lsr     $58,x                           ; DB43 56 58                    VX
-        .byte   $04                             ; DB45 04                       .
-        .byte   $5F                             ; DB46 5F                       _
-        .byte   $0C                             ; DB47 0C                       .
-        eor     $5901,x                         ; DB48 5D 01 59                 ].Y
-        eor     $5D60,x                         ; DB4B 5D 60 5D                 ]`]
-        eor     $605D,y                         ; DB4E 59 5D 60                 Y]`
-        eor     $5B54,x                         ; DB51 5D 54 5B                 ]T[
-        rts                                     ; DB54 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $5B                             ; DB55 5B                       [
-        .byte   $54                             ; DB56 54                       T
-        .byte   $5B                             ; DB57 5B                       [
-        rts                                     ; DB58 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $5B                             ; DB59 5B                       [
-        .byte   $54                             ; DB5A 54                       T
-        .byte   $5B                             ; DB5B 5B                       [
-        rts                                     ; DB5C 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $5B                             ; DB5D 5B                       [
-        .byte   $54                             ; DB5E 54                       T
-        .byte   $5B                             ; DB5F 5B                       [
-        rts                                     ; DB60 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $5B                             ; DB61 5B                       [
-        lsr     $59,x                           ; DB62 56 59                    VY
-LDB64:
-        eor     $5659,x                         ; DB64 5D 59 56                 ]YV
-        eor     $595D,y                         ; DB67 59 5D 59                 Y]Y
-        lsr     $59,x                           ; DB6A 56 59                    VY
-        eor     $5659,x                         ; DB6C 5D 59 56                 ]YV
-        eor     $595D,y                         ; DB6F 59 5D 59                 Y]Y
-        eor     ($58),y                         ; DB72 51 58                    QX
-        eor     $5158,x                         ; DB74 5D 58 51                 ]XQ
-        cli                                     ; DB77 58                       X
-        eor     $5158,x                         ; DB78 5D 58 51                 ]XQ
-        cli                                     ; DB7B 58                       X
-        eor     $5158,x                         ; DB7C 5D 58 51                 ]XQ
-        cli                                     ; DB7F 58                       X
-LDB80:
-        eor     $0A58,x                         ; DB80 5D 58 0A                 ]X.
-        eor     $5902                           ; DB83 4D 02 59                 M.Y
-        .byte   $5B                             ; DB86 5B                       [
-        eor     $5F03,x                         ; DB87 5D 03 5F                 ]._
-        ora     ($5B,x)                         ; DB8A 01 5B                    .[
-        .byte   $03                             ; DB8C 03                       .
-        eor     $5801,y                         ; DB8D 59 01 58                 Y.X
-        .byte   $03                             ; DB90 03                       .
-        lsr     $01,x                           ; DB91 56 01                    V.
-        .byte   $54                             ; DB93 54                       T
-        ora     $53                             ; DB94 05 53                    .S
-        bne     LDB64                           ; DB96 D0 CC                    ..
-        .byte   $47                             ; DB98 47                       G
-        .byte   $C7                             ; DB99 C7                       .
-        .byte   $FF                             ; DB9A FF                       .
-        cpy     $6D                             ; DB9B C4 6D                    .m
-        cmp     a:$03                           ; DB9D CD 03 00                 ...
-        .byte   $DB                             ; DBA0 DB                       .
-        .byte   $07                             ; DBA1 07                       .
-        brk                                     ; DBA2 00                       .
-        asl     LD878,x                         ; DBA3 1E 78 D8                 .x.
-        brk                                     ; DBA6 00                       .
-        dec     LCD06,x                         ; DBA7 DE 06 CD                 ...
-        .byte   $03                             ; DBAA 03                       .
-        ora     ($D8,x)                         ; DBAB 01 D8                    ..
-        .byte   $0C                             ; DBAD 0C                       .
-        php                                     ; DBAE 08                       .
-        .byte   $3F                             ; DBAF 3F                       ?
-        cmp     #$C9                            ; DBB0 C9 C9                    ..
-        cmp     #$C9                            ; DBB2 C9 C9                    ..
-        cmp     #$D0                            ; DBB4 C9 D0                    ..
+MusicOverworldTheme:
+        .byte   $FF,$00,$0E,$00,$01,$9F,$00,$02 ; D9D0 FF 00 0E 00 01 9F 00 02  ........
+        .byte   $3E,$01,$03,$C7,$01,$FF,$CC,$47 ; D9D8 3E 01 03 C7 01 FF CC 47  >......G
+        .byte   $C7,$FF,$C4,$6D,$CD,$03,$00,$DB ; D9E0 C7 FF C4 6D CD 03 00 DB  ...m....
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; D9E8 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$05,$6C ; D9F0 CD 03 01 D8 0C 08 05 6C  .......l
+        .byte   $02,$6E,$70,$04,$77,$06,$75,$02 ; D9F8 02 6E 70 04 77 06 75 02  .np.w.u.
+        .byte   $6C,$6E,$70,$73,$71,$6C,$6E,$04 ; DA00 6C 6E 70 73 71 6C 6E 04  lnpsqln.
+        .byte   $6C,$02,$6E,$70,$04,$77,$06,$75 ; DA08 6C 02 6E 70 04 77 06 75  l.np.w.u
+        .byte   $02,$6C,$6E,$70,$04,$73,$02,$71 ; DA10 02 6C 6E 70 04 73 02 71  .lnp.s.q
+        .byte   $69,$06,$70,$02,$6E,$04,$6C,$6B ; DA18 69 06 70 02 6E 04 6C 6B  i.p.n.lk
+        .byte   $0A,$C9,$02,$70,$71,$70,$01,$70 ; DA20 0A C9 02 70 71 70 01 70  ...pqp.p
+        .byte   $6E,$6E,$70,$08,$71,$02,$C9,$01 ; DA28 6E 6E 70 08 71 02 C9 01  nnp.q...
+        .byte   $70,$6E,$6C,$6E,$0C,$70,$02,$C9 ; DA30 70 6E 6C 6E 0C 70 02 C9  pnln.p..
+        .byte   $01,$73,$71,$73,$75,$08,$6C,$02 ; DA38 01 73 71 73 75 08 6C 02  .sqsu.l.
+        .byte   $6C,$6E,$0B,$70,$01,$C9,$70,$71 ; DA40 6C 6E 0B 70 01 C9 70 71  ln.p..pq
+        .byte   $70,$70,$6E,$6E,$70,$08,$71,$01 ; DA48 70 70 6E 6E 70 08 71 01  ppnnp.q.
+        .byte   $C9,$C9,$70,$6E,$04,$69,$02,$6B ; DA50 C9 C9 70 6E 04 69 02 6B  ..pn.i.k
+        .byte   $6C,$04,$75,$70,$01,$78,$77,$77 ; DA58 6C 04 75 70 01 78 77 77  l.up.xww
+        .byte   $75,$08,$75,$01,$C9,$75,$77,$75 ; DA60 75 08 75 01 C9 75 77 75  u.u..uwu
+        .byte   $73,$6E,$6E,$70,$0D,$71,$D0,$CC ; DA68 73 6E 6E 70 0D 71 D0 CC  snnp.q..
+        .byte   $47,$C7,$FF,$C4,$66,$CD,$03,$00 ; DA70 47 C7 FF C4 66 CD 03 00  G...f...
+        .byte   $DB,$07,$00,$1E,$78,$D8,$00,$DE ; DA78 DB 07 00 1E 78 D8 00 DE  ....x...
+        .byte   $06,$CD,$03,$01,$D8,$0C,$08,$05 ; DA80 06 CD 03 01 D8 0C 08 05  ........
+        .byte   $60,$02,$62,$64,$04,$6B,$06,$69 ; DA88 60 02 62 64 04 6B 06 69  `.bd.k.i
+        .byte   $02,$60,$62,$64,$67,$65,$60,$62 ; DA90 02 60 62 64 67 65 60 62  .`bdge`b
+        .byte   $04,$60,$02,$62,$64,$04,$6B,$06 ; DA98 04 60 02 62 64 04 6B 06  .`.bd.k.
+        .byte   $69,$02,$60,$62,$64,$04,$67,$02 ; DAA0 69 02 60 62 64 04 67 02  i.`bd.g.
+        .byte   $65,$5D,$06,$64,$02,$62,$04,$60 ; DAA8 65 5D 06 64 02 62 04 60  e].d.b.`
+        .byte   $5F,$01,$C9,$60,$64,$60,$CE,$04 ; DAB0 5F 01 C9 60 64 60 CE 04  _..`d`..
+        .byte   $E1,$00,$56,$5D,$62,$5D,$CF,$04 ; DAB8 E1 00 56 5D 62 5D CF 04  ..V]b]..
+        .byte   $EA,$00,$C9,$5B,$60,$5B,$54,$CE ; DAC0 EA 00 C9 5B 60 5B 54 CE  ...[`[T.
+        .byte   $03,$F3,$00,$5B,$60,$5B,$59,$5D ; DAC8 03 F3 00 5B 60 5B 59 5D  ...[`[Y]
+        .byte   $60,$5D,$59,$5D,$60,$5D,$C9,$60 ; DAD0 60 5D 59 5D 60 5D C9 60  `]Y]`].`
+        .byte   $65,$60,$C9,$60,$65,$60,$04,$5B ; DAD8 65 60 C9 60 65 60 04 5B  e`.`e`.[
+        .byte   $02,$60,$64,$04,$5F,$0C,$60,$01 ; DAE0 02 60 64 04 5F 0C 60 01  .`d._.`.
+        .byte   $C9,$62,$65,$62,$C9,$62,$65,$62 ; DAE8 C9 62 65 62 C9 62 65 62  .beb.beb
+        .byte   $C9,$60,$64,$60,$C9,$60,$64,$60 ; DAF0 C9 60 64 60 C9 60 64 60  .`d`.`d`
+        .byte   $C9,$60,$64,$60,$C9,$60,$64,$60 ; DAF8 C9 60 64 60 C9 60 64 60  .`d`.`d`
+        .byte   $04,$5D,$02,$60,$67,$08,$65,$03 ; DB00 04 5D 02 60 67 08 65 03  .].`g.e.
+        .byte   $62,$01,$60,$0D,$5F,$D0,$CC,$47 ; DB08 62 01 60 0D 5F D0 CC 47  b.`._..G
+        .byte   $C7,$FF,$C4,$6D,$CD,$03,$00,$DB ; DB10 C7 FF C4 6D CD 03 00 DB  ...m....
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; DB18 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$09,$54 ; DB20 CD 03 01 D8 0C 08 09 54  .......T
+        .byte   $08,$51,$54,$04,$50,$52,$08,$54 ; DB28 08 51 54 04 50 52 08 54  .QT.PR.T
+        .byte   $51,$54,$4D,$56,$4F,$01,$54,$5B ; DB30 51 54 4D 56 4F 01 54 5B  QTMVO.T[
+        .byte   $60,$5B,$CE,$04,$66,$01,$10,$5D ; DB38 60 5B CE 04 66 01 10 5D  `[..f..]
+        .byte   $04,$54,$02,$56,$58,$04,$5F,$0C ; DB40 04 54 02 56 58 04 5F 0C  .T.VX._.
+        .byte   $5D,$01,$59,$5D,$60,$5D,$59,$5D ; DB48 5D 01 59 5D 60 5D 59 5D  ].Y]`]Y]
+        .byte   $60,$5D,$54,$5B,$60,$5B,$54,$5B ; DB50 60 5D 54 5B 60 5B 54 5B  `]T[`[T[
+        .byte   $60,$5B,$54,$5B,$60,$5B,$54,$5B ; DB58 60 5B 54 5B 60 5B 54 5B  `[T[`[T[
+        .byte   $60,$5B,$56,$59,$5D,$59,$56,$59 ; DB60 60 5B 56 59 5D 59 56 59  `[VY]YVY
+        .byte   $5D,$59,$56,$59,$5D,$59,$56,$59 ; DB68 5D 59 56 59 5D 59 56 59  ]YVY]YVY
+        .byte   $5D,$59,$51,$58,$5D,$58,$51,$58 ; DB70 5D 59 51 58 5D 58 51 58  ]YQX]XQX
+        .byte   $5D,$58,$51,$58,$5D,$58,$51,$58 ; DB78 5D 58 51 58 5D 58 51 58  ]XQX]XQX
+        .byte   $5D,$58,$0A,$4D,$02,$59,$5B,$5D ; DB80 5D 58 0A 4D 02 59 5B 5D  ]X.M.Y[]
+        .byte   $03,$5F,$01,$5B,$03,$59,$01,$58 ; DB88 03 5F 01 5B 03 59 01 58  ._.[.Y.X
+        .byte   $03,$56,$01,$54,$05,$53,$D0,$CC ; DB90 03 56 01 54 05 53 D0 CC  .V.T.S..
+        .byte   $47,$C7,$FF,$C4,$6D,$CD,$03,$00 ; DB98 47 C7 FF C4 6D CD 03 00  G...m...
+        .byte   $DB,$07,$00,$1E,$78,$D8,$00,$DE ; DBA0 DB 07 00 1E 78 D8 00 DE  ....x...
+        .byte   $06,$CD,$03,$01,$D8,$0C,$08,$3F ; DBA8 06 CD 03 01 D8 0C 08 3F  .......?
+        .byte   $C9,$C9,$C9,$C9,$C9,$D0         ; DBB0 C9 C9 C9 C9 C9 D0        ......
 LDBB6:
-        .byte   $FF                             ; DBB6 FF                       .
-        brk                                     ; DBB7 00                       .
-        asl     L0100                           ; DBB8 0E 00 01                 ...
-        .byte   $62                             ; DBBB 62                       b
-        brk                                     ; DBBC 00                       .
-        .byte   $02                             ; DBBD 02                       .
-        .byte   $BB                             ; DBBE BB                       .
-        brk                                     ; DBBF 00                       .
-        .byte   $03                             ; DBC0 03                       .
-        dec     $00,x                           ; DBC1 D6 00                    ..
-        .byte   $FF                             ; DBC3 FF                       .
-        cpy     LC7C8                           ; DBC4 CC C8 C7                 ...
-        .byte   $FF                             ; DBC7 FF                       .
-        cpy     $6E                             ; DBC8 C4 6E                    .n
-        cmp     a:$03                           ; DBCA CD 03 00                 ...
-        .byte   $DB                             ; DBCD DB                       .
-        .byte   $07                             ; DBCE 07                       .
-        brk                                     ; DBCF 00                       .
-        asl     LD878,x                         ; DBD0 1E 78 D8                 .x.
-        brk                                     ; DBD3 00                       .
-        dec     LCD06,x                         ; DBD4 DE 06 CD                 ...
-        .byte   $03                             ; DBD7 03                       .
-        ora     ($D8,x)                         ; DBD8 01 D8                    ..
-        brk                                     ; DBDA 00                       .
-        .byte   $04                             ; DBDB 04                       .
-        adc     ($6F),y                         ; DBDC 71 6F                    qo
-        ror     $086F                           ; DBDE 6E 6F 08                 no.
-        adc     ($04),y                         ; DBE1 71 04                    q.
-        .byte   $67                             ; DBE3 67                       g
-        ror     a                               ; DBE4 6A                       j
-        ror     $146C                           ; DBE5 6E 6C 14                 nl.
-        jmp     (LC904)                         ; DBE8 6C 04 C9                 l..
-
-; ----------------------------------------------------------------------------
-        jmp     (L7173)                         ; DBEB 6C 73 71                 lsq
-
-; ----------------------------------------------------------------------------
-        .byte   $6F                             ; DBEE 6F                       o
-        .byte   $0C                             ; DBEF 0C                       .
-        adc     (L0002),y                       ; DBF0 71 02                    q.
-        .byte   $73                             ; DBF2 73                       s
-        adc     $04,x                           ; DBF3 75 04                    u.
-        ror     $73,x                           ; DBF5 76 73                    vs
-        .byte   $14                             ; DBF7 14                       .
-        .byte   $73                             ; DBF8 73                       s
-        .byte   $04                             ; DBF9 04                       .
-        cmp     #$73                            ; DBFA C9 73                    .s
-        .byte   $74                             ; DBFC 74                       t
-        .byte   $73                             ; DBFD 73                       s
-        adc     ($0C),y                         ; DBFE 71 0C                    q.
-        .byte   $6F                             ; DC00 6F                       o
-        .byte   $04                             ; DC01 04                       .
-        adc     ($73),y                         ; DC02 71 73                    qs
-        .byte   $67                             ; DC04 67                       g
-        pla                                     ; DC05 68                       h
-        ror     a                               ; DC06 6A                       j
-        ror     $6C0C                           ; DC07 6E 0C 6C                 n.l
-        .byte   $04                             ; DC0A 04                       .
-        jmp     (L7173)                         ; DC0B 6C 73 71                 lsq
-
-; ----------------------------------------------------------------------------
-        .byte   $6F                             ; DC0E 6F                       o
-        .byte   $0C                             ; DC0F 0C                       .
-        adc     ($08),y                         ; DC10 71 08                    q.
-        ror     $6F18                           ; DC12 6E 18 6F                 n.o
-        .byte   $04                             ; DC15 04                       .
-        cmp     #$D0                            ; DC16 C9 D0                    ..
-        cpy     LC7FE                           ; DC18 CC FE C7                 ...
-        .byte   $FF                             ; DC1B FF                       .
-        cpy     $0E                             ; DC1C C4 0E                    ..
-        cmp     a:$03                           ; DC1E CD 03 00                 ...
-        .byte   $DB                             ; DC21 DB                       .
-        .byte   $07                             ; DC22 07                       .
-        brk                                     ; DC23 00                       .
-        asl     LD878,x                         ; DC24 1E 78 D8                 .x.
-        brk                                     ; DC27 00                       .
-        dec     LCD06,x                         ; DC28 DE 06 CD                 ...
-        .byte   $03                             ; DC2B 03                       .
-        ora     ($D8,x)                         ; DC2C 01 D8                    ..
-        brk                                     ; DC2E 00                       .
-        .byte   $04                             ; DC2F 04                       .
-        cmp     #$57                            ; DC30 C9 57                    .W
-        .byte   $5B                             ; DC32 5B                       [
-        .byte   $57                             ; DC33 57                       W
-        .byte   $63                             ; DC34 63                       c
-        .byte   $57                             ; DC35 57                       W
-        .byte   $5B                             ; DC36 5B                       [
-        .byte   $57                             ; DC37 57                       W
-        cmp     #$57                            ; DC38 C9 57                    .W
-        .byte   $5B                             ; DC3A 5B                       [
-        .byte   $57                             ; DC3B 57                       W
-        rts                                     ; DC3C 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $57                             ; DC3D 57                       W
-LDC3E:
-        .byte   $5B                             ; DC3E 5B                       [
-        .byte   $57                             ; DC3F 57                       W
-        cmp     #$59                            ; DC40 C9 59                    .Y
-        .byte   $5C                             ; DC42 5C                       \
-        rts                                     ; DC43 60                       `
-
-; ----------------------------------------------------------------------------
-        cmp     #$59                            ; DC44 C9 59                    .Y
-        lsr     LC962,x                         ; DC46 5E 62 C9                 ^b.
-        .byte   $5B                             ; DC49 5B                       [
-        lsr     $625B,x                         ; DC4A 5E 5B 62                 ^[b
-        .byte   $5B                             ; DC4D 5B                       [
-        lsr     LC95B,x                         ; DC4E 5E 5B C9                 ^[.
-        .byte   $5B                             ; DC51 5B                       [
-        rts                                     ; DC52 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $63                             ; DC53 63                       c
-        cmp     #$5A                            ; DC54 C9 5A                    .Z
-        .byte   $5F                             ; DC56 5F                       _
-        .byte   $63                             ; DC57 63                       c
-LDC59           := * + 1
-        cmp     #$57                            ; DC58 C9 57                    .W
-        .byte   $5B                             ; DC5A 5B                       [
-        .byte   $63                             ; DC5B 63                       c
-        cmp     #$57                            ; DC5C C9 57                    .W
-        .byte   $5B                             ; DC5E 5B                       [
-        rts                                     ; DC5F 60                       `
-
-; ----------------------------------------------------------------------------
-        cmp     #$59                            ; DC60 C9 59                    .Y
-        .byte   $5C                             ; DC62 5C                       \
-        rts                                     ; DC63 60                       `
-
-; ----------------------------------------------------------------------------
-        cmp     #$59                            ; DC64 C9 59                    .Y
-        lsr     LC962,x                         ; DC66 5E 62 C9                 ^b.
-        .byte   $57                             ; DC69 57                       W
-        .byte   $5B                             ; DC6A 5B                       [
-        .byte   $57                             ; DC6B 57                       W
-        .byte   $63                             ; DC6C 63                       c
-        .byte   $57                             ; DC6D 57                       W
-        .byte   $5B                             ; DC6E 5B                       [
-        .byte   $57                             ; DC6F 57                       W
-        bne     LDC3E                           ; DC70 D0 CC                    ..
-        inc     LFFC7,x                         ; DC72 FE C7 FF                 ...
-        cpy     $6E                             ; DC75 C4 6E                    .n
-        .byte   $DB                             ; DC77 DB                       .
-        .byte   $07                             ; DC78 07                       .
-        brk                                     ; DC79 00                       .
-        asl     LD878,x                         ; DC7A 1E 78 D8                 .x.
-        brk                                     ; DC7D 00                       .
-        dec     $2006,x                         ; DC7E DE 06 20                 .. 
-        .byte   $67                             ; DC81 67                       g
-        .byte   $63                             ; DC82 63                       c
-        adc     $67                             ; DC83 65 67                    eg
-        pla                                     ; DC85 68                       h
-        .byte   $67                             ; DC86 67                       g
-        jmp     (L6B10)                         ; DC87 6C 10 6B                 l.k
-
-; ----------------------------------------------------------------------------
-        ror     a                               ; DC8A 6A                       j
-        bne     LDC59                           ; DC8B D0 CC                    ..
-        inc     LFFC7,x                         ; DC8D FE C7 FF                 ...
-        cpy     $4E                             ; DC90 C4 4E                    .N
-        cmp     a:$45                           ; DC92 CD 45 00                 .E.
-        cld                                     ; DC95 D8                       .
-        brk                                     ; DC96 00                       .
-        dec     $2006,x                         ; DC97 DE 06 20                 .. 
-        cmp     #$C9                            ; DC9A C9 C9                    ..
-        cmp     #$C9                            ; DC9C C9 C9                    ..
-        cmp     #$C9                            ; DC9E C9 C9                    ..
-        cmp     #$C9                            ; DCA0 C9 C9                    ..
-LDCA3           := * + 1
-        bne     LDCA3                           ; DCA2 D0 FF                    ..
-        brk                                     ; DCA4 00                       .
-        asl     L0100                           ; DCA5 0E 00 01                 ...
-        .byte   $33                             ; DCA8 33                       3
-        brk                                     ; DCA9 00                       .
-        .byte   $02                             ; DCAA 02                       .
-        .byte   $62                             ; DCAB 62                       b
-        brk                                     ; DCAC 00                       .
-        .byte   $03                             ; DCAD 03                       .
-        ldx     $00,y                           ; DCAE B6 00                    ..
-        .byte   $FF                             ; DCB0 FF                       .
-        cpy     LC7C8                           ; DCB1 CC C8 C7                 ...
-        .byte   $FF                             ; DCB4 FF                       .
-        cpy     $6E                             ; DCB5 C4 6E                    .n
-        cmp     a:$03                           ; DCB7 CD 03 00                 ...
-        .byte   $DB                             ; DCBA DB                       .
-        .byte   $07                             ; DCBB 07                       .
-        brk                                     ; DCBC 00                       .
-        asl     LD878,x                         ; DCBD 1E 78 D8                 .x.
-        brk                                     ; DCC0 00                       .
-        dec     LCD06,x                         ; DCC1 DE 06 CD                 ...
-        .byte   $03                             ; DCC4 03                       .
-        ora     ($D8,x)                         ; DCC5 01 D8                    ..
-        brk                                     ; DCC7 00                       .
-        bpl     LDD1C                           ; DCC8 10 52                    .R
-        cmp     #$52                            ; DCCA C9 52                    .R
-        cmp     #$52                            ; DCCC C9 52                    .R
-        cmp     #$52                            ; DCCE C9 52                    .R
-        cmp     #$52                            ; DCD0 C9 52                    .R
-LDCD2:
-        cmp     #$53                            ; DCD2 C9 53                    .S
-        cmp     #$D0                            ; DCD4 C9 D0                    ..
-        cpy     LC7FE                           ; DCD6 CC FE C7                 ...
-        .byte   $FF                             ; DCD9 FF                       .
-        cpy     $0E                             ; DCDA C4 0E                    ..
-        cmp     a:$03                           ; DCDC CD 03 00                 ...
-        .byte   $DB                             ; DCDF DB                       .
-        .byte   $07                             ; DCE0 07                       .
-        brk                                     ; DCE1 00                       .
-        asl     LD878,x                         ; DCE2 1E 78 D8                 .x.
-        brk                                     ; DCE5 00                       .
-        dec     LCD06,x                         ; DCE6 DE 06 CD                 ...
-        .byte   $03                             ; DCE9 03                       .
-        ora     ($D8,x)                         ; DCEA 01 D8                    ..
-        brk                                     ; DCEC 00                       .
-        jsr     L24C9                           ; DCED 20 C9 24                  .$
-        cmp     #$04                            ; DCF0 C9 04                    ..
-        eor     $5859,y                         ; DCF2 59 59 58                 YYX
-        .byte   $14                             ; DCF5 14                       .
-        cmp     #$04                            ; DCF6 C9 04                    ..
-        eor     $5A58,y                         ; DCF8 59 58 5A                 YXZ
-        clc                                     ; DCFB 18                       .
-        cmp     #$08                            ; DCFC C9 08                    ..
-        eor     $5A58,y                         ; DCFE 59 58 5A                 YXZ
-        eor     LC918,y                         ; DD01 59 18 C9                 Y..
-        bne     LDCD2                           ; DD04 D0 CC                    ..
-        inc     LFFC7,x                         ; DD06 FE C7 FF                 ...
-        cpy     $6E                             ; DD09 C4 6E                    .n
-        .byte   $DB                             ; DD0B DB                       .
-        .byte   $07                             ; DD0C 07                       .
-        brk                                     ; DD0D 00                       .
-        asl     LD878,x                         ; DD0E 1E 78 D8                 .x.
-        brk                                     ; DD11 00                       .
-        dec     $2006,x                         ; DD12 DE 06 20                 .. 
-        cmp     #$C9                            ; DD15 C9 C9                    ..
-        .byte   $02                             ; DD17 02                       .
-        lsr     $48                             ; DD18 46 48                    FH
-        lsr     $48                             ; DD1A 46 48                    FH
-LDD1C:
-        eor     #$4B                            ; DD1C 49 4B                    IK
-        eor     #$48                            ; DD1E 49 48                    IH
-        lsr     $48                             ; DD20 46 48                    FH
-        lsr     $48                             ; DD22 46 48                    FH
-        eor     #$4B                            ; DD24 49 4B                    IK
-LDD26:
-        eor     #$48                            ; DD26 49 48                    IH
-        lsr     $48                             ; DD28 46 48                    FH
-        lsr     $48                             ; DD2A 46 48                    FH
-        eor     #$4B                            ; DD2C 49 4B                    IK
-        eor     #$48                            ; DD2E 49 48                    IH
-        lsr     $48                             ; DD30 46 48                    FH
-        lsr     $48                             ; DD32 46 48                    FH
-        eor     #$4B                            ; DD34 49 4B                    IK
-        eor     #$48                            ; DD36 49 48                    IH
-        lsr     $48                             ; DD38 46 48                    FH
-        lsr     $48                             ; DD3A 46 48                    FH
-        eor     #$4B                            ; DD3C 49 4B                    IK
-        eor     #$48                            ; DD3E 49 48                    IH
-        lsr     $48                             ; DD40 46 48                    FH
-        lsr     $48                             ; DD42 46 48                    FH
-        eor     #$4B                            ; DD44 49 4B                    IK
-        eor     #$48                            ; DD46 49 48                    IH
-        lsr     $4B                             ; DD48 46 4B                    FK
-        eor     #$4B                            ; DD4A 49 4B                    IK
-        eor     L494B                           ; DD4C 4D 4B 49                 MKI
-        pha                                     ; DD4F 48                       H
-        lsr     $4B                             ; DD50 46 4B                    FK
-        eor     #$4B                            ; DD52 49 4B                    IK
-        eor     L494B                           ; DD54 4D 4B 49                 MKI
-        pha                                     ; DD57 48                       H
-        bne     LDD26                           ; DD58 D0 CC                    ..
-        inc     LFFC7,x                         ; DD5A FE C7 FF                 ...
-        cpy     $4E                             ; DD5D C4 4E                    .N
-        cmp     a:$45                           ; DD5F CD 45 00                 .E.
-        cld                                     ; DD62 D8                       .
-        brk                                     ; DD63 00                       .
-        dec     $0106,x                         ; DD64 DE 06 01                 ...
-        lsr     $46                             ; DD67 46 46                    FF
-        asl     $C9                             ; DD69 06 C9                    ..
-        ora     ($46,x)                         ; DD6B 01 46                    .F
-        lsr     $06                             ; DD6D 46 06                    F.
-        cmp     #$01                            ; DD6F C9 01                    ..
-        lsr     $46                             ; DD71 46 46                    FF
-        asl     $C9                             ; DD73 06 C9                    ..
-        ora     ($46,x)                         ; DD75 01 46                    .F
-        lsr     $06                             ; DD77 46 06                    F.
-        cmp     #$01                            ; DD79 C9 01                    ..
-        lsr     $46                             ; DD7B 46 46                    FF
-        asl     $C9                             ; DD7D 06 C9                    ..
-        ora     ($46,x)                         ; DD7F 01 46                    .F
-        lsr     $06                             ; DD81 46 06                    F.
-        cmp     #$01                            ; DD83 C9 01                    ..
-        lsr     $46                             ; DD85 46 46                    FF
-        asl     $C9                             ; DD87 06 C9                    ..
-        ora     ($46,x)                         ; DD89 01 46                    .F
-        lsr     $06                             ; DD8B 46 06                    F.
-        cmp     #$01                            ; DD8D C9 01                    ..
-        lsr     $46                             ; DD8F 46 46                    FF
-        asl     $C9                             ; DD91 06 C9                    ..
-        ora     ($46,x)                         ; DD93 01 46                    .F
-        lsr     $06                             ; DD95 46 06                    F.
-        cmp     #$01                            ; DD97 C9 01                    ..
-        lsr     $46                             ; DD99 46 46                    FF
-        asl     $C9                             ; DD9B 06 C9                    ..
-        ora     ($46,x)                         ; DD9D 01 46                    .F
-        lsr     $06                             ; DD9F 46 06                    F.
-        cmp     #$01                            ; DDA1 C9 01                    ..
-        lsr     $46                             ; DDA3 46 46                    FF
-        asl     $C9                             ; DDA5 06 C9                    ..
-        ora     ($46,x)                         ; DDA7 01 46                    .F
-        lsr     $06                             ; DDA9 46 06                    F.
-        cmp     #$01                            ; DDAB C9 01                    ..
-        lsr     $46                             ; DDAD 46 46                    FF
-        asl     $C9                             ; DDAF 06 C9                    ..
-        ora     ($46,x)                         ; DDB1 01 46                    .F
-        lsr     $06                             ; DDB3 46 06                    F.
-        cmp     #$01                            ; DDB5 C9 01                    ..
-        lsr     $46                             ; DDB7 46 46                    FF
-        asl     $C9                             ; DDB9 06 C9                    ..
-        ora     ($46,x)                         ; DDBB 01 46                    .F
-        lsr     $06                             ; DDBD 46 06                    F.
-        cmp     #$01                            ; DDBF C9 01                    ..
-        lsr     $46                             ; DDC1 46 46                    FF
-        asl     $C9                             ; DDC3 06 C9                    ..
-        ora     ($46,x)                         ; DDC5 01 46                    .F
-        lsr     $06                             ; DDC7 46 06                    F.
-        cmp     #$01                            ; DDC9 C9 01                    ..
-        lsr     $46                             ; DDCB 46 46                    FF
-        asl     $C9                             ; DDCD 06 C9                    ..
-        ora     ($46,x)                         ; DDCF 01 46                    .F
-        lsr     $06                             ; DDD1 46 06                    F.
-        cmp     #$01                            ; DDD3 C9 01                    ..
-        lsr     $46                             ; DDD5 46 46                    FF
-        asl     $C9                             ; DDD7 06 C9                    ..
-        ora     ($46,x)                         ; DDD9 01 46                    .F
-        lsr     $06                             ; DDDB 46 06                    F.
-        cmp     #$D0                            ; DDDD C9 D0                    ..
+        .byte   $FF,$00,$0E,$00,$01,$62,$00,$02 ; DBB6 FF 00 0E 00 01 62 00 02  .....b..
+        .byte   $BB,$00,$03,$D6,$00,$FF,$CC,$C8 ; DBBE BB 00 03 D6 00 FF CC C8  ........
+        .byte   $C7,$FF,$C4,$6E,$CD,$03,$00,$DB ; DBC6 C7 FF C4 6E CD 03 00 DB  ...n....
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; DBCE 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$00,$04,$71,$6F ; DBD6 CD 03 01 D8 00 04 71 6F  ......qo
+        .byte   $6E,$6F,$08,$71,$04,$67,$6A,$6E ; DBDE 6E 6F 08 71 04 67 6A 6E  no.q.gjn
+        .byte   $6C,$14,$6C,$04,$C9,$6C,$73,$71 ; DBE6 6C 14 6C 04 C9 6C 73 71  l.l..lsq
+        .byte   $6F,$0C,$71,$02,$73,$75,$04,$76 ; DBEE 6F 0C 71 02 73 75 04 76  o.q.su.v
+        .byte   $73,$14,$73,$04,$C9,$73,$74,$73 ; DBF6 73 14 73 04 C9 73 74 73  s.s..sts
+        .byte   $71,$0C,$6F,$04,$71,$73,$67,$68 ; DBFE 71 0C 6F 04 71 73 67 68  q.o.qsgh
+        .byte   $6A,$6E,$0C,$6C,$04,$6C,$73,$71 ; DC06 6A 6E 0C 6C 04 6C 73 71  jn.l.lsq
+        .byte   $6F,$0C,$71,$08,$6E,$18,$6F,$04 ; DC0E 6F 0C 71 08 6E 18 6F 04  o.q.n.o.
+        .byte   $C9,$D0,$CC,$FE,$C7,$FF,$C4,$0E ; DC16 C9 D0 CC FE C7 FF C4 0E  ........
+        .byte   $CD,$03,$00,$DB,$07,$00,$1E,$78 ; DC1E CD 03 00 DB 07 00 1E 78  .......x
+        .byte   $D8,$00,$DE,$06,$CD,$03,$01,$D8 ; DC26 D8 00 DE 06 CD 03 01 D8  ........
+        .byte   $00,$04,$C9,$57,$5B,$57,$63,$57 ; DC2E 00 04 C9 57 5B 57 63 57  ...W[WcW
+        .byte   $5B,$57,$C9,$57,$5B,$57,$60,$57 ; DC36 5B 57 C9 57 5B 57 60 57  [W.W[W`W
+        .byte   $5B,$57,$C9,$59,$5C,$60,$C9,$59 ; DC3E 5B 57 C9 59 5C 60 C9 59  [W.Y\`.Y
+        .byte   $5E,$62,$C9,$5B,$5E,$5B,$62,$5B ; DC46 5E 62 C9 5B 5E 5B 62 5B  ^b.[^[b[
+        .byte   $5E,$5B,$C9,$5B,$60,$63,$C9,$5A ; DC4E 5E 5B C9 5B 60 63 C9 5A  ^[.[`c.Z
+        .byte   $5F,$63,$C9,$57,$5B,$63,$C9,$57 ; DC56 5F 63 C9 57 5B 63 C9 57  _c.W[c.W
+        .byte   $5B,$60,$C9,$59,$5C,$60,$C9,$59 ; DC5E 5B 60 C9 59 5C 60 C9 59  [`.Y\`.Y
+        .byte   $5E,$62,$C9,$57,$5B,$57,$63,$57 ; DC66 5E 62 C9 57 5B 57 63 57  ^b.W[WcW
+        .byte   $5B,$57,$D0,$CC,$FE,$C7,$FF,$C4 ; DC6E 5B 57 D0 CC FE C7 FF C4  [W......
+        .byte   $6E,$DB,$07,$00,$1E,$78,$D8,$00 ; DC76 6E DB 07 00 1E 78 D8 00  n....x..
+        .byte   $DE,$06,$20,$67,$63,$65,$67,$68 ; DC7E DE 06 20 67 63 65 67 68  .. gcegh
+        .byte   $67,$6C,$10,$6B,$6A,$D0,$CC,$FE ; DC86 67 6C 10 6B 6A D0 CC FE  gl.kj...
+        .byte   $C7,$FF,$C4,$4E,$CD,$45,$00,$D8 ; DC8E C7 FF C4 4E CD 45 00 D8  ...N.E..
+        .byte   $00,$DE,$06,$20,$C9,$C9,$C9,$C9 ; DC96 00 DE 06 20 C9 C9 C9 C9  ... ....
+        .byte   $C9,$C9,$C9,$C9,$D0             ; DC9E C9 C9 C9 C9 D0           .....
+LDCA3:
+        .byte   $FF,$00,$0E,$00,$01,$33,$00,$02 ; DCA3 FF 00 0E 00 01 33 00 02  .....3..
+        .byte   $62,$00,$03,$B6,$00,$FF,$CC,$C8 ; DCAB 62 00 03 B6 00 FF CC C8  b.......
+        .byte   $C7,$FF,$C4,$6E,$CD,$03,$00,$DB ; DCB3 C7 FF C4 6E CD 03 00 DB  ...n....
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; DCBB 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$00,$10,$52,$C9 ; DCC3 CD 03 01 D8 00 10 52 C9  ......R.
+        .byte   $52,$C9,$52,$C9,$52,$C9,$52,$C9 ; DCCB 52 C9 52 C9 52 C9 52 C9  R.R.R.R.
+        .byte   $53,$C9,$D0,$CC,$FE,$C7,$FF,$C4 ; DCD3 53 C9 D0 CC FE C7 FF C4  S.......
+        .byte   $0E,$CD,$03,$00,$DB,$07,$00,$1E ; DCDB 0E CD 03 00 DB 07 00 1E  ........
+        .byte   $78,$D8,$00,$DE,$06,$CD,$03,$01 ; DCE3 78 D8 00 DE 06 CD 03 01  x.......
+        .byte   $D8,$00,$20,$C9,$24,$C9,$04,$59 ; DCEB D8 00 20 C9 24 C9 04 59  .. .$..Y
+        .byte   $59,$58,$14,$C9,$04,$59,$58,$5A ; DCF3 59 58 14 C9 04 59 58 5A  YX...YXZ
+        .byte   $18,$C9,$08,$59,$58,$5A,$59,$18 ; DCFB 18 C9 08 59 58 5A 59 18  ...YXZY.
+        .byte   $C9,$D0,$CC,$FE,$C7,$FF,$C4,$6E ; DD03 C9 D0 CC FE C7 FF C4 6E  .......n
+        .byte   $DB,$07,$00,$1E,$78,$D8,$00,$DE ; DD0B DB 07 00 1E 78 D8 00 DE  ....x...
+        .byte   $06,$20,$C9,$C9,$02,$46,$48,$46 ; DD13 06 20 C9 C9 02 46 48 46  . ...FHF
+        .byte   $48,$49,$4B,$49,$48,$46,$48,$46 ; DD1B 48 49 4B 49 48 46 48 46  HIKIHFHF
+        .byte   $48,$49,$4B,$49,$48,$46,$48,$46 ; DD23 48 49 4B 49 48 46 48 46  HIKIHFHF
+        .byte   $48,$49,$4B,$49,$48,$46,$48,$46 ; DD2B 48 49 4B 49 48 46 48 46  HIKIHFHF
+        .byte   $48,$49,$4B,$49,$48,$46,$48,$46 ; DD33 48 49 4B 49 48 46 48 46  HIKIHFHF
+        .byte   $48,$49,$4B,$49,$48,$46,$48,$46 ; DD3B 48 49 4B 49 48 46 48 46  HIKIHFHF
+        .byte   $48,$49,$4B,$49,$48,$46,$4B,$49 ; DD43 48 49 4B 49 48 46 4B 49  HIKIHFKI
+        .byte   $4B,$4D,$4B,$49,$48,$46,$4B,$49 ; DD4B 4B 4D 4B 49 48 46 4B 49  KMKIHFKI
+        .byte   $4B,$4D,$4B,$49,$48,$D0,$CC,$FE ; DD53 4B 4D 4B 49 48 D0 CC FE  KMKIH...
+        .byte   $C7,$FF,$C4,$4E,$CD,$45,$00,$D8 ; DD5B C7 FF C4 4E CD 45 00 D8  ...N.E..
+        .byte   $00,$DE,$06,$01,$46,$46,$06,$C9 ; DD63 00 DE 06 01 46 46 06 C9  ....FF..
+        .byte   $01,$46,$46,$06,$C9,$01,$46,$46 ; DD6B 01 46 46 06 C9 01 46 46  .FF...FF
+        .byte   $06,$C9,$01,$46,$46,$06,$C9,$01 ; DD73 06 C9 01 46 46 06 C9 01  ...FF...
+        .byte   $46,$46,$06,$C9,$01,$46,$46,$06 ; DD7B 46 46 06 C9 01 46 46 06  FF...FF.
+        .byte   $C9,$01,$46,$46,$06,$C9,$01,$46 ; DD83 C9 01 46 46 06 C9 01 46  ..FF...F
+        .byte   $46,$06,$C9,$01,$46,$46,$06,$C9 ; DD8B 46 06 C9 01 46 46 06 C9  F...FF..
+        .byte   $01,$46,$46,$06,$C9,$01,$46,$46 ; DD93 01 46 46 06 C9 01 46 46  .FF...FF
+        .byte   $06,$C9,$01,$46,$46,$06,$C9,$01 ; DD9B 06 C9 01 46 46 06 C9 01  ...FF...
+        .byte   $46,$46,$06,$C9,$01,$46,$46,$06 ; DDA3 46 46 06 C9 01 46 46 06  FF...FF.
+        .byte   $C9,$01,$46,$46,$06,$C9,$01,$46 ; DDAB C9 01 46 46 06 C9 01 46  ..FF...F
+        .byte   $46,$06,$C9,$01,$46,$46,$06,$C9 ; DDB3 46 06 C9 01 46 46 06 C9  F...FF..
+        .byte   $01,$46,$46,$06,$C9,$01,$46,$46 ; DDBB 01 46 46 06 C9 01 46 46  .FF...FF
+        .byte   $06,$C9,$01,$46,$46,$06,$C9,$01 ; DDC3 06 C9 01 46 46 06 C9 01  ...FF...
+        .byte   $46,$46,$06,$C9,$01,$46,$46,$06 ; DDCB 46 46 06 C9 01 46 46 06  FF...FF.
+        .byte   $C9,$01,$46,$46,$06,$C9,$01,$46 ; DDD3 C9 01 46 46 06 C9 01 46  ..FF...F
+        .byte   $46,$06,$C9,$D0                 ; DDDB 46 06 C9 D0              F...
 LDDDF:
-        .byte   $FF                             ; DDDF FF                       .
-        brk                                     ; DDE0 00                       .
-        asl     L0100                           ; DDE1 0E 00 01                 ...
-        sbc     ($00),y                         ; DDE4 F1 00                    ..
-        .byte   $02                             ; DDE6 02                       .
-        .byte   $13                             ; DDE7 13                       .
-        .byte   $02                             ; DDE8 02                       .
-        .byte   $03                             ; DDE9 03                       .
-        and     LFF03                           ; DDEA 2D 03 FF                 -..
-        cpy     LC769                           ; DDED CC 69 C7                 .i.
-        .byte   $FF                             ; DDF0 FF                       .
-        cpy     $4E                             ; DDF1 C4 4E                    .N
-        cmp     a:$03                           ; DDF3 CD 03 00                 ...
-        .byte   $DB                             ; DDF6 DB                       .
-        .byte   $07                             ; DDF7 07                       .
-        brk                                     ; DDF8 00                       .
-        asl     LD878,x                         ; DDF9 1E 78 D8                 .x.
-        brk                                     ; DDFC 00                       .
-        dec     LCD06,x                         ; DDFD DE 06 CD                 ...
-        .byte   $03                             ; DE00 03                       .
-        ora     ($D8,x)                         ; DE01 01 D8                    ..
-        brk                                     ; DE03 00                       .
-        .byte   $02                             ; DE04 02                       .
-        jmp     (L036C)                         ; DE05 6C 6C 03                 ll.
-
-; ----------------------------------------------------------------------------
-        jmp     (L6A01)                         ; DE08 6C 01 6A                 l.j
-
-; ----------------------------------------------------------------------------
-        jmp     (L6F03)                         ; DE0B 6C 03 6F                 l.o
-
-; ----------------------------------------------------------------------------
-        ora     ($6F,x)                         ; DE0E 01 6F                    .o
-        adc     ($6F),y                         ; DE10 71 6F                    qo
-        .byte   $02                             ; DE12 02                       .
-        .byte   $73                             ; DE13 73                       s
-        .byte   $73                             ; DE14 73                       s
-        ora     ($73,x)                         ; DE15 01 73                    .s
-        adc     ($6F),y                         ; DE17 71 6F                    qo
-        .byte   $02                             ; DE19 02                       .
-        adc     ($06),y                         ; DE1A 71 06                    q.
-        .byte   $73                             ; DE1C 73                       s
-        ora     ($C9,x)                         ; DE1D 01 C9                    ..
-        .byte   $03                             ; DE1F 03                       .
-        adc     ($01),y                         ; DE20 71 01                    q.
-        .byte   $6F                             ; DE22 6F                       o
-        adc     ($03),y                         ; DE23 71 03                    q.
-        .byte   $73                             ; DE25 73                       s
-        ora     ($6F,x)                         ; DE26 01 6F                    .o
-        jmp     (L6C04)                         ; DE28 6C 04 6C                 l.l
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; DE2B 02                       .
-        ror     a                               ; DE2C 6A                       j
-        ora     ($6F,x)                         ; DE2D 01 6F                    .o
-        jmp     (L0D6A)                         ; DE2F 6C 6A 0D                 lj.
-
-; ----------------------------------------------------------------------------
-        jmp     (LC90C)                         ; DE32 6C 0C C9                 l..
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; DE35 02                       .
-        .byte   $67                             ; DE36 67                       g
-        ror     a                               ; DE37 6A                       j
-        jmp     (L036C)                         ; DE38 6C 6C 03                 ll.
-
-; ----------------------------------------------------------------------------
-        jmp     (L6A01)                         ; DE3B 6C 01 6A                 l.j
-
-; ----------------------------------------------------------------------------
-        jmp     (L6F03)                         ; DE3E 6C 03 6F                 l.o
-
-; ----------------------------------------------------------------------------
-        ora     ($C9,x)                         ; DE41 01 C9                    ..
-        .byte   $6F                             ; DE43 6F                       o
-        adc     ($6F),y                         ; DE44 71 6F                    qo
-        .byte   $02                             ; DE46 02                       .
-        .byte   $73                             ; DE47 73                       s
-        .byte   $73                             ; DE48 73                       s
-        ora     ($73,x)                         ; DE49 01 73                    .s
-        adc     ($6F),y                         ; DE4B 71 6F                    qo
-        .byte   $02                             ; DE4D 02                       .
-        adc     ($06),y                         ; DE4E 71 06                    q.
-        .byte   $73                             ; DE50 73                       s
-        ora     ($C9,x)                         ; DE51 01 C9                    ..
-        .byte   $03                             ; DE53 03                       .
-        adc     ($01),y                         ; DE54 71 01                    q.
-        .byte   $6F                             ; DE56 6F                       o
-        adc     ($03),y                         ; DE57 71 03                    q.
-        .byte   $73                             ; DE59 73                       s
-        ora     ($6F,x)                         ; DE5A 01 6F                    .o
-        jmp     (L6C04)                         ; DE5C 6C 04 6C                 l.l
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; DE5F 02                       .
-        ror     a                               ; DE60 6A                       j
-        ora     ($6F,x)                         ; DE61 01 6F                    .o
-        jmp     (L0D6A)                         ; DE63 6C 6A 0D                 lj.
-
-; ----------------------------------------------------------------------------
-        jmp     (LC90C)                         ; DE66 6C 0C C9                 l..
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; DE69 02                       .
-        .byte   $73                             ; DE6A 73                       s
-        ror     $78,x                           ; DE6B 76 78                    vx
-        sei                                     ; DE6D 78                       x
-        ora     ($78,x)                         ; DE6E 01 78                    .x
-        .byte   $02                             ; DE70 02                       .
-        .byte   $7A                             ; DE71 7A                       z
-        ora     ($78,x)                         ; DE72 01 78                    .x
-        ora     $76                             ; DE74 05 76                    .v
-        ora     ($C9,x)                         ; DE76 01 C9                    ..
-        .byte   $73                             ; DE78 73                       s
-        ror     L0002,x                         ; DE79 76 02                    v.
-        sei                                     ; DE7B 78                       x
-        sei                                     ; DE7C 78                       x
-        ora     ($7B,x)                         ; DE7D 01 7B                    .{
-        .byte   $02                             ; DE7F 02                       .
-        .byte   $7A                             ; DE80 7A                       z
-        ora     ($78,x)                         ; DE81 01 78                    .x
-        .byte   $07                             ; DE83 07                       .
-        ror     $01,x                           ; DE84 76 01                    v.
-        cmp     #$03                            ; DE86 C9 03                    ..
-        adc     ($01),y                         ; DE88 71 01                    q.
-        .byte   $6F                             ; DE8A 6F                       o
-        adc     ($03),y                         ; DE8B 71 03                    q.
-        .byte   $73                             ; DE8D 73                       s
-        .byte   $74                             ; DE8E 74                       t
-        ora     ($73,x)                         ; DE8F 01 73                    .s
-        .byte   $74                             ; DE91 74                       t
-        .byte   $03                             ; DE92 03                       .
-        ror     $09,x                           ; DE93 76 09                    v.
-        .byte   $73                             ; DE95 73                       s
-        .byte   $03                             ; DE96 03                       .
-        cmp     #$02                            ; DE97 C9 02                    ..
-        .byte   $73                             ; DE99 73                       s
-        ror     $78,x                           ; DE9A 76 78                    vx
-        sei                                     ; DE9C 78                       x
-        ora     ($78,x)                         ; DE9D 01 78                    .x
-        .byte   $02                             ; DE9F 02                       .
-        .byte   $7A                             ; DEA0 7A                       z
-        ora     ($78,x)                         ; DEA1 01 78                    .x
-        ora     $76                             ; DEA3 05 76                    .v
-        ora     ($C9,x)                         ; DEA5 01 C9                    ..
-        .byte   $73                             ; DEA7 73                       s
-        ror     L0002,x                         ; DEA8 76 02                    v.
-        sei                                     ; DEAA 78                       x
-        sei                                     ; DEAB 78                       x
-        ora     ($7B,x)                         ; DEAC 01 7B                    .{
-        .byte   $02                             ; DEAE 02                       .
-        .byte   $7A                             ; DEAF 7A                       z
-        ora     ($78,x)                         ; DEB0 01 78                    .x
-        .byte   $07                             ; DEB2 07                       .
-        ror     $01,x                           ; DEB3 76 01                    v.
-        cmp     #$03                            ; DEB5 C9 03                    ..
-        adc     ($01),y                         ; DEB7 71 01                    q.
-        .byte   $6F                             ; DEB9 6F                       o
-        adc     ($03),y                         ; DEBA 71 03                    q.
-        .byte   $73                             ; DEBC 73                       s
-        .byte   $74                             ; DEBD 74                       t
-        ora     ($73,x)                         ; DEBE 01 73                    .s
-        .byte   $74                             ; DEC0 74                       t
-        .byte   $03                             ; DEC1 03                       .
-        ror     $18,x                           ; DEC2 76 18                    v.
-        sei                                     ; DEC4 78                       x
-        .byte   $04                             ; DEC5 04                       .
-        cmp     #$01                            ; DEC6 C9 01                    ..
-        .byte   $7B                             ; DEC8 7B                       {
-        .byte   $02                             ; DEC9 02                       .
-        ror     $21,x                           ; DECA 76 21                    v!
-        sei                                     ; DECC 78                       x
-        jsr     LD0C9                           ; DECD 20 C9 D0                  ..
-        cpy     LC769                           ; DED0 CC 69 C7                 .i.
-        .byte   $FF                             ; DED3 FF                       .
-        cpy     $3E                             ; DED4 C4 3E                    .>
-        cmp     a:$03                           ; DED6 CD 03 00                 ...
-        .byte   $DB                             ; DED9 DB                       .
-        .byte   $07                             ; DEDA 07                       .
-        brk                                     ; DEDB 00                       .
-        asl     LD878,x                         ; DEDC 1E 78 D8                 .x.
-        brk                                     ; DEDF 00                       .
-        dec     LCD06,x                         ; DEE0 DE 06 CD                 ...
-        .byte   $03                             ; DEE3 03                       .
-        ora     ($D8,x)                         ; DEE4 01 D8                    ..
-        brk                                     ; DEE6 00                       .
-        .byte   $02                             ; DEE7 02                       .
-        rts                                     ; DEE8 60                       `
-
-; ----------------------------------------------------------------------------
-        ora     ($5B,x)                         ; DEE9 01 5B                    .[
-        lsr     $6302,x                         ; DEEB 5E 02 63                 ^.c
-        ora     ($5B,x)                         ; DEEE 01 5B                    .[
-        lsr     $6002,x                         ; DEF0 5E 02 60                 ^.`
-        ora     ($5B,x)                         ; DEF3 01 5B                    .[
-        lsr     $6302,x                         ; DEF5 5E 02 63                 ^.c
-        ora     ($5B,x)                         ; DEF8 01 5B                    .[
-        lsr     $6202,x                         ; DEFA 5E 02 62                 ^.b
-        ora     ($5B,x)                         ; DEFD 01 5B                    .[
-        lsr     $6702,x                         ; DEFF 5E 02 67                 ^.g
-        ora     ($5B,x)                         ; DF02 01 5B                    .[
-        lsr     $6702,x                         ; DF04 5E 02 67                 ^.g
-        ora     ($5B,x)                         ; DF07 01 5B                    .[
-        lsr     $6002,x                         ; DF09 5E 02 60                 ^.`
-        ora     ($5B,x)                         ; DF0C 01 5B                    .[
-        lsr     $6502,x                         ; DF0E 5E 02 65                 ^.e
-        ora     ($59,x)                         ; DF11 01 59                    .Y
-        .byte   $5C                             ; DF13 5C                       \
-        .byte   $02                             ; DF14 02                       .
-        rts                                     ; DF15 60                       `
-
-; ----------------------------------------------------------------------------
-        ora     ($59,x)                         ; DF16 01 59                    .Y
-        .byte   $5C                             ; DF18 5C                       \
-        .byte   $02                             ; DF19 02                       .
-        adc     $01                             ; DF1A 65 01                    e.
-        eor     $025C,y                         ; DF1C 59 5C 02                 Y\.
-        rts                                     ; DF1F 60                       `
-
-; ----------------------------------------------------------------------------
-        ora     ($5B,x)                         ; DF20 01 5B                    .[
-        lsr     $6302,x                         ; DF22 5E 02 63                 ^.c
-        ora     ($5B,x)                         ; DF25 01 5B                    .[
-        lsr     $6002,x                         ; DF27 5E 02 60                 ^.`
-        ora     ($5B,x)                         ; DF2A 01 5B                    .[
-        lsr     $6302,x                         ; DF2C 5E 02 63                 ^.c
-        ora     ($5B,x)                         ; DF2F 01 5B                    .[
-        lsr     $6002,x                         ; DF31 5E 02 60                 ^.`
-        ora     ($5B,x)                         ; DF34 01 5B                    .[
-        lsr     $6302,x                         ; DF36 5E 02 63                 ^.c
-        ora     ($5B,x)                         ; DF39 01 5B                    .[
-        lsr     $6002,x                         ; DF3B 5E 02 60                 ^.`
-        ora     ($5B,x)                         ; DF3E 01 5B                    .[
-        lsr     $6302,x                         ; DF40 5E 02 63                 ^.c
-        ora     ($5B,x)                         ; DF43 01 5B                    .[
-        lsr     $6002,x                         ; DF45 5E 02 60                 ^.`
-        ora     ($5B,x)                         ; DF48 01 5B                    .[
-        lsr     $6302,x                         ; DF4A 5E 02 63                 ^.c
-        ora     ($5B,x)                         ; DF4D 01 5B                    .[
-        lsr     $6002,x                         ; DF4F 5E 02 60                 ^.`
-        ora     ($5B,x)                         ; DF52 01 5B                    .[
-        lsr     $6302,x                         ; DF54 5E 02 63                 ^.c
-        ora     ($5B,x)                         ; DF57 01 5B                    .[
-        lsr     $6302,x                         ; DF59 5E 02 63                 ^.c
-        ora     ($5B,x)                         ; DF5C 01 5B                    .[
-        lsr     $6702,x                         ; DF5E 5E 02 67                 ^.g
-        ora     ($5B,x)                         ; DF61 01 5B                    .[
-        lsr     $6302,x                         ; DF63 5E 02 63                 ^.c
-        ora     ($5B,x)                         ; DF66 01 5B                    .[
-        lsr     $6702,x                         ; DF68 5E 02 67                 ^.g
-        ora     ($5B,x)                         ; DF6B 01 5B                    .[
-        lsr     $6002,x                         ; DF6D 5E 02 60                 ^.`
-        ora     ($59,x)                         ; DF70 01 59                    .Y
-        .byte   $5C                             ; DF72 5C                       \
-        .byte   $02                             ; DF73 02                       .
-        adc     $01                             ; DF74 65 01                    e.
-        eor     $025C,y                         ; DF76 59 5C 02                 Y\.
-        rts                                     ; DF79 60                       `
-
-; ----------------------------------------------------------------------------
-        ora     ($59,x)                         ; DF7A 01 59                    .Y
-        .byte   $5C                             ; DF7C 5C                       \
-        .byte   $02                             ; DF7D 02                       .
-        adc     $01                             ; DF7E 65 01                    e.
-        eor     $025C,y                         ; DF80 59 5C 02                 Y\.
-        rts                                     ; DF83 60                       `
-
-; ----------------------------------------------------------------------------
-        ora     ($5B,x)                         ; DF84 01 5B                    .[
-        lsr     $6302,x                         ; DF86 5E 02 63                 ^.c
-        ora     ($5B,x)                         ; DF89 01 5B                    .[
-        lsr     $6002,x                         ; DF8B 5E 02 60                 ^.`
-        ora     ($5B,x)                         ; DF8E 01 5B                    .[
-        lsr     $6302,x                         ; DF90 5E 02 63                 ^.c
-        ora     ($5B,x)                         ; DF93 01 5B                    .[
-        lsr     $6002,x                         ; DF95 5E 02 60                 ^.`
-        ora     ($5B,x)                         ; DF98 01 5B                    .[
-        lsr     $6302,x                         ; DF9A 5E 02 63                 ^.c
-        ora     ($5B,x)                         ; DF9D 01 5B                    .[
-        lsr     $6002,x                         ; DF9F 5E 02 60                 ^.`
-        ora     ($5B,x)                         ; DFA2 01 5B                    .[
-        lsr     $6302,x                         ; DFA4 5E 02 63                 ^.c
-        .byte   $03                             ; DFA7 03                       .
-        .byte   $5B                             ; DFA8 5B                       [
-        lsr     L6C04,x                         ; DFA9 5E 04 6C                 ^.l
-        .byte   $67                             ; DFAC 67                       g
-        php                                     ; DFAD 08                       .
-        ror     a                               ; DFAE 6A                       j
-        .byte   $04                             ; DFAF 04                       .
-        jmp     (L0867)                         ; DFB0 6C 67 08                 lg.
-
-; ----------------------------------------------------------------------------
-        ror     a                               ; DFB3 6A                       j
-        .byte   $02                             ; DFB4 02                       .
-        adc     $01                             ; DFB5 65 01                    e.
-        .byte   $63                             ; DFB7 63                       c
-        adc     $03                             ; DFB8 65 03                    e.
-        .byte   $67                             ; DFBA 67                       g
-        pla                                     ; DFBB 68                       h
-        ora     ($67,x)                         ; DFBC 01 67                    .g
-        pla                                     ; DFBE 68                       h
-LDFBF:
-        .byte   $03                             ; DFBF 03                       .
-        ror     a                               ; DFC0 6A                       j
-        bpl     LE02A                           ; DFC1 10 67                    .g
-        .byte   $04                             ; DFC3 04                       .
-        jmp     (L0867)                         ; DFC4 6C 67 08                 lg.
-
-; ----------------------------------------------------------------------------
-        ror     a                               ; DFC7 6A                       j
-        .byte   $04                             ; DFC8 04                       .
-        jmp     (L0867)                         ; DFC9 6C 67 08                 lg.
-
-; ----------------------------------------------------------------------------
-        ror     a                               ; DFCC 6A                       j
-        .byte   $03                             ; DFCD 03                       .
-        adc     $01                             ; DFCE 65 01                    e.
-        .byte   $63                             ; DFD0 63                       c
-        adc     $03                             ; DFD1 65 03                    e.
-        .byte   $67                             ; DFD3 67                       g
-        pla                                     ; DFD4 68                       h
-        ora     ($67,x)                         ; DFD5 01 67                    .g
-        pla                                     ; DFD7 68                       h
-        .byte   $03                             ; DFD8 03                       .
-        ror     a                               ; DFD9 6A                       j
-        .byte   $1B                             ; DFDA 1B                       .
-        jmp     (LC901)                         ; DFDB 6C 01 C9                 l..
-
-; ----------------------------------------------------------------------------
-        jmp     (L6C02)                         ; DFDE 6C 02 6C                 l.l
-
-; ----------------------------------------------------------------------------
-        ora     ($C9,x)                         ; DFE1 01 C9                    ..
-        .byte   $02                             ; DFE3 02                       .
-        rts                                     ; DFE4 60                       `
-
-; ----------------------------------------------------------------------------
-        ora     ($5B,x)                         ; DFE5 01 5B                    .[
-        lsr     $6302,x                         ; DFE7 5E 02 63                 ^.c
-        ora     ($5B,x)                         ; DFEA 01 5B                    .[
-        lsr     $08CE,x                         ; DFEC 5E CE 08                 ^..
-        .byte   $04                             ; DFEF 04                       .
-        .byte   $02                             ; DFF0 02                       .
-        bne     LDFBF                           ; DFF1 D0 CC                    ..
-        adc     #$C7                            ; DFF3 69 C7                    i.
-        .byte   $FF                             ; DFF5 FF                       .
-        cpy     $FF                             ; DFF6 C4 FF                    ..
-        cmp     a:$03                           ; DFF8 CD 03 00                 ...
-        .byte   $DB                             ; DFFB DB                       .
-        .byte   $07                             ; DFFC 07                       .
-        brk                                     ; DFFD 00                       .
-        asl     LD878,x                         ; DFFE 1E 78 D8                 .x.
-        brk                                     ; E001 00                       .
-        dec     LCD06,x                         ; E002 DE 06 CD                 ...
-        .byte   $03                             ; E005 03                       .
-        ora     ($D8,x)                         ; E006 01 D8                    ..
-        brk                                     ; E008 00                       .
-        ora     ($5E,x)                         ; E009 01 5E                    .^
-        rts                                     ; E00B 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E00C 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E00D 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E00E 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $07                             ; E00F 07                       .
-        cmp     #$02                            ; E010 C9 02                    ..
-        rts                                     ; E012 60                       `
-
-; ----------------------------------------------------------------------------
-        lsr     $6201,x                         ; E013 5E 01 62                 ^.b
-        .byte   $63                             ; E016 63                       c
-        .byte   $63                             ; E017 63                       c
-        .byte   $63                             ; E018 63                       c
-        .byte   $63                             ; E019 63                       c
-        .byte   $07                             ; E01A 07                       .
-        cmp     #$02                            ; E01B C9 02                    ..
-        .byte   $63                             ; E01D 63                       c
-        .byte   $67                             ; E01E 67                       g
-        ora     ($63,x)                         ; E01F 01 63                    .c
-        adc     $65                             ; E021 65 65                    ee
-        adc     $65                             ; E023 65 65                    ee
-        .byte   $07                             ; E025 07                       .
-        cmp     #$02                            ; E026 C9 02                    ..
-        adc     $5E                             ; E028 65 5E                    e^
-LE02A:
-        ora     ($5E,x)                         ; E02A 01 5E                    .^
-        rts                                     ; E02C 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E02D 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E02E 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E02F 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $07                             ; E030 07                       .
-        cmp     #$02                            ; E031 C9 02                    ..
-        rts                                     ; E033 60                       `
-
-; ----------------------------------------------------------------------------
-        lsr     $5E01,x                         ; E034 5E 01 5E                 ^.^
-        rts                                     ; E037 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E038 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E039 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E03A 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $07                             ; E03B 07                       .
-        cmp     #$02                            ; E03C C9 02                    ..
-        rts                                     ; E03E 60                       `
-
-; ----------------------------------------------------------------------------
-        lsr     $5E01,x                         ; E03F 5E 01 5E                 ^.^
-        rts                                     ; E042 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E043 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E044 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E045 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $07                             ; E046 07                       .
-        cmp     #$02                            ; E047 C9 02                    ..
-        rts                                     ; E049 60                       `
-
-; ----------------------------------------------------------------------------
-        lsr     $6201,x                         ; E04A 5E 01 62                 ^.b
-        .byte   $63                             ; E04D 63                       c
-        .byte   $63                             ; E04E 63                       c
-        .byte   $63                             ; E04F 63                       c
-        .byte   $63                             ; E050 63                       c
-        .byte   $07                             ; E051 07                       .
-        cmp     #$02                            ; E052 C9 02                    ..
-        .byte   $63                             ; E054 63                       c
-        .byte   $67                             ; E055 67                       g
-        ora     ($63,x)                         ; E056 01 63                    .c
-        adc     $65                             ; E058 65 65                    ee
-        adc     $65                             ; E05A 65 65                    ee
-        .byte   $07                             ; E05C 07                       .
-        cmp     #$02                            ; E05D C9 02                    ..
-        adc     $5E                             ; E05F 65 5E                    e^
-        ora     ($5E,x)                         ; E061 01 5E                    .^
-        rts                                     ; E063 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E064 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E065 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E066 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $07                             ; E067 07                       .
-        cmp     #$02                            ; E068 C9 02                    ..
-        rts                                     ; E06A 60                       `
-
-; ----------------------------------------------------------------------------
-        lsr     $5E01,x                         ; E06B 5E 01 5E                 ^.^
-        rts                                     ; E06E 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E06F 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E070 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E071 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $07                             ; E072 07                       .
-        cmp     #$02                            ; E073 C9 02                    ..
-        rts                                     ; E075 60                       `
-
-; ----------------------------------------------------------------------------
-        lsr     $5E01,x                         ; E076 5E 01 5E                 ^.^
-        rts                                     ; E079 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E07A 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E07B 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E07C 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $07                             ; E07D 07                       .
-        cmp     #$02                            ; E07E C9 02                    ..
-        .byte   $5B                             ; E080 5B                       [
-        lsr     $5E01,x                         ; E081 5E 01 5E                 ^.^
-        rts                                     ; E084 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E085 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E086 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E087 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $07                             ; E088 07                       .
-        cmp     #$02                            ; E089 C9 02                    ..
-        .byte   $5B                             ; E08B 5B                       [
-        lsr     $6301,x                         ; E08C 5E 01 63                 ^.c
-        adc     $65                             ; E08F 65 65                    ee
-        adc     $65                             ; E091 65 65                    ee
-        .byte   $07                             ; E093 07                       .
-        cmp     #$04                            ; E094 C9 04                    ..
-        .byte   $5C                             ; E096 5C                       \
-        ora     ($62,x)                         ; E097 01 62                    .b
-        .byte   $63                             ; E099 63                       c
-        .byte   $63                             ; E09A 63                       c
-        .byte   $63                             ; E09B 63                       c
-        .byte   $63                             ; E09C 63                       c
-        .byte   $07                             ; E09D 07                       .
-        cmp     #$02                            ; E09E C9 02                    ..
-        .byte   $5B                             ; E0A0 5B                       [
-        lsr     $5E01,x                         ; E0A1 5E 01 5E                 ^.^
-        rts                                     ; E0A4 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E0A5 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E0A6 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E0A7 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $07                             ; E0A8 07                       .
-        cmp     #$02                            ; E0A9 C9 02                    ..
-        .byte   $5B                             ; E0AB 5B                       [
-        lsr     $5E01,x                         ; E0AC 5E 01 5E                 ^.^
-        rts                                     ; E0AF 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E0B0 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E0B1 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E0B2 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $07                             ; E0B3 07                       .
-        cmp     #$02                            ; E0B4 C9 02                    ..
-        .byte   $5B                             ; E0B6 5B                       [
-        lsr     $5908,x                         ; E0B7 5E 08 59                 ^.Y
-        ora     #$5C                            ; E0BA 09 5C                    .\
-        ora     ($C9,x)                         ; E0BC 01 C9                    ..
-        .byte   $5C                             ; E0BE 5C                       \
-        .byte   $5C                             ; E0BF 5C                       \
-        .byte   $02                             ; E0C0 02                       .
-        .byte   $5C                             ; E0C1 5C                       \
-        ora     ($5C,x)                         ; E0C2 01 5C                    .\
-        .byte   $5C                             ; E0C4 5C                       \
-        .byte   $02                             ; E0C5 02                       .
-        .byte   $5C                             ; E0C6 5C                       \
-        ora     ($5C,x)                         ; E0C7 01 5C                    .\
-        .byte   $5C                             ; E0C9 5C                       \
-        .byte   $02                             ; E0CA 02                       .
-        .byte   $5C                             ; E0CB 5C                       \
-        .byte   $5C                             ; E0CC 5C                       \
-        .byte   $02                             ; E0CD 02                       .
-        .byte   $5C                             ; E0CE 5C                       \
-        ora     ($5C,x)                         ; E0CF 01 5C                    .\
-        .byte   $5C                             ; E0D1 5C                       \
-        .byte   $02                             ; E0D2 02                       .
-        .byte   $5C                             ; E0D3 5C                       \
-        ora     ($5C,x)                         ; E0D4 01 5C                    .\
-        .byte   $5C                             ; E0D6 5C                       \
-        .byte   $02                             ; E0D7 02                       .
-        .byte   $5C                             ; E0D8 5C                       \
-        ora     ($5C,x)                         ; E0D9 01 5C                    .\
-        .byte   $5C                             ; E0DB 5C                       \
-        .byte   $5C                             ; E0DC 5C                       \
-        eor     $5959,y                         ; E0DD 59 59 59                 YYY
-        lsr     LC960,x                         ; E0E0 5E 60 C9                 ^`.
-        rts                                     ; E0E3 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E0E4 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $07                             ; E0E5 07                       .
-        cmp     #$02                            ; E0E6 C9 02                    ..
-        .byte   $5B                             ; E0E8 5B                       [
-        lsr     $5E01,x                         ; E0E9 5E 01 5E                 ^.^
-        rts                                     ; E0EC 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E0ED 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E0EE 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E0EF 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $07                             ; E0F0 07                       .
-        cmp     #$02                            ; E0F1 C9 02                    ..
-        .byte   $5B                             ; E0F3 5B                       [
-        lsr     $5E01,x                         ; E0F4 5E 01 5E                 ^.^
-        rts                                     ; E0F7 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E0F8 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E0F9 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E0FA 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $07                             ; E0FB 07                       .
-        cmp     #$02                            ; E0FC C9 02                    ..
-        .byte   $5B                             ; E0FE 5B                       [
-        lsr     $5E01,x                         ; E0FF 5E 01 5E                 ^.^
-        rts                                     ; E102 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E103 60                       `
-
-; ----------------------------------------------------------------------------
-LE104:
-        rts                                     ; E104 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E105 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $07                             ; E106 07                       .
-        cmp     #$02                            ; E107 C9 02                    ..
-        .byte   $5B                             ; E109 5B                       [
-        lsr     LCCD0,x                         ; E10A 5E D0 CC                 ^..
-        adc     #$C7                            ; E10D 69 C7                    i.
-        .byte   $FF                             ; E10F FF                       .
-        cpy     $19                             ; E110 C4 19                    ..
-        cmp     a:$03                           ; E112 CD 03 00                 ...
-        dec     LCD06,x                         ; E115 DE 06 CD                 ...
-        .byte   $03                             ; E118 03                       .
-        ora     ($D8,x)                         ; E119 01 D8                    ..
-        brk                                     ; E11B 00                       .
-        .byte   $3F                             ; E11C 3F                       ?
-        cmp     #$CE                            ; E11D C9 CE                    ..
-        .byte   $3F                             ; E11F 3F                       ?
-        and     LD003,x                         ; E120 3D 03 D0                 =..
+        .byte   $FF,$00,$0E,$00,$01,$F1,$00,$02 ; DDDF FF 00 0E 00 01 F1 00 02  ........
+        .byte   $13,$02,$03,$2D,$03,$FF,$CC,$69 ; DDE7 13 02 03 2D 03 FF CC 69  ...-...i
+        .byte   $C7,$FF,$C4,$4E,$CD,$03,$00,$DB ; DDEF C7 FF C4 4E CD 03 00 DB  ...N....
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; DDF7 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$00,$02,$6C,$6C ; DDFF CD 03 01 D8 00 02 6C 6C  ......ll
+        .byte   $03,$6C,$01,$6A,$6C,$03,$6F,$01 ; DE07 03 6C 01 6A 6C 03 6F 01  .l.jl.o.
+        .byte   $6F,$71,$6F,$02,$73,$73,$01,$73 ; DE0F 6F 71 6F 02 73 73 01 73  oqo.ss.s
+        .byte   $71,$6F,$02,$71,$06,$73,$01,$C9 ; DE17 71 6F 02 71 06 73 01 C9  qo.q.s..
+        .byte   $03,$71,$01,$6F,$71,$03,$73,$01 ; DE1F 03 71 01 6F 71 03 73 01  .q.oq.s.
+        .byte   $6F,$6C,$04,$6C,$02,$6A,$01,$6F ; DE27 6F 6C 04 6C 02 6A 01 6F  ol.l.j.o
+        .byte   $6C,$6A,$0D,$6C,$0C,$C9,$02,$67 ; DE2F 6C 6A 0D 6C 0C C9 02 67  lj.l...g
+        .byte   $6A,$6C,$6C,$03,$6C,$01,$6A,$6C ; DE37 6A 6C 6C 03 6C 01 6A 6C  jll.l.jl
+        .byte   $03,$6F,$01,$C9,$6F,$71,$6F,$02 ; DE3F 03 6F 01 C9 6F 71 6F 02  .o..oqo.
+        .byte   $73,$73,$01,$73,$71,$6F,$02,$71 ; DE47 73 73 01 73 71 6F 02 71  ss.sqo.q
+        .byte   $06,$73,$01,$C9,$03,$71,$01,$6F ; DE4F 06 73 01 C9 03 71 01 6F  .s...q.o
+        .byte   $71,$03,$73,$01,$6F,$6C,$04,$6C ; DE57 71 03 73 01 6F 6C 04 6C  q.s.ol.l
+        .byte   $02,$6A,$01,$6F,$6C,$6A,$0D,$6C ; DE5F 02 6A 01 6F 6C 6A 0D 6C  .j.olj.l
+        .byte   $0C,$C9,$02,$73,$76,$78,$78,$01 ; DE67 0C C9 02 73 76 78 78 01  ...svxx.
+        .byte   $78,$02,$7A,$01,$78,$05,$76,$01 ; DE6F 78 02 7A 01 78 05 76 01  x.z.x.v.
+        .byte   $C9,$73,$76,$02,$78,$78,$01,$7B ; DE77 C9 73 76 02 78 78 01 7B  .sv.xx.{
+        .byte   $02,$7A,$01,$78,$07,$76,$01,$C9 ; DE7F 02 7A 01 78 07 76 01 C9  .z.x.v..
+        .byte   $03,$71,$01,$6F,$71,$03,$73,$74 ; DE87 03 71 01 6F 71 03 73 74  .q.oq.st
+        .byte   $01,$73,$74,$03,$76,$09,$73,$03 ; DE8F 01 73 74 03 76 09 73 03  .st.v.s.
+        .byte   $C9,$02,$73,$76,$78,$78,$01,$78 ; DE97 C9 02 73 76 78 78 01 78  ..svxx.x
+        .byte   $02,$7A,$01,$78,$05,$76,$01,$C9 ; DE9F 02 7A 01 78 05 76 01 C9  .z.x.v..
+        .byte   $73,$76,$02,$78,$78,$01,$7B,$02 ; DEA7 73 76 02 78 78 01 7B 02  sv.xx.{.
+        .byte   $7A,$01,$78,$07,$76,$01,$C9,$03 ; DEAF 7A 01 78 07 76 01 C9 03  z.x.v...
+        .byte   $71,$01,$6F,$71,$03,$73,$74,$01 ; DEB7 71 01 6F 71 03 73 74 01  q.oq.st.
+        .byte   $73,$74,$03,$76,$18,$78,$04,$C9 ; DEBF 73 74 03 76 18 78 04 C9  st.v.x..
+        .byte   $01,$7B,$02,$76,$21,$78,$20,$C9 ; DEC7 01 7B 02 76 21 78 20 C9  .{.v!x .
+        .byte   $D0,$CC,$69,$C7,$FF,$C4,$3E,$CD ; DECF D0 CC 69 C7 FF C4 3E CD  ..i...>.
+        .byte   $03,$00,$DB,$07,$00,$1E,$78,$D8 ; DED7 03 00 DB 07 00 1E 78 D8  ......x.
+        .byte   $00,$DE,$06,$CD,$03,$01,$D8,$00 ; DEDF 00 DE 06 CD 03 01 D8 00  ........
+        .byte   $02,$60,$01,$5B,$5E,$02,$63,$01 ; DEE7 02 60 01 5B 5E 02 63 01  .`.[^.c.
+        .byte   $5B,$5E,$02,$60,$01,$5B,$5E,$02 ; DEEF 5B 5E 02 60 01 5B 5E 02  [^.`.[^.
+        .byte   $63,$01,$5B,$5E,$02,$62,$01,$5B ; DEF7 63 01 5B 5E 02 62 01 5B  c.[^.b.[
+        .byte   $5E,$02,$67,$01,$5B,$5E,$02,$67 ; DEFF 5E 02 67 01 5B 5E 02 67  ^.g.[^.g
+        .byte   $01,$5B,$5E,$02,$60,$01,$5B,$5E ; DF07 01 5B 5E 02 60 01 5B 5E  .[^.`.[^
+        .byte   $02,$65,$01,$59,$5C,$02,$60,$01 ; DF0F 02 65 01 59 5C 02 60 01  .e.Y\.`.
+        .byte   $59,$5C,$02,$65,$01,$59,$5C,$02 ; DF17 59 5C 02 65 01 59 5C 02  Y\.e.Y\.
+        .byte   $60,$01,$5B,$5E,$02,$63,$01,$5B ; DF1F 60 01 5B 5E 02 63 01 5B  `.[^.c.[
+        .byte   $5E,$02,$60,$01,$5B,$5E,$02,$63 ; DF27 5E 02 60 01 5B 5E 02 63  ^.`.[^.c
+        .byte   $01,$5B,$5E,$02,$60,$01,$5B,$5E ; DF2F 01 5B 5E 02 60 01 5B 5E  .[^.`.[^
+        .byte   $02,$63,$01,$5B,$5E,$02,$60,$01 ; DF37 02 63 01 5B 5E 02 60 01  .c.[^.`.
+        .byte   $5B,$5E,$02,$63,$01,$5B,$5E,$02 ; DF3F 5B 5E 02 63 01 5B 5E 02  [^.c.[^.
+        .byte   $60,$01,$5B,$5E,$02,$63,$01,$5B ; DF47 60 01 5B 5E 02 63 01 5B  `.[^.c.[
+        .byte   $5E,$02,$60,$01,$5B,$5E,$02,$63 ; DF4F 5E 02 60 01 5B 5E 02 63  ^.`.[^.c
+        .byte   $01,$5B,$5E,$02,$63,$01,$5B,$5E ; DF57 01 5B 5E 02 63 01 5B 5E  .[^.c.[^
+        .byte   $02,$67,$01,$5B,$5E,$02,$63,$01 ; DF5F 02 67 01 5B 5E 02 63 01  .g.[^.c.
+        .byte   $5B,$5E,$02,$67,$01,$5B,$5E,$02 ; DF67 5B 5E 02 67 01 5B 5E 02  [^.g.[^.
+        .byte   $60,$01,$59,$5C,$02,$65,$01,$59 ; DF6F 60 01 59 5C 02 65 01 59  `.Y\.e.Y
+        .byte   $5C,$02,$60,$01,$59,$5C,$02,$65 ; DF77 5C 02 60 01 59 5C 02 65  \.`.Y\.e
+        .byte   $01,$59,$5C,$02,$60,$01,$5B,$5E ; DF7F 01 59 5C 02 60 01 5B 5E  .Y\.`.[^
+        .byte   $02,$63,$01,$5B,$5E,$02,$60,$01 ; DF87 02 63 01 5B 5E 02 60 01  .c.[^.`.
+        .byte   $5B,$5E,$02,$63,$01,$5B,$5E,$02 ; DF8F 5B 5E 02 63 01 5B 5E 02  [^.c.[^.
+        .byte   $60,$01,$5B,$5E,$02,$63,$01,$5B ; DF97 60 01 5B 5E 02 63 01 5B  `.[^.c.[
+        .byte   $5E,$02,$60,$01,$5B,$5E,$02,$63 ; DF9F 5E 02 60 01 5B 5E 02 63  ^.`.[^.c
+        .byte   $03,$5B,$5E,$04,$6C,$67,$08,$6A ; DFA7 03 5B 5E 04 6C 67 08 6A  .[^.lg.j
+        .byte   $04,$6C,$67,$08,$6A,$02,$65,$01 ; DFAF 04 6C 67 08 6A 02 65 01  .lg.j.e.
+        .byte   $63,$65,$03,$67,$68,$01,$67,$68 ; DFB7 63 65 03 67 68 01 67 68  ce.gh.gh
+        .byte   $03,$6A,$10,$67,$04,$6C,$67,$08 ; DFBF 03 6A 10 67 04 6C 67 08  .j.g.lg.
+        .byte   $6A,$04,$6C,$67,$08,$6A,$03,$65 ; DFC7 6A 04 6C 67 08 6A 03 65  j.lg.j.e
+        .byte   $01,$63,$65,$03,$67,$68,$01,$67 ; DFCF 01 63 65 03 67 68 01 67  .ce.gh.g
+        .byte   $68,$03,$6A,$1B,$6C,$01,$C9,$6C ; DFD7 68 03 6A 1B 6C 01 C9 6C  h.j.l..l
+        .byte   $02,$6C,$01,$C9,$02,$60,$01,$5B ; DFDF 02 6C 01 C9 02 60 01 5B  .l...`.[
+        .byte   $5E,$02,$63,$01,$5B,$5E,$CE,$08 ; DFE7 5E 02 63 01 5B 5E CE 08  ^.c.[^..
+        .byte   $04,$02,$D0,$CC,$69,$C7,$FF,$C4 ; DFEF 04 02 D0 CC 69 C7 FF C4  ....i...
+        .byte   $FF,$CD,$03,$00,$DB,$07,$00,$1E ; DFF7 FF CD 03 00 DB 07 00 1E  ........
+        .byte   $78,$D8,$00,$DE,$06,$CD,$03,$01 ; DFFF 78 D8 00 DE 06 CD 03 01  x.......
+        .byte   $D8,$00,$01,$5E,$60,$60,$60,$60 ; E007 D8 00 01 5E 60 60 60 60  ...^````
+        .byte   $07,$C9,$02,$60,$5E,$01,$62,$63 ; E00F 07 C9 02 60 5E 01 62 63  ...`^.bc
+        .byte   $63,$63,$63,$07,$C9,$02,$63,$67 ; E017 63 63 63 07 C9 02 63 67  ccc...cg
+        .byte   $01,$63,$65,$65,$65,$65,$07,$C9 ; E01F 01 63 65 65 65 65 07 C9  .ceeee..
+        .byte   $02,$65,$5E,$01,$5E,$60,$60,$60 ; E027 02 65 5E 01 5E 60 60 60  .e^.^```
+        .byte   $60,$07,$C9,$02,$60,$5E,$01,$5E ; E02F 60 07 C9 02 60 5E 01 5E  `...`^.^
+        .byte   $60,$60,$60,$60,$07,$C9,$02,$60 ; E037 60 60 60 60 07 C9 02 60  ````...`
+        .byte   $5E,$01,$5E,$60,$60,$60,$60,$07 ; E03F 5E 01 5E 60 60 60 60 07  ^.^````.
+        .byte   $C9,$02,$60,$5E,$01,$62,$63,$63 ; E047 C9 02 60 5E 01 62 63 63  ..`^.bcc
+        .byte   $63,$63,$07,$C9,$02,$63,$67,$01 ; E04F 63 63 07 C9 02 63 67 01  cc...cg.
+        .byte   $63,$65,$65,$65,$65,$07,$C9,$02 ; E057 63 65 65 65 65 07 C9 02  ceeee...
+        .byte   $65,$5E,$01,$5E,$60,$60,$60,$60 ; E05F 65 5E 01 5E 60 60 60 60  e^.^````
+        .byte   $07,$C9,$02,$60,$5E,$01,$5E,$60 ; E067 07 C9 02 60 5E 01 5E 60  ...`^.^`
+        .byte   $60,$60,$60,$07,$C9,$02,$60,$5E ; E06F 60 60 60 07 C9 02 60 5E  ```...`^
+        .byte   $01,$5E,$60,$60,$60,$60,$07,$C9 ; E077 01 5E 60 60 60 60 07 C9  .^````..
+        .byte   $02,$5B,$5E,$01,$5E,$60,$60,$60 ; E07F 02 5B 5E 01 5E 60 60 60  .[^.^```
+        .byte   $60,$07,$C9,$02,$5B,$5E,$01,$63 ; E087 60 07 C9 02 5B 5E 01 63  `...[^.c
+        .byte   $65,$65,$65,$65,$07,$C9,$04,$5C ; E08F 65 65 65 65 07 C9 04 5C  eeee...\
+        .byte   $01,$62,$63,$63,$63,$63,$07,$C9 ; E097 01 62 63 63 63 63 07 C9  .bcccc..
+        .byte   $02,$5B,$5E,$01,$5E,$60,$60,$60 ; E09F 02 5B 5E 01 5E 60 60 60  .[^.^```
+        .byte   $60,$07,$C9,$02,$5B,$5E,$01,$5E ; E0A7 60 07 C9 02 5B 5E 01 5E  `...[^.^
+        .byte   $60,$60,$60,$60,$07,$C9,$02,$5B ; E0AF 60 60 60 60 07 C9 02 5B  ````...[
+        .byte   $5E,$08,$59,$09,$5C,$01,$C9,$5C ; E0B7 5E 08 59 09 5C 01 C9 5C  ^.Y.\..\
+        .byte   $5C,$02,$5C,$01,$5C,$5C,$02,$5C ; E0BF 5C 02 5C 01 5C 5C 02 5C  \.\.\\.\
+        .byte   $01,$5C,$5C,$02,$5C,$5C,$02,$5C ; E0C7 01 5C 5C 02 5C 5C 02 5C  .\\.\\.\
+        .byte   $01,$5C,$5C,$02,$5C,$01,$5C,$5C ; E0CF 01 5C 5C 02 5C 01 5C 5C  .\\.\.\\
+        .byte   $02,$5C,$01,$5C,$5C,$5C,$59,$59 ; E0D7 02 5C 01 5C 5C 5C 59 59  .\.\\\YY
+        .byte   $59,$5E,$60,$C9,$60,$60,$07,$C9 ; E0DF 59 5E 60 C9 60 60 07 C9  Y^`.``..
+        .byte   $02,$5B,$5E,$01,$5E,$60,$60,$60 ; E0E7 02 5B 5E 01 5E 60 60 60  .[^.^```
+        .byte   $60,$07,$C9,$02,$5B,$5E,$01,$5E ; E0EF 60 07 C9 02 5B 5E 01 5E  `...[^.^
+        .byte   $60,$60,$60,$60,$07,$C9,$02,$5B ; E0F7 60 60 60 60 07 C9 02 5B  ````...[
+        .byte   $5E,$01,$5E,$60,$60,$60,$60,$07 ; E0FF 5E 01 5E 60 60 60 60 07  ^.^````.
+        .byte   $C9,$02,$5B,$5E,$D0,$CC,$69,$C7 ; E107 C9 02 5B 5E D0 CC 69 C7  ..[^..i.
+        .byte   $FF,$C4,$19,$CD,$03,$00,$DE,$06 ; E10F FF C4 19 CD 03 00 DE 06  ........
+        .byte   $CD,$03,$01,$D8,$00,$3F,$C9,$CE ; E117 CD 03 01 D8 00 3F C9 CE  .....?..
+        .byte   $3F,$3D,$03,$D0                 ; E11F 3F 3D 03 D0              ?=..
 LE123:
-        .byte   $FF                             ; E123 FF                       .
-        brk                                     ; E124 00                       .
-        asl     L0100                           ; E125 0E 00 01                 ...
-        .byte   $CB                             ; E128 CB                       .
-        brk                                     ; E129 00                       .
-        .byte   $02                             ; E12A 02                       .
-        beq     LE12D                           ; E12B F0 00                    ..
-LE12D:
-        .byte   $03                             ; E12D 03                       .
-        .byte   $0F                             ; E12E 0F                       .
-        ora     ($FF,x)                         ; E12F 01 FF                    ..
-        cpy     LC760                           ; E131 CC 60 C7                 .`.
-        .byte   $FF                             ; E134 FF                       .
-        cpy     $FF                             ; E135 C4 FF                    ..
-        cmp     a:$03                           ; E137 CD 03 00                 ...
-        .byte   $DB                             ; E13A DB                       .
-        .byte   $07                             ; E13B 07                       .
-        brk                                     ; E13C 00                       .
-        asl     LD878,x                         ; E13D 1E 78 D8                 .x.
-        brk                                     ; E140 00                       .
-        dec     LCD06,x                         ; E141 DE 06 CD                 ...
-        .byte   $03                             ; E144 03                       .
-        ora     ($D8,x)                         ; E145 01 D8                    ..
-        .byte   $0C                             ; E147 0C                       .
-        php                                     ; E148 08                       .
-        .byte   $02                             ; E149 02                       .
-        cmp     #$01                            ; E14A C9 01                    ..
-        .byte   $6B                             ; E14C 6B                       k
-        ror     a                               ; E14D 6A                       j
-        asl     $6B                             ; E14E 06 6B                    .k
-        ora     ($64,x)                         ; E150 01 64                    .d
-        ror     L0002                           ; E152 66 02                    f.
-        pla                                     ; E154 68                       h
-        ora     ($6B,x)                         ; E155 01 6B                    .k
-        ror     a                               ; E157 6A                       j
-        .byte   $02                             ; E158 02                       .
-        .byte   $6B                             ; E159 6B                       k
-        ora     ($66,x)                         ; E15A 01 66                    .f
-        pla                                     ; E15C 68                       h
-        .byte   $02                             ; E15D 02                       .
-        ror     a                               ; E15E 6A                       j
-        ora     ($68,x)                         ; E15F 01 68                    .h
-        ror     $64                             ; E161 66 64                    fd
-        pla                                     ; E163 68                       h
-        .byte   $64                             ; E164 64                       d
-        pla                                     ; E165 68                       h
-        .byte   $04                             ; E166 04                       .
-        adc     (L0002,x)                       ; E167 61 02                    a.
-        cmp     #$5C                            ; E169 C9 5C                    .\
-        .byte   $5A                             ; E16B 5A                       Z
-        .byte   $5C                             ; E16C 5C                       \
-        cli                                     ; E16D 58                       X
-        .byte   $57                             ; E16E 57                       W
-        eor     $53,x                           ; E16F 55 53                    US
-        .byte   $52                             ; E171 52                       R
-        eor     $53,x                           ; E172 55 53                    US
-        bvc     LE1C4                           ; E174 50 4E                    PN
-        jmp     L494B                           ; E176 4C 4B 49                 LKI
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; E179 02                       .
-        cmp     #$01                            ; E17A C9 01                    ..
-        .byte   $6B                             ; E17C 6B                       k
-        ror     a                               ; E17D 6A                       j
-        asl     $6B                             ; E17E 06 6B                    .k
-        ora     ($64,x)                         ; E180 01 64                    .d
-        ror     L0002                           ; E182 66 02                    f.
-        pla                                     ; E184 68                       h
-        ora     ($6B,x)                         ; E185 01 6B                    .k
-        ror     a                               ; E187 6A                       j
-        .byte   $02                             ; E188 02                       .
-        .byte   $6B                             ; E189 6B                       k
-        ora     ($66,x)                         ; E18A 01 66                    .f
-        pla                                     ; E18C 68                       h
-        .byte   $02                             ; E18D 02                       .
-        ror     a                               ; E18E 6A                       j
-        ora     ($68,x)                         ; E18F 01 68                    .h
-        ror     $64                             ; E191 66 64                    fd
-        pla                                     ; E193 68                       h
-        .byte   $64                             ; E194 64                       d
-        pla                                     ; E195 68                       h
-        .byte   $04                             ; E196 04                       .
-        adc     (L0002,x)                       ; E197 61 02                    a.
-        cmp     #$01                            ; E199 C9 01                    ..
-        .byte   $53                             ; E19B 53                       S
-        cli                                     ; E19C 58                       X
-        .byte   $02                             ; E19D 02                       .
-        .byte   $5A                             ; E19E 5A                       Z
-        cli                                     ; E19F 58                       X
-        .byte   $57                             ; E1A0 57                       W
-        ora     ($55,x)                         ; E1A1 01 55                    .U
-        cli                                     ; E1A3 58                       X
-        .byte   $02                             ; E1A4 02                       .
-        .byte   $57                             ; E1A5 57                       W
-        .byte   $53                             ; E1A6 53                       S
-        .byte   $52                             ; E1A7 52                       R
-        ora     ($50,x)                         ; E1A8 01 50                    .P
-        .byte   $52                             ; E1AA 52                       R
-        .byte   $0C                             ; E1AB 0C                       .
-        .byte   $53                             ; E1AC 53                       S
-        .byte   $02                             ; E1AD 02                       .
-        cmp     #$64                            ; E1AE C9 64                    .d
-        adc     #$02                            ; E1B0 69 02                    i.
-        .byte   $6B                             ; E1B2 6B                       k
-        adc     #$68                            ; E1B3 69 68                    ih
-        ora     ($66,x)                         ; E1B5 01 66                    .f
-        adc     #$02                            ; E1B7 69 02                    i.
-        pla                                     ; E1B9 68                       h
-        .byte   $64                             ; E1BA 64                       d
-LE1BB:
-        .byte   $63                             ; E1BB 63                       c
-        ora     ($61,x)                         ; E1BC 01 61                    .a
-        .byte   $63                             ; E1BE 63                       c
-        .byte   $0C                             ; E1BF 0C                       .
-        .byte   $64                             ; E1C0 64                       d
-        .byte   $02                             ; E1C1 02                       .
-        cmp     #$01                            ; E1C2 C9 01                    ..
-LE1C4:
-        adc     #$6E                            ; E1C4 69 6E                    in
-        .byte   $02                             ; E1C6 02                       .
-        bvs     LE237                           ; E1C7 70 6E                    pn
-        .byte   $04                             ; E1C9 04                       .
-        adc     LC902                           ; E1CA 6D 02 C9                 m..
-        ora     ($65,x)                         ; E1CD 01 65                    .e
-        ror     a                               ; E1CF 6A                       j
-        .byte   $02                             ; E1D0 02                       .
-        jmp     (L086A)                         ; E1D1 6C 6A 08                 lj.
-
-; ----------------------------------------------------------------------------
-        adc     #$18                            ; E1D4 69 18                    i.
-        cmp     #$01                            ; E1D6 C9 01                    ..
-        eor     ($53),y                         ; E1D8 51 53                    QS
-        eor     $57,x                           ; E1DA 55 57                    UW
-        cli                                     ; E1DC 58                       X
-        .byte   $5A                             ; E1DD 5A                       Z
-        .byte   $5C                             ; E1DE 5C                       \
-LE1E0           := * + 1
-        eor     $5C08,x                         ; E1DF 5D 08 5C                 ].\
-        ora     ($69,x)                         ; E1E2 01 69                    .i
-        .byte   $6B                             ; E1E4 6B                       k
-        adc     $706F                           ; E1E5 6D 6F 70                 mop
-        .byte   $72                             ; E1E8 72                       r
-        .byte   $74                             ; E1E9 74                       t
-        adc     $08,x                           ; E1EA 75 08                    u.
-        .byte   $74                             ; E1EC 74                       t
-        bne     LE1BB                           ; E1ED D0 CC                    ..
-        rts                                     ; E1EF 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $C7                             ; E1F0 C7                       .
-        .byte   $FF                             ; E1F1 FF                       .
-        cpy     $FF                             ; E1F2 C4 FF                    ..
-        cmp     a:$03                           ; E1F4 CD 03 00                 ...
-        .byte   $DB                             ; E1F7 DB                       .
-        .byte   $07                             ; E1F8 07                       .
-        brk                                     ; E1F9 00                       .
-        asl     LD878,x                         ; E1FA 1E 78 D8                 .x.
-        brk                                     ; E1FD 00                       .
-LE1FF           := * + 1
-        dec     LCD06,x                         ; E1FE DE 06 CD                 ...
-        .byte   $03                             ; E201 03                       .
-        ora     ($D8,x)                         ; E202 01 D8                    ..
-        .byte   $0C                             ; E204 0C                       .
-        php                                     ; E205 08                       .
-        .byte   $02                             ; E206 02                       .
-        cmp     #$06                            ; E207 C9 06                    ..
-        .byte   $5A                             ; E209 5A                       Z
-        .byte   $02                             ; E20A 02                       .
-        cmp     #$06                            ; E20B C9 06                    ..
-        .byte   $5C                             ; E20D 5C                       \
-        dec     LE311                           ; E20E CE 11 E3                 ...
-        brk                                     ; E211 00                       .
-        bne     LE1E0                           ; E212 D0 CC                    ..
-        rts                                     ; E214 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $C7                             ; E215 C7                       .
-        .byte   $FF                             ; E216 FF                       .
-        cpy     $04                             ; E217 C4 04                    ..
-        cmp     a:$03                           ; E219 CD 03 00                 ...
-        .byte   $DB                             ; E21C DB                       .
-        .byte   $07                             ; E21D 07                       .
-        brk                                     ; E21E 00                       .
-        asl     LD878,x                         ; E21F 1E 78 D8                 .x.
-        brk                                     ; E222 00                       .
-        dec     LCD06,x                         ; E223 DE 06 CD                 ...
-        .byte   $03                             ; E226 03                       .
-        ora     ($D8,x)                         ; E227 01 D8                    ..
-        .byte   $0C                             ; E229 0C                       .
-        php                                     ; E22A 08                       .
-        php                                     ; E22B 08                       .
-        eor     $CF,x                           ; E22C 55 CF                    U.
-        jsr     L0108                           ; E22E 20 08 01                  ..
-        bne     LE1FF                           ; E231 D0 CC                    ..
-        rts                                     ; E233 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $C7                             ; E234 C7                       .
-        .byte   $FF                             ; E235 FF                       .
-LE237           := * + 1
-        cpy     $0D                             ; E236 C4 0D                    ..
-        cmp     a:$03                           ; E238 CD 03 00                 ...
-        .byte   $DB                             ; E23B DB                       .
-        .byte   $07                             ; E23C 07                       .
-        brk                                     ; E23D 00                       .
-        asl     LD878,x                         ; E23E 1E 78 D8                 .x.
-        brk                                     ; E241 00                       .
-        dec     LCD06,x                         ; E242 DE 06 CD                 ...
-        .byte   $03                             ; E245 03                       .
-        ora     ($D8,x)                         ; E246 01 D8                    ..
-        .byte   $0C                             ; E248 0C                       .
-        php                                     ; E249 08                       .
-        .byte   $3F                             ; E24A 3F                       ?
-        cmp     #$C9                            ; E24B C9 C9                    ..
-        cmp     #$C9                            ; E24D C9 C9                    ..
-        cmp     #$D0                            ; E24F C9 D0                    ..
+        .byte   $FF,$00,$0E,$00,$01,$CB,$00,$02 ; E123 FF 00 0E 00 01 CB 00 02  ........
+        .byte   $F0,$00,$03,$0F,$01,$FF,$CC,$60 ; E12B F0 00 03 0F 01 FF CC 60  .......`
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; E133 C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; E13B 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$02,$C9 ; E143 CD 03 01 D8 0C 08 02 C9  ........
+        .byte   $01,$6B,$6A,$06,$6B,$01,$64,$66 ; E14B 01 6B 6A 06 6B 01 64 66  .kj.k.df
+        .byte   $02,$68,$01,$6B,$6A,$02,$6B,$01 ; E153 02 68 01 6B 6A 02 6B 01  .h.kj.k.
+        .byte   $66,$68,$02,$6A,$01,$68,$66,$64 ; E15B 66 68 02 6A 01 68 66 64  fh.j.hfd
+        .byte   $68,$64,$68,$04,$61,$02,$C9,$5C ; E163 68 64 68 04 61 02 C9 5C  hdh.a..\
+        .byte   $5A,$5C,$58,$57,$55,$53,$52,$55 ; E16B 5A 5C 58 57 55 53 52 55  Z\XWUSRU
+        .byte   $53,$50,$4E,$4C,$4B,$49,$02,$C9 ; E173 53 50 4E 4C 4B 49 02 C9  SPNLKI..
+        .byte   $01,$6B,$6A,$06,$6B,$01,$64,$66 ; E17B 01 6B 6A 06 6B 01 64 66  .kj.k.df
+        .byte   $02,$68,$01,$6B,$6A,$02,$6B,$01 ; E183 02 68 01 6B 6A 02 6B 01  .h.kj.k.
+        .byte   $66,$68,$02,$6A,$01,$68,$66,$64 ; E18B 66 68 02 6A 01 68 66 64  fh.j.hfd
+        .byte   $68,$64,$68,$04,$61,$02,$C9,$01 ; E193 68 64 68 04 61 02 C9 01  hdh.a...
+        .byte   $53,$58,$02,$5A,$58,$57,$01,$55 ; E19B 53 58 02 5A 58 57 01 55  SX.ZXW.U
+        .byte   $58,$02,$57,$53,$52,$01,$50,$52 ; E1A3 58 02 57 53 52 01 50 52  X.WSR.PR
+        .byte   $0C,$53,$02,$C9,$64,$69,$02,$6B ; E1AB 0C 53 02 C9 64 69 02 6B  .S..di.k
+        .byte   $69,$68,$01,$66,$69,$02,$68,$64 ; E1B3 69 68 01 66 69 02 68 64  ih.fi.hd
+        .byte   $63,$01,$61,$63,$0C,$64,$02,$C9 ; E1BB 63 01 61 63 0C 64 02 C9  c.ac.d..
+        .byte   $01,$69,$6E,$02,$70,$6E,$04,$6D ; E1C3 01 69 6E 02 70 6E 04 6D  .in.pn.m
+        .byte   $02,$C9,$01,$65,$6A,$02,$6C,$6A ; E1CB 02 C9 01 65 6A 02 6C 6A  ...ej.lj
+        .byte   $08,$69,$18,$C9,$01,$51,$53,$55 ; E1D3 08 69 18 C9 01 51 53 55  .i...QSU
+        .byte   $57,$58,$5A,$5C,$5D,$08,$5C,$01 ; E1DB 57 58 5A 5C 5D 08 5C 01  WXZ\].\.
+        .byte   $69,$6B,$6D,$6F,$70,$72,$74,$75 ; E1E3 69 6B 6D 6F 70 72 74 75  ikmoprtu
+        .byte   $08,$74,$D0,$CC,$60,$C7,$FF,$C4 ; E1EB 08 74 D0 CC 60 C7 FF C4  .t..`...
+        .byte   $FF,$CD,$03,$00,$DB,$07,$00,$1E ; E1F3 FF CD 03 00 DB 07 00 1E  ........
+        .byte   $78,$D8,$00,$DE,$06,$CD,$03,$01 ; E1FB 78 D8 00 DE 06 CD 03 01  x.......
+        .byte   $D8,$0C,$08,$02,$C9,$06,$5A,$02 ; E203 D8 0C 08 02 C9 06 5A 02  ......Z.
+        .byte   $C9,$06,$5C,$CE,$11,$E3,$00,$D0 ; E20B C9 06 5C CE 11 E3 00 D0  ..\.....
+        .byte   $CC,$60,$C7,$FF,$C4,$04,$CD,$03 ; E213 CC 60 C7 FF C4 04 CD 03  .`......
+        .byte   $00,$DB,$07,$00,$1E,$78,$D8,$00 ; E21B 00 DB 07 00 1E 78 D8 00  .....x..
+        .byte   $DE,$06,$CD,$03,$01,$D8,$0C,$08 ; E223 DE 06 CD 03 01 D8 0C 08  ........
+        .byte   $08,$55,$CF,$20,$08,$01,$D0,$CC ; E22B 08 55 CF 20 08 01 D0 CC  .U. ....
+        .byte   $60,$C7,$FF,$C4,$0D,$CD,$03,$00 ; E233 60 C7 FF C4 0D CD 03 00  `.......
+        .byte   $DB,$07,$00,$1E,$78,$D8,$00,$DE ; E23B DB 07 00 1E 78 D8 00 DE  ....x...
+        .byte   $06,$CD,$03,$01,$D8,$0C,$08,$3F ; E243 06 CD 03 01 D8 0C 08 3F  .......?
+        .byte   $C9,$C9,$C9,$C9,$C9,$D0         ; E24B C9 C9 C9 C9 C9 D0        ......
 LE251:
-        .byte   $FF                             ; E251 FF                       .
-        brk                                     ; E252 00                       .
-        asl     L0100                           ; E253 0E 00 01                 ...
-        .byte   $DB                             ; E256 DB                       .
-        brk                                     ; E257 00                       .
-        .byte   $02                             ; E258 02                       .
-        .byte   $4B                             ; E259 4B                       K
-        ora     ($03,x)                         ; E25A 01 03                    ..
-        lda     LFF01,y                         ; E25C B9 01 FF                 ...
-        cpy     LC7C8                           ; E25F CC C8 C7                 ...
-        .byte   $FF                             ; E262 FF                       .
-        cpy     $6D                             ; E263 C4 6D                    .m
-        cmp     a:$03                           ; E265 CD 03 00                 ...
-        .byte   $DB                             ; E268 DB                       .
-        .byte   $07                             ; E269 07                       .
-        brk                                     ; E26A 00                       .
-        asl     LD878,x                         ; E26B 1E 78 D8                 .x.
-        brk                                     ; E26E 00                       .
-        dec     LCD06,x                         ; E26F DE 06 CD                 ...
-        .byte   $03                             ; E272 03                       .
-        ora     ($D8,x)                         ; E273 01 D8                    ..
-        .byte   $0C                             ; E275 0C                       .
-        php                                     ; E276 08                       .
-        .byte   $3C                             ; E277 3C                       <
-        cmp     #$03                            ; E278 C9 03                    ..
-        ror     a                               ; E27A 6A                       j
-        ora     ($C9,x)                         ; E27B 01 C9                    ..
-        cmp     #$6A                            ; E27D C9 6A                    .j
-        .byte   $02                             ; E27F 02                       .
-        .byte   $67                             ; E280 67                       g
-        ora     ($63,x)                         ; E281 01 63                    .c
-        cmp     #$C9                            ; E283 C9 C9                    ..
-        ror     a                               ; E285 6A                       j
-        .byte   $02                             ; E286 02                       .
-        .byte   $67                             ; E287 67                       g
-        ora     ($63,x)                         ; E288 01 63                    .c
-        .byte   $67                             ; E28A 67                       g
-        cmp     #$C9                            ; E28B C9 C9                    ..
-        cmp     #$C9                            ; E28D C9 C9                    ..
-        .byte   $63                             ; E28F 63                       c
-        .byte   $03                             ; E290 03                       .
-        cmp     #$67                            ; E291 C9 67                    .g
-        adc     $63                             ; E293 65 63                    ec
-        ora     ($C9,x)                         ; E295 01 C9                    ..
-        cmp     #$65                            ; E297 C9 65                    .e
-        .byte   $02                             ; E299 02                       .
-        .byte   $63                             ; E29A 63                       c
-        ora     ($61,x)                         ; E29B 01 61                    .a
-        .byte   $03                             ; E29D 03                       .
-        .byte   $63                             ; E29E 63                       c
-        adc     ($63,x)                         ; E29F 61 63                    ac
-        ora     ($C9,x)                         ; E2A1 01 C9                    ..
-        cmp     #$67                            ; E2A3 C9 67                    .g
-        .byte   $02                             ; E2A5 02                       .
-        ror     a                               ; E2A6 6A                       j
-        ora     ($6C,x)                         ; E2A7 01 6C                    .l
-        asl     $6D                             ; E2A9 06 6D                    .m
-        .byte   $CF                             ; E2AB CF                       .
-        .byte   $02                             ; E2AC 02                       .
-        rol     $00                             ; E2AD 26 00                    &.
-        .byte   $03                             ; E2AF 03                       .
-        adc     $016C                           ; E2B0 6D 6C 01                 ml.
-        cmp     #$C9                            ; E2B3 C9 C9                    ..
-        jmp     (L6802)                         ; E2B5 6C 02 68                 l.h
-
-; ----------------------------------------------------------------------------
-        ora     ($65,x)                         ; E2B8 01 65                    .e
-        .byte   $02                             ; E2BA 02                       .
-        .byte   $62                             ; E2BB 62                       b
-        ora     ($65,x)                         ; E2BC 01 65                    .e
-        .byte   $02                             ; E2BE 02                       .
-        pla                                     ; E2BF 68                       h
-        ora     ($6C,x)                         ; E2C0 01 6C                    .l
-        .byte   $03                             ; E2C2 03                       .
-        ror     a                               ; E2C3 6A                       j
-        ora     ($C9,x)                         ; E2C4 01 C9                    ..
-        cmp     #$03                            ; E2C6 C9 03                    ..
-        .byte   $6F                             ; E2C8 6F                       o
-        ora     ($C9,x)                         ; E2C9 01 C9                    ..
-        asl     $6A                             ; E2CB 06 6A                    .j
-        .byte   $03                             ; E2CD 03                       .
-        pla                                     ; E2CE 68                       h
-        ora     ($C9,x)                         ; E2CF 01 C9                    ..
-        cmp     #$68                            ; E2D1 C9 68                    .h
-        .byte   $02                             ; E2D3 02                       .
-        adc     $01                             ; E2D4 65 01                    e.
-        .byte   $62                             ; E2D6 62                       b
-        .byte   $02                             ; E2D7 02                       .
-        lsr     $6201,x                         ; E2D8 5E 01 62                 ^.b
-        .byte   $02                             ; E2DB 02                       .
-        adc     $01                             ; E2DC 65 01                    e.
-        pla                                     ; E2DE 68                       h
-        .byte   $03                             ; E2DF 03                       .
-        .byte   $67                             ; E2E0 67                       g
-        .byte   $02                             ; E2E1 02                       .
-        cmp     #$03                            ; E2E2 C9 03                    ..
-        pla                                     ; E2E4 68                       h
-        ora     ($C9,x)                         ; E2E5 01 C9                    ..
-        .byte   $03                             ; E2E7 03                       .
-        ror     a                               ; E2E8 6A                       j
-        adc     $016C                           ; E2E9 6D 6C 01                 ml.
-        cmp     #$C9                            ; E2EC C9 C9                    ..
-        jmp     (L6802)                         ; E2EE 6C 02 68                 l.h
-
-; ----------------------------------------------------------------------------
-        ora     ($65,x)                         ; E2F1 01 65                    .e
-        .byte   $02                             ; E2F3 02                       .
-        .byte   $62                             ; E2F4 62                       b
-        ora     ($65,x)                         ; E2F5 01 65                    .e
-        .byte   $02                             ; E2F7 02                       .
-        pla                                     ; E2F8 68                       h
-        ora     ($6C,x)                         ; E2F9 01 6C                    .l
-        .byte   $03                             ; E2FB 03                       .
-        ror     a                               ; E2FC 6A                       j
-        .byte   $02                             ; E2FD 02                       .
-        cmp     #$03                            ; E2FE C9 03                    ..
-        .byte   $6F                             ; E300 6F                       o
-        ora     ($C9,x)                         ; E301 01 C9                    ..
-        asl     $6A                             ; E303 06 6A                    .j
-        .byte   $03                             ; E305 03                       .
-        adc     $01                             ; E306 65 01                    e.
-        cmp     #$C9                            ; E308 C9 C9                    ..
-        .byte   $67                             ; E30A 67                       g
-        .byte   $02                             ; E30B 02                       .
-        adc     $01                             ; E30C 65 01                    e.
-        .byte   $63                             ; E30E 63                       c
-        .byte   $02                             ; E30F 02                       .
-LE311           := * + 1
-        adc     $01                             ; E310 65 01                    e.
-        .byte   $67                             ; E312 67                       g
-        .byte   $02                             ; E313 02                       .
-        pla                                     ; E314 68                       h
-        ora     ($67,x)                         ; E315 01 67                    .g
-        .byte   $03                             ; E317 03                       .
-        adc     $01                             ; E318 65 01                    e.
-        cmp     #$C9                            ; E31A C9 C9                    ..
-        .byte   $67                             ; E31C 67                       g
-        .byte   $02                             ; E31D 02                       .
-        pla                                     ; E31E 68                       h
-        ora     ($6A,x)                         ; E31F 01 6A                    .j
-        .byte   $03                             ; E321 03                       .
-        jmp     (L6968)                         ; E322 6C 68 69                 lhi
-
-; ----------------------------------------------------------------------------
-        ora     ($6A,x)                         ; E325 01 6A                    .j
-        .byte   $04                             ; E327 04                       .
-        cmp     #$13                            ; E328 C9 13                    ..
-        adc     LCCD0                           ; E32A 6D D0 CC                 m..
-        iny                                     ; E32D C8                       .
-        .byte   $C7                             ; E32E C7                       .
-        .byte   $FF                             ; E32F FF                       .
-        cpy     $6D                             ; E330 C4 6D                    .m
-        cmp     a:$03                           ; E332 CD 03 00                 ...
-        .byte   $DB                             ; E335 DB                       .
-        .byte   $07                             ; E336 07                       .
-        brk                                     ; E337 00                       .
-        asl     LD878,x                         ; E338 1E 78 D8                 .x.
-        brk                                     ; E33B 00                       .
-        dec     LCD06,x                         ; E33C DE 06 CD                 ...
-        .byte   $03                             ; E33F 03                       .
-        ora     ($D8,x)                         ; E340 01 D8                    ..
-        .byte   $0C                             ; E342 0C                       .
-        php                                     ; E343 08                       .
-        ora     ($C9,x)                         ; E344 01 C9                    ..
-        cmp     #$61                            ; E346 C9 61                    .a
-        cmp     #$C9                            ; E348 C9 C9                    ..
-        cmp     #$61                            ; E34A C9 61                    .a
-        cmp     #$C9                            ; E34C C9 C9                    ..
-        .byte   $03                             ; E34E 03                       .
-        rts                                     ; E34F 60                       `
-
-; ----------------------------------------------------------------------------
-        lsr     $08CE,x                         ; E350 5E CE 08                 ^..
-        .byte   $F3                             ; E353 F3                       .
-        brk                                     ; E354 00                       .
-        .byte   $CF                             ; E355 CF                       .
-        .byte   $02                             ; E356 02                       .
-        .byte   $F3                             ; E357 F3                       .
-        brk                                     ; E358 00                       .
-        .byte   $03                             ; E359 03                       .
-        .byte   $67                             ; E35A 67                       g
-        .byte   $0C                             ; E35B 0C                       .
-        rts                                     ; E35C 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $03                             ; E35D 03                       .
-        rts                                     ; E35E 60                       `
-
-; ----------------------------------------------------------------------------
-        ora     #$61                            ; E35F 09 61                    .a
-        .byte   $03                             ; E361 03                       .
-        rts                                     ; E362 60                       `
-
-; ----------------------------------------------------------------------------
-        lsr     $6009,x                         ; E363 5E 09 60                 ^.`
-        .byte   $03                             ; E366 03                       .
-        .byte   $63                             ; E367 63                       c
-        .byte   $62                             ; E368 62                       b
-        ora     #$61                            ; E369 09 61                    .a
-        .byte   $02                             ; E36B 02                       .
-        eor     $5E01,x                         ; E36C 5D 01 5E                 ].^
-        .byte   $03                             ; E36F 03                       .
-        .byte   $63                             ; E370 63                       c
-        .byte   $0C                             ; E371 0C                       .
-        rts                                     ; E372 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $03                             ; E373 03                       .
-        rts                                     ; E374 60                       `
-
-; ----------------------------------------------------------------------------
-        ora     #$61                            ; E375 09 61                    .a
-        .byte   $03                             ; E377 03                       .
-        rts                                     ; E378 60                       `
-
-; ----------------------------------------------------------------------------
-        lsr     LC901,x                         ; E379 5E 01 C9                 ^..
-        cmp     #$60                            ; E37C C9 60                    .`
-        cmp     #$C9                            ; E37E C9 C9                    ..
-        rts                                     ; E380 60                       `
-
-; ----------------------------------------------------------------------------
-        cmp     #$C9                            ; E381 C9 C9                    ..
-        .byte   $03                             ; E383 03                       .
-        rts                                     ; E384 60                       `
-
-; ----------------------------------------------------------------------------
-        rts                                     ; E385 60                       `
-
-; ----------------------------------------------------------------------------
-        ora     ($C9,x)                         ; E386 01 C9                    ..
-        cmp     #$61                            ; E388 C9 61                    .a
-        cmp     #$C9                            ; E38A C9 C9                    ..
-        cmp     #$C9                            ; E38C C9 C9                    ..
-        adc     ($C9,x)                         ; E38E 61 C9                    a.
-        cmp     #$03                            ; E390 C9 03                    ..
-        .byte   $63                             ; E392 63                       c
-        adc     ($60,x)                         ; E393 61 60                    a`
-        ora     ($5E,x)                         ; E395 01 5E                    .^
-        .byte   $04                             ; E397 04                       .
-        cmp     #$13                            ; E398 C9 13                    ..
-        adc     ($D0,x)                         ; E39A 61 D0                    a.
-        cpy     LC7C8                           ; E39C CC C8 C7                 ...
-        .byte   $FF                             ; E39F FF                       .
-        cpy     $6D                             ; E3A0 C4 6D                    .m
-        cmp     a:$03                           ; E3A2 CD 03 00                 ...
-        .byte   $DB                             ; E3A5 DB                       .
-        .byte   $07                             ; E3A6 07                       .
-        brk                                     ; E3A7 00                       .
-        asl     LD878,x                         ; E3A8 1E 78 D8                 .x.
-        brk                                     ; E3AB 00                       .
-        dec     LCD06,x                         ; E3AC DE 06 CD                 ...
-        .byte   $03                             ; E3AF 03                       .
-        ora     ($D8,x)                         ; E3B0 01 D8                    ..
-        .byte   $0C                             ; E3B2 0C                       .
-        php                                     ; E3B3 08                       .
-        .byte   $02                             ; E3B4 02                       .
-        .byte   $4B                             ; E3B5 4B                       K
-        ora     ($C9,x)                         ; E3B6 01 C9                    ..
-        cmp     #$C9                            ; E3B8 C9 C9                    ..
-        .byte   $4B                             ; E3BA 4B                       K
-        .byte   $03                             ; E3BB 03                       .
-        cmp     #$46                            ; E3BC C9 46                    .F
-        eor     #$CE                            ; E3BE 49 CE                    I.
-        php                                     ; E3C0 08                       .
-        .byte   $63                             ; E3C1 63                       c
-        ora     ($CF,x)                         ; E3C2 01 CF                    ..
-        .byte   $02                             ; E3C4 02                       .
-        .byte   $63                             ; E3C5 63                       c
-        ora     ($03,x)                         ; E3C6 01 03                    ..
-        .byte   $4B                             ; E3C8 4B                       K
-        bvc     LE416                           ; E3C9 50 4B                    PK
-        jmp     L464D                           ; E3CB 4C 4D 46                 LMF
-
-; ----------------------------------------------------------------------------
-        .byte   $4B                             ; E3CE 4B                       K
-        eor     ($52),y                         ; E3CF 51 52                    QR
-        eor     $4F,x                           ; E3D1 55 4F                    UO
-        bvc     LE422                           ; E3D3 50 4D                    PM
-        .byte   $4B                             ; E3D5 4B                       K
-        .byte   $02                             ; E3D6 02                       .
-        lsr     a                               ; E3D7 4A                       J
-        ora     ($52,x)                         ; E3D8 01 52                    .R
-        .byte   $03                             ; E3DA 03                       .
-        lsr     a                               ; E3DB 4A                       J
-        .byte   $4B                             ; E3DC 4B                       K
-        eor     $54,x                           ; E3DD 55 54                    UT
-        .byte   $52                             ; E3DF 52                       R
-        .byte   $4F                             ; E3E0 4F                       O
-        bvc     LE42E                           ; E3E1 50 4B                    PK
-        jmp     L464D                           ; E3E3 4C 4D 46                 LMF
-
-; ----------------------------------------------------------------------------
-        .byte   $4B                             ; E3E6 4B                       K
-        eor     $4F4E                           ; E3E7 4D 4E 4F                 MNO
-        .byte   $02                             ; E3EA 02                       .
-        .byte   $4B                             ; E3EB 4B                       K
-        ora     ($48,x)                         ; E3EC 01 48                    .H
-        .byte   $02                             ; E3EE 02                       .
-        eor     #$03                            ; E3EF 49 03                    I.
-        cmp     #$01                            ; E3F1 C9 01                    ..
-        eor     #$03                            ; E3F3 49 03                    I.
-        cmp     #$50                            ; E3F5 C9 50                    .P
-        .byte   $4F                             ; E3F7 4F                       O
-        .byte   $02                             ; E3F8 02                       .
-        .byte   $52                             ; E3F9 52                       R
-        cmp     #$01                            ; E3FA C9 01                    ..
-        cmp     #$52                            ; E3FC C9 52                    .R
-        .byte   $03                             ; E3FE 03                       .
-        cmp     #$48                            ; E3FF C9 48                    .H
-        eor     #$4A                            ; E401 49 4A                    IJ
-        ora     ($4B,x)                         ; E403 01 4B                    .K
-        .byte   $04                             ; E405 04                       .
-        cmp     #$13                            ; E406 C9 13                    ..
-        lsr     $D0                             ; E408 46 D0                    F.
-        cpy     LC7C8                           ; E40A CC C8 C7                 ...
-        .byte   $FF                             ; E40D FF                       .
-        cpy     $6D                             ; E40E C4 6D                    .m
-        cmp     a:$03                           ; E410 CD 03 00                 ...
-        .byte   $DB                             ; E413 DB                       .
-        .byte   $07                             ; E414 07                       .
-        brk                                     ; E415 00                       .
-LE416:
-        asl     LD878,x                         ; E416 1E 78 D8                 .x.
-        brk                                     ; E419 00                       .
-        dec     LCD06,x                         ; E41A DE 06 CD                 ...
-        .byte   $03                             ; E41D 03                       .
-        ora     ($D8,x)                         ; E41E 01 D8                    ..
-        .byte   $0C                             ; E420 0C                       .
-        php                                     ; E421 08                       .
-LE422:
-        .byte   $3F                             ; E422 3F                       ?
-        cmp     #$C9                            ; E423 C9 C9                    ..
-        cmp     #$C9                            ; E425 C9 C9                    ..
-        cmp     #$C9                            ; E427 C9 C9                    ..
-        cmp     #$C9                            ; E429 C9 C9                    ..
-LE42C           := * + 1
-        bne     LE42C                           ; E42B D0 FF                    ..
-        brk                                     ; E42D 00                       .
-LE42E:
-        asl     L0100                           ; E42E 0E 00 01                 ...
-        dec     L0200                           ; E431 CE 00 02                 ...
-        and     ($01),y                         ; E434 31 01                    1.
-        .byte   $03                             ; E436 03                       .
-        .byte   $42                             ; E437 42                       B
-        ora     ($FF,x)                         ; E438 01 FF                    ..
-        cpy     LC730                           ; E43A CC 30 C7                 .0.
-        .byte   $FF                             ; E43D FF                       .
-        cpy     $6E                             ; E43E C4 6E                    .n
-        cmp     a:$03                           ; E440 CD 03 00                 ...
-        .byte   $DB                             ; E443 DB                       .
-        .byte   $07                             ; E444 07                       .
-        brk                                     ; E445 00                       .
-        asl     LD878,x                         ; E446 1E 78 D8                 .x.
-        brk                                     ; E449 00                       .
-        dec     LCD06,x                         ; E44A DE 06 CD                 ...
-        .byte   $03                             ; E44D 03                       .
-        ora     ($D8,x)                         ; E44E 01 D8                    ..
-        brk                                     ; E450 00                       .
-        php                                     ; E451 08                       .
-        adc     $6A0A                           ; E452 6D 0A 6A                 m.j
-        asl     $6D                             ; E455 06 6D                    .m
-        .byte   $02                             ; E457 02                       .
-        .byte   $6F                             ; E458 6F                       o
-        asl     a                               ; E459 0A                       .
-        ror     a                               ; E45A 6A                       j
-        ora     #$6B                            ; E45B 09 6B                    .k
-        asl     a                               ; E45D 0A                       .
-        pla                                     ; E45E 68                       h
-        asl     $6B                             ; E45F 06 6B                    .k
-        .byte   $02                             ; E461 02                       .
-        adc     $680D                           ; E462 6D 0D 68                 m.h
-        ora     ($5C,x)                         ; E465 01 5C                    .\
-        adc     ($64,x)                         ; E467 61 64                    ad
-        ror     $68                             ; E469 66 68                    fh
-        ror     $6B                             ; E46B 66 6B                    fk
-        ror     a                               ; E46D 6A                       j
-        .byte   $03                             ; E46E 03                       .
-        adc     $6A02                           ; E46F 6D 02 6A                 m.j
-        adc     $61                             ; E472 65 61                    ea
-        ora     ($68,x)                         ; E474 01 68                    .h
-        adc     $7270                           ; E476 6D 70 72                 mpr
-        .byte   $74                             ; E479 74                       t
-        .byte   $72                             ; E47A 72                       r
-        .byte   $77                             ; E47B 77                       w
-        ror     $79,x                           ; E47C 76 79                    vy
-        sei                                     ; E47E 78                       x
-        ror     $71,x                           ; E47F 76 71                    vq
-        adc     $6A6C                           ; E481 6D 6C 6A                 mlj
-        adc     $61                             ; E484 65 61                    ea
-        .byte   $63                             ; E486 63                       c
-        .byte   $64                             ; E487 64                       d
-        pla                                     ; E488 68                       h
-        adc     $706F                           ; E489 6D 6F 70                 mop
-        .byte   $74                             ; E48C 74                       t
-        ror     $71,x                           ; E48D 76 71                    vq
-        adc     $6A6C                           ; E48F 6D 6C 6A                 mlj
-        adc     $61                             ; E492 65 61                    ea
-        rts                                     ; E494 60                       `
-
-; ----------------------------------------------------------------------------
-        adc     ($63,x)                         ; E495 61 63                    ac
-        .byte   $64                             ; E497 64                       d
-        pla                                     ; E498 68                       h
-        adc     $706F                           ; E499 6D 6F 70                 mop
-        .byte   $74                             ; E49C 74                       t
-        ror     $71,x                           ; E49D 76 71                    vq
-        adc     $6A6C                           ; E49F 6D 6C 6A                 mlj
-        adc     $61                             ; E4A2 65 61                    ea
-        rts                                     ; E4A4 60                       `
-
-; ----------------------------------------------------------------------------
-        cli                                     ; E4A5 58                       X
-        .byte   $5B                             ; E4A6 5B                       [
-        .byte   $5C                             ; E4A7 5C                       \
-        .byte   $5F                             ; E4A8 5F                       _
-        .byte   $64                             ; E4A9 64                       d
-        ror     $68                             ; E4AA 66 68                    fh
-        .byte   $6B                             ; E4AC 6B                       k
-        jmp     (L686A)                         ; E4AD 6C 6A 68                 ljh
-
-; ----------------------------------------------------------------------------
-        .byte   $63                             ; E4B0 63                       c
-        rts                                     ; E4B1 60                       `
-
-; ----------------------------------------------------------------------------
-        lsr     $575C,x                         ; E4B2 5E 5C 57                 ^\W
-        cli                                     ; E4B5 58                       X
-        .byte   $5A                             ; E4B6 5A                       Z
-        .byte   $5C                             ; E4B7 5C                       \
-        .byte   $5F                             ; E4B8 5F                       _
-        .byte   $64                             ; E4B9 64                       d
-        ror     $68                             ; E4BA 66 68                    fh
-        .byte   $6B                             ; E4BC 6B                       k
-        jmp     (L686A)                         ; E4BD 6C 6A 68                 ljh
-
-; ----------------------------------------------------------------------------
-        .byte   $63                             ; E4C0 63                       c
-        php                                     ; E4C1 08                       .
-        rts                                     ; E4C2 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $07                             ; E4C3 07                       .
-LE4C4:
-        adc     $7102                           ; E4C4 6D 02 71                 m.q
-LE4C7:
-        ora     ($68,x)                         ; E4C7 01 68                    .h
-        adc     $716F                           ; E4C9 6D 6F 71                 moq
-        .byte   $6F                             ; E4CC 6F                       o
-        .byte   $6B                             ; E4CD 6B                       k
-        ora     $77                             ; E4CE 05 77                    .w
-        ora     ($74,x)                         ; E4D0 01 74                    .t
-        adc     $716F                           ; E4D2 6D 6F 71                 moq
-        adc     ($6D),y                         ; E4D5 71 6D                    qm
-        .byte   $6F                             ; E4D7 6F                       o
-        adc     ($72),y                         ; E4D8 71 72                    qr
-        bvs     LE549                           ; E4DA 70 6D                    pm
-        ora     $69                             ; E4DC 05 69                    .i
-        .byte   $02                             ; E4DE 02                       .
-        adc     $6F01                           ; E4DF 6D 01 6F                 m.o
-        adc     ($71),y                         ; E4E2 71 71                    qq
-        pla                                     ; E4E4 68                       h
-        adc     $716F                           ; E4E5 6D 6F 71                 moq
-        .byte   $6F                             ; E4E8 6F                       o
-        .byte   $6B                             ; E4E9 6B                       k
-        .byte   $07                             ; E4EA 07                       .
-        .byte   $77                             ; E4EB 77                       w
-        .byte   $02                             ; E4EC 02                       .
-        .byte   $6B                             ; E4ED 6B                       k
-        ror     a                               ; E4EE 6A                       j
-        adc     $6B08                           ; E4EF 6D 08 6B                 m.k
-        .byte   $02                             ; E4F2 02                       .
-        cmp     #$6B                            ; E4F3 C9 6B                    .k
-        ror     a                               ; E4F5 6A                       j
-        adc     L6B10                           ; E4F6 6D 10 6B                 m.k
-        bne     LE4C7                           ; E4F9 D0 CC                    ..
-        bmi     LE4C4                           ; E4FB 30 C7                    0.
-        .byte   $FF                             ; E4FD FF                       .
-        cpy     $0F                             ; E4FE C4 0F                    ..
-        cmp     a:$03                           ; E500 CD 03 00                 ...
-        .byte   $DB                             ; E503 DB                       .
-        .byte   $07                             ; E504 07                       .
-        brk                                     ; E505 00                       .
-        asl     LD878,x                         ; E506 1E 78 D8                 .x.
-        brk                                     ; E509 00                       .
-        dec     LCD06,x                         ; E50A DE 06 CD                 ...
-        .byte   $03                             ; E50D 03                       .
-        ora     ($D8,x)                         ; E50E 01 D8                    ..
-        brk                                     ; E510 00                       .
-        php                                     ; E511 08                       .
-        eor     $0A,x                           ; E512 55 0A                    U.
-        .byte   $52                             ; E514 52                       R
-        asl     $55                             ; E515 06 55                    .U
-        .byte   $02                             ; E517 02                       .
-        eor     $0A,x                           ; E518 55 0A                    U.
-        .byte   $52                             ; E51A 52                       R
-        ora     #$52                            ; E51B 09 52                    .R
-        asl     a                               ; E51D 0A                       .
-        bvc     LE526                           ; E51E 50 06                    P.
-        bvc     LE524                           ; E520 50 02                    P.
-        bvc     LE52A                           ; E522 50 06                    P.
-LE524:
-        bvc     LE52C                           ; E524 50 06                    P.
-LE526:
-        .byte   $54                             ; E526 54                       T
-LE527:
-        bvc     LE531                           ; E527 50 08                    P.
-        cli                                     ; E529 58                       X
-LE52A:
-        eor     $58,x                           ; E52A 55 58                    UX
-LE52C:
-        eor     $6A6D                           ; E52C 4D 6D 6A                 Mmj
-        asl     $6D                             ; E52F 06 6D                    .m
-LE531:
-        .byte   $02                             ; E531 02                       .
-        .byte   $6F                             ; E532 6F                       o
-        php                                     ; E533 08                       .
-        ror     a                               ; E534 6A                       j
-        .byte   $6B                             ; E535 6B                       k
-        pla                                     ; E536 68                       h
-        asl     $6B                             ; E537 06 6B                    .k
-        .byte   $02                             ; E539 02                       .
-LE53B           := * + 1
-        adc     $680D                           ; E53A 6D 0D 68                 m.h
-        php                                     ; E53D 08                       .
-        adc     ($5F,x)                         ; E53E 61 5F                    a_
-        adc     ($03,x)                         ; E540 61 03                    a.
-        adc     #$05                            ; E542 69 05                    i.
-        cmp     #$02                            ; E544 C9 02                    ..
-        adc     LC906                           ; E546 6D 06 C9                 m..
-LE549:
-        .byte   $02                             ; E549 02                       .
-        .byte   $6B                             ; E54A 6B                       k
-        asl     $C9                             ; E54B 06 C9                    ..
-        ora     ($C9,x)                         ; E54D 01 C9                    ..
-        .byte   $02                             ; E54F 02                       .
-        .byte   $5F                             ; E550 5F                       _
-        lsr     $0861,x                         ; E551 5E 61 08                 ^a.
-        .byte   $5F                             ; E554 5F                       _
-        .byte   $02                             ; E555 02                       .
-        cmp     #$5F                            ; E556 C9 5F                    ._
-        lsr     $0D61,x                         ; E558 5E 61 0D                 ^a.
-        .byte   $5F                             ; E55B 5F                       _
-        bne     LE52A                           ; E55C D0 CC                    ..
-        bmi     LE527                           ; E55E 30 C7                    0.
-        .byte   $FF                             ; E560 FF                       .
-        cpy     $00                             ; E561 C4 00                    ..
-        .byte   $DB                             ; E563 DB                       .
-        .byte   $07                             ; E564 07                       .
-        brk                                     ; E565 00                       .
-        asl     LD878,x                         ; E566 1E 78 D8                 .x.
-        brk                                     ; E569 00                       .
-        dec     LC93F,x                         ; E56A DE 3F C9                 .?.
-        bne     LE53B                           ; E56D D0 CC                    ..
-        inc     LFFC7,x                         ; E56F FE C7 FF                 ...
-        cpy     $00                             ; E572 C4 00                    ..
-        cmp     a:$45                           ; E574 CD 45 00                 .E.
-        cld                                     ; E577 D8                       .
-        brk                                     ; E578 00                       .
-        dec     LC93F,x                         ; E579 DE 3F C9                 .?.
-LE57D           := * + 1
-        bne     LE57D                           ; E57C D0 FF                    ..
-        brk                                     ; E57E 00                       .
-        asl     L0100                           ; E57F 0E 00 01                 ...
-        ora     #$01                            ; E582 09 01                    ..
-        .byte   $02                             ; E584 02                       .
-        bvs     LE589                           ; E585 70 02                    p.
-        .byte   $03                             ; E587 03                       .
-        .byte   $EB                             ; E588 EB                       .
-LE589:
-        .byte   $02                             ; E589 02                       .
-        .byte   $FF                             ; E58A FF                       .
-        cpy     LC7A0                           ; E58B CC A0 C7                 ...
-        .byte   $FF                             ; E58E FF                       .
-        cpy     $0D                             ; E58F C4 0D                    ..
-        cmp     a:$03                           ; E591 CD 03 00                 ...
-        .byte   $DB                             ; E594 DB                       .
-        .byte   $07                             ; E595 07                       .
-        brk                                     ; E596 00                       .
-        asl     LD878,x                         ; E597 1E 78 D8                 .x.
-        brk                                     ; E59A 00                       .
-        dec     LCD06,x                         ; E59B DE 06 CD                 ...
-        .byte   $03                             ; E59E 03                       .
-        ora     ($D8,x)                         ; E59F 01 D8                    ..
-        .byte   $0C                             ; E5A1 0C                       .
-        php                                     ; E5A2 08                       .
-        .byte   $03                             ; E5A3 03                       .
-        cmp     #$01                            ; E5A4 C9 01                    ..
-        adc     ($C9,x)                         ; E5A6 61 C9                    a.
-        adc     ($C9,x)                         ; E5A8 61 C9                    a.
-        cmp     #$C9                            ; E5AA C9 C9                    ..
-        adc     ($C9,x)                         ; E5AC 61 C9                    a.
-        adc     ($C9,x)                         ; E5AE 61 C9                    a.
-        cmp     #$C9                            ; E5B0 C9 C9                    ..
-        .byte   $62                             ; E5B2 62                       b
-        cmp     #$62                            ; E5B3 C9 62                    .b
-        cmp     #$C9                            ; E5B5 C9 C9                    ..
-        cmp     #$62                            ; E5B7 C9 62                    .b
-        cmp     #$62                            ; E5B9 C9 62                    .b
-        cmp     #$C9                            ; E5BB C9 C9                    ..
-        cmp     #$61                            ; E5BD C9 61                    .a
-        cmp     #$61                            ; E5BF C9 61                    .a
-        cmp     #$C9                            ; E5C1 C9 C9                    ..
-        cmp     #$61                            ; E5C3 C9 61                    .a
-        cmp     #$61                            ; E5C5 C9 61                    .a
-        cmp     #$C9                            ; E5C7 C9 C9                    ..
-        cmp     #$62                            ; E5C9 C9 62                    .b
-        cmp     #$62                            ; E5CB C9 62                    .b
-        cmp     #$62                            ; E5CD C9 62                    .b
-        cmp     #$62                            ; E5CF C9 62                    .b
-        cmp     #$62                            ; E5D1 C9 62                    .b
-        cmp     #$C9                            ; E5D3 C9 C9                    ..
-        cmp     #$61                            ; E5D5 C9 61                    .a
-        cmp     #$61                            ; E5D7 C9 61                    .a
-        cmp     #$C9                            ; E5D9 C9 C9                    ..
-        cmp     #$61                            ; E5DB C9 61                    .a
-        cmp     #$61                            ; E5DD C9 61                    .a
-        cmp     #$C9                            ; E5DF C9 C9                    ..
-        cmp     #$62                            ; E5E1 C9 62                    .b
-        cmp     #$62                            ; E5E3 C9 62                    .b
-        cmp     #$C9                            ; E5E5 C9 C9                    ..
-        cmp     #$62                            ; E5E7 C9 62                    .b
-        cmp     #$62                            ; E5E9 C9 62                    .b
-        cmp     #$C9                            ; E5EB C9 C9                    ..
-        cmp     #$61                            ; E5ED C9 61                    .a
-        cmp     #$61                            ; E5EF C9 61                    .a
-        cmp     #$C9                            ; E5F1 C9 C9                    ..
-        cmp     #$61                            ; E5F3 C9 61                    .a
-        cmp     #$61                            ; E5F5 C9 61                    .a
-        cmp     #$C9                            ; E5F7 C9 C9                    ..
-        cmp     #$62                            ; E5F9 C9 62                    .b
-        cmp     #$62                            ; E5FB C9 62                    .b
-        .byte   $02                             ; E5FD 02                       .
-        .byte   $62                             ; E5FE 62                       b
-        ora     ($C9,x)                         ; E5FF 01 C9                    ..
-        .byte   $02                             ; E601 02                       .
-        rts                                     ; E602 60                       `
-
-; ----------------------------------------------------------------------------
-        ora     ($C9,x)                         ; E603 01 C9                    ..
-        .byte   $1B                             ; E605 1B                       .
-        adc     ($03,x)                         ; E606 61 03                    a.
-        cmp     #$0C                            ; E608 C9 0C                    ..
-        cmp     #$02                            ; E60A C9 02                    ..
-        lsr     $01,x                           ; E60C 56 01                    V.
-        cmp     #$02                            ; E60E C9 02                    ..
-        .byte   $54                             ; E610 54                       T
-        ora     ($C9,x)                         ; E611 01 C9                    ..
-        .byte   $1A                             ; E613 1A                       .
-        eor     $0A,x                           ; E614 55 0A                    U.
-        cmp     #$01                            ; E616 C9 01                    ..
-        cmp     #$C9                            ; E618 C9 C9                    ..
-        cmp     #$5F                            ; E61A C9 5F                    ._
-        cmp     #$5F                            ; E61C C9 5F                    ._
-        cmp     #$5F                            ; E61E C9 5F                    ._
-        cmp     #$5F                            ; E620 C9 5F                    ._
-        cmp     #$5F                            ; E622 C9 5F                    ._
-        cmp     #$C9                            ; E624 C9 C9                    ..
-        cmp     #$5D                            ; E626 C9 5D                    .]
-        cmp     #$5D                            ; E628 C9 5D                    .]
-        cmp     #$C9                            ; E62A C9 C9                    ..
-        cmp     #$5D                            ; E62C C9 5D                    .]
-        cmp     #$5D                            ; E62E C9 5D                    .]
-        cmp     #$C9                            ; E630 C9 C9                    ..
-        cmp     #$5F                            ; E632 C9 5F                    ._
-        cmp     #$5F                            ; E634 C9 5F                    ._
-        .byte   $02                             ; E636 02                       .
-        .byte   $63                             ; E637 63                       c
-        ora     ($C9,x)                         ; E638 01 C9                    ..
-        .byte   $02                             ; E63A 02                       .
-        .byte   $5F                             ; E63B 5F                       _
-        ora     ($C9,x)                         ; E63C 01 C9                    ..
-        .byte   $0C                             ; E63E 0C                       .
-        adc     ($01,x)                         ; E63F 61 01                    a.
-        .byte   $5F                             ; E641 5F                       _
-        eor     $5B5C,x                         ; E642 5D 5C 5B                 ]\[
-        .byte   $5A                             ; E645 5A                       Z
-        .byte   $5C                             ; E646 5C                       \
-        .byte   $02                             ; E647 02                       .
-        eor     $5B01,x                         ; E648 5D 01 5B                 ].[
-        .byte   $02                             ; E64B 02                       .
-        cli                                     ; E64C 58                       X
-        ora     ($5C,x)                         ; E64D 01 5C                    .\
-        .byte   $12                             ; E64F 12                       .
-        .byte   $5A                             ; E650 5A                       Z
-        .byte   $02                             ; E651 02                       .
-        .byte   $57                             ; E652 57                       W
-LE653:
-        ora     ($C9,x)                         ; E653 01 C9                    ..
-        .byte   $02                             ; E655 02                       .
-        .byte   $53                             ; E656 53                       S
-        ora     ($C9,x)                         ; E657 01 C9                    ..
-        asl     a                               ; E659 0A                       .
-        eor     $01,x                           ; E65A 55 01                    U.
-        cmp     #$53                            ; E65C C9 53                    .S
-        .byte   $02                             ; E65E 02                       .
-        eor     $03,x                           ; E65F 55 03                    U.
-        .byte   $5A                             ; E661 5A                       Z
-        ora     ($58,x)                         ; E662 01 58                    .X
-        .byte   $02                             ; E664 02                       .
-        .byte   $5A                             ; E665 5A                       Z
-        .byte   $04                             ; E666 04                       .
-        .byte   $5C                             ; E667 5C                       \
-        ora     ($5D,x)                         ; E668 01 5D                    .]
-        .byte   $5C                             ; E66A 5C                       \
-        .byte   $5B                             ; E66B 5B                       [
-        .byte   $17                             ; E66C 17                       .
-        .byte   $5A                             ; E66D 5A                       Z
-        ora     ($C9,x)                         ; E66E 01 C9                    ..
-        eor     $5DC9,x                         ; E670 5D C9 5D                 ].]
-        cmp     #$C9                            ; E673 C9 C9                    ..
-        cmp     #$5D                            ; E675 C9 5D                    .]
-        cmp     #$5D                            ; E677 C9 5D                    .]
-        cmp     #$C9                            ; E679 C9 C9                    ..
-        cmp     #$5D                            ; E67B C9 5D                    .]
-        cmp     #$5D                            ; E67D C9 5D                    .]
-        cmp     #$5D                            ; E67F C9 5D                    .]
-        cmp     #$5D                            ; E681 C9 5D                    .]
-        cmp     #$5D                            ; E683 C9 5D                    .]
-        bne     LE653                           ; E685 D0 CC                    ..
-        ldy     #$C7                            ; E687 A0 C7                    ..
-        .byte   $FF                             ; E689 FF                       .
-        cpy     $05                             ; E68A C4 05                    ..
-        cmp     a:$03                           ; E68C CD 03 00                 ...
-        .byte   $DB                             ; E68F DB                       .
-        .byte   $07                             ; E690 07                       .
-        brk                                     ; E691 00                       .
-        asl     LD878,x                         ; E692 1E 78 D8                 .x.
-        brk                                     ; E695 00                       .
-        dec     LCD06,x                         ; E696 DE 06 CD                 ...
-        .byte   $03                             ; E699 03                       .
-        ora     ($D8,x)                         ; E69A 01 D8                    ..
-        .byte   $0C                             ; E69C 0C                       .
-        php                                     ; E69D 08                       .
-        .byte   $03                             ; E69E 03                       .
-        cmp     #$01                            ; E69F C9 01                    ..
-        eor     $5DC9,x                         ; E6A1 5D C9 5D                 ].]
-        cmp     #$C9                            ; E6A4 C9 C9                    ..
-        cmp     #$5D                            ; E6A6 C9 5D                    .]
-        cmp     #$5D                            ; E6A8 C9 5D                    .]
-        cmp     #$C9                            ; E6AA C9 C9                    ..
-        cmp     #$5E                            ; E6AC C9 5E                    .^
-        cmp     #$5E                            ; E6AE C9 5E                    .^
-        cmp     #$C9                            ; E6B0 C9 C9                    ..
-        cmp     #$5E                            ; E6B2 C9 5E                    .^
-        cmp     #$5E                            ; E6B4 C9 5E                    .^
-        cmp     #$C9                            ; E6B6 C9 C9                    ..
-        cmp     #$5D                            ; E6B8 C9 5D                    .]
-        cmp     #$5D                            ; E6BA C9 5D                    .]
-        cmp     #$C9                            ; E6BC C9 C9                    ..
-        cmp     #$5D                            ; E6BE C9 5D                    .]
-        cmp     #$5D                            ; E6C0 C9 5D                    .]
-        cmp     #$C9                            ; E6C2 C9 C9                    ..
-        cmp     #$5F                            ; E6C4 C9 5F                    ._
-        cmp     #$5F                            ; E6C6 C9 5F                    ._
-        cmp     #$5F                            ; E6C8 C9 5F                    ._
-        cmp     #$5F                            ; E6CA C9 5F                    ._
-        cmp     #$5F                            ; E6CC C9 5F                    ._
-        cmp     #$C9                            ; E6CE C9 C9                    ..
-        cmp     #$5D                            ; E6D0 C9 5D                    .]
-        cmp     #$5D                            ; E6D2 C9 5D                    .]
-        cmp     #$C9                            ; E6D4 C9 C9                    ..
-        cmp     #$5D                            ; E6D6 C9 5D                    .]
-        cmp     #$5D                            ; E6D8 C9 5D                    .]
-        cmp     #$C9                            ; E6DA C9 C9                    ..
-        cmp     #$5F                            ; E6DC C9 5F                    ._
-        cmp     #$5F                            ; E6DE C9 5F                    ._
-        cmp     #$C9                            ; E6E0 C9 C9                    ..
-        cmp     #$5F                            ; E6E2 C9 5F                    ._
-        cmp     #$5F                            ; E6E4 C9 5F                    ._
-        cmp     #$C9                            ; E6E6 C9 C9                    ..
-        cmp     #$5D                            ; E6E8 C9 5D                    .]
-        cmp     #$5D                            ; E6EA C9 5D                    .]
-        cmp     #$C9                            ; E6EC C9 C9                    ..
-        cmp     #$5D                            ; E6EE C9 5D                    .]
-        cmp     #$5D                            ; E6F0 C9 5D                    .]
-        cmp     #$C9                            ; E6F2 C9 C9                    ..
-        cmp     #$5F                            ; E6F4 C9 5F                    ._
-        cmp     #$5F                            ; E6F6 C9 5F                    ._
-        cmp     #$5F                            ; E6F8 C9 5F                    ._
-        cmp     #$62                            ; E6FA C9 62                    .b
-        cmp     #$62                            ; E6FC C9 62                    .b
-        cmp     #$C9                            ; E6FE C9 C9                    ..
-        cmp     #$5D                            ; E700 C9 5D                    .]
-        cmp     #$5D                            ; E702 C9 5D                    .]
-        cmp     #$C9                            ; E704 C9 C9                    ..
-        cmp     #$5D                            ; E706 C9 5D                    .]
-        cmp     #$5D                            ; E708 C9 5D                    .]
-        cmp     #$C9                            ; E70A C9 C9                    ..
-        cmp     #$5F                            ; E70C C9 5F                    ._
-        cmp     #$5F                            ; E70E C9 5F                    ._
-        cmp     #$C9                            ; E710 C9 C9                    ..
-        cmp     #$5F                            ; E712 C9 5F                    ._
-        cmp     #$5F                            ; E714 C9 5F                    ._
-        cmp     #$C9                            ; E716 C9 C9                    ..
-        cmp     #$61                            ; E718 C9 61                    .a
-        cmp     #$61                            ; E71A C9 61                    .a
-        cmp     #$C9                            ; E71C C9 C9                    ..
-        cmp     #$61                            ; E71E C9 61                    .a
-        cmp     #$61                            ; E720 C9 61                    .a
-        cmp     #$C9                            ; E722 C9 C9                    ..
-        cmp     #$62                            ; E724 C9 62                    .b
-        cmp     #$62                            ; E726 C9 62                    .b
-        cmp     #$62                            ; E728 C9 62                    .b
-        cmp     #$62                            ; E72A C9 62                    .b
-        cmp     #$62                            ; E72C C9 62                    .b
-        cmp     #$C9                            ; E72E C9 C9                    ..
-        cmp     #$61                            ; E730 C9 61                    .a
-        cmp     #$61                            ; E732 C9 61                    .a
-        cmp     #$C9                            ; E734 C9 C9                    ..
-        cmp     #$61                            ; E736 C9 61                    .a
-        cmp     #$61                            ; E738 C9 61                    .a
-        cmp     #$C9                            ; E73A C9 C9                    ..
-        cmp     #$62                            ; E73C C9 62                    .b
-        cmp     #$62                            ; E73E C9 62                    .b
-        cmp     #$C9                            ; E740 C9 C9                    ..
-        cmp     #$62                            ; E742 C9 62                    .b
-        cmp     #$62                            ; E744 C9 62                    .b
-        cmp     #$C9                            ; E746 C9 C9                    ..
-        cmp     #$61                            ; E748 C9 61                    .a
-        cmp     #$61                            ; E74A C9 61                    .a
-        cmp     #$C9                            ; E74C C9 C9                    ..
-        cmp     #$61                            ; E74E C9 61                    .a
-        cmp     #$61                            ; E750 C9 61                    .a
-        cmp     #$C9                            ; E752 C9 C9                    ..
-        cmp     #$62                            ; E754 C9 62                    .b
-        cmp     #$62                            ; E756 C9 62                    .b
-        cmp     #$62                            ; E758 C9 62                    .b
-        cmp     #$62                            ; E75A C9 62                    .b
-        cmp     #$62                            ; E75C C9 62                    .b
-        cmp     #$C9                            ; E75E C9 C9                    ..
-        cmp     #$61                            ; E760 C9 61                    .a
-        cmp     #$61                            ; E762 C9 61                    .a
-        cmp     #$C9                            ; E764 C9 C9                    ..
-        cmp     #$61                            ; E766 C9 61                    .a
-        cmp     #$61                            ; E768 C9 61                    .a
-        cmp     #$C9                            ; E76A C9 C9                    ..
-        cmp     #$63                            ; E76C C9 63                    .c
-        cmp     #$63                            ; E76E C9 63                    .c
-        cmp     #$C9                            ; E770 C9 C9                    ..
-        cmp     #$63                            ; E772 C9 63                    .c
-        .byte   $63                             ; E774 63                       c
-        cmp     #$C9                            ; E775 C9 C9                    ..
-        cmp     #$5D                            ; E777 C9 5D                    .]
-        cmp     #$5D                            ; E779 C9 5D                    .]
-        cmp     #$C9                            ; E77B C9 C9                    ..
-        cmp     #$5D                            ; E77D C9 5D                    .]
-        cmp     #$5D                            ; E77F C9 5D                    .]
-        cmp     #$C9                            ; E781 C9 C9                    ..
-        cmp     #$61                            ; E783 C9 61                    .a
-        cmp     #$61                            ; E785 C9 61                    .a
-        cmp     #$5F                            ; E787 C9 5F                    ._
-        cmp     #$5F                            ; E789 C9 5F                    ._
-        cmp     #$5F                            ; E78B C9 5F                    ._
-        cmp     #$C9                            ; E78D C9 C9                    ..
-        cmp     #$61                            ; E78F C9 61                    .a
-        cmp     #$61                            ; E791 C9 61                    .a
-        cmp     #$C9                            ; E793 C9 C9                    ..
-        cmp     #$61                            ; E795 C9 61                    .a
-        cmp     #$61                            ; E797 C9 61                    .a
-        cmp     #$C9                            ; E799 C9 C9                    ..
-        cmp     #$63                            ; E79B C9 63                    .c
-        cmp     #$63                            ; E79D C9 63                    .c
-        cmp     #$C9                            ; E79F C9 C9                    ..
-        cmp     #$63                            ; E7A1 C9 63                    .c
-        cmp     #$63                            ; E7A3 C9 63                    .c
-        cmp     #$C9                            ; E7A5 C9 C9                    ..
-        cmp     #$61                            ; E7A7 C9 61                    .a
-        cmp     #$61                            ; E7A9 C9 61                    .a
-        cmp     #$C9                            ; E7AB C9 C9                    ..
-        cmp     #$61                            ; E7AD C9 61                    .a
-        adc     ($C9,x)                         ; E7AF 61 C9                    a.
-        cmp     #$C9                            ; E7B1 C9 C9                    ..
-        adc     ($C9,x)                         ; E7B3 61 C9                    a.
-        adc     ($C9,x)                         ; E7B5 61 C9                    a.
-        .byte   $5F                             ; E7B7 5F                       _
-        cmp     #$5F                            ; E7B8 C9 5F                    ._
-LE7BA:
-        cmp     #$5F                            ; E7BA C9 5F                    ._
-        cmp     #$C9                            ; E7BC C9 C9                    ..
-        cmp     #$61                            ; E7BE C9 61                    .a
-        cmp     #$61                            ; E7C0 C9 61                    .a
-        cmp     #$C9                            ; E7C2 C9 C9                    ..
-        cmp     #$61                            ; E7C4 C9 61                    .a
-        cmp     #$61                            ; E7C6 C9 61                    .a
-        cmp     #$C9                            ; E7C8 C9 C9                    ..
-        cmp     #$61                            ; E7CA C9 61                    .a
-        cmp     #$61                            ; E7CC C9 61                    .a
-        cmp     #$C9                            ; E7CE C9 C9                    ..
-        cmp     #$61                            ; E7D0 C9 61                    .a
-        cmp     #$61                            ; E7D2 C9 61                    .a
-        cmp     #$C9                            ; E7D4 C9 C9                    ..
-        cmp     #$61                            ; E7D6 C9 61                    .a
-        cmp     #$61                            ; E7D8 C9 61                    .a
-        cmp     #$C9                            ; E7DA C9 C9                    ..
-        cmp     #$61                            ; E7DC C9 61                    .a
-        cmp     #$61                            ; E7DE C9 61                    .a
-        cmp     #$C9                            ; E7E0 C9 C9                    ..
-        cmp     #$61                            ; E7E2 C9 61                    .a
-        cmp     #$61                            ; E7E4 C9 61                    .a
-        cmp     #$61                            ; E7E6 C9 61                    .a
-        cmp     #$61                            ; E7E8 C9 61                    .a
-        cmp     #$61                            ; E7EA C9 61                    .a
-        bne     LE7BA                           ; E7EC D0 CC                    ..
-        ldy     #$C7                            ; E7EE A0 C7                    ..
-        .byte   $FF                             ; E7F0 FF                       .
-        cpy     L0002                           ; E7F1 C4 02                    ..
-        cmp     a:$03                           ; E7F3 CD 03 00                 ...
-        .byte   $DB                             ; E7F6 DB                       .
-        .byte   $07                             ; E7F7 07                       .
-        brk                                     ; E7F8 00                       .
-        asl     LD878,x                         ; E7F9 1E 78 D8                 .x.
-        brk                                     ; E7FC 00                       .
-        dec     LCD06,x                         ; E7FD DE 06 CD                 ...
-        .byte   $03                             ; E800 03                       .
-        ora     ($D8,x)                         ; E801 01 D8                    ..
-        .byte   $0C                             ; E803 0C                       .
-        php                                     ; E804 08                       .
-        ora     ($4E,x)                         ; E805 01 4E                    .N
-        cmp     #$C9                            ; E807 C9 C9                    ..
-        lsr     LC9C9                           ; E809 4E C9 C9                 N..
-        .byte   $02                             ; E80C 02                       .
-        eor     #$C9                            ; E80D 49 C9                    I.
-        cmp     #$01                            ; E80F C9 01                    ..
-        lsr     a                               ; E811 4A                       J
-        cmp     #$C9                            ; E812 C9 C9                    ..
-        lsr     a                               ; E814 4A                       J
-        cmp     #$C9                            ; E815 C9 C9                    ..
-        .byte   $02                             ; E817 02                       .
-        .byte   $4F                             ; E818 4F                       O
-        cmp     #$C9                            ; E819 C9 C9                    ..
-        cmp     #$04                            ; E81B C9 04                    ..
-        lsr     $4901                           ; E81D 4E 01 49                 N.I
-        cmp     #$C9                            ; E820 C9 C9                    ..
-        eor     #$C9                            ; E822 49 C9                    I.
-        cmp     #$4A                            ; E824 C9 4A                    .J
-        cmp     #$C9                            ; E826 C9 C9                    ..
-        lsr     a                               ; E828 4A                       J
-        cmp     #$C9                            ; E829 C9 C9                    ..
-        .byte   $02                             ; E82B 02                       .
-        .byte   $4F                             ; E82C 4F                       O
-        cmp     #$C9                            ; E82D C9 C9                    ..
-        dec     L8804                           ; E82F CE 04 88                 ...
-        .byte   $02                             ; E832 02                       .
-        .byte   $12                             ; E833 12                       .
-        .byte   $4F                             ; E834 4F                       O
-LE835:
-        ora     ($50,x)                         ; E835 01 50                    .P
-        cmp     #$50                            ; E837 C9 50                    .P
-        cmp     #$C9                            ; E839 C9 C9                    ..
-        ora     $034E                           ; E83B 0D 4E 03                 .N.
-        cmp     #$4A                            ; E83E C9 4A                    .J
-        cmp     #$4C                            ; E840 C9 4C                    .L
-        cmp     #$0F                            ; E842 C9 0F                    ..
-        lsr     $5001                           ; E844 4E 01 50                 N.P
-        cmp     #$50                            ; E847 C9 50                    .P
-        cmp     #$C9                            ; E849 C9 C9                    ..
-        ora     $034E                           ; E84B 0D 4E 03                 .N.
-        cmp     #$4A                            ; E84E C9 4A                    .J
-        .byte   $02                             ; E850 02                       .
-        cmp     #$4C                            ; E851 C9 4C                    .L
-        .byte   $02                             ; E853 02                       .
-        cmp     #$01                            ; E854 C9 01                    ..
-        lsr     $5A06                           ; E856 4E 06 5A                 N.Z
-        adc     ($06,x)                         ; E859 61 06                    a.
-        .byte   $5F                             ; E85B 5F                       _
-        .byte   $03                             ; E85C 03                       .
-        .byte   $5C                             ; E85D 5C                       \
-        eor     $5D5F,x                         ; E85E 5D 5F 5D                 ]_]
-        .byte   $5C                             ; E861 5C                       \
-        asl     $5B                             ; E862 06 5B                    .[
-        .byte   $04                             ; E864 04                       .
-        cli                                     ; E865 58                       X
-        .byte   $5A                             ; E866 5A                       Z
-        bne     LE835                           ; E867 D0 CC                    ..
-        cpy     #$C7                            ; E869 C0 C7                    ..
-        .byte   $FF                             ; E86B FF                       .
-        cpy     $0D                             ; E86C C4 0D                    ..
-        cmp     a:$03                           ; E86E CD 03 00                 ...
-        .byte   $DB                             ; E871 DB                       .
-        .byte   $07                             ; E872 07                       .
-        brk                                     ; E873 00                       .
-        asl     LD878,x                         ; E874 1E 78 D8                 .x.
-        brk                                     ; E877 00                       .
-        dec     LCD06,x                         ; E878 DE 06 CD                 ...
-        .byte   $03                             ; E87B 03                       .
-        ora     ($D8,x)                         ; E87C 01 D8                    ..
-        .byte   $0C                             ; E87E 0C                       .
-        php                                     ; E87F 08                       .
-        .byte   $3F                             ; E880 3F                       ?
-        cmp     #$C9                            ; E881 C9 C9                    ..
-        cmp     #$C9                            ; E883 C9 C9                    ..
-        cmp     #$C9                            ; E885 C9 C9                    ..
-        cmp     #$C9                            ; E887 C9 C9                    ..
-        cmp     #$C9                            ; E889 C9 C9                    ..
-        cmp     #$D0                            ; E88B C9 D0                    ..
-LE88D:
-        .byte   $FF                             ; E88D FF                       .
-        brk                                     ; E88E 00                       .
-        asl     L0100                           ; E88F 0E 00 01                 ...
-        clv                                     ; E892 B8                       .
-        brk                                     ; E893 00                       .
-        .byte   $02                             ; E894 02                       .
-        ror     L0301,x                         ; E895 7E 01 03                 ~..
-        ldx     LFF01,y                         ; E898 BE 01 FF                 ...
-        cpy     LC780                           ; E89B CC 80 C7                 ...
-        .byte   $FF                             ; E89E FF                       .
-        cpy     $FF                             ; E89F C4 FF                    ..
-        cmp     a:$03                           ; E8A1 CD 03 00                 ...
-        .byte   $DB                             ; E8A4 DB                       .
-        .byte   $07                             ; E8A5 07                       .
-        brk                                     ; E8A6 00                       .
-        asl     LD878,x                         ; E8A7 1E 78 D8                 .x.
-        brk                                     ; E8AA 00                       .
-        dec     LCD06,x                         ; E8AB DE 06 CD                 ...
-        .byte   $03                             ; E8AE 03                       .
-        ora     ($D8,x)                         ; E8AF 01 D8                    ..
-        .byte   $0C                             ; E8B1 0C                       .
-        php                                     ; E8B2 08                       .
-        .byte   $02                             ; E8B3 02                       .
-        pla                                     ; E8B4 68                       h
-        adc     ($6F),y                         ; E8B5 71 6F                    qo
-        adc     ($08),y                         ; E8B7 71 08                    q.
-        pla                                     ; E8B9 68                       h
-        .byte   $02                             ; E8BA 02                       .
-        pla                                     ; E8BB 68                       h
-        adc     ($6F),y                         ; E8BC 71 6F                    qo
-        adc     ($08),y                         ; E8BE 71 08                    q.
-        .byte   $74                             ; E8C0 74                       t
-        .byte   $02                             ; E8C1 02                       .
-        adc     ($79),y                         ; E8C2 71 79                    qy
-        sei                                     ; E8C4 78                       x
-        clc                                     ; E8C5 18                       .
-        ror     L0002,x                         ; E8C6 76 02                    v.
-        cmp     #$6A                            ; E8C8 C9 6A                    .j
-        .byte   $72                             ; E8CA 72                       r
-        adc     ($72),y                         ; E8CB 71 72                    qr
-        php                                     ; E8CD 08                       .
-        ror     a                               ; E8CE 6A                       j
-        .byte   $02                             ; E8CF 02                       .
-        ror     a                               ; E8D0 6A                       j
-        .byte   $72                             ; E8D1 72                       r
-        adc     ($72),y                         ; E8D2 71 72                    qr
-        php                                     ; E8D4 08                       .
-        .byte   $6F                             ; E8D5 6F                       o
-        .byte   $02                             ; E8D6 02                       .
-        .byte   $6F                             ; E8D7 6F                       o
-        adc     $1C6F                           ; E8D8 6D 6F 1C                 mo.
-        adc     ($04),y                         ; E8DB 71 04                    q.
-        adc     (L0002),y                       ; E8DD 71 02                    q.
-        adc     ($6F),y                         ; E8DF 71 6F                    qo
-        ror     $046F                           ; E8E1 6E 6F 04                 no.
-        .byte   $72                             ; E8E4 72                       r
-        .byte   $02                             ; E8E5 02                       .
-        adc     ($6F),y                         ; E8E6 71 6F                    qo
-        .byte   $04                             ; E8E8 04                       .
-        .byte   $6F                             ; E8E9 6F                       o
-        php                                     ; E8EA 08                       .
-        adc     $6A02                           ; E8EB 6D 02 6A                 m.j
-        adc     $6F1A                           ; E8EE 6D 1A 6F                 m.o
-        .byte   $02                             ; E8F1 02                       .
-        bvc     LE94D                           ; E8F2 50 59                    PY
-        .byte   $57                             ; E8F4 57                       W
-        eor     $5008,y                         ; E8F5 59 08 50                 Y.P
-        .byte   $02                             ; E8F8 02                       .
-        bvc     LE954                           ; E8F9 50 59                    PY
-        .byte   $57                             ; E8FB 57                       W
-        eor     $5108,y                         ; E8FC 59 08 51                 Y.Q
-        .byte   $02                             ; E8FF 02                       .
-        eor     ($53),y                         ; E900 51 53                    QS
-        eor     ($18),y                         ; E902 51 18                    Q.
-        bvc     LE908                           ; E904 50 02                    P.
-        cmp     #$50                            ; E906 C9 50                    .P
-LE908:
-        eor     $5957,y                         ; E908 59 57 59                 YWY
-        php                                     ; E90B 08                       .
-        bvc     LE910                           ; E90C 50 02                    P.
-        bvc     LE969                           ; E90E 50 59                    PY
-LE910:
-        .byte   $57                             ; E910 57                       W
-        eor     $5C08,y                         ; E911 59 08 5C                 Y.\
-        .byte   $02                             ; E914 02                       .
-        eor     $6061,y                         ; E915 59 61 60                 Ya`
-        clc                                     ; E918 18                       .
-        lsr     LC902,x                         ; E919 5E 02 C9                 ^..
-        ror     a                               ; E91C 6A                       j
-        .byte   $72                             ; E91D 72                       r
-        adc     ($72),y                         ; E91E 71 72                    qr
-        php                                     ; E920 08                       .
-        ror     a                               ; E921 6A                       j
-        .byte   $02                             ; E922 02                       .
-        ror     a                               ; E923 6A                       j
-        .byte   $72                             ; E924 72                       r
-        adc     ($72),y                         ; E925 71 72                    qr
-        php                                     ; E927 08                       .
-        .byte   $6F                             ; E928 6F                       o
-        .byte   $02                             ; E929 02                       .
-        .byte   $6F                             ; E92A 6F                       o
-        adc     $1C6F                           ; E92B 6D 6F 1C                 mo.
-        adc     ($04),y                         ; E92E 71 04                    q.
-        .byte   $74                             ; E930 74                       t
-        .byte   $02                             ; E931 02                       .
-        .byte   $74                             ; E932 74                       t
-        .byte   $72                             ; E933 72                       r
-        adc     ($72),y                         ; E934 71 72                    qr
-        .byte   $04                             ; E936 04                       .
-        ror     L0002,x                         ; E937 76 02                    v.
-        .byte   $74                             ; E939 74                       t
-        .byte   $72                             ; E93A 72                       r
-        .byte   $0C                             ; E93B 0C                       .
-        adc     (L0002),y                       ; E93C 71 02                    q.
-        adc     $1C71                           ; E93E 6D 71 1C                 mq.
-        .byte   $72                             ; E941 72                       r
-        .byte   $04                             ; E942 04                       .
-        cmp     #$D0                            ; E943 C9 D0                    ..
-        cpy     LC780                           ; E945 CC 80 C7                 ...
-        .byte   $FF                             ; E948 FF                       .
-        cpy     $09                             ; E949 C4 09                    ..
-LE94D           := * + 2
-        cmp     a:$03                           ; E94B CD 03 00                 ...
-        .byte   $DB                             ; E94E DB                       .
-        .byte   $07                             ; E94F 07                       .
-        brk                                     ; E950 00                       .
-        asl     LD878,x                         ; E951 1E 78 D8                 .x.
-LE954:
-        brk                                     ; E954 00                       .
-        dec     LCD06,x                         ; E955 DE 06 CD                 ...
-        .byte   $03                             ; E958 03                       .
-        ora     ($D8,x)                         ; E959 01 D8                    ..
-        .byte   $0C                             ; E95B 0C                       .
-        php                                     ; E95C 08                       .
-        asl     $65                             ; E95D 06 65                    .e
-        .byte   $02                             ; E95F 02                       .
-        cmp     #$5C                            ; E960 C9 5C                    .\
-        adc     ($0A,x)                         ; E962 61 0A                    a.
-        adc     L0002                           ; E964 65 02                    e.
-        cmp     #$60                            ; E966 C9 60                    .`
-LE969           := * + 1
-        adc     $0A                             ; E968 65 0A                    e.
-        pla                                     ; E96A 68                       h
-        .byte   $02                             ; E96B 02                       .
-        cmp     #$5E                            ; E96C C9 5E                    .^
-        adc     ($66,x)                         ; E96E 61 66                    af
-        cmp     #$5E                            ; E970 C9 5E                    .^
-        adc     ($66,x)                         ; E972 61 66                    af
-        cmp     #$5E                            ; E974 C9 5E                    .^
-        .byte   $63                             ; E976 63                       c
-        asl     a                               ; E977 0A                       .
-        ror     L0002                           ; E978 66 02                    f.
-        cmp     #$5E                            ; E97A C9 5E                    .^
-        .byte   $63                             ; E97C 63                       c
-        asl     $66                             ; E97D 06 66                    .f
-        .byte   $04                             ; E97F 04                       .
-        ror     a                               ; E980 6A                       j
-        .byte   $02                             ; E981 02                       .
-        ror     a                               ; E982 6A                       j
-        jmp     (L0A68)                         ; E983 6C 68 0A                 lh.
-
-; ----------------------------------------------------------------------------
-        ror     L0002                           ; E986 66 02                    f.
-        pla                                     ; E988 68                       h
-        .byte   $5C                             ; E989 5C                       \
-        adc     ($06,x)                         ; E98A 61 06                    a.
-        adc     $04                             ; E98C 65 04                    e.
-        ror     $06                             ; E98E 66 06                    f.
-        pla                                     ; E990 68                       h
-        ror     $04                             ; E991 66 04                    f.
-        adc     L0002                           ; E993 65 02                    e.
-        cmp     #$59                            ; E995 C9 59                    .Y
-        .byte   $5F                             ; E997 5F                       _
-        asl     a                               ; E998 0A                       .
-        .byte   $63                             ; E999 63                       c
-        .byte   $02                             ; E99A 02                       .
-        cmp     #$59                            ; E99B C9 59                    .Y
-        lsr     $610A,x                         ; E99D 5E 0A 61                 ^.a
-        .byte   $02                             ; E9A0 02                       .
-        cmp     #$5E                            ; E9A1 C9 5E                    .^
-        .byte   $63                             ; E9A3 63                       c
-        .byte   $04                             ; E9A4 04                       .
-        .byte   $67                             ; E9A5 67                       g
-        .byte   $02                             ; E9A6 02                       .
-        adc     $67                             ; E9A7 65 67                    eg
-        .byte   $12                             ; E9A9 12                       .
-        ror     a                               ; E9AA 6A                       j
-        bpl     LEA12                           ; E9AB 10 65                    .e
-        .byte   $02                             ; E9AD 02                       .
-        cmp     #$5D                            ; E9AE C9 5D                    .]
-        adc     ($06,x)                         ; E9B0 61 06                    a.
-        ror     L0002                           ; E9B2 66 02                    f.
-        cmp     #$61                            ; E9B4 C9 61                    .a
-        cmp     #$5C                            ; E9B6 C9 5C                    .\
-        adc     ($0A,x)                         ; E9B8 61 0A                    a.
-        adc     L0002                           ; E9BA 65 02                    e.
-        cmp     #$5C                            ; E9BC C9 5C                    .\
-        adc     ($0A,x)                         ; E9BE 61 0A                    a.
-        adc     L0002                           ; E9C0 65 02                    e.
-        cmp     #$5C                            ; E9C2 C9 5C                    .\
-        adc     ($0A,x)                         ; E9C4 61 0A                    a.
-        adc     L0002                           ; E9C6 65 02                    e.
-        cmp     #$60                            ; E9C8 C9 60                    .`
-        adc     $0A                             ; E9CA 65 0A                    e.
-        pla                                     ; E9CC 68                       h
-        .byte   $02                             ; E9CD 02                       .
-        cmp     #$5E                            ; E9CE C9 5E                    .^
-        adc     ($66,x)                         ; E9D0 61 66                    af
-        cmp     #$5E                            ; E9D2 C9 5E                    .^
-        adc     ($66,x)                         ; E9D4 61 66                    af
-        cmp     #$5E                            ; E9D6 C9 5E                    .^
-LE9D8:
-        .byte   $0C                             ; E9D8 0C                       .
-        .byte   $63                             ; E9D9 63                       c
-        .byte   $02                             ; E9DA 02                       .
-        cmp     #$5E                            ; E9DB C9 5E                    .^
-        .byte   $63                             ; E9DD 63                       c
-        asl     $5A                             ; E9DE 06 5A                    .Z
-        .byte   $04                             ; E9E0 04                       .
-        ror     a                               ; E9E1 6A                       j
-        .byte   $02                             ; E9E2 02                       .
-        ror     a                               ; E9E3 6A                       j
-        jmp     (L0A68)                         ; E9E4 6C 68 0A                 lh.
-
-; ----------------------------------------------------------------------------
-        ror     L0002                           ; E9E7 66 02                    f.
-        pla                                     ; E9E9 68                       h
-        .byte   $5C                             ; E9EA 5C                       \
-        adc     ($06,x)                         ; E9EB 61 06                    a.
-        adc     $04                             ; E9ED 65 04                    e.
-        ror     $06                             ; E9EF 66 06                    f.
-        pla                                     ; E9F1 68                       h
-        ror     $04                             ; E9F2 66 04                    f.
-        adc     L0002                           ; E9F4 65 02                    e.
-        cmp     #$5A                            ; E9F6 C9 5A                    .Z
-        .byte   $5F                             ; E9F8 5F                       _
-        .byte   $0C                             ; E9F9 0C                       .
-        .byte   $63                             ; E9FA 63                       c
-        .byte   $02                             ; E9FB 02                       .
-        eor     $0C5E,y                         ; E9FC 59 5E 0C                 Y^.
-        adc     (L0002,x)                       ; E9FF 61 02                    a.
-        lsr     $0463,x                         ; EA01 5E 63 04                 ^c.
-        .byte   $67                             ; EA04 67                       g
-        .byte   $02                             ; EA05 02                       .
-        adc     $67                             ; EA06 65 67                    eg
-        .byte   $12                             ; EA08 12                       .
-        ror     a                               ; EA09 6A                       j
-        bne     LE9D8                           ; EA0A D0 CC                    ..
-        .byte   $80                             ; EA0C 80                       .
-        .byte   $C7                             ; EA0D C7                       .
-        .byte   $FF                             ; EA0E FF                       .
-        cpy     $FF                             ; EA0F C4 FF                    ..
-LEA12           := * + 1
-        cmp     a:$03                           ; EA11 CD 03 00                 ...
-        .byte   $DB                             ; EA14 DB                       .
-        .byte   $07                             ; EA15 07                       .
-        brk                                     ; EA16 00                       .
-LEA18           := * + 1
-        asl     LD878,x                         ; EA17 1E 78 D8                 .x.
-        brk                                     ; EA1A 00                       .
-        dec     LCD06,x                         ; EA1B DE 06 CD                 ...
-        .byte   $03                             ; EA1E 03                       .
-        ora     ($D8,x)                         ; EA1F 01 D8                    ..
-        .byte   $0C                             ; EA21 0C                       .
-        php                                     ; EA22 08                       .
-        asl     $55                             ; EA23 06 55                    .U
-        bpl     LEA80                           ; EA25 10 59                    .Y
-        php                                     ; EA27 08                       .
-        .byte   $5A                             ; EA28 5A                       Z
-        eor     $5710,y                         ; EA29 59 10 57                 Y.W
-        .byte   $57                             ; EA2C 57                       W
-        bvc     LEA4F                           ; EA2D 50 20                    P 
-        eor     $10,x                           ; EA2F 55 10                    U.
-        .byte   $53                             ; EA31 53                       S
-        .byte   $52                             ; EA32 52                       R
-        jsr     L1057                           ; EA33 20 57 10                  W.
-        eor     $55,x                           ; EA36 55 55                    UU
-        eor     $55,x                           ; EA38 55 55                    UU
-        eor     $59,x                           ; EA3A 55 59                    UY
-        php                                     ; EA3C 08                       .
-        .byte   $5A                             ; EA3D 5A                       Z
-        eor     $5710,y                         ; EA3E 59 10 57                 Y.W
-        .byte   $57                             ; EA41 57                       W
-        bvc     LEA64                           ; EA42 50 20                    P 
-        eor     $10,x                           ; EA44 55 10                    U.
-        .byte   $53                             ; EA46 53                       S
-        .byte   $52                             ; EA47 52                       R
-        .byte   $3F                             ; EA48 3F                       ?
-        .byte   $57                             ; EA49 57                       W
-        bne     LEA18                           ; EA4A D0 CC                    ..
-        ldy     #$C7                            ; EA4C A0 C7                    ..
-        .byte   $FF                             ; EA4E FF                       .
-LEA4F:
-        cpy     $08                             ; EA4F C4 08                    ..
-        cmp     a:$03                           ; EA51 CD 03 00                 ...
-        .byte   $DB                             ; EA54 DB                       .
-        .byte   $07                             ; EA55 07                       .
-        brk                                     ; EA56 00                       .
-        asl     LD878,x                         ; EA57 1E 78 D8                 .x.
-        brk                                     ; EA5A 00                       .
-        dec     LCD06,x                         ; EA5B DE 06 CD                 ...
-        .byte   $03                             ; EA5E 03                       .
-        ora     ($D8,x)                         ; EA5F 01 D8                    ..
-        .byte   $0C                             ; EA61 0C                       .
-        php                                     ; EA62 08                       .
-        .byte   $3F                             ; EA63 3F                       ?
-LEA64:
-        cmp     #$C9                            ; EA64 C9 C9                    ..
-        cmp     #$C9                            ; EA66 C9 C9                    ..
-        cmp     #$C9                            ; EA68 C9 C9                    ..
-        cmp     #$C9                            ; EA6A C9 C9                    ..
-LEA6D           := * + 1
-        bne     LEA6D                           ; EA6C D0 FF                    ..
-        brk                                     ; EA6E 00                       .
-        asl     L0100                           ; EA6F 0E 00 01                 ...
-        ldy     $00,x                           ; EA72 B4 00                    ..
-        .byte   $02                             ; EA74 02                       .
-        adc     L0301,x                         ; EA75 7D 01 03                 }..
-        sta     LFF01,x                         ; EA78 9D 01 FF                 ...
-        cpy     LC7A0                           ; EA7B CC A0 C7                 ...
-        .byte   $FF                             ; EA7E FF                       .
-LEA80           := * + 1
-        cpy     $FF                             ; EA7F C4 FF                    ..
-        cmp     a:$03                           ; EA81 CD 03 00                 ...
-        .byte   $DB                             ; EA84 DB                       .
-        .byte   $07                             ; EA85 07                       .
-        brk                                     ; EA86 00                       .
-        asl     LD878,x                         ; EA87 1E 78 D8                 .x.
-        brk                                     ; EA8A 00                       .
-        dec     LCD06,x                         ; EA8B DE 06 CD                 ...
-        .byte   $03                             ; EA8E 03                       .
-        ora     ($D8,x)                         ; EA8F 01 D8                    ..
-        .byte   $0C                             ; EA91 0C                       .
-        php                                     ; EA92 08                       .
-        .byte   $04                             ; EA93 04                       .
-        .byte   $57                             ; EA94 57                       W
-        .byte   $52                             ; EA95 52                       R
-        .byte   $54                             ; EA96 54                       T
-        lsr     $01,x                           ; EA97 56 01                    V.
-        .byte   $57                             ; EA99 57                       W
-        cmp     #$5E                            ; EA9A C9 5E                    .^
-        cmp     #$5B                            ; EA9C C9 5B                    .[
-        cmp     #$57                            ; EA9E C9 57                    .W
-        cmp     #$59                            ; EAA0 C9 59                    .Y
-        .byte   $5B                             ; EAA2 5B                       [
-        .byte   $5C                             ; EAA3 5C                       \
-        .byte   $5C                             ; EAA4 5C                       \
-        eor     $02C9,y                         ; EAA5 59 C9 02                 Y..
-        .byte   $5C                             ; EAA8 5C                       \
-        .byte   $04                             ; EAA9 04                       .
-        .byte   $57                             ; EAAA 57                       W
-        .byte   $52                             ; EAAB 52                       R
-        .byte   $54                             ; EAAC 54                       T
-        lsr     $01,x                           ; EAAD 56 01                    V.
-        .byte   $57                             ; EAAF 57                       W
-        cmp     #$5B                            ; EAB0 C9 5B                    .[
-        cmp     #$04                            ; EAB2 C9 04                    ..
-        .byte   $5C                             ; EAB4 5C                       \
-        .byte   $02                             ; EAB5 02                       .
-        cmp     #$01                            ; EAB6 C9 01                    ..
-        lsr     $04C9,x                         ; EAB8 5E C9 04                 ^..
-        .byte   $57                             ; EABB 57                       W
-        .byte   $CF                             ; EABC CF                       .
-        .byte   $02                             ; EABD 02                       .
-        rol     $00                             ; EABE 26 00                    &.
-        ora     ($52,x)                         ; EAC0 01 52                    .R
-        cmp     #$52                            ; EAC2 C9 52                    .R
-        cmp     #$52                            ; EAC4 C9 52                    .R
-        eor     ($52),y                         ; EAC6 51 52                    QR
-        .byte   $4F                             ; EAC8 4F                       O
-        eor     $02C9                           ; EAC9 4D C9 02                 M..
-        .byte   $57                             ; EACC 57                       W
-        ora     ($51,x)                         ; EACD 01 51                    .Q
-        cmp     #$02                            ; EACF C9 02                    ..
-        eor     $4FC9                           ; EAD1 4D C9 4F                 M.O
-        cmp     #$4D                            ; EAD4 C9 4D                    .M
-        eor     $044C                           ; EAD6 4D 4C 04                 ML.
-        eor     $5402                           ; EAD9 4D 02 54                 M.T
-        cmp     #$4F                            ; EADC C9 4F                    .O
-        cmp     #$06                            ; EADE C9 06                    ..
-        .byte   $54                             ; EAE0 54                       T
-        .byte   $02                             ; EAE1 02                       .
-        .byte   $4F                             ; EAE2 4F                       O
-        .byte   $54                             ; EAE3 54                       T
-        cmp     #$4F                            ; EAE4 C9 4F                    .O
-        cmp     #$54                            ; EAE6 C9 54                    .T
-        .byte   $52                             ; EAE8 52                       R
-        .byte   $54                             ; EAE9 54                       T
-        lsr     $57,x                           ; EAEA 56 57                    VW
-        cmp     #$52                            ; EAEC C9 52                    .R
-LEAEE:
-        cmp     #$06                            ; EAEE C9 06                    ..
-        .byte   $57                             ; EAF0 57                       W
-        .byte   $02                             ; EAF1 02                       .
-        .byte   $52                             ; EAF2 52                       R
-        .byte   $57                             ; EAF3 57                       W
-        cmp     #$52                            ; EAF4 C9 52                    .R
-        cmp     #$57                            ; EAF6 C9 57                    .W
-        .byte   $52                             ; EAF8 52                       R
-        .byte   $57                             ; EAF9 57                       W
-        lsr     $54,x                           ; EAFA 56 54                    VT
-        cmp     #$4F                            ; EAFC C9 4F                    .O
-        cmp     #$06                            ; EAFE C9 06                    ..
-        .byte   $54                             ; EB00 54                       T
-        .byte   $02                             ; EB01 02                       .
-        .byte   $4F                             ; EB02 4F                       O
-        .byte   $54                             ; EB03 54                       T
-        cmp     #$4F                            ; EB04 C9 4F                    .O
-        cmp     #$54                            ; EB06 C9 54                    .T
-        .byte   $52                             ; EB08 52                       R
-        .byte   $54                             ; EB09 54                       T
-        lsr     $57,x                           ; EB0A 56 57                    VW
-        cmp     #$52                            ; EB0C C9 52                    .R
-        cmp     #$06                            ; EB0E C9 06                    ..
-        .byte   $57                             ; EB10 57                       W
-        .byte   $02                             ; EB11 02                       .
-        .byte   $52                             ; EB12 52                       R
-        .byte   $04                             ; EB13 04                       .
-        .byte   $57                             ; EB14 57                       W
-        ora     ($59,x)                         ; EB15 01 59                    .Y
-        cmp     #$54                            ; EB17 C9 54                    .T
-        cmp     #$57                            ; EB19 C9 57                    .W
-        cmp     #$5B                            ; EB1B C9 5B                    .[
-        cmp     #$04                            ; EB1D C9 04                    ..
-        .byte   $52                             ; EB1F 52                       R
-        bne     LEAEE                           ; EB20 D0 CC                    ..
-        ldy     #$C7                            ; EB22 A0 C7                    ..
-        .byte   $FF                             ; EB24 FF                       .
-        cpy     $FF                             ; EB25 C4 FF                    ..
-        cmp     a:$03                           ; EB27 CD 03 00                 ...
-        .byte   $DB                             ; EB2A DB                       .
-        .byte   $07                             ; EB2B 07                       .
-        brk                                     ; EB2C 00                       .
-        asl     LD878,x                         ; EB2D 1E 78 D8                 .x.
-        brk                                     ; EB30 00                       .
-        dec     LCD06,x                         ; EB31 DE 06 CD                 ...
-        .byte   $03                             ; EB34 03                       .
-        ora     ($D8,x)                         ; EB35 01 D8                    ..
-        .byte   $0C                             ; EB37 0C                       .
-        php                                     ; EB38 08                       .
-        ora     ($6A,x)                         ; EB39 01 6A                    .j
-        cmp     #$6F                            ; EB3B C9 6F                    .o
-        cmp     #$02                            ; EB3D C9 02                    ..
-        ror     $6F01                           ; EB3F 6E 01 6F                 n.o
-        adc     ($73),y                         ; EB42 71 73                    qs
-        cmp     #$6F                            ; EB44 C9 6F                    .o
-        cmp     #$71                            ; EB46 C9 71                    .q
-        .byte   $73                             ; EB48 73                       s
-        .byte   $74                             ; EB49 74                       t
-        sei                                     ; EB4A 78                       x
-        ror     $C9,x                           ; EB4B 76 C9                    v.
-        .byte   $6F                             ; EB4D 6F                       o
-        cmp     #$76                            ; EB4E C9 76                    .v
-        cmp     #$6F                            ; EB50 C9 6F                    .o
-        cmp     #$71                            ; EB52 C9 71                    .q
-        .byte   $6F                             ; EB54 6F                       o
-        ror     $716F                           ; EB55 6E 6F 71                 noq
-        cmp     #$02                            ; EB58 C9 02                    ..
-        jmp     (L6A01)                         ; EB5A 6C 01 6A                 l.j
-
-; ----------------------------------------------------------------------------
-        cmp     #$6F                            ; EB5D C9 6F                    .o
-        cmp     #$02                            ; EB5F C9 02                    ..
-        ror     $6F01                           ; EB61 6E 01 6F                 n.o
-        adc     ($73),y                         ; EB64 71 73                    qs
-        cmp     #$6F                            ; EB66 C9 6F                    .o
-        cmp     #$02                            ; EB68 C9 02                    ..
-        adc     ($01),y                         ; EB6A 71 01                    q.
-        .byte   $73                             ; EB6C 73                       s
-        .byte   $74                             ; EB6D 74                       t
-        ror     $C9,x                           ; EB6E 76 C9                    v.
-        .byte   $6F                             ; EB70 6F                       o
-        cmp     #$78                            ; EB71 C9 78                    .x
-        cmp     #$6F                            ; EB73 C9 6F                    .o
-        cmp     #$73                            ; EB75 C9 73                    .s
-        adc     ($6F),y                         ; EB77 71 6F                    qo
-        ror     L6F04                           ; EB79 6E 04 6F                 n.o
-        dec     LCC02                           ; EB7C CE 02 CC                 ...
-        brk                                     ; EB7F 00                       .
-        ora     ($6E,x)                         ; EB80 01 6E                    .n
-        .byte   $6F                             ; EB82 6F                       o
-        adc     ($73),y                         ; EB83 71 73                    qs
-        adc     ($C9),y                         ; EB85 71 C9                    q.
-        .byte   $02                             ; EB87 02                       .
-        ror     $75,x                           ; EB88 76 75                    vu
-        sei                                     ; EB8A 78                       x
-        adc     ($01),y                         ; EB8B 71 01                    q.
-        .byte   $73                             ; EB8D 73                       s
-        adc     L0002,x                         ; EB8E 75 02                    u.
-        ror     $73,x                           ; EB90 76 73                    vs
-        adc     ($6F),y                         ; EB92 71 6F                    qo
-        ror     $0470                           ; EB94 6E 70 04                 np.
-        adc     (L0002),y                       ; EB97 71 02                    q.
-        jmp     (L6E6F)                         ; EB99 6C 6F 6E                 lon
-
-; ----------------------------------------------------------------------------
-        ror     a                               ; EB9C 6A                       j
-        .byte   $04                             ; EB9D 04                       .
-        jmp     (L6C03)                         ; EB9E 6C 03 6C                 l.l
-
-; ----------------------------------------------------------------------------
-        ora     ($6A,x)                         ; EBA1 01 6A                    .j
-        .byte   $02                             ; EBA3 02                       .
-        jmp     (L6E6F)                         ; EBA4 6C 6F 6E                 lon
-
-; ----------------------------------------------------------------------------
-        ror     a                               ; EBA7 6A                       j
-        .byte   $04                             ; EBA8 04                       .
-        jmp     (L026C)                         ; EBA9 6C 6C 02                 ll.
-
-; ----------------------------------------------------------------------------
-        .byte   $6F                             ; EBAC 6F                       o
-        .byte   $73                             ; EBAD 73                       s
-        adc     ($6E),y                         ; EBAE 71 6E                    qn
-        .byte   $04                             ; EBB0 04                       .
-        .byte   $6F                             ; EBB1 6F                       o
-        .byte   $03                             ; EBB2 03                       .
-        .byte   $6F                             ; EBB3 6F                       o
-        ora     ($6E,x)                         ; EBB4 01 6E                    .n
-        .byte   $02                             ; EBB6 02                       .
-        .byte   $6F                             ; EBB7 6F                       o
-        .byte   $73                             ; EBB8 73                       s
-        adc     ($6E),y                         ; EBB9 71 6E                    qn
-        .byte   $04                             ; EBBB 04                       .
-        .byte   $6F                             ; EBBC 6F                       o
-        .byte   $6F                             ; EBBD 6F                       o
-        .byte   $02                             ; EBBE 02                       .
-        jmp     (L6E6F)                         ; EBBF 6C 6F 6E                 lon
-
-; ----------------------------------------------------------------------------
-        ror     a                               ; EBC2 6A                       j
-        .byte   $04                             ; EBC3 04                       .
-        jmp     (L6C03)                         ; EBC4 6C 03 6C                 l.l
-
-; ----------------------------------------------------------------------------
-        ora     ($6A,x)                         ; EBC7 01 6A                    .j
-        .byte   $02                             ; EBC9 02                       .
-        jmp     (L6E6F)                         ; EBCA 6C 6F 6E                 lon
-
-; ----------------------------------------------------------------------------
-        ror     a                               ; EBCD 6A                       j
-        .byte   $04                             ; EBCE 04                       .
-        jmp     (L026C)                         ; EBCF 6C 6C 02                 ll.
-
-; ----------------------------------------------------------------------------
-        .byte   $6F                             ; EBD2 6F                       o
-        .byte   $73                             ; EBD3 73                       s
-        adc     ($6E),y                         ; EBD4 71 6E                    qn
-        .byte   $04                             ; EBD6 04                       .
-LEBD7:
-        .byte   $6F                             ; EBD7 6F                       o
-        .byte   $03                             ; EBD8 03                       .
-        .byte   $6F                             ; EBD9 6F                       o
-        ora     ($6E,x)                         ; EBDA 01 6E                    .n
-        .byte   $02                             ; EBDC 02                       .
-        .byte   $6F                             ; EBDD 6F                       o
-        .byte   $73                             ; EBDE 73                       s
-        ora     ($71,x)                         ; EBDF 01 71                    .q
-        .byte   $73                             ; EBE1 73                       s
-        .byte   $74                             ; EBE2 74                       t
-        sei                                     ; EBE3 78                       x
-        .byte   $02                             ; EBE4 02                       .
-        ror     $6F,x                           ; EBE5 76 6F                    vo
-        .byte   $04                             ; EBE7 04                       .
-        ror     LCCD0                           ; EBE8 6E D0 CC                 n..
-        ldy     #$C7                            ; EBEB A0 C7                    ..
-        .byte   $FF                             ; EBED FF                       .
-        cpy     $0D                             ; EBEE C4 0D                    ..
-        cmp     a:$03                           ; EBF0 CD 03 00                 ...
-        .byte   $DB                             ; EBF3 DB                       .
-        .byte   $07                             ; EBF4 07                       .
-        brk                                     ; EBF5 00                       .
-        asl     LD878,x                         ; EBF6 1E 78 D8                 .x.
-        brk                                     ; EBF9 00                       .
-        dec     LCD06,x                         ; EBFA DE 06 CD                 ...
-        .byte   $03                             ; EBFD 03                       .
-        ora     ($D8,x)                         ; EBFE 01 D8                    ..
-        .byte   $0C                             ; EC00 0C                       .
-        php                                     ; EC01 08                       .
-        .byte   $3F                             ; EC02 3F                       ?
-        cmp     #$C9                            ; EC03 C9 C9                    ..
-        cmp     #$C9                            ; EC05 C9 C9                    ..
-        cmp     #$C9                            ; EC07 C9 C9                    ..
-        bne     LEBD7                           ; EC09 D0 CC                    ..
-        ldy     #$C7                            ; EC0B A0 C7                    ..
-        .byte   $FF                             ; EC0D FF                       .
-        cpy     $0D                             ; EC0E C4 0D                    ..
-        cmp     a:$03                           ; EC10 CD 03 00                 ...
-        .byte   $DB                             ; EC13 DB                       .
-        .byte   $07                             ; EC14 07                       .
-        brk                                     ; EC15 00                       .
-        asl     LD878,x                         ; EC16 1E 78 D8                 .x.
-        brk                                     ; EC19 00                       .
-        dec     LCD06,x                         ; EC1A DE 06 CD                 ...
-        .byte   $03                             ; EC1D 03                       .
-        ora     ($D8,x)                         ; EC1E 01 D8                    ..
-        .byte   $0C                             ; EC20 0C                       .
-        php                                     ; EC21 08                       .
-        .byte   $3F                             ; EC22 3F                       ?
-        cmp     #$C9                            ; EC23 C9 C9                    ..
-        cmp     #$C9                            ; EC25 C9 C9                    ..
-        cmp     #$C9                            ; EC27 C9 C9                    ..
-LEC2A           := * + 1
-        bne     LEC2A                           ; EC29 D0 FF                    ..
-        brk                                     ; EC2B 00                       .
-        asl     L0100                           ; EC2C 0E 00 01                 ...
-        lda     L0200                           ; EC2F AD 00 02                 ...
-        .byte   $43                             ; EC32 43                       C
-        ora     ($03,x)                         ; EC33 01 03                    ..
-        lda     LFF01                           ; EC35 AD 01 FF                 ...
-        cpy     LC7BB                           ; EC38 CC BB C7                 ...
-        .byte   $FF                             ; EC3B FF                       .
-        cpy     $FF                             ; EC3C C4 FF                    ..
-        cmp     a:$03                           ; EC3E CD 03 00                 ...
-        .byte   $DB                             ; EC41 DB                       .
-        .byte   $07                             ; EC42 07                       .
-        brk                                     ; EC43 00                       .
-        asl     LD878,x                         ; EC44 1E 78 D8                 .x.
-        brk                                     ; EC47 00                       .
-        dec     LCD06,x                         ; EC48 DE 06 CD                 ...
-        .byte   $03                             ; EC4B 03                       .
-        ora     ($D8,x)                         ; EC4C 01 D8                    ..
-        .byte   $0C                             ; EC4E 0C                       .
-        php                                     ; EC4F 08                       .
-        .byte   $02                             ; EC50 02                       .
-        cmp     #$63                            ; EC51 C9 63                    .c
-        ora     ($67,x)                         ; EC53 01 67                    .g
-        cmp     #$63                            ; EC55 C9 63                    .c
-        .byte   $03                             ; EC57 03                       .
-        cmp     #$02                            ; EC58 C9 02                    ..
-        .byte   $64                             ; EC5A 64                       d
-        ora     ($67,x)                         ; EC5B 01 67                    .g
-        cmp     #$64                            ; EC5D C9 64                    .d
-        cmp     #$02                            ; EC5F C9 02                    ..
-        .byte   $62                             ; EC61 62                       b
-        ora     ($67,x)                         ; EC62 01 67                    .g
-        cmp     #$62                            ; EC64 C9 62                    .b
-        cmp     #$02                            ; EC66 C9 02                    ..
-        cmp     #$61                            ; EC68 C9 61                    .a
-        ora     ($64,x)                         ; EC6A 01 64                    .d
-        cmp     #$61                            ; EC6C C9 61                    .a
-        cmp     #$CE                            ; EC6E C9 CE                    ..
-        .byte   $04                             ; EC70 04                       .
-        and     L0400,x                         ; EC71 3D 00 04                 =..
-        cmp     #$5F                            ; EC74 C9 5F                    ._
-        ora     ($60,x)                         ; EC76 01 60                    .`
-        .byte   $0B                             ; EC78 0B                       .
-        cmp     #$04                            ; EC79 C9 04                    ..
-        .byte   $67                             ; EC7B 67                       g
-        ora     ($68,x)                         ; EC7C 01 68                    .h
-        .byte   $0B                             ; EC7E 0B                       .
-        cmp     #$04                            ; EC7F C9 04                    ..
-        .byte   $5F                             ; EC81 5F                       _
-        ora     ($60,x)                         ; EC82 01 60                    .`
-        .byte   $03                             ; EC84 03                       .
-        cmp     #$01                            ; EC85 C9 01                    ..
-        rts                                     ; EC87 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $62                             ; EC88 62                       b
-        .byte   $63                             ; EC89 63                       c
-        adc     $67                             ; EC8A 65 67                    eg
-        .byte   $03                             ; EC8C 03                       .
-        cmp     #$01                            ; EC8D C9 01                    ..
-        .byte   $6B                             ; EC8F 6B                       k
-        .byte   $03                             ; EC90 03                       .
-        cmp     #$01                            ; EC91 C9 01                    ..
-        jmp     (LC907)                         ; EC93 6C 07 C9                 l..
-
-; ----------------------------------------------------------------------------
-        asl     $6F                             ; EC96 06 6F                    .o
-        ora     ($71,x)                         ; EC98 01 71                    .q
-        .byte   $6F                             ; EC9A 6F                       o
-        php                                     ; EC9B 08                       .
-        ror     $6D06                           ; EC9C 6E 06 6D                 n.m
-LEC9F:
-        ora     ($6F,x)                         ; EC9F 01 6F                    .o
-        adc     L6B10                           ; ECA1 6D 10 6B                 m.k
-LECA4:
-        .byte   $02                             ; ECA4 02                       .
-        ror     $01                             ; ECA5 66 01                    f.
-        .byte   $63                             ; ECA7 63                       c
-        .byte   $02                             ; ECA8 02                       .
-        adc     L6A01                           ; ECA9 6D 01 6A                 m.j
-        ror     $63                             ; ECAC 66 63                    fc
-        .byte   $02                             ; ECAE 02                       .
-        ror     $01                             ; ECAF 66 01                    f.
-        .byte   $62                             ; ECB1 62                       b
-        .byte   $02                             ; ECB2 02                       .
-        adc     $6801                           ; ECB3 6D 01 68                 m.h
-        ror     $62                             ; ECB6 66 62                    fb
-        .byte   $02                             ; ECB8 02                       .
-        ror     $01                             ; ECB9 66 01                    f.
-        .byte   $63                             ; ECBB 63                       c
-        .byte   $02                             ; ECBC 02                       .
-        adc     L6A01                           ; ECBD 6D 01 6A                 m.j
-        ror     $63                             ; ECC0 66 63                    fc
-        dec     L8E06                           ; ECC2 CE 06 8E                 ...
-        brk                                     ; ECC5 00                       .
-        .byte   $02                             ; ECC6 02                       .
-        .byte   $63                             ; ECC7 63                       c
-        ora     ($60,x)                         ; ECC8 01 60                    .`
-        .byte   $02                             ; ECCA 02                       .
-        ror     a                               ; ECCB 6A                       j
-        ora     ($67,x)                         ; ECCC 01 67                    .g
-        .byte   $63                             ; ECCE 63                       c
-        rts                                     ; ECCF 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $CF                             ; ECD0 CF                       .
-        asl     $9C                             ; ECD1 06 9C                    ..
-        brk                                     ; ECD3 00                       .
-        bpl     LEC9F                           ; ECD4 10 C9                    ..
-        bne     LECA4                           ; ECD6 D0 CC                    ..
-        .byte   $BB                             ; ECD8 BB                       .
-        .byte   $C7                             ; ECD9 C7                       .
-        .byte   $FF                             ; ECDA FF                       .
-        cpy     $FF                             ; ECDB C4 FF                    ..
-        cmp     a:$03                           ; ECDD CD 03 00                 ...
-        .byte   $DB                             ; ECE0 DB                       .
-        .byte   $07                             ; ECE1 07                       .
-        brk                                     ; ECE2 00                       .
-        asl     LD878,x                         ; ECE3 1E 78 D8                 .x.
-        brk                                     ; ECE6 00                       .
-        dec     LCD06,x                         ; ECE7 DE 06 CD                 ...
-        .byte   $03                             ; ECEA 03                       .
-        ora     ($D8,x)                         ; ECEB 01 D8                    ..
-        .byte   $0C                             ; ECED 0C                       .
-        php                                     ; ECEE 08                       .
-        .byte   $02                             ; ECEF 02                       .
-        rts                                     ; ECF0 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $63                             ; ECF1 63                       c
-        .byte   $67                             ; ECF2 67                       g
-        jmp     (L6B01)                         ; ECF3 6C 01 6B                 l.k
-
-; ----------------------------------------------------------------------------
-        .byte   $07                             ; ECF6 07                       .
-        cmp     #$04                            ; ECF7 C9 04                    ..
-        ror     a                               ; ECF9 6A                       j
-        .byte   $02                             ; ECFA 02                       .
-        adc     $67                             ; ECFB 65 67                    eg
-        asl     $0468,x                         ; ECFD 1E 68 04                 .h.
-        cmp     #$5B                            ; ED00 C9 5B                    .[
-        ora     ($5B,x)                         ; ED02 01 5B                    .[
-        .byte   $0B                             ; ED04 0B                       .
-        cmp     #$04                            ; ED05 C9 04                    ..
-        .byte   $62                             ; ED07 62                       b
-        ora     ($63,x)                         ; ED08 01 63                    .c
-        .byte   $0B                             ; ED0A 0B                       .
-        cmp     #$04                            ; ED0B C9 04                    ..
-        .byte   $4F                             ; ED0D 4F                       O
-        ora     ($4F,x)                         ; ED0E 01 4F                    .O
-        .byte   $03                             ; ED10 03                       .
-        cmp     #$01                            ; ED11 C9 01                    ..
-        .byte   $57                             ; ED13 57                       W
-        .byte   $5B                             ; ED14 5B                       [
-        rts                                     ; ED15 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $62                             ; ED16 62                       b
-        .byte   $63                             ; ED17 63                       c
-        .byte   $0F                             ; ED18 0F                       .
-        cmp     #$08                            ; ED19 C9 08                    ..
-        ror     $67                             ; ED1B 66 67                    fg
-        adc     $10                             ; ED1D 65 10                    e.
-        .byte   $64                             ; ED1F 64                       d
-        .byte   $04                             ; ED20 04                       .
-        cmp     #$01                            ; ED21 C9 01                    ..
-        .byte   $5A                             ; ED23 5A                       Z
-        cmp     #$5A                            ; ED24 C9 5A                    .Z
-        ora     $C9                             ; ED26 05 C9                    ..
-        ora     ($5C,x)                         ; ED28 01 5C                    .\
-        ora     $C9                             ; ED2A 05 C9                    ..
-        .byte   $04                             ; ED2C 04                       .
-        .byte   $5A                             ; ED2D 5A                       Z
-        ora     ($5A,x)                         ; ED2E 01 5A                    .Z
-        ora     $C9                             ; ED30 05 C9                    ..
-        ora     ($5C,x)                         ; ED32 01 5C                    .\
-        cmp     #$5C                            ; ED34 C9 5C                    .\
-        cmp     #$04                            ; ED36 C9 04                    ..
-        cmp     #$01                            ; ED38 C9 01                    ..
-        .byte   $5A                             ; ED3A 5A                       Z
-        cmp     #$5A                            ; ED3B C9 5A                    .Z
-        cmp     #$04                            ; ED3D C9 04                    ..
-        cmp     #$01                            ; ED3F C9 01                    ..
-        .byte   $5C                             ; ED41 5C                       \
-        .byte   $03                             ; ED42 03                       .
-        cmp     #$01                            ; ED43 C9 01                    ..
-        .byte   $5A                             ; ED45 5A                       Z
-        .byte   $13                             ; ED46 13                       .
-        cmp     #$01                            ; ED47 C9 01                    ..
-        .byte   $57                             ; ED49 57                       W
-        cmp     #$57                            ; ED4A C9 57                    .W
-        ora     $C9                             ; ED4C 05 C9                    ..
-        ora     ($59,x)                         ; ED4E 01 59                    .Y
-        ora     $C9                             ; ED50 05 C9                    ..
-        .byte   $04                             ; ED52 04                       .
-        .byte   $57                             ; ED53 57                       W
-        ora     ($57,x)                         ; ED54 01 57                    .W
-        ora     $C9                             ; ED56 05 C9                    ..
-        ora     ($59,x)                         ; ED58 01 59                    .Y
-        cmp     #$59                            ; ED5A C9 59                    .Y
-        ora     $C9                             ; ED5C 05 C9                    ..
-        ora     ($57,x)                         ; ED5E 01 57                    .W
-        cmp     #$57                            ; ED60 C9 57                    .W
-        ora     $C9                             ; ED62 05 C9                    ..
-        ora     ($59,x)                         ; ED64 01 59                    .Y
-        .byte   $03                             ; ED66 03                       .
-        cmp     #$01                            ; ED67 C9 01                    ..
-        .byte   $57                             ; ED69 57                       W
-        .byte   $0F                             ; ED6A 0F                       .
-        cmp     #$D0                            ; ED6B C9 D0                    ..
-        cpy     LC7BB                           ; ED6D CC BB C7                 ...
-        .byte   $FF                             ; ED70 FF                       .
-        cpy     $FF                             ; ED71 C4 FF                    ..
-        cmp     a:$03                           ; ED73 CD 03 00                 ...
-        .byte   $DB                             ; ED76 DB                       .
-        .byte   $07                             ; ED77 07                       .
-        brk                                     ; ED78 00                       .
-        asl     LD878,x                         ; ED79 1E 78 D8                 .x.
-        brk                                     ; ED7C 00                       .
-        dec     LCD06,x                         ; ED7D DE 06 CD                 ...
-        .byte   $03                             ; ED80 03                       .
-        ora     ($D8,x)                         ; ED81 01 D8                    ..
-        .byte   $0C                             ; ED83 0C                       .
-        php                                     ; ED84 08                       .
-        php                                     ; ED85 08                       .
-        rts                                     ; ED86 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $5F                             ; ED87 5F                       _
-        lsr     $5C20,x                         ; ED88 5E 20 5C                 ^ \
-        .byte   $0C                             ; ED8B 0C                       .
-        rts                                     ; ED8C 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $04                             ; ED8D 04                       .
-        rts                                     ; ED8E 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $0C                             ; ED8F 0C                       .
-        rts                                     ; ED90 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $04                             ; ED91 04                       .
-        rts                                     ; ED92 60                       `
-
-; ----------------------------------------------------------------------------
-        asl     $0460                           ; ED93 0E 60 04                 .`.
-        cmp     #$02                            ; ED96 C9 02                    ..
-        .byte   $5B                             ; ED98 5B                       [
-        cmp     #$54                            ; ED99 C9 54                    .T
-        asl     $C9                             ; ED9B 06 C9                    ..
-        .byte   $02                             ; ED9D 02                       .
-        .byte   $63                             ; ED9E 63                       c
-        ror     $6A                             ; ED9F 66 6A                    fj
-        .byte   $6F                             ; EDA1 6F                       o
-        ora     ($6E,x)                         ; EDA2 01 6E                    .n
-LEDA4:
-        .byte   $03                             ; EDA4 03                       .
-        cmp     #$01                            ; EDA5 C9 01                    ..
-        ror     a                               ; EDA7 6A                       j
-        .byte   $03                             ; EDA8 03                       .
-        cmp     #$04                            ; EDA9 C9 04                    ..
-        adc     L6802                           ; EDAB 6D 02 68                 m.h
-        ror     a                               ; EDAE 6A                       j
-        bpl     LEE1C                           ; EDAF 10 6B                    .k
-        .byte   $02                             ; EDB1 02                       .
-        .byte   $57                             ; EDB2 57                       W
-        asl     $C9                             ; EDB3 06 C9                    ..
-        .byte   $02                             ; EDB5 02                       .
-        .byte   $52                             ; EDB6 52                       R
-        asl     $C9                             ; EDB7 06 C9                    ..
-        dec     L8703                           ; EDB9 CE 03 87                 ...
-        ora     (L0002,x)                       ; EDBC 01 02                    ..
-        .byte   $57                             ; EDBE 57                       W
-        cmp     #$04                            ; EDBF C9 04                    ..
-        .byte   $57                             ; EDC1 57                       W
-        lsr     $55,x                           ; EDC2 56 55                    VU
-        .byte   $02                             ; EDC4 02                       .
-        .byte   $54                             ; EDC5 54                       T
-        asl     $C9                             ; EDC6 06 C9                    ..
-        .byte   $02                             ; EDC8 02                       .
-        .byte   $4F                             ; EDC9 4F                       O
-        asl     $C9                             ; EDCA 06 C9                    ..
-        .byte   $CF                             ; EDCC CF                       .
-        .byte   $03                             ; EDCD 03                       .
-        txs                                     ; EDCE 9A                       .
-        ora     (L0002,x)                       ; EDCF 01 02                    ..
-        .byte   $54                             ; EDD1 54                       T
-        asl     $C9                             ; EDD2 06 C9                    ..
-        php                                     ; EDD4 08                       .
-        pha                                     ; EDD5 48                       H
-        bne     LEDA4                           ; EDD6 D0 CC                    ..
-        .byte   $BB                             ; EDD8 BB                       .
-        .byte   $C7                             ; EDD9 C7                       .
-        .byte   $FF                             ; EDDA FF                       .
-        cpy     $FF                             ; EDDB C4 FF                    ..
-        cmp     a:$03                           ; EDDD CD 03 00                 ...
-        .byte   $DB                             ; EDE0 DB                       .
-        .byte   $07                             ; EDE1 07                       .
-        brk                                     ; EDE2 00                       .
-        asl     LD878,x                         ; EDE3 1E 78 D8                 .x.
-        brk                                     ; EDE6 00                       .
-        dec     LCD06,x                         ; EDE7 DE 06 CD                 ...
-        .byte   $03                             ; EDEA 03                       .
-        ora     ($D8,x)                         ; EDEB 01 D8                    ..
-        .byte   $0C                             ; EDED 0C                       .
-        php                                     ; EDEE 08                       .
-        .byte   $3F                             ; EDEF 3F                       ?
-        cmp     #$C9                            ; EDF0 C9 C9                    ..
-        cmp     #$C9                            ; EDF2 C9 C9                    ..
-        cmp     #$C9                            ; EDF4 C9 C9                    ..
-        cmp     #$D0                            ; EDF6 C9 D0                    ..
+        .byte   $FF,$00,$0E,$00,$01,$DB,$00,$02 ; E251 FF 00 0E 00 01 DB 00 02  ........
+        .byte   $4B,$01,$03,$B9,$01,$FF,$CC,$C8 ; E259 4B 01 03 B9 01 FF CC C8  K.......
+        .byte   $C7,$FF,$C4,$6D,$CD,$03,$00,$DB ; E261 C7 FF C4 6D CD 03 00 DB  ...m....
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; E269 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$3C,$C9 ; E271 CD 03 01 D8 0C 08 3C C9  ......<.
+        .byte   $03,$6A,$01,$C9,$C9,$6A,$02,$67 ; E279 03 6A 01 C9 C9 6A 02 67  .j...j.g
+        .byte   $01,$63,$C9,$C9,$6A,$02,$67,$01 ; E281 01 63 C9 C9 6A 02 67 01  .c..j.g.
+        .byte   $63,$67,$C9,$C9,$C9,$C9,$63,$03 ; E289 63 67 C9 C9 C9 C9 63 03  cg....c.
+        .byte   $C9,$67,$65,$63,$01,$C9,$C9,$65 ; E291 C9 67 65 63 01 C9 C9 65  .gec...e
+        .byte   $02,$63,$01,$61,$03,$63,$61,$63 ; E299 02 63 01 61 03 63 61 63  .c.a.cac
+        .byte   $01,$C9,$C9,$67,$02,$6A,$01,$6C ; E2A1 01 C9 C9 67 02 6A 01 6C  ...g.j.l
+        .byte   $06,$6D,$CF,$02,$26,$00,$03,$6D ; E2A9 06 6D CF 02 26 00 03 6D  .m..&..m
+        .byte   $6C,$01,$C9,$C9,$6C,$02,$68,$01 ; E2B1 6C 01 C9 C9 6C 02 68 01  l...l.h.
+        .byte   $65,$02,$62,$01,$65,$02,$68,$01 ; E2B9 65 02 62 01 65 02 68 01  e.b.e.h.
+        .byte   $6C,$03,$6A,$01,$C9,$C9,$03,$6F ; E2C1 6C 03 6A 01 C9 C9 03 6F  l.j....o
+        .byte   $01,$C9,$06,$6A,$03,$68,$01,$C9 ; E2C9 01 C9 06 6A 03 68 01 C9  ...j.h..
+        .byte   $C9,$68,$02,$65,$01,$62,$02,$5E ; E2D1 C9 68 02 65 01 62 02 5E  .h.e.b.^
+        .byte   $01,$62,$02,$65,$01,$68,$03,$67 ; E2D9 01 62 02 65 01 68 03 67  .b.e.h.g
+        .byte   $02,$C9,$03,$68,$01,$C9,$03,$6A ; E2E1 02 C9 03 68 01 C9 03 6A  ...h...j
+        .byte   $6D,$6C,$01,$C9,$C9,$6C,$02,$68 ; E2E9 6D 6C 01 C9 C9 6C 02 68  ml...l.h
+        .byte   $01,$65,$02,$62,$01,$65,$02,$68 ; E2F1 01 65 02 62 01 65 02 68  .e.b.e.h
+        .byte   $01,$6C,$03,$6A,$02,$C9,$03,$6F ; E2F9 01 6C 03 6A 02 C9 03 6F  .l.j...o
+        .byte   $01,$C9,$06,$6A,$03,$65,$01,$C9 ; E301 01 C9 06 6A 03 65 01 C9  ...j.e..
+        .byte   $C9,$67,$02,$65,$01,$63,$02,$65 ; E309 C9 67 02 65 01 63 02 65  .g.e.c.e
+        .byte   $01,$67,$02,$68,$01,$67,$03,$65 ; E311 01 67 02 68 01 67 03 65  .g.h.g.e
+        .byte   $01,$C9,$C9,$67,$02,$68,$01,$6A ; E319 01 C9 C9 67 02 68 01 6A  ...g.h.j
+        .byte   $03,$6C,$68,$69,$01,$6A,$04,$C9 ; E321 03 6C 68 69 01 6A 04 C9  .lhi.j..
+        .byte   $13,$6D,$D0,$CC,$C8,$C7,$FF,$C4 ; E329 13 6D D0 CC C8 C7 FF C4  .m......
+        .byte   $6D,$CD,$03,$00,$DB,$07,$00,$1E ; E331 6D CD 03 00 DB 07 00 1E  m.......
+        .byte   $78,$D8,$00,$DE,$06,$CD,$03,$01 ; E339 78 D8 00 DE 06 CD 03 01  x.......
+        .byte   $D8,$0C,$08,$01,$C9,$C9,$61,$C9 ; E341 D8 0C 08 01 C9 C9 61 C9  ......a.
+        .byte   $C9,$C9,$61,$C9,$C9,$03,$60,$5E ; E349 C9 C9 61 C9 C9 03 60 5E  ..a...`^
+        .byte   $CE,$08,$F3,$00,$CF,$02,$F3,$00 ; E351 CE 08 F3 00 CF 02 F3 00  ........
+        .byte   $03,$67,$0C,$60,$03,$60,$09,$61 ; E359 03 67 0C 60 03 60 09 61  .g.`.`.a
+        .byte   $03,$60,$5E,$09,$60,$03,$63,$62 ; E361 03 60 5E 09 60 03 63 62  .`^.`.cb
+        .byte   $09,$61,$02,$5D,$01,$5E,$03,$63 ; E369 09 61 02 5D 01 5E 03 63  .a.].^.c
+        .byte   $0C,$60,$03,$60,$09,$61,$03,$60 ; E371 0C 60 03 60 09 61 03 60  .`.`.a.`
+        .byte   $5E,$01,$C9,$C9,$60,$C9,$C9,$60 ; E379 5E 01 C9 C9 60 C9 C9 60  ^...`..`
+        .byte   $C9,$C9,$03,$60,$60,$01,$C9,$C9 ; E381 C9 C9 03 60 60 01 C9 C9  ...``...
+        .byte   $61,$C9,$C9,$C9,$C9,$61,$C9,$C9 ; E389 61 C9 C9 C9 C9 61 C9 C9  a....a..
+        .byte   $03,$63,$61,$60,$01,$5E,$04,$C9 ; E391 03 63 61 60 01 5E 04 C9  .ca`.^..
+        .byte   $13,$61,$D0,$CC,$C8,$C7,$FF,$C4 ; E399 13 61 D0 CC C8 C7 FF C4  .a......
+        .byte   $6D,$CD,$03,$00,$DB,$07,$00,$1E ; E3A1 6D CD 03 00 DB 07 00 1E  m.......
+        .byte   $78,$D8,$00,$DE,$06,$CD,$03,$01 ; E3A9 78 D8 00 DE 06 CD 03 01  x.......
+        .byte   $D8,$0C,$08,$02,$4B,$01,$C9,$C9 ; E3B1 D8 0C 08 02 4B 01 C9 C9  ....K...
+        .byte   $C9,$4B,$03,$C9,$46,$49,$CE,$08 ; E3B9 C9 4B 03 C9 46 49 CE 08  .K..FI..
+        .byte   $63,$01,$CF,$02,$63,$01,$03,$4B ; E3C1 63 01 CF 02 63 01 03 4B  c...c..K
+        .byte   $50,$4B,$4C,$4D,$46,$4B,$51,$52 ; E3C9 50 4B 4C 4D 46 4B 51 52  PKLMFKQR
+        .byte   $55,$4F,$50,$4D,$4B,$02,$4A,$01 ; E3D1 55 4F 50 4D 4B 02 4A 01  UOPMK.J.
+        .byte   $52,$03,$4A,$4B,$55,$54,$52,$4F ; E3D9 52 03 4A 4B 55 54 52 4F  R.JKUTRO
+        .byte   $50,$4B,$4C,$4D,$46,$4B,$4D,$4E ; E3E1 50 4B 4C 4D 46 4B 4D 4E  PKLMFKMN
+        .byte   $4F,$02,$4B,$01,$48,$02,$49,$03 ; E3E9 4F 02 4B 01 48 02 49 03  O.K.H.I.
+        .byte   $C9,$01,$49,$03,$C9,$50,$4F,$02 ; E3F1 C9 01 49 03 C9 50 4F 02  ..I..PO.
+        .byte   $52,$C9,$01,$C9,$52,$03,$C9,$48 ; E3F9 52 C9 01 C9 52 03 C9 48  R...R..H
+        .byte   $49,$4A,$01,$4B,$04,$C9,$13,$46 ; E401 49 4A 01 4B 04 C9 13 46  IJ.K...F
+        .byte   $D0,$CC,$C8,$C7,$FF,$C4,$6D,$CD ; E409 D0 CC C8 C7 FF C4 6D CD  ......m.
+        .byte   $03,$00,$DB,$07,$00,$1E,$78,$D8 ; E411 03 00 DB 07 00 1E 78 D8  ......x.
+        .byte   $00,$DE,$06,$CD,$03,$01,$D8,$0C ; E419 00 DE 06 CD 03 01 D8 0C  ........
+        .byte   $08,$3F,$C9,$C9,$C9,$C9,$C9,$C9 ; E421 08 3F C9 C9 C9 C9 C9 C9  .?......
+        .byte   $C9,$C9,$D0                     ; E429 C9 C9 D0                 ...
+MusicNibelheimTheme:
+        .byte   $FF,$00,$0E,$00,$01,$CE,$00,$02 ; E42C FF 00 0E 00 01 CE 00 02  ........
+        .byte   $31,$01,$03,$42,$01,$FF,$CC,$30 ; E434 31 01 03 42 01 FF CC 30  1..B...0
+        .byte   $C7,$FF,$C4,$6E,$CD,$03,$00,$DB ; E43C C7 FF C4 6E CD 03 00 DB  ...n....
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; E444 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$00,$08,$6D,$0A ; E44C CD 03 01 D8 00 08 6D 0A  ......m.
+        .byte   $6A,$06,$6D,$02,$6F,$0A,$6A,$09 ; E454 6A 06 6D 02 6F 0A 6A 09  j.m.o.j.
+        .byte   $6B,$0A,$68,$06,$6B,$02,$6D,$0D ; E45C 6B 0A 68 06 6B 02 6D 0D  k.h.k.m.
+        .byte   $68,$01,$5C,$61,$64,$66,$68,$66 ; E464 68 01 5C 61 64 66 68 66  h.\adfhf
+        .byte   $6B,$6A,$03,$6D,$02,$6A,$65,$61 ; E46C 6B 6A 03 6D 02 6A 65 61  kj.m.jea
+        .byte   $01,$68,$6D,$70,$72,$74,$72,$77 ; E474 01 68 6D 70 72 74 72 77  .hmprtrw
+        .byte   $76,$79,$78,$76,$71,$6D,$6C,$6A ; E47C 76 79 78 76 71 6D 6C 6A  vyxvqmlj
+        .byte   $65,$61,$63,$64,$68,$6D,$6F,$70 ; E484 65 61 63 64 68 6D 6F 70  eacdhmop
+        .byte   $74,$76,$71,$6D,$6C,$6A,$65,$61 ; E48C 74 76 71 6D 6C 6A 65 61  tvqmljea
+        .byte   $60,$61,$63,$64,$68,$6D,$6F,$70 ; E494 60 61 63 64 68 6D 6F 70  `acdhmop
+        .byte   $74,$76,$71,$6D,$6C,$6A,$65,$61 ; E49C 74 76 71 6D 6C 6A 65 61  tvqmljea
+        .byte   $60,$58,$5B,$5C,$5F,$64,$66,$68 ; E4A4 60 58 5B 5C 5F 64 66 68  `X[\_dfh
+        .byte   $6B,$6C,$6A,$68,$63,$60,$5E,$5C ; E4AC 6B 6C 6A 68 63 60 5E 5C  kljhc`^\
+        .byte   $57,$58,$5A,$5C,$5F,$64,$66,$68 ; E4B4 57 58 5A 5C 5F 64 66 68  WXZ\_dfh
+        .byte   $6B,$6C,$6A,$68,$63,$08,$60,$07 ; E4BC 6B 6C 6A 68 63 08 60 07  kljhc.`.
+        .byte   $6D,$02,$71,$01,$68,$6D,$6F,$71 ; E4C4 6D 02 71 01 68 6D 6F 71  m.q.hmoq
+        .byte   $6F,$6B,$05,$77,$01,$74,$6D,$6F ; E4CC 6F 6B 05 77 01 74 6D 6F  ok.w.tmo
+        .byte   $71,$71,$6D,$6F,$71,$72,$70,$6D ; E4D4 71 71 6D 6F 71 72 70 6D  qqmoqrpm
+        .byte   $05,$69,$02,$6D,$01,$6F,$71,$71 ; E4DC 05 69 02 6D 01 6F 71 71  .i.m.oqq
+        .byte   $68,$6D,$6F,$71,$6F,$6B,$07,$77 ; E4E4 68 6D 6F 71 6F 6B 07 77  hmoqok.w
+        .byte   $02,$6B,$6A,$6D,$08,$6B,$02,$C9 ; E4EC 02 6B 6A 6D 08 6B 02 C9  .kjm.k..
+        .byte   $6B,$6A,$6D,$10,$6B,$D0,$CC,$30 ; E4F4 6B 6A 6D 10 6B D0 CC 30  kjm.k..0
+        .byte   $C7,$FF,$C4,$0F,$CD,$03,$00,$DB ; E4FC C7 FF C4 0F CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; E504 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$00,$08,$55,$0A ; E50C CD 03 01 D8 00 08 55 0A  ......U.
+        .byte   $52,$06,$55,$02,$55,$0A,$52,$09 ; E514 52 06 55 02 55 0A 52 09  R.U.U.R.
+        .byte   $52,$0A,$50,$06,$50,$02,$50,$06 ; E51C 52 0A 50 06 50 02 50 06  R.P.P.P.
+        .byte   $50,$06,$54,$50,$08,$58,$55,$58 ; E524 50 06 54 50 08 58 55 58  P.TP.XUX
+        .byte   $4D,$6D,$6A,$06,$6D,$02,$6F,$08 ; E52C 4D 6D 6A 06 6D 02 6F 08  Mmj.m.o.
+        .byte   $6A,$6B,$68,$06,$6B,$02,$6D,$0D ; E534 6A 6B 68 06 6B 02 6D 0D  jkh.k.m.
+        .byte   $68,$08,$61,$5F,$61,$03,$69,$05 ; E53C 68 08 61 5F 61 03 69 05  h.a_a.i.
+        .byte   $C9,$02,$6D,$06,$C9,$02,$6B,$06 ; E544 C9 02 6D 06 C9 02 6B 06  ..m...k.
+        .byte   $C9,$01,$C9,$02,$5F,$5E,$61,$08 ; E54C C9 01 C9 02 5F 5E 61 08  ...._^a.
+        .byte   $5F,$02,$C9,$5F,$5E,$61,$0D,$5F ; E554 5F 02 C9 5F 5E 61 0D 5F  _.._^a._
+        .byte   $D0,$CC,$30,$C7,$FF,$C4,$00,$DB ; E55C D0 CC 30 C7 FF C4 00 DB  ..0.....
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$3F ; E564 07 00 1E 78 D8 00 DE 3F  ...x...?
+        .byte   $C9,$D0,$CC,$FE,$C7,$FF,$C4,$00 ; E56C C9 D0 CC FE C7 FF C4 00  ........
+        .byte   $CD,$45,$00,$D8,$00,$DE,$3F,$C9 ; E574 CD 45 00 D8 00 DE 3F C9  .E....?.
+        .byte   $D0                             ; E57C D0                       .
+LE57D:
+        .byte   $FF,$00,$0E,$00,$01,$09,$01,$02 ; E57D FF 00 0E 00 01 09 01 02  ........
+        .byte   $70,$02,$03,$EB,$02,$FF,$CC,$A0 ; E585 70 02 03 EB 02 FF CC A0  p.......
+        .byte   $C7,$FF,$C4,$0D,$CD,$03,$00,$DB ; E58D C7 FF C4 0D CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; E595 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$03,$C9 ; E59D CD 03 01 D8 0C 08 03 C9  ........
+        .byte   $01,$61,$C9,$61,$C9,$C9,$C9,$61 ; E5A5 01 61 C9 61 C9 C9 C9 61  .a.a...a
+        .byte   $C9,$61,$C9,$C9,$C9,$62,$C9,$62 ; E5AD C9 61 C9 C9 C9 62 C9 62  .a...b.b
+        .byte   $C9,$C9,$C9,$62,$C9,$62,$C9,$C9 ; E5B5 C9 C9 C9 62 C9 62 C9 C9  ...b.b..
+        .byte   $C9,$61,$C9,$61,$C9,$C9,$C9,$61 ; E5BD C9 61 C9 61 C9 C9 C9 61  .a.a...a
+        .byte   $C9,$61,$C9,$C9,$C9,$62,$C9,$62 ; E5C5 C9 61 C9 C9 C9 62 C9 62  .a...b.b
+        .byte   $C9,$62,$C9,$62,$C9,$62,$C9,$C9 ; E5CD C9 62 C9 62 C9 62 C9 C9  .b.b.b..
+        .byte   $C9,$61,$C9,$61,$C9,$C9,$C9,$61 ; E5D5 C9 61 C9 61 C9 C9 C9 61  .a.a...a
+        .byte   $C9,$61,$C9,$C9,$C9,$62,$C9,$62 ; E5DD C9 61 C9 C9 C9 62 C9 62  .a...b.b
+        .byte   $C9,$C9,$C9,$62,$C9,$62,$C9,$C9 ; E5E5 C9 C9 C9 62 C9 62 C9 C9  ...b.b..
+        .byte   $C9,$61,$C9,$61,$C9,$C9,$C9,$61 ; E5ED C9 61 C9 61 C9 C9 C9 61  .a.a...a
+        .byte   $C9,$61,$C9,$C9,$C9,$62,$C9,$62 ; E5F5 C9 61 C9 C9 C9 62 C9 62  .a...b.b
+        .byte   $02,$62,$01,$C9,$02,$60,$01,$C9 ; E5FD 02 62 01 C9 02 60 01 C9  .b...`..
+        .byte   $1B,$61,$03,$C9,$0C,$C9,$02,$56 ; E605 1B 61 03 C9 0C C9 02 56  .a.....V
+        .byte   $01,$C9,$02,$54,$01,$C9,$1A,$55 ; E60D 01 C9 02 54 01 C9 1A 55  ...T...U
+        .byte   $0A,$C9,$01,$C9,$C9,$C9,$5F,$C9 ; E615 0A C9 01 C9 C9 C9 5F C9  ......_.
+        .byte   $5F,$C9,$5F,$C9,$5F,$C9,$5F,$C9 ; E61D 5F C9 5F C9 5F C9 5F C9  _._._._.
+        .byte   $C9,$C9,$5D,$C9,$5D,$C9,$C9,$C9 ; E625 C9 C9 5D C9 5D C9 C9 C9  ..].]...
+        .byte   $5D,$C9,$5D,$C9,$C9,$C9,$5F,$C9 ; E62D 5D C9 5D C9 C9 C9 5F C9  ].]..._.
+        .byte   $5F,$02,$63,$01,$C9,$02,$5F,$01 ; E635 5F 02 63 01 C9 02 5F 01  _.c..._.
+        .byte   $C9,$0C,$61,$01,$5F,$5D,$5C,$5B ; E63D C9 0C 61 01 5F 5D 5C 5B  ..a._]\[
+        .byte   $5A,$5C,$02,$5D,$01,$5B,$02,$58 ; E645 5A 5C 02 5D 01 5B 02 58  Z\.].[.X
+        .byte   $01,$5C,$12,$5A,$02,$57,$01,$C9 ; E64D 01 5C 12 5A 02 57 01 C9  .\.Z.W..
+        .byte   $02,$53,$01,$C9,$0A,$55,$01,$C9 ; E655 02 53 01 C9 0A 55 01 C9  .S...U..
+        .byte   $53,$02,$55,$03,$5A,$01,$58,$02 ; E65D 53 02 55 03 5A 01 58 02  S.U.Z.X.
+        .byte   $5A,$04,$5C,$01,$5D,$5C,$5B,$17 ; E665 5A 04 5C 01 5D 5C 5B 17  Z.\.]\[.
+        .byte   $5A,$01,$C9,$5D,$C9,$5D,$C9,$C9 ; E66D 5A 01 C9 5D C9 5D C9 C9  Z..].]..
+        .byte   $C9,$5D,$C9,$5D,$C9,$C9,$C9,$5D ; E675 C9 5D C9 5D C9 C9 C9 5D  .].]...]
+        .byte   $C9,$5D,$C9,$5D,$C9,$5D,$C9,$5D ; E67D C9 5D C9 5D C9 5D C9 5D  .].].].]
+        .byte   $D0,$CC,$A0,$C7,$FF,$C4,$05,$CD ; E685 D0 CC A0 C7 FF C4 05 CD  ........
+        .byte   $03,$00,$DB,$07,$00,$1E,$78,$D8 ; E68D 03 00 DB 07 00 1E 78 D8  ......x.
+        .byte   $00,$DE,$06,$CD,$03,$01,$D8,$0C ; E695 00 DE 06 CD 03 01 D8 0C  ........
+        .byte   $08,$03,$C9,$01,$5D,$C9,$5D,$C9 ; E69D 08 03 C9 01 5D C9 5D C9  ....].].
+        .byte   $C9,$C9,$5D,$C9,$5D,$C9,$C9,$C9 ; E6A5 C9 C9 5D C9 5D C9 C9 C9  ..].]...
+        .byte   $5E,$C9,$5E,$C9,$C9,$C9,$5E,$C9 ; E6AD 5E C9 5E C9 C9 C9 5E C9  ^.^...^.
+        .byte   $5E,$C9,$C9,$C9,$5D,$C9,$5D,$C9 ; E6B5 5E C9 C9 C9 5D C9 5D C9  ^...].].
+        .byte   $C9,$C9,$5D,$C9,$5D,$C9,$C9,$C9 ; E6BD C9 C9 5D C9 5D C9 C9 C9  ..].]...
+        .byte   $5F,$C9,$5F,$C9,$5F,$C9,$5F,$C9 ; E6C5 5F C9 5F C9 5F C9 5F C9  _._._._.
+        .byte   $5F,$C9,$C9,$C9,$5D,$C9,$5D,$C9 ; E6CD 5F C9 C9 C9 5D C9 5D C9  _...].].
+        .byte   $C9,$C9,$5D,$C9,$5D,$C9,$C9,$C9 ; E6D5 C9 C9 5D C9 5D C9 C9 C9  ..].]...
+        .byte   $5F,$C9,$5F,$C9,$C9,$C9,$5F,$C9 ; E6DD 5F C9 5F C9 C9 C9 5F C9  _._..._.
+        .byte   $5F,$C9,$C9,$C9,$5D,$C9,$5D,$C9 ; E6E5 5F C9 C9 C9 5D C9 5D C9  _...].].
+        .byte   $C9,$C9,$5D,$C9,$5D,$C9,$C9,$C9 ; E6ED C9 C9 5D C9 5D C9 C9 C9  ..].]...
+        .byte   $5F,$C9,$5F,$C9,$5F,$C9,$62,$C9 ; E6F5 5F C9 5F C9 5F C9 62 C9  _._._.b.
+        .byte   $62,$C9,$C9,$C9,$5D,$C9,$5D,$C9 ; E6FD 62 C9 C9 C9 5D C9 5D C9  b...].].
+        .byte   $C9,$C9,$5D,$C9,$5D,$C9,$C9,$C9 ; E705 C9 C9 5D C9 5D C9 C9 C9  ..].]...
+        .byte   $5F,$C9,$5F,$C9,$C9,$C9,$5F,$C9 ; E70D 5F C9 5F C9 C9 C9 5F C9  _._..._.
+        .byte   $5F,$C9,$C9,$C9,$61,$C9,$61,$C9 ; E715 5F C9 C9 C9 61 C9 61 C9  _...a.a.
+        .byte   $C9,$C9,$61,$C9,$61,$C9,$C9,$C9 ; E71D C9 C9 61 C9 61 C9 C9 C9  ..a.a...
+        .byte   $62,$C9,$62,$C9,$62,$C9,$62,$C9 ; E725 62 C9 62 C9 62 C9 62 C9  b.b.b.b.
+        .byte   $62,$C9,$C9,$C9,$61,$C9,$61,$C9 ; E72D 62 C9 C9 C9 61 C9 61 C9  b...a.a.
+        .byte   $C9,$C9,$61,$C9,$61,$C9,$C9,$C9 ; E735 C9 C9 61 C9 61 C9 C9 C9  ..a.a...
+        .byte   $62,$C9,$62,$C9,$C9,$C9,$62,$C9 ; E73D 62 C9 62 C9 C9 C9 62 C9  b.b...b.
+        .byte   $62,$C9,$C9,$C9,$61,$C9,$61,$C9 ; E745 62 C9 C9 C9 61 C9 61 C9  b...a.a.
+        .byte   $C9,$C9,$61,$C9,$61,$C9,$C9,$C9 ; E74D C9 C9 61 C9 61 C9 C9 C9  ..a.a...
+        .byte   $62,$C9,$62,$C9,$62,$C9,$62,$C9 ; E755 62 C9 62 C9 62 C9 62 C9  b.b.b.b.
+        .byte   $62,$C9,$C9,$C9,$61,$C9,$61,$C9 ; E75D 62 C9 C9 C9 61 C9 61 C9  b...a.a.
+        .byte   $C9,$C9,$61,$C9,$61,$C9,$C9,$C9 ; E765 C9 C9 61 C9 61 C9 C9 C9  ..a.a...
+        .byte   $63,$C9,$63,$C9,$C9,$C9,$63,$63 ; E76D 63 C9 63 C9 C9 C9 63 63  c.c...cc
+        .byte   $C9,$C9,$C9,$5D,$C9,$5D,$C9,$C9 ; E775 C9 C9 C9 5D C9 5D C9 C9  ...].]..
+        .byte   $C9,$5D,$C9,$5D,$C9,$C9,$C9,$61 ; E77D C9 5D C9 5D C9 C9 C9 61  .].]...a
+        .byte   $C9,$61,$C9,$5F,$C9,$5F,$C9,$5F ; E785 C9 61 C9 5F C9 5F C9 5F  .a._._._
+        .byte   $C9,$C9,$C9,$61,$C9,$61,$C9,$C9 ; E78D C9 C9 C9 61 C9 61 C9 C9  ...a.a..
+        .byte   $C9,$61,$C9,$61,$C9,$C9,$C9,$63 ; E795 C9 61 C9 61 C9 C9 C9 63  .a.a...c
+        .byte   $C9,$63,$C9,$C9,$C9,$63,$C9,$63 ; E79D C9 63 C9 C9 C9 63 C9 63  .c...c.c
+        .byte   $C9,$C9,$C9,$61,$C9,$61,$C9,$C9 ; E7A5 C9 C9 C9 61 C9 61 C9 C9  ...a.a..
+        .byte   $C9,$61,$61,$C9,$C9,$C9,$61,$C9 ; E7AD C9 61 61 C9 C9 C9 61 C9  .aa...a.
+        .byte   $61,$C9,$5F,$C9,$5F,$C9,$5F,$C9 ; E7B5 61 C9 5F C9 5F C9 5F C9  a._._._.
+        .byte   $C9,$C9,$61,$C9,$61,$C9,$C9,$C9 ; E7BD C9 C9 61 C9 61 C9 C9 C9  ..a.a...
+        .byte   $61,$C9,$61,$C9,$C9,$C9,$61,$C9 ; E7C5 61 C9 61 C9 C9 C9 61 C9  a.a...a.
+        .byte   $61,$C9,$C9,$C9,$61,$C9,$61,$C9 ; E7CD 61 C9 C9 C9 61 C9 61 C9  a...a.a.
+        .byte   $C9,$C9,$61,$C9,$61,$C9,$C9,$C9 ; E7D5 C9 C9 61 C9 61 C9 C9 C9  ..a.a...
+        .byte   $61,$C9,$61,$C9,$C9,$C9,$61,$C9 ; E7DD 61 C9 61 C9 C9 C9 61 C9  a.a...a.
+        .byte   $61,$C9,$61,$C9,$61,$C9,$61,$D0 ; E7E5 61 C9 61 C9 61 C9 61 D0  a.a.a.a.
+        .byte   $CC,$A0,$C7,$FF,$C4,$02,$CD,$03 ; E7ED CC A0 C7 FF C4 02 CD 03  ........
+        .byte   $00,$DB,$07,$00,$1E,$78,$D8,$00 ; E7F5 00 DB 07 00 1E 78 D8 00  .....x..
+        .byte   $DE,$06,$CD,$03,$01,$D8,$0C,$08 ; E7FD DE 06 CD 03 01 D8 0C 08  ........
+        .byte   $01,$4E,$C9,$C9,$4E,$C9,$C9,$02 ; E805 01 4E C9 C9 4E C9 C9 02  .N..N...
+        .byte   $49,$C9,$C9,$01,$4A,$C9,$C9,$4A ; E80D 49 C9 C9 01 4A C9 C9 4A  I...J..J
+        .byte   $C9,$C9,$02,$4F,$C9,$C9,$C9,$04 ; E815 C9 C9 02 4F C9 C9 C9 04  ...O....
+        .byte   $4E,$01,$49,$C9,$C9,$49,$C9,$C9 ; E81D 4E 01 49 C9 C9 49 C9 C9  N.I..I..
+        .byte   $4A,$C9,$C9,$4A,$C9,$C9,$02,$4F ; E825 4A C9 C9 4A C9 C9 02 4F  J..J...O
+        .byte   $C9,$C9,$CE,$04,$88,$02,$12,$4F ; E82D C9 C9 CE 04 88 02 12 4F  .......O
+        .byte   $01,$50,$C9,$50,$C9,$C9,$0D,$4E ; E835 01 50 C9 50 C9 C9 0D 4E  .P.P...N
+        .byte   $03,$C9,$4A,$C9,$4C,$C9,$0F,$4E ; E83D 03 C9 4A C9 4C C9 0F 4E  ..J.L..N
+        .byte   $01,$50,$C9,$50,$C9,$C9,$0D,$4E ; E845 01 50 C9 50 C9 C9 0D 4E  .P.P...N
+        .byte   $03,$C9,$4A,$02,$C9,$4C,$02,$C9 ; E84D 03 C9 4A 02 C9 4C 02 C9  ..J..L..
+        .byte   $01,$4E,$06,$5A,$61,$06,$5F,$03 ; E855 01 4E 06 5A 61 06 5F 03  .N.Za._.
+        .byte   $5C,$5D,$5F,$5D,$5C,$06,$5B,$04 ; E85D 5C 5D 5F 5D 5C 06 5B 04  \]_]\.[.
+        .byte   $58,$5A,$D0,$CC,$C0,$C7,$FF,$C4 ; E865 58 5A D0 CC C0 C7 FF C4  XZ......
+        .byte   $0D,$CD,$03,$00,$DB,$07,$00,$1E ; E86D 0D CD 03 00 DB 07 00 1E  ........
+        .byte   $78,$D8,$00,$DE,$06,$CD,$03,$01 ; E875 78 D8 00 DE 06 CD 03 01  x.......
+        .byte   $D8,$0C,$08,$3F,$C9,$C9,$C9,$C9 ; E87D D8 0C 08 3F C9 C9 C9 C9  ...?....
+        .byte   $C9,$C9,$C9,$C9,$C9,$C9,$C9,$D0 ; E885 C9 C9 C9 C9 C9 C9 C9 D0  ........
+MusicTifaTheme:
+        .byte   $FF,$00,$0E,$00,$01,$B8,$00,$02 ; E88D FF 00 0E 00 01 B8 00 02  ........
+        .byte   $7E,$01,$03,$BE,$01,$FF,$CC,$80 ; E895 7E 01 03 BE 01 FF CC 80  ~.......
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; E89D C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; E8A5 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$02,$68 ; E8AD CD 03 01 D8 0C 08 02 68  .......h
+        .byte   $71,$6F,$71,$08,$68,$02,$68,$71 ; E8B5 71 6F 71 08 68 02 68 71  qoq.h.hq
+        .byte   $6F,$71,$08,$74,$02,$71,$79,$78 ; E8BD 6F 71 08 74 02 71 79 78  oq.t.qyx
+        .byte   $18,$76,$02,$C9,$6A,$72,$71,$72 ; E8C5 18 76 02 C9 6A 72 71 72  .v..jrqr
+        .byte   $08,$6A,$02,$6A,$72,$71,$72,$08 ; E8CD 08 6A 02 6A 72 71 72 08  .j.jrqr.
+        .byte   $6F,$02,$6F,$6D,$6F,$1C,$71,$04 ; E8D5 6F 02 6F 6D 6F 1C 71 04  o.omo.q.
+        .byte   $71,$02,$71,$6F,$6E,$6F,$04,$72 ; E8DD 71 02 71 6F 6E 6F 04 72  q.qono.r
+        .byte   $02,$71,$6F,$04,$6F,$08,$6D,$02 ; E8E5 02 71 6F 04 6F 08 6D 02  .qo.o.m.
+        .byte   $6A,$6D,$1A,$6F,$02,$50,$59,$57 ; E8ED 6A 6D 1A 6F 02 50 59 57  jm.o.PYW
+        .byte   $59,$08,$50,$02,$50,$59,$57,$59 ; E8F5 59 08 50 02 50 59 57 59  Y.P.PYWY
+        .byte   $08,$51,$02,$51,$53,$51,$18,$50 ; E8FD 08 51 02 51 53 51 18 50  .Q.QSQ.P
+        .byte   $02,$C9,$50,$59,$57,$59,$08,$50 ; E905 02 C9 50 59 57 59 08 50  ..PYWY.P
+        .byte   $02,$50,$59,$57,$59,$08,$5C,$02 ; E90D 02 50 59 57 59 08 5C 02  .PYWY.\.
+        .byte   $59,$61,$60,$18,$5E,$02,$C9,$6A ; E915 59 61 60 18 5E 02 C9 6A  Ya`.^..j
+        .byte   $72,$71,$72,$08,$6A,$02,$6A,$72 ; E91D 72 71 72 08 6A 02 6A 72  rqr.j.jr
+        .byte   $71,$72,$08,$6F,$02,$6F,$6D,$6F ; E925 71 72 08 6F 02 6F 6D 6F  qr.o.omo
+        .byte   $1C,$71,$04,$74,$02,$74,$72,$71 ; E92D 1C 71 04 74 02 74 72 71  .q.t.trq
+        .byte   $72,$04,$76,$02,$74,$72,$0C,$71 ; E935 72 04 76 02 74 72 0C 71  r.v.tr.q
+        .byte   $02,$6D,$71,$1C,$72,$04,$C9,$D0 ; E93D 02 6D 71 1C 72 04 C9 D0  .mq.r...
+        .byte   $CC,$80,$C7,$FF,$C4,$09,$CD,$03 ; E945 CC 80 C7 FF C4 09 CD 03  ........
+        .byte   $00,$DB,$07,$00,$1E,$78,$D8,$00 ; E94D 00 DB 07 00 1E 78 D8 00  .....x..
+        .byte   $DE,$06,$CD,$03,$01,$D8,$0C,$08 ; E955 DE 06 CD 03 01 D8 0C 08  ........
+        .byte   $06,$65,$02,$C9,$5C,$61,$0A,$65 ; E95D 06 65 02 C9 5C 61 0A 65  .e..\a.e
+        .byte   $02,$C9,$60,$65,$0A,$68,$02,$C9 ; E965 02 C9 60 65 0A 68 02 C9  ..`e.h..
+        .byte   $5E,$61,$66,$C9,$5E,$61,$66,$C9 ; E96D 5E 61 66 C9 5E 61 66 C9  ^af.^af.
+        .byte   $5E,$63,$0A,$66,$02,$C9,$5E,$63 ; E975 5E 63 0A 66 02 C9 5E 63  ^c.f..^c
+        .byte   $06,$66,$04,$6A,$02,$6A,$6C,$68 ; E97D 06 66 04 6A 02 6A 6C 68  .f.j.jlh
+        .byte   $0A,$66,$02,$68,$5C,$61,$06,$65 ; E985 0A 66 02 68 5C 61 06 65  .f.h\a.e
+        .byte   $04,$66,$06,$68,$66,$04,$65,$02 ; E98D 04 66 06 68 66 04 65 02  .f.hf.e.
+        .byte   $C9,$59,$5F,$0A,$63,$02,$C9,$59 ; E995 C9 59 5F 0A 63 02 C9 59  .Y_.c..Y
+        .byte   $5E,$0A,$61,$02,$C9,$5E,$63,$04 ; E99D 5E 0A 61 02 C9 5E 63 04  ^.a..^c.
+        .byte   $67,$02,$65,$67,$12,$6A,$10,$65 ; E9A5 67 02 65 67 12 6A 10 65  g.eg.j.e
+        .byte   $02,$C9,$5D,$61,$06,$66,$02,$C9 ; E9AD 02 C9 5D 61 06 66 02 C9  ..]a.f..
+        .byte   $61,$C9,$5C,$61,$0A,$65,$02,$C9 ; E9B5 61 C9 5C 61 0A 65 02 C9  a.\a.e..
+        .byte   $5C,$61,$0A,$65,$02,$C9,$5C,$61 ; E9BD 5C 61 0A 65 02 C9 5C 61  \a.e..\a
+        .byte   $0A,$65,$02,$C9,$60,$65,$0A,$68 ; E9C5 0A 65 02 C9 60 65 0A 68  .e..`e.h
+        .byte   $02,$C9,$5E,$61,$66,$C9,$5E,$61 ; E9CD 02 C9 5E 61 66 C9 5E 61  ..^af.^a
+        .byte   $66,$C9,$5E,$0C,$63,$02,$C9,$5E ; E9D5 66 C9 5E 0C 63 02 C9 5E  f.^.c..^
+        .byte   $63,$06,$5A,$04,$6A,$02,$6A,$6C ; E9DD 63 06 5A 04 6A 02 6A 6C  c.Z.j.jl
+        .byte   $68,$0A,$66,$02,$68,$5C,$61,$06 ; E9E5 68 0A 66 02 68 5C 61 06  h.f.h\a.
+        .byte   $65,$04,$66,$06,$68,$66,$04,$65 ; E9ED 65 04 66 06 68 66 04 65  e.f.hf.e
+        .byte   $02,$C9,$5A,$5F,$0C,$63,$02,$59 ; E9F5 02 C9 5A 5F 0C 63 02 59  ..Z_.c.Y
+        .byte   $5E,$0C,$61,$02,$5E,$63,$04,$67 ; E9FD 5E 0C 61 02 5E 63 04 67  ^.a.^c.g
+        .byte   $02,$65,$67,$12,$6A,$D0,$CC,$80 ; EA05 02 65 67 12 6A D0 CC 80  .eg.j...
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; EA0D C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; EA15 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$06,$55 ; EA1D CD 03 01 D8 0C 08 06 55  .......U
+        .byte   $10,$59,$08,$5A,$59,$10,$57,$57 ; EA25 10 59 08 5A 59 10 57 57  .Y.ZY.WW
+        .byte   $50,$20,$55,$10,$53,$52,$20,$57 ; EA2D 50 20 55 10 53 52 20 57  P U.SR W
+        .byte   $10,$55,$55,$55,$55,$55,$59,$08 ; EA35 10 55 55 55 55 55 59 08  .UUUUUY.
+        .byte   $5A,$59,$10,$57,$57,$50,$20,$55 ; EA3D 5A 59 10 57 57 50 20 55  ZY.WWP U
+        .byte   $10,$53,$52,$3F,$57,$D0,$CC,$A0 ; EA45 10 53 52 3F 57 D0 CC A0  .SR?W...
+        .byte   $C7,$FF,$C4,$08,$CD,$03,$00,$DB ; EA4D C7 FF C4 08 CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; EA55 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$3F,$C9 ; EA5D CD 03 01 D8 0C 08 3F C9  ......?.
+        .byte   $C9,$C9,$C9,$C9,$C9,$C9,$C9,$D0 ; EA65 C9 C9 C9 C9 C9 C9 C9 D0  ........
+LEA6D:
+        .byte   $FF,$00,$0E,$00,$01,$B4,$00,$02 ; EA6D FF 00 0E 00 01 B4 00 02  ........
+        .byte   $7D,$01,$03,$9D,$01,$FF,$CC,$A0 ; EA75 7D 01 03 9D 01 FF CC A0  }.......
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; EA7D C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; EA85 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$04,$57 ; EA8D CD 03 01 D8 0C 08 04 57  .......W
+        .byte   $52,$54,$56,$01,$57,$C9,$5E,$C9 ; EA95 52 54 56 01 57 C9 5E C9  RTV.W.^.
+        .byte   $5B,$C9,$57,$C9,$59,$5B,$5C,$5C ; EA9D 5B C9 57 C9 59 5B 5C 5C  [.W.Y[\\
+        .byte   $59,$C9,$02,$5C,$04,$57,$52,$54 ; EAA5 59 C9 02 5C 04 57 52 54  Y..\.WRT
+        .byte   $56,$01,$57,$C9,$5B,$C9,$04,$5C ; EAAD 56 01 57 C9 5B C9 04 5C  V.W.[..\
+        .byte   $02,$C9,$01,$5E,$C9,$04,$57,$CF ; EAB5 02 C9 01 5E C9 04 57 CF  ...^..W.
+        .byte   $02,$26,$00,$01,$52,$C9,$52,$C9 ; EABD 02 26 00 01 52 C9 52 C9  .&..R.R.
+        .byte   $52,$51,$52,$4F,$4D,$C9,$02,$57 ; EAC5 52 51 52 4F 4D C9 02 57  RQROM..W
+        .byte   $01,$51,$C9,$02,$4D,$C9,$4F,$C9 ; EACD 01 51 C9 02 4D C9 4F C9  .Q..M.O.
+        .byte   $4D,$4D,$4C,$04,$4D,$02,$54,$C9 ; EAD5 4D 4D 4C 04 4D 02 54 C9  MML.M.T.
+        .byte   $4F,$C9,$06,$54,$02,$4F,$54,$C9 ; EADD 4F C9 06 54 02 4F 54 C9  O..T.OT.
+        .byte   $4F,$C9,$54,$52,$54,$56,$57,$C9 ; EAE5 4F C9 54 52 54 56 57 C9  O.TRTVW.
+        .byte   $52,$C9,$06,$57,$02,$52,$57,$C9 ; EAED 52 C9 06 57 02 52 57 C9  R..W.RW.
+        .byte   $52,$C9,$57,$52,$57,$56,$54,$C9 ; EAF5 52 C9 57 52 57 56 54 C9  R.WRWVT.
+        .byte   $4F,$C9,$06,$54,$02,$4F,$54,$C9 ; EAFD 4F C9 06 54 02 4F 54 C9  O..T.OT.
+        .byte   $4F,$C9,$54,$52,$54,$56,$57,$C9 ; EB05 4F C9 54 52 54 56 57 C9  O.TRTVW.
+        .byte   $52,$C9,$06,$57,$02,$52,$04,$57 ; EB0D 52 C9 06 57 02 52 04 57  R..W.R.W
+        .byte   $01,$59,$C9,$54,$C9,$57,$C9,$5B ; EB15 01 59 C9 54 C9 57 C9 5B  .Y.T.W.[
+        .byte   $C9,$04,$52,$D0,$CC,$A0,$C7,$FF ; EB1D C9 04 52 D0 CC A0 C7 FF  ..R.....
+        .byte   $C4,$FF,$CD,$03,$00,$DB,$07,$00 ; EB25 C4 FF CD 03 00 DB 07 00  ........
+        .byte   $1E,$78,$D8,$00,$DE,$06,$CD,$03 ; EB2D 1E 78 D8 00 DE 06 CD 03  .x......
+        .byte   $01,$D8,$0C,$08,$01,$6A,$C9,$6F ; EB35 01 D8 0C 08 01 6A C9 6F  .....j.o
+        .byte   $C9,$02,$6E,$01,$6F,$71,$73,$C9 ; EB3D C9 02 6E 01 6F 71 73 C9  ..n.oqs.
+        .byte   $6F,$C9,$71,$73,$74,$78,$76,$C9 ; EB45 6F C9 71 73 74 78 76 C9  o.qstxv.
+        .byte   $6F,$C9,$76,$C9,$6F,$C9,$71,$6F ; EB4D 6F C9 76 C9 6F C9 71 6F  o.v.o.qo
+        .byte   $6E,$6F,$71,$C9,$02,$6C,$01,$6A ; EB55 6E 6F 71 C9 02 6C 01 6A  noq..l.j
+        .byte   $C9,$6F,$C9,$02,$6E,$01,$6F,$71 ; EB5D C9 6F C9 02 6E 01 6F 71  .o..n.oq
+        .byte   $73,$C9,$6F,$C9,$02,$71,$01,$73 ; EB65 73 C9 6F C9 02 71 01 73  s.o..q.s
+        .byte   $74,$76,$C9,$6F,$C9,$78,$C9,$6F ; EB6D 74 76 C9 6F C9 78 C9 6F  tv.o.x.o
+        .byte   $C9,$73,$71,$6F,$6E,$04,$6F,$CE ; EB75 C9 73 71 6F 6E 04 6F CE  .sqon.o.
+        .byte   $02,$CC,$00,$01,$6E,$6F,$71,$73 ; EB7D 02 CC 00 01 6E 6F 71 73  ....noqs
+        .byte   $71,$C9,$02,$76,$75,$78,$71,$01 ; EB85 71 C9 02 76 75 78 71 01  q..vuxq.
+        .byte   $73,$75,$02,$76,$73,$71,$6F,$6E ; EB8D 73 75 02 76 73 71 6F 6E  su.vsqon
+        .byte   $70,$04,$71,$02,$6C,$6F,$6E,$6A ; EB95 70 04 71 02 6C 6F 6E 6A  p.q.lonj
+        .byte   $04,$6C,$03,$6C,$01,$6A,$02,$6C ; EB9D 04 6C 03 6C 01 6A 02 6C  .l.l.j.l
+        .byte   $6F,$6E,$6A,$04,$6C,$6C,$02,$6F ; EBA5 6F 6E 6A 04 6C 6C 02 6F  onj.ll.o
+        .byte   $73,$71,$6E,$04,$6F,$03,$6F,$01 ; EBAD 73 71 6E 04 6F 03 6F 01  sqn.o.o.
+        .byte   $6E,$02,$6F,$73,$71,$6E,$04,$6F ; EBB5 6E 02 6F 73 71 6E 04 6F  n.osqn.o
+        .byte   $6F,$02,$6C,$6F,$6E,$6A,$04,$6C ; EBBD 6F 02 6C 6F 6E 6A 04 6C  o.lonj.l
+        .byte   $03,$6C,$01,$6A,$02,$6C,$6F,$6E ; EBC5 03 6C 01 6A 02 6C 6F 6E  .l.j.lon
+        .byte   $6A,$04,$6C,$6C,$02,$6F,$73,$71 ; EBCD 6A 04 6C 6C 02 6F 73 71  j.ll.osq
+        .byte   $6E,$04,$6F,$03,$6F,$01,$6E,$02 ; EBD5 6E 04 6F 03 6F 01 6E 02  n.o.o.n.
+        .byte   $6F,$73,$01,$71,$73,$74,$78,$02 ; EBDD 6F 73 01 71 73 74 78 02  os.qstx.
+        .byte   $76,$6F,$04,$6E,$D0,$CC,$A0,$C7 ; EBE5 76 6F 04 6E D0 CC A0 C7  vo.n....
+        .byte   $FF,$C4,$0D,$CD,$03,$00,$DB,$07 ; EBED FF C4 0D CD 03 00 DB 07  ........
+        .byte   $00,$1E,$78,$D8,$00,$DE,$06,$CD ; EBF5 00 1E 78 D8 00 DE 06 CD  ..x.....
+        .byte   $03,$01,$D8,$0C,$08,$3F,$C9,$C9 ; EBFD 03 01 D8 0C 08 3F C9 C9  .....?..
+        .byte   $C9,$C9,$C9,$C9,$D0,$CC,$A0,$C7 ; EC05 C9 C9 C9 C9 D0 CC A0 C7  ........
+        .byte   $FF,$C4,$0D,$CD,$03,$00,$DB,$07 ; EC0D FF C4 0D CD 03 00 DB 07  ........
+        .byte   $00,$1E,$78,$D8,$00,$DE,$06,$CD ; EC15 00 1E 78 D8 00 DE 06 CD  ..x.....
+        .byte   $03,$01,$D8,$0C,$08,$3F,$C9,$C9 ; EC1D 03 01 D8 0C 08 3F C9 C9  .....?..
+        .byte   $C9,$C9,$C9,$C9,$D0             ; EC25 C9 C9 C9 C9 D0           .....
+LEC2A:
+        .byte   $FF,$00,$0E,$00,$01,$AD,$00,$02 ; EC2A FF 00 0E 00 01 AD 00 02  ........
+        .byte   $43,$01,$03,$AD,$01,$FF,$CC,$BB ; EC32 43 01 03 AD 01 FF CC BB  C.......
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; EC3A C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; EC42 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$02,$C9 ; EC4A CD 03 01 D8 0C 08 02 C9  ........
+        .byte   $63,$01,$67,$C9,$63,$03,$C9,$02 ; EC52 63 01 67 C9 63 03 C9 02  c.g.c...
+        .byte   $64,$01,$67,$C9,$64,$C9,$02,$62 ; EC5A 64 01 67 C9 64 C9 02 62  d.g.d..b
+        .byte   $01,$67,$C9,$62,$C9,$02,$C9,$61 ; EC62 01 67 C9 62 C9 02 C9 61  .g.b...a
+        .byte   $01,$64,$C9,$61,$C9,$CE,$04,$3D ; EC6A 01 64 C9 61 C9 CE 04 3D  .d.a...=
+        .byte   $00,$04,$C9,$5F,$01,$60,$0B,$C9 ; EC72 00 04 C9 5F 01 60 0B C9  ..._.`..
+        .byte   $04,$67,$01,$68,$0B,$C9,$04,$5F ; EC7A 04 67 01 68 0B C9 04 5F  .g.h..._
+        .byte   $01,$60,$03,$C9,$01,$60,$62,$63 ; EC82 01 60 03 C9 01 60 62 63  .`...`bc
+        .byte   $65,$67,$03,$C9,$01,$6B,$03,$C9 ; EC8A 65 67 03 C9 01 6B 03 C9  eg...k..
+        .byte   $01,$6C,$07,$C9,$06,$6F,$01,$71 ; EC92 01 6C 07 C9 06 6F 01 71  .l...o.q
+        .byte   $6F,$08,$6E,$06,$6D,$01,$6F,$6D ; EC9A 6F 08 6E 06 6D 01 6F 6D  o.n.m.om
+        .byte   $10,$6B,$02,$66,$01,$63,$02,$6D ; ECA2 10 6B 02 66 01 63 02 6D  .k.f.c.m
+        .byte   $01,$6A,$66,$63,$02,$66,$01,$62 ; ECAA 01 6A 66 63 02 66 01 62  .jfc.f.b
+        .byte   $02,$6D,$01,$68,$66,$62,$02,$66 ; ECB2 02 6D 01 68 66 62 02 66  .m.hfb.f
+        .byte   $01,$63,$02,$6D,$01,$6A,$66,$63 ; ECBA 01 63 02 6D 01 6A 66 63  .c.m.jfc
+        .byte   $CE,$06,$8E,$00,$02,$63,$01,$60 ; ECC2 CE 06 8E 00 02 63 01 60  .....c.`
+        .byte   $02,$6A,$01,$67,$63,$60,$CF,$06 ; ECCA 02 6A 01 67 63 60 CF 06  .j.gc`..
+        .byte   $9C,$00,$10,$C9,$D0,$CC,$BB,$C7 ; ECD2 9C 00 10 C9 D0 CC BB C7  ........
+        .byte   $FF,$C4,$FF,$CD,$03,$00,$DB,$07 ; ECDA FF C4 FF CD 03 00 DB 07  ........
+        .byte   $00,$1E,$78,$D8,$00,$DE,$06,$CD ; ECE2 00 1E 78 D8 00 DE 06 CD  ..x.....
+        .byte   $03,$01,$D8,$0C,$08,$02,$60,$63 ; ECEA 03 01 D8 0C 08 02 60 63  ......`c
+        .byte   $67,$6C,$01,$6B,$07,$C9,$04,$6A ; ECF2 67 6C 01 6B 07 C9 04 6A  gl.k...j
+        .byte   $02,$65,$67,$1E,$68,$04,$C9,$5B ; ECFA 02 65 67 1E 68 04 C9 5B  .eg.h..[
+        .byte   $01,$5B,$0B,$C9,$04,$62,$01,$63 ; ED02 01 5B 0B C9 04 62 01 63  .[...b.c
+        .byte   $0B,$C9,$04,$4F,$01,$4F,$03,$C9 ; ED0A 0B C9 04 4F 01 4F 03 C9  ...O.O..
+        .byte   $01,$57,$5B,$60,$62,$63,$0F,$C9 ; ED12 01 57 5B 60 62 63 0F C9  .W[`bc..
+        .byte   $08,$66,$67,$65,$10,$64,$04,$C9 ; ED1A 08 66 67 65 10 64 04 C9  .fge.d..
+        .byte   $01,$5A,$C9,$5A,$05,$C9,$01,$5C ; ED22 01 5A C9 5A 05 C9 01 5C  .Z.Z...\
+        .byte   $05,$C9,$04,$5A,$01,$5A,$05,$C9 ; ED2A 05 C9 04 5A 01 5A 05 C9  ...Z.Z..
+        .byte   $01,$5C,$C9,$5C,$C9,$04,$C9,$01 ; ED32 01 5C C9 5C C9 04 C9 01  .\.\....
+        .byte   $5A,$C9,$5A,$C9,$04,$C9,$01,$5C ; ED3A 5A C9 5A C9 04 C9 01 5C  Z.Z....\
+        .byte   $03,$C9,$01,$5A,$13,$C9,$01,$57 ; ED42 03 C9 01 5A 13 C9 01 57  ...Z...W
+        .byte   $C9,$57,$05,$C9,$01,$59,$05,$C9 ; ED4A C9 57 05 C9 01 59 05 C9  .W...Y..
+        .byte   $04,$57,$01,$57,$05,$C9,$01,$59 ; ED52 04 57 01 57 05 C9 01 59  .W.W...Y
+        .byte   $C9,$59,$05,$C9,$01,$57,$C9,$57 ; ED5A C9 59 05 C9 01 57 C9 57  .Y...W.W
+        .byte   $05,$C9,$01,$59,$03,$C9,$01,$57 ; ED62 05 C9 01 59 03 C9 01 57  ...Y...W
+        .byte   $0F,$C9,$D0,$CC,$BB,$C7,$FF,$C4 ; ED6A 0F C9 D0 CC BB C7 FF C4  ........
+        .byte   $FF,$CD,$03,$00,$DB,$07,$00,$1E ; ED72 FF CD 03 00 DB 07 00 1E  ........
+        .byte   $78,$D8,$00,$DE,$06,$CD,$03,$01 ; ED7A 78 D8 00 DE 06 CD 03 01  x.......
+        .byte   $D8,$0C,$08,$08,$60,$5F,$5E,$20 ; ED82 D8 0C 08 08 60 5F 5E 20  ....`_^ 
+        .byte   $5C,$0C,$60,$04,$60,$0C,$60,$04 ; ED8A 5C 0C 60 04 60 0C 60 04  \.`.`.`.
+        .byte   $60,$0E,$60,$04,$C9,$02,$5B,$C9 ; ED92 60 0E 60 04 C9 02 5B C9  `.`...[.
+        .byte   $54,$06,$C9,$02,$63,$66,$6A,$6F ; ED9A 54 06 C9 02 63 66 6A 6F  T...cfjo
+        .byte   $01,$6E,$03,$C9,$01,$6A,$03,$C9 ; EDA2 01 6E 03 C9 01 6A 03 C9  .n...j..
+        .byte   $04,$6D,$02,$68,$6A,$10,$6B,$02 ; EDAA 04 6D 02 68 6A 10 6B 02  .m.hj.k.
+        .byte   $57,$06,$C9,$02,$52,$06,$C9,$CE ; EDB2 57 06 C9 02 52 06 C9 CE  W...R...
+        .byte   $03,$87,$01,$02,$57,$C9,$04,$57 ; EDBA 03 87 01 02 57 C9 04 57  ....W..W
+        .byte   $56,$55,$02,$54,$06,$C9,$02,$4F ; EDC2 56 55 02 54 06 C9 02 4F  VU.T...O
+        .byte   $06,$C9,$CF,$03,$9A,$01,$02,$54 ; EDCA 06 C9 CF 03 9A 01 02 54  .......T
+        .byte   $06,$C9,$08,$48,$D0,$CC,$BB,$C7 ; EDD2 06 C9 08 48 D0 CC BB C7  ...H....
+        .byte   $FF,$C4,$FF,$CD,$03,$00,$DB,$07 ; EDDA FF C4 FF CD 03 00 DB 07  ........
+        .byte   $00,$1E,$78,$D8,$00,$DE,$06,$CD ; EDE2 00 1E 78 D8 00 DE 06 CD  ..x.....
+        .byte   $03,$01,$D8,$0C,$08,$3F,$C9,$C9 ; EDEA 03 01 D8 0C 08 3F C9 C9  .....?..
+        .byte   $C9,$C9,$C9,$C9,$C9,$D0         ; EDF2 C9 C9 C9 C9 C9 D0        ......
 LEDF8:
-        .byte   $FF                             ; EDF8 FF                       .
-        brk                                     ; EDF9 00                       .
-        asl     L0100                           ; EDFA 0E 00 01                 ...
-        .byte   $3B                             ; EDFD 3B                       ;
-        brk                                     ; EDFE 00                       .
-        .byte   $02                             ; EDFF 02                       .
-        pla                                     ; EE00 68                       h
-        brk                                     ; EE01 00                       .
-        .byte   $03                             ; EE02 03                       .
-        .byte   $DB                             ; EE03 DB                       .
-        brk                                     ; EE04 00                       .
-        .byte   $FF                             ; EE05 FF                       .
-        cpy     LC7BB                           ; EE06 CC BB C7                 ...
-        .byte   $FF                             ; EE09 FF                       .
-        cpy     $FF                             ; EE0A C4 FF                    ..
-        cmp     a:$03                           ; EE0C CD 03 00                 ...
-        .byte   $DB                             ; EE0F DB                       .
-        .byte   $07                             ; EE10 07                       .
-        brk                                     ; EE11 00                       .
-        asl     LD878,x                         ; EE12 1E 78 D8                 .x.
-        brk                                     ; EE15 00                       .
-        dec     LCD06,x                         ; EE16 DE 06 CD                 ...
-        .byte   $03                             ; EE19 03                       .
-        ora     ($D8,x)                         ; EE1A 01 D8                    ..
-LEE1C:
-        .byte   $0C                             ; EE1C 0C                       .
-        php                                     ; EE1D 08                       .
-        .byte   $04                             ; EE1E 04                       .
-        .byte   $6B                             ; EE1F 6B                       k
-        adc     $2071                           ; EE20 6D 71 20                 mq 
-        .byte   $6F                             ; EE23 6F                       o
-        bpl     LEE8F                           ; EE24 10 69                    .i
-        .byte   $67                             ; EE26 67                       g
-        jsr     L6C6C                           ; EE27 20 6C 6C                  ll
-        bpl     LEE95                           ; EE2A 10 69                    .i
-        .byte   $67                             ; EE2C 67                       g
-LEE2D:
-        jmp     (L206A)                         ; EE2D 6C 6A 20                 lj 
-
-; ----------------------------------------------------------------------------
-        ror     LD06E                           ; EE30 6E 6E D0                 nn.
-        cpy     LC7BB                           ; EE33 CC BB C7                 ...
-        .byte   $FF                             ; EE36 FF                       .
-        cpy     $FF                             ; EE37 C4 FF                    ..
-        cmp     a:$03                           ; EE39 CD 03 00                 ...
-        .byte   $DB                             ; EE3C DB                       .
-        .byte   $07                             ; EE3D 07                       .
-        brk                                     ; EE3E 00                       .
-        asl     LD878,x                         ; EE3F 1E 78 D8                 .x.
-        brk                                     ; EE42 00                       .
-        dec     LCD06,x                         ; EE43 DE 06 CD                 ...
-        .byte   $03                             ; EE46 03                       .
-        ora     ($D8,x)                         ; EE47 01 D8                    ..
-        .byte   $0C                             ; EE49 0C                       .
-        php                                     ; EE4A 08                       .
-        .byte   $04                             ; EE4B 04                       .
-        .byte   $62                             ; EE4C 62                       b
-        .byte   $64                             ; EE4D 64                       d
-        ror     $20                             ; EE4E 66 20                    f 
-        .byte   $64                             ; EE50 64                       d
-        bpl     LEEB5                           ; EE51 10 62                    .b
-        rts                                     ; EE53 60                       `
-
-; ----------------------------------------------------------------------------
-        jsr     L6565                           ; EE54 20 65 65                  ee
-        bpl     LEEBB                           ; EE57 10 62                    .b
-        rts                                     ; EE59 60                       `
-
-; ----------------------------------------------------------------------------
-        adc     $63                             ; EE5A 65 63                    ec
-        jsr     L6767                           ; EE5C 20 67 67                  gg
-        bne     LEE2D                           ; EE5F D0 CC                    ..
-        .byte   $BB                             ; EE61 BB                       .
-        .byte   $C7                             ; EE62 C7                       .
-        .byte   $FF                             ; EE63 FF                       .
-        cpy     $FF                             ; EE64 C4 FF                    ..
-        cmp     a:$03                           ; EE66 CD 03 00                 ...
-        .byte   $DB                             ; EE69 DB                       .
-        .byte   $07                             ; EE6A 07                       .
-        brk                                     ; EE6B 00                       .
-        asl     LD878,x                         ; EE6C 1E 78 D8                 .x.
-        brk                                     ; EE6F 00                       .
-        dec     LCD06,x                         ; EE70 DE 06 CD                 ...
-        .byte   $03                             ; EE73 03                       .
-        ora     ($D8,x)                         ; EE74 01 D8                    ..
-        .byte   $0C                             ; EE76 0C                       .
-        php                                     ; EE77 08                       .
-        .byte   $04                             ; EE78 04                       .
-        bvc     LEECD                           ; EE79 50 52                    PR
-        .byte   $53                             ; EE7B 53                       S
-        bpl     LEED2                           ; EE7C 10 54                    .T
-        ora     ($5A,x)                         ; EE7E 01 5A                    .Z
-        eor     $5A18,y                         ; EE80 59 18 5A                 Y.Z
-        bit     $C9                             ; EE83 24 C9                    $.
-        .byte   $03                             ; EE85 03                       .
-        eor     $01,x                           ; EE86 55 01                    U.
-        .byte   $4F                             ; EE88 4F                       O
-        .byte   $03                             ; EE89 03                       .
-        bvc     LEE90                           ; EE8A 50 04                    P.
-        .byte   $54                             ; EE8C 54                       T
-        ora     ($52,x)                         ; EE8D 01 52                    .R
-LEE8F:
-        .byte   $03                             ; EE8F 03                       .
-LEE90:
-        eor     $4F01                           ; EE90 4D 01 4F                 M.O
-        bpl     LEEE5                           ; EE93 10 50                    .P
-LEE95:
-        ora     ($C9,x)                         ; EE95 01 C9                    ..
-        .byte   $4B                             ; EE97 4B                       K
-        jmp     L504D                           ; EE98 4C 4D 50                 LMP
-
-; ----------------------------------------------------------------------------
-LEE9B:
-        .byte   $4F                             ; EE9B 4F                       O
-        lsr     $4C4D                           ; EE9C 4E 4D 4C                 NML
-LEEA0           := * + 1
-        eor     #$4B                            ; EE9F 49 4B                    IK
-        eor     $4D51                           ; EEA1 4D 51 4D                 MQM
-        .byte   $4F                             ; EEA4 4F                       O
-        .byte   $54                             ; EEA5 54                       T
-        .byte   $0B                             ; EEA6 0B                       .
-        cmp     #$01                            ; EEA7 C9 01                    ..
-        eor     ($03),y                         ; EEA9 51 03                    Q.
-        bvc     LEEB6                           ; EEAB 50 09                    P.
-        .byte   $4F                             ; EEAD 4F                       O
-        .byte   $03                             ; EEAE 03                       .
-        cmp     #$01                            ; EEAF C9 01                    ..
-        .byte   $4F                             ; EEB1 4F                       O
-        .byte   $03                             ; EEB2 03                       .
-LEEB5           := * + 2
-        lsr     $4D09                           ; EEB3 4E 09 4D                 N.M
-LEEB6:
-        .byte   $03                             ; EEB6 03                       .
-        cmp     #$01                            ; EEB7 C9 01                    ..
-LEEBB           := * + 2
-        eor     $4C03                           ; EEB9 4D 03 4C                 M.L
-        ora     #$4B                            ; EEBC 09 4B                    .K
-        .byte   $03                             ; EEBE 03                       .
-        cmp     #$01                            ; EEBF C9 01                    ..
-        .byte   $4B                             ; EEC1 4B                       K
-        .byte   $03                             ; EEC2 03                       .
-        eor     #$19                            ; EEC3 49 19                    I.
-        pha                                     ; EEC5 48                       H
-        php                                     ; EEC6 08                       .
-        cmp     #$01                            ; EEC7 C9 01                    ..
-        .byte   $57                             ; EEC9 57                       W
-        .byte   $02                             ; EECA 02                       .
-        cli                                     ; EECB 58                       X
-LEECD           := * + 1
-        ora     ($57,x)                         ; EECC 01 57                    .W
-        .byte   $0C                             ; EECE 0C                       .
-        cli                                     ; EECF 58                       X
-        bpl     LEE9B                           ; EED0 10 C9                    ..
-LEED2:
-        bne     LEEA0                           ; EED2 D0 CC                    ..
-        .byte   $BB                             ; EED4 BB                       .
-        .byte   $C7                             ; EED5 C7                       .
-        .byte   $FF                             ; EED6 FF                       .
-        cpy     $FF                             ; EED7 C4 FF                    ..
-        cmp     a:$03                           ; EED9 CD 03 00                 ...
-        .byte   $DB                             ; EEDC DB                       .
-        .byte   $07                             ; EEDD 07                       .
-        brk                                     ; EEDE 00                       .
-        asl     LD878,x                         ; EEDF 1E 78 D8                 .x.
-        brk                                     ; EEE2 00                       .
-LEEE5           := * + 2
-        dec     LCD06,x                         ; EEE3 DE 06 CD                 ...
-        .byte   $03                             ; EEE6 03                       .
-        ora     ($D8,x)                         ; EEE7 01 D8                    ..
-        .byte   $0C                             ; EEE9 0C                       .
-        php                                     ; EEEA 08                       .
-        .byte   $3F                             ; EEEB 3F                       ?
-        cmp     #$C9                            ; EEEC C9 C9                    ..
-        cmp     #$C9                            ; EEEE C9 C9                    ..
-        cmp     #$D0                            ; EEF0 C9 D0                    ..
+        .byte   $FF,$00,$0E,$00,$01,$3B,$00,$02 ; EDF8 FF 00 0E 00 01 3B 00 02  .....;..
+        .byte   $68,$00,$03,$DB,$00,$FF,$CC,$BB ; EE00 68 00 03 DB 00 FF CC BB  h.......
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; EE08 C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; EE10 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$04,$6B ; EE18 CD 03 01 D8 0C 08 04 6B  .......k
+        .byte   $6D,$71,$20,$6F,$10,$69,$67,$20 ; EE20 6D 71 20 6F 10 69 67 20  mq o.ig 
+        .byte   $6C,$6C,$10,$69,$67,$6C,$6A,$20 ; EE28 6C 6C 10 69 67 6C 6A 20  ll.iglj 
+        .byte   $6E,$6E,$D0,$CC,$BB,$C7,$FF,$C4 ; EE30 6E 6E D0 CC BB C7 FF C4  nn......
+        .byte   $FF,$CD,$03,$00,$DB,$07,$00,$1E ; EE38 FF CD 03 00 DB 07 00 1E  ........
+        .byte   $78,$D8,$00,$DE,$06,$CD,$03,$01 ; EE40 78 D8 00 DE 06 CD 03 01  x.......
+        .byte   $D8,$0C,$08,$04,$62,$64,$66,$20 ; EE48 D8 0C 08 04 62 64 66 20  ....bdf 
+        .byte   $64,$10,$62,$60,$20,$65,$65,$10 ; EE50 64 10 62 60 20 65 65 10  d.b` ee.
+        .byte   $62,$60,$65,$63,$20,$67,$67,$D0 ; EE58 62 60 65 63 20 67 67 D0  b`ec gg.
+        .byte   $CC,$BB,$C7,$FF,$C4,$FF,$CD,$03 ; EE60 CC BB C7 FF C4 FF CD 03  ........
+        .byte   $00,$DB,$07,$00,$1E,$78,$D8,$00 ; EE68 00 DB 07 00 1E 78 D8 00  .....x..
+        .byte   $DE,$06,$CD,$03,$01,$D8,$0C,$08 ; EE70 DE 06 CD 03 01 D8 0C 08  ........
+        .byte   $04,$50,$52,$53,$10,$54,$01,$5A ; EE78 04 50 52 53 10 54 01 5A  .PRS.T.Z
+        .byte   $59,$18,$5A,$24,$C9,$03,$55,$01 ; EE80 59 18 5A 24 C9 03 55 01  Y.Z$..U.
+        .byte   $4F,$03,$50,$04,$54,$01,$52,$03 ; EE88 4F 03 50 04 54 01 52 03  O.P.T.R.
+        .byte   $4D,$01,$4F,$10,$50,$01,$C9,$4B ; EE90 4D 01 4F 10 50 01 C9 4B  M.O.P..K
+        .byte   $4C,$4D,$50,$4F,$4E,$4D,$4C,$49 ; EE98 4C 4D 50 4F 4E 4D 4C 49  LMPONMLI
+        .byte   $4B,$4D,$51,$4D,$4F,$54,$0B,$C9 ; EEA0 4B 4D 51 4D 4F 54 0B C9  KMQMOT..
+        .byte   $01,$51,$03,$50,$09,$4F,$03,$C9 ; EEA8 01 51 03 50 09 4F 03 C9  .Q.P.O..
+        .byte   $01,$4F,$03,$4E,$09,$4D,$03,$C9 ; EEB0 01 4F 03 4E 09 4D 03 C9  .O.N.M..
+        .byte   $01,$4D,$03,$4C,$09,$4B,$03,$C9 ; EEB8 01 4D 03 4C 09 4B 03 C9  .M.L.K..
+        .byte   $01,$4B,$03,$49,$19,$48,$08,$C9 ; EEC0 01 4B 03 49 19 48 08 C9  .K.I.H..
+        .byte   $01,$57,$02,$58,$01,$57,$0C,$58 ; EEC8 01 57 02 58 01 57 0C 58  .W.X.W.X
+        .byte   $10,$C9,$D0,$CC,$BB,$C7,$FF,$C4 ; EED0 10 C9 D0 CC BB C7 FF C4  ........
+        .byte   $FF,$CD,$03,$00,$DB,$07,$00,$1E ; EED8 FF CD 03 00 DB 07 00 1E  ........
+        .byte   $78,$D8,$00,$DE,$06,$CD,$03,$01 ; EEE0 78 D8 00 DE 06 CD 03 01  x.......
+        .byte   $D8,$0C,$08,$3F,$C9,$C9,$C9,$C9 ; EEE8 D8 0C 08 3F C9 C9 C9 C9  ...?....
+        .byte   $C9,$D0                         ; EEF0 C9 D0                    ..
 LEEF2:
-        .byte   $FF                             ; EEF2 FF                       .
-        brk                                     ; EEF3 00                       .
-        asl     L0100                           ; EEF4 0E 00 01                 ...
-        .byte   $82                             ; EEF7 82                       .
-        brk                                     ; EEF8 00                       .
-        .byte   $02                             ; EEF9 02                       .
-        .byte   $02                             ; EEFA 02                       .
-        ora     ($03,x)                         ; EEFB 01 03                    ..
-        dey                                     ; EEFD 88                       .
-        ora     ($FF,x)                         ; EEFE 01 FF                    ..
-        cpy     LC788                           ; EF00 CC 88 C7                 ...
-        .byte   $FF                             ; EF03 FF                       .
-        cpy     $FF                             ; EF04 C4 FF                    ..
-        cmp     a:$03                           ; EF06 CD 03 00                 ...
-        .byte   $DB                             ; EF09 DB                       .
-        .byte   $07                             ; EF0A 07                       .
-        brk                                     ; EF0B 00                       .
-        asl     LD878,x                         ; EF0C 1E 78 D8                 .x.
-        brk                                     ; EF0F 00                       .
-        dec     LCD06,x                         ; EF10 DE 06 CD                 ...
-        .byte   $03                             ; EF13 03                       .
-        ora     ($D8,x)                         ; EF14 01 D8                    ..
-        .byte   $0C                             ; EF16 0C                       .
-        php                                     ; EF17 08                       .
-        .byte   $03                             ; EF18 03                       .
-        cmp     #$01                            ; EF19 C9 01                    ..
-        ror     a                               ; EF1B 6A                       j
-        cmp     #$06                            ; EF1C C9 06                    ..
-        pla                                     ; EF1E 68                       h
-        .byte   $04                             ; EF1F 04                       .
-        cmp     #$01                            ; EF20 C9 01                    ..
-        .byte   $63                             ; EF22 63                       c
-        cmp     #$06                            ; EF23 C9 06                    ..
-        adc     ($04,x)                         ; EF25 61 04                    a.
-        cmp     #$01                            ; EF27 C9 01                    ..
-        ror     a                               ; EF29 6A                       j
-        cmp     #$06                            ; EF2A C9 06                    ..
-        pla                                     ; EF2C 68                       h
-        .byte   $03                             ; EF2D 03                       .
-        cmp     #$04                            ; EF2E C9 04                    ..
-        .byte   $62                             ; EF30 62                       b
-        .byte   $02                             ; EF31 02                       .
-        cmp     #$04                            ; EF32 C9 04                    ..
-        .byte   $64                             ; EF34 64                       d
-        .byte   $03                             ; EF35 03                       .
-        cmp     #$01                            ; EF36 C9 01                    ..
-        ror     a                               ; EF38 6A                       j
-        cmp     #$06                            ; EF39 C9 06                    ..
-        pla                                     ; EF3B 68                       h
-        .byte   $04                             ; EF3C 04                       .
-        cmp     #$01                            ; EF3D C9 01                    ..
-        .byte   $63                             ; EF3F 63                       c
-LEF41           := * + 1
-        cmp     #$06                            ; EF40 C9 06                    ..
-        adc     ($01,x)                         ; EF42 61 01                    a.
-        cmp     #$0C                            ; EF44 C9 0C                    ..
-        ror     $186D                           ; EF46 6E 6D 18                 nm.
-        .byte   $6B                             ; EF49 6B                       k
-        dec     $2602                           ; EF4A CE 02 26                 ..&
-        brk                                     ; EF4D 00                       .
-        .byte   $03                             ; EF4E 03                       .
-        cmp     #$01                            ; EF4F C9 01                    ..
-        .byte   $5F                             ; EF51 5F                       _
-        .byte   $04                             ; EF52 04                       .
-        cmp     #$61                            ; EF53 C9 61                    .a
-        ora     $5F                             ; EF55 05 5F                    ._
-        php                                     ; EF57 08                       .
-        adc     (L0002,x)                       ; EF58 61 02                    a.
-        cmp     #$01                            ; EF5A C9 01                    ..
-        .byte   $63                             ; EF5C 63                       c
-        .byte   $04                             ; EF5D 04                       .
-        cmp     #$65                            ; EF5E C9 65                    .e
-        ora     $63                             ; EF60 05 63                    .c
-        php                                     ; EF62 08                       .
-        adc     L0002                           ; EF63 65 02                    e.
-        cmp     #$01                            ; EF65 C9 01                    ..
-        .byte   $62                             ; EF67 62                       b
-        .byte   $04                             ; EF68 04                       .
-        cmp     #$64                            ; EF69 C9 64                    .d
-        .byte   $02                             ; EF6B 02                       .
-        ror     $01                             ; EF6C 66 01                    f.
-        ror     $03                             ; EF6E 66 03                    f.
-        cmp     #$12                            ; EF70 C9 12                    ..
-        .byte   $72                             ; EF72 72                       r
-        bne     LEF41                           ; EF73 D0 CC                    ..
-        dey                                     ; EF75 88                       .
-        .byte   $C7                             ; EF76 C7                       .
-        .byte   $FF                             ; EF77 FF                       .
-        cpy     $FF                             ; EF78 C4 FF                    ..
-        cmp     a:$03                           ; EF7A CD 03 00                 ...
-        .byte   $DB                             ; EF7D DB                       .
-        .byte   $07                             ; EF7E 07                       .
-        brk                                     ; EF7F 00                       .
-        asl     LD878,x                         ; EF80 1E 78 D8                 .x.
-        brk                                     ; EF83 00                       .
-        dec     LCD06,x                         ; EF84 DE 06 CD                 ...
-        .byte   $03                             ; EF87 03                       .
-        ora     ($D8,x)                         ; EF88 01 D8                    ..
-        .byte   $0C                             ; EF8A 0C                       .
-        php                                     ; EF8B 08                       .
-        .byte   $03                             ; EF8C 03                       .
-        cmp     #$01                            ; EF8D C9 01                    ..
-        .byte   $5F                             ; EF8F 5F                       _
-        cmp     #$06                            ; EF90 C9 06                    ..
-        .byte   $5F                             ; EF92 5F                       _
-        .byte   $04                             ; EF93 04                       .
-        cmp     #$01                            ; EF94 C9 01                    ..
-        cli                                     ; EF96 58                       X
-        cmp     #$06                            ; EF97 C9 06                    ..
-        cli                                     ; EF99 58                       X
-        .byte   $04                             ; EF9A 04                       .
-        cmp     #$01                            ; EF9B C9 01                    ..
-        .byte   $5F                             ; EF9D 5F                       _
-        cmp     #$06                            ; EF9E C9 06                    ..
-        .byte   $5F                             ; EFA0 5F                       _
-        .byte   $03                             ; EFA1 03                       .
-        cmp     #$04                            ; EFA2 C9 04                    ..
-        .byte   $5A                             ; EFA4 5A                       Z
-        .byte   $02                             ; EFA5 02                       .
-        cmp     #$04                            ; EFA6 C9 04                    ..
-        .byte   $5C                             ; EFA8 5C                       \
-        .byte   $03                             ; EFA9 03                       .
-        cmp     #$01                            ; EFAA C9 01                    ..
-        .byte   $5F                             ; EFAC 5F                       _
-        cmp     #$06                            ; EFAD C9 06                    ..
-        .byte   $5F                             ; EFAF 5F                       _
-        .byte   $04                             ; EFB0 04                       .
-        cmp     #$01                            ; EFB1 C9 01                    ..
-        cli                                     ; EFB3 58                       X
-        cmp     #$06                            ; EFB4 C9 06                    ..
-        cli                                     ; EFB6 58                       X
-        asl     $C9                             ; EFB7 06 C9                    ..
-        .byte   $07                             ; EFB9 07                       .
-        eor     LC905,x                         ; EFBA 5D 05 C9                 ]..
-        .byte   $07                             ; EFBD 07                       .
-        .byte   $5C                             ; EFBE 5C                       \
-        .byte   $03                             ; EFBF 03                       .
-LEFC1           := * + 1
-        cmp     #$01                            ; EFC0 C9 01                    ..
-        .byte   $5B                             ; EFC2 5B                       [
-        .byte   $04                             ; EFC3 04                       .
-        cmp     #$5D                            ; EFC4 C9 5D                    .]
-        ora     $5B                             ; EFC6 05 5B                    .[
-        .byte   $07                             ; EFC8 07                       .
-        eor     $02CE,x                         ; EFC9 5D CE 02                 ]..
-        txs                                     ; EFCC 9A                       .
-        brk                                     ; EFCD 00                       .
-        .byte   $03                             ; EFCE 03                       .
-        cmp     #$01                            ; EFCF C9 01                    ..
-        eor     $04,x                           ; EFD1 55 04                    U.
-        cmp     #$57                            ; EFD3 C9 57                    .W
-        ora     $55                             ; EFD5 05 55                    .U
-        php                                     ; EFD7 08                       .
-        .byte   $57                             ; EFD8 57                       W
-        .byte   $02                             ; EFD9 02                       .
-        cmp     #$01                            ; EFDA C9 01                    ..
-        cli                                     ; EFDC 58                       X
-        .byte   $04                             ; EFDD 04                       .
-        cmp     #$5A                            ; EFDE C9 5A                    .Z
-        ora     $58                             ; EFE0 05 58                    .X
-        php                                     ; EFE2 08                       .
-        .byte   $5A                             ; EFE3 5A                       Z
-        .byte   $02                             ; EFE4 02                       .
-        cmp     #$01                            ; EFE5 C9 01                    ..
-        cli                                     ; EFE7 58                       X
-        .byte   $04                             ; EFE8 04                       .
-        cmp     #$5A                            ; EFE9 C9 5A                    .Z
-        .byte   $02                             ; EFEB 02                       .
-        .byte   $5B                             ; EFEC 5B                       [
-        ora     ($5B,x)                         ; EFED 01 5B                    .[
-        .byte   $03                             ; EFEF 03                       .
-        cmp     #$12                            ; EFF0 C9 12                    ..
-        .byte   $67                             ; EFF2 67                       g
-        bne     LEFC1                           ; EFF3 D0 CC                    ..
-        dey                                     ; EFF5 88                       .
-        .byte   $C7                             ; EFF6 C7                       .
-        .byte   $FF                             ; EFF7 FF                       .
-        cpy     $FF                             ; EFF8 C4 FF                    ..
-        cmp     a:$03                           ; EFFA CD 03 00                 ...
-        .byte   $DB                             ; EFFD DB                       .
-        .byte   $07                             ; EFFE 07                       .
-        brk                                     ; EFFF 00                       .
-        asl     LD878,x                         ; F000 1E 78 D8                 .x.
-        brk                                     ; F003 00                       .
-        dec     LCD06,x                         ; F004 DE 06 CD                 ...
-        .byte   $03                             ; F007 03                       .
-        ora     ($D8,x)                         ; F008 01 D8                    ..
-        .byte   $0C                             ; F00A 0C                       .
-        php                                     ; F00B 08                       .
-        .byte   $02                             ; F00C 02                       .
-        bvc     LF010                           ; F00D 50 01                    P.
-        .byte   $57                             ; F00F 57                       W
-LF010:
-        .byte   $5A                             ; F010 5A                       Z
-        cmp     #$07                            ; F011 C9 07                    ..
-        .byte   $5C                             ; F013 5C                       \
-        ora     ($C9,x)                         ; F014 01 C9                    ..
-        eor     $50,x                           ; F016 55 50                    UP
-        .byte   $02                             ; F018 02                       .
-        .byte   $4B                             ; F019 4B                       K
-        asl     $4C                             ; F01A 06 4C                    .L
-        ora     ($4E,x)                         ; F01C 01 4E                    .N
-        .byte   $02                             ; F01E 02                       .
-        bvc     LF022                           ; F01F 50 01                    P.
-        .byte   $57                             ; F021 57                       W
-LF022:
-        .byte   $5A                             ; F022 5A                       Z
-        cmp     #$05                            ; F023 C9 05                    ..
-        .byte   $5C                             ; F025 5C                       \
-        ora     ($5C,x)                         ; F026 01 5C                    .\
-        .byte   $5A                             ; F028 5A                       Z
-        .byte   $02                             ; F029 02                       .
-        cli                                     ; F02A 58                       X
-        .byte   $53                             ; F02B 53                       S
-        ora     ($4C,x)                         ; F02C 01 4C                    .L
-        eor     $4E02                           ; F02E 4D 02 4E                 M.N
-        .byte   $03                             ; F031 03                       .
-        cli                                     ; F032 58                       X
-        ora     ($52,x)                         ; F033 01 52                    .R
-        .byte   $02                             ; F035 02                       .
-        bvc     LF039                           ; F036 50 01                    P.
-        .byte   $57                             ; F038 57                       W
-LF039:
-        .byte   $5A                             ; F039 5A                       Z
-        cmp     #$07                            ; F03A C9 07                    ..
-        .byte   $5C                             ; F03C 5C                       \
-        ora     ($C9,x)                         ; F03D 01 C9                    ..
-        eor     $50,x                           ; F03F 55 50                    UP
-        .byte   $02                             ; F041 02                       .
-        .byte   $4B                             ; F042 4B                       K
-        asl     $4C                             ; F043 06 4C                    .L
-        ora     ($C9,x)                         ; F045 01 C9                    ..
-LF047:
-        .byte   $0B                             ; F047 0B                       .
-        .byte   $53                             ; F048 53                       S
-        ora     ($53,x)                         ; F049 01 53                    .S
-        .byte   $0B                             ; F04B 0B                       .
-        .byte   $52                             ; F04C 52                       R
-        ora     ($52,x)                         ; F04D 01 52                    .R
-        .byte   $14                             ; F04F 14                       .
-        eor     ($01),y                         ; F050 51 01                    Q.
-        lsr     $5003                           ; F052 4E 03 50                 N.P
-        dec     $1A02                           ; F055 CE 02 1A                 ...
-        ora     ($14,x)                         ; F058 01 14                    ..
-        eor     ($01),y                         ; F05A 51 01                    Q.
-        eor     (L0002),y                       ; F05C 51 02                    Q.
-        .byte   $53                             ; F05E 53                       S
-        .byte   $13                             ; F05F 13                       .
-        eor     $01,x                           ; F060 55 01                    U.
-        eor     #$02                            ; F062 49 02                    I.
-        .byte   $4B                             ; F064 4B                       K
-        .byte   $04                             ; F065 04                       .
-        jmp     L5302                           ; F066 4C 02 53                 L.S
-
-; ----------------------------------------------------------------------------
-        ora     ($4C,x)                         ; F069 01 4C                    .L
-        .byte   $02                             ; F06B 02                       .
-        lsr     $5501                           ; F06C 4E 01 55                 N.U
-        .byte   $02                             ; F06F 02                       .
-        jmp     L4A01                           ; F070 4C 01 4A                 L.J
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; F073 02                       .
-        .byte   $4B                             ; F074 4B                       K
-        ora     ($4B,x)                         ; F075 01 4B                    .K
-        ora     $C9,x                           ; F077 15 C9                    ..
-        bne     LF047                           ; F079 D0 CC                    ..
-        dey                                     ; F07B 88                       .
-        .byte   $C7                             ; F07C C7                       .
-        .byte   $FF                             ; F07D FF                       .
-        cpy     $FF                             ; F07E C4 FF                    ..
-        cmp     a:$03                           ; F080 CD 03 00                 ...
-        .byte   $DB                             ; F083 DB                       .
-        .byte   $07                             ; F084 07                       .
-        brk                                     ; F085 00                       .
-        asl     LD878,x                         ; F086 1E 78 D8                 .x.
-        brk                                     ; F089 00                       .
-        dec     LCD06,x                         ; F08A DE 06 CD                 ...
-        .byte   $03                             ; F08D 03                       .
-        ora     ($D8,x)                         ; F08E 01 D8                    ..
-        .byte   $0C                             ; F090 0C                       .
-        php                                     ; F091 08                       .
-        .byte   $3F                             ; F092 3F                       ?
-        cmp     #$C9                            ; F093 C9 C9                    ..
-        cmp     #$C9                            ; F095 C9 C9                    ..
-        cmp     #$C9                            ; F097 C9 C9                    ..
-LF09A           := * + 1
-        bne     LF09A                           ; F099 D0 FF                    ..
-        brk                                     ; F09B 00                       .
-        asl     L0100                           ; F09C 0E 00 01                 ...
-        .byte   $A7                             ; F09F A7                       .
-        brk                                     ; F0A0 00                       .
-        .byte   $02                             ; F0A1 02                       .
-        jmp     L0301                           ; F0A2 4C 01 03                 L..
-
-; ----------------------------------------------------------------------------
-        stx     LFF01                           ; F0A5 8E 01 FF                 ...
-        cpy     LC7AA                           ; F0A8 CC AA C7                 ...
-        .byte   $FF                             ; F0AB FF                       .
-        cpy     $FF                             ; F0AC C4 FF                    ..
-        cmp     a:$03                           ; F0AE CD 03 00                 ...
-        .byte   $DB                             ; F0B1 DB                       .
-        .byte   $07                             ; F0B2 07                       .
-        brk                                     ; F0B3 00                       .
-        asl     LD878,x                         ; F0B4 1E 78 D8                 .x.
-        brk                                     ; F0B7 00                       .
-        dec     LCD06,x                         ; F0B8 DE 06 CD                 ...
-        .byte   $03                             ; F0BB 03                       .
-        ora     ($D8,x)                         ; F0BC 01 D8                    ..
-        .byte   $0C                             ; F0BE 0C                       .
-        php                                     ; F0BF 08                       .
-        .byte   $03                             ; F0C0 03                       .
-        ror     $1271                           ; F0C1 6E 71 12                 nq.
-        ror     $03,x                           ; F0C4 76 03                    v.
-        .byte   $74                             ; F0C6 74                       t
-        adc     ($0D),y                         ; F0C7 71 0D                    q.
-        jmp     (LC901)                         ; F0C9 6C 01 C9                 l..
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; F0CC 02                       .
-        ror     a                               ; F0CD 6A                       j
-        jmp     (L6A0C)                         ; F0CE 6C 0C 6A                 l.j
-
-; ----------------------------------------------------------------------------
-        .byte   $03                             ; F0D1 03                       .
-        adc     $6A6C                           ; F0D2 6D 6C 6A                 mlj
-        jmp     (L6A21)                         ; F0D5 6C 21 6A                 l!j
-
-; ----------------------------------------------------------------------------
-        ror     a                               ; F0D8 6A                       j
-        .byte   $03                             ; F0D9 03                       .
-        lsr     $1160,x                         ; F0DA 5E 60 11                 ^`.
-        .byte   $62                             ; F0DD 62                       b
-        ora     ($C9,x)                         ; F0DE 01 C9                    ..
-        .byte   $03                             ; F0E0 03                       .
-        .byte   $62                             ; F0E1 62                       b
-        .byte   $63                             ; F0E2 63                       c
-        bpl     LF14A                           ; F0E3 10 65                    .e
-        .byte   $02                             ; F0E5 02                       .
-        cmp     #$03                            ; F0E6 C9 03                    ..
-        .byte   $67                             ; F0E8 67                       g
-        adc     #$06                            ; F0E9 69 06                    i.
-        ror     a                               ; F0EB 6A                       j
-        .byte   $0C                             ; F0EC 0C                       .
-        .byte   $67                             ; F0ED 67                       g
-        asl     $63                             ; F0EE 06 63                    .c
-        .byte   $02                             ; F0F0 02                       .
-        adc     $67                             ; F0F1 65 67                    eg
-        .byte   $0F                             ; F0F3 0F                       .
-        adc     $01                             ; F0F4 65 01                    e.
-        cmp     #$03                            ; F0F6 C9 03                    ..
-        adc     $62                             ; F0F8 65 62                    eb
-        and     $5D                             ; F0FA 25 5D                    %]
-        ora     $C9                             ; F0FC 05 C9                    ..
-        .byte   $03                             ; F0FE 03                       .
-        .byte   $67                             ; F0FF 67                       g
-        adc     $26                             ; F100 65 26                    e&
-        lsr     LC905,x                         ; F102 5E 05 C9                 ^..
-        .byte   $03                             ; F105 03                       .
-        adc     $62                             ; F106 65 62                    eb
-        .byte   $27                             ; F108 27                       '
-        eor     LC903,x                         ; F109 5D 03 C9                 ]..
-        .byte   $67                             ; F10C 67                       g
-LF10E           := * + 1
-        adc     #$1E                            ; F10D 69 1E                    i.
-        ror     a                               ; F10F 6A                       j
-        asl     $76                             ; F110 06 76                    .v
-        adc     $73,x                           ; F112 75 73                    us
-        .byte   $0C                             ; F114 0C                       .
-        adc     ($0F),y                         ; F115 71 0F                    q.
-        ror     LC903                           ; F117 6E 03 C9                 n..
-        asl     $76                             ; F11A 06 76                    .v
-        adc     $73,x                           ; F11C 75 73                    us
-        ora     #$75                            ; F11E 09 75                    .u
-        .byte   $03                             ; F120 03                       .
-        .byte   $7A                             ; F121 7A                       z
-        .byte   $0F                             ; F122 0F                       .
-        .byte   $7A                             ; F123 7A                       z
-        .byte   $04                             ; F124 04                       .
-        cmp     #$06                            ; F125 C9 06                    ..
-        ror     $75,x                           ; F127 76 75                    vu
-        .byte   $73                             ; F129 73                       s
-        .byte   $0C                             ; F12A 0C                       .
-        adc     ($19),y                         ; F12B 71 19                    q.
-        jmp     (LC905)                         ; F12D 6C 05 C9                 l..
-
-; ----------------------------------------------------------------------------
-        .byte   $03                             ; F130 03                       .
-        jmp     (L6F6E)                         ; F131 6C 6E 6F                 lno
-
-; ----------------------------------------------------------------------------
-        ror     $186C                           ; F134 6E 6C 18                 nl.
-        ror     a                               ; F137 6A                       j
-        .byte   $03                             ; F138 03                       .
-        cmp     #$6F                            ; F139 C9 6F                    .o
-        ror     $6C6A                           ; F13B 6E 6A 6C                 njl
-        bmi     LF1AA                           ; F13E 30 6A                    0j
-        bne     LF10E                           ; F140 D0 CC                    ..
-        tax                                     ; F142 AA                       .
-        .byte   $C7                             ; F143 C7                       .
-        .byte   $FF                             ; F144 FF                       .
-        cpy     $AA                             ; F145 C4 AA                    ..
-        cmp     a:$03                           ; F147 CD 03 00                 ...
-LF14A:
-        .byte   $DB                             ; F14A DB                       .
-        .byte   $07                             ; F14B 07                       .
-        brk                                     ; F14C 00                       .
-        asl     LD878,x                         ; F14D 1E 78 D8                 .x.
-        brk                                     ; F150 00                       .
-        dec     LCD06,x                         ; F151 DE 06 CD                 ...
-        .byte   $03                             ; F154 03                       .
-        ora     ($D8,x)                         ; F155 01 D8                    ..
-        .byte   $0C                             ; F157 0C                       .
-        php                                     ; F158 08                       .
-        .byte   $03                             ; F159 03                       .
-        cmp     #$C9                            ; F15A C9 C9                    ..
-        .byte   $62                             ; F15C 62                       b
-        adc     $6A                             ; F15D 65 6A                    ej
-        ror     $6E06                           ; F15F 6E 06 6E                 n.n
-        ror     $6003                           ; F162 6E 03 60                 n.`
-        adc     $68                             ; F165 65 68                    eh
-        jmp     (LC909)                         ; F167 6C 09 C9                 l..
-
-; ----------------------------------------------------------------------------
-        .byte   $03                             ; F16A 03                       .
-        .byte   $5A                             ; F16B 5A                       Z
-        adc     ($66,x)                         ; F16C 61 66                    af
-        ror     a                               ; F16E 6A                       j
-        ror     $61                             ; F16F 66 61                    fa
-        lsr     $5A09,x                         ; F171 5E 09 5A                 ^.Z
-        ora     ($5A,x)                         ; F174 01 5A                    .Z
-        lsr     $0363,x                         ; F176 5E 63 03                 ^c.
-        ror     $01                             ; F179 66 01                    f.
-        lsr     $6663,x                         ; F17B 5E 63 66                 ^cf
-        asl     $6A                             ; F17E 06 6A                    .j
-        cmp     #$03                            ; F180 C9 03                    ..
-        lsr     $6562,x                         ; F182 5E 62 65                 ^be
-        ror     a                               ; F185 6A                       j
-        .byte   $0C                             ; F186 0C                       .
-        cmp     #$03                            ; F187 C9 03                    ..
-        lsr     $6562,x                         ; F189 5E 62 65                 ^be
-        ror     a                               ; F18C 6A                       j
-        ora     #$C9                            ; F18D 09 C9                    ..
-        .byte   $03                             ; F18F 03                       .
-        .byte   $62                             ; F190 62                       b
-        .byte   $67                             ; F191 67                       g
-        .byte   $0F                             ; F192 0F                       .
-        ror     a                               ; F193 6A                       j
-        .byte   $03                             ; F194 03                       .
-        eor     $6562,x                         ; F195 5D 62 65                 ]be
-        .byte   $0F                             ; F198 0F                       .
-        adc     #$03                            ; F199 69 03                    i.
-        lsr     $6763,x                         ; F19B 5E 63 67                 ^cg
-        .byte   $0F                             ; F19E 0F                       .
-        ror     a                               ; F19F 6A                       j
-        .byte   $03                             ; F1A0 03                       .
-        lsr     $6562,x                         ; F1A1 5E 62 65                 ^be
-        .byte   $0F                             ; F1A4 0F                       .
-        ror     a                               ; F1A5 6A                       j
-        .byte   $0F                             ; F1A6 0F                       .
-        cmp     #$0C                            ; F1A7 C9 0C                    ..
-LF1AA           := * + 1
-        adc     #$67                            ; F1A9 69 67                    ig
-        adc     $67                             ; F1AB 65 67                    eg
-        .byte   $5B                             ; F1AD 5B                       [
-        eor     $0357,y                         ; F1AE 59 57 03                 YW.
-LF1B3           := * + 2
-        eor     $6562,x                         ; F1B1 5D 62 65                 ]be
-        .byte   $0F                             ; F1B4 0F                       .
-        adc     #$0C                            ; F1B5 69 0C                    i.
-        .byte   $67                             ; F1B7 67                       g
-        adc     $18                             ; F1B8 65 18                    e.
-        .byte   $67                             ; F1BA 67                       g
-        .byte   $03                             ; F1BB 03                       .
-        lsr     $6763,x                         ; F1BC 5E 63 67                 ^cg
-        .byte   $0F                             ; F1BF 0F                       .
-        ror     a                               ; F1C0 6A                       j
-        .byte   $0C                             ; F1C1 0C                       .
-        cmp     #$06                            ; F1C2 C9 06                    ..
-        .byte   $62                             ; F1C4 62                       b
-        lsr     $5B0C,x                         ; F1C5 5E 0C 5B                 ^.[
-        asl     $5E                             ; F1C8 06 5E                    .^
-        rts                                     ; F1CA 60                       `
-
-; ----------------------------------------------------------------------------
-        ora     #$62                            ; F1CB 09 62                    .b
-        .byte   $03                             ; F1CD 03                       .
-        adc     $12                             ; F1CE 65 12                    e.
-        adc     $1E                             ; F1D0 65 1E                    e.
-        cmp     #$0C                            ; F1D2 C9 0C                    ..
-        rts                                     ; F1D4 60                       `
-
-; ----------------------------------------------------------------------------
-        lsr     $0C5D,x                         ; F1D5 5E 5D 0C                 ^].
-        .byte   $52                             ; F1D8 52                       R
-        asl     $54                             ; F1D9 06 54                    .T
-        lsr     $0D,x                           ; F1DB 56 0D                    V.
-        .byte   $57                             ; F1DD 57                       W
-        .byte   $03                             ; F1DE 03                       .
-        rts                                     ; F1DF 60                       `
-
-; ----------------------------------------------------------------------------
-        lsr     $5D5B,x                         ; F1E0 5E 5B 5D                 ^[]
-        bmi     LF243                           ; F1E3 30 5E                    0^
-        bne     LF1B3                           ; F1E5 D0 CC                    ..
-        tax                                     ; F1E7 AA                       .
-        .byte   $C7                             ; F1E8 C7                       .
-        .byte   $FF                             ; F1E9 FF                       .
-        cpy     $FF                             ; F1EA C4 FF                    ..
-        cmp     a:$03                           ; F1EC CD 03 00                 ...
-        .byte   $DB                             ; F1EF DB                       .
-        .byte   $07                             ; F1F0 07                       .
-        brk                                     ; F1F1 00                       .
-        asl     LD878,x                         ; F1F2 1E 78 D8                 .x.
-LF1F5:
-        brk                                     ; F1F5 00                       .
-        dec     LCD06,x                         ; F1F6 DE 06 CD                 ...
-        .byte   $03                             ; F1F9 03                       .
-        ora     ($D8,x)                         ; F1FA 01 D8                    ..
-        .byte   $0C                             ; F1FC 0C                       .
-        php                                     ; F1FD 08                       .
-        clc                                     ; F1FE 18                       .
-        .byte   $52                             ; F1FF 52                       R
-        eor     $4B4E                           ; F200 4D 4E 4B                 MNK
-        bmi     LF257                           ; F203 30 52                    0R
-        clc                                     ; F205 18                       .
-        .byte   $5B                             ; F206 5B                       [
-        eor     $5957,y                         ; F207 59 57 59                 YWY
-        and     ($59),y                         ; F20A 31 59                    1Y
-        .byte   $57                             ; F20C 57                       W
-        eor     $1857,y                         ; F20D 59 57 18                 YW.
-        .byte   $52                             ; F210 52                       R
-        .byte   $0C                             ; F211 0C                       .
-        .byte   $4B                             ; F212 4B                       K
-        asl     $4F                             ; F213 06 4F                    .O
-        .byte   $4B                             ; F215 4B                       K
-        .byte   $0C                             ; F216 0C                       .
-        lsr     a                               ; F217 4A                       J
-        asl     $4C                             ; F218 06 4C                    .L
-        eor     $4F0C                           ; F21A 4D 0C 4F                 M.O
-        asl     $51                             ; F21D 06 51                    .Q
-        .byte   $52                             ; F21F 52                       R
-        clc                                     ; F220 18                       .
-        .byte   $54                             ; F221 54                       T
-        eor     $484B                           ; F222 4D 4B 48                 MKH
-        bmi     LF26D                           ; F225 30 46                    0F
-        bne     LF1F5                           ; F227 D0 CC                    ..
-        dey                                     ; F229 88                       .
-        .byte   $C7                             ; F22A C7                       .
-        .byte   $FF                             ; F22B FF                       .
-        cpy     $FF                             ; F22C C4 FF                    ..
-        cmp     a:$03                           ; F22E CD 03 00                 ...
-        .byte   $DB                             ; F231 DB                       .
-        .byte   $07                             ; F232 07                       .
-        brk                                     ; F233 00                       .
-        asl     LD878,x                         ; F234 1E 78 D8                 .x.
-        brk                                     ; F237 00                       .
-        dec     LCD06,x                         ; F238 DE 06 CD                 ...
-        .byte   $03                             ; F23B 03                       .
-        ora     ($D8,x)                         ; F23C 01 D8                    ..
-        .byte   $0C                             ; F23E 0C                       .
-        php                                     ; F23F 08                       .
-        .byte   $3F                             ; F240 3F                       ?
-        cmp     #$C9                            ; F241 C9 C9                    ..
-LF243:
-        cmp     #$C9                            ; F243 C9 C9                    ..
-        cmp     #$C9                            ; F245 C9 C9                    ..
-        cmp     #$C9                            ; F247 C9 C9                    ..
-        cmp     #$C9                            ; F249 C9 C9                    ..
-        cmp     #$D0                            ; F24B C9 D0                    ..
-LF24D:
-        .byte   $FF                             ; F24D FF                       .
-        brk                                     ; F24E 00                       .
-        asl     L0100                           ; F24F 0E 00 01                 ...
-        .byte   $44                             ; F252 44                       D
-        brk                                     ; F253 00                       .
-        .byte   $02                             ; F254 02                       .
-        sty     $00,x                           ; F255 94 00                    ..
-LF257:
-        .byte   $03                             ; F257 03                       .
-        clv                                     ; F258 B8                       .
-        brk                                     ; F259 00                       .
-        .byte   $FF                             ; F25A FF                       .
-        cpy     LC766                           ; F25B CC 66 C7                 .f.
-        .byte   $FF                             ; F25E FF                       .
-        cpy     $FF                             ; F25F C4 FF                    ..
-        cmp     a:$03                           ; F261 CD 03 00                 ...
-        .byte   $DB                             ; F264 DB                       .
-        .byte   $07                             ; F265 07                       .
-        brk                                     ; F266 00                       .
-        asl     LD878,x                         ; F267 1E 78 D8                 .x.
-        brk                                     ; F26A 00                       .
-LF26D           := * + 2
-        dec     LCD06,x                         ; F26B DE 06 CD                 ...
-        .byte   $03                             ; F26E 03                       .
-        ora     ($D8,x)                         ; F26F 01 D8                    ..
-        .byte   $0C                             ; F271 0C                       .
-        php                                     ; F272 08                       .
-        clc                                     ; F273 18                       .
-        cmp     #$06                            ; F274 C9 06                    ..
-        ror     a                               ; F276 6A                       j
-        cmp     #$0C                            ; F277 C9 0C                    ..
-        .byte   $63                             ; F279 63                       c
-        ror     a                               ; F27A 6A                       j
-        .byte   $03                             ; F27B 03                       .
-        jmp     (L6F06)                         ; F27C 6C 06 6F                 l.o
-
-; ----------------------------------------------------------------------------
-        .byte   $03                             ; F27F 03                       .
-        adc     L6A0C                           ; F280 6D 0C 6A                 m.j
-        cmp     #$6A                            ; F283 C9 6A                    .j
-        cmp     #$6A                            ; F285 C9 6A                    .j
-        .byte   $03                             ; F287 03                       .
-        jmp     (L6F06)                         ; F288 6C 06 6F                 l.o
-
-; ----------------------------------------------------------------------------
-        .byte   $03                             ; F28B 03                       .
-        adc     L6A0C                           ; F28C 6D 0C 6A                 m.j
-        cmp     #$D0                            ; F28F C9 D0                    ..
-        cpy     LC766                           ; F291 CC 66 C7                 .f.
-        .byte   $FF                             ; F294 FF                       .
-        cpy     $FF                             ; F295 C4 FF                    ..
-        cmp     a:$03                           ; F297 CD 03 00                 ...
-        .byte   $DB                             ; F29A DB                       .
-        .byte   $07                             ; F29B 07                       .
-        brk                                     ; F29C 00                       .
-        asl     LD878,x                         ; F29D 1E 78 D8                 .x.
-        brk                                     ; F2A0 00                       .
-        dec     LCD06,x                         ; F2A1 DE 06 CD                 ...
-        .byte   $03                             ; F2A4 03                       .
-        ora     ($D8,x)                         ; F2A5 01 D8                    ..
-        .byte   $0C                             ; F2A7 0C                       .
-        clc                                     ; F2A8 18                       .
-        cmp     #$06                            ; F2A9 C9 06                    ..
-        lsr     $0CC9,x                         ; F2AB 5E C9 0C                 ^..
-LF2AE:
-        rts                                     ; F2AE 60                       `
-
-; ----------------------------------------------------------------------------
-        adc     $03                             ; F2AF 65 03                    e.
-        pla                                     ; F2B1 68                       h
-        asl     $6A                             ; F2B2 06 6A                    .j
-        .byte   $03                             ; F2B4 03                       .
-        ror     a                               ; F2B5 6A                       j
-        ora     ($5E,x)                         ; F2B6 01 5E                    .^
-        cmp     #$C9                            ; F2B8 C9 C9                    ..
-        adc     $66                             ; F2BA 65 66                    ef
-        .byte   $63                             ; F2BC 63                       c
-        adc     $C9                             ; F2BD 65 C9                    e.
-        cmp     #$61                            ; F2BF C9 61                    .a
-        cmp     #$C9                            ; F2C1 C9 C9                    ..
-        dec     $6902                           ; F2C3 CE 02 69                 ..i
-        brk                                     ; F2C6 00                       .
-        .byte   $0C                             ; F2C7 0C                       .
-        adc     $03                             ; F2C8 65 03                    e.
-        pla                                     ; F2CA 68                       h
-        asl     $6A                             ; F2CB 06 6A                    .j
-        .byte   $03                             ; F2CD 03                       .
-        ror     a                               ; F2CE 6A                       j
-        ora     ($5E,x)                         ; F2CF 01 5E                    .^
-        cmp     #$C9                            ; F2D1 C9 C9                    ..
-        adc     $66                             ; F2D3 65 66                    ef
-        .byte   $63                             ; F2D5 63                       c
-        adc     $C9                             ; F2D6 65 C9                    e.
-        cmp     #$61                            ; F2D8 C9 61                    .a
-        cmp     #$C9                            ; F2DA C9 C9                    ..
-        .byte   $CF                             ; F2DC CF                       .
-        .byte   $03                             ; F2DD 03                       .
-        .byte   $82                             ; F2DE 82                       .
-        brk                                     ; F2DF 00                       .
-        bne     LF2AE                           ; F2E0 D0 CC                    ..
-        ror     $C7                             ; F2E2 66 C7                    f.
-        .byte   $FF                             ; F2E4 FF                       .
-        cpy     $FF                             ; F2E5 C4 FF                    ..
-        cmp     a:$03                           ; F2E7 CD 03 00                 ...
-        .byte   $DB                             ; F2EA DB                       .
-        .byte   $07                             ; F2EB 07                       .
-        brk                                     ; F2EC 00                       .
-        asl     LD878,x                         ; F2ED 1E 78 D8                 .x.
-        brk                                     ; F2F0 00                       .
-        dec     LCD06,x                         ; F2F1 DE 06 CD                 ...
-        .byte   $03                             ; F2F4 03                       .
-        ora     ($D8,x)                         ; F2F5 01 D8                    ..
-        .byte   $0C                             ; F2F7 0C                       .
-        php                                     ; F2F8 08                       .
-        .byte   $02                             ; F2F9 02                       .
-        .byte   $52                             ; F2FA 52                       R
-        eor     $5A5E,y                         ; F2FB 59 5E 5A                 Y^Z
-        .byte   $57                             ; F2FE 57                       W
-        eor     $1CCE,y                         ; F2FF 59 CE 1C                 Y..
-LF303           := * + 1
-        ldy     LD000                           ; F302 AC 00 D0                 ...
-        cpy     LC766                           ; F305 CC 66 C7                 .f.
-        .byte   $FF                             ; F308 FF                       .
-        cpy     $FF                             ; F309 C4 FF                    ..
-        cmp     a:$03                           ; F30B CD 03 00                 ...
-        .byte   $DB                             ; F30E DB                       .
-        .byte   $07                             ; F30F 07                       .
-        brk                                     ; F310 00                       .
-        asl     LD878,x                         ; F311 1E 78 D8                 .x.
-        brk                                     ; F314 00                       .
-        dec     LCD06,x                         ; F315 DE 06 CD                 ...
-        .byte   $03                             ; F318 03                       .
-        ora     ($D8,x)                         ; F319 01 D8                    ..
-        .byte   $0C                             ; F31B 0C                       .
-        .byte   $3F                             ; F31C 3F                       ?
-        cmp     #$C9                            ; F31D C9 C9                    ..
-        cmp     #$D0                            ; F31F C9 D0                    ..
-LF321:
-        .byte   $FF                             ; F321 FF                       .
-        brk                                     ; F322 00                       .
-        asl     L0100                           ; F323 0E 00 01                 ...
-        eor     $00                             ; F326 45 00                    E.
-        .byte   $02                             ; F328 02                       .
-        dey                                     ; F329 88                       .
-        brk                                     ; F32A 00                       .
-        .byte   $03                             ; F32B 03                       .
-        cmp     LFF00                           ; F32C CD 00 FF                 ...
-        cpy     LC7BB                           ; F32F CC BB C7                 ...
-        .byte   $FF                             ; F332 FF                       .
-LF333:
-        cpy     $FF                             ; F333 C4 FF                    ..
-        cmp     a:$03                           ; F335 CD 03 00                 ...
-        .byte   $DB                             ; F338 DB                       .
-        .byte   $07                             ; F339 07                       .
-        brk                                     ; F33A 00                       .
-        asl     LD878,x                         ; F33B 1E 78 D8                 .x.
-        brk                                     ; F33E 00                       .
-        dec     LCD06,x                         ; F33F DE 06 CD                 ...
-        .byte   $03                             ; F342 03                       .
-        ora     ($D8,x)                         ; F343 01 D8                    ..
-        .byte   $0C                             ; F345 0C                       .
-        php                                     ; F346 08                       .
-        php                                     ; F347 08                       .
-        ror     $68                             ; F348 66 68                    fh
-        .byte   $04                             ; F34A 04                       .
-        adc     #$6B                            ; F34B 69 6B                    ik
-        adc     $106F                           ; F34D 6D 6F 10                 mo.
-        adc     ($71),y                         ; F350 71 71                    qq
-        adc     ($62,x)                         ; F352 61 62                    ab
-        adc     ($61,x)                         ; F354 61 61                    aa
-        php                                     ; F356 08                       .
-        ror     $68                             ; F357 66 68                    fh
-        .byte   $04                             ; F359 04                       .
-        ror     a                               ; F35A 6A                       j
-        jmp     (L6F6E)                         ; F35B 6C 6E 6F                 lno
-
-; ----------------------------------------------------------------------------
-        bpl     LF3D1                           ; F35E 10 71                    .q
-        adc     ($63),y                         ; F360 71 63                    qc
-        .byte   $62                             ; F362 62                       b
-        .byte   $63                             ; F363 63                       c
-        .byte   $63                             ; F364 63                       c
-        bne     LF333                           ; F365 D0 CC                    ..
-        .byte   $BB                             ; F367 BB                       .
-        .byte   $C7                             ; F368 C7                       .
-        .byte   $FF                             ; F369 FF                       .
-        cpy     $FF                             ; F36A C4 FF                    ..
-        cmp     a:$03                           ; F36C CD 03 00                 ...
-        .byte   $DB                             ; F36F DB                       .
-        .byte   $07                             ; F370 07                       .
-        brk                                     ; F371 00                       .
-        asl     LD878,x                         ; F372 1E 78 D8                 .x.
-        brk                                     ; F375 00                       .
-LF376:
-        dec     LCD06,x                         ; F376 DE 06 CD                 ...
-        .byte   $03                             ; F379 03                       .
-        ora     ($D8,x)                         ; F37A 01 D8                    ..
-        .byte   $0C                             ; F37C 0C                       .
-        php                                     ; F37D 08                       .
-        .byte   $03                             ; F37E 03                       .
-        lsr     LC901                           ; F37F 4E 01 C9                 N..
-        .byte   $0B                             ; F382 0B                       .
-        lsr     LC901                           ; F383 4E 01 C9                 N..
-        ora     $4E                             ; F386 05 4E                    .N
-        ora     ($C9,x)                         ; F388 01 C9                    ..
-        asl     a                               ; F38A 0A                       .
-        lsr     $5A10                           ; F38B 4E 10 5A                 N.Z
-        .byte   $5C                             ; F38E 5C                       \
-        eor     $56,x                           ; F38F 55 56                    UV
-        eor     $55,x                           ; F391 55 55                    UU
-        .byte   $03                             ; F393 03                       .
-        .byte   $4B                             ; F394 4B                       K
-        ora     ($C9,x)                         ; F395 01 C9                    ..
-        .byte   $0B                             ; F397 0B                       .
-        .byte   $4B                             ; F398 4B                       K
-        ora     ($C9,x)                         ; F399 01 C9                    ..
-        ora     $4B                             ; F39B 05 4B                    .K
-        ora     ($C9,x)                         ; F39D 01 C9                    ..
-        asl     a                               ; F39F 0A                       .
-        .byte   $4B                             ; F3A0 4B                       K
-        bpl     LF3FD                           ; F3A1 10 5A                    .Z
-        .byte   $5C                             ; F3A3 5C                       \
-        .byte   $57                             ; F3A4 57                       W
-        eor     $5757,y                         ; F3A5 59 57 57                 YWW
-        bne     LF376                           ; F3A8 D0 CC                    ..
-        .byte   $BB                             ; F3AA BB                       .
-        .byte   $C7                             ; F3AB C7                       .
-        .byte   $FF                             ; F3AC FF                       .
-        cpy     $FF                             ; F3AD C4 FF                    ..
-        cmp     a:$03                           ; F3AF CD 03 00                 ...
-        .byte   $DB                             ; F3B2 DB                       .
-        .byte   $07                             ; F3B3 07                       .
-        brk                                     ; F3B4 00                       .
-        asl     LD878,x                         ; F3B5 1E 78 D8                 .x.
-        brk                                     ; F3B8 00                       .
-LF3BB           := * + 2
-        dec     LCD06,x                         ; F3B9 DE 06 CD                 ...
-        .byte   $03                             ; F3BC 03                       .
-        ora     ($D8,x)                         ; F3BD 01 D8                    ..
-        .byte   $0C                             ; F3BF 0C                       .
-        php                                     ; F3C0 08                       .
-        .byte   $03                             ; F3C1 03                       .
-        lsr     LC901                           ; F3C2 4E 01 C9                 N..
-        .byte   $0B                             ; F3C5 0B                       .
-        lsr     LC901                           ; F3C6 4E 01 C9                 N..
-        ora     $4E                             ; F3C9 05 4E                    .N
-        ora     ($C9,x)                         ; F3CB 01 C9                    ..
-        rol     a                               ; F3CD 2A                       *
-        lsr     LC908                           ; F3CE 4E 08 C9                 N..
-LF3D1:
-        clc                                     ; F3D1 18                       .
-        .byte   $5A                             ; F3D2 5A                       Z
-        php                                     ; F3D3 08                       .
-        cmp     #$18                            ; F3D4 C9 18                    ..
-        .byte   $5A                             ; F3D6 5A                       Z
-        .byte   $03                             ; F3D7 03                       .
-        .byte   $4B                             ; F3D8 4B                       K
-        ora     ($C9,x)                         ; F3D9 01 C9                    ..
-        .byte   $0B                             ; F3DB 0B                       .
-        .byte   $4B                             ; F3DC 4B                       K
-        ora     ($C9,x)                         ; F3DD 01 C9                    ..
-        ora     $4B                             ; F3DF 05 4B                    .K
-        ora     ($C9,x)                         ; F3E1 01 C9                    ..
-        rol     a                               ; F3E3 2A                       *
-        .byte   $4B                             ; F3E4 4B                       K
-        php                                     ; F3E5 08                       .
-        cmp     #$18                            ; F3E6 C9 18                    ..
-        .byte   $57                             ; F3E8 57                       W
-        php                                     ; F3E9 08                       .
-        cmp     #$18                            ; F3EA C9 18                    ..
-        .byte   $57                             ; F3EC 57                       W
-        bne     LF3BB                           ; F3ED D0 CC                    ..
-        .byte   $BB                             ; F3EF BB                       .
-        .byte   $C7                             ; F3F0 C7                       .
-        .byte   $FF                             ; F3F1 FF                       .
-        cpy     $FF                             ; F3F2 C4 FF                    ..
-        cmp     a:$03                           ; F3F4 CD 03 00                 ...
-        .byte   $DB                             ; F3F7 DB                       .
-        .byte   $07                             ; F3F8 07                       .
-        brk                                     ; F3F9 00                       .
-        asl     LD878,x                         ; F3FA 1E 78 D8                 .x.
-LF3FD:
-        brk                                     ; F3FD 00                       .
-        dec     LCD06,x                         ; F3FE DE 06 CD                 ...
-        .byte   $03                             ; F401 03                       .
-        ora     ($D8,x)                         ; F402 01 D8                    ..
-        .byte   $0C                             ; F404 0C                       .
-        php                                     ; F405 08                       .
-        .byte   $3F                             ; F406 3F                       ?
-        cmp     #$C9                            ; F407 C9 C9                    ..
-        cmp     #$C9                            ; F409 C9 C9                    ..
-        cmp     #$C9                            ; F40B C9 C9                    ..
-        cmp     #$C9                            ; F40D C9 C9                    ..
-LF410           := * + 1
-        bne     LF410                           ; F40F D0 FF                    ..
-        brk                                     ; F411 00                       .
-        asl     L0100                           ; F412 0E 00 01                 ...
-        .byte   $4F                             ; F415 4F                       O
-        brk                                     ; F416 00                       .
-        .byte   $02                             ; F417 02                       .
-        .byte   $93                             ; F418 93                       .
-        brk                                     ; F419 00                       .
-        .byte   $03                             ; F41A 03                       .
-        cld                                     ; F41B D8                       .
-        brk                                     ; F41C 00                       .
-        .byte   $FF                             ; F41D FF                       .
-        cpy     LC766                           ; F41E CC 66 C7                 .f.
-        .byte   $FF                             ; F421 FF                       .
-        cpy     $FF                             ; F422 C4 FF                    ..
-        cmp     a:$03                           ; F424 CD 03 00                 ...
-        .byte   $DB                             ; F427 DB                       .
-        .byte   $07                             ; F428 07                       .
-        brk                                     ; F429 00                       .
-LF42C           := * + 2
-        asl     LD878,x                         ; F42A 1E 78 D8                 .x.
-        brk                                     ; F42D 00                       .
-        dec     LCD06,x                         ; F42E DE 06 CD                 ...
-        .byte   $03                             ; F431 03                       .
-        ora     ($D8,x)                         ; F432 01 D8                    ..
-        .byte   $0C                             ; F434 0C                       .
-        php                                     ; F435 08                       .
-        clc                                     ; F436 18                       .
-        cmp     #$02                            ; F437 C9 02                    ..
-        .byte   $64                             ; F439 64                       d
-        ror     $6B                             ; F43A 66 6B                    fk
-        asl     $026D                           ; F43C 0E 6D 02                 .m.
-        jmp     (L186A)                         ; F43F 6C 6A 18                 lj.
-
-; ----------------------------------------------------------------------------
-        adc     L0002                           ; F442 65 02                    e.
-        adc     $67                             ; F444 65 67                    eg
-        ror     a                               ; F446 6A                       j
-        .byte   $12                             ; F447 12                       .
-        ror     $6D02                           ; F448 6E 02 6D                 n.m
-        pla                                     ; F44B 68                       h
-        .byte   $64                             ; F44C 64                       d
-        .byte   $12                             ; F44D 12                       .
-        .byte   $63                             ; F44E 63                       c
-        .byte   $02                             ; F44F 02                       .
-        adc     $67                             ; F450 65 67                    eg
-        ror     a                               ; F452 6A                       j
-        .byte   $04                             ; F453 04                       .
-        ror     L6C02                           ; F454 6E 02 6C                 n.l
-        php                                     ; F457 08                       .
-        ror     $6E02                           ; F458 6E 02 6E                 n.n
-        jmp     (L6E18)                         ; F45B 6C 18 6E                 l.n
-
-; ----------------------------------------------------------------------------
-        bne     LF42C                           ; F45E D0 CC                    ..
-        ror     $C7                             ; F460 66 C7                    f.
-        .byte   $FF                             ; F462 FF                       .
-        cpy     $77                             ; F463 C4 77                    .w
-        cmp     a:$03                           ; F465 CD 03 00                 ...
-        .byte   $DB                             ; F468 DB                       .
-        .byte   $07                             ; F469 07                       .
-        brk                                     ; F46A 00                       .
-        asl     LD878,x                         ; F46B 1E 78 D8                 .x.
-        brk                                     ; F46E 00                       .
-LF470           := * + 1
-        dec     LCD06,x                         ; F46F DE 06 CD                 ...
-        .byte   $03                             ; F472 03                       .
-        ora     ($D8,x)                         ; F473 01 D8                    ..
-        .byte   $0C                             ; F475 0C                       .
-        php                                     ; F476 08                       .
-        .byte   $02                             ; F477 02                       .
-        adc     $6E                             ; F478 65 6E                    en
-        jmp     (L04CE)                         ; F47A 6C CE 04                 l..
-
-; ----------------------------------------------------------------------------
-        .byte   $67                             ; F47D 67                       g
-        brk                                     ; F47E 00                       .
-        .byte   $62                             ; F47F 62                       b
-        adc     LCF6B                           ; F480 6D 6B CF                 mk.
-        .byte   $04                             ; F483 04                       .
-        .byte   $6F                             ; F484 6F                       o
-        brk                                     ; F485 00                       .
-        adc     ($6C,x)                         ; F486 61 6C                    al
-        ror     a                               ; F488 6A                       j
-        .byte   $CF                             ; F489 CF                       .
-        .byte   $04                             ; F48A 04                       .
-        ror     $00,x                           ; F48B 76 00                    v.
-        .byte   $63                             ; F48D 63                       c
-        ror     LCF6C                           ; F48E 6E 6C CF                 nl.
-        .byte   $04                             ; F491 04                       .
-        adc     $6400,x                         ; F492 7D 00 64                 }.d
-        .byte   $6F                             ; F495 6F                       o
-        adc     L04CE                           ; F496 6D CE 04                 m..
-        sty     $00                             ; F499 84 00                    ..
-        .byte   $63                             ; F49B 63                       c
-        ror     LCE6C                           ; F49C 6E 6C CE                 nl.
-        php                                     ; F49F 08                       .
-        .byte   $8B                             ; F4A0 8B                       .
-        brk                                     ; F4A1 00                       .
-        bne     LF470                           ; F4A2 D0 CC                    ..
-        ror     $C7                             ; F4A4 66 C7                    f.
-        .byte   $FF                             ; F4A6 FF                       .
-        cpy     $FF                             ; F4A7 C4 FF                    ..
-        cmp     a:$03                           ; F4A9 CD 03 00                 ...
-        .byte   $DB                             ; F4AC DB                       .
-        .byte   $07                             ; F4AD 07                       .
-        brk                                     ; F4AE 00                       .
-        asl     LD878,x                         ; F4AF 1E 78 D8                 .x.
-        brk                                     ; F4B2 00                       .
-LF4B5           := * + 2
-        dec     LCD06,x                         ; F4B3 DE 06 CD                 ...
-        .byte   $03                             ; F4B6 03                       .
-        ora     ($D8,x)                         ; F4B7 01 D8                    ..
-        .byte   $0C                             ; F4B9 0C                       .
-        php                                     ; F4BA 08                       .
-        ora     ($5B,x)                         ; F4BB 01 5B                    .[
-        cmp     #$CE                            ; F4BD C9 CE                    ..
-        .byte   $0C                             ; F4BF 0C                       .
-        .byte   $A7                             ; F4C0 A7                       .
-        brk                                     ; F4C1 00                       .
-        eor     LCFC9,x                         ; F4C2 5D C9 CF                 ]..
-        .byte   $0C                             ; F4C5 0C                       .
-        .byte   $B2                             ; F4C6 B2                       .
-        brk                                     ; F4C7 00                       .
-        .byte   $5C                             ; F4C8 5C                       \
-        cmp     #$CF                            ; F4C9 C9 CF                    ..
-        .byte   $0C                             ; F4CB 0C                       .
-        clv                                     ; F4CC B8                       .
-        brk                                     ; F4CD 00                       .
-        lsr     LCEC9,x                         ; F4CE 5E C9 CE                 ^..
-        .byte   $0C                             ; F4D1 0C                       .
-        ldx     $5F00,y                         ; F4D2 BE 00 5F                 .._
-        cmp     #$CF                            ; F4D5 C9 CF                    ..
-        .byte   $0C                             ; F4D7 0C                       .
-        cpy     $00                             ; F4D8 C4 00                    ..
-        lsr     LCEC9,x                         ; F4DA 5E C9 CE                 ^..
-        .byte   $0C                             ; F4DD 0C                       .
-        dex                                     ; F4DE CA                       .
-        brk                                     ; F4DF 00                       .
-        ora     ($5B,x)                         ; F4E0 01 5B                    .[
-        cmp     #$CE                            ; F4E2 C9 CE                    ..
-        .byte   $0C                             ; F4E4 0C                       .
-        cmp     ($00),y                         ; F4E5 D1 00                    ..
-        bne     LF4B5                           ; F4E7 D0 CC                    ..
-        ror     $C7                             ; F4E9 66 C7                    f.
-        .byte   $FF                             ; F4EB FF                       .
-        cpy     $FF                             ; F4EC C4 FF                    ..
-        cmp     a:$03                           ; F4EE CD 03 00                 ...
-        .byte   $DB                             ; F4F1 DB                       .
-        .byte   $07                             ; F4F2 07                       .
-        brk                                     ; F4F3 00                       .
-        asl     LD878,x                         ; F4F4 1E 78 D8                 .x.
-        brk                                     ; F4F7 00                       .
-        dec     LCD06,x                         ; F4F8 DE 06 CD                 ...
-        .byte   $03                             ; F4FB 03                       .
-        ora     ($D8,x)                         ; F4FC 01 D8                    ..
-        .byte   $0C                             ; F4FE 0C                       .
-        php                                     ; F4FF 08                       .
-        .byte   $3F                             ; F500 3F                       ?
-        cmp     #$C9                            ; F501 C9 C9                    ..
-        cmp     #$D0                            ; F503 C9 D0                    ..
+        .byte   $FF,$00,$0E,$00,$01,$82,$00,$02 ; EEF2 FF 00 0E 00 01 82 00 02  ........
+        .byte   $02,$01,$03,$88,$01,$FF,$CC,$88 ; EEFA 02 01 03 88 01 FF CC 88  ........
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; EF02 C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; EF0A 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$03,$C9 ; EF12 CD 03 01 D8 0C 08 03 C9  ........
+        .byte   $01,$6A,$C9,$06,$68,$04,$C9,$01 ; EF1A 01 6A C9 06 68 04 C9 01  .j..h...
+        .byte   $63,$C9,$06,$61,$04,$C9,$01,$6A ; EF22 63 C9 06 61 04 C9 01 6A  c..a...j
+        .byte   $C9,$06,$68,$03,$C9,$04,$62,$02 ; EF2A C9 06 68 03 C9 04 62 02  ..h...b.
+        .byte   $C9,$04,$64,$03,$C9,$01,$6A,$C9 ; EF32 C9 04 64 03 C9 01 6A C9  ..d...j.
+        .byte   $06,$68,$04,$C9,$01,$63,$C9,$06 ; EF3A 06 68 04 C9 01 63 C9 06  .h...c..
+        .byte   $61,$01,$C9,$0C,$6E,$6D,$18,$6B ; EF42 61 01 C9 0C 6E 6D 18 6B  a...nm.k
+        .byte   $CE,$02,$26,$00,$03,$C9,$01,$5F ; EF4A CE 02 26 00 03 C9 01 5F  ..&...._
+        .byte   $04,$C9,$61,$05,$5F,$08,$61,$02 ; EF52 04 C9 61 05 5F 08 61 02  ..a._.a.
+        .byte   $C9,$01,$63,$04,$C9,$65,$05,$63 ; EF5A C9 01 63 04 C9 65 05 63  ..c..e.c
+        .byte   $08,$65,$02,$C9,$01,$62,$04,$C9 ; EF62 08 65 02 C9 01 62 04 C9  .e...b..
+        .byte   $64,$02,$66,$01,$66,$03,$C9,$12 ; EF6A 64 02 66 01 66 03 C9 12  d.f.f...
+        .byte   $72,$D0,$CC,$88,$C7,$FF,$C4,$FF ; EF72 72 D0 CC 88 C7 FF C4 FF  r.......
+        .byte   $CD,$03,$00,$DB,$07,$00,$1E,$78 ; EF7A CD 03 00 DB 07 00 1E 78  .......x
+        .byte   $D8,$00,$DE,$06,$CD,$03,$01,$D8 ; EF82 D8 00 DE 06 CD 03 01 D8  ........
+        .byte   $0C,$08,$03,$C9,$01,$5F,$C9,$06 ; EF8A 0C 08 03 C9 01 5F C9 06  ....._..
+        .byte   $5F,$04,$C9,$01,$58,$C9,$06,$58 ; EF92 5F 04 C9 01 58 C9 06 58  _...X..X
+        .byte   $04,$C9,$01,$5F,$C9,$06,$5F,$03 ; EF9A 04 C9 01 5F C9 06 5F 03  ..._.._.
+        .byte   $C9,$04,$5A,$02,$C9,$04,$5C,$03 ; EFA2 C9 04 5A 02 C9 04 5C 03  ..Z...\.
+        .byte   $C9,$01,$5F,$C9,$06,$5F,$04,$C9 ; EFAA C9 01 5F C9 06 5F 04 C9  .._.._..
+        .byte   $01,$58,$C9,$06,$58,$06,$C9,$07 ; EFB2 01 58 C9 06 58 06 C9 07  .X..X...
+        .byte   $5D,$05,$C9,$07,$5C,$03,$C9,$01 ; EFBA 5D 05 C9 07 5C 03 C9 01  ]...\...
+        .byte   $5B,$04,$C9,$5D,$05,$5B,$07,$5D ; EFC2 5B 04 C9 5D 05 5B 07 5D  [..].[.]
+        .byte   $CE,$02,$9A,$00,$03,$C9,$01,$55 ; EFCA CE 02 9A 00 03 C9 01 55  .......U
+        .byte   $04,$C9,$57,$05,$55,$08,$57,$02 ; EFD2 04 C9 57 05 55 08 57 02  ..W.U.W.
+        .byte   $C9,$01,$58,$04,$C9,$5A,$05,$58 ; EFDA C9 01 58 04 C9 5A 05 58  ..X..Z.X
+        .byte   $08,$5A,$02,$C9,$01,$58,$04,$C9 ; EFE2 08 5A 02 C9 01 58 04 C9  .Z...X..
+        .byte   $5A,$02,$5B,$01,$5B,$03,$C9,$12 ; EFEA 5A 02 5B 01 5B 03 C9 12  Z.[.[...
+        .byte   $67,$D0,$CC,$88,$C7,$FF,$C4,$FF ; EFF2 67 D0 CC 88 C7 FF C4 FF  g.......
+        .byte   $CD,$03,$00,$DB,$07,$00,$1E,$78 ; EFFA CD 03 00 DB 07 00 1E 78  .......x
+        .byte   $D8,$00,$DE,$06,$CD,$03,$01,$D8 ; F002 D8 00 DE 06 CD 03 01 D8  ........
+        .byte   $0C,$08,$02,$50,$01,$57,$5A,$C9 ; F00A 0C 08 02 50 01 57 5A C9  ...P.WZ.
+        .byte   $07,$5C,$01,$C9,$55,$50,$02,$4B ; F012 07 5C 01 C9 55 50 02 4B  .\..UP.K
+        .byte   $06,$4C,$01,$4E,$02,$50,$01,$57 ; F01A 06 4C 01 4E 02 50 01 57  .L.N.P.W
+        .byte   $5A,$C9,$05,$5C,$01,$5C,$5A,$02 ; F022 5A C9 05 5C 01 5C 5A 02  Z..\.\Z.
+        .byte   $58,$53,$01,$4C,$4D,$02,$4E,$03 ; F02A 58 53 01 4C 4D 02 4E 03  XS.LM.N.
+        .byte   $58,$01,$52,$02,$50,$01,$57,$5A ; F032 58 01 52 02 50 01 57 5A  X.R.P.WZ
+        .byte   $C9,$07,$5C,$01,$C9,$55,$50,$02 ; F03A C9 07 5C 01 C9 55 50 02  ..\..UP.
+        .byte   $4B,$06,$4C,$01,$C9,$0B,$53,$01 ; F042 4B 06 4C 01 C9 0B 53 01  K.L...S.
+        .byte   $53,$0B,$52,$01,$52,$14,$51,$01 ; F04A 53 0B 52 01 52 14 51 01  S.R.R.Q.
+        .byte   $4E,$03,$50,$CE,$02,$1A,$01,$14 ; F052 4E 03 50 CE 02 1A 01 14  N.P.....
+        .byte   $51,$01,$51,$02,$53,$13,$55,$01 ; F05A 51 01 51 02 53 13 55 01  Q.Q.S.U.
+        .byte   $49,$02,$4B,$04,$4C,$02,$53,$01 ; F062 49 02 4B 04 4C 02 53 01  I.K.L.S.
+        .byte   $4C,$02,$4E,$01,$55,$02,$4C,$01 ; F06A 4C 02 4E 01 55 02 4C 01  L.N.U.L.
+        .byte   $4A,$02,$4B,$01,$4B,$15,$C9,$D0 ; F072 4A 02 4B 01 4B 15 C9 D0  J.K.K...
+        .byte   $CC,$88,$C7,$FF,$C4,$FF,$CD,$03 ; F07A CC 88 C7 FF C4 FF CD 03  ........
+        .byte   $00,$DB,$07,$00,$1E,$78,$D8,$00 ; F082 00 DB 07 00 1E 78 D8 00  .....x..
+        .byte   $DE,$06,$CD,$03,$01,$D8,$0C,$08 ; F08A DE 06 CD 03 01 D8 0C 08  ........
+        .byte   $3F,$C9,$C9,$C9,$C9,$C9,$C9,$D0 ; F092 3F C9 C9 C9 C9 C9 C9 D0  ?.......
+MusicAerithTheme:
+        .byte   $FF,$00,$0E,$00,$01,$A7,$00,$02 ; F09A FF 00 0E 00 01 A7 00 02  ........
+        .byte   $4C,$01,$03,$8E,$01,$FF,$CC,$AA ; F0A2 4C 01 03 8E 01 FF CC AA  L.......
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; F0AA C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; F0B2 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$03,$6E ; F0BA CD 03 01 D8 0C 08 03 6E  .......n
+        .byte   $71,$12,$76,$03,$74,$71,$0D,$6C ; F0C2 71 12 76 03 74 71 0D 6C  q.v.tq.l
+        .byte   $01,$C9,$02,$6A,$6C,$0C,$6A,$03 ; F0CA 01 C9 02 6A 6C 0C 6A 03  ...jl.j.
+        .byte   $6D,$6C,$6A,$6C,$21,$6A,$6A,$03 ; F0D2 6D 6C 6A 6C 21 6A 6A 03  mljl!jj.
+        .byte   $5E,$60,$11,$62,$01,$C9,$03,$62 ; F0DA 5E 60 11 62 01 C9 03 62  ^`.b...b
+        .byte   $63,$10,$65,$02,$C9,$03,$67,$69 ; F0E2 63 10 65 02 C9 03 67 69  c.e...gi
+        .byte   $06,$6A,$0C,$67,$06,$63,$02,$65 ; F0EA 06 6A 0C 67 06 63 02 65  .j.g.c.e
+        .byte   $67,$0F,$65,$01,$C9,$03,$65,$62 ; F0F2 67 0F 65 01 C9 03 65 62  g.e...eb
+        .byte   $25,$5D,$05,$C9,$03,$67,$65,$26 ; F0FA 25 5D 05 C9 03 67 65 26  %]...ge&
+        .byte   $5E,$05,$C9,$03,$65,$62,$27,$5D ; F102 5E 05 C9 03 65 62 27 5D  ^...eb']
+        .byte   $03,$C9,$67,$69,$1E,$6A,$06,$76 ; F10A 03 C9 67 69 1E 6A 06 76  ..gi.j.v
+        .byte   $75,$73,$0C,$71,$0F,$6E,$03,$C9 ; F112 75 73 0C 71 0F 6E 03 C9  us.q.n..
+        .byte   $06,$76,$75,$73,$09,$75,$03,$7A ; F11A 06 76 75 73 09 75 03 7A  .vus.u.z
+        .byte   $0F,$7A,$04,$C9,$06,$76,$75,$73 ; F122 0F 7A 04 C9 06 76 75 73  .z...vus
+        .byte   $0C,$71,$19,$6C,$05,$C9,$03,$6C ; F12A 0C 71 19 6C 05 C9 03 6C  .q.l...l
+        .byte   $6E,$6F,$6E,$6C,$18,$6A,$03,$C9 ; F132 6E 6F 6E 6C 18 6A 03 C9  nonl.j..
+        .byte   $6F,$6E,$6A,$6C,$30,$6A,$D0,$CC ; F13A 6F 6E 6A 6C 30 6A D0 CC  onjl0j..
+        .byte   $AA,$C7,$FF,$C4,$AA,$CD,$03,$00 ; F142 AA C7 FF C4 AA CD 03 00  ........
+        .byte   $DB,$07,$00,$1E,$78,$D8,$00,$DE ; F14A DB 07 00 1E 78 D8 00 DE  ....x...
+        .byte   $06,$CD,$03,$01,$D8,$0C,$08,$03 ; F152 06 CD 03 01 D8 0C 08 03  ........
+        .byte   $C9,$C9,$62,$65,$6A,$6E,$06,$6E ; F15A C9 C9 62 65 6A 6E 06 6E  ..bejn.n
+        .byte   $6E,$03,$60,$65,$68,$6C,$09,$C9 ; F162 6E 03 60 65 68 6C 09 C9  n.`ehl..
+        .byte   $03,$5A,$61,$66,$6A,$66,$61,$5E ; F16A 03 5A 61 66 6A 66 61 5E  .Zafjfa^
+        .byte   $09,$5A,$01,$5A,$5E,$63,$03,$66 ; F172 09 5A 01 5A 5E 63 03 66  .Z.Z^c.f
+        .byte   $01,$5E,$63,$66,$06,$6A,$C9,$03 ; F17A 01 5E 63 66 06 6A C9 03  .^cf.j..
+        .byte   $5E,$62,$65,$6A,$0C,$C9,$03,$5E ; F182 5E 62 65 6A 0C C9 03 5E  ^bej...^
+        .byte   $62,$65,$6A,$09,$C9,$03,$62,$67 ; F18A 62 65 6A 09 C9 03 62 67  bej...bg
+        .byte   $0F,$6A,$03,$5D,$62,$65,$0F,$69 ; F192 0F 6A 03 5D 62 65 0F 69  .j.]be.i
+        .byte   $03,$5E,$63,$67,$0F,$6A,$03,$5E ; F19A 03 5E 63 67 0F 6A 03 5E  .^cg.j.^
+        .byte   $62,$65,$0F,$6A,$0F,$C9,$0C,$69 ; F1A2 62 65 0F 6A 0F C9 0C 69  be.j...i
+        .byte   $67,$65,$67,$5B,$59,$57,$03,$5D ; F1AA 67 65 67 5B 59 57 03 5D  geg[YW.]
+        .byte   $62,$65,$0F,$69,$0C,$67,$65,$18 ; F1B2 62 65 0F 69 0C 67 65 18  be.i.ge.
+        .byte   $67,$03,$5E,$63,$67,$0F,$6A,$0C ; F1BA 67 03 5E 63 67 0F 6A 0C  g.^cg.j.
+        .byte   $C9,$06,$62,$5E,$0C,$5B,$06,$5E ; F1C2 C9 06 62 5E 0C 5B 06 5E  ..b^.[.^
+        .byte   $60,$09,$62,$03,$65,$12,$65,$1E ; F1CA 60 09 62 03 65 12 65 1E  `.b.e.e.
+        .byte   $C9,$0C,$60,$5E,$5D,$0C,$52,$06 ; F1D2 C9 0C 60 5E 5D 0C 52 06  ..`^].R.
+        .byte   $54,$56,$0D,$57,$03,$60,$5E,$5B ; F1DA 54 56 0D 57 03 60 5E 5B  TV.W.`^[
+        .byte   $5D,$30,$5E,$D0,$CC,$AA,$C7,$FF ; F1E2 5D 30 5E D0 CC AA C7 FF  ]0^.....
+        .byte   $C4,$FF,$CD,$03,$00,$DB,$07,$00 ; F1EA C4 FF CD 03 00 DB 07 00  ........
+        .byte   $1E,$78,$D8,$00,$DE,$06,$CD,$03 ; F1F2 1E 78 D8 00 DE 06 CD 03  .x......
+        .byte   $01,$D8,$0C,$08,$18,$52,$4D,$4E ; F1FA 01 D8 0C 08 18 52 4D 4E  .....RMN
+        .byte   $4B,$30,$52,$18,$5B,$59,$57,$59 ; F202 4B 30 52 18 5B 59 57 59  K0R.[YWY
+        .byte   $31,$59,$57,$59,$57,$18,$52,$0C ; F20A 31 59 57 59 57 18 52 0C  1YWYW.R.
+        .byte   $4B,$06,$4F,$4B,$0C,$4A,$06,$4C ; F212 4B 06 4F 4B 0C 4A 06 4C  K.OK.J.L
+        .byte   $4D,$0C,$4F,$06,$51,$52,$18,$54 ; F21A 4D 0C 4F 06 51 52 18 54  M.O.QR.T
+        .byte   $4D,$4B,$48,$30,$46,$D0,$CC,$88 ; F222 4D 4B 48 30 46 D0 CC 88  MKH0F...
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; F22A C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; F232 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$3F,$C9 ; F23A CD 03 01 D8 0C 08 3F C9  ......?.
+        .byte   $C9,$C9,$C9,$C9,$C9,$C9,$C9,$C9 ; F242 C9 C9 C9 C9 C9 C9 C9 C9  ........
+        .byte   $C9,$C9,$D0                     ; F24A C9 C9 D0                 ...
+MusicForgottenCityTheme:
+        .byte   $FF,$00,$0E,$00,$01,$44,$00,$02 ; F24D FF 00 0E 00 01 44 00 02  .....D..
+        .byte   $94,$00,$03,$B8,$00,$FF,$CC,$66 ; F255 94 00 03 B8 00 FF CC 66  .......f
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; F25D C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; F265 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$18,$C9 ; F26D CD 03 01 D8 0C 08 18 C9  ........
+        .byte   $06,$6A,$C9,$0C,$63,$6A,$03,$6C ; F275 06 6A C9 0C 63 6A 03 6C  .j..cj.l
+        .byte   $06,$6F,$03,$6D,$0C,$6A,$C9,$6A ; F27D 06 6F 03 6D 0C 6A C9 6A  .o.m.j.j
+        .byte   $C9,$6A,$03,$6C,$06,$6F,$03,$6D ; F285 C9 6A 03 6C 06 6F 03 6D  .j.l.o.m
+        .byte   $0C,$6A,$C9,$D0,$CC,$66,$C7,$FF ; F28D 0C 6A C9 D0 CC 66 C7 FF  .j...f..
+        .byte   $C4,$FF,$CD,$03,$00,$DB,$07,$00 ; F295 C4 FF CD 03 00 DB 07 00  ........
+        .byte   $1E,$78,$D8,$00,$DE,$06,$CD,$03 ; F29D 1E 78 D8 00 DE 06 CD 03  .x......
+        .byte   $01,$D8,$0C,$18,$C9,$06,$5E,$C9 ; F2A5 01 D8 0C 18 C9 06 5E C9  ......^.
+        .byte   $0C,$60,$65,$03,$68,$06,$6A,$03 ; F2AD 0C 60 65 03 68 06 6A 03  .`e.h.j.
+        .byte   $6A,$01,$5E,$C9,$C9,$65,$66,$63 ; F2B5 6A 01 5E C9 C9 65 66 63  j.^..efc
+        .byte   $65,$C9,$C9,$61,$C9,$C9,$CE,$02 ; F2BD 65 C9 C9 61 C9 C9 CE 02  e..a....
+        .byte   $69,$00,$0C,$65,$03,$68,$06,$6A ; F2C5 69 00 0C 65 03 68 06 6A  i..e.h.j
+        .byte   $03,$6A,$01,$5E,$C9,$C9,$65,$66 ; F2CD 03 6A 01 5E C9 C9 65 66  .j.^..ef
+        .byte   $63,$65,$C9,$C9,$61,$C9,$C9,$CF ; F2D5 63 65 C9 C9 61 C9 C9 CF  ce..a...
+        .byte   $03,$82,$00,$D0,$CC,$66,$C7,$FF ; F2DD 03 82 00 D0 CC 66 C7 FF  .....f..
+        .byte   $C4,$FF,$CD,$03,$00,$DB,$07,$00 ; F2E5 C4 FF CD 03 00 DB 07 00  ........
+        .byte   $1E,$78,$D8,$00,$DE,$06,$CD,$03 ; F2ED 1E 78 D8 00 DE 06 CD 03  .x......
+        .byte   $01,$D8,$0C,$08,$02,$52,$59,$5E ; F2F5 01 D8 0C 08 02 52 59 5E  .....RY^
+        .byte   $5A,$57,$59,$CE,$1C,$AC,$00,$D0 ; F2FD 5A 57 59 CE 1C AC 00 D0  ZWY.....
+        .byte   $CC,$66,$C7,$FF,$C4,$FF,$CD,$03 ; F305 CC 66 C7 FF C4 FF CD 03  .f......
+        .byte   $00,$DB,$07,$00,$1E,$78,$D8,$00 ; F30D 00 DB 07 00 1E 78 D8 00  .....x..
+        .byte   $DE,$06,$CD,$03,$01,$D8,$0C,$3F ; F315 DE 06 CD 03 01 D8 0C 3F  .......?
+        .byte   $C9,$C9,$C9,$D0                 ; F31D C9 C9 C9 D0              ....
+MusicShinraCompanyTheme:
+        .byte   $FF,$00,$0E,$00,$01,$45,$00,$02 ; F321 FF 00 0E 00 01 45 00 02  .....E..
+        .byte   $88,$00,$03,$CD,$00,$FF,$CC,$BB ; F329 88 00 03 CD 00 FF CC BB  ........
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; F331 C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; F339 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$08,$66 ; F341 CD 03 01 D8 0C 08 08 66  .......f
+        .byte   $68,$04,$69,$6B,$6D,$6F,$10,$71 ; F349 68 04 69 6B 6D 6F 10 71  h.ikmo.q
+        .byte   $71,$61,$62,$61,$61,$08,$66,$68 ; F351 71 61 62 61 61 08 66 68  qabaa.fh
+        .byte   $04,$6A,$6C,$6E,$6F,$10,$71,$71 ; F359 04 6A 6C 6E 6F 10 71 71  .jlno.qq
+        .byte   $63,$62,$63,$63,$D0,$CC,$BB,$C7 ; F361 63 62 63 63 D0 CC BB C7  cbcc....
+        .byte   $FF,$C4,$FF,$CD,$03,$00,$DB,$07 ; F369 FF C4 FF CD 03 00 DB 07  ........
+        .byte   $00,$1E,$78,$D8,$00,$DE,$06,$CD ; F371 00 1E 78 D8 00 DE 06 CD  ..x.....
+        .byte   $03,$01,$D8,$0C,$08,$03,$4E,$01 ; F379 03 01 D8 0C 08 03 4E 01  ......N.
+        .byte   $C9,$0B,$4E,$01,$C9,$05,$4E,$01 ; F381 C9 0B 4E 01 C9 05 4E 01  ..N...N.
+        .byte   $C9,$0A,$4E,$10,$5A,$5C,$55,$56 ; F389 C9 0A 4E 10 5A 5C 55 56  ..N.Z\UV
+        .byte   $55,$55,$03,$4B,$01,$C9,$0B,$4B ; F391 55 55 03 4B 01 C9 0B 4B  UU.K...K
+        .byte   $01,$C9,$05,$4B,$01,$C9,$0A,$4B ; F399 01 C9 05 4B 01 C9 0A 4B  ...K...K
+        .byte   $10,$5A,$5C,$57,$59,$57,$57,$D0 ; F3A1 10 5A 5C 57 59 57 57 D0  .Z\WYWW.
+        .byte   $CC,$BB,$C7,$FF,$C4,$FF,$CD,$03 ; F3A9 CC BB C7 FF C4 FF CD 03  ........
+        .byte   $00,$DB,$07,$00,$1E,$78,$D8,$00 ; F3B1 00 DB 07 00 1E 78 D8 00  .....x..
+        .byte   $DE,$06,$CD,$03,$01,$D8,$0C,$08 ; F3B9 DE 06 CD 03 01 D8 0C 08  ........
+        .byte   $03,$4E,$01,$C9,$0B,$4E,$01,$C9 ; F3C1 03 4E 01 C9 0B 4E 01 C9  .N...N..
+        .byte   $05,$4E,$01,$C9,$2A,$4E,$08,$C9 ; F3C9 05 4E 01 C9 2A 4E 08 C9  .N..*N..
+        .byte   $18,$5A,$08,$C9,$18,$5A,$03,$4B ; F3D1 18 5A 08 C9 18 5A 03 4B  .Z...Z.K
+        .byte   $01,$C9,$0B,$4B,$01,$C9,$05,$4B ; F3D9 01 C9 0B 4B 01 C9 05 4B  ...K...K
+        .byte   $01,$C9,$2A,$4B,$08,$C9,$18,$57 ; F3E1 01 C9 2A 4B 08 C9 18 57  ..*K...W
+        .byte   $08,$C9,$18,$57,$D0,$CC,$BB,$C7 ; F3E9 08 C9 18 57 D0 CC BB C7  ...W....
+        .byte   $FF,$C4,$FF,$CD,$03,$00,$DB,$07 ; F3F1 FF C4 FF CD 03 00 DB 07  ........
+        .byte   $00,$1E,$78,$D8,$00,$DE,$06,$CD ; F3F9 00 1E 78 D8 00 DE 06 CD  ..x.....
+        .byte   $03,$01,$D8,$0C,$08,$3F,$C9,$C9 ; F401 03 01 D8 0C 08 3F C9 C9  .....?..
+        .byte   $C9,$C9,$C9,$C9,$C9,$C9,$D0     ; F409 C9 C9 C9 C9 C9 C9 D0     .......
+LF410:
+        .byte   $FF,$00,$0E,$00,$01,$4F,$00,$02 ; F410 FF 00 0E 00 01 4F 00 02  .....O..
+        .byte   $93,$00,$03,$D8,$00,$FF,$CC,$66 ; F418 93 00 03 D8 00 FF CC 66  .......f
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; F420 C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; F428 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$18,$C9 ; F430 CD 03 01 D8 0C 08 18 C9  ........
+        .byte   $02,$64,$66,$6B,$0E,$6D,$02,$6C ; F438 02 64 66 6B 0E 6D 02 6C  .dfk.m.l
+        .byte   $6A,$18,$65,$02,$65,$67,$6A,$12 ; F440 6A 18 65 02 65 67 6A 12  j.e.egj.
+        .byte   $6E,$02,$6D,$68,$64,$12,$63,$02 ; F448 6E 02 6D 68 64 12 63 02  n.mhd.c.
+        .byte   $65,$67,$6A,$04,$6E,$02,$6C,$08 ; F450 65 67 6A 04 6E 02 6C 08  egj.n.l.
+        .byte   $6E,$02,$6E,$6C,$18,$6E,$D0,$CC ; F458 6E 02 6E 6C 18 6E D0 CC  n.nl.n..
+        .byte   $66,$C7,$FF,$C4,$77,$CD,$03,$00 ; F460 66 C7 FF C4 77 CD 03 00  f...w...
+        .byte   $DB,$07,$00,$1E,$78,$D8,$00,$DE ; F468 DB 07 00 1E 78 D8 00 DE  ....x...
+        .byte   $06,$CD,$03,$01,$D8,$0C,$08,$02 ; F470 06 CD 03 01 D8 0C 08 02  ........
+        .byte   $65,$6E,$6C,$CE,$04,$67,$00,$62 ; F478 65 6E 6C CE 04 67 00 62  enl..g.b
+        .byte   $6D,$6B,$CF,$04,$6F,$00,$61,$6C ; F480 6D 6B CF 04 6F 00 61 6C  mk..o.al
+        .byte   $6A,$CF,$04,$76,$00,$63,$6E,$6C ; F488 6A CF 04 76 00 63 6E 6C  j..v.cnl
+        .byte   $CF,$04,$7D,$00,$64,$6F,$6D,$CE ; F490 CF 04 7D 00 64 6F 6D CE  ..}.dom.
+        .byte   $04,$84,$00,$63,$6E,$6C,$CE,$08 ; F498 04 84 00 63 6E 6C CE 08  ...cnl..
+        .byte   $8B,$00,$D0,$CC,$66,$C7,$FF,$C4 ; F4A0 8B 00 D0 CC 66 C7 FF C4  ....f...
+        .byte   $FF,$CD,$03,$00,$DB,$07,$00,$1E ; F4A8 FF CD 03 00 DB 07 00 1E  ........
+        .byte   $78,$D8,$00,$DE,$06,$CD,$03,$01 ; F4B0 78 D8 00 DE 06 CD 03 01  x.......
+        .byte   $D8,$0C,$08,$01,$5B,$C9,$CE,$0C ; F4B8 D8 0C 08 01 5B C9 CE 0C  ....[...
+        .byte   $A7,$00,$5D,$C9,$CF,$0C,$B2,$00 ; F4C0 A7 00 5D C9 CF 0C B2 00  ..].....
+        .byte   $5C,$C9,$CF,$0C,$B8,$00,$5E,$C9 ; F4C8 5C C9 CF 0C B8 00 5E C9  \.....^.
+        .byte   $CE,$0C,$BE,$00,$5F,$C9,$CF,$0C ; F4D0 CE 0C BE 00 5F C9 CF 0C  ...._...
+        .byte   $C4,$00,$5E,$C9,$CE,$0C,$CA,$00 ; F4D8 C4 00 5E C9 CE 0C CA 00  ..^.....
+        .byte   $01,$5B,$C9,$CE,$0C,$D1,$00,$D0 ; F4E0 01 5B C9 CE 0C D1 00 D0  .[......
+        .byte   $CC,$66,$C7,$FF,$C4,$FF,$CD,$03 ; F4E8 CC 66 C7 FF C4 FF CD 03  .f......
+        .byte   $00,$DB,$07,$00,$1E,$78,$D8,$00 ; F4F0 00 DB 07 00 1E 78 D8 00  .....x..
+        .byte   $DE,$06,$CD,$03,$01,$D8,$0C,$08 ; F4F8 DE 06 CD 03 01 D8 0C 08  ........
+        .byte   $3F,$C9,$C9,$C9,$D0             ; F500 3F C9 C9 C9 D0           ?....
 LF505:
-        .byte   $FF                             ; F505 FF                       .
-        brk                                     ; F506 00                       .
-        asl     L0100                           ; F507 0E 00 01                 ...
-        adc     ($00,x)                         ; F50A 61 00                    a.
-        .byte   $02                             ; F50C 02                       .
-        lsr     L0301,x                         ; F50D 5E 01 03                 ^..
-        cmp     LFF01,x                         ; F510 DD 01 FF                 ...
-        cpy     LC7BB                           ; F513 CC BB C7                 ...
-        .byte   $FF                             ; F516 FF                       .
-        cpy     $FF                             ; F517 C4 FF                    ..
-        cmp     a:$03                           ; F519 CD 03 00                 ...
-        .byte   $DB                             ; F51C DB                       .
-        .byte   $07                             ; F51D 07                       .
-        brk                                     ; F51E 00                       .
-        asl     LD878,x                         ; F51F 1E 78 D8                 .x.
-        brk                                     ; F522 00                       .
-        dec     LCD06,x                         ; F523 DE 06 CD                 ...
-        .byte   $03                             ; F526 03                       .
-        ora     ($D8,x)                         ; F527 01 D8                    ..
-        .byte   $0C                             ; F529 0C                       .
-        php                                     ; F52A 08                       .
-        php                                     ; F52B 08                       .
-        jmp     (L6F04)                         ; F52C 6C 04 6F                 l.o
-
-; ----------------------------------------------------------------------------
-        php                                     ; F52F 08                       .
-        .byte   $73                             ; F530 73                       s
-        .byte   $04                             ; F531 04                       .
-        .byte   $6F                             ; F532 6F                       o
-        clc                                     ; F533 18                       .
-        .byte   $73                             ; F534 73                       s
-        php                                     ; F535 08                       .
-        ror     a                               ; F536 6A                       j
-        .byte   $04                             ; F537 04                       .
-        ror     L7308                           ; F538 6E 08 73                 n.s
-        .byte   $04                             ; F53B 04                       .
-        ror     $7318                           ; F53C 6E 18 73                 n.s
-        php                                     ; F53F 08                       .
-        jmp     (L6F04)                         ; F540 6C 04 6F                 l.o
-
-; ----------------------------------------------------------------------------
-        php                                     ; F543 08                       .
-        .byte   $73                             ; F544 73                       s
-        .byte   $04                             ; F545 04                       .
-        .byte   $6F                             ; F546 6F                       o
-        clc                                     ; F547 18                       .
-        .byte   $73                             ; F548 73                       s
-        php                                     ; F549 08                       .
-        ror     a                               ; F54A 6A                       j
-        .byte   $04                             ; F54B 04                       .
-        .byte   $6F                             ; F54C 6F                       o
-        php                                     ; F54D 08                       .
-        .byte   $73                             ; F54E 73                       s
-        .byte   $04                             ; F54F 04                       .
-        .byte   $6F                             ; F550 6F                       o
-        clc                                     ; F551 18                       .
-        .byte   $73                             ; F552 73                       s
-        php                                     ; F553 08                       .
-        pla                                     ; F554 68                       h
-        .byte   $04                             ; F555 04                       .
-        jmp     (L7308)                         ; F556 6C 08 73                 l.s
-
-; ----------------------------------------------------------------------------
-        .byte   $04                             ; F559 04                       .
-        jmp     (L7314)                         ; F55A 6C 14 73                 l.s
-
-; ----------------------------------------------------------------------------
-        .byte   $04                             ; F55D 04                       .
-        adc     ($08),y                         ; F55E 71 08                    q.
-        ror     $7104                           ; F560 6E 04 71                 n.q
-        plp                                     ; F563 28                       (
-        ror     LCCD0                           ; F564 6E D0 CC                 n..
-        .byte   $BB                             ; F567 BB                       .
-        .byte   $C7                             ; F568 C7                       .
-        .byte   $FF                             ; F569 FF                       .
-        cpy     $FF                             ; F56A C4 FF                    ..
-        cmp     a:$03                           ; F56C CD 03 00                 ...
-        .byte   $DB                             ; F56F DB                       .
-        .byte   $07                             ; F570 07                       .
-        brk                                     ; F571 00                       .
-        asl     LD878,x                         ; F572 1E 78 D8                 .x.
-        brk                                     ; F575 00                       .
-        dec     LCD06,x                         ; F576 DE 06 CD                 ...
-        .byte   $03                             ; F579 03                       .
-        ora     ($D8,x)                         ; F57A 01 D8                    ..
-        .byte   $0C                             ; F57C 0C                       .
-        php                                     ; F57D 08                       .
-        ora     ($67,x)                         ; F57E 01 67                    .g
-        cmp     #$C9                            ; F580 C9 C9                    ..
-        cmp     #$6A                            ; F582 C9 6A                    .j
-        cmp     #$C9                            ; F584 C9 C9                    ..
-        cmp     #$CE                            ; F586 C9 CE                    ..
-        ora     $7E                             ; F588 05 7E                    .~
-        brk                                     ; F58A 00                       .
-        ora     ($6E,x)                         ; F58B 01 6E                    .n
-        cmp     #$C9                            ; F58D C9 C9                    ..
-        cmp     #$6A                            ; F58F C9 6A                    .j
-        cmp     #$C9                            ; F591 C9 C9                    ..
-        cmp     #$6A                            ; F593 C9 6A                    .j
-        cmp     #$C9                            ; F595 C9 C9                    ..
-        cmp     #$67                            ; F597 C9 67                    .g
-        cmp     #$C9                            ; F599 C9 C9                    ..
-        cmp     #$6A                            ; F59B C9 6A                    .j
-        cmp     #$C9                            ; F59D C9 C9                    ..
-        cmp     #$6A                            ; F59F C9 6A                    .j
-        cmp     #$C9                            ; F5A1 C9 C9                    ..
-        cmp     #$65                            ; F5A3 C9 65                    .e
-        cmp     #$C9                            ; F5A5 C9 C9                    ..
-        cmp     #$69                            ; F5A7 C9 69                    .i
-        cmp     #$C9                            ; F5A9 C9 C9                    ..
-        cmp     #$69                            ; F5AB C9 69                    .i
-        cmp     #$C9                            ; F5AD C9 C9                    ..
-        cmp     #$CF                            ; F5AF C9 CF                    ..
-        ora     $A7                             ; F5B1 05 A7                    ..
-        brk                                     ; F5B3 00                       .
-        ora     ($6C,x)                         ; F5B4 01 6C                    .l
-        cmp     #$C9                            ; F5B6 C9 C9                    ..
-        cmp     #$69                            ; F5B8 C9 69                    .i
-        cmp     #$C9                            ; F5BA C9 C9                    ..
-        cmp     #$69                            ; F5BC C9 69                    .i
-        cmp     #$C9                            ; F5BE C9 C9                    ..
-        cmp     #$65                            ; F5C0 C9 65                    .e
-        cmp     #$C9                            ; F5C2 C9 C9                    ..
-        cmp     #$69                            ; F5C4 C9 69                    .i
-        cmp     #$C9                            ; F5C6 C9 C9                    ..
-        cmp     #$69                            ; F5C8 C9 69                    .i
-        cmp     #$C9                            ; F5CA C9 C9                    ..
-        cmp     #$67                            ; F5CC C9 67                    .g
-        cmp     #$C9                            ; F5CE C9 C9                    ..
-        cmp     #$6A                            ; F5D0 C9 6A                    .j
-        cmp     #$C9                            ; F5D2 C9 C9                    ..
-        cmp     #$CE                            ; F5D4 C9 CE                    ..
-        ora     $CC                             ; F5D6 05 CC                    ..
-        brk                                     ; F5D8 00                       .
-        ora     ($6E,x)                         ; F5D9 01 6E                    .n
-        cmp     #$C9                            ; F5DB C9 C9                    ..
-        cmp     #$6A                            ; F5DD C9 6A                    .j
-        cmp     #$C9                            ; F5DF C9 C9                    ..
-        cmp     #$6A                            ; F5E1 C9 6A                    .j
-        cmp     #$C9                            ; F5E3 C9 C9                    ..
-        cmp     #$67                            ; F5E5 C9 67                    .g
-        cmp     #$C9                            ; F5E7 C9 C9                    ..
-        cmp     #$6A                            ; F5E9 C9 6A                    .j
-        cmp     #$C9                            ; F5EB C9 C9                    ..
-        cmp     #$6A                            ; F5ED C9 6A                    .j
-        cmp     #$C9                            ; F5EF C9 C9                    ..
-        cmp     #$62                            ; F5F1 C9 62                    .b
-        cmp     #$C9                            ; F5F3 C9 C9                    ..
-        cmp     #$65                            ; F5F5 C9 65                    .e
-        cmp     #$C9                            ; F5F7 C9 C9                    ..
-        cmp     #$CE                            ; F5F9 C9 CE                    ..
-        ora     $F1                             ; F5FB 05 F1                    ..
-        brk                                     ; F5FD 00                       .
-        ora     ($69,x)                         ; F5FE 01 69                    .i
-        cmp     #$C9                            ; F600 C9 C9                    ..
-        cmp     #$65                            ; F602 C9 65                    .e
-        cmp     #$C9                            ; F604 C9 C9                    ..
-        cmp     #$65                            ; F606 C9 65                    .e
-        cmp     #$C9                            ; F608 C9 C9                    ..
-        cmp     #$62                            ; F60A C9 62                    .b
-        cmp     #$C9                            ; F60C C9 C9                    ..
-        cmp     #$65                            ; F60E C9 65                    .e
-        cmp     #$C9                            ; F610 C9 C9                    ..
-        cmp     #$65                            ; F612 C9 65                    .e
-        cmp     #$C9                            ; F614 C9 C9                    ..
-        cmp     #$63                            ; F616 C9 63                    .c
-        cmp     #$C9                            ; F618 C9 C9                    ..
-        cmp     #$67                            ; F61A C9 67                    .g
-        cmp     #$C9                            ; F61C C9 C9                    ..
-        cmp     #$01                            ; F61E C9 01                    ..
-        dec     $1605                           ; F620 CE 05 16                 ...
-        ora     ($01,x)                         ; F623 01 01                    ..
-        ror     a                               ; F625 6A                       j
-        cmp     #$C9                            ; F626 C9 C9                    ..
-        cmp     #$67                            ; F628 C9 67                    .g
-        cmp     #$C9                            ; F62A C9 C9                    ..
-        cmp     #$67                            ; F62C C9 67                    .g
-        cmp     #$C9                            ; F62E C9 C9                    ..
-        cmp     #$63                            ; F630 C9 63                    .c
-        cmp     #$C9                            ; F632 C9 C9                    ..
-        cmp     #$67                            ; F634 C9 67                    .g
-        cmp     #$C9                            ; F636 C9 C9                    ..
-        cmp     #$67                            ; F638 C9 67                    .g
-        cmp     #$C9                            ; F63A C9 C9                    ..
-        cmp     #$62                            ; F63C C9 62                    .b
-        cmp     #$C9                            ; F63E C9 C9                    ..
-        cmp     #$65                            ; F640 C9 65                    .e
-        cmp     #$C9                            ; F642 C9 C9                    ..
-        cmp     #$CF                            ; F644 C9 CF                    ..
-        ora     $3C                             ; F646 05 3C                    .<
-        ora     ($01,x)                         ; F648 01 01                    ..
-        adc     #$C9                            ; F64A 69 C9                    i.
-        cmp     #$C9                            ; F64C C9 C9                    ..
-        adc     $C9                             ; F64E 65 C9                    e.
-        cmp     #$C9                            ; F650 C9 C9                    ..
-        adc     $C9                             ; F652 65 C9                    e.
-        cmp     #$C9                            ; F654 C9 C9                    ..
-        .byte   $62                             ; F656 62                       b
-        cmp     #$C9                            ; F657 C9 C9                    ..
-        cmp     #$65                            ; F659 C9 65                    .e
-        cmp     #$C9                            ; F65B C9 C9                    ..
-        cmp     #$65                            ; F65D C9 65                    .e
-        cmp     #$C9                            ; F65F C9 C9                    ..
-        cmp     #$D0                            ; F661 C9 D0                    ..
-        cpy     LC7BB                           ; F663 CC BB C7                 ...
-        .byte   $FF                             ; F666 FF                       .
-        cpy     $FF                             ; F667 C4 FF                    ..
-        cmp     a:$03                           ; F669 CD 03 00                 ...
-        .byte   $DB                             ; F66C DB                       .
-        .byte   $07                             ; F66D 07                       .
-        brk                                     ; F66E 00                       .
-        asl     LD878,x                         ; F66F 1E 78 D8                 .x.
-        brk                                     ; F672 00                       .
-        dec     LCD06,x                         ; F673 DE 06 CD                 ...
-        .byte   $03                             ; F676 03                       .
-        ora     ($D8,x)                         ; F677 01 D8                    ..
-        .byte   $0C                             ; F679 0C                       .
-        php                                     ; F67A 08                       .
-        ora     ($5C,x)                         ; F67B 01 5C                    .\
-        cmp     #$C9                            ; F67D C9 C9                    ..
-        cmp     #$60                            ; F67F C9 60                    .`
-        cmp     #$C9                            ; F681 C9 C9                    ..
-        cmp     #$50                            ; F683 C9 50                    .P
-        cmp     #$C9                            ; F685 C9 C9                    ..
-        cmp     #$CE                            ; F687 C9 CE                    ..
-        .byte   $04                             ; F689 04                       .
-        ror     $01,x                           ; F68A 76 01                    v.
-        ora     ($5B,x)                         ; F68C 01 5B                    .[
-        cmp     #$C9                            ; F68E C9 C9                    ..
-        cmp     #$5E                            ; F690 C9 5E                    .^
-        cmp     #$C9                            ; F692 C9 C9                    ..
-        cmp     #$4F                            ; F694 C9 4F                    .O
-        cmp     #$C9                            ; F696 C9 C9                    ..
-        cmp     #$CF                            ; F698 C9 CF                    ..
-        .byte   $04                             ; F69A 04                       .
-        dey                                     ; F69B 88                       .
-        ora     ($01,x)                         ; F69C 01 01                    ..
-        .byte   $5C                             ; F69E 5C                       \
-        cmp     #$C9                            ; F69F C9 C9                    ..
-        cmp     #$60                            ; F6A1 C9 60                    .`
-        cmp     #$C9                            ; F6A3 C9 C9                    ..
-        cmp     #$50                            ; F6A5 C9 50                    .P
-        cmp     #$C9                            ; F6A7 C9 C9                    ..
-        cmp     #$CE                            ; F6A9 C9 CE                    ..
-        .byte   $04                             ; F6AB 04                       .
-        tya                                     ; F6AC 98                       .
-        ora     ($01,x)                         ; F6AD 01 01                    ..
-        .byte   $57                             ; F6AF 57                       W
-        cmp     #$C9                            ; F6B0 C9 C9                    ..
-        cmp     #$5B                            ; F6B2 C9 5B                    .[
-        cmp     #$C9                            ; F6B4 C9 C9                    ..
-        cmp     #$4B                            ; F6B6 C9 4B                    .K
-        cmp     #$C9                            ; F6B8 C9 C9                    ..
-        cmp     #$CF                            ; F6BA C9 CF                    ..
-        .byte   $04                             ; F6BC 04                       .
-        lda     #$01                            ; F6BD A9 01                    ..
-        ora     ($59,x)                         ; F6BF 01 59                    .Y
-        cmp     #$C9                            ; F6C1 C9 C9                    ..
-        cmp     #$5C                            ; F6C3 C9 5C                    .\
-        cmp     #$C9                            ; F6C5 C9 C9                    ..
-        cmp     #$4D                            ; F6C7 C9 4D                    .M
-        cmp     #$C9                            ; F6C9 C9 C9                    ..
-        cmp     #$CE                            ; F6CB C9 CE                    ..
-        .byte   $04                             ; F6CD 04                       .
-        tsx                                     ; F6CE BA                       .
-        ora     ($01,x)                         ; F6CF 01 01                    ..
-        .byte   $57                             ; F6D1 57                       W
-        cmp     #$C9                            ; F6D2 C9 C9                    ..
-        cmp     #$5B                            ; F6D4 C9 5B                    .[
-        cmp     #$C9                            ; F6D6 C9 C9                    ..
-        cmp     #$4B                            ; F6D8 C9 4B                    .K
-        cmp     #$C9                            ; F6DA C9 C9                    ..
-        cmp     #$CF                            ; F6DC C9 CF                    ..
-        .byte   $04                             ; F6DE 04                       .
-        .byte   $CB                             ; F6DF CB                       .
-        ora     ($D0,x)                         ; F6E0 01 D0                    ..
-        cpy     LC7BB                           ; F6E2 CC BB C7                 ...
-        .byte   $FF                             ; F6E5 FF                       .
-        cpy     $FF                             ; F6E6 C4 FF                    ..
-        cmp     a:$03                           ; F6E8 CD 03 00                 ...
-        .byte   $DB                             ; F6EB DB                       .
-        .byte   $07                             ; F6EC 07                       .
-        brk                                     ; F6ED 00                       .
-        asl     LD878,x                         ; F6EE 1E 78 D8                 .x.
-        brk                                     ; F6F1 00                       .
-LF6F3           := * + 1
-        dec     LCD06,x                         ; F6F2 DE 06 CD                 ...
-        .byte   $03                             ; F6F5 03                       .
-        ora     ($D8,x)                         ; F6F6 01 D8                    ..
-        .byte   $0C                             ; F6F8 0C                       .
-        php                                     ; F6F9 08                       .
-        .byte   $3F                             ; F6FA 3F                       ?
-        cmp     #$C9                            ; F6FB C9 C9                    ..
-        cmp     #$C9                            ; F6FD C9 C9                    ..
-        cmp     #$C9                            ; F6FF C9 C9                    ..
-LF702           := * + 1
-        bne     LF702                           ; F701 D0 FF                    ..
-        brk                                     ; F703 00                       .
-        asl     L0100                           ; F704 0E 00 01                 ...
-        bcc     LF709                           ; F707 90 00                    ..
-LF709:
-        .byte   $02                             ; F709 02                       .
-        bcs     LF70C                           ; F70A B0 00                    ..
-LF70C:
-        .byte   $03                             ; F70C 03                       .
-        .byte   $D2                             ; F70D D2                       .
-        brk                                     ; F70E 00                       .
-        .byte   $FF                             ; F70F FF                       .
-        cpy     LC777                           ; F710 CC 77 C7                 .w.
-        .byte   $FF                             ; F713 FF                       .
-        cpy     $FF                             ; F714 C4 FF                    ..
-        cmp     a:$03                           ; F716 CD 03 00                 ...
-        .byte   $DB                             ; F719 DB                       .
-        .byte   $07                             ; F71A 07                       .
-        brk                                     ; F71B 00                       .
-        asl     LD878,x                         ; F71C 1E 78 D8                 .x.
-        brk                                     ; F71F 00                       .
-        dec     LCD06,x                         ; F720 DE 06 CD                 ...
-        .byte   $03                             ; F723 03                       .
-        ora     ($D8,x)                         ; F724 01 D8                    ..
-        .byte   $0C                             ; F726 0C                       .
-        php                                     ; F727 08                       .
-        bpl     LF6F3                           ; F728 10 C9                    ..
-        asl     $0174                           ; F72A 0E 74 01                 .t.
-        .byte   $72                             ; F72D 72                       r
-        bvs     LF739                           ; F72E 70 09                    p.
-        .byte   $6F                             ; F730 6F                       o
-        ora     ($C9,x)                         ; F731 01 C9                    ..
-        .byte   $6F                             ; F733 6F                       o
-        bvs     LF738                           ; F734 70 02                    p.
-        .byte   $72                             ; F736 72                       r
-LF738           := * + 1
-        ora     ($70,x)                         ; F737 01 70                    .p
-LF739:
-        .byte   $6F                             ; F739 6F                       o
-        ora     #$6D                            ; F73A 09 6D                    .m
-        ora     ($C9,x)                         ; F73C 01 C9                    ..
-        adc     $026F                           ; F73E 6D 6F 02                 mo.
-        bvs     LF744                           ; F741 70 01                    p.
-        .byte   $6F                             ; F743 6F                       o
-LF744:
-        adc     $6B09                           ; F744 6D 09 6B                 m.k
-        ora     ($C9,x)                         ; F747 01 C9                    ..
-        .byte   $6B                             ; F749 6B                       k
-        adc     $6F02                           ; F74A 6D 02 6F                 m.o
-        ora     ($6D,x)                         ; F74D 01 6D                    .m
-        .byte   $6B                             ; F74F 6B                       k
-        ora     $016A,y                         ; F750 19 6A 01                 .j.
-        cmp     #$6A                            ; F753 C9 6A                    .j
-        .byte   $6B                             ; F755 6B                       k
-        .byte   $02                             ; F756 02                       .
-        adc     $2070                           ; F757 6D 70 20                 mp 
-        .byte   $6F                             ; F75A 6F                       o
-        asl     $0174                           ; F75B 0E 74 01                 .t.
-        .byte   $72                             ; F75E 72                       r
-        bvs     LF76A                           ; F75F 70 09                    p.
-        .byte   $6F                             ; F761 6F                       o
-        ora     ($C9,x)                         ; F762 01 C9                    ..
-        .byte   $6F                             ; F764 6F                       o
-        bvs     LF769                           ; F765 70 02                    p.
-        .byte   $72                             ; F767 72                       r
-LF769           := * + 1
-        ora     ($70,x)                         ; F768 01 70                    .p
-LF76A:
-        .byte   $6F                             ; F76A 6F                       o
-        ora     #$6D                            ; F76B 09 6D                    .m
-        ora     ($C9,x)                         ; F76D 01 C9                    ..
-        adc     $026F                           ; F76F 6D 6F 02                 mo.
-        bvs     LF775                           ; F772 70 01                    p.
-        .byte   $6F                             ; F774 6F                       o
-LF775:
-        adc     $6B09                           ; F775 6D 09 6B                 m.k
-        ora     ($C9,x)                         ; F778 01 C9                    ..
-        .byte   $6B                             ; F77A 6B                       k
-        adc     $6F02                           ; F77B 6D 02 6F                 m.o
-LF77F           := * + 1
-        ora     ($6D,x)                         ; F77E 01 6D                    .m
-        .byte   $6B                             ; F780 6B                       k
-        .byte   $1A                             ; F781 1A                       .
-        ror     a                               ; F782 6A                       j
-        ora     ($6B,x)                         ; F783 01 6B                    .k
-        ror     a                               ; F785 6A                       j
-        .byte   $6B                             ; F786 6B                       k
-        adc     $6A6B                           ; F787 6D 6B 6A                 mkj
-        .byte   $02                             ; F78A 02                       .
-        .byte   $6B                             ; F78B 6B                       k
-        ror     a                               ; F78C 6A                       j
-        clc                                     ; F78D 18                       .
-        pla                                     ; F78E 68                       h
-        .byte   $04                             ; F78F 04                       .
-        cmp     #$D0                            ; F790 C9 D0                    ..
-        cpy     LC777                           ; F792 CC 77 C7                 .w.
-        .byte   $FF                             ; F795 FF                       .
-        cpy     $44                             ; F796 C4 44                    .D
-        cmp     a:$03                           ; F798 CD 03 00                 ...
-        .byte   $DB                             ; F79B DB                       .
-        .byte   $07                             ; F79C 07                       .
-        brk                                     ; F79D 00                       .
-        asl     LD878,x                         ; F79E 1E 78 D8                 .x.
-LF7A1:
-        brk                                     ; F7A1 00                       .
-        dec     LCD06,x                         ; F7A2 DE 06 CD                 ...
-        .byte   $03                             ; F7A5 03                       .
-        ora     ($D8,x)                         ; F7A6 01 D8                    ..
-        .byte   $0C                             ; F7A8 0C                       .
-        php                                     ; F7A9 08                       .
-        .byte   $04                             ; F7AA 04                       .
-        pla                                     ; F7AB 68                       h
-        .byte   $6B                             ; F7AC 6B                       k
-        dec     LA844                           ; F7AD CE 44 A8                 .D.
-        brk                                     ; F7B0 00                       .
-        bne     LF77F                           ; F7B1 D0 CC                    ..
-        .byte   $77                             ; F7B3 77                       w
-        .byte   $C7                             ; F7B4 C7                       .
-        .byte   $FF                             ; F7B5 FF                       .
-        cpy     $FF                             ; F7B6 C4 FF                    ..
-        cmp     a:$03                           ; F7B8 CD 03 00                 ...
-        .byte   $DB                             ; F7BB DB                       .
-        .byte   $07                             ; F7BC 07                       .
-        brk                                     ; F7BD 00                       .
-        asl     LD878,x                         ; F7BE 1E 78 D8                 .x.
-        brk                                     ; F7C1 00                       .
-        dec     LCD06,x                         ; F7C2 DE 06 CD                 ...
-        .byte   $03                             ; F7C5 03                       .
-        ora     ($D8,x)                         ; F7C6 01 D8                    ..
-        .byte   $0C                             ; F7C8 0C                       .
-        php                                     ; F7C9 08                       .
-        .byte   $02                             ; F7CA 02                       .
-        bvc     LF824                           ; F7CB 50 57                    PW
-        eor     $58,x                           ; F7CD 55 58                    UX
-        dec     LC822                           ; F7CF CE 22 C8                 .".
-        brk                                     ; F7D2 00                       .
-        bne     LF7A1                           ; F7D3 D0 CC                    ..
-        .byte   $77                             ; F7D5 77                       w
-        .byte   $C7                             ; F7D6 C7                       .
-        .byte   $FF                             ; F7D7 FF                       .
-        cpy     $FF                             ; F7D8 C4 FF                    ..
-        cmp     a:$03                           ; F7DA CD 03 00                 ...
-        .byte   $DB                             ; F7DD DB                       .
-        .byte   $07                             ; F7DE 07                       .
-        brk                                     ; F7DF 00                       .
-        asl     LD878,x                         ; F7E0 1E 78 D8                 .x.
-        brk                                     ; F7E3 00                       .
-        dec     LCD06,x                         ; F7E4 DE 06 CD                 ...
-        .byte   $03                             ; F7E7 03                       .
-        ora     ($D8,x)                         ; F7E8 01 D8                    ..
-        .byte   $0C                             ; F7EA 0C                       .
-        php                                     ; F7EB 08                       .
-        .byte   $3F                             ; F7EC 3F                       ?
-        cmp     #$C9                            ; F7ED C9 C9                    ..
-        cmp     #$C9                            ; F7EF C9 C9                    ..
-        cmp     #$D0                            ; F7F1 C9 D0                    ..
+        .byte   $FF,$00,$0E,$00,$01,$61,$00,$02 ; F505 FF 00 0E 00 01 61 00 02  .....a..
+        .byte   $5E,$01,$03,$DD,$01,$FF,$CC,$BB ; F50D 5E 01 03 DD 01 FF CC BB  ^.......
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; F515 C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; F51D 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$08,$6C ; F525 CD 03 01 D8 0C 08 08 6C  .......l
+        .byte   $04,$6F,$08,$73,$04,$6F,$18,$73 ; F52D 04 6F 08 73 04 6F 18 73  .o.s.o.s
+        .byte   $08,$6A,$04,$6E,$08,$73,$04,$6E ; F535 08 6A 04 6E 08 73 04 6E  .j.n.s.n
+        .byte   $18,$73,$08,$6C,$04,$6F,$08,$73 ; F53D 18 73 08 6C 04 6F 08 73  .s.l.o.s
+        .byte   $04,$6F,$18,$73,$08,$6A,$04,$6F ; F545 04 6F 18 73 08 6A 04 6F  .o.s.j.o
+        .byte   $08,$73,$04,$6F,$18,$73,$08,$68 ; F54D 08 73 04 6F 18 73 08 68  .s.o.s.h
+        .byte   $04,$6C,$08,$73,$04,$6C,$14,$73 ; F555 04 6C 08 73 04 6C 14 73  .l.s.l.s
+        .byte   $04,$71,$08,$6E,$04,$71,$28,$6E ; F55D 04 71 08 6E 04 71 28 6E  .q.n.q(n
+        .byte   $D0,$CC,$BB,$C7,$FF,$C4,$FF,$CD ; F565 D0 CC BB C7 FF C4 FF CD  ........
+        .byte   $03,$00,$DB,$07,$00,$1E,$78,$D8 ; F56D 03 00 DB 07 00 1E 78 D8  ......x.
+        .byte   $00,$DE,$06,$CD,$03,$01,$D8,$0C ; F575 00 DE 06 CD 03 01 D8 0C  ........
+        .byte   $08,$01,$67,$C9,$C9,$C9,$6A,$C9 ; F57D 08 01 67 C9 C9 C9 6A C9  ..g...j.
+        .byte   $C9,$C9,$CE,$05,$7E,$00,$01,$6E ; F585 C9 C9 CE 05 7E 00 01 6E  ....~..n
+        .byte   $C9,$C9,$C9,$6A,$C9,$C9,$C9,$6A ; F58D C9 C9 C9 6A C9 C9 C9 6A  ...j...j
+        .byte   $C9,$C9,$C9,$67,$C9,$C9,$C9,$6A ; F595 C9 C9 C9 67 C9 C9 C9 6A  ...g...j
+        .byte   $C9,$C9,$C9,$6A,$C9,$C9,$C9,$65 ; F59D C9 C9 C9 6A C9 C9 C9 65  ...j...e
+        .byte   $C9,$C9,$C9,$69,$C9,$C9,$C9,$69 ; F5A5 C9 C9 C9 69 C9 C9 C9 69  ...i...i
+        .byte   $C9,$C9,$C9,$CF,$05,$A7,$00,$01 ; F5AD C9 C9 C9 CF 05 A7 00 01  ........
+        .byte   $6C,$C9,$C9,$C9,$69,$C9,$C9,$C9 ; F5B5 6C C9 C9 C9 69 C9 C9 C9  l...i...
+        .byte   $69,$C9,$C9,$C9,$65,$C9,$C9,$C9 ; F5BD 69 C9 C9 C9 65 C9 C9 C9  i...e...
+        .byte   $69,$C9,$C9,$C9,$69,$C9,$C9,$C9 ; F5C5 69 C9 C9 C9 69 C9 C9 C9  i...i...
+        .byte   $67,$C9,$C9,$C9,$6A,$C9,$C9,$C9 ; F5CD 67 C9 C9 C9 6A C9 C9 C9  g...j...
+        .byte   $CE,$05,$CC,$00,$01,$6E,$C9,$C9 ; F5D5 CE 05 CC 00 01 6E C9 C9  .....n..
+        .byte   $C9,$6A,$C9,$C9,$C9,$6A,$C9,$C9 ; F5DD C9 6A C9 C9 C9 6A C9 C9  .j...j..
+        .byte   $C9,$67,$C9,$C9,$C9,$6A,$C9,$C9 ; F5E5 C9 67 C9 C9 C9 6A C9 C9  .g...j..
+        .byte   $C9,$6A,$C9,$C9,$C9,$62,$C9,$C9 ; F5ED C9 6A C9 C9 C9 62 C9 C9  .j...b..
+        .byte   $C9,$65,$C9,$C9,$C9,$CE,$05,$F1 ; F5F5 C9 65 C9 C9 C9 CE 05 F1  .e......
+        .byte   $00,$01,$69,$C9,$C9,$C9,$65,$C9 ; F5FD 00 01 69 C9 C9 C9 65 C9  ..i...e.
+        .byte   $C9,$C9,$65,$C9,$C9,$C9,$62,$C9 ; F605 C9 C9 65 C9 C9 C9 62 C9  ..e...b.
+        .byte   $C9,$C9,$65,$C9,$C9,$C9,$65,$C9 ; F60D C9 C9 65 C9 C9 C9 65 C9  ..e...e.
+        .byte   $C9,$C9,$63,$C9,$C9,$C9,$67,$C9 ; F615 C9 C9 63 C9 C9 C9 67 C9  ..c...g.
+        .byte   $C9,$C9,$01,$CE,$05,$16,$01,$01 ; F61D C9 C9 01 CE 05 16 01 01  ........
+        .byte   $6A,$C9,$C9,$C9,$67,$C9,$C9,$C9 ; F625 6A C9 C9 C9 67 C9 C9 C9  j...g...
+        .byte   $67,$C9,$C9,$C9,$63,$C9,$C9,$C9 ; F62D 67 C9 C9 C9 63 C9 C9 C9  g...c...
+        .byte   $67,$C9,$C9,$C9,$67,$C9,$C9,$C9 ; F635 67 C9 C9 C9 67 C9 C9 C9  g...g...
+        .byte   $62,$C9,$C9,$C9,$65,$C9,$C9,$C9 ; F63D 62 C9 C9 C9 65 C9 C9 C9  b...e...
+        .byte   $CF,$05,$3C,$01,$01,$69,$C9,$C9 ; F645 CF 05 3C 01 01 69 C9 C9  ..<..i..
+        .byte   $C9,$65,$C9,$C9,$C9,$65,$C9,$C9 ; F64D C9 65 C9 C9 C9 65 C9 C9  .e...e..
+        .byte   $C9,$62,$C9,$C9,$C9,$65,$C9,$C9 ; F655 C9 62 C9 C9 C9 65 C9 C9  .b...e..
+        .byte   $C9,$65,$C9,$C9,$C9,$D0,$CC,$BB ; F65D C9 65 C9 C9 C9 D0 CC BB  .e......
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; F665 C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; F66D 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$01,$5C ; F675 CD 03 01 D8 0C 08 01 5C  .......\
+        .byte   $C9,$C9,$C9,$60,$C9,$C9,$C9,$50 ; F67D C9 C9 C9 60 C9 C9 C9 50  ...`...P
+        .byte   $C9,$C9,$C9,$CE,$04,$76,$01,$01 ; F685 C9 C9 C9 CE 04 76 01 01  .....v..
+        .byte   $5B,$C9,$C9,$C9,$5E,$C9,$C9,$C9 ; F68D 5B C9 C9 C9 5E C9 C9 C9  [...^...
+        .byte   $4F,$C9,$C9,$C9,$CF,$04,$88,$01 ; F695 4F C9 C9 C9 CF 04 88 01  O.......
+        .byte   $01,$5C,$C9,$C9,$C9,$60,$C9,$C9 ; F69D 01 5C C9 C9 C9 60 C9 C9  .\...`..
+        .byte   $C9,$50,$C9,$C9,$C9,$CE,$04,$98 ; F6A5 C9 50 C9 C9 C9 CE 04 98  .P......
+        .byte   $01,$01,$57,$C9,$C9,$C9,$5B,$C9 ; F6AD 01 01 57 C9 C9 C9 5B C9  ..W...[.
+        .byte   $C9,$C9,$4B,$C9,$C9,$C9,$CF,$04 ; F6B5 C9 C9 4B C9 C9 C9 CF 04  ..K.....
+        .byte   $A9,$01,$01,$59,$C9,$C9,$C9,$5C ; F6BD A9 01 01 59 C9 C9 C9 5C  ...Y...\
+        .byte   $C9,$C9,$C9,$4D,$C9,$C9,$C9,$CE ; F6C5 C9 C9 C9 4D C9 C9 C9 CE  ...M....
+        .byte   $04,$BA,$01,$01,$57,$C9,$C9,$C9 ; F6CD 04 BA 01 01 57 C9 C9 C9  ....W...
+        .byte   $5B,$C9,$C9,$C9,$4B,$C9,$C9,$C9 ; F6D5 5B C9 C9 C9 4B C9 C9 C9  [...K...
+        .byte   $CF,$04,$CB,$01,$D0,$CC,$BB,$C7 ; F6DD CF 04 CB 01 D0 CC BB C7  ........
+        .byte   $FF,$C4,$FF,$CD,$03,$00,$DB,$07 ; F6E5 FF C4 FF CD 03 00 DB 07  ........
+        .byte   $00,$1E,$78,$D8,$00,$DE,$06,$CD ; F6ED 00 1E 78 D8 00 DE 06 CD  ..x.....
+        .byte   $03,$01,$D8,$0C,$08,$3F,$C9,$C9 ; F6F5 03 01 D8 0C 08 3F C9 C9  .....?..
+        .byte   $C9,$C9,$C9,$C9,$D0             ; F6FD C9 C9 C9 C9 D0           .....
+LF702:
+        .byte   $FF,$00,$0E,$00,$01,$90,$00,$02 ; F702 FF 00 0E 00 01 90 00 02  ........
+        .byte   $B0,$00,$03,$D2,$00,$FF,$CC,$77 ; F70A B0 00 03 D2 00 FF CC 77  .......w
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; F712 C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; F71A 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$10,$C9 ; F722 CD 03 01 D8 0C 08 10 C9  ........
+        .byte   $0E,$74,$01,$72,$70,$09,$6F,$01 ; F72A 0E 74 01 72 70 09 6F 01  .t.rp.o.
+        .byte   $C9,$6F,$70,$02,$72,$01,$70,$6F ; F732 C9 6F 70 02 72 01 70 6F  .op.r.po
+        .byte   $09,$6D,$01,$C9,$6D,$6F,$02,$70 ; F73A 09 6D 01 C9 6D 6F 02 70  .m..mo.p
+        .byte   $01,$6F,$6D,$09,$6B,$01,$C9,$6B ; F742 01 6F 6D 09 6B 01 C9 6B  .om.k..k
+        .byte   $6D,$02,$6F,$01,$6D,$6B,$19,$6A ; F74A 6D 02 6F 01 6D 6B 19 6A  m.o.mk.j
+        .byte   $01,$C9,$6A,$6B,$02,$6D,$70,$20 ; F752 01 C9 6A 6B 02 6D 70 20  ..jk.mp 
+        .byte   $6F,$0E,$74,$01,$72,$70,$09,$6F ; F75A 6F 0E 74 01 72 70 09 6F  o.t.rp.o
+        .byte   $01,$C9,$6F,$70,$02,$72,$01,$70 ; F762 01 C9 6F 70 02 72 01 70  ..op.r.p
+        .byte   $6F,$09,$6D,$01,$C9,$6D,$6F,$02 ; F76A 6F 09 6D 01 C9 6D 6F 02  o.m..mo.
+        .byte   $70,$01,$6F,$6D,$09,$6B,$01,$C9 ; F772 70 01 6F 6D 09 6B 01 C9  p.om.k..
+        .byte   $6B,$6D,$02,$6F,$01,$6D,$6B,$1A ; F77A 6B 6D 02 6F 01 6D 6B 1A  km.o.mk.
+        .byte   $6A,$01,$6B,$6A,$6B,$6D,$6B,$6A ; F782 6A 01 6B 6A 6B 6D 6B 6A  j.kjkmkj
+        .byte   $02,$6B,$6A,$18,$68,$04,$C9,$D0 ; F78A 02 6B 6A 18 68 04 C9 D0  .kj.h...
+        .byte   $CC,$77,$C7,$FF,$C4,$44,$CD,$03 ; F792 CC 77 C7 FF C4 44 CD 03  .w...D..
+        .byte   $00,$DB,$07,$00,$1E,$78,$D8,$00 ; F79A 00 DB 07 00 1E 78 D8 00  .....x..
+        .byte   $DE,$06,$CD,$03,$01,$D8,$0C,$08 ; F7A2 DE 06 CD 03 01 D8 0C 08  ........
+        .byte   $04,$68,$6B,$CE,$44,$A8,$00,$D0 ; F7AA 04 68 6B CE 44 A8 00 D0  .hk.D...
+        .byte   $CC,$77,$C7,$FF,$C4,$FF,$CD,$03 ; F7B2 CC 77 C7 FF C4 FF CD 03  .w......
+        .byte   $00,$DB,$07,$00,$1E,$78,$D8,$00 ; F7BA 00 DB 07 00 1E 78 D8 00  .....x..
+        .byte   $DE,$06,$CD,$03,$01,$D8,$0C,$08 ; F7C2 DE 06 CD 03 01 D8 0C 08  ........
+        .byte   $02,$50,$57,$55,$58,$CE,$22,$C8 ; F7CA 02 50 57 55 58 CE 22 C8  .PWUX.".
+        .byte   $00,$D0,$CC,$77,$C7,$FF,$C4,$FF ; F7D2 00 D0 CC 77 C7 FF C4 FF  ...w....
+        .byte   $CD,$03,$00,$DB,$07,$00,$1E,$78 ; F7DA CD 03 00 DB 07 00 1E 78  .......x
+        .byte   $D8,$00,$DE,$06,$CD,$03,$01,$D8 ; F7E2 D8 00 DE 06 CD 03 01 D8  ........
+        .byte   $0C,$08,$3F,$C9,$C9,$C9,$C9,$C9 ; F7EA 0C 08 3F C9 C9 C9 C9 C9  ..?.....
+        .byte   $D0                             ; F7F2 D0                       .
 LF7F3:
-        .byte   $FF                             ; F7F3 FF                       .
-        brk                                     ; F7F4 00                       .
-        asl     L0100                           ; F7F5 0E 00 01                 ...
-        .byte   $82                             ; F7F8 82                       .
-        brk                                     ; F7F9 00                       .
-        .byte   $02                             ; F7FA 02                       .
-        plp                                     ; F7FB 28                       (
-        ora     ($03,x)                         ; F7FC 01 03                    ..
-        .byte   $5B                             ; F7FE 5B                       [
-        ora     ($FF,x)                         ; F7FF 01 FF                    ..
-        cpy     LC750                           ; F801 CC 50 C7                 .P.
-        .byte   $FF                             ; F804 FF                       .
-        cpy     $FF                             ; F805 C4 FF                    ..
-        cmp     a:$03                           ; F807 CD 03 00                 ...
-        .byte   $DB                             ; F80A DB                       .
-        .byte   $07                             ; F80B 07                       .
-        brk                                     ; F80C 00                       .
-        asl     LD878,x                         ; F80D 1E 78 D8                 .x.
-        brk                                     ; F810 00                       .
-        dec     LCD06,x                         ; F811 DE 06 CD                 ...
-        .byte   $03                             ; F814 03                       .
-        ora     ($D8,x)                         ; F815 01 D8                    ..
-        .byte   $0C                             ; F817 0C                       .
-        php                                     ; F818 08                       .
-        ora     ($6C,x)                         ; F819 01 6C                    .l
-        cmp     #$6C                            ; F81B C9 6C                    .l
-        cmp     #$6C                            ; F81D C9 6C                    .l
-        .byte   $02                             ; F81F 02                       .
-        ror     $6C01                           ; F820 6E 01 6C                 n.l
-        php                                     ; F823 08                       .
-LF824:
-        ror     a                               ; F824 6A                       j
-        ora     ($6C,x)                         ; F825 01 6C                    .l
-        cmp     #$6C                            ; F827 C9 6C                    .l
-        cmp     #$6F                            ; F829 C9 6F                    .o
-        .byte   $02                             ; F82B 02                       .
-        ror     $6C01                           ; F82C 6E 01 6C                 n.l
-        php                                     ; F82F 08                       .
-        ror     a                               ; F830 6A                       j
-        .byte   $03                             ; F831 03                       .
-        adc     $01                             ; F832 65 01                    e.
-        .byte   $63                             ; F834 63                       c
-        adc     $03                             ; F835 65 03                    e.
-        .byte   $67                             ; F837 67                       g
-        pla                                     ; F838 68                       h
-        ora     ($67,x)                         ; F839 01 67                    .g
-        pla                                     ; F83B 68                       h
-        .byte   $03                             ; F83C 03                       .
-        ror     a                               ; F83D 6A                       j
-        php                                     ; F83E 08                       .
-LF83F:
-        .byte   $67                             ; F83F 67                       g
-        cmp     #$01                            ; F840 C9 01                    ..
-LF842:
-        jmp     (L6CC9)                         ; F842 6C C9 6C                 l.l
-
-; ----------------------------------------------------------------------------
-        cmp     #$6C                            ; F845 C9 6C                    .l
-        .byte   $02                             ; F847 02                       .
-        ror     $6C01                           ; F848 6E 01 6C                 n.l
-        php                                     ; F84B 08                       .
-        ror     a                               ; F84C 6A                       j
-        ora     ($6C,x)                         ; F84D 01 6C                    .l
-        cmp     #$6C                            ; F84F C9 6C                    .l
-        cmp     #$6F                            ; F851 C9 6F                    .o
-        .byte   $02                             ; F853 02                       .
-        ror     $6C01                           ; F854 6E 01 6C                 n.l
-        php                                     ; F857 08                       .
-        ror     a                               ; F858 6A                       j
-        .byte   $03                             ; F859 03                       .
-        adc     $01                             ; F85A 65 01                    e.
-        .byte   $63                             ; F85C 63                       c
-        adc     $03                             ; F85D 65 03                    e.
-        .byte   $67                             ; F85F 67                       g
-        pla                                     ; F860 68                       h
-        ora     ($67,x)                         ; F861 01 67                    .g
-        pla                                     ; F863 68                       h
-        .byte   $03                             ; F864 03                       .
-        ror     a                               ; F865 6A                       j
-        php                                     ; F866 08                       .
-        jmp     (LC902)                         ; F867 6C 02 C9                 l..
-
-; ----------------------------------------------------------------------------
-        .byte   $6F                             ; F86A 6F                       o
-        ror     $106A                           ; F86B 6E 6A 10                 nj.
-        .byte   $67                             ; F86E 67                       g
-        adc     #$67                            ; F86F 69 67                    ig
-        php                                     ; F871 08                       .
-        adc     #$6B                            ; F872 69 6B                    ik
-        bne     LF842                           ; F874 D0 CC                    ..
-        bvc     LF83F                           ; F876 50 C7                    P.
-        .byte   $FF                             ; F878 FF                       .
-        cpy     $99                             ; F879 C4 99                    ..
-        cmp     a:$03                           ; F87B CD 03 00                 ...
-        .byte   $DB                             ; F87E DB                       .
-        .byte   $07                             ; F87F 07                       .
-        brk                                     ; F880 00                       .
-        asl     LD878,x                         ; F881 1E 78 D8                 .x.
-        brk                                     ; F884 00                       .
-        dec     LCD06,x                         ; F885 DE 06 CD                 ...
-        .byte   $03                             ; F888 03                       .
-        ora     ($D8,x)                         ; F889 01 D8                    ..
-        .byte   $0C                             ; F88B 0C                       .
-        php                                     ; F88C 08                       .
-        .byte   $04                             ; F88D 04                       .
-        .byte   $67                             ; F88E 67                       g
-        .byte   $67                             ; F88F 67                       g
-        php                                     ; F890 08                       .
-        .byte   $67                             ; F891 67                       g
-        .byte   $04                             ; F892 04                       .
-        .byte   $67                             ; F893 67                       g
-        .byte   $67                             ; F894 67                       g
-        php                                     ; F895 08                       .
-        .byte   $67                             ; F896 67                       g
-        ora     ($C9,x)                         ; F897 01 C9                    ..
-        eor     $605C,y                         ; F899 59 5C 60                 Y\`
-        .byte   $04                             ; F89C 04                       .
-        adc     ($01,x)                         ; F89D 61 01                    a.
-        cmp     #$59                            ; F89F C9 59                    .Y
-        lsr     $0462,x                         ; F8A1 5E 62 04                 ^b.
-        adc     $01                             ; F8A4 65 01                    e.
-        cmp     #$5B                            ; F8A6 C9 5B                    .[
-        lsr     $0462,x                         ; F8A8 5E 62 04                 ^b.
-        .byte   $63                             ; F8AB 63                       c
-        ora     ($C9,x)                         ; F8AC 01 C9                    ..
-        .byte   $5B                             ; F8AE 5B                       [
-        .byte   $5F                             ; F8AF 5F                       _
-        .byte   $62                             ; F8B0 62                       b
-        .byte   $04                             ; F8B1 04                       .
-        adc     $04                             ; F8B2 65 04                    e.
-        .byte   $67                             ; F8B4 67                       g
-        .byte   $67                             ; F8B5 67                       g
-        php                                     ; F8B6 08                       .
-        .byte   $67                             ; F8B7 67                       g
-        .byte   $04                             ; F8B8 04                       .
-        .byte   $67                             ; F8B9 67                       g
-        .byte   $67                             ; F8BA 67                       g
-        php                                     ; F8BB 08                       .
-        .byte   $67                             ; F8BC 67                       g
-        ora     ($C9,x)                         ; F8BD 01 C9                    ..
-        rts                                     ; F8BF 60                       `
-
-; ----------------------------------------------------------------------------
-        adc     $68                             ; F8C0 65 68                    eh
-        .byte   $04                             ; F8C2 04                       .
-        jmp     (LC901)                         ; F8C3 6C 01 C9                 l..
-
-; ----------------------------------------------------------------------------
-        .byte   $63                             ; F8C6 63                       c
-        pla                                     ; F8C7 68                       h
-        jmp     (L6F04)                         ; F8C8 6C 04 6F                 l.o
-
-; ----------------------------------------------------------------------------
-        ora     ($C9,x)                         ; F8CB 01 C9                    ..
-        adc     $6A                             ; F8CD 65 6A                    ej
-        ror     $7104                           ; F8CF 6E 04 71                 n.q
-        ora     ($C9,x)                         ; F8D2 01 C9                    ..
-        adc     $6A                             ; F8D4 65 6A                    ej
-        ror     $7104                           ; F8D6 6E 04 71                 n.q
-        ora     ($C9,x)                         ; F8D9 01 C9                    ..
-        .byte   $63                             ; F8DB 63                       c
-        .byte   $67                             ; F8DC 67                       g
-        jmp     (L6C6E)                         ; F8DD 6C 6E 6C                 lnl
-
-; ----------------------------------------------------------------------------
-        .byte   $67                             ; F8E0 67                       g
-        .byte   $63                             ; F8E1 63                       c
-        .byte   $6F                             ; F8E2 6F                       o
-LF8E5           := * + 2
-        jmp     (L7167)                         ; F8E3 6C 67 71                 lgq
-
-; ----------------------------------------------------------------------------
-LF8E8           := * + 2
-        jmp     (L6F67)                         ; F8E6 6C 67 6F                 lgo
-
-; ----------------------------------------------------------------------------
-        jmp     (L60C9)                         ; F8E9 6C C9 60                 l.`
-
-; ----------------------------------------------------------------------------
-        adc     $69                             ; F8EC 65 69                    ei
-        jmp     (L6569)                         ; F8EE 6C 69 65                 lie
-
-; ----------------------------------------------------------------------------
-        rts                                     ; F8F1 60                       `
-
-; ----------------------------------------------------------------------------
-        adc     #$65                            ; F8F2 69 65                    ie
-        rts                                     ; F8F4 60                       `
-
-; ----------------------------------------------------------------------------
-        ror     a                               ; F8F5 6A                       j
-        adc     $60                             ; F8F6 65 60                    e`
-        adc     #$65                            ; F8F8 69 65                    ie
-        cmp     #$63                            ; F8FA C9 63                    .c
-        .byte   $67                             ; F8FC 67                       g
-        jmp     (L6C6E)                         ; F8FD 6C 6E 6C                 lnl
-
-; ----------------------------------------------------------------------------
-        .byte   $67                             ; F900 67                       g
-        .byte   $63                             ; F901 63                       c
-        .byte   $6F                             ; F902 6F                       o
-        jmp     (L7167)                         ; F903 6C 67 71                 lgq
-
-; ----------------------------------------------------------------------------
-        jmp     (L6F67)                         ; F906 6C 67 6F                 lgo
-
-; ----------------------------------------------------------------------------
-        jmp     (L60C9)                         ; F909 6C C9 60                 l.`
-
-; ----------------------------------------------------------------------------
-        adc     $69                             ; F90C 65 69                    ei
-        jmp     (L6569)                         ; F90E 6C 69 65                 lie
-
-; ----------------------------------------------------------------------------
-        rts                                     ; F911 60                       `
-
-; ----------------------------------------------------------------------------
-        cmp     #$62                            ; F912 C9 62                    .b
-        .byte   $67                             ; F914 67                       g
-        .byte   $6B                             ; F915 6B                       k
-        ror     $676B                           ; F916 6E 6B 67                 nkg
-        .byte   $62                             ; F919 62                       b
-        bne     LF8E8                           ; F91A D0 CC                    ..
-        bvc     LF8E5                           ; F91C 50 C7                    P.
-        .byte   $FF                             ; F91E FF                       .
-        cpy     $55                             ; F91F C4 55                    .U
-        cmp     a:$03                           ; F921 CD 03 00                 ...
-        .byte   $DB                             ; F924 DB                       .
-        .byte   $07                             ; F925 07                       .
-        brk                                     ; F926 00                       .
-        asl     LD878,x                         ; F927 1E 78 D8                 .x.
-        brk                                     ; F92A 00                       .
-        dec     LCD06,x                         ; F92B DE 06 CD                 ...
-        .byte   $03                             ; F92E 03                       .
-        ora     ($D8,x)                         ; F92F 01 D8                    ..
-        .byte   $0C                             ; F931 0C                       .
-        php                                     ; F932 08                       .
-        php                                     ; F933 08                       .
-        rts                                     ; F934 60                       `
-
-; ----------------------------------------------------------------------------
-        lsr     $5E60,x                         ; F935 5E 60 5E                 ^`^
-        eor     $5B59,y                         ; F938 59 59 5B                 YY[
-        .byte   $5F                             ; F93B 5F                       _
-        rts                                     ; F93C 60                       `
-
-; ----------------------------------------------------------------------------
-        lsr     $5E60,x                         ; F93D 5E 60 5E                 ^`^
-        eor     $5E5C,y                         ; F940 59 5C 5E                 Y\^
-        .byte   $04                             ; F943 04                       .
-        .byte   $63                             ; F944 63                       c
-        .byte   $62                             ; F945 62                       b
-        bpl     LF9A6                           ; F946 10 5E                    .^
-        eor     $085E,x                         ; F948 5D 5E 08                 ]^.
-        eor     LD05F,x                         ; F94B 5D 5F D0                 ]_.
-        cpy     LC750                           ; F94E CC 50 C7                 .P.
-        .byte   $FF                             ; F951 FF                       .
-        cpy     $FF                             ; F952 C4 FF                    ..
-        cmp     a:$03                           ; F954 CD 03 00                 ...
-        .byte   $DB                             ; F957 DB                       .
-        .byte   $07                             ; F958 07                       .
-        brk                                     ; F959 00                       .
-        asl     LD878,x                         ; F95A 1E 78 D8                 .x.
-        brk                                     ; F95D 00                       .
-        dec     LCD06,x                         ; F95E DE 06 CD                 ...
-LF961:
-        .byte   $03                             ; F961 03                       .
-        ora     ($D8,x)                         ; F962 01 D8                    ..
-        .byte   $0C                             ; F964 0C                       .
-        php                                     ; F965 08                       .
-        .byte   $3F                             ; F966 3F                       ?
-        cmp     #$C9                            ; F967 C9 C9                    ..
-        cmp     #$C9                            ; F969 C9 C9                    ..
-        cmp     #$D0                            ; F96B C9 D0                    ..
+        .byte   $FF,$00,$0E,$00,$01,$82,$00,$02 ; F7F3 FF 00 0E 00 01 82 00 02  ........
+        .byte   $28,$01,$03,$5B,$01,$FF,$CC,$50 ; F7FB 28 01 03 5B 01 FF CC 50  (..[...P
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; F803 C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; F80B 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$01,$6C ; F813 CD 03 01 D8 0C 08 01 6C  .......l
+        .byte   $C9,$6C,$C9,$6C,$02,$6E,$01,$6C ; F81B C9 6C C9 6C 02 6E 01 6C  .l.l.n.l
+        .byte   $08,$6A,$01,$6C,$C9,$6C,$C9,$6F ; F823 08 6A 01 6C C9 6C C9 6F  .j.l.l.o
+        .byte   $02,$6E,$01,$6C,$08,$6A,$03,$65 ; F82B 02 6E 01 6C 08 6A 03 65  .n.l.j.e
+        .byte   $01,$63,$65,$03,$67,$68,$01,$67 ; F833 01 63 65 03 67 68 01 67  .ce.gh.g
+        .byte   $68,$03,$6A,$08,$67,$C9,$01,$6C ; F83B 68 03 6A 08 67 C9 01 6C  h.j.g..l
+        .byte   $C9,$6C,$C9,$6C,$02,$6E,$01,$6C ; F843 C9 6C C9 6C 02 6E 01 6C  .l.l.n.l
+        .byte   $08,$6A,$01,$6C,$C9,$6C,$C9,$6F ; F84B 08 6A 01 6C C9 6C C9 6F  .j.l.l.o
+        .byte   $02,$6E,$01,$6C,$08,$6A,$03,$65 ; F853 02 6E 01 6C 08 6A 03 65  .n.l.j.e
+        .byte   $01,$63,$65,$03,$67,$68,$01,$67 ; F85B 01 63 65 03 67 68 01 67  .ce.gh.g
+        .byte   $68,$03,$6A,$08,$6C,$02,$C9,$6F ; F863 68 03 6A 08 6C 02 C9 6F  h.j.l..o
+        .byte   $6E,$6A,$10,$67,$69,$67,$08,$69 ; F86B 6E 6A 10 67 69 67 08 69  nj.gig.i
+        .byte   $6B,$D0,$CC,$50,$C7,$FF,$C4,$99 ; F873 6B D0 CC 50 C7 FF C4 99  k..P....
+        .byte   $CD,$03,$00,$DB,$07,$00,$1E,$78 ; F87B CD 03 00 DB 07 00 1E 78  .......x
+        .byte   $D8,$00,$DE,$06,$CD,$03,$01,$D8 ; F883 D8 00 DE 06 CD 03 01 D8  ........
+        .byte   $0C,$08,$04,$67,$67,$08,$67,$04 ; F88B 0C 08 04 67 67 08 67 04  ...gg.g.
+        .byte   $67,$67,$08,$67,$01,$C9,$59,$5C ; F893 67 67 08 67 01 C9 59 5C  gg.g..Y\
+        .byte   $60,$04,$61,$01,$C9,$59,$5E,$62 ; F89B 60 04 61 01 C9 59 5E 62  `.a..Y^b
+        .byte   $04,$65,$01,$C9,$5B,$5E,$62,$04 ; F8A3 04 65 01 C9 5B 5E 62 04  .e..[^b.
+        .byte   $63,$01,$C9,$5B,$5F,$62,$04,$65 ; F8AB 63 01 C9 5B 5F 62 04 65  c..[_b.e
+        .byte   $04,$67,$67,$08,$67,$04,$67,$67 ; F8B3 04 67 67 08 67 04 67 67  .gg.g.gg
+        .byte   $08,$67,$01,$C9,$60,$65,$68,$04 ; F8BB 08 67 01 C9 60 65 68 04  .g..`eh.
+        .byte   $6C,$01,$C9,$63,$68,$6C,$04,$6F ; F8C3 6C 01 C9 63 68 6C 04 6F  l..chl.o
+        .byte   $01,$C9,$65,$6A,$6E,$04,$71,$01 ; F8CB 01 C9 65 6A 6E 04 71 01  ..ejn.q.
+        .byte   $C9,$65,$6A,$6E,$04,$71,$01,$C9 ; F8D3 C9 65 6A 6E 04 71 01 C9  .ejn.q..
+        .byte   $63,$67,$6C,$6E,$6C,$67,$63,$6F ; F8DB 63 67 6C 6E 6C 67 63 6F  cglnlgco
+        .byte   $6C,$67,$71,$6C,$67,$6F,$6C,$C9 ; F8E3 6C 67 71 6C 67 6F 6C C9  lgqlgol.
+        .byte   $60,$65,$69,$6C,$69,$65,$60,$69 ; F8EB 60 65 69 6C 69 65 60 69  `eilie`i
+        .byte   $65,$60,$6A,$65,$60,$69,$65,$C9 ; F8F3 65 60 6A 65 60 69 65 C9  e`je`ie.
+        .byte   $63,$67,$6C,$6E,$6C,$67,$63,$6F ; F8FB 63 67 6C 6E 6C 67 63 6F  cglnlgco
+        .byte   $6C,$67,$71,$6C,$67,$6F,$6C,$C9 ; F903 6C 67 71 6C 67 6F 6C C9  lgqlgol.
+        .byte   $60,$65,$69,$6C,$69,$65,$60,$C9 ; F90B 60 65 69 6C 69 65 60 C9  `eilie`.
+        .byte   $62,$67,$6B,$6E,$6B,$67,$62,$D0 ; F913 62 67 6B 6E 6B 67 62 D0  bgknkgb.
+        .byte   $CC,$50,$C7,$FF,$C4,$55,$CD,$03 ; F91B CC 50 C7 FF C4 55 CD 03  .P...U..
+        .byte   $00,$DB,$07,$00,$1E,$78,$D8,$00 ; F923 00 DB 07 00 1E 78 D8 00  .....x..
+        .byte   $DE,$06,$CD,$03,$01,$D8,$0C,$08 ; F92B DE 06 CD 03 01 D8 0C 08  ........
+        .byte   $08,$60,$5E,$60,$5E,$59,$59,$5B ; F933 08 60 5E 60 5E 59 59 5B  .`^`^YY[
+        .byte   $5F,$60,$5E,$60,$5E,$59,$5C,$5E ; F93B 5F 60 5E 60 5E 59 5C 5E  _`^`^Y\^
+        .byte   $04,$63,$62,$10,$5E,$5D,$5E,$08 ; F943 04 63 62 10 5E 5D 5E 08  .cb.^]^.
+        .byte   $5D,$5F,$D0,$CC,$50,$C7,$FF,$C4 ; F94B 5D 5F D0 CC 50 C7 FF C4  ]_..P...
+        .byte   $FF,$CD,$03,$00,$DB,$07,$00,$1E ; F953 FF CD 03 00 DB 07 00 1E  ........
+        .byte   $78,$D8,$00,$DE,$06,$CD,$03,$01 ; F95B 78 D8 00 DE 06 CD 03 01  x.......
+        .byte   $D8,$0C,$08,$3F,$C9,$C9,$C9,$C9 ; F963 D8 0C 08 3F C9 C9 C9 C9  ...?....
+        .byte   $C9,$D0                         ; F96B C9 D0                    ..
 LF96D:
-        .byte   $FF                             ; F96D FF                       .
-        brk                                     ; F96E 00                       .
-        asl     L0100                           ; F96F 0E 00 01                 ...
-        .byte   $80                             ; F972 80                       .
-        brk                                     ; F973 00                       .
-        .byte   $02                             ; F974 02                       .
-        cmp     ($00),y                         ; F975 D1 00                    ..
-        .byte   $03                             ; F977 03                       .
-        .byte   $74                             ; F978 74                       t
-        ora     ($FF,x)                         ; F979 01 FF                    ..
-        cpy     LC799                           ; F97B CC 99 C7                 ...
-        .byte   $FF                             ; F97E FF                       .
-        cpy     $FF                             ; F97F C4 FF                    ..
-        cmp     a:$03                           ; F981 CD 03 00                 ...
-        .byte   $DB                             ; F984 DB                       .
-        .byte   $07                             ; F985 07                       .
-        brk                                     ; F986 00                       .
-        asl     LD878,x                         ; F987 1E 78 D8                 .x.
-        brk                                     ; F98A 00                       .
-        dec     LCD06,x                         ; F98B DE 06 CD                 ...
-        .byte   $03                             ; F98E 03                       .
-        ora     ($D8,x)                         ; F98F 01 D8                    ..
-        .byte   $0C                             ; F991 0C                       .
-        php                                     ; F992 08                       .
-        .byte   $0C                             ; F993 0C                       .
-        cmp     #$01                            ; F994 C9 01                    ..
-        bvs     LF961                           ; F996 70 C9                    p.
-        ror     $10C9                           ; F998 6E C9 10                 n..
-        .byte   $6F                             ; F99B 6F                       o
-        .byte   $0C                             ; F99C 0C                       .
-        cmp     #$01                            ; F99D C9 01                    ..
-        .byte   $64                             ; F99F 64                       d
-        cmp     #$62                            ; F9A0 C9 62                    .b
-        cmp     #$10                            ; F9A2 C9 10                    ..
-        .byte   $63                             ; F9A4 63                       c
-        php                                     ; F9A5 08                       .
-LF9A6:
-        .byte   $6B                             ; F9A6 6B                       k
-        adc     $6B6A                           ; F9A7 6D 6A 6B                 mjk
-        .byte   $6B                             ; F9AA 6B                       k
-        adc     $6B6A                           ; F9AB 6D 6A 6B                 mjk
-        jsr     L01C9                           ; F9AE 20 C9 01                  ..
-        cmp     #$C9                            ; F9B1 C9 C9                    ..
-        .byte   $6F                             ; F9B3 6F                       o
-        cmp     #$C9                            ; F9B4 C9 C9                    ..
-        cmp     #$6F                            ; F9B6 C9 6F                    .o
-        cmp     #$C9                            ; F9B8 C9 C9                    ..
-LF9BA:
-        cmp     #$6F                            ; F9BA C9 6F                    .o
-        cmp     #$04                            ; F9BC C9 04                    ..
-        adc     ($CE),y                         ; F9BE 71 CE                    q.
-        .byte   $02                             ; F9C0 02                       .
-        .byte   $43                             ; F9C1 43                       C
-        brk                                     ; F9C2 00                       .
-        .byte   $CF                             ; F9C3 CF                       .
-        .byte   $03                             ; F9C4 03                       .
-        eor     ($00,x)                         ; F9C5 41 00                    A.
-        ora     ($74,x)                         ; F9C7 01 74                    .t
-        ror     L0002,x                         ; F9C9 76 02                    v.
-        .byte   $77                             ; F9CB 77                       w
-        ora     ($76,x)                         ; F9CC 01 76                    .v
-        cmp     #$74                            ; F9CE C9 74                    .t
-        cmp     #$72                            ; F9D0 C9 72                    .r
-        cmp     #$02                            ; F9D2 C9 02                    ..
-        bvs     LF9D7                           ; F9D4 70 01                    p.
-        .byte   $6F                             ; F9D6 6F                       o
-LF9D7:
-        cmp     #$6D                            ; F9D7 C9 6D                    .m
-        cmp     #$6B                            ; F9D9 C9 6B                    .k
-        cmp     #$06                            ; F9DB C9 06                    ..
-        adc     #$02                            ; F9DD 69 02                    i.
-        pla                                     ; F9DF 68                       h
-        .byte   $67                             ; F9E0 67                       g
-        ora     ($6F,x)                         ; F9E1 01 6F                    .o
-        cmp     #$6A                            ; F9E3 C9 6A                    .j
-        cmp     #$6D                            ; F9E5 C9 6D                    .m
-        cmp     #$6B                            ; F9E7 C9 6B                    .k
-        cmp     #$10                            ; F9E9 C9 10                    ..
-        pla                                     ; F9EB 68                       h
-        bne     LF9BA                           ; F9EC D0 CC                    ..
-LF9EF           := * + 1
-        sta     LFFC7,y                         ; F9EE 99 C7 FF                 ...
+        .byte   $FF,$00,$0E,$00,$01,$80,$00,$02 ; F96D FF 00 0E 00 01 80 00 02  ........
+        .byte   $D1,$00,$03,$74,$01,$FF,$CC,$99 ; F975 D1 00 03 74 01 FF CC 99  ...t....
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; F97D C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; F985 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$0C,$C9 ; F98D CD 03 01 D8 0C 08 0C C9  ........
+        .byte   $01,$70,$C9,$6E,$C9,$10,$6F,$0C ; F995 01 70 C9 6E C9 10 6F 0C  .p.n..o.
+        .byte   $C9,$01,$64,$C9,$62,$C9,$10,$63 ; F99D C9 01 64 C9 62 C9 10 63  ..d.b..c
+        .byte   $08,$6B,$6D,$6A,$6B,$6B,$6D,$6A ; F9A5 08 6B 6D 6A 6B 6B 6D 6A  .kmjkkmj
+        .byte   $6B,$20,$C9,$01,$C9,$C9,$6F,$C9 ; F9AD 6B 20 C9 01 C9 C9 6F C9  k ....o.
+        .byte   $C9,$C9,$6F,$C9,$C9,$C9,$6F,$C9 ; F9B5 C9 C9 6F C9 C9 C9 6F C9  ..o...o.
+        .byte   $04,$71,$CE,$02,$43,$00,$CF,$03 ; F9BD 04 71 CE 02 43 00 CF 03  .q..C...
+        .byte   $41,$00,$01,$74,$76,$02,$77,$01 ; F9C5 41 00 01 74 76 02 77 01  A..tv.w.
+        .byte   $76,$C9,$74,$C9,$72,$C9,$02,$70 ; F9CD 76 C9 74 C9 72 C9 02 70  v.t.r..p
+        .byte   $01,$6F,$C9,$6D,$C9,$6B,$C9,$06 ; F9D5 01 6F C9 6D C9 6B C9 06  .o.m.k..
+        .byte   $69,$02,$68,$67,$01,$6F,$C9,$6A ; F9DD 69 02 68 67 01 6F C9 6A  i.hg.o.j
+        .byte   $C9,$6D,$C9,$6B,$C9,$10,$68,$D0 ; F9E5 C9 6D C9 6B C9 10 68 D0  .m.k..h.
+; ----------------------------------------------------------------------------
+LF9EF           := * + 2
+        cpy     LC799                           ; F9ED CC 99 C7                 ...
+        .byte   $FF                             ; F9F0 FF                       .
         cpy     $FF                             ; F9F1 C4 FF                    ..
         cmp     a:$03                           ; F9F3 CD 03 00                 ...
         .byte   $DB                             ; F9F6 DB                       .
@@ -16658,66 +12101,20 @@ LFAD0:
         cmp     #$C9                            ; FAFC C9 C9                    ..
         cmp     #$C9                            ; FAFE C9 C9                    ..
         cmp     #$D0                            ; FB00 C9 D0                    ..
-LFB02:
-        .byte   $FF                             ; FB02 FF                       .
-        brk                                     ; FB03 00                       .
-        asl     L0100                           ; FB04 0E 00 01                 ...
-        .byte   $4F                             ; FB07 4F                       O
-        brk                                     ; FB08 00                       .
-        .byte   $02                             ; FB09 02                       .
-        ldy     $00                             ; FB0A A4 00                    ..
-        .byte   $03                             ; FB0C 03                       .
-        dec     $00                             ; FB0D C6 00                    ..
-        .byte   $FF                             ; FB0F FF                       .
-        cpy     LC7AA                           ; FB10 CC AA C7                 ...
-        .byte   $FF                             ; FB13 FF                       .
-        cpy     $FF                             ; FB14 C4 FF                    ..
-        cmp     a:$03                           ; FB16 CD 03 00                 ...
-        .byte   $DB                             ; FB19 DB                       .
-        .byte   $07                             ; FB1A 07                       .
-        brk                                     ; FB1B 00                       .
-LFB1E           := * + 2
-        asl     LD878,x                         ; FB1C 1E 78 D8                 .x.
-        brk                                     ; FB1F 00                       .
-        dec     LCD06,x                         ; FB20 DE 06 CD                 ...
-        .byte   $03                             ; FB23 03                       .
-        ora     ($D8,x)                         ; FB24 01 D8                    ..
-        .byte   $0C                             ; FB26 0C                       .
-        php                                     ; FB27 08                       .
-        php                                     ; FB28 08                       .
-        ror     a                               ; FB29 6A                       j
-        jmp     (L6D04)                         ; FB2A 6C 04 6D                 l.m
-
+MusicInfiltratingShinraTheme:
+        .byte   $FF,$00,$0E,$00,$01,$4F,$00,$02 ; FB02 FF 00 0E 00 01 4F 00 02  .....O..
+        .byte   $A4,$00,$03,$C6,$00,$FF,$CC,$AA ; FB0A A4 00 03 C6 00 FF CC AA  ........
+        .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; FB12 C7 FF C4 FF CD 03 00 DB  ........
+        .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; FB1A 07 00 1E 78 D8 00 DE 06  ...x....
+        .byte   $CD,$03,$01,$D8,$0C,$08,$08,$6A ; FB22 CD 03 01 D8 0C 08 08 6A  .......j
+        .byte   $6C,$04,$6D,$6F,$71,$73,$20,$75 ; FB2A 6C 04 6D 6F 71 73 20 75  l.moqs u
+        .byte   $08,$68,$6A,$04,$6B,$6D,$6F,$71 ; FB32 08 68 6A 04 6B 6D 6F 71  .hj.kmoq
+        .byte   $20,$73,$08,$65,$67,$04,$68,$6A ; FB3A 20 73 08 65 67 04 68 6A   s.eg.hj
+        .byte   $6C,$6E,$20,$70,$08,$6C,$6E,$04 ; FB42 6C 6E 20 70 08 6C 6E 04  ln p.ln.
+        .byte   $6F,$71,$73,$75,$20,$77,$D0     ; FB4A 6F 71 73 75 20 77 D0     oqsu w.
 ; ----------------------------------------------------------------------------
-        .byte   $6F                             ; FB2D 6F                       o
-        adc     ($73),y                         ; FB2E 71 73                    qs
-        jsr     L0875                           ; FB30 20 75 08                  u.
-        pla                                     ; FB33 68                       h
-        ror     a                               ; FB34 6A                       j
-        .byte   $04                             ; FB35 04                       .
-        .byte   $6B                             ; FB36 6B                       k
-        adc     $716F                           ; FB37 6D 6F 71                 moq
-        jsr     L0873                           ; FB3A 20 73 08                  s.
-        adc     $67                             ; FB3D 65 67                    eg
-        .byte   $04                             ; FB3F 04                       .
-        pla                                     ; FB40 68                       h
-        ror     a                               ; FB41 6A                       j
-        jmp     (L206E)                         ; FB42 6C 6E 20                 ln 
-
-; ----------------------------------------------------------------------------
-        bvs     LFB4F                           ; FB45 70 08                    p.
-        jmp     (L046E)                         ; FB47 6C 6E 04                 ln.
-
-; ----------------------------------------------------------------------------
-        .byte   $6F                             ; FB4A 6F                       o
-        adc     ($73),y                         ; FB4B 71 73                    qs
-        adc     $20,x                           ; FB4D 75 20                    u 
-LFB4F:
-        .byte   $77                             ; FB4F 77                       w
-LFB51           := * + 1
-        bne     LFB1E                           ; FB50 D0 CC                    ..
-        tax                                     ; FB52 AA                       .
-        .byte   $C7                             ; FB53 C7                       .
+LFB51:
+        cpy     LC7AA                           ; FB51 CC AA C7                 ...
         .byte   $FF                             ; FB54 FF                       .
         cpy     $FF                             ; FB55 C4 FF                    ..
         cmp     a:$07                           ; FB57 CD 07 00                 ...
@@ -17203,11 +12600,8 @@ LFEEE:
         sta     $0139                           ; FEF7 8D 39 01                 .9.
         sta     $0129                           ; FEFA 8D 29 01                 .).
         lda     #$00                            ; FEFD A9 00                    ..
-LFF00           := * + 1
         sta     $4F                             ; FEFF 85 4F                    .O
-LFF01:
         lda     #$00                            ; FF01 A9 00                    ..
-LFF03:
         sta     $5000                           ; FF03 8D 00 50                 ..P
         pla                                     ; FF06 68                       h
         jsr     LFEEE                           ; FF07 20 EE FE                  ..
