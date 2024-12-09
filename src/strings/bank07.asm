@@ -2700,9 +2700,9 @@ LBA8D:
         .byte   $0A                             ; BA96 0A                       .
 ; ----------------------------------------------------------------------------
         .byte   $30,$30,$30,$30,$FF,$FF         ; BA97 30 30 30 30 FF FF        0000..
-LBA9D:
-        .byte   $E7,$C1                         ; BA9D E7 C1                    ..
 ; ----------------------------------------------------------------------------
+LBA9D:
+        .addr   LC1E7                           ; BA9D E7 C1                    ..
         .addr   LBCA5                           ; BA9F A5 BC                    ..
         .addr   LBCCF                           ; BAA1 CF BC                    ..
         .addr   LBD09                           ; BAA3 09 BD                    ..
@@ -3173,6 +3173,7 @@ LC1BD:
         .byte   " the\gate?"                    ; C1DC 20 74 68 65 5C 67 61 74   the\gat
                                                 ; C1E4 65 3F                    e?
         .byte   $0A                             ; C1E6 0A                       .
+LC1E7:
         .byte   "@3Because__"                   ; C1E7 40 33 42 65 63 61 75 73  @3Becaus
                                                 ; C1EF 65 5F 5F                 e__
         .byte   $0A                             ; C1F2 0A                       .

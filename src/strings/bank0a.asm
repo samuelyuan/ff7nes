@@ -5,7 +5,7 @@ L0000           := $0000
 ; ----------------------------------------------------------------------------
         .addr   L8009                           ; 8000 09 80                    ..
         .addr   LB88C                           ; 8002 8C B8                    ..
-        .addr   LE7DC                           ; 8004 DC E7                    ..
+        .addr   LocationNameTextTable           ; 8004 DC E7                    ..
 ; ----------------------------------------------------------------------------
         .byte   $FF,$FF,$40                     ; 8006 FF FF 40                 ..@
 ; ----------------------------------------------------------------------------
@@ -4808,38 +4808,38 @@ LE783:
                                                 ; E7D1 6D 69 73 65 20 6D 65 21  mise me!
         .byte   $0A,$FF,$FF                     ; E7D9 0A FF FF                 ...
 ; ----------------------------------------------------------------------------
-LE7DC:
-        .addr   LE826                           ; E7DC 26 E8                    &.
+LocationNameTextTable:
+        .addr   NoLocationText                  ; E7DC 26 E8                    &.
         .addr   LE827                           ; E7DE 27 E8                    '.
         .addr   LE82E                           ; E7E0 2E E8                    ..
         .addr   LE833                           ; E7E2 33 E8                    3.
         .addr   LE840                           ; E7E4 40 E8                    @.
         .addr   LE84B                           ; E7E6 4B E8                    K.
         .addr   LE858                           ; E7E8 58 E8                    X.
-        .addr   LE826                           ; E7EA 26 E8                    &.
-        .addr   LE826                           ; E7EC 26 E8                    &.
-        .addr   LE826                           ; E7EE 26 E8                    &.
-        .addr   LE826                           ; E7F0 26 E8                    &.
-        .addr   LE826                           ; E7F2 26 E8                    &.
+        .addr   NoLocationText                  ; E7EA 26 E8                    &.
+        .addr   NoLocationText                  ; E7EC 26 E8                    &.
+        .addr   NoLocationText                  ; E7EE 26 E8                    &.
+        .addr   NoLocationText                  ; E7F0 26 E8                    &.
+        .addr   NoLocationText                  ; E7F2 26 E8                    &.
         .addr   LE85E                           ; E7F4 5E E8                    ^.
         .addr   LE86B                           ; E7F6 6B E8                    k.
         .addr   LE877                           ; E7F8 77 E8                    w.
-        .addr   LE826                           ; E7FA 26 E8                    &.
+        .addr   NoLocationText                  ; E7FA 26 E8                    &.
         .addr   LE883                           ; E7FC 83 E8                    ..
-        .addr   LE826                           ; E7FE 26 E8                    &.
+        .addr   NoLocationText                  ; E7FE 26 E8                    &.
         .addr   LE890                           ; E800 90 E8                    ..
         .addr   LE898                           ; E802 98 E8                    ..
-        .addr   LE826                           ; E804 26 E8                    &.
-        .addr   LE826                           ; E806 26 E8                    &.
+        .addr   NoLocationText                  ; E804 26 E8                    &.
+        .addr   NoLocationText                  ; E806 26 E8                    &.
         .addr   LE8A5                           ; E808 A5 E8                    ..
-        .addr   LE826                           ; E80A 26 E8                    &.
+        .addr   NoLocationText                  ; E80A 26 E8                    &.
         .addr   LE8AF                           ; E80C AF E8                    ..
         .addr   LE8BB                           ; E80E BB E8                    ..
-        .addr   LE826                           ; E810 26 E8                    &.
+        .addr   NoLocationText                  ; E810 26 E8                    &.
         .addr   LE8C2                           ; E812 C2 E8                    ..
         .addr   LE8CF                           ; E814 CF E8                    ..
         .addr   LE8DC                           ; E816 DC E8                    ..
-        .addr   LE826                           ; E818 26 E8                    &.
+        .addr   NoLocationText                  ; E818 26 E8                    &.
         .addr   LE8E8                           ; E81A E8 E8                    ..
         .addr   LE8F3                           ; E81C F3 E8                    ..
         .addr   LE8FF                           ; E81E FF E8                    ..
@@ -4847,7 +4847,7 @@ LE7DC:
         .addr   LE919                           ; E822 19 E9                    ..
         .addr   LE924                           ; E824 24 E9                    $.
 ; ----------------------------------------------------------------------------
-LE826:
+NoLocationText:
         .byte   $0A                             ; E826 0A                       .
 LE827:
         .byte   "Midgar"                        ; E827 4D 69 64 67 61 72        Midgar
