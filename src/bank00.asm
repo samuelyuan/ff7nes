@@ -1572,7 +1572,7 @@ Bank00ScriptOpcodeTable:
         .addr   L8E69                           ; 8949 69 8E                    i.
         .addr   L8E5D                           ; 894B 5D 8E                    ].
         .addr   L8F25                           ; 894D 25 8F                    %.
-        .addr   L8F40                           ; 894F 40 8F                    @.
+        .addr   Bank00ScriptOpcode1b_PlayerGetsKeyItem; 894F 40 8F              @.
         .addr   L8F5E                           ; 8951 5E 8F                    ^.
         .addr   L8F6A                           ; 8953 6A 8F                    j.
         .addr   L8F74                           ; 8955 74 8F                    t.
@@ -2557,12 +2557,12 @@ L8F3B:
         jmp     L88D9                           ; 8F3D 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L8F40:
+Bank00ScriptOpcode1b_PlayerGetsKeyItem:
         ldy     #$01                            ; 8F40 A0 01                    ..
         lda     ($A7),y                         ; 8F42 B1 A7                    ..
         sec                                     ; 8F44 38                       8
         sbc     #$11                            ; 8F45 E9 11                    ..
-        jsr     LD198                           ; 8F47 20 98 D1                  ..
+        jsr     PlayerGetsKeyItem               ; 8F47 20 98 D1                  ..
         lda     #$02                            ; 8F4A A9 02                    ..
         jmp     L88D9                           ; 8F4C 4C D9 88                 L..
 
@@ -2729,7 +2729,7 @@ L9051:
 L9059:
         ldy     #$01                            ; 9059 A0 01                    ..
         lda     ($A7),y                         ; 905B B1 A7                    ..
-        jsr     LD180                           ; 905D 20 80 D1                  ..
+        jsr     CheckIfPlayerHasKeyItem         ; 905D 20 80 D1                  ..
         bcc     L9063                           ; 9060 90 01                    ..
         rts                                     ; 9062 60                       `
 
@@ -2744,7 +2744,7 @@ L9068:
         lda     ($A7),y                         ; 906A B1 A7                    ..
         sec                                     ; 906C 38                       8
         sbc     #$11                            ; 906D E9 11                    ..
-        jsr     LD180                           ; 906F 20 80 D1                  ..
+        jsr     CheckIfPlayerHasKeyItem         ; 906F 20 80 D1                  ..
         bcc     L9079                           ; 9072 90 05                    ..
         lda     #$03                            ; 9074 A9 03                    ..
         jmp     L88D9                           ; 9076 4C D9 88                 L..
@@ -2868,16 +2868,9 @@ L913E:
 
 ; ----------------------------------------------------------------------------
 L913F:
-        ora     ($01,x)                         ; 913F 01 01                    ..
-        ora     ($04,x)                         ; 9141 01 04                    ..
-        .byte   $04                             ; 9143 04                       .
-        .byte   $04                             ; 9144 04                       .
-        php                                     ; 9145 08                       .
-        php                                     ; 9146 08                       .
-        php                                     ; 9147 08                       .
-        .byte   $02                             ; 9148 02                       .
-        .byte   $02                             ; 9149 02                       .
-        .byte   $02                             ; 914A 02                       .
+        .byte   $01,$01,$01,$04,$04,$04,$08,$08 ; 913F 01 01 01 04 04 04 08 08  ........
+        .byte   $08,$02,$02,$02                 ; 9147 08 02 02 02              ....
+; ----------------------------------------------------------------------------
 L914B:
         ldy     #$01                            ; 914B A0 01                    ..
         lda     ($A7),y                         ; 914D B1 A7                    ..
@@ -5749,7 +5742,7 @@ LAD16:
         .byte   $0D,$10,$06,$29,$04,$3C,$01,$23 ; AD16 0D 10 06 29 04 3C 01 23  ...).<.#
         .byte   $04,$3D,$48,$FF,$29,$04,$40,$02 ; AD1E 04 3D 48 FF 29 04 40 02  .=H.).@.
         .byte   $29,$04,$45,$03,$FF             ; AD26 29 04 45 03 FF           ).E..
-LAD2B:
+ScenePlayerGets62FCard:
         .byte   $29,$04,$43,$01,$03,$59,$06,$59 ; AD2B 29 04 43 01 03 59 06 59  ).C..Y.Y
         .byte   $29,$04,$44,$01,$1B,$19,$FF     ; AD33 29 04 44 01 1B 19 FF     ).D....
 LAD3A:
@@ -7074,7 +7067,7 @@ Bank00SceneScriptTable:
         .addr   LACF9                           ; CCDB F9 AC                    ..
         .addr   LAD11                           ; CCDD 11 AD                    ..
         .addr   LAD16                           ; CCDF 16 AD                    ..
-        .addr   LAD2B                           ; CCE1 2B AD                    +.
+        .addr   ScenePlayerGets62FCard          ; CCE1 2B AD                    +.
         .addr   LAD3A                           ; CCE3 3A AD                    :.
         .addr   LAD46                           ; CCE5 46 AD                    F.
         .addr   LAD50                           ; CCE7 50 AD                    P.
@@ -7708,7 +7701,7 @@ LD16A:
         rts                                     ; D17F 60                       `
 
 ; ----------------------------------------------------------------------------
-LD180:
+CheckIfPlayerHasKeyItem:
         sec                                     ; D180 38                       8
         sbc     #$01                            ; D181 E9 01                    ..
         pha                                     ; D183 48                       H
@@ -7721,17 +7714,17 @@ LD180:
         tay                                     ; D18B A8                       .
         lda     $623A,y                         ; D18C B9 3A 62                 .:b
         and     LD118,x                         ; D18F 3D 18 D1                 =..
-        beq     LD196                           ; D192 F0 02                    ..
+        beq     PlayerIsMissingKeyItem          ; D192 F0 02                    ..
         sec                                     ; D194 38                       8
         rts                                     ; D195 60                       `
 
 ; ----------------------------------------------------------------------------
-LD196:
+PlayerIsMissingKeyItem:
         clc                                     ; D196 18                       .
         rts                                     ; D197 60                       `
 
 ; ----------------------------------------------------------------------------
-LD198:
+PlayerGetsKeyItem:
         sec                                     ; D198 38                       8
         sbc     #$01                            ; D199 E9 01                    ..
         pha                                     ; D19B 48                       H
@@ -9279,14 +9272,14 @@ LDC4C:
         asl     a                               ; DC98 0A                       .
         asl     a                               ; DC99 0A                       .
         sta     $A4                             ; DC9A 85 A4                    ..
-        jmp     LDCA2                           ; DC9C 4C A2 DC                 L..
+        jmp     ChangeCurrentMap                ; DC9C 4C A2 DC                 L..
 
 ; ----------------------------------------------------------------------------
 LDC9F:
         jmp     LDCE5                           ; DC9F 4C E5 DC                 L..
 
 ; ----------------------------------------------------------------------------
-LDCA2:
+ChangeCurrentMap:
         ldy     #$01                            ; DCA2 A0 01                    ..
         jsr     L0140                           ; DCA4 20 40 01                  @.
         sta     $89                             ; DCA7 85 89                    ..

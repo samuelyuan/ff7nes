@@ -12174,7 +12174,7 @@ LE6C1:
         sta     $0405                           ; E70A 8D 05 04                 ...
         jsr     L831E                           ; E70D 20 1E 83                  ..
         ldx     #$00                            ; E710 A2 00                    ..
-LE712:
+ModifyPlayerExp:
         lda     $603C,x                         ; E712 BD 3C 60                 .<`
         tay                                     ; E715 A8                       .
         lda     $6043,y                         ; E716 B9 43 60                 .C`
@@ -12193,7 +12193,7 @@ LE712:
 LE738:
         inx                                     ; E738 E8                       .
         cpx     $603B                           ; E739 EC 3B 60                 .;`
-        bcc     LE712                           ; E73C 90 D4                    ..
+        bcc     ModifyPlayerExp                 ; E73C 90 D4                    ..
         lda     $6F25                           ; E73E AD 25 6F                 .%o
         sta     L0400                           ; E741 8D 00 04                 ...
         lda     $6F26                           ; E744 AD 26 6F                 .&o
@@ -12375,7 +12375,8 @@ LE8B8:
         ldx     $6F1E                           ; E8BD AE 1E 6F                 ..o
         lda     $603C,x                         ; E8C0 BD 3C 60                 .<`
         tax                                     ; E8C3 AA                       .
-LE8C4:
+; 0x6082+x and 0x6089+x store character index x exp. 0x6f3f and 0x6f40 store exp needed to move to next level. 0x6043+x stores level.
+PlayerExpLevelUp:
         lda     $6043,x                         ; E8C4 BD 43 60                 .C`
         cmp     #$64                            ; E8C7 C9 64                    .d
         bcs     LE90A                           ; E8C9 B0 3F                    .?
@@ -12402,7 +12403,7 @@ LE8C4:
         lda     #$01                            ; E900 A9 01                    ..
         sta     $6F25                           ; E902 8D 25 6F                 .%o
         inc     $6043,x                         ; E905 FE 43 60                 .C`
-        bne     LE8C4                           ; E908 D0 BA                    ..
+        bne     PlayerExpLevelUp                ; E908 D0 BA                    ..
 LE90A:
         lda     $6F25                           ; E90A AD 25 6F                 .%o
         beq     LE918                           ; E90D F0 09                    ..

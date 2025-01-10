@@ -6817,13 +6817,13 @@ LAEE1:
         jsr     LAF4F                           ; AEF1 20 4F AF                  O.
 LAEF4:
         txa                                     ; AEF4 8A                       .
-        jsr     LAEFD                           ; AEF5 20 FD AE                  ..
+        jsr     SetCharacterStats               ; AEF5 20 FD AE                  ..
         txa                                     ; AEF8 8A                       .
         jsr     LAFF9                           ; AEF9 20 F9 AF                  ..
         rts                                     ; AEFC 60                       `
 
 ; ----------------------------------------------------------------------------
-LAEFD:
+SetCharacterStats:
         tax                                     ; AEFD AA                       .
         lda     #$05                            ; AEFE A9 05                    ..
         sta     $0141                           ; AF00 8D 41 01                 .A.
