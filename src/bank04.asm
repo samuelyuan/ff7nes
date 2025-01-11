@@ -7098,7 +7098,7 @@ LBFCF:
 LBFD7:
         jsr     LC283                           ; BFD7 20 83 C2                  ..
         jsr     LC1DA                           ; BFDA 20 DA C1                  ..
-        jsr     LC8F3                           ; BFDD 20 F3 C8                  ..
+        jsr     LoadCharacterStatsFromBank5     ; BFDD 20 F3 C8                  ..
         jsr     LCE84                           ; BFE0 20 84 CE                  ..
         jsr     LC1B0                           ; BFE3 20 B0 C1                  ..
         jsr     L9F39                           ; BFE6 20 39 9F                  9.
@@ -7865,17 +7865,21 @@ LC4E2           := * + 1
         lda     $6F96                           ; C4E7 AD 96 6F                 ..o
         asl     a                               ; C4EA 0A                       .
         tax                                     ; C4EB AA                       .
-        lda     LC4FA,x                         ; C4EC BD FA C4                 ...
+        lda     BattleMenuChoice,x              ; C4EC BD FA C4                 ...
         sta     L0002                           ; C4EF 85 02                    ..
         inx                                     ; C4F1 E8                       .
-        lda     LC4FA,x                         ; C4F2 BD FA C4                 ...
+        lda     BattleMenuChoice,x              ; C4F2 BD FA C4                 ...
         sta     $03                             ; C4F5 85 03                    ..
         jmp     (L0002)                         ; C4F7 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-LC4FA:
-        .byte   $02,$C5,$27,$C5,$7D,$C5,$17,$C6 ; C4FA 02 C5 27 C5 7D C5 17 C6  ..'.}...
+BattleMenuChoice:
+        .addr   BattleMenuAttack                ; C4FA 02 C5                    ..
+        .addr   BattleMenuMagic                 ; C4FC 27 C5                    '.
+        .addr   BattleMenuItem                  ; C4FE 7D C5                    }.
+        .addr   BattleMenuRun                   ; C500 17 C6                    ..
 ; ----------------------------------------------------------------------------
+BattleMenuAttack:
         jsr     LC62C                           ; C502 20 2C C6                  ,.
         bcc     LC524                           ; C505 90 1D                    ..
         lda     $6F1E                           ; C507 AD 1E 6F                 ..o
@@ -7899,7 +7903,7 @@ LC524:
         jmp     LC489                           ; C524 4C 89 C4                 L..
 
 ; ----------------------------------------------------------------------------
-LC527:
+BattleMenuMagic:
         jsr     LF435                           ; C527 20 35 F4                  5.
         lda     #$00                            ; C52A A9 00                    ..
         sta     $6F20                           ; C52C 8D 20 6F                 . o
@@ -7919,11 +7923,11 @@ LC527:
         lsr     a                               ; C54B 4A                       J
         bcc     LC555                           ; C54C 90 07                    ..
         jsr     LC70E                           ; C54E 20 0E C7                  ..
-        bcc     LC527                           ; C551 90 D4                    ..
+        bcc     BattleMenuMagic                 ; C551 90 D4                    ..
         bcs     LC55A                           ; C553 B0 05                    ..
 LC555:
         jsr     LC62C                           ; C555 20 2C C6                  ,.
-        bcc     LC527                           ; C558 90 CD                    ..
+        bcc     BattleMenuMagic                 ; C558 90 CD                    ..
 LC55A:
         lda     $6F1E                           ; C55A AD 1E 6F                 ..o
         asl     a                               ; C55D 0A                       .
@@ -7944,6 +7948,7 @@ LC55A:
         rts                                     ; C57C 60                       `
 
 ; ----------------------------------------------------------------------------
+BattleMenuItem:
         lda     #$00                            ; C57D A9 00                    ..
         sta     $6F42                           ; C57F 8D 42 6F                 .Bo
         sta     $6F43                           ; C582 8D 43 6F                 .Co
@@ -8019,6 +8024,7 @@ LC60A:
         rts                                     ; C616 60                       `
 
 ; ----------------------------------------------------------------------------
+BattleMenuRun:
         lda     $6F1E                           ; C617 AD 1E 6F                 ..o
         asl     a                               ; C61A 0A                       .
         asl     a                               ; C61B 0A                       .
@@ -8445,7 +8451,7 @@ LC8DA:
         rts                                     ; C8F2 60                       `
 
 ; ----------------------------------------------------------------------------
-LC8F3:
+LoadCharacterStatsFromBank5:
         lda     #$05                            ; C8F3 A9 05                    ..
         sta     $0141                           ; C8F5 8D 41 01                 .A.
         lda     $4F                             ; C8F8 A5 4F                    .O
@@ -8463,7 +8469,7 @@ LC8F3:
         pla                                     ; C911 68                       h
         sta     L0002                           ; C912 85 02                    ..
         ldx     #$00                            ; C914 A2 00                    ..
-LC916:
+LoadEnemyStats:
         lda     $03                             ; C916 A5 03                    ..
         pha                                     ; C918 48                       H
         lda     L0002                           ; C919 A5 02                    ..
@@ -8532,7 +8538,7 @@ LC916:
         inx                                     ; C9A3 E8                       .
         cpx     $6F4F                           ; C9A4 EC 4F 6F                 .Oo
         bcs     LC9AC                           ; C9A7 B0 03                    ..
-        jmp     LC916                           ; C9A9 4C 16 C9                 L..
+        jmp     LoadEnemyStats                  ; C9A9 4C 16 C9                 L..
 
 ; ----------------------------------------------------------------------------
 LC9AC:
@@ -9328,7 +9334,7 @@ LD11D:
         ora     $060D                           ; D129 0D 0D 06                 ...
         beq     LD14A                           ; D12C F0 1C                    ..
         jsr     LD437                           ; D12E 20 37 D4                  7.
-        jsr     LD3EE                           ; D131 20 EE D3                  ..
+        jsr     PlayerCharacterTakesDamage      ; D131 20 EE D3                  ..
         bcs     LD149                           ; D134 B0 13                    ..
         jsr     L95B2                           ; D136 20 B2 95                  ..
         jsr     LD46F                           ; D139 20 6F D4                  o.
@@ -9359,7 +9365,7 @@ LD14E:
         jsr     L8006                           ; D156 20 06 80                  ..
         lda     $B0                             ; D159 A5 B0                    ..
         beq     LD169                           ; D15B F0 0C                    ..
-        jsr     LD303                           ; D15D 20 03 D3                  ..
+        jsr     CalculatePlayerDefenseFromEnemy ; D15D 20 03 D3                  ..
         lda     $6F3D                           ; D160 AD 3D 6F                 .=o
         and     #$0F                            ; D163 29 0F                    ).
         cmp     #$01                            ; D165 C9 01                    ..
@@ -9547,7 +9553,7 @@ LD22F:
         rts                                     ; D302 60                       `
 
 ; ----------------------------------------------------------------------------
-LD303:
+CalculatePlayerDefenseFromEnemy:
         lda     #$05                            ; D303 A9 05                    ..
         sta     $0141                           ; D305 8D 41 01                 .A.
         lda     $4F                             ; D308 A5 4F                    .O
@@ -9652,7 +9658,7 @@ LD3C5:
         rts                                     ; D3ED 60                       `
 
 ; ----------------------------------------------------------------------------
-LD3EE:
+PlayerCharacterTakesDamage:
         ldx     $6F1E                           ; D3EE AE 1E 6F                 ..o
         lda     $603C,x                         ; D3F1 BD 3C 60                 .<`
         tax                                     ; D3F4 AA                       .
@@ -10156,7 +10162,7 @@ LD710:
         ora     $060D                           ; D75A 0D 0D 06                 ...
         beq     LD77B                           ; D75D F0 1C                    ..
         jsr     LD437                           ; D75F 20 37 D4                  7.
-        jsr     LD3EE                           ; D762 20 EE D3                  ..
+        jsr     PlayerCharacterTakesDamage      ; D762 20 EE D3                  ..
         bcs     LD77A                           ; D765 B0 13                    ..
         jsr     L95B2                           ; D767 20 B2 95                  ..
         jsr     LD46F                           ; D76A 20 6F D4                  o.
@@ -10221,7 +10227,7 @@ LD7BC:
         ora     $060D                           ; D7D5 0D 0D 06                 ...
         beq     LD7F5                           ; D7D8 F0 1B                    ..
         jsr     LD437                           ; D7DA 20 37 D4                  7.
-        jsr     LD3EE                           ; D7DD 20 EE D3                  ..
+        jsr     PlayerCharacterTakesDamage      ; D7DD 20 EE D3                  ..
         bcs     LD7F8                           ; D7E0 B0 16                    ..
         jsr     L95B2                           ; D7E2 20 B2 95                  ..
         jsr     LD46F                           ; D7E5 20 6F D4                  o.
@@ -10447,7 +10453,7 @@ LD977:
         pha                                     ; D98D 48                       H
         lda     $6F24                           ; D98E AD 24 6F                 .$o
         pha                                     ; D991 48                       H
-        jsr     LD303                           ; D992 20 03 D3                  ..
+        jsr     CalculatePlayerDefenseFromEnemy ; D992 20 03 D3                  ..
         pla                                     ; D995 68                       h
         sta     $6F24                           ; D996 8D 24 6F                 .$o
         pla                                     ; D999 68                       h
@@ -10719,12 +10725,12 @@ LDB9E:
 ; ----------------------------------------------------------------------------
 LDBA0:
         lda     $060F                           ; DBA0 AD 0F 06                 ...
-        beq     LDBA7                           ; DBA3 F0 02                    ..
+        beq     EnemyTakesDamage                ; DBA3 F0 02                    ..
         sec                                     ; DBA5 38                       8
         rts                                     ; DBA6 60                       `
 
 ; ----------------------------------------------------------------------------
-LDBA7:
+EnemyTakesDamage:
         ldx     $6FC0                           ; DBA7 AE C0 6F                 ..o
         lda     $6F5C,x                         ; DBAA BD 5C 6F                 .\o
         sec                                     ; DBAD 38                       8
@@ -10733,7 +10739,7 @@ LDBA7:
         lda     $6F62,x                         ; DBB4 BD 62 6F                 .bo
         sbc     $060D                           ; DBB7 ED 0D 06                 ...
         sta     $6F62,x                         ; DBBA 9D 62 6F                 .bo
-        bcc     LDBC9                           ; DBBD 90 0A                    ..
+        bcc     EnemyHasZeroOrNegativeHP        ; DBBD 90 0A                    ..
         lda     $6F5C,x                         ; DBBF BD 5C 6F                 .\o
         ora     $6F62,x                         ; DBC2 1D 62 6F                 .bo
         beq     LDBD1                           ; DBC5 F0 0A                    ..
@@ -10741,7 +10747,7 @@ LDBA7:
         rts                                     ; DBC8 60                       `
 
 ; ----------------------------------------------------------------------------
-LDBC9:
+EnemyHasZeroOrNegativeHP:
         lda     #$00                            ; DBC9 A9 00                    ..
         sta     $6F5C,x                         ; DBCB 9D 5C 6F                 .\o
         sta     $6F62,x                         ; DBCE 9D 62 6F                 .bo
@@ -10778,7 +10784,7 @@ LDBF7:
         lsr     a                               ; DBFD 4A                       J
         cmp     #$01                            ; DBFE C9 01                    ..
         beq     LDBEE                           ; DC00 F0 EC                    ..
-        jsr     LDCB8                           ; DC02 20 B8 DC                  ..
+        jsr     CalculatePlayerDamageToEnemy    ; DC02 20 B8 DC                  ..
         ldx     $6F1E                           ; DC05 AE 1E 6F                 ..o
         lda     $603C,x                         ; DC08 BD 3C 60                 .<`
         tax                                     ; DC0B AA                       .
@@ -10852,7 +10858,7 @@ LDCAB:
         rts                                     ; DCB7 60                       `
 
 ; ----------------------------------------------------------------------------
-LDCB8:
+CalculatePlayerDamageToEnemy:
         lda     #$05                            ; DCB8 A9 05                    ..
         sta     $0141                           ; DCBA 8D 41 01                 .A.
         lda     $4F                             ; DCBD A5 4F                    .O
@@ -11704,7 +11710,7 @@ LE327:
         pha                                     ; E33E 48                       H
         lda     $6F24                           ; E33F AD 24 6F                 .$o
         pha                                     ; E342 48                       H
-        jsr     LDCB8                           ; E343 20 B8 DC                  ..
+        jsr     CalculatePlayerDamageToEnemy    ; E343 20 B8 DC                  ..
         pla                                     ; E346 68                       h
         sta     $6F24                           ; E347 8D 24 6F                 .$o
         pla                                     ; E34A 68                       h
@@ -12988,30 +12994,30 @@ LEDC2:
         cmp     #$19                            ; EDD4 C9 19                    ..
         bcs     LEDDC                           ; EDD6 B0 04                    ..
         lda     #$02                            ; EDD8 A9 02                    ..
-        bne     LEDFE                           ; EDDA D0 22                    ."
+        bne     StoreRandomEncounterNumEnemies  ; EDDA D0 22                    ."
 LEDDC:
         cmp     #$37                            ; EDDC C9 37                    .7
         bcs     LEDE4                           ; EDDE B0 04                    ..
         lda     #$03                            ; EDE0 A9 03                    ..
-        bne     LEDFE                           ; EDE2 D0 1A                    ..
+        bne     StoreRandomEncounterNumEnemies  ; EDE2 D0 1A                    ..
 LEDE4:
         cmp     #$46                            ; EDE4 C9 46                    .F
         bcs     LEDEC                           ; EDE6 B0 04                    ..
         lda     #$01                            ; EDE8 A9 01                    ..
-        bne     LEDFE                           ; EDEA D0 12                    ..
+        bne     StoreRandomEncounterNumEnemies  ; EDEA D0 12                    ..
 LEDEC:
         cmp     #$5A                            ; EDEC C9 5A                    .Z
         bcs     LEDF4                           ; EDEE B0 04                    ..
         lda     #$04                            ; EDF0 A9 04                    ..
-        bne     LEDFE                           ; EDF2 D0 0A                    ..
+        bne     StoreRandomEncounterNumEnemies  ; EDF2 D0 0A                    ..
 LEDF4:
         cmp     #$5F                            ; EDF4 C9 5F                    ._
         bcs     LEDFC                           ; EDF6 B0 04                    ..
         lda     #$05                            ; EDF8 A9 05                    ..
-        bne     LEDFE                           ; EDFA D0 02                    ..
+        bne     StoreRandomEncounterNumEnemies  ; EDFA D0 02                    ..
 LEDFC:
         lda     #$06                            ; EDFC A9 06                    ..
-LEDFE:
+StoreRandomEncounterNumEnemies:
         sta     $6F4F                           ; EDFE 8D 4F 6F                 .Oo
         lda     $89                             ; EE01 A5 89                    ..
         bne     LEE16                           ; EE03 D0 11                    ..
@@ -13068,7 +13074,7 @@ LEE25:
         tay                                     ; EE57 A8                       .
         ldx     #$00                            ; EE58 A2 00                    ..
 LEE5A:
-        lda     LF13F,y                         ; EE5A B9 3F F1                 .?.
+        lda     RandomEncounterEnemyType,y      ; EE5A B9 3F F1                 .?.
         beq     LEE65                           ; EE5D F0 06                    ..
         iny                                     ; EE5F C8                       .
         inx                                     ; EE60 E8                       .
@@ -13077,7 +13083,7 @@ LEE5A:
 LEE65:
         stx     $08                             ; EE65 86 08                    ..
         ldx     #$00                            ; EE67 A2 00                    ..
-LEE69:
+GenerateRandomEncounterEnemyTypes:
         lda     $08                             ; EE69 A5 08                    ..
         sta     $B0                             ; EE6B 85 B0                    ..
         lda     #$00                            ; EE6D A9 00                    ..
@@ -13087,11 +13093,11 @@ LEE69:
         clc                                     ; EE76 18                       .
         adc     $07                             ; EE77 65 07                    e.
         tay                                     ; EE79 A8                       .
-        lda     LF13F,y                         ; EE7A B9 3F F1                 .?.
+        lda     RandomEncounterEnemyType,y      ; EE7A B9 3F F1                 .?.
         sta     $6F50,x                         ; EE7D 9D 50 6F                 .Po
         inx                                     ; EE80 E8                       .
         cpx     $6F4F                           ; EE81 EC 4F 6F                 .Oo
-        bcc     LEE69                           ; EE84 90 E3                    ..
+        bcc     GenerateRandomEncounterEnemyTypes; EE84 90 E3                   ..
         lda     $603B                           ; EE86 AD 3B 60                 .;`
         cmp     #$04                            ; EE89 C9 04                    ..
         bcc     LEE92                           ; EE8B 90 05                    ..
@@ -13192,7 +13198,7 @@ LF03F:
         .byte   $60,$60,$60,$60,$60,$60,$60,$60 ; F127 60 60 60 60 60 60 60 60  ````````
         .byte   $60,$60,$60,$60,$60,$60,$60,$60 ; F12F 60 60 60 60 60 60 60 60  ````````
         .byte   $60,$60,$60,$60,$60,$60,$60,$60 ; F137 60 60 60 60 60 60 60 60  ````````
-LF13F:
+RandomEncounterEnemyType:
         .byte   $23,$2E,$00,$24,$27,$00,$25,$3C ; F13F 23 2E 00 24 27 00 25 3C  #..$'.%<
         .byte   $00,$26,$30,$00,$27,$24,$00,$28 ; F147 00 26 30 00 27 24 00 28  .&0.'$.(
         .byte   $5E,$00,$29,$4A,$00,$2A,$34,$00 ; F14F 5E 00 29 4A 00 2A 34 00  ^.)J.*4.

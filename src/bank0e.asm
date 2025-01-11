@@ -6100,7 +6100,7 @@ LA99F:
         pha                                     ; A9C0 48                       H
         ldx     $6F1F                           ; A9C1 AE 1F 6F                 ..o
         lda     $603C,x                         ; A9C4 BD 3C 60                 .<`
-        jsr     LADD2                           ; A9C7 20 D2 AD                  ..
+        jsr     SetCharacterStatsOtherAttributes; A9C7 20 D2 AD                  ..
         jsr     LA9D9                           ; A9CA 20 D9 A9                  ..
         pla                                     ; A9CD 68                       h
         sta     $6F23                           ; A9CE 8D 23 6F                 .#o
@@ -6165,7 +6165,6 @@ LAA2E:
         lda     $603C,x                         ; AA37 BD 3C 60                 .<`
         tax                                     ; AA3A AA                       .
         lda     $604A,x                         ; AA3B BD 4A 60                 .J`
-LAA40           := * + 2
         ora     $6051,x                         ; AA3E 1D 51 60                 .Q`
         bne     LAA55                           ; AA41 D0 12                    ..
         ldx     #$10                            ; AA43 A2 10                    ..
@@ -6665,30 +6664,12 @@ LAD9B:
 
 ; ----------------------------------------------------------------------------
 LADBA:
-        rol     $3F43,x                         ; ADBA 3E 43 3F                 >C?
-        bne     LADF9                           ; ADBD D0 3A                    .:
-        .byte   $2B                             ; ADBF 2B                       +
-        .byte   $3B                             ; ADC0 3B                       ;
-        rti                                     ; ADC1 40                       @
-
+        .byte   $3E,$43,$3F,$D0,$3A,$2B,$3B,$40 ; ADBA 3E 43 3F D0 3A 2B 3B 40  >C?.:+;@
+        .byte   $3E,$43,$3F,$40,$22,$13,$23,$40 ; ADC2 3E 43 3F 40 22 13 23 40  >C?@".#@
+        .byte   $28,$1A,$29,$40,$18,$0A,$19,$40 ; ADCA 28 1A 29 40 18 0A 19 40  (.)@...@
 ; ----------------------------------------------------------------------------
-        rol     $3F43,x                         ; ADC2 3E 43 3F                 >C?
-        rti                                     ; ADC5 40                       @
-
-; ----------------------------------------------------------------------------
-        .byte   $22                             ; ADC6 22                       "
-        .byte   $13                             ; ADC7 13                       .
-        .byte   $23                             ; ADC8 23                       #
-        rti                                     ; ADC9 40                       @
-
-; ----------------------------------------------------------------------------
-        plp                                     ; ADCA 28                       (
-        .byte   $1A                             ; ADCB 1A                       .
-        and     #$40                            ; ADCC 29 40                    )@
-        clc                                     ; ADCE 18                       .
-        asl     a                               ; ADCF 0A                       .
-LADD2           := * + 2
-        ora     LAA40,y                         ; ADD0 19 40 AA                 .@.
+SetCharacterStatsOtherAttributes:
+        tax                                     ; ADD2 AA                       .
         lda     #$05                            ; ADD3 A9 05                    ..
         sta     $0141                           ; ADD5 8D 41 01                 .A.
         lda     $4F                             ; ADD8 A5 4F                    .O
@@ -6707,7 +6688,6 @@ LADD2           := * + 2
         sta     L0002                           ; ADF2 85 02                    ..
         txa                                     ; ADF4 8A                       .
         sta     L0400                           ; ADF5 8D 00 04                 ...
-LADF9           := * + 1
         lda     #$0E                            ; ADF8 A9 0E                    ..
         sta     $0402                           ; ADFA 8D 02 04                 ...
         lda     #$00                            ; ADFD A9 00                    ..
@@ -6817,13 +6797,13 @@ LAEE1:
         jsr     LAF4F                           ; AEF1 20 4F AF                  O.
 LAEF4:
         txa                                     ; AEF4 8A                       .
-        jsr     SetCharacterStats               ; AEF5 20 FD AE                  ..
+        jsr     SetCharacterLevelExpStats       ; AEF5 20 FD AE                  ..
         txa                                     ; AEF8 8A                       .
         jsr     LAFF9                           ; AEF9 20 F9 AF                  ..
         rts                                     ; AEFC 60                       `
 
 ; ----------------------------------------------------------------------------
-SetCharacterStats:
+SetCharacterLevelExpStats:
         tax                                     ; AEFD AA                       .
         lda     #$05                            ; AEFE A9 05                    ..
         sta     $0141                           ; AF00 8D 41 01                 .A.

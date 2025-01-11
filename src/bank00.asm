@@ -57,7 +57,7 @@ L802C:
 
 ; ----------------------------------------------------------------------------
 L802D:
-        jsr     L87C9                           ; 802D 20 C9 87                  ..
+        jsr     DecreasePlayerTimeToRandomEncounter; 802D 20 C9 87               ..
         ldy     #$04                            ; 8030 A0 04                    ..
         lda     $0300,y                         ; 8032 B9 00 03                 ...
         cmp     #$10                            ; 8035 C9 10                    ..
@@ -106,7 +106,7 @@ L8077:
         jsr     LFCCC                           ; 8077 20 CC FC                  ..
         jsr     L855E                           ; 807A 20 5E 85                  ^.
         jsr     L860A                           ; 807D 20 0A 86                  ..
-        jsr     L87C9                           ; 8080 20 C9 87                  ..
+        jsr     DecreasePlayerTimeToRandomEncounter; 8080 20 C9 87               ..
         clc                                     ; 8083 18                       .
         rts                                     ; 8084 60                       `
 
@@ -248,7 +248,7 @@ L814B:
 
 ; ----------------------------------------------------------------------------
 L814C:
-        jsr     L87C9                           ; 814C 20 C9 87                  ..
+        jsr     DecreasePlayerTimeToRandomEncounter; 814C 20 C9 87               ..
         ldy     #$06                            ; 814F A0 06                    ..
         lda     $0300,y                         ; 8151 B9 00 03                 ...
         cmp     #$D8                            ; 8154 C9 D8                    ..
@@ -297,7 +297,7 @@ L8196:
         jsr     LFC90                           ; 8196 20 90 FC                  ..
         jsr     L855E                           ; 8199 20 5E 85                  ^.
         jsr     L86B2                           ; 819C 20 B2 86                  ..
-        jsr     L87C9                           ; 819F 20 C9 87                  ..
+        jsr     DecreasePlayerTimeToRandomEncounter; 819F 20 C9 87               ..
         clc                                     ; 81A2 18                       .
         rts                                     ; 81A3 60                       `
 
@@ -454,7 +454,7 @@ L8283:
 
 ; ----------------------------------------------------------------------------
 L8284:
-        jsr     L87C9                           ; 8284 20 C9 87                  ..
+        jsr     DecreasePlayerTimeToRandomEncounter; 8284 20 C9 87               ..
         ldy     #$04                            ; 8287 A0 04                    ..
         lda     $0300,y                         ; 8289 B9 00 03                 ...
         cmp     #$F0                            ; 828C C9 F0                    ..
@@ -503,7 +503,7 @@ L82CE:
         jsr     LFCAE                           ; 82CE 20 AE FC                  ..
         jsr     L855E                           ; 82D1 20 5E 85                  ^.
         jsr     L857A                           ; 82D4 20 7A 85                  z.
-        jsr     L87C9                           ; 82D7 20 C9 87                  ..
+        jsr     DecreasePlayerTimeToRandomEncounter; 82D7 20 C9 87               ..
         clc                                     ; 82DA 18                       .
         rts                                     ; 82DB 60                       `
 
@@ -652,7 +652,7 @@ L83A9:
 
 ; ----------------------------------------------------------------------------
 L83AA:
-        jsr     L87C9                           ; 83AA 20 C9 87                  ..
+        jsr     DecreasePlayerTimeToRandomEncounter; 83AA 20 C9 87               ..
         ldy     #$06                            ; 83AD A0 06                    ..
         lda     $0300,y                         ; 83AF B9 00 03                 ...
         cmp     #$10                            ; 83B2 C9 10                    ..
@@ -701,7 +701,7 @@ L83F4:
         jsr     LFCEA                           ; 83F4 20 EA FC                  ..
         jsr     L855E                           ; 83F7 20 5E 85                  ^.
         jsr     L8753                           ; 83FA 20 53 87                  S.
-        jsr     L87C9                           ; 83FD 20 C9 87                  ..
+        jsr     DecreasePlayerTimeToRandomEncounter; 83FD 20 C9 87               ..
         clc                                     ; 8400 18                       .
         rts                                     ; 8401 60                       `
 
@@ -1299,7 +1299,7 @@ L875D:
         rts                                     ; 87C8 60                       `
 
 ; ----------------------------------------------------------------------------
-L87C9:
+DecreasePlayerTimeToRandomEncounter:
         lda     $6022                           ; 87C9 AD 22 60                 ."`
         cmp     #$01                            ; 87CC C9 01                    ..
         beq     L87D3                           ; 87CE F0 03                    ..
@@ -9505,12 +9505,12 @@ LDE17:
         sta     $602D                           ; DE34 8D 2D 60                 .-`
 LDE37:
         lda     $602C                           ; DE37 AD 2C 60                 .,`
-        beq     LDE41                           ; DE3A F0 05                    ..
-        bmi     LDE41                           ; DE3C 30 03                    0.
+        beq     TriggerRandomEncounter          ; DE3A F0 05                    ..
+        bmi     TriggerRandomEncounter          ; DE3C 30 03                    0.
         jmp     LDE57                           ; DE3E 4C 57 DE                 LW.
 
 ; ----------------------------------------------------------------------------
-LDE41:
+TriggerRandomEncounter:
         lda     #$FF                            ; DE41 A9 FF                    ..
         sta     $7E                             ; DE43 85 7E                    .~
         jsr     LF3E6                           ; DE45 20 E6 F3                  ..

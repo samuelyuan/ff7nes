@@ -4,8 +4,8 @@
 ; ----------------------------------------------------------------------------
         .addr   MenuGraphics                    ; 8000 1F 80                    ..
         .addr   LC048                           ; 8002 48 C0                    H.
-        .addr   LC234                           ; 8004 34 C2                    4.
-        .addr   LC234                           ; 8006 34 C2                    4.
+        .addr   MaxCharacterStats               ; 8004 34 C2                    4.
+        .addr   MaxCharacterStats               ; 8006 34 C2                    4.
         .addr   ExpNeededForNextLevel           ; 8008 9E C7                    ..
         .addr   ShopItemStats                   ; 800A 32 C9                    2.
         .addr   LD2B0                           ; 800C B0 D2                    ..
@@ -21,38 +21,38 @@
         .byte   $40                             ; 801E 40                       @
 ; ----------------------------------------------------------------------------
 MenuGraphics:
-        .addr   MenuPlayerHomeTileset           ; 801F 57 80                    W.
-        .addr   MenuPlayerHomeTileset           ; 8021 57 80                    W.
-        .addr   MenuPlayerHomeTilemap           ; 8023 67 84                    g.
-        .addr   MenuPlayerHomePalette           ; 8025 67 88                    g.
-        .addr   L8887                           ; 8027 87 88                    ..
-        .addr   L8887                           ; 8029 87 88                    ..
+        .addr   PlayerMenuHomeTileset           ; 801F 57 80                    W.
+        .addr   PlayerMenuHomeTileset           ; 8021 57 80                    W.
+        .addr   PlayerMenuHomeTilemap           ; 8023 67 84                    g.
+        .addr   PlayerMenuHomePalette           ; 8025 67 88                    g.
+        .addr   PlayerMenuStatusTileset         ; 8027 87 88                    ..
+        .addr   PlayerMenuStatusTileset         ; 8029 87 88                    ..
         .addr   L8D47                           ; 802B 47 8D                    G.
         .addr   L9147                           ; 802D 47 91                    G.
         .addr   L9167                           ; 802F 67 91                    g.
         .addr   L9527                           ; 8031 27 95                    '.
         .addr   L98E7                           ; 8033 E7 98                    ..
         .addr   L9CE7                           ; 8035 E7 9C                    ..
-        .addr   L9D07                           ; 8037 07 9D                    ..
-        .addr   L9D07                           ; 8039 07 9D                    ..
+        .addr   PlayerMenuItemTileset           ; 8037 07 9D                    ..
+        .addr   PlayerMenuItemTileset           ; 8039 07 9D                    ..
         .addr   L9FB7                           ; 803B B7 9F                    ..
         .addr   LA3B7                           ; 803D B7 A3                    ..
-        .addr   LA3D7                           ; 803F D7 A3                    ..
-        .addr   LA3D7                           ; 8041 D7 A3                    ..
+        .addr   PlayerMenuMagicTileset          ; 803F D7 A3                    ..
+        .addr   PlayerMenuMagicTileset          ; 8041 D7 A3                    ..
         .addr   LA617                           ; 8043 17 A6                    ..
         .addr   LAA17                           ; 8045 17 AA                    ..
         .addr   LAA37                           ; 8047 37 AA                    7.
         .addr   LB497                           ; 8049 97 B4                    ..
         .addr   LB667                           ; 804B 67 B6                    g.
         .addr   LBA67                           ; 804D 67 BA                    g.
-        .addr   LBA87                           ; 804F 87 BA                    ..
-        .addr   LBA87                           ; 8051 87 BA                    ..
+        .addr   GeneralShopMenuTileset          ; 804F 87 BA                    ..
+        .addr   GeneralShopMenuTileset          ; 8051 87 BA                    ..
         .addr   LBC27                           ; 8053 27 BC                    '.
         .addr   LC027                           ; 8055 27 C0                    '.
 ; ----------------------------------------------------------------------------
-MenuPlayerHomeTileset:
+PlayerMenuHomeTileset:
         .INCBIN "gfx/menu/bank05_player_menu_home_8057.chr"
-MenuPlayerHomeTilemap:
+PlayerMenuHomeTilemap:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8467 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 846F 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8477 00 00 00 00 00 00 00 00  ........
@@ -181,12 +181,12 @@ MenuPlayerHomeTilemap:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 884F 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8857 00 00 00 00 00 00 00 00  ........
         .byte   $40,$20,$10,$00,$30,$20,$E0,$80 ; 885F 40 20 10 00 30 20 E0 80  @ ..0 ..
-MenuPlayerHomePalette:
+PlayerMenuHomePalette:
         .byte   $0F,$30,$00,$02,$0F,$30,$29,$02 ; 8867 0F 30 00 02 0F 30 29 02  .0...0).
         .byte   $0F,$0F,$0F,$0F,$0F,$0F,$0F,$0F ; 886F 0F 0F 0F 0F 0F 0F 0F 0F  ........
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; 8877 0F 17 30 36 0F 17 30 36  ..06..06
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; 887F 0F 17 30 36 0F 17 30 36  ..06..06
-L8887:
+PlayerMenuStatusTileset:
         .INCBIN "gfx/menu/bank05_player_menu_status_8887.chr"
 L8D47:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8D47 00 00 00 00 00 00 00 00  ........
@@ -460,7 +460,7 @@ L9CE7:
         .byte   $0F,$0F,$0F,$0F,$0F,$0F,$0F,$0F ; 9CEF 0F 0F 0F 0F 0F 0F 0F 0F  ........
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; 9CF7 0F 17 30 36 0F 17 30 36  ..06..06
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; 9CFF 0F 17 30 36 0F 17 30 36  ..06..06
-L9D07:
+PlayerMenuItemTileset:
         .INCBIN "gfx/menu/bank05_player_menu_item_9d07.chr"
 L9FB7:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 9FB7 00 00 00 00 00 00 00 00  ........
@@ -596,7 +596,7 @@ LA3B7:
         .byte   $0F,$0F,$0F,$0F,$0F,$0F,$0F,$0F ; A3BF 0F 0F 0F 0F 0F 0F 0F 0F  ........
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; A3C7 0F 17 30 36 0F 17 30 36  ..06..06
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; A3CF 0F 17 30 36 0F 17 30 36  ..06..06
-LA3D7:
+PlayerMenuMagicTileset:
         .INCBIN "gfx/menu/bank05_player_menu_magic_a3d7.chr"
 LA617:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A617 00 00 00 00 00 00 00 00  ........
@@ -870,7 +870,7 @@ LBA67:
         .byte   $0F,$01,$11,$21,$0F,$00,$30,$02 ; BA6F 0F 01 11 21 0F 00 30 02  ...!..0.
         .byte   $0F,$36,$28,$12,$0F,$36,$30,$16 ; BA77 0F 36 28 12 0F 36 30 16  .6(..60.
         .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; BA7F 0F 27 19 18 0F 36 16 18  .'...6..
-LBA87:
+GeneralShopMenuTileset:
         .INCBIN "gfx/menu/bank05_general_shop_menu_ba87.chr"
 LBC27:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC27 00 00 00 00 00 00 00 00  ........
@@ -1070,7 +1070,8 @@ LC048:
         .byte   $21,$00,$00,$00,$65,$00,$00,$00 ; C220 21 00 00 00 65 00 00 00  !...e...
         .byte   $02,$00,$00,$00,$20,$00,$00,$00 ; C228 02 00 00 00 20 00 00 00  .... ...
         .byte   $65,$00,$00,$00                 ; C230 65 00 00 00              e...
-LC234:
+; Stores max HP, Str, Vit, Int, Spr, Agl. The 7th variable is unknown. All variables are 2 bytes and each character takes 14 bytes.
+MaxCharacterStats:
         .byte   $E0,$06,$B0,$01,$80,$01,$D0,$01 ; C234 E0 06 B0 01 80 01 D0 01  ........
         .byte   $30,$01,$F0,$00,$00,$70,$30,$07 ; C23C 30 01 F0 00 00 70 30 07  0....p0.
         .byte   $10,$02,$D0,$01,$F0,$00,$F0,$00 ; C244 10 02 D0 01 F0 00 F0 00  ........
