@@ -3030,7 +3030,7 @@ L9241:
 
 ; ----------------------------------------------------------------------------
 L924C:
-        jsr     LE033                           ; 924C 20 33 E0                  3.
+        jsr     InnStayRestoreUnitHealth        ; 924C 20 33 E0                  3.
         lda     #$01                            ; 924F A9 01                    ..
         jmp     L88D9                           ; 9251 4C D9 88                 L..
 
@@ -3085,7 +3085,7 @@ L9289:
 ; ----------------------------------------------------------------------------
 L9297:
         stx     $8E                             ; 9297 86 8E                    ..
-        jsr     L9434                           ; 9299 20 34 94                  4.
+        jsr     RestorePartyMemberHealth        ; 9299 20 34 94                  4.
         jsr     L9445                           ; 929C 20 45 94                  E.
         jsr     L941A                           ; 929F 20 1A 94                  ..
         lda     $603B                           ; 92A2 AD 3B 60                 .;`
@@ -3364,7 +3364,7 @@ L9433:
         rts                                     ; 9433 60                       `
 
 ; ----------------------------------------------------------------------------
-L9434:
+RestorePartyMemberHealth:
         lda     $603C,x                         ; 9434 BD 3C 60                 .<`
         tay                                     ; 9437 A8                       .
         lda     $60C1,y                         ; 9438 B9 C1 60                 ..`
@@ -9372,7 +9372,7 @@ LDCE6:
         jsr     LE0E7                           ; DD3F 20 E7 E0                  ..
         lda     #$00                            ; DD42 A9 00                    ..
         jsr     LEBFB                           ; DD44 20 FB EB                  ..
-        jsr     LF050                           ; DD47 20 50 F0                  P.
+        jsr     StoreMapRowsAndColumns          ; DD47 20 50 F0                  P.
         lda     $A3                             ; DD4A A5 A3                    ..
         sta     $1D                             ; DD4C 85 1D                    ..
         lda     $A4                             ; DD4E A5 A4                    ..
@@ -9698,14 +9698,14 @@ LDF4A:
         lda     $0B                             ; DF8F A5 0B                    ..
         cmp     $09                             ; DF91 C5 09                    ..
         bne     LDF98                           ; DF93 D0 03                    ..
-        jmp     LDF99                           ; DF95 4C 99 DF                 L..
+        jmp     InnStaySubtractGil              ; DF95 4C 99 DF                 L..
 
 ; ----------------------------------------------------------------------------
 LDF98:
         rts                                     ; DF98 60                       `
 
 ; ----------------------------------------------------------------------------
-LDF99:
+InnStaySubtractGil:
         jsr     LEA36                           ; DF99 20 36 EA                  6.
         jsr     L8364                           ; DF9C 20 64 83                  d.
         ldy     $0301                           ; DF9F AC 01 03                 ...
@@ -9748,7 +9748,7 @@ LDF99:
         sta     $1C                             ; DFF4 85 1C                    ..
         ldx     #$14                            ; DFF6 A2 14                    ..
         jsr     LF349                           ; DFF8 20 49 F3                  I.
-        jsr     LE033                           ; DFFB 20 33 E0                  3.
+        jsr     InnStayRestoreUnitHealth        ; DFFB 20 33 E0                  3.
         jsr     LEA3F                           ; DFFE 20 3F EA                  ?.
         lda     #$0E                            ; E001 A9 0E                    ..
         sta     $56                             ; E003 85 56                    .V
@@ -9782,10 +9782,10 @@ LE022:
         rts                                     ; E032 60                       `
 
 ; ----------------------------------------------------------------------------
-LE033:
+InnStayRestoreUnitHealth:
         ldx     #$00                            ; E033 A2 00                    ..
 LE035:
-        jsr     L9434                           ; E035 20 34 94                  4.
+        jsr     RestorePartyMemberHealth        ; E035 20 34 94                  4.
         inx                                     ; E038 E8                       .
         cpx     $603B                           ; E039 EC 3B 60                 .;`
         bcc     LE035                           ; E03C 90 F7                    ..
@@ -10934,7 +10934,7 @@ LE870:
         lda     $51                             ; E893 A5 51                    .Q
         and     #$3F                            ; E895 29 3F                    )?
         sta     $51                             ; E897 85 51                    .Q
-        jsr     LF050                           ; E899 20 50 F0                  P.
+        jsr     StoreMapRowsAndColumns          ; E899 20 50 F0                  P.
         lda     $50                             ; E89C A5 50                    .P
         pha                                     ; E89E 48                       H
         lda     $86                             ; E89F A5 86                    ..
@@ -11046,7 +11046,7 @@ LE944:
         lda     $51                             ; E98C A5 51                    .Q
         and     #$3F                            ; E98E 29 3F                    )?
         sta     $51                             ; E990 85 51                    .Q
-        jsr     LF050                           ; E992 20 50 F0                  P.
+        jsr     StoreMapRowsAndColumns          ; E992 20 50 F0                  P.
         jsr     L84B0                           ; E995 20 B0 84                  ..
         jsr     L6800                           ; E998 20 00 68                  .h
         jsr     LEA36                           ; E99B 20 36 EA                  6.
@@ -12070,7 +12070,7 @@ LEF6F:
         .byte   $8D,$00,$50,$A9,$00,$8D,$00,$52 ; F047 8D 00 50 A9 00 8D 00 52  ..P....R
         .byte   $60                             ; F04F 60                       `
 ; ----------------------------------------------------------------------------
-LF050:
+StoreMapRowsAndColumns:
         ldx     #$00                            ; F050 A2 00                    ..
         lda     $0770,x                         ; F052 BD 70 07                 .p.
         sta     L0000                           ; F055 85 00                    ..
@@ -12515,7 +12515,7 @@ LF350:
         lda     $51                             ; F366 A5 51                    .Q
         and     #$3F                            ; F368 29 3F                    )?
         sta     $51                             ; F36A 85 51                    .Q
-        jsr     LF050                           ; F36C 20 50 F0                  P.
+        jsr     StoreMapRowsAndColumns          ; F36C 20 50 F0                  P.
         lda     $A5                             ; F36F A5 A5                    ..
         sta     $17                             ; F371 85 17                    ..
         lda     $A3                             ; F373 A5 A3                    ..

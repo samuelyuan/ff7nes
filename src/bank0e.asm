@@ -3420,25 +3420,27 @@ L9733:
 
 ; ----------------------------------------------------------------------------
 L9745:
-        adc     ($97,x)                         ; 9745 61 97                    a.
-        eor     $97,x                           ; 9747 55 97                    U.
-        eor     $97,x                           ; 9749 55 97                    U.
-        adc     ($97,x)                         ; 974B 61 97                    a.
-        cli                                     ; 974D 58                       X
-        .byte   $97                             ; 974E 97                       .
-        cli                                     ; 974F 58                       X
-        .byte   $97                             ; 9750 97                       .
-        eor     $97,x                           ; 9751 55 97                    U.
-        eor     $97,x                           ; 9753 55 97                    U.
+        .addr   L9761                           ; 9745 61 97                    a.
+        .addr   L9755                           ; 9747 55 97                    U.
+        .addr   L9755                           ; 9749 55 97                    U.
+        .addr   L9761                           ; 974B 61 97                    a.
+        .addr   L9758                           ; 974D 58 97                    X.
+        .addr   L9758                           ; 974F 58 97                    X.
+        .addr   L9755                           ; 9751 55 97                    U.
+        .addr   L9755                           ; 9753 55 97                    U.
+; ----------------------------------------------------------------------------
+L9755:
         jmp     L9721                           ; 9755 4C 21 97                 L!.
 
 ; ----------------------------------------------------------------------------
+L9758:
         lda     $EA                             ; 9758 A5 EA                    ..
         eor     #$01                            ; 975A 49 01                    I.
         sta     $EA                             ; 975C 85 EA                    ..
         jmp     L9718                           ; 975E 4C 18 97                 L..
 
 ; ----------------------------------------------------------------------------
+L9761:
         jsr     LDE09                           ; 9761 20 09 DE                  ..
         jsr     MenuCursorGraphicsUpdate        ; 9764 20 78 DF                  x.
         jsr     L97A0                           ; 9767 20 A0 97                  ..
@@ -5737,7 +5739,7 @@ MainPlayerMenuToMagicSubmenu:
         lda     #$00                            ; A721 A9 00                    ..
         sta     $6F1E                           ; A723 8D 1E 6F                 ..o
         sta     $6F20                           ; A726 8D 20 6F                 . o
-        jsr     LCC4F                           ; A729 20 4F CC                  O.
+        jsr     MagicSubmenuRenderMain          ; A729 20 4F CC                  O.
         jsr     MenuGraphicsRefresh             ; A72C 20 0D E0                  ..
         jmp     LA615                           ; A72F 4C 15 A6                 L..
 
@@ -10185,7 +10187,7 @@ ItemToUseIsMagicItem:
         sta     $6F1E                           ; C86D 8D 1E 6F                 ..o
         lda     #$01                            ; C870 A9 01                    ..
         sta     $6F20                           ; C872 8D 20 6F                 . o
-        jsr     LCC4F                           ; C875 20 4F CC                  O.
+        jsr     MagicSubmenuRenderMain          ; C875 20 4F CC                  O.
         jsr     MenuGraphicsRefresh             ; C878 20 0D E0                  ..
 LC87B:
         jsr     LC8CE                           ; C87B 20 CE C8                  ..
@@ -10751,13 +10753,13 @@ LCC27:
         rts                                     ; CC4E 60                       `
 
 ; ----------------------------------------------------------------------------
-LCC4F:
+MagicSubmenuRenderMain:
         lda     $6F1E                           ; CC4F AD 1E 6F                 ..o
         sta     $6F1F                           ; CC52 8D 1F 6F                 ..o
-        jsr     LCEA3                           ; CC55 20 A3 CE                  ..
+        jsr     MagicSubmenuRenderPage          ; CC55 20 A3 CE                  ..
         lda     $060E                           ; CC58 AD 0E 06                 ...
         bne     MagicSubmenuSelectCharacter     ; CC5B D0 67                    .g
-LCC5D:
+MagicSubmenuNoOpRender:
         jsr     MenuCursorGraphicsUpdate        ; CC5D 20 78 DF                  x.
         ldx     #$08                            ; CC60 A2 08                    ..
         lda     $22                             ; CC62 A5 22                    ."
@@ -10766,7 +10768,7 @@ LCC64:
         bcs     LCC6C                           ; CC65 B0 05                    ..
         dex                                     ; CC67 CA                       .
         bne     LCC64                           ; CC68 D0 FA                    ..
-        beq     LCC5D                           ; CC6A F0 F1                    ..
+        beq     MagicSubmenuNoOpRender          ; CC6A F0 F1                    ..
 LCC6C:
         dex                                     ; CC6C CA                       .
         txa                                     ; CC6D 8A                       .
@@ -10796,13 +10798,13 @@ MagicSubmenuExit:
 
 ; ----------------------------------------------------------------------------
 MagicSubmenuNoOp:
-        jmp     LCC5D                           ; CC90 4C 5D CC                 L].
+        jmp     MagicSubmenuNoOpRender          ; CC90 4C 5D CC                 L].
 
 ; ----------------------------------------------------------------------------
 MagicSubmenuChangeCharacterMoveLeftOrUp:
         lda     $603B                           ; CC93 AD 3B 60                 .;`
         cmp     #$02                            ; CC96 C9 02                    ..
-        bcc     LCC5D                           ; CC98 90 C3                    ..
+        bcc     MagicSubmenuNoOpRender          ; CC98 90 C3                    ..
         ldx     $6F1F                           ; CC9A AE 1F 6F                 ..o
         dex                                     ; CC9D CA                       .
         bpl     LCCA4                           ; CC9E 10 04                    ..
@@ -10811,14 +10813,14 @@ MagicSubmenuChangeCharacterMoveLeftOrUp:
 LCCA4:
         stx     $6F1F                           ; CCA4 8E 1F 6F                 ..o
         jsr     MenuGraphicsRefresh             ; CCA7 20 0D E0                  ..
-        jsr     LCEA3                           ; CCAA 20 A3 CE                  ..
-        jmp     LCC5D                           ; CCAD 4C 5D CC                 L].
+        jsr     MagicSubmenuRenderPage          ; CCAA 20 A3 CE                  ..
+        jmp     MagicSubmenuNoOpRender          ; CCAD 4C 5D CC                 L].
 
 ; ----------------------------------------------------------------------------
 MagicSubmenuChangeCharacterMoveRightOrDown:
         lda     $603B                           ; CCB0 AD 3B 60                 .;`
         cmp     #$02                            ; CCB3 C9 02                    ..
-        bcc     LCC5D                           ; CCB5 90 A6                    ..
+        bcc     MagicSubmenuNoOpRender          ; CCB5 90 A6                    ..
         ldx     $6F1F                           ; CCB7 AE 1F 6F                 ..o
         inx                                     ; CCBA E8                       .
         cpx     $603B                           ; CCBB EC 3B 60                 .;`
@@ -10835,7 +10837,7 @@ LCCD2:
         lda     #$00                            ; CCD2 A9 00                    ..
         sta     $DB                             ; CCD4 85 DB                    ..
         sta     $DC                             ; CCD6 85 DC                    ..
-LCCD8:
+MagicSubmenuUpdateScreen:
         jsr     L9425                           ; CCD8 20 25 94                  %.
         jsr     MenuCursorGraphicsUpdate        ; CCDB 20 78 DF                  x.
         ldx     #$08                            ; CCDE A2 08                    ..
@@ -10845,7 +10847,7 @@ LCCE2:
         bcs     LCCEA                           ; CCE3 B0 05                    ..
         dex                                     ; CCE5 CA                       .
         bne     LCCE2                           ; CCE6 D0 FA                    ..
-        beq     LCCD8                           ; CCE8 F0 EE                    ..
+        beq     MagicSubmenuUpdateScreen        ; CCE8 F0 EE                    ..
 LCCEA:
         dex                                     ; CCEA CA                       .
         txa                                     ; CCEB 8A                       .
@@ -10874,7 +10876,7 @@ LCD0C:
         bne     LCD1A                           ; CD0F D0 09                    ..
         jsr     LCF26                           ; CD11 20 26 CF                  &.
         jsr     LD25D                           ; CD14 20 5D D2                  ].
-        jmp     LCC5D                           ; CD17 4C 5D CC                 L].
+        jmp     MagicSubmenuNoOpRender          ; CD17 4C 5D CC                 L].
 
 ; ----------------------------------------------------------------------------
 LCD1A:
@@ -10883,20 +10885,20 @@ LCD1A:
 
 ; ----------------------------------------------------------------------------
 LCD1C:
-        jmp     LCCD8                           ; CD1C 4C D8 CC                 L..
+        jmp     MagicSubmenuUpdateScreen        ; CD1C 4C D8 CC                 L..
 
 ; ----------------------------------------------------------------------------
 LCD1F:
         lda     $0616                           ; CD1F AD 16 06                 ...
         cmp     #$02                            ; CD22 C9 02                    ..
-        bcc     LCCD8                           ; CD24 90 B2                    ..
+        bcc     MagicSubmenuUpdateScreen        ; CD24 90 B2                    ..
         lda     $6F44                           ; CD26 AD 44 6F                 .Do
         eor     #$01                            ; CD29 49 01                    I.
         cmp     $0616                           ; CD2B CD 16 06                 ...
-        bcs     LCCD8                           ; CD2E B0 A8                    ..
+        bcs     MagicSubmenuUpdateScreen        ; CD2E B0 A8                    ..
 LCD30:
         cmp     $6F44                           ; CD30 CD 44 6F                 .Do
-        beq     LCCD8                           ; CD33 F0 A3                    ..
+        beq     MagicSubmenuUpdateScreen        ; CD33 F0 A3                    ..
         sta     $6F44                           ; CD35 8D 44 6F                 .Do
         jsr     LCEFA                           ; CD38 20 FA CE                  ..
         jsr     LD2A7                           ; CD3B 20 A7 D2                  ..
@@ -10907,7 +10909,7 @@ LCD30:
 LCD44:
         lda     $0616                           ; CD44 AD 16 06                 ...
         cmp     #$03                            ; CD47 C9 03                    ..
-        bcc     LCCD8                           ; CD49 90 8D                    ..
+        bcc     MagicSubmenuUpdateScreen        ; CD49 90 8D                    ..
         lda     $6F44                           ; CD4B AD 44 6F                 .Do
         clc                                     ; CD4E 18                       .
         adc     #$02                            ; CD4F 69 02                    i.
@@ -10918,7 +10920,7 @@ LCD44:
 
 ; ----------------------------------------------------------------------------
 LCD5B:
-        jmp     LCCD8                           ; CD5B 4C D8 CC                 L..
+        jmp     MagicSubmenuUpdateScreen        ; CD5B 4C D8 CC                 L..
 
 ; ----------------------------------------------------------------------------
 LCD5E:
@@ -10949,7 +10951,7 @@ LCD8A:
         lda     $0645,x                         ; CD8D BD 45 06                 .E.
         bne     LCD95                           ; CD90 D0 03                    ..
 LCD92:
-        jmp     LCCD8                           ; CD92 4C D8 CC                 L..
+        jmp     MagicSubmenuUpdateScreen        ; CD92 4C D8 CC                 L..
 
 ; ----------------------------------------------------------------------------
 LCD95:
@@ -10980,7 +10982,7 @@ LCDB4:
         stx     $6F24                           ; CDBC 8E 24 6F                 .$o
         lda     $60CE,x                         ; CDBF BD CE 60                 ..`
         bne     IncreaseCharacterMP             ; CDC2 D0 03                    ..
-        jmp     LCCD8                           ; CDC4 4C D8 CC                 L..
+        jmp     MagicSubmenuUpdateScreen        ; CDC4 4C D8 CC                 L..
 
 ; ----------------------------------------------------------------------------
 IncreaseCharacterMP:
@@ -10991,21 +10993,21 @@ IncreaseCharacterMP:
         ldx     $6F44                           ; CDD3 AE 44 6F                 .Do
         lda     $0645,x                         ; CDD6 BD 45 06                 .E.
         sta     $6F24                           ; CDD9 8D 24 6F                 .$o
-        jsr     LD31E                           ; CDDC 20 1E D3                  ..
+        jsr     MagicSubmenuReadPlayerMateria   ; CDDC 20 1E D3                  ..
         lda     $6F26                           ; CDDF AD 26 6F                 .&o
         sec                                     ; CDE2 38                       8
         sbc     $6F2B                           ; CDE3 ED 2B 6F                 .+o
-        bcs     LCE15                           ; CDE6 B0 2D                    .-
+        bcs     CharacterMPAlreadyFull          ; CDE6 B0 2D                    .-
         lda     $6F26                           ; CDE8 AD 26 6F                 .&o
         clc                                     ; CDEB 18                       .
         adc     $060C                           ; CDEC 6D 0C 06                 m..
         sta     $6F26                           ; CDEF 8D 26 6F                 .&o
-        bcs     LCDFD                           ; CDF2 B0 09                    ..
+        bcs     CharacterMPExceededMax          ; CDF2 B0 09                    ..
         lda     $6F2B                           ; CDF4 AD 2B 6F                 .+o
         sec                                     ; CDF7 38                       8
         sbc     $6F26                           ; CDF8 ED 26 6F                 .&o
         bcs     StoreCharacterMP                ; CDFB B0 06                    ..
-LCDFD:
+CharacterMPExceededMax:
         lda     $6F2B                           ; CDFD AD 2B 6F                 .+o
         sta     $6F26                           ; CE00 8D 26 6F                 .&o
 StoreCharacterMP:
@@ -11015,8 +11017,8 @@ StoreCharacterMP:
         jsr     LD441                           ; CE0C 20 41 D4                  A.
         ldx     $6F45                           ; CE0F AE 45 6F                 .Eo
         dec     $60CE,x                         ; CE12 DE CE 60                 ..`
-LCE15:
-        jmp     LCCD8                           ; CE15 4C D8 CC                 L..
+CharacterMPAlreadyFull:
+        jmp     MagicSubmenuUpdateScreen        ; CE15 4C D8 CC                 L..
 
 ; ----------------------------------------------------------------------------
 MagicItemMPValues:
@@ -11026,7 +11028,7 @@ LCE1B:
         ldx     $6F44                           ; CE1B AE 44 6F                 .Do
         lda     $0645,x                         ; CE1E BD 45 06                 .E.
         sta     $6F24                           ; CE21 8D 24 6F                 .$o
-        jsr     LD31E                           ; CE24 20 1E D3                  ..
+        jsr     MagicSubmenuReadPlayerMateria   ; CE24 20 1E D3                  ..
         lda     $6F25                           ; CE27 AD 25 6F                 .%o
         cmp     #$14                            ; CE2A C9 14                    ..
         bcs     LCE8F                           ; CE2C B0 61                    .a
@@ -11068,7 +11070,7 @@ LCE7D:
         jsr     L96C6                           ; CE83 20 C6 96                  ..
         jsr     LD2A7                           ; CE86 20 A7 D2                  ..
         jsr     LCF7F                           ; CE89 20 7F CF                  ..
-        jmp     LCCD8                           ; CE8C 4C D8 CC                 L..
+        jmp     MagicSubmenuUpdateScreen        ; CE8C 4C D8 CC                 L..
 
 ; ----------------------------------------------------------------------------
 LCE8F:
@@ -11083,7 +11085,7 @@ LCE99:
         lda     #$45                            ; CE9D A9 45                    .E
         sta     $69                             ; CE9F 85 69                    .i
         bne     LCE7D                           ; CEA1 D0 DA                    ..
-LCEA3:
+MagicSubmenuRenderPage:
         jsr     LDF94                           ; CEA3 20 94 DF                  ..
         jsr     MenuCursorGraphicsUpdate        ; CEA6 20 78 DF                  x.
         lda     #$04                            ; CEA9 A9 04                    ..
@@ -11245,7 +11247,7 @@ LCF8C:
 
 ; ----------------------------------------------------------------------------
 LCF8D:
-        jsr     LD31E                           ; CF8D 20 1E D3                  ..
+        jsr     MagicSubmenuReadPlayerMateria   ; CF8D 20 1E D3                  ..
         lda     #$01                            ; CF90 A9 01                    ..
 LCF94           := * + 2
         sta     $0617                           ; CF92 8D 17 06                 ...
@@ -11572,7 +11574,7 @@ LD313:
         rts                                     ; D31D 60                       `
 
 ; ----------------------------------------------------------------------------
-LD31E:
+MagicSubmenuReadPlayerMateria:
         ldx     $6F24                           ; D31E AE 24 6F                 .$o
         lda     $637C,x                         ; D321 BD 7C 63                 .|c
         sta     $6F25                           ; D324 8D 25 6F                 .%o
@@ -11796,24 +11798,25 @@ LD4D1:
 
 ; ----------------------------------------------------------------------------
 LD4E3:
-        rol     $D5                             ; D4E3 26 D5                    &.
-        .byte   $F3                             ; D4E5 F3                       .
-        .byte   $D4                             ; D4E6 D4                       .
-        sbc     $D4,x                           ; D4E7 F5 D4                    ..
-        sbc     $D4,x                           ; D4E9 F5 D4                    ..
-        sed                                     ; D4EB F8                       .
-        .byte   $D4                             ; D4EC D4                       .
-        .byte   $12                             ; D4ED 12                       .
-        cmp     $F5,x                           ; D4EE D5 F5                    ..
-        .byte   $D4                             ; D4F0 D4                       .
-        sbc     $D4,x                           ; D4F1 F5 D4                    ..
+        .addr   LD526                           ; D4E3 26 D5                    &.
+        .addr   LD4F3                           ; D4E5 F3 D4                    ..
+        .addr   LD4F5                           ; D4E7 F5 D4                    ..
+        .addr   LD4F5                           ; D4E9 F5 D4                    ..
+        .addr   LD4F8                           ; D4EB F8 D4                    ..
+        .addr   LD512                           ; D4ED 12 D5                    ..
+        .addr   LD4F5                           ; D4EF F5 D4                    ..
+        .addr   LD4F5                           ; D4F1 F5 D4                    ..
+; ----------------------------------------------------------------------------
+LD4F3:
         clc                                     ; D4F3 18                       .
         rts                                     ; D4F4 60                       `
 
 ; ----------------------------------------------------------------------------
+LD4F5:
         jmp     LD4BF                           ; D4F5 4C BF D4                 L..
 
 ; ----------------------------------------------------------------------------
+LD4F8:
         lda     $603B                           ; D4F8 AD 3B 60                 .;`
         cmp     #$02                            ; D4FB C9 02                    ..
         bcc     LD4BF                           ; D4FD 90 C0                    ..
@@ -11828,6 +11831,7 @@ LD509:
         jmp     LD4B9                           ; D50F 4C B9 D4                 L..
 
 ; ----------------------------------------------------------------------------
+LD512:
         lda     $603B                           ; D512 AD 3B 60                 .;`
         cmp     #$02                            ; D515 C9 02                    ..
         bcc     LD4BF                           ; D517 90 A6                    ..
@@ -11837,6 +11841,7 @@ LD509:
         bcc     LD509                           ; D520 90 E7                    ..
         ldx     #$00                            ; D522 A2 00                    ..
         beq     LD509                           ; D524 F0 E3                    ..
+LD526:
         lda     $603B                           ; D526 AD 3B 60                 .;`
         cmp     #$02                            ; D529 C9 02                    ..
         bcc     LD4BF                           ; D52B 90 92                    ..
@@ -13101,7 +13106,7 @@ LDDB3:
         sta     $6F1E                           ; DDB5 8D 1E 6F                 ..o
         lda     #$02                            ; DDB8 A9 02                    ..
         sta     $6F20                           ; DDBA 8D 20 6F                 . o
-        jsr     LCC4F                           ; DDBD 20 4F CC                  O.
+        jsr     MagicSubmenuRenderMain          ; DDBD 20 4F CC                  O.
         jsr     MenuGraphicsRefresh             ; DDC0 20 0D E0                  ..
         jmp     LDE0D                           ; DDC3 4C 0D DE                 L..
 
