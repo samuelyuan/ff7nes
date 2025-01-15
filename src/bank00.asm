@@ -7770,7 +7770,7 @@ LD1CB:
         cmp     #$03                            ; D1D6 C9 03                    ..
         bne     LD1CB                           ; D1D8 D0 F1                    ..
         jsr     LF33B                           ; D1DA 20 3B F3                  ;.
-        jmp     LE944                           ; D1DD 4C 44 E9                 LD.
+        jmp     InitPlayerMain                  ; D1DD 4C 44 E9                 LD.
 
 ; ----------------------------------------------------------------------------
 LD1E0:
@@ -8158,37 +8158,37 @@ LD446:
         rts                                     ; D451 60                       `
 
 ; ----------------------------------------------------------------------------
-LD452:
+InitPlayerVariablesSaveRAM:
         ldx     #$00                            ; D452 A2 00                    ..
-LD454:
+InitPlayerVariablesSaveRAMLoop:
         txa                                     ; D454 8A                       .
         sta     $603C,x                         ; D455 9D 3C 60                 .<`
         asl     a                               ; D458 0A                       .
         asl     a                               ; D459 0A                       .
         asl     a                               ; D45A 0A                       .
         tay                                     ; D45B A8                       .
-        lda     LD4F8,y                         ; D45C B9 F8 D4                 ...
+        lda     InitialPlayerVarTable,y         ; D45C B9 F8 D4                 ...
         sta     $6043,x                         ; D45F 9D 43 60                 .C`
         iny                                     ; D462 C8                       .
-        lda     LD4F8,y                         ; D463 B9 F8 D4                 ...
+        lda     InitialPlayerVarTable,y         ; D463 B9 F8 D4                 ...
         sta     $6058,x                         ; D466 9D 58 60                 .X`
         iny                                     ; D469 C8                       .
-        lda     LD4F8,y                         ; D46A B9 F8 D4                 ...
+        lda     InitialPlayerVarTable,y         ; D46A B9 F8 D4                 ...
         sta     $605F,x                         ; D46D 9D 5F 60                 ._`
         iny                                     ; D470 C8                       .
-        lda     LD4F8,y                         ; D471 B9 F8 D4                 ...
+        lda     InitialPlayerVarTable,y         ; D471 B9 F8 D4                 ...
         sta     $6066,x                         ; D474 9D 66 60                 .f`
         iny                                     ; D477 C8                       .
-        lda     LD4F8,y                         ; D478 B9 F8 D4                 ...
+        lda     InitialPlayerVarTable,y         ; D478 B9 F8 D4                 ...
         sta     $606D,x                         ; D47B 9D 6D 60                 .m`
         iny                                     ; D47E C8                       .
-        lda     LD4F8,y                         ; D47F B9 F8 D4                 ...
+        lda     InitialPlayerVarTable,y         ; D47F B9 F8 D4                 ...
         sta     $6074,x                         ; D482 9D 74 60                 .t`
         iny                                     ; D485 C8                       .
-        lda     LD4F8,y                         ; D486 B9 F8 D4                 ...
+        lda     InitialPlayerVarTable,y         ; D486 B9 F8 D4                 ...
         sta     $607B,x                         ; D489 9D 7B 60                 .{`
         iny                                     ; D48C C8                       .
-        lda     LD4F8,y                         ; D48D B9 F8 D4                 ...
+        lda     InitialPlayerVarTable,y         ; D48D B9 F8 D4                 ...
         sta     $9C                             ; D490 85 9C                    ..
         lda     $6074,x                         ; D492 BD 74 60                 .t`
         beq     LD49D                           ; D495 F0 06                    ..
@@ -8237,14 +8237,14 @@ LD4C3:
         inx                                     ; D4EF E8                       .
         cpx     #$07                            ; D4F0 E0 07                    ..
         bcs     LD4F7                           ; D4F2 B0 03                    ..
-        jmp     LD454                           ; D4F4 4C 54 D4                 LT.
+        jmp     InitPlayerVariablesSaveRAMLoop  ; D4F4 4C 54 D4                 LT.
 
 ; ----------------------------------------------------------------------------
 LD4F7:
         rts                                     ; D4F7 60                       `
 
 ; ----------------------------------------------------------------------------
-LD4F8:
+InitialPlayerVarTable:
         .byte   $08,$00,$00,$00,$00,$01,$03,$01 ; D4F8 08 00 00 00 00 01 03 01  ........
         .byte   $08,$00,$00,$00,$00,$11,$05,$02 ; D500 08 00 00 00 00 11 05 02  ........
         .byte   $08,$00,$00,$00,$00,$21,$04,$02 ; D508 08 00 00 00 00 21 04 02  .....!..
@@ -11009,15 +11009,15 @@ LE8D2:
         jsr     LF349                           ; E937 20 49 F3                  I.
         jsr     LF463                           ; E93A 20 63 F4                  c.
         lda     $EA                             ; E93D A5 EA                    ..
-        beq     LE944                           ; E93F F0 03                    ..
+        beq     InitPlayerMain                  ; E93F F0 03                    ..
         jmp     LD1C6                           ; E941 4C C6 D1                 L..
 
 ; ----------------------------------------------------------------------------
-LE944:
+InitPlayerMain:
         jsr     LEA36                           ; E944 20 36 EA                  6.
         jsr     LF09D                           ; E947 20 9D F0                  ..
         jsr     LF10B                           ; E94A 20 0B F1                  ..
-        jsr     LD452                           ; E94D 20 52 D4                  R.
+        jsr     InitPlayerVariablesSaveRAM      ; E94D 20 52 D4                  R.
         lda     #$01                            ; E950 A9 01                    ..
         sta     $603B                           ; E952 8D 3B 60                 .;`
         lda     #$0A                            ; E955 A9 0A                    ..

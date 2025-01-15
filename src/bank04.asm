@@ -7,6 +7,8 @@ L0130           := $0130
 L0140           := $0140
 L0150           := $0150
 L0400           := $0400
+L21E6           := $21E6
+L4038           := $4038
 ; ----------------------------------------------------------------------------
         jmp     LA4CE                           ; 8000 4C CE A4                 L..
 
@@ -5101,134 +5103,557 @@ LA4A9:
 
 ; ----------------------------------------------------------------------------
 LA4AE:
-        .byte   $03,$03,$0C,$0C,$03,$03,$0C,$0C ; A4AE 03 03 0C 0C 03 03 0C 0C  ........
-        .byte   $30,$30,$C0,$C0,$30,$30,$C0,$C0 ; A4B6 30 30 C0 C0 30 30 C0 C0  00..00..
+        .byte   $03                             ; A4AE 03                       .
+        .byte   $03                             ; A4AF 03                       .
+        .byte   $0C                             ; A4B0 0C                       .
+        .byte   $0C                             ; A4B1 0C                       .
+        .byte   $03                             ; A4B2 03                       .
+        .byte   $03                             ; A4B3 03                       .
+        .byte   $0C                             ; A4B4 0C                       .
+        .byte   $0C                             ; A4B5 0C                       .
+        bmi     LA4E8                           ; A4B6 30 30                    00
+        cpy     #$C0                            ; A4B8 C0 C0                    ..
+        bmi     LA4EC                           ; A4BA 30 30                    00
+        cpy     #$C0                            ; A4BC C0 C0                    ..
 LA4BE:
-        .byte   $00,$00,$01,$01,$00,$00,$01,$01 ; A4BE 00 00 01 01 00 00 01 01  ........
-        .byte   $02,$02,$03,$03,$02,$02,$03,$03 ; A4C6 02 02 03 03 02 02 03 03  ........
+        brk                                     ; A4BE 00                       .
+        brk                                     ; A4BF 00                       .
+        ora     ($01,x)                         ; A4C0 01 01                    ..
+        brk                                     ; A4C2 00                       .
+        brk                                     ; A4C3 00                       .
+        ora     ($01,x)                         ; A4C4 01 01                    ..
+        .byte   $02                             ; A4C6 02                       .
+        .byte   $02                             ; A4C7 02                       .
+        .byte   $03                             ; A4C8 03                       .
+        .byte   $03                             ; A4C9 03                       .
+        .byte   $02                             ; A4CA 02                       .
+        .byte   $02                             ; A4CB 02                       .
+        .byte   $03                             ; A4CC 03                       .
+        .byte   $03                             ; A4CD 03                       .
 LA4CE:
-        .byte   $20,$BC,$F3,$20,$A0,$F3,$A9,$00 ; A4CE 20 BC F3 20 A0 F3 A9 00   .. ....
-        .byte   $85,$A9,$20,$68,$F2,$20,$61,$A5 ; A4D6 85 A9 20 68 F2 20 61 A5  .. h. a.
-        .byte   $20,$6D,$A5,$20,$0B,$F4,$A9,$00 ; A4DE 20 6D A5 20 0B F4 A9 00   m. ....
-        .byte   $85,$DB,$85,$DC,$20,$98,$9C,$20 ; A4E6 85 DB 85 DC 20 98 9C 20  .... .. 
-        .byte   $A0,$F3,$A2,$08,$A5,$22,$4A,$B0 ; A4EE A0 F3 A2 08 A5 22 4A B0  ....."J.
-        .byte   $05,$CA,$D0,$FA,$F0,$EE,$CA,$8A ; A4F6 05 CA D0 FA F0 EE CA 8A  ........
-        .byte   $0A,$AA,$BD,$0E,$A5,$85,$02,$E8 ; A4FE 0A AA BD 0E A5 85 02 E8  ........
-        .byte   $BD,$0E,$A5,$85,$03,$6C,$02,$00 ; A506 BD 0E A5 85 03 6C 02 00  .....l..
-        .byte   $44,$A5,$1E,$A5,$24,$A5,$24,$A5 ; A50E 44 A5 1E A5 24 A5 24 A5  D...$.$.
-        .byte   $27,$A5,$38,$A5,$24,$A5,$24,$A5 ; A516 27 A5 38 A5 24 A5 24 A5  '.8.$.$.
-        .byte   $20,$35,$F4,$4C,$49,$F2,$4C,$EA ; A51E 20 35 F4 4C 49 F2 4C EA   5.LI.L.
-        .byte   $A4,$AE,$1D,$6F,$CA,$10,$02,$A2 ; A526 A4 AE 1D 6F CA 10 02 A2  ...o....
-        .byte   $04,$8E,$1D,$6F,$20,$6D,$A5,$4C ; A52E 04 8E 1D 6F 20 6D A5 4C  ...o m.L
-        .byte   $E4,$A4,$AE,$1D,$6F,$E8,$E0,$05 ; A536 E4 A4 AE 1D 6F E8 E0 05  ....o...
-        .byte   $90,$EF,$A2,$00,$F0,$EB,$AD,$1D ; A53E 90 EF A2 00 F0 EB AD 1D  ........
-        .byte   $6F,$0A,$AA,$BD,$57,$A5,$85,$02 ; A546 6F 0A AA BD 57 A5 85 02  o...W...
-        .byte   $E8,$BD,$57,$A5,$85,$03,$6C,$02 ; A54E E8 BD 57 A5 85 03 6C 02  ..W...l.
-        .byte   $00,$8F,$A5,$B4,$A5,$C0,$A5,$A3 ; A556 00 8F A5 B4 A5 C0 A5 A3  ........
-        .byte   $A5,$D4,$A5,$A9,$10,$85,$0A,$A9 ; A55E A5 D4 A5 A9 10 85 0A A9  ........
-        .byte   $00,$85,$09,$20,$E4,$9B,$60,$AD ; A566 00 85 09 20 E4 9B 60 AD  ... ..`.
-        .byte   $1D,$6F,$0A,$AA,$BD,$85,$A5,$85 ; A56E 1D 6F 0A AA BD 85 A5 85  .o......
-        .byte   $AD,$E8,$BD,$85,$A5,$85,$AC,$A2 ; A576 AD E8 BD 85 A5 85 AC A2  ........
-        .byte   $F0,$A9,$00,$20,$4C,$9C,$60,$A0 ; A57E F0 A9 00 20 4C 9C 60 A0  ... L.`.
-        .byte   $28,$A0,$38,$A0,$48,$A0,$58,$A0 ; A586 28 A0 38 A0 48 A0 58 A0  (.8.H.X.
-        .byte   $68,$20,$35,$F4,$A9,$00,$8D,$1E ; A58E 68 20 35 F4 A9 00 8D 1E  h 5.....
-        .byte   $6F,$8D,$20,$6F,$20,$DA,$A5,$20 ; A596 6F 8D 20 6F 20 DA A5 20  o. o .. 
-        .byte   $35,$F4,$4C,$CE,$A4,$20,$35,$F4 ; A59E 35 F4 4C CE A4 20 35 F4  5.L.. 5.
-        .byte   $A9,$00,$8D,$1E,$6F,$20,$D0,$B1 ; A5A6 A9 00 8D 1E 6F 20 D0 B1  ....o ..
-        .byte   $20,$35,$F4,$4C,$CE,$A4,$20,$35 ; A5AE 20 35 F4 4C CE A4 20 35   5.L.. 5
-        .byte   $F4,$20,$D1,$B1,$20,$35,$F4,$4C ; A5B6 F4 20 D1 B1 20 35 F4 4C  . .. 5.L
-        .byte   $CE,$A4,$20,$35,$F4,$A9,$00,$8D ; A5BE CE A4 20 35 F4 A9 00 8D  .. 5....
-        .byte   $1E,$6F,$8D,$20,$6F,$20,$72,$B7 ; A5C6 1E 6F 8D 20 6F 20 72 B7  .o. o r.
-        .byte   $20,$35,$F4,$4C,$CE,$A4,$20,$35 ; A5CE 20 35 F4 4C CE A4 20 35   5.L.. 5
-        .byte   $F4,$4C,$CE,$A4,$AD,$1E,$6F,$8D ; A5D6 F4 4C CE A4 AD 1E 6F 8D  .L....o.
-        .byte   $1F,$6F,$20,$2F,$A8,$20,$A0,$F3 ; A5DE 1F 6F 20 2F A8 20 A0 F3  .o /. ..
-        .byte   $A2,$08,$A5,$22,$4A,$B0,$05,$CA ; A5E6 A2 08 A5 22 4A B0 05 CA  ..."J...
-        .byte   $D0,$FA,$F0,$F1,$CA,$8A,$0A,$AA ; A5EE D0 FA F0 F1 CA 8A 0A AA  ........
-        .byte   $BD,$04,$A6,$85,$02,$E8,$BD,$04 ; A5F6 BD 04 A6 85 02 E8 BD 04  ........
-        .byte   $A6,$85,$03,$6C,$02,$00,$4A,$A6 ; A5FE A6 85 03 6C 02 00 4A A6  ...l..J.
-        .byte   $14,$A6,$16,$A6,$16,$A6,$19,$A6 ; A606 14 A6 16 A6 16 A6 19 A6  ........
-        .byte   $36,$A6,$19,$A6,$36,$A6,$18,$60 ; A60E 36 A6 19 A6 36 A6 18 60  6...6..`
-        .byte   $4C,$E3,$A5,$AD,$3B,$60,$C9,$02 ; A616 4C E3 A5 AD 3B 60 C9 02  L...;`..
-        .byte   $90,$C3,$AE,$1F,$6F,$CA,$10,$04 ; A61E 90 C3 AE 1F 6F CA 10 04  ....o...
-        .byte   $AE,$3B,$60,$CA,$8E,$1F,$6F,$20 ; A626 AE 3B 60 CA 8E 1F 6F 20  .;`...o 
-        .byte   $35,$F4,$20,$2F,$A8,$4C,$E3,$A5 ; A62E 35 F4 20 2F A8 4C E3 A5  5. /.L..
-        .byte   $AD,$3B,$60,$C9,$02,$90,$A6,$AE ; A636 AD 3B 60 C9 02 90 A6 AE  .;`.....
-        .byte   $1F,$6F,$E8,$EC,$3B,$60,$90,$E4 ; A63E 1F 6F E8 EC 3B 60 90 E4  .o..;`..
-        .byte   $A2,$00,$F0,$E0,$AD,$20,$6F,$C9 ; A646 A2 00 F0 E0 AD 20 6F C9  ..... o.
-        .byte   $01,$F0,$03,$4C,$E3,$A5,$AE,$24 ; A64E 01 F0 03 4C E3 A5 AE 24  ...L...$
-        .byte   $6F,$BD,$CE,$60,$D0,$03,$4C,$E3 ; A656 6F BD CE 60 D0 03 4C E3  o..`..L.
-        .byte   $A5,$20,$01,$B7,$AD,$26,$6F,$0A ; A65E A5 20 01 B7 AD 26 6F 0A  . ...&o.
-        .byte   $AA,$BD,$75,$A6,$85,$02,$E8,$BD ; A666 AA BD 75 A6 85 02 E8 BD  ..u.....
-        .byte   $75,$A6,$85,$03,$6C,$02,$00,$8B ; A66E 75 A6 85 03 6C 02 00 8B  u...l...
-        .byte   $A6,$00,$A7,$03,$A7,$2A,$A7,$2D ; A676 A6 00 A7 03 A7 2A A7 2D  .....*.-
-        .byte   $A7,$58,$A7,$83,$A7,$AE,$A7,$D9 ; A67E A7 58 A7 83 A7 AE A7 D9  .X......
-        .byte   $A7,$04,$A8,$04,$A8,$AD,$27,$6F ; A686 A7 04 A8 04 A8 AD 27 6F  ......'o
-        .byte   $0A,$AA,$BD,$F4,$A6,$8D,$0C,$06 ; A68E 0A AA BD F4 A6 8D 0C 06  ........
-        .byte   $E8,$BD,$F4,$A6,$8D,$0D,$06,$AD ; A696 E8 BD F4 A6 8D 0D 06 AD  ........
-        .byte   $25,$6F,$D0,$1F,$AD,$1F,$6F,$20 ; A69E 25 6F D0 1F AD 1F 6F 20  %o....o 
-        .byte   $6C,$B0,$F0,$14,$AD,$1F,$6F,$20 ; A6A6 6C B0 F0 14 AD 1F 6F 20  l.....o 
-        .byte   $59,$B0,$B0,$0C,$AD,$1F,$6F,$20 ; A6AE 59 B0 B0 0C AD 1F 6F 20  Y.....o 
-        .byte   $7F,$B0,$20,$78,$B0,$20,$B5,$B0 ; A6B6 7F B0 20 78 B0 20 B5 B0  .. x. ..
-        .byte   $4C,$E3,$A5,$A9,$00,$48,$20,$59 ; A6BE 4C E3 A5 A9 00 48 20 59  L....H Y
-        .byte   $B0,$90,$0B,$68,$18,$69,$01,$CD ; A6C6 B0 90 0B 68 18 69 01 CD  ...h.i..
-        .byte   $3B,$60,$D0,$F1,$F0,$EA,$68,$A9 ; A6CE 3B 60 D0 F1 F0 EA 68 A9  ;`....h.
-        .byte   $00,$48,$20,$6C,$B0,$F0,$05,$68 ; A6D6 00 48 20 6C B0 F0 05 68  .H l...h
-        .byte   $48,$20,$7F,$B0,$68,$18,$69,$01 ; A6DE 48 20 7F B0 68 18 69 01  H ..h.i.
-        .byte   $CD,$3B,$60,$D0,$EC,$20,$78,$B0 ; A6E6 CD 3B 60 D0 EC 20 78 B0  .;`.. x.
-        .byte   $20,$B5,$B0,$4C,$E3,$A5         ; A6EE 20 B5 B0 4C E3 A5         ..L..
+        jsr     LF3BC                           ; A4CE 20 BC F3                  ..
+        jsr     LF3A0                           ; A4D1 20 A0 F3                  ..
+        lda     #$00                            ; A4D4 A9 00                    ..
+        sta     $A9                             ; A4D6 85 A9                    ..
+        jsr     LF268                           ; A4D8 20 68 F2                  h.
+        jsr     LA561                           ; A4DB 20 61 A5                  a.
+        jsr     LA56D                           ; A4DE 20 6D A5                  m.
+        jsr     LF40B                           ; A4E1 20 0B F4                  ..
+LA4E4:
+        lda     #$00                            ; A4E4 A9 00                    ..
+        sta     $DB                             ; A4E6 85 DB                    ..
+LA4E8:
+LA4E9           := * + 1
+        sta     $DC                             ; A4E8 85 DC                    ..
+LA4EA:
+LA4EC           := * + 2
+        jsr     L9C98                           ; A4EA 20 98 9C                  ..
+        jsr     LF3A0                           ; A4ED 20 A0 F3                  ..
+        ldx     #$08                            ; A4F0 A2 08                    ..
+        lda     $22                             ; A4F2 A5 22                    ."
+LA4F4:
+        lsr     a                               ; A4F4 4A                       J
+        bcs     LA4FC                           ; A4F5 B0 05                    ..
+        dex                                     ; A4F7 CA                       .
+        bne     LA4F4                           ; A4F8 D0 FA                    ..
+        beq     LA4EA                           ; A4FA F0 EE                    ..
+LA4FC:
+        dex                                     ; A4FC CA                       .
+        txa                                     ; A4FD 8A                       .
+        asl     a                               ; A4FE 0A                       .
+        tax                                     ; A4FF AA                       .
+        lda     LA50E,x                         ; A500 BD 0E A5                 ...
+        sta     L0002                           ; A503 85 02                    ..
+        inx                                     ; A505 E8                       .
+        lda     LA50E,x                         ; A506 BD 0E A5                 ...
+        sta     $03                             ; A509 85 03                    ..
+        jmp     (L0002)                         ; A50B 6C 02 00                 l..
+
+; ----------------------------------------------------------------------------
+LA50E:
+        .byte   $44                             ; A50E 44                       D
+        lda     $1E                             ; A50F A5 1E                    ..
+        lda     $24                             ; A511 A5 24                    .$
+        lda     $24                             ; A513 A5 24                    .$
+        lda     $27                             ; A515 A5 27                    .'
+        lda     $38                             ; A517 A5 38                    .8
+        lda     $24                             ; A519 A5 24                    .$
+        lda     $24                             ; A51B A5 24                    .$
+        lda     $20                             ; A51D A5 20                    . 
+        and     $F4,x                           ; A51F 35 F4                    5.
+        jmp     LF249                           ; A521 4C 49 F2                 LI.
+
+; ----------------------------------------------------------------------------
+        jmp     LA4EA                           ; A524 4C EA A4                 L..
+
+; ----------------------------------------------------------------------------
+        ldx     $6F1D                           ; A527 AE 1D 6F                 ..o
+        dex                                     ; A52A CA                       .
+        bpl     LA52F                           ; A52B 10 02                    ..
+        ldx     #$04                            ; A52D A2 04                    ..
+LA52F:
+        stx     $6F1D                           ; A52F 8E 1D 6F                 ..o
+        jsr     LA56D                           ; A532 20 6D A5                  m.
+        jmp     LA4E4                           ; A535 4C E4 A4                 L..
+
+; ----------------------------------------------------------------------------
+        ldx     $6F1D                           ; A538 AE 1D 6F                 ..o
+        inx                                     ; A53B E8                       .
+        cpx     #$05                            ; A53C E0 05                    ..
+        bcc     LA52F                           ; A53E 90 EF                    ..
+        ldx     #$00                            ; A540 A2 00                    ..
+        beq     LA52F                           ; A542 F0 EB                    ..
+        lda     $6F1D                           ; A544 AD 1D 6F                 ..o
+        asl     a                               ; A547 0A                       .
+        tax                                     ; A548 AA                       .
+        lda     LA557,x                         ; A549 BD 57 A5                 .W.
+        sta     L0002                           ; A54C 85 02                    ..
+        inx                                     ; A54E E8                       .
+        lda     LA557,x                         ; A54F BD 57 A5                 .W.
+        sta     $03                             ; A552 85 03                    ..
+        jmp     (L0002)                         ; A554 6C 02 00                 l..
+
+; ----------------------------------------------------------------------------
+LA557:
+        .byte   $8F                             ; A557 8F                       .
+        lda     $B4                             ; A558 A5 B4                    ..
+        lda     $C0                             ; A55A A5 C0                    ..
+        lda     $A3                             ; A55C A5 A3                    ..
+        lda     $D4                             ; A55E A5 D4                    ..
+LA561           := * + 1
+        lda     $A9                             ; A560 A5 A9                    ..
+        bpl     LA4E9                           ; A562 10 85                    ..
+        asl     a                               ; A564 0A                       .
+        lda     #$00                            ; A565 A9 00                    ..
+        sta     $09                             ; A567 85 09                    ..
+        jsr     L9BE4                           ; A569 20 E4 9B                  ..
+        rts                                     ; A56C 60                       `
+
+; ----------------------------------------------------------------------------
+LA56D:
+        lda     $6F1D                           ; A56D AD 1D 6F                 ..o
+        asl     a                               ; A570 0A                       .
+        tax                                     ; A571 AA                       .
+        lda     LA585,x                         ; A572 BD 85 A5                 ...
+        sta     $AD                             ; A575 85 AD                    ..
+        inx                                     ; A577 E8                       .
+        lda     LA585,x                         ; A578 BD 85 A5                 ...
+        sta     $AC                             ; A57B 85 AC                    ..
+        ldx     #$F0                            ; A57D A2 F0                    ..
+        lda     #$00                            ; A57F A9 00                    ..
+        jsr     L9C4C                           ; A581 20 4C 9C                  L.
+        rts                                     ; A584 60                       `
+
+; ----------------------------------------------------------------------------
+LA585:
+        ldy     #$28                            ; A585 A0 28                    .(
+        ldy     #$38                            ; A587 A0 38                    .8
+        ldy     #$48                            ; A589 A0 48                    .H
+        ldy     #$58                            ; A58B A0 58                    .X
+        ldy     #$68                            ; A58D A0 68                    .h
+        jsr     LF435                           ; A58F 20 35 F4                  5.
+        lda     #$00                            ; A592 A9 00                    ..
+        sta     $6F1E                           ; A594 8D 1E 6F                 ..o
+        sta     $6F20                           ; A597 8D 20 6F                 . o
+        jsr     LA5DA                           ; A59A 20 DA A5                  ..
+        jsr     LF435                           ; A59D 20 35 F4                  5.
+        jmp     LA4CE                           ; A5A0 4C CE A4                 L..
+
+; ----------------------------------------------------------------------------
+        jsr     LF435                           ; A5A3 20 35 F4                  5.
+        lda     #$00                            ; A5A6 A9 00                    ..
+        sta     $6F1E                           ; A5A8 8D 1E 6F                 ..o
+        jsr     LB1D0                           ; A5AB 20 D0 B1                  ..
+        jsr     LF435                           ; A5AE 20 35 F4                  5.
+        jmp     LA4CE                           ; A5B1 4C CE A4                 L..
+
+; ----------------------------------------------------------------------------
+        jsr     LF435                           ; A5B4 20 35 F4                  5.
+        jsr     LB1D1                           ; A5B7 20 D1 B1                  ..
+        jsr     LF435                           ; A5BA 20 35 F4                  5.
+        jmp     LA4CE                           ; A5BD 4C CE A4                 L..
+
+; ----------------------------------------------------------------------------
+        jsr     LF435                           ; A5C0 20 35 F4                  5.
+        lda     #$00                            ; A5C3 A9 00                    ..
+        sta     $6F1E                           ; A5C5 8D 1E 6F                 ..o
+        sta     $6F20                           ; A5C8 8D 20 6F                 . o
+        jsr     LB772                           ; A5CB 20 72 B7                  r.
+        jsr     LF435                           ; A5CE 20 35 F4                  5.
+        jmp     LA4CE                           ; A5D1 4C CE A4                 L..
+
+; ----------------------------------------------------------------------------
+        jsr     LF435                           ; A5D4 20 35 F4                  5.
+        jmp     LA4CE                           ; A5D7 4C CE A4                 L..
+
+; ----------------------------------------------------------------------------
+LA5DA:
+        lda     $6F1E                           ; A5DA AD 1E 6F                 ..o
+        sta     $6F1F                           ; A5DD 8D 1F 6F                 ..o
+        jsr     LA82F                           ; A5E0 20 2F A8                  /.
+LA5E3:
+        jsr     LF3A0                           ; A5E3 20 A0 F3                  ..
+        ldx     #$08                            ; A5E6 A2 08                    ..
+        lda     $22                             ; A5E8 A5 22                    ."
+LA5EA:
+        lsr     a                               ; A5EA 4A                       J
+        bcs     LA5F2                           ; A5EB B0 05                    ..
+        dex                                     ; A5ED CA                       .
+        bne     LA5EA                           ; A5EE D0 FA                    ..
+        beq     LA5E3                           ; A5F0 F0 F1                    ..
+LA5F2:
+        dex                                     ; A5F2 CA                       .
+        txa                                     ; A5F3 8A                       .
+        asl     a                               ; A5F4 0A                       .
+        tax                                     ; A5F5 AA                       .
+        lda     LA604,x                         ; A5F6 BD 04 A6                 ...
+        sta     L0002                           ; A5F9 85 02                    ..
+        inx                                     ; A5FB E8                       .
+        lda     LA604,x                         ; A5FC BD 04 A6                 ...
+        sta     $03                             ; A5FF 85 03                    ..
+        jmp     (L0002)                         ; A601 6C 02 00                 l..
+
+; ----------------------------------------------------------------------------
+LA604:
+        lsr     a                               ; A604 4A                       J
+        ldx     $14                             ; A605 A6 14                    ..
+        ldx     $16                             ; A607 A6 16                    ..
+        ldx     $16                             ; A609 A6 16                    ..
+        ldx     $19                             ; A60B A6 19                    ..
+        ldx     $36                             ; A60D A6 36                    .6
+        ldx     $19                             ; A60F A6 19                    ..
+        ldx     $36                             ; A611 A6 36                    .6
+        ldx     $18                             ; A613 A6 18                    ..
+        rts                                     ; A615 60                       `
+
+; ----------------------------------------------------------------------------
+        jmp     LA5E3                           ; A616 4C E3 A5                 L..
+
+; ----------------------------------------------------------------------------
+        lda     $603B                           ; A619 AD 3B 60                 .;`
+        cmp     #$02                            ; A61C C9 02                    ..
+        bcc     LA5E3                           ; A61E 90 C3                    ..
+        ldx     $6F1F                           ; A620 AE 1F 6F                 ..o
+        dex                                     ; A623 CA                       .
+        bpl     LA62A                           ; A624 10 04                    ..
+        ldx     $603B                           ; A626 AE 3B 60                 .;`
+        dex                                     ; A629 CA                       .
+LA62A:
+        stx     $6F1F                           ; A62A 8E 1F 6F                 ..o
+        jsr     LF435                           ; A62D 20 35 F4                  5.
+        jsr     LA82F                           ; A630 20 2F A8                  /.
+        jmp     LA5E3                           ; A633 4C E3 A5                 L..
+
+; ----------------------------------------------------------------------------
+        lda     $603B                           ; A636 AD 3B 60                 .;`
+        cmp     #$02                            ; A639 C9 02                    ..
+        bcc     LA5E3                           ; A63B 90 A6                    ..
+        ldx     $6F1F                           ; A63D AE 1F 6F                 ..o
+        inx                                     ; A640 E8                       .
+        cpx     $603B                           ; A641 EC 3B 60                 .;`
+        bcc     LA62A                           ; A644 90 E4                    ..
+        ldx     #$00                            ; A646 A2 00                    ..
+        beq     LA62A                           ; A648 F0 E0                    ..
+        lda     $6F20                           ; A64A AD 20 6F                 . o
+        cmp     #$01                            ; A64D C9 01                    ..
+        beq     LA654                           ; A64F F0 03                    ..
+        jmp     LA5E3                           ; A651 4C E3 A5                 L..
+
+; ----------------------------------------------------------------------------
+LA654:
+        ldx     $6F24                           ; A654 AE 24 6F                 .$o
+        lda     $60CE,x                         ; A657 BD CE 60                 ..`
+        bne     LA65F                           ; A65A D0 03                    ..
+        jmp     LA5E3                           ; A65C 4C E3 A5                 L..
+
+; ----------------------------------------------------------------------------
+LA65F:
+        jsr     LB701                           ; A65F 20 01 B7                  ..
+        lda     $6F26                           ; A662 AD 26 6F                 .&o
+        asl     a                               ; A665 0A                       .
+        tax                                     ; A666 AA                       .
+        lda     LA675,x                         ; A667 BD 75 A6                 .u.
+        sta     L0002                           ; A66A 85 02                    ..
+        inx                                     ; A66C E8                       .
+        lda     LA675,x                         ; A66D BD 75 A6                 .u.
+        sta     $03                             ; A670 85 03                    ..
+        jmp     (L0002)                         ; A672 6C 02 00                 l..
+
+; ----------------------------------------------------------------------------
+LA675:
+        .byte   $8B                             ; A675 8B                       .
+        ldx     $00                             ; A676 A6 00                    ..
+        .byte   $A7                             ; A678 A7                       .
+        .byte   $03                             ; A679 03                       .
+        .byte   $A7                             ; A67A A7                       .
+        rol     a                               ; A67B 2A                       *
+        .byte   $A7                             ; A67C A7                       .
+        and     $58A7                           ; A67D 2D A7 58                 -.X
+        .byte   $A7                             ; A680 A7                       .
+        .byte   $83                             ; A681 83                       .
+        .byte   $A7                             ; A682 A7                       .
+        ldx     LD9A7                           ; A683 AE A7 D9                 ...
+        .byte   $A7                             ; A686 A7                       .
+        .byte   $04                             ; A687 04                       .
+        tay                                     ; A688 A8                       .
+        .byte   $04                             ; A689 04                       .
+        tay                                     ; A68A A8                       .
+        lda     $6F27                           ; A68B AD 27 6F                 .'o
+        asl     a                               ; A68E 0A                       .
+        tax                                     ; A68F AA                       .
+        lda     LA6F4,x                         ; A690 BD F4 A6                 ...
+        sta     $060C                           ; A693 8D 0C 06                 ...
+        inx                                     ; A696 E8                       .
+        lda     LA6F4,x                         ; A697 BD F4 A6                 ...
+        sta     $060D                           ; A69A 8D 0D 06                 ...
+        lda     $6F25                           ; A69D AD 25 6F                 .%o
+        bne     LA6C1                           ; A6A0 D0 1F                    ..
+        lda     $6F1F                           ; A6A2 AD 1F 6F                 ..o
+        jsr     LB06C                           ; A6A5 20 6C B0                  l.
+        beq     LA6BE                           ; A6A8 F0 14                    ..
+        lda     $6F1F                           ; A6AA AD 1F 6F                 ..o
+        jsr     LB059                           ; A6AD 20 59 B0                  Y.
+        bcs     LA6BE                           ; A6B0 B0 0C                    ..
+LA6B2:
+        lda     $6F1F                           ; A6B2 AD 1F 6F                 ..o
+        jsr     LB07F                           ; A6B5 20 7F B0                  ..
+        jsr     LB078                           ; A6B8 20 78 B0                  x.
+        jsr     LB0B5                           ; A6BB 20 B5 B0                  ..
+LA6BE:
+        jmp     LA5E3                           ; A6BE 4C E3 A5                 L..
+
+; ----------------------------------------------------------------------------
+LA6C1:
+        lda     #$00                            ; A6C1 A9 00                    ..
+LA6C3:
+        pha                                     ; A6C3 48                       H
+        jsr     LB059                           ; A6C4 20 59 B0                  Y.
+        bcc     LA6D4                           ; A6C7 90 0B                    ..
+        pla                                     ; A6C9 68                       h
+        clc                                     ; A6CA 18                       .
+        adc     #$01                            ; A6CB 69 01                    i.
+        cmp     $603B                           ; A6CD CD 3B 60                 .;`
+        bne     LA6C3                           ; A6D0 D0 F1                    ..
+        beq     LA6BE                           ; A6D2 F0 EA                    ..
+LA6D4:
+        pla                                     ; A6D4 68                       h
+        lda     #$00                            ; A6D5 A9 00                    ..
+LA6D7:
+        pha                                     ; A6D7 48                       H
+        jsr     LB06C                           ; A6D8 20 6C B0                  l.
+        beq     LA6E2                           ; A6DB F0 05                    ..
+        pla                                     ; A6DD 68                       h
+        pha                                     ; A6DE 48                       H
+        jsr     LB07F                           ; A6DF 20 7F B0                  ..
+LA6E2:
+        pla                                     ; A6E2 68                       h
+        clc                                     ; A6E3 18                       .
+        adc     #$01                            ; A6E4 69 01                    i.
+        cmp     $603B                           ; A6E6 CD 3B 60                 .;`
+        bne     LA6D7                           ; A6E9 D0 EC                    ..
+        jsr     LB078                           ; A6EB 20 78 B0                  x.
+        jsr     LB0B5                           ; A6EE 20 B5 B0                  ..
+        jmp     LA5E3                           ; A6F1 4C E3 A5                 L..
+
+; ----------------------------------------------------------------------------
 LA6F4:
-        .byte   $C8,$00,$F4,$01,$E8,$03,$0F,$27 ; A6F4 C8 00 F4 01 E8 03 0F 27  .......'
-        .byte   $90,$01,$0F,$27,$4C,$E3,$A5,$AD ; A6FC 90 01 0F 27 4C E3 A5 AD  ...'L...
-        .byte   $1F,$6F,$20,$6C,$B0,$D0,$1C,$AE ; A704 1F 6F 20 6C B0 D0 1C AE  .o l....
-        .byte   $1F,$6F,$BD,$3C,$60,$AA,$BD,$C1 ; A70C 1F 6F BD 3C 60 AA BD C1  .o.<`...
-        .byte   $60,$9D,$4A,$60,$BD,$C8,$60,$9D ; A714 60 9D 4A 60 BD C8 60 9D  `.J`..`.
-        .byte   $51,$60,$20,$78,$B0,$20,$85,$B1 ; A71C 51 60 20 78 B0 20 85 B1  Q` x. ..
-        .byte   $20,$B5,$B0,$4C,$E3,$A5,$4C,$E3 ; A724 20 B5 B0 4C E3 A5 4C E3   ..L..L.
-        .byte   $A5,$AE,$1F,$6F,$BD,$3C,$60,$AA ; A72C A5 AE 1F 6F BD 3C 60 AA  ...o.<`.
-        .byte   $BD,$97,$60,$C9,$C8,$B0,$1A,$FE ; A734 BD 97 60 C9 C8 B0 1A FE  ..`.....
-        .byte   $97,$60,$BD,$C1,$60,$18,$69,$05 ; A73C 97 60 BD C1 60 18 69 05  .`..`.i.
-        .byte   $9D,$C1,$60,$BD,$C8,$60,$69,$00 ; A744 9D C1 60 BD C8 60 69 00  ..`..`i.
-        .byte   $9D,$C8,$60,$20,$78,$B0,$20,$B5 ; A74C 9D C8 60 20 78 B0 20 B5  ..` x. .
-        .byte   $B0,$4C,$E3,$A5,$AE,$1F,$6F,$BD ; A754 B0 4C E3 A5 AE 1F 6F BD  .L....o.
-        .byte   $3C,$60,$AA,$BD,$9E,$60,$C9,$C8 ; A75C 3C 60 AA BD 9E 60 C9 C8  <`...`..
-        .byte   $B0,$1A,$FE,$9E,$60,$AD,$2F,$6F ; A764 B0 1A FE 9E 60 AD 2F 6F  ....`./o
-        .byte   $18,$69,$01,$8D,$2F,$6F,$AD,$30 ; A76C 18 69 01 8D 2F 6F AD 30  .i../o.0
-        .byte   $6F,$69,$00,$8D,$30,$6F,$20,$78 ; A774 6F 69 00 8D 30 6F 20 78  oi..0o x
-        .byte   $B0,$20,$B5,$B0,$4C,$E3,$A5,$AE ; A77C B0 20 B5 B0 4C E3 A5 AE  . ..L...
-        .byte   $1F,$6F,$BD,$3C,$60,$AA,$BD,$A5 ; A784 1F 6F BD 3C 60 AA BD A5  .o.<`...
-        .byte   $60,$C9,$C8,$B0,$1A,$FE,$A5,$60 ; A78C 60 C9 C8 B0 1A FE A5 60  `......`
-        .byte   $AD,$31,$6F,$18,$69,$01,$8D,$31 ; A794 AD 31 6F 18 69 01 8D 31  .1o.i..1
-        .byte   $6F,$AD,$32,$6F,$69,$00,$8D,$32 ; A79C 6F AD 32 6F 69 00 8D 32  o.2oi..2
-        .byte   $6F,$20,$78,$B0,$20,$B5,$B0,$4C ; A7A4 6F 20 78 B0 20 B5 B0 4C  o x. ..L
-        .byte   $E3,$A5,$AE,$1F,$6F,$BD,$3C,$60 ; A7AC E3 A5 AE 1F 6F BD 3C 60  ....o.<`
-        .byte   $AA,$BD,$AC,$60,$C9,$C8,$B0,$1A ; A7B4 AA BD AC 60 C9 C8 B0 1A  ...`....
-        .byte   $FE,$AC,$60,$AD,$33,$6F,$18,$69 ; A7BC FE AC 60 AD 33 6F 18 69  ..`.3o.i
-        .byte   $01,$8D,$33,$6F,$AD,$34,$6F,$69 ; A7C4 01 8D 33 6F AD 34 6F 69  ..3o.4oi
-        .byte   $00,$8D,$34,$6F,$20,$78,$B0,$20 ; A7CC 00 8D 34 6F 20 78 B0 20  ..4o x. 
-        .byte   $B5,$B0,$4C,$E3,$A5,$AE,$1F,$6F ; A7D4 B5 B0 4C E3 A5 AE 1F 6F  ..L....o
-        .byte   $BD,$3C,$60,$AA,$BD,$B3,$60,$C9 ; A7DC BD 3C 60 AA BD B3 60 C9  .<`...`.
-        .byte   $C8,$B0,$1A,$FE,$B3,$60,$AD,$35 ; A7E4 C8 B0 1A FE B3 60 AD 35  .....`.5
-        .byte   $6F,$18,$69,$01,$8D,$35,$6F,$AD ; A7EC 6F 18 69 01 8D 35 6F AD  o.i..5o.
-        .byte   $36,$6F,$69,$00,$8D,$36,$6F,$20 ; A7F4 36 6F 69 00 8D 36 6F 20  6oi..6o 
-        .byte   $78,$B0,$20,$B5,$B0,$4C,$E3,$A5 ; A7FC 78 B0 20 B5 B0 4C E3 A5  x. ..L..
-        .byte   $AE,$1F,$6F,$BD,$3C,$60,$AA,$BD ; A804 AE 1F 6F BD 3C 60 AA BD  ..o.<`..
-        .byte   $BA,$60,$C9,$C8,$B0,$1A,$FE,$BA ; A80C BA 60 C9 C8 B0 1A FE BA  .`......
-        .byte   $60,$AD,$37,$6F,$18,$69,$01,$8D ; A814 60 AD 37 6F 18 69 01 8D  `.7o.i..
-        .byte   $37,$6F,$AD,$3A,$6F,$69,$00,$8D ; A81C 37 6F AD 3A 6F 69 00 8D  7o.:oi..
-        .byte   $3A,$6F,$20,$78,$B0,$20,$B5,$B0 ; A824 3A 6F 20 78 B0 20 B5 B0  :o x. ..
-        .byte   $4C,$E3,$A5,$20,$BC,$F3,$20,$A0 ; A82C 4C E3 A5 20 BC F3 20 A0  L.. .. .
-        .byte   $F3,$A9,$01,$85,$A9,$20,$68,$F2 ; A834 F3 A9 01 85 A9 20 68 F2  ..... h.
-        .byte   $A9,$03,$8D,$18,$06,$A9,$02,$8D ; A83C A9 03 8D 18 06 A9 02 8D  ........
-        .byte   $19,$06,$20,$C4,$80,$AD,$24,$6F ; A844 19 06 20 C4 80 AD 24 6F  .. ...$o
-        .byte   $48,$AD,$23,$6F,$48,$AE,$1F,$6F ; A84C 48 AD 23 6F 48 AE 1F 6F  H.#oH..o
-        .byte   $BD,$3C,$60,$20,$62,$AC,$20,$69 ; A854 BD 3C 60 20 62 AC 20 69  .<` b. i
-        .byte   $A8,$68,$8D,$23,$6F,$68,$8D,$24 ; A85C A8 68 8D 23 6F 68 8D 24  .h.#oh.$
-        .byte   $6F,$20,$0B,$F4,$60,$A9,$05,$85 ; A864 6F 20 0B F4 60 A9 05 85  o ..`...
-        .byte   $0A,$A9,$00,$85,$09,$20,$8D,$A8 ; A86C 0A A9 00 85 09 20 8D A8  ..... ..
-        .byte   $20,$A0,$F3,$20,$AB,$A8,$20,$D4 ; A874 20 A0 F3 20 AB A8 20 D4   .. .. .
-        .byte   $A9,$20,$A0,$F3,$20,$2D,$AA,$20 ; A87C A9 20 A0 F3 20 2D AA 20  . .. -. 
-        .byte   $55,$AB,$20,$EF,$AE,$20,$B1,$AF ; A884 55 AB 20 EF AE 20 B1 AF  U. .. ..
-        .byte   $60                             ; A88C 60                       `
+        iny                                     ; A6F4 C8                       .
+        brk                                     ; A6F5 00                       .
+        .byte   $F4                             ; A6F6 F4                       .
+        ora     ($E8,x)                         ; A6F7 01 E8                    ..
+        .byte   $03                             ; A6F9 03                       .
+        .byte   $0F                             ; A6FA 0F                       .
+        .byte   $27                             ; A6FB 27                       '
+        bcc     LA6FF                           ; A6FC 90 01                    ..
+        .byte   $0F                             ; A6FE 0F                       .
+LA6FF:
+        .byte   $27                             ; A6FF 27                       '
+        jmp     LA5E3                           ; A700 4C E3 A5                 L..
+
+; ----------------------------------------------------------------------------
+        lda     $6F1F                           ; A703 AD 1F 6F                 ..o
+        jsr     LB06C                           ; A706 20 6C B0                  l.
+        bne     LA727                           ; A709 D0 1C                    ..
+        ldx     $6F1F                           ; A70B AE 1F 6F                 ..o
+        lda     $603C,x                         ; A70E BD 3C 60                 .<`
+        tax                                     ; A711 AA                       .
+        lda     $60C1,x                         ; A712 BD C1 60                 ..`
+        sta     $604A,x                         ; A715 9D 4A 60                 .J`
+        lda     $60C8,x                         ; A718 BD C8 60                 ..`
+        sta     $6051,x                         ; A71B 9D 51 60                 .Q`
+        jsr     LB078                           ; A71E 20 78 B0                  x.
+        jsr     LB185                           ; A721 20 85 B1                  ..
+        jsr     LB0B5                           ; A724 20 B5 B0                  ..
+LA727:
+        jmp     LA5E3                           ; A727 4C E3 A5                 L..
+
+; ----------------------------------------------------------------------------
+        jmp     LA5E3                           ; A72A 4C E3 A5                 L..
+
+; ----------------------------------------------------------------------------
+        ldx     $6F1F                           ; A72D AE 1F 6F                 ..o
+        lda     $603C,x                         ; A730 BD 3C 60                 .<`
+        tax                                     ; A733 AA                       .
+        lda     $6097,x                         ; A734 BD 97 60                 ..`
+        cmp     #$C8                            ; A737 C9 C8                    ..
+        bcs     LA755                           ; A739 B0 1A                    ..
+        inc     $6097,x                         ; A73B FE 97 60                 ..`
+        lda     $60C1,x                         ; A73E BD C1 60                 ..`
+        clc                                     ; A741 18                       .
+        adc     #$05                            ; A742 69 05                    i.
+        sta     $60C1,x                         ; A744 9D C1 60                 ..`
+        lda     $60C8,x                         ; A747 BD C8 60                 ..`
+        adc     #$00                            ; A74A 69 00                    i.
+        sta     $60C8,x                         ; A74C 9D C8 60                 ..`
+        jsr     LB078                           ; A74F 20 78 B0                  x.
+        jsr     LB0B5                           ; A752 20 B5 B0                  ..
+LA755:
+        jmp     LA5E3                           ; A755 4C E3 A5                 L..
+
+; ----------------------------------------------------------------------------
+        ldx     $6F1F                           ; A758 AE 1F 6F                 ..o
+        lda     $603C,x                         ; A75B BD 3C 60                 .<`
+        tax                                     ; A75E AA                       .
+        lda     $609E,x                         ; A75F BD 9E 60                 ..`
+        cmp     #$C8                            ; A762 C9 C8                    ..
+        bcs     LA780                           ; A764 B0 1A                    ..
+        inc     $609E,x                         ; A766 FE 9E 60                 ..`
+        lda     $6F2F                           ; A769 AD 2F 6F                 ./o
+        clc                                     ; A76C 18                       .
+        adc     #$01                            ; A76D 69 01                    i.
+        sta     $6F2F                           ; A76F 8D 2F 6F                 ./o
+        lda     $6F30                           ; A772 AD 30 6F                 .0o
+        adc     #$00                            ; A775 69 00                    i.
+        sta     $6F30                           ; A777 8D 30 6F                 .0o
+        jsr     LB078                           ; A77A 20 78 B0                  x.
+        jsr     LB0B5                           ; A77D 20 B5 B0                  ..
+LA780:
+        jmp     LA5E3                           ; A780 4C E3 A5                 L..
+
+; ----------------------------------------------------------------------------
+        ldx     $6F1F                           ; A783 AE 1F 6F                 ..o
+        lda     $603C,x                         ; A786 BD 3C 60                 .<`
+        tax                                     ; A789 AA                       .
+        lda     $60A5,x                         ; A78A BD A5 60                 ..`
+        cmp     #$C8                            ; A78D C9 C8                    ..
+        bcs     LA7AB                           ; A78F B0 1A                    ..
+        inc     $60A5,x                         ; A791 FE A5 60                 ..`
+        lda     $6F31                           ; A794 AD 31 6F                 .1o
+        clc                                     ; A797 18                       .
+        adc     #$01                            ; A798 69 01                    i.
+        sta     $6F31                           ; A79A 8D 31 6F                 .1o
+        lda     $6F32                           ; A79D AD 32 6F                 .2o
+        adc     #$00                            ; A7A0 69 00                    i.
+        sta     $6F32                           ; A7A2 8D 32 6F                 .2o
+        jsr     LB078                           ; A7A5 20 78 B0                  x.
+        jsr     LB0B5                           ; A7A8 20 B5 B0                  ..
+LA7AB:
+        jmp     LA5E3                           ; A7AB 4C E3 A5                 L..
+
+; ----------------------------------------------------------------------------
+        ldx     $6F1F                           ; A7AE AE 1F 6F                 ..o
+        lda     $603C,x                         ; A7B1 BD 3C 60                 .<`
+        tax                                     ; A7B4 AA                       .
+        lda     $60AC,x                         ; A7B5 BD AC 60                 ..`
+        cmp     #$C8                            ; A7B8 C9 C8                    ..
+        bcs     LA7D6                           ; A7BA B0 1A                    ..
+        inc     $60AC,x                         ; A7BC FE AC 60                 ..`
+        lda     $6F33                           ; A7BF AD 33 6F                 .3o
+        clc                                     ; A7C2 18                       .
+        adc     #$01                            ; A7C3 69 01                    i.
+        sta     $6F33                           ; A7C5 8D 33 6F                 .3o
+        lda     $6F34                           ; A7C8 AD 34 6F                 .4o
+        adc     #$00                            ; A7CB 69 00                    i.
+        sta     $6F34                           ; A7CD 8D 34 6F                 .4o
+        jsr     LB078                           ; A7D0 20 78 B0                  x.
+        jsr     LB0B5                           ; A7D3 20 B5 B0                  ..
+LA7D6:
+        jmp     LA5E3                           ; A7D6 4C E3 A5                 L..
+
+; ----------------------------------------------------------------------------
+        ldx     $6F1F                           ; A7D9 AE 1F 6F                 ..o
+        lda     $603C,x                         ; A7DC BD 3C 60                 .<`
+        tax                                     ; A7DF AA                       .
+        lda     $60B3,x                         ; A7E0 BD B3 60                 ..`
+        cmp     #$C8                            ; A7E3 C9 C8                    ..
+        bcs     LA801                           ; A7E5 B0 1A                    ..
+        inc     $60B3,x                         ; A7E7 FE B3 60                 ..`
+        lda     $6F35                           ; A7EA AD 35 6F                 .5o
+        clc                                     ; A7ED 18                       .
+        adc     #$01                            ; A7EE 69 01                    i.
+        sta     $6F35                           ; A7F0 8D 35 6F                 .5o
+        lda     $6F36                           ; A7F3 AD 36 6F                 .6o
+        adc     #$00                            ; A7F6 69 00                    i.
+        sta     $6F36                           ; A7F8 8D 36 6F                 .6o
+        jsr     LB078                           ; A7FB 20 78 B0                  x.
+        jsr     LB0B5                           ; A7FE 20 B5 B0                  ..
+LA801:
+        jmp     LA5E3                           ; A801 4C E3 A5                 L..
+
+; ----------------------------------------------------------------------------
+        ldx     $6F1F                           ; A804 AE 1F 6F                 ..o
+        lda     $603C,x                         ; A807 BD 3C 60                 .<`
+        tax                                     ; A80A AA                       .
+        lda     $60BA,x                         ; A80B BD BA 60                 ..`
+        cmp     #$C8                            ; A80E C9 C8                    ..
+        bcs     LA82C                           ; A810 B0 1A                    ..
+        inc     $60BA,x                         ; A812 FE BA 60                 ..`
+        lda     $6F37                           ; A815 AD 37 6F                 .7o
+        clc                                     ; A818 18                       .
+        adc     #$01                            ; A819 69 01                    i.
+        sta     $6F37                           ; A81B 8D 37 6F                 .7o
+        lda     $6F3A                           ; A81E AD 3A 6F                 .:o
+        adc     #$00                            ; A821 69 00                    i.
+        sta     $6F3A                           ; A823 8D 3A 6F                 .:o
+        jsr     LB078                           ; A826 20 78 B0                  x.
+        jsr     LB0B5                           ; A829 20 B5 B0                  ..
+LA82C:
+        jmp     LA5E3                           ; A82C 4C E3 A5                 L..
+
+; ----------------------------------------------------------------------------
+LA82F:
+        jsr     LF3BC                           ; A82F 20 BC F3                  ..
+        jsr     LF3A0                           ; A832 20 A0 F3                  ..
+        lda     #$01                            ; A835 A9 01                    ..
+        sta     $A9                             ; A837 85 A9                    ..
+        jsr     LF268                           ; A839 20 68 F2                  h.
+        lda     #$03                            ; A83C A9 03                    ..
+        sta     $0618                           ; A83E 8D 18 06                 ...
+        lda     #$02                            ; A841 A9 02                    ..
+        sta     $0619                           ; A843 8D 19 06                 ...
+        jsr     L80C4                           ; A846 20 C4 80                  ..
+        lda     $6F24                           ; A849 AD 24 6F                 .$o
+        pha                                     ; A84C 48                       H
+        lda     $6F23                           ; A84D AD 23 6F                 .#o
+        pha                                     ; A850 48                       H
+        ldx     $6F1F                           ; A851 AE 1F 6F                 ..o
+        lda     $603C,x                         ; A854 BD 3C 60                 .<`
+        jsr     LAC62                           ; A857 20 62 AC                  b.
+        jsr     LA869                           ; A85A 20 69 A8                  i.
+        pla                                     ; A85D 68                       h
+        sta     $6F23                           ; A85E 8D 23 6F                 .#o
+        pla                                     ; A861 68                       h
+        sta     $6F24                           ; A862 8D 24 6F                 .$o
+        jsr     LF40B                           ; A865 20 0B F4                  ..
+        rts                                     ; A868 60                       `
+
+; ----------------------------------------------------------------------------
+LA869:
+        lda     #$05                            ; A869 A9 05                    ..
+        sta     $0A                             ; A86B 85 0A                    ..
+        lda     #$00                            ; A86D A9 00                    ..
+        sta     $09                             ; A86F 85 09                    ..
+        jsr     LA88D                           ; A871 20 8D A8                  ..
+        jsr     LF3A0                           ; A874 20 A0 F3                  ..
+        jsr     LA8AB                           ; A877 20 AB A8                  ..
+        jsr     LA9D4                           ; A87A 20 D4 A9                  ..
+        jsr     LF3A0                           ; A87D 20 A0 F3                  ..
+        jsr     LAA2D                           ; A880 20 2D AA                  -.
+        jsr     LAB55                           ; A883 20 55 AB                  U.
+        jsr     LAEEF                           ; A886 20 EF AE                  ..
+        jsr     LAFB1                           ; A889 20 B1 AF                  ..
+        rts                                     ; A88C 60                       `
+
 ; ----------------------------------------------------------------------------
 LA88D:
         lda     #$20                            ; A88D A9 20                    . 
@@ -5423,6 +5848,7 @@ LA97E:
 LA9C4:
         .byte   $00,$00,$01,$01,$00,$00,$01,$01 ; A9C4 00 00 01 01 00 00 01 01  ........
         .byte   $02,$02,$03,$03,$02,$02,$03,$03 ; A9CC 02 02 03 03 02 02 03 03  ........
+LA9D4:
         .byte   $AD,$3E,$6F,$85,$8E,$A9,$06,$85 ; A9D4 AD 3E 6F 85 8E A9 06 85  .>o.....
         .byte   $0A,$A9,$00,$85,$09,$A9,$00,$48 ; A9DC 0A A9 00 85 09 A9 00 48  .......H
         .byte   $0A,$AA,$BD,$25,$AA,$85,$0F,$E8 ; A9E4 0A AA BD 25 AA 85 0F E8  ...%....
@@ -5434,9 +5860,11 @@ LA9C4:
         .byte   $19,$06,$20,$A0,$F3,$20,$FB,$8E ; AA14 19 06 20 A0 F3 20 FB 8E  .. .. ..
         .byte   $68,$18,$69,$01,$C9,$04,$90,$BF ; AA1C 68 18 69 01 C9 04 90 BF  h.i.....
         .byte   $60,$22,$03,$22,$07,$22,$0B,$22 ; AA24 60 22 03 22 07 22 0B 22  `"."."."
-        .byte   $0F,$AE,$1F,$6F,$BD,$3C,$60,$48 ; AA2C 0F AE 1F 6F BD 3C 60 48  ...o.<`H
-        .byte   $A9,$01,$8D,$17,$06,$A9,$F6,$85 ; AA34 A9 01 8D 17 06 A9 F6 85  ........
-        .byte   $AA,$A9,$3D,$8D                 ; AA3C AA A9 3D 8D              ..=.
+        .byte   $0F                             ; AA2C 0F                       .
+LAA2D:
+        .byte   $AE,$1F,$6F,$BD,$3C,$60,$48,$A9 ; AA2D AE 1F 6F BD 3C 60 48 A9  ..o.<`H.
+        .byte   $01,$8D,$17,$06,$A9,$F6,$85,$AA ; AA35 01 8D 17 06 A9 F6 85 AA  ........
+        .byte   $A9,$3D,$8D                     ; AA3D A9 3D 8D                 .=.
 LAA40:
         .byte   $11,$06,$A9,$03,$85,$AB,$A9,$21 ; AA40 11 06 A9 03 85 AB A9 21  .......!
         .byte   $85,$0F,$A9,$87,$85,$0E,$68,$48 ; AA48 85 0F A9 87 85 0E 68 48  ......hH
@@ -5472,13 +5900,15 @@ LAA40:
         .byte   $88,$A9,$22,$85,$0F,$A9,$8E,$85 ; AB38 88 A9 22 85 0F A9 8E 85  ..".....
         .byte   $0E,$AD,$3F,$6F,$85,$8E,$AD,$40 ; AB40 0E AD 3F 6F 85 8E AD 40  ..?o...@
         .byte   $6F,$85,$8F,$AD,$41,$6F,$85,$90 ; AB48 6F 85 8F AD 41 6F 85 90  o...Ao..
-        .byte   $20,$BB,$88,$68,$60,$AE,$1F,$6F ; AB50 20 BB 88 68 60 AE 1F 6F   ..h`..o
-        .byte   $BD,$3C,$60,$AA,$BD,$82,$60,$85 ; AB58 BD 3C 60 AA BD 82 60 85  .<`...`.
-        .byte   $6C,$BD,$89,$60,$85,$6D,$BD,$90 ; AB60 6C BD 89 60 85 6D BD 90  l..`.m..
-        .byte   $60,$85,$6E,$AD,$3F,$6F,$85,$6F ; AB68 60 85 6E AD 3F 6F 85 6F  `.n.?o.o
-        .byte   $AD,$40,$6F,$85,$70,$AD,$41,$6F ; AB70 AD 40 6F 85 70 AD 41 6F  .@o.p.Ao
-        .byte   $85,$71,$A9,$22,$85,$6A,$A9,$A2 ; AB78 85 71 A9 22 85 6A A9 A2  .q.".j..
-        .byte   $85,$6B,$A9,$00,$20,$88,$AB,$60 ; AB80 85 6B A9 00 20 88 AB 60  .k.. ..`
+        .byte   $20,$BB,$88,$68,$60             ; AB50 20 BB 88 68 60            ..h`
+LAB55:
+        .byte   $AE,$1F,$6F,$BD,$3C,$60,$AA,$BD ; AB55 AE 1F 6F BD 3C 60 AA BD  ..o.<`..
+        .byte   $82,$60,$85,$6C,$BD,$89,$60,$85 ; AB5D 82 60 85 6C BD 89 60 85  .`.l..`.
+        .byte   $6D,$BD,$90,$60,$85,$6E,$AD,$3F ; AB65 6D BD 90 60 85 6E AD 3F  m..`.n.?
+        .byte   $6F,$85,$6F,$AD,$40,$6F,$85,$70 ; AB6D 6F 85 6F AD 40 6F 85 70  o.o.@o.p
+        .byte   $AD,$41,$6F,$85,$71,$A9,$22,$85 ; AB75 AD 41 6F 85 71 A9 22 85  .Ao.q.".
+        .byte   $6A,$A9,$A2,$85,$6B,$A9,$00,$20 ; AB7D 6A A9 A2 85 6B A9 00 20  j...k.. 
+        .byte   $88,$AB,$60                     ; AB85 88 AB 60                 ..`
 ; ----------------------------------------------------------------------------
 LAB88:
         asl     a                               ; AB88 0A                       .
@@ -5611,6 +6041,7 @@ LAC4A:
         and     #$40                            ; AC5C 29 40                    )@
         clc                                     ; AC5E 18                       .
         asl     a                               ; AC5F 0A                       .
+LAC62           := * + 2
         ora     LAA40,y                         ; AC60 19 40 AA                 .@.
         lda     #$05                            ; AC63 A9 05                    ..
         sta     $0141                           ; AC65 8D 41 01                 .A.
@@ -5870,296 +6301,1250 @@ LAE7B:
 
 ; ----------------------------------------------------------------------------
 LAE89:
-        .byte   $AA,$BD,$9E,$60,$F0,$0F,$18,$6D ; AE89 AA BD 9E 60 F0 0F 18 6D  ...`...m
-        .byte   $2F,$6F,$8D,$2F,$6F,$AD,$30,$6F ; AE91 2F 6F 8D 2F 6F AD 30 6F  /o./o.0o
-        .byte   $69,$00,$8D,$30,$6F,$BD,$A5,$60 ; AE99 69 00 8D 30 6F BD A5 60  i..0o..`
-        .byte   $F0,$0F,$18,$6D,$31,$6F,$8D,$31 ; AEA1 F0 0F 18 6D 31 6F 8D 31  ...m1o.1
-        .byte   $6F,$AD,$32,$6F,$69,$00,$8D,$32 ; AEA9 6F AD 32 6F 69 00 8D 32  o.2oi..2
-        .byte   $6F,$BD,$AC,$60,$F0,$0F,$18,$6D ; AEB1 6F BD AC 60 F0 0F 18 6D  o..`...m
-        .byte   $33,$6F,$8D,$33,$6F,$AD,$34,$6F ; AEB9 33 6F 8D 33 6F AD 34 6F  3o.3o.4o
-        .byte   $69,$00,$8D,$34,$6F,$BD,$B3,$60 ; AEC1 69 00 8D 34 6F BD B3 60  i..4o..`
-        .byte   $F0,$0F,$18,$6D,$35,$6F,$8D,$35 ; AEC9 F0 0F 18 6D 35 6F 8D 35  ...m5o.5
-        .byte   $6F,$AD,$36,$6F,$69,$00,$8D,$36 ; AED1 6F AD 36 6F 69 00 8D 36  o.6oi..6
-        .byte   $6F,$BD,$BA,$60,$F0,$0F,$18,$6D ; AED9 6F BD BA 60 F0 0F 18 6D  o..`...m
-        .byte   $37,$6F,$8D,$37,$6F,$AD,$3A,$6F ; AEE1 37 6F 8D 37 6F AD 3A 6F  7o.7o.:o
-        .byte   $69,$00,$8D,$3A,$6F,$60,$AE,$1F ; AEE9 69 00 8D 3A 6F 60 AE 1F  i..:o`..
-        .byte   $6F,$BD,$3C,$60,$AA,$BD,$74,$60 ; AEF1 6F BD 3C 60 AA BD 74 60  o.<`..t`
-        .byte   $D0,$01,$60,$8D,$24,$6F,$20,$6B ; AEF9 D0 01 60 8D 24 6F 20 6B  ..`.$o k
-        .byte   $9D,$A9,$07,$85,$0A,$A9,$00,$85 ; AF01 9D A9 07 85 0A A9 00 85  ........
-        .byte   $09,$A9,$23,$85,$0F,$A9,$03,$85 ; AF09 09 A9 23 85 0F A9 03 85  ..#.....
-        .byte   $0E,$A9,$05,$85,$6A,$AD,$24,$6F ; AF11 0E A9 05 85 6A AD 24 6F  ....j.$o
-        .byte   $85,$69,$20,$A0,$F3,$20,$FB,$8E ; AF19 85 69 20 A0 F3 20 FB 8E  .i .. ..
-        .byte   $20,$A0,$F3,$A9,$01,$8D,$17,$06 ; AF21 20 A0 F3 A9 01 8D 17 06   .......
-        .byte   $A9,$F6,$85,$AA,$A9,$25,$8D,$11 ; AF29 A9 F6 85 AA A9 25 8D 11  .....%..
-        .byte   $06,$A9,$26,$8D,$12,$06,$A9,$02 ; AF31 06 A9 26 8D 12 06 A9 02  ..&.....
-        .byte   $85,$AB,$A9,$23,$85,$0F,$A9,$2B ; AF39 85 AB A9 23 85 0F A9 2B  ...#...+
-        .byte   $85,$0E,$AD,$29,$6F,$85,$8E,$A9 ; AF41 85 0E AD 29 6F 85 8E A9  ...)o...
-        .byte   $00,$85,$8F,$85,$90,$20,$78,$87 ; AF49 00 85 8F 85 90 20 78 87  ..... x.
-        .byte   $AD,$2A,$6F,$85,$6C,$AD,$2B,$6F ; AF51 AD 2A 6F 85 6C AD 2B 6F  .*o.l.+o
-        .byte   $85,$6D,$A9,$00,$85,$6E,$AD,$2C ; AF59 85 6D A9 00 85 6E AD 2C  .m...n.,
-        .byte   $6F,$85,$6F,$AD,$2D,$6F,$85,$70 ; AF61 6F 85 6F AD 2D 6F 85 70  o.o.-o.p
-        .byte   $A9,$00,$85,$71,$A9,$23,$85,$6A ; AF69 A9 00 85 71 A9 23 85 6A  ...q.#.j
-        .byte   $A9,$2F,$85,$6B,$A9,$02,$20,$88 ; AF71 A9 2F 85 6B A9 02 20 88  ./.k.. .
-        .byte   $AB,$A9,$03,$85,$AB,$A9,$23,$85 ; AF79 AB A9 03 85 AB A9 23 85  ......#.
-        .byte   $0F,$A9,$39,$85,$0E,$AD,$25,$6F ; AF81 0F A9 39 85 0E AD 25 6F  ..9...%o
-        .byte   $85,$8E,$A9,$00,$85,$8F,$85,$90 ; AF89 85 8E A9 00 85 8F 85 90  ........
-        .byte   $20,$C6,$81,$AD,$2A,$6F,$38,$ED ; AF91 20 C6 81 AD 2A 6F 38 ED   ...*o8.
-        .byte   $2C,$6F,$AD,$2B,$6F,$ED,$2D,$6F ; AF99 2C 6F AD 2B 6F ED 2D 6F  ,o.+o.-o
-        .byte   $90,$0D,$A9,$23,$85,$0F,$A9,$12 ; AFA1 90 0D A9 23 85 0F A9 12  ...#....
-        .byte   $85,$0E,$A9,$40,$20,$49,$9E,$60 ; AFA9 85 0E A9 40 20 49 9E 60  ...@ I.`
-        .byte   $AE,$1F,$6F,$BD,$3C,$60,$AA,$BD ; AFB1 AE 1F 6F BD 3C 60 AA BD  ..o.<`..
-        .byte   $7B,$60,$D0,$01,$60,$8D,$24,$6F ; AFB9 7B 60 D0 01 60 8D 24 6F  {`..`.$o
-        .byte   $20,$7D,$9E,$A9,$08,$85,$0A,$A9 ; AFC1 20 7D 9E A9 08 85 0A A9   }......
-        .byte   $00,$85,$09,$A9,$23,$85,$0F,$A9 ; AFC9 00 85 09 A9 23 85 0F A9  ....#...
-        .byte   $43,$85,$0E,$A9,$06,$85,$6A,$AD ; AFD1 43 85 0E A9 06 85 6A AD  C.....j.
-        .byte   $24,$6F,$85,$69,$20,$A0,$F3,$20 ; AFD9 24 6F 85 69 20 A0 F3 20  $o.i .. 
-        .byte   $FB,$8E,$20,$A0,$F3,$A9,$01,$8D ; AFE1 FB 8E 20 A0 F3 A9 01 8D  .. .....
-        .byte   $17,$06,$A9,$F6,$85,$AA,$A9,$25 ; AFE9 17 06 A9 F6 85 AA A9 25  .......%
-        .byte   $8D,$11,$06,$A9,$26,$8D,$12,$06 ; AFF1 8D 11 06 A9 26 8D 12 06  ....&...
-        .byte   $A9,$02,$85,$AB,$A9,$23,$85,$0F ; AFF9 A9 02 85 AB A9 23 85 0F  .....#..
-        .byte   $A9,$6B,$85,$0E,$AD,$25,$6F,$85 ; B001 A9 6B 85 0E AD 25 6F 85  .k...%o.
-        .byte   $8E,$A9,$00,$85,$8F,$85,$90,$20 ; B009 8E A9 00 85 8F 85 90 20  ....... 
-        .byte   $78,$87,$AD,$26,$6F,$85,$6C,$AD ; B011 78 87 AD 26 6F 85 6C AD  x..&o.l.
-        .byte   $27,$6F,$85,$6D,$A9,$00,$85,$6E ; B019 27 6F 85 6D A9 00 85 6E  'o.m...n
-        .byte   $AD,$28,$6F,$85,$6F,$AD,$29,$6F ; B021 AD 28 6F 85 6F AD 29 6F  .(o.o.)o
-        .byte   $85,$70,$A9,$00,$85,$71,$A9,$23 ; B029 85 70 A9 00 85 71 A9 23  .p...q.#
-        .byte   $85,$6A,$A9,$6F,$85,$6B,$A9,$02 ; B031 85 6A A9 6F 85 6B A9 02  .j.o.k..
-        .byte   $20,$88,$AB,$AD,$26,$6F,$38,$ED ; B039 20 88 AB AD 26 6F 38 ED   ...&o8.
-        .byte   $28,$6F,$AD,$27,$6F,$ED,$29,$6F ; B041 28 6F AD 27 6F ED 29 6F  (o.'o.)o
-        .byte   $90,$0D,$A9,$23,$85,$0F,$A9,$52 ; B049 90 0D A9 23 85 0F A9 52  ...#...R
-        .byte   $85,$0E,$A9,$40,$20,$49,$9E,$60 ; B051 85 0E A9 40 20 49 9E 60  ...@ I.`
-        .byte   $AA,$BD,$3C,$60,$AA,$BD,$4A,$60 ; B059 AA BD 3C 60 AA BD 4A 60  ..<`..J`
-        .byte   $38,$FD,$C1,$60,$BD,$51,$60,$FD ; B061 38 FD C1 60 BD 51 60 FD  8..`.Q`.
-        .byte   $C8,$60,$60,$AA,$BD,$3C,$60,$AA ; B069 C8 60 60 AA BD 3C 60 AA  .``..<`.
-        .byte   $BD,$4A,$60,$1D,$51,$60,$60,$AE ; B071 BD 4A 60 1D 51 60 60 AE  .J`.Q``.
-        .byte   $24,$6F,$DE,$CE,$60,$60         ; B079 24 6F DE CE 60 60        $o..``
+        tax                                     ; AE89 AA                       .
+        lda     $609E,x                         ; AE8A BD 9E 60                 ..`
+        beq     LAE9E                           ; AE8D F0 0F                    ..
+        clc                                     ; AE8F 18                       .
+        adc     $6F2F                           ; AE90 6D 2F 6F                 m/o
+        sta     $6F2F                           ; AE93 8D 2F 6F                 ./o
+        lda     $6F30                           ; AE96 AD 30 6F                 .0o
+        adc     #$00                            ; AE99 69 00                    i.
+        sta     $6F30                           ; AE9B 8D 30 6F                 .0o
+LAE9E:
+        lda     $60A5,x                         ; AE9E BD A5 60                 ..`
+        beq     LAEB2                           ; AEA1 F0 0F                    ..
+        clc                                     ; AEA3 18                       .
+        adc     $6F31                           ; AEA4 6D 31 6F                 m1o
+        sta     $6F31                           ; AEA7 8D 31 6F                 .1o
+        lda     $6F32                           ; AEAA AD 32 6F                 .2o
+        adc     #$00                            ; AEAD 69 00                    i.
+        sta     $6F32                           ; AEAF 8D 32 6F                 .2o
+LAEB2:
+        lda     $60AC,x                         ; AEB2 BD AC 60                 ..`
+        beq     LAEC6                           ; AEB5 F0 0F                    ..
+        clc                                     ; AEB7 18                       .
+        adc     $6F33                           ; AEB8 6D 33 6F                 m3o
+        sta     $6F33                           ; AEBB 8D 33 6F                 .3o
+        lda     $6F34                           ; AEBE AD 34 6F                 .4o
+        adc     #$00                            ; AEC1 69 00                    i.
+        sta     $6F34                           ; AEC3 8D 34 6F                 .4o
+LAEC6:
+        lda     $60B3,x                         ; AEC6 BD B3 60                 ..`
+        beq     LAEDA                           ; AEC9 F0 0F                    ..
+        clc                                     ; AECB 18                       .
+        adc     $6F35                           ; AECC 6D 35 6F                 m5o
+        sta     $6F35                           ; AECF 8D 35 6F                 .5o
+        lda     $6F36                           ; AED2 AD 36 6F                 .6o
+        adc     #$00                            ; AED5 69 00                    i.
+        sta     $6F36                           ; AED7 8D 36 6F                 .6o
+LAEDA:
+        lda     $60BA,x                         ; AEDA BD BA 60                 ..`
+        beq     LAEEE                           ; AEDD F0 0F                    ..
+        clc                                     ; AEDF 18                       .
+        adc     $6F37                           ; AEE0 6D 37 6F                 m7o
+        sta     $6F37                           ; AEE3 8D 37 6F                 .7o
+        lda     $6F3A                           ; AEE6 AD 3A 6F                 .:o
+        adc     #$00                            ; AEE9 69 00                    i.
+        sta     $6F3A                           ; AEEB 8D 3A 6F                 .:o
+LAEEE:
+        rts                                     ; AEEE 60                       `
+
+; ----------------------------------------------------------------------------
+LAEEF:
+        ldx     $6F1F                           ; AEEF AE 1F 6F                 ..o
+        lda     $603C,x                         ; AEF2 BD 3C 60                 .<`
+        tax                                     ; AEF5 AA                       .
+        lda     $6074,x                         ; AEF6 BD 74 60                 .t`
+        bne     LAEFC                           ; AEF9 D0 01                    ..
+        rts                                     ; AEFB 60                       `
+
+; ----------------------------------------------------------------------------
+LAEFC:
+        sta     $6F24                           ; AEFC 8D 24 6F                 .$o
+        jsr     L9D6B                           ; AEFF 20 6B 9D                  k.
+        lda     #$07                            ; AF02 A9 07                    ..
+        sta     $0A                             ; AF04 85 0A                    ..
+        lda     #$00                            ; AF06 A9 00                    ..
+        sta     $09                             ; AF08 85 09                    ..
+        lda     #$23                            ; AF0A A9 23                    .#
+        sta     $0F                             ; AF0C 85 0F                    ..
+        lda     #$03                            ; AF0E A9 03                    ..
+        sta     $0E                             ; AF10 85 0E                    ..
+        lda     #$05                            ; AF12 A9 05                    ..
+        sta     $6A                             ; AF14 85 6A                    .j
+        lda     $6F24                           ; AF16 AD 24 6F                 .$o
+        sta     $69                             ; AF19 85 69                    .i
+        jsr     LF3A0                           ; AF1B 20 A0 F3                  ..
+        jsr     L8EFB                           ; AF1E 20 FB 8E                  ..
+        jsr     LF3A0                           ; AF21 20 A0 F3                  ..
+        lda     #$01                            ; AF24 A9 01                    ..
+        sta     $0617                           ; AF26 8D 17 06                 ...
+        lda     #$F6                            ; AF29 A9 F6                    ..
+        sta     $AA                             ; AF2B 85 AA                    ..
+        lda     #$25                            ; AF2D A9 25                    .%
+        sta     $0611                           ; AF2F 8D 11 06                 ...
+        lda     #$26                            ; AF32 A9 26                    .&
+        sta     $0612                           ; AF34 8D 12 06                 ...
+        lda     #$02                            ; AF37 A9 02                    ..
+        sta     $AB                             ; AF39 85 AB                    ..
+        lda     #$23                            ; AF3B A9 23                    .#
+        sta     $0F                             ; AF3D 85 0F                    ..
+        lda     #$2B                            ; AF3F A9 2B                    .+
+        sta     $0E                             ; AF41 85 0E                    ..
+        lda     $6F29                           ; AF43 AD 29 6F                 .)o
+        sta     L008E                           ; AF46 85 8E                    ..
+        lda     #$00                            ; AF48 A9 00                    ..
+        sta     $8F                             ; AF4A 85 8F                    ..
+        sta     $90                             ; AF4C 85 90                    ..
+        jsr     L8778                           ; AF4E 20 78 87                  x.
+        lda     $6F2A                           ; AF51 AD 2A 6F                 .*o
+        sta     $6C                             ; AF54 85 6C                    .l
+        lda     $6F2B                           ; AF56 AD 2B 6F                 .+o
+        sta     $6D                             ; AF59 85 6D                    .m
+        lda     #$00                            ; AF5B A9 00                    ..
+        sta     $6E                             ; AF5D 85 6E                    .n
+        lda     $6F2C                           ; AF5F AD 2C 6F                 .,o
+        sta     $6F                             ; AF62 85 6F                    .o
+        lda     $6F2D                           ; AF64 AD 2D 6F                 .-o
+        sta     $70                             ; AF67 85 70                    .p
+        lda     #$00                            ; AF69 A9 00                    ..
+        sta     $71                             ; AF6B 85 71                    .q
+        lda     #$23                            ; AF6D A9 23                    .#
+        sta     $6A                             ; AF6F 85 6A                    .j
+        lda     #$2F                            ; AF71 A9 2F                    ./
+        sta     $6B                             ; AF73 85 6B                    .k
+        lda     #$02                            ; AF75 A9 02                    ..
+        jsr     LAB88                           ; AF77 20 88 AB                  ..
+        lda     #$03                            ; AF7A A9 03                    ..
+        sta     $AB                             ; AF7C 85 AB                    ..
+        lda     #$23                            ; AF7E A9 23                    .#
+        sta     $0F                             ; AF80 85 0F                    ..
+        lda     #$39                            ; AF82 A9 39                    .9
+        sta     $0E                             ; AF84 85 0E                    ..
+        lda     $6F25                           ; AF86 AD 25 6F                 .%o
+        sta     L008E                           ; AF89 85 8E                    ..
+        lda     #$00                            ; AF8B A9 00                    ..
+        sta     $8F                             ; AF8D 85 8F                    ..
+        sta     $90                             ; AF8F 85 90                    ..
+        jsr     L81C6                           ; AF91 20 C6 81                  ..
+        lda     $6F2A                           ; AF94 AD 2A 6F                 .*o
+        sec                                     ; AF97 38                       8
+        sbc     $6F2C                           ; AF98 ED 2C 6F                 .,o
+        lda     $6F2B                           ; AF9B AD 2B 6F                 .+o
+        sbc     $6F2D                           ; AF9E ED 2D 6F                 .-o
+        bcc     LAFB0                           ; AFA1 90 0D                    ..
+        lda     #$23                            ; AFA3 A9 23                    .#
+        sta     $0F                             ; AFA5 85 0F                    ..
+        lda     #$12                            ; AFA7 A9 12                    ..
+        sta     $0E                             ; AFA9 85 0E                    ..
+        lda     #$40                            ; AFAB A9 40                    .@
+        jsr     L9E49                           ; AFAD 20 49 9E                  I.
+LAFB0:
+        rts                                     ; AFB0 60                       `
+
+; ----------------------------------------------------------------------------
+LAFB1:
+        ldx     $6F1F                           ; AFB1 AE 1F 6F                 ..o
+        lda     $603C,x                         ; AFB4 BD 3C 60                 .<`
+        tax                                     ; AFB7 AA                       .
+        lda     $607B,x                         ; AFB8 BD 7B 60                 .{`
+        bne     LAFBE                           ; AFBB D0 01                    ..
+        rts                                     ; AFBD 60                       `
+
+; ----------------------------------------------------------------------------
+LAFBE:
+        sta     $6F24                           ; AFBE 8D 24 6F                 .$o
+        jsr     L9E7D                           ; AFC1 20 7D 9E                  }.
+        lda     #$08                            ; AFC4 A9 08                    ..
+        sta     $0A                             ; AFC6 85 0A                    ..
+        lda     #$00                            ; AFC8 A9 00                    ..
+        sta     $09                             ; AFCA 85 09                    ..
+        lda     #$23                            ; AFCC A9 23                    .#
+        sta     $0F                             ; AFCE 85 0F                    ..
+        lda     #$43                            ; AFD0 A9 43                    .C
+        sta     $0E                             ; AFD2 85 0E                    ..
+        lda     #$06                            ; AFD4 A9 06                    ..
+        sta     $6A                             ; AFD6 85 6A                    .j
+        lda     $6F24                           ; AFD8 AD 24 6F                 .$o
+        sta     $69                             ; AFDB 85 69                    .i
+        jsr     LF3A0                           ; AFDD 20 A0 F3                  ..
+        jsr     L8EFB                           ; AFE0 20 FB 8E                  ..
+        jsr     LF3A0                           ; AFE3 20 A0 F3                  ..
+        lda     #$01                            ; AFE6 A9 01                    ..
+        sta     $0617                           ; AFE8 8D 17 06                 ...
+        lda     #$F6                            ; AFEB A9 F6                    ..
+        sta     $AA                             ; AFED 85 AA                    ..
+        lda     #$25                            ; AFEF A9 25                    .%
+        sta     $0611                           ; AFF1 8D 11 06                 ...
+        lda     #$26                            ; AFF4 A9 26                    .&
+        sta     $0612                           ; AFF6 8D 12 06                 ...
+        lda     #$02                            ; AFF9 A9 02                    ..
+        sta     $AB                             ; AFFB 85 AB                    ..
+        lda     #$23                            ; AFFD A9 23                    .#
+        sta     $0F                             ; AFFF 85 0F                    ..
+        lda     #$6B                            ; B001 A9 6B                    .k
+        sta     $0E                             ; B003 85 0E                    ..
+        lda     $6F25                           ; B005 AD 25 6F                 .%o
+        sta     L008E                           ; B008 85 8E                    ..
+        lda     #$00                            ; B00A A9 00                    ..
+        sta     $8F                             ; B00C 85 8F                    ..
+        sta     $90                             ; B00E 85 90                    ..
+        jsr     L8778                           ; B010 20 78 87                  x.
+        lda     $6F26                           ; B013 AD 26 6F                 .&o
+        sta     $6C                             ; B016 85 6C                    .l
+        lda     $6F27                           ; B018 AD 27 6F                 .'o
+        sta     $6D                             ; B01B 85 6D                    .m
+        lda     #$00                            ; B01D A9 00                    ..
+        sta     $6E                             ; B01F 85 6E                    .n
+        lda     $6F28                           ; B021 AD 28 6F                 .(o
+        sta     $6F                             ; B024 85 6F                    .o
+        lda     $6F29                           ; B026 AD 29 6F                 .)o
+        sta     $70                             ; B029 85 70                    .p
+        lda     #$00                            ; B02B A9 00                    ..
+        sta     $71                             ; B02D 85 71                    .q
+        lda     #$23                            ; B02F A9 23                    .#
+        sta     $6A                             ; B031 85 6A                    .j
+        lda     #$6F                            ; B033 A9 6F                    .o
+        sta     $6B                             ; B035 85 6B                    .k
+        lda     #$02                            ; B037 A9 02                    ..
+        jsr     LAB88                           ; B039 20 88 AB                  ..
+        lda     $6F26                           ; B03C AD 26 6F                 .&o
+        sec                                     ; B03F 38                       8
+        sbc     $6F28                           ; B040 ED 28 6F                 .(o
+        lda     $6F27                           ; B043 AD 27 6F                 .'o
+        sbc     $6F29                           ; B046 ED 29 6F                 .)o
+        bcc     LB058                           ; B049 90 0D                    ..
+        lda     #$23                            ; B04B A9 23                    .#
+        sta     $0F                             ; B04D 85 0F                    ..
+        lda     #$52                            ; B04F A9 52                    .R
+        sta     $0E                             ; B051 85 0E                    ..
+        lda     #$40                            ; B053 A9 40                    .@
+        jsr     L9E49                           ; B055 20 49 9E                  I.
+LB058:
+        rts                                     ; B058 60                       `
+
+; ----------------------------------------------------------------------------
+LB059:
+        tax                                     ; B059 AA                       .
+        lda     $603C,x                         ; B05A BD 3C 60                 .<`
+        tax                                     ; B05D AA                       .
+        lda     $604A,x                         ; B05E BD 4A 60                 .J`
+        sec                                     ; B061 38                       8
+        sbc     $60C1,x                         ; B062 FD C1 60                 ..`
+        lda     $6051,x                         ; B065 BD 51 60                 .Q`
+        sbc     $60C8,x                         ; B068 FD C8 60                 ..`
+        rts                                     ; B06B 60                       `
+
+; ----------------------------------------------------------------------------
+LB06C:
+        tax                                     ; B06C AA                       .
+        lda     $603C,x                         ; B06D BD 3C 60                 .<`
+        tax                                     ; B070 AA                       .
+        lda     $604A,x                         ; B071 BD 4A 60                 .J`
+        ora     $6051,x                         ; B074 1D 51 60                 .Q`
+        rts                                     ; B077 60                       `
+
+; ----------------------------------------------------------------------------
+LB078:
+        ldx     $6F24                           ; B078 AE 24 6F                 .$o
+        dec     $60CE,x                         ; B07B DE CE 60                 ..`
+        rts                                     ; B07E 60                       `
+
+; ----------------------------------------------------------------------------
 LB07F:
-        .byte   $AA,$BD,$3C,$60,$AA,$BD,$4A,$60 ; B07F AA BD 3C 60 AA BD 4A 60  ..<`..J`
-        .byte   $18,$6D,$0C,$06,$9D,$4A,$60,$BD ; B087 18 6D 0C 06 9D 4A 60 BD  .m...J`.
-        .byte   $51,$60,$6D,$0D,$06,$9D,$51,$60 ; B08F 51 60 6D 0D 06 9D 51 60  Q`m...Q`
-        .byte   $B0,$0F,$BD,$C1,$60,$38,$FD,$4A ; B097 B0 0F BD C1 60 38 FD 4A  ....`8.J
-        .byte   $60,$BD,$C8,$60,$FD,$51,$60,$B0 ; B09F 60 BD C8 60 FD 51 60 B0  `..`.Q`.
-        .byte   $0C,$BD,$C1,$60,$9D,$4A,$60,$BD ; B0A7 0C BD C1 60 9D 4A 60 BD  ...`.J`.
-        .byte   $C8,$60,$9D,$51,$60,$60,$A9,$01 ; B0AF C8 60 9D 51 60 60 A9 01  .`.Q``..
-        .byte   $8D,$17,$06,$A9,$F6,$85,$AA,$A9 ; B0B7 8D 17 06 A9 F6 85 AA A9  ........
-        .byte   $3D,$8D,$11,$06,$A9,$04,$85,$AB ; B0BF 3D 8D 11 06 A9 04 85 AB  =.......
-        .byte   $A9,$21,$85,$0F,$A9,$A7,$85,$0E ; B0C7 A9 21 85 0F A9 A7 85 0E  .!......
-        .byte   $AE,$1F,$6F,$BD,$3C,$60,$AA,$BD ; B0CF AE 1F 6F BD 3C 60 AA BD  ..o.<`..
-        .byte   $4A,$60,$85,$8E,$BD,$51,$60,$85 ; B0D7 4A 60 85 8E BD 51 60 85  J`...Q`.
-        .byte   $8F,$A9,$00,$85,$90,$20,$C6,$81 ; B0DF 8F A9 00 85 90 20 C6 81  ..... ..
-        .byte   $A9,$21,$85,$0F,$A9,$AB,$85,$0E ; B0E7 A9 21 85 0F A9 AB 85 0E  .!......
-        .byte   $AE,$1F,$6F,$BD,$3C,$60,$AA,$BD ; B0EF AE 1F 6F BD 3C 60 AA BD  ..o.<`..
-        .byte   $C1,$60,$85,$8E,$BD,$C8,$60,$85 ; B0F7 C1 60 85 8E BD C8 60 85  .`....`.
-        .byte   $8F,$A9,$00,$85,$90,$20,$6D,$82 ; B0FF 8F A9 00 85 90 20 6D 82  ..... m.
-        .byte   $A9,$20,$85,$0F,$A9,$D9,$85,$0E ; B107 A9 20 85 0F A9 D9 85 0E  . ......
-        .byte   $AD,$2F,$6F,$85,$8E,$AD,$30,$6F ; B10F AD 2F 6F 85 8E AD 30 6F  ./o...0o
-        .byte   $85,$8F,$A9,$00,$85,$90,$20,$C6 ; B117 85 8F A9 00 85 90 20 C6  ...... .
-        .byte   $81,$A9,$21,$85,$0F,$A9,$39,$85 ; B11F 81 A9 21 85 0F A9 39 85  ..!...9.
-        .byte   $0E,$AD,$31,$6F,$85,$8E,$AD,$32 ; B127 0E AD 31 6F 85 8E AD 32  ..1o...2
-        .byte   $6F,$85,$8F,$A9,$00,$85,$90,$20 ; B12F 6F 85 8F A9 00 85 90 20  o...... 
-        .byte   $C6,$81,$A9,$21,$85,$0F,$A9,$99 ; B137 C6 81 A9 21 85 0F A9 99  ...!....
-        .byte   $85,$0E,$AD,$33,$6F,$85,$8E,$AD ; B13F 85 0E AD 33 6F 85 8E AD  ...3o...
-        .byte   $34,$6F,$85,$8F,$A9,$00,$85,$90 ; B147 34 6F 85 8F A9 00 85 90  4o......
-        .byte   $20,$C6,$81,$A9,$21,$85,$0F,$A9 ; B14F 20 C6 81 A9 21 85 0F A9   ...!...
-        .byte   $F9,$85,$0E,$AD,$35,$6F,$85,$8E ; B157 F9 85 0E AD 35 6F 85 8E  ....5o..
-        .byte   $AD,$36,$6F,$85,$8F,$A9,$00,$85 ; B15F AD 36 6F 85 8F A9 00 85  .6o.....
-        .byte   $90,$20,$C6,$81,$A9,$22,$85,$0F ; B167 90 20 C6 81 A9 22 85 0F  . ..."..
-        .byte   $A9,$59,$85,$0E,$AD,$37,$6F,$85 ; B16F A9 59 85 0E AD 37 6F 85  .Y...7o.
-        .byte   $8E,$AD,$3A,$6F,$85,$8F,$A9,$00 ; B177 8E AD 3A 6F 85 8F A9 00  ..:o....
-        .byte   $85,$90,$20,$C6,$81,$60,$AE,$1F ; B17F 85 90 20 C6 81 60 AE 1F  .. ..`..
-        .byte   $6F,$BD,$3C,$60,$18,$69,$01,$20 ; B187 6F BD 3C 60 18 69 01 20  o.<`.i. 
-        .byte   $2A,$A9,$A2,$10,$A0,$00,$20,$30 ; B18F 2A A9 A2 10 A0 00 20 30  *..... 0
-        .byte   $01,$9D,$1A,$06,$E8,$C8,$C0,$0C ; B197 01 9D 1A 06 E8 C8 C0 0C  ........
-        .byte   $90,$F4,$A2,$01,$A9,$0C,$9D,$00 ; B19F 90 F4 A2 01 A9 0C 9D 00  ........
-        .byte   $07,$E8,$A9,$3F,$9D,$00,$07,$E8 ; B1A7 07 E8 A9 3F 9D 00 07 E8  ...?....
-        .byte   $A9,$10,$9D,$00,$07,$E8,$A0,$00 ; B1AF A9 10 9D 00 07 E8 A0 00  ........
-        .byte   $20,$30,$01,$9D,$00,$07,$E8,$C8 ; B1B7 20 30 01 9D 00 07 E8 C8   0......
-        .byte   $C0,$0C,$D0,$F4,$A9,$01,$8D,$00 ; B1BF C0 0C D0 F4 A9 01 8D 00  ........
-        .byte   $07,$A9,$FF,$85,$2D,$20,$A0,$F3 ; B1C7 07 A9 FF 85 2D 20 A0 F3  ....- ..
-        .byte   $60,$60,$20,$F1,$B3,$A9,$00,$8D ; B1CF 60 60 20 F1 B3 A9 00 8D  `` .....
-        .byte   $42,$6F,$AD,$0E,$06,$F0,$09,$20 ; B1D7 42 6F AD 0E 06 F0 09 20  Bo..... 
-        .byte   $0B,$F4,$20,$A0,$F3,$4C,$3D,$B2 ; B1DF 0B F4 20 A0 F3 4C 3D B2  .. ..L=.
-        .byte   $20,$1E,$B4,$20,$0B,$F4,$20,$A0 ; B1E7 20 1E B4 20 0B F4 20 A0   .. .. .
-        .byte   $F3,$A9,$00,$85,$DB,$85,$DC,$20 ; B1EF F3 A9 00 85 DB 85 DC 20  ....... 
-        .byte   $98,$9C,$20,$A0,$F3,$A2,$08,$A5 ; B1F7 98 9C 20 A0 F3 A2 08 A5  .. .....
-        .byte   $22,$4A,$B0,$05,$CA,$D0,$FA,$F0 ; B1FF 22 4A B0 05 CA D0 FA F0  "J......
-        .byte   $EE,$CA,$8A,$0A,$AA,$BD,$1A,$B2 ; B207 EE CA 8A 0A AA BD 1A B2  ........
-        .byte   $85,$02,$E8,$BD,$1A,$B2,$85,$03 ; B20F 85 02 E8 BD 1A B2 85 03  ........
-        .byte   $6C,$02,$00,$3D,$B2,$2A,$B2,$2C ; B217 6C 02 00 3D B2 2A B2 2C  l..=.*.,
-        .byte   $B2,$2C,$B2,$2C,$B2,$2C,$B2,$2F ; B21F B2 2C B2 2C B2 2C B2 2F  .,.,.,./
-        .byte   $B2,$2F,$B2,$18,$60,$4C,$F6,$B1 ; B227 B2 2F B2 18 60 4C F6 B1  ./..`L..
-        .byte   $AD,$42,$6F,$49,$01,$8D,$42,$6F ; B22F AD 42 6F 49 01 8D 42 6F  .BoI..Bo
-        .byte   $20,$1E,$B4,$4C,$F0,$B1,$20,$3A ; B237 20 1E B4 4C F0 B1 20 3A   ..L.. :
-        .byte   $B4,$A9,$00,$8D,$13,$06,$20,$99 ; B23F B4 A9 00 8D 13 06 20 99  ...... .
-        .byte   $B4,$A9,$00,$8D,$43,$6F,$20,$82 ; B247 B4 A9 00 8D 43 6F 20 82  ....Co .
-        .byte   $B5,$20,$A6,$B5,$A9,$00,$85,$DB ; B24F B5 20 A6 B5 A9 00 85 DB  . ......
-        .byte   $85,$DC,$20,$98,$9C,$20,$A0,$F3 ; B257 85 DC 20 98 9C 20 A0 F3  .. .. ..
-        .byte   $A2,$08,$A5,$22,$4A,$B0,$05,$CA ; B25F A2 08 A5 22 4A B0 05 CA  ..."J...
-        .byte   $D0,$FA,$F0,$EE,$CA,$8A,$0A,$AA ; B267 D0 FA F0 EE CA 8A 0A AA  ........
-        .byte   $BD,$7D,$B2,$85,$02,$E8,$BD,$7D ; B26F BD 7D B2 85 02 E8 BD 7D  .}.....}
-        .byte   $B2,$85,$03,$6C,$02,$00,$25,$B3 ; B277 B2 85 03 6C 02 00 25 B3  ...l..%.
-        .byte   $8D,$B2,$A6,$B2,$A6,$B2,$A9,$B2 ; B27F 8D B2 A6 B2 A6 B2 A9 B2  ........
-        .byte   $C9,$B2,$DD,$B2,$0E,$B3,$AD,$0E ; B287 C9 B2 DD B2 0E B3 AD 0E  ........
-        .byte   $06,$D0,$12,$20,$FB,$B6,$20,$38 ; B28F 06 D0 12 20 FB B6 20 38  ... .. 8
-        .byte   $B6,$20,$70,$B6,$20,$C3,$B6,$20 ; B297 B6 20 70 B6 20 C3 B6 20  . p. .. 
-        .byte   $1E,$B4,$4C,$F0,$B1,$18,$60,$4C ; B29F 1E B4 4C F0 B1 18 60 4C  ..L...`L
-        .byte   $59,$B2,$AD,$15,$06,$C9,$02,$90 ; B2A7 59 B2 AD 15 06 C9 02 90  Y.......
-        .byte   $A9,$AE,$43,$6F,$CA,$10,$04,$AE ; B2AF A9 AE 43 6F CA 10 04 AE  ..Co....
-        .byte   $15,$06,$CA,$8E,$43,$6F,$20,$82 ; B2B7 15 06 CA 8E 43 6F 20 82  ....Co .
-        .byte   $B5,$20,$C3,$B6,$20,$A6,$B5,$4C ; B2BF B5 20 C3 B6 20 A6 B5 4C  . .. ..L
-        .byte   $53,$B2,$AD,$15,$06,$C9,$02,$90 ; B2C7 53 B2 AD 15 06 C9 02 90  S.......
-        .byte   $89,$AE,$43,$6F,$E8,$EC,$15,$06 ; B2CF 89 AE 43 6F E8 EC 15 06  ..Co....
-        .byte   $90,$E1,$A2,$00,$F0,$DD,$AD,$14 ; B2D7 90 E1 A2 00 F0 DD AD 14  ........
-        .byte   $06,$C9,$02,$90,$3E,$AE,$13,$06 ; B2DF 06 C9 02 90 3E AE 13 06  ....>...
-        .byte   $CA,$10,$04,$AE,$14,$06,$CA,$8E ; B2E7 CA 10 04 AE 14 06 CA 8E  ........
-        .byte   $13,$06,$20,$FB,$B6,$20,$38,$B6 ; B2EF 13 06 20 FB B6 20 38 B6  .. .. 8.
-        .byte   $20,$70,$B6,$20,$C3,$B6,$20,$99 ; B2F7 20 70 B6 20 C3 B6 20 99   p. .. .
-        .byte   $B4,$A9,$00,$8D,$43,$6F,$20,$82 ; B2FF B4 A9 00 8D 43 6F 20 82  ....Co .
-        .byte   $B5,$20,$A6,$B5,$4C,$53,$B2,$AD ; B307 B5 20 A6 B5 4C 53 B2 AD  . ..LS..
-        .byte   $14,$06,$C9,$02,$90,$0D,$AE,$13 ; B30F 14 06 C9 02 90 0D AE 13  ........
-        .byte   $06,$E8,$EC,$14,$06,$90,$D0,$A2 ; B317 06 E8 EC 14 06 90 D0 A2  ........
-        .byte   $00,$F0,$CC,$4C,$59,$B2,$20,$39 ; B31F 00 F0 CC 4C 59 B2 20 39  ...LY. 9
-        .byte   $B5,$18,$6D,$43,$6F,$AA,$BD,$45 ; B327 B5 18 6D 43 6F AA BD 45  ..mCo..E
-        .byte   $06,$F0,$12,$8D,$24,$6F,$8D,$45 ; B32F 06 F0 12 8D 24 6F 8D 45  ....$o.E
-        .byte   $6F,$30,$08,$AD,$42,$6F,$D0,$08 ; B337 6F 30 08 AD 42 6F D0 08  o0..Bo..
-        .byte   $4C,$5C,$B3,$38,$60,$4C,$59,$B2 ; B33F 4C 5C B3 38 60 4C 59 B2  L\.8`LY.
-        .byte   $AD,$24,$6F,$CD,$1A,$6F,$D0,$F5 ; B347 AD 24 6F CD 1A 6F D0 F5  .$o..o..
-        .byte   $A9,$FF,$8D,$1A,$6F,$20,$35,$F4 ; B34F A9 FF 8D 1A 6F 20 35 F4  ....o 5.
-        .byte   $68,$68,$4C,$49,$F2,$20,$01,$B7 ; B357 68 68 4C 49 F2 20 01 B7  hhLI. ..
-        .byte   $AD,$0E,$06,$F0,$03,$4C,$E5,$B3 ; B35F AD 0E 06 F0 03 4C E5 B3  .....L..
-        .byte   $AD,$26,$6F,$C9,$03,$D0,$03,$4C ; B367 AD 26 6F C9 03 D0 03 4C  .&o....L
-        .byte   $59,$B2,$C9,$01,$F0,$16,$20,$35 ; B36F 59 B2 C9 01 F0 16 20 35  Y..... 5
-        .byte   $F4,$A9,$00,$8D,$1E,$6F,$A9,$01 ; B377 F4 A9 00 8D 1E 6F A9 01  .....o..
-        .byte   $8D,$20,$6F,$20,$DA,$A5,$20,$35 ; B37F 8D 20 6F 20 DA A5 20 35  . o .. 5
-        .byte   $F4,$4C,$9E,$B3,$20,$35,$F4,$A9 ; B387 F4 4C 9E B3 20 35 F4 A9  .L.. 5..
-        .byte   $00,$8D,$1E,$6F,$A9,$01,$8D,$20 ; B38F 00 8D 1E 6F A9 01 8D 20  ...o... 
-        .byte   $6F,$20,$72,$B7,$20,$35,$F4     ; B397 6F 20 72 B7 20 35 F4     o r. 5.
+        tax                                     ; B07F AA                       .
+        lda     $603C,x                         ; B080 BD 3C 60                 .<`
+        tax                                     ; B083 AA                       .
+        lda     $604A,x                         ; B084 BD 4A 60                 .J`
+        clc                                     ; B087 18                       .
+        adc     $060C                           ; B088 6D 0C 06                 m..
+        sta     $604A,x                         ; B08B 9D 4A 60                 .J`
+        lda     $6051,x                         ; B08E BD 51 60                 .Q`
+        adc     $060D                           ; B091 6D 0D 06                 m..
+        sta     $6051,x                         ; B094 9D 51 60                 .Q`
+        bcs     LB0A8                           ; B097 B0 0F                    ..
+        lda     $60C1,x                         ; B099 BD C1 60                 ..`
+        sec                                     ; B09C 38                       8
+        sbc     $604A,x                         ; B09D FD 4A 60                 .J`
+        lda     $60C8,x                         ; B0A0 BD C8 60                 ..`
+        sbc     $6051,x                         ; B0A3 FD 51 60                 .Q`
+        bcs     LB0B4                           ; B0A6 B0 0C                    ..
+LB0A8:
+        lda     $60C1,x                         ; B0A8 BD C1 60                 ..`
+        sta     $604A,x                         ; B0AB 9D 4A 60                 .J`
+        lda     $60C8,x                         ; B0AE BD C8 60                 ..`
+        sta     $6051,x                         ; B0B1 9D 51 60                 .Q`
+LB0B4:
+        rts                                     ; B0B4 60                       `
+
+; ----------------------------------------------------------------------------
+LB0B5:
+        lda     #$01                            ; B0B5 A9 01                    ..
+        sta     $0617                           ; B0B7 8D 17 06                 ...
+        lda     #$F6                            ; B0BA A9 F6                    ..
+        sta     $AA                             ; B0BC 85 AA                    ..
+        lda     #$3D                            ; B0BE A9 3D                    .=
+        sta     $0611                           ; B0C0 8D 11 06                 ...
+        lda     #$04                            ; B0C3 A9 04                    ..
+        sta     $AB                             ; B0C5 85 AB                    ..
+        lda     #$21                            ; B0C7 A9 21                    .!
+        sta     $0F                             ; B0C9 85 0F                    ..
+        lda     #$A7                            ; B0CB A9 A7                    ..
+        sta     $0E                             ; B0CD 85 0E                    ..
+        ldx     $6F1F                           ; B0CF AE 1F 6F                 ..o
+        lda     $603C,x                         ; B0D2 BD 3C 60                 .<`
+        tax                                     ; B0D5 AA                       .
+        lda     $604A,x                         ; B0D6 BD 4A 60                 .J`
+        sta     L008E                           ; B0D9 85 8E                    ..
+        lda     $6051,x                         ; B0DB BD 51 60                 .Q`
+        sta     $8F                             ; B0DE 85 8F                    ..
+        lda     #$00                            ; B0E0 A9 00                    ..
+        sta     $90                             ; B0E2 85 90                    ..
+        jsr     L81C6                           ; B0E4 20 C6 81                  ..
+        lda     #$21                            ; B0E7 A9 21                    .!
+        sta     $0F                             ; B0E9 85 0F                    ..
+        lda     #$AB                            ; B0EB A9 AB                    ..
+        sta     $0E                             ; B0ED 85 0E                    ..
+        ldx     $6F1F                           ; B0EF AE 1F 6F                 ..o
+        lda     $603C,x                         ; B0F2 BD 3C 60                 .<`
+        tax                                     ; B0F5 AA                       .
+        lda     $60C1,x                         ; B0F6 BD C1 60                 ..`
+        sta     L008E                           ; B0F9 85 8E                    ..
+        lda     $60C8,x                         ; B0FB BD C8 60                 ..`
+        sta     $8F                             ; B0FE 85 8F                    ..
+        lda     #$00                            ; B100 A9 00                    ..
+        sta     $90                             ; B102 85 90                    ..
+        jsr     L826D                           ; B104 20 6D 82                  m.
+        lda     #$20                            ; B107 A9 20                    . 
+        sta     $0F                             ; B109 85 0F                    ..
+        lda     #$D9                            ; B10B A9 D9                    ..
+        sta     $0E                             ; B10D 85 0E                    ..
+        lda     $6F2F                           ; B10F AD 2F 6F                 ./o
+        sta     L008E                           ; B112 85 8E                    ..
+        lda     $6F30                           ; B114 AD 30 6F                 .0o
+        sta     $8F                             ; B117 85 8F                    ..
+        lda     #$00                            ; B119 A9 00                    ..
+        sta     $90                             ; B11B 85 90                    ..
+        jsr     L81C6                           ; B11D 20 C6 81                  ..
+        lda     #$21                            ; B120 A9 21                    .!
+        sta     $0F                             ; B122 85 0F                    ..
+        lda     #$39                            ; B124 A9 39                    .9
+        sta     $0E                             ; B126 85 0E                    ..
+        lda     $6F31                           ; B128 AD 31 6F                 .1o
+        sta     L008E                           ; B12B 85 8E                    ..
+        lda     $6F32                           ; B12D AD 32 6F                 .2o
+        sta     $8F                             ; B130 85 8F                    ..
+        lda     #$00                            ; B132 A9 00                    ..
+        sta     $90                             ; B134 85 90                    ..
+        jsr     L81C6                           ; B136 20 C6 81                  ..
+        lda     #$21                            ; B139 A9 21                    .!
+        sta     $0F                             ; B13B 85 0F                    ..
+        lda     #$99                            ; B13D A9 99                    ..
+        sta     $0E                             ; B13F 85 0E                    ..
+        lda     $6F33                           ; B141 AD 33 6F                 .3o
+        sta     L008E                           ; B144 85 8E                    ..
+        lda     $6F34                           ; B146 AD 34 6F                 .4o
+        sta     $8F                             ; B149 85 8F                    ..
+        lda     #$00                            ; B14B A9 00                    ..
+        sta     $90                             ; B14D 85 90                    ..
+        jsr     L81C6                           ; B14F 20 C6 81                  ..
+        lda     #$21                            ; B152 A9 21                    .!
+        sta     $0F                             ; B154 85 0F                    ..
+        lda     #$F9                            ; B156 A9 F9                    ..
+        sta     $0E                             ; B158 85 0E                    ..
+        lda     $6F35                           ; B15A AD 35 6F                 .5o
+        sta     L008E                           ; B15D 85 8E                    ..
+        lda     $6F36                           ; B15F AD 36 6F                 .6o
+        sta     $8F                             ; B162 85 8F                    ..
+        lda     #$00                            ; B164 A9 00                    ..
+        sta     $90                             ; B166 85 90                    ..
+        jsr     L81C6                           ; B168 20 C6 81                  ..
+        lda     #$22                            ; B16B A9 22                    ."
+        sta     $0F                             ; B16D 85 0F                    ..
+        lda     #$59                            ; B16F A9 59                    .Y
+        sta     $0E                             ; B171 85 0E                    ..
+        lda     $6F37                           ; B173 AD 37 6F                 .7o
+        sta     L008E                           ; B176 85 8E                    ..
+        lda     $6F3A                           ; B178 AD 3A 6F                 .:o
+        sta     $8F                             ; B17B 85 8F                    ..
+        lda     #$00                            ; B17D A9 00                    ..
+        sta     $90                             ; B17F 85 90                    ..
+        jsr     L81C6                           ; B181 20 C6 81                  ..
+        rts                                     ; B184 60                       `
+
+; ----------------------------------------------------------------------------
+LB185:
+        ldx     $6F1F                           ; B185 AE 1F 6F                 ..o
+        lda     $603C,x                         ; B188 BD 3C 60                 .<`
+        clc                                     ; B18B 18                       .
+        adc     #$01                            ; B18C 69 01                    i.
+        jsr     LA92A                           ; B18E 20 2A A9                  *.
+        ldx     #$10                            ; B191 A2 10                    ..
+        ldy     #$00                            ; B193 A0 00                    ..
+LB195:
+        jsr     L0130                           ; B195 20 30 01                  0.
+        sta     $061A,x                         ; B198 9D 1A 06                 ...
+        inx                                     ; B19B E8                       .
+        iny                                     ; B19C C8                       .
+        cpy     #$0C                            ; B19D C0 0C                    ..
+        bcc     LB195                           ; B19F 90 F4                    ..
+        ldx     #$01                            ; B1A1 A2 01                    ..
+        lda     #$0C                            ; B1A3 A9 0C                    ..
+        sta     $0700,x                         ; B1A5 9D 00 07                 ...
+        inx                                     ; B1A8 E8                       .
+        lda     #$3F                            ; B1A9 A9 3F                    .?
+        sta     $0700,x                         ; B1AB 9D 00 07                 ...
+        inx                                     ; B1AE E8                       .
+        lda     #$10                            ; B1AF A9 10                    ..
+        sta     $0700,x                         ; B1B1 9D 00 07                 ...
+        inx                                     ; B1B4 E8                       .
+        ldy     #$00                            ; B1B5 A0 00                    ..
+LB1B7:
+        jsr     L0130                           ; B1B7 20 30 01                  0.
+        sta     $0700,x                         ; B1BA 9D 00 07                 ...
+        inx                                     ; B1BD E8                       .
+        iny                                     ; B1BE C8                       .
+        cpy     #$0C                            ; B1BF C0 0C                    ..
+        bne     LB1B7                           ; B1C1 D0 F4                    ..
+        lda     #$01                            ; B1C3 A9 01                    ..
+        sta     $0700                           ; B1C5 8D 00 07                 ...
+        lda     #$FF                            ; B1C8 A9 FF                    ..
+        sta     $2D                             ; B1CA 85 2D                    .-
+        jsr     LF3A0                           ; B1CC 20 A0 F3                  ..
+        rts                                     ; B1CF 60                       `
+
+; ----------------------------------------------------------------------------
+LB1D0:
+        rts                                     ; B1D0 60                       `
+
+; ----------------------------------------------------------------------------
+LB1D1:
+        jsr     LB3F1                           ; B1D1 20 F1 B3                  ..
+        lda     #$00                            ; B1D4 A9 00                    ..
+        sta     $6F42                           ; B1D6 8D 42 6F                 .Bo
+        lda     $060E                           ; B1D9 AD 0E 06                 ...
+        beq     LB1E7                           ; B1DC F0 09                    ..
+        jsr     LF40B                           ; B1DE 20 0B F4                  ..
+        jsr     LF3A0                           ; B1E1 20 A0 F3                  ..
+        jmp     LB23D                           ; B1E4 4C 3D B2                 L=.
+
+; ----------------------------------------------------------------------------
+LB1E7:
+        jsr     LB41E                           ; B1E7 20 1E B4                  ..
+        jsr     LF40B                           ; B1EA 20 0B F4                  ..
+        jsr     LF3A0                           ; B1ED 20 A0 F3                  ..
+LB1F0:
+        lda     #$00                            ; B1F0 A9 00                    ..
+        sta     $DB                             ; B1F2 85 DB                    ..
+        sta     $DC                             ; B1F4 85 DC                    ..
+LB1F6:
+        jsr     L9C98                           ; B1F6 20 98 9C                  ..
+        jsr     LF3A0                           ; B1F9 20 A0 F3                  ..
+        ldx     #$08                            ; B1FC A2 08                    ..
+        lda     $22                             ; B1FE A5 22                    ."
+LB200:
+        lsr     a                               ; B200 4A                       J
+        bcs     LB208                           ; B201 B0 05                    ..
+        dex                                     ; B203 CA                       .
+        bne     LB200                           ; B204 D0 FA                    ..
+        beq     LB1F6                           ; B206 F0 EE                    ..
+LB208:
+        dex                                     ; B208 CA                       .
+        txa                                     ; B209 8A                       .
+        asl     a                               ; B20A 0A                       .
+        tax                                     ; B20B AA                       .
+        lda     LB21A,x                         ; B20C BD 1A B2                 ...
+        sta     L0002                           ; B20F 85 02                    ..
+        inx                                     ; B211 E8                       .
+        lda     LB21A,x                         ; B212 BD 1A B2                 ...
+        sta     $03                             ; B215 85 03                    ..
+        jmp     (L0002)                         ; B217 6C 02 00                 l..
+
+; ----------------------------------------------------------------------------
+LB21A:
+        .addr   LB23D                           ; B21A 3D B2                    =.
+        .addr   LB22A                           ; B21C 2A B2                    *.
+        .addr   LB22C                           ; B21E 2C B2                    ,.
+        .addr   LB22C                           ; B220 2C B2                    ,.
+        .addr   LB22C                           ; B222 2C B2                    ,.
+        .addr   LB22C                           ; B224 2C B2                    ,.
+        .addr   LB22F                           ; B226 2F B2                    /.
+        .addr   LB22F                           ; B228 2F B2                    /.
+; ----------------------------------------------------------------------------
+LB22A:
+        clc                                     ; B22A 18                       .
+        rts                                     ; B22B 60                       `
+
+; ----------------------------------------------------------------------------
+LB22C:
+        jmp     LB1F6                           ; B22C 4C F6 B1                 L..
+
+; ----------------------------------------------------------------------------
+LB22F:
+        lda     $6F42                           ; B22F AD 42 6F                 .Bo
+        eor     #$01                            ; B232 49 01                    I.
+        sta     $6F42                           ; B234 8D 42 6F                 .Bo
+        jsr     LB41E                           ; B237 20 1E B4                  ..
+        jmp     LB1F0                           ; B23A 4C F0 B1                 L..
+
+; ----------------------------------------------------------------------------
+LB23D:
+        jsr     LB43A                           ; B23D 20 3A B4                  :.
+        lda     #$00                            ; B240 A9 00                    ..
+        sta     $0613                           ; B242 8D 13 06                 ...
+        jsr     LB499                           ; B245 20 99 B4                  ..
+        lda     #$00                            ; B248 A9 00                    ..
+        sta     $6F43                           ; B24A 8D 43 6F                 .Co
+        jsr     LB582                           ; B24D 20 82 B5                  ..
+        jsr     LB5A6                           ; B250 20 A6 B5                  ..
+LB253:
+        lda     #$00                            ; B253 A9 00                    ..
+        sta     $DB                             ; B255 85 DB                    ..
+        sta     $DC                             ; B257 85 DC                    ..
+LB259:
+        jsr     L9C98                           ; B259 20 98 9C                  ..
+        jsr     LF3A0                           ; B25C 20 A0 F3                  ..
+        ldx     #$08                            ; B25F A2 08                    ..
+        lda     $22                             ; B261 A5 22                    ."
+LB263:
+        lsr     a                               ; B263 4A                       J
+        bcs     LB26B                           ; B264 B0 05                    ..
+        dex                                     ; B266 CA                       .
+        bne     LB263                           ; B267 D0 FA                    ..
+        beq     LB259                           ; B269 F0 EE                    ..
+LB26B:
+        dex                                     ; B26B CA                       .
+        txa                                     ; B26C 8A                       .
+        asl     a                               ; B26D 0A                       .
+        tax                                     ; B26E AA                       .
+        lda     LB27D,x                         ; B26F BD 7D B2                 .}.
+        sta     L0002                           ; B272 85 02                    ..
+        inx                                     ; B274 E8                       .
+        lda     LB27D,x                         ; B275 BD 7D B2                 .}.
+        sta     $03                             ; B278 85 03                    ..
+        jmp     (L0002)                         ; B27A 6C 02 00                 l..
+
+; ----------------------------------------------------------------------------
+LB27D:
+        and     $B3                             ; B27D 25 B3                    %.
+        sta     LA6B2                           ; B27F 8D B2 A6                 ...
+        .byte   $B2                             ; B282 B2                       .
+        ldx     $B2                             ; B283 A6 B2                    ..
+        lda     #$B2                            ; B285 A9 B2                    ..
+        cmp     #$B2                            ; B287 C9 B2                    ..
+        cmp     $0EB2,x                         ; B289 DD B2 0E                 ...
+        .byte   $B3                             ; B28C B3                       .
+        lda     $060E                           ; B28D AD 0E 06                 ...
+        bne     LB2A4                           ; B290 D0 12                    ..
+        jsr     LB6FB                           ; B292 20 FB B6                  ..
+        jsr     LB638                           ; B295 20 38 B6                  8.
+        jsr     LB670                           ; B298 20 70 B6                  p.
+        jsr     LB6C3                           ; B29B 20 C3 B6                  ..
+        jsr     LB41E                           ; B29E 20 1E B4                  ..
+        jmp     LB1F0                           ; B2A1 4C F0 B1                 L..
+
+; ----------------------------------------------------------------------------
+LB2A4:
+        clc                                     ; B2A4 18                       .
+        rts                                     ; B2A5 60                       `
+
+; ----------------------------------------------------------------------------
+        jmp     LB259                           ; B2A6 4C 59 B2                 LY.
+
+; ----------------------------------------------------------------------------
+        lda     $0615                           ; B2A9 AD 15 06                 ...
+        cmp     #$02                            ; B2AC C9 02                    ..
+        bcc     LB259                           ; B2AE 90 A9                    ..
+        ldx     $6F43                           ; B2B0 AE 43 6F                 .Co
+        dex                                     ; B2B3 CA                       .
+        bpl     LB2BA                           ; B2B4 10 04                    ..
+        ldx     $0615                           ; B2B6 AE 15 06                 ...
+        dex                                     ; B2B9 CA                       .
+LB2BA:
+        stx     $6F43                           ; B2BA 8E 43 6F                 .Co
+        jsr     LB582                           ; B2BD 20 82 B5                  ..
+        jsr     LB6C3                           ; B2C0 20 C3 B6                  ..
+        jsr     LB5A6                           ; B2C3 20 A6 B5                  ..
+        jmp     LB253                           ; B2C6 4C 53 B2                 LS.
+
+; ----------------------------------------------------------------------------
+        lda     $0615                           ; B2C9 AD 15 06                 ...
+        cmp     #$02                            ; B2CC C9 02                    ..
+        bcc     LB259                           ; B2CE 90 89                    ..
+        ldx     $6F43                           ; B2D0 AE 43 6F                 .Co
+        inx                                     ; B2D3 E8                       .
+        cpx     $0615                           ; B2D4 EC 15 06                 ...
+        bcc     LB2BA                           ; B2D7 90 E1                    ..
+        ldx     #$00                            ; B2D9 A2 00                    ..
+        beq     LB2BA                           ; B2DB F0 DD                    ..
+        lda     $0614                           ; B2DD AD 14 06                 ...
+        cmp     #$02                            ; B2E0 C9 02                    ..
+        bcc     LB322                           ; B2E2 90 3E                    .>
+        ldx     $0613                           ; B2E4 AE 13 06                 ...
+        dex                                     ; B2E7 CA                       .
+        bpl     LB2EE                           ; B2E8 10 04                    ..
+        ldx     $0614                           ; B2EA AE 14 06                 ...
+        dex                                     ; B2ED CA                       .
+LB2EE:
+        stx     $0613                           ; B2EE 8E 13 06                 ...
+        jsr     LB6FB                           ; B2F1 20 FB B6                  ..
+        jsr     LB638                           ; B2F4 20 38 B6                  8.
+        jsr     LB670                           ; B2F7 20 70 B6                  p.
+        jsr     LB6C3                           ; B2FA 20 C3 B6                  ..
+        jsr     LB499                           ; B2FD 20 99 B4                  ..
+        lda     #$00                            ; B300 A9 00                    ..
+        sta     $6F43                           ; B302 8D 43 6F                 .Co
+        jsr     LB582                           ; B305 20 82 B5                  ..
+        jsr     LB5A6                           ; B308 20 A6 B5                  ..
+        jmp     LB253                           ; B30B 4C 53 B2                 LS.
+
+; ----------------------------------------------------------------------------
+        lda     $0614                           ; B30E AD 14 06                 ...
+        cmp     #$02                            ; B311 C9 02                    ..
+        bcc     LB322                           ; B313 90 0D                    ..
+        ldx     $0613                           ; B315 AE 13 06                 ...
+        inx                                     ; B318 E8                       .
+        cpx     $0614                           ; B319 EC 14 06                 ...
+        bcc     LB2EE                           ; B31C 90 D0                    ..
+        ldx     #$00                            ; B31E A2 00                    ..
+        beq     LB2EE                           ; B320 F0 CC                    ..
+LB322:
+        jmp     LB259                           ; B322 4C 59 B2                 LY.
+
+; ----------------------------------------------------------------------------
+        jsr     LB539                           ; B325 20 39 B5                  9.
+        clc                                     ; B328 18                       .
+        adc     $6F43                           ; B329 6D 43 6F                 mCo
+        tax                                     ; B32C AA                       .
+        lda     $0645,x                         ; B32D BD 45 06                 .E.
+        beq     LB344                           ; B330 F0 12                    ..
+        sta     $6F24                           ; B332 8D 24 6F                 .$o
+        sta     $6F45                           ; B335 8D 45 6F                 .Eo
+        bmi     LB342                           ; B338 30 08                    0.
+        lda     $6F42                           ; B33A AD 42 6F                 .Bo
+        bne     LB347                           ; B33D D0 08                    ..
+        jmp     LB35C                           ; B33F 4C 5C B3                 L\.
+
+; ----------------------------------------------------------------------------
+LB342:
+        sec                                     ; B342 38                       8
+        rts                                     ; B343 60                       `
+
+; ----------------------------------------------------------------------------
+LB344:
+        jmp     LB259                           ; B344 4C 59 B2                 LY.
+
+; ----------------------------------------------------------------------------
+LB347:
+        lda     $6F24                           ; B347 AD 24 6F                 .$o
+        cmp     $6F1A                           ; B34A CD 1A 6F                 ..o
+        bne     LB344                           ; B34D D0 F5                    ..
+        lda     #$FF                            ; B34F A9 FF                    ..
+        sta     $6F1A                           ; B351 8D 1A 6F                 ..o
+        jsr     LF435                           ; B354 20 35 F4                  5.
+        pla                                     ; B357 68                       h
+        pla                                     ; B358 68                       h
+        jmp     LF249                           ; B359 4C 49 F2                 LI.
+
+; ----------------------------------------------------------------------------
+LB35C:
+        jsr     LB701                           ; B35C 20 01 B7                  ..
+        lda     $060E                           ; B35F AD 0E 06                 ...
+        beq     LB367                           ; B362 F0 03                    ..
+        jmp     LB3E5                           ; B364 4C E5 B3                 L..
+
+; ----------------------------------------------------------------------------
+LB367:
+        lda     $6F26                           ; B367 AD 26 6F                 .&o
+        cmp     #$03                            ; B36A C9 03                    ..
+        bne     LB371                           ; B36C D0 03                    ..
+        jmp     LB259                           ; B36E 4C 59 B2                 LY.
+
+; ----------------------------------------------------------------------------
+LB371:
+        cmp     #$01                            ; B371 C9 01                    ..
+        beq     LB38B                           ; B373 F0 16                    ..
+        jsr     LF435                           ; B375 20 35 F4                  5.
+        lda     #$00                            ; B378 A9 00                    ..
+        sta     $6F1E                           ; B37A 8D 1E 6F                 ..o
+        lda     #$01                            ; B37D A9 01                    ..
+        sta     $6F20                           ; B37F 8D 20 6F                 . o
+        jsr     LA5DA                           ; B382 20 DA A5                  ..
+        jsr     LF435                           ; B385 20 35 F4                  5.
+        jmp     LB39E                           ; B388 4C 9E B3                 L..
+
+; ----------------------------------------------------------------------------
+LB38B:
+        jsr     LF435                           ; B38B 20 35 F4                  5.
+        lda     #$00                            ; B38E A9 00                    ..
+        sta     $6F1E                           ; B390 8D 1E 6F                 ..o
+        lda     #$01                            ; B393 A9 01                    ..
+        sta     $6F20                           ; B395 8D 20 6F                 . o
+        jsr     LB772                           ; B398 20 72 B7                  r.
+        jsr     LF435                           ; B39B 20 35 F4                  5.
 LB39E:
-        .byte   $20,$F1,$B3,$20,$0B,$F4,$20,$A0 ; B39E 20 F1 B3 20 0B F4 20 A0   .. .. .
-        .byte   $F3,$20,$3A,$B4,$AD,$13,$06,$F0 ; B3A6 F3 20 3A B4 AD 13 06 F0  . :.....
-        .byte   $1D,$CD,$14,$06,$90,$18,$CE,$13 ; B3AE 1D CD 14 06 90 18 CE 13  ........
-        .byte   $06,$20,$99,$B4,$AD,$15,$06,$38 ; B3B6 06 20 99 B4 AD 15 06 38  . .....8
-        .byte   $E9,$01,$8D,$43,$6F,$20,$82,$B5 ; B3BE E9 01 8D 43 6F 20 82 B5  ...Co ..
-        .byte   $20,$A6,$B5,$4C,$53,$B2,$20,$99 ; B3C6 20 A6 B5 4C 53 B2 20 99   ..LS. .
-        .byte   $B4,$AD,$43,$6F,$F0,$08,$CD,$15 ; B3CE B4 AD 43 6F F0 08 CD 15  ..Co....
-        .byte   $06,$90,$03,$CE,$43,$6F,$20,$82 ; B3D6 06 90 03 CE 43 6F 20 82  ....Co .
-        .byte   $B5,$20,$A6,$B5,$4C,$53,$B2,$AD ; B3DE B5 20 A6 B5 4C 53 B2 AD  . ..LS..
-        .byte   $26,$6F,$C9,$04,$B0,$02,$38,$60 ; B3E6 26 6F C9 04 B0 02 38 60  &o....8`
-        .byte   $4C,$59,$B2,$20,$BC,$F3,$20,$A0 ; B3EE 4C 59 B2 20 BC F3 20 A0  LY. .. .
-        .byte   $F3,$A9,$03,$85,$A9,$20,$68,$F2 ; B3F6 F3 A9 03 85 A9 20 68 F2  ..... h.
-        .byte   $A9,$03,$8D,$18,$06,$A9,$02,$8D ; B3FE A9 03 8D 18 06 A9 02 8D  ........
-        .byte   $19,$06,$20,$C4,$80,$20,$12,$B4 ; B406 19 06 20 C4 80 20 12 B4  .. .. ..
-        .byte   $20,$4A,$B7,$60,$A9,$10,$85,$0A ; B40E 20 4A B7 60 A9 10 85 0A   J.`....
-        .byte   $A9,$00,$85,$09,$20,$E4,$9B,$60 ; B416 A9 00 85 09 20 E4 9B 60  .... ..`
-        .byte   $AD,$42,$6F,$0A,$AA,$BD,$36,$B4 ; B41E AD 42 6F 0A AA BD 36 B4  .Bo...6.
-        .byte   $85,$AD,$E8,$BD,$36,$B4,$85,$AC ; B426 85 AD E8 BD 36 B4 85 AC  ....6...
-        .byte   $A2,$F0,$A9,$00,$20,$4C,$9C,$60 ; B42E A2 F0 A9 00 20 4C 9C 60  .... L.`
-        .byte   $08,$10,$58,$10,$AD,$42,$6F,$F0 ; B436 08 10 58 10 AD 42 6F F0  ..X..Bo.
-        .byte   $20,$AD,$3A,$62,$85,$07,$AD,$3B ; B43E 20 AD 3A 62 85 07 AD 3B   .:b...;
-        .byte   $62,$85,$08,$A2,$12,$A0,$00,$46 ; B446 62 85 08 A2 12 A0 00 46  b......F
-        .byte   $08,$66,$07,$90,$05,$8A,$99,$45 ; B44E 08 66 07 90 05 8A 99 45  .f.....E
-        .byte   $06,$C8,$E8,$E0,$20,$D0,$F0,$F0 ; B456 06 C8 E8 E0 20 D0 F0 F0  .... ...
-        .byte   $13,$A2,$01,$A0,$00,$BD,$CE,$60 ; B45E 13 A2 01 A0 00 BD CE 60  .......`
-        .byte   $F0,$05,$8A,$99,$45,$06,$C8,$E8 ; B466 F0 05 8A 99 45 06 C8 E8  ....E...
-        .byte   $E0,$12,$D0,$F1,$20,$2E,$B7,$98 ; B46E E0 12 D0 F1 20 2E B7 98  .... ...
-        .byte   $D0,$0E,$A9,$00,$8D,$45,$06,$A9 ; B476 D0 0E A9 00 8D 45 06 A9  .....E..
-        .byte   $01,$8D,$16,$06,$8D,$14,$06,$60 ; B47E 01 8D 16 06 8D 14 06 60  .......`
-        .byte   $8D,$16,$06,$A2,$01,$38,$E9,$06 ; B486 8D 16 06 A2 01 38 E9 06  .....8..
-        .byte   $90,$05,$F0,$03,$E8,$D0,$F7,$8E ; B48E 90 05 F0 03 E8 D0 F7 8E  ........
-        .byte   $14,$06,$60,$A9,$F6,$85,$AA,$A9 ; B496 14 06 60 A9 F6 85 AA A9  ..`.....
-        .byte   $02,$85,$AB,$A9,$01,$8D,$17,$06 ; B49E 02 85 AB A9 01 8D 17 06  ........
-        .byte   $A9,$03,$85,$0A,$A9,$00,$85,$09 ; B4A6 A9 03 85 0A A9 00 85 09  ........
-        .byte   $A9,$00,$85,$97,$20,$D1,$B4,$E6 ; B4AE A9 00 85 97 20 D1 B4 E6  .... ...
-        .byte   $97,$20,$39,$B5,$18,$65,$97,$CD ; B4B6 97 20 39 B5 18 65 97 CD  . 9..e..
-        .byte   $16,$06,$B0,$06,$A5,$97,$C9,$06 ; B4BE 16 06 B0 06 A5 97 C9 06  ........
-        .byte   $90,$EA,$A5,$97,$8D,$15,$06,$20 ; B4C6 90 EA A5 97 8D 15 06 20  ....... 
-        .byte   $5B,$B5,$60,$A5,$97,$0A,$AA,$BD ; B4CE 5B B5 60 A5 97 0A AA BD  [.`.....
-        .byte   $43,$B5,$85,$0F,$E8,$BD,$43,$B5 ; B4D6 43 B5 85 0F E8 BD 43 B5  C.....C.
-        .byte   $85,$0E,$A9,$08,$85,$6A,$20,$39 ; B4DE 85 0E A9 08 85 6A 20 39  .....j 9
-        .byte   $B5,$18,$65,$97,$AA,$BD,$45,$06 ; B4E6 B5 18 65 97 AA BD 45 06  ..e...E.
-        .byte   $30,$3A,$48,$85,$69,$20,$09,$8B ; B4EE 30 3A 48 85 69 20 09 8B  0:H.i ..
-        .byte   $20,$A0,$F3,$68,$F0,$2D,$AD,$42 ; B4F6 20 A0 F3 68 F0 2D AD 42   ..h.-.B
-        .byte   $6F,$D0,$28,$A5,$97,$0A,$AA,$BD ; B4FE 6F D0 28 A5 97 0A AA BD  o.(.....
-        .byte   $4F,$B5,$85,$0F,$E8,$BD,$4F,$B5 ; B506 4F B5 85 0F E8 BD 4F B5  O.....O.
-        .byte   $85,$0E,$20,$39,$B5,$18,$65,$97 ; B50E 85 0E 20 39 B5 18 65 97  .. 9..e.
-        .byte   $AA,$BD,$45,$06,$AA,$BD,$CE,$60 ; B516 AA BD 45 06 AA BD CE 60  ..E....`
-        .byte   $85,$8E,$A9,$00,$85,$8F,$85,$90 ; B51E 85 8E A9 00 85 8F 85 90  ........
-        .byte   $20,$C6,$81,$60,$29,$7F,$85,$69 ; B526 20 C6 81 60 29 7F 85 69   ..`)..i
-        .byte   $A9,$06,$85,$6A,$20,$09,$8B,$20 ; B52E A9 06 85 6A 20 09 8B 20  ...j .. 
-        .byte   $A0,$F3,$60,$AD,$13,$06,$0A,$18 ; B536 A0 F3 60 AD 13 06 0A 18  ..`.....
-        .byte   $6D,$13,$06,$0A,$60,$20,$E6,$21 ; B53E 6D 13 06 0A 60 20 E6 21  m...` .!
-        .byte   $26,$21,$66,$21,$A6,$21,$E6,$22 ; B546 26 21 66 21 A6 21 E6 22  &!f!.!."
-        .byte   $26,$21,$16,$21,$56,$21,$96,$21 ; B54E 26 21 16 21 56 21 96 21  &!.!V!.!
-        .byte   $D6,$22,$16,$22,$56,$A9,$F6,$85 ; B556 D6 22 16 22 56 A9 F6 85  ."."V...
-        .byte   $AA,$A9,$02,$85,$AB,$A9,$01,$8D ; B55E AA A9 02 85 AB A9 01 8D  ........
-        .byte   $17,$06,$A9,$22,$85,$0F,$A9,$9B ; B566 17 06 A9 22 85 0F A9 9B  ..."....
-        .byte   $85,$0E,$AD,$13,$06,$18,$69,$01 ; B56E 85 0E AD 13 06 18 69 01  ......i.
-        .byte   $85,$8E,$A9,$00,$85,$8F,$85,$90 ; B576 85 8E A9 00 85 8F 85 90  ........
-        .byte   $20,$C6,$81,$60,$AD,$43,$6F,$0A ; B57E 20 C6 81 60 AD 43 6F 0A   ..`.Co.
-        .byte   $AA,$BD,$9A,$B5,$85,$AD,$E8,$BD ; B586 AA BD 9A B5 85 AD E8 BD  ........
-        .byte   $9A,$B5,$85,$AC,$A2,$F0,$A9,$00 ; B58E 9A B5 85 AC A2 F0 A9 00  ........
-        .byte   $20,$4C,$9C,$60,$20,$38,$20,$48 ; B596 20 4C 9C 60 20 38 20 48   L.` 8 H
-        .byte   $20,$58,$20,$68,$20,$78,$20,$88 ; B59E 20 58 20 68 20 78 20 88   X h x .
-        .byte   $A9,$09,$85,$6A,$20,$39,$B5,$18 ; B5A6 A9 09 85 6A 20 39 B5 18  ...j 9..
-        .byte   $6D,$43,$6F,$AA,$BD,$45,$06,$30 ; B5AE 6D 43 6F AA BD 45 06 30  mCo..E.0
-        .byte   $06,$85,$69,$20,$9C,$B6,$60,$29 ; B5B6 06 85 69 20 9C B6 60 29  ..i ..`)
-        .byte   $7F,$8D,$24,$6F,$20,$7D,$9E,$A9 ; B5BE 7F 8D 24 6F 20 7D 9E A9  ..$o }..
-        .byte   $01,$8D,$17,$06,$A9,$F6,$85,$AA ; B5C6 01 8D 17 06 A9 F6 85 AA  ........
-        .byte   $A9,$23,$8D,$11,$06,$A9,$24,$8D ; B5CE A9 23 8D 11 06 A9 24 8D  .#....$.
-        .byte   $12,$06,$A9,$02,$85,$AB,$A9,$23 ; B5D6 12 06 A9 02 85 AB A9 23  .......#
-        .byte   $85,$0F,$A9,$06,$85,$0E,$AD,$25 ; B5DE 85 0F A9 06 85 0E AD 25  .......%
-        .byte   $6F,$85,$8E,$A9,$00,$85,$8F,$85 ; B5E6 6F 85 8E A9 00 85 8F 85  o.......
-        .byte   $90,$20,$78,$87,$AD,$26,$6F,$85 ; B5EE 90 20 78 87 AD 26 6F 85  . x..&o.
-        .byte   $6C,$AD,$27,$6F,$85,$6D,$A9,$00 ; B5F6 6C AD 27 6F 85 6D A9 00  l.'o.m..
-        .byte   $85,$6E,$AD,$28,$6F,$85,$6F,$AD ; B5FE 85 6E AD 28 6F 85 6F AD  .n.(o.o.
-        .byte   $29,$6F,$85,$70,$A9,$00,$85,$71 ; B606 29 6F 85 70 A9 00 85 71  )o.p...q
-        .byte   $A9,$23,$85,$6A,$A9,$0A,$85,$6B ; B60E A9 23 85 6A A9 0A 85 6B  .#.j...k
-        .byte   $A9,$04,$20,$88,$AB,$AD,$26,$6F ; B616 A9 04 20 88 AB AD 26 6F  .. ...&o
-        .byte   $38,$ED,$28,$6F,$AD,$27,$6F,$ED ; B61E 38 ED 28 6F AD 27 6F ED  8.(o.'o.
-        .byte   $29,$6F,$90,$0D,$A9,$22,$85,$0F ; B626 29 6F 90 0D A9 22 85 0F  )o..."..
-        .byte   $A9,$ED,$85,$0E,$A9,$25,$20,$49 ; B62E A9 ED 85 0E A9 25 20 49  .....% I
-        .byte   $9E,$60,$A9,$20,$8D,$42,$06,$A9 ; B636 9E 60 A9 20 8D 42 06 A9  .`. .B..
-        .byte   $E6,$8D,$41,$06,$A9,$16,$8D,$43 ; B63E E6 8D 41 06 A9 16 8D 43  ..A....C
-        .byte   $06,$A9,$03,$8D,$44,$06,$A9,$05 ; B646 06 A9 03 8D 44 06 A9 05  ....D...
-        .byte   $85,$AA,$A9,$00,$48,$20,$57,$97 ; B64E 85 AA A9 00 48 20 57 97  ....H W.
-        .byte   $AD,$41,$06,$18,$69,$60,$8D,$41 ; B656 AD 41 06 18 69 60 8D 41  .A..i`.A
-        .byte   $06,$AD,$42,$06,$69,$00,$8D,$42 ; B65E 06 AD 42 06 69 00 8D 42  ..B.i..B
-        .byte   $06,$68,$18,$69,$01,$C9,$04,$90 ; B666 06 68 18 69 01 C9 04 90  .h.i....
-        .byte   $E3,$60,$A2,$01,$A9,$02,$9D,$00 ; B66E E3 60 A2 01 A9 02 9D 00  .`......
-        .byte   $07,$E8,$A9,$22,$9D,$00,$07,$E8 ; B676 07 E8 A9 22 9D 00 07 E8  ..."....
-        .byte   $A9,$9B,$9D,$00,$07,$E8,$A9,$18 ; B67E A9 9B 9D 00 07 E8 A9 18  ........
-        .byte   $9D,$00,$07,$E8,$A9,$18,$9D,$00 ; B686 9D 00 07 E8 A9 18 9D 00  ........
-        .byte   $07,$A9,$01,$8D,$00,$07,$A9,$FF ; B68E 07 A9 01 8D 00 07 A9 FF  ........
-        .byte   $85,$2D,$20,$A0,$F3,$60,$A9,$09 ; B696 85 2D 20 A0 F3 60 A9 09  .- ..`..
-        .byte   $85,$0A,$A9,$00,$85,$09,$A9,$22 ; B69E 85 0A A9 00 85 09 A9 22  ......."
-        .byte   $85,$0F,$85,$79,$A9,$E6,$85,$0E ; B6A6 85 0F 85 79 A9 E6 85 0E  ...y....
-        .byte   $85,$78,$A9,$F9,$85,$77,$A9,$FF ; B6AE 85 78 A9 F9 85 77 A9 FF  .x...w..
-        .byte   $85,$88,$20,$09,$8B,$20,$A0,$F3 ; B6B6 85 88 20 09 8B 20 A0 F3  .. .. ..
-        .byte   $A9,$00,$85,$88,$60,$A9,$22,$8D ; B6BE A9 00 85 88 60 A9 22 8D  ....`.".
-        .byte   $42,$06,$A9,$E6,$8D,$41,$06,$A9 ; B6C6 42 06 A9 E6 8D 41 06 A9  B....A..
-        .byte   $14,$8D,$43,$06,$A9,$02,$8D,$44 ; B6CE 14 8D 43 06 A9 02 8D 44  ..C....D
-        .byte   $06,$A9,$05,$85,$AA,$A9,$00,$48 ; B6D6 06 A9 05 85 AA A9 00 48  .......H
-        .byte   $20,$57,$97,$AD,$41,$06,$18,$69 ; B6DE 20 57 97 AD 41 06 18 69   W..A..i
-        .byte   $40,$8D,$41,$06,$AD,$42,$06,$69 ; B6E6 40 8D 41 06 AD 42 06 69  @.A..B.i
-        .byte   $00,$8D,$42,$06,$68,$18,$69,$01 ; B6EE 00 8D 42 06 68 18 69 01  ..B.h.i.
-        .byte   $C9,$02,$90,$E3,$60,$A2,$F0,$20 ; B6F6 C9 02 90 E3 60 A2 F0 20  ....`.. 
-        .byte   $D1,$9C,$60                     ; B6FE D1 9C 60                 ..`
+        jsr     LB3F1                           ; B39E 20 F1 B3                  ..
+        jsr     LF40B                           ; B3A1 20 0B F4                  ..
+        jsr     LF3A0                           ; B3A4 20 A0 F3                  ..
+        jsr     LB43A                           ; B3A7 20 3A B4                  :.
+        lda     $0613                           ; B3AA AD 13 06                 ...
+        beq     LB3CC                           ; B3AD F0 1D                    ..
+        cmp     $0614                           ; B3AF CD 14 06                 ...
+        bcc     LB3CC                           ; B3B2 90 18                    ..
+        dec     $0613                           ; B3B4 CE 13 06                 ...
+        jsr     LB499                           ; B3B7 20 99 B4                  ..
+        lda     $0615                           ; B3BA AD 15 06                 ...
+        sec                                     ; B3BD 38                       8
+        sbc     #$01                            ; B3BE E9 01                    ..
+        sta     $6F43                           ; B3C0 8D 43 6F                 .Co
+        jsr     LB582                           ; B3C3 20 82 B5                  ..
+        jsr     LB5A6                           ; B3C6 20 A6 B5                  ..
+        jmp     LB253                           ; B3C9 4C 53 B2                 LS.
+
+; ----------------------------------------------------------------------------
+LB3CC:
+        jsr     LB499                           ; B3CC 20 99 B4                  ..
+        lda     $6F43                           ; B3CF AD 43 6F                 .Co
+        beq     LB3DC                           ; B3D2 F0 08                    ..
+        cmp     $0615                           ; B3D4 CD 15 06                 ...
+        bcc     LB3DC                           ; B3D7 90 03                    ..
+        dec     $6F43                           ; B3D9 CE 43 6F                 .Co
+LB3DC:
+        jsr     LB582                           ; B3DC 20 82 B5                  ..
+        jsr     LB5A6                           ; B3DF 20 A6 B5                  ..
+        jmp     LB253                           ; B3E2 4C 53 B2                 LS.
+
+; ----------------------------------------------------------------------------
+LB3E5:
+        lda     $6F26                           ; B3E5 AD 26 6F                 .&o
+LB3E8:
+        cmp     #$04                            ; B3E8 C9 04                    ..
+        bcs     LB3EE                           ; B3EA B0 02                    ..
+        sec                                     ; B3EC 38                       8
+        rts                                     ; B3ED 60                       `
+
+; ----------------------------------------------------------------------------
+LB3EE:
+        jmp     LB259                           ; B3EE 4C 59 B2                 LY.
+
+; ----------------------------------------------------------------------------
+LB3F1:
+        jsr     LF3BC                           ; B3F1 20 BC F3                  ..
+        jsr     LF3A0                           ; B3F4 20 A0 F3                  ..
+        lda     #$03                            ; B3F7 A9 03                    ..
+        sta     $A9                             ; B3F9 85 A9                    ..
+        jsr     LF268                           ; B3FB 20 68 F2                  h.
+        lda     #$03                            ; B3FE A9 03                    ..
+        sta     $0618                           ; B400 8D 18 06                 ...
+        lda     #$02                            ; B403 A9 02                    ..
+        sta     $0619                           ; B405 8D 19 06                 ...
+        jsr     L80C4                           ; B408 20 C4 80                  ..
+        jsr     LB412                           ; B40B 20 12 B4                  ..
+        jsr     LB74A                           ; B40E 20 4A B7                  J.
+        rts                                     ; B411 60                       `
+
+; ----------------------------------------------------------------------------
+LB412:
+        lda     #$10                            ; B412 A9 10                    ..
+        sta     $0A                             ; B414 85 0A                    ..
+        lda     #$00                            ; B416 A9 00                    ..
+        sta     $09                             ; B418 85 09                    ..
+        jsr     L9BE4                           ; B41A 20 E4 9B                  ..
+        rts                                     ; B41D 60                       `
+
+; ----------------------------------------------------------------------------
+LB41E:
+        lda     $6F42                           ; B41E AD 42 6F                 .Bo
+        asl     a                               ; B421 0A                       .
+        tax                                     ; B422 AA                       .
+        lda     LB436,x                         ; B423 BD 36 B4                 .6.
+        sta     $AD                             ; B426 85 AD                    ..
+        inx                                     ; B428 E8                       .
+        lda     LB436,x                         ; B429 BD 36 B4                 .6.
+        sta     $AC                             ; B42C 85 AC                    ..
+        ldx     #$F0                            ; B42E A2 F0                    ..
+        lda     #$00                            ; B430 A9 00                    ..
+        jsr     L9C4C                           ; B432 20 4C 9C                  L.
+        rts                                     ; B435 60                       `
+
+; ----------------------------------------------------------------------------
+LB436:
+        php                                     ; B436 08                       .
+        bpl     LB491                           ; B437 10 58                    .X
+LB43A           := * + 1
+        bpl     LB3E8                           ; B439 10 AD                    ..
+        .byte   $42                             ; B43B 42                       B
+        .byte   $6F                             ; B43C 6F                       o
+        beq     LB45F                           ; B43D F0 20                    . 
+        lda     $623A                           ; B43F AD 3A 62                 .:b
+        sta     $07                             ; B442 85 07                    ..
+        lda     $623B                           ; B444 AD 3B 62                 .;b
+        sta     $08                             ; B447 85 08                    ..
+        ldx     #$12                            ; B449 A2 12                    ..
+        ldy     #$00                            ; B44B A0 00                    ..
+LB44D:
+        lsr     $08                             ; B44D 46 08                    F.
+        ror     $07                             ; B44F 66 07                    f.
+        bcc     LB458                           ; B451 90 05                    ..
+        txa                                     ; B453 8A                       .
+        sta     $0645,y                         ; B454 99 45 06                 .E.
+        iny                                     ; B457 C8                       .
+LB458:
+        inx                                     ; B458 E8                       .
+        cpx     #$20                            ; B459 E0 20                    . 
+        bne     LB44D                           ; B45B D0 F0                    ..
+        beq     LB472                           ; B45D F0 13                    ..
+LB45F:
+        ldx     #$01                            ; B45F A2 01                    ..
+        ldy     #$00                            ; B461 A0 00                    ..
+LB463:
+        lda     $60CE,x                         ; B463 BD CE 60                 ..`
+        beq     LB46D                           ; B466 F0 05                    ..
+        txa                                     ; B468 8A                       .
+        sta     $0645,y                         ; B469 99 45 06                 .E.
+        iny                                     ; B46C C8                       .
+LB46D:
+        inx                                     ; B46D E8                       .
+        cpx     #$12                            ; B46E E0 12                    ..
+        bne     LB463                           ; B470 D0 F1                    ..
+LB472:
+        jsr     LB72E                           ; B472 20 2E B7                  ..
+        tya                                     ; B475 98                       .
+        bne     LB486                           ; B476 D0 0E                    ..
+        lda     #$00                            ; B478 A9 00                    ..
+        sta     $0645                           ; B47A 8D 45 06                 .E.
+        lda     #$01                            ; B47D A9 01                    ..
+        sta     $0616                           ; B47F 8D 16 06                 ...
+        sta     $0614                           ; B482 8D 14 06                 ...
+        rts                                     ; B485 60                       `
+
+; ----------------------------------------------------------------------------
+LB486:
+        sta     $0616                           ; B486 8D 16 06                 ...
+        ldx     #$01                            ; B489 A2 01                    ..
+        sec                                     ; B48B 38                       8
+LB48C:
+        sbc     #$06                            ; B48C E9 06                    ..
+        bcc     LB495                           ; B48E 90 05                    ..
+LB491           := * + 1
+        beq     LB495                           ; B490 F0 03                    ..
+        inx                                     ; B492 E8                       .
+        bne     LB48C                           ; B493 D0 F7                    ..
+LB495:
+        stx     $0614                           ; B495 8E 14 06                 ...
+        rts                                     ; B498 60                       `
+
+; ----------------------------------------------------------------------------
+LB499:
+        lda     #$F6                            ; B499 A9 F6                    ..
+        sta     $AA                             ; B49B 85 AA                    ..
+        lda     #$02                            ; B49D A9 02                    ..
+        sta     $AB                             ; B49F 85 AB                    ..
+        lda     #$01                            ; B4A1 A9 01                    ..
+        sta     $0617                           ; B4A3 8D 17 06                 ...
+        lda     #$03                            ; B4A6 A9 03                    ..
+        sta     $0A                             ; B4A8 85 0A                    ..
+        lda     #$00                            ; B4AA A9 00                    ..
+        sta     $09                             ; B4AC 85 09                    ..
+        lda     #$00                            ; B4AE A9 00                    ..
+        sta     $97                             ; B4B0 85 97                    ..
+LB4B2:
+        jsr     LB4D1                           ; B4B2 20 D1 B4                  ..
+        inc     $97                             ; B4B5 E6 97                    ..
+        jsr     LB539                           ; B4B7 20 39 B5                  9.
+        clc                                     ; B4BA 18                       .
+        adc     $97                             ; B4BB 65 97                    e.
+        cmp     $0616                           ; B4BD CD 16 06                 ...
+        bcs     LB4C8                           ; B4C0 B0 06                    ..
+        lda     $97                             ; B4C2 A5 97                    ..
+        cmp     #$06                            ; B4C4 C9 06                    ..
+        bcc     LB4B2                           ; B4C6 90 EA                    ..
+LB4C8:
+        lda     $97                             ; B4C8 A5 97                    ..
+        sta     $0615                           ; B4CA 8D 15 06                 ...
+        jsr     LB55B                           ; B4CD 20 5B B5                  [.
+        rts                                     ; B4D0 60                       `
+
+; ----------------------------------------------------------------------------
+LB4D1:
+        lda     $97                             ; B4D1 A5 97                    ..
+        asl     a                               ; B4D3 0A                       .
+        tax                                     ; B4D4 AA                       .
+        lda     LB543,x                         ; B4D5 BD 43 B5                 .C.
+        sta     $0F                             ; B4D8 85 0F                    ..
+        inx                                     ; B4DA E8                       .
+        lda     LB543,x                         ; B4DB BD 43 B5                 .C.
+        sta     $0E                             ; B4DE 85 0E                    ..
+        lda     #$08                            ; B4E0 A9 08                    ..
+        sta     $6A                             ; B4E2 85 6A                    .j
+        jsr     LB539                           ; B4E4 20 39 B5                  9.
+        clc                                     ; B4E7 18                       .
+        adc     $97                             ; B4E8 65 97                    e.
+        tax                                     ; B4EA AA                       .
+        lda     $0645,x                         ; B4EB BD 45 06                 .E.
+        bmi     LB52A                           ; B4EE 30 3A                    0:
+        pha                                     ; B4F0 48                       H
+        sta     $69                             ; B4F1 85 69                    .i
+        jsr     L8B09                           ; B4F3 20 09 8B                  ..
+        jsr     LF3A0                           ; B4F6 20 A0 F3                  ..
+        pla                                     ; B4F9 68                       h
+        beq     LB529                           ; B4FA F0 2D                    .-
+        lda     $6F42                           ; B4FC AD 42 6F                 .Bo
+        bne     LB529                           ; B4FF D0 28                    .(
+        lda     $97                             ; B501 A5 97                    ..
+        asl     a                               ; B503 0A                       .
+        tax                                     ; B504 AA                       .
+        lda     LB54F,x                         ; B505 BD 4F B5                 .O.
+        sta     $0F                             ; B508 85 0F                    ..
+        inx                                     ; B50A E8                       .
+        lda     LB54F,x                         ; B50B BD 4F B5                 .O.
+        sta     $0E                             ; B50E 85 0E                    ..
+        jsr     LB539                           ; B510 20 39 B5                  9.
+        clc                                     ; B513 18                       .
+        adc     $97                             ; B514 65 97                    e.
+        tax                                     ; B516 AA                       .
+        lda     $0645,x                         ; B517 BD 45 06                 .E.
+        tax                                     ; B51A AA                       .
+        lda     $60CE,x                         ; B51B BD CE 60                 ..`
+        sta     L008E                           ; B51E 85 8E                    ..
+        lda     #$00                            ; B520 A9 00                    ..
+        sta     $8F                             ; B522 85 8F                    ..
+        sta     $90                             ; B524 85 90                    ..
+        jsr     L81C6                           ; B526 20 C6 81                  ..
+LB529:
+        rts                                     ; B529 60                       `
+
+; ----------------------------------------------------------------------------
+LB52A:
+        and     #$7F                            ; B52A 29 7F                    ).
+        sta     $69                             ; B52C 85 69                    .i
+        lda     #$06                            ; B52E A9 06                    ..
+        sta     $6A                             ; B530 85 6A                    .j
+        jsr     L8B09                           ; B532 20 09 8B                  ..
+        jsr     LF3A0                           ; B535 20 A0 F3                  ..
+        rts                                     ; B538 60                       `
+
+; ----------------------------------------------------------------------------
+LB539:
+        lda     $0613                           ; B539 AD 13 06                 ...
+        asl     a                               ; B53C 0A                       .
+        clc                                     ; B53D 18                       .
+        adc     $0613                           ; B53E 6D 13 06                 m..
+        asl     a                               ; B541 0A                       .
+        rts                                     ; B542 60                       `
+
+; ----------------------------------------------------------------------------
+LB543:
+        jsr     L21E6                           ; B543 20 E6 21                  .!
+        rol     $21                             ; B546 26 21                    &!
+        ror     $21                             ; B548 66 21                    f!
+        ldx     $21                             ; B54A A6 21                    .!
+        inc     $22                             ; B54C E6 22                    ."
+LB54F           := * + 1
+        rol     $21                             ; B54E 26 21                    &!
+        asl     $21,x                           ; B550 16 21                    .!
+        lsr     $21,x                           ; B552 56 21                    V!
+        stx     $21,y                           ; B554 96 21                    .!
+        dec     $22,x                           ; B556 D6 22                    ."
+        asl     $22,x                           ; B558 16 22                    ."
+LB55B           := * + 1
+        lsr     $A9,x                           ; B55A 56 A9                    V.
+        inc     $85,x                           ; B55C F6 85                    ..
+        tax                                     ; B55E AA                       .
+        lda     #$02                            ; B55F A9 02                    ..
+        sta     $AB                             ; B561 85 AB                    ..
+        lda     #$01                            ; B563 A9 01                    ..
+        sta     $0617                           ; B565 8D 17 06                 ...
+        lda     #$22                            ; B568 A9 22                    ."
+        sta     $0F                             ; B56A 85 0F                    ..
+        lda     #$9B                            ; B56C A9 9B                    ..
+        sta     $0E                             ; B56E 85 0E                    ..
+        lda     $0613                           ; B570 AD 13 06                 ...
+        clc                                     ; B573 18                       .
+        adc     #$01                            ; B574 69 01                    i.
+        sta     L008E                           ; B576 85 8E                    ..
+        lda     #$00                            ; B578 A9 00                    ..
+        sta     $8F                             ; B57A 85 8F                    ..
+        sta     $90                             ; B57C 85 90                    ..
+        jsr     L81C6                           ; B57E 20 C6 81                  ..
+        rts                                     ; B581 60                       `
+
+; ----------------------------------------------------------------------------
+LB582:
+        lda     $6F43                           ; B582 AD 43 6F                 .Co
+        asl     a                               ; B585 0A                       .
+        tax                                     ; B586 AA                       .
+        lda     BattleMenuItemSubmenuCursorPixelPositionTable,x; B587 BD 9A B5  ...
+        sta     $AD                             ; B58A 85 AD                    ..
+        inx                                     ; B58C E8                       .
+        lda     BattleMenuItemSubmenuCursorPixelPositionTable,x; B58D BD 9A B5  ...
+        sta     $AC                             ; B590 85 AC                    ..
+        ldx     #$F0                            ; B592 A2 F0                    ..
+        lda     #$00                            ; B594 A9 00                    ..
+        jsr     L9C4C                           ; B596 20 4C 9C                  L.
+        rts                                     ; B599 60                       `
+
+; ----------------------------------------------------------------------------
+BattleMenuItemSubmenuCursorPixelPositionTable:
+        .byte   $20,$38,$20,$48,$20,$58,$20,$68 ; B59A 20 38 20 48 20 58 20 68   8 H X h
+        .byte   $20,$78,$20,$88                 ; B5A2 20 78 20 88               x .
+; ----------------------------------------------------------------------------
+LB5A6:
+        lda     #$09                            ; B5A6 A9 09                    ..
+        sta     $6A                             ; B5A8 85 6A                    .j
+        jsr     LB539                           ; B5AA 20 39 B5                  9.
+        clc                                     ; B5AD 18                       .
+        adc     $6F43                           ; B5AE 6D 43 6F                 mCo
+        tax                                     ; B5B1 AA                       .
+        lda     $0645,x                         ; B5B2 BD 45 06                 .E.
+        bmi     LB5BD                           ; B5B5 30 06                    0.
+        sta     $69                             ; B5B7 85 69                    .i
+        jsr     LB69C                           ; B5B9 20 9C B6                  ..
+        rts                                     ; B5BC 60                       `
+
+; ----------------------------------------------------------------------------
+LB5BD:
+        and     #$7F                            ; B5BD 29 7F                    ).
+        sta     $6F24                           ; B5BF 8D 24 6F                 .$o
+        jsr     L9E7D                           ; B5C2 20 7D 9E                  }.
+        lda     #$01                            ; B5C5 A9 01                    ..
+        sta     $0617                           ; B5C7 8D 17 06                 ...
+        lda     #$F6                            ; B5CA A9 F6                    ..
+        sta     $AA                             ; B5CC 85 AA                    ..
+        lda     #$23                            ; B5CE A9 23                    .#
+        sta     $0611                           ; B5D0 8D 11 06                 ...
+        lda     #$24                            ; B5D3 A9 24                    .$
+        sta     $0612                           ; B5D5 8D 12 06                 ...
+        lda     #$02                            ; B5D8 A9 02                    ..
+        sta     $AB                             ; B5DA 85 AB                    ..
+        lda     #$23                            ; B5DC A9 23                    .#
+        sta     $0F                             ; B5DE 85 0F                    ..
+        lda     #$06                            ; B5E0 A9 06                    ..
+        sta     $0E                             ; B5E2 85 0E                    ..
+        lda     $6F25                           ; B5E4 AD 25 6F                 .%o
+        sta     L008E                           ; B5E7 85 8E                    ..
+        lda     #$00                            ; B5E9 A9 00                    ..
+        sta     $8F                             ; B5EB 85 8F                    ..
+        sta     $90                             ; B5ED 85 90                    ..
+        jsr     L8778                           ; B5EF 20 78 87                  x.
+        lda     $6F26                           ; B5F2 AD 26 6F                 .&o
+        sta     $6C                             ; B5F5 85 6C                    .l
+        lda     $6F27                           ; B5F7 AD 27 6F                 .'o
+        sta     $6D                             ; B5FA 85 6D                    .m
+        lda     #$00                            ; B5FC A9 00                    ..
+        sta     $6E                             ; B5FE 85 6E                    .n
+        lda     $6F28                           ; B600 AD 28 6F                 .(o
+        sta     $6F                             ; B603 85 6F                    .o
+        lda     $6F29                           ; B605 AD 29 6F                 .)o
+        sta     $70                             ; B608 85 70                    .p
+        lda     #$00                            ; B60A A9 00                    ..
+        sta     $71                             ; B60C 85 71                    .q
+        lda     #$23                            ; B60E A9 23                    .#
+        sta     $6A                             ; B610 85 6A                    .j
+        lda     #$0A                            ; B612 A9 0A                    ..
+        sta     $6B                             ; B614 85 6B                    .k
+        lda     #$04                            ; B616 A9 04                    ..
+        jsr     LAB88                           ; B618 20 88 AB                  ..
+        lda     $6F26                           ; B61B AD 26 6F                 .&o
+        sec                                     ; B61E 38                       8
+        sbc     $6F28                           ; B61F ED 28 6F                 .(o
+        lda     $6F27                           ; B622 AD 27 6F                 .'o
+        sbc     $6F29                           ; B625 ED 29 6F                 .)o
+        bcc     LB637                           ; B628 90 0D                    ..
+        lda     #$22                            ; B62A A9 22                    ."
+        sta     $0F                             ; B62C 85 0F                    ..
+        lda     #$ED                            ; B62E A9 ED                    ..
+        sta     $0E                             ; B630 85 0E                    ..
+        lda     #$25                            ; B632 A9 25                    .%
+        jsr     L9E49                           ; B634 20 49 9E                  I.
+LB637:
+        rts                                     ; B637 60                       `
+
+; ----------------------------------------------------------------------------
+LB638:
+        lda     #$20                            ; B638 A9 20                    . 
+        sta     $0642                           ; B63A 8D 42 06                 .B.
+        lda     #$E6                            ; B63D A9 E6                    ..
+        sta     $0641                           ; B63F 8D 41 06                 .A.
+        lda     #$16                            ; B642 A9 16                    ..
+        sta     $0643                           ; B644 8D 43 06                 .C.
+        lda     #$03                            ; B647 A9 03                    ..
+        sta     $0644                           ; B649 8D 44 06                 .D.
+        lda     #$05                            ; B64C A9 05                    ..
+        sta     $AA                             ; B64E 85 AA                    ..
+        lda     #$00                            ; B650 A9 00                    ..
+LB652:
+        pha                                     ; B652 48                       H
+        jsr     L9757                           ; B653 20 57 97                  W.
+        lda     $0641                           ; B656 AD 41 06                 .A.
+        clc                                     ; B659 18                       .
+        adc     #$60                            ; B65A 69 60                    i`
+        sta     $0641                           ; B65C 8D 41 06                 .A.
+        lda     $0642                           ; B65F AD 42 06                 .B.
+        adc     #$00                            ; B662 69 00                    i.
+        sta     $0642                           ; B664 8D 42 06                 .B.
+        pla                                     ; B667 68                       h
+        clc                                     ; B668 18                       .
+        adc     #$01                            ; B669 69 01                    i.
+        cmp     #$04                            ; B66B C9 04                    ..
+        bcc     LB652                           ; B66D 90 E3                    ..
+        rts                                     ; B66F 60                       `
+
+; ----------------------------------------------------------------------------
+LB670:
+        ldx     #$01                            ; B670 A2 01                    ..
+        lda     #$02                            ; B672 A9 02                    ..
+        sta     $0700,x                         ; B674 9D 00 07                 ...
+        inx                                     ; B677 E8                       .
+        lda     #$22                            ; B678 A9 22                    ."
+        sta     $0700,x                         ; B67A 9D 00 07                 ...
+        inx                                     ; B67D E8                       .
+        lda     #$9B                            ; B67E A9 9B                    ..
+        sta     $0700,x                         ; B680 9D 00 07                 ...
+        inx                                     ; B683 E8                       .
+        lda     #$18                            ; B684 A9 18                    ..
+        sta     $0700,x                         ; B686 9D 00 07                 ...
+        inx                                     ; B689 E8                       .
+        lda     #$18                            ; B68A A9 18                    ..
+        sta     $0700,x                         ; B68C 9D 00 07                 ...
+        lda     #$01                            ; B68F A9 01                    ..
+        sta     $0700                           ; B691 8D 00 07                 ...
+        lda     #$FF                            ; B694 A9 FF                    ..
+        sta     $2D                             ; B696 85 2D                    .-
+        jsr     LF3A0                           ; B698 20 A0 F3                  ..
+        rts                                     ; B69B 60                       `
+
+; ----------------------------------------------------------------------------
+LB69C:
+        lda     #$09                            ; B69C A9 09                    ..
+        sta     $0A                             ; B69E 85 0A                    ..
+        lda     #$00                            ; B6A0 A9 00                    ..
+        sta     $09                             ; B6A2 85 09                    ..
+        lda     #$22                            ; B6A4 A9 22                    ."
+        sta     $0F                             ; B6A6 85 0F                    ..
+        sta     $79                             ; B6A8 85 79                    .y
+        lda     #$E6                            ; B6AA A9 E6                    ..
+LB6AD           := * + 1
+        sta     $0E                             ; B6AC 85 0E                    ..
+        sta     $78                             ; B6AE 85 78                    .x
+        lda     #$F9                            ; B6B0 A9 F9                    ..
+        sta     $77                             ; B6B2 85 77                    .w
+        lda     #$FF                            ; B6B4 A9 FF                    ..
+        sta     $88                             ; B6B6 85 88                    ..
+        jsr     L8B09                           ; B6B8 20 09 8B                  ..
+        jsr     LF3A0                           ; B6BB 20 A0 F3                  ..
+        lda     #$00                            ; B6BE A9 00                    ..
+        sta     $88                             ; B6C0 85 88                    ..
+        rts                                     ; B6C2 60                       `
+
+; ----------------------------------------------------------------------------
+LB6C3:
+        lda     #$22                            ; B6C3 A9 22                    ."
+        sta     $0642                           ; B6C5 8D 42 06                 .B.
+        lda     #$E6                            ; B6C8 A9 E6                    ..
+        sta     $0641                           ; B6CA 8D 41 06                 .A.
+        lda     #$14                            ; B6CD A9 14                    ..
+        sta     $0643                           ; B6CF 8D 43 06                 .C.
+        lda     #$02                            ; B6D2 A9 02                    ..
+        sta     $0644                           ; B6D4 8D 44 06                 .D.
+        lda     #$05                            ; B6D7 A9 05                    ..
+        sta     $AA                             ; B6D9 85 AA                    ..
+LB6DC           := * + 1
+        lda     #$00                            ; B6DB A9 00                    ..
+LB6DD:
+        pha                                     ; B6DD 48                       H
+        jsr     L9757                           ; B6DE 20 57 97                  W.
+        lda     $0641                           ; B6E1 AD 41 06                 .A.
+        clc                                     ; B6E4 18                       .
+        adc     #$40                            ; B6E5 69 40                    i@
+        sta     $0641                           ; B6E7 8D 41 06                 .A.
+        lda     $0642                           ; B6EA AD 42 06                 .B.
+        adc     #$00                            ; B6ED 69 00                    i.
+        sta     $0642                           ; B6EF 8D 42 06                 .B.
+        pla                                     ; B6F2 68                       h
+        clc                                     ; B6F3 18                       .
+        adc     #$01                            ; B6F4 69 01                    i.
+        cmp     #$02                            ; B6F6 C9 02                    ..
+        bcc     LB6DD                           ; B6F8 90 E3                    ..
+        rts                                     ; B6FA 60                       `
+
+; ----------------------------------------------------------------------------
+LB6FB:
+        ldx     #$F0                            ; B6FB A2 F0                    ..
+        jsr     L9CD1                           ; B6FD 20 D1 9C                  ..
+        rts                                     ; B700 60                       `
+
+; ----------------------------------------------------------------------------
 LB701:
-        .byte   $AC,$24,$6F,$B9,$1C,$B7,$48,$29 ; B701 AC 24 6F B9 1C B7 48 29  .$o...H)
-        .byte   $08,$8D,$25,$6F,$68,$48,$29,$07 ; B709 08 8D 25 6F 68 48 29 07  ..%ohH).
-        .byte   $8D,$27,$6F,$68,$4A,$4A,$4A,$4A ; B711 8D 27 6F 68 4A 4A 4A 4A  .'ohJJJJ
-        .byte   $8D,$26,$6F,$60,$01,$02,$08,$03 ; B719 8D 26 6F 60 01 02 08 03  .&o`....
-        .byte   $09,$0A,$0B,$10,$11,$20,$38,$40 ; B721 09 0A 0B 10 11 20 38 40  ..... 8@
-        .byte   $50,$60,$70,$80,$90,$AD,$0E,$06 ; B729 50 60 70 80 90 AD 0E 06  P`p.....
-        .byte   $D0,$01,$60,$A2,$01,$BD,$67,$63 ; B731 D0 01 60 A2 01 BD 67 63  ..`...gc
-        .byte   $29,$80,$F0,$07,$8A,$09,$80,$99 ; B739 29 80 F0 07 8A 09 80 99  ).......
-        .byte   $45,$06,$C8,$E8,$E0,$08,$D0,$ED ; B741 45 06 C8 E8 E0 08 D0 ED  E.......
-        .byte   $60,$A9,$05,$85,$AA,$A9,$07,$85 ; B749 60 A9 05 85 AA A9 07 85  `.......
-        .byte   $AB,$A9,$00,$8D,$17,$06,$A9,$20 ; B751 AB A9 00 8D 17 06 A9 20  ....... 
-        .byte   $85,$0F,$A9,$77,$85,$0E,$AD,$2E ; B759 85 0F A9 77 85 0E AD 2E  ...w....
-        .byte   $60,$85,$8E,$AD,$2F,$60,$85,$8F ; B761 60 85 8E AD 2F 60 85 8F  `.../`..
-        .byte   $AD,$30,$60,$85,$90,$20,$C6,$81 ; B769 AD 30 60 85 90 20 C6 81  .0`.. ..
-        .byte   $60                             ; B771 60                       `
+        ldy     $6F24                           ; B701 AC 24 6F                 .$o
+        lda     LB71C,y                         ; B704 B9 1C B7                 ...
+        pha                                     ; B707 48                       H
+        and     #$08                            ; B708 29 08                    ).
+        sta     $6F25                           ; B70A 8D 25 6F                 .%o
+        pla                                     ; B70D 68                       h
+        pha                                     ; B70E 48                       H
+        and     #$07                            ; B70F 29 07                    ).
+        sta     $6F27                           ; B711 8D 27 6F                 .'o
+        pla                                     ; B714 68                       h
+        lsr     a                               ; B715 4A                       J
+        lsr     a                               ; B716 4A                       J
+        lsr     a                               ; B717 4A                       J
+        lsr     a                               ; B718 4A                       J
+        sta     $6F26                           ; B719 8D 26 6F                 .&o
+LB71C:
+        rts                                     ; B71C 60                       `
+
+; ----------------------------------------------------------------------------
+        ora     (L0002,x)                       ; B71D 01 02                    ..
+        php                                     ; B71F 08                       .
+        .byte   $03                             ; B720 03                       .
+        ora     #$0A                            ; B721 09 0A                    ..
+        .byte   $0B                             ; B723 0B                       .
+        bpl     LB737                           ; B724 10 11                    ..
+        jsr     L4038                           ; B726 20 38 40                  8@
+        bvc     LB78B                           ; B729 50 60                    P`
+        bvs     LB6AD                           ; B72B 70 80                    p.
+LB72E           := * + 1
+        bcc     LB6DC                           ; B72D 90 AD                    ..
+        asl     LD006                           ; B72F 0E 06 D0                 ...
+        ora     ($60,x)                         ; B732 01 60                    .`
+        ldx     #$01                            ; B734 A2 01                    ..
+LB736:
+LB737           := * + 1
+        lda     $6367,x                         ; B736 BD 67 63                 .gc
+        and     #$80                            ; B739 29 80                    ).
+        beq     LB744                           ; B73B F0 07                    ..
+        txa                                     ; B73D 8A                       .
+        ora     #$80                            ; B73E 09 80                    ..
+        sta     $0645,y                         ; B740 99 45 06                 .E.
+        iny                                     ; B743 C8                       .
+LB744:
+        inx                                     ; B744 E8                       .
+        cpx     #$08                            ; B745 E0 08                    ..
+        bne     LB736                           ; B747 D0 ED                    ..
+        rts                                     ; B749 60                       `
+
+; ----------------------------------------------------------------------------
+LB74A:
+        lda     #$05                            ; B74A A9 05                    ..
+        sta     $AA                             ; B74C 85 AA                    ..
+        lda     #$07                            ; B74E A9 07                    ..
+        sta     $AB                             ; B750 85 AB                    ..
+        lda     #$00                            ; B752 A9 00                    ..
+        sta     $0617                           ; B754 8D 17 06                 ...
+        lda     #$20                            ; B757 A9 20                    . 
+        sta     $0F                             ; B759 85 0F                    ..
+        lda     #$77                            ; B75B A9 77                    .w
+        sta     $0E                             ; B75D 85 0E                    ..
+        lda     $602E                           ; B75F AD 2E 60                 ..`
+        sta     L008E                           ; B762 85 8E                    ..
+        lda     $602F                           ; B764 AD 2F 60                 ./`
+        sta     $8F                             ; B767 85 8F                    ..
+        lda     $6030                           ; B769 AD 30 60                 .0`
+        sta     $90                             ; B76C 85 90                    ..
+        jsr     L81C6                           ; B76E 20 C6 81                  ..
+        rts                                     ; B771 60                       `
+
 ; ----------------------------------------------------------------------------
 LB772:
         lda     $6F1E                           ; B772 AD 1E 6F                 ..o
@@ -6175,6 +7560,7 @@ LB787:
         lsr     a                               ; B787 4A                       J
         bcs     LB78F                           ; B788 B0 05                    ..
         dex                                     ; B78A CA                       .
+LB78B:
         bne     LB787                           ; B78B D0 FA                    ..
         beq     LB780                           ; B78D F0 F1                    ..
 LB78F:
@@ -7659,7 +9045,6 @@ LC3B8:
         tay                                     ; C3C1 A8                       .
         lda     $604A,y                         ; C3C2 B9 4A 60                 .J`
         sta     L008E                           ; C3C5 85 8E                    ..
-LC3C9           := * + 2
         lda     $6051,y                         ; C3C7 B9 51 60                 .Q`
         sta     $8F                             ; C3CA 85 8F                    ..
         lda     #$00                            ; C3CC A9 00                    ..
@@ -7671,7 +9056,6 @@ LC3C9           := * + 2
         tax                                     ; C3D6 AA                       .
         lda     $0E                             ; C3D7 A5 0E                    ..
         clc                                     ; C3D9 18                       .
-LC3DB           := * + 1
         adc     #$04                            ; C3DA 69 04                    i.
         sta     $0E                             ; C3DC 85 0E                    ..
         lda     $0F                             ; C3DE A5 0F                    ..
@@ -7681,7 +9065,6 @@ LC3DB           := * + 1
         tay                                     ; C3E7 A8                       .
         lda     $60C1,y                         ; C3E8 B9 C1 60                 ..`
         sta     L008E                           ; C3EB 85 8E                    ..
-LC3ED:
         lda     $60C8,y                         ; C3ED B9 C8 60                 ..`
         sta     $8F                             ; C3F0 85 8F                    ..
         lda     #$00                            ; C3F2 A9 00                    ..
@@ -7693,7 +9076,6 @@ LC3ED:
         tax                                     ; C3FC AA                       .
         pla                                     ; C3FD 68                       h
         clc                                     ; C3FE 18                       .
-LC3FF:
         adc     #$40                            ; C3FF 69 40                    i@
         sta     $0E                             ; C401 85 0E                    ..
         pla                                     ; C403 68                       h
@@ -7705,14 +9087,14 @@ LC3FF:
         rts                                     ; C40E 60                       `
 
 ; ----------------------------------------------------------------------------
-LC40F:
+BattleMenuChangeCursorPixelPosition:
         lda     $6F96                           ; C40F AD 96 6F                 ..o
         asl     a                               ; C412 0A                       .
         tax                                     ; C413 AA                       .
-        lda     LC427,x                         ; C414 BD 27 C4                 .'.
+        lda     BattleMenuCursorPixelPositionTable,x; C414 BD 27 C4             .'.
         sta     $AD                             ; C417 85 AD                    ..
         inx                                     ; C419 E8                       .
-        lda     LC427,x                         ; C41A BD 27 C4                 .'.
+        lda     BattleMenuCursorPixelPositionTable,x; C41A BD 27 C4             .'.
         sta     $AC                             ; C41D 85 AC                    ..
         ldx     #$00                            ; C41F A2 00                    ..
         lda     #$A2                            ; C421 A9 A2                    ..
@@ -7720,11 +9102,9 @@ LC40F:
         rts                                     ; C426 60                       `
 
 ; ----------------------------------------------------------------------------
-LC427:
-        bpl     LC3C9                           ; C427 10 A0                    ..
-        bpl     LC3DB                           ; C429 10 B0                    ..
-        bpl     LC3ED                           ; C42B 10 C0                    ..
-        bpl     LC3FF                           ; C42D 10 D0                    ..
+BattleMenuCursorPixelPositionTable:
+        .byte   $10,$A0,$10,$B0,$10,$C0,$10,$D0 ; C427 10 A0 10 B0 10 C0 10 D0  ........
+; ----------------------------------------------------------------------------
 LC42F:
         ldx     #$00                            ; C42F A2 00                    ..
         lda     #$FF                            ; C431 A9 FF                    ..
@@ -7753,7 +9133,7 @@ LC43C:
 ; ----------------------------------------------------------------------------
 LC454:
         bpl     LC496                           ; C454 10 40                    .@
-        bpl     LC4C8                           ; C456 10 70                    .p
+        bpl     BattleMenuNoOp                  ; C456 10 70                    .p
         rti                                     ; C458 40                       @
 
 ; ----------------------------------------------------------------------------
@@ -7797,7 +9177,7 @@ LC484:
         lda     #$00                            ; C484 A9 00                    ..
         sta     $6F96                           ; C486 8D 96 6F                 ..o
 LC489:
-        jsr     LC40F                           ; C489 20 0F C4                  ..
+        jsr     BattleMenuChangeCursorPixelPosition; C489 20 0F C4               ..
         lda     #$00                            ; C48C A9 00                    ..
         sta     $DB                             ; C48E 85 DB                    ..
         sta     $DC                             ; C490 85 DC                    ..
@@ -7818,31 +9198,34 @@ LC4A4:
         txa                                     ; C4A5 8A                       .
         asl     a                               ; C4A6 0A                       .
         tax                                     ; C4A7 AA                       .
-        lda     LC4B6,x                         ; C4A8 BD B6 C4                 ...
+        lda     BattleMenuButtonPressTable,x    ; C4A8 BD B6 C4                 ...
         sta     L0002                           ; C4AB 85 02                    ..
         inx                                     ; C4AD E8                       .
-        lda     LC4B6,x                         ; C4AE BD B6 C4                 ...
+        lda     BattleMenuButtonPressTable,x    ; C4AE BD B6 C4                 ...
         sta     $03                             ; C4B1 85 03                    ..
         jmp     (L0002)                         ; C4B3 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-LC4B6:
-        .byte   $E7                             ; C4B6 E7                       .
-        cpy     $C6                             ; C4B7 C4 C6                    ..
-        cpy     $C8                             ; C4B9 C4 C8                    ..
-        cpy     $C8                             ; C4BB C4 C8                    ..
-        cpy     $CB                             ; C4BD C4 CB                    ..
-        cpy     $D9                             ; C4BF C4 D9                    ..
-        cpy     $C8                             ; C4C1 C4 C8                    ..
-        cpy     $C8                             ; C4C3 C4 C8                    ..
-        cpy     $18                             ; C4C5 C4 18                    ..
+BattleMenuButtonPressTable:
+        .addr   BattleMenuSelectOption          ; C4B6 E7 C4                    ..
+        .addr   BattleMenuExit                  ; C4B8 C6 C4                    ..
+        .addr   BattleMenuNoOp                  ; C4BA C8 C4                    ..
+        .addr   BattleMenuNoOp                  ; C4BC C8 C4                    ..
+        .addr   BattleMenuMoveUp                ; C4BE CB C4                    ..
+        .addr   BattleMenuMoveDown              ; C4C0 D9 C4                    ..
+        .addr   BattleMenuNoOp                  ; C4C2 C8 C4                    ..
+        .addr   BattleMenuNoOp                  ; C4C4 C8 C4                    ..
+; ----------------------------------------------------------------------------
+BattleMenuExit:
+        clc                                     ; C4C6 18                       .
         rts                                     ; C4C7 60                       `
 
 ; ----------------------------------------------------------------------------
-LC4C8:
+BattleMenuNoOp:
         jmp     LC492                           ; C4C8 4C 92 C4                 L..
 
 ; ----------------------------------------------------------------------------
+BattleMenuMoveUp:
 LC4CD           := * + 2
         lda     $6F96                           ; C4CB AD 96 6F                 ..o
         sec                                     ; C4CE 38                       8
@@ -7853,6 +9236,7 @@ LC4D0           := * + 1
         jmp     LC489                           ; C4D6 4C 89 C4                 L..
 
 ; ----------------------------------------------------------------------------
+BattleMenuMoveDown:
         lda     $6F96                           ; C4D9 AD 96 6F                 ..o
         clc                                     ; C4DC 18                       .
         adc     #$01                            ; C4DD 69 01                    i.
@@ -7862,18 +9246,19 @@ LC4E2           := * + 1
         jmp     LC489                           ; C4E4 4C 89 C4                 L..
 
 ; ----------------------------------------------------------------------------
+BattleMenuSelectOption:
         lda     $6F96                           ; C4E7 AD 96 6F                 ..o
         asl     a                               ; C4EA 0A                       .
         tax                                     ; C4EB AA                       .
-        lda     BattleMenuChoice,x              ; C4EC BD FA C4                 ...
+        lda     BattleMenuActionTable,x         ; C4EC BD FA C4                 ...
         sta     L0002                           ; C4EF 85 02                    ..
         inx                                     ; C4F1 E8                       .
-        lda     BattleMenuChoice,x              ; C4F2 BD FA C4                 ...
+        lda     BattleMenuActionTable,x         ; C4F2 BD FA C4                 ...
         sta     $03                             ; C4F5 85 03                    ..
         jmp     (L0002)                         ; C4F7 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-BattleMenuChoice:
+BattleMenuActionTable:
         .addr   BattleMenuAttack                ; C4FA 02 C5                    ..
         .addr   BattleMenuMagic                 ; C4FC 27 C5                    '.
         .addr   BattleMenuItem                  ; C4FE 7D C5                    }.
@@ -9182,6 +10567,7 @@ LCFF7:
         adc     $0406                           ; CFFD 6D 06 04                 m..
         sta     $0406                           ; D000 8D 06 04                 ...
         lda     $0407                           ; D003 AD 07 04                 ...
+LD006:
         adc     #$00                            ; D006 69 00                    i.
         sta     $0407                           ; D008 8D 07 04                 ...
 LD00B:
@@ -10462,6 +11848,7 @@ LD977:
         sta     $6F29                           ; D99E 8D 29 6F                 .)o
         lda     $6F24                           ; D9A1 AD 24 6F                 .$o
         sta     L0400                           ; D9A4 8D 00 04                 ...
+LD9A7:
         lda     #$00                            ; D9A7 A9 00                    ..
         sta     $0401                           ; D9A9 8D 01 04                 ...
         sta     $0402                           ; D9AC 8D 02 04                 ...
