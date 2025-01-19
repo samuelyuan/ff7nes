@@ -2,6 +2,8 @@ from PIL import Image, ImageDraw, ImageFont
 import math
 import os
 
+outputFolderName = 'assets'
+
 class NESFile:
     def __init__(self, filename):
         self.filename = filename
@@ -255,6 +257,11 @@ def combineImages(imageBlock, totalRows, totalCols, partialImageRows, partialIma
         combinedImage.paste(block, (imageStartX, imageStartY))
     return combinedImage
 
+def buildRectangleBounds(xMin, yMin, width, height):
+    xMax = xMin + width
+    yMax = yMin + height
+    return [(xMin, yMin), (xMax, yMin), (xMax, yMax), (xMin, yMax)]
+
 def drawCollisionData(image, totalCols, collisionData):
     draw = ImageDraw.Draw(image, "RGBA")
 
@@ -272,38 +279,22 @@ def drawCollisionData(image, totalCols, collisionData):
         rightBlockFlag = collisionDataValue & 0xf
 
         if not(1 <= leftBlockFlag <= 3):
-            xMin = xBase
-            xMax = xMin + (8*2)
-            yMin = yBase
-            yMax = yMin + (8*2)
-            rectangleBounds = [(xMin, yMin), (xMax, yMin), (xMax, yMax), (xMin, yMax)]
+            rectangleBounds = buildRectangleBounds(xBase, yBase, 8*2, 8*2)
             fillColor = (128, 0, 0, 128)
             draw.polygon(xy=rectangleBounds, fill=fillColor)
         
         if not(1 <= rightBlockFlag <= 3):
-            xMin = xBase + (8*2)
-            xMax = xMin + (8*2)
-            yMin = yBase
-            yMax = yMin + (8*2)
-            rectangleBounds = [(xMin, yMin), (xMax, yMin), (xMax, yMax), (xMin, yMax)]
+            rectangleBounds = buildRectangleBounds(xBase + (8*2), yBase, 8*2, 8*2)
             fillColor = (128, 0, 0, 128)
             draw.polygon(xy=rectangleBounds, fill=fillColor)
 
         if leftBlockFlag == tileFlagDrawPlayerSpriteUnder:
-            xMin = xBase
-            xMax = xMin + (8*2)
-            yMin = yBase
-            yMax = yMin + (8*2)
-            rectangleBounds = [(xMin, yMin), (xMax, yMin), (xMax, yMax), (xMin, yMax)]
+            rectangleBounds = buildRectangleBounds(xBase, yBase, 8*2, 8*2)
             fillColor = (0, 0, 128, 128)
             draw.polygon(xy=rectangleBounds, fill=fillColor)
 
         if rightBlockFlag == tileFlagDrawPlayerSpriteUnder:
-            xMin = xBase + (8*2)
-            xMax = xMin + (8*2)
-            yMin = yBase
-            yMax = yMin + (8*2)
-            rectangleBounds = [(xMin, yMin), (xMax, yMin), (xMax, yMax), (xMin, yMax)]
+            rectangleBounds = buildRectangleBounds(xBase + (8*2), yBase, 8*2, 8*2)
             fillColor = (0, 0, 128, 128)
             draw.polygon(xy=rectangleBounds, fill=fillColor)
 
@@ -340,9 +331,7 @@ def drawTransitionTiles(nesFile, image, imageIndex, indexToBankLocation):
             xMin = mapTransitionPoint.xBase
             yMin = (mapBankImagePoint.storeIndex * 0xf0) + mapTransitionPoint.yBase
 
-        xMax = xMin + (8*2)
-        yMax = yMin + (8*2)
-        rectangleBounds = [(xMin, yMin), (xMax, yMin), (xMax, yMax), (xMin, yMax)]
+        rectangleBounds = buildRectangleBounds(xMin, yMin, 8*2, 8*2)
         fillColor = (0, 128, 0, 128)
         draw.polygon(xy=rectangleBounds, fill=fillColor)
         draw.text((xMin, yMin), otherImageBank, (255, 255, 255), font=defaultFont)
@@ -395,12 +384,11 @@ def extractAllBackgroundImages1(nesFile):
                     dataTileAttributes=nesFile.getBlock(bankData, dataStart=tileAttrAddrs[j], dataLength=(8*8)),
                     dataPalettes=nesFile.getBlock(bankData, dataStart=startPaletteAddr, dataLength=16),
                     dataTileset=nesFile.getBlock(bankData, dataStart=startTilesetAddr, dataLength=(256*16)),
-                    
                 )
                 imageBlock.append(partialImage.convertToImage(30, 32))
 
             image = combineImages(imageBlock, totalRows=totalRows, totalCols=totalCols, partialImageRows=30, partialImageCols=32)
-            imageFilename = f'assets/bank{hexStr}_image{str(imageCount).zfill(3)}.png'
+            imageFilename = f'{outputFolderName}/bank{hexStr}_image{str(imageCount).zfill(3)}.png'
             image.save(imageFilename)
             print (f'Saved image to {imageFilename}')
 
@@ -464,7 +452,7 @@ def extractAllBackgroundImages2(nesFile):
                 imageBlock.append(partialImage.convertToImage(30, 32))
 
             image = combineImages(imageBlock, totalRows=totalRows, totalCols=totalCols, partialImageRows=30, partialImageCols=32)
-            imageFilename = f'assets/bank{hexStr}_image{str(imageCount).zfill(3)}.png'
+            imageFilename = f'{outputFolderName}/bank{hexStr}_image{str(imageCount).zfill(3)}.png'
             image.save(imageFilename)
             print (f'Saved image to {imageFilename}')
 
@@ -505,7 +493,7 @@ def extractSpritesBank32(nesFile):
         imageBlock.append(spriteNesImage.convertToImage(spriteRow, spriteCol))
 
     image = combineImages(imageBlock, totalRows=5, totalCols=10, partialImageRows=12, partialImageCols=4)
-    imageFilename = f'assets/bank32_sprites_magic.png'
+    imageFilename = f'{outputFolderName}/bank32_sprites_magic.png'
     image.save(imageFilename)
     print (f'Saved image to {imageFilename}')
 
@@ -538,7 +526,7 @@ def extractSpritesBank33(nesFile):
         imageBlock.append(spriteNesImage.convertToImage(spriteRow, spriteCol))
 
     spriteImage = combineImages(imageBlock, totalRows=6, totalCols=8, partialImageRows=6, partialImageCols=6)
-    imageFilename = f'assets/bank33_sprites_entity.png'
+    imageFilename = f'{outputFolderName}/bank33_sprites_entity.png'
     spriteImage.save(imageFilename)
     print (f'Saved image to {imageFilename}')
 
@@ -581,7 +569,7 @@ def extractSpritesBank34(nesFile):
         imageBlock.append(spriteImage)
 
     spriteImage = combineImages(imageBlock, totalRows=7, totalCols=8, partialImageRows=16, partialImageCols=16)
-    imageFilename = f'assets/bank34_sprites_entity.png'
+    imageFilename = f'{outputFolderName}/bank34_sprites_entity.png'
     spriteImage.save(imageFilename)
     print (f'Saved image to {imageFilename}')
 
@@ -610,7 +598,7 @@ def extractMainMenuBank01(nesFile):
         dataTileset=nesFile.getBlock(bankData, dataStart=menuTilesetAddrBottomPart, dataLength=(0xFF * 16)),
     ).convertToImage(14, 32))
     menuImage = combineImages(menuImageBlock, totalRows=2, totalCols=1, partialImageRows=16, partialImageCols=32)
-    imageFilename = f'assets/bank01_main_menu.png'
+    imageFilename = f'{outputFolderName}/bank01_main_menu.png'
     menuImage.save(imageFilename)
     print (f'Saved image to {imageFilename}')
 
@@ -645,7 +633,7 @@ def extractMenuImagesBank01(nesFile):
         imageBlock.append(image)
     
     combinedImage = combineImages(imageBlock, totalRows=2, totalCols=2, partialImageRows=30, partialImageCols=32)
-    imageFilename = f'assets/bank01_menus.png'
+    imageFilename = f'{outputFolderName}/bank01_menus.png'
     combinedImage.save(imageFilename)
     print (f'Saved image to {imageFilename}')
 
@@ -680,7 +668,7 @@ def extractMenuImagesBank05(nesFile):
         imageBlock.append(image)
     
     combinedImage = combineImages(imageBlock, totalRows=2, totalCols=4, partialImageRows=30, partialImageCols=32)
-    imageFilename = f'assets/bank05_menus.png'
+    imageFilename = f'{outputFolderName}/bank05_menus.png'
     combinedImage.save(imageFilename)
     print (f'Saved image to {imageFilename}')
 
@@ -711,7 +699,7 @@ def extractMagicSpritesImage35(nesFile):
         imageBlock.append(image)
 
     combinedImage = combineImages(imageBlock, totalRows=2, totalCols=8, partialImageRows=12, partialImageCols=4)
-    imageFilename = f'assets/bank35_magic.png'
+    imageFilename = f'{outputFolderName}/bank35_magic.png'
     combinedImage.save(imageFilename)
     print (f'Saved image to {imageFilename}')
 
@@ -773,7 +761,7 @@ def extractPortraitSpritesBank35(nesFile):
         imageBlock.append(image)
 
     combinedImage = combineImages(imageBlock, totalRows=7, totalCols=8, partialImageRows=4, partialImageCols=4)
-    imageFilename = f'assets/bank35_portraits.png'
+    imageFilename = f'{outputFolderName}/bank35_portraits.png'
     combinedImage.save(imageFilename)
     print (f'Saved image to {imageFilename}')
 
@@ -809,7 +797,7 @@ def extractOverworldBank36(nesFile):
             imageCount += 1
 
     combinedImage = combineImages(imageBlock, totalRows=16, totalCols=16, partialImageRows=30, partialImageCols=32)
-    imageFilename = f'assets/bank36_image000_overworld.png'
+    imageFilename = f'{outputFolderName}/bank36_image000_overworld.png'
     combinedImage.save(imageFilename)
     print (f'Saved image to {imageFilename}')
 
@@ -824,7 +812,7 @@ def extractOverworldBank36(nesFile):
 def main():
     nesFile = NESFile("game.nes")
 
-    createFolder("assets")
+    createFolder(outputFolderName)
 
     extractAllBackgroundImages1(nesFile)
     extractAllBackgroundImages2(nesFile)
