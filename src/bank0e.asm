@@ -3985,7 +3985,7 @@ L9B24:
         sta     $6F28                           ; 9B37 8D 28 6F                 .(o
         lda     #$00                            ; 9B3A A9 00                    ..
         sta     $6F29                           ; 9B3C 8D 29 6F                 .)o
-        jsr     L9C24                           ; 9B3F 20 24 9C                  $.
+        jsr     CheckIfPlayerCanAffordShopItem  ; 9B3F 20 24 9C                  $.
         bcs     L9B59                           ; 9B42 B0 15                    ..
         lda     #$00                            ; 9B44 A9 00                    ..
         sta     $6A                             ; 9B46 85 6A                    .j
@@ -4075,7 +4075,7 @@ L9BBC:
         cmp     #$63                            ; 9BC6 C9 63                    .c
         bcs     L9B6F                           ; 9BC8 B0 A5                    ..
         jsr     L9AA9                           ; 9BCA 20 A9 9A                  ..
-        jsr     L9C24                           ; 9BCD 20 24 9C                  $.
+        jsr     CheckIfPlayerCanAffordShopItem  ; 9BCD 20 24 9C                  $.
         bcs     L9BD8                           ; 9BD0 B0 06                    ..
         jsr     L9AC5                           ; 9BD2 20 C5 9A                  ..
         jmp     L9B6F                           ; 9BD5 4C 6F 9B                 Lo.
@@ -4116,7 +4116,7 @@ L9BE1:
         rts                                     ; 9C23 60                       `
 
 ; ----------------------------------------------------------------------------
-L9C24:
+CheckIfPlayerCanAffordShopItem:
         lda     $602E                           ; 9C24 AD 2E 60                 ..`
         sec                                     ; 9C27 38                       8
         sbc     $6F27                           ; 9C28 ED 27 6F                 .'o
@@ -4889,7 +4889,7 @@ LA16C:
         sta     $6F28                           ; A17F 8D 28 6F                 .(o
         lda     #$00                            ; A182 A9 00                    ..
         sta     $6F29                           ; A184 8D 29 6F                 .)o
-        jsr     L9C24                           ; A187 20 24 9C                  $.
+        jsr     CheckIfPlayerCanAffordShopItem  ; A187 20 24 9C                  $.
         bcs     LA1A1                           ; A18A B0 15                    ..
         lda     #$00                            ; A18C A9 00                    ..
         sta     $6A                             ; A18E 85 6A                    .j
@@ -4989,7 +4989,7 @@ LA204:
         nop                                     ; A21E EA                       .
         bcs     LA1B7                           ; A21F B0 96                    ..
         jsr     L9AA9                           ; A221 20 A9 9A                  ..
-        jsr     L9C24                           ; A224 20 24 9C                  $.
+        jsr     CheckIfPlayerCanAffordShopItem  ; A224 20 24 9C                  $.
         bcs     LA22F                           ; A227 B0 06                    ..
         jsr     L9AC5                           ; A229 20 C5 9A                  ..
         jmp     LA1B7                           ; A22C 4C B7 A1                 L..

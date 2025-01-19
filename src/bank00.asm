@@ -972,7 +972,7 @@ L855E:
         rts                                     ; 8562 60                       `
 
 ; ----------------------------------------------------------------------------
-L8563:
+Bank00MovePlayerRight:
         lda     $18                             ; 8563 A5 18                    ..
         clc                                     ; 8565 18                       .
         adc     #$02                            ; 8566 69 02                    i.
@@ -994,45 +994,45 @@ L857A:
         clc                                     ; 8580 18                       .
         adc     #$02                            ; 8581 69 02                    i.
         sta     $13                             ; 8583 85 13                    ..
-        jsr     L8563                           ; 8585 20 63 85                  c.
+        jsr     Bank00MovePlayerRight           ; 8585 20 63 85                  c.
         jsr     LEA36                           ; 8588 20 36 EA                  6.
         lda     $13                             ; 858B A5 13                    ..
         clc                                     ; 858D 18                       .
         adc     #$02                            ; 858E 69 02                    i.
         sta     $13                             ; 8590 85 13                    ..
-        jsr     L8563                           ; 8592 20 63 85                  c.
+        jsr     Bank00MovePlayerRight           ; 8592 20 63 85                  c.
         jsr     LEA36                           ; 8595 20 36 EA                  6.
         lda     $13                             ; 8598 A5 13                    ..
         clc                                     ; 859A 18                       .
         adc     #$02                            ; 859B 69 02                    i.
         sta     $13                             ; 859D 85 13                    ..
-        jsr     L8563                           ; 859F 20 63 85                  c.
+        jsr     Bank00MovePlayerRight           ; 859F 20 63 85                  c.
         jsr     LEA36                           ; 85A2 20 36 EA                  6.
         lda     $13                             ; 85A5 A5 13                    ..
         clc                                     ; 85A7 18                       .
         adc     #$02                            ; 85A8 69 02                    i.
         sta     $13                             ; 85AA 85 13                    ..
-        jsr     L8563                           ; 85AC 20 63 85                  c.
+        jsr     Bank00MovePlayerRight           ; 85AC 20 63 85                  c.
         jsr     LEA36                           ; 85AF 20 36 EA                  6.
         lda     $13                             ; 85B2 A5 13                    ..
         clc                                     ; 85B4 18                       .
         adc     #$02                            ; 85B5 69 02                    i.
         sta     $13                             ; 85B7 85 13                    ..
-        jsr     L8563                           ; 85B9 20 63 85                  c.
+        jsr     Bank00MovePlayerRight           ; 85B9 20 63 85                  c.
         jsr     LEA36                           ; 85BC 20 36 EA                  6.
         lda     $13                             ; 85BF A5 13                    ..
         clc                                     ; 85C1 18                       .
         adc     #$02                            ; 85C2 69 02                    i.
         sta     $13                             ; 85C4 85 13                    ..
-        jsr     L8563                           ; 85C6 20 63 85                  c.
+        jsr     Bank00MovePlayerRight           ; 85C6 20 63 85                  c.
         jsr     LEA36                           ; 85C9 20 36 EA                  6.
         lda     $13                             ; 85CC A5 13                    ..
         clc                                     ; 85CE 18                       .
         adc     #$02                            ; 85CF 69 02                    i.
         sta     $13                             ; 85D1 85 13                    ..
-        jsr     L8563                           ; 85D3 20 63 85                  c.
+        jsr     Bank00MovePlayerRight           ; 85D3 20 63 85                  c.
         jsr     LEA36                           ; 85D6 20 36 EA                  6.
-        jsr     L8563                           ; 85D9 20 63 85                  c.
+        jsr     Bank00MovePlayerRight           ; 85D9 20 63 85                  c.
         lda     $13                             ; 85DC A5 13                    ..
         clc                                     ; 85DE 18                       .
         adc     #$02                            ; 85DF 69 02                    i.
@@ -1048,7 +1048,7 @@ L85EE:
         rts                                     ; 85F2 60                       `
 
 ; ----------------------------------------------------------------------------
-L85F3:
+Bank00MovePlayerLeft:
         lda     $18                             ; 85F3 A5 18                    ..
         sec                                     ; 85F5 38                       8
         sbc     #$02                            ; 85F6 E9 02                    ..
@@ -1077,55 +1077,55 @@ L861B:
         sec                                     ; 861D 38                       8
         sbc     #$02                            ; 861E E9 02                    ..
         sta     $13                             ; 8620 85 13                    ..
-        jsr     L85F3                           ; 8622 20 F3 85                  ..
+        jsr     Bank00MovePlayerLeft            ; 8622 20 F3 85                  ..
         jsr     LEA36                           ; 8625 20 36 EA                  6.
         lda     $13                             ; 8628 A5 13                    ..
         sec                                     ; 862A 38                       8
         sbc     #$02                            ; 862B E9 02                    ..
         sta     $13                             ; 862D 85 13                    ..
-        jsr     L85F3                           ; 862F 20 F3 85                  ..
+        jsr     Bank00MovePlayerLeft            ; 862F 20 F3 85                  ..
         jsr     LEA36                           ; 8632 20 36 EA                  6.
         lda     $13                             ; 8635 A5 13                    ..
         sec                                     ; 8637 38                       8
         sbc     #$02                            ; 8638 E9 02                    ..
         sta     $13                             ; 863A 85 13                    ..
-        jsr     L85F3                           ; 863C 20 F3 85                  ..
+        jsr     Bank00MovePlayerLeft            ; 863C 20 F3 85                  ..
         jsr     LEA36                           ; 863F 20 36 EA                  6.
         lda     $13                             ; 8642 A5 13                    ..
         sec                                     ; 8644 38                       8
         sbc     #$02                            ; 8645 E9 02                    ..
         sta     $13                             ; 8647 85 13                    ..
-        jsr     L85F3                           ; 8649 20 F3 85                  ..
+        jsr     Bank00MovePlayerLeft            ; 8649 20 F3 85                  ..
         jsr     LEA36                           ; 864C 20 36 EA                  6.
         lda     $13                             ; 864F A5 13                    ..
         sec                                     ; 8651 38                       8
         sbc     #$02                            ; 8652 E9 02                    ..
         sta     $13                             ; 8654 85 13                    ..
-        jsr     L85F3                           ; 8656 20 F3 85                  ..
+        jsr     Bank00MovePlayerLeft            ; 8656 20 F3 85                  ..
         jsr     LEA36                           ; 8659 20 36 EA                  6.
         lda     $13                             ; 865C A5 13                    ..
         sec                                     ; 865E 38                       8
         sbc     #$02                            ; 865F E9 02                    ..
         sta     $13                             ; 8661 85 13                    ..
-        jsr     L85F3                           ; 8663 20 F3 85                  ..
+        jsr     Bank00MovePlayerLeft            ; 8663 20 F3 85                  ..
         jsr     LEA36                           ; 8666 20 36 EA                  6.
         lda     $13                             ; 8669 A5 13                    ..
         sec                                     ; 866B 38                       8
         sbc     #$02                            ; 866C E9 02                    ..
         sta     $13                             ; 866E 85 13                    ..
-        jsr     L85F3                           ; 8670 20 F3 85                  ..
+        jsr     Bank00MovePlayerLeft            ; 8670 20 F3 85                  ..
         jsr     LEA36                           ; 8673 20 36 EA                  6.
         lda     $13                             ; 8676 A5 13                    ..
         sec                                     ; 8678 38                       8
         sbc     #$02                            ; 8679 E9 02                    ..
         sta     $13                             ; 867B 85 13                    ..
-        jsr     L85F3                           ; 867D 20 F3 85                  ..
+        jsr     Bank00MovePlayerLeft            ; 867D 20 F3 85                  ..
         lda     #$00                            ; 8680 A9 00                    ..
         sta     $1F                             ; 8682 85 1F                    ..
         rts                                     ; 8684 60                       `
 
 ; ----------------------------------------------------------------------------
-L8685:
+Bank00MovePlayerDown:
         lda     $1A                             ; 8685 A5 1A                    ..
         clc                                     ; 8687 18                       .
         adc     #$02                            ; 8688 69 02                    i.
@@ -1160,45 +1160,45 @@ L86B2:
         clc                                     ; 86B8 18                       .
         adc     #$02                            ; 86B9 69 02                    i.
         sta     $14                             ; 86BB 85 14                    ..
-        jsr     L8685                           ; 86BD 20 85 86                  ..
+        jsr     Bank00MovePlayerDown            ; 86BD 20 85 86                  ..
         jsr     LEA36                           ; 86C0 20 36 EA                  6.
         lda     $14                             ; 86C3 A5 14                    ..
         clc                                     ; 86C5 18                       .
         adc     #$02                            ; 86C6 69 02                    i.
         sta     $14                             ; 86C8 85 14                    ..
-        jsr     L8685                           ; 86CA 20 85 86                  ..
+        jsr     Bank00MovePlayerDown            ; 86CA 20 85 86                  ..
         jsr     LEA36                           ; 86CD 20 36 EA                  6.
         lda     $14                             ; 86D0 A5 14                    ..
         clc                                     ; 86D2 18                       .
         adc     #$02                            ; 86D3 69 02                    i.
         sta     $14                             ; 86D5 85 14                    ..
-        jsr     L8685                           ; 86D7 20 85 86                  ..
+        jsr     Bank00MovePlayerDown            ; 86D7 20 85 86                  ..
         jsr     LEA36                           ; 86DA 20 36 EA                  6.
         lda     $14                             ; 86DD A5 14                    ..
         clc                                     ; 86DF 18                       .
         adc     #$02                            ; 86E0 69 02                    i.
         sta     $14                             ; 86E2 85 14                    ..
-        jsr     L8685                           ; 86E4 20 85 86                  ..
+        jsr     Bank00MovePlayerDown            ; 86E4 20 85 86                  ..
         jsr     LEA36                           ; 86E7 20 36 EA                  6.
         lda     $14                             ; 86EA A5 14                    ..
         clc                                     ; 86EC 18                       .
         adc     #$02                            ; 86ED 69 02                    i.
         sta     $14                             ; 86EF 85 14                    ..
-        jsr     L8685                           ; 86F1 20 85 86                  ..
+        jsr     Bank00MovePlayerDown            ; 86F1 20 85 86                  ..
         jsr     LEA36                           ; 86F4 20 36 EA                  6.
         lda     $14                             ; 86F7 A5 14                    ..
         clc                                     ; 86F9 18                       .
         adc     #$02                            ; 86FA 69 02                    i.
         sta     $14                             ; 86FC 85 14                    ..
-        jsr     L8685                           ; 86FE 20 85 86                  ..
+        jsr     Bank00MovePlayerDown            ; 86FE 20 85 86                  ..
         jsr     LEA36                           ; 8701 20 36 EA                  6.
         lda     $14                             ; 8704 A5 14                    ..
         clc                                     ; 8706 18                       .
         adc     #$02                            ; 8707 69 02                    i.
         sta     $14                             ; 8709 85 14                    ..
-        jsr     L8685                           ; 870B 20 85 86                  ..
+        jsr     Bank00MovePlayerDown            ; 870B 20 85 86                  ..
         jsr     LEA36                           ; 870E 20 36 EA                  6.
-        jsr     L8685                           ; 8711 20 85 86                  ..
+        jsr     Bank00MovePlayerDown            ; 8711 20 85 86                  ..
         lda     $14                             ; 8714 A5 14                    ..
         clc                                     ; 8716 18                       .
         adc     #$02                            ; 8717 69 02                    i.
@@ -1216,7 +1216,7 @@ L8726:
         rts                                     ; 872E 60                       `
 
 ; ----------------------------------------------------------------------------
-L872F:
+Bank00MovePlayerUp:
         lda     $1A                             ; 872F A5 1A                    ..
         sec                                     ; 8731 38                       8
         sbc     #$02                            ; 8732 E9 02                    ..
@@ -1249,49 +1249,49 @@ L875D:
         sec                                     ; 875D 38                       8
         sbc     #$02                            ; 875E E9 02                    ..
         sta     $14                             ; 8760 85 14                    ..
-        jsr     L872F                           ; 8762 20 2F 87                  /.
+        jsr     Bank00MovePlayerUp              ; 8762 20 2F 87                  /.
         jsr     LEA36                           ; 8765 20 36 EA                  6.
         lda     $14                             ; 8768 A5 14                    ..
         sec                                     ; 876A 38                       8
         sbc     #$02                            ; 876B E9 02                    ..
         sta     $14                             ; 876D 85 14                    ..
-        jsr     L872F                           ; 876F 20 2F 87                  /.
+        jsr     Bank00MovePlayerUp              ; 876F 20 2F 87                  /.
         jsr     LEA36                           ; 8772 20 36 EA                  6.
         lda     $14                             ; 8775 A5 14                    ..
         sec                                     ; 8777 38                       8
         sbc     #$02                            ; 8778 E9 02                    ..
         sta     $14                             ; 877A 85 14                    ..
-        jsr     L872F                           ; 877C 20 2F 87                  /.
+        jsr     Bank00MovePlayerUp              ; 877C 20 2F 87                  /.
         jsr     LEA36                           ; 877F 20 36 EA                  6.
         lda     $14                             ; 8782 A5 14                    ..
         sec                                     ; 8784 38                       8
         sbc     #$02                            ; 8785 E9 02                    ..
         sta     $14                             ; 8787 85 14                    ..
-        jsr     L872F                           ; 8789 20 2F 87                  /.
+        jsr     Bank00MovePlayerUp              ; 8789 20 2F 87                  /.
         jsr     LEA36                           ; 878C 20 36 EA                  6.
         lda     $14                             ; 878F A5 14                    ..
         sec                                     ; 8791 38                       8
         sbc     #$02                            ; 8792 E9 02                    ..
         sta     $14                             ; 8794 85 14                    ..
-        jsr     L872F                           ; 8796 20 2F 87                  /.
+        jsr     Bank00MovePlayerUp              ; 8796 20 2F 87                  /.
         jsr     LEA36                           ; 8799 20 36 EA                  6.
         lda     $14                             ; 879C A5 14                    ..
         sec                                     ; 879E 38                       8
         sbc     #$02                            ; 879F E9 02                    ..
         sta     $14                             ; 87A1 85 14                    ..
-        jsr     L872F                           ; 87A3 20 2F 87                  /.
+        jsr     Bank00MovePlayerUp              ; 87A3 20 2F 87                  /.
         jsr     LEA36                           ; 87A6 20 36 EA                  6.
         lda     $14                             ; 87A9 A5 14                    ..
         sec                                     ; 87AB 38                       8
         sbc     #$02                            ; 87AC E9 02                    ..
         sta     $14                             ; 87AE 85 14                    ..
-        jsr     L872F                           ; 87B0 20 2F 87                  /.
+        jsr     Bank00MovePlayerUp              ; 87B0 20 2F 87                  /.
         jsr     LEA36                           ; 87B3 20 36 EA                  6.
         lda     $14                             ; 87B6 A5 14                    ..
         sec                                     ; 87B8 38                       8
         sbc     #$02                            ; 87B9 E9 02                    ..
         sta     $14                             ; 87BB 85 14                    ..
-        jsr     L872F                           ; 87BD 20 2F 87                  /.
+        jsr     Bank00MovePlayerUp              ; 87BD 20 2F 87                  /.
         lda     #$FF                            ; 87C0 A9 FF                    ..
         sta     $2D                             ; 87C2 85 2D                    .-
         lda     #$00                            ; 87C4 A9 00                    ..
@@ -9729,7 +9729,7 @@ InnStaySubtractGil:
         sbc     #$00                            ; DFC6 E9 00                    ..
         lda     $6030                           ; DFC8 AD 30 60                 .0`
         sbc     #$00                            ; DFCB E9 00                    ..
-        bcc     LE019                           ; DFCD 90 4A                    .J
+        bcc     InnStayNotEnoughGil             ; DFCD 90 4A                    .J
         lda     $602E                           ; DFCF AD 2E 60                 ..`
         sbc     #$64                            ; DFD2 E9 64                    .d
         sta     $602E                           ; DFD4 8D 2E 60                 ..`
@@ -9765,7 +9765,7 @@ LE00D:
         jmp     LE022                           ; E016 4C 22 E0                 L".
 
 ; ----------------------------------------------------------------------------
-LE019:
+InnStayNotEnoughGil:
         lda     #$0E                            ; E019 A9 0E                    ..
         sta     $56                             ; E01B 85 56                    .V
         lda     #$4D                            ; E01D A9 4D                    .M

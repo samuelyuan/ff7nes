@@ -1607,7 +1607,7 @@ L8AF4:
         rts                                     ; 8B08 60                       `
 
 ; ----------------------------------------------------------------------------
-L8B09:
+LoadBattleMenuStringFromBank6:
         lda     #$80                            ; 8B09 A9 80                    ..
         sta     $03                             ; 8B0B 85 03                    ..
         lda     $6A                             ; 8B0D A5 6A                    .j
@@ -1648,7 +1648,7 @@ L8B09:
         pla                                     ; 8B51 68                       h
         sta     L0002                           ; 8B52 85 02                    ..
         ldy     #$00                            ; 8B54 A0 00                    ..
-L8B56:
+LoadStringCharacters:
         lda     #$06                            ; 8B56 A9 06                    ..
         sta     $0141                           ; 8B58 8D 41 01                 .A.
         lda     $4F                             ; 8B5B A5 4F                    .O
@@ -1702,7 +1702,7 @@ L8BAB:
         sta     $03                             ; 8BAF 85 03                    ..
         pla                                     ; 8BB1 68                       h
         tay                                     ; 8BB2 A8                       .
-        jmp     L8B56                           ; 8BB3 4C 56 8B                 LV.
+        jmp     LoadStringCharacters            ; 8BB3 4C 56 8B                 LV.
 
 ; ----------------------------------------------------------------------------
 L8BB6:
@@ -7185,7 +7185,7 @@ LB4D1:
         bmi     LB52A                           ; B4EE 30 3A                    0:
         pha                                     ; B4F0 48                       H
         sta     $69                             ; B4F1 85 69                    .i
-        jsr     L8B09                           ; B4F3 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; B4F3 20 09 8B                  ..
         jsr     LF3A0                           ; B4F6 20 A0 F3                  ..
         pla                                     ; B4F9 68                       h
         beq     LB529                           ; B4FA F0 2D                    .-
@@ -7220,7 +7220,7 @@ LB52A:
         sta     $69                             ; B52C 85 69                    .i
         lda     #$06                            ; B52E A9 06                    ..
         sta     $6A                             ; B530 85 6A                    .j
-        jsr     L8B09                           ; B532 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; B532 20 09 8B                  ..
         jsr     LF3A0                           ; B535 20 A0 F3                  ..
         rts                                     ; B538 60                       `
 
@@ -7431,7 +7431,7 @@ LB6AD           := * + 1
         sta     $77                             ; B6B2 85 77                    .w
         lda     #$FF                            ; B6B4 A9 FF                    ..
         sta     $88                             ; B6B6 85 88                    ..
-        jsr     L8B09                           ; B6B8 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; B6B8 20 09 8B                  ..
         jsr     LF3A0                           ; B6BB 20 A0 F3                  ..
         lda     #$00                            ; B6BE A9 00                    ..
         sta     $88                             ; B6C0 85 88                    ..
@@ -7577,26 +7577,25 @@ LB78F:
 
 ; ----------------------------------------------------------------------------
 LB7A1:
-        .byte   $E7                             ; B7A1 E7                       .
-        .byte   $B7                             ; B7A2 B7                       .
-        lda     ($B7),y                         ; B7A3 B1 B7                    ..
-        .byte   $B3                             ; B7A5 B3                       .
-        .byte   $B7                             ; B7A6 B7                       .
-        .byte   $B3                             ; B7A7 B3                       .
-        .byte   $B7                             ; B7A8 B7                       .
-        ldx     $B7,y                           ; B7A9 B6 B7                    ..
-        .byte   $D3                             ; B7AB D3                       .
-        .byte   $B7                             ; B7AC B7                       .
-        ldx     $B7,y                           ; B7AD B6 B7                    ..
-        .byte   $D3                             ; B7AF D3                       .
-        .byte   $B7                             ; B7B0 B7                       .
+        .addr   LB7E7                           ; B7A1 E7 B7                    ..
+        .addr   LB7B1                           ; B7A3 B1 B7                    ..
+        .addr   LB7B3                           ; B7A5 B3 B7                    ..
+        .addr   LB7B3                           ; B7A7 B3 B7                    ..
+        .addr   LB7B6                           ; B7A9 B6 B7                    ..
+        .addr   LB7D3                           ; B7AB D3 B7                    ..
+        .addr   LB7B6                           ; B7AD B6 B7                    ..
+        .addr   LB7D3                           ; B7AF D3 B7                    ..
+; ----------------------------------------------------------------------------
+LB7B1:
         clc                                     ; B7B1 18                       .
         rts                                     ; B7B2 60                       `
 
 ; ----------------------------------------------------------------------------
+LB7B3:
         jmp     LB780                           ; B7B3 4C 80 B7                 L..
 
 ; ----------------------------------------------------------------------------
+LB7B6:
         lda     $603B                           ; B7B6 AD 3B 60                 .;`
         cmp     #$02                            ; B7B9 C9 02                    ..
         bcc     LB780                           ; B7BB 90 C3                    ..
@@ -7612,6 +7611,7 @@ LB7C7:
         jmp     LB780                           ; B7D0 4C 80 B7                 L..
 
 ; ----------------------------------------------------------------------------
+LB7D3:
         lda     $603B                           ; B7D3 AD 3B 60                 .;`
         cmp     #$02                            ; B7D6 C9 02                    ..
         bcc     LB780                           ; B7D8 90 A6                    ..
@@ -8089,7 +8089,7 @@ LBB25:
         clc                                     ; BB59 18                       .
         adc     #$15                            ; BB5A 69 15                    i.
         sta     $69                             ; BB5C 85 69                    .i
-        jsr     L8B09                           ; BB5E 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; BB5E 20 09 8B                  ..
         jsr     LF3A0                           ; BB61 20 A0 F3                  ..
         lda     #$02                            ; BB64 A9 02                    ..
         sta     $AB                             ; BB66 85 AB                    ..
@@ -8455,7 +8455,7 @@ LBF88:
         sta     $77                             ; BF9E 85 77                    .w
         lda     #$FF                            ; BFA0 A9 FF                    ..
         sta     $88                             ; BFA2 85 88                    ..
-        jsr     L8B09                           ; BFA4 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; BFA4 20 09 8B                  ..
         jsr     LF3A0                           ; BFA7 20 A0 F3                  ..
         lda     #$00                            ; BFAA A9 00                    ..
         sta     $88                             ; BFAC 85 88                    ..
@@ -8556,7 +8556,7 @@ LC04F:
         sta     $69                             ; C06E 85 69                    .i
         lda     #$00                            ; C070 A9 00                    ..
         sta     $6A                             ; C072 85 6A                    .j
-        jsr     L8B09                           ; C074 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; C074 20 09 8B                  ..
         jsr     LF3A0                           ; C077 20 A0 F3                  ..
         lda     #$22                            ; C07A A9 22                    ."
         sta     $0F                             ; C07C 85 0F                    ..
@@ -8566,7 +8566,7 @@ LC04F:
         sta     $69                             ; C084 85 69                    .i
         lda     #$00                            ; C086 A9 00                    ..
         sta     $6A                             ; C088 85 6A                    .j
-        jsr     L8B09                           ; C08A 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; C08A 20 09 8B                  ..
         jsr     LF3A0                           ; C08D 20 A0 F3                  ..
         rts                                     ; C090 60                       `
 
@@ -8589,7 +8589,7 @@ LC091:
         sta     $69                             ; C0B0 85 69                    .i
         lda     #$00                            ; C0B2 A9 00                    ..
         sta     $6A                             ; C0B4 85 6A                    .j
-        jsr     L8B09                           ; C0B6 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; C0B6 20 09 8B                  ..
         jsr     LF3A0                           ; C0B9 20 A0 F3                  ..
         rts                                     ; C0BC 60                       `
 
@@ -8710,7 +8710,7 @@ LC185:
         sta     $69                             ; C193 85 69                    .i
         txa                                     ; C195 8A                       .
         pha                                     ; C196 48                       H
-        jsr     L8B09                           ; C197 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; C197 20 09 8B                  ..
         pla                                     ; C19A 68                       h
         tax                                     ; C19B AA                       .
         pla                                     ; C19C 68                       h
@@ -8941,7 +8941,7 @@ LC2F7:
 
 ; ----------------------------------------------------------------------------
 LC318:
-        jsr     L8B09                           ; C318 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; C318 20 09 8B                  ..
         jsr     LF3A0                           ; C31B 20 A0 F3                  ..
 LC31E:
         pla                                     ; C31E 68                       h
@@ -11224,7 +11224,7 @@ LD50C:
         sta     $69                             ; D512 85 69                    .i
         lda     #$0A                            ; D514 A9 0A                    ..
         sta     $6A                             ; D516 85 6A                    .j
-        jsr     L8B09                           ; D518 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D518 20 09 8B                  ..
         jsr     LF3A0                           ; D51B 20 A0 F3                  ..
         rts                                     ; D51E 60                       `
 
@@ -11237,7 +11237,7 @@ LD51F:
         sta     $69                             ; D528 85 69                    .i
         lda     #$0A                            ; D52A A9 0A                    ..
         sta     $6A                             ; D52C 85 6A                    .j
-        jsr     L8B09                           ; D52E 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D52E 20 09 8B                  ..
         jsr     LF3A0                           ; D531 20 A0 F3                  ..
         rts                                     ; D534 60                       `
 
@@ -11247,7 +11247,7 @@ LD535:
         sta     $69                             ; D537 85 69                    .i
         lda     #$00                            ; D539 A9 00                    ..
         sta     $6A                             ; D53B 85 6A                    .j
-        jsr     L8B09                           ; D53D 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D53D 20 09 8B                  ..
         jsr     LF3A0                           ; D540 20 A0 F3                  ..
         lda     $6FC0                           ; D543 AD C0 6F                 ..o
         cmp     $6F1E                           ; D546 CD 1E 6F                 ..o
@@ -11256,7 +11256,7 @@ LD535:
         sta     $69                             ; D54D 85 69                    .i
         lda     #$00                            ; D54F A9 00                    ..
         sta     $6A                             ; D551 85 6A                    .j
-        jsr     L8B09                           ; D553 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D553 20 09 8B                  ..
         jsr     LF3A0                           ; D556 20 A0 F3                  ..
         rts                                     ; D559 60                       `
 
@@ -11269,7 +11269,7 @@ LD55A:
         sta     $69                             ; D563 85 69                    .i
         lda     #$0A                            ; D565 A9 0A                    ..
         sta     $6A                             ; D567 85 6A                    .j
-        jsr     L8B09                           ; D569 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D569 20 09 8B                  ..
         jsr     LF3A0                           ; D56C 20 A0 F3                  ..
         rts                                     ; D56F 60                       `
 
@@ -11279,13 +11279,13 @@ LD570:
         sta     $69                             ; D572 85 69                    .i
         lda     #$00                            ; D574 A9 00                    ..
         sta     $6A                             ; D576 85 6A                    .j
-        jsr     L8B09                           ; D578 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D578 20 09 8B                  ..
         jsr     LF3A0                           ; D57B 20 A0 F3                  ..
         lda     $6F24                           ; D57E AD 24 6F                 .$o
         sta     $69                             ; D581 85 69                    .i
         lda     #$06                            ; D583 A9 06                    ..
         sta     $6A                             ; D585 85 6A                    .j
-        jsr     L8B09                           ; D587 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D587 20 09 8B                  ..
         jsr     LF3A0                           ; D58A 20 A0 F3                  ..
         rts                                     ; D58D 60                       `
 
@@ -11298,14 +11298,14 @@ LD58E:
         sta     $69                             ; D598 85 69                    .i
         lda     #$00                            ; D59A A9 00                    ..
         sta     $6A                             ; D59C 85 6A                    .j
-        jsr     L8B09                           ; D59E 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D59E 20 09 8B                  ..
         jsr     LF3A0                           ; D5A1 20 A0 F3                  ..
         ldx     $6F1E                           ; D5A4 AE 1E 6F                 ..o
         lda     $6F50,x                         ; D5A7 BD 50 6F                 .Po
         sta     $69                             ; D5AA 85 69                    .i
         lda     #$0A                            ; D5AC A9 0A                    ..
         sta     $6A                             ; D5AE 85 6A                    .j
-        jsr     L8B09                           ; D5B0 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D5B0 20 09 8B                  ..
         jsr     LF3A0                           ; D5B3 20 A0 F3                  ..
         rts                                     ; D5B6 60                       `
 
@@ -11318,7 +11318,7 @@ LD5B7:
         sta     $69                             ; D5C1 85 69                    .i
         lda     #$00                            ; D5C3 A9 00                    ..
         sta     $6A                             ; D5C5 85 6A                    .j
-        jsr     L8B09                           ; D5C7 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D5C7 20 09 8B                  ..
         jsr     LF3A0                           ; D5CA 20 A0 F3                  ..
         ldx     $6FC0                           ; D5CD AE C0 6F                 ..o
         lda     $603C,x                         ; D5D0 BD 3C 60                 .<`
@@ -11327,7 +11327,7 @@ LD5B7:
         sta     $69                             ; D5D6 85 69                    .i
         lda     #$0A                            ; D5D8 A9 0A                    ..
         sta     $6A                             ; D5DA 85 6A                    .j
-        jsr     L8B09                           ; D5DC 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D5DC 20 09 8B                  ..
         jsr     LF3A0                           ; D5DF 20 A0 F3                  ..
         rts                                     ; D5E2 60                       `
 
@@ -11337,21 +11337,21 @@ LD5E3:
         sta     $69                             ; D5E5 85 69                    .i
         lda     #$00                            ; D5E7 A9 00                    ..
         sta     $6A                             ; D5E9 85 6A                    .j
-        jsr     L8B09                           ; D5EB 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D5EB 20 09 8B                  ..
         jsr     LF3A0                           ; D5EE 20 A0 F3                  ..
         rts                                     ; D5F1 60                       `
 
 ; ----------------------------------------------------------------------------
-LD5F2:
+LoadStringNoEffect:
         lda     #$28                            ; D5F2 A9 28                    .(
         bne     LD60C                           ; D5F4 D0 16                    ..
 LD5F6:
         lda     #$18                            ; D5F6 A9 18                    ..
         bne     LD60C                           ; D5F8 D0 12                    ..
-LD5FA:
+LoadStringNoEscape:
         lda     #$27                            ; D5FA A9 27                    .'
         bne     LD60C                           ; D5FC D0 0E                    ..
-LD5FE:
+LoadStringEscaped:
         lda     #$26                            ; D5FE A9 26                    .&
         bne     LD60C                           ; D600 D0 0A                    ..
 LD602:
@@ -11366,7 +11366,7 @@ LD60C:
         sta     $69                             ; D60C 85 69                    .i
         lda     #$00                            ; D60E A9 00                    ..
         sta     $6A                             ; D610 85 6A                    .j
-        jsr     L8B09                           ; D612 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D612 20 09 8B                  ..
         jsr     LF3A0                           ; D615 20 A0 F3                  ..
         rts                                     ; D618 60                       `
 
@@ -11379,13 +11379,13 @@ LD61B:
         sta     $69                             ; D61E 85 69                    .i
         lda     #$00                            ; D620 A9 00                    ..
         sta     $6A                             ; D622 85 6A                    .j
-        jsr     L8B09                           ; D624 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D624 20 09 8B                  ..
         jsr     LF3A0                           ; D627 20 A0 F3                  ..
         lda     $6F24                           ; D62A AD 24 6F                 .$o
         sta     $69                             ; D62D 85 69                    .i
         pla                                     ; D62F 68                       h
         sta     $6A                             ; D630 85 6A                    .j
-        jsr     L8B09                           ; D632 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D632 20 09 8B                  ..
         jsr     LF3A0                           ; D635 20 A0 F3                  ..
         rts                                     ; D638 60                       `
 
@@ -11410,7 +11410,7 @@ LD643:
         sta     $69                             ; D655 85 69                    .i
         lda     #$0A                            ; D657 A9 0A                    ..
         sta     $6A                             ; D659 85 6A                    .j
-        jsr     L8B09                           ; D65B 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D65B 20 09 8B                  ..
         jsr     LF3A0                           ; D65E 20 A0 F3                  ..
         jmp     LD672                           ; D661 4C 72 D6                 Lr.
 
@@ -11420,14 +11420,14 @@ LD664:
         sta     $69                             ; D666 85 69                    .i
         lda     #$00                            ; D668 A9 00                    ..
         sta     $6A                             ; D66A 85 6A                    .j
-        jsr     L8B09                           ; D66C 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D66C 20 09 8B                  ..
         jsr     LF3A0                           ; D66F 20 A0 F3                  ..
 LD672:
         pla                                     ; D672 68                       h
         sta     $69                             ; D673 85 69                    .i
         lda     #$00                            ; D675 A9 00                    ..
         sta     $6A                             ; D677 85 6A                    .j
-        jsr     L8B09                           ; D679 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D679 20 09 8B                  ..
         jsr     LF3A0                           ; D67C 20 A0 F3                  ..
         rts                                     ; D67F 60                       `
 
@@ -11437,13 +11437,13 @@ LD680:
         sta     $69                             ; D682 85 69                    .i
         lda     #$00                            ; D684 A9 00                    ..
         sta     $6A                             ; D686 85 6A                    .j
-        jsr     L8B09                           ; D688 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D688 20 09 8B                  ..
         jsr     LF3A0                           ; D68B 20 A0 F3                  ..
         lda     #$2E                            ; D68E A9 2E                    ..
         sta     $69                             ; D690 85 69                    .i
         lda     #$00                            ; D692 A9 00                    ..
         sta     $6A                             ; D694 85 6A                    .j
-        jsr     L8B09                           ; D696 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D696 20 09 8B                  ..
         jsr     LF3A0                           ; D699 20 A0 F3                  ..
         rts                                     ; D69C 60                       `
 
@@ -11456,13 +11456,13 @@ LD69D:
         sta     $69                             ; D6A6 85 69                    .i
         lda     #$0A                            ; D6A8 A9 0A                    ..
         sta     $6A                             ; D6AA 85 6A                    .j
-        jsr     L8B09                           ; D6AC 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D6AC 20 09 8B                  ..
         jsr     LF3A0                           ; D6AF 20 A0 F3                  ..
         lda     #$31                            ; D6B2 A9 31                    .1
         sta     $69                             ; D6B4 85 69                    .i
         lda     #$00                            ; D6B6 A9 00                    ..
         sta     $6A                             ; D6B8 85 6A                    .j
-        jsr     L8B09                           ; D6BA 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; D6BA 20 09 8B                  ..
         jsr     LF3A0                           ; D6BD 20 A0 F3                  ..
         rts                                     ; D6C0 60                       `
 
@@ -12497,7 +12497,7 @@ LDE77:
         sta     $0F                             ; DECB 85 0F                    ..
         lda     #$24                            ; DECD A9 24                    .$
         sta     $0E                             ; DECF 85 0E                    ..
-        jsr     LD5FA                           ; DED1 20 FA D5                  ..
+        jsr     LoadStringNoEscape              ; DED1 20 FA D5                  ..
         ldx     #$0A                            ; DED4 A2 0A                    ..
         jsr     LF3A9                           ; DED6 20 A9 F3                  ..
         jsr     L9671                           ; DED9 20 71 96                  q.
@@ -12513,7 +12513,7 @@ LDEDD:
         sta     $0F                             ; DEE5 85 0F                    ..
         lda     #$24                            ; DEE7 A9 24                    .$
         sta     $0E                             ; DEE9 85 0E                    ..
-        jsr     LD5FE                           ; DEEB 20 FE D5                  ..
+        jsr     LoadStringEscaped               ; DEEB 20 FE D5                  ..
         lda     #$11                            ; DEEE A9 11                    ..
         jsr     LFEDE                           ; DEF0 20 DE FE                  ..
         ldx     #$0A                            ; DEF3 A2 0A                    ..
@@ -12933,7 +12933,7 @@ LE1EB:
         sta     $0F                             ; E202 85 0F                    ..
         lda     #$A4                            ; E204 A9 A4                    ..
         sta     $0E                             ; E206 85 0E                    ..
-        jsr     LD5F2                           ; E208 20 F2 D5                  ..
+        jsr     LoadStringNoEffect              ; E208 20 F2 D5                  ..
         ldx     #$0A                            ; E20B A2 0A                    ..
         jsr     LF3A9                           ; E20D 20 A9 F3                  ..
         rts                                     ; E210 60                       `
@@ -13261,7 +13261,7 @@ LE47D:
 
 ; ----------------------------------------------------------------------------
 LE4AC:
-        jsr     LD5F2                           ; E4AC 20 F2 D5                  ..
+        jsr     LoadStringNoEffect              ; E4AC 20 F2 D5                  ..
         ldx     #$0A                            ; E4AF A2 0A                    ..
         jsr     LF3A9                           ; E4B1 20 A9 F3                  ..
         rts                                     ; E4B4 60                       `
@@ -13356,7 +13356,7 @@ LE513:
         sta     $0F                             ; E55F 85 0F                    ..
         lda     #$24                            ; E561 A9 24                    .$
         sta     $0E                             ; E563 85 0E                    ..
-        jsr     LD5FA                           ; E565 20 FA D5                  ..
+        jsr     LoadStringNoEscape              ; E565 20 FA D5                  ..
         ldx     #$0A                            ; E568 A2 0A                    ..
         jsr     LF3A9                           ; E56A 20 A9 F3                  ..
         jsr     L9671                           ; E56D 20 71 96                  q.
@@ -13372,7 +13372,7 @@ LE571:
         sta     $0F                             ; E579 85 0F                    ..
         lda     #$24                            ; E57B A9 24                    .$
         sta     $0E                             ; E57D 85 0E                    ..
-        jsr     LD5FE                           ; E57F 20 FE D5                  ..
+        jsr     LoadStringEscaped               ; E57F 20 FE D5                  ..
         lda     #$11                            ; E582 A9 11                    ..
         jsr     LFEDE                           ; E584 20 DE FE                  ..
         ldx     #$0A                            ; E587 A2 0A                    ..
@@ -13693,7 +13693,7 @@ LE809:
         sta     $69                             ; E828 85 69                    .i
         lda     #$00                            ; E82A A9 00                    ..
         sta     $6A                             ; E82C 85 6A                    .j
-        jsr     L8B09                           ; E82E 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; E82E 20 09 8B                  ..
         jsr     LF3A0                           ; E831 20 A0 F3                  ..
         lda     #$00                            ; E834 A9 00                    ..
         sta     $0617                           ; E836 8D 17 06                 ...
@@ -13730,7 +13730,7 @@ LE857:
         sta     $69                             ; E876 85 69                    .i
         lda     #$00                            ; E878 A9 00                    ..
         sta     $6A                             ; E87A 85 6A                    .j
-        jsr     L8B09                           ; E87C 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; E87C 20 09 8B                  ..
         jsr     LF3A0                           ; E87F 20 A0 F3                  ..
         lda     #$00                            ; E882 A9 00                    ..
         sta     $0617                           ; E884 8D 17 06                 ...
@@ -13950,7 +13950,7 @@ LEA25:
         sta     $69                             ; EA4B 85 69                    .i
         lda     #$0A                            ; EA4D A9 0A                    ..
         sta     $6A                             ; EA4F 85 6A                    .j
-        jsr     L8B09                           ; EA51 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; EA51 20 09 8B                  ..
         jsr     LF3A0                           ; EA54 20 A0 F3                  ..
         lda     #$22                            ; EA57 A9 22                    ."
         sta     $0F                             ; EA59 85 0F                    ..
@@ -13960,7 +13960,7 @@ LEA25:
         sta     $69                             ; EA61 85 69                    .i
         lda     #$00                            ; EA63 A9 00                    ..
         sta     $6A                             ; EA65 85 6A                    .j
-        jsr     L8B09                           ; EA67 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; EA67 20 09 8B                  ..
         jsr     LF3A0                           ; EA6A 20 A0 F3                  ..
         jsr     L9F39                           ; EA6D 20 39 9F                  9.
         rts                                     ; EA70 60                       `
@@ -14205,7 +14205,7 @@ LEC1E:
         sta     $69                             ; EC3D 85 69                    .i
         lda     #$00                            ; EC3F A9 00                    ..
         sta     $6A                             ; EC41 85 6A                    .j
-        jsr     L8B09                           ; EC43 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; EC43 20 09 8B                  ..
         jsr     LF3A0                           ; EC46 20 A0 F3                  ..
         lda     $6F26                           ; EC49 AD 26 6F                 .&o
         clc                                     ; EC4C 18                       .
@@ -14213,7 +14213,7 @@ LEC1E:
         sta     $6A                             ; EC4F 85 6A                    .j
         lda     $6F25                           ; EC51 AD 25 6F                 .%o
         sta     $69                             ; EC54 85 69                    .i
-        jsr     L8B09                           ; EC56 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; EC56 20 09 8B                  ..
         jsr     LF3A0                           ; EC59 20 A0 F3                  ..
         jsr     L9F39                           ; EC5C 20 39 9F                  9.
         rts                                     ; EC5F 60                       `
@@ -14254,7 +14254,7 @@ LEC75:
         sta     $69                             ; EC9D 85 69                    .i
         lda     #$00                            ; EC9F A9 00                    ..
         sta     $6A                             ; ECA1 85 6A                    .j
-        jsr     L8B09                           ; ECA3 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; ECA3 20 09 8B                  ..
         jsr     LF3A0                           ; ECA6 20 A0 F3                  ..
         lda     $6F25                           ; ECA9 AD 25 6F                 .%o
         clc                                     ; ECAC 18                       .
@@ -14262,7 +14262,7 @@ LEC75:
         sta     $69                             ; ECAF 85 69                    .i
         lda     #$08                            ; ECB1 A9 08                    ..
         sta     $6A                             ; ECB3 85 6A                    .j
-        jsr     L8B09                           ; ECB5 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; ECB5 20 09 8B                  ..
         jsr     LF3A0                           ; ECB8 20 A0 F3                  ..
         jsr     L9F39                           ; ECBB 20 39 9F                  9.
         rts                                     ; ECBE 60                       `
@@ -14357,13 +14357,13 @@ LED84:
         sta     $69                             ; EDA3 85 69                    .i
         lda     #$00                            ; EDA5 A9 00                    ..
         sta     $6A                             ; EDA7 85 6A                    .j
-        jsr     L8B09                           ; EDA9 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; EDA9 20 09 8B                  ..
         jsr     LF3A0                           ; EDAC 20 A0 F3                  ..
         lda     $6F25                           ; EDAF AD 25 6F                 .%o
         sta     $69                             ; EDB2 85 69                    .i
         lda     #$05                            ; EDB4 A9 05                    ..
         sta     $6A                             ; EDB6 85 6A                    .j
-        jsr     L8B09                           ; EDB8 20 09 8B                  ..
+        jsr     LoadBattleMenuStringFromBank6   ; EDB8 20 09 8B                  ..
         jsr     LF3A0                           ; EDBB 20 A0 F3                  ..
         jsr     L9F39                           ; EDBE 20 39 9F                  9.
         rts                                     ; EDC1 60                       `
