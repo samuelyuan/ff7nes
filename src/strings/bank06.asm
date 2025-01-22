@@ -3,10 +3,10 @@
 ; ----------------------------------------------------------------------------
 ; ----------------------------------------------------------------------------
         .addr   L8019                           ; 8000 19 80                    ..
-        .addr   HelmetNameStr                   ; 8002 31 83                    1.
+        .addr   HeadgearNameStr                 ; 8002 31 83                    1.
         .addr   BodyArmorNameStr                ; 8004 78 85                    x.
-        .addr   L8AB8                           ; 8006 B8 8A                    ..
-        .addr   L8F10                           ; 8008 10 8F                    ..
+        .addr   BraceletNameStr                 ; 8006 B8 8A                    ..
+        .addr   RingNameStr                     ; 8008 10 8F                    ..
         .addr   WeaponNameStr                   ; 800A 75 91                    u.
         .addr   MateriaNameStr                  ; 800C C6 95                    ..
         .addr   MagicNameStr                    ; 800E 12 96                    ..
@@ -347,7 +347,7 @@ L832A:
         .byte   "Cid"                           ; 832A 43 69 64                 Cid
         .byte   $0D,$0A,$FF,$FF                 ; 832D 0D 0A FF FF              ....
 ; ----------------------------------------------------------------------------
-HelmetNameStr:
+HeadgearNameStr:
         .addr   L83A1                           ; 8331 A1 83                    ..
         .addr   L83A7                           ; 8333 A7 83                    ..
         .addr   L83AF                           ; 8335 AF 83                    ..
@@ -1093,7 +1093,7 @@ L8AAC:
         .byte   "}Scholar"                      ; 8AAC 7D 53 63 68 6F 6C 61 72  }Scholar
         .byte   $0D,$0A,$FF,$FF                 ; 8AB4 0D 0A FF FF              ....
 ; ----------------------------------------------------------------------------
-L8AB8:
+BraceletNameStr:
         .addr   L8B8C                           ; 8AB8 8C 8B                    ..
         .addr   L8B92                           ; 8ABA 92 8B                    ..
         .addr   L8B9A                           ; 8ABC 9A 8B                    ..
@@ -1520,7 +1520,7 @@ L8F04:
         .byte   "~Recruit"                      ; 8F04 7E 52 65 63 72 75 69 74  ~Recruit
         .byte   $0D,$0A,$FF,$FF                 ; 8F0C 0D 0A FF FF              ....
 ; ----------------------------------------------------------------------------
-L8F10:
+RingNameStr:
         .addr   L8F86                           ; 8F10 86 8F                    ..
         .addr   L8F8C                           ; 8F12 8C 8F                    ..
         .addr   L8F96                           ; 8F14 96 8F                    ..

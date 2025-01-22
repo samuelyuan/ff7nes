@@ -8307,18 +8307,18 @@ LBC13:
         adc     $6F23                           ; BC1C 6D 23 6F                 m#o
         asl     a                               ; BC1F 0A                       .
         tax                                     ; BC20 AA                       .
-        lda     LBC70,x                         ; BC21 BD 70 BC                 .p.
+        lda     ItemTableCharacterStartIndexAndSize,x; BC21 BD 70 BC            .p.
         sta     $07                             ; BC24 85 07                    ..
         inx                                     ; BC26 E8                       .
-        lda     LBC70,x                         ; BC27 BD 70 BC                 .p.
+        lda     ItemTableCharacterStartIndexAndSize,x; BC27 BD 70 BC            .p.
         sta     $08                             ; BC2A 85 08                    ..
         lda     $6F23                           ; BC2C AD 23 6F                 .#o
         asl     a                               ; BC2F 0A                       .
         tax                                     ; BC30 AA                       .
-        lda     LBC68,x                         ; BC31 BD 68 BC                 .h.
+        lda     ItemTableStartingAddress,x      ; BC31 BD 68 BC                 .h.
         sta     L0002                           ; BC34 85 02                    ..
         inx                                     ; BC36 E8                       .
-        lda     LBC68,x                         ; BC37 BD 68 BC                 .h.
+        lda     ItemTableStartingAddress,x      ; BC37 BD 68 BC                 .h.
         sta     $03                             ; BC3A 85 03                    ..
         ldx     #$00                            ; BC3C A2 00                    ..
         lda     #$00                            ; BC3E A9 00                    ..
@@ -8350,53 +8350,17 @@ LBC64:
         rts                                     ; BC67 60                       `
 
 ; ----------------------------------------------------------------------------
-LBC68:
-        .byte   $DF                             ; BC68 DF                       .
-        rts                                     ; BC69 60                       `
-
+ItemTableStartingAddress:
+        .byte   $DF,$60,$16,$61,$96,$61,$FF,$61 ; BC68 DF 60 16 61 96 61 FF 61  .`.a.a.a
+ItemTableCharacterStartIndexAndSize:
+        .byte   $08,$38,$18,$81,$12,$6A,$01,$3B ; BC70 08 38 18 81 12 6A 01 3B  .8...j.;
+        .byte   $01,$38,$01,$81,$01,$6A,$01,$3B ; BC78 01 38 01 81 01 6A 01 3B  .8...j.;
+        .byte   $15,$38,$33,$81,$28,$6A,$01,$3B ; BC80 15 38 33 81 28 6A 01 3B  .83.(j.;
+        .byte   $1F,$38,$4B,$81,$3F,$6A,$01,$3B ; BC88 1F 38 4B 81 3F 6A 01 3B  .8K.?j.;
+        .byte   $15,$38,$33,$81,$28,$6A,$01,$3B ; BC90 15 38 33 81 28 6A 01 3B  .83.(j.;
+        .byte   $1F,$38,$4B,$81,$3F,$6A,$01,$3B ; BC98 1F 38 4B 81 3F 6A 01 3B  .8K.?j.;
+        .byte   $08,$38,$18,$81,$12,$6A,$01,$3B ; BCA0 08 38 18 81 12 6A 01 3B  .8...j.;
 ; ----------------------------------------------------------------------------
-        asl     $61,x                           ; BC6A 16 61                    .a
-        stx     $61,y                           ; BC6C 96 61                    .a
-        .byte   $FF                             ; BC6E FF                       .
-LBC70           := * + 1
-        adc     ($08,x)                         ; BC6F 61 08                    a.
-        sec                                     ; BC71 38                       8
-        clc                                     ; BC72 18                       .
-        sta     ($12,x)                         ; BC73 81 12                    ..
-        ror     a                               ; BC75 6A                       j
-        ora     ($3B,x)                         ; BC76 01 3B                    .;
-        ora     ($38,x)                         ; BC78 01 38                    .8
-        ora     ($81,x)                         ; BC7A 01 81                    ..
-        ora     ($6A,x)                         ; BC7C 01 6A                    .j
-        ora     ($3B,x)                         ; BC7E 01 3B                    .;
-        ora     $38,x                           ; BC80 15 38                    .8
-        .byte   $33                             ; BC82 33                       3
-        sta     ($28,x)                         ; BC83 81 28                    .(
-        ror     a                               ; BC85 6A                       j
-        ora     ($3B,x)                         ; BC86 01 3B                    .;
-        .byte   $1F                             ; BC88 1F                       .
-        sec                                     ; BC89 38                       8
-        .byte   $4B                             ; BC8A 4B                       K
-        sta     ($3F,x)                         ; BC8B 81 3F                    .?
-        ror     a                               ; BC8D 6A                       j
-        ora     ($3B,x)                         ; BC8E 01 3B                    .;
-        ora     $38,x                           ; BC90 15 38                    .8
-        .byte   $33                             ; BC92 33                       3
-        sta     ($28,x)                         ; BC93 81 28                    .(
-        ror     a                               ; BC95 6A                       j
-        ora     ($3B,x)                         ; BC96 01 3B                    .;
-        .byte   $1F                             ; BC98 1F                       .
-        sec                                     ; BC99 38                       8
-        .byte   $4B                             ; BC9A 4B                       K
-        sta     ($3F,x)                         ; BC9B 81 3F                    .?
-        ror     a                               ; BC9D 6A                       j
-        ora     ($3B,x)                         ; BC9E 01 3B                    .;
-        php                                     ; BCA0 08                       .
-        sec                                     ; BCA1 38                       8
-        clc                                     ; BCA2 18                       .
-        sta     ($12,x)                         ; BCA3 81 12                    ..
-        ror     a                               ; BCA5 6A                       j
-        ora     ($3B,x)                         ; BCA6 01 3B                    .;
 LBCA8:
         lda     #$F6                            ; BCA8 A9 F6                    ..
         sta     $AA                             ; BCAA 85 AA                    ..
@@ -8462,10 +8426,10 @@ LBCE0:
         lda     $6F23                           ; BD1B AD 23 6F                 .#o
         asl     a                               ; BD1E 0A                       .
         tax                                     ; BD1F AA                       .
-        lda     LBC68,x                         ; BD20 BD 68 BC                 .h.
+        lda     ItemTableStartingAddress,x      ; BD20 BD 68 BC                 .h.
         sta     L0002                           ; BD23 85 02                    ..
         inx                                     ; BD25 E8                       .
-        lda     LBC68,x                         ; BD26 BD 68 BC                 .h.
+        lda     ItemTableStartingAddress,x      ; BD26 BD 68 BC                 .h.
         sta     $03                             ; BD29 85 03                    ..
         pla                                     ; BD2B 68                       h
         pha                                     ; BD2C 48                       H
@@ -9725,10 +9689,10 @@ LC57F:
         lda     $6F23                           ; C5A7 AD 23 6F                 .#o
         asl     a                               ; C5AA 0A                       .
         tay                                     ; C5AB A8                       .
-        lda     LBC68,y                         ; C5AC B9 68 BC                 .h.
+        lda     ItemTableStartingAddress,y      ; C5AC B9 68 BC                 .h.
         sta     L0002                           ; C5AF 85 02                    ..
         iny                                     ; C5B1 C8                       .
-        lda     LBC68,y                         ; C5B2 B9 68 BC                 .h.
+        lda     ItemTableStartingAddress,y      ; C5B2 B9 68 BC                 .h.
         sta     $03                             ; C5B5 85 03                    ..
         pla                                     ; C5B7 68                       h
         tay                                     ; C5B8 A8                       .
@@ -9765,10 +9729,10 @@ SetPlayerAccessoryToItemId:
         lda     $6F23                           ; C5F0 AD 23 6F                 .#o
         asl     a                               ; C5F3 0A                       .
         tay                                     ; C5F4 A8                       .
-        lda     LBC68,y                         ; C5F5 B9 68 BC                 .h.
+        lda     ItemTableStartingAddress,y      ; C5F5 B9 68 BC                 .h.
         sta     L0002                           ; C5F8 85 02                    ..
         iny                                     ; C5FA C8                       .
-        lda     LBC68,y                         ; C5FB B9 68 BC                 .h.
+        lda     ItemTableStartingAddress,y      ; C5FB B9 68 BC                 .h.
         sta     $03                             ; C5FE 85 03                    ..
         pla                                     ; C600 68                       h
         tay                                     ; C601 A8                       .
