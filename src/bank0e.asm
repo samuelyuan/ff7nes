@@ -7565,19 +7565,18 @@ LB4C6:
 
 ; ----------------------------------------------------------------------------
 LB4D8:
-        .byte   $87                             ; B4D8 87                       .
-        cmp     $E8                             ; B4D9 C5 E8                    ..
-        ldy     L0000,x                         ; B4DB B4 00                    ..
-        lda     L0000,x                         ; B4DD B5 00                    ..
-        lda     $03,x                           ; B4DF B5 03                    ..
-        lda     $23,x                           ; B4E1 B5 23                    .#
-        lda     $37,x                           ; B4E3 B5 37                    .7
-        lda     $6B,x                           ; B4E5 B5 6B                    .k
-        lda     $20,x                           ; B4E7 B5 20                    . 
-        .byte   $FA                             ; B4E9 FA                       .
-        lda     $20,x                           ; B4EA B5 20                    . 
-        .byte   $54                             ; B4EC 54                       T
-        .byte   $BF                             ; B4ED BF                       .
+        .addr   LC587                           ; B4D8 87 C5                    ..
+        .addr   LB4E8                           ; B4DA E8 B4                    ..
+        .addr   LB500                           ; B4DC 00 B5                    ..
+        .addr   LB500                           ; B4DE 00 B5                    ..
+        .addr   LB503                           ; B4E0 03 B5                    ..
+        .addr   LB523                           ; B4E2 23 B5                    #.
+        .addr   LB537                           ; B4E4 37 B5                    7.
+        .addr   LB56B                           ; B4E6 6B B5                    k.
+; ----------------------------------------------------------------------------
+LB4E8:
+        jsr     LB5FA                           ; B4E8 20 FA B5                  ..
+        jsr     LBF54                           ; B4EB 20 54 BF                  T.
         jsr     LBB93                           ; B4EE 20 93 BB                  ..
         jsr     LB5D2                           ; B4F1 20 D2 B5                  ..
         jsr     LBB21                           ; B4F4 20 21 BB                  !.
@@ -7586,9 +7585,11 @@ LB4D8:
         jmp     LB3C1                           ; B4FD 4C C1 B3                 L..
 
 ; ----------------------------------------------------------------------------
+LB500:
         jmp     LB4B4                           ; B500 4C B4 B4                 L..
 
 ; ----------------------------------------------------------------------------
+LB503:
         lda     $0615                           ; B503 AD 15 06                 ...
         cmp     #$02                            ; B506 C9 02                    ..
         bcc     LB4B4                           ; B508 90 AA                    ..
@@ -7605,6 +7606,7 @@ LB514:
         jmp     LB4AE                           ; B520 4C AE B4                 L..
 
 ; ----------------------------------------------------------------------------
+LB523:
         lda     $0615                           ; B523 AD 15 06                 ...
         cmp     #$02                            ; B526 C9 02                    ..
         bcc     LB4B4                           ; B528 90 8A                    ..
@@ -7614,6 +7616,7 @@ LB514:
         bcc     LB514                           ; B531 90 E1                    ..
         ldx     #$00                            ; B533 A2 00                    ..
         beq     LB514                           ; B535 F0 DD                    ..
+LB537:
         lda     $0614                           ; B537 AD 14 06                 ...
         cmp     #$02                            ; B53A C9 02                    ..
         bcc     LB568                           ; B53C 90 2A                    .*
@@ -7640,6 +7643,7 @@ LB568:
         jmp     LB4B4                           ; B568 4C B4 B4                 L..
 
 ; ----------------------------------------------------------------------------
+LB56B:
         lda     $0614                           ; B56B AD 14 06                 ...
         cmp     #$02                            ; B56E C9 02                    ..
         bcc     LB568                           ; B570 90 F6                    ..
@@ -8799,6 +8803,7 @@ LBF44:
         brk                                     ; BF4F 00                       .
         ora     ($01,x)                         ; BF50 01 01                    ..
         ora     (L0000,x)                       ; BF52 01 00                    ..
+LBF54:
         lda     #$28                            ; BF54 A9 28                    .(
         sta     $9C                             ; BF56 85 9C                    ..
         ldx     #$40                            ; BF58 A2 40                    .@
@@ -9670,6 +9675,7 @@ LC57F:
         jmp     LC12F                           ; C584 4C 2F C1                 L/.
 
 ; ----------------------------------------------------------------------------
+LC587:
         lda     #$00                            ; C587 A9 00                    ..
         sta     $6F25                           ; C589 8D 25 6F                 .%o
         lda     $6F23                           ; C58C AD 23 6F                 .#o
@@ -10839,7 +10845,7 @@ LCD95:
         cmp     #$01                            ; CD98 C9 01                    ..
         beq     LCDB4                           ; CD9A F0 18                    ..
         cmp     #$02                            ; CD9C C9 02                    ..
-        beq     LCE1B                           ; CD9E F0 7B                    .{
+        beq     LevelUpMateriaSpell             ; CD9E F0 7B                    .{
         lda     $060E                           ; CDA0 AD 0E 06                 ...
         beq     LCD92                           ; CDA3 F0 ED                    ..
         lda     $6F26                           ; CDA5 AD 26 6F                 .&o
@@ -10904,20 +10910,20 @@ CharacterMPAlreadyFull:
 MagicItemMPValues:
         .byte   $05,$63,$63                     ; CE18 05 63 63                 .cc
 ; ----------------------------------------------------------------------------
-LCE1B:
+LevelUpMateriaSpell:
         ldx     $6F44                           ; CE1B AE 44 6F                 .Do
         lda     $0645,x                         ; CE1E BD 45 06                 .E.
         sta     $6F24                           ; CE21 8D 24 6F                 .$o
         jsr     MagicSubmenuReadPlayerMateria   ; CE24 20 1E D3                  ..
         lda     $6F25                           ; CE27 AD 25 6F                 .%o
         cmp     #$14                            ; CE2A C9 14                    ..
-        bcs     LCE8F                           ; CE2C B0 61                    .a
+        bcs     SetMasteredStringIndex          ; CE2C B0 61                    .a
         lda     $6F27                           ; CE2E AD 27 6F                 .'o
         sec                                     ; CE31 38                       8
         sbc     $6F2D                           ; CE32 ED 2D 6F                 .-o
         lda     $6F28                           ; CE35 AD 28 6F                 .(o
         sbc     $6F2E                           ; CE38 ED 2E 6F                 ..o
-        bcc     LCE99                           ; CE3B 90 5C                    .\
+        bcc     SetNotEnoughExpStringIndex      ; CE3B 90 5C                    .\
         lda     #$20                            ; CE3D A9 20                    . 
         jsr     LFEDE                           ; CE3F 20 DE FE                  ..
         ldx     #$14                            ; CE42 A2 14                    ..
@@ -10953,13 +10959,13 @@ LCE7D:
         jmp     MagicSubmenuUpdateScreen        ; CE8C 4C D8 CC                 L..
 
 ; ----------------------------------------------------------------------------
-LCE8F:
+SetMasteredStringIndex:
         lda     #$00                            ; CE8F A9 00                    ..
         sta     $6A                             ; CE91 85 6A                    .j
         lda     #$44                            ; CE93 A9 44                    .D
         sta     $69                             ; CE95 85 69                    .i
         bne     LCE7D                           ; CE97 D0 E4                    ..
-LCE99:
+SetNotEnoughExpStringIndex:
         lda     #$00                            ; CE99 A9 00                    ..
         sta     $6A                             ; CE9B 85 6A                    .j
         lda     #$45                            ; CE9D A9 45                    .E
@@ -11992,12 +11998,12 @@ LD717:
         .byte   $7F,$30,$7F,$40,$7F,$50         ; D717 7F 30 7F 40 7F 50        .0.@.P
 ; ----------------------------------------------------------------------------
 LD71D:
-        jsr     LD724                           ; D71D 20 24 D7                  $.
+        jsr     SaveGameCopyData                ; D71D 20 24 D7                  $.
         jsr     LD778                           ; D720 20 78 D7                  x.
         rts                                     ; D723 60                       `
 
 ; ----------------------------------------------------------------------------
-LD724:
+SaveGameCopyData:
         lda     $6F17                           ; D724 AD 17 6F                 ..o
         asl     a                               ; D727 0A                       .
         asl     a                               ; D728 0A                       .
@@ -12019,32 +12025,32 @@ LD724:
         sta     $D6                             ; D747 85 D6                    ..
         ldx     #$03                            ; D749 A2 03                    ..
         ldy     #$00                            ; D74B A0 00                    ..
-LD74D:
+SaveGameCopyDataLoopPart1:
         lda     ($D6),y                         ; D74D B1 D6                    ..
         sta     (L0002),y                       ; D74F 91 02                    ..
         iny                                     ; D751 C8                       .
-        bne     LD74D                           ; D752 D0 F9                    ..
+        bne     SaveGameCopyDataLoopPart1       ; D752 D0 F9                    ..
         inc     $D7                             ; D754 E6 D7                    ..
         inc     $03                             ; D756 E6 03                    ..
         dex                                     ; D758 CA                       .
-        bne     LD74D                           ; D759 D0 F2                    ..
+        bne     SaveGameCopyDataLoopPart1       ; D759 D0 F2                    ..
         ldx     #$02                            ; D75B A2 02                    ..
         ldy     #$00                            ; D75D A0 00                    ..
-LD75F:
+SaveGameCopyDataLoopPart2:
         lda     ($D6),y                         ; D75F B1 D6                    ..
         sta     ($04),y                         ; D761 91 04                    ..
         iny                                     ; D763 C8                       .
-        bne     LD75F                           ; D764 D0 F9                    ..
+        bne     SaveGameCopyDataLoopPart2       ; D764 D0 F9                    ..
         inc     $D7                             ; D766 E6 D7                    ..
         inc     $05                             ; D768 E6 05                    ..
         dex                                     ; D76A CA                       .
-        bne     LD75F                           ; D76B D0 F2                    ..
+        bne     SaveGameCopyDataLoopPart2       ; D76B D0 F2                    ..
         ldy     #$00                            ; D76D A0 00                    ..
-LD76F:
+SaveGameCopyDataLoopPart3:
         lda     $0300,y                         ; D76F B9 00 03                 ...
         sta     ($04),y                         ; D772 91 04                    ..
         iny                                     ; D774 C8                       .
-        bne     LD76F                           ; D775 D0 F8                    ..
+        bne     SaveGameCopyDataLoopPart3       ; D775 D0 F8                    ..
         rts                                     ; D777 60                       `
 
 ; ----------------------------------------------------------------------------
