@@ -1,0 +1,64 @@
+GLOBAL {
+  INPUTNAME "game.nes";
+  OUTPUTNAME "bank07.asm";
+  INPUTOFFS $38010;
+  INPUTSIZE $8000;
+  COMMENTS $4;
+  STARTADDR $8000;
+  LABELBREAK $1;
+};
+RANGE {
+  START $8000;
+  END $8005;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8006;
+  END $8008;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8009;
+  END $8206;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8207;
+  END $ba96;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $ba97;
+  END $ba9c;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $ba9d;
+  END $bc9a;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $bc9b;
+  END $bca4;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $bca5;
+  END $efe5;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $efe6;
+  END $f06d;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $f06e;
+  END $ffb5;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $ffb6;
+  END $ffff;
+  TYPE BYTETABLE;
+};

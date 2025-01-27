@@ -1,0 +1,1315 @@
+GLOBAL {
+  INPUTNAME "game.nes";
+  OUTPUTNAME "bank0e.asm";
+  INPUTOFFS $70010;
+  INPUTSIZE $8000;
+  COMMENTS $4;
+  STARTADDR $8000;
+  LABELBREAK $1;
+};
+RANGE {
+  START $8000;
+  END $9394;
+  TYPE CODE;
+};
+RANGE {
+  START $9395;
+  END $93C7;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $93C8;
+  END $9744;
+  TYPE CODE;
+};
+RANGE {
+  START $9745;
+  END $9754;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $9755;
+  END $97D3;
+  TYPE CODE;
+};
+RANGE {
+  START $97D4;
+  END $97E0;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $97E1;
+  END $9858;
+  TYPE CODE;
+};
+RANGE {
+  START $9859;
+  END $9868;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $9869;
+  END $98BB;
+  TYPE CODE;
+};
+RANGE {
+  START $98BC;
+  END $98CB;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $98CC;
+  END $9A20;
+  TYPE CODE;
+};
+RANGE {
+  START $9A21;
+  END $9A30;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $9A31;
+  END $9B8F;
+  TYPE CODE;
+};
+RANGE {
+  START $9B90;
+  END $9B9F;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $9BA0;
+  END $9C77;
+  TYPE CODE;
+};
+RANGE {
+  START $9C78;
+  END $9C7B;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $9C7C;
+  END $9D9D;
+  TYPE CODE;
+};
+RANGE {
+  START $9D9E;
+  END $9DD3;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $9DD4;
+  END $9E3F;
+  TYPE CODE;
+};
+RANGE {
+  START $9E40;
+  END $9E4F;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $9E50;
+  END $9E94;
+  TYPE CODE;
+};
+RANGE {
+  START $9E95;
+  END $9EA4;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $9EA5;
+  END $9F0F;
+  TYPE CODE;
+};
+RANGE {
+  START $9F10;
+  END $9F1F;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $9F20;
+  END $A074;
+  TYPE CODE;
+};
+RANGE {
+  START $A075;
+  END $A084;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $A085;
+  END $A1D7;
+  TYPE CODE;
+};
+RANGE {
+  START $A1D8;
+  END $A1E7;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $A1E8;
+  END $A2A0;
+  TYPE CODE;
+};
+RANGE {
+  START $A2A1;
+  END $A2A8;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $A2A9;
+  END $A2C0;
+  TYPE CODE;
+};
+RANGE {
+  START $A2C1;
+  END $A2CC;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $A2CD;
+  END $A404;
+  TYPE CODE;
+};
+RANGE {
+  START $A405;
+  END $A41C;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $A41D;
+  END $A667;
+  TYPE CODE;
+};
+RANGE {
+  START $A668;
+  END $A677;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $A678;
+  END $A6B0;
+  TYPE CODE;
+};
+RANGE {
+  START $A6B1;
+  END $A6BC;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $A6BD;
+  END $A6E0;
+  TYPE CODE;
+};
+RANGE {
+  START $A6E1;
+  END $A6EC;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $A6ED;
+  END $A773;
+  TYPE CODE;
+};
+RANGE {
+  START $A774;
+  END $A783;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $A784;
+  END $A7E4;
+  TYPE CODE;
+};
+RANGE {
+  START $A7E5;
+  END $A7FA;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $A7FB;
+  END $A863;
+  TYPE CODE;
+};
+RANGE {
+  START $A864;
+  END $A86F;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $A870;
+  END $ADB9;
+  TYPE CODE;
+};
+RANGE {
+  START $ADBA;
+  END $ADD1;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $ADD2;
+  END $B369;
+  TYPE CODE;
+};
+RANGE {
+  START $B36A;
+  END $B379;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $B37A;
+  END $B3EA;
+  TYPE CODE;
+};
+RANGE {
+  START $B3EB;
+  END $B3FA;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $B3FB;
+  END $B4D7;
+  TYPE CODE;
+};
+RANGE {
+  START $B4D8;
+  END $B4E7;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $B4E8;
+  END $B5E9;
+  TYPE CODE;
+};
+RANGE {
+  START $B5EA;
+  END $B5F9;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $B5FA;
+  END $B89C;
+  TYPE CODE;
+};
+RANGE {
+  START $B89D;
+  END $B8A0;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $B8A1;
+  END $BB20;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $BB21;
+  END $BB6E;
+  TYPE CODE;
+};
+RANGE {
+  START $BB6F;
+  END $BB72;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $BB73;
+  END $BB92;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $BB93;
+  END $BC67;
+  TYPE CODE;
+};
+RANGE {
+  START $BC68;
+  END $BCA7;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $BCA8;
+  END $C0D9;
+  TYPE CODE;
+};
+RANGE {
+  START $C0DA;
+  END $C101;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $C102;
+  END $C152;
+  TYPE CODE;
+};
+RANGE {
+  START $C153;
+  END $C162;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $C163;
+  END $C36F;
+  TYPE CODE;
+};
+RANGE {
+  START $C370;
+  END $C37F;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $C380;
+  END $C6F6;
+  TYPE CODE;
+};
+RANGE {
+  START $C6F7;
+  END $C706;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $C707;
+  END $C759;
+  TYPE CODE;
+};
+RANGE {
+  START $C75A;
+  END $C769;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $C76A;
+  END $C912;
+  TYPE CODE;
+};
+RANGE {
+  START $C913;
+  END $C916;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $C917;
+  END $CA1F;
+  TYPE CODE;
+};
+RANGE {
+  START $CA20;
+  END $CA37;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $CA38;
+  END $CA76;
+  TYPE CODE;
+};
+RANGE {
+  START $CA77;
+  END $CA82;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $CA83;
+  END $CBF9;
+  TYPE CODE;
+};
+RANGE {
+  START $CBFA;
+  END $CC0A;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $CC0B;
+  END $CC7D;
+  TYPE CODE;
+};
+RANGE {
+  START $CC7E;
+  END $CC8D;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $CC8E;
+  END $CCFB;
+  TYPE CODE;
+};
+RANGE {
+  START $CCFC;
+  END $CD0B;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $CD0C;
+  END $CE17;
+  TYPE CODE;
+};
+RANGE {
+  START $CE18;
+  END $CE1A;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $CE1B;
+  END $CF11;
+  TYPE CODE;
+};
+RANGE {
+  START $CF12;
+  END $CF25;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $CF26;
+  END $D0DD;
+  TYPE CODE;
+};
+RANGE {
+  START $D0DE;
+  END $D25C;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $D25D;
+  END $D4E2;
+  TYPE CODE;
+};
+RANGE {
+  START $D4E3;
+  END $D4F2;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $D4F3;
+  END $D55F;
+  TYPE CODE;
+};
+RANGE {
+  START $D560;
+  END $D56F;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $D570;
+  END $D65E;
+  TYPE CODE;
+};
+RANGE {
+  START $D65F;
+  END $D66C;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $D66D;
+  END $D684;
+  TYPE CODE;
+};
+RANGE {
+  START $D685;
+  END $D692;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $D693;
+  END $D704;
+  TYPE CODE;
+};
+RANGE {
+  START $D705;
+  END $D71C;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $D71D;
+  END $D8B5;
+  TYPE CODE;
+};
+RANGE {
+  START $D8B6;
+  END $D8C1;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $D8C2;
+  END $DA39;
+  TYPE CODE;
+};
+RANGE {
+  START $DA3A;
+  END $DA49;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $DA4A;
+  END $DB35;
+  TYPE CODE;
+};
+RANGE {
+  START $DB36;
+  END $DB3B;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $DB3C;
+  END $DE5B;
+  TYPE CODE;
+};
+RANGE {
+  START $DE5C;
+  END $DF4B;
+  TYPE CODE;
+};
+RANGE {
+  START $DF4C;
+  END $E0C4;
+  TYPE CODE;
+};
+RANGE {
+  START $E0C5;
+  END $E2CF;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $E2D0;
+  END $E2D9;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $E2DA;
+  END $E2DF;
+  TYPE CODE;
+};
+RANGE {
+  START $E2E0;
+  END $E2E9;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $E2EA;
+  END $E39F;
+  TYPE CODE;
+};
+RANGE {
+  START $E3A0;
+  END $E3AF;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $E3B0;
+  END $E42F;
+  TYPE CODE;
+};
+RANGE {
+  START $E430;
+  END $E43F;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $E440;
+  END $FFFF;
+  TYPE CODE;
+};
+
+LABEL {
+  NAME "LoadItemNameStringBank6";
+  ADDR $8B65;
+};
+LABEL {
+  NAME "UpdateCursorPositionLoop";
+  ADDR $93D9;
+};
+LABEL {
+  NAME "ShopItemMenuWriteItemStatsForDisplay";
+  ADDR $94EC;
+};
+LABEL {
+  NAME "MainMenuStartGameEntryPoint";
+  ADDR $96FC;
+};
+LABEL {
+  NAME "MainMenuStartGameButtonPressTable";
+  ADDR $9745;
+};
+LABEL {
+  NAME "MainMenuStartGameChangeOptionNoOp";
+  ADDR $9755;
+};
+LABEL {
+  NAME "MainMenuStartGameChangeOptionUpOrDown";
+  ADDR $9758;
+};
+LABEL {
+  NAME "MainMenuStartGameSelectOption";
+  ADDR $9761;
+};
+LABEL {
+  NAME "MainMenuStartGameCursorPixelPositionTable";
+  ADDR $97D4;
+};
+LABEL {
+  NAME "ShopMenuEntryPoint";
+  ADDR $97E1;
+};
+LABEL {
+  NAME "ShopMenuType1Equipment";
+  ADDR $97F2;
+};
+LABEL {
+  NAME "ShopMenuType2WeaponUpgrade";
+  ADDR $97F5;
+};
+LABEL {
+  NAME "ShopMenuType3MateriaUpgrade";
+  ADDR $97F8;
+};
+LABEL {
+  NAME "ShopMenuHealingItemEntryPoint";
+  ADDR $97FB;
+};
+LABEL {
+  NAME "ShopMenuEquipmentEntryPoint";
+  ADDR $9DE2;
+};
+LABEL {
+  NAME "ShopMenuNoOpEntryPoint";
+  ADDR $D9CD;
+};
+LABEL {
+  NAME "ShopMenuWeaponEnhancementEntryPoint";
+  ADDR $D9D0;
+};
+LABEL {
+  NAME "ShopMenuMateriaEnhancementEntryPoint";
+  ADDR $DDB3;
+};
+LABEL {
+  NAME "CheckIfPlayerCanAffordShopItem";
+  ADDR $9C24;
+};
+LABEL {
+  NAME "ShopItemMenuCursorBuySellTabPixelPositionTable";
+  ADDR $9C78;
+};
+LABEL {
+  NAME "ShopBuySellTabButtonPressTable";
+  ADDR $9E40;
+};
+LABEL {
+  NAME "ShopBuySellTabExit";
+  ADDR $9E50;
+};
+LABEL {
+  NAME "ShopBuySellTabNoOp";
+  ADDR $9E52;
+};
+LABEL {
+  NAME "ShopBuySellTabSwitchOption";
+  ADDR $9E55;
+};
+LABEL {
+  NAME "ShopBuySellTabSelectOption";
+  ADDR $9E63;
+};
+LABEL {
+  NAME "ShopCategoryTabButtonPressTable";
+  ADDR $9E95;
+};
+LABEL {
+  NAME "ShopCategoryTabExit";
+  ADDR $9EA5;
+};
+LABEL {
+  NAME "ShopCategoryTabNoOp";
+  ADDR $9EAB;
+};
+LABEL {
+  NAME "ShopCategoryTabMoveLeft";
+  ADDR $9EAE;
+};
+LABEL {
+  NAME "ShopCategoryTabMoveRight";
+  ADDR $9EBF;
+};
+LABEL {
+  NAME "ShopCategoryTabSelectOption";
+  ADDR $9ED0;
+};
+LABEL {
+  NAME "ShopItemMenuReadItemStatsForDisplay";
+  ADDR $E310;
+};
+LABEL {
+  NAME "ShopItemPotionCost";
+  ADDR $9DA9;
+};
+LABEL {
+  NAME "ShopItemMenuButtonPressTable";
+  ADDR $9F10;
+};
+LABEL {
+  NAME "ShopItemMenuExitItemList";
+  ADDR $9F20;
+};
+LABEL {
+  NAME "ShopItemMenuNoOp";
+  ADDR $9F32;
+};
+LABEL {
+  NAME "ShopItemMenuMoveUpSamePage";
+  ADDR $9F35;
+};
+LABEL {
+  NAME "ShopItemMenuMoveDownSamePage";
+  ADDR $9F55;
+};
+LABEL {
+  NAME "ShopItemMenuMoveLeftNewPage";
+  ADDR $9F69;
+};
+LABEL {
+  NAME "ShopItemMenuMoveRightNewPage";
+  ADDR $9F9A;
+};
+LABEL {
+  NAME "ShopItemMenuSelectItemToBuyOrSell";
+  ADDR $9FB1;
+};
+LABEL {
+  NAME "ShopSellItem";
+  ADDR $A0C9;
+};
+LABEL {
+  NAME "ShopBuyItem";
+  ADDR $A238;
+};
+LABEL {
+  NAME "ShopItemMenuCursorPixelPositionTable";
+  ADDR $A2C1;
+};
+LABEL {
+  NAME "ShopListItemsForBuyOrSell";
+  ADDR $A2CD;
+};
+LABEL {
+  NAME "ShopLoadAllItemIndexesInCategoryLoop";
+  ADDR $A2E4;
+};
+LABEL {
+  NAME "ShopFinishedLoadingAllItemsInCategory";
+  ADDR $A2EE;
+};
+LABEL {
+  NAME "ShopSellOptionSelectedListItemsInInventory";
+  ADDR $A2F1;
+};
+LABEL {
+  NAME "ListPlayerItemsInInventoryLoop";
+  ADDR $A315;
+};
+LABEL {
+  NAME "PlayerItemIndexZeroJump";
+  ADDR $A31E;
+};
+LABEL {
+  NAME "ShopItemMenuSaveNewItemIndex";
+  ADDR $A47E;
+};
+LABEL {
+  NAME "MainPlayerMenuEntryPoint";
+  ADDR $A615;
+};
+LABEL {
+  NAME "MainPlayerMenuButtonPressTable";
+  ADDR $A668;
+};
+LABEL {
+  NAME "MainPlayerMenuExit";
+  ADDR $A678;
+};
+LABEL {
+  NAME "MainPlayerMenuNoOp";
+  ADDR $A67E;
+};
+LABEL {
+  NAME "MainPlayerMenuCursorPosMoveUp";
+  ADDR $A681;
+};
+LABEL {
+  NAME "StoreMainPlayerMenuCursorPos";
+  ADDR $A689;
+};
+LABEL {
+  NAME "MainPlayerMenuCursorPosMoveDown";
+  ADDR $A692;
+};
+LABEL {
+  NAME "MainPlayerMenuSelectOption";
+  ADDR $A69E;
+};
+LABEL {
+  NAME "MainPlayerMenuToSubmenuTable";
+  ADDR $A6B1;
+};
+LABEL {
+  NAME "MainPlayerMenuGetNewCursorPosition";
+  ADDR $A6C9;
+};
+LABEL {
+  NAME "MainPlayerMenuCursorPixelPositionTable";
+  ADDR $A6E1;
+};
+LABEL {
+  NAME "MainPlayerMenuToStatusSubmenu";
+  ADDR $A6ED;
+};
+LABEL {
+  NAME "MainPlayerMenuToItemSubmenu";
+  ADDR $A712;
+};
+LABEL {
+  NAME "MainPlayerMenuToMagicSubmenu";
+  ADDR $A71E;
+};
+LABEL {
+  NAME "MainPlayerMenuToEquipSubmenu";
+  ADDR $A701;
+};
+LABEL {
+  NAME "MainPlayerMenuToPartySubmenu";
+  ADDR $A732;
+};
+LABEL {
+  NAME "MainPlayerMenuToSaveSubmenu";
+  ADDR $A73E;
+};
+LABEL {
+  NAME "StatusSubmenuButtonPressTable";
+  ADDR $A774;
+};
+LABEL {
+  NAME "StatusSubmenuExit";
+  ADDR $A784;
+};
+LABEL {
+  NAME "StatusSubmenuNoOp";
+  ADDR $A786;
+};
+LABEL {
+  NAME "StatusSubmenuMoveLeftOrUp";
+  ADDR $A789;
+};
+LABEL {
+  NAME "StatusSubmenuMoveRightOrDown";
+  ADDR $A7A6;
+};
+LABEL {
+  NAME "StatusSubmenuUseItemOnPartyMember";
+  ADDR $A7BA;
+};
+LABEL {
+  NAME "ItemIsInCategory1";
+  ADDR $A7C4;
+};
+LABEL {
+  NAME "HealingItemQuantityGreaterZero";
+  ADDR $A7CF;
+};
+LABEL {
+  NAME "HealingItemTable";
+  ADDR $A7E5;
+};
+LABEL {
+  NAME "UseHealingItemHP";
+  ADDR $A7FB;
+};
+LABEL {
+  NAME "CharacterHPAlreadyFull";
+  ADDR $A82E;
+};
+LABEL {
+  NAME "HealingItemHPValues";
+  ADDR $A864;
+};
+LABEL {
+  NAME "UseItemPhoenixDown";
+  ADDR $A873;
+};
+LABEL {
+  NAME "PlayerHealthGreaterZero";
+  ADDR $A897;
+};
+LABEL {
+  NAME "UseItemStrengthPlus";
+  ADDR $A8C8;
+};
+LABEL {
+  NAME "UseItemVitalityPlus";
+  ADDR $A8F3;
+};
+LABEL {
+  NAME "UseItemIntelligencePlus";
+  ADDR $A91E;
+};
+LABEL {
+  NAME "UseItemSpiritPlus";
+  ADDR $A949;
+};
+LABEL {
+  NAME "UseItemAgilityPlus";
+  ADDR $A974;
+};
+LABEL {
+  NAME "SetCharacterStatsOtherAttributes";
+  ADDR $ADD2;
+};
+LABEL {
+  NAME "SetCharacterLevelExpStats";
+  ADDR $AEFD;
+};
+LABEL {
+  NAME "CheckPlayerHealthValue";
+  ADDR $B1DC;
+};
+LABEL {
+  NAME "DecrementItemQuantity";
+  ADDR $B1E8;
+};
+LABEL {
+  NAME "IncreaseCharacterHP";
+  ADDR $B1EF;
+};
+LABEL {
+  NAME "EquipSubmenuButtonPressTable";
+  ADDR $B36A;
+};
+LABEL {
+  NAME "EquipSubmenuSelectCharacter";
+  ADDR $B3B0;
+};
+LABEL {
+  NAME "EquipSubmenuExit";
+  ADDR $B37A;
+};
+LABEL {
+  NAME "EquipSubmenuNoOp";
+  ADDR $B37C;
+};
+LABEL {
+  NAME "EquipSubmenuMoveLeftOrUp";
+  ADDR $B37F;
+};
+LABEL {
+  NAME "EquipSubmenuMoveRightOrDown";
+  ADDR $B39C;
+};
+LABEL {
+  NAME "EquipSubmenuCursorPixelPositionTable";
+  ADDR $B5EA;
+};
+LABEL {
+  NAME "ItemTableStartingAddress";
+  ADDR $BC68;
+};
+LABEL {
+  NAME "ItemTableCharacterStartIndexAndSize";
+  ADDR $BC70;
+};
+LABEL {
+  NAME "SetPartyMemberMateria";
+  ADDR $C408;
+};
+LABEL {
+  NAME "AssignMateriaIdToPartyMember";
+  ADDR $C437;
+};
+LABEL {
+  NAME "SetPartyMemberWeapon";
+  ADDR $C4F2;
+};
+LABEL {
+  NAME "AssignWeaponIdToPartyMember";
+  ADDR $C521;
+};
+LABEL {
+  NAME "SetPartyMemberAccessory";
+  ADDR $C5CF;
+};
+LABEL {
+  NAME "SetPlayerAccessoryToItemId";
+  ADDR $C5EF;
+};
+LABEL {
+  NAME "ItemSubmenuButtonPressTable";
+  ADDR $C6F7;
+};
+LABEL {
+  NAME "ItemSubmenuExit";
+  ADDR $C707;
+};
+LABEL {
+  NAME "ItemSubmenuNoOp";
+  ADDR $C709;
+};
+LABEL {
+  NAME "ItemSubmenuChangeTab";
+  ADDR $C70C;
+};
+LABEL {
+  NAME "ItemSubmenuSelectOption";
+  ADDR $C71A;
+};
+LABEL {
+  NAME "ItemSubmenuGraphicsRefresh";
+  ADDR $C6D3;
+};
+LABEL {
+  NAME "StoreNewItemMenuCursorPos";
+  ADDR $C797;
+};
+LABEL {
+  NAME "StoreNewItemMenuPagePos";
+  ADDR $C7CB;
+};
+LABEL {
+  NAME "ItemToUseIsNotSmokeItem";
+  ADDR $C84E;
+};
+LABEL {
+  NAME "ItemToUseIsMagicItem";
+  ADDR $C868;
+};
+LABEL {
+  NAME "LoadItemQuantities";
+  ADDR $C940;
+  COMMENT "Item quantities stored in 0x60CF (x=0x01) to 0x60DF (x=0x11). A list of item indexes stored starting from 0x0645";
+};
+LABEL {
+  NAME "ItemSubmenuCursorTopTabPixelPositionTable";
+  ADDR $C913;
+};
+LABEL {
+  NAME "LoadItemSubmenuCurrentPageInit";
+  ADDR $C976;
+};
+LABEL {
+  NAME "LoadItemSubmenuCurrentPageLoop";
+  ADDR $C98F;
+};
+LABEL {
+  NAME "InitVarForLoadingItemNameString";
+  ADDR $C9AE;
+};
+LABEL {
+  NAME "ItemSubmenuCursorChangeTopTab";
+  ADDR $CA5F;
+};
+LABEL {
+  NAME "ItemSubmenuCursorItemNamePixelPositionTable";
+  ADDR $CA77;
+};
+LABEL {
+  NAME "StoreMenuCursorCurItemIndex";
+  ADDR $CA83;
+};
+LABEL {
+  NAME "DetermineItemCategoryIsMagicOrNot";
+  ADDR $CBDE;
+};
+LABEL {
+  NAME "ItemCategoryValues";
+  ADDR $CBFA;
+};
+LABEL {
+  NAME "MagicSubmenuRenderMain";
+  ADDR $CC4F;
+};
+LABEL {
+  NAME "MagicSubmenuNoOpRender";
+  ADDR $CC5D;
+};
+LABEL {
+  NAME "MagicSubmenuButtonPressTable";
+  ADDR $CC7E;
+};
+LABEL {
+  NAME "MagicSubmenuExit";
+  ADDR $CC8E;
+};
+LABEL {
+  NAME "MagicSubmenuNoOp";
+  ADDR $CC90;
+};
+LABEL {
+  NAME "MagicSubmenuChangeCharacterMoveLeftOrUp";
+  ADDR $CC93;
+};
+LABEL {
+  NAME "MagicSubmenuChangeCharacterMoveRightOrDown";
+  ADDR $CCB0;
+};
+LABEL {
+  NAME "MagicSubmenuSelectCharacter";
+  ADDR  $CCC4;
+};
+LABEL {
+  NAME "MagicSubmenuUpdateScreen";
+  ADDR  $CCD8;
+};
+LABEL {
+  NAME "IncreaseCharacterMP";
+  ADDR  $CDC7;
+};
+LABEL {
+  NAME "CharacterMPExceededMax";
+  ADDR  $CDFD;
+};
+LABEL {
+  NAME "StoreCharacterMP";
+  ADDR  $CE03;
+};
+LABEL {
+  NAME "CharacterMPAlreadyFull";
+  ADDR $CE15;
+};
+LABEL {
+  NAME "MagicItemMPValues";
+  ADDR $CE18;
+};
+LABEL {
+  NAME "LevelUpMateriaSpell";
+  ADDR $CE1B;
+};
+LABEL {
+  NAME "SetMasteredStringIndex";
+  ADDR $CE8F;
+};
+LABEL {
+  NAME "SetNotEnoughExpStringIndex";
+  ADDR $CE99;
+};
+LABEL {
+  NAME "MagicSubmenuRenderPage";
+  ADDR $CEA3;
+};
+LABEL {
+  NAME "MagicSubmenuReadPlayerMateria";
+  ADDR $D31E;
+};
+LABEL {
+  NAME "PartySubmenuSelectMemberButtonPressTable";
+  ADDR $D560;
+};
+LABEL {
+  NAME "PartySubmenuSelectMemberAndCancel";
+  ADDR $D570;
+};
+LABEL {
+  NAME "PartySubmenuSelectMemberAndNoOp";
+  ADDR $D576;
+};
+LABEL {
+  NAME "PartySubmenuSelectMemberAndMoveCursorUp";
+  ADDR $D579;
+};
+LABEL {
+  NAME "PartySubmenuSelectMemberAndMoveCursorDown";
+  ADDR $D58C;
+};
+LABEL {
+  NAME "PartySubmenuSelectMemberAndSwapIndexWithOtherMember";
+  ADDR $D599;
+};
+LABEL {
+  NAME "PartySubmenuCursorPixelPositionTable";
+  ADDR $D65F;
+};
+LABEL {
+  NAME "SaveGameDestinationAddrEnd1";
+  ADDR $D705;
+};
+LABEL {
+  NAME "SaveGameDestinationAddrMain";
+  ADDR $D70B;
+};
+LABEL {
+  NAME "SaveGameDestinationAddrEnd2";
+  ADDR $D717;
+};
+LABEL {
+  NAME "SaveGameCopyData";
+  ADDR $D724;
+};
+LABEL {
+  NAME "SaveGameCopyDataLoopPart1";
+  ADDR $D74D;
+};
+LABEL {
+  NAME "SaveGameCopyDataLoopPart2";
+  ADDR $D75F;
+};
+LABEL {
+  NAME "SaveGameCopyDataLoopPart3";
+  ADDR $D76F;
+};
+LABEL {
+  NAME "LoadAsmCodeToUpdatePPU";
+  ADDR $DE2C;
+};
+LABEL {
+  NAME "LoadMenuGraphicsFromBank01";
+  ADDR $DE40;
+};
+LABEL {
+  NAME "LoadAsmCodeForDrawingMenuBank0EMain";
+  ADDR $DE4E;
+};
+LABEL {
+  NAME "LoadAsmCodeForDrawingMenuBank0ELoop";
+  ADDR $DE50;
+};
+LABEL {
+  NAME "AsmCodeForDrawingMenuAddr0400";
+  ADDR $DE5C;
+};
+LABEL {
+  NAME "Bank0eScreenRefresh";
+  ADDR $DF78;
+};
+LABEL {
+  NAME "Bank0eSetMemoryAddress0200Main";
+  ADDR $DF94;
+};
+LABEL {
+  NAME "SetMemoryAddress0200Loop";
+  ADDR $DF98;
+};
+LABEL {
+  NAME "MenuGraphicsRefresh";
+  ADDR $E00D;
+};
+LABEL {
+  NAME "ShopItemIndexHelmet";
+  ADDR $E0E0;
+};
+LABEL {
+  NAME "ShopItemIndexBodyArmor";
+  ADDR $E120;
+};
+LABEL {
+  NAME "ShopItemIndexWeapon";
+  ADDR $E260;
+};
+LABEL {
+  NAME "ShopItemIndex";
+  ADDR  $E2D0;
+};
+LABEL {
+  NAME "ShopItemMenuCursorCategoryTabPixelPositionTable";
+  ADDR  $E2E0;
+};
+LABEL {
+  NAME "SaveRAMPlayerInventoryItemIndexAddressTable";
+  ADDR  $E3A0;
+};
+LABEL {
+  NAME "ItemListSizeTable";
+  ADDR  $E430;
+};

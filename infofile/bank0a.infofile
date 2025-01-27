@@ -1,0 +1,63 @@
+GLOBAL {
+  INPUTNAME "game.nes";
+  OUTPUTNAME "bank0a.asm";
+  INPUTOFFS $50010;
+  INPUTSIZE $8000;
+  COMMENTS $4;
+  STARTADDR $8000;
+  LABELBREAK $1;
+};
+RANGE {
+  START $8000;
+  END $8005;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8006;
+  END $8008;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8009;
+  END $8206;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8207;
+  END $b88b;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $b88c;
+  END $ba19;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $ba1a;
+  END $E7DB;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $E7DC;
+  END $E825;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $E826;
+  END $ED31;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $ED32;
+  END $ffff;
+  TYPE BYTETABLE;
+};
+
+LABEL {
+  NAME "LocationNameTextTable";
+  ADDR  $E7DC;
+};
+LABEL {
+  NAME "NoLocationText";
+  ADDR  $E826;
+};

@@ -1,0 +1,557 @@
+GLOBAL {
+  INPUTNAME "game.nes";
+  OUTPUTNAME "bank00.asm";
+  INPUTOFFS $10;
+  INPUTSIZE $8000;
+  COMMENTS $4;
+  STARTADDR $8000;
+  LABELBREAK $1;
+};
+RANGE {
+  START $8000;
+  END $87EE;
+  TYPE CODE;
+};
+RANGE {
+  START $87EF;
+  END $8818;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8819;
+  END $8918;
+  TYPE CODE;
+};
+RANGE {
+  START $8919;
+  END $8998;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8999;
+  END $913E;
+  TYPE CODE;
+};
+RANGE {
+  START $913F;
+  END $914A;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $914B;
+  END $946C;
+  TYPE CODE;
+};
+RANGE {
+  START $946D;
+  END $94AB;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $94AC;
+  END $9724;
+  TYPE CODE;
+};
+RANGE {
+  START $9725;
+  END $974D;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $974E;
+  END $9762;
+  TYPE CODE;
+};
+RANGE {
+  START $9763;
+  END $9A43;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $9A44;
+  END $9C10;
+  TYPE CODE;
+};
+RANGE {
+  START $9C11;
+  END $9DA0;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $9DA1;
+  END $9E21;
+  TYPE CODE;
+};
+RANGE {
+  START $9E22;
+  END $9E3F;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $9E40;
+  END $9F7C;
+  TYPE CODE;
+};
+RANGE {
+  START $9F7D;
+  END $9F84;
+  TYPE CODE;
+};
+RANGE {
+  START $9F85;
+  END $CC50;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $CC51;
+  END $CE50;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $CE51;
+  END $CE52;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $CE53;
+  END $CF20;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $CF21;
+  END $D0FF;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $D100;
+  END $D117;
+  TYPE CODE;
+};
+RANGE {
+  START $D118;
+  END $D11F;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $D120;
+  END $D4F7;
+  TYPE CODE;
+};
+RANGE {
+  START $D4F8;
+  END $D52F;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $D530;
+  END $DE57;
+  TYPE CODE;
+};
+RANGE {
+  START $DE58;
+  END $DE5F;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $DE60;
+  END $E145;
+  TYPE CODE;
+};
+RANGE {
+  START $E146;
+  END $E1EB;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $E1EC;
+  END $E679;
+  TYPE CODE;
+};
+RANGE {
+  START $E67A;
+  END $E687;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $E688;
+  END $E7F1;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $E7F2;
+  END $EB91;
+  TYPE CODE;
+};
+RANGE {
+  START $EB92;
+  END $EBA9;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $EBAA;
+  END $EF6E;
+  TYPE CODE;
+};
+RANGE {
+  START $EF6F;
+  END $F04F;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $F050;
+  END $F0AA;
+  TYPE CODE;
+};
+RANGE {
+  START $F0AB;
+  END $F10A;
+  TYPE CODE;
+};
+RANGE {
+  START $F10B;
+  END $F13F;
+  TYPE CODE;
+};
+RANGE {
+  START $F140;
+  END $F192;
+  TYPE CODE;
+};
+RANGE {
+  START $F193;
+  END $F1CD;
+  TYPE CODE;
+};
+RANGE {
+  START $F1CE;
+  END $F1EF;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $F1F0;
+  END $F2BC;
+  TYPE CODE;
+};
+RANGE {
+  START $F2BD;
+  END $F2C8;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $F2C9;
+  END $F476;
+  TYPE CODE;
+};
+RANGE {
+  START $F477;
+  END $F484;
+  TYPE CODE;
+};
+RANGE {
+  START $F485;
+  END $F531;
+  TYPE CODE;
+};
+RANGE {
+  START $F532;
+  END $F54F;
+  TYPE CODE;
+};
+RANGE {
+  START $F550;
+  END $F7C6;
+  TYPE CODE;
+};
+RANGE {
+  START $F7C7;
+  END $F858;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $F859;
+  END $FB50;
+  TYPE CODE;
+};
+RANGE {
+  START $FB51;
+  END $FBFC;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $FBFD;
+  END $FF2F;
+  TYPE CODE;
+};
+RANGE {
+  START $FF30;
+  END $FFA0;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $FFA1;
+  END $FFFF;
+  TYPE CODE;
+};
+
+LABEL {
+  NAME "PlayerPressedDownButton";
+  ADDR  $8122;
+};
+LABEL {
+  NAME "PlayerPressedRightButton";
+  ADDR  $825A;
+};
+LABEL {
+  NAME "PlayerPressedUpButton";
+  ADDR  $8380;
+};
+LABEL {
+  NAME "Bank00MovePlayerRight";
+  ADDR  $8563;
+};
+LABEL {
+  NAME "Bank00MovePlayerLeft";
+  ADDR  $85F3;
+};
+LABEL {
+  NAME "Bank00MovePlayerDown";
+  ADDR  $8685;
+};
+LABEL {
+  NAME "Bank00MovePlayerUp";
+  ADDR  $872F;
+};
+LABEL {
+  NAME "ScrollBufferScreenLeft";
+  ADDR  $884C;
+};
+LABEL {
+  NAME "ScrollBufferScreenLeftOverworld";
+  ADDR  $8853;
+};
+LABEL {
+  NAME "ScrollBufferScreenDown";
+  ADDR  $8865;
+};
+LABEL {
+  NAME "ScrollBufferScreenDownOverworld";
+  ADDR  $8871;
+};
+LABEL {
+  NAME "ScrollBufferScreenRight";
+  ADDR  $8883;
+};
+LABEL {
+  NAME "ScrollBufferScreenRightOverworld";
+  ADDR  $888A;
+};
+LABEL {
+  NAME "Bank00ScriptOpcodeTable";
+  ADDR  $8919;
+};
+LABEL {
+  NAME "Bank00ScriptOpcode08_MoveSprite";
+  ADDR  $8AA1;
+};
+LABEL {
+  NAME "Bank00ScriptOpcode0a";
+  ADDR  $8B86;
+};
+LABEL {
+  NAME "Bank00ScriptOpcode1b_PlayerGetsKeyItem";
+  ADDR $8F40;
+};
+LABEL {
+  NAME "Bank00ScriptOpcode29_ShowDialog";
+  ADDR  $9189;
+  COMMENT "1st param text array, 2nd param is starting dialogue index, 3rd param is number of dialog items";
+};
+LABEL {
+  NAME "MateriaCountLimit";
+  ADDR $946D;
+};
+LABEL {
+  NAME "SceneCloudSetsSector7Bomb";
+  ADDR  $FB51;
+};
+LABEL {
+  NAME "SceneBarretEnters7thHeaven";
+  ADDR  $A44D;
+};
+LABEL {
+  NAME "ScenePresidentShinraMakoReactor";
+  ADDR  $A6B8;
+};
+LABEL {
+  NAME "SceneShinraBuildingGuardsBeforeFloor60";
+  ADDR  $ACBB;
+};
+LABEL {
+  NAME "ScenePlayerGets62FCard";
+  ADDR $AD2B;
+};
+LABEL {
+  NAME "SceneKalmEntrance";
+  ADDR  $B835;
+};
+LABEL {
+  NAME "SceneRedXIIIBeforeEnterObservatory";
+  ADDR  $BFE4;
+};
+LABEL {
+  NAME "SceneCampfireCosmoCanyon";
+  ADDR  $F7DC;
+};
+LABEL {
+  NAME "SceneBeforeEnterCaveGi";
+  ADDR  $FF41;
+};
+LABEL {
+  NAME "Bank00SceneScriptTable";
+  ADDR  $CC51;
+};
+LABEL {
+  NAME "RoomMusicIndex";
+  ADDR  $E146;
+};
+
+LABEL {
+  NAME "DecreasePlayerTimeToRandomEncounter";
+  ADDR $87C9;
+};
+LABEL {
+  NAME "RestorePartyMemberHealth";
+  ADDR $9434;
+};
+LABEL {
+  NAME "PlayerGetsKeyItem";
+  ADDR $D198;
+};
+LABEL {
+  NAME "CheckIfPlayerHasKeyItem";
+  ADDR $D180;
+};
+LABEL {
+  NAME "PlayerIsMissingKeyItem";
+  ADDR $D196;
+};
+LABEL {
+  NAME "InitPlayerVariablesSaveRAM";
+  ADDR $D452;
+};
+LABEL {
+  NAME "InitPlayerVariablesSaveRAMLoop";
+  ADDR $D454;
+};
+LABEL {
+  NAME "InitialPlayerVarTable";
+  ADDR $D4F8;
+};
+LABEL {
+  NAME "ChangeCurrentMap";
+  ADDR $DCA2;
+};
+LABEL {
+  NAME "LoadMapDataFromBank1";
+  ADDR $DCE6;
+};
+LABEL {
+  NAME "TriggerRandomEncounter";
+  ADDR $DE41;
+};
+LABEL {
+  NAME "InnStaySubtractGil";
+  ADDR $DF99;
+};
+LABEL {
+  NAME "InnStayNotEnoughGil";
+  ADDR $E019;
+};
+LABEL {
+  NAME "InnStayRestoreUnitHealth";
+  ADDR $E033;
+};
+LABEL {
+  NAME "InitPlayerMain";
+  ADDR $E944;
+};
+LABEL {
+  NAME "PlayerPressedNonDirectionalButton";
+  ADDR $E9D1;
+};
+LABEL {
+  NAME "PlayerPressedDirectionalButton";
+  ADDR $EA03;
+};
+LABEL {
+  NAME "PlayerPressedStartButtonMainMenu";
+  ADDR $EA2F;
+};
+LABEL {
+  NAME "PlayerPressedSelectButton";
+  ADDR $EA33;
+};
+LABEL {
+  NAME "PlayerPressedButtonA";
+  ADDR $EA34;
+};
+LABEL {
+  NAME "PlayerPressedButtonB";
+  ADDR $EA35;
+};
+LABEL {
+  NAME "StoreMapRowsAndColumns";
+  ADDR $F050;
+};
+LABEL {
+  NAME "CopyAsmCodeBytesMain";
+  ADDR $F09D;
+};
+LABEL {
+  NAME "CopyAsmCodeBytesLoop";
+  ADDR $F09F;
+};
+LABEL {
+  NAME "AsmCodeForAddr0100";
+  ADDR $F0AB;
+};
+LABEL {
+  NAME "ResetGameMemoryMain";
+  ADDR $F2D4;
+};
+LABEL {
+  NAME "ResetGameMemoryLoop";
+  ADDR $F2D7;
+};
+LABEL {
+  NAME "LoadAsmCodeForJumpToBattleScreen";
+  ADDR $F441;
+};
+LABEL {
+  NAME "AsmCodeJumpToBattleScreenBank04";
+  ADDR $F455;
+};
+LABEL {
+  NAME "LoadAsmCodeForJumpMainMenuStartGame";
+  ADDR $F46B;
+};
+LABEL {
+  NAME "AsmCodeJumpToMainMenuStartGameBank0e";
+  ADDR $F477;
+};
+LABEL {
+  NAME "LoadAsmCodeForJumpMainPlayerMenu";
+  ADDR $F51E;
+};
+LABEL {
+  NAME "CopyAsmCodeJumpMainPlayerMenuLoop";
+  ADDR $F526;
+};
+LABEL {
+  NAME "AsmCodeJumpToMainPlayerMenuBank0e";
+  ADDR $F532;
+};
+LABEL {
+  NAME "Bank00JumpBank03LoadMusicTable";
+  ADDR $FC26;
+};

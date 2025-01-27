@@ -1,0 +1,255 @@
+GLOBAL {
+  INPUTNAME "game.nes";
+  OUTPUTNAME "bank02.asm";
+  INPUTOFFS $10010;
+  INPUTSIZE $8000;
+  COMMENTS $4;
+  STARTADDR $8000;
+  LABELBREAK $1;
+};
+RANGE {
+  START $8000;
+  END $8C68;
+  TYPE CODE;
+};
+RANGE {
+  START $8C69;
+  END $8CE8;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8CE9;
+  END $A16A;
+  TYPE CODE;
+};
+RANGE {
+  START $A16B;
+  END $A2FA;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $A2FB;
+  END $A325;
+  TYPE CODE;
+};
+RANGE {
+  START $A326;
+  END $A4B5;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $A4B6;
+  END $A5B6;
+  TYPE CODE;
+};
+RANGE {
+  START $A5B7;
+  END $A5D2;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $A5D3;
+  END $A5F1;
+  TYPE CODE;
+};
+RANGE {
+  START $A5F2;
+  END $A615;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $A616;
+  END $D700;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $D701;
+  END $D9C8;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $D9C9;
+  END $e00b;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $E00C;
+  END $E023;
+  TYPE CODE;
+};
+RANGE {
+  START $E024;
+  END $E02B;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $E02C;
+  END $EB12;
+  TYPE CODE;
+};
+RANGE {
+  START $EB13;
+  END $F9EC;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $F9ED;
+  END $ffff;
+  TYPE CODE;
+};
+
+LABEL {
+  NAME "Bank02LoadNextScriptOpcode";
+  ADDR  $8C29;
+};
+LABEL {
+  NAME "Bank02ScriptOpcodeTable";
+  ADDR  $8C69;
+};
+LABEL {
+  NAME "Bank02ScriptOpcode02";
+  ADDR  $8D85;
+};
+LABEL {
+  NAME "Bank02ScriptOpcode08_MoveSprite";
+  ADDR  $8DF1;
+};
+LABEL {
+  NAME "Bank02ScriptOpcode29_ShowDialog";
+  ADDR  $94D9;
+  COMMENT "1st param text array, 2nd param is starting dialogue index, 3rd param is number of dialog items";
+};
+LABEL {
+  NAME "CheckIfShowLocationName";
+  ADDR  $A5DF;
+  COMMENT "If ArrayFlagShouldShowLocationName[mapId - 0x28] == 1, show location text";
+};
+LABEL {
+  NAME "ArrayFlagShouldShowLocationName";
+  ADDR  $A5F2;
+};
+LABEL {
+  NAME "LoadLocationNameText";
+  ADDR  $A5E9;
+};
+LABEL {
+  NAME "SceneCloudAndBarretEnterTrainStation";
+  ADDR  $A61A;
+};
+LABEL {
+  NAME "SceneAvalancheWaitsForCloudOnTrain";
+  ADDR  $A851;
+};
+LABEL {
+  NAME "SceneCloudFindsAvalancheOnTrain";
+  ADDR  $A930;
+};
+LABEL {
+  NAME "SceneTifaGreetsCloud";
+  ADDR  $AA65;
+};
+LABEL {
+  NAME "Scene7thHeavenBasementMeeting";
+  ADDR  $AABA;
+};
+LABEL {
+  NAME "SceneCloudPromiseToTifaFlashback";
+  ADDR  $AB17;
+};
+LABEL {
+  NAME "SceneTifaAsksCloudJoinAvalanche";
+  ADDR  $AB3D;
+};
+LABEL {
+  NAME "SceneAfterPromiseFlashback";
+  ADDR  $AB81;
+};
+LABEL {
+  NAME "Scene7thHeavenCloudNextDay";
+  ADDR  $ABF2;
+};
+LABEL {
+  NAME "SceneCloudFallsThroughReactor";
+  ADDR  $AF25;
+};
+LABEL {
+  NAME "SceneCloudWakesUpInAerisChurch";
+  ADDR  $AF3A;
+};
+LABEL {
+  NAME "SceneCloudAndAerisOutsideChurch";
+  ADDR  $B030;
+};
+LABEL {
+  NAME "SceneWallMarketBoutiqueFatherMissing";
+  ADDR  $B153;
+};
+LABEL {
+  NAME "SceneWallMarketBarCloudFindsBoutiqueOwner";
+  ADDR  $B190;
+};
+LABEL {
+  NAME "SceneWallMarketBoutiqueCloudTriesDress";
+  ADDR  $B1FA;
+};
+LABEL {
+  NAME "SceneDonHouseAfterEntrance";
+  ADDR  $B2A0;
+};
+LABEL {
+  NAME "SceneDonHouseConfrontsDon";
+  ADDR  $B421;
+};
+LABEL {
+  NAME "SceneShinraBuildingEntrance";
+  ADDR  $B8F0;
+};
+LABEL {
+  NAME "SceneShinraBuildingFloor61";
+  ADDR  $BB13;
+};
+LABEL {
+  NAME "SceneCloudEncounterTurksGongaga";
+  ADDR  $CB01;
+};
+LABEL {
+  NAME "Bank02ScreenRefresh";
+  ADDR  $E356;
+};
+LABEL {
+  NAME "SceneRedXIIIReturnsCosmoCanyon";
+  ADDR  $EB13;
+};
+LABEL {
+  NAME "SceneCloudEntersBugenhagenHouse";
+  ADDR  $EB95;
+};
+LABEL {
+  NAME "SceneBugenhagenEntersCave";
+  ADDR  $CDC3;
+};
+LABEL {
+  NAME "SceneRedXIIIAndSeto";
+  ADDR  $EC34;
+};
+LABEL {
+  NAME "SceneInnCloudLooksForAeris3";
+  ADDR  $DF02;
+};
+LABEL {
+  NAME "SceneInnCloudLooksForAeris1";
+  ADDR  $F11E;
+};
+LABEL {
+  NAME "SceneInnCloudLooksForAeris2";
+  ADDR  $D642;
+};
+LABEL {
+  NAME "Bank02SceneScriptTable";
+  ADDR  $D701;
+};
+
+LABEL {
+  NAME "LoadMapRowsAndColumns";
+  ADDR  $E80B;
+};

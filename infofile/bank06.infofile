@@ -1,0 +1,180 @@
+GLOBAL {
+  INPUTNAME "game.nes";
+  OUTPUTNAME "bank06.asm";
+  INPUTOFFS $30010;
+  INPUTSIZE $8000;
+  COMMENTS $4;
+  STARTADDR $8000;
+  LABELBREAK $1;
+};
+RANGE {
+  START $8000;
+  END $8015;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8016;
+  END $8018;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8019;
+  END $80b8;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $80b9;
+  END $8330;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $8331;
+  END $83a0;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $83a1;
+  END $8577;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $8578;
+  END $8679;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $867a;
+  END $8ab7;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $8ab8;
+  END $8b8b;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8b8c;
+  END $8f0f;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $8f10;
+  END $8f85;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8f86;
+  END $9174;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $9175;
+  END $923e;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $923f;
+  END $95C5;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $95C6;
+  END $95D5;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $95D6;
+  END $9611;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $9612;
+  END $9691;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $9692;
+  END $98E4;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $98E5;
+  END $9924;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $9925;
+  END $9A2F;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $9A30;
+  END $9A6F;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $9A70;
+  END $9CE7;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $9ce8;
+  END $9DAF;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $9DB0;
+  END $a1c7;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $a1c8;
+  END $a5c5;
+  TYPE TEXTTABLE;
+};
+RANGE {
+  START $a5c6;
+  END $ffff;
+  TYPE BYTETABLE;
+};
+
+LABEL {
+  NAME "HeadgearNameStr";
+  ADDR $8331;
+};
+LABEL {
+  NAME "BodyArmorNameStr";
+  ADDR $8578;
+};
+LABEL {
+  NAME "BraceletNameStr";
+  ADDR $8AB8;
+};
+LABEL {
+  NAME "RingNameStr";
+  ADDR $8F10;
+};
+LABEL {
+  NAME "WeaponNameStr";
+  ADDR $9175;
+};
+LABEL {
+  NAME "MateriaNameStr";
+  ADDR $95C6;
+};
+LABEL {
+  NAME "MagicNameStr";
+  ADDR $9612;
+};
+LABEL {
+  NAME "ItemNameStr";
+  ADDR $98E5;
+};
+LABEL {
+  NAME "ItemDescriptionStr";
+  ADDR $9A30;
+};
+LABEL {
+  NAME "CharacterNameStr";
+  ADDR $9CE8;
+};

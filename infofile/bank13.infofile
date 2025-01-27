@@ -1,0 +1,349 @@
+GLOBAL {
+  INPUTNAME "game.nes";
+  OUTPUTNAME "bank13.asm";
+  INPUTOFFS $98010;
+  INPUTSIZE $8000;
+  COMMENTS $4;
+  STARTADDR $8000;
+  LABELBREAK $1;
+};
+RANGE {
+  START $8000;
+  END $8007;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8008;
+  END $8011;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8012;
+  END $8019;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $801a;
+  END $8041;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8042;
+  END $8049;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $804a;
+  END $804b;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $804c;
+  END $8053;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8054;
+  END $8055;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8056;
+  END $805d;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $805e;
+  END $805f;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8060;
+  END $8067;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8068;
+  END $8069;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $806a;
+  END $8071;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8072;
+  END $8073;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8074;
+  END $807b;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $807c;
+  END $807d;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $807e;
+  END $8085;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8086;
+  END $8087;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8088;
+  END $808f;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8090;
+  END $8091;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8092;
+  END $ac9a;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $ac9b;
+  END $aca2;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $aca3;
+  END $acbe;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $acbf;
+  END $acc6;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $acc7;
+  END $acc8;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $acc9;
+  END $acd0;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $acd1;
+  END $acd2;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $acd3;
+  END $acda;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $acdb;
+  END $acdc;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $acdd;
+  END $ace4;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $ace5;
+  END $ace6;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $ace7;
+  END $acee;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $acef;
+  END $acf0;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $acf1;
+  END $acf8;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $acf9;
+  END $acfa;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $acfb;
+  END $ad02;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $ad03;
+  END $ad04;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $ad05;
+  END $ad0c;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $ad0d;
+  END $ad0e;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $ad0f;
+  END $ad16;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $ad17;
+  END $ad18;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $ad19;
+  END $c5f1;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c5f2;
+  END $c5f9;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c5fa;
+  END $c60d;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $c60e;
+  END $c615;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c616;
+  END $c617;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $c618;
+  END $c61f;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c620;
+  END $c621;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $c622;
+  END $d682;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $d683;
+  END $d68a;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $d68b;
+  END $d6a6;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $d6a7;
+  END $d6ae;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $d6af;
+  END $d6b0;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $d6b1;
+  END $d6b8;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $d6b9;
+  END $d6ba;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $d6bb;
+  END $d6c2;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $d6c3;
+  END $d6c4;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $d6c5;
+  END $d6cc;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $d6cd;
+  END $d6ce;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $d6cf;
+  END $d6d6;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $d6d7;
+  END $d6d8;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $d6d9;
+  END $d6e0;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $d6e1;
+  END $d6e2;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $d6e3;
+  END $d6ea;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $d6eb;
+  END $d6ec;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $d6ed;
+  END $d6f4;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $d6f5;
+  END $d6f6;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $d6f7;
+  END $fffe;
+  TYPE BYTETABLE;
+};

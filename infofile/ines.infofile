@@ -1,0 +1,12 @@
+GLOBAL { 
+  INPUTNAME "../ff7-advent-children.nes"; 
+  OUTPUTNAME "ines.asm"; 
+  INPUTOFFS $0; 
+  INPUTSIZE $10; 
+  STARTADDR $0; 
+}; 
+RANGE { 
+  START $0; 
+  END $10; 
+  TYPE BYTETABLE; 
+}; 

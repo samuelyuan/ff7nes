@@ -1,0 +1,147 @@
+GLOBAL {
+  INPUTNAME "game.nes";
+  OUTPUTNAME "bank37.asm";
+  INPUTOFFS $1b8010;
+  INPUTSIZE $8000;
+  COMMENTS $4;
+  STARTADDR $8000;
+  LABELBREAK $1;
+};
+RANGE {
+  START $8000;
+  END $803f;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8040;
+  END $fffe;
+  TYPE BYTETABLE;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow0Col0";
+  ADDR  $8040;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow0Col1";
+  ADDR  $8400;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow0Col2";
+  ADDR  $87c0;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow0Col3";
+  ADDR  $8b80;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow0Col4";
+  ADDR  $8f40;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow0Col5";
+  ADDR  $9300;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow0Col6";
+  ADDR  $96c0;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow0Col7";
+  ADDR  $9a80;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow0Col8";
+  ADDR  $9e40;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow0Col9";
+  ADDR  $a200;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow0Col10";
+  ADDR  $a5c0;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow0Col11";
+  ADDR  $a980;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow0Col12";
+  ADDR  $ad40;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow0Col13";
+  ADDR  $b100;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow0Col14";
+  ADDR  $b4c0;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow0Col15";
+  ADDR  $b880;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow1Col0";
+  ADDR  $bc40;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow1Col1";
+  ADDR  $c000;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow1Col2";
+  ADDR  $c3c0;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow1Col3";
+  ADDR  $c780;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow1Col4";
+  ADDR  $cb40;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow1Col5";
+  ADDR  $cf00;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow1Col6";
+  ADDR  $d2c0;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow1Col7";
+  ADDR  $d680;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow1Col8";
+  ADDR  $da40;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow1Col9";
+  ADDR  $de00;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow1Col10";
+  ADDR  $e1c0;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow1Col11";
+  ADDR  $e580;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow1Col12";
+  ADDR  $e940;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow1Col13";
+  ADDR  $ed00;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow1Col14";
+  ADDR  $f0c0;
+};
+LABEL {
+  NAME "OverworldTilemapSectionRow1Col15";
+  ADDR  $f480;
+};

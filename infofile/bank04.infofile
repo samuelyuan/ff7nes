@@ -1,0 +1,481 @@
+GLOBAL {
+  INPUTNAME "game.nes";
+  OUTPUTNAME "bank04.asm";
+  INPUTOFFS $20010;
+  INPUTSIZE $8000;
+  COMMENTS $4;
+  STARTADDR $8000;
+  LABELBREAK $1;
+};
+RANGE {
+  START $8000;
+  END $9033;
+  TYPE CODE;
+};
+RANGE {
+  START $9034;
+  END $9061;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $9062;
+  END $922a;
+  TYPE CODE;
+};
+RANGE {
+  START $922b;
+  END $9439;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $943a;
+  END $96d2;
+  TYPE CODE;
+};
+RANGE {
+  START $96d3;
+  END $9756;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $9757;
+  END $9FFB;
+  TYPE CODE;
+};
+RANGE {
+  START $9FFC;
+  END $A001;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $A002;
+  END $a019;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $A01A;
+  END $A0EE;
+  TYPE CODE;
+};
+RANGE {
+  START $A0EF;
+  END $A0FE;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $A0FF;
+  END $a4ad;
+  TYPE CODE;
+};
+RANGE {
+  START $A4AE;
+  END $A4CD;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $A4CE;
+  END $A50D;
+  TYPE CODE;
+};
+RANGE {
+  START $A50E;
+  END $A51D;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $A51E;
+  END $A556;
+  TYPE CODE;
+};
+RANGE {
+  START $A557;
+  END $A560;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $A561;
+  END $A674;
+  TYPE CODE;
+};
+RANGE {
+  START $A675;
+  END $A68A;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $A68B;
+  END $a88c;
+  TYPE CODE;
+};
+RANGE {
+  START $a88d;
+  END $A9C3;
+  TYPE CODE;
+};
+RANGE {
+  START $A9C4;
+  END $AB87;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $AB88;
+  END $B219;
+  TYPE CODE;
+};
+RANGE {
+  START $B21A;
+  END $B229;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $B22A;
+  END $B599;
+  TYPE CODE;
+};
+RANGE {
+  START $B59A;
+  END $B5A5;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $B5A6;
+  END $B7A0;
+  TYPE CODE;
+};
+RANGE {
+  START $B7A1;
+  END $B7B0;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $B7B1;
+  END $BA7D;
+  TYPE CODE;
+};
+RANGE {
+  START $BA7E;
+  END $BAA1;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $BAA2;
+  END $BBFD;
+  TYPE CODE;
+};
+RANGE {
+  START $BBFE;
+  END $BDFF;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $BE00;
+  END $C426;
+  TYPE CODE;
+};
+RANGE {
+  START $C427;
+  END $C42E;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $C42F;
+  END $C4B5;
+  TYPE CODE;
+};
+RANGE {
+  START $C4B6;
+  END $C4C5;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $C4C6;
+  END $C4F9;
+  TYPE CODE;
+};
+RANGE {
+  START $C4FA;
+  END $C501;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $C502;
+  END $C675;
+  TYPE CODE;
+};
+RANGE {
+  START $C676;
+  END $C685;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $C686;
+  END $C7E8;
+  TYPE CODE;
+};
+RANGE {
+  START $C7E9;
+  END $C80E;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $C80F;
+  END $CBE8;
+  TYPE CODE;
+};
+RANGE {
+  START $CBE9;
+  END $CE46;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $CE47;
+  END $DAD7;
+  TYPE CODE;
+};
+RANGE {
+  START $DAD8;
+  END $DADF;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $DAE0;
+  END $DB3B;
+  TYPE CODE;
+};
+RANGE {
+  START $DB3C;
+  END $DB41;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $DB42;
+  END $DB59;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $DB5A;
+  END $E7DC;
+  TYPE CODE;
+};
+RANGE {
+  START $E7DD;
+  END $E808;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $E809;
+  END $E9E5;
+  TYPE CODE;
+};
+RANGE {
+  START $E9E6;
+  END $EA24;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $EA25;
+  END $EB27;
+  TYPE CODE;
+};
+RANGE {
+  START $EB28;
+  END $EB37;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $EB38;
+  END $EC15;
+  TYPE CODE;
+};
+RANGE {
+  START $EC16;
+  END $EC1D;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $EC1E;
+  END $ED11;
+  TYPE CODE;
+};
+RANGE {
+  START $ED12;
+  END $ED83;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $ED84;
+  END $EE92;
+  TYPE CODE;
+};
+RANGE {
+  START $EE93;
+  END $f201;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $f202;
+  END $F27B;
+  TYPE CODE;
+};
+RANGE {
+  START $F27C;
+  END $F373;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $F374;
+  END $F4EC;
+  TYPE CODE;
+};
+RANGE {
+  START $f4ed;
+  END $fbaf;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $fbb0;
+  END $ffff;
+  TYPE CODE;
+};
+
+LABEL {
+  NAME "LoadBattleMenuStringFromBank6";
+  ADDR $8B09;
+};
+LABEL {
+  NAME "LoadStringCharacters";
+  ADDR $8B56;
+};
+LABEL {
+  NAME "BattleMenuItemSubmenuCursorPixelPositionTable";
+  ADDR $B59A;
+};
+LABEL {
+  NAME "BattleScreenEntryPoint";
+  ADDR $BFAF;
+};
+LABEL {
+  NAME "BattleMenuChangeCursorPixelPosition";
+  ADDR $C40F;
+};
+LABEL {
+  NAME "BattleMenuCursorPixelPositionTable";
+  ADDR $C427;
+};
+LABEL {
+  NAME "BattleMenuButtonPressTable";
+  ADDR $C4B6;
+};
+LABEL {
+  NAME "BattleMenuExit";
+  ADDR $C4C6;
+};
+LABEL {
+  NAME "BattleMenuNoOp";
+  ADDR $C4C8;
+};
+LABEL {
+  NAME "BattleMenuMoveUp";
+  ADDR $C4CB;
+};
+LABEL {
+  NAME "BattleMenuMoveDown";
+  ADDR $C4D9;
+};
+LABEL {
+  NAME "BattleMenuSelectOption";
+  ADDR $C4E7;
+};
+LABEL {
+  NAME "BattleMenuActionTable";
+  ADDR $C4FA;
+};
+LABEL {
+  NAME "BattleMenuAttack";
+  ADDR $C502;
+};
+LABEL {
+  NAME "BattleMenuItem";
+  ADDR $C57D;
+};
+LABEL {
+  NAME "BattleMenuMagic";
+  ADDR $C527;
+};
+LABEL {
+  NAME "BattleMenuRun";
+  ADDR $C617;
+};
+LABEL {
+  NAME "LoadCharacterStatsFromBank5";
+  ADDR $C8F3;
+};
+LABEL {
+  NAME "LoadEnemyStats";
+  ADDR $C916;
+};
+LABEL {
+  NAME "CalculatePlayerDefenseFromEnemy";
+  ADDR $D303;
+};
+LABEL {
+  NAME "PlayerCharacterTakesDamage";
+  ADDR $D3EE;
+};
+LABEL {
+  NAME "LoadStringNoEffect";
+  ADDR $D5F2;
+};
+LABEL {
+  NAME "LoadStringNoEscape";
+  ADDR $D5FA;
+};
+LABEL {
+  NAME "LoadStringEscaped";
+  ADDR $D5FE;
+};
+LABEL {
+  NAME "EnemyTakesDamage";
+  ADDR $DBA7;
+};
+LABEL {
+  NAME "EnemyHasZeroOrNegativeHP";
+  ADDR $DBC9;
+};
+LABEL {
+  NAME "CalculatePlayerDamageToEnemy";
+  ADDR $DCB8;
+};
+LABEL {
+  NAME "DecrementMateriaCount";
+  ADDR $E27F;
+};
+LABEL {
+  NAME "ModifyPlayerExp";
+  ADDR $E712;
+};
+LABEL {
+  NAME "PlayerExpLevelUp";
+  ADDR $E8C4;
+  COMMENT "0x6082+x and 0x6089+x store character index x exp. 0x6f3f and 0x6f40 store exp needed to move to next level. 0x6043+x stores level.";
+};
+LABEL {
+  NAME "StoreRandomEncounterNumEnemies";
+  ADDR $EDFE;
+};
+LABEL {
+  NAME "GenerateRandomEncounterEnemyTypes";
+  ADDR $EE69;
+};
+LABEL {
+  NAME "RandomEncounterEnemyType";
+  ADDR $F13F;
+};
+LABEL {
+  NAME "Bank04ScreenRefresh";
+  ADDR $F3A0;
+};
+LABEL {
+  NAME "Bank04SetMemoryAddress0200Main";
+  ADDR $F3BC;
+};

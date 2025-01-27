@@ -1,0 +1,205 @@
+GLOBAL {
+  INPUTNAME "game.nes";
+  OUTPUTNAME "bank03.asm";
+  INPUTOFFS $18010;
+  INPUTSIZE $8000;
+  COMMENTS $4;
+  STARTADDR $8000;
+  LABELBREAK $1;
+};
+RANGE {
+  START $8000;
+  END $8544;
+  TYPE CODE;
+};
+RANGE {
+  START $8545;
+  END $8640;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8641;
+  END $8927;
+  TYPE CODE;
+};
+RANGE {
+  START $8928;
+  END $89c7;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $89c8;
+  END $8ED1;
+  TYPE CODE;
+};
+RANGE {
+  START $8ED2;
+  END $8FD9;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8FDA;
+  END $9348;
+  TYPE CODE;
+};
+RANGE {
+  START $9349;
+  END $9448;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $9449;
+  END $9C49;
+  TYPE CODE;
+};
+RANGE {
+  START $9C4A;
+  END $9C89;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $9C8A;
+  END $9D5E;
+  TYPE CODE;
+};
+RANGE {
+  START $9D5F;
+  END $9D7E;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $9D7F;
+  END $A3EC;
+  TYPE CODE;
+};
+RANGE {
+  START $A3ED;
+  END $A438;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $A439;
+  END $ad5c;
+  TYPE CODE;
+};
+RANGE {
+  START $ad5d;
+  END $AEC4;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $AEC5;
+  END $AED8;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $AED9;
+  END $b141;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $B142;
+  END $B19B;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $B19C;
+  END $b8a0;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $b8a1;
+  END $b8dc;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $b8dd;
+  END $c688;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c689;
+  END $D9CF;
+  TYPE CODE;
+};
+RANGE {
+  START $D9D0;
+  END $FBFF;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $FC00;
+  END $ff33;
+  TYPE CODE;
+};
+RANGE {
+  START $ff34;
+  END $ff44;
+  TYPE CODE;
+};
+RANGE {
+  START $ff45;
+  END $ffff;
+  TYPE BYTETABLE;
+};
+
+LABEL {
+  NAME "UpdateSpriteInfo";
+  ADDR  $8212;
+};
+LABEL {
+  NAME "LoadLocationStringFromBank";
+  ADDR  $9C96;
+};
+LABEL {
+  NAME "MusicThemeTable";
+  ADDR  $B8A1;
+};
+LABEL {
+  NAME "MusicOpeningMakoReactorTheme";
+  ADDR  $B980;
+};
+LABEL {
+  NAME "MusicTitleScreenTheme";
+  ADDR  $B8DF;
+};
+LABEL {
+  NAME "MusicTownTheme";
+  ADDR  $C44A;
+};
+LABEL {
+  NAME "ScrollBufferScreenUp";
+  ADDR  $D13A;
+};
+LABEL {
+  NAME "ScrollBufferScreenUpOverworld";
+  ADDR  $D153;
+};
+LABEL {
+  NAME "MusicOverworldTheme";
+  ADDR  $D9D0;
+};
+LABEL {
+  NAME "MusicNibelheimTheme";
+  ADDR  $E42C;
+};
+LABEL {
+  NAME "MusicTifaTheme";
+  ADDR  $E88D;
+};
+LABEL {
+  NAME "MusicAerithTheme";
+  ADDR  $F09A;
+};
+LABEL {
+  NAME "MusicForgottenCityTheme";
+  ADDR  $F24D;
+};
+LABEL {
+  NAME "MusicShinraCompanyTheme";
+  ADDR  $F321;
+};
+LABEL {
+  NAME "MusicInfiltratingShinraTheme";
+  ADDR  $FB02;
+};
