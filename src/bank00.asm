@@ -27,6 +27,7 @@ L2900           := $2900
 L2903           := $2903
 L6800           := $6800
 ; ----------------------------------------------------------------------------
+L8000:
         jmp     LE8D2                           ; 8000 4C D2 E8                 L..
 
 ; ----------------------------------------------------------------------------
@@ -223,7 +224,7 @@ L8120:
         rts                                     ; 8121 60                       `
 
 ; ----------------------------------------------------------------------------
-L8122:
+PlayerPressedDownButton:
         jsr     L8241                           ; 8122 20 41 82                  A.
         bcc     L814B                           ; 8125 90 24                    .$
         lda     $BB                             ; 8127 A5 BB                    ..
@@ -429,7 +430,7 @@ L8258:
         rts                                     ; 8259 60                       `
 
 ; ----------------------------------------------------------------------------
-L825A:
+PlayerPressedRightButton:
         jsr     L836B                           ; 825A 20 6B 83                  k.
         bcc     L8283                           ; 825D 90 24                    .$
         lda     $BB                             ; 825F A5 BB                    ..
@@ -627,7 +628,7 @@ L837E:
         rts                                     ; 837F 60                       `
 
 ; ----------------------------------------------------------------------------
-L8380:
+PlayerPressedUpButton:
         jsr     L8497                           ; 8380 20 97 84                  ..
         bcc     L83A9                           ; 8383 90 24                    .$
         lda     $BB                             ; 8385 A5 BB                    ..
@@ -1041,7 +1042,7 @@ L857A:
         lda     $15                             ; 85E5 A5 15                    ..
         eor     #$01                            ; 85E7 49 01                    I.
         sta     $15                             ; 85E9 85 15                    ..
-        jsr     L8883                           ; 85EB 20 83 88                  ..
+        jsr     ScrollBufferScreenRight         ; 85EB 20 83 88                  ..
 L85EE:
         lda     #$00                            ; 85EE A9 00                    ..
         sta     $1F                             ; 85F0 85 1F                    ..
@@ -1068,7 +1069,7 @@ L860A:
         sta     $1F                             ; 860C 85 1F                    ..
         lda     $13                             ; 860E A5 13                    ..
         bne     L861B                           ; 8610 D0 09                    ..
-        jsr     L884C                           ; 8612 20 4C 88                  L.
+        jsr     ScrollBufferScreenLeft          ; 8612 20 4C 88                  L.
         lda     $15                             ; 8615 A5 15                    ..
         eor     #$01                            ; 8617 49 01                    I.
         sta     $15                             ; 8619 85 15                    ..
@@ -1205,7 +1206,7 @@ L86B2:
         sta     $14                             ; 8719 85 14                    ..
         cmp     #$F0                            ; 871B C9 F0                    ..
         bne     L8726                           ; 871D D0 07                    ..
-        jsr     L8865                           ; 871F 20 65 88                  e.
+        jsr     ScrollBufferScreenDown          ; 871F 20 65 88                  e.
         lda     #$00                            ; 8722 A9 00                    ..
         sta     $14                             ; 8724 85 14                    ..
 L8726:
@@ -1330,37 +1331,14 @@ L87ED:
 
 ; ----------------------------------------------------------------------------
 L87EF:
-        brk                                     ; 87EF 00                       .
-        brk                                     ; 87F0 00                       .
-        brk                                     ; 87F1 00                       .
-        brk                                     ; 87F2 00                       .
-        brk                                     ; 87F3 00                       .
-        ora     ($01,x)                         ; 87F4 01 01                    ..
-        brk                                     ; 87F6 00                       .
-        ora     (L0000,x)                       ; 87F7 01 00                    ..
-        ora     ($01,x)                         ; 87F9 01 01                    ..
-        brk                                     ; 87FB 00                       .
-        ora     (L0000,x)                       ; 87FC 01 00                    ..
-        ora     ($01,x)                         ; 87FE 01 01                    ..
-        brk                                     ; 8800 00                       .
-        brk                                     ; 8801 00                       .
-        brk                                     ; 8802 00                       .
-        brk                                     ; 8803 00                       .
-        brk                                     ; 8804 00                       .
-        ora     (L0000,x)                       ; 8805 01 00                    ..
-        ora     (L0000,x)                       ; 8807 01 00                    ..
-        brk                                     ; 8809 00                       .
-        ora     ($01,x)                         ; 880A 01 01                    ..
-        ora     ($01,x)                         ; 880C 01 01                    ..
-        ora     (L0000,x)                       ; 880E 01 00                    ..
-        ora     (L0000,x)                       ; 8810 01 00                    ..
+        .byte   $00,$00,$00,$00,$00,$01,$01,$00 ; 87EF 00 00 00 00 00 01 01 00  ........
+        .byte   $01,$00,$01,$01,$00,$01,$00,$01 ; 87F7 01 00 01 01 00 01 00 01  ........
+        .byte   $01,$00,$00,$00,$00,$00,$01,$00 ; 87FF 01 00 00 00 00 00 01 00  ........
+        .byte   $01,$00,$00,$01,$01,$01,$01,$01 ; 8807 01 00 00 01 01 01 01 01  ........
+        .byte   $00,$01,$00                     ; 880F 00 01 00                 ...
 L8812:
-        brk                                     ; 8812 00                       .
-        brk                                     ; 8813 00                       .
-        ora     (L0002,x)                       ; 8814 01 02                    ..
-        brk                                     ; 8816 00                       .
-        brk                                     ; 8817 00                       .
-        brk                                     ; 8818 00                       .
+        .byte   $00,$00,$01,$02,$00,$00,$00     ; 8812 00 00 01 02 00 00 00     .......
+; ----------------------------------------------------------------------------
 L8819:
         lda     $D5                             ; 8819 A5 D5                    ..
         beq     L882D                           ; 881B F0 10                    ..
@@ -1397,14 +1375,14 @@ L884B:
         rts                                     ; 884B 60                       `
 
 ; ----------------------------------------------------------------------------
-L884C:
+ScrollBufferScreenLeft:
         lda     $D5                             ; 884C A5 D5                    ..
-        bne     L8853                           ; 884E D0 03                    ..
+        bne     ScrollBufferScreenLeftOverworld ; 884E D0 03                    ..
         dec     $17                             ; 8850 C6 17                    ..
         rts                                     ; 8852 60                       `
 
 ; ----------------------------------------------------------------------------
-L8853:
+ScrollBufferScreenLeftOverworld:
         lda     $17                             ; 8853 A5 17                    ..
         sec                                     ; 8855 38                       8
         sbc     #$01                            ; 8856 E9 01                    ..
@@ -1417,9 +1395,9 @@ L8853:
         rts                                     ; 8864 60                       `
 
 ; ----------------------------------------------------------------------------
-L8865:
+ScrollBufferScreenDown:
         lda     $D5                             ; 8865 A5 D5                    ..
-        bne     L8871                           ; 8867 D0 08                    ..
+        bne     ScrollBufferScreenDownOverworld ; 8867 D0 08                    ..
         lda     $17                             ; 8869 A5 17                    ..
         clc                                     ; 886B 18                       .
         adc     L0000                           ; 886C 65 00                    e.
@@ -1427,7 +1405,7 @@ L8865:
         rts                                     ; 8870 60                       `
 
 ; ----------------------------------------------------------------------------
-L8871:
+ScrollBufferScreenDownOverworld:
         lda     $17                             ; 8871 A5 17                    ..
         clc                                     ; 8873 18                       .
         adc     L0000                           ; 8874 65 00                    e.
@@ -1440,14 +1418,14 @@ L8871:
         rts                                     ; 8882 60                       `
 
 ; ----------------------------------------------------------------------------
-L8883:
+ScrollBufferScreenRight:
         lda     $D5                             ; 8883 A5 D5                    ..
-        bne     L888A                           ; 8885 D0 03                    ..
+        bne     ScrollBufferScreenRightOverworld; 8885 D0 03                    ..
         inc     $17                             ; 8887 E6 17                    ..
         rts                                     ; 8889 60                       `
 
 ; ----------------------------------------------------------------------------
-L888A:
+ScrollBufferScreenRightOverworld:
         lda     $17                             ; 888A A5 17                    ..
         clc                                     ; 888C 18                       .
         adc     #$01                            ; 888D 69 01                    i.
@@ -2322,7 +2300,7 @@ L8DDB:
 L8DE5:
         txa                                     ; 8DE5 8A                       .
         pha                                     ; 8DE6 48                       H
-        jsr     L8380                           ; 8DE7 20 80 83                  ..
+        jsr     PlayerPressedUpButton           ; 8DE7 20 80 83                  ..
         jsr     LEA36                           ; 8DEA 20 36 EA                  6.
         pla                                     ; 8DED 68                       h
         tax                                     ; 8DEE AA                       .
@@ -2334,7 +2312,7 @@ L8DE5:
 L8DF5:
         txa                                     ; 8DF5 8A                       .
         pha                                     ; 8DF6 48                       H
-        jsr     L8122                           ; 8DF7 20 22 81                  ".
+        jsr     PlayerPressedDownButton         ; 8DF7 20 22 81                  ".
         jsr     LEA36                           ; 8DFA 20 36 EA                  6.
         pla                                     ; 8DFD 68                       h
         tax                                     ; 8DFE AA                       .
@@ -2358,7 +2336,7 @@ L8E05:
 L8E15:
         txa                                     ; 8E15 8A                       .
         pha                                     ; 8E16 48                       H
-        jsr     L825A                           ; 8E17 20 5A 82                  Z.
+        jsr     PlayerPressedRightButton        ; 8E17 20 5A 82                  Z.
         jsr     LEA36                           ; 8E1A 20 36 EA                  6.
         pla                                     ; 8E1D 68                       h
         tax                                     ; 8E1E AA                       .
@@ -2842,7 +2820,7 @@ L910A:
         beq     L911C                           ; 910C F0 0E                    ..
         lda     $E5                             ; 910E A5 E5                    ..
         sta     $20                             ; 9110 85 20                    . 
-        jsr     LEA03                           ; 9112 20 03 EA                  ..
+        jsr     PlayerPressedDirectionalButton  ; 9112 20 03 EA                  ..
         jsr     LEA36                           ; 9115 20 36 EA                  6.
         dec     $E3                             ; 9118 C6 E3                    ..
         bne     L910A                           ; 911A D0 EE                    ..
@@ -2859,7 +2837,7 @@ L912C:
         beq     L913E                           ; 912E F0 0E                    ..
         lda     $E6                             ; 9130 A5 E6                    ..
         sta     $20                             ; 9132 85 20                    . 
-        jsr     LEA03                           ; 9134 20 03 EA                  ..
+        jsr     PlayerPressedDirectionalButton  ; 9134 20 03 EA                  ..
         jsr     LEA36                           ; 9137 20 36 EA                  6.
         dec     $E4                             ; 913A C6 E4                    ..
         bne     L912C                           ; 913C D0 EE                    ..
@@ -9277,14 +9255,14 @@ ChangeCurrentMap:
         lda     $03                             ; DCDC A5 03                    ..
         adc     $07                             ; DCDE 65 07                    e.
         sta     $03                             ; DCE0 85 03                    ..
-        jmp     LDCE6                           ; DCE2 4C E6 DC                 L..
+        jmp     LoadMapDataFromBank1            ; DCE2 4C E6 DC                 L..
 
 ; ----------------------------------------------------------------------------
 LDCE5:
         rts                                     ; DCE5 60                       `
 
 ; ----------------------------------------------------------------------------
-LDCE6:
+LoadMapDataFromBank1:
         lda     L0002                           ; DCE6 A5 02                    ..
         pha                                     ; DCE8 48                       H
         lda     $03                             ; DCE9 A5 03                    ..
@@ -10882,7 +10860,7 @@ LE868:
         .byte   $7F                             ; E86F 7F                       .
 LE870:
         jsr     LEA36                           ; E870 20 36 EA                  6.
-        jsr     LF09D                           ; E873 20 9D F0                  ..
+        jsr     CopyAsmCodeBytesMain            ; E873 20 9D F0                  ..
         jsr     LF10B                           ; E876 20 0B F1                  ..
         lda     #$00                            ; E879 A9 00                    ..
         sta     $4F                             ; E87B 85 4F                    .O
@@ -10938,8 +10916,8 @@ LE8D2:
         sta     $4010                           ; E8DF 8D 10 40                 ..@
         ldx     #$FF                            ; E8E2 A2 FF                    ..
         txs                                     ; E8E4 9A                       .
-        jsr     LF2D4                           ; E8E5 20 D4 F2                  ..
-        jsr     LF09D                           ; E8E8 20 9D F0                  ..
+        jsr     ResetGameMemoryMain             ; E8E5 20 D4 F2                  ..
+        jsr     CopyAsmCodeBytesMain            ; E8E8 20 9D F0                  ..
         jsr     LF10B                           ; E8EB 20 0B F1                  ..
         jsr     LF316                           ; E8EE 20 16 F3                  ..
         jsr     LF2C9                           ; E8F1 20 C9 F2                  ..
@@ -10979,7 +10957,7 @@ LE8D2:
 ; ----------------------------------------------------------------------------
 InitPlayerMain:
         jsr     LEA36                           ; E944 20 36 EA                  6.
-        jsr     LF09D                           ; E947 20 9D F0                  ..
+        jsr     CopyAsmCodeBytesMain            ; E947 20 9D F0                  ..
         jsr     LF10B                           ; E94A 20 0B F1                  ..
         jsr     InitPlayerVariablesSaveRAM      ; E94D 20 52 D4                  R.
         lda     #$01                            ; E950 A9 01                    ..
@@ -11026,7 +11004,7 @@ LE9B5:
         jsr     LEA36                           ; E9B5 20 36 EA                  6.
         jsr     LF550                           ; E9B8 20 50 F5                  P.
         bcs     LE9C5                           ; E9BB B0 08                    ..
-        jsr     LE9D1                           ; E9BD 20 D1 E9                  ..
+        jsr     PlayerPressedNonDirectionalButton; E9BD 20 D1 E9                 ..
         bcs     LE9C5                           ; E9C0 B0 03                    ..
         jmp     LE9CE                           ; E9C2 4C CE E9                 L..
 
@@ -11039,32 +11017,32 @@ LE9CE:
         jmp     LE9B5                           ; E9CE 4C B5 E9                 L..
 
 ; ----------------------------------------------------------------------------
-LE9D1:
+PlayerPressedNonDirectionalButton:
         lda     $20                             ; E9D1 A5 20                    . 
         lsr     a                               ; E9D3 4A                       J
         bcc     LE9DC                           ; E9D4 90 06                    ..
-        jsr     LEA2F                           ; E9D6 20 2F EA                  /.
+        jsr     PlayerPressedStartButtonMainMenu; E9D6 20 2F EA                  /.
         jmp     LEA01                           ; E9D9 4C 01 EA                 L..
 
 ; ----------------------------------------------------------------------------
 LE9DC:
         lsr     a                               ; E9DC 4A                       J
         bcc     LE9E5                           ; E9DD 90 06                    ..
-        jsr     LEA33                           ; E9DF 20 33 EA                  3.
+        jsr     PlayerPressedSelectButton       ; E9DF 20 33 EA                  3.
         jmp     LEA01                           ; E9E2 4C 01 EA                 L..
 
 ; ----------------------------------------------------------------------------
 LE9E5:
         lsr     a                               ; E9E5 4A                       J
         bcc     LE9EE                           ; E9E6 90 06                    ..
-        jsr     LEA35                           ; E9E8 20 35 EA                  5.
+        jsr     PlayerPressedButtonB            ; E9E8 20 35 EA                  5.
         jmp     LEA01                           ; E9EB 4C 01 EA                 L..
 
 ; ----------------------------------------------------------------------------
 LE9EE:
         lsr     a                               ; E9EE 4A                       J
         bcc     LE9FB                           ; E9EF 90 0A                    ..
-        jsr     LEA34                           ; E9F1 20 34 EA                  4.
+        jsr     PlayerPressedButtonA            ; E9F1 20 34 EA                  4.
         lda     #$FF                            ; E9F4 A9 FF                    ..
         sta     $55                             ; E9F6 85 55                    .U
         jmp     LEA01                           ; E9F8 4C 01 EA                 L..
@@ -11082,11 +11060,11 @@ LEA01:
         rts                                     ; EA02 60                       `
 
 ; ----------------------------------------------------------------------------
-LEA03:
+PlayerPressedDirectionalButton:
         lda     $20                             ; EA03 A5 20                    . 
         lsr     a                               ; EA05 4A                       J
         bcc     LEA0E                           ; EA06 90 06                    ..
-        jsr     L825A                           ; EA08 20 5A 82                  Z.
+        jsr     PlayerPressedRightButton        ; EA08 20 5A 82                  Z.
         jmp     LEA2D                           ; EA0B 4C 2D EA                 L-.
 
 ; ----------------------------------------------------------------------------
@@ -11100,14 +11078,14 @@ LEA0E:
 LEA17:
         lsr     a                               ; EA17 4A                       J
         bcc     LEA20                           ; EA18 90 06                    ..
-        jsr     L8122                           ; EA1A 20 22 81                  ".
+        jsr     PlayerPressedDownButton         ; EA1A 20 22 81                  ".
         jmp     LEA2D                           ; EA1D 4C 2D EA                 L-.
 
 ; ----------------------------------------------------------------------------
 LEA20:
         lsr     a                               ; EA20 4A                       J
         bcc     LEA29                           ; EA21 90 06                    ..
-        jsr     L8380                           ; EA23 20 80 83                  ..
+        jsr     PlayerPressedUpButton           ; EA23 20 80 83                  ..
         jmp     LEA2D                           ; EA26 4C 2D EA                 L-.
 
 ; ----------------------------------------------------------------------------
@@ -11122,20 +11100,20 @@ LEA2D:
         rts                                     ; EA2E 60                       `
 
 ; ----------------------------------------------------------------------------
-LEA2F:
+PlayerPressedStartButtonMainMenu:
         jsr     LF4D0                           ; EA2F 20 D0 F4                  ..
         rts                                     ; EA32 60                       `
 
 ; ----------------------------------------------------------------------------
-LEA33:
+PlayerPressedSelectButton:
         rts                                     ; EA33 60                       `
 
 ; ----------------------------------------------------------------------------
-LEA34:
+PlayerPressedButtonA:
         rts                                     ; EA34 60                       `
 
 ; ----------------------------------------------------------------------------
-LEA35:
+PlayerPressedButtonB:
         rts                                     ; EA35 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -12080,18 +12058,18 @@ LF08A:
         rts                                     ; F09C 60                       `
 
 ; ----------------------------------------------------------------------------
-LF09D:
+CopyAsmCodeBytesMain:
         ldx     #$00                            ; F09D A2 00                    ..
-LF09F:
-        lda     LF0AB,x                         ; F09F BD AB F0                 ...
+CopyAsmCodeBytesLoop:
+        lda     AsmCodeForAddr0100,x            ; F09F BD AB F0                 ...
         sta     L0100,x                         ; F0A2 9D 00 01                 ...
         inx                                     ; F0A5 E8                       .
         cpx     #$60                            ; F0A6 E0 60                    .`
-        bne     LF09F                           ; F0A8 D0 F5                    ..
+        bne     CopyAsmCodeBytesLoop            ; F0A8 D0 F5                    ..
         rts                                     ; F0AA 60                       `
 
 ; ----------------------------------------------------------------------------
-LF0AB:
+AsmCodeForAddr0100:
         lda     $80                             ; F0AB A5 80                    ..
         jsr     L06E0                           ; F0AD 20 E0 06                  ..
         lda     (L0002),y                       ; F0B0 B1 02                    ..
@@ -12190,22 +12168,54 @@ LF134:
 
 ; ----------------------------------------------------------------------------
 LF140:
-        .byte   $A9,$01,$8D,$00,$50,$A2,$00,$BD ; F140 A9 01 8D 00 50 A2 00 BD  ....P...
-        .byte   $00,$F8,$9D,$00,$68,$BD,$00,$F9 ; F148 00 F8 9D 00 68 BD 00 F9  ....h...
-        .byte   $9D,$00,$69,$BD,$00,$FA,$9D,$00 ; F150 9D 00 69 BD 00 FA 9D 00  ..i.....
-        .byte   $6A,$BD,$00,$FB,$9D,$00,$6B,$BD ; F158 6A BD 00 FB 9D 00 6B BD  j.....k.
-        .byte   $00,$FC,$9D,$00,$6C,$BD,$00,$FD ; F160 00 FC 9D 00 6C BD 00 FD  ....l...
-        .byte   $9D,$00,$6D,$E8,$D0,$D9,$A9,$00 ; F168 9D 00 6D E8 D0 D9 A9 00  ..m.....
-        .byte   $8D,$00,$50,$60                 ; F170 8D 00 50 60              ..P`
+        lda     #$01                            ; F140 A9 01                    ..
+        sta     $5000                           ; F142 8D 00 50                 ..P
+        ldx     #$00                            ; F145 A2 00                    ..
+LF147:
+        lda     LF800,x                         ; F147 BD 00 F8                 ...
+        sta     L6800,x                         ; F14A 9D 00 68                 ..h
+        lda     LF900,x                         ; F14D BD 00 F9                 ...
+        sta     $6900,x                         ; F150 9D 00 69                 ..i
+        lda     LFA00,x                         ; F153 BD 00 FA                 ...
+        sta     $6A00,x                         ; F156 9D 00 6A                 ..j
+        lda     LFB00,x                         ; F159 BD 00 FB                 ...
+        sta     $6B00,x                         ; F15C 9D 00 6B                 ..k
+        lda     LFC00,x                         ; F15F BD 00 FC                 ...
+        sta     $6C00,x                         ; F162 9D 00 6C                 ..l
+        lda     LFD00,x                         ; F165 BD 00 FD                 ...
+        sta     $6D00,x                         ; F168 9D 00 6D                 ..m
+        inx                                     ; F16B E8                       .
+        bne     LF147                           ; F16C D0 D9                    ..
+        lda     #$00                            ; F16E A9 00                    ..
+        sta     $5000                           ; F170 8D 00 50                 ..P
+        rts                                     ; F173 60                       `
+
+; ----------------------------------------------------------------------------
 LF174:
-        .byte   $48,$4A,$4A,$4A,$4A,$8D,$00,$52 ; F174 48 4A 4A 4A 4A 8D 00 52  HJJJJ..R
-        .byte   $68,$8D,$00,$50,$60             ; F17C 68 8D 00 50 60           h..P`
+        pha                                     ; F174 48                       H
+        lsr     a                               ; F175 4A                       J
+        lsr     a                               ; F176 4A                       J
+        lsr     a                               ; F177 4A                       J
+        lsr     a                               ; F178 4A                       J
+        sta     $5200                           ; F179 8D 00 52                 ..R
+        pla                                     ; F17C 68                       h
+        sta     $5000                           ; F17D 8D 00 50                 ..P
+        rts                                     ; F180 60                       `
+
+; ----------------------------------------------------------------------------
 LF181:
-        .byte   $8D,$00,$52,$A5,$50,$8D,$00,$50 ; F181 8D 00 52 A5 50 8D 00 50  ..R.P..P
-        .byte   $60                             ; F189 60                       `
+        sta     $5200                           ; F181 8D 00 52                 ..R
+        lda     $50                             ; F184 A5 50                    .P
+        sta     $5000                           ; F186 8D 00 50                 ..P
+        rts                                     ; F189 60                       `
+
+; ----------------------------------------------------------------------------
 LF18A:
-        .byte   $8D,$00,$50,$A9,$00,$8D,$00,$52 ; F18A 8D 00 50 A9 00 8D 00 52  ..P....R
-        .byte   $60                             ; F192 60                       `
+        sta     $5000                           ; F18A 8D 00 50                 ..P
+        lda     #$00                            ; F18D A9 00                    ..
+        sta     $5200                           ; F18F 8D 00 52                 ..R
+        rts                                     ; F192 60                       `
+
 ; ----------------------------------------------------------------------------
 LF193:
         lda     $8A                             ; F193 A5 8A                    ..
@@ -12355,7 +12365,7 @@ LF29A:
 
 ; ----------------------------------------------------------------------------
 LF2AB:
-        jmp     LFC26                           ; F2AB 4C 26 FC                 L&.
+        jmp     Bank00JumpBank03LoadMusicTable  ; F2AB 4C 26 FC                 L&.
 
 ; ----------------------------------------------------------------------------
         rts                                     ; F2AE 60                       `
@@ -12388,10 +12398,10 @@ LF2CE:
         rts                                     ; F2D3 60                       `
 
 ; ----------------------------------------------------------------------------
-LF2D4:
+ResetGameMemoryMain:
         ldx     #$00                            ; F2D4 A2 00                    ..
         txa                                     ; F2D6 8A                       .
-LF2D7:
+ResetGameMemoryLoop:
         sta     L0000,x                         ; F2D7 95 00                    ..
         sta     $0200,x                         ; F2D9 9D 00 02                 ...
         sta     $0300,x                         ; F2DC 9D 00 03                 ...
@@ -12413,7 +12423,7 @@ LF2D7:
         sta     $6E00,x                         ; F30C 9D 00 6E                 ..n
         sta     $6F00,x                         ; F30F 9D 00 6F                 ..o
         inx                                     ; F312 E8                       .
-        bne     LF2D7                           ; F313 D0 C2                    ..
+        bne     ResetGameMemoryLoop             ; F313 D0 C2                    ..
         rts                                     ; F315 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -12561,7 +12571,7 @@ LF3E6:
         sta     $1C                             ; F3F9 85 1C                    ..
         lda     $6F15                           ; F3FB AD 15 6F                 ..o
         sta     $6F16                           ; F3FE 8D 16 6F                 ..o
-        jsr     LF441                           ; F401 20 41 F4                  A.
+        jsr     LoadAsmCodeForJumpToBattleScreen; F401 20 41 F4                  A.
         lda     $0610                           ; F404 AD 10 06                 ...
         bne     LF418                           ; F407 D0 0F                    ..
         jsr     LEA36                           ; F409 20 36 EA                  6.
@@ -12593,21 +12603,21 @@ LF435:
         rts                                     ; F440 60                       `
 
 ; ----------------------------------------------------------------------------
-LF441:
+LoadAsmCodeForJumpToBattleScreen:
         pla                                     ; F441 68                       h
         sta     $40                             ; F442 85 40                    .@
         pla                                     ; F444 68                       h
         sta     $41                             ; F445 85 41                    .A
         ldx     #$30                            ; F447 A2 30                    .0
 LF449:
-        lda     LF455,x                         ; F449 BD 55 F4                 .U.
+        lda     AsmCodeJumpToBattleScreenBank04,x; F449 BD 55 F4                .U.
         sta     L0400,x                         ; F44C 9D 00 04                 ...
         dex                                     ; F44F CA                       .
         bpl     LF449                           ; F450 10 F7                    ..
         jmp     L0400                           ; F452 4C 00 04                 L..
 
 ; ----------------------------------------------------------------------------
-LF455:
+AsmCodeJumpToBattleScreenBank04:
         lda     #$04                            ; F455 A9 04                    ..
         sta     $5000                           ; F457 8D 00 50                 ..P
         sta     $4F                             ; F45A 85 4F                    .O
@@ -12622,15 +12632,15 @@ LF463:
         pla                                     ; F466 68                       h
         sta     $41                             ; F467 85 41                    .A
         ldx     #$30                            ; F469 A2 30                    .0
-LF46B:
-        lda     LF477,x                         ; F46B BD 77 F4                 .w.
+LoadAsmCodeForJumpMainMenuStartGame:
+        lda     AsmCodeJumpToMainMenuStartGameBank0e,x; F46B BD 77 F4           .w.
         sta     L0400,x                         ; F46E 9D 00 04                 ...
         dex                                     ; F471 CA                       .
-        bpl     LF46B                           ; F472 10 F7                    ..
+        bpl     LoadAsmCodeForJumpMainMenuStartGame; F472 10 F7                 ..
         jmp     L0400                           ; F474 4C 00 04                 L..
 
 ; ----------------------------------------------------------------------------
-LF477:
+AsmCodeJumpToMainMenuStartGameBank0e:
         lda     #$0E                            ; F477 A9 0E                    ..
         sta     $5000                           ; F479 8D 00 50                 ..P
         sta     $4F                             ; F47C 85 4F                    .O
@@ -12697,7 +12707,7 @@ LF4D0:
         sta     $1E                             ; F4EB 85 1E                    ..
         lda     $15                             ; F4ED A5 15                    ..
         sta     $1C                             ; F4EF 85 1C                    ..
-        jsr     LF51E                           ; F4F1 20 1E F5                  ..
+        jsr     LoadAsmCodeForJumpMainPlayerMenu; F4F1 20 1E F5                  ..
         jsr     LEA36                           ; F4F4 20 36 EA                  6.
         jsr     L6800                           ; F4F7 20 00 68                  .h
         jsr     LEA3F                           ; F4FA 20 3F EA                  ?.
@@ -12719,26 +12729,45 @@ LF51D:
         rts                                     ; F51D 60                       `
 
 ; ----------------------------------------------------------------------------
-LF51E:
+LoadAsmCodeForJumpMainPlayerMenu:
         pla                                     ; F51E 68                       h
         sta     $40                             ; F51F 85 40                    .@
         pla                                     ; F521 68                       h
         sta     $41                             ; F522 85 41                    .A
         ldx     #$30                            ; F524 A2 30                    .0
-LF526:
-        lda     LF532,x                         ; F526 BD 32 F5                 .2.
+CopyAsmCodeJumpMainPlayerMenuLoop:
+        lda     AsmCodeJumpToMainPlayerMenuBank0e,x; F526 BD 32 F5              .2.
         sta     L0400,x                         ; F529 9D 00 04                 ...
         dex                                     ; F52C CA                       .
-        bpl     LF526                           ; F52D 10 F7                    ..
+        bpl     CopyAsmCodeJumpMainPlayerMenuLoop; F52D 10 F7                   ..
         jmp     L0400                           ; F52F 4C 00 04                 L..
 
 ; ----------------------------------------------------------------------------
-LF532:
-        .byte   $A9,$0E,$8D,$00,$50,$85,$4F,$A9 ; F532 A9 0E 8D 00 50 85 4F A9  ....P.O.
-        .byte   $00,$85,$3F,$4C,$00,$80,$FF,$00 ; F53A 00 85 3F 4C 00 80 FF 00  ..?L....
-        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F542 00 00 00 00 00 00 00 00  ........
-        .byte   $00,$00,$00,$00,$00,$00         ; F54A 00 00 00 00 00 00        ......
+AsmCodeJumpToMainPlayerMenuBank0e:
+        lda     #$0E                            ; F532 A9 0E                    ..
+        sta     $5000                           ; F534 8D 00 50                 ..P
+        sta     $4F                             ; F537 85 4F                    .O
+        lda     #$00                            ; F539 A9 00                    ..
+        sta     $3F                             ; F53B 85 3F                    .?
+        jmp     L8000                           ; F53D 4C 00 80                 L..
+
 ; ----------------------------------------------------------------------------
+        .byte   $FF                             ; F540 FF                       .
+        brk                                     ; F541 00                       .
+        brk                                     ; F542 00                       .
+        brk                                     ; F543 00                       .
+        brk                                     ; F544 00                       .
+        brk                                     ; F545 00                       .
+        brk                                     ; F546 00                       .
+        brk                                     ; F547 00                       .
+        brk                                     ; F548 00                       .
+        brk                                     ; F549 00                       .
+        brk                                     ; F54A 00                       .
+        brk                                     ; F54B 00                       .
+        brk                                     ; F54C 00                       .
+        brk                                     ; F54D 00                       .
+        brk                                     ; F54E 00                       .
+        brk                                     ; F54F 00                       .
 LF550:
         lda     #$01                            ; F550 A9 01                    ..
         sta     $3F                             ; F552 85 3F                    .?
@@ -12753,7 +12782,7 @@ LF550:
 LF564:
         lda     $20                             ; F564 A5 20                    . 
         lsr     a                               ; F566 4A                       J
-        jsr     LEA03                           ; F567 20 03 EA                  ..
+        jsr     PlayerPressedDirectionalButton  ; F567 20 03 EA                  ..
         rts                                     ; F56A 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -12801,7 +12830,7 @@ LF590:
         lda     ($A7),y                         ; F597 B1 A7                    ..
         sta     $6022                           ; F599 8D 22 60                 ."`
         lda     #$03                            ; F59C A9 03                    ..
-        jsr     LFC26                           ; F59E 20 26 FC                  &.
+        jsr     Bank00JumpBank03LoadMusicTable  ; F59E 20 26 FC                  &.
         rts                                     ; F5A1 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -13319,18 +13348,20 @@ SceneCampfireCosmoCanyon:
         .byte   $01,$40,$04,$27,$16,$1A,$06,$AF ; F7E4 01 40 04 27 16 1A 06 AF  .@.'....
         .byte   $08,$00,$10,$03,$08,$00,$80,$02 ; F7EC 08 00 10 03 08 00 80 02  ........
         .byte   $0B,$50,$29,$08,$3F,$04,$0B,$50 ; F7F4 0B 50 29 08 3F 04 0B 50  .P).?..P
-        .byte   $29,$08,$43,$01,$0B,$AE,$0B,$50 ; F7FC 29 08 43 01 0B AE 0B 50  ).C....P
-        .byte   $29,$08,$44,$02,$0B,$50,$29,$08 ; F804 29 08 44 02 0B 50 29 08  ).D..P).
-        .byte   $46,$01,$0B,$AE,$29,$08,$47,$01 ; F80C 46 01 0B AE 29 08 47 01  F...).G.
-        .byte   $0B,$50,$29,$08,$48,$01,$08,$00 ; F814 0B 50 29 08 48 01 08 00  .P).H...
-        .byte   $10,$00,$29,$08,$49,$03,$0B,$32 ; F81C 10 00 29 08 49 03 0B 32  ..).I..2
-        .byte   $08,$00,$80,$00,$0B,$50,$29,$08 ; F824 08 00 80 00 0B 50 29 08  .....P).
-        .byte   $4C,$01,$08,$00,$20,$00,$29,$08 ; F82C 4C 01 08 00 20 00 29 08  L... .).
-        .byte   $4D,$02,$0B,$32,$29,$08,$4F,$01 ; F834 4D 02 0B 32 29 08 4F 01  M..2).O.
-        .byte   $08,$01,$20,$00,$09,$02,$02,$00 ; F83C 08 01 20 00 09 02 02 00  .. .....
-        .byte   $E0,$01,$80,$08,$02,$10,$06,$29 ; F844 E0 01 80 08 02 10 06 29  .......)
-        .byte   $08,$50,$04,$1C,$04,$05,$0A,$01 ; F84C 08 50 04 1C 04 05 0A 01  .P......
-        .byte   $03,$04,$05,$09,$FF             ; F854 03 04 05 09 FF           .....
+        .byte   $29,$08,$43,$01                 ; F7FC 29 08 43 01              ).C.
+LF800:
+        .byte   $0B,$AE,$0B,$50,$29,$08,$44,$02 ; F800 0B AE 0B 50 29 08 44 02  ...P).D.
+        .byte   $0B,$50,$29,$08,$46,$01,$0B,$AE ; F808 0B 50 29 08 46 01 0B AE  .P).F...
+        .byte   $29,$08,$47,$01,$0B,$50,$29,$08 ; F810 29 08 47 01 0B 50 29 08  ).G..P).
+        .byte   $48,$01,$08,$00,$10,$00,$29,$08 ; F818 48 01 08 00 10 00 29 08  H.....).
+        .byte   $49,$03,$0B,$32,$08,$00,$80,$00 ; F820 49 03 0B 32 08 00 80 00  I..2....
+        .byte   $0B,$50,$29,$08,$4C,$01,$08,$00 ; F828 0B 50 29 08 4C 01 08 00  .P).L...
+        .byte   $20,$00,$29,$08,$4D,$02,$0B,$32 ; F830 20 00 29 08 4D 02 0B 32   .).M..2
+        .byte   $29,$08,$4F,$01,$08,$01,$20,$00 ; F838 29 08 4F 01 08 01 20 00  ).O... .
+        .byte   $09,$02,$02,$00,$E0,$01,$80,$08 ; F840 09 02 02 00 E0 01 80 08  ........
+        .byte   $02,$10,$06,$29,$08,$50,$04,$1C ; F848 02 10 06 29 08 50 04 1C  ...).P..
+        .byte   $04,$05,$0A,$01,$03,$04,$05,$09 ; F850 04 05 0A 01 03 04 05 09  ........
+        .byte   $FF                             ; F858 FF                       .
 ; ----------------------------------------------------------------------------
         php                                     ; F859 08                       .
         .byte   $02                             ; F85A 02                       .
@@ -13471,6 +13502,7 @@ LF8FC:
         .byte   $80                             ; F8FD 80                       .
         brk                                     ; F8FE 00                       .
         php                                     ; F8FF 08                       .
+LF900:
         ora     $40                             ; F900 05 40                    .@
         brk                                     ; F902 00                       .
         php                                     ; F903 08                       .
@@ -13691,6 +13723,7 @@ LF9FC:
         .byte   $03                             ; F9FC 03                       .
         .byte   $80                             ; F9FD 80                       .
         brk                                     ; F9FE 00                       .
+LFA00           := * + 1
         and     #$0B                            ; F9FF 29 0B                    ).
         plp                                     ; FA01 28                       (
         .byte   $02                             ; FA02 02                       .
@@ -13917,6 +13950,7 @@ LFAEC:
         pha                                     ; FAFD 48                       H
         .byte   $02                             ; FAFE 02                       .
         php                                     ; FAFF 08                       .
+LFB00:
         .byte   $02                             ; FB00 02                       .
         bpl     LFB06                           ; FB01 10 03                    ..
         php                                     ; FB03 08                       .
@@ -14033,13 +14067,13 @@ LFC18:
         rts                                     ; FC25 60                       `
 
 ; ----------------------------------------------------------------------------
-LFC26:
+Bank00JumpBank03LoadMusicTable:
         pha                                     ; FC26 48                       H
         lda     #$03                            ; FC27 A9 03                    ..
         sta     $5000                           ; FC29 8D 00 50                 ..P
         pla                                     ; FC2C 68                       h
 LFC2F           := * + 2
-        jsr     LFC26                           ; FC2D 20 26 FC                  &.
+        jsr     Bank00JumpBank03LoadMusicTable  ; FC2D 20 26 FC                  &.
         lda     #$00                            ; FC30 A9 00                    ..
         sta     $5000                           ; FC32 8D 00 50                 ..P
         rts                                     ; FC35 60                       `
@@ -14152,6 +14186,7 @@ LFCEA:
         jsr     LFCEA                           ; FCF7 20 EA FC                  ..
         lda     #$00                            ; FCFA A9 00                    ..
         sta     $0119                           ; FCFC 8D 19 01                 ...
+LFD00           := * + 1
         sta     $0109                           ; FCFF 8D 09 01                 ...
         lda     #$00                            ; FD02 A9 00                    ..
         sta     $5000                           ; FD04 8D 00 50                 ..P

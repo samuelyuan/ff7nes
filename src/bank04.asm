@@ -13,7 +13,7 @@ L4038           := $4038
         jmp     LA4CE                           ; 8000 4C CE A4                 L..
 
 ; ----------------------------------------------------------------------------
-        jmp     LBFAF                           ; 8003 4C AF BF                 L..
+        jmp     BattleScreenEntryPoint          ; 8003 4C AF BF                 L..
 
 ; ----------------------------------------------------------------------------
 L8006:
@@ -146,7 +146,7 @@ L80B6:
 
 ; ----------------------------------------------------------------------------
 L80C4:
-        jsr     LF3A0                           ; 80C4 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 80C4 20 A0 F3                  ..
         lda     #$00                            ; 80C7 A9 00                    ..
         sta     L0002                           ; 80C9 85 02                    ..
         lda     #$83                            ; 80CB A9 83                    ..
@@ -170,7 +170,7 @@ L80C4:
         sta     $0700                           ; 80F3 8D 00 07                 ...
         lda     #$FF                            ; 80F6 A9 FF                    ..
         sta     $2D                             ; 80F8 85 2D                    .-
-        jsr     LF3A0                           ; 80FA 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 80FA 20 A0 F3                  ..
         lda     #$50                            ; 80FD A9 50                    .P
         sta     L0002                           ; 80FF 85 02                    ..
         lda     #$83                            ; 8101 A9 83                    ..
@@ -190,7 +190,7 @@ L80C4:
         sta     $0700                           ; 811F 8D 00 07                 ...
         lda     #$FF                            ; 8122 A9 FF                    ..
         sta     $2D                             ; 8124 85 2D                    .-
-        jsr     LF3A0                           ; 8126 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 8126 20 A0 F3                  ..
         rts                                     ; 8129 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -286,7 +286,7 @@ L8197:
         bne     L8197                           ; 81A7 D0 EE                    ..
         pla                                     ; 81A9 68                       h
         sta     $0600                           ; 81AA 8D 00 06                 ...
-        jsr     LF3A0                           ; 81AD 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 81AD 20 A0 F3                  ..
         pla                                     ; 81B0 68                       h
         sta     $0C                             ; 81B1 85 0C                    ..
         pla                                     ; 81B3 68                       h
@@ -399,7 +399,7 @@ L825E:
 L8265:
         lda     #$FF                            ; 8265 A9 FF                    ..
         sta     $2D                             ; 8267 85 2D                    .-
-        jsr     LF3A0                           ; 8269 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 8269 20 A0 F3                  ..
         rts                                     ; 826C 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -504,7 +504,7 @@ L830F:
 L8316:
         lda     #$FF                            ; 8316 A9 FF                    ..
         sta     $2D                             ; 8318 85 2D                    .-
-        jsr     LF3A0                           ; 831A 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 831A 20 A0 F3                  ..
         rts                                     ; 831D 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -1180,7 +1180,7 @@ L8821:
 L8828:
         lda     #$FF                            ; 8828 A9 FF                    ..
         sta     $2D                             ; 882A 85 2D                    .-
-        jsr     LF3A0                           ; 882C 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 882C 20 A0 F3                  ..
         rts                                     ; 882F 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -1437,7 +1437,7 @@ L89E2:
 
 ; ----------------------------------------------------------------------------
 L89E3:
-        jsr     LF3A0                           ; 89E3 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 89E3 20 A0 F3                  ..
         lda     $0D                             ; 89E6 A5 0D                    ..
         asl     a                               ; 89E8 0A                       .
         asl     a                               ; 89E9 0A                       .
@@ -1596,7 +1596,7 @@ L8AED:
 L8AF4:
         lda     #$FF                            ; 8AF4 A9 FF                    ..
         sta     $2D                             ; 8AF6 85 2D                    .-
-        jsr     LF3A0                           ; 8AF8 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 8AF8 20 A0 F3                  ..
         lda     $0E                             ; 8AFB A5 0E                    ..
         clc                                     ; 8AFD 18                       .
         adc     $AB                             ; 8AFE 65 AB                    e.
@@ -1970,7 +1970,7 @@ L8D5A:
 
 ; ----------------------------------------------------------------------------
 L8D5B:
-        jsr     LF3A0                           ; 8D5B 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 8D5B 20 A0 F3                  ..
         ldx     #$00                            ; 8D5E A2 00                    ..
         lda     $53                             ; 8D60 A5 53                    .S
         beq     L8D68                           ; 8D62 F0 04                    ..
@@ -2606,7 +2606,7 @@ L91BC:
         sta     $0700                           ; 91CA 8D 00 07                 ...
         lda     #$FF                            ; 91CD A9 FF                    ..
         sta     $2D                             ; 91CF 85 2D                    .-
-        jsr     LF3A0                           ; 91D1 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 91D1 20 A0 F3                  ..
         rts                                     ; 91D4 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -2660,7 +2660,7 @@ L9214:
         adc     #$01                            ; 9220 69 01                    i.
         cmp     $603B                           ; 9222 CD 3B 60                 .;`
         bcc     L91D7                           ; 9225 90 B0                    ..
-        jsr     LF3A0                           ; 9227 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9227 20 A0 F3                  ..
         rts                                     ; 922A 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -2800,7 +2800,7 @@ L948B:
         tay                                     ; 949B A8                       .
         pla                                     ; 949C 68                       h
         tax                                     ; 949D AA                       .
-        jsr     LF3A0                           ; 949E 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 949E 20 A0 F3                  ..
         pla                                     ; 94A1 68                       h
         sec                                     ; 94A2 38                       8
         sbc     #$02                            ; 94A3 E9 02                    ..
@@ -2830,7 +2830,7 @@ L94B4:
         tay                                     ; 94C4 A8                       .
         pla                                     ; 94C5 68                       h
         tax                                     ; 94C6 AA                       .
-        jsr     LF3A0                           ; 94C7 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 94C7 20 A0 F3                  ..
         pla                                     ; 94CA 68                       h
         sec                                     ; 94CB 38                       8
         sbc     #$02                            ; 94CC E9 02                    ..
@@ -2845,7 +2845,7 @@ L94D1:
         sbc     #$10                            ; 94D7 E9 10                    ..
         sta     $AD                             ; 94D9 85 AD                    ..
         jsr     L943A                           ; 94DB 20 3A 94                  :.
-        jsr     LF3A0                           ; 94DE 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 94DE 20 A0 F3                  ..
         rts                                     ; 94E1 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -2926,7 +2926,7 @@ L955E:
         sta     $0700                           ; 956C 8D 00 07                 ...
         lda     #$FF                            ; 956F A9 FF                    ..
         sta     $2D                             ; 9571 85 2D                    .-
-        jsr     LF3A0                           ; 9573 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9573 20 A0 F3                  ..
         rts                                     ; 9576 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3036,7 +3036,7 @@ L9614:
 L9625:
         pha                                     ; 9625 48                       H
         jsr     L9757                           ; 9626 20 57 97                  W.
-        jsr     LF3A0                           ; 9629 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9629 20 A0 F3                  ..
         lda     $0641                           ; 962C AD 41 06                 .A.
         sec                                     ; 962F 38                       8
         sbc     #$20                            ; 9630 E9 20                    . 
@@ -3070,7 +3070,7 @@ L9650           := * + 1
         ora     ($85,x)                         ; 965C 01 85                    ..
         lda     $01A0                           ; 965E AD A0 01                 ...
         jsr     LFF30                           ; 9661 20 30 FF                  0.
-        jsr     LF3A0                           ; 9664 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9664 20 A0 F3                  ..
         rts                                     ; 9667 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3100,7 +3100,7 @@ L9681:
         stx     $6F1E                           ; 9686 8E 1E 6F                 ..o
         jsr     L94E2                           ; 9689 20 E2 94                  ..
         jsr     L943A                           ; 968C 20 3A 94                  :.
-        jsr     LF3A0                           ; 968F 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 968F 20 A0 F3                  ..
         pla                                     ; 9692 68                       h
         sta     $6F1E                           ; 9693 8D 1E 6F                 ..o
         rts                                     ; 9696 60                       `
@@ -3206,7 +3206,7 @@ L9783:
 L97A3:
         lda     #$FF                            ; 97A3 A9 FF                    ..
         sta     $2D                             ; 97A5 85 2D                    .-
-        jsr     LF3A0                           ; 97A7 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 97A7 20 A0 F3                  ..
         pla                                     ; 97AA 68                       h
         sta     $0642                           ; 97AB 8D 42 06                 .B.
         pla                                     ; 97AE 68                       h
@@ -3324,7 +3324,7 @@ L9864:
         bne     L984D                           ; 9887 D0 C4                    ..
         lda     #$FF                            ; 9889 A9 FF                    ..
         sta     $2D                             ; 988B 85 2D                    .-
-        jsr     LF3A0                           ; 988D 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 988D 20 A0 F3                  ..
         dec     $0644                           ; 9890 CE 44 06                 .D.
         dec     $0644                           ; 9893 CE 44 06                 .D.
         dec     $0644                           ; 9896 CE 44 06                 .D.
@@ -3559,7 +3559,7 @@ L9A07:
         sta     L008E                           ; 9A09 85 8E                    ..
 L9A0B:
         jsr     L9A7C                           ; 9A0B 20 7C 9A                  |.
-        jsr     LF3A0                           ; 9A0E 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9A0E 20 A0 F3                  ..
         lda     $AC                             ; 9A11 A5 AC                    ..
         sec                                     ; 9A13 38                       8
         sbc     #$04                            ; 9A14 E9 04                    ..
@@ -3572,7 +3572,7 @@ L9A0B:
         sta     L008E                           ; 9A23 85 8E                    ..
 L9A25:
         jsr     L9A7C                           ; 9A25 20 7C 9A                  |.
-        jsr     LF3A0                           ; 9A28 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9A28 20 A0 F3                  ..
         lda     $AC                             ; 9A2B A5 AC                    ..
         clc                                     ; 9A2D 18                       .
         adc     #$04                            ; 9A2E 69 04                    i.
@@ -3585,7 +3585,7 @@ L9A25:
         sta     L008E                           ; 9A3D 85 8E                    ..
 L9A3F:
         jsr     L9A7C                           ; 9A3F 20 7C 9A                  |.
-        jsr     LF3A0                           ; 9A42 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9A42 20 A0 F3                  ..
         lda     $AC                             ; 9A45 A5 AC                    ..
         sec                                     ; 9A47 38                       8
         sbc     #$02                            ; 9A48 E9 02                    ..
@@ -3598,7 +3598,7 @@ L9A3F:
         sta     L008E                           ; 9A57 85 8E                    ..
 L9A59:
         jsr     L9A7C                           ; 9A59 20 7C 9A                  |.
-        jsr     LF3A0                           ; 9A5C 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9A5C 20 A0 F3                  ..
         lda     $AC                             ; 9A5F A5 AC                    ..
         clc                                     ; 9A61 18                       .
         adc     #$02                            ; 9A62 69 02                    i.
@@ -3607,10 +3607,10 @@ L9A59:
         bne     L9A59                           ; 9A68 D0 EF                    ..
         ldx     #$03                            ; 9A6A A2 03                    ..
         jsr     LF3A9                           ; 9A6C 20 A9 F3                  ..
-        jsr     LF3A0                           ; 9A6F 20 A0 F3                  ..
-        jsr     LF3A0                           ; 9A72 20 A0 F3                  ..
-        jsr     LF3A0                           ; 9A75 20 A0 F3                  ..
-        jsr     LF3A0                           ; 9A78 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9A6F 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9A72 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9A75 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9A78 20 A0 F3                  ..
         rts                                     ; 9A7B 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3665,7 +3665,7 @@ L9AC0:
 
 ; ----------------------------------------------------------------------------
 L9ACC:
-        jsr     LF3A0                           ; 9ACC 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9ACC 20 A0 F3                  ..
         lda     #$00                            ; 9ACF A9 00                    ..
         sta     L0002                           ; 9AD1 85 02                    ..
         lda     #$83                            ; 9AD3 A9 83                    ..
@@ -3689,7 +3689,7 @@ L9ACC:
         sta     $0700                           ; 9AFB 8D 00 07                 ...
         lda     #$FF                            ; 9AFE A9 FF                    ..
         sta     $2D                             ; 9B00 85 2D                    .-
-        jsr     LF3A0                           ; 9B02 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9B02 20 A0 F3                  ..
         lda     #$50                            ; 9B05 A9 50                    .P
         sta     L0002                           ; 9B07 85 02                    ..
         lda     #$83                            ; 9B09 A9 83                    ..
@@ -3709,7 +3709,7 @@ L9ACC:
         sta     $0700                           ; 9B27 8D 00 07                 ...
         lda     #$FF                            ; 9B2A A9 FF                    ..
         sta     $2D                             ; 9B2C 85 2D                    .-
-        jsr     LF3A0                           ; 9B2E 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9B2E 20 A0 F3                  ..
         rts                                     ; 9B31 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3735,7 +3735,7 @@ L9B32:
 
 ; ----------------------------------------------------------------------------
 L9B5F:
-        jsr     LF3A0                           ; 9B5F 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9B5F 20 A0 F3                  ..
         ldx     #$01                            ; 9B62 A2 01                    ..
         lda     #$40                            ; 9B64 A9 40                    .@
         sta     $0700,x                         ; 9B66 9D 00 07                 ...
@@ -3751,7 +3751,7 @@ L9B5F:
         sta     $0700                           ; 9B7C 8D 00 07                 ...
         lda     #$FF                            ; 9B7F A9 FF                    ..
         sta     $2D                             ; 9B81 85 2D                    .-
-        jsr     LF3A0                           ; 9B83 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9B83 20 A0 F3                  ..
         rts                                     ; 9B86 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3942,7 +3942,7 @@ L9C5F:
         dec     $9D                             ; 9C8F C6 9D                    ..
         bne     L9C5B                           ; 9C91 D0 C8                    ..
         pla                                     ; 9C93 68                       h
-        jsr     LF3A0                           ; 9C94 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9C94 20 A0 F3                  ..
         rts                                     ; 9C97 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4006,7 +4006,7 @@ L9CD7:
         inx                                     ; 9CDD E8                       .
         dec     $9C                             ; 9CDE C6 9C                    ..
         bne     L9CD7                           ; 9CE0 D0 F5                    ..
-        jsr     LF3A0                           ; 9CE2 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9CE2 20 A0 F3                  ..
         rts                                     ; 9CE5 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4223,7 +4223,7 @@ L9E49:
         sta     $0700                           ; 9E72 8D 00 07                 ...
         lda     #$FF                            ; 9E75 A9 FF                    ..
         sta     $2D                             ; 9E77 85 2D                    .-
-        jsr     LF3A0                           ; 9E79 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9E79 20 A0 F3                  ..
         rts                                     ; 9E7C 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4320,7 +4320,7 @@ L9E7D:
 
 ; ----------------------------------------------------------------------------
 L9F39:
-        jsr     LF3A0                           ; 9F39 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9F39 20 A0 F3                  ..
         lda     $22                             ; 9F3C A5 22                    ."
         beq     L9F39                           ; 9F3E F0 F9                    ..
         rts                                     ; 9F40 60                       `
@@ -4347,7 +4347,7 @@ L9F39:
         sta     $0700                           ; 9F64 8D 00 07                 ...
         lda     #$FF                            ; 9F67 A9 FF                    ..
         sta     $2D                             ; 9F69 85 2D                    .-
-        jsr     LF3A0                           ; 9F6B 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; 9F6B 20 A0 F3                  ..
         rts                                     ; 9F6E 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4833,7 +4833,7 @@ LA2B9:
         cmp     #$FF                            ; A2BE C9 FF                    ..
         beq     LA2CD                           ; A2C0 F0 0B                    ..
         jsr     LFEDE                           ; A2C2 20 DE FE                  ..
-        jsr     LF3A0                           ; A2C5 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; A2C5 20 A0 F3                  ..
         lda     #$02                            ; A2C8 A9 02                    ..
         jmp     LA0BC                           ; A2CA 4C BC A0                 L..
 
@@ -4857,7 +4857,7 @@ LA2DB:
 LA2E7:
         lda     LA2F5,x                         ; A2E7 BD F5 A2                 ...
         jsr     LFEDE                           ; A2EA 20 DE FE                  ..
-        jsr     LF3A0                           ; A2ED 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; A2ED 20 A0 F3                  ..
 LA2F0:
         lda     #$02                            ; A2F0 A9 02                    ..
         jmp     LA0BC                           ; A2F2 4C BC A0                 L..
@@ -4922,7 +4922,7 @@ LA348:
         sta     $0700                           ; A356 8D 00 07                 ...
         lda     #$FF                            ; A359 A9 FF                    ..
         sta     $2D                             ; A35B 85 2D                    .-
-        jsr     LF3A0                           ; A35D 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; A35D 20 A0 F3                  ..
         lda     L0002                           ; A360 A5 02                    ..
         clc                                     ; A362 18                       .
         adc     #$40                            ; A363 69 40                    i@
@@ -4970,7 +4970,7 @@ LA3A7:
         sta     $0700                           ; A3B5 8D 00 07                 ...
         lda     #$FF                            ; A3B8 A9 FF                    ..
         sta     $2D                             ; A3BA 85 2D                    .-
-        jsr     LF3A0                           ; A3BC 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; A3BC 20 A0 F3                  ..
 LA3BF:
         pla                                     ; A3BF 68                       h
         sta     $6FD0                           ; A3C0 8D D0 6F                 ..o
@@ -5060,7 +5060,7 @@ LA42B:
         bne     LA426                           ; A465 D0 BF                    ..
         pla                                     ; A467 68                       h
         sta     $6FD0                           ; A468 8D D0 6F                 ..o
-        jsr     LF3A0                           ; A46B 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; A46B 20 A0 F3                  ..
         rts                                     ; A46E 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5082,7 +5082,7 @@ LA47E:
         bne     LA47E                           ; A487 D0 F5                    ..
         dec     $9D                             ; A489 C6 9D                    ..
         bne     LA477                           ; A48B D0 EA                    ..
-        jsr     LF3A0                           ; A48D 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; A48D 20 A0 F3                  ..
         rts                                     ; A490 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5116,8 +5116,8 @@ LA4BE:
         .byte   $02,$02,$03,$03,$02,$02,$03,$03 ; A4C6 02 02 03 03 02 02 03 03  ........
 ; ----------------------------------------------------------------------------
 LA4CE:
-        jsr     LF3BC                           ; A4CE 20 BC F3                  ..
-        jsr     LF3A0                           ; A4D1 20 A0 F3                  ..
+        jsr     Bank04SetMemoryAddress0200Main  ; A4CE 20 BC F3                  ..
+        jsr     Bank04ScreenRefresh             ; A4D1 20 A0 F3                  ..
         lda     #$00                            ; A4D4 A9 00                    ..
         sta     $A9                             ; A4D6 85 A9                    ..
         jsr     LF268                           ; A4D8 20 68 F2                  h.
@@ -5130,7 +5130,7 @@ LA4E4:
         sta     $DC                             ; A4E8 85 DC                    ..
 LA4EA:
         jsr     L9C98                           ; A4EA 20 98 9C                  ..
-        jsr     LF3A0                           ; A4ED 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; A4ED 20 A0 F3                  ..
         ldx     #$08                            ; A4F0 A2 08                    ..
         lda     $22                             ; A4F2 A5 22                    ."
 LA4F4:
@@ -5284,7 +5284,7 @@ LA5DA:
         sta     $6F1F                           ; A5DD 8D 1F 6F                 ..o
         jsr     LA82F                           ; A5E0 20 2F A8                  /.
 LA5E3:
-        jsr     LF3A0                           ; A5E3 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; A5E3 20 A0 F3                  ..
         ldx     #$08                            ; A5E6 A2 08                    ..
         lda     $22                             ; A5E8 A5 22                    ."
 LA5EA:
@@ -5609,8 +5609,8 @@ LA82C:
 
 ; ----------------------------------------------------------------------------
 LA82F:
-        jsr     LF3BC                           ; A82F 20 BC F3                  ..
-        jsr     LF3A0                           ; A832 20 A0 F3                  ..
+        jsr     Bank04SetMemoryAddress0200Main  ; A82F 20 BC F3                  ..
+        jsr     Bank04ScreenRefresh             ; A832 20 A0 F3                  ..
         lda     #$01                            ; A835 A9 01                    ..
         sta     $A9                             ; A837 85 A9                    ..
         jsr     LF268                           ; A839 20 68 F2                  h.
@@ -5641,10 +5641,10 @@ LA869:
         lda     #$00                            ; A86D A9 00                    ..
         sta     $09                             ; A86F 85 09                    ..
         jsr     LA88D                           ; A871 20 8D A8                  ..
-        jsr     LF3A0                           ; A874 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; A874 20 A0 F3                  ..
         jsr     LA8AB                           ; A877 20 AB A8                  ..
         jsr     LA9D4                           ; A87A 20 D4 A9                  ..
-        jsr     LF3A0                           ; A87D 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; A87D 20 A0 F3                  ..
         jsr     LAA2D                           ; A880 20 2D AA                  -.
         jsr     LAB55                           ; A883 20 55 AB                  U.
         jsr     LAEEF                           ; A886 20 EF AE                  ..
@@ -5664,7 +5664,7 @@ LA88D:
         clc                                     ; A89F 18                       .
         adc     #$02                            ; A8A0 69 02                    i.
         sta     $69                             ; A8A2 85 69                    .i
-        jsr     LF3A0                           ; A8A4 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; A8A4 20 A0 F3                  ..
         jsr     L8EFB                           ; A8A7 20 FB 8E                  ..
         rts                                     ; A8AA 60                       `
 
@@ -5838,7 +5838,7 @@ LA97E:
         sta     $9B                             ; A9BA 85 9B                    ..
         dec     $9D                             ; A9BC C6 9D                    ..
         bne     LA97A                           ; A9BE D0 BA                    ..
-        jsr     LF3A0                           ; A9C0 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; A9C0 20 A0 F3                  ..
         rts                                     ; A9C3 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -6003,7 +6003,7 @@ LAC2B:
         sta     $0700                           ; AC33 8D 00 07                 ...
         lda     #$FF                            ; AC36 A9 FF                    ..
         sta     $2D                             ; AC38 85 2D                    .-
-        jsr     LF3A0                           ; AC3A 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; AC3A 20 A0 F3                  ..
         pla                                     ; AC3D 68                       h
         sta     $0A                             ; AC3E 85 0A                    ..
         pla                                     ; AC40 68                       h
@@ -6371,9 +6371,9 @@ LAEFC:
         sta     $6A                             ; AF14 85 6A                    .j
         lda     $6F24                           ; AF16 AD 24 6F                 .$o
         sta     $69                             ; AF19 85 69                    .i
-        jsr     LF3A0                           ; AF1B 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; AF1B 20 A0 F3                  ..
         jsr     L8EFB                           ; AF1E 20 FB 8E                  ..
-        jsr     LF3A0                           ; AF21 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; AF21 20 A0 F3                  ..
         lda     #$01                            ; AF24 A9 01                    ..
         sta     $0617                           ; AF26 8D 17 06                 ...
         lda     #$F6                            ; AF29 A9 F6                    ..
@@ -6464,9 +6464,9 @@ LAFBE:
         sta     $6A                             ; AFD6 85 6A                    .j
         lda     $6F24                           ; AFD8 AD 24 6F                 .$o
         sta     $69                             ; AFDB 85 69                    .i
-        jsr     LF3A0                           ; AFDD 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; AFDD 20 A0 F3                  ..
         jsr     L8EFB                           ; AFE0 20 FB 8E                  ..
-        jsr     LF3A0                           ; AFE3 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; AFE3 20 A0 F3                  ..
         lda     #$01                            ; AFE6 A9 01                    ..
         sta     $0617                           ; AFE8 8D 17 06                 ...
         lda     #$F6                            ; AFEB A9 F6                    ..
@@ -6707,7 +6707,7 @@ LB1B7:
         sta     $0700                           ; B1C5 8D 00 07                 ...
         lda     #$FF                            ; B1C8 A9 FF                    ..
         sta     $2D                             ; B1CA 85 2D                    .-
-        jsr     LF3A0                           ; B1CC 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; B1CC 20 A0 F3                  ..
         rts                                     ; B1CF 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -6722,21 +6722,21 @@ LB1D1:
         lda     $060E                           ; B1D9 AD 0E 06                 ...
         beq     LB1E7                           ; B1DC F0 09                    ..
         jsr     LF40B                           ; B1DE 20 0B F4                  ..
-        jsr     LF3A0                           ; B1E1 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; B1E1 20 A0 F3                  ..
         jmp     LB23D                           ; B1E4 4C 3D B2                 L=.
 
 ; ----------------------------------------------------------------------------
 LB1E7:
         jsr     LB41E                           ; B1E7 20 1E B4                  ..
         jsr     LF40B                           ; B1EA 20 0B F4                  ..
-        jsr     LF3A0                           ; B1ED 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; B1ED 20 A0 F3                  ..
 LB1F0:
         lda     #$00                            ; B1F0 A9 00                    ..
         sta     $DB                             ; B1F2 85 DB                    ..
         sta     $DC                             ; B1F4 85 DC                    ..
 LB1F6:
         jsr     L9C98                           ; B1F6 20 98 9C                  ..
-        jsr     LF3A0                           ; B1F9 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; B1F9 20 A0 F3                  ..
         ldx     #$08                            ; B1FC A2 08                    ..
         lda     $22                             ; B1FE A5 22                    ."
 LB200:
@@ -6800,7 +6800,7 @@ LB253:
         sta     $DC                             ; B257 85 DC                    ..
 LB259:
         jsr     L9C98                           ; B259 20 98 9C                  ..
-        jsr     LF3A0                           ; B25C 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; B25C 20 A0 F3                  ..
         ldx     #$08                            ; B25F A2 08                    ..
         lda     $22                             ; B261 A5 22                    ."
 LB263:
@@ -6982,7 +6982,7 @@ LB38B:
 LB39E:
         jsr     LB3F1                           ; B39E 20 F1 B3                  ..
         jsr     LF40B                           ; B3A1 20 0B F4                  ..
-        jsr     LF3A0                           ; B3A4 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; B3A4 20 A0 F3                  ..
         jsr     LB43A                           ; B3A7 20 3A B4                  :.
         lda     $0613                           ; B3AA AD 13 06                 ...
         beq     LB3CC                           ; B3AD F0 1D                    ..
@@ -7026,8 +7026,8 @@ LB3EE:
 
 ; ----------------------------------------------------------------------------
 LB3F1:
-        jsr     LF3BC                           ; B3F1 20 BC F3                  ..
-        jsr     LF3A0                           ; B3F4 20 A0 F3                  ..
+        jsr     Bank04SetMemoryAddress0200Main  ; B3F1 20 BC F3                  ..
+        jsr     Bank04ScreenRefresh             ; B3F4 20 A0 F3                  ..
         lda     #$03                            ; B3F7 A9 03                    ..
         sta     $A9                             ; B3F9 85 A9                    ..
         jsr     LF268                           ; B3FB 20 68 F2                  h.
@@ -7183,7 +7183,7 @@ LB4D1:
         pha                                     ; B4F0 48                       H
         sta     $69                             ; B4F1 85 69                    .i
         jsr     LoadBattleMenuStringFromBank6   ; B4F3 20 09 8B                  ..
-        jsr     LF3A0                           ; B4F6 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; B4F6 20 A0 F3                  ..
         pla                                     ; B4F9 68                       h
         beq     LB529                           ; B4FA F0 2D                    .-
         lda     $6F42                           ; B4FC AD 42 6F                 .Bo
@@ -7218,7 +7218,7 @@ LB52A:
         lda     #$06                            ; B52E A9 06                    ..
         sta     $6A                             ; B530 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; B532 20 09 8B                  ..
-        jsr     LF3A0                           ; B535 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; B535 20 A0 F3                  ..
         rts                                     ; B538 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -7408,7 +7408,7 @@ LB670:
         sta     $0700                           ; B691 8D 00 07                 ...
         lda     #$FF                            ; B694 A9 FF                    ..
         sta     $2D                             ; B696 85 2D                    .-
-        jsr     LF3A0                           ; B698 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; B698 20 A0 F3                  ..
         rts                                     ; B69B 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -7429,7 +7429,7 @@ LB6AD           := * + 1
         lda     #$FF                            ; B6B4 A9 FF                    ..
         sta     $88                             ; B6B6 85 88                    ..
         jsr     LoadBattleMenuStringFromBank6   ; B6B8 20 09 8B                  ..
-        jsr     LF3A0                           ; B6BB 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; B6BB 20 A0 F3                  ..
         lda     #$00                            ; B6BE A9 00                    ..
         sta     $88                             ; B6C0 85 88                    ..
         rts                                     ; B6C2 60                       `
@@ -7550,7 +7550,7 @@ LB772:
         lda     $060E                           ; B77B AD 0E 06                 ...
         bne     LB7E7                           ; B77E D0 67                    .g
 LB780:
-        jsr     LF3A0                           ; B780 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; B780 20 A0 F3                  ..
         ldx     #$08                            ; B783 A2 08                    ..
         lda     $22                             ; B785 A5 22                    ."
 LB787:
@@ -7630,7 +7630,7 @@ LB7F5:
         sta     $DC                             ; B7F9 85 DC                    ..
 LB7FB:
         jsr     L9C98                           ; B7FB 20 98 9C                  ..
-        jsr     LF3A0                           ; B7FE 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; B7FE 20 A0 F3                  ..
         ldx     #$08                            ; B801 A2 08                    ..
         lda     $22                             ; B803 A5 22                    ."
 LB805:
@@ -7875,8 +7875,8 @@ LB9BC:
         sta     $69                             ; B9C2 85 69                    .i
         bne     LB9A0                           ; B9C4 D0 DA                    ..
 LB9C6:
-        jsr     LF3BC                           ; B9C6 20 BC F3                  ..
-        jsr     LF3A0                           ; B9C9 20 A0 F3                  ..
+        jsr     Bank04SetMemoryAddress0200Main  ; B9C6 20 BC F3                  ..
+        jsr     Bank04ScreenRefresh             ; B9C9 20 A0 F3                  ..
         lda     #$04                            ; B9CC A9 04                    ..
         sta     $A9                             ; B9CE 85 A9                    ..
         jsr     LF268                           ; B9D0 20 68 F2                  h.
@@ -7891,7 +7891,7 @@ LB9C6:
         lda     #$40                            ; B9E7 A9 40                    .@
         sta     $09                             ; B9E9 85 09                    ..
         jsr     LA88D                           ; B9EB 20 8D A8                  ..
-        jsr     LF3A0                           ; B9EE 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; B9EE 20 A0 F3                  ..
         jsr     LA8AB                           ; B9F1 20 AB A8                  ..
         jsr     LBE00                           ; B9F4 20 00 BE                  ..
         jsr     LB9FE                           ; B9F7 20 FE B9                  ..
@@ -7909,7 +7909,7 @@ LBA00:
         adc     #$01                            ; BA06 69 01                    i.
         cmp     $0616                           ; BA08 CD 16 06                 ...
         bcc     LBA00                           ; BA0B 90 F3                    ..
-        jsr     LF3A0                           ; BA0D 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; BA0D 20 A0 F3                  ..
         rts                                     ; BA10 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -7978,7 +7978,7 @@ LBA67           := * + 2
         tax                                     ; BA70 AA                       .
         lda     $0645,x                         ; BA71 BD 45 06                 .E.
         sta     $69                             ; BA74 85 69                    .i
-        jsr     LF3A0                           ; BA76 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; BA76 20 A0 F3                  ..
 LBA7B           := * + 2
         jsr     L8EFB                           ; BA79 20 FB 8E                  ..
         pla                                     ; BA7C 68                       h
@@ -8087,7 +8087,7 @@ LBB25:
         adc     #$15                            ; BB5A 69 15                    i.
         sta     $69                             ; BB5C 85 69                    .i
         jsr     LoadBattleMenuStringFromBank6   ; BB5E 20 09 8B                  ..
-        jsr     LF3A0                           ; BB61 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; BB61 20 A0 F3                  ..
         lda     #$02                            ; BB64 A9 02                    ..
         sta     $AB                             ; BB66 85 AB                    ..
         lda     #$23                            ; BB68 A9 23                    .#
@@ -8150,7 +8150,7 @@ LBBC8:
         sta     $0700                           ; BBD5 8D 00 07                 ...
         lda     #$FF                            ; BBD8 A9 FF                    ..
         sta     $2D                             ; BBDA 85 2D                    .-
-        jsr     LF3A0                           ; BBDC 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; BBDC 20 A0 F3                  ..
         lda     L0002                           ; BBDF A5 02                    ..
         clc                                     ; BBE1 18                       .
         adc     #$40                            ; BBE2 69 40                    i@
@@ -8453,31 +8453,31 @@ LBF88:
         lda     #$FF                            ; BFA0 A9 FF                    ..
         sta     $88                             ; BFA2 85 88                    ..
         jsr     LoadBattleMenuStringFromBank6   ; BFA4 20 09 8B                  ..
-        jsr     LF3A0                           ; BFA7 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; BFA7 20 A0 F3                  ..
         lda     #$00                            ; BFAA A9 00                    ..
         sta     $88                             ; BFAC 85 88                    ..
         rts                                     ; BFAE 60                       `
 
 ; ----------------------------------------------------------------------------
-LBFAF:
+BattleScreenEntryPoint:
         lda     #$FF                            ; BFAF A9 FF                    ..
         sta     $060E                           ; BFB1 8D 0E 06                 ...
-        jsr     LF3BC                           ; BFB4 20 BC F3                  ..
-        jsr     LF3A0                           ; BFB7 20 A0 F3                  ..
+        jsr     Bank04SetMemoryAddress0200Main  ; BFB4 20 BC F3                  ..
+        jsr     Bank04ScreenRefresh             ; BFB7 20 A0 F3                  ..
         jsr     LF245                           ; BFBA 20 45 F2                  E.
-        jsr     LF3A0                           ; BFBD 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; BFBD 20 A0 F3                  ..
         lda     $7E                             ; BFC0 A5 7E                    .~
         beq     LBFCF                           ; BFC2 F0 0B                    ..
         lda     #$06                            ; BFC4 A9 06                    ..
         jsr     LF241                           ; BFC6 20 41 F2                  A.
-        jsr     LF3A0                           ; BFC9 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; BFC9 20 A0 F3                  ..
         jmp     LBFD7                           ; BFCC 4C D7 BF                 L..
 
 ; ----------------------------------------------------------------------------
 LBFCF:
         lda     #$07                            ; BFCF A9 07                    ..
         jsr     LF241                           ; BFD1 20 41 F2                  A.
-        jsr     LF3A0                           ; BFD4 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; BFD4 20 A0 F3                  ..
 LBFD7:
         jsr     LC283                           ; BFD7 20 83 C2                  ..
         jsr     LC1DA                           ; BFDA 20 DA C1                  ..
@@ -8519,12 +8519,12 @@ LC019:
 
 ; ----------------------------------------------------------------------------
 LC027:
-        jsr     LF3A0                           ; C027 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; C027 20 A0 F3                  ..
         jsr     LF245                           ; C02A 20 45 F2                  E.
-        jsr     LF3A0                           ; C02D 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; C02D 20 A0 F3                  ..
         lda     #$08                            ; C030 A9 08                    ..
         jsr     LF241                           ; C032 20 41 F2                  A.
-        jsr     LF3A0                           ; C035 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; C035 20 A0 F3                  ..
         jsr     LC091                           ; C038 20 91 C0                  ..
         jsr     L9F39                           ; C03B 20 39 9F                  9.
         jsr     LE6A9                           ; C03E 20 A9 E6                  ..
@@ -8554,7 +8554,7 @@ LC04F:
         lda     #$00                            ; C070 A9 00                    ..
         sta     $6A                             ; C072 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; C074 20 09 8B                  ..
-        jsr     LF3A0                           ; C077 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; C077 20 A0 F3                  ..
         lda     #$22                            ; C07A A9 22                    ."
         sta     $0F                             ; C07C 85 0F                    ..
         lda     #$E4                            ; C07E A9 E4                    ..
@@ -8564,7 +8564,7 @@ LC04F:
         lda     #$00                            ; C086 A9 00                    ..
         sta     $6A                             ; C088 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; C08A 20 09 8B                  ..
-        jsr     LF3A0                           ; C08D 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; C08D 20 A0 F3                  ..
         rts                                     ; C090 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -8587,7 +8587,7 @@ LC091:
         lda     #$00                            ; C0B2 A9 00                    ..
         sta     $6A                             ; C0B4 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; C0B6 20 09 8B                  ..
-        jsr     LF3A0                           ; C0B9 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; C0B9 20 A0 F3                  ..
         rts                                     ; C0BC 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -8720,12 +8720,12 @@ LC185:
         inx                                     ; C1A7 E8                       .
         cpx     #$04                            ; C1A8 E0 04                    ..
         bcc     LC185                           ; C1AA 90 D9                    ..
-        jsr     LF3A0                           ; C1AC 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; C1AC 20 A0 F3                  ..
         rts                                     ; C1AF 60                       `
 
 ; ----------------------------------------------------------------------------
 LC1B0:
-        jsr     LF3BC                           ; C1B0 20 BC F3                  ..
+        jsr     Bank04SetMemoryAddress0200Main  ; C1B0 20 BC F3                  ..
         lda     #$05                            ; C1B3 A9 05                    ..
         sta     $A9                             ; C1B5 85 A9                    ..
         jsr     LF268                           ; C1B7 20 68 F2                  h.
@@ -8932,14 +8932,14 @@ LC2F7:
         tya                                     ; C30B 98                       .
         pha                                     ; C30C 48                       H
         beq     LC318                           ; C30D F0 09                    ..
-        jsr     LF3A0                           ; C30F 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; C30F 20 A0 F3                  ..
         jsr     L8EFB                           ; C312 20 FB 8E                  ..
         jmp     LC31E                           ; C315 4C 1E C3                 L..
 
 ; ----------------------------------------------------------------------------
 LC318:
         jsr     LoadBattleMenuStringFromBank6   ; C318 20 09 8B                  ..
-        jsr     LF3A0                           ; C31B 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; C31B 20 A0 F3                  ..
 LC31E:
         pla                                     ; C31E 68                       h
         tay                                     ; C31F A8                       .
@@ -8955,7 +8955,7 @@ LC31E:
         inx                                     ; C32D E8                       .
         cpx     $603B                           ; C32E EC 3B 60                 .;`
         bcc     LC2F7                           ; C331 90 C4                    ..
-        jsr     LF3A0                           ; C333 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; C333 20 A0 F3                  ..
         rts                                     ; C336 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -9001,7 +9001,7 @@ LC370:
         sta     $6A                             ; C37C 85 6A                    .j
         txa                                     ; C37E 8A                       .
         pha                                     ; C37F 48                       H
-        jsr     LF3A0                           ; C380 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; C380 20 A0 F3                  ..
         jsr     L8EFB                           ; C383 20 FB 8E                  ..
         pla                                     ; C386 68                       h
         tax                                     ; C387 AA                       .
@@ -9015,7 +9015,7 @@ LC370:
         inx                                     ; C393 E8                       .
         cpx     $91                             ; C394 E4 91                    ..
         bcc     LC370                           ; C396 90 D8                    ..
-        jsr     LF3A0                           ; C398 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; C398 20 A0 F3                  ..
         rts                                     ; C39B 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -9181,7 +9181,7 @@ LC489:
 LC492:
         jsr     L9CE6                           ; C492 20 E6 9C                  ..
 LC496           := * + 1
-        jsr     LF3A0                           ; C495 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; C495 20 A0 F3                  ..
         ldx     #$08                            ; C498 A2 08                    ..
         lda     $22                             ; C49A A5 22                    ."
 LC49C:
@@ -9442,7 +9442,7 @@ LC646:
         sta     $DC                             ; C650 85 DC                    ..
 LC652:
         jsr     L9CE6                           ; C652 20 E6 9C                  ..
-        jsr     LF3A0                           ; C655 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; C655 20 A0 F3                  ..
         ldx     #$08                            ; C658 A2 08                    ..
         lda     $22                             ; C65A A5 22                    ."
 LC65C:
@@ -9540,7 +9540,7 @@ LC6DA:
 
 ; ----------------------------------------------------------------------------
 LC6DE:
-        jsr     LF3BC                           ; C6DE 20 BC F3                  ..
+        jsr     Bank04SetMemoryAddress0200Main  ; C6DE 20 BC F3                  ..
         lda     #$05                            ; C6E1 A9 05                    ..
         sta     $A9                             ; C6E3 85 A9                    ..
         jsr     LF268                           ; C6E5 20 68 F2                  h.
@@ -9571,7 +9571,7 @@ LC713:
         sta     $DC                             ; C71A 85 DC                    ..
 LC71C:
         jsr     L9CE6                           ; C71C 20 E6 9C                  ..
-        jsr     LF3A0                           ; C71F 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; C71F 20 A0 F3                  ..
         ldx     #$08                            ; C722 A2 08                    ..
         lda     $22                             ; C724 A5 22                    ."
 LC726:
@@ -9694,7 +9694,7 @@ LC7C4:
         bne     LC7B0                           ; C7DF D0 CF                    ..
         lda     #$FF                            ; C7E1 A9 FF                    ..
         sta     $2D                             ; C7E3 85 2D                    .-
-        jsr     LF3A0                           ; C7E5 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; C7E5 20 A0 F3                  ..
         rts                                     ; C7E8 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -9737,7 +9737,7 @@ LC837:
         sta     $0700                           ; C842 8D 00 07                 ...
         lda     #$FF                            ; C845 A9 FF                    ..
         sta     $2D                             ; C847 85 2D                    .-
-        jsr     LF3A0                           ; C849 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; C849 20 A0 F3                  ..
         lda     $0E                             ; C84C A5 0E                    ..
         clc                                     ; C84E 18                       .
         adc     #$20                            ; C84F 69 20                    i 
@@ -10246,7 +10246,7 @@ LCBB0:
         sta     $0700                           ; CBBD 8D 00 07                 ...
         lda     #$FF                            ; CBC0 A9 FF                    ..
         sta     $2D                             ; CBC2 85 2D                    .-
-        jsr     LF3A0                           ; CBC4 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; CBC4 20 A0 F3                  ..
         lda     $0E                             ; CBC7 A5 0E                    ..
         clc                                     ; CBC9 18                       .
         adc     #$20                            ; CBCA 69 20                    i 
@@ -11207,7 +11207,7 @@ LD4C3:
         jsr     LD51F                           ; D4F6 20 1F D5                  ..
         lda     #$00                            ; D4F9 A9 00                    ..
         jsr     LFEDE                           ; D4FB 20 DE FE                  ..
-        jsr     LF3A0                           ; D4FE 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D4FE 20 A0 F3                  ..
         lda     #$02                            ; D501 A9 02                    ..
         jsr     L950F                           ; D503 20 0F 95                  ..
         lda     #$04                            ; D506 A9 04                    ..
@@ -11222,7 +11222,7 @@ LD50C:
         lda     #$0A                            ; D514 A9 0A                    ..
         sta     $6A                             ; D516 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D518 20 09 8B                  ..
-        jsr     LF3A0                           ; D51B 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D51B 20 A0 F3                  ..
         rts                                     ; D51E 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -11235,7 +11235,7 @@ LD51F:
         lda     #$0A                            ; D52A A9 0A                    ..
         sta     $6A                             ; D52C 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D52E 20 09 8B                  ..
-        jsr     LF3A0                           ; D531 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D531 20 A0 F3                  ..
         rts                                     ; D534 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -11245,7 +11245,7 @@ LD535:
         lda     #$00                            ; D539 A9 00                    ..
         sta     $6A                             ; D53B 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D53D 20 09 8B                  ..
-        jsr     LF3A0                           ; D540 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D540 20 A0 F3                  ..
         lda     $6FC0                           ; D543 AD C0 6F                 ..o
         cmp     $6F1E                           ; D546 CD 1E 6F                 ..o
         bne     LD55A                           ; D549 D0 0F                    ..
@@ -11254,7 +11254,7 @@ LD535:
         lda     #$00                            ; D54F A9 00                    ..
         sta     $6A                             ; D551 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D553 20 09 8B                  ..
-        jsr     LF3A0                           ; D556 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D556 20 A0 F3                  ..
         rts                                     ; D559 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -11267,7 +11267,7 @@ LD55A:
         lda     #$0A                            ; D565 A9 0A                    ..
         sta     $6A                             ; D567 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D569 20 09 8B                  ..
-        jsr     LF3A0                           ; D56C 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D56C 20 A0 F3                  ..
         rts                                     ; D56F 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -11277,13 +11277,13 @@ LD570:
         lda     #$00                            ; D574 A9 00                    ..
         sta     $6A                             ; D576 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D578 20 09 8B                  ..
-        jsr     LF3A0                           ; D57B 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D57B 20 A0 F3                  ..
         lda     $6F24                           ; D57E AD 24 6F                 .$o
         sta     $69                             ; D581 85 69                    .i
         lda     #$06                            ; D583 A9 06                    ..
         sta     $6A                             ; D585 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D587 20 09 8B                  ..
-        jsr     LF3A0                           ; D58A 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D58A 20 A0 F3                  ..
         rts                                     ; D58D 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -11296,14 +11296,14 @@ LD58E:
         lda     #$00                            ; D59A A9 00                    ..
         sta     $6A                             ; D59C 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D59E 20 09 8B                  ..
-        jsr     LF3A0                           ; D5A1 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D5A1 20 A0 F3                  ..
         ldx     $6F1E                           ; D5A4 AE 1E 6F                 ..o
         lda     $6F50,x                         ; D5A7 BD 50 6F                 .Po
         sta     $69                             ; D5AA 85 69                    .i
         lda     #$0A                            ; D5AC A9 0A                    ..
         sta     $6A                             ; D5AE 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D5B0 20 09 8B                  ..
-        jsr     LF3A0                           ; D5B3 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D5B3 20 A0 F3                  ..
         rts                                     ; D5B6 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -11316,7 +11316,7 @@ LD5B7:
         lda     #$00                            ; D5C3 A9 00                    ..
         sta     $6A                             ; D5C5 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D5C7 20 09 8B                  ..
-        jsr     LF3A0                           ; D5CA 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D5CA 20 A0 F3                  ..
         ldx     $6FC0                           ; D5CD AE C0 6F                 ..o
         lda     $603C,x                         ; D5D0 BD 3C 60                 .<`
         clc                                     ; D5D3 18                       .
@@ -11325,7 +11325,7 @@ LD5B7:
         lda     #$0A                            ; D5D8 A9 0A                    ..
         sta     $6A                             ; D5DA 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D5DC 20 09 8B                  ..
-        jsr     LF3A0                           ; D5DF 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D5DF 20 A0 F3                  ..
         rts                                     ; D5E2 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -11335,7 +11335,7 @@ LD5E3:
         lda     #$00                            ; D5E7 A9 00                    ..
         sta     $6A                             ; D5E9 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D5EB 20 09 8B                  ..
-        jsr     LF3A0                           ; D5EE 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D5EE 20 A0 F3                  ..
         rts                                     ; D5F1 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -11364,7 +11364,7 @@ LD60C:
         lda     #$00                            ; D60E A9 00                    ..
         sta     $6A                             ; D610 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D612 20 09 8B                  ..
-        jsr     LF3A0                           ; D615 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D615 20 A0 F3                  ..
         rts                                     ; D618 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -11377,13 +11377,13 @@ LD61B:
         lda     #$00                            ; D620 A9 00                    ..
         sta     $6A                             ; D622 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D624 20 09 8B                  ..
-        jsr     LF3A0                           ; D627 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D627 20 A0 F3                  ..
         lda     $6F24                           ; D62A AD 24 6F                 .$o
         sta     $69                             ; D62D 85 69                    .i
         pla                                     ; D62F 68                       h
         sta     $6A                             ; D630 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D632 20 09 8B                  ..
-        jsr     LF3A0                           ; D635 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D635 20 A0 F3                  ..
         rts                                     ; D638 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -11408,7 +11408,7 @@ LD643:
         lda     #$0A                            ; D657 A9 0A                    ..
         sta     $6A                             ; D659 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D65B 20 09 8B                  ..
-        jsr     LF3A0                           ; D65E 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D65E 20 A0 F3                  ..
         jmp     LD672                           ; D661 4C 72 D6                 Lr.
 
 ; ----------------------------------------------------------------------------
@@ -11418,14 +11418,14 @@ LD664:
         lda     #$00                            ; D668 A9 00                    ..
         sta     $6A                             ; D66A 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D66C 20 09 8B                  ..
-        jsr     LF3A0                           ; D66F 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D66F 20 A0 F3                  ..
 LD672:
         pla                                     ; D672 68                       h
         sta     $69                             ; D673 85 69                    .i
         lda     #$00                            ; D675 A9 00                    ..
         sta     $6A                             ; D677 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D679 20 09 8B                  ..
-        jsr     LF3A0                           ; D67C 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D67C 20 A0 F3                  ..
         rts                                     ; D67F 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -11435,13 +11435,13 @@ LD680:
         lda     #$00                            ; D684 A9 00                    ..
         sta     $6A                             ; D686 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D688 20 09 8B                  ..
-        jsr     LF3A0                           ; D68B 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D68B 20 A0 F3                  ..
         lda     #$2E                            ; D68E A9 2E                    ..
         sta     $69                             ; D690 85 69                    .i
         lda     #$00                            ; D692 A9 00                    ..
         sta     $6A                             ; D694 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D696 20 09 8B                  ..
-        jsr     LF3A0                           ; D699 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D699 20 A0 F3                  ..
         rts                                     ; D69C 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -11454,13 +11454,13 @@ LD69D:
         lda     #$0A                            ; D6A8 A9 0A                    ..
         sta     $6A                             ; D6AA 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D6AC 20 09 8B                  ..
-        jsr     LF3A0                           ; D6AF 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D6AF 20 A0 F3                  ..
         lda     #$31                            ; D6B2 A9 31                    .1
         sta     $69                             ; D6B4 85 69                    .i
         lda     #$00                            ; D6B6 A9 00                    ..
         sta     $6A                             ; D6B8 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; D6BA 20 09 8B                  ..
-        jsr     LF3A0                           ; D6BD 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; D6BD 20 A0 F3                  ..
         rts                                     ; D6C0 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -12442,7 +12442,7 @@ LDE2D:
         jsr     L9650                           ; DE63 20 50 96                  P.
         lda     #$00                            ; DE66 A9 00                    ..
         jsr     LFEDE                           ; DE68 20 DE FE                  ..
-        jsr     LF3A0                           ; DE6B 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; DE6B 20 A0 F3                  ..
         lda     #$04                            ; DE6E A9 04                    ..
         jsr     L950F                           ; DE70 20 0F 95                  ..
         jsr     L94A8                           ; DE73 20 A8 94                  ..
@@ -13690,7 +13690,7 @@ LE809:
         lda     #$00                            ; E82A A9 00                    ..
         sta     $6A                             ; E82C 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; E82E 20 09 8B                  ..
-        jsr     LF3A0                           ; E831 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; E831 20 A0 F3                  ..
         lda     #$00                            ; E834 A9 00                    ..
         sta     $0617                           ; E836 8D 17 06                 ...
         lda     #$15                            ; E839 A9 15                    ..
@@ -13727,7 +13727,7 @@ LE857:
         lda     #$00                            ; E878 A9 00                    ..
         sta     $6A                             ; E87A 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; E87C 20 09 8B                  ..
-        jsr     LF3A0                           ; E87F 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; E87F 20 A0 F3                  ..
         lda     #$00                            ; E882 A9 00                    ..
         sta     $0617                           ; E884 8D 17 06                 ...
         lda     #$15                            ; E887 A9 15                    ..
@@ -13947,7 +13947,7 @@ LEA25:
         lda     #$0A                            ; EA4D A9 0A                    ..
         sta     $6A                             ; EA4F 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; EA51 20 09 8B                  ..
-        jsr     LF3A0                           ; EA54 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; EA54 20 A0 F3                  ..
         lda     #$22                            ; EA57 A9 22                    ."
         sta     $0F                             ; EA59 85 0F                    ..
         lda     #$E4                            ; EA5B A9 E4                    ..
@@ -13957,7 +13957,7 @@ LEA25:
         lda     #$00                            ; EA63 A9 00                    ..
         sta     $6A                             ; EA65 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; EA67 20 09 8B                  ..
-        jsr     LF3A0                           ; EA6A 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; EA6A 20 A0 F3                  ..
         jsr     L9F39                           ; EA6D 20 39 9F                  9.
         rts                                     ; EA70 60                       `
 
@@ -14202,7 +14202,7 @@ LEC1E:
         lda     #$00                            ; EC3F A9 00                    ..
         sta     $6A                             ; EC41 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; EC43 20 09 8B                  ..
-        jsr     LF3A0                           ; EC46 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; EC46 20 A0 F3                  ..
         lda     $6F26                           ; EC49 AD 26 6F                 .&o
         clc                                     ; EC4C 18                       .
         adc     #$01                            ; EC4D 69 01                    i.
@@ -14210,7 +14210,7 @@ LEC1E:
         lda     $6F25                           ; EC51 AD 25 6F                 .%o
         sta     $69                             ; EC54 85 69                    .i
         jsr     LoadBattleMenuStringFromBank6   ; EC56 20 09 8B                  ..
-        jsr     LF3A0                           ; EC59 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; EC59 20 A0 F3                  ..
         jsr     L9F39                           ; EC5C 20 39 9F                  9.
         rts                                     ; EC5F 60                       `
 
@@ -14251,7 +14251,7 @@ LEC75:
         lda     #$00                            ; EC9F A9 00                    ..
         sta     $6A                             ; ECA1 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; ECA3 20 09 8B                  ..
-        jsr     LF3A0                           ; ECA6 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; ECA6 20 A0 F3                  ..
         lda     $6F25                           ; ECA9 AD 25 6F                 .%o
         clc                                     ; ECAC 18                       .
         adc     #$01                            ; ECAD 69 01                    i.
@@ -14259,7 +14259,7 @@ LEC75:
         lda     #$08                            ; ECB1 A9 08                    ..
         sta     $6A                             ; ECB3 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; ECB5 20 09 8B                  ..
-        jsr     LF3A0                           ; ECB8 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; ECB8 20 A0 F3                  ..
         jsr     L9F39                           ; ECBB 20 39 9F                  9.
         rts                                     ; ECBE 60                       `
 
@@ -14354,13 +14354,13 @@ LED84:
         lda     #$00                            ; EDA5 A9 00                    ..
         sta     $6A                             ; EDA7 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; EDA9 20 09 8B                  ..
-        jsr     LF3A0                           ; EDAC 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; EDAC 20 A0 F3                  ..
         lda     $6F25                           ; EDAF AD 25 6F                 .%o
         sta     $69                             ; EDB2 85 69                    .i
         lda     #$05                            ; EDB4 A9 05                    ..
         sta     $6A                             ; EDB6 85 6A                    .j
         jsr     LoadBattleMenuStringFromBank6   ; EDB8 20 09 8B                  ..
-        jsr     LF3A0                           ; EDBB 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; EDBB 20 A0 F3                  ..
         jsr     L9F39                           ; EDBE 20 39 9F                  9.
         rts                                     ; EDC1 60                       `
 
@@ -14661,7 +14661,7 @@ LF245:
 
 ; ----------------------------------------------------------------------------
 LF249:
-        jsr     LF3A0                           ; F249 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; F249 20 A0 F3                  ..
         ldx     #$00                            ; F24C A2 00                    ..
 LF24E:
         lda     LF25A,x                         ; F24E BD 5A F2                 .Z.
@@ -14751,11 +14751,11 @@ LF38C:
         sta     $0700                           ; F395 8D 00 07                 ...
         lda     #$FF                            ; F398 A9 FF                    ..
         sta     $2D                             ; F39A 85 2D                    .-
-        jsr     LF3A0                           ; F39C 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; F39C 20 A0 F3                  ..
         rts                                     ; F39F 60                       `
 
 ; ----------------------------------------------------------------------------
-LF3A0:
+Bank04ScreenRefresh:
         lda     #$FF                            ; F3A0 A9 FF                    ..
         sta     $2E                             ; F3A2 85 2E                    ..
 LF3A4:
@@ -14765,7 +14765,7 @@ LF3A4:
 
 ; ----------------------------------------------------------------------------
 LF3A9:
-        jsr     LF3A0                           ; F3A9 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; F3A9 20 A0 F3                  ..
         dex                                     ; F3AC CA                       .
         bne     LF3A9                           ; F3AD D0 FA                    ..
         rts                                     ; F3AF 60                       `
@@ -14778,7 +14778,7 @@ LF3A9:
         rts                                     ; F3BB 60                       `
 
 ; ----------------------------------------------------------------------------
-LF3BC:
+Bank04SetMemoryAddress0200Main:
         ldx     #$00                            ; F3BC A2 00                    ..
         lda     #$F0                            ; F3BE A9 F0                    ..
 LF3C0:
@@ -14792,7 +14792,7 @@ LF3C0:
 
 ; ----------------------------------------------------------------------------
 LF3CA:
-        jsr     LF3A0                           ; F3CA 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; F3CA 20 A0 F3                  ..
         lda     $22                             ; F3CD A5 22                    ."
         bpl     LF3CA                           ; F3CF 10 F9                    ..
         rts                                     ; F3D1 60                       `
@@ -14847,20 +14847,20 @@ LF40B:
         lda     #$1E                            ; F424 A9 1E                    ..
         sta     $2001                           ; F426 8D 01 20                 .. 
         sta     $16                             ; F429 85 16                    ..
-        jsr     LF3A0                           ; F42B 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; F42B 20 A0 F3                  ..
         jsr     LF449                           ; F42E 20 49 F4                  I.
-        jsr     LF3A0                           ; F431 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; F431 20 A0 F3                  ..
         rts                                     ; F434 60                       `
 
 ; ----------------------------------------------------------------------------
 LF435:
-        jsr     LF3A0                           ; F435 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; F435 20 A0 F3                  ..
         jsr     LF46D                           ; F438 20 6D F4                  m.
-        jsr     LF3BC                           ; F43B 20 BC F3                  ..
-        jsr     LF3A0                           ; F43E 20 A0 F3                  ..
+        jsr     Bank04SetMemoryAddress0200Main  ; F43B 20 BC F3                  ..
+        jsr     Bank04ScreenRefresh             ; F43E 20 A0 F3                  ..
         lda     #$06                            ; F441 A9 06                    ..
         sta     $16                             ; F443 85 16                    ..
-        jsr     LF3A0                           ; F445 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; F445 20 A0 F3                  ..
         rts                                     ; F448 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -15387,7 +15387,7 @@ LFCFE           := * + 2
 ; ----------------------------------------------------------------------------
 LFD08:
         sta     $0D                             ; FD08 85 0D                    ..
-        jsr     LF3A0                           ; FD0A 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; FD0A 20 A0 F3                  ..
         lda     $0141                           ; FD0D AD 41 01                 .A.
         pha                                     ; FD10 48                       H
         lda     $0149                           ; FD11 AD 49 01                 .I.
@@ -15401,7 +15401,7 @@ LFD08:
         sta     $0129                           ; FD25 8D 29 01                 .).
         lda     $0D                             ; FD28 A5 0D                    ..
         jsr     LFD08                           ; FD2A 20 08 FD                  ..
-        jsr     LF3A0                           ; FD2D 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; FD2D 20 A0 F3                  ..
         pla                                     ; FD30 68                       h
         sta     $0149                           ; FD31 8D 49 01                 .I.
         pla                                     ; FD34 68                       h
@@ -15418,7 +15418,7 @@ LFD08:
 ; ----------------------------------------------------------------------------
 LFD4C:
         sta     $0D                             ; FD4C 85 0D                    ..
-        jsr     LF3A0                           ; FD4E 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; FD4E 20 A0 F3                  ..
         lda     $0141                           ; FD51 AD 41 01                 .A.
         pha                                     ; FD54 48                       H
         lda     $0149                           ; FD55 AD 49 01                 .I.
@@ -15433,7 +15433,7 @@ LFD4C:
         lda     $0D                             ; FD6C A5 0D                    ..
         jsr     LFD4C                           ; FD6E 20 4C FD                  L.
         sta     $0D                             ; FD71 85 0D                    ..
-        jsr     LF3A0                           ; FD73 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; FD73 20 A0 F3                  ..
         pla                                     ; FD76 68                       h
         sta     $0149                           ; FD77 8D 49 01                 .I.
         pla                                     ; FD7A 68                       h
@@ -15451,7 +15451,7 @@ LFD4C:
 ; ----------------------------------------------------------------------------
 LFD94:
         sta     $0D                             ; FD94 85 0D                    ..
-        jsr     LF3A0                           ; FD96 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; FD96 20 A0 F3                  ..
         lda     $0141                           ; FD99 AD 41 01                 .A.
         pha                                     ; FD9C 48                       H
         lda     $0149                           ; FD9D AD 49 01                 .I.
@@ -15466,7 +15466,7 @@ LFD94:
         lda     $0D                             ; FDB4 A5 0D                    ..
         jsr     LFD94                           ; FDB6 20 94 FD                  ..
         sta     $0D                             ; FDB9 85 0D                    ..
-        jsr     LF3A0                           ; FDBB 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; FDBB 20 A0 F3                  ..
         pla                                     ; FDBE 68                       h
         sta     $0149                           ; FDBF 8D 49 01                 .I.
         pla                                     ; FDC2 68                       h
@@ -15484,7 +15484,7 @@ LFD94:
 ; ----------------------------------------------------------------------------
 LFDDC:
         sta     $0D                             ; FDDC 85 0D                    ..
-        jsr     LF3A0                           ; FDDE 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; FDDE 20 A0 F3                  ..
         lda     $0141                           ; FDE1 AD 41 01                 .A.
         pha                                     ; FDE4 48                       H
         lda     $0149                           ; FDE5 AD 49 01                 .I.
@@ -15498,7 +15498,7 @@ LFDDC:
         sta     $0129                           ; FDF9 8D 29 01                 .).
         lda     $0D                             ; FDFC A5 0D                    ..
         jsr     LFDDC                           ; FDFE 20 DC FD                  ..
-        jsr     LF3A0                           ; FE01 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; FE01 20 A0 F3                  ..
         pla                                     ; FE04 68                       h
         sta     $0149                           ; FE05 8D 49 01                 .I.
         pla                                     ; FE08 68                       h
@@ -15514,7 +15514,7 @@ LFDDC:
 
 ; ----------------------------------------------------------------------------
 LFE20:
-        jsr     LF3A0                           ; FE20 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; FE20 20 A0 F3                  ..
         lda     #$02                            ; FE23 A9 02                    ..
         sta     $0119                           ; FE25 8D 19 01                 ...
         sta     $0109                           ; FE28 8D 09 01                 ...
@@ -15525,7 +15525,7 @@ LFE20:
         lda     #$02                            ; FE35 A9 02                    ..
         sta     $5000                           ; FE37 8D 00 50                 ..P
         jsr     LFE20                           ; FE3A 20 20 FE                   .
-        jsr     LF3A0                           ; FE3D 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; FE3D 20 A0 F3                  ..
         lda     #$00                            ; FE40 A9 00                    ..
         sta     $0119                           ; FE42 8D 19 01                 ...
         sta     $0109                           ; FE45 8D 09 01                 ...
@@ -15539,7 +15539,7 @@ LFE20:
 
 ; ----------------------------------------------------------------------------
 LFE58:
-        jsr     LF3A0                           ; FE58 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; FE58 20 A0 F3                  ..
         lda     #$02                            ; FE5B A9 02                    ..
         sta     $0119                           ; FE5D 8D 19 01                 ...
         sta     $0109                           ; FE60 8D 09 01                 ...
@@ -15550,7 +15550,7 @@ LFE58:
         lda     #$02                            ; FE6D A9 02                    ..
         sta     $5000                           ; FE6F 8D 00 50                 ..P
         jsr     LFE58                           ; FE72 20 58 FE                  X.
-        jsr     LF3A0                           ; FE75 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; FE75 20 A0 F3                  ..
         lda     #$00                            ; FE78 A9 00                    ..
         sta     $0119                           ; FE7A 8D 19 01                 ...
         sta     $0109                           ; FE7D 8D 09 01                 ...
@@ -15564,7 +15564,7 @@ LFE58:
 
 ; ----------------------------------------------------------------------------
 LFE90:
-        jsr     LF3A0                           ; FE90 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; FE90 20 A0 F3                  ..
         lda     $0141                           ; FE93 AD 41 01                 .A.
         pha                                     ; FE96 48                       H
         lda     $0149                           ; FE97 AD 49 01                 .I.
@@ -15577,7 +15577,7 @@ LFE90:
         sta     $0139                           ; FEA8 8D 39 01                 .9.
         sta     $0129                           ; FEAB 8D 29 01                 .).
         jsr     LFE90                           ; FEAE 20 90 FE                  ..
-        jsr     LF3A0                           ; FEB1 20 A0 F3                  ..
+        jsr     Bank04ScreenRefresh             ; FEB1 20 A0 F3                  ..
         pla                                     ; FEB4 68                       h
         sta     $0149                           ; FEB5 8D 49 01                 .I.
         pla                                     ; FEB8 68                       h

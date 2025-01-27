@@ -57,7 +57,7 @@ L8040:
         sbc     #$01                            ; 8044 E9 01                    ..
         sta     $0300,y                         ; 8046 99 00 03                 ...
         jsr     LE587                           ; 8049 20 87 E5                  ..
-        jsr     LE356                           ; 804C 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 804C 20 56 E3                  V.
         cpx     #$10                            ; 804F E0 10                    ..
         bne     L8040                           ; 8051 D0 ED                    ..
 L8053:
@@ -248,7 +248,7 @@ L815F:
         adc     #$01                            ; 8163 69 01                    i.
         sta     $0300,y                         ; 8165 99 00 03                 ...
         jsr     LE587                           ; 8168 20 87 E5                  ..
-        jsr     LE356                           ; 816B 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 816B 20 56 E3                  V.
         cpx     #$10                            ; 816E E0 10                    ..
         bne     L815F                           ; 8170 D0 ED                    ..
 L8172:
@@ -454,7 +454,7 @@ L8297:
         adc     #$01                            ; 829B 69 01                    i.
         sta     $0300,y                         ; 829D 99 00 03                 ...
         jsr     LE587                           ; 82A0 20 87 E5                  ..
-        jsr     LE356                           ; 82A3 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 82A3 20 56 E3                  V.
         cpx     #$10                            ; 82A6 E0 10                    ..
         bne     L8297                           ; 82A8 D0 ED                    ..
 L82AA:
@@ -652,7 +652,7 @@ L83BD:
         sbc     #$01                            ; 83C1 E9 01                    ..
         sta     $0300,y                         ; 83C3 99 00 03                 ...
         jsr     LE587                           ; 83C6 20 87 E5                  ..
-        jsr     LE356                           ; 83C9 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 83C9 20 56 E3                  V.
         cpx     #$10                            ; 83CC E0 10                    ..
         bne     L83BD                           ; 83CE D0 ED                    ..
 L83D0:
@@ -979,43 +979,43 @@ L8577:
         adc     #$02                            ; 857E 69 02                    i.
         sta     $13                             ; 8580 85 13                    ..
         jsr     L8560                           ; 8582 20 60 85                  `.
-        jsr     LE356                           ; 8585 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8585 20 56 E3                  V.
         lda     $13                             ; 8588 A5 13                    ..
         clc                                     ; 858A 18                       .
         adc     #$02                            ; 858B 69 02                    i.
         sta     $13                             ; 858D 85 13                    ..
         jsr     L8560                           ; 858F 20 60 85                  `.
-        jsr     LE356                           ; 8592 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8592 20 56 E3                  V.
         lda     $13                             ; 8595 A5 13                    ..
         clc                                     ; 8597 18                       .
         adc     #$02                            ; 8598 69 02                    i.
         sta     $13                             ; 859A 85 13                    ..
         jsr     L8560                           ; 859C 20 60 85                  `.
-        jsr     LE356                           ; 859F 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 859F 20 56 E3                  V.
         lda     $13                             ; 85A2 A5 13                    ..
         clc                                     ; 85A4 18                       .
         adc     #$02                            ; 85A5 69 02                    i.
         sta     $13                             ; 85A7 85 13                    ..
         jsr     L8560                           ; 85A9 20 60 85                  `.
-        jsr     LE356                           ; 85AC 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 85AC 20 56 E3                  V.
         lda     $13                             ; 85AF A5 13                    ..
         clc                                     ; 85B1 18                       .
         adc     #$02                            ; 85B2 69 02                    i.
         sta     $13                             ; 85B4 85 13                    ..
         jsr     L8560                           ; 85B6 20 60 85                  `.
-        jsr     LE356                           ; 85B9 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 85B9 20 56 E3                  V.
         lda     $13                             ; 85BC A5 13                    ..
         clc                                     ; 85BE 18                       .
         adc     #$02                            ; 85BF 69 02                    i.
         sta     $13                             ; 85C1 85 13                    ..
         jsr     L8560                           ; 85C3 20 60 85                  `.
-        jsr     LE356                           ; 85C6 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 85C6 20 56 E3                  V.
         lda     $13                             ; 85C9 A5 13                    ..
         clc                                     ; 85CB 18                       .
         adc     #$02                            ; 85CC 69 02                    i.
         sta     $13                             ; 85CE 85 13                    ..
         jsr     L8560                           ; 85D0 20 60 85                  `.
-        jsr     LE356                           ; 85D3 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 85D3 20 56 E3                  V.
         jsr     L8560                           ; 85D6 20 60 85                  `.
         lda     $13                             ; 85D9 A5 13                    ..
         clc                                     ; 85DB 18                       .
@@ -1062,43 +1062,43 @@ L8618:
         sbc     #$02                            ; 861B E9 02                    ..
         sta     $13                             ; 861D 85 13                    ..
         jsr     L85F0                           ; 861F 20 F0 85                  ..
-        jsr     LE356                           ; 8622 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8622 20 56 E3                  V.
         lda     $13                             ; 8625 A5 13                    ..
         sec                                     ; 8627 38                       8
         sbc     #$02                            ; 8628 E9 02                    ..
         sta     $13                             ; 862A 85 13                    ..
         jsr     L85F0                           ; 862C 20 F0 85                  ..
-        jsr     LE356                           ; 862F 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 862F 20 56 E3                  V.
         lda     $13                             ; 8632 A5 13                    ..
         sec                                     ; 8634 38                       8
         sbc     #$02                            ; 8635 E9 02                    ..
         sta     $13                             ; 8637 85 13                    ..
         jsr     L85F0                           ; 8639 20 F0 85                  ..
-        jsr     LE356                           ; 863C 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 863C 20 56 E3                  V.
         lda     $13                             ; 863F A5 13                    ..
         sec                                     ; 8641 38                       8
         sbc     #$02                            ; 8642 E9 02                    ..
         sta     $13                             ; 8644 85 13                    ..
         jsr     L85F0                           ; 8646 20 F0 85                  ..
-        jsr     LE356                           ; 8649 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8649 20 56 E3                  V.
         lda     $13                             ; 864C A5 13                    ..
         sec                                     ; 864E 38                       8
         sbc     #$02                            ; 864F E9 02                    ..
         sta     $13                             ; 8651 85 13                    ..
         jsr     L85F0                           ; 8653 20 F0 85                  ..
-        jsr     LE356                           ; 8656 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8656 20 56 E3                  V.
         lda     $13                             ; 8659 A5 13                    ..
         sec                                     ; 865B 38                       8
         sbc     #$02                            ; 865C E9 02                    ..
         sta     $13                             ; 865E 85 13                    ..
         jsr     L85F0                           ; 8660 20 F0 85                  ..
-        jsr     LE356                           ; 8663 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8663 20 56 E3                  V.
         lda     $13                             ; 8666 A5 13                    ..
         sec                                     ; 8668 38                       8
         sbc     #$02                            ; 8669 E9 02                    ..
         sta     $13                             ; 866B 85 13                    ..
         jsr     L85F0                           ; 866D 20 F0 85                  ..
-        jsr     LE356                           ; 8670 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8670 20 56 E3                  V.
         lda     $13                             ; 8673 A5 13                    ..
         sec                                     ; 8675 38                       8
         sbc     #$02                            ; 8676 E9 02                    ..
@@ -1145,43 +1145,43 @@ L86AF:
         adc     #$02                            ; 86B6 69 02                    i.
         sta     $14                             ; 86B8 85 14                    ..
         jsr     L8682                           ; 86BA 20 82 86                  ..
-        jsr     LE356                           ; 86BD 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 86BD 20 56 E3                  V.
         lda     $14                             ; 86C0 A5 14                    ..
         clc                                     ; 86C2 18                       .
         adc     #$02                            ; 86C3 69 02                    i.
         sta     $14                             ; 86C5 85 14                    ..
         jsr     L8682                           ; 86C7 20 82 86                  ..
-        jsr     LE356                           ; 86CA 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 86CA 20 56 E3                  V.
         lda     $14                             ; 86CD A5 14                    ..
         clc                                     ; 86CF 18                       .
         adc     #$02                            ; 86D0 69 02                    i.
         sta     $14                             ; 86D2 85 14                    ..
         jsr     L8682                           ; 86D4 20 82 86                  ..
-        jsr     LE356                           ; 86D7 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 86D7 20 56 E3                  V.
         lda     $14                             ; 86DA A5 14                    ..
         clc                                     ; 86DC 18                       .
         adc     #$02                            ; 86DD 69 02                    i.
         sta     $14                             ; 86DF 85 14                    ..
         jsr     L8682                           ; 86E1 20 82 86                  ..
-        jsr     LE356                           ; 86E4 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 86E4 20 56 E3                  V.
         lda     $14                             ; 86E7 A5 14                    ..
         clc                                     ; 86E9 18                       .
         adc     #$02                            ; 86EA 69 02                    i.
         sta     $14                             ; 86EC 85 14                    ..
         jsr     L8682                           ; 86EE 20 82 86                  ..
-        jsr     LE356                           ; 86F1 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 86F1 20 56 E3                  V.
         lda     $14                             ; 86F4 A5 14                    ..
         clc                                     ; 86F6 18                       .
         adc     #$02                            ; 86F7 69 02                    i.
         sta     $14                             ; 86F9 85 14                    ..
         jsr     L8682                           ; 86FB 20 82 86                  ..
-        jsr     LE356                           ; 86FE 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 86FE 20 56 E3                  V.
         lda     $14                             ; 8701 A5 14                    ..
         clc                                     ; 8703 18                       .
         adc     #$02                            ; 8704 69 02                    i.
         sta     $14                             ; 8706 85 14                    ..
         jsr     L8682                           ; 8708 20 82 86                  ..
-        jsr     LE356                           ; 870B 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 870B 20 56 E3                  V.
         jsr     L8682                           ; 870E 20 82 86                  ..
         lda     $14                             ; 8711 A5 14                    ..
         clc                                     ; 8713 18                       .
@@ -1234,43 +1234,43 @@ L875A:
         sbc     #$02                            ; 875B E9 02                    ..
         sta     $14                             ; 875D 85 14                    ..
         jsr     L872C                           ; 875F 20 2C 87                  ,.
-        jsr     LE356                           ; 8762 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8762 20 56 E3                  V.
         lda     $14                             ; 8765 A5 14                    ..
         sec                                     ; 8767 38                       8
         sbc     #$02                            ; 8768 E9 02                    ..
         sta     $14                             ; 876A 85 14                    ..
         jsr     L872C                           ; 876C 20 2C 87                  ,.
-        jsr     LE356                           ; 876F 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 876F 20 56 E3                  V.
         lda     $14                             ; 8772 A5 14                    ..
         sec                                     ; 8774 38                       8
         sbc     #$02                            ; 8775 E9 02                    ..
         sta     $14                             ; 8777 85 14                    ..
         jsr     L872C                           ; 8779 20 2C 87                  ,.
-        jsr     LE356                           ; 877C 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 877C 20 56 E3                  V.
         lda     $14                             ; 877F A5 14                    ..
         sec                                     ; 8781 38                       8
         sbc     #$02                            ; 8782 E9 02                    ..
         sta     $14                             ; 8784 85 14                    ..
         jsr     L872C                           ; 8786 20 2C 87                  ,.
-        jsr     LE356                           ; 8789 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8789 20 56 E3                  V.
         lda     $14                             ; 878C A5 14                    ..
         sec                                     ; 878E 38                       8
         sbc     #$02                            ; 878F E9 02                    ..
         sta     $14                             ; 8791 85 14                    ..
         jsr     L872C                           ; 8793 20 2C 87                  ,.
-        jsr     LE356                           ; 8796 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8796 20 56 E3                  V.
         lda     $14                             ; 8799 A5 14                    ..
         sec                                     ; 879B 38                       8
         sbc     #$02                            ; 879C E9 02                    ..
         sta     $14                             ; 879E 85 14                    ..
         jsr     L872C                           ; 87A0 20 2C 87                  ,.
-        jsr     LE356                           ; 87A3 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 87A3 20 56 E3                  V.
         lda     $14                             ; 87A6 A5 14                    ..
         sec                                     ; 87A8 38                       8
         sbc     #$02                            ; 87A9 E9 02                    ..
         sta     $14                             ; 87AB 85 14                    ..
         jsr     L872C                           ; 87AD 20 2C 87                  ,.
-        jsr     LE356                           ; 87B0 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 87B0 20 56 E3                  V.
         lda     $14                             ; 87B3 A5 14                    ..
         sec                                     ; 87B5 38                       8
         sbc     #$02                            ; 87B6 E9 02                    ..
@@ -1687,7 +1687,7 @@ L89EF:
         ldx     #$00                            ; 89FD A2 00                    ..
 L89FF:
         jsr     L8A0B                           ; 89FF 20 0B 8A                  ..
-        jsr     LE356                           ; 8A02 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8A02 20 56 E3                  V.
         inx                                     ; 8A05 E8                       .
         cpx     #$10                            ; 8A06 E0 10                    ..
         bne     L89FF                           ; 8A08 D0 F5                    ..
@@ -2002,7 +2002,7 @@ L8BEC:
         lda     Bank02SceneScriptTable,y        ; 8BF8 B9 01 D7                 ...
         sta     $A8                             ; 8BFB 85 A8                    ..
         lda     #$00                            ; 8BFD A9 00                    ..
-        jmp     L8C29                           ; 8BFF 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8BFF 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L8C02:
@@ -2016,7 +2016,7 @@ L8C02:
         lda     Bank02SceneScriptTable+256,y    ; 8C0D B9 01 D8                 ...
         sta     $A8                             ; 8C10 85 A8                    ..
         lda     #$00                            ; 8C12 A9 00                    ..
-        jmp     L8C29                           ; 8C14 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8C14 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L8C17:
@@ -2028,10 +2028,10 @@ L8C17:
         lda     Bank02SceneScriptTable+256+254,y; 8C1F B9 FF D8                 ...
         sta     $A8                             ; 8C22 85 A8                    ..
         lda     #$00                            ; 8C24 A9 00                    ..
-        jmp     L8C29                           ; 8C26 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8C26 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-L8C29:
+Bank02LoadNextScriptOpcode:
         clc                                     ; 8C29 18                       .
         adc     $A7                             ; 8C2A 65 A7                    e.
         sta     $A7                             ; 8C2C 85 A7                    ..
@@ -2059,7 +2059,7 @@ L8C3D:
         pla                                     ; 8C4D 68                       h
         sta     $A7                             ; 8C4E 85 A7                    ..
         lda     #$02                            ; 8C50 A9 02                    ..
-        jmp     L8C29                           ; 8C52 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8C52 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L8C55:
@@ -2078,13 +2078,13 @@ L8C55:
 Bank02ScriptOpcodeTable:
         .addr   L8C3C                           ; 8C69 3C 8C                    <.
         .addr   L8CE9                           ; 8C6B E9 8C                    ..
-        .addr   L8D85                           ; 8C6D 85 8D                    ..
+        .addr   Bank02ScriptOpcode02            ; 8C6D 85 8D                    ..
         .addr   L8D94                           ; 8C6F 94 8D                    ..
         .addr   L8DA3                           ; 8C71 A3 8D                    ..
         .addr   L8DCD                           ; 8C73 CD 8D                    ..
         .addr   L8DD9                           ; 8C75 D9 8D                    ..
-        .addr   Bank02ScriptOpcode08_MoveSprite ; 8C77 E5 8D                    ..
-        .addr   L8DF1                           ; 8C79 F1 8D                    ..
+        .addr   L8DE5                           ; 8C77 E5 8D                    ..
+        .addr   Bank02ScriptOpcode08_MoveSprite ; 8C79 F1 8D                    ..
         .addr   L8E6F                           ; 8C7B 6F 8E                    o.
         .addr   L8ED6                           ; 8C7D D6 8E                    ..
         .addr   L8F0C                           ; 8C7F 0C 8F                    ..
@@ -2220,10 +2220,10 @@ L8D51:
 ; ----------------------------------------------------------------------------
 L8D6C:
         jsr     L8361                           ; 8D6C 20 61 83                  a.
-        jsr     LE356                           ; 8D6F 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8D6F 20 56 E3                  V.
         jsr     LE340                           ; 8D72 20 40 E3                  @.
         lda     #$07                            ; 8D75 A9 07                    ..
-        jmp     L8C29                           ; 8D77 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8D77 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L8D7A:
@@ -2236,13 +2236,13 @@ L8D84:
         rts                                     ; 8D84 60                       `
 
 ; ----------------------------------------------------------------------------
-L8D85:
+Bank02ScriptOpcode02:
         ldy     #$01                            ; 8D85 A0 01                    ..
         lda     ($A7),y                         ; 8D87 B1 A7                    ..
         jsr     LE00C                           ; 8D89 20 0C E0                  ..
         bcc     L8D93                           ; 8D8C 90 05                    ..
         lda     #$02                            ; 8D8E A9 02                    ..
-        jmp     L8C29                           ; 8D90 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8D90 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L8D93:
@@ -2255,7 +2255,7 @@ L8D94:
         jsr     LE00C                           ; 8D98 20 0C E0                  ..
         bcs     L8DA2                           ; 8D9B B0 05                    ..
         lda     #$02                            ; 8D9D A9 02                    ..
-        jmp     L8C29                           ; 8D9F 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8D9F 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L8DA2:
@@ -2275,7 +2275,7 @@ L8DAA:
         tya                                     ; 8DB2 98                       .
         pha                                     ; 8DB3 48                       H
         jsr     L8361                           ; 8DB4 20 61 83                  a.
-        jsr     LE356                           ; 8DB7 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8DB7 20 56 E3                  V.
         jsr     LE340                           ; 8DBA 20 40 E3                  @.
         lda     $8D                             ; 8DBD A5 8D                    ..
         jsr     LFD08                           ; 8DBF 20 08 FD                  ..
@@ -2288,7 +2288,7 @@ L8DAA:
 L8DC8:
         iny                                     ; 8DC8 C8                       .
         tya                                     ; 8DC9 98                       .
-        jmp     L8C29                           ; 8DCA 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8DCA 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L8DCD:
@@ -2296,7 +2296,7 @@ L8DCD:
         lda     ($A7),y                         ; 8DCF B1 A7                    ..
         jsr     LFEEE                           ; 8DD1 20 EE FE                  ..
         lda     #$01                            ; 8DD4 A9 01                    ..
-        jmp     L8C29                           ; 8DD6 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8DD6 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L8DD9:
@@ -2304,20 +2304,20 @@ L8DD9:
         lda     ($A7),y                         ; 8DDB B1 A7                    ..
         jsr     LE02C                           ; 8DDD 20 2C E0                  ,.
         lda     #$02                            ; 8DE0 A9 02                    ..
-        jmp     L8C29                           ; 8DE2 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8DE2 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-Bank02ScriptOpcode08_MoveSprite:
+L8DE5:
         ldy     #$01                            ; 8DE5 A0 01                    ..
         lda     ($A7),y                         ; 8DE7 B1 A7                    ..
         jsr     LE042                           ; 8DE9 20 42 E0                  B.
         lda     #$02                            ; 8DEC A9 02                    ..
-        jmp     L8C29                           ; 8DEE 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8DEE 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-L8DF1:
+Bank02ScriptOpcode08_MoveSprite:
         jsr     L8361                           ; 8DF1 20 61 83                  a.
-        jsr     LE356                           ; 8DF4 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8DF4 20 56 E3                  V.
         ldy     #$01                            ; 8DF7 A0 01                    ..
         lda     ($A7),y                         ; 8DF9 B1 A7                    ..
         sta     $8D                             ; 8DFB 85 8D                    ..
@@ -2342,28 +2342,28 @@ L8DF1:
 L8E1A:
         lda     $8D                             ; 8E1A A5 8D                    ..
         jsr     LE6E1                           ; 8E1C 20 E1 E6                  ..
-        jsr     LE356                           ; 8E1F 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8E1F 20 56 E3                  V.
         jmp     L8E46                           ; 8E22 4C 46 8E                 LF.
 
 ; ----------------------------------------------------------------------------
 L8E25:
         lda     $8D                             ; 8E25 A5 8D                    ..
         jsr     LE6A9                           ; 8E27 20 A9 E6                  ..
-        jsr     LE356                           ; 8E2A 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8E2A 20 56 E3                  V.
         jmp     L8E46                           ; 8E2D 4C 46 8E                 LF.
 
 ; ----------------------------------------------------------------------------
 L8E30:
         lda     $8D                             ; 8E30 A5 8D                    ..
         jsr     LE671                           ; 8E32 20 71 E6                  q.
-        jsr     LE356                           ; 8E35 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8E35 20 56 E3                  V.
         jmp     L8E46                           ; 8E38 4C 46 8E                 LF.
 
 ; ----------------------------------------------------------------------------
 L8E3B:
         lda     $8D                             ; 8E3B A5 8D                    ..
         jsr     LE639                           ; 8E3D 20 39 E6                  9.
-        jsr     LE356                           ; 8E40 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8E40 20 56 E3                  V.
         jmp     L8E46                           ; 8E43 4C 46 8E                 LF.
 
 ; ----------------------------------------------------------------------------
@@ -2387,7 +2387,7 @@ L8E53:
         jsr     LE503                           ; 8E67 20 03 E5                  ..
 L8E6A:
         lda     #$04                            ; 8E6A A9 04                    ..
-        jmp     L8C29                           ; 8E6C 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8E6C 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L8E6F:
@@ -2429,7 +2429,7 @@ L8E6F:
         sta     $0300,x                         ; 8EA5 9D 00 03                 ...
 L8EA8:
         lda     #$07                            ; 8EA8 A9 07                    ..
-        jmp     L8C29                           ; 8EAA 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8EAA 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L8EAD:
@@ -2492,7 +2492,7 @@ L8EED:
 L8F07:
         iny                                     ; 8F07 C8                       .
         tya                                     ; 8F08 98                       .
-        jmp     L8C29                           ; 8F09 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8F09 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L8F0C:
@@ -2500,11 +2500,11 @@ L8F0C:
         lda     ($A7),y                         ; 8F0E B1 A7                    ..
         tay                                     ; 8F10 A8                       .
 L8F11:
-        jsr     LE356                           ; 8F11 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8F11 20 56 E3                  V.
         dey                                     ; 8F14 88                       .
         bne     L8F11                           ; 8F15 D0 FA                    ..
         lda     #$02                            ; 8F17 A9 02                    ..
-        jmp     L8C29                           ; 8F19 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8F19 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L8F1C:
@@ -2512,7 +2512,7 @@ L8F1C:
 
 ; ----------------------------------------------------------------------------
 L8F1F:
-        jsr     LE356                           ; 8F1F 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8F1F 20 56 E3                  V.
         ldy     #$02                            ; 8F22 A0 02                    ..
         lda     ($A7),y                         ; 8F24 B1 A7                    ..
         beq     L8F3E                           ; 8F26 F0 16                    ..
@@ -2530,7 +2530,7 @@ L8F1F:
 L8F3E:
         jsr     LE340                           ; 8F3E 20 40 E3                  @.
         lda     #$03                            ; 8F41 A9 03                    ..
-        jmp     L8C29                           ; 8F43 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8F43 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L8F46:
@@ -2538,7 +2538,7 @@ L8F46:
         bcs     L8F58                           ; 8F49 B0 0D                    ..
         jsr     LFCEA                           ; 8F4B 20 EA FC                  ..
         jsr     L8750                           ; 8F4E 20 50 87                  P.
-        jsr     LE356                           ; 8F51 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8F51 20 56 E3                  V.
         dec     $8D                             ; 8F54 C6 8D                    ..
         bne     L8F46                           ; 8F56 D0 EE                    ..
 L8F58:
@@ -2550,7 +2550,7 @@ L8F5B:
         bcs     L8F6D                           ; 8F5E B0 0D                    ..
         jsr     LFC90                           ; 8F60 20 90 FC                  ..
         jsr     L86AF                           ; 8F63 20 AF 86                  ..
-        jsr     LE356                           ; 8F66 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8F66 20 56 E3                  V.
         dec     $8D                             ; 8F69 C6 8D                    ..
         bne     L8F5B                           ; 8F6B D0 EE                    ..
 L8F6D:
@@ -2562,7 +2562,7 @@ L8F70:
         bcs     L8F82                           ; 8F73 B0 0D                    ..
         jsr     LFCCC                           ; 8F75 20 CC FC                  ..
         jsr     L8607                           ; 8F78 20 07 86                  ..
-        jsr     LE356                           ; 8F7B 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8F7B 20 56 E3                  V.
         dec     $8D                             ; 8F7E C6 8D                    ..
         bne     L8F70                           ; 8F80 D0 EE                    ..
 L8F82:
@@ -2574,7 +2574,7 @@ L8F85:
         bcs     L8F97                           ; 8F88 B0 0D                    ..
         jsr     LFCAE                           ; 8F8A 20 AE FC                  ..
         jsr     L8577                           ; 8F8D 20 77 85                  w.
-        jsr     LE356                           ; 8F90 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 8F90 20 56 E3                  V.
         dec     $8D                             ; 8F93 C6 8D                    ..
         bne     L8F85                           ; 8F95 D0 EE                    ..
 L8F97:
@@ -2585,7 +2585,7 @@ L8F9A:
         lda     $55                             ; 8F9A A5 55                    .U
         beq     L8FA3                           ; 8F9C F0 05                    ..
         lda     #$01                            ; 8F9E A9 01                    ..
-        jmp     L8C29                           ; 8FA0 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8FA0 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L8FA3:
@@ -2598,7 +2598,7 @@ L8FA4:
         jsr     L8FB3                           ; 8FA8 20 B3 8F                  ..
         bcc     L8FB2                           ; 8FAB 90 05                    ..
         lda     #$02                            ; 8FAD A9 02                    ..
-        jmp     L8C29                           ; 8FAF 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 8FAF 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L8FB2:
@@ -2746,13 +2746,13 @@ L9070:
         sta     $1C                             ; 907A 85 1C                    ..
         jsr     LE939                           ; 907C 20 39 E9                  9.
         lda     #$01                            ; 907F A9 01                    ..
-        jmp     L8C29                           ; 9081 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9081 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9084:
         jsr     LE35F                           ; 9084 20 5F E3                  _.
         lda     #$01                            ; 9087 A9 01                    ..
-        jmp     L8C29                           ; 9089 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9089 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L908C:
@@ -2763,11 +2763,11 @@ L908C:
         pla                                     ; 9094 68                       h
         pha                                     ; 9095 48                       H
         jsr     L8361                           ; 9096 20 61 83                  a.
-        jsr     LE356                           ; 9099 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 9099 20 56 E3                  V.
         pla                                     ; 909C 68                       h
         jsr     LE340                           ; 909D 20 40 E3                  @.
         lda     #$02                            ; 90A0 A9 02                    ..
-        jmp     L8C29                           ; 90A2 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 90A2 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L90A5:
@@ -2775,7 +2775,7 @@ L90A5:
         lda     ($A7),y                         ; 90A7 B1 A7                    ..
         jsr     LE503                           ; 90A9 20 03 E5                  ..
         lda     #$02                            ; 90AC A9 02                    ..
-        jmp     L8C29                           ; 90AE 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 90AE 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L90B1:
@@ -2821,7 +2821,7 @@ L90C7:
         beq     L9165                           ; 90F9 F0 6A                    .j
 L90FB:
         jsr     L8361                           ; 90FB 20 61 83                  a.
-        jsr     LE356                           ; 90FE 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 90FE 20 56 E3                  V.
         jsr     LE340                           ; 9101 20 40 E3                  @.
         lda     #$00                            ; 9104 A9 00                    ..
         jsr     LE503                           ; 9106 20 03 E5                  ..
@@ -2847,14 +2847,14 @@ L912B:
         lda     #$00                            ; 912B A9 00                    ..
         sta     $602D                           ; 912D 8D 2D 60                 .-`
         lda     #$04                            ; 9130 A9 04                    ..
-        jmp     L8C29                           ; 9132 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9132 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9135:
         txa                                     ; 9135 8A                       .
         pha                                     ; 9136 48                       H
         jsr     L837D                           ; 9137 20 7D 83                  }.
-        jsr     LE356                           ; 913A 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 913A 20 56 E3                  V.
         pla                                     ; 913D 68                       h
         tax                                     ; 913E AA                       .
         dex                                     ; 913F CA                       .
@@ -2866,7 +2866,7 @@ L9145:
         txa                                     ; 9145 8A                       .
         pha                                     ; 9146 48                       H
         jsr     L811F                           ; 9147 20 1F 81                  ..
-        jsr     LE356                           ; 914A 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 914A 20 56 E3                  V.
         pla                                     ; 914D 68                       h
         tax                                     ; 914E AA                       .
         dex                                     ; 914F CA                       .
@@ -2878,7 +2878,7 @@ L9155:
         txa                                     ; 9155 8A                       .
         pha                                     ; 9156 48                       H
         jsr     L8000                           ; 9157 20 00 80                  ..
-        jsr     LE356                           ; 915A 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 915A 20 56 E3                  V.
         pla                                     ; 915D 68                       h
         tax                                     ; 915E AA                       .
         dex                                     ; 915F CA                       .
@@ -2890,7 +2890,7 @@ L9165:
         txa                                     ; 9165 8A                       .
         pha                                     ; 9166 48                       H
         jsr     L8257                           ; 9167 20 57 82                  W.
-        jsr     LE356                           ; 916A 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 916A 20 56 E3                  V.
         pla                                     ; 916D 68                       h
         tax                                     ; 916E AA                       .
         dex                                     ; 916F CA                       .
@@ -2904,7 +2904,7 @@ L9175:
         cmp     $5D                             ; 9179 C5 5D                    .]
         bne     L9182                           ; 917B D0 05                    ..
         lda     #$02                            ; 917D A9 02                    ..
-        jmp     L8C29                           ; 917F 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 917F 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9182:
@@ -2915,7 +2915,7 @@ L9183:
         lda     #$00                            ; 9183 A9 00                    ..
         sta     $5D                             ; 9185 85 5D                    .]
         lda     #$01                            ; 9187 A9 01                    ..
-        jmp     L8C29                           ; 9189 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9189 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L918C:
@@ -2934,7 +2934,7 @@ L918C:
         lda     $8F                             ; 91A3 A5 8F                    ..
         jsr     L89EF                           ; 91A5 20 EF 89                  ..
         lda     #$04                            ; 91A8 A9 04                    ..
-        jmp     L8C29                           ; 91AA 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 91AA 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L91AD:
@@ -2942,7 +2942,7 @@ L91AD:
         lda     ($A7),y                         ; 91AF B1 A7                    ..
         sta     $060B                           ; 91B1 8D 0B 06                 ...
         lda     #$02                            ; 91B4 A9 02                    ..
-        jmp     L8C29                           ; 91B6 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 91B6 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L91B9:
@@ -3007,7 +3007,7 @@ L921C:
         bne     L91DC                           ; 921E D0 BC                    ..
 L9220:
         lda     #$07                            ; 9220 A9 07                    ..
-        jmp     L8C29                           ; 9222 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9222 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9225:
@@ -3022,7 +3022,7 @@ L9225:
         sta     $060A                           ; 9234 8D 0A 06                 ...
         jsr     LEA95                           ; 9237 20 95 EA                  ..
         lda     #$04                            ; 923A A9 04                    ..
-        jmp     L8C29                           ; 923C 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 923C 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L923F:
@@ -3085,7 +3085,7 @@ L9275:
 ; ----------------------------------------------------------------------------
 L928B:
         lda     #$04                            ; 928B A9 04                    ..
-        jmp     L8C29                           ; 928D 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 928D 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9290:
@@ -3095,7 +3095,7 @@ L9290:
         sbc     #$11                            ; 9295 E9 11                    ..
         jsr     LE0A4                           ; 9297 20 A4 E0                  ..
         lda     #$02                            ; 929A A9 02                    ..
-        jmp     L8C29                           ; 929C 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 929C 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L929F:
@@ -3105,7 +3105,7 @@ L929F:
         sbc     #$11                            ; 92A4 E9 11                    ..
         jsr     LE0BA                           ; 92A6 20 BA E0                  ..
         lda     #$02                            ; 92A9 A9 02                    ..
-        jmp     L8C29                           ; 92AB 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 92AB 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L92AE:
@@ -3113,14 +3113,14 @@ L92AE:
         lda     ($A7),y                         ; 92B0 B1 A7                    ..
         jsr     L95A4                           ; 92B2 20 A4 95                  ..
         lda     #$03                            ; 92B5 A9 03                    ..
-        jmp     L8C29                           ; 92B7 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 92B7 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L92BA:
         lda     #$00                            ; 92BA A9 00                    ..
         sta     $6F1A                           ; 92BC 8D 1A 6F                 ..o
         lda     #$01                            ; 92BF A9 01                    ..
-        jmp     L8C29                           ; 92C1 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 92C1 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L92C4:
@@ -3134,7 +3134,7 @@ L92C4:
         lda     ($A7),y                         ; 92D2 B1 A7                    ..
         sta     $6F1C                           ; 92D4 8D 1C 6F                 ..o
         lda     #$04                            ; 92D7 A9 04                    ..
-        jmp     L8C29                           ; 92D9 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 92D9 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L92DC:
@@ -3142,7 +3142,7 @@ L92DC:
         lda     ($A7),y                         ; 92DE B1 A7                    ..
         jsr     L95CD                           ; 92E0 20 CD 95                  ..
         lda     #$02                            ; 92E3 A9 02                    ..
-        jmp     L8C29                           ; 92E5 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 92E5 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L92E8:
@@ -3166,7 +3166,7 @@ L92E8:
         sta     $6030                           ; 930F 8D 30 60                 .0`
 L9312:
         lda     #$04                            ; 9312 A9 04                    ..
-        jmp     L8C29                           ; 9314 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9314 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9317:
@@ -3196,12 +3196,12 @@ L9317:
         sta     $6030                           ; 934A 8D 30 60                 .0`
 L934D:
         lda     #$06                            ; 934D A9 06                    ..
-        jmp     L8C29                           ; 934F 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 934F 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9352:
         lda     #$03                            ; 9352 A9 03                    ..
-        jmp     L8C29                           ; 9354 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9354 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9357:
@@ -3218,7 +3218,7 @@ L9357:
         jsr     LFD4C                           ; 9368 20 4C FD                  L.
         bne     L9372                           ; 936B D0 05                    ..
         lda     #$05                            ; 936D A9 05                    ..
-        jmp     L8C29                           ; 936F 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 936F 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9372:
@@ -3247,7 +3247,7 @@ L937A:
         sbc     $09                             ; 9398 E5 09                    ..
         bcc     L93A1                           ; 939A 90 05                    ..
         lda     #$05                            ; 939C A9 05                    ..
-        jmp     L8C29                           ; 939E 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 939E 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L93A1:
@@ -3267,7 +3267,7 @@ L93A9:
 ; ----------------------------------------------------------------------------
 L93B3:
         lda     #$02                            ; 93B3 A9 02                    ..
-        jmp     L8C29                           ; 93B5 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 93B5 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L93B8:
@@ -3278,7 +3278,7 @@ L93B8:
         jsr     LE08C                           ; 93BF 20 8C E0                  ..
         bcc     L93C9                           ; 93C2 90 05                    ..
         lda     #$03                            ; 93C4 A9 03                    ..
-        jmp     L8C29                           ; 93C6 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 93C6 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L93C9:
@@ -3297,7 +3297,7 @@ L93D1:
         sta     $E0                             ; 93DA 85 E0                    ..
         jsr     L93E4                           ; 93DC 20 E4 93                  ..
         lda     #$03                            ; 93DF A9 03                    ..
-        jmp     L8C29                           ; 93E1 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 93E1 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L93E4:
@@ -3374,7 +3374,7 @@ L945A:
         lda     $E5                             ; 945E A5 E5                    ..
         sta     $20                             ; 9460 85 20                    . 
         jsr     LE33F                           ; 9462 20 3F E3                  ?.
-        jsr     LE356                           ; 9465 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 9465 20 56 E3                  V.
         dec     $E3                             ; 9468 C6 E3                    ..
         bne     L945A                           ; 946A D0 EE                    ..
 L946C:
@@ -3391,7 +3391,7 @@ L947C:
         lda     $E6                             ; 9480 A5 E6                    ..
         sta     $20                             ; 9482 85 20                    . 
         jsr     LE33F                           ; 9484 20 3F E3                  ?.
-        jsr     LE356                           ; 9487 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 9487 20 56 E3                  V.
         dec     $E4                             ; 948A C6 E4                    ..
         bne     L947C                           ; 948C D0 EE                    ..
 L948E:
@@ -3433,7 +3433,7 @@ L94BB:
         dec     $DD                             ; 94C2 C6 DD                    ..
         bne     L94BB                           ; 94C4 D0 F5                    ..
         lda     #$06                            ; 94C6 A9 06                    ..
-        jmp     L8C29                           ; 94C8 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 94C8 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L94CB:
@@ -3458,7 +3458,7 @@ Bank02ScriptOpcode29_ShowDialog:
         lda     ($A7),y                         ; 94E5 B1 A7                    ..
         sta     $DE                             ; 94E7 85 DE                    ..
         jsr     L8361                           ; 94E9 20 61 83                  a.
-        jsr     LE356                           ; 94EC 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 94EC 20 56 E3                  V.
         jsr     LE340                           ; 94EF 20 40 E3                  @.
 L94F2:
         lda     $DD                             ; 94F2 A5 DD                    ..
@@ -3467,7 +3467,7 @@ L94F2:
         dec     $DE                             ; 94F9 C6 DE                    ..
         bne     L94F2                           ; 94FB D0 F5                    ..
         lda     #$04                            ; 94FD A9 04                    ..
-        jmp     L8C29                           ; 94FF 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 94FF 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9502:
@@ -3510,7 +3510,7 @@ L9502:
         pla                                     ; 9548 68                       h
         sta     $0308,y                         ; 9549 99 08 03                 ...
         lda     #$03                            ; 954C A9 03                    ..
-        jmp     L8C29                           ; 954E 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 954E 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9551:
@@ -3527,11 +3527,11 @@ L955A:
         bne     L955A                           ; 9562 D0 F6                    ..
         lda     #$FF                            ; 9564 A9 FF                    ..
         sta     $2D                             ; 9566 85 2D                    .-
-        jsr     LE356                           ; 9568 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 9568 20 56 E3                  V.
         pla                                     ; 956B 68                       h
         clc                                     ; 956C 18                       .
         adc     #$02                            ; 956D 69 02                    i.
-        jmp     L8C29                           ; 956F 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 956F 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9572:
@@ -3544,19 +3544,19 @@ L9572:
 ; ----------------------------------------------------------------------------
 L957C:
         lda     #$02                            ; 957C A9 02                    ..
-        jmp     L8C29                           ; 957E 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 957E 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9581:
         inc     $6021                           ; 9581 EE 21 60                 .!`
         lda     #$01                            ; 9584 A9 01                    ..
-        jmp     L8C29                           ; 9586 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9586 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9589:
         dec     $6021                           ; 9589 CE 21 60                 .!`
         lda     #$01                            ; 958C A9 01                    ..
-        jmp     L8C29                           ; 958E 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 958E 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9591:
@@ -3564,13 +3564,13 @@ L9591:
         lda     ($A7),y                         ; 9593 B1 A7                    ..
         sta     $BE                             ; 9595 85 BE                    ..
         lda     #$02                            ; 9597 A9 02                    ..
-        jmp     L8C29                           ; 9599 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9599 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L959C:
         jsr     LE542                           ; 959C 20 42 E5                  B.
         lda     #$01                            ; 959F A9 01                    ..
-        jmp     L8C29                           ; 95A1 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 95A1 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L95A4:
@@ -3656,7 +3656,7 @@ L9619:
         lda     ($A7),y                         ; 961B B1 A7                    ..
         sta     $0303                           ; 961D 8D 03 03                 ...
         lda     #$02                            ; 9620 A9 02                    ..
-        jmp     L8C29                           ; 9622 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9622 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9625:
@@ -3672,7 +3672,7 @@ L9625:
 ; ----------------------------------------------------------------------------
 L9636:
         lda     #$03                            ; 9636 A9 03                    ..
-        jmp     L8C29                           ; 9638 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9638 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L963B:
@@ -3702,7 +3702,7 @@ L965A:
 L9661:
         iny                                     ; 9661 C8                       .
         tya                                     ; 9662 98                       .
-        jmp     L8C29                           ; 9663 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9663 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9666:
@@ -3710,7 +3710,7 @@ L9666:
         lda     ($A7),y                         ; 9668 B1 A7                    ..
         sta     $6022                           ; 966A 8D 22 60                 ."`
         lda     #$02                            ; 966D A9 02                    ..
-        jmp     L8C29                           ; 966F 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 966F 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9672:
@@ -3723,7 +3723,7 @@ L9672:
 ; ----------------------------------------------------------------------------
 L967C:
         lda     #$02                            ; 967C A9 02                    ..
-        jmp     L8C29                           ; 967E 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 967E 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9681:
@@ -3770,7 +3770,7 @@ L9681:
         rol     a                               ; 96CA 2A                       *
         sta     $6023,y                         ; 96CB 99 23 60                 .#`
         lda     #$02                            ; 96CE A9 02                    ..
-        jmp     L8C29                           ; 96D0 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 96D0 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L96D3:
@@ -3808,14 +3808,14 @@ L9700:
         iny                                     ; 9700 C8                       .
         iny                                     ; 9701 C8                       .
         tya                                     ; 9702 98                       .
-        jmp     L8C29                           ; 9703 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9703 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9706:
         jmp     LEA73                           ; 9706 4C 73 EA                 Ls.
 
 ; ----------------------------------------------------------------------------
-        jmp     L8C29                           ; 9709 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9709 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L970C:
@@ -3823,7 +3823,7 @@ L970C:
         lda     ($A7),y                         ; 970E B1 A7                    ..
         sta     $6021                           ; 9710 8D 21 60                 .!`
         lda     #$02                            ; 9713 A9 02                    ..
-        jmp     L8C29                           ; 9715 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9715 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9718:
@@ -3832,7 +3832,7 @@ L9718:
         cmp     $5C                             ; 971C C5 5C                    .\
         bne     L9725                           ; 971E D0 05                    ..
         lda     #$02                            ; 9720 A9 02                    ..
-        jmp     L8C29                           ; 9722 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9722 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9725:
@@ -3844,9 +3844,9 @@ L9726:
         lda     L9739,x                         ; 9729 BD 39 97                 .9.
         ldx     #$00                            ; 972C A2 00                    ..
         jsr     LE719                           ; 972E 20 19 E7                  ..
-        jsr     LE356                           ; 9731 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; 9731 20 56 E3                  V.
         lda     #$01                            ; 9734 A9 01                    ..
-        jmp     L8C29                           ; 9736 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9736 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L9739:
@@ -3881,7 +3881,7 @@ L974B           := * + 1
         lda     ($A7),y                         ; 9760 B1 A7                    ..
         sta     $6025,x                         ; 9762 9D 25 60                 .%`
         lda     #$04                            ; 9765 A9 04                    ..
-        jmp     L8C29                           ; 9767 4C 29 8C                 L).
+        jmp     Bank02LoadNextScriptOpcode      ; 9767 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
 L976A:
@@ -7138,7 +7138,7 @@ LA577:
         bcc     LA577                           ; A5AD 90 C8                    ..
         lda     #$FF                            ; A5AF A9 FF                    ..
         sta     $2D                             ; A5B1 85 2D                    .-
-        jsr     LE356                           ; A5B3 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; A5B3 20 56 E3                  V.
         rts                                     ; A5B6 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -9854,14 +9854,8 @@ LE022:
 
 ; ----------------------------------------------------------------------------
 LE024:
-        ora     (L0002,x)                       ; E024 01 02                    ..
-        .byte   $04                             ; E026 04                       .
-        php                                     ; E027 08                       .
-        bpl     LE04A                           ; E028 10 20                    . 
-        rti                                     ; E02A 40                       @
-
+        .byte   $01,$02,$04,$08,$10,$20,$40,$80 ; E024 01 02 04 08 10 20 40 80  ..... @.
 ; ----------------------------------------------------------------------------
-        .byte   $80                             ; E02B 80                       .
 LE02C:
         sec                                     ; E02C 38                       8
         sbc     #$01                            ; E02D E9 01                    ..
@@ -9886,7 +9880,6 @@ LE042:
         and     #$07                            ; E046 29 07                    ).
         tax                                     ; E048 AA                       .
         pla                                     ; E049 68                       h
-LE04A:
         lsr     a                               ; E04A 4A                       J
         lsr     a                               ; E04B 4A                       J
         lsr     a                               ; E04C 4A                       J
@@ -10501,7 +10494,7 @@ LE34A:
         .byte   $0B                             ; E353 0B                       .
         .byte   $0B                             ; E354 0B                       .
         .byte   $0B                             ; E355 0B                       .
-LE356:
+Bank02ScreenRefresh:
         lda     #$FF                            ; E356 A9 FF                    ..
         sta     $2E                             ; E358 85 2E                    ..
 LE35A:
@@ -10513,7 +10506,7 @@ LE35A:
 LE35F:
         lda     #$FF                            ; E35F A9 FF                    ..
         sta     $D4                             ; E361 85 D4                    ..
-        jsr     LE356                           ; E363 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; E363 20 56 E3                  V.
         lda     $1D                             ; E366 A5 1D                    ..
         sta     $13                             ; E368 85 13                    ..
         lda     $1E                             ; E36A A5 1E                    ..
@@ -10524,9 +10517,9 @@ LE35F:
         sta     $16                             ; E374 85 16                    ..
         lda     #$00                            ; E376 A9 00                    ..
         sta     $83                             ; E378 85 83                    ..
-        jsr     LE356                           ; E37A 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; E37A 20 56 E3                  V.
         jsr     LE384                           ; E37D 20 84 E3                  ..
-        jsr     LE356                           ; E380 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; E380 20 56 E3                  V.
         rts                                     ; E383 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -10612,9 +10605,9 @@ LE3F0:
         jsr     LE418                           ; E406 20 18 E4                  ..
         ldx     #$01                            ; E409 A2 01                    ..
         jsr     LEA14                           ; E40B 20 14 EA                  ..
-        jsr     LE356                           ; E40E 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; E40E 20 56 E3                  V.
         jsr     LE910                           ; E411 20 10 E9                  ..
-        jsr     LE356                           ; E414 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; E414 20 56 E3                  V.
         rts                                     ; E417 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -11151,7 +11144,7 @@ LE719:
 LE725:
         jsr     LE751                           ; E725 20 51 E7                  Q.
         jsr     LE5C6                           ; E728 20 C6 E5                  ..
-        jsr     LE356                           ; E72B 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; E72B 20 56 E3                  V.
         cpx     #$10                            ; E72E E0 10                    ..
         bne     LE725                           ; E730 D0 F3                    ..
         lda     $06                             ; E732 A5 06                    ..
@@ -11474,12 +11467,12 @@ LE926:
 LE939:
         lda     #$00                            ; E939 A9 00                    ..
         sta     $D4                             ; E93B 85 D4                    ..
-        jsr     LE356                           ; E93D 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; E93D 20 56 E3                  V.
         jsr     LE3F0                           ; E940 20 F0 E3                  ..
-        jsr     LE356                           ; E943 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; E943 20 56 E3                  V.
         lda     #$06                            ; E946 A9 06                    ..
         sta     $16                             ; E948 85 16                    ..
-        jsr     LE356                           ; E94A 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; E94A 20 56 E3                  V.
         lda     #$FF                            ; E94D A9 FF                    ..
         sta     $83                             ; E94F 85 83                    ..
         rts                                     ; E951 60                       `
@@ -11611,7 +11604,7 @@ LEA0A:
 
 ; ----------------------------------------------------------------------------
 LEA14:
-        jsr     LE356                           ; EA14 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; EA14 20 56 E3                  V.
         dex                                     ; EA17 CA                       .
         bne     LEA14                           ; EA18 D0 FA                    ..
         rts                                     ; EA1A 60                       `
@@ -11672,7 +11665,7 @@ LEA66:
 
 ; ----------------------------------------------------------------------------
 LEA73:
-        jsr     LE356                           ; EA73 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; EA73 20 56 E3                  V.
         ldx     #$00                            ; EA76 A2 00                    ..
 LEA78:
         lda     LEA86,x                         ; EA78 BD 86 EA                 ...
@@ -11709,21 +11702,21 @@ LEA95:
         jsr     LEAF0                           ; EAB0 20 F0 EA                  ..
         lda     $0610                           ; EAB3 AD 10 06                 ...
         bne     LEAC7                           ; EAB6 D0 0F                    ..
-        jsr     LE356                           ; EAB8 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; EAB8 20 56 E3                  V.
         jsr     LE9F7                           ; EABB 20 F7 E9                  ..
-        jsr     LE356                           ; EABE 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; EABE 20 56 E3                  V.
         ldx     #$FF                            ; EAC1 A2 FF                    ..
         txs                                     ; EAC3 9A                       .
         jmp     LEA73                           ; EAC4 4C 73 EA                 Ls.
 
 ; ----------------------------------------------------------------------------
 LEAC7:
-        jsr     LE356                           ; EAC7 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; EAC7 20 56 E3                  V.
         jsr     LE9F7                           ; EACA 20 F7 E9                  ..
-        jsr     LE356                           ; EACD 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; EACD 20 56 E3                  V.
         lda     $6F16                           ; EAD0 AD 16 6F                 ..o
         jsr     LE9F3                           ; EAD3 20 F3 E9                  ..
-        jsr     LE356                           ; EAD6 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; EAD6 20 56 E3                  V.
         jsr     L6800                           ; EAD9 20 00 68                  .h
         lda     $060A                           ; EADC AD 0A 06                 ...
         bne     LEAE4                           ; EADF D0 03                    ..
@@ -12827,7 +12820,7 @@ LFCEA:
 ; ----------------------------------------------------------------------------
 LFD08:
         sta     $0D                             ; FD08 85 0D                    ..
-        jsr     LE356                           ; FD0A 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; FD0A 20 56 E3                  V.
         lda     $0141                           ; FD0D AD 41 01                 .A.
         pha                                     ; FD10 48                       H
         lda     $0149                           ; FD11 AD 49 01                 .I.
@@ -12841,7 +12834,7 @@ LFD08:
         sta     $0129                           ; FD25 8D 29 01                 .).
         lda     $0D                             ; FD28 A5 0D                    ..
         jsr     LFD08                           ; FD2A 20 08 FD                  ..
-        jsr     LE356                           ; FD2D 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; FD2D 20 56 E3                  V.
         pla                                     ; FD30 68                       h
         sta     $0149                           ; FD31 8D 49 01                 .I.
         pla                                     ; FD34 68                       h
@@ -12858,7 +12851,7 @@ LFD08:
 ; ----------------------------------------------------------------------------
 LFD4C:
         sta     $0D                             ; FD4C 85 0D                    ..
-        jsr     LE356                           ; FD4E 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; FD4E 20 56 E3                  V.
         lda     $0141                           ; FD51 AD 41 01                 .A.
         pha                                     ; FD54 48                       H
         lda     $0149                           ; FD55 AD 49 01                 .I.
@@ -12873,7 +12866,7 @@ LFD4C:
         lda     $0D                             ; FD6C A5 0D                    ..
         jsr     LFD4C                           ; FD6E 20 4C FD                  L.
         sta     $0D                             ; FD71 85 0D                    ..
-        jsr     LE356                           ; FD73 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; FD73 20 56 E3                  V.
         pla                                     ; FD76 68                       h
         sta     $0149                           ; FD77 8D 49 01                 .I.
         pla                                     ; FD7A 68                       h
@@ -12891,7 +12884,7 @@ LFD4C:
 ; ----------------------------------------------------------------------------
 LFD94:
         sta     $0D                             ; FD94 85 0D                    ..
-        jsr     LE356                           ; FD96 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; FD96 20 56 E3                  V.
         lda     $0141                           ; FD99 AD 41 01                 .A.
         pha                                     ; FD9C 48                       H
         lda     $0149                           ; FD9D AD 49 01                 .I.
@@ -12906,7 +12899,7 @@ LFD94:
         lda     $0D                             ; FDB4 A5 0D                    ..
         jsr     LFD94                           ; FDB6 20 94 FD                  ..
         sta     $0D                             ; FDB9 85 0D                    ..
-        jsr     LE356                           ; FDBB 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; FDBB 20 56 E3                  V.
         pla                                     ; FDBE 68                       h
         sta     $0149                           ; FDBF 8D 49 01                 .I.
         pla                                     ; FDC2 68                       h
@@ -12924,7 +12917,7 @@ LFD94:
 ; ----------------------------------------------------------------------------
 LFDDC:
         sta     $0D                             ; FDDC 85 0D                    ..
-        jsr     LE356                           ; FDDE 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; FDDE 20 56 E3                  V.
         lda     $0141                           ; FDE1 AD 41 01                 .A.
         pha                                     ; FDE4 48                       H
         lda     $0149                           ; FDE5 AD 49 01                 .I.
@@ -12938,7 +12931,7 @@ LFDDC:
         sta     $0129                           ; FDF9 8D 29 01                 .).
         lda     $0D                             ; FDFC A5 0D                    ..
         jsr     LFDDC                           ; FDFE 20 DC FD                  ..
-        jsr     LE356                           ; FE01 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; FE01 20 56 E3                  V.
         pla                                     ; FE04 68                       h
         sta     $0149                           ; FE05 8D 49 01                 .I.
         pla                                     ; FE08 68                       h
@@ -12953,7 +12946,7 @@ LFDDC:
         rts                                     ; FE1F 60                       `
 
 ; ----------------------------------------------------------------------------
-        jsr     LE356                           ; FE20 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; FE20 20 56 E3                  V.
         lda     #$02                            ; FE23 A9 02                    ..
         sta     $0119                           ; FE25 8D 19 01                 ...
         sta     $0109                           ; FE28 8D 09 01                 ...
@@ -12964,7 +12957,7 @@ LFDDC:
         lda     #$02                            ; FE35 A9 02                    ..
         sta     $5000                           ; FE37 8D 00 50                 ..P
         jsr     LA128                           ; FE3A 20 28 A1                  (.
-        jsr     LE356                           ; FE3D 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; FE3D 20 56 E3                  V.
         lda     #$00                            ; FE40 A9 00                    ..
         sta     $0119                           ; FE42 8D 19 01                 ...
         sta     $0109                           ; FE45 8D 09 01                 ...
@@ -12977,7 +12970,7 @@ LFDDC:
         rts                                     ; FE57 60                       `
 
 ; ----------------------------------------------------------------------------
-        jsr     LE356                           ; FE58 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; FE58 20 56 E3                  V.
         lda     #$02                            ; FE5B A9 02                    ..
         sta     $0119                           ; FE5D 8D 19 01                 ...
         sta     $0109                           ; FE60 8D 09 01                 ...
@@ -12988,7 +12981,7 @@ LFDDC:
         lda     #$02                            ; FE6D A9 02                    ..
         sta     $5000                           ; FE6F 8D 00 50                 ..P
         jsr     LA2FB                           ; FE72 20 FB A2                  ..
-        jsr     LE356                           ; FE75 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; FE75 20 56 E3                  V.
         lda     #$00                            ; FE78 A9 00                    ..
         sta     $0119                           ; FE7A 8D 19 01                 ...
         sta     $0109                           ; FE7D 8D 09 01                 ...
@@ -13002,7 +12995,7 @@ LFDDC:
 
 ; ----------------------------------------------------------------------------
 LFE90:
-        jsr     LE356                           ; FE90 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; FE90 20 56 E3                  V.
         lda     $0141                           ; FE93 AD 41 01                 .A.
         pha                                     ; FE96 48                       H
         lda     $0149                           ; FE97 AD 49 01                 .I.
@@ -13015,7 +13008,7 @@ LFE90:
         sta     $0139                           ; FEA8 8D 39 01                 .9.
         sta     $0129                           ; FEAB 8D 29 01                 .).
         jsr     LFE90                           ; FEAE 20 90 FE                  ..
-        jsr     LE356                           ; FEB1 20 56 E3                  V.
+        jsr     Bank02ScreenRefresh             ; FEB1 20 56 E3                  V.
         pla                                     ; FEB4 68                       h
         sta     $0149                           ; FEB5 8D 49 01                 .I.
         pla                                     ; FEB8 68                       h

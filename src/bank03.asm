@@ -340,14 +340,14 @@ L81F8:
         ldy     #$01                            ; 8203 A0 01                    ..
         lda     ($23),y                         ; 8205 B1 23                    .#
         sta     $29                             ; 8207 85 29                    .)
-        jsr     L8212                           ; 8209 20 12 82                  ..
+        jsr     UpdateSpriteInfo                ; 8209 20 12 82                  ..
         jsr     L8332                           ; 820C 20 32 83                  2.
         inc     $2A                             ; 820F E6 2A                    .*
 L8211:
         rts                                     ; 8211 60                       `
 
 ; ----------------------------------------------------------------------------
-L8212:
+UpdateSpriteInfo:
         lda     $29                             ; 8212 A5 29                    .)
         asl     a                               ; 8214 0A                       .
         asl     a                               ; 8215 0A                       .
@@ -4331,10 +4331,10 @@ L9D18:
         sta     $6F15                           ; 9D18 8D 15 6F                 ..o
         asl     a                               ; 9D1B 0A                       .
         tay                                     ; 9D1C A8                       .
-        lda     LB8A1,y                         ; 9D1D B9 A1 B8                 ...
+        lda     MusicThemeTable,y               ; 9D1D B9 A1 B8                 ...
         sta     $BF                             ; 9D20 85 BF                    ..
         iny                                     ; 9D22 C8                       .
-        lda     LB8A1,y                         ; 9D23 B9 A1 B8                 ...
+        lda     MusicThemeTable,y               ; 9D23 B9 A1 B8                 ...
         sta     $C0                             ; 9D26 85 C0                    ..
         lda     #$01                            ; 9D28 A9 01                    ..
         sta     $6F00                           ; 9D2A 8D 00 6F                 ..o
@@ -7314,7 +7314,7 @@ LB822:
         .byte   $02,$E1,$13,$E4,$02,$E1,$16,$E4 ; B892 02 E1 13 E4 02 E1 16 E4  ........
         .byte   $02,$E1,$19,$E4,$02,$CB,$D3     ; B89A 02 E1 19 E4 02 CB D3     .......
 ; ----------------------------------------------------------------------------
-LB8A1:
+MusicThemeTable:
         .addr   MusicOpeningMakoReactorTheme    ; B8A1 80 B9                    ..
         .addr   MusicTitleScreenTheme           ; B8A3 DF B8                    ..
         .addr   MusicTownTheme                  ; B8A5 4A C4                    J.
@@ -9360,14 +9360,14 @@ LD133:
         rts                                     ; D139 60                       `
 
 ; ----------------------------------------------------------------------------
-LD13A:
+ScrollBufferScreenUp:
         jsr     LD5A2                           ; D13A 20 A2 D5                  ..
         lda     #$00                            ; D13D A9 00                    ..
         sta     $08                             ; D13F 85 08                    ..
         lda     $14                             ; D141 A5 14                    ..
         bne     LD164                           ; D143 D0 1F                    ..
         lda     $D5                             ; D145 A5 D5                    ..
-        bne     LD153                           ; D147 D0 0A                    ..
+        bne     ScrollBufferScreenUpOverworld   ; D147 D0 0A                    ..
         lda     $17                             ; D149 A5 17                    ..
         sec                                     ; D14B 38                       8
         sbc     $00                             ; D14C E5 00                    ..
@@ -9375,7 +9375,7 @@ LD13A:
         jmp     LD164                           ; D150 4C 64 D1                 Ld.
 
 ; ----------------------------------------------------------------------------
-LD153:
+ScrollBufferScreenUpOverworld:
         lda     $17                             ; D153 A5 17                    ..
         sec                                     ; D155 38                       8
         sbc     $00                             ; D156 E5 00                    ..
@@ -12076,7 +12076,7 @@ LFC78:
         lda     #$03                            ; FCEF A9 03                    ..
         sta     $0119                           ; FCF1 8D 19 01                 ...
         sta     $0109                           ; FCF4 8D 09 01                 ...
-        jsr     LD13A                           ; FCF7 20 3A D1                  :.
+        jsr     ScrollBufferScreenUp            ; FCF7 20 3A D1                  :.
         lda     $4F                             ; FCFA A5 4F                    .O
         sta     $0119                           ; FCFC 8D 19 01                 ...
         sta     $0109                           ; FCFF 8D 09 01                 ...

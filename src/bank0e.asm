@@ -17,25 +17,25 @@ L6196           := $6196
 L61FF           := $61FF
 L623B           := $623B
 ; ----------------------------------------------------------------------------
-        jmp     LA615                           ; 8000 4C 15 A6                 L..
+        jmp     MainPlayerMenuEntryPoint        ; 8000 4C 15 A6                 L..
 
 ; ----------------------------------------------------------------------------
-        jmp     LD9CD                           ; 8003 4C CD D9                 L..
+        jmp     ShopMenuNoOpEntryPoint          ; 8003 4C CD D9                 L..
 
 ; ----------------------------------------------------------------------------
-        jmp     L97E1                           ; 8006 4C E1 97                 L..
+        jmp     ShopMenuEntryPoint              ; 8006 4C E1 97                 L..
 
 ; ----------------------------------------------------------------------------
-        jmp     L96FC                           ; 8009 4C FC 96                 L..
+        jmp     MainMenuStartGameEntryPoint     ; 8009 4C FC 96                 L..
 
 ; ----------------------------------------------------------------------------
-        jmp     L9DE2                           ; 800C 4C E2 9D                 L..
+        jmp     ShopMenuEquipmentEntryPoint     ; 800C 4C E2 9D                 L..
 
 ; ----------------------------------------------------------------------------
-        jmp     LD9D0                           ; 800F 4C D0 D9                 L..
+        jmp     ShopMenuWeaponEnhancementEntryPoint; 800F 4C D0 D9              L..
 
 ; ----------------------------------------------------------------------------
-        jmp     LDDB3                           ; 8012 4C B3 DD                 L..
+        jmp     ShopMenuMateriaEnhancementEntryPoint; 8012 4C B3 DD             L..
 
 ; ----------------------------------------------------------------------------
         txa                                     ; 8015 8A                       .
@@ -167,7 +167,7 @@ L80C5:
 
 ; ----------------------------------------------------------------------------
 L80D3:
-        jsr     MenuCursorGraphicsUpdate        ; 80D3 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 80D3 20 78 DF                  x.
         lda     #$00                            ; 80D6 A9 00                    ..
         sta     L0002                           ; 80D8 85 02                    ..
         lda     #$83                            ; 80DA A9 83                    ..
@@ -191,7 +191,7 @@ L80D3:
         sta     $0700                           ; 8102 8D 00 07                 ...
         lda     #$FF                            ; 8105 A9 FF                    ..
         sta     $2D                             ; 8107 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; 8109 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 8109 20 78 DF                  x.
         lda     #$50                            ; 810C A9 50                    .P
         sta     L0002                           ; 810E 85 02                    ..
         lda     #$83                            ; 8110 A9 83                    ..
@@ -211,7 +211,7 @@ L80D3:
         sta     $0700                           ; 812E 8D 00 07                 ...
         lda     #$FF                            ; 8131 A9 FF                    ..
         sta     $2D                             ; 8133 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; 8135 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 8135 20 78 DF                  x.
         rts                                     ; 8138 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -306,7 +306,7 @@ L81A6:
         bne     L81A6                           ; 81B6 D0 EE                    ..
         pla                                     ; 81B8 68                       h
         sta     $0600                           ; 81B9 8D 00 06                 ...
-        jsr     MenuCursorGraphicsUpdate        ; 81BC 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 81BC 20 78 DF                  x.
         pla                                     ; 81BF 68                       h
         sta     $0C                             ; 81C0 85 0C                    ..
         pla                                     ; 81C2 68                       h
@@ -419,7 +419,7 @@ L826D:
 L8274:
         lda     #$FF                            ; 8274 A9 FF                    ..
         sta     $2D                             ; 8276 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; 8278 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 8278 20 78 DF                  x.
         rts                                     ; 827B 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -524,7 +524,7 @@ L831E:
 L8325:
         lda     #$FF                            ; 8325 A9 FF                    ..
         sta     $2D                             ; 8327 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; 8329 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 8329 20 78 DF                  x.
         rts                                     ; 832C 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -1201,7 +1201,7 @@ L8830:
 L8837:
         lda     #$FF                            ; 8837 A9 FF                    ..
         sta     $2D                             ; 8839 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; 883B 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 883B 20 78 DF                  x.
         rts                                     ; 883E 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -1461,7 +1461,7 @@ L89F1:
 
 ; ----------------------------------------------------------------------------
 L89F2:
-        jsr     MenuCursorGraphicsUpdate        ; 89F2 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 89F2 20 78 DF                  x.
         lda     $0D                             ; 89F5 A5 0D                    ..
         asl     a                               ; 89F7 0A                       .
         asl     a                               ; 89F8 0A                       .
@@ -1620,7 +1620,7 @@ L8AFC:
 L8B03:
         lda     #$FF                            ; 8B03 A9 FF                    ..
         sta     $2D                             ; 8B05 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; 8B07 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 8B07 20 78 DF                  x.
         lda     $0E                             ; 8B0A A5 0E                    ..
         clc                                     ; 8B0C 18                       .
         adc     $AB                             ; 8B0D 65 AB                    e.
@@ -1994,7 +1994,7 @@ L8D69:
 
 ; ----------------------------------------------------------------------------
 L8D6A:
-        jsr     MenuCursorGraphicsUpdate        ; 8D6A 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 8D6A 20 78 DF                  x.
         ldx     #$00                            ; 8D6D A2 00                    ..
         lda     $53                             ; 8D6F A5 53                    .S
         beq     L8D77                           ; 8D71 F0 04                    ..
@@ -2569,7 +2569,7 @@ L912F:
 L914F:
         lda     #$FF                            ; 914F A9 FF                    ..
         sta     $2D                             ; 9151 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; 9153 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 9153 20 78 DF                  x.
         pla                                     ; 9156 68                       h
         sta     $0642                           ; 9157 8D 42 06                 .B.
         pla                                     ; 915A 68                       h
@@ -2685,7 +2685,7 @@ L9210:
         bne     L91F9                           ; 9233 D0 C4                    ..
         lda     #$FF                            ; 9235 A9 FF                    ..
         sta     $2D                             ; 9237 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; 9239 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 9239 20 78 DF                  x.
         dec     $0644                           ; 923C CE 44 06                 .D.
         dec     $0644                           ; 923F CE 44 06                 .D.
         dec     $0644                           ; 9242 CE 44 06                 .D.
@@ -2964,7 +2964,7 @@ L93EC:
         dec     $9D                             ; 941C C6 9D                    ..
         bne     L93E8                           ; 941E D0 C8                    ..
         pla                                     ; 9420 68                       h
-        jsr     MenuCursorGraphicsUpdate        ; 9421 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 9421 20 78 DF                  x.
         rts                                     ; 9424 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3028,7 +3028,7 @@ L9464:
         inx                                     ; 946A E8                       .
         dec     $9C                             ; 946B C6 9C                    ..
         bne     L9464                           ; 946D D0 F5                    ..
-        jsr     MenuCursorGraphicsUpdate        ; 946F 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 946F 20 78 DF                  x.
         rts                                     ; 9472 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3244,7 +3244,7 @@ L95D6:
         sta     $0700                           ; 95FF 8D 00 07                 ...
         lda     #$FF                            ; 9602 A9 FF                    ..
         sta     $2D                             ; 9604 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; 9606 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 9606 20 78 DF                  x.
         rts                                     ; 9609 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3341,7 +3341,7 @@ L960A:
 
 ; ----------------------------------------------------------------------------
 L96C6:
-        jsr     MenuCursorGraphicsUpdate        ; 96C6 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 96C6 20 78 DF                  x.
         lda     $22                             ; 96C9 A5 22                    ."
         beq     L96C6                           ; 96CB F0 F9                    ..
         rts                                     ; 96CD 60                       `
@@ -3369,19 +3369,19 @@ L96CE:
         sta     $0700                           ; 96F1 8D 00 07                 ...
         lda     #$FF                            ; 96F4 A9 FF                    ..
         sta     $2D                             ; 96F6 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; 96F8 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 96F8 20 78 DF                  x.
         rts                                     ; 96FB 60                       `
 
 ; ----------------------------------------------------------------------------
-L96FC:
-        jsr     LDF94                           ; 96FC 20 94 DF                  ..
-        jsr     MenuCursorGraphicsUpdate        ; 96FF 20 78 DF                  x.
+MainMenuStartGameEntryPoint:
+        jsr     Bank0eSetMemoryAddress0200Main  ; 96FC 20 94 DF                  ..
+        jsr     Bank0eScreenRefresh             ; 96FF 20 78 DF                  x.
         lda     #$07                            ; 9702 A9 07                    ..
         sta     $A9                             ; 9704 85 A9                    ..
-        jsr     LDE2C                           ; 9706 20 2C DE                  ,.
+        jsr     LoadAsmCodeToUpdatePPU          ; 9706 20 2C DE                  ,.
         lda     #$01                            ; 9709 A9 01                    ..
         jsr     LDE05                           ; 970B 20 05 DE                  ..
-        jsr     MenuCursorGraphicsUpdate        ; 970E 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 970E 20 78 DF                  x.
         jsr     L976D                           ; 9711 20 6D 97                  m.
         lda     #$00                            ; 9714 A9 00                    ..
         sta     $EA                             ; 9716 85 EA                    ..
@@ -3392,7 +3392,7 @@ L9718:
         sta     $DC                             ; 971F 85 DC                    ..
 L9721:
         jsr     L9425                           ; 9721 20 25 94                  %.
-        jsr     MenuCursorGraphicsUpdate        ; 9724 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 9724 20 78 DF                  x.
         ldx     #$08                            ; 9727 A2 08                    ..
         lda     $22                             ; 9729 A5 22                    ."
 L972B:
@@ -3406,38 +3406,38 @@ L9733:
         txa                                     ; 9734 8A                       .
         asl     a                               ; 9735 0A                       .
         tax                                     ; 9736 AA                       .
-        lda     L9745,x                         ; 9737 BD 45 97                 .E.
+        lda     MainMenuStartGameButtonPressTable,x; 9737 BD 45 97              .E.
         sta     L0002                           ; 973A 85 02                    ..
         inx                                     ; 973C E8                       .
-        lda     L9745,x                         ; 973D BD 45 97                 .E.
+        lda     MainMenuStartGameButtonPressTable,x; 973D BD 45 97              .E.
         sta     $03                             ; 9740 85 03                    ..
         jmp     (L0002)                         ; 9742 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-L9745:
-        .addr   L9761                           ; 9745 61 97                    a.
-        .addr   L9755                           ; 9747 55 97                    U.
-        .addr   L9755                           ; 9749 55 97                    U.
-        .addr   L9761                           ; 974B 61 97                    a.
-        .addr   L9758                           ; 974D 58 97                    X.
-        .addr   L9758                           ; 974F 58 97                    X.
-        .addr   L9755                           ; 9751 55 97                    U.
-        .addr   L9755                           ; 9753 55 97                    U.
+MainMenuStartGameButtonPressTable:
+        .addr   MainMenuStartGameSelectOption   ; 9745 61 97                    a.
+        .addr   MainMenuStartGameChangeOptionNoOp; 9747 55 97                   U.
+        .addr   MainMenuStartGameChangeOptionNoOp; 9749 55 97                   U.
+        .addr   MainMenuStartGameSelectOption   ; 974B 61 97                    a.
+        .addr   MainMenuStartGameChangeOptionUpOrDown; 974D 58 97               X.
+        .addr   MainMenuStartGameChangeOptionUpOrDown; 974F 58 97               X.
+        .addr   MainMenuStartGameChangeOptionNoOp; 9751 55 97                   U.
+        .addr   MainMenuStartGameChangeOptionNoOp; 9753 55 97                   U.
 ; ----------------------------------------------------------------------------
-L9755:
+MainMenuStartGameChangeOptionNoOp:
         jmp     L9721                           ; 9755 4C 21 97                 L!.
 
 ; ----------------------------------------------------------------------------
-L9758:
+MainMenuStartGameChangeOptionUpOrDown:
         lda     $EA                             ; 9758 A5 EA                    ..
         eor     #$01                            ; 975A 49 01                    I.
         sta     $EA                             ; 975C 85 EA                    ..
         jmp     L9718                           ; 975E 4C 18 97                 L..
 
 ; ----------------------------------------------------------------------------
-L9761:
+MainMenuStartGameSelectOption:
         jsr     LDE09                           ; 9761 20 09 DE                  ..
-        jsr     MenuCursorGraphicsUpdate        ; 9764 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 9764 20 78 DF                  x.
         jsr     L97A0                           ; 9767 20 A0 97                  ..
         jmp     LDE0D                           ; 976A 4C 0D DE                 L..
 
@@ -3460,24 +3460,24 @@ L976D:
         ora     #$80                            ; 978F 09 80                    ..
         sta     $4F                             ; 9791 85 4F                    .O
         sta     $5000                           ; 9793 8D 00 50                 ..P
-        jsr     MenuCursorGraphicsUpdate        ; 9796 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 9796 20 78 DF                  x.
         jsr     LE021                           ; 9799 20 21 E0                  !.
-        jsr     MenuCursorGraphicsUpdate        ; 979C 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 979C 20 78 DF                  x.
         rts                                     ; 979F 60                       `
 
 ; ----------------------------------------------------------------------------
 L97A0:
-        jsr     MenuCursorGraphicsUpdate        ; 97A0 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 97A0 20 78 DF                  x.
         jsr     LE045                           ; 97A3 20 45 E0                  E.
-        jsr     LDF94                           ; 97A6 20 94 DF                  ..
-        jsr     MenuCursorGraphicsUpdate        ; 97A9 20 78 DF                  x.
+        jsr     Bank0eSetMemoryAddress0200Main  ; 97A6 20 94 DF                  ..
+        jsr     Bank0eScreenRefresh             ; 97A9 20 78 DF                  x.
         lda     #$06                            ; 97AC A9 06                    ..
         sta     $16                             ; 97AE 85 16                    ..
         lda     $4F                             ; 97B0 A5 4F                    .O
         and     #$7F                            ; 97B2 29 7F                    ).
         sta     $4F                             ; 97B4 85 4F                    .O
         sta     $5000                           ; 97B6 8D 00 50                 ..P
-        jsr     MenuCursorGraphicsUpdate        ; 97B9 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 97B9 20 78 DF                  x.
         rts                                     ; 97BC 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3485,10 +3485,10 @@ L97BD:
         lda     $EA                             ; 97BD A5 EA                    ..
         asl     a                               ; 97BF 0A                       .
         tax                                     ; 97C0 AA                       .
-        lda     L97D4,x                         ; 97C1 BD D4 97                 ...
+        lda     MainMenuStartGameCursorPixelPositionTable,x; 97C1 BD D4 97      ...
         sta     $AD                             ; 97C4 85 AD                    ..
         inx                                     ; 97C6 E8                       .
-        lda     L97D4,x                         ; 97C7 BD D4 97                 ...
+        lda     MainMenuStartGameCursorPixelPositionTable,x; 97C7 BD D4 97      ...
         sta     $AC                             ; 97CA 85 AC                    ..
         ldx     #$F0                            ; 97CC A2 F0                    ..
         lda     #$BF                            ; 97CE A9 BF                    ..
@@ -3496,44 +3496,39 @@ L97BD:
         rts                                     ; 97D3 60                       `
 
 ; ----------------------------------------------------------------------------
-L97D4:
-        ldy     #$A8                            ; 97D4 A0 A8                    ..
-        ldy     #$C0                            ; 97D6 A0 C0                    ..
+MainMenuStartGameCursorPixelPositionTable:
+        .byte   $A0,$A8,$A0,$C0                 ; 97D4 A0 A8 A0 C0              ....
 L97D8:
-        ora     (L0002,x)                       ; 97D8 01 02                    ..
-        .byte   $03                             ; 97DA 03                       .
-        ora     $06                             ; 97DB 05 06                    ..
-        php                                     ; 97DD 08                       .
-        asl     a                               ; 97DE 0A                       .
-        .byte   $0B                             ; 97DF 0B                       .
-        brk                                     ; 97E0 00                       .
-L97E1:
+        .byte   $01,$02,$03,$05,$06,$08,$0A,$0B ; 97D8 01 02 03 05 06 08 0A 0B  ........
+        .byte   $00                             ; 97E0 00                       .
+; ----------------------------------------------------------------------------
+ShopMenuEntryPoint:
         lda     $6F18                           ; 97E1 AD 18 6F                 ..o
-        beq     L97FB                           ; 97E4 F0 15                    ..
+        beq     ShopMenuHealingItemEntryPoint   ; 97E4 F0 15                    ..
         cmp     #$01                            ; 97E6 C9 01                    ..
-        beq     L97F2                           ; 97E8 F0 08                    ..
+        beq     ShopMenuType1Equipment          ; 97E8 F0 08                    ..
         cmp     #$02                            ; 97EA C9 02                    ..
-        beq     L97F5                           ; 97EC F0 07                    ..
+        beq     ShopMenuType2WeaponUpgrade      ; 97EC F0 07                    ..
         cmp     #$03                            ; 97EE C9 03                    ..
-        beq     L97F8                           ; 97F0 F0 06                    ..
-L97F2:
-        jmp     L9DE2                           ; 97F2 4C E2 9D                 L..
+        beq     ShopMenuType3MateriaUpgrade     ; 97F0 F0 06                    ..
+ShopMenuType1Equipment:
+        jmp     ShopMenuEquipmentEntryPoint     ; 97F2 4C E2 9D                 L..
 
 ; ----------------------------------------------------------------------------
-L97F5:
-        jmp     LD9D0                           ; 97F5 4C D0 D9                 L..
+ShopMenuType2WeaponUpgrade:
+        jmp     ShopMenuWeaponEnhancementEntryPoint; 97F5 4C D0 D9              L..
 
 ; ----------------------------------------------------------------------------
-L97F8:
-        jmp     LDDB3                           ; 97F8 4C B3 DD                 L..
+ShopMenuType3MateriaUpgrade:
+        jmp     ShopMenuMateriaEnhancementEntryPoint; 97F8 4C B3 DD             L..
 
 ; ----------------------------------------------------------------------------
-L97FB:
-        jsr     LDF94                           ; 97FB 20 94 DF                  ..
-        jsr     MenuCursorGraphicsUpdate        ; 97FE 20 78 DF                  x.
+ShopMenuHealingItemEntryPoint:
+        jsr     Bank0eSetMemoryAddress0200Main  ; 97FB 20 94 DF                  ..
+        jsr     Bank0eScreenRefresh             ; 97FE 20 78 DF                  x.
         lda     #$06                            ; 9801 A9 06                    ..
         sta     $A9                             ; 9803 85 A9                    ..
-        jsr     LDE2C                           ; 9805 20 2C DE                  ,.
+        jsr     LoadAsmCodeToUpdatePPU          ; 9805 20 2C DE                  ,.
         lda     #$03                            ; 9808 A9 03                    ..
         sta     $0618                           ; 980A 8D 18 06                 ...
         lda     #$02                            ; 980D A9 02                    ..
@@ -3556,7 +3551,7 @@ L982F:
         sta     $DC                             ; 9833 85 DC                    ..
 L9835:
         jsr     L9425                           ; 9835 20 25 94                  %.
-        jsr     MenuCursorGraphicsUpdate        ; 9838 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 9838 20 78 DF                  x.
         ldx     #$08                            ; 983B A2 08                    ..
         lda     $22                             ; 983D A5 22                    ."
 L983F:
@@ -3620,7 +3615,7 @@ L9892:
         sta     $DC                             ; 9896 85 DC                    ..
 L9898:
         jsr     L9425                           ; 9898 20 25 94                  %.
-        jsr     MenuCursorGraphicsUpdate        ; 989B 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 989B 20 78 DF                  x.
         ldx     #$08                            ; 989E A2 08                    ..
         lda     $22                             ; 98A0 A5 22                    ."
 L98A2:
@@ -3811,7 +3806,7 @@ L99CF:
         sta     $6F19                           ; 99FA 8D 19 6F                 ..o
         jsr     L9AE1                           ; 99FD 20 E1 9A                  ..
 L9A00:
-        jsr     MenuCursorGraphicsUpdate        ; 9A00 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 9A00 20 78 DF                  x.
         ldx     #$08                            ; 9A03 A2 08                    ..
         lda     $22                             ; 9A05 A5 22                    ."
 L9A07:
@@ -3893,7 +3888,7 @@ L9A66:
         sta     $6030                           ; 9A7F 8D 30 60                 .0`
         lda     #$18                            ; 9A82 A9 18                    ..
         jsr     LFEDE                           ; 9A84 20 DE FE                  ..
-        jsr     MenuCursorGraphicsUpdate        ; 9A87 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 9A87 20 78 DF                  x.
         jsr     L9C38                           ; 9A8A 20 38 9C                  8.
         ldx     $6F24                           ; 9A8D AE 24 6F                 .$o
         lda     $60CE,x                         ; 9A90 BD CE 60                 ..`
@@ -4010,7 +4005,7 @@ L9B59:
         sta     $6F19                           ; 9B69 8D 19 6F                 ..o
         jsr     L9AE1                           ; 9B6C 20 E1 9A                  ..
 L9B6F:
-        jsr     MenuCursorGraphicsUpdate        ; 9B6F 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 9B6F 20 78 DF                  x.
         ldx     #$08                            ; 9B72 A2 08                    ..
         lda     $22                             ; 9B74 A5 22                    ."
 L9B76:
@@ -4100,7 +4095,7 @@ L9BE1:
         sta     $6030                           ; 9BFA 8D 30 60                 .0`
         lda     #$18                            ; 9BFD A9 18                    ..
         jsr     LFEDE                           ; 9BFF 20 DE FE                  ..
-        jsr     MenuCursorGraphicsUpdate        ; 9C02 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 9C02 20 78 DF                  x.
         jsr     L9C38                           ; 9C05 20 38 9C                  8.
         ldx     $6F24                           ; 9C08 AE 24 6F                 .$o
         lda     $60CE,x                         ; 9C0B BD CE 60                 ..`
@@ -4263,7 +4258,7 @@ L9CF3:
         pha                                     ; 9D10 48                       H
         sta     $69                             ; 9D11 85 69                    .i
         jsr     L8B18                           ; 9D13 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; 9D16 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 9D16 20 78 DF                  x.
         pla                                     ; 9D19 68                       h
         beq     L9D70                           ; 9D1A F0 54                    .T
         pha                                     ; 9D1C 48                       H
@@ -4365,12 +4360,12 @@ L9DD2:
         ora     ($81,x)                         ; 9DDC 01 81                    ..
         ora     ($6A,x)                         ; 9DDE 01 6A                    .j
         ora     ($3B,x)                         ; 9DE0 01 3B                    .;
-L9DE2:
-        jsr     LDF94                           ; 9DE2 20 94 DF                  ..
-        jsr     MenuCursorGraphicsUpdate        ; 9DE5 20 78 DF                  x.
+ShopMenuEquipmentEntryPoint:
+        jsr     Bank0eSetMemoryAddress0200Main  ; 9DE2 20 94 DF                  ..
+        jsr     Bank0eScreenRefresh             ; 9DE5 20 78 DF                  x.
         lda     #$08                            ; 9DE8 A9 08                    ..
         sta     $A9                             ; 9DEA 85 A9                    ..
-        jsr     LDE2C                           ; 9DEC 20 2C DE                  ,.
+        jsr     LoadAsmCodeToUpdatePPU          ; 9DEC 20 2C DE                  ,.
         lda     #$03                            ; 9DEF A9 03                    ..
         sta     $0618                           ; 9DF1 8D 18 06                 ...
         lda     #$02                            ; 9DF4 A9 02                    ..
@@ -4393,7 +4388,7 @@ L9E16:
         sta     $DC                             ; 9E1A 85 DC                    ..
 L9E1C:
         jsr     L9425                           ; 9E1C 20 25 94                  %.
-        jsr     MenuCursorGraphicsUpdate        ; 9E1F 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 9E1F 20 78 DF                  x.
         ldx     #$08                            ; 9E22 A2 08                    ..
         lda     $22                             ; 9E24 A5 22                    ."
 L9E26:
@@ -4452,7 +4447,7 @@ L9E6B:
         sta     $DC                             ; 9E6F 85 DC                    ..
 L9E71:
         jsr     L9425                           ; 9E71 20 25 94                  %.
-        jsr     MenuCursorGraphicsUpdate        ; 9E74 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 9E74 20 78 DF                  x.
         ldx     #$08                            ; 9E77 A2 08                    ..
         lda     $22                             ; 9E79 A5 22                    ."
 L9E7B:
@@ -4528,7 +4523,7 @@ L9EE6:
         sta     $DC                             ; 9EEA 85 DC                    ..
 L9EEC:
         jsr     L9425                           ; 9EEC 20 25 94                  %.
-        jsr     MenuCursorGraphicsUpdate        ; 9EEF 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; 9EEF 20 78 DF                  x.
         ldx     #$08                            ; 9EF2 A2 08                    ..
         lda     $22                             ; 9EF4 A5 22                    ."
 L9EF6:
@@ -4719,7 +4714,7 @@ LA023:
         sta     $6F19                           ; A04E 8D 19 6F                 ..o
         jsr     LA11A                           ; A051 20 1A A1                  ..
 LA054:
-        jsr     MenuCursorGraphicsUpdate        ; A054 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; A054 20 78 DF                  x.
         ldx     #$08                            ; A057 A2 08                    ..
         lda     $22                             ; A059 A5 22                    ."
 LA05B:
@@ -4809,7 +4804,7 @@ ShopSellItem:
         sta     $6030                           ; A0E2 8D 30 60                 .0`
         lda     #$18                            ; A0E5 A9 18                    ..
         jsr     LFEDE                           ; A0E7 20 DE FE                  ..
-        jsr     MenuCursorGraphicsUpdate        ; A0EA 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; A0EA 20 78 DF                  x.
         jsr     L9C38                           ; A0ED 20 38 9C                  8.
         lda     $6FCA                           ; A0F0 AD CA 6F                 ..o
         asl     a                               ; A0F3 0A                       .
@@ -4914,7 +4909,7 @@ LA1A1:
         sta     $6F19                           ; A1B1 8D 19 6F                 ..o
         jsr     LA11A                           ; A1B4 20 1A A1                  ..
 LA1B7:
-        jsr     MenuCursorGraphicsUpdate        ; A1B7 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; A1B7 20 78 DF                  x.
         ldx     #$08                            ; A1BA A2 08                    ..
         lda     $22                             ; A1BC A5 22                    ."
 LA1BE:
@@ -5014,7 +5009,7 @@ ShopBuyItem:
         sta     $6030                           ; A251 8D 30 60                 .0`
         lda     #$18                            ; A254 A9 18                    ..
         jsr     LFEDE                           ; A256 20 DE FE                  ..
-        jsr     MenuCursorGraphicsUpdate        ; A259 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; A259 20 78 DF                  x.
         jsr     L9C38                           ; A25C 20 38 9C                  8.
         lda     $6FCA                           ; A25F AD CA 6F                 ..o
         asl     a                               ; A262 0A                       .
@@ -5200,7 +5195,7 @@ LA374:
         pha                                     ; A395 48                       H
         sta     $69                             ; A396 85 69                    .i
         jsr     L8B18                           ; A398 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; A39B 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; A39B 20 78 DF                  x.
         pla                                     ; A39E 68                       h
         beq     LA404                           ; A39F F0 63                    .c
         pha                                     ; A3A1 48                       H
@@ -5308,7 +5303,7 @@ LA444:
         sta     $0700                           ; A465 8D 00 07                 ...
         lda     #$FF                            ; A468 A9 FF                    ..
         sta     $2D                             ; A46A 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; A46C 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; A46C 20 78 DF                  x.
         rts                                     ; A46F 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5355,7 +5350,7 @@ ShopItemMenuSaveNewItemIndex:
         nop                                     ; A4BC EA                       .
         sta     $69                             ; A4BD 85 69                    .i
         jsr     L8B18                           ; A4BF 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; A4C2 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; A4C2 20 78 DF                  x.
         lda     #$00                            ; A4C5 A9 00                    ..
 LA4C7:
         pha                                     ; A4C7 48                       H
@@ -5374,7 +5369,7 @@ LA4C7:
         adc     #$3C                            ; A4DC 69 3C                    i<
         sta     $69                             ; A4DE 85 69                    .i
         jsr     L8B18                           ; A4E0 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; A4E3 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; A4E3 20 78 DF                  x.
         lda     $0E                             ; A4E6 A5 0E                    ..
         clc                                     ; A4E8 18                       .
         adc     #$20                            ; A4E9 69 20                    i 
@@ -5489,7 +5484,7 @@ LA58B:
         lda     #$FF                            ; A5A3 A9 FF                    ..
         sta     $88                             ; A5A5 85 88                    ..
         jsr     L8B18                           ; A5A7 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; A5AA 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; A5AA 20 78 DF                  x.
         lda     #$00                            ; A5AD A9 00                    ..
         sta     $88                             ; A5AF 85 88                    ..
         rts                                     ; A5B1 60                       `
@@ -5553,12 +5548,12 @@ LA614:
         rts                                     ; A614 60                       `
 
 ; ----------------------------------------------------------------------------
-LA615:
-        jsr     LDF94                           ; A615 20 94 DF                  ..
-        jsr     MenuCursorGraphicsUpdate        ; A618 20 78 DF                  x.
+MainPlayerMenuEntryPoint:
+        jsr     Bank0eSetMemoryAddress0200Main  ; A615 20 94 DF                  ..
+        jsr     Bank0eScreenRefresh             ; A618 20 78 DF                  x.
         lda     #$00                            ; A61B A9 00                    ..
         sta     $A9                             ; A61D 85 A9                    ..
-        jsr     LDE2C                           ; A61F 20 2C DE                  ,.
+        jsr     LoadAsmCodeToUpdatePPU          ; A61F 20 2C DE                  ,.
         lda     #$03                            ; A622 A9 03                    ..
         sta     $0618                           ; A624 8D 18 06                 ...
         lda     #$02                            ; A627 A9 02                    ..
@@ -5575,7 +5570,7 @@ LA63E:
         sta     $DC                             ; A642 85 DC                    ..
 LA644:
         jsr     L9425                           ; A644 20 25 94                  %.
-        jsr     MenuCursorGraphicsUpdate        ; A647 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; A647 20 78 DF                  x.
         ldx     #$08                            ; A64A A2 08                    ..
         lda     $22                             ; A64C A5 22                    ."
 LA64E:
@@ -5689,7 +5684,7 @@ MainPlayerMenuToStatusSubmenu:
         sta     $6F20                           ; A6F5 8D 20 6F                 . o
         jsr     LA74A                           ; A6F8 20 4A A7                  J.
         jsr     MenuGraphicsRefresh             ; A6FB 20 0D E0                  ..
-        jmp     LA615                           ; A6FE 4C 15 A6                 L..
+        jmp     MainPlayerMenuEntryPoint        ; A6FE 4C 15 A6                 L..
 
 ; ----------------------------------------------------------------------------
 MainPlayerMenuToEquipSubmenu:
@@ -5698,14 +5693,14 @@ MainPlayerMenuToEquipSubmenu:
         sta     $6F1E                           ; A706 8D 1E 6F                 ..o
         jsr     LB340                           ; A709 20 40 B3                  @.
         jsr     MenuGraphicsRefresh             ; A70C 20 0D E0                  ..
-        jmp     LA615                           ; A70F 4C 15 A6                 L..
+        jmp     MainPlayerMenuEntryPoint        ; A70F 4C 15 A6                 L..
 
 ; ----------------------------------------------------------------------------
 MainPlayerMenuToItemSubmenu:
         jsr     MenuGraphicsRefresh             ; A712 20 0D E0                  ..
         jsr     LC6AE                           ; A715 20 AE C6                  ..
         jsr     MenuGraphicsRefresh             ; A718 20 0D E0                  ..
-        jmp     LA615                           ; A71B 4C 15 A6                 L..
+        jmp     MainPlayerMenuEntryPoint        ; A71B 4C 15 A6                 L..
 
 ; ----------------------------------------------------------------------------
 MainPlayerMenuToMagicSubmenu:
@@ -5715,21 +5710,21 @@ MainPlayerMenuToMagicSubmenu:
         sta     $6F20                           ; A726 8D 20 6F                 . o
         jsr     MagicSubmenuRenderMain          ; A729 20 4F CC                  O.
         jsr     MenuGraphicsRefresh             ; A72C 20 0D E0                  ..
-        jmp     LA615                           ; A72F 4C 15 A6                 L..
+        jmp     MainPlayerMenuEntryPoint        ; A72F 4C 15 A6                 L..
 
 ; ----------------------------------------------------------------------------
 MainPlayerMenuToPartySubmenu:
         jsr     MenuGraphicsRefresh             ; A732 20 0D E0                  ..
         jsr     LD48C                           ; A735 20 8C D4                  ..
         jsr     MenuGraphicsRefresh             ; A738 20 0D E0                  ..
-        jmp     LA615                           ; A73B 4C 15 A6                 L..
+        jmp     MainPlayerMenuEntryPoint        ; A73B 4C 15 A6                 L..
 
 ; ----------------------------------------------------------------------------
 MainPlayerMenuToSaveSubmenu:
         jsr     MenuGraphicsRefresh             ; A73E 20 0D E0                  ..
         jsr     LD6D7                           ; A741 20 D7 D6                  ..
         jsr     MenuGraphicsRefresh             ; A744 20 0D E0                  ..
-        jmp     LA615                           ; A747 4C 15 A6                 L..
+        jmp     MainPlayerMenuEntryPoint        ; A747 4C 15 A6                 L..
 
 ; ----------------------------------------------------------------------------
 LA74A:
@@ -5737,7 +5732,7 @@ LA74A:
         sta     $6F1F                           ; A74D 8D 1F 6F                 ..o
         jsr     LA99F                           ; A750 20 9F A9                  ..
 LA753:
-        jsr     MenuCursorGraphicsUpdate        ; A753 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; A753 20 78 DF                  x.
         ldx     #$08                            ; A756 A2 08                    ..
         lda     $22                             ; A758 A5 22                    ."
 LA75A:
@@ -6065,11 +6060,11 @@ LA99C:
 
 ; ----------------------------------------------------------------------------
 LA99F:
-        jsr     LDF94                           ; A99F 20 94 DF                  ..
-        jsr     MenuCursorGraphicsUpdate        ; A9A2 20 78 DF                  x.
+        jsr     Bank0eSetMemoryAddress0200Main  ; A99F 20 94 DF                  ..
+        jsr     Bank0eScreenRefresh             ; A9A2 20 78 DF                  x.
         lda     #$01                            ; A9A5 A9 01                    ..
         sta     $A9                             ; A9A7 85 A9                    ..
-        jsr     LDE2C                           ; A9A9 20 2C DE                  ,.
+        jsr     LoadAsmCodeToUpdatePPU          ; A9A9 20 2C DE                  ,.
         lda     #$03                            ; A9AC A9 03                    ..
         sta     $0618                           ; A9AE 8D 18 06                 ...
         lda     #$02                            ; A9B1 A9 02                    ..
@@ -6097,10 +6092,10 @@ LA9D9:
         lda     #$00                            ; A9DD A9 00                    ..
         sta     $09                             ; A9DF 85 09                    ..
         jsr     LA9FD                           ; A9E1 20 FD A9                  ..
-        jsr     MenuCursorGraphicsUpdate        ; A9E4 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; A9E4 20 78 DF                  x.
         jsr     LAA1B                           ; A9E7 20 1B AA                  ..
         jsr     LAB44                           ; A9EA 20 44 AB                  D.
-        jsr     MenuCursorGraphicsUpdate        ; A9ED 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; A9ED 20 78 DF                  x.
         jsr     LAB9D                           ; A9F0 20 9D AB                  ..
         jsr     LACC5                           ; A9F3 20 C5 AC                  ..
         jsr     LB05F                           ; A9F6 20 5F B0                  _.
@@ -6120,7 +6115,7 @@ LA9FD:
         clc                                     ; AA0F 18                       .
         adc     #$02                            ; AA10 69 02                    i.
         sta     $69                             ; AA12 85 69                    .i
-        jsr     MenuCursorGraphicsUpdate        ; AA14 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; AA14 20 78 DF                  x.
         jsr     L8F0A                           ; AA17 20 0A 8F                  ..
         rts                                     ; AA1A 60                       `
 
@@ -6294,7 +6289,7 @@ LAAEE:
         sta     $9B                             ; AB2A 85 9B                    ..
         dec     $9D                             ; AB2C C6 9D                    ..
         bne     LAAEA                           ; AB2E D0 BA                    ..
-        jsr     MenuCursorGraphicsUpdate        ; AB30 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; AB30 20 78 DF                  x.
         rts                                     ; AB33 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -6350,7 +6345,7 @@ LAB7C:
         lda     #$03                            ; AB81 A9 03                    ..
         sta     $0619                           ; AB83 8D 19 06                 ...
 LAB86:
-        jsr     MenuCursorGraphicsUpdate        ; AB86 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; AB86 20 78 DF                  x.
         jsr     L8F0A                           ; AB89 20 0A 8F                  ..
         pla                                     ; AB8C 68                       h
         clc                                     ; AB8D 18                       .
@@ -6631,7 +6626,7 @@ LAD9B:
         sta     $0700                           ; ADA3 8D 00 07                 ...
         lda     #$FF                            ; ADA6 A9 FF                    ..
         sta     $2D                             ; ADA8 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; ADAA 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; ADAA 20 78 DF                  x.
         pla                                     ; ADAD 68                       h
         sta     $0A                             ; ADAE 85 0A                    ..
         pla                                     ; ADB0 68                       h
@@ -6980,9 +6975,9 @@ LB06C:
         sta     $6A                             ; B084 85 6A                    .j
         lda     $6F24                           ; B086 AD 24 6F                 .$o
         sta     $69                             ; B089 85 69                    .i
-        jsr     MenuCursorGraphicsUpdate        ; B08B 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; B08B 20 78 DF                  x.
         jsr     L8F0A                           ; B08E 20 0A 8F                  ..
-        jsr     MenuCursorGraphicsUpdate        ; B091 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; B091 20 78 DF                  x.
         lda     #$01                            ; B094 A9 01                    ..
         sta     $0617                           ; B096 8D 17 06                 ...
         lda     #$F6                            ; B099 A9 F6                    ..
@@ -7073,9 +7068,9 @@ LB12E:
         sta     $6A                             ; B146 85 6A                    .j
         lda     $6F24                           ; B148 AD 24 6F                 .$o
         sta     $69                             ; B14B 85 69                    .i
-        jsr     MenuCursorGraphicsUpdate        ; B14D 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; B14D 20 78 DF                  x.
         jsr     L8F0A                           ; B150 20 0A 8F                  ..
-        jsr     MenuCursorGraphicsUpdate        ; B153 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; B153 20 78 DF                  x.
         lda     #$01                            ; B156 A9 01                    ..
         sta     $0617                           ; B158 8D 17 06                 ...
         lda     #$F6                            ; B15B A9 F6                    ..
@@ -7316,7 +7311,7 @@ LB327:
         sta     $0700                           ; B335 8D 00 07                 ...
         lda     #$FF                            ; B338 A9 FF                    ..
         sta     $2D                             ; B33A 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; B33C 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; B33C 20 78 DF                  x.
         rts                                     ; B33F 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -7325,7 +7320,7 @@ LB340:
         sta     $6F1F                           ; B343 8D 1F 6F                 ..o
         jsr     LB57F                           ; B346 20 7F B5                  ..
 LB349:
-        jsr     MenuCursorGraphicsUpdate        ; B349 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; B349 20 78 DF                  x.
         ldx     #$08                            ; B34C A2 08                    ..
         lda     $22                             ; B34E A5 22                    ."
 LB350:
@@ -7405,7 +7400,7 @@ LB3C1:
         sta     $DC                             ; B3C5 85 DC                    ..
 LB3C7:
         jsr     L9425                           ; B3C7 20 25 94                  %.
-        jsr     MenuCursorGraphicsUpdate        ; B3CA 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; B3CA 20 78 DF                  x.
         ldx     #$08                            ; B3CD A2 08                    ..
         lda     $22                             ; B3CF A5 22                    ."
 LB3D1:
@@ -7542,7 +7537,7 @@ LB4AE:
         sta     $DC                             ; B4B2 85 DC                    ..
 LB4B4:
         jsr     L9425                           ; B4B4 20 25 94                  %.
-        jsr     MenuCursorGraphicsUpdate        ; B4B7 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; B4B7 20 78 DF                  x.
         ldx     #$08                            ; B4BA A2 08                    ..
         lda     $22                             ; B4BC A5 22                    ."
 LB4BE:
@@ -7654,11 +7649,11 @@ LB56B:
         ldx     #$00                            ; B57B A2 00                    ..
         beq     LB548                           ; B57D F0 C9                    ..
 LB57F:
-        jsr     LDF94                           ; B57F 20 94 DF                  ..
-        jsr     MenuCursorGraphicsUpdate        ; B582 20 78 DF                  x.
+        jsr     Bank0eSetMemoryAddress0200Main  ; B57F 20 94 DF                  ..
+        jsr     Bank0eScreenRefresh             ; B582 20 78 DF                  x.
         lda     #$02                            ; B585 A9 02                    ..
         sta     $A9                             ; B587 85 A9                    ..
-        jsr     LDE2C                           ; B589 20 2C DE                  ,.
+        jsr     LoadAsmCodeToUpdatePPU          ; B589 20 2C DE                  ,.
         lda     #$03                            ; B58C A9 03                    ..
         sta     $0618                           ; B58E 8D 18 06                 ...
         lda     #$02                            ; B591 A9 02                    ..
@@ -7676,7 +7671,7 @@ LB5A3:
         lda     #$C0                            ; B5A7 A9 C0                    ..
         sta     $09                             ; B5A9 85 09                    ..
         jsr     LA9FD                           ; B5AB 20 FD A9                  ..
-        jsr     MenuCursorGraphicsUpdate        ; B5AE 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; B5AE 20 78 DF                  x.
         jsr     LAA1B                           ; B5B1 20 1B AA                  ..
         lda     #$00                            ; B5B4 A9 00                    ..
 LB5B6:
@@ -7687,7 +7682,7 @@ LB5B6:
         adc     #$01                            ; B5BC 69 01                    i.
         cmp     #$06                            ; B5BE C9 06                    ..
         bcc     LB5B6                           ; B5C0 90 F4                    ..
-        jsr     MenuCursorGraphicsUpdate        ; B5C2 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; B5C2 20 78 DF                  x.
         rts                                     ; B5C5 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -7761,7 +7756,7 @@ LB600:
         lda     $6058,x                         ; B634 BD 58 60                 .X`
         beq     LB641                           ; B637 F0 08                    ..
         sta     $69                             ; B639 85 69                    .i
-        jsr     MenuCursorGraphicsUpdate        ; B63B 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; B63B 20 78 DF                  x.
         jsr     L8F0A                           ; B63E 20 0A 8F                  ..
 LB641:
         pla                                     ; B641 68                       h
@@ -7839,7 +7834,7 @@ LB686:
         adc     #$09                            ; B6BA 69 09                    i.
         sta     $69                             ; B6BC 85 69                    .i
         jsr     L8B18                           ; B6BE 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; B6C1 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; B6C1 20 78 DF                  x.
         lda     #$00                            ; B6C4 A9 00                    ..
 LB6C6:
         pha                                     ; B6C6 48                       H
@@ -7858,7 +7853,7 @@ LB6C6:
         adc     #$0E                            ; B6DB 69 0E                    i.
         sta     $69                             ; B6DD 85 69                    .i
         jsr     L8B18                           ; B6DF 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; B6E2 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; B6E2 20 78 DF                  x.
         lda     $0E                             ; B6E5 A5 0E                    ..
         clc                                     ; B6E7 18                       .
         adc     #$20                            ; B6E8 69 20                    i 
@@ -8070,7 +8065,7 @@ LB867:
         sta     $0700                           ; B874 8D 00 07                 ...
         lda     #$FF                            ; B877 A9 FF                    ..
         sta     $2D                             ; B879 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; B87B 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; B87B 20 78 DF                  x.
         lda     L0002                           ; B87E A5 02                    ..
         clc                                     ; B880 18                       .
         adc     #$40                            ; B881 69 40                    i@
@@ -8216,7 +8211,7 @@ LBB57:
         sta     $0700                           ; BB64 8D 00 07                 ...
         lda     #$FF                            ; BB67 A9 FF                    ..
         sta     $2D                             ; BB69 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; BB6B 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; BB6B 20 78 DF                  x.
         rts                                     ; BB6E 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -8260,7 +8255,7 @@ LBBB7:
         sta     $0700                           ; BBC1 8D 00 07                 ...
         lda     #$FF                            ; BBC4 A9 FF                    ..
         sta     $2D                             ; BBC6 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; BBC8 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; BBC8 20 78 DF                  x.
         lda     $0E                             ; BBCB A5 0E                    ..
         sec                                     ; BBCD 38                       8
         sbc     #$20                            ; BBCE E9 20                    . 
@@ -8418,7 +8413,7 @@ LBCE0:
         pha                                     ; BD03 48                       H
         sta     $69                             ; BD04 85 69                    .i
         jsr     L8B18                           ; BD06 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; BD09 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; BD09 20 78 DF                  x.
         lda     $97                             ; BD0C A5 97                    ..
         asl     a                               ; BD0E 0A                       .
         tax                                     ; BD0F AA                       .
@@ -8455,7 +8450,7 @@ LBD40:
         lda     #$19                            ; BD44 A9 19                    ..
         sta     $69                             ; BD46 85 69                    .i
         jsr     L8B18                           ; BD48 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; BD4B 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; BD4B 20 78 DF                  x.
         rts                                     ; BD4E 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -8688,7 +8683,7 @@ LBE82:
         sta     $0700                           ; BEA3 8D 00 07                 ...
         lda     #$FF                            ; BEA6 A9 FF                    ..
         sta     $2D                             ; BEA8 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; BEAA 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; BEAA 20 78 DF                  x.
         rts                                     ; BEAD 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -8733,7 +8728,7 @@ LBEEF           := * + 2
         inx                                     ; BEF3 E8                       .
         dec     $9C                             ; BEF4 C6 9C                    ..
         bne     LBEED                           ; BEF6 D0 F5                    ..
-        jsr     MenuCursorGraphicsUpdate        ; BEF8 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; BEF8 20 78 DF                  x.
         rts                                     ; BEFB 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -8816,7 +8811,7 @@ LBF5C:
         inx                                     ; BF62 E8                       .
         dec     $9C                             ; BF63 C6 9C                    ..
         bne     LBF5C                           ; BF65 D0 F5                    ..
-        jsr     MenuCursorGraphicsUpdate        ; BF67 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; BF67 20 78 DF                  x.
         rts                                     ; BF6A 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -8924,7 +8919,7 @@ LC00E:
         sta     $6F24                           ; C00E 8D 24 6F                 .$o
         sta     $69                             ; C011 85 69                    .i
         jsr     L8B18                           ; C013 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; C016 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; C016 20 78 DF                  x.
         jsr     L94F8                           ; C019 20 F8 94                  ..
         lda     #$01                            ; C01C A9 01                    ..
         sta     $0617                           ; C01E 8D 17 06                 ...
@@ -9014,7 +9009,7 @@ LC0C5:
         lda     #$19                            ; C0C9 A9 19                    ..
         sta     $69                             ; C0CB 85 69                    .i
         jsr     L8B18                           ; C0CD 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; C0D0 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; C0D0 20 78 DF                  x.
         rts                                     ; C0D3 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -9066,7 +9061,7 @@ LC129:
         sta     $DC                             ; C12D 85 DC                    ..
 LC12F:
         jsr     L9425                           ; C12F 20 25 94                  %.
-        jsr     MenuCursorGraphicsUpdate        ; C132 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; C132 20 78 DF                  x.
         ldx     #$08                            ; C135 A2 08                    ..
         lda     $22                             ; C137 A5 22                    ."
 LC139:
@@ -9192,7 +9187,7 @@ LC1EB:
         sta     $0700                           ; C20C 8D 00 07                 ...
         lda     #$FF                            ; C20F A9 FF                    ..
         sta     $2D                             ; C211 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; C213 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; C213 20 78 DF                  x.
         rts                                     ; C216 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -9284,7 +9279,7 @@ LC2A1:
         sta     $6F24                           ; C2A1 8D 24 6F                 .$o
         sta     $69                             ; C2A4 85 69                    .i
         jsr     L8B18                           ; C2A6 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; C2A9 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; C2A9 20 78 DF                  x.
         jsr     L960A                           ; C2AC 20 0A 96                  ..
         lda     #$01                            ; C2AF A9 01                    ..
         sta     $0617                           ; C2B1 8D 17 06                 ...
@@ -9358,7 +9353,7 @@ LC337:
         lda     #$19                            ; C33B A9 19                    ..
         sta     $69                             ; C33D 85 69                    .i
         jsr     L8B18                           ; C33F 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; C342 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; C342 20 78 DF                  x.
         rts                                     ; C345 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -9368,7 +9363,7 @@ LC346:
         sta     $DC                             ; C34A 85 DC                    ..
 LC34C:
         jsr     L9425                           ; C34C 20 25 94                  %.
-        jsr     MenuCursorGraphicsUpdate        ; C34F 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; C34F 20 78 DF                  x.
         ldx     #$08                            ; C352 A2 08                    ..
         lda     $22                             ; C354 A5 22                    ."
 LC356:
@@ -9585,7 +9580,7 @@ LC49D:
         beq     LC4E3                           ; C4D8 F0 09                    ..
         sta     $69                             ; C4DA 85 69                    .i
         jsr     L8B18                           ; C4DC 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; C4DF 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; C4DF 20 78 DF                  x.
         rts                                     ; C4E2 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -9595,7 +9590,7 @@ LC4E3:
         lda     #$0D                            ; C4E7 A9 0D                    ..
         sta     $69                             ; C4E9 85 69                    .i
         jsr     L8B18                           ; C4EB 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; C4EE 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; C4EE 20 78 DF                  x.
         rts                                     ; C4F1 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -9824,21 +9819,21 @@ LC6AE:
         lda     $060E                           ; C6B6 AD 0E 06                 ...
         beq     LC6C4                           ; C6B9 F0 09                    ..
         jsr     LDFE3                           ; C6BB 20 E3 DF                  ..
-        jsr     MenuCursorGraphicsUpdate        ; C6BE 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; C6BE 20 78 DF                  x.
         jmp     ItemSubmenuSelectOption         ; C6C1 4C 1A C7                 L..
 
 ; ----------------------------------------------------------------------------
 LC6C4:
         jsr     LC8FB                           ; C6C4 20 FB C8                  ..
         jsr     LDFE3                           ; C6C7 20 E3 DF                  ..
-        jsr     MenuCursorGraphicsUpdate        ; C6CA 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; C6CA 20 78 DF                  x.
 LC6CD:
         lda     #$00                            ; C6CD A9 00                    ..
         sta     $DB                             ; C6CF 85 DB                    ..
         sta     $DC                             ; C6D1 85 DC                    ..
 ItemSubmenuGraphicsRefresh:
         jsr     L9425                           ; C6D3 20 25 94                  %.
-        jsr     MenuCursorGraphicsUpdate        ; C6D6 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; C6D6 20 78 DF                  x.
         ldx     #$08                            ; C6D9 A2 08                    ..
         lda     $22                             ; C6DB A5 22                    ."
 LC6DD:
@@ -9902,7 +9897,7 @@ LC730:
         sta     $DC                             ; C734 85 DC                    ..
 LC736:
         jsr     L9425                           ; C736 20 25 94                  %.
-        jsr     MenuCursorGraphicsUpdate        ; C739 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; C739 20 78 DF                  x.
         ldx     #$08                            ; C73C A2 08                    ..
         lda     $22                             ; C73E A5 22                    ."
 LC740:
@@ -10092,7 +10087,7 @@ ItemToUseIsMagicItem:
 LC87B:
         jsr     LC8CE                           ; C87B 20 CE C8                  ..
         jsr     LDFE3                           ; C87E 20 E3 DF                  ..
-        jsr     MenuCursorGraphicsUpdate        ; C881 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; C881 20 78 DF                  x.
         jsr     LC917                           ; C884 20 17 C9                  ..
         lda     $0613                           ; C887 AD 13 06                 ...
         beq     LC8A9                           ; C88A F0 1D                    ..
@@ -10135,11 +10130,11 @@ LC8CB:
 
 ; ----------------------------------------------------------------------------
 LC8CE:
-        jsr     LDF94                           ; C8CE 20 94 DF                  ..
-        jsr     MenuCursorGraphicsUpdate        ; C8D1 20 78 DF                  x.
+        jsr     Bank0eSetMemoryAddress0200Main  ; C8CE 20 94 DF                  ..
+        jsr     Bank0eScreenRefresh             ; C8D1 20 78 DF                  x.
         lda     #$03                            ; C8D4 A9 03                    ..
         sta     $A9                             ; C8D6 85 A9                    ..
-        jsr     LDE2C                           ; C8D8 20 2C DE                  ,.
+        jsr     LoadAsmCodeToUpdatePPU          ; C8D8 20 2C DE                  ,.
         lda     #$03                            ; C8DB A9 03                    ..
         sta     $0618                           ; C8DD 8D 18 06                 ...
         lda     #$02                            ; C8E0 A9 02                    ..
@@ -10290,7 +10285,7 @@ InitVarForLoadingItemNameString:
         pha                                     ; C9CD 48                       H
         sta     $69                             ; C9CE 85 69                    .i
         jsr     L8B18                           ; C9D0 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; C9D3 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; C9D3 20 78 DF                  x.
         pla                                     ; C9D6 68                       h
         beq     LCA06                           ; C9D7 F0 2D                    .-
         lda     $6F42                           ; C9D9 AD 42 6F                 .Bo
@@ -10325,7 +10320,7 @@ LCA07:
         lda     #$06                            ; CA0B A9 06                    ..
         sta     $6A                             ; CA0D 85 6A                    .j
         jsr     L8B18                           ; CA0F 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; CA12 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; CA12 20 78 DF                  x.
         rts                                     ; CA15 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -10508,7 +10503,7 @@ LCB4D:
         sta     $0700                           ; CB6E 8D 00 07                 ...
         lda     #$FF                            ; CB71 A9 FF                    ..
         sta     $2D                             ; CB73 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; CB75 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; CB75 20 78 DF                  x.
         rts                                     ; CB78 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -10528,7 +10523,7 @@ LCB79:
         lda     #$FF                            ; CB91 A9 FF                    ..
         sta     $88                             ; CB93 85 88                    ..
         jsr     L8B18                           ; CB95 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; CB98 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; CB98 20 78 DF                  x.
         lda     #$00                            ; CB9B A9 00                    ..
         sta     $88                             ; CB9D 85 88                    ..
         rts                                     ; CB9F 60                       `
@@ -10646,7 +10641,7 @@ MagicSubmenuRenderMain:
         lda     $060E                           ; CC58 AD 0E 06                 ...
         bne     MagicSubmenuSelectCharacter     ; CC5B D0 67                    .g
 MagicSubmenuNoOpRender:
-        jsr     MenuCursorGraphicsUpdate        ; CC5D 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; CC5D 20 78 DF                  x.
         ldx     #$08                            ; CC60 A2 08                    ..
         lda     $22                             ; CC62 A5 22                    ."
 LCC64:
@@ -10725,7 +10720,7 @@ LCCD2:
         sta     $DC                             ; CCD6 85 DC                    ..
 MagicSubmenuUpdateScreen:
         jsr     L9425                           ; CCD8 20 25 94                  %.
-        jsr     MenuCursorGraphicsUpdate        ; CCDB 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; CCDB 20 78 DF                  x.
         ldx     #$08                            ; CCDE A2 08                    ..
         lda     $22                             ; CCE0 A5 22                    ."
 LCCE2:
@@ -10972,11 +10967,11 @@ SetNotEnoughExpStringIndex:
         sta     $69                             ; CE9F 85 69                    .i
         bne     LCE7D                           ; CEA1 D0 DA                    ..
 MagicSubmenuRenderPage:
-        jsr     LDF94                           ; CEA3 20 94 DF                  ..
-        jsr     MenuCursorGraphicsUpdate        ; CEA6 20 78 DF                  x.
+        jsr     Bank0eSetMemoryAddress0200Main  ; CEA3 20 94 DF                  ..
+        jsr     Bank0eScreenRefresh             ; CEA6 20 78 DF                  x.
         lda     #$04                            ; CEA9 A9 04                    ..
         sta     $A9                             ; CEAB 85 A9                    ..
-        jsr     LDE2C                           ; CEAD 20 2C DE                  ,.
+        jsr     LoadAsmCodeToUpdatePPU          ; CEAD 20 2C DE                  ,.
         lda     #$03                            ; CEB0 A9 03                    ..
         sta     $0618                           ; CEB2 8D 18 06                 ...
         lda     #$02                            ; CEB5 A9 02                    ..
@@ -10988,7 +10983,7 @@ MagicSubmenuRenderPage:
         lda     #$40                            ; CEC4 A9 40                    .@
         sta     $09                             ; CEC6 85 09                    ..
         jsr     LA9FD                           ; CEC8 20 FD A9                  ..
-        jsr     MenuCursorGraphicsUpdate        ; CECB 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; CECB 20 78 DF                  x.
         jsr     LAA1B                           ; CECE 20 1B AA                  ..
         jsr     LD2DD                           ; CED1 20 DD D2                  ..
         jsr     LCEDB                           ; CED4 20 DB CE                  ..
@@ -11006,7 +11001,7 @@ LCEDD:
         adc     #$01                            ; CEE3 69 01                    i.
         cmp     $0616                           ; CEE5 CD 16 06                 ...
         bcc     LCEDD                           ; CEE8 90 F3                    ..
-        jsr     MenuCursorGraphicsUpdate        ; CEEA 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; CEEA 20 78 DF                  x.
         rts                                     ; CEED 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -11068,7 +11063,7 @@ LCF2C:
         tax                                     ; CF4D AA                       .
         lda     $0645,x                         ; CF4E BD 45 06                 .E.
         sta     $69                             ; CF51 85 69                    .i
-        jsr     MenuCursorGraphicsUpdate        ; CF53 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; CF53 20 78 DF                  x.
         jsr     L8F0A                           ; CF56 20 0A 8F                  ..
         pla                                     ; CF59 68                       h
         rts                                     ; CF5A 60                       `
@@ -11203,7 +11198,7 @@ LD002:
         adc     #$15                            ; D037 69 15                    i.
         sta     $69                             ; D039 85 69                    .i
         jsr     L8B18                           ; D03B 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; D03E 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; D03E 20 78 DF                  x.
         lda     #$02                            ; D041 A9 02                    ..
         sta     $AB                             ; D043 85 AB                    ..
         lda     #$23                            ; D045 A9 23                    .#
@@ -11266,7 +11261,7 @@ LD0A5:
         sta     $0700                           ; D0B2 8D 00 07                 ...
         lda     #$FF                            ; D0B5 A9 FF                    ..
         sta     $2D                             ; D0B7 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; D0B9 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; D0B9 20 78 DF                  x.
         lda     L0002                           ; D0BC A5 02                    ..
         clc                                     ; D0BE 18                       .
         adc     #$40                            ; D0BF 69 40                    i@
@@ -11367,7 +11362,7 @@ LD281:
         sta     $0700                           ; D28B 8D 00 07                 ...
         lda     #$FF                            ; D28E A9 FF                    ..
         sta     $2D                             ; D290 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; D292 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; D292 20 78 DF                  x.
         lda     $0E                             ; D295 A5 0E                    ..
         sec                                     ; D297 38                       8
         sbc     #$20                            ; D298 E9 20                    . 
@@ -11620,18 +11615,18 @@ LD465:
         lda     #$FF                            ; D47D A9 FF                    ..
         sta     $88                             ; D47F 85 88                    ..
         jsr     L8B18                           ; D481 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; D484 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; D484 20 78 DF                  x.
         lda     #$00                            ; D487 A9 00                    ..
         sta     $88                             ; D489 85 88                    ..
         rts                                     ; D48B 60                       `
 
 ; ----------------------------------------------------------------------------
 LD48C:
-        jsr     LDF94                           ; D48C 20 94 DF                  ..
-        jsr     MenuCursorGraphicsUpdate        ; D48F 20 78 DF                  x.
+        jsr     Bank0eSetMemoryAddress0200Main  ; D48C 20 94 DF                  ..
+        jsr     Bank0eScreenRefresh             ; D48F 20 78 DF                  x.
         lda     #$09                            ; D492 A9 09                    ..
         sta     $A9                             ; D494 85 A9                    ..
-        jsr     LDE2C                           ; D496 20 2C DE                  ,.
+        jsr     LoadAsmCodeToUpdatePPU          ; D496 20 2C DE                  ,.
         lda     #$03                            ; D499 A9 03                    ..
         sta     $0618                           ; D49B 8D 18 06                 ...
         lda     #$02                            ; D49E A9 02                    ..
@@ -11650,7 +11645,7 @@ LD4B9:
         sta     $DC                             ; D4BD 85 DC                    ..
 LD4BF:
         jsr     L9425                           ; D4BF 20 25 94                  %.
-        jsr     MenuCursorGraphicsUpdate        ; D4C2 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; D4C2 20 78 DF                  x.
         ldx     #$08                            ; D4C5 A2 08                    ..
         lda     $22                             ; D4C7 A5 22                    ."
 LD4C9:
@@ -11729,7 +11724,7 @@ LD536:
         sta     $DC                             ; D53A 85 DC                    ..
 LD53C:
         jsr     LD693                           ; D53C 20 93 D6                  ..
-        jsr     MenuCursorGraphicsUpdate        ; D53F 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; D53F 20 78 DF                  x.
         ldx     #$08                            ; D542 A2 08                    ..
         lda     $22                             ; D544 A5 22                    ."
 LD546:
@@ -11841,14 +11836,14 @@ LD5F2:
         pha                                     ; D5F7 48                       H
         lda     $6F25                           ; D5F8 AD 25 6F                 .%o
         beq     LD606                           ; D5FB F0 09                    ..
-        jsr     MenuCursorGraphicsUpdate        ; D5FD 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; D5FD 20 78 DF                  x.
         jsr     L8F0A                           ; D600 20 0A 8F                  ..
         jmp     LD60C                           ; D603 4C 0C D6                 L..
 
 ; ----------------------------------------------------------------------------
 LD606:
         jsr     L8B18                           ; D606 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; D609 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; D609 20 78 DF                  x.
 LD60C:
         pla                                     ; D60C 68                       h
         tax                                     ; D60D AA                       .
@@ -11862,14 +11857,14 @@ LD60C:
         pha                                     ; D61B 48                       H
         lda     $6F25                           ; D61C AD 25 6F                 .%o
         beq     LD62A                           ; D61F F0 09                    ..
-        jsr     MenuCursorGraphicsUpdate        ; D621 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; D621 20 78 DF                  x.
         jsr     L8F0A                           ; D624 20 0A 8F                  ..
         jmp     LD630                           ; D627 4C 30 D6                 L0.
 
 ; ----------------------------------------------------------------------------
 LD62A:
         jsr     L8B18                           ; D62A 20 18 8B                  ..
-        jsr     MenuCursorGraphicsUpdate        ; D62D 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; D62D 20 78 DF                  x.
 LD630:
         pla                                     ; D630 68                       h
         tax                                     ; D631 AA                       .
@@ -11883,7 +11878,7 @@ LD630:
         inx                                     ; D63D E8                       .
         cpx     $603B                           ; D63E EC 3B 60                 .;`
         bcc     LD5DE                           ; D641 90 9B                    ..
-        jsr     MenuCursorGraphicsUpdate        ; D643 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; D643 20 78 DF                  x.
         rts                                     ; D646 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -11968,13 +11963,13 @@ LD6B9:
 
 ; ----------------------------------------------------------------------------
 LD6D7:
-        jsr     LDF94                           ; D6D7 20 94 DF                  ..
-        jsr     MenuCursorGraphicsUpdate        ; D6DA 20 78 DF                  x.
+        jsr     Bank0eSetMemoryAddress0200Main  ; D6D7 20 94 DF                  ..
+        jsr     Bank0eScreenRefresh             ; D6DA 20 78 DF                  x.
         lda     #$0A                            ; D6DD A9 0A                    ..
         sta     $A9                             ; D6DF 85 A9                    ..
-        jsr     LDE2C                           ; D6E1 20 2C DE                  ,.
+        jsr     LoadAsmCodeToUpdatePPU          ; D6E1 20 2C DE                  ,.
         jsr     LDFE3                           ; D6E4 20 E3 DF                  ..
-        jsr     MenuCursorGraphicsUpdate        ; D6E7 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; D6E7 20 78 DF                  x.
         lda     #$00                            ; D6EA A9 00                    ..
         sta     $6F17                           ; D6EC 8D 17 6F                 ..o
 LD6EF:
@@ -11989,12 +11984,12 @@ LD6EF:
         rts                                     ; D704 60                       `
 
 ; ----------------------------------------------------------------------------
-LD705:
+SaveGameDestinationAddrEnd1:
         .byte   $7F,$00,$7F,$10,$7F,$20         ; D705 7F 00 7F 10 7F 20        ..... 
-LD70B:
+SaveGameDestinationAddrMain:
         .byte   $65,$00,$70,$00,$73,$00,$76,$00 ; D70B 65 00 70 00 73 00 76 00  e.p.s.v.
         .byte   $79,$00,$7C,$00                 ; D713 79 00 7C 00              y.|.
-LD717:
+SaveGameDestinationAddrEnd2:
         .byte   $7F,$30,$7F,$40,$7F,$50         ; D717 7F 30 7F 40 7F 50        .0.@.P
 ; ----------------------------------------------------------------------------
 LD71D:
@@ -12008,16 +12003,16 @@ SaveGameCopyData:
         asl     a                               ; D727 0A                       .
         asl     a                               ; D728 0A                       .
         tay                                     ; D729 A8                       .
-        lda     LD70B,y                         ; D72A B9 0B D7                 ...
+        lda     SaveGameDestinationAddrMain,y   ; D72A B9 0B D7                 ...
         sta     $03                             ; D72D 85 03                    ..
         iny                                     ; D72F C8                       .
-        lda     LD70B,y                         ; D730 B9 0B D7                 ...
+        lda     SaveGameDestinationAddrMain,y   ; D730 B9 0B D7                 ...
         sta     L0002                           ; D733 85 02                    ..
         iny                                     ; D735 C8                       .
-        lda     LD70B,y                         ; D736 B9 0B D7                 ...
+        lda     SaveGameDestinationAddrMain,y   ; D736 B9 0B D7                 ...
         sta     $05                             ; D739 85 05                    ..
         iny                                     ; D73B C8                       .
-        lda     LD70B,y                         ; D73C B9 0B D7                 ...
+        lda     SaveGameDestinationAddrMain,y   ; D73C B9 0B D7                 ...
         sta     $04                             ; D73F 85 04                    ..
         lda     #$60                            ; D741 A9 60                    .`
         sta     $D7                             ; D743 85 D7                    ..
@@ -12058,10 +12053,10 @@ LD778:
         lda     $6F17                           ; D778 AD 17 6F                 ..o
         asl     a                               ; D77B 0A                       .
         tay                                     ; D77C A8                       .
-        lda     LD705,y                         ; D77D B9 05 D7                 ...
+        lda     SaveGameDestinationAddrEnd1,y   ; D77D B9 05 D7                 ...
         sta     $03                             ; D780 85 03                    ..
         iny                                     ; D782 C8                       .
-        lda     LD705,y                         ; D783 B9 05 D7                 ...
+        lda     SaveGameDestinationAddrEnd1,y   ; D783 B9 05 D7                 ...
         sta     L0002                           ; D786 85 02                    ..
         ldy     #$00                            ; D788 A0 00                    ..
         lda     $07FB                           ; D78A AD FB 07                 ...
@@ -12107,10 +12102,10 @@ LD778:
         lda     $6F17                           ; D7D3 AD 17 6F                 ..o
         asl     a                               ; D7D6 0A                       .
         tay                                     ; D7D7 A8                       .
-        lda     LD717,y                         ; D7D8 B9 17 D7                 ...
+        lda     SaveGameDestinationAddrEnd2,y   ; D7D8 B9 17 D7                 ...
         sta     $03                             ; D7DB 85 03                    ..
         iny                                     ; D7DD C8                       .
-        lda     LD717,y                         ; D7DE B9 17 D7                 ...
+        lda     SaveGameDestinationAddrEnd2,y   ; D7DE B9 17 D7                 ...
         sta     L0002                           ; D7E1 85 02                    ..
         ldy     #$00                            ; D7E3 A0 00                    ..
         pla                                     ; D7E5 68                       h
@@ -12135,16 +12130,16 @@ LD7FD:
         asl     a                               ; D800 0A                       .
         asl     a                               ; D801 0A                       .
         tay                                     ; D802 A8                       .
-        lda     LD70B,y                         ; D803 B9 0B D7                 ...
+        lda     SaveGameDestinationAddrMain,y   ; D803 B9 0B D7                 ...
         sta     $03                             ; D806 85 03                    ..
         iny                                     ; D808 C8                       .
-        lda     LD70B,y                         ; D809 B9 0B D7                 ...
+        lda     SaveGameDestinationAddrMain,y   ; D809 B9 0B D7                 ...
         sta     L0002                           ; D80C 85 02                    ..
         iny                                     ; D80E C8                       .
-        lda     LD70B,y                         ; D80F B9 0B D7                 ...
+        lda     SaveGameDestinationAddrMain,y   ; D80F B9 0B D7                 ...
         sta     $05                             ; D812 85 05                    ..
         iny                                     ; D814 C8                       .
-        lda     LD70B,y                         ; D815 B9 0B D7                 ...
+        lda     SaveGameDestinationAddrMain,y   ; D815 B9 0B D7                 ...
         sta     $04                             ; D818 85 04                    ..
         lda     #$00                            ; D81A A9 00                    ..
         sta     $06                             ; D81C 85 06                    ..
@@ -12175,10 +12170,10 @@ LD835:
         lda     $6F17                           ; D844 AD 17 6F                 ..o
         asl     a                               ; D847 0A                       .
         tay                                     ; D848 A8                       .
-        lda     LD705,y                         ; D849 B9 05 D7                 ...
+        lda     SaveGameDestinationAddrEnd1,y   ; D849 B9 05 D7                 ...
         sta     $03                             ; D84C 85 03                    ..
         iny                                     ; D84E C8                       .
-        lda     LD705,y                         ; D84F B9 05 D7                 ...
+        lda     SaveGameDestinationAddrEnd1,y   ; D84F B9 05 D7                 ...
         sta     L0002                           ; D852 85 02                    ..
         plp                                     ; D854 28                       (
         ldy     #$00                            ; D855 A0 00                    ..
@@ -12240,9 +12235,9 @@ LD883:
         clc                                     ; D8A7 18                       .
         adc     #$01                            ; D8A8 69 01                    i.
         sta     $69                             ; D8AA 85 69                    .i
-        jsr     MenuCursorGraphicsUpdate        ; D8AC 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; D8AC 20 78 DF                  x.
         jsr     L8F0A                           ; D8AF 20 0A 8F                  ..
-        jsr     MenuCursorGraphicsUpdate        ; D8B2 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; D8B2 20 78 DF                  x.
         rts                                     ; D8B5 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -12397,16 +12392,16 @@ LD9A5:
         rts                                     ; D9CC 60                       `
 
 ; ----------------------------------------------------------------------------
-LD9CD:
+ShopMenuNoOpEntryPoint:
         jmp     LDE0D                           ; D9CD 4C 0D DE                 L..
 
 ; ----------------------------------------------------------------------------
-LD9D0:
-        jsr     LDF94                           ; D9D0 20 94 DF                  ..
-        jsr     MenuCursorGraphicsUpdate        ; D9D3 20 78 DF                  x.
+ShopMenuWeaponEnhancementEntryPoint:
+        jsr     Bank0eSetMemoryAddress0200Main  ; D9D0 20 94 DF                  ..
+        jsr     Bank0eScreenRefresh             ; D9D3 20 78 DF                  x.
         lda     #$0B                            ; D9D6 A9 0B                    ..
         sta     $A9                             ; D9D8 85 A9                    ..
-        jsr     LDE2C                           ; D9DA 20 2C DE                  ,.
+        jsr     LoadAsmCodeToUpdatePPU          ; D9DA 20 2C DE                  ,.
         lda     #$03                            ; D9DD A9 03                    ..
         sta     $0618                           ; D9DF 8D 18 06                 ...
         lda     #$02                            ; D9E2 A9 02                    ..
@@ -12435,7 +12430,7 @@ LDA10:
         sta     $DC                             ; DA14 85 DC                    ..
 LDA16:
         jsr     L9425                           ; DA16 20 25 94                  %.
-        jsr     MenuCursorGraphicsUpdate        ; DA19 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; DA19 20 78 DF                  x.
         ldx     #$08                            ; DA1C A2 08                    ..
         lda     $22                             ; DA1E A5 22                    ."
 LDA20:
@@ -12608,7 +12603,7 @@ LDB46:
         adc     #$01                            ; DB51 69 01                    i.
         cmp     $0616                           ; DB53 CD 16 06                 ...
         bcc     LDB46                           ; DB56 90 EE                    ..
-        jsr     MenuCursorGraphicsUpdate        ; DB58 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; DB58 20 78 DF                  x.
         rts                                     ; DB5B 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -12629,7 +12624,7 @@ LDB5C:
         clc                                     ; DB73 18                       .
         adc     #$01                            ; DB74 69 01                    i.
         sta     $69                             ; DB76 85 69                    .i
-        jsr     MenuCursorGraphicsUpdate        ; DB78 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; DB78 20 78 DF                  x.
         jsr     L8F0A                           ; DB7B 20 0A 8F                  ..
         rts                                     ; DB7E 60                       `
 
@@ -12662,7 +12657,7 @@ LDB85           := * + 1
         sta     $6A                             ; DBAA 85 6A                    .j
         lda     #$43                            ; DBAC A9 43                    .C
         sta     $69                             ; DBAE 85 69                    .i
-        jsr     MenuCursorGraphicsUpdate        ; DBB0 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; DBB0 20 78 DF                  x.
         jsr     L8F0A                           ; DBB3 20 0A 8F                  ..
         pla                                     ; DBB6 68                       h
         rts                                     ; DBB7 60                       `
@@ -12674,9 +12669,9 @@ LDBB8:
         sta     $6A                             ; DBBD 85 6A                    .j
         lda     $6F24                           ; DBBF AD 24 6F                 .$o
         sta     $69                             ; DBC2 85 69                    .i
-        jsr     MenuCursorGraphicsUpdate        ; DBC4 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; DBC4 20 78 DF                  x.
         jsr     L8F0A                           ; DBC7 20 0A 8F                  ..
-        jsr     MenuCursorGraphicsUpdate        ; DBCA 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; DBCA 20 78 DF                  x.
         jsr     L94F8                           ; DBCD 20 F8 94                  ..
         lda     #$01                            ; DBD0 A9 01                    ..
         sta     $0617                           ; DBD2 8D 17 06                 ...
@@ -12936,7 +12931,7 @@ LDD7E:
         rts                                     ; DDB2 60                       `
 
 ; ----------------------------------------------------------------------------
-LDDB3:
+ShopMenuMateriaEnhancementEntryPoint:
         lda     #$00                            ; DDB3 A9 00                    ..
         sta     $6F1E                           ; DDB5 8D 1E 6F                 ..o
         lda     #$02                            ; DDB8 A9 02                    ..
@@ -12999,7 +12994,7 @@ LDE09:
 
 ; ----------------------------------------------------------------------------
 LDE0D:
-        jsr     MenuCursorGraphicsUpdate        ; DE0D 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; DE0D 20 78 DF                  x.
         ldx     #$00                            ; DE10 A2 00                    ..
 LDE12:
         lda     LDE1E,x                         ; DE12 BD 1E DE                 ...
@@ -13020,10 +13015,10 @@ LDE1E:
         rts                                     ; DE2B 60                       `
 
 ; ----------------------------------------------------------------------------
-LDE2C:
+LoadAsmCodeToUpdatePPU:
         lda     $A9                             ; DE2C A5 A9                    ..
         cmp     #$07                            ; DE2E C9 07                    ..
-        bcs     LDE40                           ; DE30 B0 0E                    ..
+        bcs     LoadMenuGraphicsFromBank01      ; DE30 B0 0E                    ..
         pha                                     ; DE32 48                       H
         lda     #$80                            ; DE33 A9 80                    ..
         sta     $03                             ; DE35 85 03                    ..
@@ -13031,8 +13026,8 @@ LDE2C:
         sta     L0002                           ; DE39 85 02                    ..
         lda     #$05                            ; DE3B A9 05                    ..
         pha                                     ; DE3D 48                       H
-        bne     LDE4E                           ; DE3E D0 0E                    ..
-LDE40:
+        bne     LoadAsmCodeForDrawingMenuBank0EMain; DE3E D0 0E                 ..
+LoadMenuGraphicsFromBank01:
         sbc     #$07                            ; DE40 E9 07                    ..
         pha                                     ; DE42 48                       H
         lda     #$80                            ; DE43 A9 80                    ..
@@ -13041,17 +13036,17 @@ LDE40:
         sta     L0002                           ; DE49 85 02                    ..
         lda     #$01                            ; DE4B A9 01                    ..
         pha                                     ; DE4D 48                       H
-LDE4E:
+LoadAsmCodeForDrawingMenuBank0EMain:
         ldx     #$00                            ; DE4E A2 00                    ..
-LDE50:
-        lda     LDE5C,x                         ; DE50 BD 5C DE                 .\.
+LoadAsmCodeForDrawingMenuBank0ELoop:
+        lda     AsmCodeForDrawingMenuAddr0400,x ; DE50 BD 5C DE                 .\.
         sta     L0400,x                         ; DE53 9D 00 04                 ...
         inx                                     ; DE56 E8                       .
-        bne     LDE50                           ; DE57 D0 F7                    ..
+        bne     LoadAsmCodeForDrawingMenuBank0ELoop; DE57 D0 F7                 ..
         jmp     L0400                           ; DE59 4C 00 04                 L..
 
 ; ----------------------------------------------------------------------------
-LDE5C:
+AsmCodeForDrawingMenuAddr0400:
         pla                                     ; DE5C 68                       h
         sta     $5000                           ; DE5D 8D 00 50                 ..P
         ldy     #$00                            ; DE60 A0 00                    ..
@@ -13220,11 +13215,11 @@ LDF64:
         sta     $0700                           ; DF6D 8D 00 07                 ...
         lda     #$FF                            ; DF70 A9 FF                    ..
         sta     $2D                             ; DF72 85 2D                    .-
-        jsr     MenuCursorGraphicsUpdate        ; DF74 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; DF74 20 78 DF                  x.
         rts                                     ; DF77 60                       `
 
 ; ----------------------------------------------------------------------------
-MenuCursorGraphicsUpdate:
+Bank0eScreenRefresh:
         lda     #$FF                            ; DF78 A9 FF                    ..
         sta     $2E                             ; DF7A 85 2E                    ..
 LDF7C:
@@ -13234,7 +13229,7 @@ LDF7C:
 
 ; ----------------------------------------------------------------------------
 LDF81:
-        jsr     MenuCursorGraphicsUpdate        ; DF81 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; DF81 20 78 DF                  x.
         dex                                     ; DF84 CA                       .
         bne     LDF81                           ; DF85 D0 FA                    ..
         rts                                     ; DF87 60                       `
@@ -13247,21 +13242,21 @@ LDF81:
         rts                                     ; DF93 60                       `
 
 ; ----------------------------------------------------------------------------
-LDF94:
+Bank0eSetMemoryAddress0200Main:
         ldx     #$00                            ; DF94 A2 00                    ..
         lda     #$F0                            ; DF96 A9 F0                    ..
-LDF98:
+SetMemoryAddress0200Loop:
         sta     $0200,x                         ; DF98 9D 00 02                 ...
         inx                                     ; DF9B E8                       .
         inx                                     ; DF9C E8                       .
         inx                                     ; DF9D E8                       .
         inx                                     ; DF9E E8                       .
-        bne     LDF98                           ; DF9F D0 F7                    ..
+        bne     SetMemoryAddress0200Loop        ; DF9F D0 F7                    ..
         rts                                     ; DFA1 60                       `
 
 ; ----------------------------------------------------------------------------
 LDFA2:
-        jsr     MenuCursorGraphicsUpdate        ; DFA2 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; DFA2 20 78 DF                  x.
         lda     $22                             ; DFA5 A5 22                    ."
         bpl     LDFA2                           ; DFA7 10 F9                    ..
         rts                                     ; DFA9 60                       `
@@ -13316,20 +13311,20 @@ LDFE3:
         lda     #$1E                            ; DFFC A9 1E                    ..
         sta     $2001                           ; DFFE 8D 01 20                 .. 
         sta     $16                             ; E001 85 16                    ..
-        jsr     MenuCursorGraphicsUpdate        ; E003 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; E003 20 78 DF                  x.
         jsr     LE021                           ; E006 20 21 E0                  !.
-        jsr     MenuCursorGraphicsUpdate        ; E009 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; E009 20 78 DF                  x.
         rts                                     ; E00C 60                       `
 
 ; ----------------------------------------------------------------------------
 MenuGraphicsRefresh:
-        jsr     MenuCursorGraphicsUpdate        ; E00D 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; E00D 20 78 DF                  x.
         jsr     LE045                           ; E010 20 45 E0                  E.
-        jsr     LDF94                           ; E013 20 94 DF                  ..
-        jsr     MenuCursorGraphicsUpdate        ; E016 20 78 DF                  x.
+        jsr     Bank0eSetMemoryAddress0200Main  ; E013 20 94 DF                  ..
+        jsr     Bank0eScreenRefresh             ; E016 20 78 DF                  x.
         lda     #$06                            ; E019 A9 06                    ..
         sta     $16                             ; E01B 85 16                    ..
-        jsr     MenuCursorGraphicsUpdate        ; E01D 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; E01D 20 78 DF                  x.
         rts                                     ; E020 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -20033,7 +20028,7 @@ LFCEA:
 ; ----------------------------------------------------------------------------
 LFD08:
         sta     $0D                             ; FD08 85 0D                    ..
-        jsr     MenuCursorGraphicsUpdate        ; FD0A 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; FD0A 20 78 DF                  x.
         lda     $0141                           ; FD0D AD 41 01                 .A.
         pha                                     ; FD10 48                       H
         lda     $0149                           ; FD11 AD 49 01                 .I.
@@ -20047,7 +20042,7 @@ LFD08:
         sta     $0129                           ; FD25 8D 29 01                 .).
         lda     $0D                             ; FD28 A5 0D                    ..
         jsr     LFD08                           ; FD2A 20 08 FD                  ..
-        jsr     MenuCursorGraphicsUpdate        ; FD2D 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; FD2D 20 78 DF                  x.
         pla                                     ; FD30 68                       h
         sta     $0149                           ; FD31 8D 49 01                 .I.
         pla                                     ; FD34 68                       h
@@ -20064,7 +20059,7 @@ LFD08:
 ; ----------------------------------------------------------------------------
 LFD4C:
         sta     $0D                             ; FD4C 85 0D                    ..
-        jsr     MenuCursorGraphicsUpdate        ; FD4E 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; FD4E 20 78 DF                  x.
         lda     $0141                           ; FD51 AD 41 01                 .A.
         pha                                     ; FD54 48                       H
         lda     $0149                           ; FD55 AD 49 01                 .I.
@@ -20079,7 +20074,7 @@ LFD4C:
         lda     $0D                             ; FD6C A5 0D                    ..
         jsr     LFD4C                           ; FD6E 20 4C FD                  L.
         sta     $0D                             ; FD71 85 0D                    ..
-        jsr     MenuCursorGraphicsUpdate        ; FD73 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; FD73 20 78 DF                  x.
         pla                                     ; FD76 68                       h
         sta     $0149                           ; FD77 8D 49 01                 .I.
         pla                                     ; FD7A 68                       h
@@ -20097,7 +20092,7 @@ LFD4C:
 ; ----------------------------------------------------------------------------
 LFD94:
         sta     $0D                             ; FD94 85 0D                    ..
-        jsr     MenuCursorGraphicsUpdate        ; FD96 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; FD96 20 78 DF                  x.
         lda     $0141                           ; FD99 AD 41 01                 .A.
         pha                                     ; FD9C 48                       H
         lda     $0149                           ; FD9D AD 49 01                 .I.
@@ -20112,7 +20107,7 @@ LFD94:
         lda     $0D                             ; FDB4 A5 0D                    ..
         jsr     LFD94                           ; FDB6 20 94 FD                  ..
         sta     $0D                             ; FDB9 85 0D                    ..
-        jsr     MenuCursorGraphicsUpdate        ; FDBB 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; FDBB 20 78 DF                  x.
         pla                                     ; FDBE 68                       h
         sta     $0149                           ; FDBF 8D 49 01                 .I.
         pla                                     ; FDC2 68                       h
@@ -20130,7 +20125,7 @@ LFD94:
 ; ----------------------------------------------------------------------------
 LFDDC:
         sta     $0D                             ; FDDC 85 0D                    ..
-        jsr     MenuCursorGraphicsUpdate        ; FDDE 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; FDDE 20 78 DF                  x.
         lda     $0141                           ; FDE1 AD 41 01                 .A.
         pha                                     ; FDE4 48                       H
         lda     $0149                           ; FDE5 AD 49 01                 .I.
@@ -20144,7 +20139,7 @@ LFDDC:
         sta     $0129                           ; FDF9 8D 29 01                 .).
         lda     $0D                             ; FDFC A5 0D                    ..
         jsr     LFDDC                           ; FDFE 20 DC FD                  ..
-        jsr     MenuCursorGraphicsUpdate        ; FE01 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; FE01 20 78 DF                  x.
         pla                                     ; FE04 68                       h
         sta     $0149                           ; FE05 8D 49 01                 .I.
         pla                                     ; FE08 68                       h
@@ -20160,7 +20155,7 @@ LFDDC:
 
 ; ----------------------------------------------------------------------------
 LFE20:
-        jsr     MenuCursorGraphicsUpdate        ; FE20 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; FE20 20 78 DF                  x.
         lda     #$02                            ; FE23 A9 02                    ..
         sta     $0119                           ; FE25 8D 19 01                 ...
         sta     $0109                           ; FE28 8D 09 01                 ...
@@ -20171,7 +20166,7 @@ LFE20:
         lda     #$02                            ; FE35 A9 02                    ..
         sta     $5000                           ; FE37 8D 00 50                 ..P
         jsr     LFE20                           ; FE3A 20 20 FE                   .
-        jsr     MenuCursorGraphicsUpdate        ; FE3D 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; FE3D 20 78 DF                  x.
         lda     #$00                            ; FE40 A9 00                    ..
         sta     $0119                           ; FE42 8D 19 01                 ...
         sta     $0109                           ; FE45 8D 09 01                 ...
@@ -20185,7 +20180,7 @@ LFE20:
 
 ; ----------------------------------------------------------------------------
 LFE58:
-        jsr     MenuCursorGraphicsUpdate        ; FE58 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; FE58 20 78 DF                  x.
         lda     #$02                            ; FE5B A9 02                    ..
         sta     $0119                           ; FE5D 8D 19 01                 ...
         sta     $0109                           ; FE60 8D 09 01                 ...
@@ -20196,7 +20191,7 @@ LFE58:
         lda     #$02                            ; FE6D A9 02                    ..
         sta     $5000                           ; FE6F 8D 00 50                 ..P
         jsr     LFE58                           ; FE72 20 58 FE                  X.
-        jsr     MenuCursorGraphicsUpdate        ; FE75 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; FE75 20 78 DF                  x.
         lda     #$00                            ; FE78 A9 00                    ..
         sta     $0119                           ; FE7A 8D 19 01                 ...
         sta     $0109                           ; FE7D 8D 09 01                 ...
@@ -20210,7 +20205,7 @@ LFE58:
 
 ; ----------------------------------------------------------------------------
 LFE90:
-        jsr     MenuCursorGraphicsUpdate        ; FE90 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; FE90 20 78 DF                  x.
         lda     $0141                           ; FE93 AD 41 01                 .A.
         pha                                     ; FE96 48                       H
         lda     $0149                           ; FE97 AD 49 01                 .I.
@@ -20223,7 +20218,7 @@ LFE90:
         sta     $0139                           ; FEA8 8D 39 01                 .9.
         sta     $0129                           ; FEAB 8D 29 01                 .).
         jsr     LFE90                           ; FEAE 20 90 FE                  ..
-        jsr     MenuCursorGraphicsUpdate        ; FEB1 20 78 DF                  x.
+        jsr     Bank0eScreenRefresh             ; FEB1 20 78 DF                  x.
         pla                                     ; FEB4 68                       h
         sta     $0149                           ; FEB5 8D 49 01                 .I.
         pla                                     ; FEB8 68                       h
