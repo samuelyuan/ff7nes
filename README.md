@@ -10,6 +10,26 @@ This project builds the following rom:
 
 This reference table shows where the game reads and writes data to in RAM. 
 
+## CPU Memory
+
+| Address | Size (bytes) | Description |
+|---------|--------------|-------------|
+| 0x0000 | 1 | Total Tilemap Rows |
+| 0x0001 | 1 | Total Tilemap Columns |
+| 0x0017 | 1 | Tilemap Screen Index |
+| 0x0020 | 1 | Controller Button Press |
+| 0x0050 | 1 | Current bank to load map |
+| 0x0051 | 1 | Current bank to load map |
+| 0x00CF | 1 | Dialogue Flag (set to 0xFF when dialogue is displayed, else set to 0) |
+| 0x00D5 | 1 | Overworld Flag (set to 0xFF in overworld, else set to 0) |
+| 0x00D8 | 1 | Number of characters in current dialog box |
+| 0x00EA | 1 | Current selected option on main menu (0 - New Game, 1 - Continue) |
+| 0x0141 | 1 | Current bank to load data from |
+| 0x0200-0x02FF | 256 | Each character takes 16 bytes, each sprite part takes 4 bytes (byte 0 - sprite Y, byte 1 - tile index, byte 2 - palette index, byte 3 - sprite X) |
+| 0x0770 | 1 | Source of total tilemap rows |
+| 0x0771 | 1 | Source of total tilemap cols |
+| 0x0772 | 1 | Source of initial tilemap screen index |
+
 ## Save RAM
 
 There are 7 party members total in the following order:
@@ -116,7 +136,17 @@ To get the values for party member at index i, you must add i to the base addres
 | 0x7600-0x77FF | 512 | Game Save 2 Data Part 2 (copied from 0x6300-0x64FF) |
 | 0x7800-0x78FF | 256 | Game Save 2 Data Part 3 (copied from 0x0300-0x03FF) |
 | 0x7900-0x7EFF | 1536 | Game Save 3 (same format as Game Save 2) |
-| 0x7F00-0x7FFF | 256 | Unknown |
+| 0x7F00-0x7F04 | 5 | Copied from 0x07FB-0x07FF |
+| 0x7F05-0x7F0B | 7 | Copied from 0x0089, 0x0017, 0x001D, 0x001E, 0x001C, 0x0086, 0x0087 |
+| 0x7F0C-0x7F0F | 4 | Set to 0 |
+| 0x7F10-0x7F1F | 16 | Same data as 0x7F00-0x7F0F |
+| 0x7F20-0x7F2F | 16 | Same data as 0x7F00-0x7F0F |
+| 0x7F30 | 1 | Unknown |
+| 0x7F31-0x7F34 | 4 | Copied from 0xAA, 0x55, 0xA5, 0x5A |
+| 0x7F35-0x7F3F | 11 | Set to 0 |
+| 0x7F40-0x7F4F | 16 | Same data as 0x7F30-0x7F3F |
+| 0x7F50-0x7F5F | 16 | Same data as 0x7F30-0x7F3F |
+| 0x7F60-0x7FFF | 160 | Unknown |
 
 # Tables
 

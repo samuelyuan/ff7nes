@@ -39,13 +39,23 @@ RANGE {
 };
 RANGE {
   START $8FDA;
+  END $9241;
+  TYPE CODE;
+};
+RANGE {
+  START $9242;
+  END $9261;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $9262;
   END $9348;
   TYPE CODE;
 };
 RANGE {
   START $9349;
   END $9448;
-  TYPE BYTETABLE;
+  TYPE CODE;
 };
 RANGE {
   START $9449;
@@ -144,8 +154,40 @@ RANGE {
 };
 
 LABEL {
+  NAME "Bank03ScreenRefresh";
+  ADDR $8010;
+};
+LABEL {
   NAME "UpdateSpriteInfo";
   ADDR  $8212;
+};
+LABEL {
+  NAME "StartDialogueBox01";
+  ADDR  $82EE;
+};
+LABEL {
+  NAME "StartDialogueBox02";
+  ADDR  $8303;
+};
+LABEL {
+  NAME "StartDialogueBox03";
+  ADDR  $8318;
+};
+LABEL {
+  NAME "CloseDialogueBox";
+  ADDR  $832D;
+};
+LABEL {
+  NAME "LoadDialogStringFromBank01";
+  ADDR  $915E;
+};
+LABEL {
+  NAME "BankSectionPairForDialogTable";
+  ADDR  $9242;
+};
+LABEL {
+  NAME "LoadDialogStringFromBank02";
+  ADDR  $9262;
 };
 LABEL {
   NAME "LoadLocationStringFromBank";
@@ -174,6 +216,10 @@ LABEL {
 LABEL {
   NAME "ScrollBufferScreenUpOverworld";
   ADDR  $D153;
+};
+LABEL {
+  NAME "ManageCharacterPositionCount";
+  ADDR  $D910;
 };
 LABEL {
   NAME "MusicOverworldTheme";

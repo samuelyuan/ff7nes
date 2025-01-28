@@ -350,6 +350,11 @@ LABEL {
   ADDR  $8919;
 };
 LABEL {
+  NAME "Bank00ScriptOpcode04_ShowDialogIdList";
+  ADDR  $8A53;
+  Comment "1st param index in bank array, rest of params is a variable list of dialog ids and terminates in 0xFF";
+};
+LABEL {
   NAME "Bank00ScriptOpcode08_MoveSprite";
   ADDR  $8AA1;
 };
@@ -358,17 +363,25 @@ LABEL {
   ADDR  $8B86;
 };
 LABEL {
+  NAME "Bank00ScriptOpcode13_TriggerBattle";
+  ADDR  $8ED5;
+};
+LABEL {
   NAME "Bank00ScriptOpcode1b_PlayerGetsKeyItem";
   ADDR $8F40;
 };
 LABEL {
-  NAME "Bank00ScriptOpcode29_ShowDialog";
+  NAME "Bank00ScriptOpcode29_ShowDialogBlock";
   ADDR  $9189;
   COMMENT "1st param text array, 2nd param is starting dialogue index, 3rd param is number of dialog items";
 };
 LABEL {
   NAME "MateriaCountLimit";
   ADDR $946D;
+};
+LABEL {
+  NAME "SceneCloudMeetsBiggsJessieWedge";
+  ADDR  $A0B5;
 };
 LABEL {
   NAME "SceneCloudSetsSector7Bomb";
@@ -500,6 +513,10 @@ LABEL {
   ADDR $EA35;
 };
 LABEL {
+  NAME "Bank00ScreenRefresh";
+  ADDR $EA36;
+};
+LABEL {
   NAME "StoreMapRowsAndColumns";
   ADDR $F050;
 };
@@ -554,4 +571,8 @@ LABEL {
 LABEL {
   NAME "Bank00JumpBank03LoadMusicTable";
   ADDR $FC26;
+};
+LABEL {
+  NAME "Bank00JumpBank03";
+  ADDR $FD08;
 };

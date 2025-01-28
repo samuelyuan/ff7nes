@@ -8,9 +8,44 @@ GLOBAL {
   LABELBREAK $1;
 };
 RANGE {
+  START $8000;
+  END $8007;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8008;
+  END $8543;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8544;
+  END $86BF;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $86C0;
+  END $A724;
+  TYPE BYTETABLE;
+};
+RANGE {
   START $A725;
   END $A74C;
   TYPE ADDRTABLE;
+};
+RANGE {
+  START $A74D;
+  END $D79C;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $D79D;
+  END $D81E;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $D81F;
+  END $FFFF;
+  TYPE BYTETABLE;
 };
 
 LABEL {
@@ -3278,6 +3313,58 @@ LABEL {
   ADDR  $a6ff;
 };
 LABEL {
-  NAME "MainMenuTilemapAddress";
+  NAME "Bank01MenuGraphics";
+  ADDR  $A725;
+};
+LABEL {
+  NAME "MainMenuBottomPartTileset";
+  ADDR  $A74D;
+};
+LABEL {
+  NAME "MainMenuTopPartTileset";
+  ADDR  $B37D;
+};
+LABEL {
+  NAME "MainMenuTilemap";
   ADDR  $BCED;
+};
+LABEL {
+  NAME "MainMenuPalette";
+  ADDR  $C0ED;
+};
+LABEL {
+  NAME "ArmorWeaponShopTileset";
+  ADDR  $C10D;
+};
+LABEL {
+  NAME "ArmorWeaponShopTilemap";
+  ADDR  $C3BD;
+};
+LABEL {
+  NAME "ArmorWeaponShopPalette";
+  ADDR  $C7BD;
+};
+LABEL {
+  NAME "PartyMemberScreenTileset";
+  ADDR  $C7DD;
+};
+LABEL {
+  NAME "PartyMemberScreenTilemap";
+  ADDR  $C87D;
+};
+LABEL {
+  NAME "PartyMemberScreenPalette";
+  ADDR  $CC7D;
+};
+LABEL {
+  NAME "SaveScreenTileset";
+  ADDR  $CC9D;
+};
+LABEL {
+  NAME "SaveScreenTilemap";
+  ADDR  $CDBD;
+};
+LABEL {
+  NAME "SaveScreenPalette";
+  ADDR  $D1BD;
 };

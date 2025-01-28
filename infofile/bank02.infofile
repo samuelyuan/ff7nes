@@ -111,11 +111,16 @@ LABEL {
   ADDR  $8D85;
 };
 LABEL {
+  NAME "Bank02ScriptOpcode04_ShowDialogIdList";
+  ADDR  $8DA3;
+  Comment "1st param index in bank array, rest of params is a variable list of dialog ids and terminates in 0xFF";
+};
+LABEL {
   NAME "Bank02ScriptOpcode08_MoveSprite";
   ADDR  $8DF1;
 };
 LABEL {
-  NAME "Bank02ScriptOpcode29_ShowDialog";
+  NAME "Bank02ScriptOpcode29_ShowDialogBlock";
   ADDR  $94D9;
   COMMENT "1st param text array, 2nd param is starting dialogue index, 3rd param is number of dialog items";
 };
@@ -135,6 +140,10 @@ LABEL {
 LABEL {
   NAME "SceneCloudAndBarretEnterTrainStation";
   ADDR  $A61A;
+};
+LABEL {
+  NAME "SceneBarretAsksCloudEverVisitedReactor";
+  ADDR  $A6AA;
 };
 LABEL {
   NAME "SceneAvalancheWaitsForCloudOnTrain";
@@ -248,8 +257,11 @@ LABEL {
   NAME "Bank02SceneScriptTable";
   ADDR  $D701;
 };
-
 LABEL {
   NAME "LoadMapRowsAndColumns";
   ADDR  $E80B;
+};
+LABEL {
+  NAME "Bank02JumpBank03";
+  ADDR $FD08;
 };

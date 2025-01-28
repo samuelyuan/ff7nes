@@ -2080,7 +2080,7 @@ Bank02ScriptOpcodeTable:
         .addr   L8CE9                           ; 8C6B E9 8C                    ..
         .addr   Bank02ScriptOpcode02            ; 8C6D 85 8D                    ..
         .addr   L8D94                           ; 8C6F 94 8D                    ..
-        .addr   L8DA3                           ; 8C71 A3 8D                    ..
+        .addr   Bank02ScriptOpcode04_ShowDialogIdList; 8C71 A3 8D               ..
         .addr   L8DCD                           ; 8C73 CD 8D                    ..
         .addr   L8DD9                           ; 8C75 D9 8D                    ..
         .addr   L8DE5                           ; 8C77 E5 8D                    ..
@@ -2117,7 +2117,7 @@ Bank02ScriptOpcodeTable:
         .addr   L937A                           ; 8CB5 7A 93                    z.
         .addr   L93D1                           ; 8CB7 D1 93                    ..
         .addr   L949B                           ; 8CB9 9B 94                    ..
-        .addr   Bank02ScriptOpcode29_ShowDialog ; 8CBB D9 94                    ..
+        .addr   Bank02ScriptOpcode29_ShowDialogBlock; 8CBB D9 94                ..
         .addr   L9502                           ; 8CBD 02 95                    ..
         .addr   L9551                           ; 8CBF 51 95                    Q.
         .addr   L9572                           ; 8CC1 72 95                    r.
@@ -2262,7 +2262,8 @@ L8DA2:
         rts                                     ; 8DA2 60                       `
 
 ; ----------------------------------------------------------------------------
-L8DA3:
+; 1st param index in bank array, rest of params is a variable list of dialog ids and terminates in 0xFF
+Bank02ScriptOpcode04_ShowDialogIdList:
         ldy     #$01                            ; 8DA3 A0 01                    ..
         lda     ($A7),y                         ; 8DA5 B1 A7                    ..
         sta     $56                             ; 8DA7 85 56                    .V
@@ -2278,7 +2279,7 @@ L8DAA:
         jsr     Bank02ScreenRefresh             ; 8DB7 20 56 E3                  V.
         jsr     LE340                           ; 8DBA 20 40 E3                  @.
         lda     $8D                             ; 8DBD A5 8D                    ..
-        jsr     LFD08                           ; 8DBF 20 08 FD                  ..
+        jsr     Bank02JumpBank03                ; 8DBF 20 08 FD                  ..
         pla                                     ; 8DC2 68                       h
         tay                                     ; 8DC3 A8                       .
         iny                                     ; 8DC4 C8                       .
@@ -3428,7 +3429,7 @@ L949B:
         sta     $DE                             ; 94B9 85 DE                    ..
 L94BB:
         lda     $DE                             ; 94BB A5 DE                    ..
-        jsr     LFD08                           ; 94BD 20 08 FD                  ..
+        jsr     Bank02JumpBank03                ; 94BD 20 08 FD                  ..
         inc     $DE                             ; 94C0 E6 DE                    ..
         dec     $DD                             ; 94C2 C6 DD                    ..
         bne     L94BB                           ; 94C4 D0 F5                    ..
@@ -3442,12 +3443,12 @@ L94CB:
         sta     $56                             ; 94CF 85 56                    .V
         ldy     #$05                            ; 94D1 A0 05                    ..
         lda     ($A7),y                         ; 94D3 B1 A7                    ..
-        jsr     LFD08                           ; 94D5 20 08 FD                  ..
+        jsr     Bank02JumpBank03                ; 94D5 20 08 FD                  ..
         rts                                     ; 94D8 60                       `
 
 ; ----------------------------------------------------------------------------
 ; 1st param text array, 2nd param is starting dialogue index, 3rd param is number of dialog items
-Bank02ScriptOpcode29_ShowDialog:
+Bank02ScriptOpcode29_ShowDialogBlock:
         ldy     #$01                            ; 94D9 A0 01                    ..
         lda     ($A7),y                         ; 94DB B1 A7                    ..
         sta     $56                             ; 94DD 85 56                    .V
@@ -3462,7 +3463,7 @@ Bank02ScriptOpcode29_ShowDialog:
         jsr     LE340                           ; 94EF 20 40 E3                  @.
 L94F2:
         lda     $DD                             ; 94F2 A5 DD                    ..
-        jsr     LFD08                           ; 94F4 20 08 FD                  ..
+        jsr     Bank02JumpBank03                ; 94F4 20 08 FD                  ..
         inc     $DD                             ; 94F7 E6 DD                    ..
         dec     $DE                             ; 94F9 C6 DE                    ..
         bne     L94F2                           ; 94FB D0 F5                    ..
@@ -6376,7 +6377,7 @@ LA0FC:
         lda     #$0F                            ; A0FC A9 0F                    ..
         sta     $56                             ; A0FE 85 56                    .V
         lda     #$24                            ; A100 A9 24                    .$
-        jsr     LFD08                           ; A102 20 08 FD                  ..
+        jsr     Bank02JumpBank03                ; A102 20 08 FD                  ..
         rts                                     ; A105 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -7211,7 +7212,7 @@ LA688:
 LA6A0:
         .byte   $03,$04,$09,$01,$05,$00,$70,$02 ; A6A0 03 04 09 01 05 00 70 02  ......p.
         .byte   $50,$FF                         ; A6A8 50 FF                    P.
-LA6AA:
+SceneBarretAsksCloudEverVisitedReactor:
         .byte   $03,$04,$08,$00,$80,$05,$04,$00 ; A6AA 03 04 08 00 80 05 04 00  ........
         .byte   $0C,$0D,$0E,$0F,$10,$FF,$0E,$01 ; A6B2 0C 0D 0E 0F 10 FF 0E 01  ........
         .byte   $16,$00,$01,$84,$0F,$01,$0A,$01 ; A6BA 16 00 01 84 0F 01 0A 01  ........
@@ -9118,7 +9119,7 @@ Bank02SceneScriptTable:
         .addr   SceneCloudAndBarretEnterTrainStation; D703 1A A6                ..
         .addr   LA688                           ; D705 88 A6                    ..
         .addr   LA6A0                           ; D707 A0 A6                    ..
-        .addr   LA6AA                           ; D709 AA A6                    ..
+        .addr   SceneBarretAsksCloudEverVisitedReactor; D709 AA A6              ..
         .addr   LA6CD                           ; D70B CD A6                    ..
         .addr   LA6D8                           ; D70D D8 A6                    ..
         .addr   LA6E4                           ; D70F E4 A6                    ..
@@ -12818,7 +12819,7 @@ LFCEA:
         rts                                     ; FD07 60                       `
 
 ; ----------------------------------------------------------------------------
-LFD08:
+Bank02JumpBank03:
         sta     $0D                             ; FD08 85 0D                    ..
         jsr     Bank02ScreenRefresh             ; FD0A 20 56 E3                  V.
         lda     $0141                           ; FD0D AD 41 01                 .A.
@@ -12833,7 +12834,7 @@ LFD08:
         sta     $0139                           ; FD22 8D 39 01                 .9.
         sta     $0129                           ; FD25 8D 29 01                 .).
         lda     $0D                             ; FD28 A5 0D                    ..
-        jsr     LFD08                           ; FD2A 20 08 FD                  ..
+        jsr     Bank02JumpBank03                ; FD2A 20 08 FD                  ..
         jsr     Bank02ScreenRefresh             ; FD2D 20 56 E3                  V.
         pla                                     ; FD30 68                       h
         sta     $0149                           ; FD31 8D 49 01                 .I.
