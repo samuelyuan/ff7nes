@@ -7,24 +7,14 @@ L0065           := $0065
 L0100           := $0100
 L0130           := $0130
 L0140           := $0140
-L0208           := $0208
 L0400           := $0400
 L06D0           := $06D0
 L06E0           := $06E0
 L06F0           := $06F0
-L0800           := $0800
-L0801           := $0801
-L0802           := $0802
-L0812           := $0812
-L0900           := $0900
-L0A06           := $0A06
 L0B00           := $0B00
-L0B03           := $0B03
 L1100           := $1100
-L1F0C           := $1F0C
 L2020           := $2020
 L2900           := $2900
-L2903           := $2903
 L6800           := $6800
 ; ----------------------------------------------------------------------------
 L8000:
@@ -1449,7 +1439,7 @@ L889C:
         lda     Bank00SceneScriptTable,y        ; 88A8 B9 51 CC                 .Q.
         sta     $A8                             ; 88AB 85 A8                    ..
         lda     #$00                            ; 88AD A9 00                    ..
-        jmp     L88D9                           ; 88AF 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 88AF 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L88B2:
@@ -1463,7 +1453,7 @@ L88B2:
         lda     Bank00SceneScriptTable+256,y    ; 88BD B9 51 CD                 .Q.
         sta     $A8                             ; 88C0 85 A8                    ..
         lda     #$00                            ; 88C2 A9 00                    ..
-        jmp     L88D9                           ; 88C4 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 88C4 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L88C7:
@@ -1475,10 +1465,10 @@ L88C7:
         lda     LCE51,y                         ; 88CF B9 51 CE                 .Q.
         sta     $A8                             ; 88D2 85 A8                    ..
         lda     #$00                            ; 88D4 A9 00                    ..
-        jmp     L88D9                           ; 88D6 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 88D6 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L88D9:
+Bank00LoadNextScriptOpcode:
         clc                                     ; 88D9 18                       .
         adc     $A7                             ; 88DA 65 A7                    e.
         sta     $A7                             ; 88DC 85 A7                    ..
@@ -1506,7 +1496,7 @@ L88ED:
         pla                                     ; 88FD 68                       h
         sta     $A7                             ; 88FE 85 A7                    ..
         lda     #$02                            ; 8900 A9 02                    ..
-        jmp     L88D9                           ; 8902 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8902 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8905:
@@ -1526,11 +1516,11 @@ Bank00ScriptOpcodeTable:
         .addr   L88EC                           ; 8919 EC 88                    ..
         .addr   L8999                           ; 891B 99 89                    ..
         .addr   L8A35                           ; 891D 35 8A                    5.
-        .addr   L8A44                           ; 891F 44 8A                    D.
+        .addr   Bank00ScriptOpcode03_CheckSceneFlag; 891F 44 8A                 D.
         .addr   Bank00ScriptOpcode04_ShowDialogIdList; 8921 53 8A               S.
         .addr   L8A7D                           ; 8923 7D 8A                    }.
-        .addr   L8A89                           ; 8925 89 8A                    ..
-        .addr   L8A95                           ; 8927 95 8A                    ..
+        .addr   Bank00ScriptOpcode06_SetSceneFlag; 8925 89 8A                   ..
+        .addr   Bank00ScriptOpcode07_ClearSceneFlag; 8927 95 8A                 ..
         .addr   Bank00ScriptOpcode08_MoveSprite ; 8929 A1 8A                    ..
         .addr   L8B1F                           ; 892B 1F 8B                    ..
         .addr   Bank00ScriptOpcode0a            ; 892D 86 8B                    ..
@@ -1670,7 +1660,7 @@ L8A1C:
         jsr     Bank00ScreenRefresh             ; 8A1F 20 36 EA                  6.
         jsr     LF2B3                           ; 8A22 20 B3 F2                  ..
         lda     #$07                            ; 8A25 A9 07                    ..
-        jmp     L88D9                           ; 8A27 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8A27 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8A2A:
@@ -1686,23 +1676,23 @@ L8A34:
 L8A35:
         ldy     #$01                            ; 8A35 A0 01                    ..
         lda     ($A7),y                         ; 8A37 B1 A7                    ..
-        jsr     LD100                           ; 8A39 20 00 D1                  ..
+        jsr     Bank00CheckCutsceneFlagBit      ; 8A39 20 00 D1                  ..
         bcc     L8A43                           ; 8A3C 90 05                    ..
         lda     #$02                            ; 8A3E A9 02                    ..
-        jmp     L88D9                           ; 8A40 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8A40 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8A43:
         rts                                     ; 8A43 60                       `
 
 ; ----------------------------------------------------------------------------
-L8A44:
+Bank00ScriptOpcode03_CheckSceneFlag:
         ldy     #$01                            ; 8A44 A0 01                    ..
         lda     ($A7),y                         ; 8A46 B1 A7                    ..
-        jsr     LD100                           ; 8A48 20 00 D1                  ..
+        jsr     Bank00CheckCutsceneFlagBit      ; 8A48 20 00 D1                  ..
         bcs     L8A52                           ; 8A4B B0 05                    ..
         lda     #$02                            ; 8A4D A9 02                    ..
-        jmp     L88D9                           ; 8A4F 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8A4F 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8A52:
@@ -1736,7 +1726,7 @@ L8A5A:
 L8A78:
         iny                                     ; 8A78 C8                       .
         tya                                     ; 8A79 98                       .
-        jmp     L88D9                           ; 8A7A 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8A7A 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8A7D:
@@ -1744,23 +1734,25 @@ L8A7D:
         lda     ($A7),y                         ; 8A7F B1 A7                    ..
         jsr     LDDAC                           ; 8A81 20 AC DD                  ..
         lda     #$01                            ; 8A84 A9 01                    ..
-        jmp     L88D9                           ; 8A86 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8A86 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L8A89:
+; 1st param is bit index starting from rightmost bit
+Bank00ScriptOpcode06_SetSceneFlag:
         ldy     #$01                            ; 8A89 A0 01                    ..
         lda     ($A7),y                         ; 8A8B B1 A7                    ..
-        jsr     LD120                           ; 8A8D 20 20 D1                   .
+        jsr     Bank00SetCutsceneFlagBit        ; 8A8D 20 20 D1                   .
         lda     #$02                            ; 8A90 A9 02                    ..
-        jmp     L88D9                           ; 8A92 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8A92 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L8A95:
+; 1st param is bit index starting from rightmost bit
+Bank00ScriptOpcode07_ClearSceneFlag:
         ldy     #$01                            ; 8A95 A0 01                    ..
         lda     ($A7),y                         ; 8A97 B1 A7                    ..
-        jsr     LD136                           ; 8A99 20 36 D1                  6.
+        jsr     Bank00ClearCutsceneFlagBit      ; 8A99 20 36 D1                  6.
         lda     #$02                            ; 8A9C A9 02                    ..
-        jmp     L88D9                           ; 8A9E 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8A9E 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 Bank00ScriptOpcode08_MoveSprite:
@@ -1835,7 +1827,7 @@ L8B03:
         jsr     LEC34                           ; 8B17 20 34 EC                  4.
 L8B1A:
         lda     #$04                            ; 8B1A A9 04                    ..
-        jmp     L88D9                           ; 8B1C 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8B1C 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8B1F:
@@ -1877,7 +1869,7 @@ L8B1F:
         sta     $0300,x                         ; 8B55 9D 00 03                 ...
 L8B58:
         lda     #$07                            ; 8B58 A9 07                    ..
-        jmp     L88D9                           ; 8B5A 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8B5A 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8B5D:
@@ -1940,7 +1932,7 @@ L8B9D:
 L8BB7:
         iny                                     ; 8BB7 C8                       .
         tya                                     ; 8BB8 98                       .
-        jmp     L88D9                           ; 8BB9 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8BB9 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8BBC:
@@ -1952,7 +1944,7 @@ L8BC1:
         dey                                     ; 8BC4 88                       .
         bne     L8BC1                           ; 8BC5 D0 FA                    ..
         lda     #$02                            ; 8BC7 A9 02                    ..
-        jmp     L88D9                           ; 8BC9 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8BC9 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8BCC:
@@ -1978,7 +1970,7 @@ L8BCF:
 L8BEE:
         jsr     LF2B3                           ; 8BEE 20 B3 F2                  ..
         lda     #$03                            ; 8BF1 A9 03                    ..
-        jmp     L88D9                           ; 8BF3 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8BF3 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8BF6:
@@ -2033,7 +2025,7 @@ L8C4A:
         lda     $55                             ; 8C4A A5 55                    .U
         beq     L8C53                           ; 8C4C F0 05                    ..
         lda     #$01                            ; 8C4E A9 01                    ..
-        jmp     L88D9                           ; 8C50 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8C50 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8C53:
@@ -2046,7 +2038,7 @@ L8C54:
         jsr     L8C63                           ; 8C58 20 63 8C                  c.
         bcc     L8C62                           ; 8C5B 90 05                    ..
         lda     #$02                            ; 8C5D A9 02                    ..
-        jmp     L88D9                           ; 8C5F 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8C5F 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8C62:
@@ -2194,13 +2186,13 @@ L8D20:
         sta     $1C                             ; 8D2A 85 1C                    ..
         jsr     LF1F1                           ; 8D2C 20 F1 F1                  ..
         lda     #$01                            ; 8D2F A9 01                    ..
-        jmp     L88D9                           ; 8D31 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8D31 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8D34:
         jsr     LEA3F                           ; 8D34 20 3F EA                  ?.
         lda     #$01                            ; 8D37 A9 01                    ..
-        jmp     L88D9                           ; 8D39 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8D39 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8D3C:
@@ -2215,7 +2207,7 @@ L8D3C:
         pla                                     ; 8D4C 68                       h
         jsr     LF2B3                           ; 8D4D 20 B3 F2                  ..
         lda     #$02                            ; 8D50 A9 02                    ..
-        jmp     L88D9                           ; 8D52 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8D52 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8D55:
@@ -2223,7 +2215,7 @@ L8D55:
         lda     ($A7),y                         ; 8D57 B1 A7                    ..
         jsr     LEC34                           ; 8D59 20 34 EC                  4.
         lda     #$02                            ; 8D5C A9 02                    ..
-        jmp     L88D9                           ; 8D5E 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8D5E 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8D61:
@@ -2295,7 +2287,7 @@ L8DDB:
         lda     #$00                            ; 8DDB A9 00                    ..
         sta     $602D                           ; 8DDD 8D 2D 60                 .-`
         lda     #$04                            ; 8DE0 A9 04                    ..
-        jmp     L88D9                           ; 8DE2 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8DE2 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8DE5:
@@ -2352,7 +2344,7 @@ L8E25:
         cmp     $5D                             ; 8E29 C5 5D                    .]
         bne     L8E32                           ; 8E2B D0 05                    ..
         lda     #$02                            ; 8E2D A9 02                    ..
-        jmp     L88D9                           ; 8E2F 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8E2F 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8E32:
@@ -2363,7 +2355,7 @@ L8E33:
         lda     #$00                            ; 8E33 A9 00                    ..
         sta     $5D                             ; 8E35 85 5D                    .]
         lda     #$01                            ; 8E37 A9 01                    ..
-        jmp     L88D9                           ; 8E39 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8E39 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8E3C:
@@ -2382,7 +2374,7 @@ L8E3C:
         lda     $8F                             ; 8E53 A5 8F                    ..
         jsr     LE406                           ; 8E55 20 06 E4                  ..
         lda     #$04                            ; 8E58 A9 04                    ..
-        jmp     L88D9                           ; 8E5A 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8E5A 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8E5D:
@@ -2390,7 +2382,7 @@ L8E5D:
         lda     ($A7),y                         ; 8E5F B1 A7                    ..
         sta     $060B                           ; 8E61 8D 0B 06                 ...
         lda     #$02                            ; 8E64 A9 02                    ..
-        jmp     L88D9                           ; 8E66 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8E66 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8E69:
@@ -2455,7 +2447,7 @@ L8ECC:
         bne     L8E8C                           ; 8ECE D0 BC                    ..
 L8ED0:
         lda     #$07                            ; 8ED0 A9 07                    ..
-        jmp     L88D9                           ; 8ED2 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8ED2 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 Bank00ScriptOpcode13_TriggerBattle:
@@ -2470,7 +2462,7 @@ Bank00ScriptOpcode13_TriggerBattle:
         sta     $060A                           ; 8EE4 8D 0A 06                 ...
         jsr     LF3E6                           ; 8EE7 20 E6 F3                  ..
         lda     #$04                            ; 8EEA A9 04                    ..
-        jmp     L88D9                           ; 8EEC 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8EEC 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8EEF:
@@ -2533,7 +2525,7 @@ L8F25:
 ; ----------------------------------------------------------------------------
 L8F3B:
         lda     #$04                            ; 8F3B A9 04                    ..
-        jmp     L88D9                           ; 8F3D 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8F3D 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 Bank00ScriptOpcode1b_PlayerGetsKeyItem:
@@ -2543,7 +2535,7 @@ Bank00ScriptOpcode1b_PlayerGetsKeyItem:
         sbc     #$11                            ; 8F45 E9 11                    ..
         jsr     PlayerGetsKeyItem               ; 8F47 20 98 D1                  ..
         lda     #$02                            ; 8F4A A9 02                    ..
-        jmp     L88D9                           ; 8F4C 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8F4C 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8F4F:
@@ -2553,7 +2545,7 @@ L8F4F:
         sbc     #$11                            ; 8F54 E9 11                    ..
         jsr     LD1AE                           ; 8F56 20 AE D1                  ..
         lda     #$02                            ; 8F59 A9 02                    ..
-        jmp     L88D9                           ; 8F5B 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8F5B 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8F5E:
@@ -2561,14 +2553,14 @@ L8F5E:
         lda     ($A7),y                         ; 8F60 B1 A7                    ..
         jsr     L9254                           ; 8F62 20 54 92                  T.
         lda     #$03                            ; 8F65 A9 03                    ..
-        jmp     L88D9                           ; 8F67 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8F67 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8F6A:
         lda     #$00                            ; 8F6A A9 00                    ..
         sta     $6F1A                           ; 8F6C 8D 1A 6F                 ..o
         lda     #$01                            ; 8F6F A9 01                    ..
-        jmp     L88D9                           ; 8F71 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8F71 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8F74:
@@ -2582,7 +2574,7 @@ L8F74:
         lda     ($A7),y                         ; 8F82 B1 A7                    ..
         sta     $6F1C                           ; 8F84 8D 1C 6F                 ..o
         lda     #$04                            ; 8F87 A9 04                    ..
-        jmp     L88D9                           ; 8F89 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8F89 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8F8C:
@@ -2590,7 +2582,7 @@ L8F8C:
         lda     ($A7),y                         ; 8F8E B1 A7                    ..
         jsr     L927D                           ; 8F90 20 7D 92                  }.
         lda     #$02                            ; 8F93 A9 02                    ..
-        jmp     L88D9                           ; 8F95 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8F95 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8F98:
@@ -2614,7 +2606,7 @@ L8F98:
         sta     $6030                           ; 8FBF 8D 30 60                 .0`
 L8FC2:
         lda     #$04                            ; 8FC2 A9 04                    ..
-        jmp     L88D9                           ; 8FC4 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8FC4 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L8FC7:
@@ -2644,12 +2636,12 @@ L8FC7:
         sta     $6030                           ; 8FFA 8D 30 60                 .0`
 L8FFD:
         lda     #$06                            ; 8FFD A9 06                    ..
-        jmp     L88D9                           ; 8FFF 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 8FFF 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L9002:
         lda     #$03                            ; 9002 A9 03                    ..
-        jmp     L88D9                           ; 9004 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 9004 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L9007:
@@ -2666,7 +2658,7 @@ L9007:
         jsr     LFD4C                           ; 9018 20 4C FD                  L.
         bne     L9022                           ; 901B D0 05                    ..
         lda     #$05                            ; 901D A9 05                    ..
-        jmp     L88D9                           ; 901F 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 901F 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L9022:
@@ -2695,7 +2687,7 @@ L902A:
         sbc     $09                             ; 9048 E5 09                    ..
         bcc     L9051                           ; 904A 90 05                    ..
         lda     #$05                            ; 904C A9 05                    ..
-        jmp     L88D9                           ; 904E 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 904E 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L9051:
@@ -2715,7 +2707,7 @@ L9059:
 ; ----------------------------------------------------------------------------
 L9063:
         lda     #$02                            ; 9063 A9 02                    ..
-        jmp     L88D9                           ; 9065 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 9065 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L9068:
@@ -2726,7 +2718,7 @@ L9068:
         jsr     CheckIfPlayerHasKeyItem         ; 906F 20 80 D1                  ..
         bcc     L9079                           ; 9072 90 05                    ..
         lda     #$03                            ; 9074 A9 03                    ..
-        jmp     L88D9                           ; 9076 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 9076 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L9079:
@@ -2745,7 +2737,7 @@ L9081:
         sta     $E0                             ; 908A 85 E0                    ..
         jsr     L9094                           ; 908C 20 94 90                  ..
         lda     #$03                            ; 908F A9 03                    ..
-        jmp     L88D9                           ; 9091 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 9091 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L9094:
@@ -2853,11 +2845,11 @@ L913F:
 L914B:
         ldy     #$01                            ; 914B A0 01                    ..
         lda     ($A7),y                         ; 914D B1 A7                    ..
-        jsr     LD100                           ; 914F 20 00 D1                  ..
+        jsr     Bank00CheckCutsceneFlagBit      ; 914F 20 00 D1                  ..
         bcs     L917B                           ; 9152 B0 27                    .'
         ldy     #$01                            ; 9154 A0 01                    ..
         lda     ($A7),y                         ; 9156 B1 A7                    ..
-        jsr     LD120                           ; 9158 20 20 D1                   .
+        jsr     Bank00SetCutsceneFlagBit        ; 9158 20 20 D1                   .
         ldy     #$02                            ; 915B A0 02                    ..
         lda     ($A7),y                         ; 915D B1 A7                    ..
         sta     $56                             ; 915F 85 56                    .V
@@ -2874,7 +2866,7 @@ L916B:
         dec     $DD                             ; 9172 C6 DD                    ..
         bne     L916B                           ; 9174 D0 F5                    ..
         lda     #$06                            ; 9176 A9 06                    ..
-        jmp     L88D9                           ; 9178 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 9178 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L917B:
@@ -2908,7 +2900,7 @@ L91A2:
         dec     $DE                             ; 91A9 C6 DE                    ..
         bne     L91A2                           ; 91AB D0 F5                    ..
         lda     #$04                            ; 91AD A9 04                    ..
-        jmp     L88D9                           ; 91AF 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 91AF 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L91B2:
@@ -2951,7 +2943,7 @@ L91B2:
         pla                                     ; 91F8 68                       h
         sta     $0308,y                         ; 91F9 99 08 03                 ...
         lda     #$03                            ; 91FC A9 03                    ..
-        jmp     L88D9                           ; 91FE 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 91FE 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L9201:
@@ -2972,7 +2964,7 @@ L920A:
         pla                                     ; 921B 68                       h
         clc                                     ; 921C 18                       .
         adc     #$02                            ; 921D 69 02                    i.
-        jmp     L88D9                           ; 921F 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 921F 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L9222:
@@ -2985,19 +2977,19 @@ L9222:
 ; ----------------------------------------------------------------------------
 L922C:
         lda     #$02                            ; 922C A9 02                    ..
-        jmp     L88D9                           ; 922E 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 922E 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L9231:
         inc     $6021                           ; 9231 EE 21 60                 .!`
         lda     #$01                            ; 9234 A9 01                    ..
-        jmp     L88D9                           ; 9236 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 9236 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L9239:
         dec     $6021                           ; 9239 CE 21 60                 .!`
         lda     #$01                            ; 923C A9 01                    ..
-        jmp     L88D9                           ; 923E 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 923E 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L9241:
@@ -3005,13 +2997,13 @@ L9241:
         lda     ($A7),y                         ; 9243 B1 A7                    ..
         sta     $BE                             ; 9245 85 BE                    ..
         lda     #$02                            ; 9247 A9 02                    ..
-        jmp     L88D9                           ; 9249 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 9249 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L924C:
         jsr     InnStayRestoreUnitHealth        ; 924C 20 33 E0                  3.
         lda     #$01                            ; 924F A9 01                    ..
-        jmp     L88D9                           ; 9251 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 9251 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L9254:
@@ -3097,13 +3089,13 @@ L92C9:
         lda     ($A7),y                         ; 92CB B1 A7                    ..
         sta     $0303                           ; 92CD 8D 03 03                 ...
         lda     #$02                            ; 92D0 A9 02                    ..
-        jmp     L88D9                           ; 92D2 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 92D2 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L92D5:
         ldy     #$01                            ; 92D5 A0 01                    ..
         lda     ($A7),y                         ; 92D7 B1 A7                    ..
-        jsr     LD100                           ; 92D9 20 00 D1                  ..
+        jsr     Bank00CheckCutsceneFlagBit      ; 92D9 20 00 D1                  ..
         bcs     L92E6                           ; 92DC B0 08                    ..
         ldy     #$02                            ; 92DE A0 02                    ..
         lda     ($A7),y                         ; 92E0 B1 A7                    ..
@@ -3113,7 +3105,7 @@ L92D5:
 ; ----------------------------------------------------------------------------
 L92E6:
         lda     #$03                            ; 92E6 A9 03                    ..
-        jmp     L88D9                           ; 92E8 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 92E8 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L92EB:
@@ -3129,7 +3121,7 @@ L92F7:
         lda     ($A7),y                         ; 92FB B1 A7                    ..
         cmp     #$FF                            ; 92FD C9 FF                    ..
         beq     L930A                           ; 92FF F0 09                    ..
-        jsr     LD100                           ; 9301 20 00 D1                  ..
+        jsr     Bank00CheckCutsceneFlagBit      ; 9301 20 00 D1                  ..
         bcc     L92F7                           ; 9304 90 F1                    ..
         inc     $07                             ; 9306 E6 07                    ..
         bne     L92F7                           ; 9308 D0 ED                    ..
@@ -3143,7 +3135,7 @@ L930A:
 L9311:
         iny                                     ; 9311 C8                       .
         tya                                     ; 9312 98                       .
-        jmp     L88D9                           ; 9313 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 9313 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L9316:
@@ -3151,7 +3143,7 @@ L9316:
         lda     ($A7),y                         ; 9318 B1 A7                    ..
         jsr     LF590                           ; 931A 20 90 F5                  ..
         lda     #$02                            ; 931D A9 02                    ..
-        jmp     L88D9                           ; 931F 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 931F 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L9322:
@@ -3164,7 +3156,7 @@ L9322:
 ; ----------------------------------------------------------------------------
 L932C:
         lda     #$02                            ; 932C A9 02                    ..
-        jmp     L88D9                           ; 932E 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 932E 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L9331:
@@ -3211,7 +3203,7 @@ L9331:
         rol     a                               ; 937A 2A                       *
         sta     $6023,y                         ; 937B 99 23 60                 .#`
         lda     #$02                            ; 937E A9 02                    ..
-        jmp     L88D9                           ; 9380 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 9380 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L9383:
@@ -3231,7 +3223,7 @@ L9390:
         lda     ($A7),y                         ; 9394 B1 A7                    ..
         cmp     #$FF                            ; 9396 C9 FF                    ..
         beq     L93A3                           ; 9398 F0 09                    ..
-        jsr     LD100                           ; 939A 20 00 D1                  ..
+        jsr     Bank00CheckCutsceneFlagBit      ; 939A 20 00 D1                  ..
         bcc     L9390                           ; 939D 90 F1                    ..
         inc     $07                             ; 939F E6 07                    ..
         bne     L9390                           ; 93A1 D0 ED                    ..
@@ -3249,14 +3241,14 @@ L93B0:
         iny                                     ; 93B0 C8                       .
         iny                                     ; 93B1 C8                       .
         tya                                     ; 93B2 98                       .
-        jmp     L88D9                           ; 93B3 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 93B3 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L93B6:
         jmp     LE8D2                           ; 93B6 4C D2 E8                 L..
 
 ; ----------------------------------------------------------------------------
-        jmp     L88D9                           ; 93B9 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 93B9 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L93BC:
@@ -3264,7 +3256,7 @@ L93BC:
         lda     ($A7),y                         ; 93BE B1 A7                    ..
         sta     $6021                           ; 93C0 8D 21 60                 .!`
         lda     #$02                            ; 93C3 A9 02                    ..
-        jmp     L88D9                           ; 93C5 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 93C5 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L93C8:
@@ -3273,7 +3265,7 @@ L93C8:
         cmp     $5C                             ; 93CC C5 5C                    .\
         bne     L93D5                           ; 93CE D0 05                    ..
         lda     #$02                            ; 93D0 A9 02                    ..
-        jmp     L88D9                           ; 93D2 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 93D2 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L93D5:
@@ -3287,7 +3279,7 @@ L93D6:
         jsr     LEE4B                           ; 93DE 20 4B EE                  K.
         jsr     Bank00ScreenRefresh             ; 93E1 20 36 EA                  6.
         lda     #$01                            ; 93E4 A9 01                    ..
-        jmp     L88D9                           ; 93E6 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 93E6 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L93E9:
@@ -3322,7 +3314,7 @@ L93FB           := * + 1
         lda     ($A7),y                         ; 9410 B1 A7                    ..
         sta     $6025,x                         ; 9412 9D 25 60                 .%`
         lda     #$04                            ; 9415 A9 04                    ..
-        jmp     L88D9                           ; 9417 4C D9 88                 L..
+        jmp     Bank00LoadNextScriptOpcode      ; 9417 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
 L941A:
@@ -3580,7 +3572,7 @@ L95B5:
         lda     #$0D                            ; 95D3 A9 0D                    ..
         jsr     L9F7D                           ; 95D5 20 7D 9F                  }.
         lda     #$0D                            ; 95D8 A9 0D                    ..
-        jsr     LD100                           ; 95DA 20 00 D1                  ..
+        jsr     Bank00CheckCutsceneFlagBit      ; 95DA 20 00 D1                  ..
         bcc     L95EC                           ; 95DD 90 0D                    ..
         jsr     L9DA1                           ; 95DF 20 A1 9D                  ..
         lda     #$01                            ; 95E2 A9 01                    ..
@@ -3637,12 +3629,12 @@ L9629:
         lda     #$0F                            ; 9629 A9 0F                    ..
         jsr     L9F7D                           ; 962B 20 7D 9F                  }.
         lda     #$10                            ; 962E A9 10                    ..
-        jsr     LD100                           ; 9630 20 00 D1                  ..
+        jsr     Bank00CheckCutsceneFlagBit      ; 9630 20 00 D1                  ..
         bcc     L9654                           ; 9633 90 1F                    ..
         dec     $6020                           ; 9635 CE 20 60                 . `
         bne     L964E                           ; 9638 D0 14                    ..
         lda     #$10                            ; 963A A9 10                    ..
-        jsr     LD136                           ; 963C 20 36 D1                  6.
+        jsr     Bank00ClearCutsceneFlagBit      ; 963C 20 36 D1                  6.
         inc     $6020                           ; 963F EE 20 60                 . `
         lda     #$0E                            ; 9642 A9 0E                    ..
         sta     $56                             ; 9644 85 56                    .V
@@ -3661,7 +3653,7 @@ L9654:
         lda     #$11                            ; 9654 A9 11                    ..
         jsr     L9F7D                           ; 9656 20 7D 9F                  }.
         lda     #$10                            ; 9659 A9 10                    ..
-        jsr     LD100                           ; 965B 20 00 D1                  ..
+        jsr     Bank00CheckCutsceneFlagBit      ; 965B 20 00 D1                  ..
         bcc     L9678                           ; 965E 90 18                    ..
         inc     $6020                           ; 9660 EE 20 60                 . `
         lda     $6020                           ; 9663 AD 20 60                 . `
@@ -3669,7 +3661,7 @@ L9654:
         bcc     L9673                           ; 9668 90 09                    ..
         dec     $6020                           ; 966A CE 20 60                 . `
         lda     #$10                            ; 966D A9 10                    ..
-        jsr     LD136                           ; 966F 20 36 D1                  6.
+        jsr     Bank00ClearCutsceneFlagBit      ; 966F 20 36 D1                  6.
         rts                                     ; 9672 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3997,12 +3989,12 @@ L9A44:
         lda     #$0F                            ; 9A44 A9 0F                    ..
         jsr     L9F7D                           ; 9A46 20 7D 9F                  }.
         lda     #$10                            ; 9A49 A9 10                    ..
-        jsr     LD100                           ; 9A4B 20 00 D1                  ..
+        jsr     Bank00CheckCutsceneFlagBit      ; 9A4B 20 00 D1                  ..
         bcc     L9A65                           ; 9A4E 90 15                    ..
         dec     $6020                           ; 9A50 CE 20 60                 . `
         bne     L9A5F                           ; 9A53 D0 0A                    ..
         lda     #$10                            ; 9A55 A9 10                    ..
-        jsr     LD136                           ; 9A57 20 36 D1                  6.
+        jsr     Bank00ClearCutsceneFlagBit      ; 9A57 20 36 D1                  6.
         inc     $6020                           ; 9A5A EE 20 60                 . `
         bne     L9A65                           ; 9A5D D0 06                    ..
 L9A5F:
@@ -4015,7 +4007,7 @@ L9A65:
         lda     #$11                            ; 9A65 A9 11                    ..
         jsr     L9F7D                           ; 9A67 20 7D 9F                  }.
         lda     #$10                            ; 9A6A A9 10                    ..
-        jsr     LD100                           ; 9A6C 20 00 D1                  ..
+        jsr     Bank00CheckCutsceneFlagBit      ; 9A6C 20 00 D1                  ..
         bcc     L9A89                           ; 9A6F 90 18                    ..
         inc     $6020                           ; 9A71 EE 20 60                 . `
         lda     $6020                           ; 9A74 AD 20 60                 . `
@@ -4023,7 +4015,7 @@ L9A65:
         bcc     L9A84                           ; 9A79 90 09                    ..
         dec     $6020                           ; 9A7B CE 20 60                 . `
         lda     #$10                            ; 9A7E A9 10                    ..
-        jsr     LD136                           ; 9A80 20 36 D1                  6.
+        jsr     Bank00ClearCutsceneFlagBit      ; 9A80 20 36 D1                  6.
         rts                                     ; 9A83 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4918,7 +4910,7 @@ L9E22:
         .byte   $34,$35,$32,$33,$34,$35         ; 9E3A 34 35 32 33 34 35        452345
 ; ----------------------------------------------------------------------------
         lda     #$D1                            ; 9E40 A9 D1                    ..
-        jsr     LD100                           ; 9E42 20 00 D1                  ..
+        jsr     Bank00CheckCutsceneFlagBit      ; 9E42 20 00 D1                  ..
         bcs     L9E48                           ; 9E45 B0 01                    ..
         rts                                     ; 9E47 60                       `
 
@@ -4936,7 +4928,7 @@ L9E4D:
         sta     $07                             ; 9E53 85 07                    ..
 L9E55:
         lda     $07                             ; 9E55 A5 07                    ..
-        jsr     LD100                           ; 9E57 20 00 D1                  ..
+        jsr     Bank00CheckCutsceneFlagBit      ; 9E57 20 00 D1                  ..
         bcc     L9E5E                           ; 9E5A 90 02                    ..
         inc     $0B                             ; 9E5C E6 0B                    ..
 L9E5E:
@@ -4974,7 +4966,7 @@ L9E8F:
         adc     $06                             ; 9E93 65 06                    e.
         tax                                     ; 9E95 AA                       .
         lda     L9F09,x                         ; 9E96 BD 09 9F                 ...
-        jsr     LD100                           ; 9E99 20 00 D1                  ..
+        jsr     Bank00CheckCutsceneFlagBit      ; 9E99 20 00 D1                  ..
         bcs     L9EF6                           ; 9E9C B0 58                    .X
         lda     $06                             ; 9E9E A5 06                    ..
         asl     a                               ; 9EA0 0A                       .
@@ -5013,7 +5005,7 @@ L9EE3           := * + 2
         sbc     #$00                            ; 9EE7 E9 00                    ..
         sta     $6030                           ; 9EE9 8D 30 60                 .0`
         lda     L9F09,x                         ; 9EEC BD 09 9F                 ...
-        jsr     LD120                           ; 9EEF 20 20 D1                   .
+        jsr     Bank00SetCutsceneFlagBit        ; 9EEF 20 20 D1                   .
         jsr     L9F54                           ; 9EF2 20 54 9F                  T.
         rts                                     ; 9EF5 60                       `
 
@@ -5396,31 +5388,31 @@ LA5E4:
         .byte   $31,$00,$08,$00,$10,$01,$08,$00 ; A61C 31 00 08 00 10 01 08 00  1.......
         .byte   $40,$00,$04,$01,$A3,$FF,$FF,$FF ; A624 40 00 04 01 A3 FF FF FF  @.......
         .byte   $FF                             ; A62C FF                       .
-LA62D:
+SceneCloudSetsCodeForTopLeftSwitch:
         .byte   $03,$23,$0D,$01,$08,$00,$80,$00 ; A62D 03 23 0D 01 08 00 80 00  .#......
         .byte   $90,$00,$29,$0E,$08,$01,$06,$24 ; A635 90 00 29 0E 08 01 06 24  ..)....$
         .byte   $FF                             ; A63D FF                       .
-LA63E:
+SceneCloudSetsCodeForMiddleLeftSwitch:
         .byte   $03,$23,$0D,$01,$08,$00,$80,$00 ; A63E 03 23 0D 01 08 00 80 00  .#......
         .byte   $F0,$00,$29,$0E,$08,$01,$06,$25 ; A646 F0 00 29 0E 08 01 06 25  ..)....%
         .byte   $FF                             ; A64E FF                       .
-LA64F:
+SceneCloudSetsCodeForTopRightSwitch:
         .byte   $03,$23,$0D,$01,$08,$01,$80,$00 ; A64F 03 23 0D 01 08 01 80 00  .#......
         .byte   $90,$00,$29,$0E,$08,$01,$06,$26 ; A657 90 00 29 0E 08 01 06 26  ..)....&
         .byte   $FF                             ; A65F FF                       .
-LA660:
+SceneCloudSetsCodeForMiddleRightSwitch:
         .byte   $03,$23,$0D,$01,$08,$01,$80,$00 ; A660 03 23 0D 01 08 01 80 00  .#......
         .byte   $F0,$00,$29,$0E,$08,$01,$06,$27 ; A668 F0 00 29 0E 08 01 06 27  ..)....'
         .byte   $FF                             ; A670 FF                       .
-LA671:
+SceneCloudSetsCodeForBottomLeftSwitch:
         .byte   $03,$23,$0D,$01,$08,$00,$80,$01 ; A671 03 23 0D 01 08 00 80 01  .#......
         .byte   $50,$00,$29,$0E,$08,$01,$06,$28 ; A679 50 00 29 0E 08 01 06 28  P.)....(
         .byte   $FF                             ; A681 FF                       .
-LA682:
+SceneCloudSetsCodeForBottomRightSwitch:
         .byte   $03,$23,$0D,$01,$08,$01,$80,$01 ; A682 03 23 0D 01 08 01 80 01  .#......
         .byte   $50,$00,$29,$0E,$08,$01,$06,$29 ; A68A 50 00 29 0E 08 01 06 29  P.)....)
         .byte   $FF                             ; A692 FF                       .
-LA693:
+SceneAllSwitchesHaveCodeAndGateUnlocked:
         .byte   $03,$23,$02,$24,$02,$25,$02,$26 ; A693 03 23 02 24 02 25 02 26  .#.$.%.&
         .byte   $02,$27,$02,$28,$02,$29,$06,$23 ; A69B 02 27 02 28 02 29 06 23  .'.(.).#
         .byte   $07,$24,$07,$25,$07,$26,$07,$27 ; A6A3 07 24 07 25 07 26 07 27  .$.%.&.'
@@ -6220,50 +6212,49 @@ LB943:
         .byte   $0F,$02,$0A,$01,$02,$FF,$0E,$00 ; B9F3 0F 02 0A 01 02 FF 0E 00  ........
         .byte   $FF                             ; B9FB FF                       .
 LB9FC:
-        .byte   $03,$8B,$01,$FF,$01,$30,$00     ; B9FC 03 8B 01 FF 01 30 00     .....0.
-LBA03:
-        .byte   $E0,$00,$14,$00,$20,$0E,$08,$00 ; BA03 E0 00 14 00 20 0E 08 00  .... ...
-        .byte   $80,$01,$09,$01,$0B,$FF,$FF,$FF ; BA0B 80 01 09 01 0B FF FF FF  ........
-        .byte   $FF,$08,$01,$20,$01,$08,$01,$80 ; BA13 FF 08 01 20 01 08 01 80  ... ....
-        .byte   $00,$06,$8B,$29,$05,$D3,$01,$09 ; BA1B 00 06 8B 29 05 D3 01 09  ...)....
-        .byte   $04,$05,$00,$60,$00,$60,$08,$04 ; BA23 04 05 00 60 00 60 08 04  ...`.`..
-        .byte   $40,$04,$08,$04,$20,$02,$08,$04 ; BA2B 40 04 08 04 20 02 08 04  @... ...
-        .byte   $40,$00,$29,$05,$D4,$01,$08,$02 ; BA33 40 00 29 05 D4 01 08 02  @.).....
-        .byte   $40,$00,$29,$05,$D5,$06,$08,$02 ; BA3B 40 00 29 05 D5 06 08 02  @.).....
-        .byte   $80,$00,$09,$03,$05,$00,$40,$00 ; BA43 80 00 09 03 05 00 40 00  ......@.
-        .byte   $80,$29,$05,$DB,$01,$08,$02,$80 ; BA4B 80 29 05 DB 01 08 02 80  .)......
-        .byte   $01,$29,$05,$E7,$01,$0A,$02,$FF ; BA53 01 29 05 E7 01 0A 02 FF  .)......
-        .byte   $09,$05,$00,$00,$40,$00,$B0,$08 ; BA5B 09 05 00 00 40 00 B0 08  ....@...
-        .byte   $04,$20,$04,$0A,$04,$FF,$29,$05 ; BA63 04 20 04 0A 04 FF 29 05  . ....).
-        .byte   $DC,$01,$08,$03,$40,$02,$16,$01 ; BA6B DC 01 08 03 40 02 16 01  ....@...
-        .byte   $00,$88,$13,$15,$00,$FF,$0A,$03 ; BA73 00 88 13 15 00 FF 0A 03  ........
-        .byte   $FF,$09,$05,$00,$00,$90,$00,$D0 ; BA7B FF 09 05 00 00 90 00 D0  ........
-        .byte   $09,$00,$04,$00,$90,$00,$C0,$09 ; BA83 09 00 04 00 90 00 C0 09  ........
-        .byte   $01,$02,$00,$80,$00,$D0,$12,$29 ; BA8B 01 02 00 80 00 D0 12 29  .......)
-        .byte   $05,$DE,$01,$08,$00,$10,$00,$09 ; BA93 05 DE 01 08 00 10 00 09  ........
-        .byte   $03,$0B,$00,$F0,$00,$D0,$08,$03 ; BA9B 03 0B 00 F0 00 D0 08 03  ........
-        .byte   $20,$05,$0B,$80,$29,$05,$DF,$07 ; BAA3 20 05 0B 80 29 05 DF 07   ...)...
-        .byte   $08,$00,$10,$01,$08,$00,$40,$00 ; BAAB 08 00 10 01 08 00 40 00  ......@.
-        .byte   $08,$03,$80,$00,$29,$05,$E6,$01 ; BAB3 08 03 80 00 29 05 E6 01  ....)...
-        .byte   $08,$00,$20,$01,$08,$00,$40,$00 ; BABB 08 00 20 01 08 00 40 00  .. ...@.
-        .byte   $08,$03,$20,$00,$0B,$50,$29,$05 ; BAC3 08 03 20 00 0B 50 29 05  .. ..P).
-        .byte   $E7,$02,$08,$03,$20,$01,$08,$03 ; BACB E7 02 08 03 20 01 08 03  .... ...
-        .byte   $10,$00,$0A,$05,$FF,$29,$05,$E9 ; BAD3 10 00 0A 05 FF 29 05 E9  .....)..
-        .byte   $01,$08,$00,$10,$00,$08,$03,$10 ; BADB 01 08 00 10 00 08 03 10  ........
-        .byte   $06,$0A,$03,$FF,$0B,$32,$08,$01 ; BAE3 06 0A 03 FF 0B 32 08 01  .....2..
-        .byte   $10,$01,$08,$01,$80,$01,$0A,$01 ; BAEB 10 01 08 01 80 01 0A 01  ........
-        .byte   $FF,$08,$00,$40,$01,$08,$00,$10 ; BAF3 FF 08 00 40 01 08 00 10  ...@....
-        .byte   $00,$08,$00,$10,$00,$08,$00,$10 ; BAFB 00 08 00 10 00 08 00 10  ........
-        .byte   $00,$08,$00,$10,$00,$08,$00,$10 ; BB03 00 08 00 10 00 08 00 10  ........
-        .byte   $00,$08,$00,$10,$00,$08,$00,$10 ; BB0B 00 08 00 10 00 08 00 10  ........
-        .byte   $00,$08,$00,$10,$00,$08,$00,$10 ; BB13 00 08 00 10 00 08 00 10  ........
-        .byte   $00,$08,$00,$10,$00,$08,$00,$10 ; BB1B 00 08 00 10 00 08 00 10  ........
-        .byte   $00,$08,$00,$10,$00,$08,$00,$10 ; BB23 00 08 00 10 00 08 00 10  ........
-        .byte   $00,$08,$00,$10,$00,$08,$00,$10 ; BB2B 00 08 00 10 00 08 00 10  ........
-        .byte   $00,$08,$00,$10,$00,$08,$00,$10 ; BB33 00 08 00 10 00 08 00 10  ........
-        .byte   $00,$08,$00,$10,$00,$08,$00,$10 ; BB3B 00 08 00 10 00 08 00 10  ........
-        .byte   $00,$08,$00,$10,$00,$08,$00,$10 ; BB43 00 08 00 10 00 08 00 10  ........
-        .byte   $00,$08,$00,$10,$00,$FF         ; BB4B 00 08 00 10 00 FF        ......
+        .byte   $03,$8B,$01,$FF,$01,$30,$00,$E0 ; B9FC 03 8B 01 FF 01 30 00 E0  .....0..
+        .byte   $00,$14,$00,$20,$0E,$08,$00,$80 ; BA04 00 14 00 20 0E 08 00 80  ... ....
+        .byte   $01,$09,$01,$0B,$FF,$FF,$FF,$FF ; BA0C 01 09 01 0B FF FF FF FF  ........
+        .byte   $08,$01,$20,$01,$08,$01,$80,$00 ; BA14 08 01 20 01 08 01 80 00  .. .....
+        .byte   $06,$8B,$29,$05,$D3,$01,$09,$04 ; BA1C 06 8B 29 05 D3 01 09 04  ..).....
+        .byte   $05,$00,$60,$00,$60,$08,$04,$40 ; BA24 05 00 60 00 60 08 04 40  ..`.`..@
+        .byte   $04,$08,$04,$20,$02,$08,$04,$40 ; BA2C 04 08 04 20 02 08 04 40  ... ...@
+        .byte   $00,$29,$05,$D4,$01,$08,$02,$40 ; BA34 00 29 05 D4 01 08 02 40  .).....@
+        .byte   $00,$29,$05,$D5,$06,$08,$02,$80 ; BA3C 00 29 05 D5 06 08 02 80  .)......
+        .byte   $00,$09,$03,$05,$00,$40,$00,$80 ; BA44 00 09 03 05 00 40 00 80  .....@..
+        .byte   $29,$05,$DB,$01,$08,$02,$80,$01 ; BA4C 29 05 DB 01 08 02 80 01  ).......
+        .byte   $29,$05,$E7,$01,$0A,$02,$FF,$09 ; BA54 29 05 E7 01 0A 02 FF 09  ).......
+        .byte   $05,$00,$00,$40,$00,$B0,$08,$04 ; BA5C 05 00 00 40 00 B0 08 04  ...@....
+        .byte   $20,$04,$0A,$04,$FF,$29,$05,$DC ; BA64 20 04 0A 04 FF 29 05 DC   ....)..
+        .byte   $01,$08,$03,$40,$02,$16,$01,$00 ; BA6C 01 08 03 40 02 16 01 00  ...@....
+        .byte   $88,$13,$15,$00,$FF,$0A,$03,$FF ; BA74 88 13 15 00 FF 0A 03 FF  ........
+        .byte   $09,$05,$00,$00,$90,$00,$D0,$09 ; BA7C 09 05 00 00 90 00 D0 09  ........
+        .byte   $00,$04,$00,$90,$00,$C0,$09,$01 ; BA84 00 04 00 90 00 C0 09 01  ........
+        .byte   $02,$00,$80,$00,$D0,$12,$29,$05 ; BA8C 02 00 80 00 D0 12 29 05  ......).
+        .byte   $DE,$01,$08,$00,$10,$00,$09,$03 ; BA94 DE 01 08 00 10 00 09 03  ........
+        .byte   $0B,$00,$F0,$00,$D0,$08,$03,$20 ; BA9C 0B 00 F0 00 D0 08 03 20  ....... 
+        .byte   $05,$0B,$80,$29,$05,$DF,$07,$08 ; BAA4 05 0B 80 29 05 DF 07 08  ...)....
+        .byte   $00,$10,$01,$08,$00,$40,$00,$08 ; BAAC 00 10 01 08 00 40 00 08  .....@..
+        .byte   $03,$80,$00,$29,$05,$E6,$01,$08 ; BAB4 03 80 00 29 05 E6 01 08  ...)....
+        .byte   $00,$20,$01,$08,$00,$40,$00,$08 ; BABC 00 20 01 08 00 40 00 08  . ...@..
+        .byte   $03,$20,$00,$0B,$50,$29,$05,$E7 ; BAC4 03 20 00 0B 50 29 05 E7  . ..P)..
+        .byte   $02,$08,$03,$20,$01,$08,$03,$10 ; BACC 02 08 03 20 01 08 03 10  ... ....
+        .byte   $00,$0A,$05,$FF,$29,$05,$E9,$01 ; BAD4 00 0A 05 FF 29 05 E9 01  ....)...
+        .byte   $08,$00,$10,$00,$08,$03,$10,$06 ; BADC 08 00 10 00 08 03 10 06  ........
+        .byte   $0A,$03,$FF,$0B,$32,$08,$01,$10 ; BAE4 0A 03 FF 0B 32 08 01 10  ....2...
+        .byte   $01,$08,$01,$80,$01,$0A,$01,$FF ; BAEC 01 08 01 80 01 0A 01 FF  ........
+        .byte   $08,$00,$40,$01,$08,$00,$10,$00 ; BAF4 08 00 40 01 08 00 10 00  ..@.....
+        .byte   $08,$00,$10,$00,$08,$00,$10,$00 ; BAFC 08 00 10 00 08 00 10 00  ........
+        .byte   $08,$00,$10,$00,$08,$00,$10,$00 ; BB04 08 00 10 00 08 00 10 00  ........
+        .byte   $08,$00,$10,$00,$08,$00,$10,$00 ; BB0C 08 00 10 00 08 00 10 00  ........
+        .byte   $08,$00,$10,$00,$08,$00,$10,$00 ; BB14 08 00 10 00 08 00 10 00  ........
+        .byte   $08,$00,$10,$00,$08,$00,$10,$00 ; BB1C 08 00 10 00 08 00 10 00  ........
+        .byte   $08,$00,$10,$00,$08,$00,$10,$00 ; BB24 08 00 10 00 08 00 10 00  ........
+        .byte   $08,$00,$10,$00,$08,$00,$10,$00 ; BB2C 08 00 10 00 08 00 10 00  ........
+        .byte   $08,$00,$10,$00,$08,$00,$10,$00 ; BB34 08 00 10 00 08 00 10 00  ........
+        .byte   $08,$00,$10,$00,$08,$00,$10,$00 ; BB3C 08 00 10 00 08 00 10 00  ........
+        .byte   $08,$00,$10,$00,$08,$00,$10,$00 ; BB44 08 00 10 00 08 00 10 00  ........
+        .byte   $08,$00,$10,$00,$FF             ; BB4C 08 00 10 00 FF           .....
 LBB51:
         .byte   $02,$8D,$03,$8E,$01,$0B,$01,$30 ; BB51 02 8D 03 8E 01 0B 01 30  .......0
         .byte   $00,$D0,$01,$06,$8E,$27,$03,$08 ; BB59 00 D0 01 06 8E 27 03 08  .....'..
@@ -6566,7 +6557,7 @@ LC1DD:
 LC2AF:
         .byte   $02,$BB,$0D,$10,$01,$29,$08,$CB ; C2AF 02 BB 0D 10 01 29 08 CB  .....)..
         .byte   $01,$FF                         ; C2B7 01 FF                    ..
-LC2B9:
+SceneCloudReturnsSheraHouseAfterMeetingCaptain:
         .byte   $02,$BB,$03,$BC,$01,$05,$00,$80 ; C2B9 02 BB 03 BC 01 05 00 80  ........
         .byte   $04,$00,$00,$06,$BC,$08,$00,$20 ; C2C1 04 00 00 06 BC 08 00 20  ....... 
         .byte   $01,$08,$00,$40,$00,$08,$02,$80 ; C2C9 01 08 00 40 00 08 02 80  ...@....
@@ -6842,7 +6833,7 @@ LC919:
         .byte   $10,$01,$08,$02,$80,$02         ; C9C1 10 01 08 02 80 02        ......
 LC9C7:
         .byte   $0A,$02,$FF,$0E,$00,$FF,$FF     ; C9C7 0A 02 FF 0E 00 FF FF     .......
-LC9CE:
+SceneTalkToKidGetSnowboard:
         .byte   $03,$E9,$0D,$10,$02,$06,$E9,$29 ; C9CE 03 E9 0D 10 02 06 E9 29  .......)
         .byte   $0C,$89,$02,$1B,$1E,$FF         ; C9D6 0C 89 02 1B 1E FF        ......
 LC9DC:
@@ -6966,13 +6957,13 @@ Bank00SceneScriptTable:
         .addr   LA564                           ; CC83 64 A5                    d.
         .addr   LA5BA                           ; CC85 BA A5                    ..
         .addr   LA5C4                           ; CC87 C4 A5                    ..
-        .addr   LA62D                           ; CC89 2D A6                    -.
-        .addr   LA63E                           ; CC8B 3E A6                    >.
-        .addr   LA64F                           ; CC8D 4F A6                    O.
-        .addr   LA660                           ; CC8F 60 A6                    `.
-        .addr   LA671                           ; CC91 71 A6                    q.
-        .addr   LA682                           ; CC93 82 A6                    ..
-        .addr   LA693                           ; CC95 93 A6                    ..
+        .addr   SceneCloudSetsCodeForTopLeftSwitch; CC89 2D A6                  -.
+        .addr   SceneCloudSetsCodeForMiddleLeftSwitch; CC8B 3E A6               >.
+        .addr   SceneCloudSetsCodeForTopRightSwitch; CC8D 4F A6                 O.
+        .addr   SceneCloudSetsCodeForMiddleRightSwitch; CC8F 60 A6              `.
+        .addr   SceneCloudSetsCodeForBottomLeftSwitch; CC91 71 A6               q.
+        .addr   SceneCloudSetsCodeForBottomRightSwitch; CC93 82 A6              ..
+        .addr   SceneAllSwitchesHaveCodeAndGateUnlocked; CC95 93 A6             ..
         .addr   LA22E                           ; CC97 2E A2                    ..
         .addr   ScenePresidentShinraMakoReactor ; CC99 B8 A6                    ..
         .addr   LA7C2                           ; CC9B C2 A7                    ..
@@ -7147,9 +7138,9 @@ Bank00SceneScriptTable:
         .addr   LC16D                           ; CDED 6D C1                    m.
         .addr   LC1C9                           ; CDEF C9 C1                    ..
         .addr   LC1D3                           ; CDF1 D3 C1                    ..
-        .addr   LF8BE                           ; CDF3 BE F8                    ..
+        .addr   ScenePartyFindsBroncoSheraBackyard; CDF3 BE F8                  ..
         .addr   LC2AF                           ; CDF5 AF C2                    ..
-        .addr   LC2B9                           ; CDF7 B9 C2                    ..
+        .addr   SceneCloudReturnsSheraHouseAfterMeetingCaptain; CDF7 B9 C2      ..
         .addr   LC3EA                           ; CDF9 EA C3                    ..
         .addr   LC3F6                           ; CDFB F6 C3                    ..
         .addr   LC400                           ; CDFD 00 C4                    ..
@@ -7184,7 +7175,7 @@ Bank00SceneScriptTable:
         .addr   LC908                           ; CE37 08 C9                    ..
         .addr   LC919                           ; CE39 19 C9                    ..
         .addr   LC9C7                           ; CE3B C7 C9                    ..
-        .addr   LC9CE                           ; CE3D CE C9                    ..
+        .addr   SceneTalkToKidGetSnowboard      ; CE3D CE C9                    ..
         .addr   LC9DC                           ; CE3F DC C9                    ..
         .addr   LC9FC                           ; CE41 FC C9                    ..
         .addr   LCA09                           ; CE43 09 CA                    ..
@@ -7537,7 +7528,7 @@ LD0F7:
 LD0FC:
         .byte   $0D,$05,$00,$FF                 ; D0FC 0D 05 00 FF              ....
 ; ----------------------------------------------------------------------------
-LD100:
+Bank00CheckCutsceneFlagBit:
         sec                                     ; D100 38                       8
         sbc     #$01                            ; D101 E9 01                    ..
         pha                                     ; D103 48                       H
@@ -7563,7 +7554,8 @@ LD116:
 LD118:
         .byte   $01,$02,$04,$08,$10,$20,$40,$80 ; D118 01 02 04 08 10 20 40 80  ..... @.
 ; ----------------------------------------------------------------------------
-LD120:
+; X is rightmost 3 bits, Y is A >> 3
+Bank00SetCutsceneFlagBit:
         sec                                     ; D120 38                       8
         sbc     #$01                            ; D121 E9 01                    ..
         pha                                     ; D123 48                       H
@@ -7580,7 +7572,8 @@ LD120:
         rts                                     ; D135 60                       `
 
 ; ----------------------------------------------------------------------------
-LD136:
+; X is rightmost 3 bits, Y is A >> 3
+Bank00ClearCutsceneFlagBit:
         sec                                     ; D136 38                       8
         sbc     #$01                            ; D137 E9 01                    ..
         pha                                     ; D139 48                       H
@@ -8959,7 +8952,7 @@ LDAB7:
         jsr     L0140                           ; DAF8 20 40 01                  @.
         sta     $0A                             ; DAFB 85 0A                    ..
         lda     $07                             ; DAFD A5 07                    ..
-        jsr     LD100                           ; DAFF 20 00 D1                  ..
+        jsr     Bank00CheckCutsceneFlagBit      ; DAFF 20 00 D1                  ..
         bcc     LDB09                           ; DB02 90 05                    ..
         lda     $08                             ; DB04 A5 08                    ..
         jmp     LDB1A                           ; DB06 4C 1A DB                 L..
@@ -8967,7 +8960,7 @@ LDAB7:
 ; ----------------------------------------------------------------------------
 LDB09:
         lda     $09                             ; DB09 A5 09                    ..
-        jsr     LD100                           ; DB0B 20 00 D1                  ..
+        jsr     Bank00CheckCutsceneFlagBit      ; DB0B 20 00 D1                  ..
         bcc     LDB15                           ; DB0E 90 05                    ..
         lda     $0A                             ; DB10 A5 0A                    ..
         jmp     LDB1A                           ; DB12 4C 1A DB                 L..
@@ -8994,13 +8987,13 @@ LDB2E:
         ldy     #$04                            ; DB2E A0 04                    ..
         jsr     L0140                           ; DB30 20 40 01                  @.
         beq     LDB3A                           ; DB33 F0 05                    ..
-        jsr     LD100                           ; DB35 20 00 D1                  ..
+        jsr     Bank00CheckCutsceneFlagBit      ; DB35 20 00 D1                  ..
         bcc     LDB5B                           ; DB38 90 21                    .!
 LDB3A:
         ldy     #$09                            ; DB3A A0 09                    ..
         jsr     L0140                           ; DB3C 20 40 01                  @.
         beq     LDB44                           ; DB3F F0 03                    ..
-        jsr     LD120                           ; DB41 20 20 D1                   .
+        jsr     Bank00SetCutsceneFlagBit        ; DB41 20 20 D1                   .
 LDB44:
         ldy     #$03                            ; DB44 A0 03                    ..
         jsr     L0140                           ; DB46 20 40 01                  @.
@@ -13362,662 +13355,110 @@ LF800:
         .byte   $09,$02,$02,$00,$E0,$01,$80,$08 ; F840 09 02 02 00 E0 01 80 08  ........
         .byte   $02,$10,$06,$29,$08,$50,$04,$1C ; F848 02 10 06 29 08 50 04 1C  ...).P..
         .byte   $04,$05,$0A,$01,$03,$04,$05,$09 ; F850 04 05 0A 01 03 04 05 09  ........
-        .byte   $FF                             ; F858 FF                       .
-; ----------------------------------------------------------------------------
-        php                                     ; F859 08                       .
-        .byte   $02                             ; F85A 02                       .
-        jsr     L0A06                           ; F85B 20 06 0A                  ..
-        .byte   $02                             ; F85E 02                       .
-        .byte   $FF                             ; F85F FF                       .
-        php                                     ; F860 08                       .
-        brk                                     ; F861 00                       .
-        rti                                     ; F862 40                       @
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; F863 02                       .
-        php                                     ; F864 08                       .
-        brk                                     ; F865 00                       .
-        jsr     L0900                           ; F866 20 00 09                  ..
-        .byte   $02                             ; F869 02                       .
-        ora     L0000                           ; F86A 05 00                    ..
-        bvc     LF86F                           ; F86C 50 01                    P.
-LF86F           := * + 1
-        ldy     #$FF                            ; F86E A0 FF                    ..
+        .byte   $FF,$08,$02,$20,$06,$0A,$02,$FF ; F858 FF 08 02 20 06 0A 02 FF  ... ....
+        .byte   $08,$00,$40,$02,$08,$00,$20,$00 ; F860 08 00 40 02 08 00 20 00  ..@... .
+        .byte   $09,$02,$05,$00,$50,$01,$A0,$FF ; F868 09 02 05 00 50 01 A0 FF  ....P...
 LF870:
-        .byte   $03                             ; F870 03                       .
-        .byte   $B3                             ; F871 B3                       .
-        ora     ($08,x)                         ; F872 01 08                    ..
-        brk                                     ; F874 00                       .
-        rts                                     ; F875 60                       `
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F876 00                       .
-        bvc     LF889                           ; F877 50 10                    P.
-        asl     $B3                             ; F879 06 B3                    ..
-        ora     #$02                            ; F87B 09 02                    ..
-        .byte   $0B                             ; F87D 0B                       .
-        .byte   $FF                             ; F87E FF                       .
-        .byte   $FF                             ; F87F FF                       .
-        .byte   $FF                             ; F880 FF                       .
-        .byte   $FF                             ; F881 FF                       .
-        php                                     ; F882 08                       .
-        .byte   $02                             ; F883 02                       .
-        jsr     L0801                           ; F884 20 01 08                  ..
-        .byte   $02                             ; F887 02                       .
-LF889           := * + 1
-        bpl     LF88A                           ; F888 10 00                    ..
-LF88A:
-        ora     #$01                            ; F88A 09 01                    ..
-        ora     $FF                             ; F88C 05 FF                    ..
-        .byte   $FF                             ; F88E FF                       .
-        .byte   $FF                             ; F88F FF                       .
-        .byte   $FF                             ; F890 FF                       .
-        php                                     ; F891 08                       .
-        ora     ($40,x)                         ; F892 01 40                    .@
-        ora     ($08,x)                         ; F894 01 08                    ..
-        ora     ($80,x)                         ; F896 01 80                    ..
-        brk                                     ; F898 00                       .
-        and     #$08                            ; F899 29 08                    ).
-        lsr     $1306,x                         ; F89B 5E 06 13                 ^..
-        ora     L0000,y                         ; F89E 19 00 00                 ...
-        php                                     ; F8A1 08                       .
-        brk                                     ; F8A2 00                       .
-        rti                                     ; F8A3 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F8A4 00                       .
-        and     #$08                            ; F8A5 29 08                    ).
-        .byte   $64                             ; F8A7 64                       d
-        .byte   $03                             ; F8A8 03                       .
-        php                                     ; F8A9 08                       .
-        .byte   $02                             ; F8AA 02                       .
-        bpl     LF8AE                           ; F8AB 10 01                    ..
-        asl     a                               ; F8AD 0A                       .
-LF8AE:
-        .byte   $02                             ; F8AE 02                       .
-        .byte   $FF                             ; F8AF FF                       .
-        php                                     ; F8B0 08                       .
-        ora     ($80,x)                         ; F8B1 01 80                    ..
-        ora     ($0A,x)                         ; F8B3 01 0A                    ..
-        ora     ($FF,x)                         ; F8B5 01 FF                    ..
-        php                                     ; F8B7 08                       .
-        brk                                     ; F8B8 00                       .
-        .byte   $80                             ; F8B9 80                       .
-        .byte   $02                             ; F8BA 02                       .
-        ora     $01                             ; F8BB 05 01                    ..
-        .byte   $FF                             ; F8BD FF                       .
-LF8BE:
-        .byte   $02                             ; F8BE 02                       .
-        lda     LBA03,y                         ; F8BF B9 03 BA                 ...
-        ora     ($08,x)                         ; F8C2 01 08                    ..
-        brk                                     ; F8C4 00                       .
-        bpl     LF8C8                           ; F8C5 10 01                    ..
-        .byte   $80                             ; F8C7 80                       .
-LF8C8:
-        bpl     LF8D0                           ; F8C8 10 06                    ..
-        tsx                                     ; F8CA BA                       .
-        .byte   $27                             ; F8CB 27                       '
-        .byte   $02                             ; F8CC 02                       .
-        brk                                     ; F8CD 00                       .
-        ora     #$05                            ; F8CE 09 05                    ..
-LF8D0:
-        .byte   $02                             ; F8D0 02                       .
-        .byte   $FF                             ; F8D1 FF                       .
-        .byte   $FF                             ; F8D2 FF                       .
-        .byte   $FF                             ; F8D3 FF                       .
-        .byte   $FF                             ; F8D4 FF                       .
-        php                                     ; F8D5 08                       .
-        ora     $20                             ; F8D6 05 20                    . 
-        ora     ($08,x)                         ; F8D8 01 08                    ..
-        ora     $80                             ; F8DA 05 80                    ..
-        ora     ($08,x)                         ; F8DC 01 08                    ..
-        ora     $10                             ; F8DE 05 10                    ..
-        brk                                     ; F8E0 00                       .
-        ora     #$03                            ; F8E1 09 03                    ..
-        php                                     ; F8E3 08                       .
-        brk                                     ; F8E4 00                       .
-        bpl     LF8E8                           ; F8E5 10 01                    ..
-        .byte   $80                             ; F8E7 80                       .
-LF8E8:
-        and     #$08                            ; F8E8 29 08                    ).
-        .byte   $B3                             ; F8EA B3                       .
-        .byte   $02                             ; F8EB 02                       .
-        ora     #$04                            ; F8EC 09 04                    ..
-        .byte   $02                             ; F8EE 02                       .
-        brk                                     ; F8EF 00                       .
-        bpl     LF8F4                           ; F8F0 10 02                    ..
-        bcc     LF8FC                           ; F8F2 90 08                    ..
-LF8F4:
-        .byte   $04                             ; F8F4 04                       .
-        bpl     LF8F8                           ; F8F5 10 01                    ..
-        php                                     ; F8F7 08                       .
-LF8F8:
-        brk                                     ; F8F8 00                       .
-        rti                                     ; F8F9 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F8FA 00                       .
-        php                                     ; F8FB 08                       .
-LF8FC:
-        .byte   $04                             ; F8FC 04                       .
-        .byte   $80                             ; F8FD 80                       .
-        brk                                     ; F8FE 00                       .
-        php                                     ; F8FF 08                       .
+        .byte   $03,$B3,$01,$08,$00,$60,$00,$50 ; F870 03 B3 01 08 00 60 00 50  .....`.P
+        .byte   $10,$06,$B3,$09,$02,$0B,$FF,$FF ; F878 10 06 B3 09 02 0B FF FF  ........
+        .byte   $FF,$FF,$08,$02,$20,$01,$08,$02 ; F880 FF FF 08 02 20 01 08 02  .... ...
+        .byte   $10,$00,$09,$01,$05,$FF,$FF,$FF ; F888 10 00 09 01 05 FF FF FF  ........
+        .byte   $FF,$08,$01,$40,$01,$08,$01,$80 ; F890 FF 08 01 40 01 08 01 80  ...@....
+        .byte   $00,$29,$08,$5E,$06,$13,$19,$00 ; F898 00 29 08 5E 06 13 19 00  .).^....
+        .byte   $00,$08,$00,$40,$00,$29,$08,$64 ; F8A0 00 08 00 40 00 29 08 64  ...@.).d
+        .byte   $03,$08,$02,$10,$01,$0A,$02,$FF ; F8A8 03 08 02 10 01 0A 02 FF  ........
+        .byte   $08,$01,$80,$01,$0A,$01,$FF,$08 ; F8B0 08 01 80 01 0A 01 FF 08  ........
+        .byte   $00,$80,$02,$05,$01,$FF         ; F8B8 00 80 02 05 01 FF        ......
+ScenePartyFindsBroncoSheraBackyard:
+        .byte   $02,$B9,$03,$BA,$01,$08,$00,$10 ; F8BE 02 B9 03 BA 01 08 00 10  ........
+        .byte   $01,$80,$10,$06,$BA,$27,$02,$00 ; F8C6 01 80 10 06 BA 27 02 00  .....'..
+        .byte   $09,$05,$02,$FF,$FF,$FF,$FF,$08 ; F8CE 09 05 02 FF FF FF FF 08  ........
+        .byte   $05,$20,$01,$08,$05,$80,$01,$08 ; F8D6 05 20 01 08 05 80 01 08  . ......
+        .byte   $05,$10,$00,$09,$03,$08,$00,$10 ; F8DE 05 10 00 09 03 08 00 10  ........
+        .byte   $01,$80,$29,$08,$B3,$02,$09,$04 ; F8E6 01 80 29 08 B3 02 09 04  ..).....
+        .byte   $02,$00,$10,$02,$90,$08,$04,$10 ; F8EE 02 00 10 02 90 08 04 10  ........
+        .byte   $01,$08,$00,$40,$00,$08,$04,$80 ; F8F6 01 08 00 40 00 08 04 80  ...@....
+        .byte   $00,$08                         ; F8FE 00 08                    ..
 LF900:
-        ora     $40                             ; F900 05 40                    .@
-        brk                                     ; F902 00                       .
-        php                                     ; F903 08                       .
-        .byte   $03                             ; F904 03                       .
-        jsr     L2900                           ; F905 20 00 29                  .)
-        php                                     ; F908 08                       .
-        lda     $09,x                           ; F909 B5 09                    ..
-        php                                     ; F90B 08                       .
-        .byte   $04                             ; F90C 04                       .
-        jsr     L0801                           ; F90D 20 01 08                  ..
-        .byte   $04                             ; F910 04                       .
-        rti                                     ; F911 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F912 00                       .
-        asl     a                               ; F913 0A                       .
-        .byte   $04                             ; F914 04                       .
-        .byte   $FF                             ; F915 FF                       .
-        php                                     ; F916 08                       .
-        brk                                     ; F917 00                       .
-        rti                                     ; F918 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F919 00                       .
-        .byte   $0B                             ; F91A 0B                       .
-        .byte   $32                             ; F91B 32                       2
-        and     #$08                            ; F91C 29 08                    ).
-        ldx     $0A01,y                         ; F91E BE 01 0A                 ...
-        .byte   $03                             ; F921 03                       .
-        .byte   $FF                             ; F922 FF                       .
-        asl     a                               ; F923 0A                       .
-        ora     $FF                             ; F924 05 FF                    ..
-        .byte   $FF                             ; F926 FF                       .
+        .byte   $05,$40,$00,$08,$03,$20,$00,$29 ; F900 05 40 00 08 03 20 00 29  .@... .)
+        .byte   $08,$B5,$09,$08,$04,$20,$01,$08 ; F908 08 B5 09 08 04 20 01 08  ..... ..
+        .byte   $04,$40,$00,$0A,$04,$FF,$08,$00 ; F910 04 40 00 0A 04 FF 08 00  .@......
+        .byte   $40,$00,$0B,$32,$29,$08,$BE,$01 ; F918 40 00 0B 32 29 08 BE 01  @..2)...
+        .byte   $0A,$03,$FF,$0A,$05,$FF,$FF     ; F920 0A 03 FF 0A 05 FF FF     .......
 LF927:
-        .byte   $02                             ; F927 02                       .
-        iny                                     ; F928 C8                       .
-        .byte   $03                             ; F929 03                       .
-        cmp     #$01                            ; F92A C9 01                    ..
-        php                                     ; F92C 08                       .
-        brk                                     ; F92D 00                       .
-        rts                                     ; F92E 60                       `
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; F92F 02                       .
-        bmi     LF962                           ; F930 30 30                    00
-        asl     $C9                             ; F932 06 C9                    ..
-        .byte   $27                             ; F934 27                       '
-        .byte   $07                             ; F935 07                       .
-        .byte   $1B                             ; F936 1B                       .
-        ora     #$01                            ; F937 09 01                    ..
-        .byte   $02                             ; F939 02                       .
-        .byte   $FF                             ; F93A FF                       .
-        .byte   $FF                             ; F93B FF                       .
-        .byte   $FF                             ; F93C FF                       .
-        .byte   $FF                             ; F93D FF                       .
-        php                                     ; F93E 08                       .
-        ora     ($10,x)                         ; F93F 01 10                    ..
-        ora     ($08,x)                         ; F941 01 08                    ..
-        ora     ($80,x)                         ; F943 01 80                    ..
-        brk                                     ; F945 00                       .
-        asl     $1401                           ; F946 0E 01 14                 ...
-        brk                                     ; F949 00                       .
-        .byte   $80                             ; F94A 80                       .
-        .byte   $03                             ; F94B 03                       .
-        .byte   $0F                             ; F94C 0F                       .
-        ora     ($29,x)                         ; F94D 01 29                    .)
-        .byte   $0B                             ; F94F 0B                       .
-        php                                     ; F950 08                       .
-        .byte   $02                             ; F951 02                       .
-        .byte   $0B                             ; F952 0B                       .
-        .byte   $32                             ; F953 32                       2
-        php                                     ; F954 08                       .
-        .byte   $02                             ; F955 02                       .
-        rti                                     ; F956 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F957 00                       .
-        and     #$0B                            ; F958 29 0B                    ).
-        asl     a                               ; F95A 0A                       .
-        .byte   $04                             ; F95B 04                       .
-        .byte   $0B                             ; F95C 0B                       .
-        .byte   $32                             ; F95D 32                       2
-        php                                     ; F95E 08                       .
-        .byte   $02                             ; F95F 02                       .
-LF962           := * + 2
-        jsr     L2900                           ; F960 20 00 29                  .)
-        .byte   $0B                             ; F963 0B                       .
-        asl     $1B02                           ; F964 0E 02 1B                 ...
-        ora     $08,x                           ; F967 15 08                    ..
-        .byte   $02                             ; F969 02                       .
-        rti                                     ; F96A 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F96B 00                       .
-        and     #$0B                            ; F96C 29 0B                    ).
-        bpl     LF974                           ; F96E 10 04                    ..
-        .byte   $0B                             ; F970 0B                       .
-        .byte   $32                             ; F971 32                       2
-        php                                     ; F972 08                       .
-        .byte   $02                             ; F973 02                       .
-LF974:
-        .byte   $80                             ; F974 80                       .
-        brk                                     ; F975 00                       .
-        .byte   $0B                             ; F976 0B                       .
-        .byte   $32                             ; F977 32                       2
-        php                                     ; F978 08                       .
-        .byte   $02                             ; F979 02                       .
-        bpl     LF97D                           ; F97A 10 01                    ..
-        .byte   $0B                             ; F97C 0B                       .
-LF97D:
-        .byte   $32                             ; F97D 32                       2
-        php                                     ; F97E 08                       .
-        .byte   $02                             ; F97F 02                       .
-        bpl     LF983                           ; F980 10 01                    ..
-        .byte   $0B                             ; F982 0B                       .
-LF983:
-        .byte   $32                             ; F983 32                       2
-        php                                     ; F984 08                       .
-        .byte   $02                             ; F985 02                       .
-        .byte   $80                             ; F986 80                       .
-        brk                                     ; F987 00                       .
-        .byte   $0B                             ; F988 0B                       .
-        jsr     L0208                           ; F989 20 08 02                  ..
-        rti                                     ; F98C 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F98D 00                       .
-        .byte   $0B                             ; F98E 0B                       .
-        jsr     L0208                           ; F98F 20 08 02                  ..
-        jsr     L0B00                           ; F992 20 00 0B                  ..
-        .byte   $32                             ; F995 32                       2
-        php                                     ; F996 08                       .
-        ora     ($40,x)                         ; F997 01 40                    .@
-        brk                                     ; F999 00                       .
-        php                                     ; F99A 08                       .
-        brk                                     ; F99B 00                       .
-        bpl     LF99E                           ; F99C 10 00                    ..
-LF99E:
-        and     #$0B                            ; F99E 29 0B                    ).
-        .byte   $14                             ; F9A0 14                       .
-        .byte   $03                             ; F9A1 03                       .
-        php                                     ; F9A2 08                       .
-        brk                                     ; F9A3 00                       .
-        .byte   $80                             ; F9A4 80                       .
-        .byte   $03                             ; F9A5 03                       .
-        .byte   $0B                             ; F9A6 0B                       .
-        .byte   $32                             ; F9A7 32                       2
-        ora     L0000                           ; F9A8 05 00                    ..
-        .byte   $FF                             ; F9AA FF                       .
+        .byte   $02,$C8,$03,$C9,$01,$08,$00,$60 ; F927 02 C8 03 C9 01 08 00 60  .......`
+        .byte   $02,$30,$30,$06,$C9,$27,$07,$1B ; F92F 02 30 30 06 C9 27 07 1B  .00..'..
+        .byte   $09,$01,$02,$FF,$FF,$FF,$FF,$08 ; F937 09 01 02 FF FF FF FF 08  ........
+        .byte   $01,$10,$01,$08,$01,$80,$00,$0E ; F93F 01 10 01 08 01 80 00 0E  ........
+        .byte   $01,$14,$00,$80,$03,$0F,$01,$29 ; F947 01 14 00 80 03 0F 01 29  .......)
+        .byte   $0B,$08,$02,$0B,$32,$08,$02,$40 ; F94F 0B 08 02 0B 32 08 02 40  ....2..@
+        .byte   $00,$29,$0B,$0A,$04,$0B,$32,$08 ; F957 00 29 0B 0A 04 0B 32 08  .)....2.
+        .byte   $02,$20,$00,$29,$0B,$0E,$02,$1B ; F95F 02 20 00 29 0B 0E 02 1B  . .)....
+        .byte   $15,$08,$02,$40,$00,$29,$0B,$10 ; F967 15 08 02 40 00 29 0B 10  ...@.)..
+        .byte   $04,$0B,$32,$08,$02,$80,$00,$0B ; F96F 04 0B 32 08 02 80 00 0B  ..2.....
+        .byte   $32,$08,$02,$10,$01,$0B,$32,$08 ; F977 32 08 02 10 01 0B 32 08  2.....2.
+        .byte   $02,$10,$01,$0B,$32,$08,$02,$80 ; F97F 02 10 01 0B 32 08 02 80  ....2...
+        .byte   $00,$0B,$20,$08,$02,$40,$00,$0B ; F987 00 0B 20 08 02 40 00 0B  .. ..@..
+        .byte   $20,$08,$02,$20,$00,$0B,$32,$08 ; F98F 20 08 02 20 00 0B 32 08   .. ..2.
+        .byte   $01,$40,$00,$08,$00,$10,$00,$29 ; F997 01 40 00 08 00 10 00 29  .@.....)
+        .byte   $0B,$14,$03,$08,$00,$80,$03,$0B ; F99F 0B 14 03 08 00 80 03 0B  ........
+        .byte   $32,$05,$00,$FF                 ; F9A7 32 05 00 FF              2...
 LF9AB:
-        .byte   $02                             ; F9AB 02                       .
-        dex                                     ; F9AC CA                       .
-        .byte   $03                             ; F9AD 03                       .
-        .byte   $CB                             ; F9AE CB                       .
-        ora     ($08,x)                         ; F9AF 01 08                    ..
-        brk                                     ; F9B1 00                       .
-        bpl     LF9B4                           ; F9B2 10 00                    ..
-LF9B4:
-        .byte   $80                             ; F9B4 80                       .
-        brk                                     ; F9B5 00                       .
-        .byte   $27                             ; F9B6 27                       '
-        php                                     ; F9B7 08                       .
-        php                                     ; F9B8 08                       .
-        asl     $CB                             ; F9B9 06 CB                    ..
-        php                                     ; F9BB 08                       .
-        brk                                     ; F9BC 00                       .
-        .byte   $80                             ; F9BD 80                       .
-        brk                                     ; F9BE 00                       .
-        ora     #$01                            ; F9BF 09 01                    ..
-        .byte   $02                             ; F9C1 02                       .
-        .byte   $FF                             ; F9C2 FF                       .
-        .byte   $FF                             ; F9C3 FF                       .
-        .byte   $FF                             ; F9C4 FF                       .
-        .byte   $FF                             ; F9C5 FF                       .
-        php                                     ; F9C6 08                       .
-        ora     ($10,x)                         ; F9C7 01 10                    ..
-        ora     ($08,x)                         ; F9C9 01 08                    ..
-        ora     ($80,x)                         ; F9CB 01 80                    ..
-        brk                                     ; F9CD 00                       .
-        ora     #$02                            ; F9CE 09 02                    ..
-        .byte   $0B                             ; F9D0 0B                       .
-        .byte   $FF                             ; F9D1 FF                       .
-        .byte   $FF                             ; F9D2 FF                       .
-        .byte   $FF                             ; F9D3 FF                       .
-        .byte   $FF                             ; F9D4 FF                       .
-        php                                     ; F9D5 08                       .
-        .byte   $02                             ; F9D6 02                       .
-        jsr     L0801                           ; F9D7 20 01 08                  ..
-        .byte   $02                             ; F9DA 02                       .
-        .byte   $80                             ; F9DB 80                       .
-        brk                                     ; F9DC 00                       .
-        and     #$0B                            ; F9DD 29 0B                    ).
-        .byte   $1A                             ; F9DF 1A                       .
-        .byte   $03                             ; F9E0 03                       .
-        php                                     ; F9E1 08                       .
-        .byte   $03                             ; F9E2 03                       .
-        rti                                     ; F9E3 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F9E4 00                       .
-        and     #$0B                            ; F9E5 29 0B                    ).
-        ora     $0803,x                         ; F9E7 1D 03 08                 ...
-        .byte   $03                             ; F9EA 03                       .
-        .byte   $80                             ; F9EB 80                       .
-        brk                                     ; F9EC 00                       .
-        and     #$0B                            ; F9ED 29 0B                    ).
-        jsr     L0B03                           ; F9EF 20 03 0B                  ..
-        bmi     LF9FC                           ; F9F2 30 08                    0.
-        .byte   $03                             ; F9F4 03                       .
-        rti                                     ; F9F5 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F9F6 00                       .
-        and     #$0B                            ; F9F7 29 0B                    ).
-        .byte   $23                             ; F9F9 23                       #
-        ora     $08                             ; F9FA 05 08                    ..
-LF9FC:
-        .byte   $03                             ; F9FC 03                       .
-        .byte   $80                             ; F9FD 80                       .
-        brk                                     ; F9FE 00                       .
-LFA00           := * + 1
-        and     #$0B                            ; F9FF 29 0B                    ).
-        plp                                     ; FA01 28                       (
-        .byte   $02                             ; FA02 02                       .
-        php                                     ; FA03 08                       .
-        brk                                     ; FA04 00                       .
-        .byte   $80                             ; FA05 80                       .
-        ora     ($29,x)                         ; FA06 01 29                    .)
-        .byte   $0B                             ; FA08 0B                       .
-        rol     a                               ; FA09 2A                       *
-        ora     ($12,x)                         ; FA0A 01 12                    ..
-        .byte   $12                             ; FA0C 12                       .
-        .byte   $12                             ; FA0D 12                       .
-        ora     ($0A),y                         ; FA0E 11 0A                    ..
-        .byte   $03                             ; FA10 03                       .
-        .byte   $FF                             ; FA11 FF                       .
-        .byte   $0B                             ; FA12 0B                       .
-        jsr     L0812                           ; FA13 20 12 08                  ..
-        brk                                     ; FA16 00                       .
-        bpl     LFA19                           ; FA17 10 00                    ..
-LFA19:
-        .byte   $0B                             ; FA19 0B                       .
-        .byte   $0F                             ; FA1A 0F                       .
-        php                                     ; FA1B 08                       .
-        brk                                     ; FA1C 00                       .
-        jsr     L0B00                           ; FA1D 20 00 0B                  ..
-        .byte   $0F                             ; FA20 0F                       .
-        php                                     ; FA21 08                       .
-        brk                                     ; FA22 00                       .
-        .byte   $80                             ; FA23 80                       .
-        brk                                     ; FA24 00                       .
-        and     #$0B                            ; FA25 29 0B                    ).
-        .byte   $2B                             ; FA27 2B                       +
-        .byte   $02                             ; FA28 02                       .
-        .byte   $0B                             ; FA29 0B                       .
-        .byte   $0F                             ; FA2A 0F                       .
-        .byte   $12                             ; FA2B 12                       .
-        .byte   $12                             ; FA2C 12                       .
-        .byte   $12                             ; FA2D 12                       .
-        ora     ($0B),y                         ; FA2E 11 0B                    ..
-        bpl     LFA44                           ; FA30 10 12                    ..
-        .byte   $0B                             ; FA32 0B                       .
-        bmi     LFA3D                           ; FA33 30 08                    0.
-        brk                                     ; FA35 00                       .
-        .byte   $80                             ; FA36 80                       .
-        ora     ($29,x)                         ; FA37 01 29                    .)
-        .byte   $0B                             ; FA39 0B                       .
-        and     $0B02                           ; FA3A 2D 02 0B                 -..
-LFA3D:
-        rts                                     ; FA3D 60                       `
-
-; ----------------------------------------------------------------------------
-        and     #$0B                            ; FA3E 29 0B                    ).
-        .byte   $2F                             ; FA40 2F                       /
-        ora     ($08,x)                         ; FA41 01 08                    ..
-        .byte   $02                             ; FA43 02                       .
-LFA44:
-        .byte   $80                             ; FA44 80                       .
-        .byte   $02                             ; FA45 02                       .
-        php                                     ; FA46 08                       .
-        .byte   $02                             ; FA47 02                       .
-        bpl     LFA4A                           ; FA48 10 00                    ..
-LFA4A:
-        php                                     ; FA4A 08                       .
-        ora     ($80,x)                         ; FA4B 01 80                    ..
-        .byte   $02                             ; FA4D 02                       .
-        php                                     ; FA4E 08                       .
-        ora     ($20,x)                         ; FA4F 01 20                    . 
-        brk                                     ; FA51 00                       .
-        and     #$0B                            ; FA52 29 0B                    ).
-        bmi     LFA57                           ; FA54 30 01                    0.
-        .byte   $0B                             ; FA56 0B                       .
-LFA57:
-        bmi     LFA61                           ; FA57 30 08                    0.
-        brk                                     ; FA59 00                       .
-        rti                                     ; FA5A 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; FA5B 00                       .
-        php                                     ; FA5C 08                       .
-        brk                                     ; FA5D 00                       .
-        bpl     LFA60                           ; FA5E 10 00                    ..
-LFA60:
-        rol     a                               ; FA60 2A                       *
-LFA61:
-        brk                                     ; FA61 00                       .
-        .byte   $03                             ; FA62 03                       .
-        .byte   $0B                             ; FA63 0B                       .
-        rti                                     ; FA64 40                       @
-
-; ----------------------------------------------------------------------------
-        and     #$0B                            ; FA65 29 0B                    ).
-        and     (L0002),y                       ; FA67 31 02                    1.
-        .byte   $0B                             ; FA69 0B                       .
-        bvc     LFA7E                           ; FA6A 50 12                    P.
-        .byte   $12                             ; FA6C 12                       .
-        .byte   $12                             ; FA6D 12                       .
-        rol     a                               ; FA6E 2A                       *
-        brk                                     ; FA6F 00                       .
-        .byte   $03                             ; FA70 03                       .
-        php                                     ; FA71 08                       .
-        brk                                     ; FA72 00                       .
-        rti                                     ; FA73 40                       @
-
-; ----------------------------------------------------------------------------
-        ora     ($08,x)                         ; FA74 01 08                    ..
-        ora     ($40,x)                         ; FA76 01 40                    .@
-        brk                                     ; FA78 00                       .
-        php                                     ; FA79 08                       .
-        .byte   $02                             ; FA7A 02                       .
-        rti                                     ; FA7B 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; FA7C 00                       .
-LFA7E           := * + 1
-        and     #$0B                            ; FA7D 29 0B                    ).
-        .byte   $33                             ; FA7F 33                       3
-        .byte   $02                             ; FA80 02                       .
-        php                                     ; FA81 08                       .
-        brk                                     ; FA82 00                       .
-        .byte   $80                             ; FA83 80                       .
-        brk                                     ; FA84 00                       .
-        and     #$0B                            ; FA85 29 0B                    ).
-        and     $05,x                           ; FA87 35 05                    5.
-        php                                     ; FA89 08                       .
-        brk                                     ; FA8A 00                       .
-        bpl     LFA8F                           ; FA8B 10 02                    ..
-        php                                     ; FA8D 08                       .
-        brk                                     ; FA8E 00                       .
-LFA8F:
-        .byte   $80                             ; FA8F 80                       .
-        brk                                     ; FA90 00                       .
-        and     #$0B                            ; FA91 29 0B                    ).
-        .byte   $3A                             ; FA93 3A                       :
-        ora     ($08,x)                         ; FA94 01 08                    ..
-        ora     ($10,x)                         ; FA96 01 10                    ..
-        .byte   $02                             ; FA98 02                       .
-        php                                     ; FA99 08                       .
-        ora     ($80,x)                         ; FA9A 01 80                    ..
-        brk                                     ; FA9C 00                       .
-        php                                     ; FA9D 08                       .
-        .byte   $02                             ; FA9E 02                       .
-        bpl     LFAA3                           ; FA9F 10 02                    ..
-        php                                     ; FAA1 08                       .
-        .byte   $02                             ; FAA2 02                       .
-LFAA3:
-        .byte   $80                             ; FAA3 80                       .
-        brk                                     ; FAA4 00                       .
-        and     #$0B                            ; FAA5 29 0B                    ).
-        .byte   $3B                             ; FAA7 3B                       ;
-        .byte   $02                             ; FAA8 02                       .
-        php                                     ; FAA9 08                       .
-        .byte   $02                             ; FAAA 02                       .
-        bpl     LFAAD                           ; FAAB 10 00                    ..
-LFAAD:
-        php                                     ; FAAD 08                       .
-        ora     ($20,x)                         ; FAAE 01 20                    . 
-        brk                                     ; FAB0 00                       .
-        and     #$0B                            ; FAB1 29 0B                    ).
-        and     $1802,x                         ; FAB3 3D 02 18                 =..
-        .byte   $04                             ; FAB6 04                       .
-        .byte   $04                             ; FAB7 04                       .
-        .byte   $04                             ; FAB8 04                       .
-        .byte   $04                             ; FAB9 04                       .
-        .byte   $04                             ; FABA 04                       .
-        .byte   $04                             ; FABB 04                       .
-        php                                     ; FABC 08                       .
-        brk                                     ; FABD 00                       .
-        rti                                     ; FABE 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; FABF 00                       .
-        and     #$0B                            ; FAC0 29 0B                    ).
-        .byte   $3F                             ; FAC2 3F                       ?
-        ora     ($08,x)                         ; FAC3 01 08                    ..
-        .byte   $02                             ; FAC5 02                       .
-        rti                                     ; FAC6 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; FAC7 00                       .
-        php                                     ; FAC8 08                       .
-        ora     ($40,x)                         ; FAC9 01 40                    .@
-        brk                                     ; FACB 00                       .
-        and     #$0B                            ; FACC 29 0B                    ).
-        rti                                     ; FACE 40                       @
-
-; ----------------------------------------------------------------------------
-        ora     ($13,x)                         ; FACF 01 13                    ..
-        and     (L0000,x)                       ; FAD1 21 00                    !.
-        inc     $030A,x                         ; FAD3 FE 0A 03                 ...
-        .byte   $FF                             ; FAD6 FF                       .
-        .byte   $12                             ; FAD7 12                       .
-        php                                     ; FAD8 08                       .
-        brk                                     ; FAD9 00                       .
-        bpl     LFADF                           ; FADA 10 03                    ..
-        php                                     ; FADC 08                       .
-        ora     ($10,x)                         ; FADD 01 10                    ..
-LFADF:
-        .byte   $02                             ; FADF 02                       .
-        php                                     ; FAE0 08                       .
-        .byte   $02                             ; FAE1 02                       .
-        rti                                     ; FAE2 40                       @
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; FAE3 02                       .
-        php                                     ; FAE4 08                       .
-        .byte   $02                             ; FAE5 02                       .
-        bpl     LFAEC                           ; FAE6 10 04                    ..
-        and     #$0B                            ; FAE8 29 0B                    ).
-        eor     ($06,x)                         ; FAEA 41 06                    A.
-LFAEC:
-        clc                                     ; FAEC 18                       .
-        .byte   $04                             ; FAED 04                       .
-        .byte   $04                             ; FAEE 04                       .
-        .byte   $04                             ; FAEF 04                       .
-        .byte   $04                             ; FAF0 04                       .
-        .byte   $04                             ; FAF1 04                       .
-        .byte   $04                             ; FAF2 04                       .
-        and     #$0B                            ; FAF3 29 0B                    ).
-        .byte   $47                             ; FAF5 47                       G
-        ora     ($08,x)                         ; FAF6 01 08                    ..
-        .byte   $02                             ; FAF8 02                       .
-        jsr     L2903                           ; FAF9 20 03 29                  .)
-        .byte   $0B                             ; FAFC 0B                       .
-        pha                                     ; FAFD 48                       H
-        .byte   $02                             ; FAFE 02                       .
-        php                                     ; FAFF 08                       .
+        .byte   $02,$CA,$03,$CB,$01,$08,$00,$10 ; F9AB 02 CA 03 CB 01 08 00 10  ........
+        .byte   $00,$80,$00,$27,$08,$08,$06,$CB ; F9B3 00 80 00 27 08 08 06 CB  ...'....
+        .byte   $08,$00,$80,$00,$09,$01,$02,$FF ; F9BB 08 00 80 00 09 01 02 FF  ........
+        .byte   $FF,$FF,$FF,$08,$01,$10,$01,$08 ; F9C3 FF FF FF 08 01 10 01 08  ........
+        .byte   $01,$80,$00,$09,$02,$0B,$FF,$FF ; F9CB 01 80 00 09 02 0B FF FF  ........
+        .byte   $FF,$FF,$08,$02,$20,$01,$08,$02 ; F9D3 FF FF 08 02 20 01 08 02  .... ...
+        .byte   $80,$00,$29,$0B,$1A,$03,$08,$03 ; F9DB 80 00 29 0B 1A 03 08 03  ..).....
+        .byte   $40,$00,$29,$0B,$1D,$03,$08,$03 ; F9E3 40 00 29 0B 1D 03 08 03  @.).....
+        .byte   $80,$00,$29,$0B,$20,$03,$0B,$30 ; F9EB 80 00 29 0B 20 03 0B 30  ..). ..0
+        .byte   $08,$03,$40,$00,$29,$0B,$23,$05 ; F9F3 08 03 40 00 29 0B 23 05  ..@.).#.
+        .byte   $08,$03,$80,$00,$29             ; F9FB 08 03 80 00 29           ....)
+LFA00:
+        .byte   $0B,$28,$02,$08,$00,$80,$01,$29 ; FA00 0B 28 02 08 00 80 01 29  .(.....)
+        .byte   $0B,$2A,$01,$12,$12,$12,$11,$0A ; FA08 0B 2A 01 12 12 12 11 0A  .*......
+        .byte   $03,$FF,$0B,$20,$12,$08,$00,$10 ; FA10 03 FF 0B 20 12 08 00 10  ... ....
+        .byte   $00,$0B,$0F,$08,$00,$20,$00,$0B ; FA18 00 0B 0F 08 00 20 00 0B  ..... ..
+        .byte   $0F,$08,$00,$80,$00,$29,$0B,$2B ; FA20 0F 08 00 80 00 29 0B 2B  .....).+
+        .byte   $02,$0B,$0F,$12,$12,$12,$11,$0B ; FA28 02 0B 0F 12 12 12 11 0B  ........
+        .byte   $10,$12,$0B,$30,$08,$00,$80,$01 ; FA30 10 12 0B 30 08 00 80 01  ...0....
+        .byte   $29,$0B,$2D,$02,$0B,$60,$29,$0B ; FA38 29 0B 2D 02 0B 60 29 0B  ).-..`).
+        .byte   $2F,$01,$08,$02,$80,$02,$08,$02 ; FA40 2F 01 08 02 80 02 08 02  /.......
+        .byte   $10,$00,$08,$01,$80,$02,$08,$01 ; FA48 10 00 08 01 80 02 08 01  ........
+        .byte   $20,$00,$29,$0B,$30,$01,$0B,$30 ; FA50 20 00 29 0B 30 01 0B 30   .).0..0
+        .byte   $08,$00,$40,$00,$08,$00,$10,$00 ; FA58 08 00 40 00 08 00 10 00  ..@.....
+        .byte   $2A,$00,$03,$0B,$40,$29,$0B,$31 ; FA60 2A 00 03 0B 40 29 0B 31  *...@).1
+        .byte   $02,$0B,$50,$12,$12,$12,$2A,$00 ; FA68 02 0B 50 12 12 12 2A 00  ..P...*.
+        .byte   $03,$08,$00,$40,$01,$08,$01,$40 ; FA70 03 08 00 40 01 08 01 40  ...@...@
+        .byte   $00,$08,$02,$40,$00,$29,$0B,$33 ; FA78 00 08 02 40 00 29 0B 33  ...@.).3
+        .byte   $02,$08,$00,$80,$00,$29,$0B,$35 ; FA80 02 08 00 80 00 29 0B 35  .....).5
+        .byte   $05,$08,$00,$10,$02,$08,$00,$80 ; FA88 05 08 00 10 02 08 00 80  ........
+        .byte   $00,$29,$0B,$3A,$01,$08,$01,$10 ; FA90 00 29 0B 3A 01 08 01 10  .).:....
+        .byte   $02,$08,$01,$80,$00,$08,$02,$10 ; FA98 02 08 01 80 00 08 02 10  ........
+        .byte   $02,$08,$02,$80,$00,$29,$0B,$3B ; FAA0 02 08 02 80 00 29 0B 3B  .....).;
+        .byte   $02,$08,$02,$10,$00,$08,$01,$20 ; FAA8 02 08 02 10 00 08 01 20  ....... 
+        .byte   $00,$29,$0B,$3D,$02,$18,$04,$04 ; FAB0 00 29 0B 3D 02 18 04 04  .).=....
+        .byte   $04,$04,$04,$04,$08,$00,$40,$00 ; FAB8 04 04 04 04 08 00 40 00  ......@.
+        .byte   $29,$0B,$3F,$01,$08,$02,$40,$00 ; FAC0 29 0B 3F 01 08 02 40 00  ).?...@.
+        .byte   $08,$01,$40,$00,$29,$0B,$40,$01 ; FAC8 08 01 40 00 29 0B 40 01  ..@.).@.
+        .byte   $13,$21,$00,$FE,$0A,$03,$FF,$12 ; FAD0 13 21 00 FE 0A 03 FF 12  .!......
+        .byte   $08,$00,$10,$03,$08,$01,$10,$02 ; FAD8 08 00 10 03 08 01 10 02  ........
+        .byte   $08,$02,$40,$02,$08,$02,$10,$04 ; FAE0 08 02 40 02 08 02 10 04  ..@.....
+        .byte   $29,$0B,$41,$06,$18,$04,$04,$04 ; FAE8 29 0B 41 06 18 04 04 04  ).A.....
+        .byte   $04,$04,$04,$29,$0B,$47,$01,$08 ; FAF0 04 04 04 29 0B 47 01 08  ...).G..
+        .byte   $02,$20,$03,$29,$0B,$48,$02,$08 ; FAF8 02 20 03 29 0B 48 02 08  . .).H..
 LFB00:
-        .byte   $02                             ; FB00 02                       .
-        bpl     LFB06                           ; FB01 10 03                    ..
-        php                                     ; FB03 08                       .
-        .byte   $02                             ; FB04 02                       .
-        .byte   $80                             ; FB05 80                       .
-LFB06:
-        brk                                     ; FB06 00                       .
-        php                                     ; FB07 08                       .
-        brk                                     ; FB08 00                       .
-        rti                                     ; FB09 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; FB0A 00                       .
-        php                                     ; FB0B 08                       .
-        ora     ($40,x)                         ; FB0C 01 40                    .@
-        brk                                     ; FB0E 00                       .
-        and     #$0B                            ; FB0F 29 0B                    ).
-        lsr     a                               ; FB11 4A                       J
-        .byte   $0C                             ; FB12 0C                       .
-        ora     #$04                            ; FB13 09 04                    ..
-        .byte   $02                             ; FB15 02                       .
-        .byte   $FF                             ; FB16 FF                       .
-        .byte   $FF                             ; FB17 FF                       .
-        .byte   $FF                             ; FB18 FF                       .
-        .byte   $FF                             ; FB19 FF                       .
-        php                                     ; FB1A 08                       .
-        .byte   $04                             ; FB1B 04                       .
-        jsr     L0802                           ; FB1C 20 02 08                  ..
-        .byte   $04                             ; FB1F 04                       .
-        bpl     LFB22                           ; FB20 10 00                    ..
-LFB22:
-        php                                     ; FB22 08                       .
-        brk                                     ; FB23 00                       .
-        jsr     L0800                           ; FB24 20 00 08                  ..
-        ora     ($20,x)                         ; FB27 01 20                    . 
-        brk                                     ; FB29 00                       .
-        php                                     ; FB2A 08                       .
-        .byte   $02                             ; FB2B 02                       .
-        jsr     L2900                           ; FB2C 20 00 29                  .)
-        .byte   $0B                             ; FB2F 0B                       .
-        lsr     $05,x                           ; FB30 56 05                    V.
-        php                                     ; FB32 08                       .
-        ora     ($40,x)                         ; FB33 01 40                    .@
-        ora     ($0A,x)                         ; FB35 01 0A                    ..
-        ora     ($FF,x)                         ; FB37 01 FF                    ..
-        php                                     ; FB39 08                       .
-        .byte   $02                             ; FB3A 02                       .
-        .byte   $80                             ; FB3B 80                       .
-        ora     ($0A,x)                         ; FB3C 01 0A                    ..
-        .byte   $02                             ; FB3E 02                       .
-        .byte   $FF                             ; FB3F FF                       .
-        php                                     ; FB40 08                       .
-        brk                                     ; FB41 00                       .
-        rti                                     ; FB42 40                       @
-
-; ----------------------------------------------------------------------------
-        ora     ($08,x)                         ; FB43 01 08                    ..
-        brk                                     ; FB45 00                       .
-        jsr     L1F0C                           ; FB46 20 0C 1F                  ..
-        ora     $08                             ; FB49 05 08                    ..
-        brk                                     ; FB4B 00                       .
-        rti                                     ; FB4C 40                       @
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; FB4D 02                       .
-        ora     L0000                           ; FB4E 05 00                    ..
+        .byte   $02,$10,$03,$08,$02,$80,$00,$08 ; FB00 02 10 03 08 02 80 00 08  ........
+        .byte   $00,$40,$00,$08,$01,$40,$00,$29 ; FB08 00 40 00 08 01 40 00 29  .@...@.)
+        .byte   $0B,$4A,$0C,$09,$04,$02,$FF,$FF ; FB10 0B 4A 0C 09 04 02 FF FF  .J......
+        .byte   $FF,$FF,$08,$04,$20,$02,$08,$04 ; FB18 FF FF 08 04 20 02 08 04  .... ...
+        .byte   $10,$00,$08,$00,$20,$00,$08,$01 ; FB20 10 00 08 00 20 00 08 01  .... ...
+        .byte   $20,$00,$08,$02,$20,$00,$29,$0B ; FB28 20 00 08 02 20 00 29 0B   ... .).
+        .byte   $56,$05,$08,$01,$40,$01,$0A,$01 ; FB30 56 05 08 01 40 01 0A 01  V...@...
+        .byte   $FF,$08,$02,$80,$01,$0A,$02,$FF ; FB38 FF 08 02 80 01 0A 02 FF  ........
+        .byte   $08,$00,$40,$01,$08,$00,$20,$0C ; FB40 08 00 40 01 08 00 20 0C  ..@... .
+        .byte   $1F,$05,$08,$00,$40,$02,$05,$00 ; FB48 1F 05 08 00 40 02 05 00  ....@...
         .byte   $FF                             ; FB50 FF                       .
 SceneCloudSetsSector7Bomb:
         .byte   $03,$08,$01,$08,$00,$60,$00,$80 ; FB51 03 08 01 08 00 60 00 80  .....`..

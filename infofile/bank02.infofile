@@ -116,6 +116,11 @@ LABEL {
   Comment "1st param index in bank array, rest of params is a variable list of dialog ids and terminates in 0xFF";
 };
 LABEL {
+  NAME "Bank02ScriptOpcode06_SetSceneFlag";
+  ADDR  $8DD9;
+  Comment "1st param is bit index starting from rightmost bit";
+};
+LABEL {
   NAME "Bank02ScriptOpcode08_MoveSprite";
   ADDR  $8DF1;
 };
@@ -220,6 +225,43 @@ LABEL {
 LABEL {
   NAME "SceneCloudEncounterTurksGongaga";
   ADDR  $CB01;
+};
+LABEL {
+  NAME "SceneCloudAndTifaEnterNibelheim";
+  ADDR  $CE6C;
+};
+LABEL {
+  NAME "SceneCloudFindsSephirothNibelheimMansion";
+  ADDR  $CE99;
+};
+LABEL {
+  NAME "SceneFirstTimeEnteringRocketTown";
+  ADDR  $CEA9;
+};
+LABEL {
+  NAME "SceneCloudEntersRocketFindsCaptain";
+  ADDR  $CED2;
+};
+LABEL {
+  NAME "SceneCloudFindsTurksWantBronco";
+  ADDR  $F05F;
+};
+LABEL {
+  NAME "SceneCloudFindsPalmerInSheraBackyard";
+  ADDR  $F096;
+};
+LABEL {
+  NAME "ScenePartyInBroncoShipOutsideRocketTown";
+  ADDR  $D00C;
+};
+LABEL {
+  NAME "Bank02CheckCutsceneFlagBit";
+  ADDR $E00C;
+};
+LABEL {
+  NAME "Bank02SetCutsceneFlagBit";
+  ADDR $E02C;
+  Comment "X is rightmost 3 bits, Y is A >> 3";
 };
 LABEL {
   NAME "Bank02ScreenRefresh";

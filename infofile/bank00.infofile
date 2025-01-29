@@ -270,7 +270,7 @@ RANGE {
 RANGE {
   START $F859;
   END $FB50;
-  TYPE CODE;
+  TYPE BYTETABLE;
 };
 RANGE {
   START $FB51;
@@ -346,13 +346,31 @@ LABEL {
   ADDR  $888A;
 };
 LABEL {
+  NAME "Bank00LoadNextScriptOpcode";
+  ADDR  $88D9;
+};
+LABEL {
   NAME "Bank00ScriptOpcodeTable";
   ADDR  $8919;
+};
+LABEL {
+  NAME "Bank00ScriptOpcode03_CheckSceneFlag";
+  ADDR  $8A44;
 };
 LABEL {
   NAME "Bank00ScriptOpcode04_ShowDialogIdList";
   ADDR  $8A53;
   Comment "1st param index in bank array, rest of params is a variable list of dialog ids and terminates in 0xFF";
+};
+LABEL {
+  NAME "Bank00ScriptOpcode06_SetSceneFlag";
+  ADDR  $8A89;
+  Comment "1st param is bit index starting from rightmost bit";
+};
+LABEL {
+  NAME "Bank00ScriptOpcode07_ClearSceneFlag";
+  ADDR  $8A95;
+  Comment "1st param is bit index starting from rightmost bit";
 };
 LABEL {
   NAME "Bank00ScriptOpcode08_MoveSprite";
@@ -392,6 +410,34 @@ LABEL {
   ADDR  $A44D;
 };
 LABEL {
+  NAME "SceneCloudSetsCodeForTopLeftSwitch";
+  ADDR  $A62D;
+};
+LABEL {
+  NAME "SceneCloudSetsCodeForMiddleLeftSwitch";
+  ADDR  $A63E;
+};
+LABEL {
+  NAME "SceneCloudSetsCodeForTopRightSwitch";
+  ADDR  $A64F;
+};
+LABEL {
+  NAME "SceneCloudSetsCodeForMiddleRightSwitch";
+  ADDR  $A660;
+};
+LABEL {
+  NAME "SceneCloudSetsCodeForBottomLeftSwitch";
+  ADDR  $A671;
+};
+LABEL {
+  NAME "SceneCloudSetsCodeForBottomRightSwitch";
+  ADDR  $A682;
+};
+LABEL {
+  NAME "SceneAllSwitchesHaveCodeAndGateUnlocked";
+  ADDR  $A693;
+};
+LABEL {
   NAME "ScenePresidentShinraMakoReactor";
   ADDR  $A6B8;
 };
@@ -420,6 +466,18 @@ LABEL {
   ADDR  $FF41;
 };
 LABEL {
+  NAME "ScenePartyFindsBroncoSheraBackyard";
+  ADDR  $F8BE;
+};
+LABEL {
+  NAME "SceneCloudReturnsSheraHouseAfterMeetingCaptain";
+  ADDR  $C2B9;
+};
+LABEL {
+  NAME "SceneTalkToKidGetSnowboard";
+  ADDR  $C9CE;
+};
+LABEL {
   NAME "Bank00SceneScriptTable";
   ADDR  $CC51;
 };
@@ -435,6 +493,20 @@ LABEL {
 LABEL {
   NAME "RestorePartyMemberHealth";
   ADDR $9434;
+};
+LABEL {
+  NAME "Bank00CheckCutsceneFlagBit";
+  ADDR $D100;
+};
+LABEL {
+  NAME "Bank00SetCutsceneFlagBit";
+  ADDR $D120;
+  Comment "X is rightmost 3 bits, Y is A >> 3";
+};
+LABEL {
+  NAME "Bank00ClearCutsceneFlagBit";
+  ADDR $D136;
+  Comment "X is rightmost 3 bits, Y is A >> 3";
 };
 LABEL {
   NAME "PlayerGetsKeyItem";

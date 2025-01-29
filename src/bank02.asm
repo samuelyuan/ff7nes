@@ -2082,7 +2082,7 @@ Bank02ScriptOpcodeTable:
         .addr   L8D94                           ; 8C6F 94 8D                    ..
         .addr   Bank02ScriptOpcode04_ShowDialogIdList; 8C71 A3 8D               ..
         .addr   L8DCD                           ; 8C73 CD 8D                    ..
-        .addr   L8DD9                           ; 8C75 D9 8D                    ..
+        .addr   Bank02ScriptOpcode06_SetSceneFlag; 8C75 D9 8D                   ..
         .addr   L8DE5                           ; 8C77 E5 8D                    ..
         .addr   Bank02ScriptOpcode08_MoveSprite ; 8C79 F1 8D                    ..
         .addr   L8E6F                           ; 8C7B 6F 8E                    o.
@@ -2239,7 +2239,7 @@ L8D84:
 Bank02ScriptOpcode02:
         ldy     #$01                            ; 8D85 A0 01                    ..
         lda     ($A7),y                         ; 8D87 B1 A7                    ..
-        jsr     LE00C                           ; 8D89 20 0C E0                  ..
+        jsr     Bank02CheckCutsceneFlagBit      ; 8D89 20 0C E0                  ..
         bcc     L8D93                           ; 8D8C 90 05                    ..
         lda     #$02                            ; 8D8E A9 02                    ..
         jmp     Bank02LoadNextScriptOpcode      ; 8D90 4C 29 8C                 L).
@@ -2252,7 +2252,7 @@ L8D93:
 L8D94:
         ldy     #$01                            ; 8D94 A0 01                    ..
         lda     ($A7),y                         ; 8D96 B1 A7                    ..
-        jsr     LE00C                           ; 8D98 20 0C E0                  ..
+        jsr     Bank02CheckCutsceneFlagBit      ; 8D98 20 0C E0                  ..
         bcs     L8DA2                           ; 8D9B B0 05                    ..
         lda     #$02                            ; 8D9D A9 02                    ..
         jmp     Bank02LoadNextScriptOpcode      ; 8D9F 4C 29 8C                 L).
@@ -2300,10 +2300,11 @@ L8DCD:
         jmp     Bank02LoadNextScriptOpcode      ; 8DD6 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-L8DD9:
+; 1st param is bit index starting from rightmost bit
+Bank02ScriptOpcode06_SetSceneFlag:
         ldy     #$01                            ; 8DD9 A0 01                    ..
         lda     ($A7),y                         ; 8DDB B1 A7                    ..
-        jsr     LE02C                           ; 8DDD 20 2C E0                  ,.
+        jsr     Bank02SetCutsceneFlagBit        ; 8DDD 20 2C E0                  ,.
         lda     #$02                            ; 8DE0 A9 02                    ..
         jmp     Bank02LoadNextScriptOpcode      ; 8DE2 4C 29 8C                 L).
 
@@ -3413,11 +3414,11 @@ L948F:
 L949B:
         ldy     #$01                            ; 949B A0 01                    ..
         lda     ($A7),y                         ; 949D B1 A7                    ..
-        jsr     LE00C                           ; 949F 20 0C E0                  ..
+        jsr     Bank02CheckCutsceneFlagBit      ; 949F 20 0C E0                  ..
         bcs     L94CB                           ; 94A2 B0 27                    .'
         ldy     #$01                            ; 94A4 A0 01                    ..
         lda     ($A7),y                         ; 94A6 B1 A7                    ..
-        jsr     LE02C                           ; 94A8 20 2C E0                  ,.
+        jsr     Bank02SetCutsceneFlagBit        ; 94A8 20 2C E0                  ,.
         ldy     #$02                            ; 94AB A0 02                    ..
         lda     ($A7),y                         ; 94AD B1 A7                    ..
         sta     $56                             ; 94AF 85 56                    .V
@@ -3663,7 +3664,7 @@ L9619:
 L9625:
         ldy     #$01                            ; 9625 A0 01                    ..
         lda     ($A7),y                         ; 9627 B1 A7                    ..
-        jsr     LE00C                           ; 9629 20 0C E0                  ..
+        jsr     Bank02CheckCutsceneFlagBit      ; 9629 20 0C E0                  ..
         bcs     L9636                           ; 962C B0 08                    ..
         ldy     #$02                            ; 962E A0 02                    ..
         lda     ($A7),y                         ; 9630 B1 A7                    ..
@@ -3689,7 +3690,7 @@ L9647:
         lda     ($A7),y                         ; 964B B1 A7                    ..
         cmp     #$FF                            ; 964D C9 FF                    ..
         beq     L965A                           ; 964F F0 09                    ..
-        jsr     LE00C                           ; 9651 20 0C E0                  ..
+        jsr     Bank02CheckCutsceneFlagBit      ; 9651 20 0C E0                  ..
         bcc     L9647                           ; 9654 90 F1                    ..
         inc     $07                             ; 9656 E6 07                    ..
         bne     L9647                           ; 9658 D0 ED                    ..
@@ -3791,7 +3792,7 @@ L96E0:
         lda     ($A7),y                         ; 96E4 B1 A7                    ..
         cmp     #$FF                            ; 96E6 C9 FF                    ..
         beq     L96F3                           ; 96E8 F0 09                    ..
-        jsr     LE00C                           ; 96EA 20 0C E0                  ..
+        jsr     Bank02CheckCutsceneFlagBit      ; 96EA 20 0C E0                  ..
         bcc     L96E0                           ; 96ED 90 F1                    ..
         inc     $07                             ; 96EF E6 07                    ..
         bne     L96E0                           ; 96F1 D0 ED                    ..
@@ -5447,14 +5448,14 @@ L9DBD:
 ; ----------------------------------------------------------------------------
 L9DBE:
         lda     #$1A                            ; 9DBE A9 1A                    ..
-        jsr     LE00C                           ; 9DC0 20 0C E0                  ..
+        jsr     Bank02CheckCutsceneFlagBit      ; 9DC0 20 0C E0                  ..
         bcs     L9DC6                           ; 9DC3 B0 01                    ..
         rts                                     ; 9DC5 60                       `
 
 ; ----------------------------------------------------------------------------
 L9DC6:
         lda     #$1B                            ; 9DC6 A9 1B                    ..
-        jsr     LE00C                           ; 9DC8 20 0C E0                  ..
+        jsr     Bank02CheckCutsceneFlagBit      ; 9DC8 20 0C E0                  ..
         bcc     L9DCE                           ; 9DCB 90 01                    ..
         rts                                     ; 9DCD 60                       `
 
@@ -6997,7 +6998,7 @@ LA4BA:
 
 ; ----------------------------------------------------------------------------
 LA4BE:
-        jsr     LE00C                           ; A4BE 20 0C E0                  ..
+        jsr     Bank02CheckCutsceneFlagBit      ; A4BE 20 0C E0                  ..
         rts                                     ; A4C1 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -8777,7 +8778,7 @@ LCE4B:
         .byte   $01,$80,$09,$05,$03,$01,$A0,$01 ; CE5B 01 80 09 05 03 01 A0 01  ........
         .byte   $70,$09,$09,$00,$01,$90,$01,$60 ; CE63 70 09 09 00 01 90 01 60  p......`
         .byte   $FF                             ; CE6B FF                       .
-LCE6C:
+SceneCloudAndTifaEnterNibelheim:
         .byte   $03,$B7,$06,$B7,$08,$00,$80,$04 ; CE6C 03 B7 06 B7 08 00 80 04  ........
         .byte   $09,$01,$02,$FF,$FF,$FF,$FF,$08 ; CE74 09 01 02 FF FF FF FF 08  ........
         .byte   $01,$10,$01,$08,$01,$20,$00,$29 ; CE7C 01 10 01 08 01 20 00 29  ..... .)
@@ -8786,10 +8787,10 @@ LCE6C:
 LCE8F:
         .byte   $03,$B8,$09,$02,$05,$00,$70,$00 ; CE8F 03 B8 09 02 05 00 70 00  ......p.
         .byte   $70,$FF                         ; CE97 70 FF                    p.
-LCE99:
+SceneCloudFindsSephirothNibelheimMansion:
         .byte   $03,$B8,$06,$B8,$08,$00,$80,$03 ; CE99 03 B8 06 B8 08 00 80 03  ........
         .byte   $29,$08,$A1,$07,$0A,$02,$FF,$FF ; CEA1 29 08 A1 07 0A 02 FF FF  ).......
-LCEA9:
+SceneFirstTimeEnteringRocketTown:
         .byte   $02,$B6,$03,$B9,$06,$B9,$08,$00 ; CEA9 02 B6 03 B9 06 B9 08 00  ........
         .byte   $80,$02,$29,$08,$A8,$01,$0F,$00 ; CEB1 80 02 29 08 A8 01 0F 00  ..).....
         .byte   $0C,$80,$1E,$29,$08,$A9,$01,$0C ; CEB9 0C 80 1E 29 08 A9 01 0C  ...)....
@@ -8797,7 +8798,7 @@ LCEA9:
 LCEC6:
         .byte   $02,$BA,$03,$BC,$09,$01,$05,$00 ; CEC6 02 BA 03 BC 09 01 05 00  ........
         .byte   $70,$05,$00,$FF                 ; CECE 70 05 00 FF              p...
-LCED2:
+SceneCloudEntersRocketFindsCaptain:
         .byte   $02,$BA,$03,$BB,$06,$BB,$08,$00 ; CED2 02 BA 03 BB 06 BB 08 00  ........
         .byte   $80,$05,$29,$08,$BF,$08,$08,$01 ; CEDA 80 05 29 08 BF 08 08 01  ..).....
         .byte   $10,$02,$08,$01,$20,$04,$08,$01 ; CEE2 10 02 08 01 20 04 08 01  .... ...
@@ -8845,7 +8846,7 @@ LCF92:
         .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; CFFA 30 30 30 30 30 30 30 30  00000000
         .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; D002 30 30 30 30 30 30 30 30  00000000
         .byte   $30,$FF                         ; D00A 30 FF                    0.
-LD00C:
+ScenePartyInBroncoShipOutsideRocketTown:
         .byte   $02,$BE,$03,$BF,$06,$BF,$2A,$00 ; D00C 02 BE 03 BF 06 BF 2A 00  ......*.
         .byte   $04,$1C,$06,$05,$FF             ; D014 04 1C 06 05 FF           .....
 LD019:
@@ -9324,20 +9325,20 @@ Bank02SceneScriptTable:
         .addr   SceneRedXIIIAndSeto             ; D89D 34 EC                    4.
         .addr   LCE38                           ; D89F 38 CE                    8.
         .addr   LCE4B                           ; D8A1 4B CE                    K.
-        .addr   LCE6C                           ; D8A3 6C CE                    l.
+        .addr   SceneCloudAndTifaEnterNibelheim ; D8A3 6C CE                    l.
         .addr   LCE8F                           ; D8A5 8F CE                    ..
-        .addr   LCE99                           ; D8A7 99 CE                    ..
-        .addr   LCEA9                           ; D8A9 A9 CE                    ..
+        .addr   SceneCloudFindsSephirothNibelheimMansion; D8A7 99 CE            ..
+        .addr   SceneFirstTimeEnteringRocketTown; D8A9 A9 CE                    ..
         .addr   LCEC6                           ; D8AB C6 CE                    ..
-        .addr   LCED2                           ; D8AD D2 CE                    ..
+        .addr   SceneCloudEntersRocketFindsCaptain; D8AD D2 CE                  ..
         .addr   LCF09                           ; D8AF 09 CF                    ..
-        .addr   LF05F                           ; D8B1 5F F0                    _.
+        .addr   SceneCloudFindsTurksWantBronco  ; D8B1 5F F0                    _.
         .addr   LCF4D                           ; D8B3 4D CF                    M.
         .addr   LCF59                           ; D8B5 59 CF                    Y.
         .addr   LCF78                           ; D8B7 78 CF                    x.
-        .addr   LF096                           ; D8B9 96 F0                    ..
+        .addr   SceneCloudFindsPalmerInSheraBackyard; D8B9 96 F0                ..
         .addr   LCF92                           ; D8BB 92 CF                    ..
-        .addr   LD00C                           ; D8BD 0C D0                    ..
+        .addr   ScenePartyInBroncoShipOutsideRocketTown; D8BD 0C D0             ..
         .addr   LD019                           ; D8BF 19 D0                    ..
         .addr   LD11A                           ; D8C1 1A D1                    ..
         .addr   LD126                           ; D8C3 26 D1                    &.
@@ -9831,7 +9832,7 @@ LE009:
 LE00A:
         .byte   $FF,$FF                         ; E00A FF FF                    ..
 ; ----------------------------------------------------------------------------
-LE00C:
+Bank02CheckCutsceneFlagBit:
         sec                                     ; E00C 38                       8
         sbc     #$01                            ; E00D E9 01                    ..
         pha                                     ; E00F 48                       H
@@ -9857,7 +9858,8 @@ LE022:
 LE024:
         .byte   $01,$02,$04,$08,$10,$20,$40,$80 ; E024 01 02 04 08 10 20 40 80  ..... @.
 ; ----------------------------------------------------------------------------
-LE02C:
+; X is rightmost 3 bits, Y is A >> 3
+Bank02SetCutsceneFlagBit:
         sec                                     ; E02C 38                       8
         sbc     #$01                            ; E02D E9 01                    ..
         pha                                     ; E02F 48                       H
@@ -11934,7 +11936,7 @@ LEE3D:
         .byte   $0C,$F5,$01,$0B,$32,$29,$0C,$F6 ; F04D 0C F5 01 0B 32 29 0C F6  ....2)..
         .byte   $01,$12,$12,$12,$11,$0B,$32,$05 ; F055 01 12 12 12 11 0B 32 05  ......2.
         .byte   $00,$FF                         ; F05D 00 FF                    ..
-LF05F:
+SceneCloudFindsTurksWantBronco:
         .byte   $02,$BC,$03,$BD,$06,$BD,$08,$00 ; F05F 02 BC 03 BD 06 BD 08 00  ........
         .byte   $40,$01,$08,$00,$10,$00,$29,$08 ; F067 40 01 08 00 10 00 29 08  @.....).
         .byte   $E6,$04,$09,$04,$04,$00,$10,$01 ; F06F E6 04 09 04 04 00 10 01  ........
@@ -11942,7 +11944,7 @@ LF05F:
         .byte   $01,$08,$00,$80,$00,$29,$08,$EB ; F07F 01 08 00 80 00 29 08 EB  .....)..
         .byte   $01,$08,$04,$80,$01,$0A,$04,$FF ; F087 01 08 04 80 01 0A 04 FF  ........
         .byte   $08,$00,$80,$02,$05,$00,$FF     ; F08F 08 00 80 02 05 00 FF     .......
-LF096:
+SceneCloudFindsPalmerInSheraBackyard:
         .byte   $02,$BD,$03,$BE,$06,$BE,$08,$00 ; F096 02 BD 03 BE 06 BE 08 00  ........
         .byte   $80,$00,$0B,$1E,$29,$08,$EE,$01 ; F09E 80 00 0B 1E 29 08 EE 01  ....)...
         .byte   $08,$00,$80,$01,$08,$00,$80,$00 ; F0A6 08 00 80 01 08 00 80 00  ........
