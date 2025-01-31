@@ -11,10 +11,8 @@ L0400           := $0400
 L06D0           := $06D0
 L06E0           := $06E0
 L06F0           := $06F0
-L0B00           := $0B00
 L1100           := $1100
 L2020           := $2020
-L2900           := $2900
 L6800           := $6800
 ; ----------------------------------------------------------------------------
 L8000:
@@ -1428,41 +1426,41 @@ ScrollBufferScreenRightOverworld:
         rts                                     ; 889B 60                       `
 
 ; ----------------------------------------------------------------------------
-L889C:
+Bank00LoadSceneJumpTablePart1:
         cmp     #$80                            ; 889C C9 80                    ..
-        bcs     L88B2                           ; 889E B0 12                    ..
+        bcs     Bank00LoadSceneJumpTablePart2   ; 889E B0 12                    ..
         asl     a                               ; 88A0 0A                       .
         tay                                     ; 88A1 A8                       .
-        lda     Bank00SceneScriptTable,y        ; 88A2 B9 51 CC                 .Q.
+        lda     Bank00SceneScriptTablePart1,y   ; 88A2 B9 51 CC                 .Q.
         sta     $A7                             ; 88A5 85 A7                    ..
         iny                                     ; 88A7 C8                       .
-        lda     Bank00SceneScriptTable,y        ; 88A8 B9 51 CC                 .Q.
+        lda     Bank00SceneScriptTablePart1,y   ; 88A8 B9 51 CC                 .Q.
         sta     $A8                             ; 88AB 85 A8                    ..
         lda     #$00                            ; 88AD A9 00                    ..
         jmp     Bank00LoadNextScriptOpcode      ; 88AF 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L88B2:
+Bank00LoadSceneJumpTablePart2:
         sec                                     ; 88B2 38                       8
         sbc     #$80                            ; 88B3 E9 80                    ..
         asl     a                               ; 88B5 0A                       .
         tay                                     ; 88B6 A8                       .
-        lda     Bank00SceneScriptTable+256,y    ; 88B7 B9 51 CD                 .Q.
+        lda     Bank00SceneScriptTablePart2,y   ; 88B7 B9 51 CD                 .Q.
         sta     $A7                             ; 88BA 85 A7                    ..
         iny                                     ; 88BC C8                       .
-        lda     Bank00SceneScriptTable+256,y    ; 88BD B9 51 CD                 .Q.
+        lda     Bank00SceneScriptTablePart2,y   ; 88BD B9 51 CD                 .Q.
         sta     $A8                             ; 88C0 85 A8                    ..
         lda     #$00                            ; 88C2 A9 00                    ..
         jmp     Bank00LoadNextScriptOpcode      ; 88C4 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L88C7:
+Bank00LoadSceneJumpTablePart3:
         asl     a                               ; 88C7 0A                       .
         tay                                     ; 88C8 A8                       .
-        lda     LCE51,y                         ; 88C9 B9 51 CE                 .Q.
+        lda     Bank00SceneScriptTablePart3,y   ; 88C9 B9 51 CE                 .Q.
         sta     $A7                             ; 88CC 85 A7                    ..
         iny                                     ; 88CE C8                       .
-        lda     LCE51,y                         ; 88CF B9 51 CE                 .Q.
+        lda     Bank00SceneScriptTablePart3,y   ; 88CF B9 51 CE                 .Q.
         sta     $A8                             ; 88D2 85 A8                    ..
         lda     #$00                            ; 88D4 A9 00                    ..
         jmp     Bank00LoadNextScriptOpcode      ; 88D6 4C D9 88                 L..
@@ -1490,7 +1488,7 @@ L88ED:
         pha                                     ; 88F2 48                       H
         ldy     #$01                            ; 88F3 A0 01                    ..
         lda     ($A7),y                         ; 88F5 B1 A7                    ..
-        jsr     L889C                           ; 88F7 20 9C 88                  ..
+        jsr     Bank00LoadSceneJumpTablePart1   ; 88F7 20 9C 88                  ..
         pla                                     ; 88FA 68                       h
         sta     $A8                             ; 88FB 85 A8                    ..
         pla                                     ; 88FD 68                       h
@@ -1518,7 +1516,7 @@ Bank00ScriptOpcodeTable:
         .addr   L8A35                           ; 891D 35 8A                    5.
         .addr   Bank00ScriptOpcode03_CheckSceneFlag; 891F 44 8A                 D.
         .addr   Bank00ScriptOpcode04_ShowDialogIdList; 8921 53 8A               S.
-        .addr   L8A7D                           ; 8923 7D 8A                    }.
+        .addr   Bank00ScriptOpcode05_ChangeMap  ; 8923 7D 8A                    }.
         .addr   Bank00ScriptOpcode06_SetSceneFlag; 8925 89 8A                   ..
         .addr   Bank00ScriptOpcode07_ClearSceneFlag; 8927 95 8A                 ..
         .addr   Bank00ScriptOpcode08_MoveSprite ; 8929 A1 8A                    ..
@@ -1531,17 +1529,17 @@ Bank00ScriptOpcodeTable:
         .addr   L8D55                           ; 8937 55 8D                    U.
         .addr   L8C54                           ; 8939 54 8C                    T.
         .addr   L8D20                           ; 893B 20 8D                     .
-        .addr   L8D34                           ; 893D 34 8D                    4.
+        .addr   Bank00ScriptOpcode12_ScreenFlash; 893D 34 8D                    4.
         .addr   Bank00ScriptOpcode13_TriggerBattle; 893F D5 8E                  ..
         .addr   L8D61                           ; 8941 61 8D                    a.
         .addr   L8E25                           ; 8943 25 8E                    %.
         .addr   L8E3C                           ; 8945 3C 8E                    <.
         .addr   L8E33                           ; 8947 33 8E                    3.
-        .addr   L8E69                           ; 8949 69 8E                    i.
+        .addr   Bank00ScriptOpcode18_ScreenRumble; 8949 69 8E                   i.
         .addr   L8E5D                           ; 894B 5D 8E                    ].
         .addr   L8F25                           ; 894D 25 8F                    %.
         .addr   Bank00ScriptOpcode1b_PlayerGetsKeyItem; 894F 40 8F              @.
-        .addr   L8F5E                           ; 8951 5E 8F                    ^.
+        .addr   Bank00ScriptOpcode1c_SetPartyMember; 8951 5E 8F                 ^.
         .addr   L8F6A                           ; 8953 6A 8F                    j.
         .addr   L8F74                           ; 8955 74 8F                    t.
         .addr   L8F8C                           ; 8957 8C 8F                    ..
@@ -1568,9 +1566,9 @@ Bank00ScriptOpcodeTable:
         .addr   L92EB                           ; 8981 EB 92                    ..
         .addr   L9383                           ; 8983 83 93                    ..
         .addr   L9383                           ; 8985 83 93                    ..
-        .addr   L9316                           ; 8987 16 93                    ..
+        .addr   Bank00ScriptOpcode37_EmbarkVehicle; 8987 16 93                  ..
         .addr   L9322                           ; 8989 22 93                    ".
-        .addr   L9331                           ; 898B 31 93                    1.
+        .addr   Bank00ScriptOpcode39_DisembarkVehicle; 898B 31 93               1.
         .addr   L9384                           ; 898D 84 93                    ..
         .addr   L93B6                           ; 898F B6 93                    ..
         .addr   L93C8                           ; 8991 C8 93                    ..
@@ -1729,7 +1727,8 @@ L8A78:
         jmp     Bank00LoadNextScriptOpcode      ; 8A7A 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L8A7D:
+; 1st param is map id
+Bank00ScriptOpcode05_ChangeMap:
         ldy     #$01                            ; 8A7D A0 01                    ..
         lda     ($A7),y                         ; 8A7F B1 A7                    ..
         jsr     LDDAC                           ; 8A81 20 AC DD                  ..
@@ -2189,7 +2188,7 @@ L8D20:
         jmp     Bank00LoadNextScriptOpcode      ; 8D31 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L8D34:
+Bank00ScriptOpcode12_ScreenFlash:
         jsr     LEA3F                           ; 8D34 20 3F EA                  ?.
         lda     #$01                            ; 8D37 A9 01                    ..
         jmp     Bank00LoadNextScriptOpcode      ; 8D39 4C D9 88                 L..
@@ -2385,7 +2384,7 @@ L8E5D:
         jmp     Bank00LoadNextScriptOpcode      ; 8E66 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L8E69:
+Bank00ScriptOpcode18_ScreenRumble:
         ldy     #$01                            ; 8E69 A0 01                    ..
         lda     ($A7),y                         ; 8E6B B1 A7                    ..
         sta     $8E                             ; 8E6D 85 8E                    ..
@@ -2450,6 +2449,7 @@ L8ED0:
         jmp     Bank00LoadNextScriptOpcode      ; 8ED2 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
+; 1st param enemy id, 2nd param and 3rd param unknown
 Bank00ScriptOpcode13_TriggerBattle:
         ldy     #$01                            ; 8ED5 A0 01                    ..
         lda     ($A7),y                         ; 8ED7 B1 A7                    ..
@@ -2548,10 +2548,10 @@ L8F4F:
         jmp     Bank00LoadNextScriptOpcode      ; 8F5B 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L8F5E:
+Bank00ScriptOpcode1c_SetPartyMember:
         ldy     #$01                            ; 8F5E A0 01                    ..
         lda     ($A7),y                         ; 8F60 B1 A7                    ..
-        jsr     L9254                           ; 8F62 20 54 92                  T.
+        jsr     Bank00AddPartyMember            ; 8F62 20 54 92                  T.
         lda     #$03                            ; 8F65 A9 03                    ..
         jmp     Bank00LoadNextScriptOpcode      ; 8F67 4C D9 88                 L..
 
@@ -2664,7 +2664,7 @@ L9007:
 L9022:
         ldy     #$03                            ; 9022 A0 03                    ..
         lda     ($A7),y                         ; 9024 B1 A7                    ..
-        jsr     L889C                           ; 9026 20 9C 88                  ..
+        jsr     Bank00LoadSceneJumpTablePart1   ; 9026 20 9C 88                  ..
         rts                                     ; 9029 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -2693,7 +2693,7 @@ L902A:
 L9051:
         ldy     #$04                            ; 9051 A0 04                    ..
         lda     ($A7),y                         ; 9053 B1 A7                    ..
-        jsr     L889C                           ; 9055 20 9C 88                  ..
+        jsr     Bank00LoadSceneJumpTablePart1   ; 9055 20 9C 88                  ..
         rts                                     ; 9058 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -2724,7 +2724,7 @@ L9068:
 L9079:
         ldy     #$02                            ; 9079 A0 02                    ..
         lda     ($A7),y                         ; 907B B1 A7                    ..
-        jsr     L889C                           ; 907D 20 9C 88                  ..
+        jsr     Bank00LoadSceneJumpTablePart1   ; 907D 20 9C 88                  ..
         rts                                     ; 9080 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3006,20 +3006,23 @@ L924C:
         jmp     Bank00LoadNextScriptOpcode      ; 9251 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L9254:
+; Find value in party member array that equals A and store party member index in X
+Bank00AddPartyMember:
         ldx     #$00                            ; 9254 A2 00                    ..
-L9256:
+; Find value in party member array that equals A and store party member index in X
+Bank00FindPartyMemberIndexLoop:
         cmp     $603C,x                         ; 9256 DD 3C 60                 .<`
-        beq     L9261                           ; 9259 F0 06                    ..
+        beq     Bank00SwapPartyMemberIndex      ; 9259 F0 06                    ..
         inx                                     ; 925B E8                       .
         cpx     #$07                            ; 925C E0 07                    ..
-        bne     L9256                           ; 925E D0 F6                    ..
+        bne     Bank00FindPartyMemberIndexLoop  ; 925E D0 F6                    ..
         rts                                     ; 9260 60                       `
 
 ; ----------------------------------------------------------------------------
-L9261:
+; Swap values in party member array between index X and Y
+Bank00SwapPartyMemberIndex:
         cpx     $603B                           ; 9261 EC 3B 60                 .;`
-        beq     L9279                           ; 9264 F0 13                    ..
+        beq     Bank00IncreaseTotalPartyMemberCount; 9264 F0 13                 ..
         bcc     L927C                           ; 9266 90 14                    ..
         ldy     $603B                           ; 9268 AC 3B 60                 .;`
         lda     $603C,x                         ; 926B BD 3C 60                 .<`
@@ -3028,7 +3031,8 @@ L9261:
         sta     $603C,x                         ; 9272 9D 3C 60                 .<`
         pla                                     ; 9275 68                       h
         sta     $603C,y                         ; 9276 99 3C 60                 .<`
-L9279:
+; Party member count is stored in 0x603B
+Bank00IncreaseTotalPartyMemberCount:
         inc     $603B                           ; 9279 EE 3B 60                 .;`
 L927C:
         rts                                     ; 927C 60                       `
@@ -3099,7 +3103,7 @@ L92D5:
         bcs     L92E6                           ; 92DC B0 08                    ..
         ldy     #$02                            ; 92DE A0 02                    ..
         lda     ($A7),y                         ; 92E0 B1 A7                    ..
-        jsr     L889C                           ; 92E2 20 9C 88                  ..
+        jsr     Bank00LoadSceneJumpTablePart1   ; 92E2 20 9C 88                  ..
         rts                                     ; 92E5 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3138,7 +3142,7 @@ L9311:
         jmp     Bank00LoadNextScriptOpcode      ; 9313 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L9316:
+Bank00ScriptOpcode37_EmbarkVehicle:
         ldy     #$01                            ; 9316 A0 01                    ..
         lda     ($A7),y                         ; 9318 B1 A7                    ..
         jsr     LF590                           ; 931A 20 90 F5                  ..
@@ -3159,7 +3163,7 @@ L932C:
         jmp     Bank00LoadNextScriptOpcode      ; 932E 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L9331:
+Bank00ScriptOpcode39_DisembarkVehicle:
         ldy     #$01                            ; 9331 A0 01                    ..
         lda     ($A7),y                         ; 9333 B1 A7                    ..
         sec                                     ; 9335 38                       8
@@ -3233,7 +3237,7 @@ L93A3:
         bcs     L93B0                           ; 93A7 B0 07                    ..
         iny                                     ; 93A9 C8                       .
         lda     ($A7),y                         ; 93AA B1 A7                    ..
-        jsr     L889C                           ; 93AC 20 9C 88                  ..
+        jsr     Bank00LoadSceneJumpTablePart1   ; 93AC 20 9C 88                  ..
         rts                                     ; 93AF 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3536,41 +3540,41 @@ L954F:
         rts                                     ; 958B 60                       `
 
 ; ----------------------------------------------------------------------------
-L958C:
+BackgroundSceneRoomIndex00:
         lda     #$A0                            ; 958C A9 A0                    ..
-        jsr     L9F7D                           ; 958E 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 958E 20 7D 9F                 }.
         lda     #$A6                            ; 9591 A9 A6                    ..
-        jsr     L9F7D                           ; 9593 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9593 20 7D 9F                 }.
         lda     #$A7                            ; 9596 A9 A7                    ..
-        jsr     L9F7D                           ; 9598 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9598 20 7D 9F                 }.
         lda     #$0F                            ; 959B A9 0F                    ..
-        jsr     L9F81                           ; 959D 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 959D 20 81 9F                 ..
         lda     #$00                            ; 95A0 A9 00                    ..
-        jsr     L9F81                           ; 95A2 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 95A2 20 81 9F                 ..
         lda     #$0D                            ; 95A5 A9 0D                    ..
-        jsr     L9F81                           ; 95A7 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 95A7 20 81 9F                 ..
         lda     #$0C                            ; 95AA A9 0C                    ..
-        jsr     L9F81                           ; 95AC 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 95AC 20 81 9F                 ..
         lda     #$0E                            ; 95AF A9 0E                    ..
-        jsr     L9F81                           ; 95B1 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 95B1 20 81 9F                 ..
         rts                                     ; 95B4 60                       `
 
 ; ----------------------------------------------------------------------------
 L95B5:
         lda     #$00                            ; 95B5 A9 00                    ..
-        jsr     L9F7D                           ; 95B7 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 95B7 20 7D 9F                 }.
         lda     #$01                            ; 95BA A9 01                    ..
-        jsr     L9F7D                           ; 95BC 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 95BC 20 7D 9F                 }.
         lda     #$02                            ; 95BF A9 02                    ..
-        jsr     L9F7D                           ; 95C1 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 95C1 20 7D 9F                 }.
         lda     #$03                            ; 95C4 A9 03                    ..
-        jsr     L9F7D                           ; 95C6 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 95C6 20 7D 9F                 }.
         lda     #$0B                            ; 95C9 A9 0B                    ..
-        jsr     L9F7D                           ; 95CB 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 95CB 20 7D 9F                 }.
         lda     #$0C                            ; 95CE A9 0C                    ..
-        jsr     L9F7D                           ; 95D0 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 95D0 20 7D 9F                 }.
         lda     #$0D                            ; 95D3 A9 0D                    ..
-        jsr     L9F7D                           ; 95D5 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 95D5 20 7D 9F                 }.
         lda     #$0D                            ; 95D8 A9 0D                    ..
         jsr     Bank00CheckCutsceneFlagBit      ; 95DA 20 00 D1                  ..
         bcc     L95EC                           ; 95DD 90 0D                    ..
@@ -3578,46 +3582,46 @@ L95B5:
         lda     #$01                            ; 95E2 A9 01                    ..
         sta     $6020                           ; 95E4 8D 20 60                 . `
         lda     #$0E                            ; 95E7 A9 0E                    ..
-        jsr     L9F7D                           ; 95E9 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 95E9 20 7D 9F                 }.
 L95EC:
         rts                                     ; 95EC 60                       `
 
 ; ----------------------------------------------------------------------------
 L95ED:
         lda     #$04                            ; 95ED A9 04                    ..
-        jsr     L9F7D                           ; 95EF 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 95EF 20 7D 9F                 }.
         lda     #$11                            ; 95F2 A9 11                    ..
-        jsr     L9F81                           ; 95F4 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 95F4 20 81 9F                 ..
         rts                                     ; 95F7 60                       `
 
 ; ----------------------------------------------------------------------------
 L95F8:
         lda     #$05                            ; 95F8 A9 05                    ..
-        jsr     L9F7D                           ; 95FA 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 95FA 20 7D 9F                 }.
         lda     #$06                            ; 95FD A9 06                    ..
-        jsr     L9F7D                           ; 95FF 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 95FF 20 7D 9F                 }.
         lda     #$07                            ; 9602 A9 07                    ..
-        jsr     L9F7D                           ; 9604 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9604 20 7D 9F                 }.
         rts                                     ; 9607 60                       `
 
 ; ----------------------------------------------------------------------------
 L9608:
         lda     #$09                            ; 9608 A9 09                    ..
-        jsr     L9F7D                           ; 960A 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 960A 20 7D 9F                 }.
         lda     #$0A                            ; 960D A9 0A                    ..
-        jsr     L9F7D                           ; 960F 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 960F 20 7D 9F                 }.
         rts                                     ; 9612 60                       `
 
 ; ----------------------------------------------------------------------------
 L9613:
         lda     #$08                            ; 9613 A9 08                    ..
-        jsr     L9F7D                           ; 9615 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9615 20 7D 9F                 }.
         lda     #$23                            ; 9618 A9 23                    .#
-        jsr     L9F7D                           ; 961A 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 961A 20 7D 9F                 }.
         lda     #$24                            ; 961D A9 24                    .$
-        jsr     L9F7D                           ; 961F 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 961F 20 7D 9F                 }.
         lda     #$25                            ; 9622 A9 25                    .%
-        jsr     L9F7D                           ; 9624 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9624 20 7D 9F                 }.
         rts                                     ; 9627 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3627,7 +3631,7 @@ L9628:
 ; ----------------------------------------------------------------------------
 L9629:
         lda     #$0F                            ; 9629 A9 0F                    ..
-        jsr     L9F7D                           ; 962B 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 962B 20 7D 9F                 }.
         lda     #$10                            ; 962E A9 10                    ..
         jsr     Bank00CheckCutsceneFlagBit      ; 9630 20 00 D1                  ..
         bcc     L9654                           ; 9633 90 1F                    ..
@@ -3645,13 +3649,13 @@ L9629:
 ; ----------------------------------------------------------------------------
 L964E:
         lda     #$10                            ; 964E A9 10                    ..
-        jsr     L9F7D                           ; 9650 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9650 20 7D 9F                 }.
         rts                                     ; 9653 60                       `
 
 ; ----------------------------------------------------------------------------
 L9654:
         lda     #$11                            ; 9654 A9 11                    ..
-        jsr     L9F7D                           ; 9656 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9656 20 7D 9F                 }.
         lda     #$10                            ; 9659 A9 10                    ..
         jsr     Bank00CheckCutsceneFlagBit      ; 965B 20 00 D1                  ..
         bcc     L9678                           ; 965E 90 18                    ..
@@ -3667,24 +3671,24 @@ L9654:
 ; ----------------------------------------------------------------------------
 L9673:
         lda     #$12                            ; 9673 A9 12                    ..
-        jsr     L9F7D                           ; 9675 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9675 20 7D 9F                 }.
 L9678:
         rts                                     ; 9678 60                       `
 
 ; ----------------------------------------------------------------------------
 L9679:
         lda     #$13                            ; 9679 A9 13                    ..
-        jsr     L9F7D                           ; 967B 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 967B 20 7D 9F                 }.
         lda     #$13                            ; 967E A9 13                    ..
-        jsr     L9F81                           ; 9680 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 9680 20 81 9F                 ..
         lda     #$14                            ; 9683 A9 14                    ..
-        jsr     L9F81                           ; 9685 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 9685 20 81 9F                 ..
         rts                                     ; 9688 60                       `
 
 ; ----------------------------------------------------------------------------
 L9689:
         lda     #$34                            ; 9689 A9 34                    .4
-        jsr     L9F7D                           ; 968B 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 968B 20 7D 9F                 }.
         rts                                     ; 968E 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3694,39 +3698,39 @@ L968F:
 ; ----------------------------------------------------------------------------
 L9690:
         lda     #$18                            ; 9690 A9 18                    ..
-        jsr     L9F7D                           ; 9692 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9692 20 7D 9F                 }.
         lda     #$19                            ; 9695 A9 19                    ..
-        jsr     L9F7D                           ; 9697 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9697 20 7D 9F                 }.
         lda     #$1A                            ; 969A A9 1A                    ..
-        jsr     L9F7D                           ; 969C 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 969C 20 7D 9F                 }.
         rts                                     ; 969F 60                       `
 
 ; ----------------------------------------------------------------------------
 L96A0:
         lda     #$1B                            ; 96A0 A9 1B                    ..
-        jsr     L9F7D                           ; 96A2 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 96A2 20 7D 9F                 }.
         lda     #$12                            ; 96A5 A9 12                    ..
-        jsr     L9F81                           ; 96A7 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 96A7 20 81 9F                 ..
         rts                                     ; 96AA 60                       `
 
 ; ----------------------------------------------------------------------------
 L96AB:
         lda     #$1C                            ; 96AB A9 1C                    ..
-        jsr     L9F7D                           ; 96AD 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 96AD 20 7D 9F                 }.
         lda     #$1D                            ; 96B0 A9 1D                    ..
-        jsr     L9F7D                           ; 96B2 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 96B2 20 7D 9F                 }.
         lda     #$1E                            ; 96B5 A9 1E                    ..
-        jsr     L9F7D                           ; 96B7 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 96B7 20 7D 9F                 }.
         lda     #$1F                            ; 96BA A9 1F                    ..
-        jsr     L9F7D                           ; 96BC 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 96BC 20 7D 9F                 }.
         lda     #$20                            ; 96BF A9 20                    . 
-        jsr     L9F7D                           ; 96C1 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 96C1 20 7D 9F                 }.
         lda     #$21                            ; 96C4 A9 21                    .!
-        jsr     L9F7D                           ; 96C6 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 96C6 20 7D 9F                 }.
         lda     #$22                            ; 96C9 A9 22                    ."
-        jsr     L9F7D                           ; 96CB 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 96CB 20 7D 9F                 }.
         lda     #$78                            ; 96CE A9 78                    .x
-        jsr     L9F7D                           ; 96D0 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 96D0 20 7D 9F                 }.
         rts                                     ; 96D3 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3744,15 +3748,15 @@ L96D6:
 ; ----------------------------------------------------------------------------
 L96D7:
         lda     #$29                            ; 96D7 A9 29                    .)
-        jsr     L9F7D                           ; 96D9 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 96D9 20 7D 9F                 }.
         lda     #$79                            ; 96DC A9 79                    .y
-        jsr     L9F7D                           ; 96DE 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 96DE 20 7D 9F                 }.
         rts                                     ; 96E1 60                       `
 
 ; ----------------------------------------------------------------------------
 L96E2:
         lda     #$2A                            ; 96E2 A9 2A                    .*
-        jsr     L9F7D                           ; 96E4 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 96E4 20 7D 9F                 }.
         rts                                     ; 96E7 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3762,39 +3766,39 @@ L96E8:
 ; ----------------------------------------------------------------------------
 L96E9:
         lda     #$2B                            ; 96E9 A9 2B                    .+
-        jsr     L9F7D                           ; 96EB 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 96EB 20 7D 9F                 }.
         lda     #$2C                            ; 96EE A9 2C                    .,
-        jsr     L9F7D                           ; 96F0 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 96F0 20 7D 9F                 }.
         lda     #$7D                            ; 96F3 A9 7D                    .}
-        jsr     L9F7D                           ; 96F5 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 96F5 20 7D 9F                 }.
         lda     #$09                            ; 96F8 A9 09                    ..
-        jsr     L9F81                           ; 96FA 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 96FA 20 81 9F                 ..
         lda     #$0A                            ; 96FD A9 0A                    ..
-        jsr     L9F81                           ; 96FF 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 96FF 20 81 9F                 ..
         rts                                     ; 9702 60                       `
 
 ; ----------------------------------------------------------------------------
 L9703:
         lda     #$2D                            ; 9703 A9 2D                    .-
-        jsr     L9F7D                           ; 9705 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9705 20 7D 9F                 }.
         lda     #$2E                            ; 9708 A9 2E                    ..
-        jsr     L9F7D                           ; 970A 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 970A 20 7D 9F                 }.
         lda     #$2F                            ; 970D A9 2F                    ./
-        jsr     L9F7D                           ; 970F 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 970F 20 7D 9F                 }.
         rts                                     ; 9712 60                       `
 
 ; ----------------------------------------------------------------------------
 L9713:
         lda     #$7E                            ; 9713 A9 7E                    .~
-        jsr     L9F7D                           ; 9715 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9715 20 7D 9F                 }.
         lda     #$7F                            ; 9718 A9 7F                    ..
-        jsr     L9F7D                           ; 971A 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 971A 20 7D 9F                 }.
         rts                                     ; 971D 60                       `
 
 ; ----------------------------------------------------------------------------
 L971E:
         lda     #$80                            ; 971E A9 80                    ..
-        jsr     L9F7D                           ; 9720 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9720 20 7D 9F                 }.
         rts                                     ; 9723 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3814,180 +3818,487 @@ L974E:
         lda     #$00                            ; 974E A9 00                    ..
         sta     $6F1A                           ; 9750 8D 1A 6F                 ..o
         lda     #$3C                            ; 9753 A9 3C                    .<
-        jsr     L9F7D                           ; 9755 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9755 20 7D 9F                 }.
         lda     #$3D                            ; 9758 A9 3D                    .=
-        jsr     L9F7D                           ; 975A 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 975A 20 7D 9F                 }.
         lda     #$7C                            ; 975D A9 7C                    .|
-        jsr     L9F7D                           ; 975F 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 975F 20 7D 9F                 }.
         rts                                     ; 9762 60                       `
 
 ; ----------------------------------------------------------------------------
 L9763:
-        .byte   $A9,$77,$20,$7D,$9F,$A9,$8C,$20 ; 9763 A9 77 20 7D 9F A9 8C 20  .w }... 
-        .byte   $7D,$9F,$A9,$01,$20,$81,$9F,$60 ; 976B 7D 9F A9 01 20 81 9F 60  }... ..`
+        lda     #$77                            ; 9763 A9 77                    .w
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9765 20 7D 9F                 }.
+        lda     #$8C                            ; 9768 A9 8C                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 976A 20 7D 9F                 }.
+        lda     #$01                            ; 976D A9 01                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 976F 20 81 9F                 ..
+        rts                                     ; 9772 60                       `
+
+; ----------------------------------------------------------------------------
 L9773:
-        .byte   $A9,$3F,$20,$7D,$9F,$A9,$02,$20 ; 9773 A9 3F 20 7D 9F A9 02 20  .? }... 
-        .byte   $81,$9F,$A9,$40,$20,$7D,$9F,$A9 ; 977B 81 9F A9 40 20 7D 9F A9  ...@ }..
-        .byte   $41,$20,$7D,$9F,$A9,$42,$20,$7D ; 9783 41 20 7D 9F A9 42 20 7D  A }..B }
-        .byte   $9F,$60                         ; 978B 9F 60                    .`
+        lda     #$3F                            ; 9773 A9 3F                    .?
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9775 20 7D 9F                 }.
+        lda     #$02                            ; 9778 A9 02                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 977A 20 81 9F                 ..
+        lda     #$40                            ; 977D A9 40                    .@
+        jsr     Bank00LoadBackgroundSceneIdTable1; 977F 20 7D 9F                 }.
+        lda     #$41                            ; 9782 A9 41                    .A
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9784 20 7D 9F                 }.
+        lda     #$42                            ; 9787 A9 42                    .B
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9789 20 7D 9F                 }.
+        rts                                     ; 978C 60                       `
+
+; ----------------------------------------------------------------------------
 L978D:
-        .byte   $A9,$43,$20,$7D,$9F,$A9,$44,$20 ; 978D A9 43 20 7D 9F A9 44 20  .C }..D 
-        .byte   $7D,$9F,$A9,$03,$20,$81,$9F,$60 ; 9795 7D 9F A9 03 20 81 9F 60  }... ..`
+        lda     #$43                            ; 978D A9 43                    .C
+        jsr     Bank00LoadBackgroundSceneIdTable1; 978F 20 7D 9F                 }.
+        lda     #$44                            ; 9792 A9 44                    .D
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9794 20 7D 9F                 }.
+        lda     #$03                            ; 9797 A9 03                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 9799 20 81 9F                 ..
+        rts                                     ; 979C 60                       `
+
+; ----------------------------------------------------------------------------
 L979D:
-        .byte   $A9,$45,$20,$7D,$9F,$A9,$47,$20 ; 979D A9 45 20 7D 9F A9 47 20  .E }..G 
-        .byte   $7D,$9F,$A9,$85,$20,$7D,$9F,$60 ; 97A5 7D 9F A9 85 20 7D 9F 60  }... }.`
+        lda     #$45                            ; 979D A9 45                    .E
+        jsr     Bank00LoadBackgroundSceneIdTable1; 979F 20 7D 9F                 }.
+        lda     #$47                            ; 97A2 A9 47                    .G
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97A4 20 7D 9F                 }.
+        lda     #$85                            ; 97A7 A9 85                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97A9 20 7D 9F                 }.
+        rts                                     ; 97AC 60                       `
+
+; ----------------------------------------------------------------------------
 L97AD:
-        .byte   $A9,$49,$20,$7D,$9F,$A9,$4A,$20 ; 97AD A9 49 20 7D 9F A9 4A 20  .I }..J 
-        .byte   $7D,$9F,$A9,$4B,$20,$7D,$9F,$A9 ; 97B5 7D 9F A9 4B 20 7D 9F A9  }..K }..
-        .byte   $4C,$20,$7D,$9F,$A9,$4D,$20,$7D ; 97BD 4C 20 7D 9F A9 4D 20 7D  L }..M }
-        .byte   $9F,$A9,$4E,$20,$7D,$9F,$A9,$50 ; 97C5 9F A9 4E 20 7D 9F A9 50  ..N }..P
-        .byte   $20,$7D,$9F,$A9,$55,$20,$7D,$9F ; 97CD 20 7D 9F A9 55 20 7D 9F   }..U }.
-        .byte   $A9,$51,$20,$7D,$9F,$A9,$54,$20 ; 97D5 A9 51 20 7D 9F A9 54 20  .Q }..T 
-        .byte   $7D,$9F,$A9,$52,$20,$7D,$9F,$60 ; 97DD 7D 9F A9 52 20 7D 9F 60  }..R }.`
+        lda     #$49                            ; 97AD A9 49                    .I
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97AF 20 7D 9F                 }.
+        lda     #$4A                            ; 97B2 A9 4A                    .J
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97B4 20 7D 9F                 }.
+        lda     #$4B                            ; 97B7 A9 4B                    .K
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97B9 20 7D 9F                 }.
+        lda     #$4C                            ; 97BC A9 4C                    .L
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97BE 20 7D 9F                 }.
+        lda     #$4D                            ; 97C1 A9 4D                    .M
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97C3 20 7D 9F                 }.
+        lda     #$4E                            ; 97C6 A9 4E                    .N
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97C8 20 7D 9F                 }.
+        lda     #$50                            ; 97CB A9 50                    .P
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97CD 20 7D 9F                 }.
+        lda     #$55                            ; 97D0 A9 55                    .U
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97D2 20 7D 9F                 }.
+        lda     #$51                            ; 97D5 A9 51                    .Q
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97D7 20 7D 9F                 }.
+        lda     #$54                            ; 97DA A9 54                    .T
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97DC 20 7D 9F                 }.
+        lda     #$52                            ; 97DF A9 52                    .R
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97E1 20 7D 9F                 }.
+        rts                                     ; 97E4 60                       `
+
+; ----------------------------------------------------------------------------
 L97E5:
-        .byte   $A9,$56,$20,$7D,$9F,$60         ; 97E5 A9 56 20 7D 9F 60        .V }.`
+        lda     #$56                            ; 97E5 A9 56                    .V
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97E7 20 7D 9F                 }.
+        rts                                     ; 97EA 60                       `
+
+; ----------------------------------------------------------------------------
 L97EB:
-        .byte   $A9,$57,$20,$7D,$9F,$A9,$58,$20 ; 97EB A9 57 20 7D 9F A9 58 20  .W }..X 
-        .byte   $7D,$9F,$A9,$59,$20,$7D,$9F,$60 ; 97F3 7D 9F A9 59 20 7D 9F 60  }..Y }.`
+        lda     #$57                            ; 97EB A9 57                    .W
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97ED 20 7D 9F                 }.
+        lda     #$58                            ; 97F0 A9 58                    .X
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97F2 20 7D 9F                 }.
+        lda     #$59                            ; 97F5 A9 59                    .Y
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97F7 20 7D 9F                 }.
+        rts                                     ; 97FA 60                       `
+
+; ----------------------------------------------------------------------------
 L97FB:
-        .byte   $A9,$5A,$20,$7D,$9F,$A9,$5B,$20 ; 97FB A9 5A 20 7D 9F A9 5B 20  .Z }..[ 
-        .byte   $7D,$9F,$A9,$5C,$20,$7D,$9F,$A9 ; 9803 7D 9F A9 5C 20 7D 9F A9  }..\ }..
-        .byte   $5E,$20,$7D,$9F,$A9,$60,$20,$7D ; 980B 5E 20 7D 9F A9 60 20 7D  ^ }..` }
-        .byte   $9F,$A9,$62,$20,$7D,$9F,$A9,$64 ; 9813 9F A9 62 20 7D 9F A9 64  ..b }..d
-        .byte   $20,$7D,$9F,$A9,$66,$20,$7D,$9F ; 981B 20 7D 9F A9 66 20 7D 9F   }..f }.
-        .byte   $60                             ; 9823 60                       `
+        lda     #$5A                            ; 97FB A9 5A                    .Z
+        jsr     Bank00LoadBackgroundSceneIdTable1; 97FD 20 7D 9F                 }.
+        lda     #$5B                            ; 9800 A9 5B                    .[
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9802 20 7D 9F                 }.
+        lda     #$5C                            ; 9805 A9 5C                    .\
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9807 20 7D 9F                 }.
+        lda     #$5E                            ; 980A A9 5E                    .^
+        jsr     Bank00LoadBackgroundSceneIdTable1; 980C 20 7D 9F                 }.
+        lda     #$60                            ; 980F A9 60                    .`
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9811 20 7D 9F                 }.
+        lda     #$62                            ; 9814 A9 62                    .b
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9816 20 7D 9F                 }.
+        lda     #$64                            ; 9819 A9 64                    .d
+        jsr     Bank00LoadBackgroundSceneIdTable1; 981B 20 7D 9F                 }.
+        lda     #$66                            ; 981E A9 66                    .f
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9820 20 7D 9F                 }.
+        rts                                     ; 9823 60                       `
+
+; ----------------------------------------------------------------------------
 L9824:
-        .byte   $A9,$68,$20,$7D,$9F,$A9,$8A,$20 ; 9824 A9 68 20 7D 9F A9 8A 20  .h }... 
-        .byte   $7D,$9F,$A9,$8B,$20,$7D,$9F,$60 ; 982C 7D 9F A9 8B 20 7D 9F 60  }... }.`
+        lda     #$68                            ; 9824 A9 68                    .h
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9826 20 7D 9F                 }.
+        lda     #$8A                            ; 9829 A9 8A                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 982B 20 7D 9F                 }.
+        lda     #$8B                            ; 982E A9 8B                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9830 20 7D 9F                 }.
+        rts                                     ; 9833 60                       `
+
+; ----------------------------------------------------------------------------
 L9834:
-        .byte   $A9,$69,$20,$7D,$9F,$A9,$6A,$20 ; 9834 A9 69 20 7D 9F A9 6A 20  .i }..j 
-        .byte   $7D,$9F,$A9,$6B,$20,$7D,$9F,$A9 ; 983C 7D 9F A9 6B 20 7D 9F A9  }..k }..
-        .byte   $16,$20,$81,$9F,$60             ; 9844 16 20 81 9F 60           . ..`
+        lda     #$69                            ; 9834 A9 69                    .i
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9836 20 7D 9F                 }.
+        lda     #$6A                            ; 9839 A9 6A                    .j
+        jsr     Bank00LoadBackgroundSceneIdTable1; 983B 20 7D 9F                 }.
+        lda     #$6B                            ; 983E A9 6B                    .k
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9840 20 7D 9F                 }.
+        lda     #$16                            ; 9843 A9 16                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 9845 20 81 9F                 ..
+        rts                                     ; 9848 60                       `
+
+; ----------------------------------------------------------------------------
 L9849:
-        .byte   $A9,$6C,$20,$7D,$9F,$A9,$6D,$20 ; 9849 A9 6C 20 7D 9F A9 6D 20  .l }..m 
-        .byte   $7D,$9F,$A9,$6E,$20,$7D,$9F,$A9 ; 9851 7D 9F A9 6E 20 7D 9F A9  }..n }..
-        .byte   $6F,$20,$7D,$9F,$A9,$86,$20,$7D ; 9859 6F 20 7D 9F A9 86 20 7D  o }... }
-        .byte   $9F,$A9,$87,$20,$7D,$9F,$A9,$89 ; 9861 9F A9 87 20 7D 9F A9 89  ... }...
-        .byte   $20,$7D,$9F,$60                 ; 9869 20 7D 9F 60               }.`
+        lda     #$6C                            ; 9849 A9 6C                    .l
+        jsr     Bank00LoadBackgroundSceneIdTable1; 984B 20 7D 9F                 }.
+        lda     #$6D                            ; 984E A9 6D                    .m
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9850 20 7D 9F                 }.
+        lda     #$6E                            ; 9853 A9 6E                    .n
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9855 20 7D 9F                 }.
+        lda     #$6F                            ; 9858 A9 6F                    .o
+        jsr     Bank00LoadBackgroundSceneIdTable1; 985A 20 7D 9F                 }.
+        lda     #$86                            ; 985D A9 86                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 985F 20 7D 9F                 }.
+        lda     #$87                            ; 9862 A9 87                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9864 20 7D 9F                 }.
+        lda     #$89                            ; 9867 A9 89                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9869 20 7D 9F                 }.
+        rts                                     ; 986C 60                       `
+
+; ----------------------------------------------------------------------------
 L986D:
-        .byte   $60                             ; 986D 60                       `
+        rts                                     ; 986D 60                       `
+
+; ----------------------------------------------------------------------------
 L986E:
-        .byte   $A9,$71,$20,$7D,$9F,$A9,$73,$20 ; 986E A9 71 20 7D 9F A9 73 20  .q }..s 
-        .byte   $7D,$9F,$A9,$74,$20,$7D,$9F,$A9 ; 9876 7D 9F A9 74 20 7D 9F A9  }..t }..
-        .byte   $75,$20,$7D,$9F,$A9,$76,$20,$7D ; 987E 75 20 7D 9F A9 76 20 7D  u }..v }
-        .byte   $9F,$60                         ; 9886 9F 60                    .`
+        lda     #$71                            ; 986E A9 71                    .q
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9870 20 7D 9F                 }.
+        lda     #$73                            ; 9873 A9 73                    .s
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9875 20 7D 9F                 }.
+        lda     #$74                            ; 9878 A9 74                    .t
+        jsr     Bank00LoadBackgroundSceneIdTable1; 987A 20 7D 9F                 }.
+        lda     #$75                            ; 987D A9 75                    .u
+        jsr     Bank00LoadBackgroundSceneIdTable1; 987F 20 7D 9F                 }.
+        lda     #$76                            ; 9882 A9 76                    .v
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9884 20 7D 9F                 }.
+        rts                                     ; 9887 60                       `
+
+; ----------------------------------------------------------------------------
 L9888:
-        .byte   $A9,$72,$20,$7D,$9F,$60         ; 9888 A9 72 20 7D 9F 60        .r }.`
-L988E:
-        .byte   $A9,$8D,$20,$7D,$9F,$A9,$8E,$20 ; 988E A9 8D 20 7D 9F A9 8E 20  .. }... 
-        .byte   $7D,$9F,$A9,$8F,$20,$7D,$9F,$A9 ; 9896 7D 9F A9 8F 20 7D 9F A9  }... }..
-        .byte   $90,$20,$7D,$9F,$A9,$91,$20,$7D ; 989E 90 20 7D 9F A9 91 20 7D  . }... }
-        .byte   $9F,$A9,$92,$20,$7D,$9F,$A9,$93 ; 98A6 9F A9 92 20 7D 9F A9 93  ... }...
-        .byte   $20,$7D,$9F,$A9,$94,$20,$7D,$9F ; 98AE 20 7D 9F A9 94 20 7D 9F   }... }.
-        .byte   $A9,$95,$20,$7D,$9F,$A9,$96,$20 ; 98B6 A9 95 20 7D 9F A9 96 20  .. }... 
-        .byte   $7D,$9F,$A9,$97,$20,$7D,$9F,$60 ; 98BE 7D 9F A9 97 20 7D 9F 60  }... }.`
+        lda     #$72                            ; 9888 A9 72                    .r
+        jsr     Bank00LoadBackgroundSceneIdTable1; 988A 20 7D 9F                 }.
+        rts                                     ; 988D 60                       `
+
+; ----------------------------------------------------------------------------
+BackgroundSceneRoomIndex29:
+        lda     #$8D                            ; 988E A9 8D                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9890 20 7D 9F                 }.
+        lda     #$8E                            ; 9893 A9 8E                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9895 20 7D 9F                 }.
+        lda     #$8F                            ; 9898 A9 8F                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 989A 20 7D 9F                 }.
+        lda     #$90                            ; 989D A9 90                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 989F 20 7D 9F                 }.
+        lda     #$91                            ; 98A2 A9 91                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 98A4 20 7D 9F                 }.
+        lda     #$92                            ; 98A7 A9 92                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 98A9 20 7D 9F                 }.
+        lda     #$93                            ; 98AC A9 93                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 98AE 20 7D 9F                 }.
+        lda     #$94                            ; 98B1 A9 94                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 98B3 20 7D 9F                 }.
+        lda     #$95                            ; 98B6 A9 95                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 98B8 20 7D 9F                 }.
+        lda     #$96                            ; 98BB A9 96                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 98BD 20 7D 9F                 }.
+        lda     #$97                            ; 98C0 A9 97                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 98C2 20 7D 9F                 }.
+        rts                                     ; 98C5 60                       `
+
+; ----------------------------------------------------------------------------
 L98C6:
-        .byte   $A9,$98,$20,$7D,$9F,$60         ; 98C6 A9 98 20 7D 9F 60        .. }.`
+        lda     #$98                            ; 98C6 A9 98                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 98C8 20 7D 9F                 }.
+        rts                                     ; 98CB 60                       `
+
+; ----------------------------------------------------------------------------
 L98CC:
-        .byte   $60                             ; 98CC 60                       `
+        rts                                     ; 98CC 60                       `
+
+; ----------------------------------------------------------------------------
 L98CD:
-        .byte   $A9,$9D,$20,$7D,$9F,$A9,$9F,$20 ; 98CD A9 9D 20 7D 9F A9 9F 20  .. }... 
-        .byte   $7D,$9F,$60                     ; 98D5 7D 9F 60                 }.`
+        lda     #$9D                            ; 98CD A9 9D                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 98CF 20 7D 9F                 }.
+        lda     #$9F                            ; 98D2 A9 9F                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 98D4 20 7D 9F                 }.
+        rts                                     ; 98D7 60                       `
+
+; ----------------------------------------------------------------------------
 L98D8:
-        .byte   $A9,$A1,$20,$7D,$9F,$60         ; 98D8 A9 A1 20 7D 9F 60        .. }.`
+        lda     #$A1                            ; 98D8 A9 A1                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 98DA 20 7D 9F                 }.
+        rts                                     ; 98DD 60                       `
+
+; ----------------------------------------------------------------------------
 L98DE:
-        .byte   $60                             ; 98DE 60                       `
+        rts                                     ; 98DE 60                       `
+
+; ----------------------------------------------------------------------------
 L98DF:
-        .byte   $A9,$A2,$20,$7D,$9F,$A9,$A3,$20 ; 98DF A9 A2 20 7D 9F A9 A3 20  .. }... 
-        .byte   $7D,$9F,$60                     ; 98E7 7D 9F 60                 }.`
+        lda     #$A2                            ; 98DF A9 A2                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 98E1 20 7D 9F                 }.
+        lda     #$A3                            ; 98E4 A9 A3                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 98E6 20 7D 9F                 }.
+        rts                                     ; 98E9 60                       `
+
+; ----------------------------------------------------------------------------
 L98EA:
-        .byte   $60                             ; 98EA 60                       `
+        rts                                     ; 98EA 60                       `
+
+; ----------------------------------------------------------------------------
 L98EB:
-        .byte   $A9,$A4,$20,$7D,$9F,$A9,$A5,$20 ; 98EB A9 A4 20 7D 9F A9 A5 20  .. }... 
-        .byte   $7D,$9F,$60                     ; 98F3 7D 9F 60                 }.`
+        lda     #$A4                            ; 98EB A9 A4                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 98ED 20 7D 9F                 }.
+        lda     #$A5                            ; 98F0 A9 A5                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 98F2 20 7D 9F                 }.
+        rts                                     ; 98F5 60                       `
+
+; ----------------------------------------------------------------------------
 L98F6:
-        .byte   $A9,$A8,$20,$7D,$9F,$A9,$A9,$20 ; 98F6 A9 A8 20 7D 9F A9 A9 20  .. }... 
-        .byte   $7D,$9F,$A9,$AA,$20,$7D,$9F,$A9 ; 98FE 7D 9F A9 AA 20 7D 9F A9  }... }..
-        .byte   $AB,$20,$7D,$9F,$A9,$B2,$20,$7D ; 9906 AB 20 7D 9F A9 B2 20 7D  . }... }
-        .byte   $9F,$60                         ; 990E 9F 60                    .`
+        lda     #$A8                            ; 98F6 A9 A8                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 98F8 20 7D 9F                 }.
+        lda     #$A9                            ; 98FB A9 A9                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 98FD 20 7D 9F                 }.
+        lda     #$AA                            ; 9900 A9 AA                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9902 20 7D 9F                 }.
+        lda     #$AB                            ; 9905 A9 AB                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9907 20 7D 9F                 }.
+        lda     #$B2                            ; 990A A9 B2                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 990C 20 7D 9F                 }.
+        rts                                     ; 990F 60                       `
+
+; ----------------------------------------------------------------------------
 L9910:
-        .byte   $A9,$AC,$20,$7D,$9F,$A9,$AD,$20 ; 9910 A9 AC 20 7D 9F A9 AD 20  .. }... 
-        .byte   $7D,$9F,$A9,$AE,$20,$7D,$9F,$A9 ; 9918 7D 9F A9 AE 20 7D 9F A9  }... }..
-        .byte   $AF,$20,$7D,$9F,$A9,$B0,$20,$7D ; 9920 AF 20 7D 9F A9 B0 20 7D  . }... }
-        .byte   $9F,$A9,$B1,$20,$7D,$9F,$60     ; 9928 9F A9 B1 20 7D 9F 60     ... }.`
+        lda     #$AC                            ; 9910 A9 AC                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9912 20 7D 9F                 }.
+        lda     #$AD                            ; 9915 A9 AD                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9917 20 7D 9F                 }.
+        lda     #$AE                            ; 991A A9 AE                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 991C 20 7D 9F                 }.
+        lda     #$AF                            ; 991F A9 AF                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9921 20 7D 9F                 }.
+        lda     #$B0                            ; 9924 A9 B0                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9926 20 7D 9F                 }.
+        lda     #$B1                            ; 9929 A9 B1                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 992B 20 7D 9F                 }.
+        rts                                     ; 992E 60                       `
+
+; ----------------------------------------------------------------------------
 L992F:
-        .byte   $A9,$B3,$20,$7D,$9F,$A9,$B4,$20 ; 992F A9 B3 20 7D 9F A9 B4 20  .. }... 
-        .byte   $7D,$9F,$A9,$B5,$20,$7D,$9F,$60 ; 9937 7D 9F A9 B5 20 7D 9F 60  }... }.`
+        lda     #$B3                            ; 992F A9 B3                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9931 20 7D 9F                 }.
+        lda     #$B4                            ; 9934 A9 B4                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9936 20 7D 9F                 }.
+        lda     #$B5                            ; 9939 A9 B5                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 993B 20 7D 9F                 }.
+        rts                                     ; 993E 60                       `
+
+; ----------------------------------------------------------------------------
 L993F:
-        .byte   $A9,$B6,$20,$7D,$9F,$A9,$D6,$20 ; 993F A9 B6 20 7D 9F A9 D6 20  .. }... 
-        .byte   $7D,$9F,$60                     ; 9947 7D 9F 60                 }.`
+        lda     #$B6                            ; 993F A9 B6                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9941 20 7D 9F                 }.
+        lda     #$D6                            ; 9944 A9 D6                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9946 20 7D 9F                 }.
+        rts                                     ; 9949 60                       `
+
+; ----------------------------------------------------------------------------
 L994A:
-        .byte   $A9,$B7,$20,$7D,$9F,$A9,$BB,$20 ; 994A A9 B7 20 7D 9F A9 BB 20  .. }... 
-        .byte   $7D,$9F,$A9,$D7,$20,$7D,$9F,$A9 ; 9952 7D 9F A9 D7 20 7D 9F A9  }... }..
-        .byte   $D8,$20,$7D,$9F,$A9,$D9,$20,$7D ; 995A D8 20 7D 9F A9 D9 20 7D  . }... }
-        .byte   $9F,$A9,$DA,$20,$7D,$9F,$A9,$DB ; 9962 9F A9 DA 20 7D 9F A9 DB  ... }...
-        .byte   $20,$7D,$9F,$60                 ; 996A 20 7D 9F 60               }.`
+        lda     #$B7                            ; 994A A9 B7                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 994C 20 7D 9F                 }.
+        lda     #$BB                            ; 994F A9 BB                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9951 20 7D 9F                 }.
+        lda     #$D7                            ; 9954 A9 D7                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9956 20 7D 9F                 }.
+        lda     #$D8                            ; 9959 A9 D8                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 995B 20 7D 9F                 }.
+        lda     #$D9                            ; 995E A9 D9                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9960 20 7D 9F                 }.
+        lda     #$DA                            ; 9963 A9 DA                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9965 20 7D 9F                 }.
+        lda     #$DB                            ; 9968 A9 DB                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 996A 20 7D 9F                 }.
+        rts                                     ; 996D 60                       `
+
+; ----------------------------------------------------------------------------
 L996E:
-        .byte   $A9,$DC,$20,$7D,$9F,$60         ; 996E A9 DC 20 7D 9F 60        .. }.`
+        lda     #$DC                            ; 996E A9 DC                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9970 20 7D 9F                 }.
+        rts                                     ; 9973 60                       `
+
+; ----------------------------------------------------------------------------
 L9974:
-        .byte   $60                             ; 9974 60                       `
+        rts                                     ; 9974 60                       `
+
+; ----------------------------------------------------------------------------
 L9975:
-        .byte   $A9,$C0,$20,$7D,$9F,$60         ; 9975 A9 C0 20 7D 9F 60        .. }.`
+        lda     #$C0                            ; 9975 A9 C0                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9977 20 7D 9F                 }.
+        rts                                     ; 997A 60                       `
+
+; ----------------------------------------------------------------------------
 L997B:
-        .byte   $60                             ; 997B 60                       `
+        rts                                     ; 997B 60                       `
+
+; ----------------------------------------------------------------------------
 L997C:
-        .byte   $A9,$C1,$20,$7D,$9F,$A9,$C2,$20 ; 997C A9 C1 20 7D 9F A9 C2 20  .. }... 
-        .byte   $7D,$9F,$A9,$C3,$20,$7D,$9F,$A9 ; 9984 7D 9F A9 C3 20 7D 9F A9  }... }..
-        .byte   $C5,$20,$7D,$9F,$A9,$C6,$20,$7D ; 998C C5 20 7D 9F A9 C6 20 7D  . }... }
-        .byte   $9F,$A9,$C7,$20,$7D,$9F,$A9,$C8 ; 9994 9F A9 C7 20 7D 9F A9 C8  ... }...
-        .byte   $20,$7D,$9F,$A9,$CD,$20,$7D,$9F ; 999C 20 7D 9F A9 CD 20 7D 9F   }... }.
-        .byte   $A9,$CE,$20,$7D,$9F,$A9,$CF,$20 ; 99A4 A9 CE 20 7D 9F A9 CF 20  .. }... 
-        .byte   $7D,$9F,$60                     ; 99AC 7D 9F 60                 }.`
+        lda     #$C1                            ; 997C A9 C1                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 997E 20 7D 9F                 }.
+        lda     #$C2                            ; 9981 A9 C2                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9983 20 7D 9F                 }.
+        lda     #$C3                            ; 9986 A9 C3                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9988 20 7D 9F                 }.
+        lda     #$C5                            ; 998B A9 C5                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 998D 20 7D 9F                 }.
+        lda     #$C6                            ; 9990 A9 C6                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9992 20 7D 9F                 }.
+        lda     #$C7                            ; 9995 A9 C7                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9997 20 7D 9F                 }.
+        lda     #$C8                            ; 999A A9 C8                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 999C 20 7D 9F                 }.
+        lda     #$CD                            ; 999F A9 CD                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99A1 20 7D 9F                 }.
+        lda     #$CE                            ; 99A4 A9 CE                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99A6 20 7D 9F                 }.
+        lda     #$CF                            ; 99A9 A9 CF                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99AB 20 7D 9F                 }.
+        rts                                     ; 99AE 60                       `
+
+; ----------------------------------------------------------------------------
 L99AF:
-        .byte   $A9,$C9,$20,$7D,$9F,$A9,$CA,$20 ; 99AF A9 C9 20 7D 9F A9 CA 20  .. }... 
-        .byte   $7D,$9F,$60                     ; 99B7 7D 9F 60                 }.`
+        lda     #$C9                            ; 99AF A9 C9                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99B1 20 7D 9F                 }.
+        lda     #$CA                            ; 99B4 A9 CA                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99B6 20 7D 9F                 }.
+        rts                                     ; 99B9 60                       `
+
+; ----------------------------------------------------------------------------
 L99BA:
-        .byte   $A9,$CB,$20,$7D,$9F,$A9,$CC,$20 ; 99BA A9 CB 20 7D 9F A9 CC 20  .. }... 
-        .byte   $7D,$9F,$60                     ; 99C2 7D 9F 60                 }.`
+        lda     #$CB                            ; 99BA A9 CB                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99BC 20 7D 9F                 }.
+        lda     #$CC                            ; 99BF A9 CC                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99C1 20 7D 9F                 }.
+        rts                                     ; 99C4 60                       `
+
+; ----------------------------------------------------------------------------
 L99C5:
-        .byte   $60                             ; 99C5 60                       `
+        rts                                     ; 99C5 60                       `
+
+; ----------------------------------------------------------------------------
 L99C6:
-        .byte   $60                             ; 99C6 60                       `
+        rts                                     ; 99C6 60                       `
+
+; ----------------------------------------------------------------------------
 L99C7:
-        .byte   $A9,$D1,$20,$7D,$9F,$60,$A9,$DD ; 99C7 A9 D1 20 7D 9F 60 A9 DD  .. }.`..
-        .byte   $20,$7D,$9F,$60                 ; 99CF 20 7D 9F 60               }.`
+        lda     #$D1                            ; 99C7 A9 D1                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99C9 20 7D 9F                 }.
+        rts                                     ; 99CC 60                       `
+
+; ----------------------------------------------------------------------------
+        lda     #$DD                            ; 99CD A9 DD                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99CF 20 7D 9F                 }.
+        rts                                     ; 99D2 60                       `
+
+; ----------------------------------------------------------------------------
 L99D3:
-        .byte   $60                             ; 99D3 60                       `
+        rts                                     ; 99D3 60                       `
+
+; ----------------------------------------------------------------------------
 L99D4:
-        .byte   $A9,$DF,$20,$7D,$9F,$A9,$E0,$20 ; 99D4 A9 DF 20 7D 9F A9 E0 20  .. }... 
-        .byte   $7D,$9F,$A9,$E1,$20,$7D,$9F,$A9 ; 99DC 7D 9F A9 E1 20 7D 9F A9  }... }..
-        .byte   $E2,$20,$7D,$9F,$A9,$E5,$20,$7D ; 99E4 E2 20 7D 9F A9 E5 20 7D  . }... }
-        .byte   $9F,$A9,$E7,$20,$7D,$9F,$A9,$E8 ; 99EC 9F A9 E7 20 7D 9F A9 E8  ... }...
-        .byte   $20,$7D,$9F,$A9,$E9,$20,$7D,$9F ; 99F4 20 7D 9F A9 E9 20 7D 9F   }... }.
-        .byte   $A9,$EA,$20,$7D,$9F,$A9,$EC,$20 ; 99FC A9 EA 20 7D 9F A9 EC 20  .. }... 
-        .byte   $7D,$9F,$20,$40,$9E,$60         ; 9A04 7D 9F 20 40 9E 60        }. @.`
+        lda     #$DF                            ; 99D4 A9 DF                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99D6 20 7D 9F                 }.
+        lda     #$E0                            ; 99D9 A9 E0                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99DB 20 7D 9F                 }.
+        lda     #$E1                            ; 99DE A9 E1                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99E0 20 7D 9F                 }.
+        lda     #$E2                            ; 99E3 A9 E2                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99E5 20 7D 9F                 }.
+        lda     #$E5                            ; 99E8 A9 E5                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99EA 20 7D 9F                 }.
+        lda     #$E7                            ; 99ED A9 E7                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99EF 20 7D 9F                 }.
+        lda     #$E8                            ; 99F2 A9 E8                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99F4 20 7D 9F                 }.
+        lda     #$E9                            ; 99F7 A9 E9                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99F9 20 7D 9F                 }.
+        lda     #$EA                            ; 99FC A9 EA                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 99FE 20 7D 9F                 }.
+        lda     #$EC                            ; 9A01 A9 EC                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A03 20 7D 9F                 }.
+        jsr     L9E40                           ; 9A06 20 40 9E                  @.
+        rts                                     ; 9A09 60                       `
+
+; ----------------------------------------------------------------------------
 L9A0A:
-        .byte   $A9,$EE,$20,$7D,$9F,$60         ; 9A0A A9 EE 20 7D 9F 60        .. }.`
+        lda     #$EE                            ; 9A0A A9 EE                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A0C 20 7D 9F                 }.
+        rts                                     ; 9A0F 60                       `
+
+; ----------------------------------------------------------------------------
 L9A10:
-        .byte   $60                             ; 9A10 60                       `
+        rts                                     ; 9A10 60                       `
+
+; ----------------------------------------------------------------------------
 L9A11:
-        .byte   $A9,$F0,$20,$7D,$9F,$60         ; 9A11 A9 F0 20 7D 9F 60        .. }.`
+        lda     #$F0                            ; 9A11 A9 F0                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A13 20 7D 9F                 }.
+        rts                                     ; 9A16 60                       `
+
+; ----------------------------------------------------------------------------
 L9A17:
-        .byte   $A9,$F4,$20,$7D,$9F,$A9,$F7,$20 ; 9A17 A9 F4 20 7D 9F A9 F7 20  .. }... 
-        .byte   $7D,$9F,$A9,$F9,$20,$7D,$9F,$60 ; 9A1F 7D 9F A9 F9 20 7D 9F 60  }... }.`
+        lda     #$F4                            ; 9A17 A9 F4                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A19 20 7D 9F                 }.
+        lda     #$F7                            ; 9A1C A9 F7                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A1E 20 7D 9F                 }.
+        lda     #$F9                            ; 9A21 A9 F9                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A23 20 7D 9F                 }.
+        rts                                     ; 9A26 60                       `
+
+; ----------------------------------------------------------------------------
 L9A27:
-        .byte   $60                             ; 9A27 60                       `
+        rts                                     ; 9A27 60                       `
+
+; ----------------------------------------------------------------------------
 L9A28:
-        .byte   $A9,$FA,$20,$7D,$9F,$A9,$FB,$20 ; 9A28 A9 FA 20 7D 9F A9 FB 20  .. }... 
-        .byte   $7D,$9F,$A9,$FC,$20,$7D,$9F,$60 ; 9A30 7D 9F A9 FC 20 7D 9F 60  }... }.`
+        lda     #$FA                            ; 9A28 A9 FA                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A2A 20 7D 9F                 }.
+        lda     #$FB                            ; 9A2D A9 FB                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A2F 20 7D 9F                 }.
+        lda     #$FC                            ; 9A32 A9 FC                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A34 20 7D 9F                 }.
+        rts                                     ; 9A37 60                       `
+
+; ----------------------------------------------------------------------------
 L9A38:
-        .byte   $A9,$FD,$20,$7D,$9F,$60         ; 9A38 A9 FD 20 7D 9F 60        .. }.`
+        lda     #$FD                            ; 9A38 A9 FD                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A3A 20 7D 9F                 }.
+        rts                                     ; 9A3D 60                       `
+
+; ----------------------------------------------------------------------------
 L9A3E:
-        .byte   $A9,$FF,$20,$7D,$9F,$60         ; 9A3E A9 FF 20 7D 9F 60        .. }.`
+        lda     #$FF                            ; 9A3E A9 FF                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A40 20 7D 9F                 }.
+        rts                                     ; 9A43 60                       `
+
 ; ----------------------------------------------------------------------------
 L9A44:
         lda     #$0F                            ; 9A44 A9 0F                    ..
-        jsr     L9F7D                           ; 9A46 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A46 20 7D 9F                 }.
         lda     #$10                            ; 9A49 A9 10                    ..
         jsr     Bank00CheckCutsceneFlagBit      ; 9A4B 20 00 D1                  ..
         bcc     L9A65                           ; 9A4E 90 15                    ..
@@ -3999,13 +4310,13 @@ L9A44:
         bne     L9A65                           ; 9A5D D0 06                    ..
 L9A5F:
         lda     #$10                            ; 9A5F A9 10                    ..
-        jsr     L9F7D                           ; 9A61 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A61 20 7D 9F                 }.
         rts                                     ; 9A64 60                       `
 
 ; ----------------------------------------------------------------------------
 L9A65:
         lda     #$11                            ; 9A65 A9 11                    ..
-        jsr     L9F7D                           ; 9A67 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A67 20 7D 9F                 }.
         lda     #$10                            ; 9A6A A9 10                    ..
         jsr     Bank00CheckCutsceneFlagBit      ; 9A6C 20 00 D1                  ..
         bcc     L9A89                           ; 9A6F 90 18                    ..
@@ -4021,7 +4332,7 @@ L9A65:
 ; ----------------------------------------------------------------------------
 L9A84:
         lda     #$12                            ; 9A84 A9 12                    ..
-        jsr     L9F7D                           ; 9A86 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A86 20 7D 9F                 }.
 L9A89:
         rts                                     ; 9A89 60                       `
 
@@ -4036,7 +4347,7 @@ L9A8B:
 ; ----------------------------------------------------------------------------
 L9A8C:
         lda     #$70                            ; 9A8C A9 70                    .p
-        jsr     L9F7D                           ; 9A8E 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A8E 20 7D 9F                 }.
         rts                                     ; 9A91 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4050,7 +4361,7 @@ L9A93:
 ; ----------------------------------------------------------------------------
 L9A94:
         lda     #$7A                            ; 9A94 A9 7A                    .z
-        jsr     L9F7D                           ; 9A96 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A96 20 7D 9F                 }.
         rts                                     ; 9A99 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4067,23 +4378,23 @@ L9A9C:
 ; ----------------------------------------------------------------------------
 L9A9D:
         lda     #$D4                            ; 9A9D A9 D4                    ..
-        jsr     L9F7D                           ; 9A9F 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9A9F 20 7D 9F                 }.
         lda     #$D5                            ; 9AA2 A9 D5                    ..
-        jsr     L9F7D                           ; 9AA4 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9AA4 20 7D 9F                 }.
         rts                                     ; 9AA7 60                       `
 
 ; ----------------------------------------------------------------------------
 L9AA8:
         lda     #$DE                            ; 9AA8 A9 DE                    ..
-        jsr     L9F7D                           ; 9AAA 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9AAA 20 7D 9F                 }.
         rts                                     ; 9AAD 60                       `
 
 ; ----------------------------------------------------------------------------
 L9AAE:
         lda     #$E3                            ; 9AAE A9 E3                    ..
-        jsr     L9F7D                           ; 9AB0 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9AB0 20 7D 9F                 }.
         lda     #$E4                            ; 9AB3 A9 E4                    ..
-        jsr     L9F7D                           ; 9AB5 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9AB5 20 7D 9F                 }.
         rts                                     ; 9AB8 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4093,7 +4404,7 @@ L9AB9:
 ; ----------------------------------------------------------------------------
 L9ABA:
         lda     #$15                            ; 9ABA A9 15                    ..
-        jsr     L9F81                           ; 9ABC 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 9ABC 20 81 9F                 ..
         rts                                     ; 9ABF 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4103,13 +4414,13 @@ L9AC0:
 ; ----------------------------------------------------------------------------
 L9AC1:
         lda     #$14                            ; 9AC1 A9 14                    ..
-        jsr     L9F7D                           ; 9AC3 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9AC3 20 7D 9F                 }.
         lda     #$15                            ; 9AC6 A9 15                    ..
-        jsr     L9F7D                           ; 9AC8 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9AC8 20 7D 9F                 }.
         lda     #$16                            ; 9ACB A9 16                    ..
-        jsr     L9F7D                           ; 9ACD 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9ACD 20 7D 9F                 }.
         lda     #$17                            ; 9AD0 A9 17                    ..
-        jsr     L9F7D                           ; 9AD2 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9AD2 20 7D 9F                 }.
         rts                                     ; 9AD5 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4131,11 +4442,11 @@ L9AD9:
 ; ----------------------------------------------------------------------------
 L9ADA:
         lda     #$26                            ; 9ADA A9 26                    .&
-        jsr     L9F7D                           ; 9ADC 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9ADC 20 7D 9F                 }.
         lda     #$82                            ; 9ADF A9 82                    ..
-        jsr     L9F7D                           ; 9AE1 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9AE1 20 7D 9F                 }.
         lda     #$17                            ; 9AE4 A9 17                    ..
-        jsr     L9F81                           ; 9AE6 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 9AE6 20 81 9F                 ..
         rts                                     ; 9AE9 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4157,31 +4468,31 @@ L9AED:
 ; ----------------------------------------------------------------------------
 L9AEE:
         lda     #$27                            ; 9AEE A9 27                    .'
-        jsr     L9F7D                           ; 9AF0 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9AF0 20 7D 9F                 }.
         lda     #$28                            ; 9AF3 A9 28                    .(
-        jsr     L9F7D                           ; 9AF5 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9AF5 20 7D 9F                 }.
         lda     #$81                            ; 9AF8 A9 81                    ..
-        jsr     L9F7D                           ; 9AFA 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9AFA 20 7D 9F                 }.
         lda     #$83                            ; 9AFD A9 83                    ..
-        jsr     L9F7D                           ; 9AFF 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9AFF 20 7D 9F                 }.
         lda     #$0B                            ; 9B02 A9 0B                    ..
-        jsr     L9F81                           ; 9B04 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 9B04 20 81 9F                 ..
         rts                                     ; 9B07 60                       `
 
 ; ----------------------------------------------------------------------------
 L9B08:
         lda     #$84                            ; 9B08 A9 84                    ..
-        jsr     L9F7D                           ; 9B0A 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9B0A 20 7D 9F                 }.
         rts                                     ; 9B0D 60                       `
 
 ; ----------------------------------------------------------------------------
 L9B0E:
         lda     #$04                            ; 9B0E A9 04                    ..
-        jsr     L9F81                           ; 9B10 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 9B10 20 81 9F                 ..
         lda     #$05                            ; 9B13 A9 05                    ..
-        jsr     L9F81                           ; 9B15 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 9B15 20 81 9F                 ..
         lda     #$06                            ; 9B18 A9 06                    ..
-        jsr     L9F81                           ; 9B1A 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 9B1A 20 81 9F                 ..
         rts                                     ; 9B1D 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4191,9 +4502,9 @@ L9B1E:
 ; ----------------------------------------------------------------------------
 L9B1F:
         lda     #$07                            ; 9B1F A9 07                    ..
-        jsr     L9F81                           ; 9B21 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 9B21 20 81 9F                 ..
         lda     #$08                            ; 9B24 A9 08                    ..
-        jsr     L9F81                           ; 9B26 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 9B26 20 81 9F                 ..
         rts                                     ; 9B29 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4203,17 +4514,17 @@ L9B2A:
 ; ----------------------------------------------------------------------------
 L9B2B:
         lda     #$30                            ; 9B2B A9 30                    .0
-        jsr     L9F7D                           ; 9B2D 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9B2D 20 7D 9F                 }.
         rts                                     ; 9B30 60                       `
 
 ; ----------------------------------------------------------------------------
 L9B31:
         lda     #$31                            ; 9B31 A9 31                    .1
-        jsr     L9F7D                           ; 9B33 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9B33 20 7D 9F                 }.
         lda     #$32                            ; 9B36 A9 32                    .2
-        jsr     L9F7D                           ; 9B38 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9B38 20 7D 9F                 }.
         lda     #$33                            ; 9B3B A9 33                    .3
-        jsr     L9F7D                           ; 9B3D 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9B3D 20 7D 9F                 }.
         rts                                     ; 9B40 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4247,9 +4558,9 @@ L9B47:
 ; ----------------------------------------------------------------------------
 L9B48:
         lda     #$9C                            ; 9B48 A9 9C                    ..
-        jsr     L9F7D                           ; 9B4A 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9B4A 20 7D 9F                 }.
         lda     #$99                            ; 9B4D A9 99                    ..
-        jsr     L9F7D                           ; 9B4F 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9B4F 20 7D 9F                 }.
         rts                                     ; 9B52 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4303,13 +4614,13 @@ L9B5E:
 ; ----------------------------------------------------------------------------
 L9B5F:
         lda     #$BC                            ; 9B5F A9 BC                    ..
-        jsr     L9F7D                           ; 9B61 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9B61 20 7D 9F                 }.
         rts                                     ; 9B64 60                       `
 
 ; ----------------------------------------------------------------------------
 L9B65:
         lda     #$BD                            ; 9B65 A9 BD                    ..
-        jsr     L9F7D                           ; 9B67 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9B67 20 7D 9F                 }.
 L9B6A:
         rts                                     ; 9B6A 60                       `
 
@@ -4320,15 +4631,15 @@ L9B6B:
 ; ----------------------------------------------------------------------------
 L9B6C:
         lda     #$10                            ; 9B6C A9 10                    ..
-        jsr     L9F81                           ; 9B6E 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 9B6E 20 81 9F                 ..
         rts                                     ; 9B71 60                       `
 
 ; ----------------------------------------------------------------------------
 L9B72:
         lda     #$BF                            ; 9B72 A9 BF                    ..
-        jsr     L9F7D                           ; 9B74 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9B74 20 7D 9F                 }.
         lda     #$BE                            ; 9B77 A9 BE                    ..
-        jsr     L9F7D                           ; 9B79 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9B79 20 7D 9F                 }.
         rts                                     ; 9B7C 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4358,7 +4669,7 @@ L9B82:
 ; ----------------------------------------------------------------------------
 L9B83:
         lda     #$C4                            ; 9B83 A9 C4                    ..
-        jsr     L9F7D                           ; 9B85 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9B85 20 7D 9F                 }.
         rts                                     ; 9B88 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4419,15 +4730,15 @@ L9B96:
 ; ----------------------------------------------------------------------------
 L9B97:
         lda     #$D0                            ; 9B97 A9 D0                    ..
-        jsr     L9F7D                           ; 9B99 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9B99 20 7D 9F                 }.
         lda     #$D3                            ; 9B9C A9 D3                    ..
-        jsr     L9F7D                           ; 9B9E 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9B9E 20 7D 9F                 }.
         rts                                     ; 9BA1 60                       `
 
 ; ----------------------------------------------------------------------------
 L9BA2:
         lda     #$D2                            ; 9BA2 A9 D2                    ..
-        jsr     L9F7D                           ; 9BA4 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9BA4 20 7D 9F                 }.
         rts                                     ; 9BA7 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4536,19 +4847,19 @@ L9BC2:
 ; ----------------------------------------------------------------------------
 L9BC3:
         lda     #$63                            ; 9BC3 A9 63                    .c
-        jsr     L9F81                           ; 9BC5 20 81 9F                  ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 9BC5 20 81 9F                 ..
         rts                                     ; 9BC8 60                       `
 
 ; ----------------------------------------------------------------------------
 L9BC9:
         lda     #$F1                            ; 9BC9 A9 F1                    ..
-        jsr     L9F7D                           ; 9BCB 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9BCB 20 7D 9F                 }.
         lda     #$F2                            ; 9BCE A9 F2                    ..
-        jsr     L9F7D                           ; 9BD0 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9BD0 20 7D 9F                 }.
         lda     #$F3                            ; 9BD3 A9 F3                    ..
-        jsr     L9F7D                           ; 9BD5 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9BD5 20 7D 9F                 }.
         lda     #$F6                            ; 9BD8 A9 F6                    ..
-        jsr     L9F7D                           ; 9BDA 20 7D 9F                  }.
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9BDA 20 7D 9F                 }.
         rts                                     ; 9BDD 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4610,9 +4921,9 @@ L9BEB:
         bcs     L9C00                           ; 9BEF B0 0F                    ..
         asl     a                               ; 9BF1 0A                       .
         tay                                     ; 9BF2 A8                       .
-        lda     L9C11,y                         ; 9BF3 B9 11 9C                 ...
+        lda     BackgroundSceneRoomIndexTablePart1,y; 9BF3 B9 11 9C             ...
         sta     L0002                           ; 9BF6 85 02                    ..
-        lda     L9C11+1,y                       ; 9BF8 B9 12 9C                 ...
+        lda     BackgroundSceneRoomIndexTablePart1+1,y; 9BF8 B9 12 9C           ...
         sta     $03                             ; 9BFB 85 03                    ..
         jmp     (L0002)                         ; 9BFD 6C 02 00                 l..
 
@@ -4621,15 +4932,15 @@ L9C00:
         sbc     #$80                            ; 9C00 E9 80                    ..
         asl     a                               ; 9C02 0A                       .
         tay                                     ; 9C03 A8                       .
-        lda     L9C11+1+255,y                   ; 9C04 B9 11 9D                 ...
+        lda     BackgroundSceneRoomIndexTablePart2,y; 9C04 B9 11 9D             ...
         sta     L0002                           ; 9C07 85 02                    ..
-        lda     L9C11+1+255+1,y                 ; 9C09 B9 12 9D                 ...
+        lda     BackgroundSceneRoomIndexTablePart2+1,y; 9C09 B9 12 9D           ...
         sta     $03                             ; 9C0C 85 03                    ..
         jmp     (L0002)                         ; 9C0E 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-L9C11:
-        .addr   L958C                           ; 9C11 8C 95                    ..
+BackgroundSceneRoomIndexTablePart1:
+        .addr   BackgroundSceneRoomIndex00      ; 9C11 8C 95                    ..
         .addr   L95B5                           ; 9C13 B5 95                    ..
         .addr   L95ED                           ; 9C15 ED 95                    ..
         .addr   L95F8                           ; 9C17 F8 95                    ..
@@ -4670,7 +4981,7 @@ L9C11:
         .addr   L986D                           ; 9C5D 6D 98                    m.
         .addr   L986E                           ; 9C5F 6E 98                    n.
         .addr   L9888                           ; 9C61 88 98                    ..
-        .addr   L988E                           ; 9C63 8E 98                    ..
+        .addr   BackgroundSceneRoomIndex29      ; 9C63 8E 98                    ..
         .addr   L98C6                           ; 9C65 C6 98                    ..
         .addr   L98CC                           ; 9C67 CC 98                    ..
         .addr   L98CD                           ; 9C69 CD 98                    ..
@@ -4757,6 +5068,7 @@ L9C11:
         .addr   L9B5A                           ; 9D0B 5A 9B                    Z.
         .addr   L9B5B                           ; 9D0D 5B 9B                    [.
         .addr   L9B5C                           ; 9D0F 5C 9B                    \.
+BackgroundSceneRoomIndexTablePart2:
         .addr   L9B5D                           ; 9D11 5D 9B                    ].
         .addr   L9B5E                           ; 9D13 5E 9B                    ^.
         .addr   L9B5F                           ; 9D15 5F 9B                    _.
@@ -4909,6 +5221,7 @@ L9E22:
         .byte   $34,$35,$32,$33,$34,$35,$32,$33 ; 9E32 34 35 32 33 34 35 32 33  45234523
         .byte   $34,$35,$32,$33,$34,$35         ; 9E3A 34 35 32 33 34 35        452345
 ; ----------------------------------------------------------------------------
+L9E40:
         lda     #$D1                            ; 9E40 A9 D1                    ..
         jsr     Bank00CheckCutsceneFlagBit      ; 9E42 20 00 D1                  ..
         bcs     L9E48                           ; 9E45 B0 01                    ..
@@ -5119,13 +5432,13 @@ L9F54           := * + 1
         rts                                     ; 9F7C 60                       `
 
 ; ----------------------------------------------------------------------------
-L9F7D:
-        jsr     L889C                           ; 9F7D 20 9C 88                  ..
+Bank00LoadBackgroundSceneIdTable1:
+        jsr     Bank00LoadSceneJumpTablePart1   ; 9F7D 20 9C 88                  ..
         rts                                     ; 9F80 60                       `
 
 ; ----------------------------------------------------------------------------
-L9F81:
-        jsr     L88C7                           ; 9F81 20 C7 88                  ..
+Bank00LoadBackgroundSceneIdTable3:
+        jsr     Bank00LoadSceneJumpTablePart3   ; 9F81 20 C7 88                  ..
         rts                                     ; 9F84 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5140,7 +5453,7 @@ L9F85:
         .byte   $FF,$06,$01,$13,$02,$00,$00,$0F ; 9FBD FF 06 01 13 02 00 00 0F  ........
         .byte   $02,$0F,$06,$0E,$00,$0A,$02,$06 ; 9FC5 02 0F 06 0E 00 0A 02 06  ........
         .byte   $FF,$FF                         ; 9FCD FF FF                    ..
-L9FCF:
+SceneTrainStationFirstWaveGuards:
         .byte   $03,$01,$01,$08,$00,$A0,$01,$90 ; 9FCF 03 01 01 08 00 A0 01 90  ........
         .byte   $00,$09,$02,$02,$01,$80,$00,$50 ; 9FD7 00 09 02 02 01 80 00 50  .......P
         .byte   $08,$02,$10,$01,$09,$06,$02,$01 ; 9FDF 08 02 10 01 09 06 02 01  ........
@@ -5162,7 +5475,7 @@ LA01D:
         .byte   $02,$04,$00,$01,$FF,$13,$02,$00 ; A055 02 04 00 01 FF 13 02 00  ........
         .byte   $00,$0E,$00,$0A,$02,$06,$FF,$FF ; A05D 00 0E 00 0A 02 06 FF FF  ........
         .byte   $30,$FF                         ; A065 30 FF                    0.
-LA067:
+SceneTrainStationSecondWaveGuards:
         .byte   $03,$02,$01,$08,$00,$A0,$01,$70 ; A067 03 02 01 08 00 A0 01 70  .......p
         .byte   $00,$09,$02,$02,$01,$80,$00,$50 ; A06F 00 09 02 02 01 80 00 50  .......P
         .byte   $08,$02,$10,$01,$09,$06,$02,$01 ; A077 08 02 10 01 09 06 02 01  ........
@@ -5550,7 +5863,7 @@ LAA0D:
         .byte   $06,$29,$02,$1C,$01,$16,$01,$00 ; AA2D 06 29 02 1C 01 16 01 00  .)......
         .byte   $88,$0F,$01,$08,$00,$80,$01,$0A ; AA35 88 0F 01 08 00 80 01 0A  ........
         .byte   $00,$FF,$05,$00,$FF             ; AA3D 00 FF 05 00 FF           .....
-LAA42:
+SceneCloudFindsTifaInDonCorneoBasement:
         .byte   $03,$39,$01,$0B,$00,$60,$01,$60 ; AA42 03 39 01 0B 00 60 01 60  .9...`.`
         .byte   $00,$06,$39,$09,$02,$0B,$00,$60 ; AA4A 00 06 39 09 02 0B 00 60  ..9....`
         .byte   $01,$60,$08,$02,$20,$01,$0E,$02 ; AA52 01 60 08 02 20 01 0E 02  .`.. ...
@@ -5677,10 +5990,10 @@ LAD16:
         .byte   $0D,$10,$06,$29,$04,$3C,$01,$23 ; AD16 0D 10 06 29 04 3C 01 23  ...).<.#
         .byte   $04,$3D,$48,$FF,$29,$04,$40,$02 ; AD1E 04 3D 48 FF 29 04 40 02  .=H.).@.
         .byte   $29,$04,$45,$03,$FF             ; AD26 29 04 45 03 FF           ).E..
-ScenePlayerGets62FCard:
+SceneCloudGets62FCard:
         .byte   $29,$04,$43,$01,$03,$59,$06,$59 ; AD2B 29 04 43 01 03 59 06 59  ).C..Y.Y
         .byte   $29,$04,$44,$01,$1B,$19,$FF     ; AD33 29 04 44 01 1B 19 FF     ).D....
-LAD3A:
+SceneCloudTalksToMayor62F:
         .byte   $0D,$03,$5A,$10,$03,$06,$5A,$29 ; AD3A 0D 03 5A 10 03 06 5A 29  ..Z...Z)
         .byte   $04,$49,$02,$FF                 ; AD42 04 49 02 FF              .I..
 LAD46:
@@ -5742,44 +6055,44 @@ LAE3C:
 LAE54:
         .byte   $03,$62,$01,$02,$00,$C0,$00,$E0 ; AE54 03 62 01 02 00 C0 00 E0  .b......
         .byte   $00,$2F,$00,$FF                 ; AE5C 00 2F 00 FF              ./..
-LAE60:
+SceneShinra65FSwitchTopLeftTurnOffAndGet66FCard:
         .byte   $0D,$10,$03,$29,$04,$F5,$01,$33 ; AE60 0D 10 03 29 04 F5 01 33  ...)...3
         .byte   $66,$5D,$07,$66,$09,$0E,$00,$01 ; AE68 66 5D 07 66 09 0E 00 01  f].f....
         .byte   $F0,$01,$F0,$03,$69,$06,$69,$04 ; AE70 F0 01 F0 03 69 06 69 04  ....i.i.
         .byte   $04,$56,$FF,$1B,$1C,$FF         ; AE78 04 56 FF 1B 1C FF        .V....
-LAE7E:
+SceneShinra65FSwitchTopLeftTurnOn:
         .byte   $06,$66,$0A,$0E,$FF,$FF         ; AE7E 06 66 0A 0E FF FF        .f....
 LAE84:
         .byte   $0D,$10,$05,$29,$04,$F5,$01,$33 ; AE84 0D 10 05 29 04 F5 01 33  ...)...3
         .byte   $65,$5F,$07,$65,$09,$0B,$00,$00 ; AE8C 65 5F 07 65 09 0B 00 00  e_.e....
         .byte   $F0,$01,$F0,$FF                 ; AE94 F0 01 F0 FF              ....
-LAE98:
+SceneShinra65FSwitchTopRightTurnOn:
         .byte   $06,$65,$0A,$0B,$FF,$FF         ; AE98 06 65 0A 0B FF FF        .e....
 LAE9E:
         .byte   $0D,$10,$06,$29,$04,$F5,$01,$33 ; AE9E 0D 10 06 29 04 F5 01 33  ...)...3
         .byte   $64,$61,$07,$64,$09,$0A,$00,$01 ; AEA6 64 61 07 64 09 0A 00 01  da.d....
         .byte   $C0,$00,$C0,$FF                 ; AEAE C0 00 C0 FF              ....
-LAEB2:
+SceneShinra65FSwitchMiddleLeftTurnOn:
         .byte   $06,$64,$0A,$0A,$FF,$FF         ; AEB2 06 64 0A 0A FF FF        .d....
 LAEB8:
         .byte   $0D,$10,$07,$29,$04,$F5,$01,$33 ; AEB8 0D 10 07 29 04 F5 01 33  ...)...3
         .byte   $68,$63,$07,$68,$09,$0D,$00,$01 ; AEC0 68 63 07 68 09 0D 00 01  hc.h....
         .byte   $30,$01,$50,$FF                 ; AEC8 30 01 50 FF              0.P.
-LAECC:
+SceneShinra65FSwitchBottomLeftTurnOn:
         .byte   $06,$68,$0A,$0D,$FF,$FF         ; AECC 06 68 0A 0D FF FF        .h....
 LAED2:
         .byte   $0D,$10,$08,$29,$04,$F5,$01,$33 ; AED2 0D 10 08 29 04 F5 01 33  ...)...3
         .byte   $63,$65,$07,$63,$09,$04,$00,$00 ; AEDA 63 65 07 63 09 04 00 00  ce.c....
         .byte   $00,$00,$00,$FF                 ; AEE2 00 00 00 FF              ....
-LAEE6:
+SceneShinra65FSwitchTopMiddleTurnOn:
         .byte   $06,$63,$0A,$04,$FF,$FF         ; AEE6 06 63 0A 04 FF FF        .c....
-LAEEC:
+SceneShinra65FSwitchBottomRightTurnOff:
         .byte   $0D,$10,$09,$29,$04,$F5,$01,$33 ; AEEC 0D 10 09 29 04 F5 01 33  ...)...3
         .byte   $67,$67,$07,$67,$09,$0C,$00,$00 ; AEF4 67 67 07 67 09 0C 00 00  gg.g....
         .byte   $F0,$01,$F0,$FF                 ; AEFC F0 01 F0 FF              ....
-LAF00:
+SceneShinra65FSwitchBottomRightTurnOn:
         .byte   $06,$67,$0A,$0C,$FF,$FF         ; AF00 06 67 0A 0C FF FF        .g....
-LAF06:
+SceneShinraMeeting66FDiscussSector7:
         .byte   $03,$6A,$01,$0B,$00,$F0,$01,$60 ; AF06 03 6A 01 0B 00 F0 01 60  .j.....`
         .byte   $04,$06,$6A,$27,$0D,$16,$09,$01 ; AF0E 04 06 6A 27 0D 16 09 01  ..j'....
         .byte   $0B,$00,$D0,$01,$60,$08,$01,$20 ; AF16 0B 00 D0 01 60 08 01 20  ....`.. 
@@ -5809,7 +6122,7 @@ LAF06:
         .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; AFD6 30 30 30 30 30 30 30 30  00000000
         .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; AFDE 30 30 30 30 30 30 30 30  00000000
         .byte   $30,$30,$FF                     ; AFE6 30 30 FF                 00.
-LAFE9:
+Scene67FCloudFindsHojoExperiment:
         .byte   $02,$6A,$03,$6B,$01,$0B,$00,$70 ; AFE9 02 6A 03 6B 01 0B 00 70  .j.k...p
         .byte   $01,$80,$02,$06,$6B,$27,$04,$18 ; AFF1 01 80 02 06 6B 27 04 18  ....k'..
         .byte   $08,$00,$80,$00,$09,$01,$08,$01 ; AFF9 08 00 80 00 09 01 08 01  ........
@@ -5839,7 +6152,7 @@ LAFE9:
 LB0B2:
         .byte   $03,$6C,$01,$02,$00,$C0,$00,$E0 ; B0B2 03 6C 01 02 00 C0 00 E0  .l......
         .byte   $00,$2F,$00,$FF                 ; B0BA 00 2F 00 FF              ./..
-LB0BE:
+Scene67FCloudFindsAerith:
         .byte   $02,$6C,$03,$6D,$01,$05,$00,$40 ; B0BE 02 6C 03 6D 01 05 00 40  .l.m...@
         .byte   $00,$50,$40,$06,$6D,$27,$07,$0F ; B0C6 00 50 40 06 6D 27 07 0F  .P@.m'..
         .byte   $08,$04,$20,$00,$09,$01,$08,$00 ; B0CE 08 04 20 00 09 01 08 00  .. .....
@@ -5905,7 +6218,7 @@ LB287:
         .byte   $00,$2F,$00,$FF                 ; B28F 00 2F 00 FF              ./..
 LB293:
         .byte   $0D,$10,$01,$29,$04,$EB,$01,$FF ; B293 0D 10 01 29 04 EB 01 FF  ...)....
-LB29B:
+ScenePresidentShinraDead:
         .byte   $02,$72,$03,$73,$01,$08,$00,$10 ; B29B 02 72 03 73 01 08 00 10  .r.s....
         .byte   $00,$C0,$F0,$06,$73,$27,$08,$0A ; B2A3 00 C0 F0 06 73 27 08 0A  ....s'..
         .byte   $09,$02,$02,$00,$70,$00,$B0,$09 ; B2AB 09 02 02 00 70 00 B0 09  ....p...
@@ -5917,7 +6230,7 @@ LB29B:
         .byte   $00,$0A,$01,$02,$03,$0A,$FF,$1C ; B2DB 00 0A 01 02 03 0A FF 1C  ........
         .byte   $01,$05,$1C,$02,$05,$1C,$03,$05 ; B2E3 01 05 1C 02 05 1C 03 05  ........
         .byte   $1C,$04,$05,$FF                 ; B2EB 1C 04 05 FF              ....
-LB2EF:
+ScenePartyMeetsRufusOnRooftop:
         .byte   $02,$73,$03,$74,$01,$0B,$00,$C0 ; B2EF 02 73 03 74 01 0B 00 C0  .s.t....
         .byte   $00,$70,$0F,$06,$74,$27,$08,$08 ; B2F7 00 70 0F 06 74 27 08 08  .p..t'..
         .byte   $29,$05,$17,$01,$08,$05,$10,$02 ; B2FF 29 05 17 01 08 05 10 02  ).......
@@ -5973,7 +6286,7 @@ LB44B:
         .byte   $08,$00,$10,$00,$29,$05,$35,$02 ; B45B 08 00 10 00 29 05 35 02  ....).5.
         .byte   $08,$00,$10,$01,$1C,$02,$05,$0A ; B463 08 00 10 01 1C 02 05 0A  ........
         .byte   $02,$FF,$08,$00,$40,$00,$FF     ; B46B 02 FF 08 00 40 00 FF     ....@..
-LB472:
+ScenePartyReachesShinraEntranceReadyToLeave:
         .byte   $02,$78,$03,$79,$01,$05,$00,$40 ; B472 02 78 03 79 01 05 00 40  .x.y...@
         .byte   $00,$80,$A0,$06,$79,$27,$06,$09 ; B47A 00 80 A0 06 79 27 06 09  ....y'..
         .byte   $08,$00,$40,$00,$09,$01,$0B,$FF ; B482 08 00 40 00 09 01 0B FF  ..@.....
@@ -6068,19 +6381,19 @@ LB66B:
         .byte   $03,$78,$01,$05,$00,$50,$00,$C0 ; B66B 03 78 01 05 00 50 00 C0  .x...P..
         .byte   $20,$29,$0E,$1B,$01,$08,$00,$80 ; B673 20 29 0E 1B 01 08 00 80   )......
         .byte   $01,$FF                         ; B67B 01 FF                    ..
-LB67D:
+SceneMidgarRoadCloudPicksBarret:
         .byte   $0D,$03,$7D,$10,$02,$1A,$0E,$1D ; B67D 0D 03 7D 10 02 1A 0E 1D  ..}.....
         .byte   $02,$0A,$02,$FF,$06,$7D,$1C,$01 ; B685 02 0A 02 FF 06 7D 1C 01  .....}..
         .byte   $05,$FF                         ; B68D 05 FF                    ..
-LB68F:
+SceneMidgarRoadCloudPicksTifa:
         .byte   $0D,$03,$7E,$10,$01,$1A,$0E,$1D ; B68F 0D 03 7E 10 01 1A 0E 1D  ..~.....
         .byte   $03,$0A,$01,$FF,$06,$7E,$1C,$02 ; B697 03 0A 01 FF 06 7E 1C 02  .....~..
         .byte   $05,$FF                         ; B69F 05 FF                    ..
-LB6A1:
+SceneMidgarRoadCloudPicksAerith:
         .byte   $0D,$03,$7F,$10,$03,$1A,$0E,$1D ; B6A1 0D 03 7F 10 03 1A 0E 1D  ........
         .byte   $04,$0A,$03,$FF,$06,$7F,$1C,$03 ; B6A9 04 0A 03 FF 06 7F 1C 03  ........
         .byte   $05,$FF                         ; B6B1 05 FF                    ..
-LB6B3:
+SceneMidgarRoadCloudPicksRedXIII:
         .byte   $0D,$03,$80,$10,$04,$1A,$0E,$1D ; B6B3 0D 03 80 10 04 1A 0E 1D  ........
         .byte   $05,$0A,$04,$FF,$06,$80,$1C,$04 ; B6BB 05 0A 04 FF 06 80 1C 04  ........
         .byte   $05,$FF                         ; B6C3 05 FF                    ..
@@ -6119,7 +6432,7 @@ LB77B:
         .byte   $60,$03,$7D,$08,$02,$80,$01,$29 ; B783 60 03 7D 08 02 80 01 29  `.}....)
         .byte   $0E,$1E,$01,$08,$00,$40,$01,$29 ; B78B 0E 1E 01 08 00 40 01 29  .....@.)
         .byte   $0E,$1F,$01,$FF                 ; B793 0E 1F 01 FF              ....
-LB797:
+ScenePartyReachesEndOfRoadOutsideMidgar:
         .byte   $03,$82,$01,$05,$00,$00,$02,$60 ; B797 03 82 01 05 00 00 02 60  .......`
         .byte   $F0,$06,$82,$09,$05,$05,$00,$70 ; B79F F0 06 82 09 05 05 00 70  .......p
         .byte   $01,$E0,$08,$05,$40,$04,$27,$07 ; B7A7 01 E0 08 05 40 04 27 07  ....@.'.
@@ -6211,7 +6524,7 @@ LB943:
         .byte   $20,$00,$16,$01,$02,$12,$0F,$01 ; B9EB 20 00 16 01 02 12 0F 01   .......
         .byte   $0F,$02,$0A,$01,$02,$FF,$0E,$00 ; B9F3 0F 02 0A 01 02 FF 0E 00  ........
         .byte   $FF                             ; B9FB FF                       .
-LB9FC:
+SceneCloudFindsPriscillaNearWater:
         .byte   $03,$8B,$01,$FF,$01,$30,$00,$E0 ; B9FC 03 8B 01 FF 01 30 00 E0  .....0..
         .byte   $00,$14,$00,$20,$0E,$08,$00,$80 ; BA04 00 14 00 20 0E 08 00 80  ... ....
         .byte   $01,$09,$01,$0B,$FF,$FF,$FF,$FF ; BA0C 01 09 01 0B FF FF FF FF  ........
@@ -6255,7 +6568,7 @@ LB9FC:
         .byte   $08,$00,$10,$00,$08,$00,$10,$00 ; BB3C 08 00 10 00 08 00 10 00  ........
         .byte   $08,$00,$10,$00,$08,$00,$10,$00 ; BB44 08 00 10 00 08 00 10 00  ........
         .byte   $08,$00,$10,$00,$FF             ; BB4C 08 00 10 00 FF           .....
-LBB51:
+SceneCloudGoesToDolphinToJumpUp:
         .byte   $02,$8D,$03,$8E,$01,$0B,$01,$30 ; BB51 02 8D 03 8E 01 0B 01 30  .......0
         .byte   $00,$D0,$01,$06,$8E,$27,$03,$08 ; BB59 00 D0 01 06 8E 27 03 08  .....'..
         .byte   $08,$00,$20,$00,$29,$06,$0C,$02 ; BB61 08 00 20 00 29 06 0C 02  .. .)...
@@ -6314,11 +6627,11 @@ LBC33:
 LBCEF:
         .byte   $0D,$38,$01,$2A,$00,$01,$37,$00 ; BCEF 0D 38 01 2A 00 01 37 00  .8.*..7.
         .byte   $FF                             ; BCF7 FF                       .
-LBCF8:
+ScriptDisembarkBuggy:
         .byte   $0D,$38,$03,$09,$03,$08,$FF,$FF ; BCF8 0D 38 03 09 03 08 FF FF  .8......
         .byte   $FF,$FF,$2A,$00,$03,$37,$00,$39 ; BD00 FF FF 2A 00 03 37 00 39  ..*..7.9
         .byte   $03,$FF                         ; BD08 03 FF                    ..
-LBD0A:
+SceneJunonAirshipCloudTalksToAerisInShinraUniform:
         .byte   $0D,$03,$92,$10,$02,$06,$92,$29 ; BD0A 0D 03 92 10 02 06 92 29  .......)
         .byte   $06,$42,$06,$FF                 ; BD12 06 42 06 FF              .B..
 LBD16:
@@ -6330,13 +6643,13 @@ LBD22:
 LBD30:
         .byte   $02,$95,$0D,$10,$02,$29,$06,$4E ; BD30 02 95 0D 10 02 29 06 4E  .....).N
         .byte   $01,$FF                         ; BD38 01 FF                    ..
-LBD3A:
+SceneJunonAirshipCloudTalksToRedXIIIInShinraUniform:
         .byte   $03,$94,$0D,$10,$02,$06,$94,$29 ; BD3A 03 94 0D 10 02 06 94 29  .......)
         .byte   $06,$4C,$02,$FF                 ; BD42 06 4C 02 FF              .L..
 LBD46:
         .byte   $02,$94,$0D,$10,$02,$29,$06,$4D ; BD46 02 94 0D 10 02 29 06 4D  .....).M
         .byte   $01,$FF                         ; BD4E 01 FF                    ..
-LBD50:
+SceneJunonAirshipCloudTalksToTifaInShinraUniform:
         .byte   $03,$93,$0D,$10,$03,$06,$93,$29 ; BD50 03 93 0D 10 03 06 93 29  .......)
         .byte   $06,$48,$04,$FF                 ; BD58 06 48 04 FF              .H..
 LBD5C:
@@ -6345,7 +6658,7 @@ LBD5C:
 LBD66:
         .byte   $03,$97,$34,$02,$93,$94,$FF,$06 ; BD66 03 97 34 02 93 94 FF 06  ..4.....
         .byte   $97,$FF                         ; BD6E 97 FF                    ..
-LBD70:
+SceneJunonAirshipCloudTalksToBarretAndPartyGetsTogether:
         .byte   $02,$95,$03,$96,$0D,$10,$04,$06 ; BD70 02 95 03 96 0D 10 04 06  ........
         .byte   $96,$29,$06,$4F,$04,$11,$0B,$1E ; BD78 96 29 06 4F 04 11 0B 1E  .).O....
         .byte   $0F,$00,$09,$00,$05,$01,$70,$00 ; BD80 0F 00 09 00 05 01 70 00  ......p.
@@ -6361,7 +6674,7 @@ LBD70:
         .byte   $0A,$02,$FF,$1C,$01,$05,$1C,$02 ; BDD0 0A 02 FF 1C 01 05 1C 02  ........
         .byte   $05,$1C,$03,$05,$1C,$04,$05,$08 ; BDD8 05 1C 03 05 1C 04 05 08  ........
         .byte   $00,$20,$00,$FF                 ; BDE0 00 20 00 FF              . ..
-LBDE4:
+SceneJunonAirshipCloudFindsSephiroth:
         .byte   $02,$96,$03,$98,$01,$02,$01,$40 ; BDE4 02 96 03 98 01 02 01 40  .......@
         .byte   $00,$70,$00,$06,$98,$09,$02,$05 ; BDEC 00 70 00 06 98 09 02 05  .p......
         .byte   $FF,$FF,$FF,$FF,$08,$02,$40,$01 ; BDF4 FF FF FF FF 08 02 40 01  ......@.
@@ -6382,14 +6695,14 @@ LBDE4:
 LBE68:
         .byte   $03,$9A,$0D,$10,$08,$06,$9A,$29 ; BE68 03 9A 0D 10 08 06 9A 29  .......)
         .byte   $06,$94,$08,$FF                 ; BE70 06 94 08 FF              ....
-LBE74:
+ScenePartyLeavesCostaDelSol:
         .byte   $03,$9A,$01,$08,$00,$20,$00,$70 ; BE74 03 9A 01 08 00 20 00 70  ..... .p
         .byte   $10,$06,$9A,$29,$06,$94,$02,$08 ; BE7C 10 06 9A 29 06 94 02 08  ...)....
         .byte   $00,$20,$00,$29,$06,$96,$06,$FF ; BE84 00 20 00 29 06 96 06 FF  . .)....
 LBE8C:
         .byte   $02,$9A,$0D,$10,$08,$29,$06,$98 ; BE8C 02 9A 0D 10 08 29 06 98  .....)..
         .byte   $01,$FF                         ; BE94 01 FF                    ..
-LBE96:
+SceneBeforeEnterGoldSaucer:
         .byte   $03,$9C,$01,$08,$00,$50,$00,$70 ; BE96 03 9C 01 08 00 50 00 70  .....P.p
         .byte   $40,$06,$9C,$27,$05,$06,$08,$00 ; BE9E 40 06 9C 27 05 06 08 00  @..'....
         .byte   $20,$00,$14,$00,$20,$01,$09,$01 ; BEA6 20 00 14 00 20 01 09 01   ... ...
@@ -6406,7 +6719,7 @@ LBEC2:
         .byte   $FF                             ; BEF2 FF                       .
 LBEF3:
         .byte   $08,$00,$40,$01,$FF             ; BEF3 08 00 40 01 FF           ..@..
-LBEF8:
+SceneCloudBuysLifetimePassGoldSaucer:
         .byte   $26,$B8,$0B,$00,$BA,$24,$B8,$0B ; BEF8 26 B8 0B 00 BA 24 B8 0B  &....$..
         .byte   $00,$00,$00,$06,$9F,$04,$07,$FC ; BF00 00 00 00 06 9F 04 07 FC  ........
         .byte   $FF,$08,$00,$80,$01,$05,$00,$FF ; BF08 FF 08 00 80 01 05 00 FF  ........
@@ -6418,11 +6731,11 @@ LBF19:
         .byte   $00,$08,$00,$20,$00,$04,$07,$00 ; BF21 00 08 00 20 00 04 07 00  ... ....
         .byte   $04,$FF,$08,$00,$80,$01,$05,$00 ; BF29 04 FF 08 00 80 01 05 00  ........
         .byte   $FF                             ; BF31 FF                       .
-LBF32:
+SceneCloudMeetsDio:
         .byte   $0D,$03,$A1,$10,$01,$06,$A1,$29 ; BF32 0D 03 A1 10 01 06 A1 29  .......)
         .byte   $07,$17,$0F,$FF,$0D,$02,$A1,$10 ; BF3A 07 17 0F FF 0D 02 A1 10  ........
         .byte   $01,$29,$07,$FD,$01,$FF         ; BF42 01 29 07 FD 01 FF        .)....
-LBF48:
+SceneCloudMeetsGuardBeforeDyne:
         .byte   $0D,$03,$A6,$10,$02,$06,$A6,$29 ; BF48 0D 03 A6 10 02 06 A6 29  .......)
         .byte   $07,$6A,$03,$FF                 ; BF50 07 6A 03 FF              .j..
 LBF54:
@@ -6597,7 +6910,7 @@ SceneCloudReturnsSheraHouseAfterMeetingCaptain:
         .byte   $06,$E9,$29,$0C,$89,$02,$1B,$1E ; C3D9 06 E9 29 0C 89 02 1B 1E  ..).....
         .byte   $29,$0E,$3B,$01,$FF,$30,$05,$00 ; C3E1 29 0E 3B 01 FF 30 05 00  ).;..0..
         .byte   $FF                             ; C3E9 FF                       .
-LC3EA:
+SceneCloudDiscoversKeystoneSoldToDio:
         .byte   $03,$C0,$0D,$10,$01,$06,$C0,$29 ; C3EA 03 C0 0D 10 01 06 C0 29  .......)
         .byte   $0A,$00,$0F,$FF                 ; C3F2 0A 00 0F FF              ....
 LC3F6:
@@ -6630,7 +6943,7 @@ LC47B:
         .byte   $06,$16,$05,$16,$06,$16,$05,$06 ; C493 06 16 05 16 06 16 05 06  ........
         .byte   $88,$16,$05,$06,$88,$16,$05,$06 ; C49B 88 16 05 06 88 16 05 06  ........
         .byte   $88,$16,$05,$06,$88,$05,$01,$FF ; C4A3 88 16 05 06 88 05 01 FF  ........
-LC4AB:
+SceneTramDownAtGoldSaucer:
         .byte   $02,$C1,$03,$C2,$0D,$01,$05,$00 ; C4AB 02 C1 03 C2 0D 01 05 00  ........
         .byte   $A0,$00,$A0,$00,$06,$C2,$29,$0A ; C4B3 A0 00 A0 00 06 C2 29 0A  ......).
         .byte   $1A,$03,$09,$08,$0B,$FF,$FF,$FF ; C4BB 1A 03 09 08 0B FF FF FF  ........
@@ -6643,7 +6956,7 @@ LC4D7:
         .byte   $00,$80,$01,$FF                 ; C4E7 00 80 01 FF              ....
 LC4EB:
         .byte   $0D,$10,$05,$29,$0A,$50,$01,$FF ; C4EB 0D 10 05 29 0A 50 01 FF  ...).P..
-LC4F3:
+SceneForgottenCityAerithDeathScene:
         .byte   $02,$E3,$03,$E4,$01,$08,$00,$70 ; C4F3 02 E3 03 E4 01 08 00 70  .......p
         .byte   $00,$F0,$00,$09,$03,$02,$FF,$FF ; C4FB 00 F0 00 09 03 02 FF FF  ........
         .byte   $FF,$FF,$08,$03,$10,$01,$08,$03 ; C503 FF FF 08 03 10 01 08 03  ........
@@ -6710,7 +7023,7 @@ LC6DD:
         .byte   $02,$CE,$03,$CF,$01,$08,$01,$10 ; C6DD 02 CE 03 CF 01 08 01 10  ........
         .byte   $00,$30,$30,$06,$CF,$29,$0C,$2B ; C6E5 00 30 30 06 CF 29 0C 2B  .00..).+
         .byte   $02,$FF                         ; C6ED 02 FF                    ..
-LC6EF:
+SceneCloudTalksToPersonNearSleepingForest:
         .byte   $02,$CE,$03,$CF,$0D,$10,$02,$06 ; C6EF 02 CE 03 CF 0D 10 02 06  ........
         .byte   $CF,$29,$0C,$2B,$02,$FF         ; C6F7 CF 29 0C 2B 02 FF        .).+..
 LC6FD:
@@ -6725,7 +7038,7 @@ LC711:
 LC71B:
         .byte   $0D,$10,$02,$02,$CE,$29,$0C,$26 ; C71B 0D 10 02 02 CE 29 0C 26  .....).&
         .byte   $02,$FF                         ; C723 02 FF                    ..
-LC725:
+SceneCloudTalksToPersonInBoneValley:
         .byte   $02,$CE,$03,$D0,$0D,$10,$01,$06 ; C725 02 CE 03 D0 0D 10 01 06  ........
         .byte   $D0,$29,$0C,$28,$08,$23,$0C,$31 ; C72D D0 29 0C 28 08 23 0C 31  .).(.#.1
         .byte   $E6,$FF,$06,$D2,$29,$0C,$33,$03 ; C735 E6 FF 06 D2 29 0C 33 03  ....).3.
@@ -6804,11 +7117,11 @@ LC8F4:
 LC8FE:
         .byte   $02,$E7,$10,$05,$0D,$29,$0E,$37 ; C8FE 02 E7 10 05 0D 29 0E 37  .....).7
         .byte   $01,$FF                         ; C906 01 FF                    ..
-LC908:
+SceneCloudGetsGlacierMap:
         .byte   $03,$E7,$0D,$10,$0B,$0A,$0B,$FF ; C908 03 E7 0D 10 0B 0A 0B FF  ........
         .byte   $29,$0E,$38,$01,$06,$E7,$1B,$1F ; C910 29 0E 38 01 06 E7 1B 1F  ).8.....
         .byte   $FF                             ; C918 FF                       .
-LC919:
+ScenePartyLeavesGlacierInnToHeadNorth:
         .byte   $02,$E6,$03,$E8,$01,$08,$00,$60 ; C919 02 E6 03 E8 01 08 00 60  .......`
         .byte   $00,$10,$00,$06,$E8,$08,$07,$10 ; C921 00 10 00 06 E8 08 07 10  ........
         .byte   $00,$29,$0C,$74,$01,$08,$00,$20 ; C929 00 29 0C 74 01 08 00 20  .).t... 
@@ -6928,16 +7241,16 @@ LCB7C:
         .byte   $A4,$01,$08,$00,$80,$00,$29,$0D ; CC44 A4 01 08 00 80 00 29 0D  ......).
         .byte   $A5,$0C,$05,$00,$FF             ; CC4C A5 0C 05 00 FF           .....
 ; ----------------------------------------------------------------------------
-Bank00SceneScriptTable:
+Bank00SceneScriptTablePart1:
         .addr   L9F85                           ; CC51 85 9F                    ..
-        .addr   L9FCF                           ; CC53 CF 9F                    ..
+        .addr   SceneTrainStationFirstWaveGuards; CC53 CF 9F                    ..
         .addr   LA01D                           ; CC55 1D A0                    ..
-        .addr   LA067                           ; CC57 67 A0                    g.
+        .addr   SceneTrainStationSecondWaveGuards; CC57 67 A0                   g.
         .addr   SceneCloudMeetsBiggsJessieWedge ; CC59 B5 A0                    ..
         .addr   LA137                           ; CC5B 37 A1                    7.
         .addr   LA145                           ; CC5D 45 A1                    E.
         .addr   LA205                           ; CC5F 05 A2                    ..
-        .addr   SceneCloudSetsSector7Bomb       ; CC61 51 FB                    Q.
+        .addr   SceneCloudSetsSector1Bomb       ; CC61 51 FB                    Q.
         .addr   LA28F                           ; CC63 8F A2                    ..
         .addr   LA2A1                           ; CC65 A1 A2                    ..
         .addr   LA2DD                           ; CC67 DD A2                    ..
@@ -6977,7 +7290,7 @@ Bank00SceneScriptTable:
         .addr   LA979                           ; CCAB 79 A9                    y.
         .addr   LA9E9                           ; CCAD E9 A9                    ..
         .addr   LAA0D                           ; CCAF 0D AA                    ..
-        .addr   LAA42                           ; CCB1 42 AA                    B.
+        .addr   SceneCloudFindsTifaInDonCorneoBasement; CCB1 42 AA              B.
         .addr   LAAFC                           ; CCB3 FC AA                    ..
         .addr   LAB04                           ; CCB5 04 AB                    ..
         .addr   LAB0C                           ; CCB7 0C AB                    ..
@@ -7001,8 +7314,8 @@ Bank00SceneScriptTable:
         .addr   LACF9                           ; CCDB F9 AC                    ..
         .addr   LAD11                           ; CCDD 11 AD                    ..
         .addr   LAD16                           ; CCDF 16 AD                    ..
-        .addr   ScenePlayerGets62FCard          ; CCE1 2B AD                    +.
-        .addr   LAD3A                           ; CCE3 3A AD                    :.
+        .addr   SceneCloudGets62FCard           ; CCE1 2B AD                    +.
+        .addr   SceneCloudTalksToMayor62F       ; CCE3 3A AD                    :.
         .addr   LAD46                           ; CCE5 46 AD                    F.
         .addr   LAD50                           ; CCE7 50 AD                    P.
         .addr   LAD65                           ; CCE9 65 AD                    e.
@@ -7021,34 +7334,34 @@ Bank00SceneScriptTable:
         .addr   LAE30                           ; CD03 30 AE                    0.
         .addr   LAE3C                           ; CD05 3C AE                    <.
         .addr   LAE54                           ; CD07 54 AE                    T.
-        .addr   LAE60                           ; CD09 60 AE                    `.
-        .addr   LAE7E                           ; CD0B 7E AE                    ~.
+        .addr   SceneShinra65FSwitchTopLeftTurnOffAndGet66FCard; CD09 60 AE     `.
+        .addr   SceneShinra65FSwitchTopLeftTurnOn; CD0B 7E AE                   ~.
         .addr   LAE84                           ; CD0D 84 AE                    ..
-        .addr   LAE98                           ; CD0F 98 AE                    ..
+        .addr   SceneShinra65FSwitchTopRightTurnOn; CD0F 98 AE                  ..
         .addr   LAE9E                           ; CD11 9E AE                    ..
-        .addr   LAEB2                           ; CD13 B2 AE                    ..
+        .addr   SceneShinra65FSwitchMiddleLeftTurnOn; CD13 B2 AE                ..
         .addr   LAEB8                           ; CD15 B8 AE                    ..
-        .addr   LAECC                           ; CD17 CC AE                    ..
+        .addr   SceneShinra65FSwitchBottomLeftTurnOn; CD17 CC AE                ..
         .addr   LAED2                           ; CD19 D2 AE                    ..
-        .addr   LAEE6                           ; CD1B E6 AE                    ..
-        .addr   LAEEC                           ; CD1D EC AE                    ..
-        .addr   LAF00                           ; CD1F 00 AF                    ..
-        .addr   LAF06                           ; CD21 06 AF                    ..
-        .addr   LAFE9                           ; CD23 E9 AF                    ..
+        .addr   SceneShinra65FSwitchTopMiddleTurnOn; CD1B E6 AE                 ..
+        .addr   SceneShinra65FSwitchBottomRightTurnOff; CD1D EC AE              ..
+        .addr   SceneShinra65FSwitchBottomRightTurnOn; CD1F 00 AF               ..
+        .addr   SceneShinraMeeting66FDiscussSector7; CD21 06 AF                 ..
+        .addr   Scene67FCloudFindsHojoExperiment; CD23 E9 AF                    ..
         .addr   LF7C7                           ; CD25 C7 F7                    ..
         .addr   LB0B2                           ; CD27 B2 B0                    ..
-        .addr   LB0BE                           ; CD29 BE B0                    ..
+        .addr   Scene67FCloudFindsAerith        ; CD29 BE B0                    ..
         .addr   LB260                           ; CD2B 60 B2                    `.
         .addr   LB26F                           ; CD2D 6F B2                    o.
         .addr   LB287                           ; CD2F 87 B2                    ..
         .addr   LB293                           ; CD31 93 B2                    ..
-        .addr   LB29B                           ; CD33 9B B2                    ..
-        .addr   LB2EF                           ; CD35 EF B2                    ..
+        .addr   ScenePresidentShinraDead        ; CD33 9B B2                    ..
+        .addr   ScenePartyMeetsRufusOnRooftop   ; CD35 EF B2                    ..
         .addr   LB3F2                           ; CD37 F2 B3                    ..
         .addr   LB406                           ; CD39 06 B4                    ..
         .addr   LB430                           ; CD3B 30 B4                    0.
         .addr   LB44B                           ; CD3D 4B B4                    K.
-        .addr   LB472                           ; CD3F 72 B4                    r.
+        .addr   ScenePartyReachesShinraEntranceReadyToLeave; CD3F 72 B4         r.
         .addr   LB502                           ; CD41 02 B5                    ..
         .addr   LB511                           ; CD43 11 B5                    ..
         .addr   LB539                           ; CD45 39 B5                    9.
@@ -7057,6 +7370,7 @@ Bank00SceneScriptTable:
         .addr   LB55F                           ; CD4B 5F B5                    _.
         .addr   LB589                           ; CD4D 89 B5                    ..
         .addr   LB59D                           ; CD4F 9D B5                    ..
+Bank00SceneScriptTablePart2:
         .addr   LB5AF                           ; CD51 AF B5                    ..
         .addr   LB5BF                           ; CD53 BF B5                    ..
         .addr   LB5D3                           ; CD55 D3 B5                    ..
@@ -7070,17 +7384,17 @@ Bank00SceneScriptTable:
         .addr   LB649                           ; CD65 49 B6                    I.
         .addr   LB661                           ; CD67 61 B6                    a.
         .addr   LB66B                           ; CD69 6B B6                    k.
-        .addr   LB67D                           ; CD6B 7D B6                    }.
-        .addr   LB68F                           ; CD6D 8F B6                    ..
-        .addr   LB6A1                           ; CD6F A1 B6                    ..
-        .addr   LB6B3                           ; CD71 B3 B6                    ..
+        .addr   SceneMidgarRoadCloudPicksBarret ; CD6B 7D B6                    }.
+        .addr   SceneMidgarRoadCloudPicksTifa   ; CD6D 8F B6                    ..
+        .addr   SceneMidgarRoadCloudPicksAerith ; CD6F A1 B6                    ..
+        .addr   SceneMidgarRoadCloudPicksRedXIII; CD71 B3 B6                    ..
         .addr   LB6C5                           ; CD73 C5 B6                    ..
         .addr   LB6E3                           ; CD75 E3 B6                    ..
         .addr   LB70B                           ; CD77 0B B7                    ..
         .addr   LB735                           ; CD79 35 B7                    5.
         .addr   LB75F                           ; CD7B 5F B7                    _.
         .addr   LB77B                           ; CD7D 7B B7                    {.
-        .addr   LB797                           ; CD7F 97 B7                    ..
+        .addr   ScenePartyReachesEndOfRoadOutsideMidgar; CD7F 97 B7             ..
         .addr   SceneKalmEntrance               ; CD81 35 B8                    5.
         .addr   LB8A8                           ; CD83 A8 B8                    ..
         .addr   LB8D3                           ; CD85 D3 B8                    ..
@@ -7091,37 +7405,37 @@ Bank00SceneScriptTable:
         .addr   LB928                           ; CD8F 28 B9                    (.
         .addr   LB933                           ; CD91 33 B9                    3.
         .addr   LB943                           ; CD93 43 B9                    C.
-        .addr   LB9FC                           ; CD95 FC B9                    ..
-        .addr   LBB51                           ; CD97 51 BB                    Q.
+        .addr   SceneCloudFindsPriscillaNearWater; CD95 FC B9                   ..
+        .addr   SceneCloudGoesToDolphinToJumpUp ; CD97 51 BB                    Q.
         .addr   LBB88                           ; CD99 88 BB                    ..
         .addr   LBC33                           ; CD9B 33 BC                    3.
         .addr   LBCEF                           ; CD9D EF BC                    ..
-        .addr   LBCF8                           ; CD9F F8 BC                    ..
-        .addr   LBD0A                           ; CDA1 0A BD                    ..
+        .addr   ScriptDisembarkBuggy            ; CD9F F8 BC                    ..
+        .addr   SceneJunonAirshipCloudTalksToAerisInShinraUniform; CDA1 0A BD   ..
         .addr   LBD16                           ; CDA3 16 BD                    ..
         .addr   LBD22                           ; CDA5 22 BD                    ".
         .addr   LBD30                           ; CDA7 30 BD                    0.
-        .addr   LBD3A                           ; CDA9 3A BD                    :.
+        .addr   SceneJunonAirshipCloudTalksToRedXIIIInShinraUniform; CDA9 3A BD :.
         .addr   LBD46                           ; CDAB 46 BD                    F.
-        .addr   LBD50                           ; CDAD 50 BD                    P.
+        .addr   SceneJunonAirshipCloudTalksToTifaInShinraUniform; CDAD 50 BD    P.
         .addr   LBD5C                           ; CDAF 5C BD                    \.
         .addr   LBD66                           ; CDB1 66 BD                    f.
-        .addr   LBD70                           ; CDB3 70 BD                    p.
-        .addr   LBDE4                           ; CDB5 E4 BD                    ..
+        .addr   SceneJunonAirshipCloudTalksToBarretAndPartyGetsTogether; CDB3 70 BDp.
+        .addr   SceneJunonAirshipCloudFindsSephiroth; CDB5 E4 BD                ..
         .addr   LBE68                           ; CDB7 68 BE                    h.
-        .addr   LBE74                           ; CDB9 74 BE                    t.
+        .addr   ScenePartyLeavesCostaDelSol     ; CDB9 74 BE                    t.
         .addr   LBE8C                           ; CDBB 8C BE                    ..
-        .addr   LBE96                           ; CDBD 96 BE                    ..
+        .addr   SceneBeforeEnterGoldSaucer      ; CDBD 96 BE                    ..
         .addr   LBEC2                           ; CDBF C2 BE                    ..
         .addr   LBEF3                           ; CDC1 F3 BE                    ..
-        .addr   LBEF8                           ; CDC3 F8 BE                    ..
+        .addr   SceneCloudBuysLifetimePassGoldSaucer; CDC3 F8 BE                ..
         .addr   LBF10                           ; CDC5 10 BF                    ..
         .addr   LBF19                           ; CDC7 19 BF                    ..
-        .addr   LBF32                           ; CDC9 32 BF                    2.
+        .addr   SceneCloudMeetsDio              ; CDC9 32 BF                    2.
         .addr   LF5C0                           ; CDCB C0 F5                    ..
-        .addr   LBF48                           ; CDCD 48 BF                    H.
+        .addr   SceneCloudMeetsGuardBeforeDyne  ; CDCD 48 BF                    H.
         .addr   LBF54                           ; CDCF 54 BF                    T.
-        .addr   LF6D5                           ; CDD1 D5 F6                    ..
+        .addr   SceneCorelPrisonBarretFindsDyne ; CDD1 D5 F6                    ..
         .addr   LBFDC                           ; CDD3 DC BF                    ..
         .addr   LA511                           ; CDD5 11 A5                    ..
         .addr   SceneRedXIIIBeforeEnterObservatory; CDD7 E4 BF                  ..
@@ -7141,24 +7455,24 @@ Bank00SceneScriptTable:
         .addr   ScenePartyFindsBroncoSheraBackyard; CDF3 BE F8                  ..
         .addr   LC2AF                           ; CDF5 AF C2                    ..
         .addr   SceneCloudReturnsSheraHouseAfterMeetingCaptain; CDF7 B9 C2      ..
-        .addr   LC3EA                           ; CDF9 EA C3                    ..
+        .addr   SceneCloudDiscoversKeystoneSoldToDio; CDF9 EA C3                ..
         .addr   LC3F6                           ; CDFB F6 C3                    ..
         .addr   LC400                           ; CDFD 00 C4                    ..
         .addr   LC43A                           ; CDFF 3A C4                    :.
         .addr   LC46A                           ; CE01 6A C4                    j.
         .addr   LC47B                           ; CE03 7B C4                    {.
-        .addr   LC4AB                           ; CE05 AB C4                    ..
+        .addr   SceneTramDownAtGoldSaucer       ; CE05 AB C4                    ..
         .addr   LC4D7                           ; CE07 D7 C4                    ..
         .addr   LC4EB                           ; CE09 EB C4                    ..
-        .addr   LF927                           ; CE0B 27 F9                    '.
-        .addr   LF9AB                           ; CE0D AB F9                    ..
+        .addr   ScenePartyFindsTsengEntranceTempleOfAncients; CE0B 27 F9        '.
+        .addr   SceneCloudFindsSephirothInTempleOfAncients; CE0D AB F9          ..
         .addr   LC6DD                           ; CE0F DD C6                    ..
-        .addr   LC6EF                           ; CE11 EF C6                    ..
+        .addr   SceneCloudTalksToPersonNearSleepingForest; CE11 EF C6           ..
         .addr   LC6FD                           ; CE13 FD C6                    ..
         .addr   LC707                           ; CE15 07 C7                    ..
         .addr   LC711                           ; CE17 11 C7                    ..
         .addr   LC71B                           ; CE19 1B C7                    ..
-        .addr   LC725                           ; CE1B 25 C7                    %.
+        .addr   SceneCloudTalksToPersonInBoneValley; CE1B 25 C7                 %.
         .addr   LC740                           ; CE1D 40 C7                    @.
         .addr   LC749                           ; CE1F 49 C7                    I.
         .addr   LC753                           ; CE21 53 C7                    S.
@@ -7169,11 +7483,11 @@ Bank00SceneScriptTable:
         .addr   LC7CD                           ; CE2B CD C7                    ..
         .addr   LC7F4                           ; CE2D F4 C7                    ..
         .addr   LC801                           ; CE2F 01 C8                    ..
-        .addr   LC4F3                           ; CE31 F3 C4                    ..
+        .addr   SceneForgottenCityAerithDeathScene; CE31 F3 C4                  ..
         .addr   LC8F4                           ; CE33 F4 C8                    ..
         .addr   LC8FE                           ; CE35 FE C8                    ..
-        .addr   LC908                           ; CE37 08 C9                    ..
-        .addr   LC919                           ; CE39 19 C9                    ..
+        .addr   SceneCloudGetsGlacierMap        ; CE37 08 C9                    ..
+        .addr   ScenePartyLeavesGlacierInnToHeadNorth; CE39 19 C9               ..
         .addr   LC9C7                           ; CE3B C7 C9                    ..
         .addr   SceneTalkToKidGetSnowboard      ; CE3D CE C9                    ..
         .addr   LC9DC                           ; CE3F DC C9                    ..
@@ -7185,10 +7499,8 @@ Bank00SceneScriptTable:
         .addr   LCB3B                           ; CE4B 3B CB                    ;.
         .addr   LCB6A                           ; CE4D 6A CB                    j.
         .addr   LCB7C                           ; CE4F 7C CB                    |.
-; ----------------------------------------------------------------------------
-LCE51:
-        .byte   $AB,$FF                         ; CE51 AB FF                    ..
-; ----------------------------------------------------------------------------
+Bank00SceneScriptTablePart3:
+        .addr   LFFAB                           ; CE51 AB FF                    ..
         .addr   LCF2E                           ; CE53 2E CF                    ..
         .addr   LCF39                           ; CE55 39 CF                    9.
         .addr   LCF48                           ; CE57 48 CF                    H.
@@ -7200,10 +7512,10 @@ LCE51:
         .addr   LCFA1                           ; CE63 A1 CF                    ..
         .addr   LCFAB                           ; CE65 AB CF                    ..
         .addr   LCFB5                           ; CE67 B5 CF                    ..
-        .addr   LCFBD                           ; CE69 BD CF                    ..
+        .addr   ScriptDisembarkBronco           ; CE69 BD CF                    ..
         .addr   LCFD1                           ; CE6B D1 CF                    ..
-        .addr   LCFDE                           ; CE6D DE CF                    ..
-        .addr   LCFEB                           ; CE6F EB CF                    ..
+        .addr   ScriptEmbarkBronco              ; CE6D DE CF                    ..
+        .addr   ScriptEmbarkBuggy               ; CE6F EB CF                    ..
         .addr   LCFF8                           ; CE71 F8 CF                    ..
         .addr   LD005                           ; CE73 05 D0                    ..
         .addr   LD012                           ; CE75 12 D0                    ..
@@ -7328,17 +7640,17 @@ LCFAB:
         .byte   $02,$FF                         ; CFB3 02 FF                    ..
 LCFB5:
         .byte   $0D,$10,$0A,$29,$0E,$69,$01,$FF ; CFB5 0D 10 0A 29 0E 69 01 FF  ...).i..
-LCFBD:
+ScriptDisembarkBronco:
         .byte   $0D,$38,$04,$3C,$06,$09,$04,$08 ; CFBD 0D 38 04 3C 06 09 04 08  .8.<....
         .byte   $FF,$FF,$FF,$FF,$2A,$00,$04,$37 ; CFC5 FF FF FF FF 2A 00 04 37  ....*..7
         .byte   $00,$39,$04,$FF                 ; CFCD 00 39 04 FF              .9..
 LCFD1:
         .byte   $0D,$10,$02,$3E,$2A,$00,$02,$37 ; CFD1 0D 10 02 3E 2A 00 02 37  ...>*..7
         .byte   $02,$0A,$02,$FF,$FF             ; CFD9 02 0A 02 FF FF           .....
-LCFDE:
+ScriptEmbarkBronco:
         .byte   $0D,$10,$04,$3E,$2A,$00,$04,$37 ; CFDE 0D 10 04 3E 2A 00 04 37  ...>*..7
         .byte   $04,$0A,$04,$FF,$FF             ; CFE6 04 0A 04 FF FF           .....
-LCFEB:
+ScriptEmbarkBuggy:
         .byte   $0D,$10,$03,$3E,$2A,$00,$03,$37 ; CFEB 0D 10 03 3E 2A 00 03 37  ...>*..7
         .byte   $03,$0A,$03,$FF,$FF             ; CFF3 03 0A 03 FF FF           .....
 LCFF8:
@@ -12718,7 +13030,7 @@ LF4D0:
         jsr     LD1AE                           ; F514 20 AE D1                  ..
 LF517:
         lda     $6F1B                           ; F517 AD 1B 6F                 ..o
-        jsr     L889C                           ; F51A 20 9C 88                  ..
+        jsr     Bank00LoadSceneJumpTablePart1   ; F51A 20 9C 88                  ..
 LF51D:
         rts                                     ; F51D 60                       `
 
@@ -12820,7 +13132,7 @@ LF564:
 LF590:
         lda     $6022                           ; F590 AD 22 60                 ."`
         cmp     #$01                            ; F593 C9 01                    ..
-        bne     LF5A2                           ; F595 D0 0B                    ..
+        bne     PlayerChangeVehicle             ; F595 D0 0B                    ..
         lda     ($A7),y                         ; F597 B1 A7                    ..
         sta     $6022                           ; F599 8D 22 60                 ."`
         lda     #$03                            ; F59C A9 03                    ..
@@ -12828,7 +13140,7 @@ LF590:
         rts                                     ; F5A1 60                       `
 
 ; ----------------------------------------------------------------------------
-LF5A2:
+PlayerChangeVehicle:
         lda     ($A7),y                         ; F5A2 B1 A7                    ..
         sta     $6022                           ; F5A4 8D 22 60                 ."`
         rts                                     ; F5A7 60                       `
@@ -12921,417 +13233,69 @@ LF5EA:
         .byte   $12                             ; F5FF 12                       .
         .byte   $13                             ; F600 13                       .
 LF601:
-        .byte   $17                             ; F601 17                       .
-        brk                                     ; F602 00                       .
-        ora     ($0A),y                         ; F603 11 0A                    ..
-        asl     a                               ; F605 0A                       .
-        .byte   $FF                             ; F606 FF                       .
-        .byte   $12                             ; F607 12                       .
-        ora     #$0A                            ; F608 09 0A                    ..
-        ora     L0000                           ; F60A 05 00                    ..
-        rti                                     ; F60C 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F60D 00                       .
-        bpl     LF618                           ; F60E 10 08                    ..
-        asl     a                               ; F610 0A                       .
-        rti                                     ; F611 40                       @
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; F612 02                       .
-        .byte   $12                             ; F613 12                       .
-        .byte   $12                             ; F614 12                       .
-        .byte   $12                             ; F615 12                       .
-        .byte   $12                             ; F616 12                       .
-        .byte   $13                             ; F617 13                       .
-LF618:
-        ora     L1100,y                         ; F618 19 00 11                 ...
-        asl     a                               ; F61B 0A                       .
-        asl     a                               ; F61C 0A                       .
-        .byte   $FF                             ; F61D FF                       .
-        .byte   $12                             ; F61E 12                       .
-        ora     #$0A                            ; F61F 09 0A                    ..
-        ora     L0000                           ; F621 05 00                    ..
-        rti                                     ; F623 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F624 00                       .
-        bpl     LF62F                           ; F625 10 08                    ..
-        asl     a                               ; F627 0A                       .
-        rti                                     ; F628 40                       @
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; F629 02                       .
-        .byte   $12                             ; F62A 12                       .
-        .byte   $12                             ; F62B 12                       .
-        .byte   $12                             ; F62C 12                       .
-        .byte   $12                             ; F62D 12                       .
-        .byte   $13                             ; F62E 13                       .
-LF62F:
-        clc                                     ; F62F 18                       .
-        brk                                     ; F630 00                       .
-        ora     ($0A),y                         ; F631 11 0A                    ..
-        asl     a                               ; F633 0A                       .
-        .byte   $FF                             ; F634 FF                       .
-        .byte   $12                             ; F635 12                       .
-        ora     #$0A                            ; F636 09 0A                    ..
-        ora     L0000                           ; F638 05 00                    ..
-        rti                                     ; F63A 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F63B 00                       .
-        bpl     LF646                           ; F63C 10 08                    ..
-        asl     a                               ; F63E 0A                       .
-        rti                                     ; F63F 40                       @
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; F640 02                       .
-        .byte   $12                             ; F641 12                       .
-        .byte   $12                             ; F642 12                       .
-        .byte   $12                             ; F643 12                       .
-        .byte   $12                             ; F644 12                       .
-        .byte   $13                             ; F645 13                       .
-LF646:
-        .byte   $13                             ; F646 13                       .
-        brk                                     ; F647 00                       .
-        ora     ($0A),y                         ; F648 11 0A                    ..
-        asl     a                               ; F64A 0A                       .
-        .byte   $FF                             ; F64B FF                       .
-        .byte   $12                             ; F64C 12                       .
-        ora     #$0A                            ; F64D 09 0A                    ..
-        ora     L0000                           ; F64F 05 00                    ..
-        rti                                     ; F651 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F652 00                       .
-        bpl     LF65D                           ; F653 10 08                    ..
-        asl     a                               ; F655 0A                       .
-        rti                                     ; F656 40                       @
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; F657 02                       .
-        .byte   $12                             ; F658 12                       .
-        .byte   $12                             ; F659 12                       .
-        .byte   $12                             ; F65A 12                       .
-        .byte   $12                             ; F65B 12                       .
-        .byte   $13                             ; F65C 13                       .
-LF65D:
-        ora     L0000,x                         ; F65D 15 00                    ..
-        ora     ($0A),y                         ; F65F 11 0A                    ..
-        asl     a                               ; F661 0A                       .
-        .byte   $FF                             ; F662 FF                       .
-        .byte   $12                             ; F663 12                       .
-        ora     #$0A                            ; F664 09 0A                    ..
-        ora     L0000                           ; F666 05 00                    ..
-        rti                                     ; F668 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F669 00                       .
-        bpl     LF674                           ; F66A 10 08                    ..
-        asl     a                               ; F66C 0A                       .
-        rti                                     ; F66D 40                       @
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; F66E 02                       .
-        .byte   $12                             ; F66F 12                       .
-        .byte   $12                             ; F670 12                       .
-        .byte   $12                             ; F671 12                       .
-        .byte   $12                             ; F672 12                       .
-        .byte   $13                             ; F673 13                       .
-LF674:
-        .byte   $12                             ; F674 12                       .
-        brk                                     ; F675 00                       .
-        ora     ($0A),y                         ; F676 11 0A                    ..
-        asl     a                               ; F678 0A                       .
-        .byte   $FF                             ; F679 FF                       .
-        .byte   $12                             ; F67A 12                       .
-        ora     #$0A                            ; F67B 09 0A                    ..
-        ora     L0000                           ; F67D 05 00                    ..
-        rti                                     ; F67F 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F680 00                       .
-        bpl     LF68B                           ; F681 10 08                    ..
-        asl     a                               ; F683 0A                       .
-        rti                                     ; F684 40                       @
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; F685 02                       .
-        .byte   $12                             ; F686 12                       .
-        .byte   $12                             ; F687 12                       .
-        .byte   $12                             ; F688 12                       .
-        .byte   $12                             ; F689 12                       .
-        .byte   $13                             ; F68A 13                       .
-LF68B:
-        asl     L0000,x                         ; F68B 16 00                    ..
-        ora     ($0A),y                         ; F68D 11 0A                    ..
-        asl     a                               ; F68F 0A                       .
-        .byte   $FF                             ; F690 FF                       .
-        .byte   $12                             ; F691 12                       .
-        ora     #$0A                            ; F692 09 0A                    ..
-        ora     L0000                           ; F694 05 00                    ..
-        rti                                     ; F696 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F697 00                       .
-        bpl     LF6A2                           ; F698 10 08                    ..
-        asl     a                               ; F69A 0A                       .
-        rti                                     ; F69B 40                       @
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; F69C 02                       .
-        .byte   $12                             ; F69D 12                       .
-        .byte   $12                             ; F69E 12                       .
-        .byte   $12                             ; F69F 12                       .
-        .byte   $12                             ; F6A0 12                       .
-        .byte   $13                             ; F6A1 13                       .
-LF6A2:
-        bpl     LF6A4                           ; F6A2 10 00                    ..
-LF6A4:
-        ora     ($0A),y                         ; F6A4 11 0A                    ..
-        asl     a                               ; F6A6 0A                       .
-        .byte   $FF                             ; F6A7 FF                       .
-        .byte   $12                             ; F6A8 12                       .
-        ora     #$0A                            ; F6A9 09 0A                    ..
-        ora     L0000                           ; F6AB 05 00                    ..
-        rti                                     ; F6AD 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F6AE 00                       .
-        bpl     LF6B9                           ; F6AF 10 08                    ..
-        asl     a                               ; F6B1 0A                       .
-        rti                                     ; F6B2 40                       @
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; F6B3 02                       .
-        .byte   $12                             ; F6B4 12                       .
-        .byte   $12                             ; F6B5 12                       .
-        .byte   $12                             ; F6B6 12                       .
-        .byte   $12                             ; F6B7 12                       .
-        .byte   $13                             ; F6B8 13                       .
-LF6B9:
-        .byte   $14                             ; F6B9 14                       .
-        brk                                     ; F6BA 00                       .
-        .byte   $12                             ; F6BB 12                       .
-        asl     a                               ; F6BC 0A                       .
-        asl     a                               ; F6BD 0A                       .
-        .byte   $FF                             ; F6BE FF                       .
-        ora     #$00                            ; F6BF 09 00                    ..
-        php                                     ; F6C1 08                       .
-        brk                                     ; F6C2 00                       .
-        bcc     LF6C5                           ; F6C3 90 00                    ..
-LF6C5:
-        bcs     LF6D9                           ; F6C5 B0 12                    ..
-        .byte   $12                             ; F6C7 12                       .
-        and     #$0A                            ; F6C8 29 0A                    ).
-        stx     L0002                           ; F6CA 86 02                    ..
-        and     ($10,x)                         ; F6CC 21 10                    !.
-        .byte   $27                             ; F6CE 27                       '
-        brk                                     ; F6CF 00                       .
-        and     #$0A                            ; F6D0 29 0A                    ).
-        sta     $01                             ; F6D2 85 01                    ..
-        .byte   $FF                             ; F6D4 FF                       .
-LF6D5:
-        .byte   $03                             ; F6D5 03                       .
-        .byte   $A7                             ; F6D6 A7                       .
-        ora     ($08,x)                         ; F6D7 01 08                    ..
-LF6D9:
-        brk                                     ; F6D9 00                       .
-        bvs     LF6DD                           ; F6DA 70 01                    p.
-LF6DD           := * + 1
-        bvs     LF70E                           ; F6DC 70 30                    p0
-        asl     $A7                             ; F6DE 06 A7                    ..
-        .byte   $27                             ; F6E0 27                       '
-        .byte   $07                             ; F6E1 07                       .
-        .byte   $0B                             ; F6E2 0B                       .
-        .byte   $0F                             ; F6E3 0F                       .
-        brk                                     ; F6E4 00                       .
-        .byte   $0C                             ; F6E5 0C                       .
-        .byte   $80                             ; F6E6 80                       .
-        .byte   $04                             ; F6E7 04                       .
-        ora     #$01                            ; F6E8 09 01                    ..
-        .byte   $02                             ; F6EA 02                       .
-        .byte   $FF                             ; F6EB FF                       .
-        .byte   $FF                             ; F6EC FF                       .
-        .byte   $FF                             ; F6ED FF                       .
-        .byte   $FF                             ; F6EE FF                       .
-        php                                     ; F6EF 08                       .
-        ora     ($80,x)                         ; F6F0 01 80                    ..
-        ora     ($29,x)                         ; F6F2 01 29                    .)
-        .byte   $07                             ; F6F4 07                       .
-        sta     ($01,x)                         ; F6F5 81 01                    ..
-        .byte   $0B                             ; F6F7 0B                       .
-        .byte   $32                             ; F6F8 32                       2
-        and     #$07                            ; F6F9 29 07                    ).
-        .byte   $82                             ; F6FB 82                       .
-        ora     ($08,x)                         ; F6FC 01 08                    ..
-        .byte   $02                             ; F6FE 02                       .
-        rti                                     ; F6FF 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F700 00                       .
-        and     #$07                            ; F701 29 07                    ).
-        .byte   $83                             ; F703 83                       .
-        .byte   $03                             ; F704 03                       .
-        php                                     ; F705 08                       .
-        .byte   $02                             ; F706 02                       .
-        jsr     L2900                           ; F707 20 00 29                  .)
-        .byte   $07                             ; F70A 07                       .
-        stx     L0002                           ; F70B 86 02                    ..
-        php                                     ; F70D 08                       .
-LF70E:
-        .byte   $02                             ; F70E 02                       .
-        rti                                     ; F70F 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F710 00                       .
-        and     #$07                            ; F711 29 07                    ).
-        dey                                     ; F713 88                       .
-        .byte   $03                             ; F714 03                       .
-        php                                     ; F715 08                       .
-        .byte   $02                             ; F716 02                       .
-        jsr     L2900                           ; F717 20 00 29                  .)
-        .byte   $07                             ; F71A 07                       .
-        .byte   $8B                             ; F71B 8B                       .
-        .byte   $02                             ; F71C 02                       .
-        php                                     ; F71D 08                       .
-        .byte   $02                             ; F71E 02                       .
-        rti                                     ; F71F 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F720 00                       .
-        and     #$07                            ; F721 29 07                    ).
-        sta     $0804                           ; F723 8D 04 08                 ...
-        .byte   $02                             ; F726 02                       .
-        jsr     L0B00                           ; F727 20 00 0B                  ..
-        .byte   $32                             ; F72A 32                       2
-        and     #$07                            ; F72B 29 07                    ).
-        sta     (L0002),y                       ; F72D 91 02                    ..
-        php                                     ; F72F 08                       .
-        .byte   $02                             ; F730 02                       .
-        rti                                     ; F731 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F732 00                       .
-        and     #$07                            ; F733 29 07                    ).
-        .byte   $93                             ; F735 93                       .
-        php                                     ; F736 08                       .
-        .byte   $13                             ; F737 13                       .
-        .byte   $17                             ; F738 17                       .
-        brk                                     ; F739 00                       .
-        brk                                     ; F73A 00                       .
-        php                                     ; F73B 08                       .
-        ora     ($80,x)                         ; F73C 01 80                    ..
-        ora     ($29,x)                         ; F73E 01 29                    .)
-        .byte   $07                             ; F740 07                       .
-        .byte   $9B                             ; F741 9B                       .
-        ora     ($08,x)                         ; F742 01 08                    ..
-        .byte   $02                             ; F744 02                       .
-        .byte   $80                             ; F745 80                       .
-        ora     ($29,x)                         ; F746 01 29                    .)
-        .byte   $07                             ; F748 07                       .
-        .byte   $9C                             ; F749 9C                       .
-        .byte   $03                             ; F74A 03                       .
-        php                                     ; F74B 08                       .
-        .byte   $02                             ; F74C 02                       .
-        bpl     LF74F                           ; F74D 10 00                    ..
-LF74F:
-        and     #$07                            ; F74F 29 07                    ).
-        .byte   $9F                             ; F751 9F                       .
-        .byte   $04                             ; F752 04                       .
-        php                                     ; F753 08                       .
-        .byte   $02                             ; F754 02                       .
-        jsr     L2900                           ; F755 20 00 29                  .)
-        .byte   $07                             ; F758 07                       .
-        .byte   $A3                             ; F759 A3                       .
-        .byte   $02                             ; F75A 02                       .
-        php                                     ; F75B 08                       .
-        .byte   $02                             ; F75C 02                       .
-        rti                                     ; F75D 40                       @
-
-; ----------------------------------------------------------------------------
-        ora     ($29,x)                         ; F75E 01 29                    .)
-        .byte   $07                             ; F760 07                       .
-        lda     $01                             ; F761 A5 01                    ..
-        php                                     ; F763 08                       .
-        .byte   $02                             ; F764 02                       .
-        .byte   $80                             ; F765 80                       .
-        brk                                     ; F766 00                       .
-        .byte   $0B                             ; F767 0B                       .
-        .byte   $32                             ; F768 32                       2
-        and     #$07                            ; F769 29 07                    ).
-        ldx     $01                             ; F76B A6 01                    ..
-        php                                     ; F76D 08                       .
-        .byte   $02                             ; F76E 02                       .
-        .byte   $80                             ; F76F 80                       .
-        ora     ($29,x)                         ; F770 01 29                    .)
-        .byte   $07                             ; F772 07                       .
-        .byte   $A7                             ; F773 A7                       .
-        .byte   $02                             ; F774 02                       .
-        php                                     ; F775 08                       .
-        .byte   $02                             ; F776 02                       .
-        jsr     L2900                           ; F777 20 00 29                  .)
-        .byte   $07                             ; F77A 07                       .
-        lda     #$01                            ; F77B A9 01                    ..
-        rol     a                               ; F77D 2A                       *
-        .byte   $02                             ; F77E 02                       .
-        .byte   $03                             ; F77F 03                       .
-        asl     $01,x                           ; F780 16 01                    ..
-        .byte   $02                             ; F782 02                       .
-        dey                                     ; F783 88                       .
-        asl     a                               ; F784 0A                       .
-        .byte   $02                             ; F785 02                       .
-        .byte   $FF                             ; F786 FF                       .
-        php                                     ; F787 08                       .
-        ora     ($80,x)                         ; F788 01 80                    ..
-        ora     ($29,x)                         ; F78A 01 29                    .)
-        .byte   $07                             ; F78C 07                       .
-        tax                                     ; F78D AA                       .
-        .byte   $02                             ; F78E 02                       .
-        .byte   $0B                             ; F78F 0B                       .
-        .byte   $32                             ; F790 32                       2
-        php                                     ; F791 08                       .
-        brk                                     ; F792 00                       .
-        .byte   $80                             ; F793 80                       .
-        .byte   $03                             ; F794 03                       .
-        php                                     ; F795 08                       .
-        ora     ($40,x)                         ; F796 01 40                    .@
-        ora     ($0A,x)                         ; F798 01 0A                    ..
-        ora     ($FF,x)                         ; F79A 01 FF                    ..
-        .byte   $1B                             ; F79C 1B                       .
-        .byte   $14                             ; F79D 14                       .
-        asl     LFF00                           ; F79E 0E 00 FF                 ...
+        .byte   $17,$00,$11,$0A,$0A,$FF,$12,$09 ; F601 17 00 11 0A 0A FF 12 09  ........
+        .byte   $0A,$05,$00,$40,$00,$10,$08,$0A ; F609 0A 05 00 40 00 10 08 0A  ...@....
+        .byte   $40,$02,$12,$12,$12,$12,$13,$19 ; F611 40 02 12 12 12 12 13 19  @.......
+        .byte   $00,$11,$0A,$0A,$FF,$12,$09,$0A ; F619 00 11 0A 0A FF 12 09 0A  ........
+        .byte   $05,$00,$40,$00,$10,$08,$0A,$40 ; F621 05 00 40 00 10 08 0A 40  ..@....@
+        .byte   $02,$12,$12,$12,$12,$13,$18,$00 ; F629 02 12 12 12 12 13 18 00  ........
+        .byte   $11,$0A,$0A,$FF,$12,$09,$0A,$05 ; F631 11 0A 0A FF 12 09 0A 05  ........
+        .byte   $00,$40,$00,$10,$08,$0A,$40,$02 ; F639 00 40 00 10 08 0A 40 02  .@....@.
+        .byte   $12,$12,$12,$12,$13,$13,$00,$11 ; F641 12 12 12 12 13 13 00 11  ........
+        .byte   $0A,$0A,$FF,$12,$09,$0A,$05,$00 ; F649 0A 0A FF 12 09 0A 05 00  ........
+        .byte   $40,$00,$10,$08,$0A,$40,$02,$12 ; F651 40 00 10 08 0A 40 02 12  @....@..
+        .byte   $12,$12,$12,$13,$15,$00,$11,$0A ; F659 12 12 12 13 15 00 11 0A  ........
+        .byte   $0A,$FF,$12,$09,$0A,$05,$00,$40 ; F661 0A FF 12 09 0A 05 00 40  .......@
+        .byte   $00,$10,$08,$0A,$40,$02,$12,$12 ; F669 00 10 08 0A 40 02 12 12  ....@...
+        .byte   $12,$12,$13,$12,$00,$11,$0A,$0A ; F671 12 12 13 12 00 11 0A 0A  ........
+        .byte   $FF,$12,$09,$0A,$05,$00,$40,$00 ; F679 FF 12 09 0A 05 00 40 00  ......@.
+        .byte   $10,$08,$0A,$40,$02,$12,$12,$12 ; F681 10 08 0A 40 02 12 12 12  ...@....
+        .byte   $12,$13,$16,$00,$11,$0A,$0A,$FF ; F689 12 13 16 00 11 0A 0A FF  ........
+        .byte   $12,$09,$0A,$05,$00,$40,$00,$10 ; F691 12 09 0A 05 00 40 00 10  .....@..
+        .byte   $08,$0A,$40,$02,$12,$12,$12,$12 ; F699 08 0A 40 02 12 12 12 12  ..@.....
+        .byte   $13,$10,$00,$11,$0A,$0A,$FF,$12 ; F6A1 13 10 00 11 0A 0A FF 12  ........
+        .byte   $09,$0A,$05,$00,$40,$00,$10,$08 ; F6A9 09 0A 05 00 40 00 10 08  ....@...
+        .byte   $0A,$40,$02,$12,$12,$12,$12,$13 ; F6B1 0A 40 02 12 12 12 12 13  .@......
+        .byte   $14,$00,$12,$0A,$0A,$FF,$09,$00 ; F6B9 14 00 12 0A 0A FF 09 00  ........
+        .byte   $08,$00,$90,$00,$B0,$12,$12,$29 ; F6C1 08 00 90 00 B0 12 12 29  .......)
+        .byte   $0A,$86,$02,$21,$10,$27,$00,$29 ; F6C9 0A 86 02 21 10 27 00 29  ...!.'.)
+        .byte   $0A,$85,$01,$FF                 ; F6D1 0A 85 01 FF              ....
+SceneCorelPrisonBarretFindsDyne:
+        .byte   $03,$A7,$01,$08,$00,$70,$01,$70 ; F6D5 03 A7 01 08 00 70 01 70  .....p.p
+        .byte   $30,$06,$A7,$27,$07,$0B,$0F,$00 ; F6DD 30 06 A7 27 07 0B 0F 00  0..'....
+        .byte   $0C,$80,$04,$09,$01,$02,$FF,$FF ; F6E5 0C 80 04 09 01 02 FF FF  ........
+        .byte   $FF,$FF,$08,$01,$80,$01,$29,$07 ; F6ED FF FF 08 01 80 01 29 07  ......).
+        .byte   $81,$01,$0B,$32,$29,$07,$82,$01 ; F6F5 81 01 0B 32 29 07 82 01  ...2)...
+        .byte   $08,$02,$40,$00,$29,$07,$83,$03 ; F6FD 08 02 40 00 29 07 83 03  ..@.)...
+        .byte   $08,$02,$20,$00,$29,$07,$86,$02 ; F705 08 02 20 00 29 07 86 02  .. .)...
+        .byte   $08,$02,$40,$00,$29,$07,$88,$03 ; F70D 08 02 40 00 29 07 88 03  ..@.)...
+        .byte   $08,$02,$20,$00,$29,$07,$8B,$02 ; F715 08 02 20 00 29 07 8B 02  .. .)...
+        .byte   $08,$02,$40,$00,$29,$07,$8D,$04 ; F71D 08 02 40 00 29 07 8D 04  ..@.)...
+        .byte   $08,$02,$20,$00,$0B,$32,$29,$07 ; F725 08 02 20 00 0B 32 29 07  .. ..2).
+        .byte   $91,$02,$08,$02,$40,$00,$29,$07 ; F72D 91 02 08 02 40 00 29 07  ....@.).
+        .byte   $93,$08,$13,$17,$00,$00,$08,$01 ; F735 93 08 13 17 00 00 08 01  ........
+        .byte   $80,$01,$29,$07,$9B,$01,$08,$02 ; F73D 80 01 29 07 9B 01 08 02  ..).....
+        .byte   $80,$01,$29,$07,$9C,$03,$08,$02 ; F745 80 01 29 07 9C 03 08 02  ..).....
+        .byte   $10,$00,$29,$07,$9F,$04,$08,$02 ; F74D 10 00 29 07 9F 04 08 02  ..).....
+        .byte   $20,$00,$29,$07,$A3,$02,$08,$02 ; F755 20 00 29 07 A3 02 08 02   .).....
+        .byte   $40,$01,$29,$07,$A5,$01,$08,$02 ; F75D 40 01 29 07 A5 01 08 02  @.).....
+        .byte   $80,$00,$0B,$32,$29,$07,$A6,$01 ; F765 80 00 0B 32 29 07 A6 01  ...2)...
+        .byte   $08,$02,$80,$01,$29,$07,$A7,$02 ; F76D 08 02 80 01 29 07 A7 02  ....)...
+        .byte   $08,$02,$20,$00,$29,$07,$A9,$01 ; F775 08 02 20 00 29 07 A9 01  .. .)...
+        .byte   $2A,$02,$03,$16,$01,$02,$88,$0A ; F77D 2A 02 03 16 01 02 88 0A  *.......
+        .byte   $02,$FF,$08,$01,$80,$01,$29,$07 ; F785 02 FF 08 01 80 01 29 07  ......).
+        .byte   $AA,$02,$0B,$32,$08,$00,$80,$03 ; F78D AA 02 0B 32 08 00 80 03  ...2....
+        .byte   $08,$01,$40,$01,$0A,$01,$FF,$1B ; F795 08 01 40 01 0A 01 FF 1B  ..@.....
+        .byte   $14,$0E,$00,$FF                 ; F79D 14 0E 00 FF              ....
 LF7A1:
-        .byte   $03                             ; F7A1 03                       .
-        .byte   $5F                             ; F7A2 5F                       _
-        ora     ($08,x)                         ; F7A3 01 08                    ..
-        ora     ($60,x)                         ; F7A5 01 60                    .`
-        brk                                     ; F7A7 00                       .
-        bne     LF7AA                           ; F7A8 D0 00                    ..
-LF7AA:
-        .byte   $33                             ; F7AA 33                       3
-        php                                     ; F7AB 08                       .
-        ora     $1925                           ; F7AC 0D 25 19                 .%.
-        .byte   $53                             ; F7AF 53                       S
-        and     #$04                            ; F7B0 29 04                    ).
-        inc     LFF01                           ; F7B2 EE 01 FF                 ...
+        .byte   $03,$5F,$01,$08,$01,$60,$00,$D0 ; F7A1 03 5F 01 08 01 60 00 D0  ._...`..
+        .byte   $00,$33,$08,$0D,$25,$19,$53,$29 ; F7A9 00 33 08 0D 25 19 53 29  .3..%.S)
+        .byte   $04,$EE,$01,$FF                 ; F7B1 04 EE 01 FF              ....
 LF7B5:
-        and     #$04                            ; F7B5 29 04                    ).
-        .byte   $EF                             ; F7B7 EF                       .
-        ora     ($08,x)                         ; F7B8 01 08                    ..
-        brk                                     ; F7BA 00                       .
-        bpl     LF7BD                           ; F7BB 10 00                    ..
-LF7BD:
+        .byte   $29,$04,$EF,$01,$08,$00,$10,$00 ; F7B5 29 04 EF 01 08 00 10 00  ).......
         .byte   $FF                             ; F7BD FF                       .
 LF7BE:
-        and     #$04                            ; F7BE 29 04                    ).
-        .byte   $EF                             ; F7C0 EF                       .
-        ora     ($08,x)                         ; F7C1 01 08                    ..
-        brk                                     ; F7C3 00                       .
-        rti                                     ; F7C4 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F7C5 00                       .
+        .byte   $29,$04,$EF,$01,$08,$00,$40,$00 ; F7BE 29 04 EF 01 08 00 40 00  ).....@.
         .byte   $FF                             ; F7C6 FF                       .
 LF7C7:
         .byte   $03,$6C,$01,$05,$01,$80,$01,$30 ; F7C7 03 6C 01 05 01 80 01 30  .l.....0
@@ -13385,7 +13349,7 @@ LF900:
         .byte   $04,$40,$00,$0A,$04,$FF,$08,$00 ; F910 04 40 00 0A 04 FF 08 00  .@......
         .byte   $40,$00,$0B,$32,$29,$08,$BE,$01 ; F918 40 00 0B 32 29 08 BE 01  @..2)...
         .byte   $0A,$03,$FF,$0A,$05,$FF,$FF     ; F920 0A 03 FF 0A 05 FF FF     .......
-LF927:
+ScenePartyFindsTsengEntranceTempleOfAncients:
         .byte   $02,$C8,$03,$C9,$01,$08,$00,$60 ; F927 02 C8 03 C9 01 08 00 60  .......`
         .byte   $02,$30,$30,$06,$C9,$27,$07,$1B ; F92F 02 30 30 06 C9 27 07 1B  .00..'..
         .byte   $09,$01,$02,$FF,$FF,$FF,$FF,$08 ; F937 09 01 02 FF FF FF FF 08  ........
@@ -13403,7 +13367,7 @@ LF927:
         .byte   $01,$40,$00,$08,$00,$10,$00,$29 ; F997 01 40 00 08 00 10 00 29  .@.....)
         .byte   $0B,$14,$03,$08,$00,$80,$03,$0B ; F99F 0B 14 03 08 00 80 03 0B  ........
         .byte   $32,$05,$00,$FF                 ; F9A7 32 05 00 FF              2...
-LF9AB:
+SceneCloudFindsSephirothInTempleOfAncients:
         .byte   $02,$CA,$03,$CB,$01,$08,$00,$10 ; F9AB 02 CA 03 CB 01 08 00 10  ........
         .byte   $00,$80,$00,$27,$08,$08,$06,$CB ; F9B3 00 80 00 27 08 08 06 CB  ...'....
         .byte   $08,$00,$80,$00,$09,$01,$02,$FF ; F9BB 08 00 80 00 09 01 02 FF  ........
@@ -13460,7 +13424,7 @@ LFB00:
         .byte   $08,$00,$40,$01,$08,$00,$20,$0C ; FB40 08 00 40 01 08 00 20 0C  ..@... .
         .byte   $1F,$05,$08,$00,$40,$02,$05,$00 ; FB48 1F 05 08 00 40 02 05 00  ....@...
         .byte   $FF                             ; FB50 FF                       .
-SceneCloudSetsSector7Bomb:
+SceneCloudSetsSector1Bomb:
         .byte   $03,$08,$01,$08,$00,$60,$00,$80 ; FB51 03 08 01 08 00 60 00 80  .....`..
         .byte   $20,$27,$07,$06,$09,$01,$0B,$00 ; FB59 20 27 07 06 09 01 0B 00   '......
         .byte   $70,$00,$60,$08,$01,$20,$01,$08 ; FB61 70 00 60 08 01 20 01 08  p.`.. ..
@@ -13869,9 +13833,7 @@ LFEDE:
         sta     $0139                           ; FEF7 8D 39 01                 .9.
         sta     $0129                           ; FEFA 8D 29 01                 .).
         lda     #$00                            ; FEFD A9 00                    ..
-LFF00           := * + 1
         sta     $4F                             ; FEFF 85 4F                    .O
-LFF01:
         lda     #$00                            ; FF01 A9 00                    ..
         sta     $5000                           ; FF03 8D 00 50                 ..P
         pla                                     ; FF06 68                       h
@@ -13932,6 +13894,7 @@ LFF8B:
         brk                                     ; FFA8 00                       .
         brk                                     ; FFA9 00                       .
         brk                                     ; FFAA 00                       .
+LFFAB:
         ora     $0238                           ; FFAB 0D 38 02                 .8.
         .byte   $3C                             ; FFAE 3C                       <
         asl     $09                             ; FFAF 06 09                    ..

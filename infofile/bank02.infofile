@@ -89,12 +89,12 @@ RANGE {
 };
 RANGE {
   START $EB13;
-  END $F9EC;
+  END $FBFF;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $F9ED;
-  END $ffff;
+  START $FC00;
+  END $FFFF;
   TYPE CODE;
 };
 
@@ -123,6 +123,19 @@ LABEL {
 LABEL {
   NAME "Bank02ScriptOpcode08_MoveSprite";
   ADDR  $8DF1;
+};
+LABEL {
+  NAME "Bank02ScriptOpcode11_ScreenFadeBlack";
+  ADDR  $9070;
+};
+LABEL {
+  NAME "Bank02ScriptOpcode12_ScreenFlash";
+  ADDR  $9084;
+};
+LABEL {
+  NAME "Bank02ScriptOpcode13_TriggerBattle";
+  ADDR  $9225;
+  COMMENT "1st param enemy id, 2nd param and 3rd param unknown";
 };
 LABEL {
   NAME "Bank02ScriptOpcode29_ShowDialogBlock";
@@ -211,16 +224,100 @@ LABEL {
   ADDR  $B2A0;
 };
 LABEL {
+  NAME "SceneDonHouseCloudSavesAerith";
+  ADDR  $B3D0;
+};
+LABEL {
   NAME "SceneDonHouseConfrontsDon";
   ADDR  $B421;
+};
+LABEL {
+  NAME "SceneSewersBelowDonMansion";
+  ADDR  $B509;
+};
+LABEL {
+  NAME "SceneEscapedSector7Explosion";
+  ADDR  $B6D7;
 };
 LABEL {
   NAME "SceneShinraBuildingEntrance";
   ADDR  $B8F0;
 };
 LABEL {
+  NAME "SceneShinraBuildingFloor60Stairs";
+  ADDR  $BAB3;
+};
+LABEL {
   NAME "SceneShinraBuildingFloor61";
   ADDR  $BB13;
+};
+LABEL {
+  NAME "SceneShinraBuildingEnterFloor65";
+  ADDR  $BB52;
+};
+LABEL {
+  NAME "SceneCloudGetsCaughtOn69FByTseng";
+  ADDR  $BBB4;
+};
+LABEL {
+  NAME "SceneShinraBuildingCapturedByTurks";
+  ADDR  $BC04;
+};
+LABEL {
+  NAME "SceneShinraBuildingLockedUp";
+  ADDR  $BC77;
+};
+LABEL {
+  NAME "SceneCloudOnRoadLeavingMidgar";
+  ADDR  $BFFE;
+};
+LABEL {
+  NAME "SceneCloudEntersJunon";
+  ADDR  $C168;
+};
+LABEL {
+  NAME "SceneJunonPartyGoesOutsideNextDay";
+  ADDR  $C289;
+};
+LABEL {
+  NAME "SceneJunonCloudGetsPulledAsideToGetUniform";
+  ADDR  $C324;
+};
+LABEL {
+  NAME "SceneCloudGetsPulledAsideToWelcomeHeidegger";
+  ADDR  $C421;
+};
+LABEL {
+  NAME "SceneCloudBoardsShipLeavingJunon";
+  ADDR  $C459;
+};
+LABEL {
+  NAME "SceneCloudEntersCostaDelSol";
+  ADDR  $C4F0;
+};
+LABEL {
+  NAME "SceneCloudEntersNorthCorel";
+  ADDR  $C5D7;
+};
+LABEL {
+  NAME "ScenePartyBuysTicketAndEntersGoldSaucer";
+  ADDR  $C6F3;
+};
+LABEL {
+  NAME "SceneCloudMeetsCaitSith";
+  ADDR  $C7CA;
+};
+LABEL {
+  NAME "SceneGoldSaucerCloudFindsDeadBodiesShowroom";
+  ADDR  $C854;
+};
+LABEL {
+  NAME "ScenePartyThrownInCorelPrison";
+  ADDR  $C960;
+};
+LABEL {
+  NAME "SceneCorelPrisonPartyFindsBarret";
+  ADDR  $C9D0;
 };
 LABEL {
   NAME "SceneCloudEncounterTurksGongaga";
@@ -255,6 +352,70 @@ LABEL {
   ADDR  $D00C;
 };
 LABEL {
+  NAME "SceneCloudReturnsGoldSaucerGetKeystone";
+  ADDR  $D019;
+};
+LABEL {
+  NAME "SceneCloudGoesOnDateWithAerith";
+  ADDR  $D1CB;
+};
+LABEL {
+  NAME "SceneEventSquareCloudAndAerith";
+  ADDR  $D201;
+};
+LABEL {
+  NAME "SceneFindsCaithSithWorksForShinra";
+  ADDR  $D2ED;
+};
+LABEL {
+  NAME "SceneAerithEntranceTempleOfAncients";
+  ADDR  $D3B7;
+};
+LABEL {
+  NAME "ScenePartyEntersTempleOfAncients";
+  ADDR  $D40B;
+};
+LABEL {
+  NAME "ScenePartyLetsCaitSithGetBlackMateria";
+  ADDR  $D440;
+};
+LABEL {
+  NAME "SceneInnCloudLooksForAeris";
+  ADDR  $D5CE;
+};
+LABEL {
+  NAME "SceneCloudLeavesGongagaInnTalksToBarretAndTifa";
+  ADDR  $D642;
+};
+LABEL {
+  NAME "ScenePartyForgottenCityInnBeforeSeeingAerith";
+  ADDR  $F2CC;
+};
+LABEL {
+  NAME "ScenePartyForgottenCityInnAfterAerithDeath";
+  ADDR  $D554;
+};
+LABEL {
+  NAME "SceneCloudWakesUpInInnNearGaeaCliff";
+  ADDR  $D6D1;
+};
+LABEL {
+  NAME "SceneFlashbackNibelheimIncident";
+  ADDR  $EE3D;
+};
+LABEL {
+  NAME "SceneShinraEntersMateriaTreeFirstTime";
+  ADDR  $F4FB;
+};
+LABEL {
+  NAME "SceneFinishedExploringCloudMemories";
+  ADDR  $DD23;
+};
+LABEL {
+  NAME "SceneNorthernCavePartyConfrontsSephiroth";
+  ADDR  $F886;
+};
+LABEL {
   NAME "Bank02CheckCutsceneFlagBit";
   ADDR $E00C;
 };
@@ -284,20 +445,16 @@ LABEL {
   ADDR  $EC34;
 };
 LABEL {
-  NAME "SceneInnCloudLooksForAeris3";
-  ADDR  $DF02;
-};
-LABEL {
-  NAME "SceneInnCloudLooksForAeris1";
-  ADDR  $F11E;
-};
-LABEL {
-  NAME "SceneInnCloudLooksForAeris2";
-  ADDR  $D642;
-};
-LABEL {
-  NAME "Bank02SceneScriptTable";
+  NAME "Bank02SceneScriptTablePart1";
   ADDR  $D701;
+};
+LABEL {
+  NAME "Bank02SceneScriptTablePart2";
+  ADDR  $D801;
+};
+LABEL {
+  NAME "Bank02SceneScriptTablePart3";
+  ADDR  $D8FF;
 };
 LABEL {
   NAME "LoadMapRowsAndColumns";

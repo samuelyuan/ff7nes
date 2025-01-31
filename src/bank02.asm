@@ -5,13 +5,7 @@ L0002           := $0002
 L0100           := $0100
 L0130           := $0130
 L0140           := $0140
-L0216           := $0216
 L0400           := $0400
-L040E           := $040E
-L0800           := $0800
-L0801           := $0801
-L0B00           := $0B00
-L1200           := $1200
 L2020           := $2020
 L3030           := $3030
 L6800           := $6800
@@ -1996,10 +1990,10 @@ L8BEC:
         bcs     L8C02                           ; 8BEE B0 12                    ..
         asl     a                               ; 8BF0 0A                       .
         tay                                     ; 8BF1 A8                       .
-        lda     Bank02SceneScriptTable,y        ; 8BF2 B9 01 D7                 ...
+        lda     Bank02SceneScriptTablePart1,y   ; 8BF2 B9 01 D7                 ...
         sta     $A7                             ; 8BF5 85 A7                    ..
         iny                                     ; 8BF7 C8                       .
-        lda     Bank02SceneScriptTable,y        ; 8BF8 B9 01 D7                 ...
+        lda     Bank02SceneScriptTablePart1,y   ; 8BF8 B9 01 D7                 ...
         sta     $A8                             ; 8BFB 85 A8                    ..
         lda     #$00                            ; 8BFD A9 00                    ..
         jmp     Bank02LoadNextScriptOpcode      ; 8BFF 4C 29 8C                 L).
@@ -2010,10 +2004,10 @@ L8C02:
         sbc     #$80                            ; 8C03 E9 80                    ..
         asl     a                               ; 8C05 0A                       .
         tay                                     ; 8C06 A8                       .
-        lda     Bank02SceneScriptTable+256,y    ; 8C07 B9 01 D8                 ...
+        lda     Bank02SceneScriptTablePart2,y   ; 8C07 B9 01 D8                 ...
         sta     $A7                             ; 8C0A 85 A7                    ..
         iny                                     ; 8C0C C8                       .
-        lda     Bank02SceneScriptTable+256,y    ; 8C0D B9 01 D8                 ...
+        lda     Bank02SceneScriptTablePart2,y   ; 8C0D B9 01 D8                 ...
         sta     $A8                             ; 8C10 85 A8                    ..
         lda     #$00                            ; 8C12 A9 00                    ..
         jmp     Bank02LoadNextScriptOpcode      ; 8C14 4C 29 8C                 L).
@@ -2022,10 +2016,10 @@ L8C02:
 L8C17:
         asl     a                               ; 8C17 0A                       .
         tay                                     ; 8C18 A8                       .
-        lda     Bank02SceneScriptTable+256+254,y; 8C19 B9 FF D8                 ...
+        lda     Bank02SceneScriptTablePart3,y   ; 8C19 B9 FF D8                 ...
         sta     $A7                             ; 8C1C 85 A7                    ..
         iny                                     ; 8C1E C8                       .
-        lda     Bank02SceneScriptTable+256+254,y; 8C1F B9 FF D8                 ...
+        lda     Bank02SceneScriptTablePart3,y   ; 8C1F B9 FF D8                 ...
         sta     $A8                             ; 8C22 85 A8                    ..
         lda     #$00                            ; 8C24 A9 00                    ..
         jmp     Bank02LoadNextScriptOpcode      ; 8C26 4C 29 8C                 L).
@@ -2093,9 +2087,9 @@ Bank02ScriptOpcodeTable:
         .addr   L908C                           ; 8C85 8C 90                    ..
         .addr   L90A5                           ; 8C87 A5 90                    ..
         .addr   L8FA4                           ; 8C89 A4 8F                    ..
-        .addr   L9070                           ; 8C8B 70 90                    p.
-        .addr   L9084                           ; 8C8D 84 90                    ..
-        .addr   L9225                           ; 8C8F 25 92                    %.
+        .addr   Bank02ScriptOpcode11_ScreenFadeBlack; 8C8B 70 90                p.
+        .addr   Bank02ScriptOpcode12_ScreenFlash; 8C8D 84 90                    ..
+        .addr   Bank02ScriptOpcode13_TriggerBattle; 8C8F 25 92                  %.
         .addr   L90B1                           ; 8C91 B1 90                    ..
         .addr   L9175                           ; 8C93 75 91                    u.
         .addr   L918C                           ; 8C95 8C 91                    ..
@@ -2739,7 +2733,7 @@ L906E:
         rts                                     ; 906F 60                       `
 
 ; ----------------------------------------------------------------------------
-L9070:
+Bank02ScriptOpcode11_ScreenFadeBlack:
         lda     $13                             ; 9070 A5 13                    ..
         sta     $1D                             ; 9072 85 1D                    ..
         lda     $14                             ; 9074 A5 14                    ..
@@ -2751,7 +2745,7 @@ L9070:
         jmp     Bank02LoadNextScriptOpcode      ; 9081 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-L9084:
+Bank02ScriptOpcode12_ScreenFlash:
         jsr     LE35F                           ; 9084 20 5F E3                  _.
         lda     #$01                            ; 9087 A9 01                    ..
         jmp     Bank02LoadNextScriptOpcode      ; 9089 4C 29 8C                 L).
@@ -3012,7 +3006,8 @@ L9220:
         jmp     Bank02LoadNextScriptOpcode      ; 9222 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-L9225:
+; 1st param enemy id, 2nd param and 3rd param unknown
+Bank02ScriptOpcode13_TriggerBattle:
         ldy     #$01                            ; 9225 A0 01                    ..
         lda     ($A7),y                         ; 9227 B1 A7                    ..
         sta     $52                             ; 9229 85 52                    .R
@@ -7734,7 +7729,7 @@ LB3AF:
         .byte   $01,$60,$09,$06,$08,$00,$40,$01 ; B3BF 01 60 09 06 08 00 40 01  .`....@.
         .byte   $60,$09,$07,$08,$00,$50,$01,$60 ; B3C7 60 09 07 08 00 50 01 60  `....P.`
         .byte   $FF                             ; B3CF FF                       .
-LB3D0:
+SceneDonHouseCloudSavesAerith:
         .byte   $02,$3B,$03,$3C,$06,$3C,$08,$00 ; B3D0 02 3B 03 3C 06 3C 08 00  .;.<.<..
         .byte   $20,$03,$29,$03,$16,$04,$08,$00 ; B3D8 20 03 29 03 16 04 08 00   .).....
         .byte   $20,$06,$13,$0B,$00,$FF,$0A,$05 ; B3E0 20 06 13 0B 00 FF 0A 05   .......
@@ -7782,7 +7777,7 @@ LB4F6:
         .byte   $02,$3E,$03,$3F,$09,$01,$02,$00 ; B4F6 02 3E 03 3F 09 01 02 00  .>.?....
         .byte   $20,$02,$40,$09,$02,$02,$00,$20 ; B4FE 20 02 40 09 02 02 00 20   .@.... 
         .byte   $02,$50,$FF                     ; B506 02 50 FF                 .P.
-LB509:
+SceneSewersBelowDonMansion:
         .byte   $02,$3E,$03,$3F,$06,$3F,$04,$03 ; B509 02 3E 03 3F 06 3F 04 03  .>.?.?..
         .byte   $47,$FF,$08,$01,$20,$00,$04,$03 ; B511 47 FF 08 01 20 00 04 03  G... ...
         .byte   $48,$FF,$08,$00,$40,$01,$08,$00 ; B519 48 FF 08 00 40 01 08 00  H...@...
@@ -7851,7 +7846,7 @@ LB6C4:
         .byte   $02,$46,$03,$47,$09,$03,$08,$00 ; B6C4 02 46 03 47 09 03 08 00  .F.G....
         .byte   $B0,$00,$50,$09,$04,$02,$00,$A0 ; B6CC B0 00 50 09 04 02 00 A0  ..P.....
         .byte   $00,$40,$FF                     ; B6D4 00 40 FF                 .@.
-LB6D7:
+SceneEscapedSector7Explosion:
         .byte   $02,$46,$03,$47,$06,$47,$29,$03 ; B6D7 02 46 03 47 06 47 29 03  .F.G.G).
         .byte   $84,$26,$0F,$00,$0E,$04,$0E,$03 ; B6DF 84 26 0F 00 0E 04 0E 03  .&......
         .byte   $08,$03,$10,$00,$16,$03,$04,$11 ; B6E7 08 03 10 00 16 03 04 11  ........
@@ -7998,7 +7993,7 @@ LBA74:
         .byte   $29,$04,$28,$07,$08,$01,$20,$00 ; BA9C 29 04 28 07 08 01 20 00  ).(... .
         .byte   $16,$01,$02,$28,$0E,$00,$0F,$01 ; BAA4 16 01 02 28 0E 00 0F 01  ...(....
         .byte   $0F,$02,$0A,$01,$02,$FF,$FF     ; BAAC 0F 02 0A 01 02 FF FF     .......
-LBAB3:
+SceneShinraBuildingFloor60Stairs:
         .byte   $03,$51,$03,$55,$2C,$3B,$06,$55 ; BAB3 03 51 03 55 2C 3B 06 55  .Q.U,;.U
         .byte   $08,$00,$40,$01,$09,$01,$02,$00 ; BABB 08 00 40 01 09 01 02 00  ..@.....
         .byte   $30,$02,$20,$09,$02,$0B,$00,$30 ; BAC3 30 02 20 09 02 0B 00 30  0. ....0
@@ -8022,7 +8017,7 @@ SceneShinraBuildingFloor61:
         .byte   $08,$02,$80,$00,$29,$04,$34,$02 ; BB3B 08 02 80 00 29 04 34 02  ....).4.
         .byte   $08,$01,$10,$01,$0A,$01,$FF,$08 ; BB43 08 01 10 01 0A 01 FF 08  ........
         .byte   $02,$80,$01,$0A,$02,$FF,$FF     ; BB4B 02 80 01 0A 02 FF FF     .......
-LBB52:
+SceneShinraBuildingEnterFloor65:
         .byte   $06,$65,$06,$66,$FF             ; BB52 06 65 06 66 FF           .e.f.
 LBB57:
         .byte   $03,$6A,$09,$03,$05,$00,$F0,$00 ; BB57 03 6A 09 03 05 00 F0 00  .j......
@@ -8042,7 +8037,7 @@ LBB97:
 LBBAA:
         .byte   $03,$70,$09,$05,$0B,$01,$A0,$00 ; BBAA 03 70 09 05 0B 01 A0 00  .p......
         .byte   $F0,$FF                         ; BBB2 F0 FF                    ..
-LBBB4:
+SceneCloudGetsCaughtOn69FByTseng:
         .byte   $03,$70,$06,$70,$0F,$00,$0C,$10 ; BBB4 03 70 06 70 0F 00 0C 10  .p.p....
         .byte   $05,$08,$00,$80,$02,$0E,$00,$08 ; BBBC 05 08 00 80 02 0E 00 08  ........
         .byte   $00,$10,$00,$08,$05,$20,$03,$29 ; BBC4 00 10 00 08 05 20 03 29  ..... .)
@@ -8055,7 +8050,7 @@ LBBD5:
         .byte   $C0,$09,$05,$05,$00,$80,$00,$90 ; BBED C0 09 05 05 00 80 00 90  ........
         .byte   $09,$07,$05,$00,$60,$00,$A0,$09 ; BBF5 09 07 05 00 60 00 A0 09  ....`...
         .byte   $08,$08,$00,$A0,$00,$A0,$FF     ; BBFD 08 08 00 A0 00 A0 FF     .......
-LBC04:
+SceneShinraBuildingCapturedByTurks:
         .byte   $02,$70,$03,$71,$06,$71,$0B,$1E ; BC04 02 70 03 71 06 71 0B 1E  .p.q.q..
         .byte   $08,$00,$10,$00,$29,$04,$AE,$01 ; BC0C 08 00 10 00 29 04 AE 01  ....)...
         .byte   $08,$00,$80,$00,$29,$04,$AF,$0B ; BC14 08 00 80 00 29 04 AF 0B  ....)...
@@ -8072,7 +8067,7 @@ LBC27:
         .byte   $00,$90,$09,$0A,$00,$01,$20,$00 ; BC5F 00 90 09 0A 00 01 20 00  ...... .
         .byte   $90,$09,$0B,$00,$01,$C0,$00,$90 ; BC67 90 09 0B 00 01 C0 00 90  ........
         .byte   $09,$06,$00,$01,$40,$00,$70,$FF ; BC6F 09 06 00 01 40 00 70 FF  ....@.p.
-LBC77:
+SceneShinraBuildingLockedUp:
         .byte   $03,$72,$06,$72,$29,$04,$BD,$03 ; BC77 03 72 06 72 29 04 BD 03  .r.r)...
         .byte   $0B,$50,$29,$04,$C0,$01,$0F,$00 ; BC7F 0B 50 29 04 C0 01 0F 00  .P).....
         .byte   $0C,$10,$05,$0C,$40,$04,$29,$04 ; BC87 0C 10 05 0C 40 04 29 04  ....@.).
@@ -8214,7 +8209,7 @@ LBF97:
 LBFF5:
         .byte   $02,$73,$0A,$05,$06,$07,$08,$FF ; BFF5 02 73 0A 05 06 07 08 FF  .s......
         .byte   $FF                             ; BFFD FF                       .
-LBFFE:
+SceneCloudOnRoadLeavingMidgar:
         .byte   $03,$81,$06,$81,$1C,$00,$05,$1F ; BFFE 03 81 06 81 1C 00 05 1F  ........
         .byte   $01,$1F,$02,$1F,$03,$1F,$04,$1F ; C006 01 1F 02 1F 03 1F 04 1F  ........
         .byte   $05,$1F,$06,$08,$00,$40,$03,$09 ; C00E 05 1F 06 08 00 40 03 09  .....@..
@@ -8275,7 +8270,7 @@ LC157:
         .byte   $03,$89,$09,$04,$05,$00,$20,$03 ; C157 03 89 09 04 05 00 20 03  ...... .
         .byte   $50,$09,$05,$05,$00,$40,$03,$50 ; C15F 50 09 05 05 00 40 03 50  P....@.P
         .byte   $FF                             ; C167 FF                       .
-LC168:
+SceneCloudEntersJunon:
         .byte   $03,$8A,$06,$8A,$08,$00,$20,$02 ; C168 03 8A 06 8A 08 00 20 02  ...... .
         .byte   $29,$05,$CB,$01,$FF             ; C170 29 05 CB 01 FF           )....
 LC175:
@@ -8319,7 +8314,7 @@ LC261:
         .byte   $01,$70,$09,$03,$04,$01,$50,$01 ; C271 01 70 09 03 04 01 50 01  .p....P.
         .byte   $60,$09,$04,$04,$01,$60,$01,$60 ; C279 60 09 04 04 01 60 01 60  `....`.`
         .byte   $09,$05,$08,$00,$F0,$01,$70,$FF ; C281 09 05 08 00 F0 01 70 FF  ......p.
-LC289:
+SceneJunonPartyGoesOutsideNextDay:
         .byte   $02,$8C,$03,$8D,$06,$8D,$29,$05 ; C289 02 8C 03 8D 06 8D 29 05  ......).
         .byte   $F2,$04,$08,$05,$10,$04,$08,$00 ; C291 F2 04 08 05 10 04 08 00  ........
         .byte   $20,$00,$29,$05,$F6,$05,$29,$06 ; C299 20 00 29 05 F6 05 29 06   .)...).
@@ -8346,7 +8341,7 @@ LC2E2:
 LC31A:
         .byte   $03,$8F,$09,$01,$08,$00,$70,$04 ; C31A 03 8F 09 01 08 00 70 04  ......p.
         .byte   $70,$FF                         ; C322 70 FF                    p.
-LC324:
+SceneJunonCloudGetsPulledAsideToGetUniform:
         .byte   $03,$8F,$06,$8F,$0E,$01,$08,$01 ; C324 03 8F 06 8F 0E 01 08 01  ........
         .byte   $80,$03,$08,$01,$40,$00,$08,$00 ; C32C 80 03 08 01 40 00 08 00  ....@...
         .byte   $80,$03,$29,$06,$0F,$01,$08,$00 ; C334 80 03 29 06 0F 01 08 00  ..).....
@@ -8384,7 +8379,7 @@ LC3ED:
 LC413:
         .byte   $02,$8F,$03,$90,$02,$F5,$09,$01 ; C413 02 8F 03 90 02 F5 09 01  ........
         .byte   $02,$00,$70,$04,$40,$FF         ; C41B 02 00 70 04 40 FF        ..p.@.
-LC421:
+SceneCloudGetsPulledAsideToWelcomeHeidegger:
         .byte   $02,$8F,$03,$90,$02,$F5,$06,$90 ; C421 02 8F 03 90 02 F5 06 90  ........
         .byte   $29,$06,$24,$03,$08,$01,$40,$04 ; C429 29 06 24 03 08 01 40 04  ).$...@.
         .byte   $0A,$01,$FF,$FF                 ; C431 0A 01 FF FF              ....
@@ -8396,7 +8391,7 @@ LC435:
 LC44F:
         .byte   $02,$90,$03,$91,$37,$02,$2A,$00 ; C44F 02 90 03 91 37 02 2A 00  ....7.*.
         .byte   $02,$FF                         ; C457 02 FF                    ..
-LC459:
+SceneCloudBoardsShipLeavingJunon:
         .byte   $02,$90,$03,$91,$0C,$20,$10,$08 ; C459 02 90 03 91 0C 20 10 08  ..... ..
         .byte   $00,$80,$00,$0C,$80,$0A,$06,$91 ; C461 00 80 00 0C 80 0A 06 91  ........
         .byte   $37,$00,$05,$00,$FF             ; C469 37 00 05 00 FF           7....
@@ -8427,7 +8422,7 @@ LC4CA:
         .byte   $09,$05,$01,$02,$40,$01,$00,$09 ; C4DA 09 05 01 02 40 01 00 09  ....@...
         .byte   $06,$02,$02,$40,$01,$20,$09,$0A ; C4E2 06 02 02 40 01 20 09 0A  ...@. ..
         .byte   $02,$02,$A0,$01,$60,$FF         ; C4EA 02 02 A0 01 60 FF        ....`.
-LC4F0:
+SceneCloudEntersCostaDelSol:
         .byte   $03,$99,$06,$99,$29,$06,$78,$01 ; C4F0 03 99 06 99 29 06 78 01  ....).x.
         .byte   $08,$05,$20,$00,$29,$06,$79,$01 ; C4F8 08 05 20 00 29 06 79 01  .. .).y.
         .byte   $08,$03,$10,$00,$29,$06,$7A,$01 ; C500 08 03 10 00 29 06 7A 01  ....).z.
@@ -8459,7 +8454,7 @@ LC5C6:
         .byte   $03,$9B,$09,$02,$02,$01,$60,$00 ; C5C6 03 9B 09 02 02 01 60 00  ......`.
         .byte   $90,$09,$03,$08,$01,$70,$00,$A0 ; C5CE 90 09 03 08 01 70 00 A0  .....p..
         .byte   $FF                             ; C5D6 FF                       .
-LC5D7:
+SceneCloudEntersNorthCorel:
         .byte   $03,$9B,$06,$9B,$08,$00,$40,$05 ; C5D7 03 9B 06 9B 08 00 40 05  ......@.
         .byte   $09,$01,$05,$FF,$FF,$FF,$FF,$08 ; C5DF 09 01 05 FF FF FF FF 08  ........
         .byte   $01,$40,$02,$08,$02,$10,$01,$0F ; C5E7 01 40 02 08 02 10 01 0F  .@......
@@ -8503,7 +8498,7 @@ LC6CB:
         .byte   $06,$44,$16,$05,$06,$44,$16,$05 ; C6DB 06 44 16 05 06 44 16 05  .D...D..
         .byte   $06,$44,$0F,$05,$0F,$06,$09,$00 ; C6E3 06 44 0F 05 0F 06 09 00  .D......
         .byte   $0B,$00,$A0,$00,$A0,$0E,$00,$FF ; C6EB 0B 00 A0 00 A0 0E 00 FF  ........
-LC6F3:
+ScenePartyBuysTicketAndEntersGoldSaucer:
         .byte   $03,$A0,$06,$A0,$08,$00,$80,$05 ; C6F3 03 A0 06 A0 08 00 80 05  ........
         .byte   $09,$01,$08,$FF,$FF,$FF,$FF,$08 ; C6FB 09 01 08 FF FF FF FF 08  ........
         .byte   $01,$80,$01,$08,$01,$10,$02,$09 ; C703 01 80 01 08 01 10 02 09  ........
@@ -8533,7 +8528,7 @@ LC6F3:
 LC7C0:
         .byte   $03,$A2,$09,$06,$08,$00,$70,$01 ; C7C0 03 A2 09 06 08 00 70 01  ......p.
         .byte   $80,$FF                         ; C7C8 80 FF                    ..
-LC7CA:
+SceneCloudMeetsCaitSith:
         .byte   $03,$A2,$06,$A2,$08,$00,$80,$04 ; C7CA 03 A2 06 A2 08 00 80 04  ........
         .byte   $09,$04,$02,$FF,$FF,$FF,$FF,$08 ; C7D2 09 04 02 FF FF FF FF 08  ........
         .byte   $04,$10,$01,$08,$04,$80,$00,$29 ; C7DA 04 10 01 08 04 80 00 29  .......)
@@ -8553,7 +8548,7 @@ LC841:
         .byte   $02,$A2,$03,$A3,$09,$03,$08,$00 ; C841 02 A2 03 A3 09 03 08 00  ........
         .byte   $90,$00,$A0,$09,$04,$05,$00,$30 ; C849 90 00 A0 09 04 05 00 30  .......0
         .byte   $00,$80,$FF                     ; C851 00 80 FF                 ...
-LC854:
+SceneGoldSaucerCloudFindsDeadBodiesShowroom:
         .byte   $02,$A2,$03,$A3,$06,$A3,$08,$00 ; C854 02 A2 03 A3 06 A3 08 00  ........
         .byte   $80,$02,$29,$07,$3D,$01,$09,$02 ; C85C 80 02 29 07 3D 01 09 02  ..).=...
         .byte   $08,$FF,$FF,$FF,$FF,$09,$06,$08 ; C864 08 FF FF FF FF 09 06 08  ........
@@ -8589,7 +8584,7 @@ LC941:
         .byte   $B0,$09,$03,$02,$00,$E0,$00,$B0 ; C949 B0 09 03 02 00 E0 00 B0  ........
         .byte   $09,$01,$0B,$00,$F0,$00,$E0,$09 ; C951 09 01 0B 00 F0 00 E0 09  ........
         .byte   $07,$00,$00,$E0,$00,$E0,$FF     ; C959 07 00 00 E0 00 E0 FF     .......
-LC960:
+ScenePartyThrownInCorelPrison:
         .byte   $03,$A4,$06,$A4,$29,$07,$54,$05 ; C960 03 A4 06 A4 29 07 54 05  ....).T.
         .byte   $08,$02,$40,$00,$29,$07,$59,$01 ; C968 08 02 40 00 29 07 59 01  ..@.).Y.
         .byte   $08,$00,$40,$00,$08,$03,$40,$00 ; C970 08 00 40 00 08 03 40 00  ..@...@.
@@ -8604,7 +8599,7 @@ LC960:
         .byte   $07,$5E,$02,$08,$00,$20,$00,$29 ; C9B8 07 5E 02 08 00 20 00 29  .^... .)
         .byte   $07,$60,$01,$0F,$00,$16,$02,$03 ; C9C0 07 60 01 0F 00 16 02 03  .`......
         .byte   $24,$0E,$00,$0A,$02,$03,$FF,$FF ; C9C8 24 0E 00 0A 02 03 FF FF  $.......
-LC9D0:
+SceneCorelPrisonPartyFindsBarret:
         .byte   $03,$A5,$06,$A5,$09,$03,$0B,$00 ; C9D0 03 A5 06 A5 09 03 0B 00  ........
         .byte   $90,$01,$90,$08,$00,$10,$04,$09 ; C9D8 90 01 90 08 00 10 04 09  ........
         .byte   $01,$02,$FF,$FF,$FF,$FF,$08,$01 ; C9E0 01 02 FF FF FF FF 08 01  ........
@@ -8849,7 +8844,7 @@ LCF92:
 ScenePartyInBroncoShipOutsideRocketTown:
         .byte   $02,$BE,$03,$BF,$06,$BF,$2A,$00 ; D00C 02 BE 03 BF 06 BF 2A 00  ......*.
         .byte   $04,$1C,$06,$05,$FF             ; D014 04 1C 06 05 FF           .....
-LD019:
+SceneCloudReturnsGoldSaucerGetKeystone:
         .byte   $02,$C0,$03,$C1,$06,$C1,$08,$00 ; D019 02 C0 03 C1 06 C1 08 00  ........
         .byte   $80,$02,$08,$00,$10,$09,$08,$00 ; D021 80 02 08 00 10 09 08 00  ........
         .byte   $80,$09,$29,$0A,$0F,$01,$09,$01 ; D029 80 09 29 0A 0F 01 09 01  ..).....
@@ -8911,7 +8906,7 @@ LD155:
 LD1BF:
         .byte   $02,$C3,$03,$C5,$09,$05,$02,$00 ; D1BF 02 C3 03 C5 09 05 02 00  ........
         .byte   $E0,$01,$10,$FF                 ; D1C7 E0 01 10 FF              ....
-LD1CB:
+SceneCloudGoesOnDateWithAerith:
         .byte   $02,$C3,$03,$C5,$03,$C4,$06,$C4 ; D1CB 02 C3 03 C5 03 C4 06 C4  ........
         .byte   $29,$0A,$50,$01,$09,$03,$05,$FF ; D1D3 29 0A 50 01 09 03 05 FF  ).P.....
         .byte   $FF,$FF,$FF,$08,$03,$40,$01,$08 ; D1DB FF FF FF 08 03 40 01 08  .....@..
@@ -8920,7 +8915,7 @@ LD1CB:
 LD1F2:
         .byte   $02,$C3,$03,$C5,$09,$02,$09,$00 ; D1F2 02 C3 03 C5 09 02 09 00  ........
         .byte   $70,$02,$70,$0A,$03,$FF,$FF     ; D1FA 70 02 70 0A 03 FF FF     p.p....
-LD201:
+SceneEventSquareCloudAndAerith:
         .byte   $02,$C3,$03,$C5,$06,$C5,$08,$00 ; D201 02 C3 03 C5 06 C5 08 00  ........
         .byte   $80,$04,$29,$0A,$52,$05,$09,$05 ; D209 80 04 29 0A 52 05 09 05  ..).R...
         .byte   $02,$FF,$FF,$FF,$FF,$08,$05,$10 ; D211 02 FF FF FF FF 08 05 10  ........
@@ -8953,7 +8948,7 @@ LD2DA:
         .byte   $02,$C5,$03,$C6,$09,$08,$05,$00 ; D2DA 02 C5 03 C6 09 08 05 00  ........
         .byte   $70,$00,$60,$09,$0A,$0B,$00,$70 ; D2E2 70 00 60 09 0A 0B 00 70  p.`....p
         .byte   $00,$70,$FF                     ; D2EA 00 70 FF                 .p.
-LD2ED:
+SceneFindsCaithSithWorksForShinra:
         .byte   $02,$C5,$03,$C6,$06,$C6,$08,$00 ; D2ED 02 C5 03 C6 06 C6 08 00  ........
         .byte   $40,$01,$08,$00,$10,$00,$09,$03 ; D2F5 40 01 08 00 10 00 09 03  @.......
         .byte   $02,$FF,$FF,$FF,$FF,$08,$03,$40 ; D2FD 02 FF FF FF FF 08 03 40  .......@
@@ -8984,7 +8979,7 @@ LD382:
 LD3AB:
         .byte   $02,$C7,$03,$C9,$09,$02,$0B,$00 ; D3AB 02 C7 03 C9 09 02 0B 00  ........
         .byte   $80,$01,$70,$FF                 ; D3B3 80 01 70 FF              ..p.
-LD3B7:
+SceneAerithEntranceTempleOfAncients:
         .byte   $02,$C7,$03,$C8,$06,$C8,$09,$01 ; D3B7 02 C7 03 C8 06 C8 09 01  ........
         .byte   $02,$FF,$FF,$FF,$FF,$08,$01,$10 ; D3BF 02 FF FF FF FF 08 01 10  ........
         .byte   $01,$08,$01,$80,$00,$0E,$01,$16 ; D3C7 01 08 01 80 00 0E 01 16  ........
@@ -8998,7 +8993,7 @@ LD3F8:
         .byte   $02,$C9,$03,$CA,$09,$01,$02,$03 ; D3F8 02 C9 03 CA 09 01 02 03  ........
         .byte   $60,$03,$50,$09,$02,$0B,$03,$80 ; D400 60 03 50 09 02 0B 03 80  `.P.....
         .byte   $03,$50,$FF                     ; D408 03 50 FF                 .P.
-LD40B:
+ScenePartyEntersTempleOfAncients:
         .byte   $02,$C9,$03,$CA,$06,$CA,$29,$0B ; D40B 02 C9 03 CA 06 CA 29 0B  ......).
         .byte   $17,$02,$08,$01,$10,$01,$08,$01 ; D413 17 02 08 01 10 01 08 01  ........
         .byte   $80,$00,$29,$0B,$19,$01,$08,$01 ; D41B 80 00 29 0B 19 01 08 01  ..).....
@@ -9008,7 +9003,7 @@ LD40B:
 LD434:
         .byte   $02,$CA,$03,$CB,$09,$03,$08,$00 ; D434 02 CA 03 CB 09 03 08 00  ........
         .byte   $80,$00,$60,$FF                 ; D43C 80 00 60 FF              ..`.
-LD440:
+ScenePartyLetsCaitSithGetBlackMateria:
         .byte   $02,$CB,$03,$CC,$06,$CC,$08,$00 ; D440 02 CB 03 CC 06 CC 08 00  ........
         .byte   $40,$02,$29,$0B,$5B,$01,$09,$01 ; D448 40 02 29 0B 5B 01 09 01  @.).[...
         .byte   $05,$FF,$FF,$FF,$FF,$08,$01,$40 ; D450 05 FF FF FF FF 08 01 40  .......@
@@ -9047,7 +9042,7 @@ LD52C:
         .byte   $00,$50,$09,$05,$0B,$00,$90,$00 ; D53C 00 50 09 05 0B 00 90 00  .P......
         .byte   $50,$09,$01,$08,$00,$80,$00,$60 ; D544 50 09 01 08 00 80 00 60  P......`
         .byte   $09,$02,$08,$00,$90,$00,$60,$FF ; D54C 09 02 08 00 90 00 60 FF  ......`.
-LD554:
+ScenePartyForgottenCityInnAfterAerithDeath:
         .byte   $02,$E4,$03,$E5,$06,$E5,$29,$0C ; D554 02 E4 03 E5 06 E5 29 0C  ......).
         .byte   $59,$0F,$08,$00,$40,$01,$08,$01 ; D55C 59 0F 08 00 40 01 08 01  Y...@...
         .byte   $80,$01,$0A,$01,$FF,$08,$02,$80 ; D564 80 01 0A 01 FF 08 02 80  ........
@@ -9068,7 +9063,7 @@ LD5BB:
         .byte   $02,$CC,$03,$CD,$09,$01,$02,$00 ; D5BB 02 CC 03 CD 09 01 02 00  ........
         .byte   $20,$00,$50,$09,$0A,$08,$00,$30 ; D5C3 20 00 50 09 0A 08 00 30   .P....0
         .byte   $00,$60,$FF                     ; D5CB 00 60 FF                 .`.
-LD5CE:
+SceneInnCloudLooksForAeris:
         .byte   $02,$CC,$03,$CD,$06,$CD,$29,$0C ; D5CE 02 CC 03 CD 06 CD 29 0C  ......).
         .byte   $00,$04,$08,$00,$20,$00,$29,$0C ; D5D6 00 04 08 00 20 00 29 0C  .... .).
         .byte   $04,$16,$08,$0A,$10,$02,$08,$0A ; D5DE 04 16 08 0A 10 02 08 0A  ........
@@ -9086,7 +9081,7 @@ LD62F:
         .byte   $02,$CD,$03,$CE,$09,$0A,$0B,$00 ; D62F 02 CD 03 CE 09 0A 0B 00  ........
         .byte   $30,$00,$60,$09,$0B,$00,$00,$20 ; D637 30 00 60 09 0B 00 00 20  0.`.... 
         .byte   $00,$70,$FF                     ; D63F 00 70 FF                 .p.
-SceneInnCloudLooksForAeris2:
+SceneCloudLeavesGongagaInnTalksToBarretAndTifa:
         .byte   $02,$CD,$03,$CE,$06,$CE,$29,$0C ; D642 02 CD 03 CE 06 CE 29 0C  ......).
         .byte   $1C,$07,$08,$0A,$20,$01,$0A,$0A ; D64A 1C 07 08 0A 20 01 0A 0A  .... ...
         .byte   $0B,$FF,$FF,$02,$E2,$03,$E3,$08 ; D652 0B FF FF 02 E2 03 E3 08  ........
@@ -9107,7 +9102,7 @@ SceneInnCloudLooksForAeris2:
 LD6C5:
         .byte   $02,$E3,$03,$E4,$09,$02,$02,$00 ; D6C5 02 E3 03 E4 09 02 02 00  ........
         .byte   $70,$00,$80,$FF                 ; D6CD 70 00 80 FF              p...
-LD6D1:
+SceneCloudWakesUpInInnNearGaeaCliff:
         .byte   $02,$EA,$03,$EB,$06,$EB,$0B,$64 ; D6D1 02 EA 03 EB 06 EB 0B 64  .......d
         .byte   $08,$00,$20,$00,$0B,$32,$08,$00 ; D6D9 08 00 20 00 0B 32 08 00  .. ..2..
         .byte   $10,$00,$0B,$32,$08,$00,$40,$06 ; D6E1 10 00 0B 32 08 00 40 06  ...2..@.
@@ -9115,7 +9110,7 @@ LD6D1:
         .byte   $29,$0C,$92,$07,$08,$00,$20,$03 ; D6F1 29 0C 92 07 08 00 20 03  )..... .
         .byte   $08,$00,$40,$00,$FF,$30,$FF,$FF ; D6F9 08 00 40 00 FF 30 FF FF  ..@..0..
 ; ----------------------------------------------------------------------------
-Bank02SceneScriptTable:
+Bank02SceneScriptTablePart1:
         .addr   LA616                           ; D701 16 A6                    ..
         .addr   SceneCloudAndBarretEnterTrainStation; D703 1A A6                ..
         .addr   LA688                           ; D705 88 A6                    ..
@@ -9189,13 +9184,13 @@ Bank02SceneScriptTable:
         .addr   LB387                           ; D78D 87 B3                    ..
         .addr   LB3A4                           ; D78F A4 B3                    ..
         .addr   LB3AF                           ; D791 AF B3                    ..
-        .addr   LB3D0                           ; D793 D0 B3                    ..
+        .addr   SceneDonHouseCloudSavesAerith   ; D793 D0 B3                    ..
         .addr   LB40B                           ; D795 0B B4                    ..
         .addr   SceneDonHouseConfrontsDon       ; D797 21 B4                    !.
         .addr   LB49A                           ; D799 9A B4                    ..
         .addr   LB4B7                           ; D79B B7 B4                    ..
         .addr   LB4F6                           ; D79D F6 B4                    ..
-        .addr   LB509                           ; D79F 09 B5                    ..
+        .addr   SceneSewersBelowDonMansion      ; D79F 09 B5                    ..
         .addr   LB54F                           ; D7A1 4F B5                    O.
         .addr   LB59E                           ; D7A3 9E B5                    ..
         .addr   LB5A6                           ; D7A5 A6 B5                    ..
@@ -9203,7 +9198,7 @@ Bank02SceneScriptTable:
         .addr   LB6A4                           ; D7A9 A4 B6                    ..
         .addr   LB6B7                           ; D7AB B7 B6                    ..
         .addr   LB6C4                           ; D7AD C4 B6                    ..
-        .addr   LB6D7                           ; D7AF D7 B6                    ..
+        .addr   SceneEscapedSector7Explosion    ; D7AF D7 B6                    ..
         .addr   LB702                           ; D7B1 02 B7                    ..
         .addr   LB763                           ; D7B3 63 B7                    c.
         .addr   LB776                           ; D7B5 76 B7                    v.
@@ -9218,19 +9213,19 @@ Bank02SceneScriptTable:
         .addr   LB9F6                           ; D7C7 F6 B9                    ..
         .addr   LBA35                           ; D7C9 35 BA                    5.
         .addr   LBA74                           ; D7CB 74 BA                    t.
-        .addr   LBAB3                           ; D7CD B3 BA                    ..
+        .addr   SceneShinraBuildingFloor60Stairs; D7CD B3 BA                    ..
         .addr   LBB02                           ; D7CF 02 BB                    ..
         .addr   SceneShinraBuildingFloor61      ; D7D1 13 BB                    ..
-        .addr   LBB52                           ; D7D3 52 BB                    R.
+        .addr   SceneShinraBuildingEnterFloor65 ; D7D3 52 BB                    R.
         .addr   LBB57                           ; D7D5 57 BB                    W.
         .addr   LBB7D                           ; D7D7 7D BB                    }.
         .addr   LBB97                           ; D7D9 97 BB                    ..
         .addr   LBBAA                           ; D7DB AA BB                    ..
-        .addr   LBBB4                           ; D7DD B4 BB                    ..
+        .addr   SceneCloudGetsCaughtOn69FByTseng; D7DD B4 BB                    ..
         .addr   LBBD5                           ; D7DF D5 BB                    ..
-        .addr   LBC04                           ; D7E1 04 BC                    ..
+        .addr   SceneShinraBuildingCapturedByTurks; D7E1 04 BC                  ..
         .addr   LBC27                           ; D7E3 27 BC                    '.
-        .addr   LBC77                           ; D7E5 77 BC                    w.
+        .addr   SceneShinraBuildingLockedUp     ; D7E5 77 BC                    w.
         .addr   LBE26                           ; D7E7 26 BE                    &.
         .addr   LBE4E                           ; D7E9 4E BE                    N.
         .addr   LBE68                           ; D7EB 68 BE                    h.
@@ -9244,6 +9239,7 @@ Bank02SceneScriptTable:
         .addr   LBF13                           ; D7FB 13 BF                    ..
         .addr   LBF1F                           ; D7FD 1F BF                    ..
         .addr   LBF29                           ; D7FF 29 BF                    ).
+Bank02SceneScriptTablePart2:
         .addr   LBF38                           ; D801 38 BF                    8.
         .addr   LBF3E                           ; D803 3E BF                    >.
         .addr   LBF4A                           ; D805 4A BF                    J.
@@ -9251,7 +9247,7 @@ Bank02SceneScriptTable:
         .addr   LBF88                           ; D809 88 BF                    ..
         .addr   LBF97                           ; D80B 97 BF                    ..
         .addr   LBFF5                           ; D80D F5 BF                    ..
-        .addr   LBFFE                           ; D80F FE BF                    ..
+        .addr   SceneCloudOnRoadLeavingMidgar   ; D80F FE BF                    ..
         .addr   LC066                           ; D811 66 C0                    f.
         .addr   LC077                           ; D813 77 C0                    w.
         .addr   LC08F                           ; D815 8F C0                    ..
@@ -9262,26 +9258,26 @@ Bank02SceneScriptTable:
         .addr   LC0FC                           ; D81F FC C0                    ..
         .addr   LC114                           ; D821 14 C1                    ..
         .addr   LC157                           ; D823 57 C1                    W.
-        .addr   LC168                           ; D825 68 C1                    h.
+        .addr   SceneCloudEntersJunon           ; D825 68 C1                    h.
         .addr   LC175                           ; D827 75 C1                    u.
         .addr   LC17F                           ; D829 7F C1                    ..
         .addr   LC18B                           ; D82B 8B C1                    ..
         .addr   LC24A                           ; D82D 4A C2                    J.
         .addr   LC261                           ; D82F 61 C2                    a.
-        .addr   LC289                           ; D831 89 C2                    ..
+        .addr   SceneJunonPartyGoesOutsideNextDay; D831 89 C2                   ..
         .addr   LC2C5                           ; D833 C5 C2                    ..
         .addr   LC2D8                           ; D835 D8 C2                    ..
         .addr   LC2E2                           ; D837 E2 C2                    ..
         .addr   LC31A                           ; D839 1A C3                    ..
-        .addr   LC324                           ; D83B 24 C3                    $.
+        .addr   SceneJunonCloudGetsPulledAsideToGetUniform; D83B 24 C3          $.
         .addr   LC3E1                           ; D83D E1 C3                    ..
         .addr   LC3E7                           ; D83F E7 C3                    ..
         .addr   LC3ED                           ; D841 ED C3                    ..
         .addr   LC413                           ; D843 13 C4                    ..
-        .addr   LC421                           ; D845 21 C4                    !.
+        .addr   SceneCloudGetsPulledAsideToWelcomeHeidegger; D845 21 C4         !.
         .addr   LC435                           ; D847 35 C4                    5.
         .addr   LC44F                           ; D849 4F C4                    O.
-        .addr   LC459                           ; D84B 59 C4                    Y.
+        .addr   SceneCloudBoardsShipLeavingJunon; D84B 59 C4                    Y.
         .addr   LC46E                           ; D84D 6E C4                    n.
         .addr   LC47F                           ; D84F 7F C4                    ..
         .addr   LC48B                           ; D851 8B C4                    ..
@@ -9289,22 +9285,22 @@ Bank02SceneScriptTable:
         .addr   LC4A6                           ; D855 A6 C4                    ..
         .addr   LC4B0                           ; D857 B0 C4                    ..
         .addr   LC4CA                           ; D859 CA C4                    ..
-        .addr   LC4F0                           ; D85B F0 C4                    ..
+        .addr   SceneCloudEntersCostaDelSol     ; D85B F0 C4                    ..
         .addr   LC5C6                           ; D85D C6 C5                    ..
-        .addr   LC5D7                           ; D85F D7 C5                    ..
+        .addr   SceneCloudEntersNorthCorel      ; D85F D7 C5                    ..
         .addr   LC648                           ; D861 48 C6                    H.
         .addr   LC663                           ; D863 63 C6                    c.
         .addr   LC66F                           ; D865 6F C6                    o.
         .addr   LC6B5                           ; D867 B5 C6                    ..
         .addr   LC6CB                           ; D869 CB C6                    ..
-        .addr   LC6F3                           ; D86B F3 C6                    ..
+        .addr   ScenePartyBuysTicketAndEntersGoldSaucer; D86B F3 C6             ..
         .addr   LC7C0                           ; D86D C0 C7                    ..
-        .addr   LC7CA                           ; D86F CA C7                    ..
+        .addr   SceneCloudMeetsCaitSith         ; D86F CA C7                    ..
         .addr   LC841                           ; D871 41 C8                    A.
-        .addr   LC854                           ; D873 54 C8                    T.
+        .addr   SceneGoldSaucerCloudFindsDeadBodiesShowroom; D873 54 C8         T.
         .addr   LC941                           ; D875 41 C9                    A.
-        .addr   LC960                           ; D877 60 C9                    `.
-        .addr   LC9D0                           ; D879 D0 C9                    ..
+        .addr   ScenePartyThrownInCorelPrison   ; D877 60 C9                    `.
+        .addr   SceneCorelPrisonPartyFindsBarret; D879 D0 C9                    ..
         .addr   LCAA6                           ; D87B A6 CA                    ..
         .addr   LCAB0                           ; D87D B0 CA                    ..
         .addr   LCAEA                           ; D87F EA CA                    ..
@@ -9339,53 +9335,54 @@ Bank02SceneScriptTable:
         .addr   SceneCloudFindsPalmerInSheraBackyard; D8B9 96 F0                ..
         .addr   LCF92                           ; D8BB 92 CF                    ..
         .addr   ScenePartyInBroncoShipOutsideRocketTown; D8BD 0C D0             ..
-        .addr   LD019                           ; D8BF 19 D0                    ..
+        .addr   SceneCloudReturnsGoldSaucerGetKeystone; D8BF 19 D0              ..
         .addr   LD11A                           ; D8C1 1A D1                    ..
         .addr   LD126                           ; D8C3 26 D1                    &.
         .addr   LD155                           ; D8C5 55 D1                    U.
         .addr   LD1BF                           ; D8C7 BF D1                    ..
-        .addr   LD1CB                           ; D8C9 CB D1                    ..
+        .addr   SceneCloudGoesOnDateWithAerith  ; D8C9 CB D1                    ..
         .addr   LD1F2                           ; D8CB F2 D1                    ..
-        .addr   LD201                           ; D8CD 01 D2                    ..
+        .addr   SceneEventSquareCloudAndAerith  ; D8CD 01 D2                    ..
         .addr   LD2DA                           ; D8CF DA D2                    ..
-        .addr   LD2ED                           ; D8D1 ED D2                    ..
+        .addr   SceneFindsCaithSithWorksForShinra; D8D1 ED D2                   ..
         .addr   LD353                           ; D8D3 53 D3                    S.
         .addr   LD382                           ; D8D5 82 D3                    ..
         .addr   LD3AB                           ; D8D7 AB D3                    ..
-        .addr   LD3B7                           ; D8D9 B7 D3                    ..
+        .addr   SceneAerithEntranceTempleOfAncients; D8D9 B7 D3                 ..
         .addr   LD3F8                           ; D8DB F8 D3                    ..
-        .addr   LD40B                           ; D8DD 0B D4                    ..
+        .addr   ScenePartyEntersTempleOfAncients; D8DD 0B D4                    ..
         .addr   LD434                           ; D8DF 34 D4                    4.
-        .addr   LD440                           ; D8E1 40 D4                    @.
+        .addr   ScenePartyLetsCaitSithGetBlackMateria; D8E1 40 D4               @.
         .addr   LD4E4                           ; D8E3 E4 D4                    ..
         .addr   LD4EC                           ; D8E5 EC D4                    ..
-        .addr   SceneInnCloudLooksForAeris1     ; D8E7 1E F1                    ..
+        .addr   LF11E                           ; D8E7 1E F1                    ..
         .addr   LD5A8                           ; D8E9 A8 D5                    ..
         .addr   LD5B0                           ; D8EB B0 D5                    ..
         .addr   LD5BB                           ; D8ED BB D5                    ..
-        .addr   LD5CE                           ; D8EF CE D5                    ..
+        .addr   SceneInnCloudLooksForAeris      ; D8EF CE D5                    ..
         .addr   LD62F                           ; D8F1 2F D6                    /.
-        .addr   SceneInnCloudLooksForAeris2     ; D8F3 42 D6                    B.
-        .addr   LF2CC                           ; D8F5 CC F2                    ..
+        .addr   SceneCloudLeavesGongagaInnTalksToBarretAndTifa; D8F3 42 D6      B.
+        .addr   ScenePartyForgottenCityInnBeforeSeeingAerith; D8F5 CC F2        ..
         .addr   LF33F                           ; D8F7 3F F3                    ?.
         .addr   LD6C5                           ; D8F9 C5 D6                    ..
         .addr   LD52C                           ; D8FB 2C D5                    ,.
-        .addr   LD554                           ; D8FD 54 D5                    T.
+        .addr   ScenePartyForgottenCityInnAfterAerithDeath; D8FD 54 D5          T.
+Bank02SceneScriptTablePart3:
         .addr   LCDE2                           ; D8FF E2 CD                    ..
         .addr   LDA04                           ; D901 04 DA                    ..
         .addr   LDA10                           ; D903 10 DA                    ..
         .addr   LDA16                           ; D905 16 DA                    ..
-        .addr   LD6D1                           ; D907 D1 D6                    ..
+        .addr   SceneCloudWakesUpInInnNearGaeaCliff; D907 D1 D6                 ..
         .addr   LDA68                           ; D909 68 DA                    h.
         .addr   LDA8B                           ; D90B 8B DA                    ..
         .addr   LDAA8                           ; D90D A8 DA                    ..
         .addr   LF402                           ; D90F 02 F4                    ..
         .addr   LDAD1                           ; D911 D1 DA                    ..
         .addr   LED4A                           ; D913 4A ED                    J.
-        .addr   LEE3D                           ; D915 3D EE                    =.
-        .addr   LEE3D                           ; D917 3D EE                    =.
+        .addr   SceneFlashbackNibelheimIncident ; D915 3D EE                    =.
+        .addr   SceneFlashbackNibelheimIncident ; D917 3D EE                    =.
         .addr   LDC3E                           ; D919 3E DC                    >.
-        .addr   LF4FB                           ; D91B FB F4                    ..
+        .addr   SceneShinraEntersMateriaTreeFirstTime; D91B FB F4               ..
         .addr   LDC94                           ; D91D 94 DC                    ..
         .addr   LF423                           ; D91F 23 F4                    #.
         .addr   LDCDC                           ; D921 DC DC                    ..
@@ -9393,14 +9390,14 @@ Bank02SceneScriptTable:
         .addr   LDE49                           ; D925 49 DE                    I.
         .addr   LDE55                           ; D927 55 DE                    U.
         .addr   LDCF9                           ; D929 F9 DC                    ..
-        .addr   LDD23                           ; D92B 23 DD                    #.
-        .addr   LF886                           ; D92D 86 F8                    ..
+        .addr   SceneFinishedExploringCloudMemories; D92B 23 DD                 #.
+        .addr   SceneNorthernCavePartyConfrontsSephiroth; D92D 86 F8            ..
         .addr   LDD82                           ; D92F 82 DD                    ..
         .addr   LDEC0                           ; D931 C0 DE                    ..
         .addr   LDECA                           ; D933 CA DE                    ..
         .addr   LDED4                           ; D935 D4 DE                    ..
         .addr   LDEDC                           ; D937 DC DE                    ..
-        .addr   SceneInnCloudLooksForAeris3     ; D939 02 DF                    ..
+        .addr   LDF02                           ; D939 02 DF                    ..
         .addr   LF367                           ; D93B 67 F3                    g.
         .addr   L3030                           ; D93D 30 30                    00
         .addr   LDFBE                           ; D93F BE DF                    ..
@@ -9598,7 +9595,7 @@ LDCF9:
         .byte   $40,$09,$02,$02,$00,$80,$02,$60 ; DD11 40 09 02 02 00 80 02 60  @......`
         .byte   $09,$07,$08,$00,$60,$02,$60,$FF ; DD19 09 07 08 00 60 02 60 FF  ....`.`.
         .byte   $30,$FF                         ; DD21 30 FF                    0.
-LDD23:
+SceneFinishedExploringCloudMemories:
         .byte   $02,$F2,$03,$F3,$06,$F3,$29,$0D ; DD23 02 F2 03 F3 06 F3 29 0D  ......).
         .byte   $5B,$1E,$29,$0A,$8A,$01,$04,$0D ; DD2B 5B 1E 29 0A 8A 01 04 0D  [.).....
         .byte   $79,$7A,$7D,$FF,$29,$0A,$8B,$01 ; DD33 79 7A 7D FF 29 0A 8B 01  yz}.)...
@@ -9669,7 +9666,7 @@ LDEDC:
         .byte   $08,$01,$40,$00,$E0,$08,$06,$80 ; DEEC 08 01 40 00 E0 08 06 80  ..@.....
         .byte   $02,$08,$06,$20,$05,$29,$04,$AA ; DEF4 02 08 06 20 05 29 04 AA  ... .)..
         .byte   $04,$0B,$1E,$05,$00,$FF         ; DEFC 04 0B 1E 05 00 FF        ......
-SceneInnCloudLooksForAeris3:
+LDF02:
         .byte   $02,$1B,$03,$F6,$09,$04,$05,$00 ; DF02 02 1B 03 F6 09 04 05 00  ........
         .byte   $80,$00,$50,$FF,$02,$E3,$03,$E4 ; DF0A 80 00 50 FF 02 E3 03 E4  ..P.....
         .byte   $08,$00,$80,$06,$09,$01,$02,$FF ; DF12 08 00 80 06 09 01 02 FF  ........
@@ -11866,7 +11863,7 @@ LED4A:
         .byte   $02,$08,$01,$40,$00,$29,$0C,$CB ; EE2A 02 08 01 40 00 29 0C CB  ...@.)..
         .byte   $01,$12,$12,$12,$29,$0C,$CC,$02 ; EE32 01 12 12 12 29 0C CC 02  ....)...
         .byte   $05,$00,$FF                     ; EE3A 05 00 FF                 ...
-LEE3D:
+SceneFlashbackNibelheimIncident:
         .byte   $02,$EF,$03,$F0,$06,$F0,$09,$01 ; EE3D 02 EF 03 F0 06 F0 09 01  ........
         .byte   $02,$00,$40,$00,$80,$09,$03,$05 ; EE45 02 00 40 00 80 09 03 05  ..@.....
         .byte   $00,$60,$00,$D0,$12,$0B,$20,$08 ; EE4D 00 60 00 D0 12 0B 20 08  .`.... .
@@ -11962,7 +11959,7 @@ SceneCloudFindsPalmerInSheraBackyard:
         .byte   $08,$01,$40,$01,$0A,$01,$FF,$0C ; F106 08 01 40 01 0A 01 FF 0C  ..@.....
         .byte   $40,$06,$08,$00,$40,$06,$29,$08 ; F10E 40 06 08 00 40 06 29 08  @...@.).
         .byte   $F4,$03,$1C,$06,$05,$05,$01,$FF ; F116 F4 03 1C 06 05 05 01 FF  ........
-SceneInnCloudLooksForAeris1:
+LF11E:
         .byte   $02,$CC,$03,$CD,$12,$12,$12,$12 ; F11E 02 CC 03 CD 12 12 12 12  ........
         .byte   $12,$12,$08,$00,$80,$02,$0B,$15 ; F126 12 12 08 00 80 02 0B 15  ........
         .byte   $08,$00,$80,$01,$0A,$00,$FF,$0B ; F12E 08 00 80 01 0A 00 FF 0B  ........
@@ -12017,7 +12014,7 @@ SceneInnCloudLooksForAeris1:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F2B6 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F2BE 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00         ; F2C6 00 00 00 00 00 00        ......
-LF2CC:
+ScenePartyForgottenCityInnBeforeSeeingAerith:
         .byte   $02,$E2,$03,$E3,$08,$00,$80,$06 ; F2CC 02 E2 03 E3 08 00 80 06  ........
         .byte   $09,$01,$02,$FF,$FF,$FF,$FF,$08 ; F2D4 09 01 02 FF FF FF FF 08  ........
         .byte   $01,$80,$02,$08,$01,$40,$00,$29 ; F2DC 01 80 02 08 01 40 00 29  .....@.)
@@ -12094,7 +12091,7 @@ LF423:
         .byte   $00,$0B,$10,$08,$03,$10,$00,$0B ; F4E3 00 0B 10 08 03 10 00 0B  ........
         .byte   $10,$08,$05,$40,$00,$0B,$10,$08 ; F4EB 10 08 05 40 00 0B 10 08  ...@....
         .byte   $03,$40,$00,$0B,$10,$05,$02,$FF ; F4F3 03 40 00 0B 10 05 02 FF  .@......
-LF4FB:
+SceneShinraEntersMateriaTreeFirstTime:
         .byte   $02,$F0,$03,$F1,$06,$F1,$08,$01 ; F4FB 02 F0 03 F1 06 F1 08 01  ........
         .byte   $80,$06,$0B,$1E,$08,$01,$10,$03 ; F503 80 06 0B 1E 08 01 10 03  ........
         .byte   $0B,$1E,$08,$01,$20,$02,$09,$02 ; F50B 0B 1E 08 01 20 02 09 02  .... ...
@@ -12210,7 +12207,7 @@ LF559:
         .byte   $08,$02,$10,$00,$08,$07,$20,$01 ; F871 08 02 10 00 08 07 20 01  ...... .
         .byte   $08,$07,$80,$01,$0B,$64,$29,$0D ; F879 08 07 80 01 0B 64 29 0D  .....d).
         .byte   $47,$02,$05,$02,$FF             ; F881 47 02 05 02 FF           G....
-LF886:
+SceneNorthernCavePartyConfrontsSephiroth:
         .byte   $03,$F4,$12,$08,$00,$80,$01,$0B ; F886 03 F4 12 08 00 80 01 0B  ........
         .byte   $32,$0F,$00,$08,$00,$80,$02,$0B ; F88E 32 0F 00 08 00 80 02 0B  2.......
         .byte   $32,$08,$00,$80,$02,$0B,$32,$08 ; F896 32 08 00 80 02 0B 32 08  2.....2.
@@ -12255,426 +12252,75 @@ LF886:
         .byte   $27,$00,$00,$29,$0D,$8B,$01,$18 ; F9CE 27 00 00 29 0D 8B 01 18  '..)....
         .byte   $06,$06,$06,$06,$06,$06,$0B,$22 ; F9D6 06 06 06 06 06 06 0B 22  ......."
         .byte   $12,$12,$12,$12,$12,$12,$12,$12 ; F9DE 12 12 12 12 12 12 12 12  ........
-        .byte   $12,$12,$0F,$01,$0A,$01,$FF     ; F9E6 12 12 0F 01 0A 01 FF     .......
+        .byte   $12,$12,$0F,$01,$0A,$01,$FF,$0B ; F9E6 12 12 0F 01 0A 01 FF 0B  ........
+        .byte   $32,$08,$00,$80,$02,$29,$0D,$93 ; F9EE 32 08 00 80 02 29 0D 93  2....)..
+        .byte   $02,$08,$00,$40,$00,$29,$0D,$95 ; F9F6 02 08 00 40 00 29 0D 95  ...@.)..
+        .byte   $02,$0B,$22,$08,$00,$20,$00,$0B ; F9FE 02 0B 22 08 00 20 00 0B  ..".. ..
+        .byte   $10,$08,$00,$40,$00,$29,$0D,$97 ; FA06 10 08 00 40 00 29 0D 97  ...@.)..
+        .byte   $02,$0E,$04,$0E,$06,$08,$04,$40 ; FA0E 02 0E 04 0E 06 08 04 40  .......@
+        .byte   $00,$08,$06,$40,$00,$16,$04,$06 ; FA16 00 08 06 40 00 16 04 06  ...@....
+        .byte   $44,$16,$04,$06,$44,$08,$02,$40 ; FA1E 44 16 04 06 44 08 02 40  D...D..@
+        .byte   $00,$08,$05,$10,$00,$16,$02,$05 ; FA26 00 08 05 10 00 16 02 05  ........
+        .byte   $41,$08,$05,$20,$00,$16,$04,$06 ; FA2E 41 08 05 20 00 16 04 06  A.. ....
+        .byte   $44,$16,$04,$06,$44,$0E,$02,$08 ; FA36 44 16 04 06 44 0E 02 08  D...D...
+        .byte   $02,$40,$02,$08,$03,$20,$01,$08 ; FA3E 02 40 02 08 03 20 01 08  .@... ..
+        .byte   $03,$40,$00,$0F,$04,$0F,$06,$16 ; FA46 03 40 00 0F 04 0F 06 16  .@......
+        .byte   $00,$03,$44,$11,$0B,$10,$12,$08 ; FA4E 00 03 44 11 0B 10 12 08  ..D.....
+        .byte   $03,$40,$01,$29,$0D,$9A,$01,$08 ; FA56 03 40 01 29 0D 9A 01 08  .@.)....
+        .byte   $00,$20,$00,$08,$03,$80,$00,$08 ; FA5E 00 20 00 08 03 80 00 08  . ......
+        .byte   $05,$80,$00,$08,$04,$80,$00,$08 ; FA66 05 80 00 08 04 80 00 08  ........
+        .byte   $06,$80,$00,$08,$02,$80,$00,$11 ; FA6E 06 80 00 08 02 80 00 11  ........
+        .byte   $12,$11,$12,$29,$0D,$9B,$07,$11 ; FA76 12 11 12 29 0D 9B 07 11  ...)....
+        .byte   $12,$11,$12,$11,$12,$11,$12,$11 ; FA7E 12 11 12 11 12 11 12 11  ........
+        .byte   $0F,$00,$0A,$00,$FF,$0C,$80,$0F ; FA86 0F 00 0A 00 FF 0C 80 0F  ........
+        .byte   $09,$00,$02,$00,$70,$00,$D0,$12 ; FA8E 09 00 02 00 70 00 D0 12  ....p...
+        .byte   $12,$12,$0E,$02,$09,$02,$02,$00 ; FA96 12 12 0E 02 09 02 02 00  ........
+        .byte   $40,$00,$20,$16,$02,$02,$44,$16 ; FA9E 40 00 20 16 02 02 44 16  @. ...D.
+        .byte   $02,$02,$44,$16,$02,$02,$44,$16 ; FAA6 02 02 44 16 02 02 44 16  ..D...D.
+        .byte   $02,$02,$44,$16,$02,$02,$44,$16 ; FAAE 02 02 44 16 02 02 44 16  ..D...D.
+        .byte   $02,$02,$44,$0F,$02,$0A,$02,$FF ; FAB6 02 02 44 0F 02 0A 02 FF  ..D.....
+        .byte   $09,$04,$0B,$00,$80,$00,$20,$0E ; FABE 09 04 0B 00 80 00 20 0E  ...... .
+        .byte   $04,$16,$04,$04,$44,$16,$04,$04 ; FAC6 04 16 04 04 44 16 04 04  ....D...
+        .byte   $44,$16,$04,$04,$44,$16,$04,$04 ; FACE 44 16 04 04 44 16 04 04  D...D...
+        .byte   $44,$16,$04,$04,$44,$16,$04,$04 ; FAD6 44 16 04 04 44 16 04 04  D...D...
+        .byte   $44,$0F,$04,$0A,$04,$FF,$09,$06 ; FADE 44 0F 04 0A 04 FF 09 06  D.......
+        .byte   $0B,$00,$A0,$00,$00,$0E,$06,$16 ; FAE6 0B 00 A0 00 00 0E 06 16  ........
+        .byte   $06,$06,$44,$16,$06,$06,$44,$16 ; FAEE 06 06 44 16 06 06 44 16  ..D...D.
+        .byte   $06,$06,$44,$16,$06,$06,$44,$16 ; FAF6 06 06 44 16 06 06 44 16  ..D...D.
+        .byte   $06,$06,$44,$16,$06,$06,$44,$16 ; FAFE 06 06 44 16 06 06 44 16  ..D...D.
+        .byte   $06,$06,$44,$0F,$06,$0A,$06,$FF ; FB06 06 06 44 0F 06 0A 06 FF  ..D.....
+        .byte   $09,$04,$0B,$00,$40,$00,$00,$0E ; FB0E 09 04 0B 00 40 00 00 0E  ....@...
+        .byte   $04,$16,$04,$04,$44,$16,$04,$04 ; FB16 04 16 04 04 44 16 04 04  ....D...
+        .byte   $44,$16,$04,$09,$44,$16,$04,$09 ; FB1E 44 16 04 09 44 16 04 09  D...D...
+        .byte   $44,$16,$04,$09,$44,$16,$04,$09 ; FB26 44 16 04 09 44 16 04 09  D...D...
+        .byte   $44,$16,$04,$09,$44,$16,$04,$09 ; FB2E 44 16 04 09 44 16 04 09  D...D...
+        .byte   $44,$16,$04,$09,$44,$16,$04,$09 ; FB36 44 16 04 09 44 16 04 09  D...D...
+        .byte   $44,$0F,$04,$0A,$04,$FF,$09,$01 ; FB3E 44 0F 04 0A 04 FF 09 01  D.......
+        .byte   $08,$00,$70,$00,$00,$16,$01,$09 ; FB46 08 00 70 00 00 16 01 09  ..p.....
+        .byte   $44,$16,$01,$09,$44,$16,$01,$09 ; FB4E 44 16 01 09 44 16 01 09  D...D...
+        .byte   $44,$16,$01,$00,$48,$0B,$03,$16 ; FB56 44 16 01 00 48 0B 03 16  D...H...
+        .byte   $01,$00,$48,$0B,$03,$16,$01,$00 ; FB5E 01 00 48 0B 03 16 01 00  ..H.....
+        .byte   $48,$0B,$16,$08,$00,$20,$00,$0B ; FB66 48 0B 16 08 00 20 00 0B  H.... ..
+        .byte   $64,$08,$00,$40,$00,$0B,$A0,$08 ; FB6E 64 08 00 40 00 0B A0 08  d..@....
+        .byte   $00,$80,$00,$0B,$50,$08,$00,$80 ; FB76 00 80 00 0B 50 08 00 80  ....P...
+        .byte   $02,$0B,$32,$12,$12,$12,$12,$12 ; FB7E 02 0B 32 12 12 12 12 12  ..2.....
+        .byte   $11,$13,$25,$00,$00,$12,$08,$01 ; FB86 11 13 25 00 00 12 08 01  ..%.....
+        .byte   $20,$00,$16,$01,$09,$88,$12,$12 ; FB8E 20 00 16 01 09 88 12 12   .......
+        .byte   $12,$12,$12,$08,$01,$10,$00,$12 ; FB96 12 12 12 08 01 10 00 12  ........
+        .byte   $12,$12,$12,$12,$11,$0A,$01,$FF ; FB9E 12 12 12 12 11 0A 01 FF  ........
+        .byte   $12,$0B,$64,$08,$00,$40,$00,$0B ; FBA6 12 0B 64 08 00 40 00 0B  ..d..@..
+        .byte   $32,$08,$00,$20,$00,$0B,$64,$29 ; FBAE 32 08 00 20 00 0B 64 29  2.. ..d)
+        .byte   $0D,$A2,$01,$0E,$00,$0B,$32,$08 ; FBB6 0D A2 01 0E 00 0B 32 08  ......2.
+        .byte   $00,$10,$00,$0B,$32,$12,$12,$12 ; FBBE 00 10 00 0B 32 12 12 12  ....2...
+        .byte   $11,$0C,$40,$0F,$08,$00,$80,$05 ; FBC6 11 0C 40 0F 08 00 80 05  ..@.....
+        .byte   $09,$04,$08,$00,$70,$01,$A0,$09 ; FBCE 09 04 08 00 70 01 A0 09  ....p...
+        .byte   $02,$08,$00,$80,$01,$80,$09,$06 ; FBD6 02 08 00 80 01 80 09 06  ........
+        .byte   $08,$00,$80,$01,$A0,$08,$00,$20 ; FBDE 08 00 80 01 A0 08 00 20  ....... 
+        .byte   $00,$12,$0B,$43,$08,$00,$40,$00 ; FBE6 00 12 0B 43 08 00 40 00  ...C..@.
+        .byte   $08,$00,$40,$03,$08,$05,$20,$00 ; FBEE 08 00 40 03 08 05 20 00  ..@... .
+        .byte   $29,$0D,$A3,$09,$0B,$32,$05,$00 ; FBF6 29 0D A3 09 0B 32 05 00  )....2..
+        .byte   $FF,$FF                         ; FBFE FF FF                    ..
 ; ----------------------------------------------------------------------------
-        .byte   $0B                             ; F9ED 0B                       .
-        .byte   $32                             ; F9EE 32                       2
-        php                                     ; F9EF 08                       .
-        brk                                     ; F9F0 00                       .
-        .byte   $80                             ; F9F1 80                       .
-        .byte   $02                             ; F9F2 02                       .
-        and     #$0D                            ; F9F3 29 0D                    ).
-        .byte   $93                             ; F9F5 93                       .
-        .byte   $02                             ; F9F6 02                       .
-        php                                     ; F9F7 08                       .
-        brk                                     ; F9F8 00                       .
-        rti                                     ; F9F9 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; F9FA 00                       .
-        and     #$0D                            ; F9FB 29 0D                    ).
-        sta     L0002,x                         ; F9FD 95 02                    ..
-        .byte   $0B                             ; F9FF 0B                       .
-        .byte   $22                             ; FA00 22                       "
-        php                                     ; FA01 08                       .
-        brk                                     ; FA02 00                       .
-        jsr     L0B00                           ; FA03 20 00 0B                  ..
-        bpl     LFA10                           ; FA06 10 08                    ..
-        brk                                     ; FA08 00                       .
-        rti                                     ; FA09 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; FA0A 00                       .
-        and     #$0D                            ; FA0B 29 0D                    ).
-        .byte   $97                             ; FA0D 97                       .
-        .byte   $02                             ; FA0E 02                       .
-LFA10           := * + 1
-        asl     $0E04                           ; FA0F 0E 04 0E                 ...
-        asl     $08                             ; FA12 06 08                    ..
-        .byte   $04                             ; FA14 04                       .
-        rti                                     ; FA15 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; FA16 00                       .
-        php                                     ; FA17 08                       .
-        asl     $40                             ; FA18 06 40                    .@
-        brk                                     ; FA1A 00                       .
-        asl     $04,x                           ; FA1B 16 04                    ..
-        asl     $44                             ; FA1D 06 44                    .D
-        asl     $04,x                           ; FA1F 16 04                    ..
-        asl     $44                             ; FA21 06 44                    .D
-        php                                     ; FA23 08                       .
-        .byte   $02                             ; FA24 02                       .
-        rti                                     ; FA25 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; FA26 00                       .
-        php                                     ; FA27 08                       .
-        ora     $10                             ; FA28 05 10                    ..
-        brk                                     ; FA2A 00                       .
-        asl     L0002,x                         ; FA2B 16 02                    ..
-        ora     $41                             ; FA2D 05 41                    .A
-        php                                     ; FA2F 08                       .
-        ora     $20                             ; FA30 05 20                    . 
-        brk                                     ; FA32 00                       .
-        asl     $04,x                           ; FA33 16 04                    ..
-        asl     $44                             ; FA35 06 44                    .D
-        asl     $04,x                           ; FA37 16 04                    ..
-        asl     $44                             ; FA39 06 44                    .D
-        asl     $0802                           ; FA3B 0E 02 08                 ...
-        .byte   $02                             ; FA3E 02                       .
-        rti                                     ; FA3F 40                       @
-
-; ----------------------------------------------------------------------------
-        .byte   $02                             ; FA40 02                       .
-        php                                     ; FA41 08                       .
-        .byte   $03                             ; FA42 03                       .
-        jsr     L0801                           ; FA43 20 01 08                  ..
-        .byte   $03                             ; FA46 03                       .
-        rti                                     ; FA47 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; FA48 00                       .
-        .byte   $0F                             ; FA49 0F                       .
-        .byte   $04                             ; FA4A 04                       .
-        .byte   $0F                             ; FA4B 0F                       .
-        asl     $16                             ; FA4C 06 16                    ..
-        brk                                     ; FA4E 00                       .
-        .byte   $03                             ; FA4F 03                       .
-        .byte   $44                             ; FA50 44                       D
-        ora     ($0B),y                         ; FA51 11 0B                    ..
-        bpl     LFA67                           ; FA53 10 12                    ..
-        php                                     ; FA55 08                       .
-        .byte   $03                             ; FA56 03                       .
-        rti                                     ; FA57 40                       @
-
-; ----------------------------------------------------------------------------
-        ora     ($29,x)                         ; FA58 01 29                    .)
-        ora     $019A                           ; FA5A 0D 9A 01                 ...
-        php                                     ; FA5D 08                       .
-        brk                                     ; FA5E 00                       .
-        jsr     L0800                           ; FA5F 20 00 08                  ..
-        .byte   $03                             ; FA62 03                       .
-        .byte   $80                             ; FA63 80                       .
-        brk                                     ; FA64 00                       .
-        php                                     ; FA65 08                       .
-LFA67           := * + 1
-        ora     $80                             ; FA66 05 80                    ..
-        brk                                     ; FA68 00                       .
-        php                                     ; FA69 08                       .
-        .byte   $04                             ; FA6A 04                       .
-        .byte   $80                             ; FA6B 80                       .
-        brk                                     ; FA6C 00                       .
-        php                                     ; FA6D 08                       .
-        asl     $80                             ; FA6E 06 80                    ..
-        brk                                     ; FA70 00                       .
-        php                                     ; FA71 08                       .
-        .byte   $02                             ; FA72 02                       .
-        .byte   $80                             ; FA73 80                       .
-        brk                                     ; FA74 00                       .
-        ora     ($12),y                         ; FA75 11 12                    ..
-        ora     ($12),y                         ; FA77 11 12                    ..
-        and     #$0D                            ; FA79 29 0D                    ).
-        .byte   $9B                             ; FA7B 9B                       .
-        .byte   $07                             ; FA7C 07                       .
-        ora     ($12),y                         ; FA7D 11 12                    ..
-        ora     ($12),y                         ; FA7F 11 12                    ..
-        ora     ($12),y                         ; FA81 11 12                    ..
-        ora     ($12),y                         ; FA83 11 12                    ..
-        ora     ($0F),y                         ; FA85 11 0F                    ..
-        brk                                     ; FA87 00                       .
-        asl     a                               ; FA88 0A                       .
-        brk                                     ; FA89 00                       .
-        .byte   $FF                             ; FA8A FF                       .
-        .byte   $0C                             ; FA8B 0C                       .
-        .byte   $80                             ; FA8C 80                       .
-        .byte   $0F                             ; FA8D 0F                       .
-        ora     #$00                            ; FA8E 09 00                    ..
-        .byte   $02                             ; FA90 02                       .
-        brk                                     ; FA91 00                       .
-        bvs     LFA94                           ; FA92 70 00                    p.
-LFA94:
-        bne     LFAA8                           ; FA94 D0 12                    ..
-        .byte   $12                             ; FA96 12                       .
-        .byte   $12                             ; FA97 12                       .
-        asl     $0902                           ; FA98 0E 02 09                 ...
-        .byte   $02                             ; FA9B 02                       .
-        .byte   $02                             ; FA9C 02                       .
-        brk                                     ; FA9D 00                       .
-        rti                                     ; FA9E 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; FA9F 00                       .
-        jsr     L0216                           ; FAA0 20 16 02                  ..
-        .byte   $02                             ; FAA3 02                       .
-        .byte   $44                             ; FAA4 44                       D
-        asl     L0002,x                         ; FAA5 16 02                    ..
-        .byte   $02                             ; FAA7 02                       .
-LFAA8:
-        .byte   $44                             ; FAA8 44                       D
-        asl     L0002,x                         ; FAA9 16 02                    ..
-        .byte   $02                             ; FAAB 02                       .
-        .byte   $44                             ; FAAC 44                       D
-        asl     L0002,x                         ; FAAD 16 02                    ..
-        .byte   $02                             ; FAAF 02                       .
-        .byte   $44                             ; FAB0 44                       D
-        asl     L0002,x                         ; FAB1 16 02                    ..
-        .byte   $02                             ; FAB3 02                       .
-        .byte   $44                             ; FAB4 44                       D
-        asl     L0002,x                         ; FAB5 16 02                    ..
-        .byte   $02                             ; FAB7 02                       .
-        .byte   $44                             ; FAB8 44                       D
-        .byte   $0F                             ; FAB9 0F                       .
-        .byte   $02                             ; FABA 02                       .
-        asl     a                               ; FABB 0A                       .
-        .byte   $02                             ; FABC 02                       .
-        .byte   $FF                             ; FABD FF                       .
-        ora     #$04                            ; FABE 09 04                    ..
-        .byte   $0B                             ; FAC0 0B                       .
-        brk                                     ; FAC1 00                       .
-        .byte   $80                             ; FAC2 80                       .
-        brk                                     ; FAC3 00                       .
-        jsr     L040E                           ; FAC4 20 0E 04                  ..
-        asl     $04,x                           ; FAC7 16 04                    ..
-        .byte   $04                             ; FAC9 04                       .
-        .byte   $44                             ; FACA 44                       D
-        asl     $04,x                           ; FACB 16 04                    ..
-        .byte   $04                             ; FACD 04                       .
-        .byte   $44                             ; FACE 44                       D
-        asl     $04,x                           ; FACF 16 04                    ..
-        .byte   $04                             ; FAD1 04                       .
-        .byte   $44                             ; FAD2 44                       D
-        asl     $04,x                           ; FAD3 16 04                    ..
-        .byte   $04                             ; FAD5 04                       .
-        .byte   $44                             ; FAD6 44                       D
-        asl     $04,x                           ; FAD7 16 04                    ..
-        .byte   $04                             ; FAD9 04                       .
-        .byte   $44                             ; FADA 44                       D
-        asl     $04,x                           ; FADB 16 04                    ..
-        .byte   $04                             ; FADD 04                       .
-        .byte   $44                             ; FADE 44                       D
-        .byte   $0F                             ; FADF 0F                       .
-        .byte   $04                             ; FAE0 04                       .
-        asl     a                               ; FAE1 0A                       .
-        .byte   $04                             ; FAE2 04                       .
-        .byte   $FF                             ; FAE3 FF                       .
-        ora     #$06                            ; FAE4 09 06                    ..
-        .byte   $0B                             ; FAE6 0B                       .
-        brk                                     ; FAE7 00                       .
-        ldy     #$00                            ; FAE8 A0 00                    ..
-        brk                                     ; FAEA 00                       .
-        asl     $1606                           ; FAEB 0E 06 16                 ...
-        asl     $06                             ; FAEE 06 06                    ..
-        .byte   $44                             ; FAF0 44                       D
-        asl     $06,x                           ; FAF1 16 06                    ..
-        asl     $44                             ; FAF3 06 44                    .D
-        asl     $06,x                           ; FAF5 16 06                    ..
-        asl     $44                             ; FAF7 06 44                    .D
-        asl     $06,x                           ; FAF9 16 06                    ..
-        asl     $44                             ; FAFB 06 44                    .D
-        asl     $06,x                           ; FAFD 16 06                    ..
-        asl     $44                             ; FAFF 06 44                    .D
-        asl     $06,x                           ; FB01 16 06                    ..
-        asl     $44                             ; FB03 06 44                    .D
-        asl     $06,x                           ; FB05 16 06                    ..
-        asl     $44                             ; FB07 06 44                    .D
-        .byte   $0F                             ; FB09 0F                       .
-        asl     $0A                             ; FB0A 06 0A                    ..
-        asl     $FF                             ; FB0C 06 FF                    ..
-        ora     #$04                            ; FB0E 09 04                    ..
-        .byte   $0B                             ; FB10 0B                       .
-        brk                                     ; FB11 00                       .
-        rti                                     ; FB12 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; FB13 00                       .
-        brk                                     ; FB14 00                       .
-        asl     $1604                           ; FB15 0E 04 16                 ...
-        .byte   $04                             ; FB18 04                       .
-        .byte   $04                             ; FB19 04                       .
-        .byte   $44                             ; FB1A 44                       D
-        asl     $04,x                           ; FB1B 16 04                    ..
-        .byte   $04                             ; FB1D 04                       .
-        .byte   $44                             ; FB1E 44                       D
-        asl     $04,x                           ; FB1F 16 04                    ..
-        ora     #$44                            ; FB21 09 44                    .D
-        asl     $04,x                           ; FB23 16 04                    ..
-        ora     #$44                            ; FB25 09 44                    .D
-        asl     $04,x                           ; FB27 16 04                    ..
-        ora     #$44                            ; FB29 09 44                    .D
-        asl     $04,x                           ; FB2B 16 04                    ..
-        ora     #$44                            ; FB2D 09 44                    .D
-        asl     $04,x                           ; FB2F 16 04                    ..
-        ora     #$44                            ; FB31 09 44                    .D
-        asl     $04,x                           ; FB33 16 04                    ..
-        ora     #$44                            ; FB35 09 44                    .D
-        asl     $04,x                           ; FB37 16 04                    ..
-        ora     #$44                            ; FB39 09 44                    .D
-        asl     $04,x                           ; FB3B 16 04                    ..
-        ora     #$44                            ; FB3D 09 44                    .D
-        .byte   $0F                             ; FB3F 0F                       .
-        .byte   $04                             ; FB40 04                       .
-        asl     a                               ; FB41 0A                       .
-        .byte   $04                             ; FB42 04                       .
-        .byte   $FF                             ; FB43 FF                       .
-        ora     #$01                            ; FB44 09 01                    ..
-        php                                     ; FB46 08                       .
-        brk                                     ; FB47 00                       .
-        bvs     LFB4A                           ; FB48 70 00                    p.
-LFB4A:
-        brk                                     ; FB4A 00                       .
-        asl     $01,x                           ; FB4B 16 01                    ..
-        ora     #$44                            ; FB4D 09 44                    .D
-        asl     $01,x                           ; FB4F 16 01                    ..
-        ora     #$44                            ; FB51 09 44                    .D
-        asl     $01,x                           ; FB53 16 01                    ..
-        ora     #$44                            ; FB55 09 44                    .D
-        asl     $01,x                           ; FB57 16 01                    ..
-        brk                                     ; FB59 00                       .
-        pha                                     ; FB5A 48                       H
-        .byte   $0B                             ; FB5B 0B                       .
-        .byte   $03                             ; FB5C 03                       .
-        asl     $01,x                           ; FB5D 16 01                    ..
-        brk                                     ; FB5F 00                       .
-        pha                                     ; FB60 48                       H
-        .byte   $0B                             ; FB61 0B                       .
-        .byte   $03                             ; FB62 03                       .
-        asl     $01,x                           ; FB63 16 01                    ..
-        brk                                     ; FB65 00                       .
-        pha                                     ; FB66 48                       H
-        .byte   $0B                             ; FB67 0B                       .
-        asl     $08,x                           ; FB68 16 08                    ..
-        brk                                     ; FB6A 00                       .
-        jsr     L0B00                           ; FB6B 20 00 0B                  ..
-        .byte   $64                             ; FB6E 64                       d
-        php                                     ; FB6F 08                       .
-        brk                                     ; FB70 00                       .
-        rti                                     ; FB71 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; FB72 00                       .
-        .byte   $0B                             ; FB73 0B                       .
-        ldy     #$08                            ; FB74 A0 08                    ..
-        brk                                     ; FB76 00                       .
-        .byte   $80                             ; FB77 80                       .
-        brk                                     ; FB78 00                       .
-        .byte   $0B                             ; FB79 0B                       .
-        bvc     LFB84                           ; FB7A 50 08                    P.
-        brk                                     ; FB7C 00                       .
-        .byte   $80                             ; FB7D 80                       .
-        .byte   $02                             ; FB7E 02                       .
-        .byte   $0B                             ; FB7F 0B                       .
-        .byte   $32                             ; FB80 32                       2
-        .byte   $12                             ; FB81 12                       .
-        .byte   $12                             ; FB82 12                       .
-        .byte   $12                             ; FB83 12                       .
-LFB84:
-        .byte   $12                             ; FB84 12                       .
-        .byte   $12                             ; FB85 12                       .
-        ora     ($13),y                         ; FB86 11 13                    ..
-        and     $00                             ; FB88 25 00                    %.
-        brk                                     ; FB8A 00                       .
-        .byte   $12                             ; FB8B 12                       .
-        php                                     ; FB8C 08                       .
-        ora     ($20,x)                         ; FB8D 01 20                    . 
-        brk                                     ; FB8F 00                       .
-        asl     $01,x                           ; FB90 16 01                    ..
-        ora     #$88                            ; FB92 09 88                    ..
-        .byte   $12                             ; FB94 12                       .
-        .byte   $12                             ; FB95 12                       .
-        .byte   $12                             ; FB96 12                       .
-        .byte   $12                             ; FB97 12                       .
-        .byte   $12                             ; FB98 12                       .
-        php                                     ; FB99 08                       .
-        ora     ($10,x)                         ; FB9A 01 10                    ..
-        brk                                     ; FB9C 00                       .
-        .byte   $12                             ; FB9D 12                       .
-        .byte   $12                             ; FB9E 12                       .
-        .byte   $12                             ; FB9F 12                       .
-        .byte   $12                             ; FBA0 12                       .
-        .byte   $12                             ; FBA1 12                       .
-        ora     ($0A),y                         ; FBA2 11 0A                    ..
-        ora     ($FF,x)                         ; FBA4 01 FF                    ..
-        .byte   $12                             ; FBA6 12                       .
-        .byte   $0B                             ; FBA7 0B                       .
-        .byte   $64                             ; FBA8 64                       d
-        php                                     ; FBA9 08                       .
-        brk                                     ; FBAA 00                       .
-        rti                                     ; FBAB 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; FBAC 00                       .
-        .byte   $0B                             ; FBAD 0B                       .
-        .byte   $32                             ; FBAE 32                       2
-        php                                     ; FBAF 08                       .
-        brk                                     ; FBB0 00                       .
-        jsr     L0B00                           ; FBB1 20 00 0B                  ..
-        .byte   $64                             ; FBB4 64                       d
-        and     #$0D                            ; FBB5 29 0D                    ).
-        ldx     #$01                            ; FBB7 A2 01                    ..
-        asl     L0B00                           ; FBB9 0E 00 0B                 ...
-        .byte   $32                             ; FBBC 32                       2
-        php                                     ; FBBD 08                       .
-        brk                                     ; FBBE 00                       .
-        bpl     LFBC1                           ; FBBF 10 00                    ..
-LFBC1:
-        .byte   $0B                             ; FBC1 0B                       .
-        .byte   $32                             ; FBC2 32                       2
-        .byte   $12                             ; FBC3 12                       .
-        .byte   $12                             ; FBC4 12                       .
-        .byte   $12                             ; FBC5 12                       .
-        ora     ($0C),y                         ; FBC6 11 0C                    ..
-        rti                                     ; FBC8 40                       @
-
-; ----------------------------------------------------------------------------
-        .byte   $0F                             ; FBC9 0F                       .
-        php                                     ; FBCA 08                       .
-        brk                                     ; FBCB 00                       .
-        .byte   $80                             ; FBCC 80                       .
-        ora     $09                             ; FBCD 05 09                    ..
-        .byte   $04                             ; FBCF 04                       .
-        php                                     ; FBD0 08                       .
-        brk                                     ; FBD1 00                       .
-        bvs     LFBD5                           ; FBD2 70 01                    p.
-LFBD5           := * + 1
-        ldy     #$09                            ; FBD4 A0 09                    ..
-        .byte   $02                             ; FBD6 02                       .
-        php                                     ; FBD7 08                       .
-        brk                                     ; FBD8 00                       .
-        .byte   $80                             ; FBD9 80                       .
-        ora     ($80,x)                         ; FBDA 01 80                    ..
-        ora     #$06                            ; FBDC 09 06                    ..
-        php                                     ; FBDE 08                       .
-        brk                                     ; FBDF 00                       .
-        .byte   $80                             ; FBE0 80                       .
-        ora     ($A0,x)                         ; FBE1 01 A0                    ..
-        php                                     ; FBE3 08                       .
-        brk                                     ; FBE4 00                       .
-        jsr     L1200                           ; FBE5 20 00 12                  ..
-        .byte   $0B                             ; FBE8 0B                       .
-        .byte   $43                             ; FBE9 43                       C
-        php                                     ; FBEA 08                       .
-        brk                                     ; FBEB 00                       .
-        rti                                     ; FBEC 40                       @
-
-; ----------------------------------------------------------------------------
-        brk                                     ; FBED 00                       .
-        php                                     ; FBEE 08                       .
-        brk                                     ; FBEF 00                       .
-        rti                                     ; FBF0 40                       @
-
-; ----------------------------------------------------------------------------
-        .byte   $03                             ; FBF1 03                       .
-        php                                     ; FBF2 08                       .
-        ora     $20                             ; FBF3 05 20                    . 
-        brk                                     ; FBF5 00                       .
-        and     #$0D                            ; FBF6 29 0D                    ).
-        .byte   $A3                             ; FBF8 A3                       .
-        ora     #$0B                            ; FBF9 09 0B                    ..
-        .byte   $32                             ; FBFB 32                       2
-        ora     $00                             ; FBFC 05 00                    ..
-        .byte   $FF                             ; FBFE FF                       .
-        .byte   $FF                             ; FBFF FF                       .
 LFC00:
         lda     #$03                            ; FC00 A9 03                    ..
         sta     $5000                           ; FC02 8D 00 50                 ..P

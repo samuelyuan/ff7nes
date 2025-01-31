@@ -50,9 +50,14 @@ To get the values for party member at index i, you must add i to the base addres
 |---------|--------------|-------------|
 | 0x6000-0x601F | 32 | Script scene flags |
 | 0x6020 | 1 | Current car number on train |
-| 0x6022 | 1 | Cloud's vehicle (4 for Bronco, 0 for none) |
+| 0x6021 | 1 | Current floor in Shinra building |
+| 0x6022 | 1 | Cloud's vehicle (0 for none, 3 for Buggy, 4 for Bronco) |
+| 0x6026-0x6028 | 3 | Cloud's buggy location |
+| 0x6029-0x602B | 3 | Cloud's Bronco location |
 | 0x602C | 1 | Timer until random encounter (decreases by 1 every time player moves) |
 | 0x602E-0x602F | 2 | Player Gil |
+| 0x6031 | 1 | Flag used for treasure items on the map (bit 0 - sewer middle left) |
+| 0x6032 | 1 | Flag used for treasure items on the map (bit 7 - sewer middle) |
 | 0x603B | 1 | Number of characters in party (1 - 7) |
 | 0x603C-0x6042 | 7 | Party Member List Index |
 | 0x6043-0x6049 | 7 | Party Member Level |
@@ -294,7 +299,7 @@ Values stored in 0x6005:
 
 | Bit Index | String |
 |-----------|--------|
-| 0 | Cloud and Aerith arrive in wall market |
+| 0 | Cloud and Aerith arrive in Wall Market |
 | 1 | Cloud and Aerith reach playground near gate |
 | 2 | Cloud meets Aerith outside house |
 | 3 | Cloud sneaks to first floor next day |
@@ -316,18 +321,99 @@ Values stored in 0x6006:
 | 6 | Cloud talks to man outside Honey Bee Inn |
 | 7 | Cloud talks to Johnny at Wall Market |
 
+Values stored in 0x6007:
+
+| Bit Index | String |
+|-----------|--------|
+| 0 | Party climbs out of sewer |
+| 1 | Party ends up in sewers |
+| 2 | Camera switches to Shinra HQ to discuss destruction of Sector 7 |
+| 3 | Cloud and Aerith go to Don's room to save Tifa |
+| 4 | Cloud saves Aerith who is in another room of Don's mansion |
+| 5 | Cloud ends up in another room surrounded by Don's men |
+| 6 | Don meets the three girls |
+| 7 | Cloud finds Tifa in Don Corneo's basement |
+
+Values stored in 0x6008:
+
+| Bit Index | String |
+|-----------|--------|
+| 1 | Party escaped and jumped off plate |
+| 2 | Turks set explosion on Sector 7 plate |
+| 4 | Party top of Sector 7 plate |
+
+Values stored in 0x6009:
+
+| Bit Index | String |
+|-----------|--------|
+| 1 | Cloud uses Battery to fix broken wire on way up to Shinra building |
+
 Values stored in 0x600A
 
 | Bit Index | String |
 |-----------|--------|
-| 2 | Party enters 61F |
-| 7 | Cloud fights guards on 60F |
+| 1 | Party has a conversation before entering 61F |
+| 2 | Party fights guards on 60F |
+| 3 | Party climbs to 60F using stairs |
+| 7 | Party confronts guards at Shinra building entrance |
 
 Values stored in 0x600B
 
 | Bit Index | String |
 |-----------|--------|
+| 0 | Cloud uses keycard on 64F |
+| 6 | Cloud meets mayor on 62F |
 | 7 | Cloud gets 62F keycard |
+
+Values stored in 0x600C
+
+| Bit Index | String |
+|-----------|--------|
+| 0 | Cloud opens up 65F switch in bottom left (opens up switch in top middle) |
+| 1 | Cloud opens up 65F switch in bottom right (opens up switch in bottom left) |
+| 2 | Cloud opens up 65F switch in top left (turned on by default when Cloud goes to 65F, turn off to get 66F card) |
+| 3 | Cloud opens up 65F switch in top right (turned on by default when Cloud goes to 65F) |
+| 4 | Cloud opens up 65F switch in middle left (opens up switch in top right) |
+| 5 | Cloud opens up 65F switch in top middle (opens up switch in top left) |
+| 6 | Cloud used 65F keycard |
+
+Values stored in 0x600D 
+
+| Bit Index | String |
+|-----------|--------|
+| 0 | Cloud gets caught by Tseng on 69F |
+| 1 | Party uses keycard on 68F |
+| 3 | Party finds Aerith and RedXIII on 68F |
+| 4 | Hojo goes up to 67F and party follows behind |
+| 5 | Party follows Hojo and reaches experiment room |
+| 6 | Party reaches outside meeting room on 66F and listens in |
+| 7 | All switches on 65F unlocked and Cloud gets 66F card |
+
+Values stored in 0x600E
+
+| Bit Index | String |
+|-----------|--------|
+| 0 | After Rufus escapes, Cloud goes inside and finds Tifa is still waiting for him |
+| 1 | Camera goes back to rooftop between Cloud and Rufus |
+| 2 | Aerith reaches elevator on 69F and has to fight Heli Gunner |
+| 3 | Aerith leaves with the rest of the members to escape the building |
+| 4 | Party finds Rufus is about to escape on a helicopter |
+| 5 | Party goes to top floor and finds President Shinra is dead |
+| 6 | Party locked into separate rooms on 67F |
+| 7 | Party captured by Turks and sent to President Shinra |
+
+Values stored in 0x600F
+
+| Bit Index | String |
+|-----------|--------|
+| 0 | On Midgar road, Cloud takes Red XIII |
+| 1 | On Midgar road, Cloud takes Aerith |
+| 2 | On Midgar road, Cloud takes Tifa |
+| 3 | On Midgar road, Cloud takes Barret |
+| 4 | On Midgar road, party is ready to leave |
+| 5 | Cloud uses keycard on 66F |
+| 6 | Party reaches end of sewer and has to fight Aps |
+| 7 | Party escapes Shinra Building and regroups at entrance |
 
 Values stored in 0x6010
 
@@ -338,13 +424,60 @@ Values stored in 0x6010
 | 3 | Party enters Chocobo Farm and meets Choco Billy |
 | 4 | Party enters Kalm Inn and Cloud tells his story |
 | 5 | Party enters Kalm for the first time |
+| 6 | Party reaches end of road and ends up on ground outside of Midgar |
+| 7 | Party is on the road going away from Midgar |
 
 Values stored in 0x6011
 
 | Bit Index | String |
 |-----------|--------|
+| 0 | Cloud gets pulled in locker room to rehearse before welcoming Heidegger onto Airship |
+| 1 | Cloud gets pulled aside because he ends up in parade without Shinra uniform |
+| 2 | Cloud goes near dolphin to jump up |
+| 3 | Party goes outside house on the next day |
+| 4 | Party goes to house to find Priscilla inside |
+| 5 | Cloud finds Priscilla near the water |
 | 6 | Cloud enters Junon for the first time |
 | 7 | Party encounters Turks near exit of Mythril Mines |
+
+Values stored in 0x6012
+
+| Bit Index | String |
+|-----------|--------|
+| 0 | Cloud finds Sepiroth on Airship |
+| 1 | Cloud talked to both Tifa and Red XIII |
+| 2 | Cloud talks to Aeris wearing Shinra uniform disguise |
+| 3 | Cloud talks to Aerith again after talking to everyone else and Aerith asks where is Barret |
+| 4 | Cloud talks to Red XIII wearing Shinra uniform disguise |
+| 5 | Cloud talks to Tifa wearing Shinra uniform disguise |
+| 6 | Cloud talks to Aeris wearing Shinra uniform disguise |
+| 7 | Cloud boarded ship leaving Junon |
+
+Values stored in 0x6013
+
+| Bit Index | String |
+|-----------|--------|
+| 0 | Party gets inside Gold Saucer after buying ticket |
+| 1 | Cloud buys lifetime pass to Gold Saucer |
+| 2 | Party visits Gold Saucer for the first time |
+| 3 | Barret has flashback when Shinra wanted to build Corel Reactor |
+| 4 | Cloud talks to someone before boarding ropeway heading to Gold Saucer |
+| 5 | Cloud enters North Corel for the first time |
+| 6 | Party leaves Costa Del Sol |
+| 7 | Cloud enters Costa Del Sol for the first time |
+
+Values stored in 0x6014
+
+| Bit Index | String |
+|-----------|--------|
+| 0 | Party asks guard in Corel Prison to go up |
+| 1 | Party finds Dyne in desert |
+| 2 | Party tries to talk to guard to leave desert before looking for Dyne |
+| 3 | Party finds Barret in some house in Corel Prison |
+| 4 | Party ends up in Corel Prison |
+| 5 | Cloud finds dead people near Showroom |
+| 6 | Cloud meets Cait Sith for the first time |
+| 7 | Cloud meets Dio for the first time |
 
 Values stored in 0x6015
 
@@ -376,6 +509,7 @@ Values stored in 0x6017
 
 | Bit Index | String |
 |-----------|--------|
+| 0 | Cloud finds out someone sold Keystone to Dio |
 | 1 | Party escapes Rocket Town in the Bronco |
 | 2 | Cloud finds Palmer in Shera's backyard |
 | 3 | Cloud goes outside to find the Turks want to borrow the Bronco |
@@ -384,11 +518,81 @@ Values stored in 0x6017
 | 6 | Party finds Bronco in Shera's backyard |
 | 7 | Cloud enters Rocket Town for first time |
 
+Values stored in 0x6018
+
+| Bit Index | String |
+|-----------|--------|
+| 0 | Party returns to Temple of Ancients |
+| 1 | Party meets at Gold Saucer hotel to head for Temple of Ancients |
+| 2 | Cloud and Aerith find out Caith Sith works for Shinra |
+| 3 | Cloud and Aerith go to Event Square |
+| 4 | Aerith brings Cloud on date |
+| 5 | Party meets at hotel in Gold Saucer to get some rest |
+| 6 | Cloud tries to leave Gold Saucer with Keystone, but tram is down |
+| 7 | Cloud goes back to Gold Saucer to get Keystone |
+
+Values stored in 0x6019
+
+| Bit Index | String |
+|-----------|--------|
+| 0 | Cloud talks to person in Bone Village about excavation |
+| 1 | Cloud talks to person near entrance of Sleeping Forest |
+| 2 | Cloud meets Barret and Tifa outside inn in Gongaga |
+| 3 | Cloud wakes up in Gongaga inn after giving Black Materia to Sephiroth and Aeris is missing |
+| 4 | Party leaves Cait Sith behind to get Black Materia |
+| 5 | Party finds Sephiroth inside Temple of Ancients |
+| 6 | Party enters Temple of Ancients |
+| 7 | Cloud finds injured Tseng near entrance of Temple of Ancients. Gets Keystone back. |
+
+Digging Lunar Harp
+
+| Address-Bit Index | String |
+|-----------|--------|
+| 0x601A-6 | Ask to dig for Lunar Harp in Bone Valley |
+| 0x601A-7 | Begin digging for Lunar Harp in Bone Valley |
+| 0x601B-1 | Selected place to dig 4 |
+| 0x601B-2 | Selected place to dig 1 |
+| 0x601B-3 | Selected place to dig 2 |
+| 0x601B-4 | Selected place to dig 5 |
+| 0x601B-6 | Selected place to dig 3 |
+
+These values are reset to 0 once the lunar harp is dug up or nothing is found.
+
+Values stored in 0x601C
+
+| Bit Index | String |
+|-----------|--------|
+| 0 | Party leaves Icicle Inn to head north |
+| 1 | Cloud gets Glacier Map from wall in Icicle Inn |
+| 2 | Party exits Forgotten City inn and looks for Sepiroth |
+| 3 | Party meets in Forgotten City inn after Aerith death |
+| 4 | Cloud approaches Aerith at Water Altar |
+| 5 | Party rests in inn in Forgotten City |
+| 6 | Cloud found Lunar Harp in Bone Valley |
+
 Values stored in 0x601D
 
 | Bit Index | String |
 |-----------|--------|
+| 0 | Cloud and Tifa have flashback to Nibelheim Incident |
+| 1 | Party reaches top of Gaea's Cliff and finds Sephiroth |
+| 2 | Party reaches middle of Gaea's Cliff |
+| 3 | Party fights Schizo in Gaea's Cliff |
+| 4 | Party enters Gaea's Cliff for the first time |
+| 5 | Cloud was found in Great Glacier by Holzoff and ends up in inn near Gaea Cliff |
+| 6 | Party enters Great Glacier for the first time |
 | 7 | Cloud gets snowboard from kid |
+
+Values stored in 0x601E
+
+| Bit Index | String |
+|-----------|--------|
+| 0 | Party chase after Elena and Shinra soldier north of Icicle Inn |
+| 2 | Party gets buggy and leaves Corel Prison |
+| 3 | Cloud leaves Junon parade to find some soldiers near airship |
+| 5 | Cloud and Tifa get back to Materia Tree after exploring Cloud's memories |
+| 6 | Cloud enters Materia Tree and finds Shinra |
+| 7 | Shinra enters Materia Tree for the first time |
 
 Values stored in 0x601F
 

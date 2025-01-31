@@ -65,7 +65,7 @@ RANGE {
 RANGE {
   START $9763;
   END $9A43;
-  TYPE BYTETABLE;
+  TYPE CODE;
 };
 RANGE {
   START $9A44;
@@ -110,7 +110,7 @@ RANGE {
 RANGE {
   START $CE51;
   END $CE52;
-  TYPE BYTETABLE;
+  TYPE ADDRTABLE;
 };
 RANGE {
   START $CE53;
@@ -259,11 +259,11 @@ RANGE {
 };
 RANGE {
   START $F550;
-  END $F7C6;
+  END $F600;
   TYPE CODE;
 };
 RANGE {
-  START $F7C7;
+  START $F601;
   END $F858;
   TYPE BYTETABLE;
 };
@@ -346,6 +346,18 @@ LABEL {
   ADDR  $888A;
 };
 LABEL {
+  NAME "Bank00LoadSceneJumpTablePart1";
+  ADDR  $889C;
+};
+LABEL {
+  NAME "Bank00LoadSceneJumpTablePart2";
+  ADDR  $88B2;
+};
+LABEL {
+  NAME "Bank00LoadSceneJumpTablePart3";
+  ADDR  $88C7;
+};
+LABEL {
   NAME "Bank00LoadNextScriptOpcode";
   ADDR  $88D9;
 };
@@ -361,6 +373,11 @@ LABEL {
   NAME "Bank00ScriptOpcode04_ShowDialogIdList";
   ADDR  $8A53;
   Comment "1st param index in bank array, rest of params is a variable list of dialog ids and terminates in 0xFF";
+};
+LABEL {
+  NAME "Bank00ScriptOpcode05_ChangeMap";
+  ADDR  $8A7D;
+  Comment "1st param is map id";
 };
 LABEL {
   NAME "Bank00ScriptOpcode06_SetSceneFlag";
@@ -381,12 +398,25 @@ LABEL {
   ADDR  $8B86;
 };
 LABEL {
+  NAME "Bank00ScriptOpcode12_ScreenFlash";
+  ADDR  $8D34;
+};
+LABEL {
   NAME "Bank00ScriptOpcode13_TriggerBattle";
   ADDR  $8ED5;
+  COMMENT "1st param enemy id, 2nd param and 3rd param unknown";
+};
+LABEL {
+  NAME "Bank00ScriptOpcode18_ScreenRumble";
+  ADDR  $8E69;
 };
 LABEL {
   NAME "Bank00ScriptOpcode1b_PlayerGetsKeyItem";
   ADDR $8F40;
+};
+LABEL {
+  NAME "Bank00ScriptOpcode1c_SetPartyMember";
+  ADDR $8F5E;
 };
 LABEL {
   NAME "Bank00ScriptOpcode29_ShowDialogBlock";
@@ -394,15 +424,75 @@ LABEL {
   COMMENT "1st param text array, 2nd param is starting dialogue index, 3rd param is number of dialog items";
 };
 LABEL {
+  NAME "Bank00AddPartyMember";
+  ADDR $9254;
+  COMMENT "Find value in party member array that equals A and store party member index in X";
+};
+LABEL {
+  NAME "Bank00FindPartyMemberIndexLoop";
+  ADDR $9256;
+  COMMENT "Find value in party member array that equals A and store party member index in X";
+};
+LABEL {
+  NAME "Bank00SwapPartyMemberIndex";
+  ADDR $9261;
+  COMMENT "Swap values in party member array between index X and Y";
+};
+LABEL {
+  NAME "Bank00IncreaseTotalPartyMemberCount";
+  ADDR $9279;
+  COMMENT "Party member count is stored in 0x603B";
+};
+LABEL {
+  NAME "Bank00ScriptOpcode37_EmbarkVehicle";
+  ADDR $9316;
+};
+LABEL {
+  NAME "Bank00ScriptOpcode39_DisembarkVehicle";
+  ADDR $9331;
+};
+LABEL {
   NAME "MateriaCountLimit";
   ADDR $946D;
+};
+LABEL {
+  NAME "BackgroundSceneRoomIndexTablePart1";
+  ADDR $9C11;
+};
+LABEL {
+  NAME "BackgroundSceneRoomIndexTablePart2";
+  ADDR $9D11;
+};
+LABEL {
+  NAME "BackgroundSceneRoomIndex00";
+  ADDR $958C;
+};
+LABEL {
+  NAME "BackgroundSceneRoomIndex29";
+  ADDR $988E;
+};
+LABEL {
+  NAME "Bank00LoadBackgroundSceneIdTable1";
+  ADDR  $9F7D;
+};
+LABEL {
+  NAME "Bank00LoadBackgroundSceneIdTable3";
+  ADDR  $9F81;
+};
+LABEL {
+  NAME "SceneTrainStationFirstWaveGuards";
+  ADDR  $9FCF;
+};
+LABEL {
+  NAME "SceneTrainStationSecondWaveGuards";
+  ADDR  $A067;
 };
 LABEL {
   NAME "SceneCloudMeetsBiggsJessieWedge";
   ADDR  $A0B5;
 };
 LABEL {
-  NAME "SceneCloudSetsSector7Bomb";
+  NAME "SceneCloudSetsSector1Bomb";
   ADDR  $FB51;
 };
 LABEL {
@@ -442,16 +532,152 @@ LABEL {
   ADDR  $A6B8;
 };
 LABEL {
+  NAME "SceneCloudFindsTifaInDonCorneoBasement";
+  ADDR  $AA42;
+};
+LABEL {
   NAME "SceneShinraBuildingGuardsBeforeFloor60";
   ADDR  $ACBB;
 };
 LABEL {
-  NAME "ScenePlayerGets62FCard";
+  NAME "SceneCloudGets62FCard";
   ADDR $AD2B;
+};
+LABEL {
+  NAME "SceneCloudTalksToMayor62F";
+  ADDR $AD3A;
+};
+LABEL {
+  NAME "SceneShinra65FSwitchTopLeftTurnOffAndGet66FCard";
+  ADDR $AE60;
+};
+LABEL {
+  NAME "SceneShinra65FSwitchTopLeftTurnOn";
+  ADDR $AE7E;
+};
+LABEL {
+  NAME "SceneShinra65FSwitchTopRightTurnOn";
+  ADDR $AE98;
+};
+LABEL {
+  NAME "SceneShinra65FSwitchMiddleLeftTurnOn";
+  ADDR $AEB2;
+};
+LABEL {
+  NAME "SceneShinra65FSwitchBottomLeftTurnOn";
+  ADDR $AECC;
+};
+LABEL {
+  NAME "SceneShinra65FSwitchTopMiddleTurnOn";
+  ADDR $AEE6;
+};
+LABEL {
+  NAME "SceneShinra65FSwitchBottomRightTurnOff";
+  ADDR $AEEC;
+};
+LABEL {
+  NAME "SceneShinra65FSwitchBottomRightTurnOn";
+  ADDR $AF00;
+};
+LABEL {
+  NAME "SceneShinraMeeting66FDiscussSector7";
+  ADDR $AF06;
+};
+LABEL {
+  NAME "Scene67FCloudFindsHojoExperiment";
+  ADDR $AFE9;
+};
+LABEL {
+  NAME "Scene67FCloudFindsAerith";
+  ADDR $B0BE;
+};
+LABEL {
+  NAME "ScenePresidentShinraDead";
+  ADDR $B29B;
+};
+LABEL {
+  NAME "ScenePartyMeetsRufusOnRooftop";
+  ADDR $B2EF;
+};
+LABEL {
+  NAME "ScenePartyReachesShinraEntranceReadyToLeave";
+  ADDR $B472;
+};
+LABEL {
+  NAME "ScenePartyReachesEndOfRoadOutsideMidgar";
+  ADDR $B797;
+};
+LABEL {
+  NAME "SceneMidgarRoadCloudPicksBarret";
+  ADDR $B67D;
+};
+LABEL {
+  NAME "SceneMidgarRoadCloudPicksTifa";
+  ADDR $B68F;
+};
+LABEL {
+  NAME "SceneMidgarRoadCloudPicksAerith";
+  ADDR $B6A1;
+};
+LABEL {
+  NAME "SceneMidgarRoadCloudPicksRedXIII";
+  ADDR $B6B3;
 };
 LABEL {
   NAME "SceneKalmEntrance";
   ADDR  $B835;
+};
+LABEL {
+  NAME "SceneCloudFindsPriscillaNearWater";
+  ADDR  $B9FC;
+};
+LABEL {
+  NAME "SceneCloudGoesToDolphinToJumpUp";
+  ADDR  $BB51;
+};
+LABEL {
+  NAME "SceneJunonAirshipCloudTalksToAerisInShinraUniform";
+  ADDR  $BD0A;
+};
+LABEL {
+  NAME "SceneJunonAirshipCloudTalksToRedXIIIInShinraUniform";
+  ADDR  $BD3A;
+};
+LABEL {
+  NAME "SceneJunonAirshipCloudTalksToTifaInShinraUniform";
+  ADDR  $BD50;
+};
+LABEL {
+  NAME "SceneJunonAirshipCloudTalksToBarretAndPartyGetsTogether";
+  ADDR  $BD70;
+};
+LABEL {
+  NAME "SceneJunonAirshipCloudFindsSephiroth";
+  ADDR  $BDE4;
+};
+LABEL {
+  NAME "ScenePartyLeavesCostaDelSol";
+  ADDR  $BE74;
+};
+LABEL {
+  NAME "SceneBeforeEnterGoldSaucer";
+  ADDR  $BE96;
+};
+LABEL {
+  NAME "SceneCloudBuysLifetimePassGoldSaucer";
+  ADDR  $BEF8;
+};
+LABEL {
+  NAME "SceneCloudMeetsDio";
+  ADDR  $BF32;
+};
+LABEL {
+  NAME "SceneCloudMeetsGuardBeforeDyne";
+  ADDR  $BF48;
+};
+LABEL {
+  NAME "SceneCorelPrisonBarretFindsDyne";
+  ADDR  $F6D5;
 };
 LABEL {
   NAME "SceneRedXIIIBeforeEnterObservatory";
@@ -474,12 +700,56 @@ LABEL {
   ADDR  $C2B9;
 };
 LABEL {
+  NAME "SceneCloudDiscoversKeystoneSoldToDio";
+  ADDR  $C3EA;
+};
+LABEL {
+  NAME "SceneTramDownAtGoldSaucer";
+  ADDR  $C4AB;
+};
+LABEL {
+  NAME "ScenePartyFindsTsengEntranceTempleOfAncients";
+  ADDR  $F927;
+};
+LABEL {
+  NAME "SceneCloudFindsSephirothInTempleOfAncients";
+  ADDR  $F9AB;
+};
+LABEL {
+  NAME "SceneCloudTalksToPersonInBoneValley";
+  ADDR  $C725;
+};
+LABEL {
+  NAME "SceneCloudTalksToPersonNearSleepingForest";
+  ADDR  $C6EF;
+};
+LABEL {
+  NAME "SceneForgottenCityAerithDeathScene";
+  ADDR  $C4F3;
+};
+LABEL {
+  NAME "SceneCloudGetsGlacierMap";
+  ADDR  $C908;
+};
+LABEL {
+  NAME "ScenePartyLeavesGlacierInnToHeadNorth";
+  ADDR  $C919;
+};
+LABEL {
   NAME "SceneTalkToKidGetSnowboard";
   ADDR  $C9CE;
 };
 LABEL {
-  NAME "Bank00SceneScriptTable";
+  NAME "Bank00SceneScriptTablePart1";
   ADDR  $CC51;
+};
+LABEL {
+  NAME "Bank00SceneScriptTablePart2";
+  ADDR  $CD51;
+};
+LABEL {
+  NAME "Bank00SceneScriptTablePart3";
+  ADDR  $CE51;
 };
 LABEL {
   NAME "RoomMusicIndex";
@@ -493,6 +763,22 @@ LABEL {
 LABEL {
   NAME "RestorePartyMemberHealth";
   ADDR $9434;
+};
+LABEL {
+  NAME "ScriptDisembarkBuggy";
+  ADDR  $BCF8;
+};
+LABEL {
+  NAME "ScriptDisembarkBronco";
+  ADDR  $CFBD;
+};
+LABEL {
+  NAME "ScriptEmbarkBronco";
+  ADDR  $CFDE;
+};
+LABEL {
+  NAME "ScriptEmbarkBuggy";
+  ADDR  $CFEB;
 };
 LABEL {
   NAME "Bank00CheckCutsceneFlagBit";
@@ -639,6 +925,10 @@ LABEL {
 LABEL {
   NAME "AsmCodeJumpToMainPlayerMenuBank0e";
   ADDR $F532;
+};
+LABEL {
+  NAME "PlayerChangeVehicle";
+  ADDR $F5A2;
 };
 LABEL {
   NAME "Bank00JumpBank03LoadMusicTable";
