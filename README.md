@@ -25,6 +25,7 @@ This reference table shows where the game reads and writes data to in RAM.
 | 0x00D8 | 1 | Number of characters in current dialog box |
 | 0x00EA | 1 | Current selected option on main menu (0 - New Game, 1 - Continue) |
 | 0x0141 | 1 | Current bank to load data from |
+| 0x0149 | 1 | Bank to return to after finishing loading |
 | 0x0200-0x02FF | 256 | Each 8x8 sprite block takes 4 bytes (byte 0 - sprite Y, byte 1 - tile index, byte 2 - palette index, byte 3 - sprite X) |
 | 0x0770 | 1 | Source of total tilemap rows |
 | 0x0771 | 1 | Source of total tilemap cols |
@@ -134,10 +135,17 @@ To get the values for party member at index i, you must add i to the base addres
 | 0x6479-0x64B8 | 64 | Menu Screen Graphics Tile Attributes |
 | 0x64B9-0x64FF | 71 | Unknown |
 | 0x6500-0x67FF | 768 | Game Save 1 Data Part 1 (copied from 0x6000-0x62FF) |
+| 0x6F47 | 1 | Number of party members (copied from 0x603C) |
+| 0x6F48-0x6F4E | 7 | Party member index (copied from 0x603D-0x6042) |
 | 0x6F4F | 1 | Battle Screen Enemy count (1 - 6) |
 | 0x6F50-0x6F55 | 6 | Enemy Types |
-| 0x6F5C-0x6F61 | 6 | Enemy Health lower byte |
-| 0x6F62-0x6F67 | 6 | Enemy Health upper byte |
+| 0x6F5C-0x6F61 | 6 | Enemy Current Health lower byte |
+| 0x6F62-0x6F67 | 6 | Enemy Current Health upper byte |
+| 0x6F68-0x6F6D | 6 | Enemy Total Health lower byte |
+| 0x6F6E-0x6F73 | 6 | Enemy Total Health upper byte |
+| 0x6F74-0x6F7B | 8 | Unknown |
+| 0x6F7C-0x6F81 | 6 | Unknown enemy field |
+| 0x6F82-0x6F87 | 6 | Unknown enemy field |
 | 0x7000-0x71FF | 512 | Game Save 1 Data Part 2 (copied from 0x6300-0x64FF) |
 | 0x7200-0x72FF | 256 | Game Save 1 Data Part 3 (copied from 0x0300-0x03FF) |
 | 0x7300-0x75FF | 768 | Game Save 2 Data Part 1 (copied from 0x6000-0x62FF) |

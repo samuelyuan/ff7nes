@@ -355,6 +355,14 @@ LABEL {
   ADDR $BFAF;
 };
 LABEL {
+  NAME "LoadPartyMemberIndex";
+  ADDR $C283;
+};
+LABEL {
+  NAME "CopyPartyMemberIndexLoop";
+  ADDR $C285;
+};
+LABEL {
   NAME "BattleMenuChangeCursorPixelPosition";
   ADDR $C40F;
 };

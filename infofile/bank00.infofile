@@ -472,6 +472,10 @@ LABEL {
   ADDR $988E;
 };
 LABEL {
+  NAME "BackgroundSceneRoomIndex40";
+  ADDR $99C7;
+};
+LABEL {
   NAME "Bank00LoadBackgroundSceneIdTable1";
   ADDR  $9F7D;
 };
@@ -795,6 +799,18 @@ LABEL {
   Comment "X is rightmost 3 bits, Y is A >> 3";
 };
 LABEL {
+  NAME "CheckTreasureChestOpened";
+  ADDR $D14E;
+};
+LABEL {
+  NAME "CheckFlagTreasureChestOpened";
+  ADDR $D152;
+};
+LABEL {
+  NAME "SetFlagTreasureChestOpened";
+  ADDR $D16A;
+};
+LABEL {
   NAME "PlayerGetsKeyItem";
   ADDR $D198;
 };
@@ -817,6 +833,10 @@ LABEL {
 LABEL {
   NAME "InitialPlayerVarTable";
   ADDR $D4F8;
+};
+LABEL {
+  NAME "CheckMapItemType0F_TreasureBox";
+  ADDR $D9F5;
 };
 LABEL {
   NAME "ChangeCurrentMap";

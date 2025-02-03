@@ -28,7 +28,7 @@
 
 .scope bank0a
 .segment "PRG0a"
-.include "src/bank05_menu.asm"
+.include "src/bank05.asm"
 .endscope
 
 .scope bank0c

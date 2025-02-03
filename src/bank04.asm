@@ -8479,7 +8479,7 @@ LBFCF:
         jsr     LF241                           ; BFD1 20 41 F2                  A.
         jsr     Bank04ScreenRefresh             ; BFD4 20 A0 F3                  ..
 LBFD7:
-        jsr     LC283                           ; BFD7 20 83 C2                  ..
+        jsr     LoadPartyMemberIndex            ; BFD7 20 83 C2                  ..
         jsr     LC1DA                           ; BFDA 20 DA C1                  ..
         jsr     LoadCharacterStatsFromBank5     ; BFDD 20 F3 C8                  ..
         jsr     LCE84                           ; BFE0 20 84 CE                  ..
@@ -8842,14 +8842,14 @@ LC282:
         rts                                     ; C282 60                       `
 
 ; ----------------------------------------------------------------------------
-LC283:
+LoadPartyMemberIndex:
         ldy     #$00                            ; C283 A0 00                    ..
-LC285:
+CopyPartyMemberIndexLoop:
         lda     $603C,y                         ; C285 B9 3C 60                 .<`
         sta     $6F48,y                         ; C288 99 48 6F                 .Ho
         iny                                     ; C28B C8                       .
         cpy     #$07                            ; C28C C0 07                    ..
-        bne     LC285                           ; C28E D0 F5                    ..
+        bne     CopyPartyMemberIndexLoop        ; C28E D0 F5                    ..
         lda     $603B                           ; C290 AD 3B 60                 .;`
         sta     $6F47                           ; C293 8D 47 6F                 .Go
         rts                                     ; C296 60                       `

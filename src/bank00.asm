@@ -4204,7 +4204,7 @@ L99C6:
         rts                                     ; 99C6 60                       `
 
 ; ----------------------------------------------------------------------------
-L99C7:
+BackgroundSceneRoomIndex40:
         lda     #$D1                            ; 99C7 A9 D1                    ..
         jsr     Bank00LoadBackgroundSceneIdTable1; 99C9 20 7D 9F                 }.
         rts                                     ; 99CC 60                       `
@@ -5004,7 +5004,7 @@ BackgroundSceneRoomIndexTablePart1:
         .addr   L99BA                           ; 9C8B BA 99                    ..
         .addr   L99C5                           ; 9C8D C5 99                    ..
         .addr   L99C6                           ; 9C8F C6 99                    ..
-        .addr   L99C7                           ; 9C91 C7 99                    ..
+        .addr   BackgroundSceneRoomIndex40      ; 9C91 C7 99                    ..
         .addr   LA7E5                           ; 9C93 E5 A7                    ..
         .addr   L99D3                           ; 9C95 D3 99                    ..
         .addr   L99D4                           ; 9C97 D4 99                    ..
@@ -7903,13 +7903,13 @@ Bank00ClearCutsceneFlagBit:
         rts                                     ; D14D 60                       `
 
 ; ----------------------------------------------------------------------------
-LD14E:
-        bne     LD152                           ; D14E D0 02                    ..
+CheckTreasureChestOpened:
+        bne     CheckFlagTreasureChestOpened    ; D14E D0 02                    ..
         clc                                     ; D150 18                       .
         rts                                     ; D151 60                       `
 
 ; ----------------------------------------------------------------------------
-LD152:
+CheckFlagTreasureChestOpened:
         sec                                     ; D152 38                       8
         sbc     #$01                            ; D153 E9 01                    ..
         pha                                     ; D155 48                       H
@@ -7932,7 +7932,7 @@ LD168:
         rts                                     ; D169 60                       `
 
 ; ----------------------------------------------------------------------------
-LD16A:
+SetFlagTreasureChestOpened:
         sec                                     ; D16A 38                       8
         sbc     #$01                            ; D16B E9 01                    ..
         pha                                     ; D16D 48                       H
@@ -9097,12 +9097,12 @@ LD9E1:
 ; ----------------------------------------------------------------------------
 LD9EB:
         cmp     #$03                            ; D9EB C9 03                    ..
-        bne     LD9F5                           ; D9ED D0 06                    ..
+        bne     CheckMapItemType0F_TreasureBox  ; D9ED D0 06                    ..
         jsr     LDAB7                           ; D9EF 20 B7 DA                  ..
         jmp     LD9FF                           ; D9F2 4C FF D9                 L..
 
 ; ----------------------------------------------------------------------------
-LD9F5:
+CheckMapItemType0F_TreasureBox:
         cmp     #$0F                            ; D9F5 C9 0F                    ..
         bne     LD9FF                           ; D9F7 D0 06                    ..
         jsr     LE068                           ; D9F9 20 68 E0                  h.
@@ -10083,14 +10083,14 @@ LE068:
         ldy     #$07                            ; E07F A0 07                    ..
         jsr     L0140                           ; E081 20 40 01                  @.
         sta     $08                             ; E084 85 08                    ..
-        jsr     LD14E                           ; E086 20 4E D1                  N.
+        jsr     CheckTreasureChestOpened        ; E086 20 4E D1                  N.
         bcs     LE0D6                           ; E089 B0 4B                    .K
         lda     $07                             ; E08B A5 07                    ..
         jsr     LEF24                           ; E08D 20 24 EF                  $.
         lda     #$01                            ; E090 A9 01                    ..
         sta     $0301,y                         ; E092 99 01 03                 ...
         lda     $08                             ; E095 A5 08                    ..
-        jsr     LD16A                           ; E097 20 6A D1                  j.
+        jsr     SetFlagTreasureChestOpened      ; E097 20 6A D1                  j.
         lda     L0002                           ; E09A A5 02                    ..
         pha                                     ; E09C 48                       H
         lda     $03                             ; E09D A5 03                    ..
@@ -10162,7 +10162,7 @@ LE0FE:
         tya                                     ; E0FE 98                       .
         pha                                     ; E0FF 48                       H
         lda     $0302,y                         ; E100 B9 02 03                 ...
-        jsr     LD14E                           ; E103 20 4E D1                  N.
+        jsr     CheckTreasureChestOpened        ; E103 20 4E D1                  N.
         bcc     LE112                           ; E106 90 0A                    ..
         pla                                     ; E108 68                       h
         tay                                     ; E109 A8                       .
