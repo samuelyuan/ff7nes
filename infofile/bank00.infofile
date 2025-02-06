@@ -39,6 +39,16 @@ RANGE {
 };
 RANGE {
   START $914B;
+  END $93E8;
+  TYPE CODE;
+};
+RANGE {
+  START $93E9;
+  END $93F4;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $93F5;
   END $946C;
   TYPE CODE;
 };
@@ -398,6 +408,10 @@ LABEL {
   ADDR  $8B86;
 };
 LABEL {
+  NAME "Bank00ScriptOpcode11_ScreenFadeBlack";
+  ADDR  $8D20;
+};
+LABEL {
   NAME "Bank00ScriptOpcode12_ScreenFlash";
   ADDR  $8D34;
 };
@@ -419,9 +433,29 @@ LABEL {
   ADDR $8F5E;
 };
 LABEL {
+  NAME "Bank00ScriptOpcode24_SubtractGil";
+  ADDR $8FC7;
+};
+LABEL {
+  NAME "Bank00ScriptOpcode24GilGreaterThanZero";
+  ADDR  $8FFD;
+};
+LABEL {
   NAME "Bank00ScriptOpcode29_ShowDialogBlock";
   ADDR  $9189;
   COMMENT "1st param text array, 2nd param is starting dialogue index, 3rd param is number of dialog items";
+};
+LABEL {
+  NAME "Bank00ScriptOpcode2c_CheckCurrentFloorEqualToValue";
+  ADDR $9222;
+};
+LABEL {
+  NAME "Bank00ScriptOpcode2d_ClimbUpFloor";
+  ADDR $9231;
+};
+LABEL {
+  NAME "Bank00ScriptOpcode2e_ClimbDownFloor";
+  ADDR $9239;
 };
 LABEL {
   NAME "Bank00AddPartyMember";
@@ -456,23 +490,23 @@ LABEL {
   ADDR $946D;
 };
 LABEL {
-  NAME "BackgroundSceneRoomIndexTablePart1";
+  NAME "Bank00BackgroundSceneRoomIndexTablePart1";
   ADDR $9C11;
 };
 LABEL {
-  NAME "BackgroundSceneRoomIndexTablePart2";
+  NAME "Bank00BackgroundSceneRoomIndexTablePart2";
   ADDR $9D11;
 };
 LABEL {
-  NAME "BackgroundSceneRoomIndex00";
+  NAME "Bank00BackgroundSceneRoomIndex00";
   ADDR $958C;
 };
 LABEL {
-  NAME "BackgroundSceneRoomIndex29";
+  NAME "Bank00BackgroundSceneRoomIndex29";
   ADDR $988E;
 };
 LABEL {
-  NAME "BackgroundSceneRoomIndex40";
+  NAME "Bank00BackgroundSceneRoomIndex40";
   ADDR $99C7;
 };
 LABEL {
@@ -540,6 +574,26 @@ LABEL {
   ADDR  $AA42;
 };
 LABEL {
+  NAME "SceneWallMarketDiscoveredBrokenWire";
+  ADDR  $AC27;
+};
+LABEL {
+  NAME "SceneCloudUsesBatteryFixWire";
+  ADDR $B54B;
+};
+LABEL {
+  NAME "SceneShinraBuildingClimbStairsDownLowerFloor";
+  ADDR  $AC99;
+};
+LABEL {
+  NAME "SceneShinraBuildingCheckPartyReachedFloor60";
+  ADDR  $ACA4;
+};
+LABEL {
+  NAME "SceneShinraBuildingClimbStairsUpNextFloor";
+  ADDR  $ACB0;
+};
+LABEL {
   NAME "SceneShinraBuildingGuardsBeforeFloor60";
   ADDR  $ACBB;
 };
@@ -550,6 +604,18 @@ LABEL {
 LABEL {
   NAME "SceneCloudTalksToMayor62F";
   ADDR $AD3A;
+};
+LABEL {
+  NAME "Scene62FTopLeftLibraryHint";
+  ADDR $AD65;
+};
+LABEL {
+  NAME "Scene62FBottomLeftLibraryHint";
+  ADDR $AD7A;
+};
+LABEL {
+  NAME "Scene62FSolvesMayorPuzzleAndGets64FCardAnd65FCard";
+  ADDR $ADA0;
 };
 LABEL {
   NAME "SceneShinra65FSwitchTopLeftTurnOffAndGet66FCard";
@@ -765,7 +831,7 @@ LABEL {
   ADDR $87C9;
 };
 LABEL {
-  NAME "RestorePartyMemberHealth";
+  NAME "Bank00RestorePartyMemberHealth";
   ADDR $9434;
 };
 LABEL {

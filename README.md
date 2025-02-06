@@ -354,7 +354,14 @@ Values stored in 0x6009:
 
 | Bit Index | String |
 |-----------|--------|
+| 0 | Party reaches top of wire and is at entrance of Shinra building and needs to make decision |
 | 1 | Cloud uses Battery to fix broken wire on way up to Shinra building |
+| 2 | Party climbs up wall and realizes part of the wire is missing a piece |
+| 3 | Party is at wall but can't go up to Shinra Building |
+| 4 | Wall Market weapon shop owner gives Cloud a battery to repair broken wire |
+| 5 | Party meets outside Aerith's house to discuss going to Shinra Building |
+| 6 | Party goes downstairs to tell Aerith's mom that Aerith is taken by Turks |
+| 7 | Party returns to Aerith's house and Barret talks to Marlene |
 
 Values stored in 0x600A
 
@@ -363,6 +370,9 @@ Values stored in 0x600A
 | 1 | Party has a conversation before entering 61F |
 | 2 | Party fights guards on 60F |
 | 3 | Party climbs to 60F using stairs |
+| 4 | Party reaches 40F using stairs |
+| 5 | Party reaches 30F using stairs |
+| 6 | Party reaches 20F using stairs |
 | 7 | Party confronts guards at Shinra building entrance |
 
 Values stored in 0x600B
@@ -370,6 +380,10 @@ Values stored in 0x600B
 | Bit Index | String |
 |-----------|--------|
 | 0 | Cloud uses keycard on 64F |
+| 2 | Cloud answers correct password to mayor and gets 64F card and 65F card |
+| 3 | Flag that is also set when Cloud sees hint in top left library but nothing happens after |
+| 4 | Cloud sees hint in bottom left library that says Curse President Shinra |
+| 5 | Cloud sees hint in top left library that says Shinra World Domination Plan |
 | 6 | Cloud meets mayor on 62F |
 | 7 | Cloud gets 62F keycard |
 

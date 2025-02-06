@@ -19,6 +19,16 @@ RANGE {
 };
 RANGE {
   START $8CE9;
+  END $9738;
+  TYPE CODE;
+};
+RANGE {
+  START $9739;
+  END $9744;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $9745;
   END $A16A;
   TYPE CODE;
 };
@@ -99,6 +109,10 @@ RANGE {
 };
 
 LABEL {
+  NAME "Bank02LoadSceneJumpTablePart1";
+  ADDR  $8BEC;
+};
+LABEL {
   NAME "Bank02LoadNextScriptOpcode";
   ADDR  $8C29;
 };
@@ -111,9 +125,17 @@ LABEL {
   ADDR  $8D85;
 };
 LABEL {
+  NAME "Bank02ScriptOpcode03_CheckSceneFlag";
+  ADDR  $8D94;
+};
+LABEL {
   NAME "Bank02ScriptOpcode04_ShowDialogIdList";
   ADDR  $8DA3;
   Comment "1st param index in bank array, rest of params is a variable list of dialog ids and terminates in 0xFF";
+};
+LABEL {
+  NAME "Bank02ScriptOpcode05_ChangeMap";
+  ADDR  $8DCD;
 };
 LABEL {
   NAME "Bank02ScriptOpcode06_SetSceneFlag";
@@ -121,8 +143,16 @@ LABEL {
   Comment "1st param is bit index starting from rightmost bit";
 };
 LABEL {
+  NAME "Bank02ScriptOpcode07_ClearSceneFlag";
+  ADDR  $8DE5;
+};
+LABEL {
   NAME "Bank02ScriptOpcode08_MoveSprite";
   ADDR  $8DF1;
+};
+LABEL {
+  NAME "Bank02ScriptOpcode0a";
+  ADDR  $8ED6;
 };
 LABEL {
   NAME "Bank02ScriptOpcode11_ScreenFadeBlack";
@@ -133,14 +163,66 @@ LABEL {
   ADDR  $9084;
 };
 LABEL {
+  NAME "Bank02ScriptOpcode18_ScreenRumble";
+  ADDR  $91B9;
+};
+LABEL {
   NAME "Bank02ScriptOpcode13_TriggerBattle";
   ADDR  $9225;
   COMMENT "1st param enemy id, 2nd param and 3rd param unknown";
 };
 LABEL {
+  NAME "Bank02ScriptOpcode1b_PlayerGetsKeyItem";
+  ADDR  $9290;
+};
+LABEL {
+  NAME "Bank02ScriptOpcode1c_SetPartyMember";
+  ADDR  $92AE;
+};
+LABEL {
+  NAME "Bank02ScriptOpcode24_SubtractGil";
+  ADDR  $9317;
+};
+LABEL {
+  NAME "Bank02ScriptOpcode24GilGreaterThanZero";
+  ADDR  $934D;
+};
+LABEL {
   NAME "Bank02ScriptOpcode29_ShowDialogBlock";
   ADDR  $94D9;
   COMMENT "1st param text array, 2nd param is starting dialogue index, 3rd param is number of dialog items";
+};
+LABEL {
+  NAME "Bank02ScriptOpcode2c_CheckCurrentFloorEqualToValue";
+  ADDR $9572;
+};
+LABEL {
+  NAME "Bank02ScriptOpcode2d_ClimbUpFloor";
+  ADDR $9581;
+};
+LABEL {
+  NAME "Bank02ScriptOpcode2e_ClimbDownFloor";
+  ADDR $9589;
+};
+LABEL {
+  NAME "Bank02ScriptOpcode39_DisembarkVehicle";
+  ADDR $9681;
+};
+LABEL {
+  NAME "Bank02RestorePartyMemberHealth";
+  ADDR $9784;
+};
+LABEL {
+  NAME "Bank02BackgroundSceneRoomIndexTablePart1";
+  ADDR $A16B;
+};
+LABEL {
+  NAME "Bank02BackgroundSceneRoomIndexTablePart2";
+  ADDR $A26B;
+};
+LABEL {
+  NAME "Bank02LoadBackgroundSceneIdTable1";
+  ADDR  $A4B6;
 };
 LABEL {
   NAME "CheckIfShowLocationName";
@@ -240,8 +322,40 @@ LABEL {
   ADDR  $B6D7;
 };
 LABEL {
+  NAME "SceneAerithHouseBarretTalksToMarlene";
+  ADDR  $B776;
+};
+LABEL {
+  NAME "SceneAerithHouseMissingAerith";
+  ADDR  $B7BD;
+};
+LABEL {
+  NAME "SceneAerithHouseOutsideDiscussGoingToShinraBuilding";
+  ADDR  $B82F;
+};
+LABEL {
+  NAME "SceneWallMarketWeaponShopGetBattery";
+  ADDR  $B888;
+};
+LABEL {
+  NAME "SceneWallMarketBeforeClimbingWall";
+  ADDR  $B8A7;
+};
+LABEL {
   NAME "SceneShinraBuildingEntrance";
   ADDR  $B8F0;
+};
+LABEL {
+  NAME "SceneShinraBuildingStairsCheckPartyReachedFloor20";
+  ADDR  $B9F6;
+};
+LABEL {
+  NAME "SceneShinraBuildingStairsCheckPartyReachedFloor30";
+  ADDR  $BA35;
+};
+LABEL {
+  NAME "SceneShinraBuildingStairsCheckPartyReachedFloor40";
+  ADDR  $BA74;
 };
 LABEL {
   NAME "SceneShinraBuildingFloor60Stairs";

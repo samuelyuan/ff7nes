@@ -12,7 +12,6 @@ L06D0           := $06D0
 L06E0           := $06E0
 L06F0           := $06F0
 L1100           := $1100
-L2020           := $2020
 L6800           := $6800
 ; ----------------------------------------------------------------------------
 L8000:
@@ -1528,7 +1527,7 @@ Bank00ScriptOpcodeTable:
         .addr   L8D3C                           ; 8935 3C 8D                    <.
         .addr   L8D55                           ; 8937 55 8D                    U.
         .addr   L8C54                           ; 8939 54 8C                    T.
-        .addr   L8D20                           ; 893B 20 8D                     .
+        .addr   Bank00ScriptOpcode11_ScreenFadeBlack; 893B 20 8D                 .
         .addr   Bank00ScriptOpcode12_ScreenFlash; 893D 34 8D                    4.
         .addr   Bank00ScriptOpcode13_TriggerBattle; 893F D5 8E                  ..
         .addr   L8D61                           ; 8941 61 8D                    a.
@@ -1547,7 +1546,7 @@ Bank00ScriptOpcodeTable:
         .addr   L8F98                           ; 895B 98 8F                    ..
         .addr   L9002                           ; 895D 02 90                    ..
         .addr   L9007                           ; 895F 07 90                    ..
-        .addr   L8FC7                           ; 8961 C7 8F                    ..
+        .addr   Bank00ScriptOpcode24_SubtractGil; 8961 C7 8F                    ..
         .addr   L9068                           ; 8963 68 90                    h.
         .addr   L902A                           ; 8965 2A 90                    *.
         .addr   L9081                           ; 8967 81 90                    ..
@@ -1555,9 +1554,9 @@ Bank00ScriptOpcodeTable:
         .addr   Bank00ScriptOpcode29_ShowDialogBlock; 896B 89 91                ..
         .addr   L91B2                           ; 896D B2 91                    ..
         .addr   L9201                           ; 896F 01 92                    ..
-        .addr   L9222                           ; 8971 22 92                    ".
-        .addr   L9231                           ; 8973 31 92                    1.
-        .addr   L9239                           ; 8975 39 92                    9.
+        .addr   Bank00ScriptOpcode2c_CheckCurrentFloorEqualToValue; 8971 22 92  ".
+        .addr   Bank00ScriptOpcode2d_ClimbUpFloor; 8973 31 92                   1.
+        .addr   Bank00ScriptOpcode2e_ClimbDownFloor; 8975 39 92                 9.
         .addr   L9241                           ; 8977 41 92                    A.
         .addr   L924C                           ; 8979 4C 92                    L.
         .addr   L92C9                           ; 897B C9 92                    ..
@@ -2176,7 +2175,7 @@ L8D1E:
         rts                                     ; 8D1F 60                       `
 
 ; ----------------------------------------------------------------------------
-L8D20:
+Bank00ScriptOpcode11_ScreenFadeBlack:
         lda     $13                             ; 8D20 A5 13                    ..
         sta     $1D                             ; 8D22 85 1D                    ..
         lda     $14                             ; 8D24 A5 14                    ..
@@ -2609,7 +2608,7 @@ L8FC2:
         jmp     Bank00LoadNextScriptOpcode      ; 8FC4 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L8FC7:
+Bank00ScriptOpcode24_SubtractGil:
         ldy     #$01                            ; 8FC7 A0 01                    ..
         lda     ($A7),y                         ; 8FC9 B1 A7                    ..
         sta     $8E                             ; 8FCB 85 8E                    ..
@@ -2629,12 +2628,12 @@ L8FC7:
         lda     $6030                           ; 8FE8 AD 30 60                 .0`
         sbc     $90                             ; 8FEB E5 90                    ..
         sta     $6030                           ; 8FED 8D 30 60                 .0`
-        bcs     L8FFD                           ; 8FF0 B0 0B                    ..
+        bcs     Bank00ScriptOpcode24GilGreaterThanZero; 8FF0 B0 0B              ..
         lda     #$00                            ; 8FF2 A9 00                    ..
         sta     $602E                           ; 8FF4 8D 2E 60                 ..`
         sta     $602F                           ; 8FF7 8D 2F 60                 ./`
         sta     $6030                           ; 8FFA 8D 30 60                 .0`
-L8FFD:
+Bank00ScriptOpcode24GilGreaterThanZero:
         lda     #$06                            ; 8FFD A9 06                    ..
         jmp     Bank00LoadNextScriptOpcode      ; 8FFF 4C D9 88                 L..
 
@@ -2967,7 +2966,7 @@ L920A:
         jmp     Bank00LoadNextScriptOpcode      ; 921F 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L9222:
+Bank00ScriptOpcode2c_CheckCurrentFloorEqualToValue:
         ldy     #$01                            ; 9222 A0 01                    ..
         lda     ($A7),y                         ; 9224 B1 A7                    ..
         cmp     $6021                           ; 9226 CD 21 60                 .!`
@@ -2980,13 +2979,13 @@ L922C:
         jmp     Bank00LoadNextScriptOpcode      ; 922E 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L9231:
+Bank00ScriptOpcode2d_ClimbUpFloor:
         inc     $6021                           ; 9231 EE 21 60                 .!`
         lda     #$01                            ; 9234 A9 01                    ..
         jmp     Bank00LoadNextScriptOpcode      ; 9236 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L9239:
+Bank00ScriptOpcode2e_ClimbDownFloor:
         dec     $6021                           ; 9239 CE 21 60                 .!`
         lda     #$01                            ; 923C A9 01                    ..
         jmp     Bank00LoadNextScriptOpcode      ; 923E 4C D9 88                 L..
@@ -3060,7 +3059,7 @@ L9289:
 ; ----------------------------------------------------------------------------
 L9297:
         stx     $8E                             ; 9297 86 8E                    ..
-        jsr     RestorePartyMemberHealth        ; 9299 20 34 94                  4.
+        jsr     Bank00RestorePartyMemberHealth  ; 9299 20 34 94                  4.
         jsr     L9445                           ; 929C 20 45 94                  E.
         jsr     L941A                           ; 929F 20 1A 94                  ..
         lda     $603B                           ; 92A2 AD 3B 60                 .;`
@@ -3287,23 +3286,13 @@ L93D6:
 
 ; ----------------------------------------------------------------------------
 L93E9:
-        bpl     L93FB                           ; 93E9 10 10                    ..
-        bpl     L942D                           ; 93EB 10 40                    .@
-        rti                                     ; 93ED 40                       @
-
+        .byte   $10,$10,$10,$40,$40,$40,$80,$80 ; 93E9 10 10 10 40 40 40 80 80  ...@@@..
+        .byte   $80,$20,$20,$20                 ; 93F1 80 20 20 20              .   
 ; ----------------------------------------------------------------------------
-        rti                                     ; 93EE 40                       @
-
-; ----------------------------------------------------------------------------
-        .byte   $80                             ; 93EF 80                       .
-        .byte   $80                             ; 93F0 80                       .
-        .byte   $80                             ; 93F1 80                       .
-        jsr     L2020                           ; 93F2 20 20 20                    
 L93F5:
         ldy     #$01                            ; 93F5 A0 01                    ..
         lda     ($A7),y                         ; 93F7 B1 A7                    ..
         sec                                     ; 93F9 38                       8
-L93FB           := * + 1
         sbc     #$02                            ; 93FA E9 02                    ..
         sta     $06                             ; 93FC 85 06                    ..
         asl     a                               ; 93FE 0A                       .
@@ -3331,7 +3320,6 @@ L941A:
         sta     $607B,y                         ; 9426 99 7B 60                 .{`
         pla                                     ; 9429 68                       h
         tay                                     ; 942A A8                       .
-L942D           := * + 2
         lda     $6367,y                         ; 942B B9 67 63                 .gc
         ora     #$80                            ; 942E 09 80                    ..
         sta     $6367,y                         ; 9430 99 67 63                 .gc
@@ -3339,7 +3327,7 @@ L9433:
         rts                                     ; 9433 60                       `
 
 ; ----------------------------------------------------------------------------
-RestorePartyMemberHealth:
+Bank00RestorePartyMemberHealth:
         lda     $603C,x                         ; 9434 BD 3C 60                 .<`
         tay                                     ; 9437 A8                       .
         lda     $60C1,y                         ; 9438 B9 C1 60                 ..`
@@ -3540,7 +3528,7 @@ L954F:
         rts                                     ; 958B 60                       `
 
 ; ----------------------------------------------------------------------------
-BackgroundSceneRoomIndex00:
+Bank00BackgroundSceneRoomIndex00:
         lda     #$A0                            ; 958C A9 A0                    ..
         jsr     Bank00LoadBackgroundSceneIdTable1; 958E 20 7D 9F                 }.
         lda     #$A6                            ; 9591 A9 A6                    ..
@@ -3996,7 +3984,7 @@ L9888:
         rts                                     ; 988D 60                       `
 
 ; ----------------------------------------------------------------------------
-BackgroundSceneRoomIndex29:
+Bank00BackgroundSceneRoomIndex29:
         lda     #$8D                            ; 988E A9 8D                    ..
         jsr     Bank00LoadBackgroundSceneIdTable1; 9890 20 7D 9F                 }.
         lda     #$8E                            ; 9893 A9 8E                    ..
@@ -4204,7 +4192,7 @@ L99C6:
         rts                                     ; 99C6 60                       `
 
 ; ----------------------------------------------------------------------------
-BackgroundSceneRoomIndex40:
+Bank00BackgroundSceneRoomIndex40:
         lda     #$D1                            ; 99C7 A9 D1                    ..
         jsr     Bank00LoadBackgroundSceneIdTable1; 99C9 20 7D 9F                 }.
         rts                                     ; 99CC 60                       `
@@ -4921,9 +4909,9 @@ L9BEB:
         bcs     L9C00                           ; 9BEF B0 0F                    ..
         asl     a                               ; 9BF1 0A                       .
         tay                                     ; 9BF2 A8                       .
-        lda     BackgroundSceneRoomIndexTablePart1,y; 9BF3 B9 11 9C             ...
+        lda     Bank00BackgroundSceneRoomIndexTablePart1,y; 9BF3 B9 11 9C       ...
         sta     L0002                           ; 9BF6 85 02                    ..
-        lda     BackgroundSceneRoomIndexTablePart1+1,y; 9BF8 B9 12 9C           ...
+        lda     Bank00BackgroundSceneRoomIndexTablePart1+1,y; 9BF8 B9 12 9C     ...
         sta     $03                             ; 9BFB 85 03                    ..
         jmp     (L0002)                         ; 9BFD 6C 02 00                 l..
 
@@ -4932,15 +4920,15 @@ L9C00:
         sbc     #$80                            ; 9C00 E9 80                    ..
         asl     a                               ; 9C02 0A                       .
         tay                                     ; 9C03 A8                       .
-        lda     BackgroundSceneRoomIndexTablePart2,y; 9C04 B9 11 9D             ...
+        lda     Bank00BackgroundSceneRoomIndexTablePart2,y; 9C04 B9 11 9D       ...
         sta     L0002                           ; 9C07 85 02                    ..
-        lda     BackgroundSceneRoomIndexTablePart2+1,y; 9C09 B9 12 9D           ...
+        lda     Bank00BackgroundSceneRoomIndexTablePart2+1,y; 9C09 B9 12 9D     ...
         sta     $03                             ; 9C0C 85 03                    ..
         jmp     (L0002)                         ; 9C0E 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-BackgroundSceneRoomIndexTablePart1:
-        .addr   BackgroundSceneRoomIndex00      ; 9C11 8C 95                    ..
+Bank00BackgroundSceneRoomIndexTablePart1:
+        .addr   Bank00BackgroundSceneRoomIndex00; 9C11 8C 95                    ..
         .addr   L95B5                           ; 9C13 B5 95                    ..
         .addr   L95ED                           ; 9C15 ED 95                    ..
         .addr   L95F8                           ; 9C17 F8 95                    ..
@@ -4981,7 +4969,7 @@ BackgroundSceneRoomIndexTablePart1:
         .addr   L986D                           ; 9C5D 6D 98                    m.
         .addr   L986E                           ; 9C5F 6E 98                    n.
         .addr   L9888                           ; 9C61 88 98                    ..
-        .addr   BackgroundSceneRoomIndex29      ; 9C63 8E 98                    ..
+        .addr   Bank00BackgroundSceneRoomIndex29; 9C63 8E 98                    ..
         .addr   L98C6                           ; 9C65 C6 98                    ..
         .addr   L98CC                           ; 9C67 CC 98                    ..
         .addr   L98CD                           ; 9C69 CD 98                    ..
@@ -5004,7 +4992,7 @@ BackgroundSceneRoomIndexTablePart1:
         .addr   L99BA                           ; 9C8B BA 99                    ..
         .addr   L99C5                           ; 9C8D C5 99                    ..
         .addr   L99C6                           ; 9C8F C6 99                    ..
-        .addr   BackgroundSceneRoomIndex40      ; 9C91 C7 99                    ..
+        .addr   Bank00BackgroundSceneRoomIndex40; 9C91 C7 99                    ..
         .addr   LA7E5                           ; 9C93 E5 A7                    ..
         .addr   L99D3                           ; 9C95 D3 99                    ..
         .addr   L99D4                           ; 9C97 D4 99                    ..
@@ -5068,7 +5056,7 @@ BackgroundSceneRoomIndexTablePart1:
         .addr   L9B5A                           ; 9D0B 5A 9B                    Z.
         .addr   L9B5B                           ; 9D0D 5B 9B                    [.
         .addr   L9B5C                           ; 9D0F 5C 9B                    \.
-BackgroundSceneRoomIndexTablePart2:
+Bank00BackgroundSceneRoomIndexTablePart2:
         .addr   L9B5D                           ; 9D11 5D 9B                    ].
         .addr   L9B5E                           ; 9D13 5E 9B                    ^.
         .addr   L9B5F                           ; 9D15 5F 9B                    _.
@@ -5940,7 +5928,7 @@ LAC0F:
 LAC1D:
         .byte   $01,$FF,$00,$90,$05,$E0,$10,$05 ; AC1D 01 FF 00 90 05 E0 10 05  ........
         .byte   $01,$FF                         ; AC25 01 FF                    ..
-LAC27:
+SceneWallMarketDiscoveredBrokenWire:
         .byte   $02,$4D,$03,$4E,$01,$08,$00,$70 ; AC27 02 4D 03 4E 01 08 00 70  .M.N...p
         .byte   $00,$70,$00,$29,$03,$EA,$03,$06 ; AC2F 00 70 00 29 03 EA 03 06  .p.)....
         .byte   $4E,$FF                         ; AC37 4E FF                    N.
@@ -5960,13 +5948,13 @@ LAC4B:
         .byte   $02,$40,$00,$04,$04,$0B,$FF,$08 ; AC83 02 40 00 04 04 0B FF 08  .@......
         .byte   $02,$20,$01,$0A,$02,$FF,$08,$00 ; AC8B 02 20 01 0A 02 FF 08 00  . ......
         .byte   $40,$02,$0A,$01,$FF,$FF         ; AC93 40 02 0A 01 FF FF        @.....
-LAC99:
+SceneShinraBuildingClimbStairsDownLowerFloor:
         .byte   $01,$08,$00,$30,$00,$30,$00,$2E ; AC99 01 08 00 30 00 30 00 2E  ...0.0..
         .byte   $05,$00,$FF                     ; ACA1 05 00 FF                 ...
-LACA4:
+SceneShinraBuildingCheckPartyReachedFloor60:
         .byte   $01,$08,$00,$B0,$00,$20,$00,$2C ; ACA4 01 08 00 B0 00 20 00 2C  ..... .,
         .byte   $3B,$05,$02,$FF                 ; ACAC 3B 05 02 FF              ;...
-LACB0:
+SceneShinraBuildingClimbStairsUpNextFloor:
         .byte   $01,$08,$00,$B0,$00,$20,$00,$2D ; ACB0 01 08 00 B0 00 20 00 2D  ..... .-
         .byte   $05,$01,$FF                     ; ACB8 05 01 FF                 ...
 SceneShinraBuildingGuardsBeforeFloor60:
@@ -6003,11 +5991,11 @@ LAD50:
         .byte   $02,$5A,$0D,$01,$05,$00,$A0,$00 ; AD50 02 5A 0D 01 05 00 A0 00  .Z......
         .byte   $90,$00,$06,$5B,$29,$04,$F0,$01 ; AD58 90 00 06 5B 29 04 F0 01  ...[)...
         .byte   $02,$5C,$06,$5D,$FF             ; AD60 02 5C 06 5D FF           .\.].
-LAD65:
+Scene62FTopLeftLibraryHint:
         .byte   $02,$5A,$0D,$01,$0B,$00,$C0,$00 ; AD65 02 5A 0D 01 0B 00 C0 00  .Z......
         .byte   $A0,$00,$06,$5B,$29,$04,$F0,$01 ; AD6D A0 00 06 5B 29 04 F0 01  ...[)...
         .byte   $02,$5C,$06,$5D,$FF             ; AD75 02 5C 06 5D FF           .\.].
-LAD7A:
+Scene62FBottomLeftLibraryHint:
         .byte   $02,$5A,$0D,$01,$0B,$00,$C0,$01 ; AD7A 02 5A 0D 01 0B 00 C0 01  .Z......
         .byte   $40,$00,$06,$5C,$29,$04,$F1,$01 ; AD82 40 00 06 5C 29 04 F1 01  @..\)...
         .byte   $02,$5B,$06,$5D,$FF             ; AD8A 02 5B 06 5D FF           .[.].
@@ -6015,7 +6003,7 @@ LAD8F:
         .byte   $0D,$03,$5E,$02,$5D,$10,$03,$23 ; AD8F 0D 03 5E 02 5D 10 03 23  ..^.]..#
         .byte   $04,$F2,$4F,$FF,$29,$04,$F3,$01 ; AD97 04 F2 4F FF 29 04 F3 01  ..O.)...
         .byte   $FF                             ; AD9F FF                       .
-LADA0:
+Scene62FSolvesMayorPuzzleAndGets64FCardAnd65FCard:
         .byte   $29,$04,$4D,$04,$1B,$1A,$1B,$1B ; ADA0 29 04 4D 04 1B 1A 1B 1B  ).M.....
         .byte   $06,$5E,$FF                     ; ADA8 06 5E FF                 .^.
 LADAB:
@@ -6318,7 +6306,7 @@ LB539:
         .byte   $03,$2E,$01,$02,$03,$F0,$00,$80 ; B539 03 2E 01 02 03 F0 00 80  ........
         .byte   $00,$08,$00,$20,$01,$29,$0E,$0C ; B541 00 08 00 20 01 29 0E 0C  ... .)..
         .byte   $01,$FF                         ; B549 01 FF                    ..
-LB54B:
+SceneCloudUsesBatteryFixWire:
         .byte   $06,$4F,$0A,$04,$FF,$FF         ; B54B 06 4F 0A 04 FF FF        .O....
 LB551:
         .byte   $03,$4C,$01,$08,$00,$70,$00,$70 ; B551 03 4C 01 08 00 70 00 70  .L...p.p
@@ -7302,13 +7290,13 @@ Bank00SceneScriptTablePart1:
         .addr   LABFD                           ; CCC3 FD AB                    ..
         .addr   LAC0F                           ; CCC5 0F AC                    ..
         .addr   LAC1D                           ; CCC7 1D AC                    ..
-        .addr   LAC27                           ; CCC9 27 AC                    '.
+        .addr   SceneWallMarketDiscoveredBrokenWire; CCC9 27 AC                 '.
         .addr   LAC39                           ; CCCB 39 AC                    9.
         .addr   LAC47                           ; CCCD 47 AC                    G.
         .addr   LAC4B                           ; CCCF 4B AC                    K.
-        .addr   LAC99                           ; CCD1 99 AC                    ..
-        .addr   LACA4                           ; CCD3 A4 AC                    ..
-        .addr   LACB0                           ; CCD5 B0 AC                    ..
+        .addr   SceneShinraBuildingClimbStairsDownLowerFloor; CCD1 99 AC        ..
+        .addr   SceneShinraBuildingCheckPartyReachedFloor60; CCD3 A4 AC         ..
+        .addr   SceneShinraBuildingClimbStairsUpNextFloor; CCD5 B0 AC           ..
         .addr   SceneShinraBuildingGuardsBeforeFloor60; CCD7 BB AC              ..
         .addr   LACDC                           ; CCD9 DC AC                    ..
         .addr   LACF9                           ; CCDB F9 AC                    ..
@@ -7318,10 +7306,10 @@ Bank00SceneScriptTablePart1:
         .addr   SceneCloudTalksToMayor62F       ; CCE3 3A AD                    :.
         .addr   LAD46                           ; CCE5 46 AD                    F.
         .addr   LAD50                           ; CCE7 50 AD                    P.
-        .addr   LAD65                           ; CCE9 65 AD                    e.
-        .addr   LAD7A                           ; CCEB 7A AD                    z.
+        .addr   Scene62FTopLeftLibraryHint      ; CCE9 65 AD                    e.
+        .addr   Scene62FBottomLeftLibraryHint   ; CCEB 7A AD                    z.
         .addr   LAD8F                           ; CCED 8F AD                    ..
-        .addr   LADA0                           ; CCEF A0 AD                    ..
+        .addr   Scene62FSolvesMayorPuzzleAndGets64FCardAnd65FCard; CCEF A0 AD   ..
         .addr   LADAB                           ; CCF1 AB AD                    ..
         .addr   LADB4                           ; CCF3 B4 AD                    ..
         .addr   LF7A1                           ; CCF5 A1 F7                    ..
@@ -7365,7 +7353,7 @@ Bank00SceneScriptTablePart1:
         .addr   LB502                           ; CD41 02 B5                    ..
         .addr   LB511                           ; CD43 11 B5                    ..
         .addr   LB539                           ; CD45 39 B5                    9.
-        .addr   LB54B                           ; CD47 4B B5                    K.
+        .addr   SceneCloudUsesBatteryFixWire    ; CD47 4B B5                    K.
         .addr   LB551                           ; CD49 51 B5                    Q.
         .addr   LB55F                           ; CD4B 5F B5                    _.
         .addr   LB589                           ; CD4D 89 B5                    ..
@@ -10033,7 +10021,7 @@ LE022:
 InnStayRestoreUnitHealth:
         ldx     #$00                            ; E033 A2 00                    ..
 LE035:
-        jsr     RestorePartyMemberHealth        ; E035 20 34 94                  4.
+        jsr     Bank00RestorePartyMemberHealth  ; E035 20 34 94                  4.
         inx                                     ; E038 E8                       .
         cpx     $603B                           ; E039 EC 3B 60                 .;`
         bcc     LE035                           ; E03C 90 F7                    ..

@@ -6,7 +6,6 @@ L0100           := $0100
 L0130           := $0130
 L0140           := $0140
 L0400           := $0400
-L2020           := $2020
 L3030           := $3030
 L6800           := $6800
 ; ----------------------------------------------------------------------------
@@ -1985,7 +1984,7 @@ L8BDE:
         rts                                     ; 8BEB 60                       `
 
 ; ----------------------------------------------------------------------------
-L8BEC:
+Bank02LoadSceneJumpTablePart1:
         cmp     #$80                            ; 8BEC C9 80                    ..
         bcs     L8C02                           ; 8BEE B0 12                    ..
         asl     a                               ; 8BF0 0A                       .
@@ -2047,7 +2046,7 @@ L8C3D:
         pha                                     ; 8C42 48                       H
         ldy     #$01                            ; 8C43 A0 01                    ..
         lda     ($A7),y                         ; 8C45 B1 A7                    ..
-        jsr     L8BEC                           ; 8C47 20 EC 8B                  ..
+        jsr     Bank02LoadSceneJumpTablePart1   ; 8C47 20 EC 8B                  ..
         pla                                     ; 8C4A 68                       h
         sta     $A8                             ; 8C4B 85 A8                    ..
         pla                                     ; 8C4D 68                       h
@@ -2073,14 +2072,14 @@ Bank02ScriptOpcodeTable:
         .addr   L8C3C                           ; 8C69 3C 8C                    <.
         .addr   L8CE9                           ; 8C6B E9 8C                    ..
         .addr   Bank02ScriptOpcode02            ; 8C6D 85 8D                    ..
-        .addr   L8D94                           ; 8C6F 94 8D                    ..
+        .addr   Bank02ScriptOpcode03_CheckSceneFlag; 8C6F 94 8D                 ..
         .addr   Bank02ScriptOpcode04_ShowDialogIdList; 8C71 A3 8D               ..
-        .addr   L8DCD                           ; 8C73 CD 8D                    ..
+        .addr   Bank02ScriptOpcode05_ChangeMap  ; 8C73 CD 8D                    ..
         .addr   Bank02ScriptOpcode06_SetSceneFlag; 8C75 D9 8D                   ..
-        .addr   L8DE5                           ; 8C77 E5 8D                    ..
+        .addr   Bank02ScriptOpcode07_ClearSceneFlag; 8C77 E5 8D                 ..
         .addr   Bank02ScriptOpcode08_MoveSprite ; 8C79 F1 8D                    ..
         .addr   L8E6F                           ; 8C7B 6F 8E                    o.
-        .addr   L8ED6                           ; 8C7D D6 8E                    ..
+        .addr   Bank02ScriptOpcode0a            ; 8C7D D6 8E                    ..
         .addr   L8F0C                           ; 8C7F 0C 8F                    ..
         .addr   L8F1F                           ; 8C81 1F 8F                    ..
         .addr   L8F9A                           ; 8C83 9A 8F                    ..
@@ -2094,11 +2093,11 @@ Bank02ScriptOpcodeTable:
         .addr   L9175                           ; 8C93 75 91                    u.
         .addr   L918C                           ; 8C95 8C 91                    ..
         .addr   L9183                           ; 8C97 83 91                    ..
-        .addr   L91B9                           ; 8C99 B9 91                    ..
+        .addr   Bank02ScriptOpcode18_ScreenRumble; 8C99 B9 91                   ..
         .addr   L91AD                           ; 8C9B AD 91                    ..
         .addr   L9275                           ; 8C9D 75 92                    u.
-        .addr   L9290                           ; 8C9F 90 92                    ..
-        .addr   L92AE                           ; 8CA1 AE 92                    ..
+        .addr   Bank02ScriptOpcode1b_PlayerGetsKeyItem; 8C9F 90 92              ..
+        .addr   Bank02ScriptOpcode1c_SetPartyMember; 8CA1 AE 92                 ..
         .addr   L92BA                           ; 8CA3 BA 92                    ..
         .addr   L92C4                           ; 8CA5 C4 92                    ..
         .addr   L92DC                           ; 8CA7 DC 92                    ..
@@ -2106,7 +2105,7 @@ Bank02ScriptOpcodeTable:
         .addr   L92E8                           ; 8CAB E8 92                    ..
         .addr   L9352                           ; 8CAD 52 93                    R.
         .addr   L9357                           ; 8CAF 57 93                    W.
-        .addr   L9317                           ; 8CB1 17 93                    ..
+        .addr   Bank02ScriptOpcode24_SubtractGil; 8CB1 17 93                    ..
         .addr   L93B8                           ; 8CB3 B8 93                    ..
         .addr   L937A                           ; 8CB5 7A 93                    z.
         .addr   L93D1                           ; 8CB7 D1 93                    ..
@@ -2114,9 +2113,9 @@ Bank02ScriptOpcodeTable:
         .addr   Bank02ScriptOpcode29_ShowDialogBlock; 8CBB D9 94                ..
         .addr   L9502                           ; 8CBD 02 95                    ..
         .addr   L9551                           ; 8CBF 51 95                    Q.
-        .addr   L9572                           ; 8CC1 72 95                    r.
-        .addr   L9581                           ; 8CC3 81 95                    ..
-        .addr   L9589                           ; 8CC5 89 95                    ..
+        .addr   Bank02ScriptOpcode2c_CheckCurrentFloorEqualToValue; 8CC1 72 95  r.
+        .addr   Bank02ScriptOpcode2d_ClimbUpFloor; 8CC3 81 95                   ..
+        .addr   Bank02ScriptOpcode2e_ClimbDownFloor; 8CC5 89 95                 ..
         .addr   L9591                           ; 8CC7 91 95                    ..
         .addr   L959C                           ; 8CC9 9C 95                    ..
         .addr   L9619                           ; 8CCB 19 96                    ..
@@ -2127,7 +2126,7 @@ Bank02ScriptOpcodeTable:
         .addr   L96D3                           ; 8CD5 D3 96                    ..
         .addr   L9666                           ; 8CD7 66 96                    f.
         .addr   L9672                           ; 8CD9 72 96                    r.
-        .addr   L9681                           ; 8CDB 81 96                    ..
+        .addr   Bank02ScriptOpcode39_DisembarkVehicle; 8CDB 81 96               ..
         .addr   L96D4                           ; 8CDD D4 96                    ..
         .addr   L9706                           ; 8CDF 06 97                    ..
         .addr   L9718                           ; 8CE1 18 97                    ..
@@ -2243,7 +2242,7 @@ L8D93:
         rts                                     ; 8D93 60                       `
 
 ; ----------------------------------------------------------------------------
-L8D94:
+Bank02ScriptOpcode03_CheckSceneFlag:
         ldy     #$01                            ; 8D94 A0 01                    ..
         lda     ($A7),y                         ; 8D96 B1 A7                    ..
         jsr     Bank02CheckCutsceneFlagBit      ; 8D98 20 0C E0                  ..
@@ -2286,7 +2285,7 @@ L8DC8:
         jmp     Bank02LoadNextScriptOpcode      ; 8DCA 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-L8DCD:
+Bank02ScriptOpcode05_ChangeMap:
         ldy     #$01                            ; 8DCD A0 01                    ..
         lda     ($A7),y                         ; 8DCF B1 A7                    ..
         jsr     LFEEE                           ; 8DD1 20 EE FE                  ..
@@ -2303,7 +2302,7 @@ Bank02ScriptOpcode06_SetSceneFlag:
         jmp     Bank02LoadNextScriptOpcode      ; 8DE2 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-L8DE5:
+Bank02ScriptOpcode07_ClearSceneFlag:
         ldy     #$01                            ; 8DE5 A0 01                    ..
         lda     ($A7),y                         ; 8DE7 B1 A7                    ..
         jsr     LE042                           ; 8DE9 20 42 E0                  B.
@@ -2450,7 +2449,7 @@ L8EAD:
         jmp     L8EA8                           ; 8ED3 4C A8 8E                 L..
 
 ; ----------------------------------------------------------------------------
-L8ED6:
+Bank02ScriptOpcode0a:
         ldy     #$01                            ; 8ED6 A0 01                    ..
 L8ED8:
         lda     ($A7),y                         ; 8ED8 B1 A7                    ..
@@ -2941,7 +2940,7 @@ L91AD:
         jmp     Bank02LoadNextScriptOpcode      ; 91B6 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-L91B9:
+Bank02ScriptOpcode18_ScreenRumble:
         ldy     #$01                            ; 91B9 A0 01                    ..
         lda     ($A7),y                         ; 91BB B1 A7                    ..
         sta     $8E                             ; 91BD 85 8E                    ..
@@ -3085,7 +3084,7 @@ L928B:
         jmp     Bank02LoadNextScriptOpcode      ; 928D 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-L9290:
+Bank02ScriptOpcode1b_PlayerGetsKeyItem:
         ldy     #$01                            ; 9290 A0 01                    ..
         lda     ($A7),y                         ; 9292 B1 A7                    ..
         sec                                     ; 9294 38                       8
@@ -3105,7 +3104,7 @@ L929F:
         jmp     Bank02LoadNextScriptOpcode      ; 92AB 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-L92AE:
+Bank02ScriptOpcode1c_SetPartyMember:
         ldy     #$01                            ; 92AE A0 01                    ..
         lda     ($A7),y                         ; 92B0 B1 A7                    ..
         jsr     L95A4                           ; 92B2 20 A4 95                  ..
@@ -3166,7 +3165,7 @@ L9312:
         jmp     Bank02LoadNextScriptOpcode      ; 9314 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-L9317:
+Bank02ScriptOpcode24_SubtractGil:
         ldy     #$01                            ; 9317 A0 01                    ..
         lda     ($A7),y                         ; 9319 B1 A7                    ..
         sta     $8E                             ; 931B 85 8E                    ..
@@ -3186,12 +3185,12 @@ L9317:
         lda     $6030                           ; 9338 AD 30 60                 .0`
         sbc     $90                             ; 933B E5 90                    ..
         sta     $6030                           ; 933D 8D 30 60                 .0`
-        bcs     L934D                           ; 9340 B0 0B                    ..
+        bcs     Bank02ScriptOpcode24GilGreaterThanZero; 9340 B0 0B              ..
         lda     #$00                            ; 9342 A9 00                    ..
         sta     $602E                           ; 9344 8D 2E 60                 ..`
         sta     $602F                           ; 9347 8D 2F 60                 ./`
         sta     $6030                           ; 934A 8D 30 60                 .0`
-L934D:
+Bank02ScriptOpcode24GilGreaterThanZero:
         lda     #$06                            ; 934D A9 06                    ..
         jmp     Bank02LoadNextScriptOpcode      ; 934F 4C 29 8C                 L).
 
@@ -3221,7 +3220,7 @@ L9357:
 L9372:
         ldy     #$03                            ; 9372 A0 03                    ..
         lda     ($A7),y                         ; 9374 B1 A7                    ..
-        jsr     L8BEC                           ; 9376 20 EC 8B                  ..
+        jsr     Bank02LoadSceneJumpTablePart1   ; 9376 20 EC 8B                  ..
         rts                                     ; 9379 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3250,7 +3249,7 @@ L937A:
 L93A1:
         ldy     #$04                            ; 93A1 A0 04                    ..
         lda     ($A7),y                         ; 93A3 B1 A7                    ..
-        jsr     L8BEC                           ; 93A5 20 EC 8B                  ..
+        jsr     Bank02LoadSceneJumpTablePart1   ; 93A5 20 EC 8B                  ..
         rts                                     ; 93A8 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3281,7 +3280,7 @@ L93B8:
 L93C9:
         ldy     #$02                            ; 93C9 A0 02                    ..
         lda     ($A7),y                         ; 93CB B1 A7                    ..
-        jsr     L8BEC                           ; 93CD 20 EC 8B                  ..
+        jsr     Bank02LoadSceneJumpTablePart1   ; 93CD 20 EC 8B                  ..
         rts                                     ; 93D0 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3531,7 +3530,7 @@ L955A:
         jmp     Bank02LoadNextScriptOpcode      ; 956F 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-L9572:
+Bank02ScriptOpcode2c_CheckCurrentFloorEqualToValue:
         ldy     #$01                            ; 9572 A0 01                    ..
         lda     ($A7),y                         ; 9574 B1 A7                    ..
         cmp     $6021                           ; 9576 CD 21 60                 .!`
@@ -3544,13 +3543,13 @@ L957C:
         jmp     Bank02LoadNextScriptOpcode      ; 957E 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-L9581:
+Bank02ScriptOpcode2d_ClimbUpFloor:
         inc     $6021                           ; 9581 EE 21 60                 .!`
         lda     #$01                            ; 9584 A9 01                    ..
         jmp     Bank02LoadNextScriptOpcode      ; 9586 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-L9589:
+Bank02ScriptOpcode2e_ClimbDownFloor:
         dec     $6021                           ; 9589 CE 21 60                 .!`
         lda     #$01                            ; 958C A9 01                    ..
         jmp     Bank02LoadNextScriptOpcode      ; 958E 4C 29 8C                 L).
@@ -3620,7 +3619,7 @@ L95D9:
 ; ----------------------------------------------------------------------------
 L95E7:
         stx     $8E                             ; 95E7 86 8E                    ..
-        jsr     L9784                           ; 95E9 20 84 97                  ..
+        jsr     Bank02RestorePartyMemberHealth  ; 95E9 20 84 97                  ..
         jsr     L9795                           ; 95EC 20 95 97                  ..
         jsr     L976A                           ; 95EF 20 6A 97                  j.
         lda     $603B                           ; 95F2 AD 3B 60                 .;`
@@ -3663,7 +3662,7 @@ L9625:
         bcs     L9636                           ; 962C B0 08                    ..
         ldy     #$02                            ; 962E A0 02                    ..
         lda     ($A7),y                         ; 9630 B1 A7                    ..
-        jsr     L8BEC                           ; 9632 20 EC 8B                  ..
+        jsr     Bank02LoadSceneJumpTablePart1   ; 9632 20 EC 8B                  ..
         rts                                     ; 9635 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3723,7 +3722,7 @@ L967C:
         jmp     Bank02LoadNextScriptOpcode      ; 967E 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-L9681:
+Bank02ScriptOpcode39_DisembarkVehicle:
         ldy     #$01                            ; 9681 A0 01                    ..
         lda     ($A7),y                         ; 9683 B1 A7                    ..
         sec                                     ; 9685 38                       8
@@ -3797,7 +3796,7 @@ L96F3:
         bcs     L9700                           ; 96F7 B0 07                    ..
         iny                                     ; 96F9 C8                       .
         lda     ($A7),y                         ; 96FA B1 A7                    ..
-        jsr     L8BEC                           ; 96FC 20 EC 8B                  ..
+        jsr     Bank02LoadSceneJumpTablePart1   ; 96FC 20 EC 8B                  ..
         rts                                     ; 96FF 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3847,23 +3846,13 @@ L9726:
 
 ; ----------------------------------------------------------------------------
 L9739:
-        bpl     L974B                           ; 9739 10 10                    ..
-        bpl     L977D                           ; 973B 10 40                    .@
-        rti                                     ; 973D 40                       @
-
+        .byte   $10,$10,$10,$40,$40,$40,$80,$80 ; 9739 10 10 10 40 40 40 80 80  ...@@@..
+        .byte   $80,$20,$20,$20                 ; 9741 80 20 20 20              .   
 ; ----------------------------------------------------------------------------
-        rti                                     ; 973E 40                       @
-
-; ----------------------------------------------------------------------------
-        .byte   $80                             ; 973F 80                       .
-        .byte   $80                             ; 9740 80                       .
-        .byte   $80                             ; 9741 80                       .
-        jsr     L2020                           ; 9742 20 20 20                    
 L9745:
         ldy     #$01                            ; 9745 A0 01                    ..
         lda     ($A7),y                         ; 9747 B1 A7                    ..
         sec                                     ; 9749 38                       8
-L974B           := * + 1
         sbc     #$02                            ; 974A E9 02                    ..
         sta     $06                             ; 974C 85 06                    ..
         asl     a                               ; 974E 0A                       .
@@ -3891,7 +3880,6 @@ L976A:
         sta     $607B,y                         ; 9776 99 7B 60                 .{`
         pla                                     ; 9779 68                       h
         tay                                     ; 977A A8                       .
-L977D           := * + 2
         lda     $6367,y                         ; 977B B9 67 63                 .gc
         ora     #$80                            ; 977E 09 80                    ..
         sta     $6367,y                         ; 9780 99 67 63                 .gc
@@ -3899,7 +3887,7 @@ L9783:
         rts                                     ; 9783 60                       `
 
 ; ----------------------------------------------------------------------------
-L9784:
+Bank02RestorePartyMemberHealth:
         lda     $603C,x                         ; 9784 BD 3C 60                 .<`
         tay                                     ; 9787 A8                       .
         lda     $60C1,y                         ; 9788 B9 C1 60                 ..`
@@ -4139,15 +4127,15 @@ L989F:
 L98DC:
         jsr     L98FE                           ; 98DC 20 FE 98                  ..
         lda     #$8E                            ; 98DF A9 8E                    ..
-        jsr     LA4B6                           ; 98E1 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 98E1 20 B6 A4                 ..
         lda     #$A4                            ; 98E4 A9 A4                    ..
-        jsr     LA4B6                           ; 98E6 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 98E6 20 B6 A4                 ..
         lda     #$AA                            ; 98E9 A9 AA                    ..
-        jsr     LA4B6                           ; 98EB 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 98EB 20 B6 A4                 ..
         lda     #$BF                            ; 98EE A9 BF                    ..
-        jsr     LA4B6                           ; 98F0 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 98F0 20 B6 A4                 ..
         lda     #$DE                            ; 98F3 A9 DE                    ..
-        jsr     LA4B6                           ; 98F5 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 98F5 20 B6 A4                 ..
         lda     #$1A                            ; 98F8 A9 1A                    ..
         jsr     LA4BA                           ; 98FA 20 BA A4                  ..
         rts                                     ; 98FD 60                       `
@@ -4207,7 +4195,7 @@ L9948:
 ; ----------------------------------------------------------------------------
 L9958:
         lda     #$7B                            ; 9958 A9 7B                    .{
-        jsr     LA4B6                           ; 995A 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 995A 20 B6 A4                 ..
         lda     #$01                            ; 995D A9 01                    ..
         jsr     LA4BE                           ; 995F 20 BE A4                  ..
         bcc     L9965                           ; 9962 90 01                    ..
@@ -4216,38 +4204,38 @@ L9958:
 ; ----------------------------------------------------------------------------
 L9965:
         lda     #$00                            ; 9965 A9 00                    ..
-        jsr     LA4B6                           ; 9967 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9967 20 B6 A4                 ..
         jsr     LA509                           ; 996A 20 09 A5                  ..
         rts                                     ; 996D 60                       `
 
 ; ----------------------------------------------------------------------------
 L996E:
         lda     #$02                            ; 996E A9 02                    ..
-        jsr     LA4B6                           ; 9970 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9970 20 B6 A4                 ..
         lda     #$14                            ; 9973 A9 14                    ..
-        jsr     LA4B6                           ; 9975 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9975 20 B6 A4                 ..
         rts                                     ; 9978 60                       `
 
 ; ----------------------------------------------------------------------------
 L9979:
         lda     #$03                            ; 9979 A9 03                    ..
-        jsr     LA4B6                           ; 997B 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 997B 20 B6 A4                 ..
         lda     #$05                            ; 997E A9 05                    ..
-        jsr     LA4B6                           ; 9980 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9980 20 B6 A4                 ..
         lda     #$06                            ; 9983 A9 06                    ..
-        jsr     LA4B6                           ; 9985 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9985 20 B6 A4                 ..
         lda     #$09                            ; 9988 A9 09                    ..
-        jsr     LA4B6                           ; 998A 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 998A 20 B6 A4                 ..
         lda     #$0C                            ; 998D A9 0C                    ..
-        jsr     LA4B6                           ; 998F 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 998F 20 B6 A4                 ..
         rts                                     ; 9992 60                       `
 
 ; ----------------------------------------------------------------------------
 L9993:
         lda     #$07                            ; 9993 A9 07                    ..
-        jsr     LA4B6                           ; 9995 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9995 20 B6 A4                 ..
         lda     #$0B                            ; 9998 A9 0B                    ..
-        jsr     LA4B6                           ; 999A 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 999A 20 B6 A4                 ..
         rts                                     ; 999D 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4257,7 +4245,7 @@ L999E:
 ; ----------------------------------------------------------------------------
 L999F:
         lda     #$08                            ; 999F A9 08                    ..
-        jsr     LA4B6                           ; 99A1 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 99A1 20 B6 A4                 ..
         rts                                     ; 99A4 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4266,7 +4254,7 @@ L99A5:
         cmp     #$01                            ; 99A8 C9 01                    ..
         bne     L99B2                           ; 99AA D0 06                    ..
         lda     #$0F                            ; 99AC A9 0F                    ..
-        jsr     LA4B6                           ; 99AE 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 99AE 20 B6 A4                 ..
         rts                                     ; 99B1 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4275,7 +4263,7 @@ L99B2:
         cmp     #$05                            ; 99B5 C9 05                    ..
         bne     L99BF                           ; 99B7 D0 06                    ..
         lda     #$11                            ; 99B9 A9 11                    ..
-        jsr     LA4B6                           ; 99BB 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 99BB 20 B6 A4                 ..
         rts                                     ; 99BE 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4284,7 +4272,7 @@ L99BF:
         cmp     #$08                            ; 99C2 C9 08                    ..
         bne     L99CC                           ; 99C4 D0 06                    ..
         lda     #$12                            ; 99C6 A9 12                    ..
-        jsr     LA4B6                           ; 99C8 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 99C8 20 B6 A4                 ..
         rts                                     ; 99CB 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4294,7 +4282,7 @@ L99CC:
 ; ----------------------------------------------------------------------------
 L99CD:
         lda     #$20                            ; 99CD A9 20                    . 
-        jsr     LA4B6                           ; 99CF 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 99CF 20 B6 A4                 ..
         lda     #$1D                            ; 99D2 A9 1D                    ..
         jsr     LA4BA                           ; 99D4 20 BA A4                  ..
         rts                                     ; 99D7 60                       `
@@ -4302,9 +4290,9 @@ L99CD:
 ; ----------------------------------------------------------------------------
 L99D8:
         lda     #$51                            ; 99D8 A9 51                    .Q
-        jsr     LA4B6                           ; 99DA 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 99DA 20 B6 A4                 ..
         lda     #$7C                            ; 99DD A9 7C                    .|
-        jsr     LA4B6                           ; 99DF 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 99DF 20 B6 A4                 ..
         rts                                     ; 99E2 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4314,7 +4302,7 @@ L99E3:
 ; ----------------------------------------------------------------------------
 L99E4:
         lda     #$29                            ; 99E4 A9 29                    .)
-        jsr     LA4B6                           ; 99E6 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 99E6 20 B6 A4                 ..
         rts                                     ; 99E9 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4324,13 +4312,13 @@ L99EA:
 ; ----------------------------------------------------------------------------
 L99EB:
         lda     #$2D                            ; 99EB A9 2D                    .-
-        jsr     LA4B6                           ; 99ED 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 99ED 20 B6 A4                 ..
         rts                                     ; 99F0 60                       `
 
 ; ----------------------------------------------------------------------------
 L99F1:
         lda     #$2E                            ; 99F1 A9 2E                    ..
-        jsr     LA4B6                           ; 99F3 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 99F3 20 B6 A4                 ..
         rts                                     ; 99F6 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4348,7 +4336,7 @@ L99F9:
 ; ----------------------------------------------------------------------------
 L99FA:
         lda     #$56                            ; 99FA A9 56                    .V
-        jsr     LA4B6                           ; 99FC 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 99FC 20 B6 A4                 ..
         rts                                     ; 99FF 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4358,29 +4346,29 @@ L9A00:
 ; ----------------------------------------------------------------------------
 L9A01:
         lda     #$3F                            ; 9A01 A9 3F                    .?
-        jsr     LA4B6                           ; 9A03 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A03 20 B6 A4                 ..
         rts                                     ; 9A06 60                       `
 
 ; ----------------------------------------------------------------------------
 L9A07:
         lda     #$40                            ; 9A07 A9 40                    .@
-        jsr     LA4B6                           ; 9A09 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A09 20 B6 A4                 ..
         lda     #$80                            ; 9A0C A9 80                    ..
-        jsr     LA4B6                           ; 9A0E 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A0E 20 B6 A4                 ..
         rts                                     ; 9A11 60                       `
 
 ; ----------------------------------------------------------------------------
 L9A12:
         lda     #$40                            ; 9A12 A9 40                    .@
-        jsr     LA4B6                           ; 9A14 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A14 20 B6 A4                 ..
         lda     #$41                            ; 9A17 A9 41                    .A
-        jsr     LA4B6                           ; 9A19 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A19 20 B6 A4                 ..
         rts                                     ; 9A1C 60                       `
 
 ; ----------------------------------------------------------------------------
 L9A1D:
         lda     #$4E                            ; 9A1D A9 4E                    .N
-        jsr     LA4B6                           ; 9A1F 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A1F 20 B6 A4                 ..
         rts                                     ; 9A22 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4390,25 +4378,25 @@ L9A23:
 ; ----------------------------------------------------------------------------
 L9A24:
         lda     #$52                            ; 9A24 A9 52                    .R
-        jsr     LA4B6                           ; 9A26 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A26 20 B6 A4                 ..
         lda     #$54                            ; 9A29 A9 54                    .T
-        jsr     LA4B6                           ; 9A2B 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A2B 20 B6 A4                 ..
         rts                                     ; 9A2E 60                       `
 
 ; ----------------------------------------------------------------------------
 L9A2F:
         lda     #$7E                            ; 9A2F A9 7E                    .~
-        jsr     LA4B6                           ; 9A31 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A31 20 B6 A4                 ..
         rts                                     ; 9A34 60                       `
 
 ; ----------------------------------------------------------------------------
 L9A35:
         lda     #$62                            ; 9A35 A9 62                    .b
-        jsr     LA4B6                           ; 9A37 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A37 20 B6 A4                 ..
         lda     #$7A                            ; 9A3A A9 7A                    .z
-        jsr     LA4B6                           ; 9A3C 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A3C 20 B6 A4                 ..
         lda     #$86                            ; 9A3F A9 86                    ..
-        jsr     LA4B6                           ; 9A41 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A41 20 B6 A4                 ..
         rts                                     ; 9A44 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4418,7 +4406,7 @@ L9A45:
 ; ----------------------------------------------------------------------------
 L9A46:
         lda     #$67                            ; 9A46 A9 67                    .g
-        jsr     LA4B6                           ; 9A48 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A48 20 B6 A4                 ..
         rts                                     ; 9A4B 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4440,57 +4428,57 @@ L9A4F:
 ; ----------------------------------------------------------------------------
 L9A50:
         lda     #$69                            ; 9A50 A9 69                    .i
-        jsr     LA4B6                           ; 9A52 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A52 20 B6 A4                 ..
         rts                                     ; 9A55 60                       `
 
 ; ----------------------------------------------------------------------------
 L9A56:
         lda     #$6A                            ; 9A56 A9 6A                    .j
-        jsr     LA4B6                           ; 9A58 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A58 20 B6 A4                 ..
         rts                                     ; 9A5B 60                       `
 
 ; ----------------------------------------------------------------------------
 L9A5C:
         lda     #$6B                            ; 9A5C A9 6B                    .k
-        jsr     LA4B6                           ; 9A5E 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A5E 20 B6 A4                 ..
         lda     #$84                            ; 9A61 A9 84                    ..
-        jsr     LA4B6                           ; 9A63 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A63 20 B6 A4                 ..
         rts                                     ; 9A66 60                       `
 
 ; ----------------------------------------------------------------------------
 L9A67:
         lda     #$6C                            ; 9A67 A9 6C                    .l
-        jsr     LA4B6                           ; 9A69 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A69 20 B6 A4                 ..
         lda     #$83                            ; 9A6C A9 83                    ..
-        jsr     LA4B6                           ; 9A6E 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A6E 20 B6 A4                 ..
         rts                                     ; 9A71 60                       `
 
 ; ----------------------------------------------------------------------------
 L9A72:
         lda     #$6D                            ; 9A72 A9 6D                    .m
-        jsr     LA4B6                           ; 9A74 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A74 20 B6 A4                 ..
         rts                                     ; 9A77 60                       `
 
 ; ----------------------------------------------------------------------------
 L9A78:
         lda     #$4C                            ; 9A78 A9 4C                    .L
-        jsr     LA4B6                           ; 9A7A 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A7A 20 B6 A4                 ..
         lda     #$6F                            ; 9A7D A9 6F                    .o
-        jsr     LA4B6                           ; 9A7F 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A7F 20 B6 A4                 ..
         lda     #$73                            ; 9A82 A9 73                    .s
-        jsr     LA4B6                           ; 9A84 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A84 20 B6 A4                 ..
         lda     #$75                            ; 9A87 A9 75                    .u
-        jsr     LA4B6                           ; 9A89 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A89 20 B6 A4                 ..
         lda     #$79                            ; 9A8C A9 79                    .y
-        jsr     LA4B6                           ; 9A8E 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A8E 20 B6 A4                 ..
         rts                                     ; 9A91 60                       `
 
 ; ----------------------------------------------------------------------------
 L9A92:
         lda     #$74                            ; 9A92 A9 74                    .t
-        jsr     LA4B6                           ; 9A94 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A94 20 B6 A4                 ..
         lda     #$77                            ; 9A97 A9 77                    .w
-        jsr     LA4B6                           ; 9A99 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9A99 20 B6 A4                 ..
         rts                                     ; 9A9C 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4512,61 +4500,61 @@ L9AA0:
 ; ----------------------------------------------------------------------------
 L9AA1:
         lda     #$8F                            ; 9AA1 A9 8F                    ..
-        jsr     LA4B6                           ; 9AA3 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9AA3 20 B6 A4                 ..
         lda     #$91                            ; 9AA6 A9 91                    ..
-        jsr     LA4B6                           ; 9AA8 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9AA8 20 B6 A4                 ..
         rts                                     ; 9AAB 60                       `
 
 ; ----------------------------------------------------------------------------
 L9AAC:
         lda     #$97                            ; 9AAC A9 97                    ..
-        jsr     LA4B6                           ; 9AAE 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9AAE 20 B6 A4                 ..
         rts                                     ; 9AB1 60                       `
 
 ; ----------------------------------------------------------------------------
 L9AB2:
         lda     #$93                            ; 9AB2 A9 93                    ..
-        jsr     LA4B6                           ; 9AB4 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9AB4 20 B6 A4                 ..
         lda     #$99                            ; 9AB7 A9 99                    ..
-        jsr     LA4B6                           ; 9AB9 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9AB9 20 B6 A4                 ..
         rts                                     ; 9ABC 60                       `
 
 ; ----------------------------------------------------------------------------
 L9ABD:
         lda     #$9A                            ; 9ABD A9 9A                    ..
-        jsr     LA4B6                           ; 9ABF 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9ABF 20 B6 A4                 ..
         lda     #$9E                            ; 9AC2 A9 9E                    ..
-        jsr     LA4B6                           ; 9AC4 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9AC4 20 B6 A4                 ..
         rts                                     ; 9AC7 60                       `
 
 ; ----------------------------------------------------------------------------
 L9AC8:
         lda     #$9E                            ; 9AC8 A9 9E                    ..
-        jsr     LA4B6                           ; 9ACA 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9ACA 20 B6 A4                 ..
         lda     #$A0                            ; 9ACD A9 A0                    ..
-        jsr     LA4B6                           ; 9ACF 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9ACF 20 B6 A4                 ..
         lda     #$A3                            ; 9AD2 A9 A3                    ..
-        jsr     LA4B6                           ; 9AD4 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9AD4 20 B6 A4                 ..
         rts                                     ; 9AD7 60                       `
 
 ; ----------------------------------------------------------------------------
 L9AD8:
         lda     #$9E                            ; 9AD8 A9 9E                    ..
-        jsr     LA4B6                           ; 9ADA 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9ADA 20 B6 A4                 ..
         lda     #$A8                            ; 9ADD A9 A8                    ..
-        jsr     LA4B6                           ; 9ADF 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9ADF 20 B6 A4                 ..
         lda     #$A9                            ; 9AE2 A9 A9                    ..
-        jsr     LA4B6                           ; 9AE4 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9AE4 20 B6 A4                 ..
         rts                                     ; 9AE7 60                       `
 
 ; ----------------------------------------------------------------------------
 L9AE8:
         lda     #$9E                            ; 9AE8 A9 9E                    ..
-        jsr     LA4B6                           ; 9AEA 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9AEA 20 B6 A4                 ..
         lda     #$A6                            ; 9AED A9 A6                    ..
-        jsr     LA4B6                           ; 9AEF 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9AEF 20 B6 A4                 ..
         lda     #$A7                            ; 9AF2 A9 A7                    ..
-        jsr     LA4B6                           ; 9AF4 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9AF4 20 B6 A4                 ..
         lda     #$06                            ; 9AF7 A9 06                    ..
         jsr     LA4BA                           ; 9AF9 20 BA A4                  ..
         rts                                     ; 9AFC 60                       `
@@ -4574,77 +4562,77 @@ L9AE8:
 ; ----------------------------------------------------------------------------
 L9AFD:
         lda     #$AC                            ; 9AFD A9 AC                    ..
-        jsr     LA4B6                           ; 9AFF 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9AFF 20 B6 A4                 ..
         rts                                     ; 9B02 60                       `
 
 ; ----------------------------------------------------------------------------
 L9B03:
         lda     #$AE                            ; 9B03 A9 AE                    ..
-        jsr     LA4B6                           ; 9B05 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B05 20 B6 A4                 ..
         lda     #$B1                            ; 9B08 A9 B1                    ..
-        jsr     LA4B6                           ; 9B0A 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B0A 20 B6 A4                 ..
         rts                                     ; 9B0D 60                       `
 
 ; ----------------------------------------------------------------------------
 L9B0E:
         lda     #$B3                            ; 9B0E A9 B3                    ..
-        jsr     LA4B6                           ; 9B10 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B10 20 B6 A4                 ..
         lda     #$E0                            ; 9B13 A9 E0                    ..
-        jsr     LA4B6                           ; 9B15 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B15 20 B6 A4                 ..
         lda     #$E7                            ; 9B18 A9 E7                    ..
-        jsr     LA4B6                           ; 9B1A 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B1A 20 B6 A4                 ..
         rts                                     ; 9B1D 60                       `
 
 ; ----------------------------------------------------------------------------
 L9B1E:
         lda     #$E3                            ; 9B1E A9 E3                    ..
-        jsr     LA4B6                           ; 9B20 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B20 20 B6 A4                 ..
         rts                                     ; 9B23 60                       `
 
 ; ----------------------------------------------------------------------------
 L9B24:
         lda     #$BA                            ; 9B24 A9 BA                    ..
-        jsr     LA4B6                           ; 9B26 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B26 20 B6 A4                 ..
         rts                                     ; 9B29 60                       `
 
 ; ----------------------------------------------------------------------------
 L9B2A:
         lda     #$BD                            ; 9B2A A9 BD                    ..
-        jsr     LA4B6                           ; 9B2C 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B2C 20 B6 A4                 ..
         rts                                     ; 9B2F 60                       `
 
 ; ----------------------------------------------------------------------------
 L9B30:
         lda     #$C0                            ; 9B30 A9 C0                    ..
-        jsr     LA4B6                           ; 9B32 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B32 20 B6 A4                 ..
         lda     #$C3                            ; 9B35 A9 C3                    ..
-        jsr     LA4B6                           ; 9B37 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B37 20 B6 A4                 ..
         lda     #$F8                            ; 9B3A A9 F8                    ..
-        jsr     LA4B6                           ; 9B3C 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B3C 20 B6 A4                 ..
         rts                                     ; 9B3F 60                       `
 
 ; ----------------------------------------------------------------------------
 L9B40:
         lda     #$C8                            ; 9B40 A9 C8                    ..
-        jsr     LA4B6                           ; 9B42 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B42 20 B6 A4                 ..
         lda     #$CA                            ; 9B45 A9 CA                    ..
-        jsr     LA4B6                           ; 9B47 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B47 20 B6 A4                 ..
         lda     #$CB                            ; 9B4A A9 CB                    ..
-        jsr     LA4B6                           ; 9B4C 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B4C 20 B6 A4                 ..
         lda     #$D0                            ; 9B4F A9 D0                    ..
-        jsr     LA4B6                           ; 9B51 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B51 20 B6 A4                 ..
         rts                                     ; 9B54 60                       `
 
 ; ----------------------------------------------------------------------------
 L9B55:
         lda     #$CC                            ; 9B55 A9 CC                    ..
-        jsr     LA4B6                           ; 9B57 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B57 20 B6 A4                 ..
         rts                                     ; 9B5A 60                       `
 
 ; ----------------------------------------------------------------------------
 L9B5B:
         lda     #$CF                            ; 9B5B A9 CF                    ..
-        jsr     LA4B6                           ; 9B5D 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B5D 20 B6 A4                 ..
         rts                                     ; 9B60 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4660,21 +4648,21 @@ L9B62:
 ; ----------------------------------------------------------------------------
 L9B68:
         lda     #$D7                            ; 9B68 A9 D7                    ..
-        jsr     LA4B6                           ; 9B6A 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B6A 20 B6 A4                 ..
         lda     #$DB                            ; 9B6D A9 DB                    ..
-        jsr     LA4B6                           ; 9B6F 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B6F 20 B6 A4                 ..
         rts                                     ; 9B72 60                       `
 
 ; ----------------------------------------------------------------------------
 L9B73:
         lda     #$EB                            ; 9B73 A9 EB                    ..
-        jsr     LA4B6                           ; 9B75 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B75 20 B6 A4                 ..
         rts                                     ; 9B78 60                       `
 
 ; ----------------------------------------------------------------------------
 L9B79:
         lda     #$ED                            ; 9B79 A9 ED                    ..
-        jsr     LA4B6                           ; 9B7B 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B7B 20 B6 A4                 ..
         rts                                     ; 9B7E 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4692,7 +4680,7 @@ L9B81:
 ; ----------------------------------------------------------------------------
 L9B82:
         lda     #$FC                            ; 9B82 A9 FC                    ..
-        jsr     LA4B6                           ; 9B84 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9B84 20 B6 A4                 ..
         rts                                     ; 9B87 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4739,7 +4727,7 @@ L9BBA:
         cmp     #$03                            ; 9BBD C9 03                    ..
         bne     L9BC7                           ; 9BBF D0 06                    ..
         lda     #$23                            ; 9BC1 A9 23                    .#
-        jsr     LA4B6                           ; 9BC3 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9BC3 20 B6 A4                 ..
         rts                                     ; 9BC6 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4747,7 +4735,7 @@ L9BC7:
         cmp     #$05                            ; 9BC7 C9 05                    ..
         bne     L9BD1                           ; 9BC9 D0 06                    ..
         lda     #$25                            ; 9BCB A9 25                    .%
-        jsr     LA4B6                           ; 9BCD 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9BCD 20 B6 A4                 ..
         rts                                     ; 9BD0 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4755,7 +4743,7 @@ L9BD1:
         cmp     #$07                            ; 9BD1 C9 07                    ..
         bne     L9BDB                           ; 9BD3 D0 06                    ..
         lda     #$27                            ; 9BD5 A9 27                    .'
-        jsr     LA4B6                           ; 9BD7 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9BD7 20 B6 A4                 ..
         rts                                     ; 9BDA 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4776,13 +4764,13 @@ L9BDC:
         bmi     L9C4C                           ; 9BEA 30 60                    0`
 L9BEC:
         lda     #$32                            ; 9BEC A9 32                    .2
-        jsr     LA4B6                           ; 9BEE 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9BEE 20 B6 A4                 ..
         rts                                     ; 9BF1 60                       `
 
 ; ----------------------------------------------------------------------------
 L9BF2:
         lda     #$71                            ; 9BF2 A9 71                    .q
-        jsr     LA4B6                           ; 9BF4 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9BF4 20 B6 A4                 ..
         rts                                     ; 9BF7 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4803,7 +4791,7 @@ L9BFB:
 ; ----------------------------------------------------------------------------
 L9BFC:
         lda     #$B8                            ; 9BFC A9 B8                    ..
-        jsr     LA4B6                           ; 9BFE 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9BFE 20 B6 A4                 ..
         rts                                     ; 9C01 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4817,7 +4805,7 @@ L9C03:
 ; ----------------------------------------------------------------------------
 L9C04:
         lda     #$F1                            ; 9C04 A9 F1                    ..
-        jsr     LA4B6                           ; 9C06 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C06 20 B6 A4                 ..
         rts                                     ; 9C09 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4827,7 +4815,7 @@ L9C0A:
 ; ----------------------------------------------------------------------------
 L9C0B:
         lda     #$FD                            ; 9C0B A9 FD                    ..
-        jsr     LA4B6                           ; 9C0D 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C0D 20 B6 A4                 ..
         rts                                     ; 9C10 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4843,15 +4831,15 @@ L9C13:
 L9C14           := * + 1
         lda     #$15                            ; 9C13 A9 15                    ..
 L9C16           := * + 1
-        jsr     LA4B6                           ; 9C15 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C15 20 B6 A4                 ..
 L9C18:
         lda     #$1B                            ; 9C18 A9 1B                    ..
 L9C1A:
-        jsr     LA4B6                           ; 9C1A 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C1A 20 B6 A4                 ..
         lda     #$1E                            ; 9C1D A9 1E                    ..
-        jsr     LA4B6                           ; 9C1F 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C1F 20 B6 A4                 ..
         lda     #$22                            ; 9C22 A9 22                    ."
-        jsr     LA4B6                           ; 9C24 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C24 20 B6 A4                 ..
         rts                                     ; 9C27 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4869,17 +4857,17 @@ L9C2A:
 ; ----------------------------------------------------------------------------
 L9C2B:
         lda     #$17                            ; 9C2B A9 17                    ..
-        jsr     LA4B6                           ; 9C2D 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C2D 20 B6 A4                 ..
         lda     #$1A                            ; 9C30 A9 1A                    ..
-        jsr     LA4B6                           ; 9C32 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C32 20 B6 A4                 ..
         rts                                     ; 9C35 60                       `
 
 ; ----------------------------------------------------------------------------
 L9C36:
         lda     #$38                            ; 9C36 A9 38                    .8
-        jsr     LA4B6                           ; 9C38 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C38 20 B6 A4                 ..
         lda     #$5B                            ; 9C3B A9 5B                    .[
-        jsr     LA4B6                           ; 9C3D 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C3D 20 B6 A4                 ..
         rts                                     ; 9C40 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4901,68 +4889,68 @@ L9C44:
 ; ----------------------------------------------------------------------------
 L9C45:
         lda     #$37                            ; 9C45 A9 37                    .7
-        jsr     LA4B6                           ; 9C47 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C47 20 B6 A4                 ..
         lda     #$59                            ; 9C4A A9 59                    .Y
 L9C4C:
-        jsr     LA4B6                           ; 9C4C 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C4C 20 B6 A4                 ..
         lda     #$7D                            ; 9C4F A9 7D                    .}
-        jsr     LA4B6                           ; 9C51 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C51 20 B6 A4                 ..
         lda     #$81                            ; 9C54 A9 81                    ..
-        jsr     LA4B6                           ; 9C56 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C56 20 B6 A4                 ..
         rts                                     ; 9C59 60                       `
 
 ; ----------------------------------------------------------------------------
 L9C5A:
         lda     #$3F                            ; 9C5A A9 3F                    .?
-        jsr     LA4B6                           ; 9C5C 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C5C 20 B6 A4                 ..
         rts                                     ; 9C5F 60                       `
 
 ; ----------------------------------------------------------------------------
 L9C60:
         lda     #$3D                            ; 9C60 A9 3D                    .=
-        jsr     LA4B6                           ; 9C62 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C62 20 B6 A4                 ..
         lda     #$3F                            ; 9C65 A9 3F                    .?
-        jsr     LA4B6                           ; 9C67 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C67 20 B6 A4                 ..
         rts                                     ; 9C6A 60                       `
 
 ; ----------------------------------------------------------------------------
 L9C6B:
         lda     #$3F                            ; 9C6B A9 3F                    .?
-        jsr     LA4B6                           ; 9C6D 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C6D 20 B6 A4                 ..
         rts                                     ; 9C70 60                       `
 
 ; ----------------------------------------------------------------------------
 L9C71:
         lda     #$3B                            ; 9C71 A9 3B                    .;
-        jsr     LA4B6                           ; 9C73 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C73 20 B6 A4                 ..
         lda     #$3F                            ; 9C76 A9 3F                    .?
-        jsr     LA4B6                           ; 9C78 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C78 20 B6 A4                 ..
         rts                                     ; 9C7B 60                       `
 
 ; ----------------------------------------------------------------------------
 L9C7C:
         lda     #$44                            ; 9C7C A9 44                    .D
-        jsr     LA4B6                           ; 9C7E 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C7E 20 B6 A4                 ..
         lda     #$40                            ; 9C81 A9 40                    .@
-        jsr     LA4B6                           ; 9C83 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C83 20 B6 A4                 ..
         lda     #$4A                            ; 9C86 A9 4A                    .J
-        jsr     LA4B6                           ; 9C88 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C88 20 B6 A4                 ..
         rts                                     ; 9C8B 60                       `
 
 ; ----------------------------------------------------------------------------
 L9C8C:
         lda     #$43                            ; 9C8C A9 43                    .C
-        jsr     LA4B6                           ; 9C8E 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C8E 20 B6 A4                 ..
         lda     #$40                            ; 9C91 A9 40                    .@
-        jsr     LA4B6                           ; 9C93 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C93 20 B6 A4                 ..
         lda     #$48                            ; 9C96 A9 48                    .H
-        jsr     LA4B6                           ; 9C98 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C98 20 B6 A4                 ..
         rts                                     ; 9C9B 60                       `
 
 ; ----------------------------------------------------------------------------
 L9C9C:
         lda     #$46                            ; 9C9C A9 46                    .F
-        jsr     LA4B6                           ; 9C9E 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9C9E 20 B6 A4                 ..
         rts                                     ; 9CA1 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -4988,7 +4976,7 @@ L9CA6:
 ; ----------------------------------------------------------------------------
 L9CA7:
         lda     #$89                            ; 9CA7 A9 89                    ..
-        jsr     LA4B6                           ; 9CA9 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9CA9 20 B6 A4                 ..
         rts                                     ; 9CAC 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5010,41 +4998,41 @@ L9CB0:
 ; ----------------------------------------------------------------------------
 L9CB1:
         lda     #$94                            ; 9CB1 A9 94                    ..
-        jsr     LA4B6                           ; 9CB3 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9CB3 20 B6 A4                 ..
         rts                                     ; 9CB6 60                       `
 
 ; ----------------------------------------------------------------------------
 L9CB7:
         lda     #$9F                            ; 9CB7 A9 9F                    ..
-        jsr     LA4B6                           ; 9CB9 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9CB9 20 B6 A4                 ..
         rts                                     ; 9CBC 60                       `
 
 ; ----------------------------------------------------------------------------
 L9CBD:
         lda     #$9F                            ; 9CBD A9 9F                    ..
-        jsr     LA4B6                           ; 9CBF 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9CBF 20 B6 A4                 ..
         rts                                     ; 9CC2 60                       `
 
 ; ----------------------------------------------------------------------------
 L9CC3:
         lda     #$9F                            ; 9CC3 A9 9F                    ..
-        jsr     LA4B6                           ; 9CC5 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9CC5 20 B6 A4                 ..
         rts                                     ; 9CC8 60                       `
 
 ; ----------------------------------------------------------------------------
 L9CC9:
         lda     #$9F                            ; 9CC9 A9 9F                    ..
-        jsr     LA4B6                           ; 9CCB 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9CCB 20 B6 A4                 ..
         rts                                     ; 9CCE 60                       `
 
 ; ----------------------------------------------------------------------------
 L9CCF:
         lda     #$9C                            ; 9CCF A9 9C                    ..
-        jsr     LA4B6                           ; 9CD1 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9CD1 20 B6 A4                 ..
         lda     #$9F                            ; 9CD4 A9 9F                    ..
-        jsr     LA4B6                           ; 9CD6 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9CD6 20 B6 A4                 ..
         lda     #$A1                            ; 9CD9 A9 A1                    ..
-        jsr     LA4B6                           ; 9CDB 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9CDB 20 B6 A4                 ..
         rts                                     ; 9CDE 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5070,21 +5058,21 @@ L9CE3:
 ; ----------------------------------------------------------------------------
 L9CE4:
         lda     #$B6                            ; 9CE4 A9 B6                    ..
-        jsr     LA4B6                           ; 9CE6 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9CE6 20 B6 A4                 ..
         rts                                     ; 9CE9 60                       `
 
 ; ----------------------------------------------------------------------------
 L9CEA:
         lda     #$E5                            ; 9CEA A9 E5                    ..
-        jsr     LA4B6                           ; 9CEC 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9CEC 20 B6 A4                 ..
         rts                                     ; 9CEF 60                       `
 
 ; ----------------------------------------------------------------------------
 L9CF0:
         lda     #$E1                            ; 9CF0 A9 E1                    ..
-        jsr     LA4B6                           ; 9CF2 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9CF2 20 B6 A4                 ..
         lda     #$E9                            ; 9CF5 A9 E9                    ..
-        jsr     LA4B6                           ; 9CF7 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9CF7 20 B6 A4                 ..
         rts                                     ; 9CFA 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5098,7 +5086,7 @@ L9CFC:
 ; ----------------------------------------------------------------------------
 L9CFD:
         lda     #$F6                            ; 9CFD A9 F6                    ..
-        jsr     LA4B6                           ; 9CFF 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9CFF 20 B6 A4                 ..
         rts                                     ; 9D02 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5120,9 +5108,9 @@ L9D06:
 ; ----------------------------------------------------------------------------
 L9D07:
         lda     #$C6                            ; 9D07 A9 C6                    ..
-        jsr     LA4B6                           ; 9D09 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9D09 20 B6 A4                 ..
         lda     #$C9                            ; 9D0C A9 C9                    ..
-        jsr     LA4B6                           ; 9D0E 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9D0E 20 B6 A4                 ..
         lda     #$1B                            ; 9D11 A9 1B                    ..
         jsr     LA4BA                           ; 9D13 20 BA A4                  ..
         rts                                     ; 9D16 60                       `
@@ -5142,7 +5130,7 @@ L9D19:
 ; ----------------------------------------------------------------------------
 L9D1A:
         lda     #$D2                            ; 9D1A A9 D2                    ..
-        jsr     LA4B6                           ; 9D1C 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9D1C 20 B6 A4                 ..
         rts                                     ; 9D1F 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5188,13 +5176,13 @@ L9D29:
 ; ----------------------------------------------------------------------------
 L9D2A:
         lda     #$D9                            ; 9D2A A9 D9                    ..
-        jsr     LA4B6                           ; 9D2C 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9D2C 20 B6 A4                 ..
         rts                                     ; 9D2F 60                       `
 
 ; ----------------------------------------------------------------------------
 L9D30:
         lda     #$D5                            ; 9D30 A9 D5                    ..
-        jsr     LA4B6                           ; 9D32 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9D32 20 B6 A4                 ..
         rts                                     ; 9D35 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5372,9 +5360,9 @@ L9D69:
 ; ----------------------------------------------------------------------------
 L9D6A:
         lda     #$A5                            ; 9D6A A9 A5                    ..
-        jsr     LA4B6                           ; 9D6C 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9D6C 20 B6 A4                 ..
         lda     #$AB                            ; 9D6F A9 AB                    ..
-        jsr     LA4B6                           ; 9D71 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9D71 20 B6 A4                 ..
         rts                                     ; 9D74 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5383,14 +5371,14 @@ L9D75:
         jsr     LA4BE                           ; 9D77 20 BE A4                  ..
         bcc     L9D82                           ; 9D7A 90 06                    ..
         lda     #$0E                            ; 9D7C A9 0E                    ..
-        jsr     LA4B6                           ; 9D7E 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9D7E 20 B6 A4                 ..
         rts                                     ; 9D81 60                       `
 
 ; ----------------------------------------------------------------------------
 L9D82:
         jsr     LA53B                           ; 9D82 20 3B A5                  ;.
         lda     #$01                            ; 9D85 A9 01                    ..
-        jsr     LA4B6                           ; 9D87 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9D87 20 B6 A4                 ..
         rts                                     ; 9D8A 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5400,9 +5388,9 @@ L9D8B:
 ; ----------------------------------------------------------------------------
 L9D8C:
         lda     #$04                            ; 9D8C A9 04                    ..
-        jsr     LA4B6                           ; 9D8E 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9D8E 20 B6 A4                 ..
         lda     #$0D                            ; 9D91 A9 0D                    ..
-        jsr     LA4B6                           ; 9D93 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9D93 20 B6 A4                 ..
         rts                                     ; 9D96 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5416,7 +5404,7 @@ L9D98:
 ; ----------------------------------------------------------------------------
 L9D99:
         lda     #$0A                            ; 9D99 A9 0A                    ..
-        jsr     LA4B6                           ; 9D9B 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9D9B 20 B6 A4                 ..
         rts                                     ; 9D9E 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5425,7 +5413,7 @@ L9D9F:
         cmp     #$01                            ; 9DA2 C9 01                    ..
         bne     L9DAC                           ; 9DA4 D0 06                    ..
         lda     #$10                            ; 9DA6 A9 10                    ..
-        jsr     LA4B6                           ; 9DA8 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9DA8 20 B6 A4                 ..
         rts                                     ; 9DAB 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5436,7 +5424,7 @@ L9DAC:
         lda     #$01                            ; 9DB3 A9 01                    ..
         sta     $6020                           ; 9DB5 8D 20 60                 . `
         lda     #$13                            ; 9DB8 A9 13                    ..
-        jsr     LA4B6                           ; 9DBA 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9DBA 20 B6 A4                 ..
 L9DBD:
         rts                                     ; 9DBD 60                       `
 
@@ -5461,7 +5449,7 @@ L9DCE:
         lda     #$10                            ; 9DD3 A9 10                    ..
         jsr     LE042                           ; 9DD5 20 42 E0                  B.
         lda     #$21                            ; 9DD8 A9 21                    .!
-        jsr     LA4B6                           ; 9DDA 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9DDA 20 B6 A4                 ..
         rts                                     ; 9DDD 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5471,37 +5459,37 @@ L9DDE:
 ; ----------------------------------------------------------------------------
 L9DDF:
         lda     #$19                            ; 9DDF A9 19                    ..
-        jsr     LA4B6                           ; 9DE1 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9DE1 20 B6 A4                 ..
         rts                                     ; 9DE4 60                       `
 
 ; ----------------------------------------------------------------------------
 L9DE5:
         lda     #$2A                            ; 9DE5 A9 2A                    .*
-        jsr     LA4B6                           ; 9DE7 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9DE7 20 B6 A4                 ..
         rts                                     ; 9DEA 60                       `
 
 ; ----------------------------------------------------------------------------
 L9DEB:
         lda     #$2B                            ; 9DEB A9 2B                    .+
-        jsr     LA4B6                           ; 9DED 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9DED 20 B6 A4                 ..
         rts                                     ; 9DF0 60                       `
 
 ; ----------------------------------------------------------------------------
 L9DF1:
         lda     #$2C                            ; 9DF1 A9 2C                    .,
-        jsr     LA4B6                           ; 9DF3 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9DF3 20 B6 A4                 ..
         rts                                     ; 9DF6 60                       `
 
 ; ----------------------------------------------------------------------------
 L9DF7:
         lda     #$2F                            ; 9DF7 A9 2F                    ./
-        jsr     LA4B6                           ; 9DF9 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9DF9 20 B6 A4                 ..
         rts                                     ; 9DFC 60                       `
 
 ; ----------------------------------------------------------------------------
 L9DFD:
         lda     #$34                            ; 9DFD A9 34                    .4
-        jsr     LA4B6                           ; 9DFF 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9DFF 20 B6 A4                 ..
         rts                                     ; 9E02 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5511,15 +5499,15 @@ L9E03:
 ; ----------------------------------------------------------------------------
 L9E04:
         lda     #$35                            ; 9E04 A9 35                    .5
-        jsr     LA4B6                           ; 9E06 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E06 20 B6 A4                 ..
         lda     #$5D                            ; 9E09 A9 5D                    .]
-        jsr     LA4B6                           ; 9E0B 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E0B 20 B6 A4                 ..
         rts                                     ; 9E0E 60                       `
 
 ; ----------------------------------------------------------------------------
 L9E0F:
         lda     #$57                            ; 9E0F A9 57                    .W
-        jsr     LA4B6                           ; 9E11 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E11 20 B6 A4                 ..
         rts                                     ; 9E14 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5529,75 +5517,75 @@ L9E15:
 ; ----------------------------------------------------------------------------
 L9E16:
         lda     #$39                            ; 9E16 A9 39                    .9
-        jsr     LA4B6                           ; 9E18 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E18 20 B6 A4                 ..
         rts                                     ; 9E1B 60                       `
 
 ; ----------------------------------------------------------------------------
 L9E1C:
         lda     #$7F                            ; 9E1C A9 7F                    ..
-        jsr     LA4B6                           ; 9E1E 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E1E 20 B6 A4                 ..
         rts                                     ; 9E21 60                       `
 
 ; ----------------------------------------------------------------------------
 L9E22:
         lda     #$42                            ; 9E22 A9 42                    .B
-        jsr     LA4B6                           ; 9E24 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E24 20 B6 A4                 ..
         rts                                     ; 9E27 60                       `
 
 ; ----------------------------------------------------------------------------
 L9E28:
         lda     #$4F                            ; 9E28 A9 4F                    .O
-        jsr     LA4B6                           ; 9E2A 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E2A 20 B6 A4                 ..
         rts                                     ; 9E2D 60                       `
 
 ; ----------------------------------------------------------------------------
 L9E2E:
         lda     #$50                            ; 9E2E A9 50                    .P
-        jsr     LA4B6                           ; 9E30 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E30 20 B6 A4                 ..
         rts                                     ; 9E33 60                       `
 
 ; ----------------------------------------------------------------------------
 L9E34:
         lda     #$53                            ; 9E34 A9 53                    .S
-        jsr     LA4B6                           ; 9E36 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E36 20 B6 A4                 ..
         lda     #$55                            ; 9E39 A9 55                    .U
-        jsr     LA4B6                           ; 9E3B 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E3B 20 B6 A4                 ..
         rts                                     ; 9E3E 60                       `
 
 ; ----------------------------------------------------------------------------
 L9E3F:
         lda     #$5F                            ; 9E3F A9 5F                    ._
-        jsr     LA4B6                           ; 9E41 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E41 20 B6 A4                 ..
         rts                                     ; 9E44 60                       `
 
 ; ----------------------------------------------------------------------------
 L9E45:
         lda     #$60                            ; 9E45 A9 60                    .`
-        jsr     LA4B6                           ; 9E47 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E47 20 B6 A4                 ..
         lda     #$82                            ; 9E4A A9 82                    ..
-        jsr     LA4B6                           ; 9E4C 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E4C 20 B6 A4                 ..
         rts                                     ; 9E4F 60                       `
 
 ; ----------------------------------------------------------------------------
 L9E50:
         lda     #$63                            ; 9E50 A9 63                    .c
-        jsr     LA4B6                           ; 9E52 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E52 20 B6 A4                 ..
         lda     #$64                            ; 9E55 A9 64                    .d
-        jsr     LA4B6                           ; 9E57 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E57 20 B6 A4                 ..
         lda     #$65                            ; 9E5A A9 65                    .e
-        jsr     LA4B6                           ; 9E5C 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E5C 20 B6 A4                 ..
         rts                                     ; 9E5F 60                       `
 
 ; ----------------------------------------------------------------------------
 L9E60:
         lda     #$66                            ; 9E60 A9 66                    .f
-        jsr     LA4B6                           ; 9E62 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E62 20 B6 A4                 ..
         rts                                     ; 9E65 60                       `
 
 ; ----------------------------------------------------------------------------
 L9E66:
         lda     #$68                            ; 9E66 A9 68                    .h
-        jsr     LA4B6                           ; 9E68 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E68 20 B6 A4                 ..
         rts                                     ; 9E6B 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5623,7 +5611,7 @@ L9E70:
 ; ----------------------------------------------------------------------------
 L9E71:
         lda     #$85                            ; 9E71 A9 85                    ..
-        jsr     LA4B6                           ; 9E73 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E73 20 B6 A4                 ..
         rts                                     ; 9E76 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5633,31 +5621,31 @@ L9E77:
 ; ----------------------------------------------------------------------------
 L9E78:
         lda     #$6E                            ; 9E78 A9 6E                    .n
-        jsr     LA4B6                           ; 9E7A 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E7A 20 B6 A4                 ..
         lda     #$76                            ; 9E7D A9 76                    .v
-        jsr     LA4B6                           ; 9E7F 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E7F 20 B6 A4                 ..
         rts                                     ; 9E82 60                       `
 
 ; ----------------------------------------------------------------------------
 L9E83:
         lda     #$4D                            ; 9E83 A9 4D                    .M
-        jsr     LA4B6                           ; 9E85 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E85 20 B6 A4                 ..
         lda     #$70                            ; 9E88 A9 70                    .p
-        jsr     LA4B6                           ; 9E8A 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E8A 20 B6 A4                 ..
         rts                                     ; 9E8D 60                       `
 
 ; ----------------------------------------------------------------------------
 L9E8E:
         lda     #$78                            ; 9E8E A9 78                    .x
-        jsr     LA4B6                           ; 9E90 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E90 20 B6 A4                 ..
         rts                                     ; 9E93 60                       `
 
 ; ----------------------------------------------------------------------------
 L9E94:
         lda     #$87                            ; 9E94 A9 87                    ..
-        jsr     LA4B6                           ; 9E96 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E96 20 B6 A4                 ..
         lda     #$88                            ; 9E99 A9 88                    ..
-        jsr     LA4B6                           ; 9E9B 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9E9B 20 B6 A4                 ..
         rts                                     ; 9E9E 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5675,17 +5663,17 @@ L9EA1:
 ; ----------------------------------------------------------------------------
 L9EA2:
         lda     #$90                            ; 9EA2 A9 90                    ..
-        jsr     LA4B6                           ; 9EA4 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9EA4 20 B6 A4                 ..
         rts                                     ; 9EA7 60                       `
 
 ; ----------------------------------------------------------------------------
 L9EA8:
         lda     #$92                            ; 9EA8 A9 92                    ..
-        jsr     LA4B6                           ; 9EAA 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9EAA 20 B6 A4                 ..
         lda     #$96                            ; 9EAD A9 96                    ..
-        jsr     LA4B6                           ; 9EAF 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9EAF 20 B6 A4                 ..
         lda     #$98                            ; 9EB2 A9 98                    ..
-        jsr     LA4B6                           ; 9EB4 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9EB4 20 B6 A4                 ..
         rts                                     ; 9EB7 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5695,7 +5683,7 @@ L9EB8:
 ; ----------------------------------------------------------------------------
 L9EB9:
         lda     #$9B                            ; 9EB9 A9 9B                    ..
-        jsr     LA4B6                           ; 9EBB 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9EBB 20 B6 A4                 ..
         rts                                     ; 9EBE 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5717,37 +5705,37 @@ L9EC5:
 ; ----------------------------------------------------------------------------
 L9ECB:
         lda     #$AD                            ; 9ECB A9 AD                    ..
-        jsr     LA4B6                           ; 9ECD 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9ECD 20 B6 A4                 ..
         rts                                     ; 9ED0 60                       `
 
 ; ----------------------------------------------------------------------------
 L9ED1:
         lda     #$AF                            ; 9ED1 A9 AF                    ..
-        jsr     LA4B6                           ; 9ED3 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9ED3 20 B6 A4                 ..
         lda     #$B2                            ; 9ED6 A9 B2                    ..
-        jsr     LA4B6                           ; 9ED8 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9ED8 20 B6 A4                 ..
         rts                                     ; 9EDB 60                       `
 
 ; ----------------------------------------------------------------------------
 L9EDC:
         lda     #$B4                            ; 9EDC A9 B4                    ..
-        jsr     LA4B6                           ; 9EDE 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9EDE 20 B6 A4                 ..
         lda     #$E8                            ; 9EE1 A9 E8                    ..
-        jsr     LA4B6                           ; 9EE3 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9EE3 20 B6 A4                 ..
         rts                                     ; 9EE6 60                       `
 
 ; ----------------------------------------------------------------------------
 L9EE7:
         lda     #$B5                            ; 9EE7 A9 B5                    ..
-        jsr     LA4B6                           ; 9EE9 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9EE9 20 B6 A4                 ..
         lda     #$E4                            ; 9EEC A9 E4                    ..
-        jsr     LA4B6                           ; 9EEE 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9EEE 20 B6 A4                 ..
         rts                                     ; 9EF1 60                       `
 
 ; ----------------------------------------------------------------------------
 L9EF2:
         lda     #$BB                            ; 9EF2 A9 BB                    ..
-        jsr     LA4B6                           ; 9EF4 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9EF4 20 B6 A4                 ..
         rts                                     ; 9EF7 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5757,35 +5745,35 @@ L9EF8:
 ; ----------------------------------------------------------------------------
 L9EF9:
         lda     #$C1                            ; 9EF9 A9 C1                    ..
-        jsr     LA4B6                           ; 9EFB 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9EFB 20 B6 A4                 ..
         lda     #$C4                            ; 9EFE A9 C4                    ..
-        jsr     LA4B6                           ; 9F00 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9F00 20 B6 A4                 ..
         lda     #$F9                            ; 9F03 A9 F9                    ..
-        jsr     LA4B6                           ; 9F05 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9F05 20 B6 A4                 ..
         rts                                     ; 9F08 60                       `
 
 ; ----------------------------------------------------------------------------
 L9F09:
         lda     #$C5                            ; 9F09 A9 C5                    ..
-        jsr     LA4B6                           ; 9F0B 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9F0B 20 B6 A4                 ..
         rts                                     ; 9F0E 60                       `
 
 ; ----------------------------------------------------------------------------
 L9F0F:
         lda     #$CD                            ; 9F0F A9 CD                    ..
-        jsr     LA4B6                           ; 9F11 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9F11 20 B6 A4                 ..
         rts                                     ; 9F14 60                       `
 
 ; ----------------------------------------------------------------------------
 L9F15:
         lda     #$CE                            ; 9F15 A9 CE                    ..
-        jsr     LA4B6                           ; 9F17 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9F17 20 B6 A4                 ..
         rts                                     ; 9F1A 60                       `
 
 ; ----------------------------------------------------------------------------
 L9F1B:
         lda     #$D1                            ; 9F1B A9 D1                    ..
-        jsr     LA4B6                           ; 9F1D 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9F1D 20 B6 A4                 ..
         lda     #$0A                            ; 9F20 A9 0A                    ..
         jsr     LA4BA                           ; 9F22 20 BA A4                  ..
         rts                                     ; 9F25 60                       `
@@ -5812,27 +5800,27 @@ L9F26:
 ; ----------------------------------------------------------------------------
 L9F2C:
         lda     #$D4                            ; 9F2C A9 D4                    ..
-        jsr     LA4B6                           ; 9F2E 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9F2E 20 B6 A4                 ..
         lda     #$D8                            ; 9F31 A9 D8                    ..
-        jsr     LA4B6                           ; 9F33 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9F33 20 B6 A4                 ..
         lda     #$DC                            ; 9F36 A9 DC                    ..
-        jsr     LA4B6                           ; 9F38 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9F38 20 B6 A4                 ..
         rts                                     ; 9F3B 60                       `
 
 ; ----------------------------------------------------------------------------
 L9F3C:
         lda     #$EC                            ; 9F3C A9 EC                    ..
-        jsr     LA4B6                           ; 9F3E 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9F3E 20 B6 A4                 ..
         lda     #$F3                            ; 9F41 A9 F3                    ..
-        jsr     LA4B6                           ; 9F43 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9F43 20 B6 A4                 ..
         rts                                     ; 9F46 60                       `
 
 ; ----------------------------------------------------------------------------
 L9F47:
         lda     #$EE                            ; 9F47 A9 EE                    ..
-        jsr     LA4B6                           ; 9F49 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9F49 20 B6 A4                 ..
         lda     #$F0                            ; 9F4C A9 F0                    ..
-        jsr     LA4B6                           ; 9F4E 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9F4E 20 B6 A4                 ..
         rts                                     ; 9F51 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5891,7 +5879,7 @@ L9F7E:
         cmp     #$03                            ; 9F81 C9 03                    ..
         bne     L9F8B                           ; 9F83 D0 06                    ..
         lda     #$24                            ; 9F85 A9 24                    .$
-        jsr     LA4B6                           ; 9F87 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9F87 20 B6 A4                 ..
         rts                                     ; 9F8A 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5899,7 +5887,7 @@ L9F8B:
         cmp     #$05                            ; 9F8B C9 05                    ..
         bne     L9F95                           ; 9F8D D0 06                    ..
         lda     #$26                            ; 9F8F A9 26                    .&
-        jsr     LA4B6                           ; 9F91 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9F91 20 B6 A4                 ..
         rts                                     ; 9F94 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5907,7 +5895,7 @@ L9F95:
         cmp     #$07                            ; 9F95 C9 07                    ..
         bne     L9F9F                           ; 9F97 D0 06                    ..
         lda     #$28                            ; 9F99 A9 28                    .(
-        jsr     LA4B6                           ; 9F9B 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9F9B 20 B6 A4                 ..
         rts                                     ; 9F9E 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5917,9 +5905,9 @@ L9F9F:
 ; ----------------------------------------------------------------------------
 L9FA0:
         lda     #$31                            ; 9FA0 A9 31                    .1
-        jsr     LA4B6                           ; 9FA2 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9FA2 20 B6 A4                 ..
         lda     #$F5                            ; 9FA5 A9 F5                    ..
-        jsr     LA4B6                           ; 9FA7 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9FA7 20 B6 A4                 ..
         lda     #$19                            ; 9FAA A9 19                    ..
         jsr     LA4BA                           ; 9FAC 20 BA A4                  ..
         rts                                     ; 9FAF 60                       `
@@ -5927,13 +5915,13 @@ L9FA0:
 ; ----------------------------------------------------------------------------
 L9FB0:
         lda     #$33                            ; 9FB0 A9 33                    .3
-        jsr     LA4B6                           ; 9FB2 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9FB2 20 B6 A4                 ..
         rts                                     ; 9FB5 60                       `
 
 ; ----------------------------------------------------------------------------
 L9FB6:
         lda     #$72                            ; 9FB6 A9 72                    .r
-        jsr     LA4B6                           ; 9FB8 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9FB8 20 B6 A4                 ..
         rts                                     ; 9FBB 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5950,21 +5938,21 @@ L9FBE:
 ; ----------------------------------------------------------------------------
 L9FBF:
         lda     #$B0                            ; 9FBF A9 B0                    ..
-        jsr     LA4B6                           ; 9FC1 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9FC1 20 B6 A4                 ..
         rts                                     ; 9FC4 60                       `
 
 ; ----------------------------------------------------------------------------
 L9FC5:
         lda     #$B9                            ; 9FC5 A9 B9                    ..
-        jsr     LA4B6                           ; 9FC7 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9FC7 20 B6 A4                 ..
         lda     #$DF                            ; 9FCA A9 DF                    ..
-        jsr     LA4B6                           ; 9FCC 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9FCC 20 B6 A4                 ..
         rts                                     ; 9FCF 60                       `
 
 ; ----------------------------------------------------------------------------
 L9FD0:
         lda     #$DD                            ; 9FD0 A9 DD                    ..
-        jsr     LA4B6                           ; 9FD2 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9FD2 20 B6 A4                 ..
         rts                                     ; 9FD5 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5974,9 +5962,9 @@ L9FD6:
 ; ----------------------------------------------------------------------------
 L9FD7:
         lda     #$EF                            ; 9FD7 A9 EF                    ..
-        jsr     LA4B6                           ; 9FD9 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9FD9 20 B6 A4                 ..
         lda     #$F2                            ; 9FDC A9 F2                    ..
-        jsr     LA4B6                           ; 9FDE 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9FDE 20 B6 A4                 ..
         rts                                     ; 9FE1 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5990,9 +5978,9 @@ L9FE3:
         lda     #$1F                            ; 9FE8 A9 1F                    ..
         jsr     LA4BA                           ; 9FEA 20 BA A4                  ..
         lda     #$FA                            ; 9FED A9 FA                    ..
-        jsr     LA4B6                           ; 9FEF 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9FEF 20 B6 A4                 ..
         lda     #$FE                            ; 9FF2 A9 FE                    ..
-        jsr     LA4B6                           ; 9FF4 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; 9FF4 20 B6 A4                 ..
         rts                                     ; 9FF7 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -6008,13 +5996,13 @@ L9FFE:
 ; ----------------------------------------------------------------------------
 L9FFF:
         lda     #$16                            ; 9FFF A9 16                    ..
-        jsr     LA4B6                           ; A001 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A001 20 B6 A4                 ..
         lda     #$1A                            ; A004 A9 1A                    ..
-        jsr     LA4B6                           ; A006 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A006 20 B6 A4                 ..
         lda     #$1C                            ; A009 A9 1C                    ..
-        jsr     LA4B6                           ; A00B 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A00B 20 B6 A4                 ..
         lda     #$1F                            ; A00E A9 1F                    ..
-        jsr     LA4B6                           ; A010 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A010 20 B6 A4                 ..
         rts                                     ; A013 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -6032,19 +6020,19 @@ LA016:
 ; ----------------------------------------------------------------------------
 LA017:
         lda     #$18                            ; A017 A9 18                    ..
-        jsr     LA4B6                           ; A019 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A019 20 B6 A4                 ..
         lda     #$1D                            ; A01C A9 1D                    ..
-        jsr     LA4B6                           ; A01E 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A01E 20 B6 A4                 ..
         rts                                     ; A021 60                       `
 
 ; ----------------------------------------------------------------------------
 LA022:
         lda     #$36                            ; A022 A9 36                    .6
-        jsr     LA4B6                           ; A024 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A024 20 B6 A4                 ..
         lda     #$58                            ; A027 A9 58                    .X
-        jsr     LA4B6                           ; A029 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A029 20 B6 A4                 ..
         lda     #$5C                            ; A02C A9 5C                    .\
-        jsr     LA4B6                           ; A02E 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A02E 20 B6 A4                 ..
         rts                                     ; A031 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -6066,21 +6054,21 @@ LA035:
 ; ----------------------------------------------------------------------------
 LA036:
         lda     #$5A                            ; A036 A9 5A                    .Z
-        jsr     LA4B6                           ; A038 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A038 20 B6 A4                 ..
         rts                                     ; A03B 60                       `
 
 ; ----------------------------------------------------------------------------
 LA03C:
         lda     #$5E                            ; A03C A9 5E                    .^
-        jsr     LA4B6                           ; A03E 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A03E 20 B6 A4                 ..
         rts                                     ; A041 60                       `
 
 ; ----------------------------------------------------------------------------
 LA042:
         lda     #$3A                            ; A042 A9 3A                    .:
-        jsr     LA4B6                           ; A044 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A044 20 B6 A4                 ..
         lda     #$3E                            ; A047 A9 3E                    .>
-        jsr     LA4B6                           ; A049 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A049 20 B6 A4                 ..
         rts                                     ; A04C 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -6090,27 +6078,27 @@ LA04D:
 ; ----------------------------------------------------------------------------
 LA04E:
         lda     #$3C                            ; A04E A9 3C                    .<
-        jsr     LA4B6                           ; A050 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A050 20 B6 A4                 ..
         rts                                     ; A053 60                       `
 
 ; ----------------------------------------------------------------------------
 LA054:
         lda     #$45                            ; A054 A9 45                    .E
-        jsr     LA4B6                           ; A056 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A056 20 B6 A4                 ..
         lda     #$4B                            ; A059 A9 4B                    .K
-        jsr     LA4B6                           ; A05B 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A05B 20 B6 A4                 ..
         rts                                     ; A05E 60                       `
 
 ; ----------------------------------------------------------------------------
 LA05F:
         lda     #$49                            ; A05F A9 49                    .I
-        jsr     LA4B6                           ; A061 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A061 20 B6 A4                 ..
         rts                                     ; A064 60                       `
 
 ; ----------------------------------------------------------------------------
 LA065:
         lda     #$47                            ; A065 A9 47                    .G
-        jsr     LA4B6                           ; A067 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A067 20 B6 A4                 ..
         rts                                     ; A06A 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -6136,7 +6124,7 @@ LA06F:
 ; ----------------------------------------------------------------------------
 LA070:
         lda     #$8A                            ; A070 A9 8A                    ..
-        jsr     LA4B6                           ; A072 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A072 20 B6 A4                 ..
         rts                                     ; A075 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -6146,7 +6134,7 @@ LA076:
 ; ----------------------------------------------------------------------------
 LA077:
         lda     #$8B                            ; A077 A9 8B                    ..
-        jsr     LA4B6                           ; A079 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A079 20 B6 A4                 ..
         rts                                     ; A07C 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -6160,7 +6148,7 @@ LA07E:
 ; ----------------------------------------------------------------------------
 LA07F:
         lda     #$95                            ; A07F A9 95                    ..
-        jsr     LA4B6                           ; A081 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A081 20 B6 A4                 ..
         rts                                     ; A084 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -6182,9 +6170,9 @@ LA088:
 ; ----------------------------------------------------------------------------
 LA089:
         lda     #$9D                            ; A089 A9 9D                    ..
-        jsr     LA4B6                           ; A08B 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A08B 20 B6 A4                 ..
         lda     #$A2                            ; A08E A9 A2                    ..
-        jsr     LA4B6                           ; A090 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A090 20 B6 A4                 ..
         rts                                     ; A093 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -6210,39 +6198,39 @@ LA098:
 ; ----------------------------------------------------------------------------
 LA099:
         lda     #$B7                            ; A099 A9 B7                    ..
-        jsr     LA4B6                           ; A09B 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A09B 20 B6 A4                 ..
         rts                                     ; A09E 60                       `
 
 ; ----------------------------------------------------------------------------
 LA09F:
         lda     #$E6                            ; A09F A9 E6                    ..
-        jsr     LA4B6                           ; A0A1 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A0A1 20 B6 A4                 ..
         rts                                     ; A0A4 60                       `
 
 ; ----------------------------------------------------------------------------
 LA0A5:
         lda     #$E2                            ; A0A5 A9 E2                    ..
-        jsr     LA4B6                           ; A0A7 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A0A7 20 B6 A4                 ..
         lda     #$EA                            ; A0AA A9 EA                    ..
-        jsr     LA4B6                           ; A0AC 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A0AC 20 B6 A4                 ..
         rts                                     ; A0AF 60                       `
 
 ; ----------------------------------------------------------------------------
 LA0B0:
         lda     #$BE                            ; A0B0 A9 BE                    ..
-        jsr     LA4B6                           ; A0B2 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A0B2 20 B6 A4                 ..
         rts                                     ; A0B5 60                       `
 
 ; ----------------------------------------------------------------------------
 LA0B6:
         lda     #$BC                            ; A0B6 A9 BC                    ..
-        jsr     LA4B6                           ; A0B8 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A0B8 20 B6 A4                 ..
         rts                                     ; A0BB 60                       `
 
 ; ----------------------------------------------------------------------------
 LA0BC:
         lda     #$F7                            ; A0BC A9 F7                    ..
-        jsr     LA4B6                           ; A0BE 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A0BE 20 B6 A4                 ..
         rts                                     ; A0C1 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -6260,13 +6248,13 @@ LA0C4:
 ; ----------------------------------------------------------------------------
 LA0C5:
         lda     #$C2                            ; A0C5 A9 C2                    ..
-        jsr     LA4B6                           ; A0C7 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A0C7 20 B6 A4                 ..
         rts                                     ; A0CA 60                       `
 
 ; ----------------------------------------------------------------------------
 LA0CB:
         lda     #$C7                            ; A0CB A9 C7                    ..
-        jsr     LA4B6                           ; A0CD 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A0CD 20 B6 A4                 ..
         rts                                     ; A0D0 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -6284,7 +6272,7 @@ LA0D3:
 ; ----------------------------------------------------------------------------
 LA0D4:
         lda     #$D3                            ; A0D4 A9 D3                    ..
-        jsr     LA4B6                           ; A0D6 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A0D6 20 B6 A4                 ..
         rts                                     ; A0D9 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -6330,13 +6318,13 @@ LA0E3:
 ; ----------------------------------------------------------------------------
 LA0E4:
         lda     #$DA                            ; A0E4 A9 DA                    ..
-        jsr     LA4B6                           ; A0E6 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A0E6 20 B6 A4                 ..
         rts                                     ; A0E9 60                       `
 
 ; ----------------------------------------------------------------------------
 LA0EA:
         lda     #$D6                            ; A0EA A9 D6                    ..
-        jsr     LA4B6                           ; A0EC 20 B6 A4                  ..
+        jsr     Bank02LoadBackgroundSceneIdTable1; A0EC 20 B6 A4                 ..
         rts                                     ; A0EF 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -6531,10 +6519,10 @@ LA143:
         bcs     LA159                           ; A147 B0 10                    ..
         asl     a                               ; A149 0A                       .
         tay                                     ; A14A A8                       .
-        lda     LA16B,y                         ; A14B B9 6B A1                 .k.
+        lda     Bank02BackgroundSceneRoomIndexTablePart1,y; A14B B9 6B A1       .k.
         sta     L0002                           ; A14E 85 02                    ..
         iny                                     ; A150 C8                       .
-        lda     LA16B,y                         ; A151 B9 6B A1                 .k.
+        lda     Bank02BackgroundSceneRoomIndexTablePart1,y; A151 B9 6B A1       .k.
         sta     $03                             ; A154 85 03                    ..
         jmp     (L0002)                         ; A156 6C 02 00                 l..
 
@@ -6543,15 +6531,15 @@ LA159:
         sbc     #$80                            ; A159 E9 80                    ..
         asl     a                               ; A15B 0A                       .
         tay                                     ; A15C A8                       .
-        lda     LA16B+256,y                     ; A15D B9 6B A2                 .k.
+        lda     Bank02BackgroundSceneRoomIndexTablePart2,y; A15D B9 6B A2       .k.
         sta     L0002                           ; A160 85 02                    ..
         iny                                     ; A162 C8                       .
-        lda     LA16B+256,y                     ; A163 B9 6B A2                 .k.
+        lda     Bank02BackgroundSceneRoomIndexTablePart2,y; A163 B9 6B A2       .k.
         sta     $03                             ; A166 85 03                    ..
         jmp     (L0002)                         ; A168 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-LA16B:
+Bank02BackgroundSceneRoomIndexTablePart1:
         .addr   L98DC                           ; A16B DC 98                    ..
         .addr   L9958                           ; A16D 58 99                    X.
         .addr   L996E                           ; A16F 6E 99                    n.
@@ -6680,6 +6668,7 @@ LA16B:
         .addr   L9CCF                           ; A265 CF 9C                    ..
         .addr   L9CDF                           ; A267 DF 9C                    ..
         .addr   L9CE0                           ; A269 E0 9C                    ..
+Bank02BackgroundSceneRoomIndexTablePart2:
         .addr   L9CE1                           ; A26B E1 9C                    ..
         .addr   L9CE2                           ; A26D E2 9C                    ..
         .addr   L9CE3                           ; A26F E3 9C                    ..
@@ -6982,8 +6971,8 @@ LA326:
         .addr   LA126                           ; A4B2 26 A1                    &.
         .addr   LA127                           ; A4B4 27 A1                    '.
 ; ----------------------------------------------------------------------------
-LA4B6:
-        jsr     L8BEC                           ; A4B6 20 EC 8B                  ..
+Bank02LoadBackgroundSceneIdTable1:
+        jsr     Bank02LoadSceneJumpTablePart1   ; A4B6 20 EC 8B                  ..
         rts                                     ; A4B9 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -7871,7 +7860,7 @@ LB763:
         .byte   $02,$48,$03,$4A,$09,$0A,$03,$00 ; B763 02 48 03 4A 09 0A 03 00  .H.J....
         .byte   $90,$04,$F0,$09,$03,$02,$00,$80 ; B76B 90 04 F0 09 03 02 00 80  ........
         .byte   $04,$F0,$FF                     ; B773 04 F0 FF                 ...
-LB776:
+SceneAerithHouseBarretTalksToMarlene:
         .byte   $02,$48,$03,$49,$06,$49,$08,$00 ; B776 02 48 03 49 06 49 08 00  .H.I.I..
         .byte   $40,$06,$08,$00,$10,$03,$08,$00 ; B77E 40 06 08 00 10 03 08 00  @.......
         .byte   $80,$03,$08,$00,$10,$00,$29,$03 ; B786 80 03 08 00 10 00 29 03  ......).
@@ -7883,7 +7872,7 @@ LB776:
 LB7B1:
         .byte   $02,$49,$03,$4A,$09,$04,$0B,$00 ; B7B1 02 49 03 4A 09 04 0B 00  .I.J....
         .byte   $60,$00,$60,$FF                 ; B7B9 60 00 60 FF              `.`.
-LB7BD:
+SceneAerithHouseMissingAerith:
         .byte   $02,$49,$03,$4A,$06,$4A,$0E,$04 ; B7BD 02 49 03 4A 06 4A 0E 04  .I.J.J..
         .byte   $16,$00,$04,$42,$08,$04,$80,$00 ; B7C5 16 00 04 42 08 04 80 00  ...B....
         .byte   $16,$00,$04,$48,$16,$00,$04,$48 ; B7CD 16 00 04 48 16 00 04 48  ...H...H
@@ -7899,7 +7888,7 @@ LB7BD:
         .byte   $20,$00,$16,$02,$03,$21,$29,$03 ; B81D 20 00 16 02 03 21 29 03   ....!).
         .byte   $D0,$04,$08,$03,$20,$02,$0A,$03 ; B825 D0 04 08 03 20 02 0A 03  .... ...
         .byte   $FF,$FF                         ; B82D FF FF                    ..
-LB82F:
+SceneAerithHouseOutsideDiscussGoingToShinraBuilding:
         .byte   $02,$4A,$03,$4B,$06,$4B,$08,$00 ; B82F 02 4A 03 4B 06 4B 08 00  .J.K.K..
         .byte   $40,$00,$09,$06,$02,$01,$10,$00 ; B837 40 00 09 06 02 01 10 00  @.......
         .byte   $A0,$09,$05,$0B,$01,$10,$00,$A0 ; B83F A0 09 05 0B 01 10 00 A0  ........
@@ -7912,12 +7901,12 @@ LB82F:
         .byte   $05,$10,$01,$0A,$05,$FF,$14,$00 ; B877 05 10 01 0A 05 FF 14 00  ........
         .byte   $40,$01,$1C,$01,$05,$1C,$02,$05 ; B87F 40 01 1C 01 05 1C 02 05  @.......
         .byte   $FF                             ; B887 FF                       .
-LB888:
+SceneWallMarketWeaponShopGetBattery:
         .byte   $02,$4B,$03,$4C,$08,$00,$80,$06 ; B888 02 4B 03 4C 08 00 80 06  .K.L....
         .byte   $29,$03,$D6,$06,$1A,$03,$DC,$FF ; B890 29 03 D6 06 1A 03 DC FF  ).......
         .byte   $29,$03,$DF,$01,$24,$2C,$01,$00 ; B898 29 03 DF 01 24 2C 01 00  )...$,..
         .byte   $0E,$19,$1B,$12,$06,$4C,$FF     ; B8A0 0E 19 1B 12 06 4C FF     .....L.
-LB8A7:
+SceneWallMarketBeforeClimbingWall:
         .byte   $02,$4B,$03,$4D,$06,$4D,$08,$00 ; B8A7 02 4B 03 4D 06 4D 08 00  .K.M.M..
         .byte   $10,$07,$08,$00,$80,$02,$09,$01 ; B8AF 10 07 08 00 80 02 09 01  ........
         .byte   $02,$00,$70,$07,$20,$09,$02,$0B ; B8B7 02 00 70 07 20 09 02 0B  ..p. ...
@@ -7966,7 +7955,7 @@ LB9CA:
 LB9ED:
         .byte   $02,$51,$0A,$05,$06,$07,$08,$FF ; B9ED 02 51 0A 05 06 07 08 FF  .Q......
         .byte   $FF                             ; B9F5 FF                       .
-LB9F6:
+SceneShinraBuildingStairsCheckPartyReachedFloor20:
         .byte   $03,$51,$03,$52,$2C,$14,$06,$52 ; B9F6 03 51 03 52 2C 14 06 52  .Q.R,..R
         .byte   $09,$01,$02,$00,$30,$00,$50,$09 ; B9FE 09 01 02 00 30 00 50 09  ....0.P.
         .byte   $02,$05,$00,$30,$00,$50,$0F,$00 ; BA06 02 05 00 30 00 50 0F 00  ...0.P..
@@ -7975,7 +7964,7 @@ LB9F6:
         .byte   $29,$04,$0C,$17,$08,$01,$20,$00 ; BA1E 29 04 0C 17 08 01 20 00  )..... .
         .byte   $16,$01,$02,$28,$0E,$00,$0F,$01 ; BA26 16 01 02 28 0E 00 0F 01  ...(....
         .byte   $0F,$02,$0A,$01,$02,$FF,$FF     ; BA2E 0F 02 0A 01 02 FF FF     .......
-LBA35:
+SceneShinraBuildingStairsCheckPartyReachedFloor30:
         .byte   $03,$51,$03,$53,$2C,$1E,$06,$53 ; BA35 03 51 03 53 2C 1E 06 53  .Q.S,..S
         .byte   $09,$01,$02,$00,$30,$00,$50,$09 ; BA3D 09 01 02 00 30 00 50 09  ....0.P.
         .byte   $02,$05,$00,$30,$00,$50,$0F,$00 ; BA45 02 05 00 30 00 50 0F 00  ...0.P..
@@ -7984,7 +7973,7 @@ LBA35:
         .byte   $29,$04,$23,$05,$08,$01,$20,$00 ; BA5D 29 04 23 05 08 01 20 00  ).#... .
         .byte   $16,$01,$02,$28,$0E,$00,$0F,$01 ; BA65 16 01 02 28 0E 00 0F 01  ...(....
         .byte   $0F,$02,$0A,$01,$02,$FF,$FF     ; BA6D 0F 02 0A 01 02 FF FF     .......
-LBA74:
+SceneShinraBuildingStairsCheckPartyReachedFloor40:
         .byte   $03,$51,$03,$54,$2C,$28,$06,$54 ; BA74 03 51 03 54 2C 28 06 54  .Q.T,(.T
         .byte   $09,$01,$02,$00,$30,$00,$50,$09 ; BA7C 09 01 02 00 30 00 50 09  ....0.P.
         .byte   $02,$05,$00,$30,$00,$50,$0F,$00 ; BA84 02 05 00 30 00 50 0F 00  ...0.P..
@@ -9201,18 +9190,18 @@ Bank02SceneScriptTablePart1:
         .addr   SceneEscapedSector7Explosion    ; D7AF D7 B6                    ..
         .addr   LB702                           ; D7B1 02 B7                    ..
         .addr   LB763                           ; D7B3 63 B7                    c.
-        .addr   LB776                           ; D7B5 76 B7                    v.
+        .addr   SceneAerithHouseBarretTalksToMarlene; D7B5 76 B7                v.
         .addr   LB7B1                           ; D7B7 B1 B7                    ..
-        .addr   LB7BD                           ; D7B9 BD B7                    ..
-        .addr   LB82F                           ; D7BB 2F B8                    /.
-        .addr   LB888                           ; D7BD 88 B8                    ..
-        .addr   LB8A7                           ; D7BF A7 B8                    ..
+        .addr   SceneAerithHouseMissingAerith   ; D7B9 BD B7                    ..
+        .addr   SceneAerithHouseOutsideDiscussGoingToShinraBuilding; D7BB 2F B8 /.
+        .addr   SceneWallMarketWeaponShopGetBattery; D7BD 88 B8                 ..
+        .addr   SceneWallMarketBeforeClimbingWall; D7BF A7 B8                   ..
         .addr   SceneShinraBuildingEntrance     ; D7C1 F0 B8                    ..
         .addr   LB9CA                           ; D7C3 CA B9                    ..
         .addr   LB9ED                           ; D7C5 ED B9                    ..
-        .addr   LB9F6                           ; D7C7 F6 B9                    ..
-        .addr   LBA35                           ; D7C9 35 BA                    5.
-        .addr   LBA74                           ; D7CB 74 BA                    t.
+        .addr   SceneShinraBuildingStairsCheckPartyReachedFloor20; D7C7 F6 B9   ..
+        .addr   SceneShinraBuildingStairsCheckPartyReachedFloor30; D7C9 35 BA   5.
+        .addr   SceneShinraBuildingStairsCheckPartyReachedFloor40; D7CB 74 BA   t.
         .addr   SceneShinraBuildingFloor60Stairs; D7CD B3 BA                    ..
         .addr   LBB02                           ; D7CF 02 BB                    ..
         .addr   SceneShinraBuildingFloor61      ; D7D1 13 BB                    ..
