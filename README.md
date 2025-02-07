@@ -53,12 +53,15 @@ To get the values for party member at index i, you must add i to the base addres
 | 0x6020 | 1 | Current car number on train |
 | 0x6021 | 1 | Current floor in Shinra building |
 | 0x6022 | 1 | Cloud's vehicle (0 for none, 3 for Buggy, 4 for Bronco) |
+| 0x6023-0x6025 | 3 | Unknown |
 | 0x6026-0x6028 | 3 | Cloud's buggy location |
 | 0x6029-0x602B | 3 | Cloud's Bronco location |
 | 0x602C | 1 | Timer until random encounter (decreases by 1 every time player moves) |
-| 0x602E-0x602F | 2 | Player Gil |
-| 0x6031 | 1 | Flag used for treasure items on the map (bit 0 - sewer middle left) |
-| 0x6032 | 1 | Flag used for treasure items on the map (bit 7 - sewer middle) |
+| 0x602D | 1 | Flag related to random encounter |
+| 0x602E | 1 | Player Gil lower byte |
+| 0x602F | 1 | Player Gil middle byte |
+| 0x6030 | 1 | Player Gil upper byte |
+| 0x6031-0x6032 | 2 | Flag used for treasure items on the map |
 | 0x603B | 1 | Number of characters in party (1 - 7) |
 | 0x603C-0x6042 | 7 | Party Member List Index |
 | 0x6043-0x6049 | 7 | Party Member Level |
@@ -259,6 +262,8 @@ Values stored in 0x6002:
 | 2 | Cloud has flashback to childhood promise to Tifa |
 | 3 | Cloud goes to 7th Heaven for basement meeting |
 | 4 | Barret enters 7th Heaven |
+| 5 | Cloud talks to Biggs in 7th Heaven |
+| 6 | Cloud talks to Wedge in 7th Heaven |
 | 7 | Tifa greets Cloud when he enters 7th Heaven |
 
 Values stored in 0x6003:

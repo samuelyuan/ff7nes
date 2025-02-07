@@ -1,5 +1,5 @@
 GLOBAL {
-  INPUTNAME "main.nes";
+  INPUTNAME "game.nes";
   OUTPUTNAME "bank31.asm";
   INPUTOFFS $188010;
   INPUTSIZE $8000;

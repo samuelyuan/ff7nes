@@ -3052,23 +3052,18 @@ L9625:
 
 ; ----------------------------------------------------------------------------
 L9644:
-        and     ($62,x)                         ; 9644 21 62                    !b
-        .byte   $22                             ; 9646 22                       "
-        .byte   $22                             ; 9647 22                       "
-        and     ($68,x)                         ; 9648 21 68                    !h
-        .byte   $22                             ; 964A 22                       "
-        plp                                     ; 964B 28                       (
-        and     ($6E,x)                         ; 964C 21 6E                    !n
-        .byte   $22                             ; 964E 22                       "
-L9650           := * + 1
-        rol     LE220                           ; 964F 2E 20 E2                 . .
-        sty     $A9,x                           ; 9652 94 A9                    ..
-        bpl     L9676                           ; 9654 10 20                    . 
-        .byte   $8B                             ; 9656 8B                       .
-        sty     $A5,x                           ; 9657 94 A5                    ..
-        lda     LE938                           ; 9659 AD 38 E9                 .8.
-        ora     ($85,x)                         ; 965C 01 85                    ..
-        lda     $01A0                           ; 965E AD A0 01                 ...
+        .byte   $21,$62,$22,$22,$21,$68,$22,$28 ; 9644 21 62 22 22 21 68 22 28  !b""!h"(
+        .byte   $21,$6E,$22,$2E                 ; 964C 21 6E 22 2E              !n".
+; ----------------------------------------------------------------------------
+L9650:
+        jsr     L94E2                           ; 9650 20 E2 94                  ..
+        lda     #$10                            ; 9653 A9 10                    ..
+        jsr     L948B                           ; 9655 20 8B 94                  ..
+        lda     $AD                             ; 9658 A5 AD                    ..
+        sec                                     ; 965A 38                       8
+        sbc     #$01                            ; 965B E9 01                    ..
+        sta     $AD                             ; 965D 85 AD                    ..
+        ldy     #$01                            ; 965F A0 01                    ..
         jsr     LFF30                           ; 9661 20 30 FF                  0.
         jsr     Bank04ScreenRefresh             ; 9664 20 A0 F3                  ..
         rts                                     ; 9667 60                       `
@@ -3084,7 +3079,6 @@ L9668:
 L9671:
         jsr     L94E2                           ; 9671 20 E2 94                  ..
         lda     $AD                             ; 9674 A5 AD                    ..
-L9676:
         clc                                     ; 9676 18                       .
         adc     #$10                            ; 9677 69 10                    i.
         sta     $AD                             ; 9679 85 AD                    ..
@@ -3810,7 +3804,6 @@ L9BCF:
         brk                                     ; 9BD5 00                       .
         brk                                     ; 9BD6 00                       .
         .byte   $7C                             ; 9BD7 7C                       |
-L9BD8:
         cpy     #$78                            ; 9BD8 C0 78                    .x
         .byte   $0C                             ; 9BDA 0C                       .
         sed                                     ; 9BDB F8                       .
@@ -3844,63 +3837,21 @@ L9C03           := * + 2
 
 ; ----------------------------------------------------------------------------
 L9C08:
-        .byte   $03                             ; 9C08 03                       .
-        asl     $603C                           ; 9C09 0E 3C 60                 .<`
-        cpy     #$C0                            ; 9C0C C0 C0                    ..
-        .byte   $80                             ; 9C0E 80                       .
-        .byte   $80                             ; 9C0F 80                       .
-        brk                                     ; 9C10 00                       .
-        .byte   $03                             ; 9C11 03                       .
-        .byte   $0F                             ; 9C12 0F                       .
-        .byte   $3F                             ; 9C13 3F                       ?
-        .byte   $7F                             ; 9C14 7F                       .
-        .byte   $7F                             ; 9C15 7F                       .
-        .byte   $7F                             ; 9C16 7F                       .
-        .byte   $7F                             ; 9C17 7F                       .
-        .byte   $80                             ; 9C18 80                       .
-        .byte   $FF                             ; 9C19 FF                       .
-        ora     ($01,x)                         ; 9C1A 01 01                    ..
-        .byte   $43                             ; 9C1C 43                       C
-        .byte   $7C                             ; 9C1D 7C                       |
-        bmi     L9BD8                           ; 9C1E 30 B8                    0.
-        brk                                     ; 9C20 00                       .
-        .byte   $80                             ; 9C21 80                       .
-        inc     LFCFE,x                         ; 9C22 FE FE FC                 ...
-        cpx     #$E0                            ; 9C25 E0 E0                    ..
-        cpx     #$92                            ; 9C27 E0 92                    ..
-        .byte   $DF                             ; 9C29 DF                       .
-        .byte   $7F                             ; 9C2A 7F                       .
-        .byte   $3F                             ; 9C2B 3F                       ?
-        .byte   $1F                             ; 9C2C 1F                       .
-        .byte   $3F                             ; 9C2D 3F                       ?
-        .byte   $3F                             ; 9C2E 3F                       ?
-        .byte   $1F                             ; 9C2F 1F                       .
-        .byte   $7F                             ; 9C30 7F                       .
-        .byte   $7F                             ; 9C31 7F                       .
-        rol     $1906,x                         ; 9C32 3E 06 19                 >..
-        .byte   $3F                             ; 9C35 3F                       ?
-        .byte   $3F                             ; 9C36 3F                       ?
-        .byte   $1F                             ; 9C37 1F                       .
-        .byte   $3C                             ; 9C38 3C                       <
-        .byte   $FC                             ; 9C39 FC                       .
-        .byte   $FC                             ; 9C3A FC                       .
-        cpy     #$F0                            ; 9C3B C0 F0                    ..
-        inc     LC0FF,x                         ; 9C3D FE FF C0                 ...
-        inx                                     ; 9C40 E8                       .
-        cld                                     ; 9C41 D8                       .
-        rti                                     ; 9C42 40                       @
-
+        .byte   $03,$0E,$3C,$60,$C0,$C0,$80,$80 ; 9C08 03 0E 3C 60 C0 C0 80 80  ..<`....
+        .byte   $00,$03,$0F,$3F,$7F,$7F,$7F,$7F ; 9C10 00 03 0F 3F 7F 7F 7F 7F  ...?....
+        .byte   $80,$FF,$01,$01,$43,$7C,$30,$B8 ; 9C18 80 FF 01 01 43 7C 30 B8  ....C|0.
+        .byte   $00,$80,$FE,$FE,$FC,$E0,$E0,$E0 ; 9C20 00 80 FE FE FC E0 E0 E0  ........
+        .byte   $92,$DF,$7F,$3F,$1F,$3F,$3F,$1F ; 9C28 92 DF 7F 3F 1F 3F 3F 1F  ...?.??.
+        .byte   $7F,$7F,$3E,$06,$19,$3F,$3F,$1F ; 9C30 7F 7F 3E 06 19 3F 3F 1F  ..>..??.
+        .byte   $3C,$FC,$FC,$C0,$F0,$FE,$FF,$C0 ; 9C38 3C FC FC C0 F0 FE FF C0  <.......
+        .byte   $E8,$D8,$40,$00,$F0,$FE,$FF,$C0 ; 9C40 E8 D8 40 00 F0 FE FF C0  ..@.....
 ; ----------------------------------------------------------------------------
-        brk                                     ; 9C43 00                       .
-L9C44:
-        beq     L9C44                           ; 9C44 F0 FE                    ..
-        .byte   $FF                             ; 9C46 FF                       .
-L9C48           := * + 1
-        cpy     #$A0                            ; 9C47 C0 A0                    ..
-        ora     ($D0,x)                         ; 9C49 01 D0                    ..
-        .byte   $02                             ; 9C4B 02                       .
+L9C48:
+        ldy     #$01                            ; 9C48 A0 01                    ..
+        bne     L9C4E                           ; 9C4A D0 02                    ..
 L9C4C:
         ldy     #$03                            ; 9C4C A0 03                    ..
+L9C4E:
         pha                                     ; 9C4E 48                       H
         lda     $AD                             ; 9C4F A5 AD                    ..
         sta     $9A                             ; 9C51 85 9A                    ..
@@ -4389,9 +4340,8 @@ L9F95:
 
 ; ----------------------------------------------------------------------------
 L9FB1:
-        bcs     L9FEB                           ; 9FB1 B0 38                    .8
-        cpy     #$58                            ; 9FB3 C0 58                    .X
-        bne     LA02F                           ; 9FB5 D0 78                    .x
+        .byte   $B0,$38,$C0,$58,$D0,$78         ; 9FB1 B0 38 C0 58 D0 78        .8.X.x
+; ----------------------------------------------------------------------------
 L9FB7:
         lda     $6FC0                           ; 9FB7 AD C0 6F                 ..o
         pha                                     ; 9FBA 48                       H
@@ -4420,7 +4370,6 @@ L9FC9:
         lda     (L0002),y                       ; 9FE4 B1 02                    ..
         sta     $6FD9                           ; 9FE6 8D D9 6F                 ..o
         iny                                     ; 9FE9 C8                       .
-L9FEB           := * + 1
         lda     (L0002),y                       ; 9FEA B1 02                    ..
         sta     $6FDA                           ; 9FEC 8D DA 6F                 ..o
         jsr     LA01A                           ; 9FEF 20 1A A0                  ..
@@ -4457,7 +4406,6 @@ LA01A:
 LA02A:
         lda     $6FCB                           ; A02A AD CB 6F                 ..o
         cmp     #$32                            ; A02D C9 32                    .2
-LA02F:
         bcs     LA037                           ; A02F B0 06                    ..
         pha                                     ; A031 48                       H
         lda     #$32                            ; A032 A9 32                    .2
@@ -8624,7 +8572,6 @@ LC0F9:
         lda     $6F1E                           ; C0F9 AD 1E 6F                 ..o
         clc                                     ; C0FC 18                       .
         adc     #$01                            ; C0FD 69 01                    i.
-LC0FF:
         cmp     $603B                           ; C0FF CD 3B 60                 .;`
         bcc     LC0D4                           ; C102 90 D0                    ..
         ldx     #$05                            ; C104 A2 05                    ..
@@ -12942,7 +12889,6 @@ LE211:
         lda     #$03                            ; E219 A9 03                    ..
         sta     $0619                           ; E21B 8D 19 06                 ...
         lda     #$01                            ; E21E A9 01                    ..
-LE220:
         sta     $0A                             ; E220 85 0A                    ..
         lda     #$D0                            ; E222 A9 D0                    ..
         sta     $09                             ; E224 85 09                    ..
@@ -13819,7 +13765,6 @@ LE919:
         jsr     L0140                           ; E932 20 40 01                  @.
         sta     $03                             ; E935 85 03                    ..
         pla                                     ; E937 68                       h
-LE938:
         sta     L0002                           ; E938 85 02                    ..
         ldx     $6F1E                           ; E93A AE 1E 6F                 ..o
         lda     $603C,x                         ; E93D BD 3C 60                 .<`
@@ -15377,7 +15322,6 @@ LFCEA:
         sta     $0109                           ; FCF4 8D 09 01                 ...
         jsr     LFCEA                           ; FCF7 20 EA FC                  ..
         lda     #$04                            ; FCFA A9 04                    ..
-LFCFE           := * + 2
         sta     $0119                           ; FCFC 8D 19 01                 ...
         sta     $0109                           ; FCFF 8D 09 01                 ...
         lda     #$04                            ; FD02 A9 04                    ..

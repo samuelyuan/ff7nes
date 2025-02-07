@@ -1512,7 +1512,7 @@ L8905:
 Bank00ScriptOpcodeTable:
         .addr   L88EC                           ; 8919 EC 88                    ..
         .addr   L8999                           ; 891B 99 89                    ..
-        .addr   L8A35                           ; 891D 35 8A                    5.
+        .addr   Bank00ScriptOpcode02_CheckSceneFlag; 891D 35 8A                 5.
         .addr   Bank00ScriptOpcode03_CheckSceneFlag; 891F 44 8A                 D.
         .addr   Bank00ScriptOpcode04_ShowDialogIdList; 8921 53 8A               S.
         .addr   Bank00ScriptOpcode05_ChangeMap  ; 8923 7D 8A                    }.
@@ -1543,14 +1543,14 @@ Bank00ScriptOpcodeTable:
         .addr   L8F74                           ; 8955 74 8F                    t.
         .addr   L8F8C                           ; 8957 8C 8F                    ..
         .addr   L8F4F                           ; 8959 4F 8F                    O.
-        .addr   L8F98                           ; 895B 98 8F                    ..
-        .addr   L9002                           ; 895D 02 90                    ..
+        .addr   Bank00ScriptOpcode21_AddGil     ; 895B 98 8F                    ..
+        .addr   Bank00ScriptOpcode22_NoOp       ; 895D 02 90                    ..
         .addr   L9007                           ; 895F 07 90                    ..
         .addr   Bank00ScriptOpcode24_SubtractGil; 8961 C7 8F                    ..
         .addr   L9068                           ; 8963 68 90                    h.
         .addr   L902A                           ; 8965 2A 90                    *.
         .addr   L9081                           ; 8967 81 90                    ..
-        .addr   L914B                           ; 8969 4B 91                    K.
+        .addr   Bank00ScriptOpcode28_SetCutsceneBitAndStartDialogue; 8969 4B 91 K.
         .addr   Bank00ScriptOpcode29_ShowDialogBlock; 896B 89 91                ..
         .addr   L91B2                           ; 896D B2 91                    ..
         .addr   L9201                           ; 896F 01 92                    ..
@@ -1670,7 +1670,7 @@ L8A34:
         rts                                     ; 8A34 60                       `
 
 ; ----------------------------------------------------------------------------
-L8A35:
+Bank00ScriptOpcode02_CheckSceneFlag:
         ldy     #$01                            ; 8A35 A0 01                    ..
         lda     ($A7),y                         ; 8A37 B1 A7                    ..
         jsr     Bank00CheckCutsceneFlagBit      ; 8A39 20 00 D1                  ..
@@ -2584,7 +2584,7 @@ L8F8C:
         jmp     Bank00LoadNextScriptOpcode      ; 8F95 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L8F98:
+Bank00ScriptOpcode21_AddGil:
         ldy     #$01                            ; 8F98 A0 01                    ..
         lda     ($A7),y                         ; 8F9A B1 A7                    ..
         clc                                     ; 8F9C 18                       .
@@ -2638,7 +2638,7 @@ Bank00ScriptOpcode24GilGreaterThanZero:
         jmp     Bank00LoadNextScriptOpcode      ; 8FFF 4C D9 88                 L..
 
 ; ----------------------------------------------------------------------------
-L9002:
+Bank00ScriptOpcode22_NoOp:
         lda     #$03                            ; 9002 A9 03                    ..
         jmp     Bank00LoadNextScriptOpcode      ; 9004 4C D9 88                 L..
 
@@ -2841,7 +2841,7 @@ L913F:
         .byte   $01,$01,$01,$04,$04,$04,$08,$08 ; 913F 01 01 01 04 04 04 08 08  ........
         .byte   $08,$02,$02,$02                 ; 9147 08 02 02 02              ....
 ; ----------------------------------------------------------------------------
-L914B:
+Bank00ScriptOpcode28_SetCutsceneBitAndStartDialogue:
         ldy     #$01                            ; 914B A0 01                    ..
         lda     ($A7),y                         ; 914D B1 A7                    ..
         jsr     Bank00CheckCutsceneFlagBit      ; 914F 20 00 D1                  ..
@@ -3060,7 +3060,7 @@ L9289:
 L9297:
         stx     $8E                             ; 9297 86 8E                    ..
         jsr     Bank00RestorePartyMemberHealth  ; 9299 20 34 94                  4.
-        jsr     L9445                           ; 929C 20 45 94                  E.
+        jsr     Bank00RestorePartyMemberMagic   ; 929C 20 45 94                  E.
         jsr     L941A                           ; 929F 20 1A 94                  ..
         lda     $603B                           ; 92A2 AD 3B 60                 .;`
         clc                                     ; 92A5 18                       .
@@ -3337,7 +3337,7 @@ Bank00RestorePartyMemberHealth:
         rts                                     ; 9444 60                       `
 
 ; ----------------------------------------------------------------------------
-L9445:
+Bank00RestorePartyMemberMagic:
         lda     $603C,x                         ; 9445 BD 3C 60                 .<`
         tay                                     ; 9448 A8                       .
         lda     $607B,y                         ; 9449 B9 7B 60                 .{`
@@ -3356,7 +3356,7 @@ L9445:
         adc     $8D                             ; 945E 65 8D                    e.
         tay                                     ; 9460 A8                       .
 L9461:
-        lda     MateriaCountLimit,y             ; 9461 B9 6D 94                 .m.
+        lda     Bank00PartyMemberMaxMateriaCount,y; 9461 B9 6D 94               .m.
         sta     $643A,y                         ; 9464 99 3A 64                 .:d
         iny                                     ; 9467 C8                       .
         dec     $9C                             ; 9468 C6 9C                    ..
@@ -3365,7 +3365,7 @@ L946C:
         rts                                     ; 946C 60                       `
 
 ; ----------------------------------------------------------------------------
-MateriaCountLimit:
+Bank00PartyMemberMaxMateriaCount:
         .byte   $0A,$06,$08,$05,$07,$04,$05,$03 ; 946D 0A 06 08 05 07 04 05 03  ........
         .byte   $02,$0A,$06,$08,$07,$07,$04,$05 ; 9475 02 0A 06 08 07 07 04 05  ........
         .byte   $05,$02,$0A,$06,$08,$05,$07,$04 ; 947D 05 02 0A 06 08 05 07 04  ........
@@ -3795,12 +3795,24 @@ L9724:
 
 ; ----------------------------------------------------------------------------
 L9725:
-        .byte   $A9,$35,$20,$7D,$9F,$A9,$36,$20 ; 9725 A9 35 20 7D 9F A9 36 20  .5 }..6 
-        .byte   $7D,$9F,$A9,$37,$20,$7D,$9F,$A9 ; 972D 7D 9F A9 37 20 7D 9F A9  }..7 }..
-        .byte   $38,$20,$7D,$9F,$A9,$39,$20,$7D ; 9735 38 20 7D 9F A9 39 20 7D  8 }..9 }
-        .byte   $9F,$A9,$3A,$20,$7D,$9F,$A9,$3B ; 973D 9F A9 3A 20 7D 9F A9 3B  ..: }..;
-        .byte   $20,$7D,$9F,$A9,$12,$20,$81,$9F ; 9745 20 7D 9F A9 12 20 81 9F   }... ..
-        .byte   $60                             ; 974D 60                       `
+        lda     #$35                            ; 9725 A9 35                    .5
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9727 20 7D 9F                 }.
+        lda     #$36                            ; 972A A9 36                    .6
+        jsr     Bank00LoadBackgroundSceneIdTable1; 972C 20 7D 9F                 }.
+        lda     #$37                            ; 972F A9 37                    .7
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9731 20 7D 9F                 }.
+        lda     #$38                            ; 9734 A9 38                    .8
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9736 20 7D 9F                 }.
+        lda     #$39                            ; 9739 A9 39                    .9
+        jsr     Bank00LoadBackgroundSceneIdTable1; 973B 20 7D 9F                 }.
+        lda     #$3A                            ; 973E A9 3A                    .:
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9740 20 7D 9F                 }.
+        lda     #$3B                            ; 9743 A9 3B                    .;
+        jsr     Bank00LoadBackgroundSceneIdTable1; 9745 20 7D 9F                 }.
+        lda     #$12                            ; 9748 A9 12                    ..
+        jsr     Bank00LoadBackgroundSceneIdTable3; 974A 20 81 9F                 ..
+        rts                                     ; 974D 60                       `
+
 ; ----------------------------------------------------------------------------
 L974E:
         lda     #$00                            ; 974E A9 00                    ..
@@ -5611,10 +5623,10 @@ LA423:
         .byte   $03,$3D,$01,$02,$01,$F0,$00,$C0 ; A423 03 3D 01 02 01 F0 00 C0  .=......
         .byte   $00,$08,$06,$40,$00,$04,$00,$64 ; A42B 00 08 06 40 00 04 00 64  ...@...d
         .byte   $FF,$08,$00,$20,$01,$FF         ; A433 FF 08 00 20 01 FF        ... ..
-LA439:
+Scene7thHeavenCloudTalksToWedge:
         .byte   $10,$06,$0D,$28,$12,$00,$03,$70 ; A439 10 06 0D 28 12 00 03 70  ...(...p
         .byte   $72,$FF                         ; A441 72 FF                    r.
-LA443:
+Scene7thHeavenCloudTalksToBiggs:
         .byte   $10,$04,$0D,$28,$13,$00,$03,$74 ; A443 10 04 0D 28 13 00 03 74  ...(...t
         .byte   $FD,$FF                         ; A44B FD FF                    ..
 SceneBarretEnters7thHeaven:
@@ -7250,8 +7262,8 @@ Bank00SceneScriptTablePart1:
         .addr   LA414                           ; CC73 14 A4                    ..
         .addr   LA41E                           ; CC75 1E A4                    ..
         .addr   LA423                           ; CC77 23 A4                    #.
-        .addr   LA439                           ; CC79 39 A4                    9.
-        .addr   LA443                           ; CC7B 43 A4                    C.
+        .addr   Scene7thHeavenCloudTalksToWedge ; CC79 39 A4                    9.
+        .addr   Scene7thHeavenCloudTalksToBiggs ; CC7B 43 A4                    C.
         .addr   SceneBarretEnters7thHeaven      ; CC7D 4D A4                    M.
         .addr   LA544                           ; CC7F 44 A5                    D.
         .addr   LA558                           ; CC81 58 A5                    X.
@@ -8449,7 +8461,7 @@ LD49D:
 LD4B3:
         lda     #$01                            ; D4B3 A9 01                    ..
         sta     $637D,y                         ; D4B5 99 7D 63                 .}c
-        lda     MateriaCountLimit,y             ; D4B8 B9 6D 94                 .m.
+        lda     Bank00PartyMemberMaxMateriaCount,y; D4B8 B9 6D 94               .m.
         sta     $643A,y                         ; D4BB 99 3A 64                 .:d
         iny                                     ; D4BE C8                       .
         dec     $9C                             ; D4BF C6 9C                    ..
@@ -10025,11 +10037,11 @@ LE035:
         inx                                     ; E038 E8                       .
         cpx     $603B                           ; E039 EC 3B 60                 .;`
         bcc     LE035                           ; E03C 90 F7                    ..
-        jsr     LE042                           ; E03E 20 42 E0                  B.
+        jsr     InnStayRestoreUnitMagic         ; E03E 20 42 E0                  B.
         rts                                     ; E041 60                       `
 
 ; ----------------------------------------------------------------------------
-LE042:
+InnStayRestoreUnitMagic:
         ldx     #$00                            ; E042 A2 00                    ..
 LE044:
         lda     $6368,x                         ; E044 BD 68 63                 .hc
@@ -10045,7 +10057,7 @@ LE044:
         adc     $8D                             ; E054 65 8D                    e.
         tay                                     ; E056 A8                       .
 LE057:
-        lda     MateriaCountLimit,y             ; E057 B9 6D 94                 .m.
+        lda     Bank00PartyMemberMaxMateriaCount,y; E057 B9 6D 94               .m.
         sta     $643A,y                         ; E05A 99 3A 64                 .:d
         iny                                     ; E05D C8                       .
         dec     $9C                             ; E05E C6 9C                    ..

@@ -2071,7 +2071,7 @@ L8C55:
 Bank02ScriptOpcodeTable:
         .addr   L8C3C                           ; 8C69 3C 8C                    <.
         .addr   L8CE9                           ; 8C6B E9 8C                    ..
-        .addr   Bank02ScriptOpcode02            ; 8C6D 85 8D                    ..
+        .addr   Bank02ScriptOpcode02_CheckSceneFlag; 8C6D 85 8D                 ..
         .addr   Bank02ScriptOpcode03_CheckSceneFlag; 8C6F 94 8D                 ..
         .addr   Bank02ScriptOpcode04_ShowDialogIdList; 8C71 A3 8D               ..
         .addr   Bank02ScriptOpcode05_ChangeMap  ; 8C73 CD 8D                    ..
@@ -2100,7 +2100,7 @@ Bank02ScriptOpcodeTable:
         .addr   Bank02ScriptOpcode1c_SetPartyMember; 8CA1 AE 92                 ..
         .addr   L92BA                           ; 8CA3 BA 92                    ..
         .addr   L92C4                           ; 8CA5 C4 92                    ..
-        .addr   L92DC                           ; 8CA7 DC 92                    ..
+        .addr   Bank02ScriptOpcode1f_HealParty  ; 8CA7 DC 92                    ..
         .addr   L929F                           ; 8CA9 9F 92                    ..
         .addr   L92E8                           ; 8CAB E8 92                    ..
         .addr   L9352                           ; 8CAD 52 93                    R.
@@ -2229,7 +2229,7 @@ L8D84:
         rts                                     ; 8D84 60                       `
 
 ; ----------------------------------------------------------------------------
-Bank02ScriptOpcode02:
+Bank02ScriptOpcode02_CheckSceneFlag:
         ldy     #$01                            ; 8D85 A0 01                    ..
         lda     ($A7),y                         ; 8D87 B1 A7                    ..
         jsr     Bank02CheckCutsceneFlagBit      ; 8D89 20 0C E0                  ..
@@ -3107,7 +3107,7 @@ L929F:
 Bank02ScriptOpcode1c_SetPartyMember:
         ldy     #$01                            ; 92AE A0 01                    ..
         lda     ($A7),y                         ; 92B0 B1 A7                    ..
-        jsr     L95A4                           ; 92B2 20 A4 95                  ..
+        jsr     Bank02AddPartyMember            ; 92B2 20 A4 95                  ..
         lda     #$03                            ; 92B5 A9 03                    ..
         jmp     Bank02LoadNextScriptOpcode      ; 92B7 4C 29 8C                 L).
 
@@ -3133,7 +3133,7 @@ L92C4:
         jmp     Bank02LoadNextScriptOpcode      ; 92D9 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-L92DC:
+Bank02ScriptOpcode1f_HealParty:
         ldy     #$01                            ; 92DC A0 01                    ..
         lda     ($A7),y                         ; 92DE B1 A7                    ..
         jsr     L95CD                           ; 92E0 20 CD 95                  ..
@@ -3569,14 +3569,14 @@ L959C:
         jmp     Bank02LoadNextScriptOpcode      ; 95A1 4C 29 8C                 L).
 
 ; ----------------------------------------------------------------------------
-L95A4:
+Bank02AddPartyMember:
         ldx     #$00                            ; 95A4 A2 00                    ..
-L95A6:
+Bank02FindPartyMemberIndexLoop:
         cmp     $603C,x                         ; 95A6 DD 3C 60                 .<`
         beq     L95B1                           ; 95A9 F0 06                    ..
         inx                                     ; 95AB E8                       .
         cpx     #$07                            ; 95AC E0 07                    ..
-        bne     L95A6                           ; 95AE D0 F6                    ..
+        bne     Bank02FindPartyMemberIndexLoop  ; 95AE D0 F6                    ..
         rts                                     ; 95B0 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -3620,7 +3620,7 @@ L95D9:
 L95E7:
         stx     $8E                             ; 95E7 86 8E                    ..
         jsr     Bank02RestorePartyMemberHealth  ; 95E9 20 84 97                  ..
-        jsr     L9795                           ; 95EC 20 95 97                  ..
+        jsr     Bank02RestorePartyMemberMagic   ; 95EC 20 95 97                  ..
         jsr     L976A                           ; 95EF 20 6A 97                  j.
         lda     $603B                           ; 95F2 AD 3B 60                 .;`
         clc                                     ; 95F5 18                       .
@@ -3897,7 +3897,7 @@ Bank02RestorePartyMemberHealth:
         rts                                     ; 9794 60                       `
 
 ; ----------------------------------------------------------------------------
-L9795:
+Bank02RestorePartyMemberMagic:
         lda     $603C,x                         ; 9795 BD 3C 60                 .<`
         tay                                     ; 9798 A8                       .
         lda     $607B,y                         ; 9799 B9 7B 60                 .{`
@@ -3916,7 +3916,7 @@ L9795:
         adc     $8D                             ; 97AE 65 8D                    e.
         tay                                     ; 97B0 A8                       .
 L97B1:
-        lda     L97BD,y                         ; 97B1 B9 BD 97                 ...
+        lda     Bank02PartyMemberMaxMateriaCount,y; 97B1 B9 BD 97               ...
         sta     $643A,y                         ; 97B4 99 3A 64                 .:d
         iny                                     ; 97B7 C8                       .
         dec     $9C                             ; 97B8 C6 9C                    ..
@@ -3925,52 +3925,16 @@ L97BC:
         rts                                     ; 97BC 60                       `
 
 ; ----------------------------------------------------------------------------
-L97BD:
-        asl     a                               ; 97BD 0A                       .
-        asl     $08                             ; 97BE 06 08                    ..
-        ora     $07                             ; 97C0 05 07                    ..
-        .byte   $04                             ; 97C2 04                       .
-        ora     $03                             ; 97C3 05 03                    ..
-        .byte   $02                             ; 97C5 02                       .
-        asl     a                               ; 97C6 0A                       .
-        asl     $08                             ; 97C7 06 08                    ..
-        .byte   $07                             ; 97C9 07                       .
-        .byte   $07                             ; 97CA 07                       .
-        .byte   $04                             ; 97CB 04                       .
-        ora     $05                             ; 97CC 05 05                    ..
-        .byte   $02                             ; 97CE 02                       .
-        asl     a                               ; 97CF 0A                       .
-        asl     $08                             ; 97D0 06 08                    ..
-        ora     $07                             ; 97D2 05 07                    ..
-        .byte   $04                             ; 97D4 04                       .
-        ora     $03                             ; 97D5 05 03                    ..
-        .byte   $02                             ; 97D7 02                       .
-        asl     a                               ; 97D8 0A                       .
-        asl     $08                             ; 97D9 06 08                    ..
-        .byte   $07                             ; 97DB 07                       .
-        .byte   $07                             ; 97DC 07                       .
-        .byte   $04                             ; 97DD 04                       .
-        ora     $05                             ; 97DE 05 05                    ..
-        .byte   $02                             ; 97E0 02                       .
-        asl     a                               ; 97E1 0A                       .
-        asl     $08                             ; 97E2 06 08                    ..
-        ora     $07                             ; 97E4 05 07                    ..
-        .byte   $04                             ; 97E6 04                       .
-        ora     $03                             ; 97E7 05 03                    ..
-        .byte   $02                             ; 97E9 02                       .
-        .byte   $0F                             ; 97EA 0F                       .
-        asl     $0A                             ; 97EB 06 0A                    ..
-        .byte   $07                             ; 97ED 07                       .
-        asl     a                               ; 97EE 0A                       .
-        .byte   $04                             ; 97EF 04                       .
-        .byte   $07                             ; 97F0 07                       .
-        ora     L0002                           ; 97F1 05 02                    ..
-        asl     a                               ; 97F3 0A                       .
-        asl     $08                             ; 97F4 06 08                    ..
-        ora     $07                             ; 97F6 05 07                    ..
-        .byte   $04                             ; 97F8 04                       .
-        ora     $03                             ; 97F9 05 03                    ..
-        .byte   $02                             ; 97FB 02                       .
+Bank02PartyMemberMaxMateriaCount:
+        .byte   $0A,$06,$08,$05,$07,$04,$05,$03 ; 97BD 0A 06 08 05 07 04 05 03  ........
+        .byte   $02,$0A,$06,$08,$07,$07,$04,$05 ; 97C5 02 0A 06 08 07 07 04 05  ........
+        .byte   $05,$02,$0A,$06,$08,$05,$07,$04 ; 97CD 05 02 0A 06 08 05 07 04  ........
+        .byte   $05,$03,$02,$0A,$06,$08,$07,$07 ; 97D5 05 03 02 0A 06 08 07 07  ........
+        .byte   $04,$05,$05,$02,$0A,$06,$08,$05 ; 97DD 04 05 05 02 0A 06 08 05  ........
+        .byte   $07,$04,$05,$03,$02,$0F,$06,$0A ; 97E5 07 04 05 03 02 0F 06 0A  ........
+        .byte   $07,$0A,$04,$07,$05,$02,$0A,$06 ; 97ED 07 0A 04 07 05 02 0A 06  ........
+        .byte   $08,$05,$07,$04,$05,$03,$02     ; 97F5 08 05 07 04 05 03 02     .......
+; ----------------------------------------------------------------------------
 L97FC:
         lda     $D5                             ; 97FC A5 D5                    ..
         beq     L9801                           ; 97FE F0 01                    ..
@@ -10069,316 +10033,56 @@ LE13E:
 LE149:
         .byte   $57                             ; E149 57                       W
 LE14A:
-        sbc     ($57,x)                         ; E14A E1 57                    .W
-        sbc     ($77,x)                         ; E14C E1 77                    .w
-        sbc     ($97,x)                         ; E14E E1 97                    ..
-        sbc     ($B7,x)                         ; E150 E1 B7                    ..
-        sbc     ($D7,x)                         ; E152 E1 D7                    ..
-        sbc     ($F7,x)                         ; E154 E1 F7                    ..
-        sbc     ($01,x)                         ; E156 E1 01                    ..
-        .byte   $02                             ; E158 02                       .
-        .byte   $03                             ; E159 03                       .
-        .byte   $04                             ; E15A 04                       .
-        ora     $06                             ; E15B 05 06                    ..
-        .byte   $07                             ; E15D 07                       .
-        php                                     ; E15E 08                       .
-        ora     #$0A                            ; E15F 09 0A                    ..
-        .byte   $0B                             ; E161 0B                       .
-        .byte   $0C                             ; E162 0C                       .
-        ora     $0F0E                           ; E163 0D 0E 0F                 ...
-        bpl     LE16C                           ; E166 10 04                    ..
-        .byte   $03                             ; E168 03                       .
-        .byte   $02                             ; E169 02                       .
-        ora     ($08,x)                         ; E16A 01 08                    ..
-LE16C:
-        .byte   $07                             ; E16C 07                       .
-        asl     $05                             ; E16D 06 05                    ..
-        .byte   $0C                             ; E16F 0C                       .
-        .byte   $0B                             ; E170 0B                       .
-        asl     a                               ; E171 0A                       .
-        ora     #$10                            ; E172 09 10                    ..
-        .byte   $0F                             ; E174 0F                       .
-        asl     $010D                           ; E175 0E 0D 01                 ...
-        .byte   $02                             ; E178 02                       .
-        .byte   $03                             ; E179 03                       .
-        .byte   $04                             ; E17A 04                       .
-        ora     $06                             ; E17B 05 06                    ..
-        .byte   $07                             ; E17D 07                       .
-        php                                     ; E17E 08                       .
-        ora     #$0A                            ; E17F 09 0A                    ..
-        .byte   $0B                             ; E181 0B                       .
-        .byte   $0C                             ; E182 0C                       .
-        ora     $0F0E                           ; E183 0D 0E 0F                 ...
-        bpl     LE18C                           ; E186 10 04                    ..
-        .byte   $03                             ; E188 03                       .
-        .byte   $02                             ; E189 02                       .
-        ora     ($08,x)                         ; E18A 01 08                    ..
-LE18C:
-        .byte   $07                             ; E18C 07                       .
-        asl     $05                             ; E18D 06 05                    ..
-        .byte   $0C                             ; E18F 0C                       .
-        .byte   $0B                             ; E190 0B                       .
-        asl     a                               ; E191 0A                       .
-        ora     #$10                            ; E192 09 10                    ..
-        .byte   $0F                             ; E194 0F                       .
-        asl     $010D                           ; E195 0E 0D 01                 ...
-        .byte   $02                             ; E198 02                       .
-        .byte   $03                             ; E199 03                       .
-        .byte   $04                             ; E19A 04                       .
-        ora     $06                             ; E19B 05 06                    ..
-        .byte   $07                             ; E19D 07                       .
-        php                                     ; E19E 08                       .
-        ora     #$0A                            ; E19F 09 0A                    ..
-        .byte   $0B                             ; E1A1 0B                       .
-        .byte   $0C                             ; E1A2 0C                       .
-        ora     $0F0E                           ; E1A3 0D 0E 0F                 ...
-        bpl     LE1AA                           ; E1A6 10 02                    ..
-        ora     ($04,x)                         ; E1A8 01 04                    ..
-LE1AA:
-        .byte   $03                             ; E1AA 03                       .
-        asl     $05                             ; E1AB 06 05                    ..
-        php                                     ; E1AD 08                       .
-        .byte   $07                             ; E1AE 07                       .
-        asl     a                               ; E1AF 0A                       .
-        ora     #$0C                            ; E1B0 09 0C                    ..
-        .byte   $0B                             ; E1B2 0B                       .
-        asl     $100D                           ; E1B3 0E 0D 10                 ...
-        .byte   $0F                             ; E1B6 0F                       .
-        ora     (L0002,x)                       ; E1B7 01 02                    ..
-        .byte   $03                             ; E1B9 03                       .
-        .byte   $04                             ; E1BA 04                       .
-        ora     $06                             ; E1BB 05 06                    ..
-        .byte   $07                             ; E1BD 07                       .
-        php                                     ; E1BE 08                       .
-        ora     #$0A                            ; E1BF 09 0A                    ..
-        .byte   $0B                             ; E1C1 0B                       .
-        .byte   $0C                             ; E1C2 0C                       .
-        ora     $0F0E                           ; E1C3 0D 0E 0F                 ...
-        bpl     LE1CC                           ; E1C6 10 04                    ..
-        .byte   $03                             ; E1C8 03                       .
-        .byte   $02                             ; E1C9 02                       .
-        ora     ($08,x)                         ; E1CA 01 08                    ..
-LE1CC:
-        .byte   $07                             ; E1CC 07                       .
-        asl     $05                             ; E1CD 06 05                    ..
-        .byte   $0C                             ; E1CF 0C                       .
-        .byte   $0B                             ; E1D0 0B                       .
-        asl     a                               ; E1D1 0A                       .
-        ora     #$10                            ; E1D2 09 10                    ..
-        .byte   $0F                             ; E1D4 0F                       .
-        asl     $010D                           ; E1D5 0E 0D 01                 ...
-        .byte   $02                             ; E1D8 02                       .
-        .byte   $03                             ; E1D9 03                       .
-        .byte   $04                             ; E1DA 04                       .
-        ora     $06                             ; E1DB 05 06                    ..
-        .byte   $07                             ; E1DD 07                       .
-        php                                     ; E1DE 08                       .
-        ora     #$0A                            ; E1DF 09 0A                    ..
-        .byte   $0B                             ; E1E1 0B                       .
-        .byte   $0C                             ; E1E2 0C                       .
-        ora     $0F0E                           ; E1E3 0D 0E 0F                 ...
-        bpl     LE1EB                           ; E1E6 10 03                    ..
-        .byte   $04                             ; E1E8 04                       .
-        ora     (L0002,x)                       ; E1E9 01 02                    ..
-LE1EB:
-        .byte   $07                             ; E1EB 07                       .
-        php                                     ; E1EC 08                       .
-        ora     $06                             ; E1ED 05 06                    ..
-        .byte   $0B                             ; E1EF 0B                       .
-        .byte   $0C                             ; E1F0 0C                       .
-        ora     #$0A                            ; E1F1 09 0A                    ..
-        .byte   $0F                             ; E1F3 0F                       .
-        bpl     LE203                           ; E1F4 10 0D                    ..
-        asl     $0201                           ; E1F6 0E 01 02                 ...
-        .byte   $03                             ; E1F9 03                       .
-        .byte   $04                             ; E1FA 04                       .
-        ora     $06                             ; E1FB 05 06                    ..
-        .byte   $07                             ; E1FD 07                       .
-        php                                     ; E1FE 08                       .
-        ora     #$0A                            ; E1FF 09 0A                    ..
-        .byte   $0B                             ; E201 0B                       .
-        .byte   $0C                             ; E202 0C                       .
-LE203:
-        ora     $0F0E                           ; E203 0D 0E 0F                 ...
-        bpl     LE215                           ; E206 10 0D                    ..
-        asl     $100F                           ; E208 0E 0F 10                 ...
-        ora     #$0A                            ; E20B 09 0A                    ..
-        .byte   $0B                             ; E20D 0B                       .
-        .byte   $0C                             ; E20E 0C                       .
-        ora     $06                             ; E20F 05 06                    ..
-        .byte   $07                             ; E211 07                       .
-        php                                     ; E212 08                       .
-        ora     (L0002,x)                       ; E213 01 02                    ..
-LE215:
-        .byte   $03                             ; E215 03                       .
-        .byte   $04                             ; E216 04                       .
+        .byte   $E1,$57,$E1,$77,$E1,$97,$E1,$B7 ; E14A E1 57 E1 77 E1 97 E1 B7  .W.w....
+        .byte   $E1,$D7,$E1,$F7,$E1,$01,$02,$03 ; E152 E1 D7 E1 F7 E1 01 02 03  ........
+        .byte   $04,$05,$06,$07,$08,$09,$0A,$0B ; E15A 04 05 06 07 08 09 0A 0B  ........
+        .byte   $0C,$0D,$0E,$0F,$10,$04,$03,$02 ; E162 0C 0D 0E 0F 10 04 03 02  ........
+        .byte   $01,$08,$07,$06,$05,$0C,$0B,$0A ; E16A 01 08 07 06 05 0C 0B 0A  ........
+        .byte   $09,$10,$0F,$0E,$0D,$01,$02,$03 ; E172 09 10 0F 0E 0D 01 02 03  ........
+        .byte   $04,$05,$06,$07,$08,$09,$0A,$0B ; E17A 04 05 06 07 08 09 0A 0B  ........
+        .byte   $0C,$0D,$0E,$0F,$10,$04,$03,$02 ; E182 0C 0D 0E 0F 10 04 03 02  ........
+        .byte   $01,$08,$07,$06,$05,$0C,$0B,$0A ; E18A 01 08 07 06 05 0C 0B 0A  ........
+        .byte   $09,$10,$0F,$0E,$0D,$01,$02,$03 ; E192 09 10 0F 0E 0D 01 02 03  ........
+        .byte   $04,$05,$06,$07,$08,$09,$0A,$0B ; E19A 04 05 06 07 08 09 0A 0B  ........
+        .byte   $0C,$0D,$0E,$0F,$10,$02,$01,$04 ; E1A2 0C 0D 0E 0F 10 02 01 04  ........
+        .byte   $03,$06,$05,$08,$07,$0A,$09,$0C ; E1AA 03 06 05 08 07 0A 09 0C  ........
+        .byte   $0B,$0E,$0D,$10,$0F,$01,$02,$03 ; E1B2 0B 0E 0D 10 0F 01 02 03  ........
+        .byte   $04,$05,$06,$07,$08,$09,$0A,$0B ; E1BA 04 05 06 07 08 09 0A 0B  ........
+        .byte   $0C,$0D,$0E,$0F,$10,$04,$03,$02 ; E1C2 0C 0D 0E 0F 10 04 03 02  ........
+        .byte   $01,$08,$07,$06,$05,$0C,$0B,$0A ; E1CA 01 08 07 06 05 0C 0B 0A  ........
+        .byte   $09,$10,$0F,$0E,$0D,$01,$02,$03 ; E1D2 09 10 0F 0E 0D 01 02 03  ........
+        .byte   $04,$05,$06,$07,$08,$09,$0A,$0B ; E1DA 04 05 06 07 08 09 0A 0B  ........
+        .byte   $0C,$0D,$0E,$0F,$10,$03,$04,$01 ; E1E2 0C 0D 0E 0F 10 03 04 01  ........
+        .byte   $02,$07,$08,$05,$06,$0B,$0C,$09 ; E1EA 02 07 08 05 06 0B 0C 09  ........
+        .byte   $0A,$0F,$10,$0D,$0E,$01,$02,$03 ; E1F2 0A 0F 10 0D 0E 01 02 03  ........
+        .byte   $04,$05,$06,$07,$08,$09,$0A,$0B ; E1FA 04 05 06 07 08 09 0A 0B  ........
+        .byte   $0C,$0D,$0E,$0F,$10,$0D,$0E,$0F ; E202 0C 0D 0E 0F 10 0D 0E 0F  ........
+        .byte   $10,$09,$0A,$0B,$0C,$05,$06,$07 ; E20A 10 09 0A 0B 0C 05 06 07  ........
+        .byte   $08,$01,$02,$03,$04             ; E212 08 01 02 03 04           .....
 LE217:
-        asl     $00                             ; E217 06 00                    ..
-        ora     ($00,x)                         ; E219 01 00                    ..
-        brk                                     ; E21B 00                       .
-        brk                                     ; E21C 00                       .
-        brk                                     ; E21D 00                       .
-        brk                                     ; E21E 00                       .
-        brk                                     ; E21F 00                       .
-        brk                                     ; E220 00                       .
-        brk                                     ; E221 00                       .
-        .byte   $02                             ; E222 02                       .
-        .byte   $02                             ; E223 02                       .
-        brk                                     ; E224 00                       .
-        brk                                     ; E225 00                       .
-        brk                                     ; E226 00                       .
-        brk                                     ; E227 00                       .
-        brk                                     ; E228 00                       .
-        brk                                     ; E229 00                       .
-        brk                                     ; E22A 00                       .
-        brk                                     ; E22B 00                       .
-        brk                                     ; E22C 00                       .
-        brk                                     ; E22D 00                       .
-        .byte   $02                             ; E22E 02                       .
-        brk                                     ; E22F 00                       .
-        brk                                     ; E230 00                       .
-        brk                                     ; E231 00                       .
-        brk                                     ; E232 00                       .
-        brk                                     ; E233 00                       .
-        brk                                     ; E234 00                       .
-        brk                                     ; E235 00                       .
-        brk                                     ; E236 00                       .
-        brk                                     ; E237 00                       .
-        brk                                     ; E238 00                       .
-        brk                                     ; E239 00                       .
-        brk                                     ; E23A 00                       .
-        brk                                     ; E23B 00                       .
-        brk                                     ; E23C 00                       .
-        brk                                     ; E23D 00                       .
-        brk                                     ; E23E 00                       .
-        brk                                     ; E23F 00                       .
-        brk                                     ; E240 00                       .
-        brk                                     ; E241 00                       .
-        brk                                     ; E242 00                       .
-        brk                                     ; E243 00                       .
-        brk                                     ; E244 00                       .
-        brk                                     ; E245 00                       .
-        .byte   $02                             ; E246 02                       .
-        brk                                     ; E247 00                       .
-        brk                                     ; E248 00                       .
-        brk                                     ; E249 00                       .
-        .byte   $03                             ; E24A 03                       .
-        .byte   $04                             ; E24B 04                       .
-        brk                                     ; E24C 00                       .
-        brk                                     ; E24D 00                       .
-        brk                                     ; E24E 00                       .
-        brk                                     ; E24F 00                       .
-        brk                                     ; E250 00                       .
-        brk                                     ; E251 00                       .
-        brk                                     ; E252 00                       .
-        brk                                     ; E253 00                       .
-        brk                                     ; E254 00                       .
-        brk                                     ; E255 00                       .
-        brk                                     ; E256 00                       .
-        brk                                     ; E257 00                       .
-        brk                                     ; E258 00                       .
-        brk                                     ; E259 00                       .
-        brk                                     ; E25A 00                       .
-        brk                                     ; E25B 00                       .
-        brk                                     ; E25C 00                       .
-        ora     $00                             ; E25D 05 00                    ..
-        brk                                     ; E25F 00                       .
-        brk                                     ; E260 00                       .
-        brk                                     ; E261 00                       .
-        brk                                     ; E262 00                       .
-        brk                                     ; E263 00                       .
-        brk                                     ; E264 00                       .
-        brk                                     ; E265 00                       .
-        brk                                     ; E266 00                       .
-        brk                                     ; E267 00                       .
-        brk                                     ; E268 00                       .
-        brk                                     ; E269 00                       .
-        brk                                     ; E26A 00                       .
-        brk                                     ; E26B 00                       .
-        asl     $00                             ; E26C 06 00                    ..
-        brk                                     ; E26E 00                       .
-        brk                                     ; E26F 00                       .
-        brk                                     ; E270 00                       .
-        brk                                     ; E271 00                       .
-        brk                                     ; E272 00                       .
-        brk                                     ; E273 00                       .
-        brk                                     ; E274 00                       .
-        brk                                     ; E275 00                       .
-        brk                                     ; E276 00                       .
-        brk                                     ; E277 00                       .
-        brk                                     ; E278 00                       .
-        brk                                     ; E279 00                       .
-        brk                                     ; E27A 00                       .
-        brk                                     ; E27B 00                       .
-        brk                                     ; E27C 00                       .
-        brk                                     ; E27D 00                       .
-        brk                                     ; E27E 00                       .
-        brk                                     ; E27F 00                       .
-        brk                                     ; E280 00                       .
-        brk                                     ; E281 00                       .
-        brk                                     ; E282 00                       .
-        brk                                     ; E283 00                       .
-        brk                                     ; E284 00                       .
-        brk                                     ; E285 00                       .
-        brk                                     ; E286 00                       .
-        brk                                     ; E287 00                       .
-        brk                                     ; E288 00                       .
-        brk                                     ; E289 00                       .
-        brk                                     ; E28A 00                       .
-        brk                                     ; E28B 00                       .
-        brk                                     ; E28C 00                       .
-        brk                                     ; E28D 00                       .
-        brk                                     ; E28E 00                       .
-        brk                                     ; E28F 00                       .
-        brk                                     ; E290 00                       .
-        brk                                     ; E291 00                       .
-        brk                                     ; E292 00                       .
-        brk                                     ; E293 00                       .
-        brk                                     ; E294 00                       .
-        brk                                     ; E295 00                       .
-        brk                                     ; E296 00                       .
-        brk                                     ; E297 00                       .
-        brk                                     ; E298 00                       .
-        brk                                     ; E299 00                       .
-        brk                                     ; E29A 00                       .
-        brk                                     ; E29B 00                       .
-        brk                                     ; E29C 00                       .
-        brk                                     ; E29D 00                       .
-        brk                                     ; E29E 00                       .
-        brk                                     ; E29F 00                       .
-        brk                                     ; E2A0 00                       .
-        brk                                     ; E2A1 00                       .
-        brk                                     ; E2A2 00                       .
-        brk                                     ; E2A3 00                       .
-        brk                                     ; E2A4 00                       .
-        brk                                     ; E2A5 00                       .
-        brk                                     ; E2A6 00                       .
-        brk                                     ; E2A7 00                       .
-        brk                                     ; E2A8 00                       .
-        brk                                     ; E2A9 00                       .
-        brk                                     ; E2AA 00                       .
-        brk                                     ; E2AB 00                       .
-        brk                                     ; E2AC 00                       .
-        brk                                     ; E2AD 00                       .
-        brk                                     ; E2AE 00                       .
-        brk                                     ; E2AF 00                       .
-        brk                                     ; E2B0 00                       .
-        brk                                     ; E2B1 00                       .
-        brk                                     ; E2B2 00                       .
-        brk                                     ; E2B3 00                       .
-        brk                                     ; E2B4 00                       .
-        brk                                     ; E2B5 00                       .
-        brk                                     ; E2B6 00                       .
-        brk                                     ; E2B7 00                       .
-        brk                                     ; E2B8 00                       .
-        brk                                     ; E2B9 00                       .
-        brk                                     ; E2BA 00                       .
-        brk                                     ; E2BB 00                       .
-        brk                                     ; E2BC 00                       .
-        brk                                     ; E2BD 00                       .
-        brk                                     ; E2BE 00                       .
-        brk                                     ; E2BF 00                       .
-        brk                                     ; E2C0 00                       .
+        .byte   $06,$00,$01,$00,$00,$00,$00,$00 ; E217 06 00 01 00 00 00 00 00  ........
+        .byte   $00,$00,$00,$02,$02,$00,$00,$00 ; E21F 00 00 00 02 02 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$02 ; E227 00 00 00 00 00 00 00 02  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E22F 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E237 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$02 ; E23F 00 00 00 00 00 00 00 02  ........
+        .byte   $00,$00,$00,$03,$04,$00,$00,$00 ; E247 00 00 00 03 04 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E24F 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$05,$00 ; E257 00 00 00 00 00 00 05 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E25F 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$06,$00,$00 ; E267 00 00 00 00 00 06 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E26F 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E277 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E27F 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E287 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E28F 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E297 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E29F 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E2A7 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E2AF 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E2B7 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00                         ; E2BF 00 00                    ..
+; ----------------------------------------------------------------------------
 LE2C1:
         lda     $0304                           ; E2C1 AD 04 03                 ...
         clc                                     ; E2C4 18                       .

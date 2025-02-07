@@ -59,6 +59,46 @@ RANGE {
 };
 RANGE {
   START $9449;
+  END $9800;
+  TYPE CODE;
+};
+RANGE {
+  START $9801;
+  END $9810;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $9811;
+  END $9A30;
+  TYPE CODE;
+};
+RANGE {
+  START $9A31;
+  END $9A44;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $9A45;
+  END $9A59;
+  TYPE CODE;
+};
+RANGE {
+  START $9A5A;
+  END $9A6D;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $9A6E;
+  END $9A8C;
+  TYPE CODE;
+};
+RANGE {
+  START $9A8D;
+  END $9AA0;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $9AA1;
   END $9C49;
   TYPE CODE;
 };
@@ -178,16 +218,57 @@ LABEL {
   ADDR  $832D;
 };
 LABEL {
-  NAME "LoadDialogStringFromBank01";
+  NAME "LoadDialogString1";
   ADDR  $915E;
+};
+LABEL {
+  NAME "CheckIfCharIsHanzi";
+  ADDR  $917B;
+  COMMENT "Chinese characters are made up of 2 bytes, first is 0xB0 and second is a value starting from 0xA1";
+};
+LABEL {
+  NAME "CharIsEnglishLetter";
+  ADDR  $9199;
 };
 LABEL {
   NAME "BankSectionPairForDialogTable";
   ADDR  $9242;
 };
 LABEL {
-  NAME "LoadDialogStringFromBank02";
+  NAME "LoadDialogString2";
   ADDR  $9262;
+};
+LABEL {
+  NAME "AsmCodeLoadHanziFromBank8or9";
+  ADDR  $9349;
+};
+LABEL {
+  NAME "ProcessCharInMemoryAddr0Cand0D";
+  ADDR  $93CD;
+};
+LABEL {
+  NAME "ProcessHanziInMemoryAddr0Cand0D";
+  ADDR  $93D4;
+};
+LABEL {
+  NAME "LoadCharacterDialoguePortrait";
+  ADDR  $96A9;
+};
+LABEL {
+  NAME "LoadCharacterPortraitFromId";
+  ADDR  $96B4;
+};
+LABEL {
+  NAME "LoadCharacterPortraitGraphicsFromBank35";
+  ADDR  $9705;
+};
+LABEL {
+  NAME "CopyPortraitPixelsLoop";
+  ADDR  $973A;
+};
+LABEL {
+  NAME "LoadCharacterPortraitAddrFromBank35";
+  ADDR  $9777;
 };
 LABEL {
   NAME "LoadLocationStringFromBank";

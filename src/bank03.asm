@@ -11,7 +11,6 @@ L0130           := $0130
 L0140           := $0140
 L0200           := $0200
 L0400           := $0400
-L5CA8           := $5CA8
 L6EF0           := $6EF0
 ; ----------------------------------------------------------------------------
         nop                                     ; 8000 EA                       .
@@ -2581,7 +2580,7 @@ L912D:
 L913B:
         ldy     #$00                            ; 913B A0 00                    ..
 L913D:
-        lda     L9349,y                         ; 913D B9 49 93                 .I.
+        lda     AsmCodeLoadHanziFromBank8or9,y  ; 913D B9 49 93                 .I.
         sta     L0400,y                         ; 9140 99 00 04                 ...
         iny                                     ; 9143 C8                       .
         bne     L913D                           ; 9144 D0 F7                    ..
@@ -2589,8 +2588,8 @@ L913D:
 
 ; ----------------------------------------------------------------------------
 L9147:
-        jsr     LoadDialogStringFromBank02      ; 9147 20 62 92                  b.
-        jsr     L96A9                           ; 914A 20 A9 96                  ..
+        jsr     LoadDialogString2               ; 9147 20 62 92                  b.
+        jsr     LoadCharacterDialoguePortrait   ; 914A 20 A9 96                  ..
         bcs     L9153                           ; 914D B0 04                    ..
         lda     #$04                            ; 914F A9 04                    ..
         sta     $DA                             ; 9151 85 DA                    ..
@@ -2600,7 +2599,7 @@ L9153:
         sta     $42                             ; 9158 85 42                    .B
         sta     $D8                             ; 915A 85 D8                    ..
         sta     $6C                             ; 915C 85 6C                    .l
-LoadDialogStringFromBank01:
+LoadDialogString1:
         lda     $6A                             ; 915E A5 6A                    .j
         sta     $0141                           ; 9160 8D 41 01                 .A.
         lda     #$03                            ; 9163 A9 03                    ..
@@ -2614,13 +2613,14 @@ LoadDialogStringFromBank01:
 
 ; ----------------------------------------------------------------------------
 L9176:
-        bcs     L917B                           ; 9176 B0 03                    ..
+        bcs     CheckIfCharIsHanzi              ; 9176 B0 03                    ..
         jmp     L91EF                           ; 9178 4C EF 91                 L..
 
 ; ----------------------------------------------------------------------------
-L917B:
+; Chinese characters are made up of 2 bytes, first is 0xB0 and second is a value starting from 0xA1
+CheckIfCharIsHanzi:
         cmp     #$B0                            ; 917B C9 B0                    ..
-        bcc     L9199                           ; 917D 90 1A                    ..
+        bcc     CharIsEnglishLetter             ; 917D 90 1A                    ..
         iny                                     ; 917F C8                       .
         jsr     L0140                           ; 9180 20 40 01                  @.
         sta     $0C                             ; 9183 85 0C                    ..
@@ -2636,7 +2636,7 @@ L917B:
         jmp     L91AA                           ; 9196 4C AA 91                 L..
 
 ; ----------------------------------------------------------------------------
-L9199:
+CharIsEnglishLetter:
         jsr     LD8B0                           ; 9199 20 B0 D8                  ..
         nop                                     ; 919C EA                       .
         lda     L0002                           ; 919D A5 02                    ..
@@ -2677,7 +2677,7 @@ L91D5:
         lda     $42                             ; 91D5 A5 42                    .B
         cmp     #$4F                            ; 91D7 C9 4F                    .O
         bcs     L91DE                           ; 91D9 B0 03                    ..
-        jmp     LoadDialogStringFromBank01      ; 91DB 4C 5E 91                 L^.
+        jmp     LoadDialogString1               ; 91DB 4C 5E 91                 L^.
 
 ; ----------------------------------------------------------------------------
 L91DE:
@@ -2687,7 +2687,7 @@ L91DE:
         sta     $42                             ; 91E6 85 42                    .B
         sta     $D8                             ; 91E8 85 D8                    ..
         sta     $6C                             ; 91EA 85 6C                    .l
-        jmp     LoadDialogStringFromBank01      ; 91EC 4C 5E 91                 L^.
+        jmp     LoadDialogString1               ; 91EC 4C 5E 91                 L^.
 
 ; ----------------------------------------------------------------------------
 L91EF:
@@ -2751,7 +2751,7 @@ L9243:
         .byte   $01,$0B,$02,$0C,$00,$0C,$01,$0D ; 9253 01 0B 02 0C 00 0C 01 0D  ........
         .byte   $00,$0D,$01,$0D,$02,$0A,$02     ; 925B 00 0D 01 0D 02 0A 02     .......
 ; ----------------------------------------------------------------------------
-LoadDialogStringFromBank02:
+LoadDialogString2:
         pha                                     ; 9262 48                       H
         jsr     L9233                           ; 9263 20 33 92                  3.
         lda     #$00                            ; 9266 A9 00                    ..
@@ -2820,7 +2820,7 @@ L92C5:
         sta     $78                             ; 92D6 85 78                    .x
         jsr     L9497                           ; 92D8 20 97 94                  ..
 L92DB:
-        jsr     L93CD                           ; 92DB 20 CD 93                  ..
+        jsr     ProcessCharInMemoryAddr0Cand0D  ; 92DB 20 CD 93                  ..
         lda     $53                             ; 92DE A5 53                    .S
         bne     L92F8                           ; 92E0 D0 16                    ..
         lda     $12                             ; 92E2 A5 12                    ..
@@ -2885,7 +2885,7 @@ L933E:
         rts                                     ; 9348 60                       `
 
 ; ----------------------------------------------------------------------------
-L9349:
+AsmCodeLoadHanziFromBank8or9:
         lda     $43                             ; 9349 A5 43                    .C
         clc                                     ; 934B 18                       .
         adc     #$08                            ; 934C 69 08                    i.
@@ -2968,13 +2968,13 @@ L93AB:
         rts                                     ; 93CC 60                       `
 
 ; ----------------------------------------------------------------------------
-L93CD:
+ProcessCharInMemoryAddr0Cand0D:
         lda     $53                             ; 93CD A5 53                    .S
-        beq     L93D4                           ; 93CF F0 03                    ..
+        beq     ProcessHanziInMemoryAddr0Cand0D ; 93CF F0 03                    ..
         jmp     L93AB                           ; 93D1 4C AB 93                 L..
 
 ; ----------------------------------------------------------------------------
-L93D4:
+ProcessHanziInMemoryAddr0Cand0D:
         lda     #$00                            ; 93D4 A9 00                    ..
         sta     $43                             ; 93D6 85 43                    .C
         lda     $0C                             ; 93D8 A5 0C                    ..
@@ -3421,16 +3421,16 @@ L96A0:
         rts                                     ; 96A8 60                       `
 
 ; ----------------------------------------------------------------------------
-L96A9:
+LoadCharacterDialoguePortrait:
         ldy     #$00                            ; 96A9 A0 00                    ..
         jsr     L0140                           ; 96AB 20 40 01                  @.
         cmp     #$40                            ; 96AE C9 40                    .@
-        beq     L96B4                           ; 96B0 F0 02                    ..
+        beq     LoadCharacterPortraitFromId     ; 96B0 F0 02                    ..
         clc                                     ; 96B2 18                       .
         rts                                     ; 96B3 60                       `
 
 ; ----------------------------------------------------------------------------
-L96B4:
+LoadCharacterPortraitFromId:
         iny                                     ; 96B4 C8                       .
         jsr     L0140                           ; 96B5 20 40 01                  @.
         sec                                     ; 96B8 38                       8
@@ -3483,8 +3483,8 @@ L96B4:
         lda     L0002                           ; 96EA A5 02                    ..
         pha                                     ; 96EC 48                       H
         lda     $07                             ; 96ED A5 07                    ..
-        jsr     L9777                           ; 96EF 20 77 97                  w.
-        jsr     L9705                           ; 96F2 20 05 97                  ..
+        jsr     LoadCharacterPortraitAddrFromBank35; 96EF 20 77 97               w.
+        jsr     LoadCharacterPortraitGraphicsFromBank35; 96F2 20 05 97           ..
         jsr     L979D                           ; 96F5 20 9D 97                  ..
         pla                                     ; 96F8 68                       h
         clc                                     ; 96F9 18                       .
@@ -3497,7 +3497,7 @@ L96B4:
         rts                                     ; 9704 60                       `
 
 ; ----------------------------------------------------------------------------
-L9705:
+LoadCharacterPortraitGraphicsFromBank35:
         lda     $03                             ; 9705 A5 03                    ..
         pha                                     ; 9707 48                       H
         lda     L0002                           ; 9708 A5 02                    ..
@@ -3527,13 +3527,13 @@ L9724:
         sta     $0700,x                         ; 9734 9D 00 07                 ...
         inx                                     ; 9737 E8                       .
         ldy     #$00                            ; 9738 A0 00                    ..
-L973A:
+CopyPortraitPixelsLoop:
         jsr     L0130                           ; 973A 20 30 01                  0.
         sta     $0700,x                         ; 973D 9D 00 07                 ...
         inx                                     ; 9740 E8                       .
         iny                                     ; 9741 C8                       .
         cpy     #$40                            ; 9742 C0 40                    .@
-        bne     L973A                           ; 9744 D0 F4                    ..
+        bne     CopyPortraitPixelsLoop          ; 9744 D0 F4                    ..
         lda     #$01                            ; 9746 A9 01                    ..
         sta     $0700                           ; 9748 8D 00 07                 ...
         lda     #$FF                            ; 974B A9 FF                    ..
@@ -3562,7 +3562,7 @@ L973A:
         rts                                     ; 9776 60                       `
 
 ; ----------------------------------------------------------------------------
-L9777:
+LoadCharacterPortraitAddrFromBank35:
         pha                                     ; 9777 48                       H
         lda     #$35                            ; 9778 A9 35                    .5
         pha                                     ; 977A 48                       H
@@ -3647,20 +3647,9 @@ L97BB:
 
 ; ----------------------------------------------------------------------------
 L9801:
-        brk                                     ; 9801 00                       .
-        brk                                     ; 9802 00                       .
-        brk                                     ; 9803 00                       .
-        brk                                     ; 9804 00                       .
-        ora     ($01,x)                         ; 9805 01 01                    ..
-        ora     ($01,x)                         ; 9807 01 01                    ..
-        .byte   $02                             ; 9809 02                       .
-        .byte   $02                             ; 980A 02                       .
-        .byte   $02                             ; 980B 02                       .
-        .byte   $02                             ; 980C 02                       .
-        .byte   $03                             ; 980D 03                       .
-        .byte   $03                             ; 980E 03                       .
-        .byte   $03                             ; 980F 03                       .
-        .byte   $03                             ; 9810 03                       .
+        .byte   $00,$00,$00,$00,$01,$01,$01,$01 ; 9801 00 00 00 00 01 01 01 01  ........
+        .byte   $02,$02,$02,$02,$03,$03,$03,$03 ; 9809 02 02 02 02 03 03 03 03  ........
+; ----------------------------------------------------------------------------
 L9811:
         lda     #$10                            ; 9811 A9 10                    ..
         sta     $9C                             ; 9813 85 9C                    ..
@@ -3988,19 +3977,10 @@ L9A1E:
 
 ; ----------------------------------------------------------------------------
 L9A31:
-        ora     ($10,x)                         ; 9A31 01 10                    ..
-        asl     a:$F0,x                         ; 9A33 1E F0 00                 ...
-        brk                                     ; 9A36 00                       .
-        brk                                     ; 9A37 00                       .
-        bvs     L9A3B                           ; 9A38 70 01                    p.
-        .byte   $F2                             ; 9A3A F2                       .
-L9A3B:
-        .byte   $04                             ; 9A3B 04                       .
-        php                                     ; 9A3C 08                       .
-        php                                     ; 9A3D 08                       .
-        .byte   $0C                             ; 9A3E 0C                       .
-        inc     LFFFF,x                         ; 9A3F FE FF FF                 ...
-        inc     $080C,x                         ; 9A42 FE 0C 08                 ...
+        .byte   $01,$10,$1E,$F0,$00,$00,$00,$70 ; 9A31 01 10 1E F0 00 00 00 70  .......p
+        .byte   $01,$F2,$04,$08,$08,$0C,$FE,$FF ; 9A39 01 F2 04 08 08 0C FE FF  ........
+        .byte   $FF,$FE,$0C,$08                 ; 9A41 FF FE 0C 08              ....
+; ----------------------------------------------------------------------------
 L9A45:
         ldx     #$00                            ; 9A45 A2 00                    ..
 L9A47:
@@ -4016,20 +3996,10 @@ L9A47:
 
 ; ----------------------------------------------------------------------------
 L9A5A:
-        ora     ($10,x)                         ; 9A5A 01 10                    ..
-        asl     $04F0,x                         ; 9A5C 1E F0 04                 ...
-        .byte   $14                             ; 9A5F 14                       .
-        .byte   $14                             ; 9A60 14                       .
-        .byte   $04                             ; 9A61 04                       .
-        ora     (L0002,x)                       ; 9A62 01 02                    ..
-        .byte   $04                             ; 9A64 04                       .
-        php                                     ; 9A65 08                       .
-        .byte   $3C                             ; 9A66 3C                       <
-        .byte   $3C                             ; 9A67 3C                       <
-        .byte   $3C                             ; 9A68 3C                       <
-        .byte   $3C                             ; 9A69 3C                       <
-        .byte   $FF                             ; 9A6A FF                       .
-        ror     $183C,x                         ; 9A6B 7E 3C 18                 ~<.
+        .byte   $01,$10,$1E,$F0,$04,$14,$14,$04 ; 9A5A 01 10 1E F0 04 14 14 04  ........
+        .byte   $01,$02,$04,$08,$3C,$3C,$3C,$3C ; 9A62 01 02 04 08 3C 3C 3C 3C  ....<<<<
+        .byte   $FF,$7E,$3C,$18                 ; 9A6A FF 7E 3C 18              .~<.
+; ----------------------------------------------------------------------------
 L9A6E:
         lda     $0D                             ; 9A6E A5 0D                    ..
         asl     a                               ; 9A70 0A                       .
@@ -4048,24 +4018,10 @@ L9A6E:
 
 ; ----------------------------------------------------------------------------
 L9A8D:
-        tay                                     ; 9A8D A8                       .
-        bit     $3CA8                           ; 9A8E 2C A8 3C                 ,.<
-        tay                                     ; 9A91 A8                       .
-        jmp     L5CA8                           ; 9A92 4C A8 5C                 L.\
-
+        .byte   $A8,$2C,$A8,$3C,$A8,$4C,$A8,$5C ; 9A8D A8 2C A8 3C A8 4C A8 5C  .,.<.L.\
+        .byte   $A8,$6C,$E0,$D0,$44,$B7,$44,$BF ; 9A95 A8 6C E0 D0 44 B7 44 BF  .l..D.D.
+        .byte   $34,$B7,$34,$BF                 ; 9A9D 34 B7 34 BF              4.4.
 ; ----------------------------------------------------------------------------
-        tay                                     ; 9A95 A8                       .
-        jmp     (LD0E0)                         ; 9A96 6C E0 D0                 l..
-
-; ----------------------------------------------------------------------------
-        .byte   $44                             ; 9A99 44                       D
-        .byte   $B7                             ; 9A9A B7                       .
-        .byte   $44                             ; 9A9B 44                       D
-        .byte   $BF                             ; 9A9C BF                       .
-        .byte   $34                             ; 9A9D 34                       4
-        .byte   $B7                             ; 9A9E B7                       .
-        .byte   $34                             ; 9A9F 34                       4
-        .byte   $BF                             ; 9AA0 BF                       .
 L9AA1:
         lda     #$F0                            ; 9AA1 A9 F0                    ..
         sta     $02F8                           ; 9AA3 8D F8 02                 ...
@@ -4099,8 +4055,8 @@ L9AA7:
         lda     $D9                             ; 9AD8 A5 D9                    ..
         cmp     #$FF                            ; 9ADA C9 FF                    ..
         beq     L9AEF                           ; 9ADC F0 11                    ..
-        jsr     L9777                           ; 9ADE 20 77 97                  w.
-        jsr     L9705                           ; 9AE1 20 05 97                  ..
+        jsr     LoadCharacterPortraitAddrFromBank35; 9ADE 20 77 97               w.
+        jsr     LoadCharacterPortraitGraphicsFromBank35; 9AE1 20 05 97           ..
         jsr     L979D                           ; 9AE4 20 9D 97                  ..
         lda     #$FF                            ; 9AE7 A9 FF                    ..
         sta     $D9                             ; 9AE9 85 D9                    ..
@@ -4122,7 +4078,7 @@ L9AEF:
 
 ; ----------------------------------------------------------------------------
 L9B08:
-        jsr     LoadDialogStringFromBank02      ; 9B08 20 62 92                  b.
+        jsr     LoadDialogString2               ; 9B08 20 62 92                  b.
         jsr     L913B                           ; 9B0B 20 3B 91                  ;.
         lda     #$02                            ; 9B0E A9 02                    ..
         sta     $42                             ; 9B10 85 42                    .B
@@ -4334,7 +4290,7 @@ L9C4A:
         .byte   $08,$08,$08,$08,$08,$08,$08,$09 ; 9C82 08 08 08 08 08 08 08 09  ........
 ; ----------------------------------------------------------------------------
 L9C8A:
-        jsr     LoadDialogStringFromBank02      ; 9C8A 20 62 92                  b.
+        jsr     LoadDialogString2               ; 9C8A 20 62 92                  b.
         jsr     L913B                           ; 9C8D 20 3B 91                  ;.
         lda     #$00                            ; 9C90 A9 00                    ..
         sta     $42                             ; 9C92 85 42                    .B
@@ -9406,7 +9362,6 @@ LD0D7:
         jsr     L0100                           ; D0D7 20 00 01                  ..
         and     #$F0                            ; D0DA 29 F0                    ).
         sta     $0C                             ; D0DC 85 0C                    ..
-LD0E0           := * + 2
         jsr     L0110                           ; D0DE 20 10 01                  ..
         and     #$0F                            ; D0E1 29 0F                    ).
         ora     $0C                             ; D0E3 05 0C                    ..
@@ -12497,6 +12452,4 @@ LFF44:
         .byte   $00,$04,$A9,$04,$8D,$00,$53,$A9 ; FFE5 00 04 A9 04 8D 00 53 A9  ......S.
         .byte   $00,$8D,$00,$50,$8D,$00,$52,$8D ; FFED 00 8D 00 50 8D 00 52 8D  ...P..R.
         .byte   $00,$51,$6C,$FC,$FF,$2C,$80,$C0 ; FFF5 00 51 6C FC FF 2C 80 C0  .Ql..,..
-        .byte   $FF,$79                         ; FFFD FF 79                    .y
-LFFFF:
-        .byte   $80                             ; FFFF 80                       .
+        .byte   $FF,$79,$80                     ; FFFD FF 79 80                 .y.

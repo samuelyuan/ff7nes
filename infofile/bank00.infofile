@@ -59,16 +59,6 @@ RANGE {
 };
 RANGE {
   START $94AC;
-  END $9724;
-  TYPE CODE;
-};
-RANGE {
-  START $9725;
-  END $974D;
-  TYPE BYTETABLE;
-};
-RANGE {
-  START $974E;
   END $9762;
   TYPE CODE;
 };
@@ -376,6 +366,10 @@ LABEL {
   ADDR  $8919;
 };
 LABEL {
+  NAME "Bank00ScriptOpcode02_CheckSceneFlag";
+  ADDR  $8A35;
+};
+LABEL {
   NAME "Bank00ScriptOpcode03_CheckSceneFlag";
   ADDR  $8A44;
 };
@@ -433,12 +427,24 @@ LABEL {
   ADDR $8F5E;
 };
 LABEL {
+  NAME "Bank00ScriptOpcode21_AddGil";
+  ADDR $8F98;
+};
+LABEL {
+  NAME "Bank00ScriptOpcode22_NoOp";
+  ADDR $9002;
+};
+LABEL {
   NAME "Bank00ScriptOpcode24_SubtractGil";
   ADDR $8FC7;
 };
 LABEL {
   NAME "Bank00ScriptOpcode24GilGreaterThanZero";
   ADDR  $8FFD;
+};
+LABEL {
+  NAME "Bank00ScriptOpcode28_SetCutsceneBitAndStartDialogue";
+  ADDR  $914B;
 };
 LABEL {
   NAME "Bank00ScriptOpcode29_ShowDialogBlock";
@@ -486,7 +492,11 @@ LABEL {
   ADDR $9331;
 };
 LABEL {
-  NAME "MateriaCountLimit";
+  NAME "Bank00RestorePartyMemberMagic";
+  ADDR $9445;
+};
+LABEL {
+  NAME "Bank00PartyMemberMaxMateriaCount";
   ADDR $946D;
 };
 LABEL {
@@ -532,6 +542,14 @@ LABEL {
 LABEL {
   NAME "SceneCloudSetsSector1Bomb";
   ADDR  $FB51;
+};
+LABEL {
+  NAME "Scene7thHeavenCloudTalksToWedge";
+  ADDR  $A439;
+};
+LABEL {
+  NAME "Scene7thHeavenCloudTalksToBiggs";
+  ADDR  $A443;
 };
 LABEL {
   NAME "SceneBarretEnters7thHeaven";
@@ -927,6 +945,10 @@ LABEL {
 LABEL {
   NAME "InnStayRestoreUnitHealth";
   ADDR $E033;
+};
+LABEL {
+  NAME "InnStayRestoreUnitMagic";
+  ADDR $E042;
 };
 LABEL {
   NAME "InitPlayerMain";

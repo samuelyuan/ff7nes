@@ -29,6 +29,16 @@ RANGE {
 };
 RANGE {
   START $9745;
+  END $97BC;
+  TYPE CODE;
+};
+RANGE {
+  START $97BD;
+  END $97FB;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $97FC;
   END $A16A;
   TYPE CODE;
 };
@@ -94,6 +104,16 @@ RANGE {
 };
 RANGE {
   START $E02C;
+  END $E148;
+  TYPE CODE;
+};
+RANGE {
+  START $E149;
+  END $E2C0;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $E2C1;
   END $EB12;
   TYPE CODE;
 };
@@ -121,7 +141,7 @@ LABEL {
   ADDR  $8C69;
 };
 LABEL {
-  NAME "Bank02ScriptOpcode02";
+  NAME "Bank02ScriptOpcode02_CheckSceneFlag";
   ADDR  $8D85;
 };
 LABEL {
@@ -153,6 +173,10 @@ LABEL {
 LABEL {
   NAME "Bank02ScriptOpcode0a";
   ADDR  $8ED6;
+};
+LABEL {
+  NAME "Bank02ScriptOpcode1f_HealParty";
+  ADDR  $92DC;
 };
 LABEL {
   NAME "Bank02ScriptOpcode11_ScreenFadeBlack";
@@ -205,12 +229,28 @@ LABEL {
   ADDR $9589;
 };
 LABEL {
+  NAME "Bank02AddPartyMember";
+  ADDR $95A4;
+};
+LABEL {
+  NAME "Bank02FindPartyMemberIndexLoop";
+  ADDR $95A6;
+};
+LABEL {
   NAME "Bank02ScriptOpcode39_DisembarkVehicle";
   ADDR $9681;
 };
 LABEL {
   NAME "Bank02RestorePartyMemberHealth";
   ADDR $9784;
+};
+LABEL {
+  NAME "Bank02RestorePartyMemberMagic";
+  ADDR $9795;
+};
+LABEL {
+  NAME "Bank02PartyMemberMaxMateriaCount";
+  ADDR $97BD;
 };
 LABEL {
   NAME "Bank02BackgroundSceneRoomIndexTablePart1";
