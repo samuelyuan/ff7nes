@@ -42,3 +42,8 @@ RANGE {
   END $ffff;
   TYPE BYTETABLE;
 };
+
+LABEL {
+  NAME "FontGraphicsTileset";
+  ADDR $8010;
+};

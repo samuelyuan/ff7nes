@@ -617,8 +617,20 @@ LABEL {
   ADDR $93D9;
 };
 LABEL {
+  NAME "LoadItemStatsFromBank5";
+  ADDR $9479;
+};
+LABEL {
   NAME "ShopItemMenuWriteItemStatsForDisplay";
   ADDR $94EC;
+};
+LABEL {
+  NAME "LoadUnknownStatsFromBank5_800C";
+  ADDR $94F8;
+};
+LABEL {
+  NAME "LoadUnknownStatsFromBank5_8014";
+  ADDR $960A;
 };
 LABEL {
   NAME "MainMenuStartGameEntryPoint";
@@ -811,6 +823,10 @@ LABEL {
 LABEL {
   NAME "ShopItemMenuSaveNewItemIndex";
   ADDR $A47E;
+};
+LABEL {
+  NAME "LoadUnknownStatsFromBank5_801C";
+  ADDR $A5B2;
 };
 LABEL {
   NAME "MainPlayerMenuEntryPoint";
@@ -1286,12 +1302,20 @@ LABEL {
   ADDR $E00D;
 };
 LABEL {
-  NAME "ShopItemIndexHelmet";
+  NAME "ShopItemIndexHeadgear";
   ADDR $E0E0;
 };
 LABEL {
   NAME "ShopItemIndexBodyArmor";
   ADDR $E120;
+};
+LABEL {
+  NAME "ShopItemIndexBracelet";
+  ADDR $E1B0;
+};
+LABEL {
+  NAME "ShopItemIndexRing";
+  ADDR $E220;
 };
 LABEL {
   NAME "ShopItemIndexWeapon";

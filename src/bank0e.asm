@@ -3037,7 +3037,7 @@ L9464:
         rts                                     ; 9478 60                       `
 
 ; ----------------------------------------------------------------------------
-L9479:
+LoadItemStatsFromBank5:
         lda     #$05                            ; 9479 A9 05                    ..
         sta     $0141                           ; 947B 8D 41 01                 .A.
         lda     $4F                             ; 947E A5 4F                    .O
@@ -3105,7 +3105,7 @@ ShopItemMenuWriteItemStatsForDisplay:
         rts                                     ; 94F7 60                       `
 
 ; ----------------------------------------------------------------------------
-L94F8:
+LoadUnknownStatsFromBank5_800C:
         lda     #$05                            ; 94F8 A9 05                    ..
         sta     $0141                           ; 94FA 8D 41 01                 .A.
         lda     $4F                             ; 94FD A5 4F                    .O
@@ -3248,7 +3248,7 @@ L95D6:
         rts                                     ; 9609 60                       `
 
 ; ----------------------------------------------------------------------------
-L960A:
+LoadUnknownStatsFromBank5_8014:
         lda     #$05                            ; 960A A9 05                    ..
         sta     $0141                           ; 960C 8D 41 01                 .A.
         lda     $4F                             ; 960F A5 4F                    .O
@@ -4701,7 +4701,7 @@ LA023:
         jsr     LA553                           ; A02B 20 53 A5                  S.
         jsr     LA58B                           ; A02E 20 8B A5                  ..
         lda     $6F24                           ; A031 AD 24 6F                 .$o
-        jsr     LA5B2                           ; A034 20 B2 A5                  ..
+        jsr     LoadUnknownStatsFromBank5_801C  ; A034 20 B2 A5                  ..
         lda     $8E                             ; A037 A5 8E                    ..
         sta     $6F25                           ; A039 8D 25 6F                 .%o
         sta     $6F27                           ; A03C 8D 27 6F                 .'o
@@ -4875,7 +4875,7 @@ LA13E:
 ; ----------------------------------------------------------------------------
 LA16C:
         lda     $6F24                           ; A16C AD 24 6F                 .$o
-        jsr     LA5B2                           ; A16F 20 B2 A5                  ..
+        jsr     LoadUnknownStatsFromBank5_801C  ; A16F 20 B2 A5                  ..
         lda     $8E                             ; A172 A5 8E                    ..
         sta     $6F25                           ; A174 8D 25 6F                 .%o
         sta     $6F27                           ; A177 8D 27 6F                 .'o
@@ -5243,7 +5243,7 @@ LA374:
         lda     #$00                            ; A3F3 A9 00                    ..
         sta     $0617                           ; A3F5 8D 17 06                 ...
         pla                                     ; A3F8 68                       h
-        jsr     LA5B2                           ; A3F9 20 B2 A5                  ..
+        jsr     LoadUnknownStatsFromBank5_801C  ; A3F9 20 B2 A5                  ..
         lda     #$00                            ; A3FC A9 00                    ..
         sta     $90                             ; A3FE 85 90                    ..
         jsr     L81D5                           ; A400 20 D5 81                  ..
@@ -5321,7 +5321,7 @@ ShopItemMenuSaveNewItemIndex:
         sta     $6F24                           ; A47E 8D 24 6F                 .$o
         lda     $6FCA                           ; A481 AD CA 6F                 ..o
         sta     $6F23                           ; A484 8D 23 6F                 .#o
-        jsr     L9479                           ; A487 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5          ; A487 20 79 94                  y.
         lda     #$00                            ; A48A A9 00                    ..
         sta     $0617                           ; A48C 8D 17 06                 ...
         lda     #$05                            ; A48F A9 05                    ..
@@ -5490,7 +5490,7 @@ LA58B:
         rts                                     ; A5B1 60                       `
 
 ; ----------------------------------------------------------------------------
-LA5B2:
+LoadUnknownStatsFromBank5_801C:
         pha                                     ; A5B2 48                       H
         lda     #$05                            ; A5B3 A9 05                    ..
         sta     $0141                           ; A5B5 8D 41 01                 .A.
@@ -6744,7 +6744,7 @@ SetCharacterStatsOtherAttributes:
         sta     $6F24                           ; AEAD 8D 24 6F                 .$o
         lda     #$00                            ; AEB0 A9 00                    ..
         sta     $6F23                           ; AEB2 8D 23 6F                 .#o
-        jsr     L9479                           ; AEB5 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5          ; AEB5 20 79 94                  y.
         jsr     LAF4F                           ; AEB8 20 4F AF                  O.
 LAEBB:
         lda     $605F,x                         ; AEBB BD 5F 60                 ._`
@@ -6752,7 +6752,7 @@ LAEBB:
         sta     $6F24                           ; AEC0 8D 24 6F                 .$o
         lda     #$01                            ; AEC3 A9 01                    ..
         sta     $6F23                           ; AEC5 8D 23 6F                 .#o
-        jsr     L9479                           ; AEC8 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5          ; AEC8 20 79 94                  y.
         jsr     LAF4F                           ; AECB 20 4F AF                  O.
 LAECE:
         lda     $6066,x                         ; AECE BD 66 60                 .f`
@@ -6760,7 +6760,7 @@ LAECE:
         sta     $6F24                           ; AED3 8D 24 6F                 .$o
         lda     #$02                            ; AED6 A9 02                    ..
         sta     $6F23                           ; AED8 8D 23 6F                 .#o
-        jsr     L9479                           ; AEDB 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5          ; AEDB 20 79 94                  y.
         jsr     LAF4F                           ; AEDE 20 4F AF                  O.
 LAEE1:
         lda     $606D,x                         ; AEE1 BD 6D 60                 .m`
@@ -6768,7 +6768,7 @@ LAEE1:
         sta     $6F24                           ; AEE6 8D 24 6F                 .$o
         lda     #$03                            ; AEE9 A9 03                    ..
         sta     $6F23                           ; AEEB 8D 23 6F                 .#o
-        jsr     L9479                           ; AEEE 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5          ; AEEE 20 79 94                  y.
         jsr     LAF4F                           ; AEF1 20 4F AF                  O.
 LAEF4:
         txa                                     ; AEF4 8A                       .
@@ -6962,7 +6962,7 @@ LB05F:
 ; ----------------------------------------------------------------------------
 LB06C:
         sta     $6F24                           ; B06C 8D 24 6F                 .$o
-        jsr     L94F8                           ; B06F 20 F8 94                  ..
+        jsr     LoadUnknownStatsFromBank5_800C  ; B06F 20 F8 94                  ..
         lda     #$07                            ; B072 A9 07                    ..
         sta     $0A                             ; B074 85 0A                    ..
         lda     #$00                            ; B076 A9 00                    ..
@@ -7055,7 +7055,7 @@ LB121:
 ; ----------------------------------------------------------------------------
 LB12E:
         sta     $6F24                           ; B12E 8D 24 6F                 .$o
-        jsr     L960A                           ; B131 20 0A 96                  ..
+        jsr     LoadUnknownStatsFromBank5_8014  ; B131 20 0A 96                  ..
         lda     #$08                            ; B134 A9 08                    ..
         sta     $0A                             ; B136 85 0A                    ..
         lda     #$00                            ; B138 A9 00                    ..
@@ -7806,7 +7806,7 @@ LB685:
 
 ; ----------------------------------------------------------------------------
 LB686:
-        jsr     L9479                           ; B686 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5          ; B686 20 79 94                  y.
         lda     #$00                            ; B689 A9 00                    ..
         sta     $0617                           ; B68B 8D 17 06                 ...
         lda     #$05                            ; B68E A9 05                    ..
@@ -7884,7 +7884,7 @@ LB70C:
 
 ; ----------------------------------------------------------------------------
 LB711:
-        jsr     L94F8                           ; B711 20 F8 94                  ..
+        jsr     LoadUnknownStatsFromBank5_800C  ; B711 20 F8 94                  ..
         lda     #$01                            ; B714 A9 01                    ..
         sta     $0617                           ; B716 8D 17 06                 ...
         lda     #$F6                            ; B719 A9 F6                    ..
@@ -7952,7 +7952,7 @@ LB7A0:
 
 ; ----------------------------------------------------------------------------
 LB7A1:
-        jsr     L960A                           ; B7A1 20 0A 96                  ..
+        jsr     LoadUnknownStatsFromBank5_8014  ; B7A1 20 0A 96                  ..
         lda     #$01                            ; B7A4 A9 01                    ..
         sta     $0617                           ; B7A6 8D 17 06                 ...
         lda     #$F6                            ; B7A9 A9 F6                    ..
@@ -8537,7 +8537,7 @@ LBDAC:
 ; ----------------------------------------------------------------------------
 LBDBA:
         sta     $6F24                           ; BDBA 8D 24 6F                 .$o
-        jsr     L9479                           ; BDBD 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5          ; BDBD 20 79 94                  y.
         lda     #$00                            ; BDC0 A9 00                    ..
         sta     $0617                           ; BDC2 8D 17 06                 ...
         lda     #$05                            ; BDC5 A9 05                    ..
@@ -8920,7 +8920,7 @@ LC00E:
         sta     $69                             ; C011 85 69                    .i
         jsr     L8B18                           ; C013 20 18 8B                  ..
         jsr     Bank0eScreenRefresh             ; C016 20 78 DF                  x.
-        jsr     L94F8                           ; C019 20 F8 94                  ..
+        jsr     LoadUnknownStatsFromBank5_800C  ; C019 20 F8 94                  ..
         lda     #$01                            ; C01C A9 01                    ..
         sta     $0617                           ; C01E 8D 17 06                 ...
         lda     #$F6                            ; C021 A9 F6                    ..
@@ -9280,7 +9280,7 @@ LC2A1:
         sta     $69                             ; C2A4 85 69                    .i
         jsr     L8B18                           ; C2A6 20 18 8B                  ..
         jsr     Bank0eScreenRefresh             ; C2A9 20 78 DF                  x.
-        jsr     L960A                           ; C2AC 20 0A 96                  ..
+        jsr     LoadUnknownStatsFromBank5_8014  ; C2AC 20 0A 96                  ..
         lda     #$01                            ; C2AF A9 01                    ..
         sta     $0617                           ; C2B1 8D 17 06                 ...
         lda     #$F6                            ; C2B4 A9 F6                    ..
@@ -9706,7 +9706,7 @@ LC587:
         txa                                     ; C5C5 8A                       .
         pha                                     ; C5C6 48                       H
         jsr     LC49D                           ; C5C7 20 9D C4                  ..
-        jsr     L9479                           ; C5CA 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5          ; C5CA 20 79 94                  y.
         pla                                     ; C5CD 68                       h
         tax                                     ; C5CE AA                       .
 SetPartyMemberAccessory:
@@ -9747,7 +9747,7 @@ SetPlayerAccessoryToItemId:
         jsr     LC49D                           ; C610 20 9D C4                  ..
         lda     $6F25                           ; C613 AD 25 6F                 .%o
         pha                                     ; C616 48                       H
-        jsr     L9479                           ; C617 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5          ; C617 20 79 94                  y.
         pla                                     ; C61A 68                       h
         sta     $6F26                           ; C61B 8D 26 6F                 .&o
 LC61E:
@@ -10398,7 +10398,7 @@ StoreMenuCursorCurItemIndex:
 LCA9A:
         and     #$7F                            ; CA9A 29 7F                    ).
         sta     $6F24                           ; CA9C 8D 24 6F                 .$o
-        jsr     L960A                           ; CA9F 20 0A 96                  ..
+        jsr     LoadUnknownStatsFromBank5_8014  ; CA9F 20 0A 96                  ..
         lda     #$01                            ; CAA2 A9 01                    ..
         sta     $0617                           ; CAA4 8D 17 06                 ...
         lda     #$F6                            ; CAA7 A9 F6                    ..
@@ -12497,7 +12497,7 @@ LDA6F:
         lda     $6074,x                         ; DA76 BD 74 60                 .t`
         beq     LDA16                           ; DA79 F0 9B                    ..
         sta     $6F24                           ; DA7B 8D 24 6F                 .$o
-        jsr     L94F8                           ; DA7E 20 F8 94                  ..
+        jsr     LoadUnknownStatsFromBank5_800C  ; DA7E 20 F8 94                  ..
         lda     $6F29                           ; DA81 AD 29 6F                 .)o
         cmp     #$14                            ; DA84 C9 14                    ..
         bcs     LDAF6                           ; DA86 B0 6E                    .n
@@ -12672,7 +12672,7 @@ LDBB8:
         jsr     Bank0eScreenRefresh             ; DBC4 20 78 DF                  x.
         jsr     L8F0A                           ; DBC7 20 0A 8F                  ..
         jsr     Bank0eScreenRefresh             ; DBCA 20 78 DF                  x.
-        jsr     L94F8                           ; DBCD 20 F8 94                  ..
+        jsr     LoadUnknownStatsFromBank5_800C  ; DBCD 20 F8 94                  ..
         lda     #$01                            ; DBD0 A9 01                    ..
         sta     $0617                           ; DBD2 8D 17 06                 ...
         lda     #$F6                            ; DBD5 A9 F6                    ..
@@ -13434,7 +13434,7 @@ LE0C5:
         .byte   $00,$01,$02,$02,$01,$00,$00,$00 ; E0CD 00 01 02 02 01 00 00 00  ........
         .byte   $00,$01,$02,$03,$02,$01,$00,$00 ; E0D5 00 01 02 03 02 01 00 00  ........
         .byte   $FF,$00,$00                     ; E0DD FF 00 00                 ...
-ShopItemIndexHelmet:
+ShopItemIndexHeadgear:
         .byte   $37,$36,$35,$34,$33,$32,$31,$30 ; E0E0 37 36 35 34 33 32 31 30  76543210
         .byte   $2F,$2E,$1E,$1D,$1C,$1B,$1A,$19 ; E0E8 2F 2E 1E 1D 1C 1B 1A 19  /.......
         .byte   $18,$17,$16,$15,$14,$13,$12,$11 ; E0F0 18 17 16 15 14 13 12 11  ........
@@ -13462,7 +13462,7 @@ ShopItemIndexBodyArmor:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E198 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E1A0 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E1A8 00 00 00 00 00 00 00 00  ........
-LE1B0:
+ShopItemIndexBracelet:
         .byte   $69,$68,$67,$66,$65,$64,$63,$62 ; E1B0 69 68 67 66 65 64 63 62  ihgfedcb
         .byte   $61,$60,$3E,$3D,$3C,$3B,$3A,$39 ; E1B8 61 60 3E 3D 3C 3B 3A 39  a`>=<;:9
         .byte   $38,$37,$36,$35,$27,$26,$25,$24 ; E1C0 38 37 36 35 27 26 25 24  8765'&%$
@@ -13477,7 +13477,7 @@ LE1B0:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E208 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E210 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E218 00 00 00 00 00 00 00 00  ........
-LE220:
+ShopItemIndexRing:
         .byte   $3A,$39,$38,$37,$36,$35,$34,$33 ; E220 3A 39 38 37 36 35 34 33  :9876543
         .byte   $32,$31,$30,$2F,$2E,$2D,$2C,$2B ; E228 32 31 30 2F 2E 2D 2C 2B  210/.-,+
         .byte   $2A,$29,$28,$27,$00,$00,$00,$00 ; E230 2A 29 28 27 00 00 00 00  *)('....
@@ -13503,10 +13503,10 @@ ShopItemIndexWeapon:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E2C8 00 00 00 00 00 00 00 00  ........
 ; ----------------------------------------------------------------------------
 ShopItemIndex:
-        .addr   ShopItemIndexHelmet             ; E2D0 E0 E0                    ..
+        .addr   ShopItemIndexHeadgear           ; E2D0 E0 E0                    ..
         .addr   ShopItemIndexBodyArmor          ; E2D2 20 E1                     .
-        .addr   LE1B0                           ; E2D4 B0 E1                    ..
-        .addr   LE220                           ; E2D6 20 E2                     .
+        .addr   ShopItemIndexBracelet           ; E2D4 B0 E1                    ..
+        .addr   ShopItemIndexRing               ; E2D6 20 E2                     .
         .addr   ShopItemIndexWeapon             ; E2D8 60 E2                    `.
 ; ----------------------------------------------------------------------------
         brk                                     ; E2DA 00                       .

@@ -79,19 +79,83 @@ LABEL {
   ADDR $8887;
 };
 LABEL {
+  NAME "PlayerMenuStatusTilemap";
+  ADDR $8D47;
+};
+LABEL {
+  NAME "PlayerMenuStatusPalette";
+  ADDR $9147;
+};
+LABEL {
+  NAME "PlayerMenuEquipIconsTileset";
+  ADDR $9167;
+};
+LABEL {
+  NAME "PlayerMenuEquipTileset";
+  ADDR $9527;
+};
+LABEL {
+  NAME "PlayerMenuEquipTilemap";
+  ADDR $98E7;
+};
+LABEL {
+  NAME "PlayerMenuEquipPalette";
+  ADDR $9CE7;
+};
+LABEL {
   NAME "PlayerMenuItemTileset";
   ADDR $9D07;
+};
+LABEL {
+  NAME "PlayerMenuItemTilemap";
+  ADDR $9FB7;
+};
+LABEL {
+  NAME "PlayerMenuItemPalette";
+  ADDR $A3B7;
 };
 LABEL {
   NAME "PlayerMenuMagicTileset";
   ADDR $A3D7;
 };
 LABEL {
+  NAME "PlayerMenuMagicTilemap";
+  ADDR $A617;
+};
+LABEL {
+  NAME "PlayerMenuMagicPalette";
+  ADDR $AA17;
+};
+LABEL {
+  NAME "BattleScreenCharacterTileset";
+  ADDR $AA37;
+};
+LABEL {
+  NAME "BattleMenuTileset";
+  ADDR $B497;
+};
+LABEL {
+  NAME "BattleMenuTilemap";
+  ADDR $B667;
+};
+LABEL {
+  NAME "BattleMenuPalette";
+  ADDR $BA67;
+};
+LABEL {
   NAME "GeneralShopMenuTileset";
   ADDR $BA87;
 };
 LABEL {
-  NAME "MaxCharacterStats";
+  NAME "GeneralShopMenuTilemap";
+  ADDR $BC27;
+};
+LABEL {
+  NAME "GeneralShopMenuPalette";
+  ADDR $C027;
+};
+LABEL {
+  NAME "BaseCharacterStats";
   ADDR $C234;
   COMMENT "Stores max HP, Str, Vit, Int, Spr, Agl. The 7th variable is unknown. All variables are 2 bytes and each character takes 14 bytes.";
 };
@@ -104,6 +168,52 @@ LABEL {
   ADDR $C932;
 };
 LABEL {
+  NAME "ShopItemHeadgearStats";
+  ADDR $C93A;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStats";
+  ADDR $CABB;
+};
+LABEL {
+  NAME "ShopItemBraceletStats";
+  ADDR $CE3B;
+};
+LABEL {
+  NAME "ShopItemRingStats";
+  ADDR $D11A;
+};
+LABEL {
+  NAME "MateriaStats";
+  ADDR $E3E0;
+  COMMENT "Each materia item has 5 bytes. First bytes is a base value, last byte is the amount to add for each additional level";
+};
+LABEL {
+  NAME "MateriaExpNeededForNextLevel";
+  ADDR $E51B;
+};
+LABEL {
   NAME "ShopItemCost";
   ADDR $F460;
+  COMMENT "Each item cost is represented by a single byte, but the values are multiplied by 10 in game";
+};
+LABEL {
+  NAME "ShopItemHeadgearCost";
+  ADDR $F2FF;
+};
+LABEL {
+  NAME "ShopItemBodyArmorCost";
+  ADDR $F4F0;
+};
+LABEL {
+  NAME "ShopItemBraceletCost";
+  ADDR $F3B6;
+};
+LABEL {
+  NAME "ShopItemRingCost";
+  ADDR $F41F;
+};
+LABEL {
+  NAME "ShopItemWeaponCost";
+  ADDR $F470;
 };
