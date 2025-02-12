@@ -94,11 +94,11 @@ RANGE {
 };
 RANGE {
   START $9D9E;
-  END $9DD3;
+  END $9DE1;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $9DD4;
+  START $9DE2;
   END $9E3F;
   TYPE CODE;
 };
@@ -289,6 +289,16 @@ RANGE {
 };
 RANGE {
   START $B5FA;
+  END $B642;
+  TYPE CODE;
+};
+RANGE {
+  START $B643;
+  END $B65A;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $B65B;
   END $B89C;
   TYPE CODE;
 };
@@ -617,7 +627,11 @@ LABEL {
   ADDR $93D9;
 };
 LABEL {
-  NAME "LoadItemStatsFromBank5";
+  NAME "LoadMenuItemSprites";
+  ADDR $945E;
+};
+LABEL {
+  NAME "LoadItemStatsFromBank5_800A";
   ADDR $9479;
 };
 LABEL {
@@ -625,8 +639,12 @@ LABEL {
   ADDR $94EC;
 };
 LABEL {
-  NAME "LoadUnknownStatsFromBank5_800C";
+  NAME "LoadWeaponItemStatsFromBank5_800C";
   ADDR $94F8;
+};
+LABEL {
+  NAME "LoadWeaponExpLevelUpStatsFromBank5_800E";
+  ADDR $9561;
 };
 LABEL {
   NAME "LoadUnknownStatsFromBank5_8014";
@@ -677,6 +695,118 @@ LABEL {
   ADDR $97FB;
 };
 LABEL {
+  NAME "HealingItemShopMenuBuySellTabButtonPressTable";
+  ADDR $9859;
+};
+LABEL {
+  NAME "HealingItemShopMenuBuySellTabExit";
+  ADDR $9869;
+};
+LABEL {
+  NAME "HealingItemShopMenuBuySellTabNoOp";
+  ADDR $986B;
+};
+LABEL {
+  NAME "HealingItemShopMenuBuySellTabMoveLeftOrRight";
+  ADDR $986E;
+};
+LABEL {
+  NAME "HealingItemShopMenuBuySellTabSelectTab";
+  ADDR $987C;
+};
+LABEL {
+  NAME "HealingItemShopMenuItemListButtonPressTable";
+  ADDR $98BC;
+};
+LABEL {
+  NAME "HealingItemShopMenuItemListExit";
+  ADDR $98CC;
+};
+LABEL {
+  NAME "HealingItemShopMenuItemListNoOp";
+  ADDR $98DE;
+};
+LABEL {
+  NAME "HealingItemShopMenuItemListMoveUp";
+  ADDR $98E1;
+};
+LABEL {
+  NAME "HealingItemShopMenuItemListMoveDown";
+  ADDR $9901;
+};
+LABEL {
+  NAME "HealingItemShopMenuItemListMoveLeftPrevPage";
+  ADDR $9915;
+};
+LABEL {
+  NAME "HealingItemShopMenuItemListMoveRightNextPage";
+  ADDR $9946;
+};
+LABEL {
+  NAME "HealingItemShopMenuItemListSelectItem";
+  ADDR $995D;
+};
+LABEL {
+  NAME "HealingItemShopChooseSellQuantityButtonPressTable";
+  ADDR $9A21;
+};
+LABEL {
+  NAME "HealingItemShopChooseSellQuantityConfirmAmount";
+  ADDR $9A31;
+};
+LABEL {
+  NAME "HealingItemShopChooseSellQuantityExit";
+  ADDR $9A36;
+};
+LABEL {
+  NAME "HealingItemShopChooseSellQuantityNoOp";
+  ADDR $9A38;
+};
+LABEL {
+  NAME "HealingItemShopChooseSellQuantityMoveLeftOrDown";
+  ADDR $9A3B;
+};
+LABEL {
+  NAME "HealingItemShopChooseSellQuantityMoveRightOrUp";
+  ADDR $9A4D;
+};
+LABEL {
+  NAME "HealingItemShopChooseBuyQuantityButtonPressTable";
+  ADDR $9B90;
+};
+LABEL {
+  NAME "HealingItemShopChooseBuyQuantityConfirmAmount";
+  ADDR $9BA0;
+};
+LABEL {
+  NAME "HealingItemShopChooseBuyQuantityExit";
+  ADDR $9BA5;
+};
+LABEL {
+  NAME "HealingItemShopChooseBuyQuantityNoOp";
+  ADDR $9BA7;
+};
+LABEL {
+  NAME "HealingItemShopChooseBuyQuantityMoveLeftOrDown";
+  ADDR $9BAA;
+};
+LABEL {
+  NAME "HealingItemShopChooseBuyQuantityMoveRightOrUp";
+  ADDR $9BBC;
+};
+LABEL {
+  NAME "HealingItemShopBuyItemAndSubtractGil";
+  ADDR $9BE1;
+};
+LABEL {
+  NAME "HealingItemShopCopyPlayerItemQuantityForSaleLoop";
+  ADDR $9C95;
+};
+LABEL {
+  NAME "HealingItemShopPlayerSellItemsCountNumberOfPages";
+  ADDR $9CB5;
+};
+LABEL {
   NAME "ShopMenuEquipmentEntryPoint";
   ADDR $9DE2;
 };
@@ -697,51 +827,51 @@ LABEL {
   ADDR $9C24;
 };
 LABEL {
-  NAME "ShopItemMenuCursorBuySellTabPixelPositionTable";
+  NAME "ShopMenuCursorBuySellTabPixelPositionTable";
   ADDR $9C78;
 };
 LABEL {
-  NAME "ShopBuySellTabButtonPressTable";
+  NAME "EquipmentShopBuySellTabButtonPressTable";
   ADDR $9E40;
 };
 LABEL {
-  NAME "ShopBuySellTabExit";
+  NAME "EquipmentShopBuySellTabExit";
   ADDR $9E50;
 };
 LABEL {
-  NAME "ShopBuySellTabNoOp";
+  NAME "EquipmentShopBuySellTabNoOp";
   ADDR $9E52;
 };
 LABEL {
-  NAME "ShopBuySellTabSwitchOption";
+  NAME "EquipmentShopBuySellTabSwitchOption";
   ADDR $9E55;
 };
 LABEL {
-  NAME "ShopBuySellTabSelectOption";
+  NAME "EquipmentShopBuySellTabSelectOption";
   ADDR $9E63;
 };
 LABEL {
-  NAME "ShopCategoryTabButtonPressTable";
+  NAME "EquipmentShopCategoryTabButtonPressTable";
   ADDR $9E95;
 };
 LABEL {
-  NAME "ShopCategoryTabExit";
+  NAME "EquipmentShopCategoryTabExit";
   ADDR $9EA5;
 };
 LABEL {
-  NAME "ShopCategoryTabNoOp";
+  NAME "EquipmentShopCategoryTabNoOp";
   ADDR $9EAB;
 };
 LABEL {
-  NAME "ShopCategoryTabMoveLeft";
+  NAME "EquipmentShopCategoryTabMoveLeft";
   ADDR $9EAE;
 };
 LABEL {
-  NAME "ShopCategoryTabMoveRight";
+  NAME "EquipmentShopCategoryTabMoveRight";
   ADDR $9EBF;
 };
 LABEL {
-  NAME "ShopCategoryTabSelectOption";
+  NAME "EquipmentShopCategoryTabSelectOption";
   ADDR $9ED0;
 };
 LABEL {
@@ -753,43 +883,91 @@ LABEL {
   ADDR $9DA9;
 };
 LABEL {
-  NAME "ShopItemMenuButtonPressTable";
+  NAME "EquipmentShopItemMenuButtonPressTable";
   ADDR $9F10;
 };
 LABEL {
-  NAME "ShopItemMenuExitItemList";
+  NAME "EquipmentShopItemMenuExitItemList";
   ADDR $9F20;
 };
 LABEL {
-  NAME "ShopItemMenuNoOp";
+  NAME "EquipmentShopItemMenuNoOp";
   ADDR $9F32;
 };
 LABEL {
-  NAME "ShopItemMenuMoveUpSamePage";
+  NAME "EquipmentShopItemMenuMoveUpSamePage";
   ADDR $9F35;
 };
 LABEL {
-  NAME "ShopItemMenuMoveDownSamePage";
+  NAME "EquipmentShopItemMenuMoveDownSamePage";
   ADDR $9F55;
 };
 LABEL {
-  NAME "ShopItemMenuMoveLeftNewPage";
+  NAME "EquipmentShopItemMenuMoveLeftNewPage";
   ADDR $9F69;
 };
 LABEL {
-  NAME "ShopItemMenuMoveRightNewPage";
+  NAME "EquipmentShopItemMenuMoveRightNewPage";
   ADDR $9F9A;
 };
 LABEL {
-  NAME "ShopItemMenuSelectItemToBuyOrSell";
+  NAME "EquipmentShopItemMenuSelectItemToBuyOrSell";
   ADDR $9FB1;
 };
 LABEL {
-  NAME "ShopSellItem";
+  NAME "EquipmentShopChooseSellQuantityButtonPressTable";
+  ADDR $A075;
+};
+LABEL {
+  NAME "EquipmentShopChooseSellQuantityConfirmAmount";
+  ADDR $A085;
+};
+LABEL {
+  NAME "EquipmentShopChooseSellQuantityExit";
+  ADDR $A08A;
+};
+LABEL {
+  NAME "EquipmentShopChooseSellQuantityNoOp";
+  ADDR $A08C;
+};
+LABEL {
+  NAME "EquipmentShopChooseSellQuantityMoveLeftOrDown";
+  ADDR $A08F;
+};
+LABEL {
+  NAME "EquipmentShopChooseSellQuantityMoveRightOrUp";
+  ADDR $A0A1;
+};
+LABEL {
+  NAME "EquipmentShopSellItem";
   ADDR $A0C9;
 };
 LABEL {
-  NAME "ShopBuyItem";
+  NAME "EquipmentShopChooseBuyQuantityButtonPressTable";
+  ADDR $A1D8;
+};
+LABEL {
+  NAME "EquipmentShopChooseBuyQuantityButtonConfirmQuantity";
+  ADDR $A1E8;
+};
+LABEL {
+  NAME "EquipmentShopChooseBuyQuantityExit";
+  ADDR $A1ED;
+};
+LABEL {
+  NAME "EquipmentShopChooseBuyQuantityNoOp";
+  ADDR $A1EF;
+};
+LABEL {
+  NAME "EquipmentShopChooseBuyQuantityMoveLeftOrDown";
+  ADDR $A1F2;
+};
+LABEL {
+  NAME "EquipmentShopChooseBuyQuantityMoveRightOrUp";
+  ADDR $A204;
+};
+LABEL {
+  NAME "EquipmentShopBuyItem";
   ADDR $A238;
 };
 LABEL {
@@ -821,11 +999,27 @@ LABEL {
   ADDR $A31E;
 };
 LABEL {
+  NAME "CountNumberItemMenuPages";
+  ADDR $A325;
+};
+LABEL {
+  NAME "CountNumberItemMenuPagesMoreThanZero";
+  ADDR $A336;
+};
+LABEL {
+  NAME "ItemMenuCountNumberOfPagesLoop";
+  ADDR $A33C;
+};
+LABEL {
+  NAME "FinishedCountingPages";
+  ADDR $A345;
+};
+LABEL {
   NAME "ShopItemMenuSaveNewItemIndex";
   ADDR $A47E;
 };
 LABEL {
-  NAME "LoadUnknownStatsFromBank5_801C";
+  NAME "LoadShopItemCostFromBank5_801C";
   ADDR $A5B2;
 };
 LABEL {
@@ -993,7 +1187,7 @@ LABEL {
   ADDR $B1EF;
 };
 LABEL {
-  NAME "EquipSubmenuButtonPressTable";
+  NAME "EquipSubmenuCharacterButtonPressTable";
   ADDR $B36A;
 };
 LABEL {
@@ -1001,20 +1195,80 @@ LABEL {
   ADDR $B3B0;
 };
 LABEL {
-  NAME "EquipSubmenuExit";
+  NAME "EquipSubmenuCharacterExit";
   ADDR $B37A;
 };
 LABEL {
-  NAME "EquipSubmenuNoOp";
+  NAME "EquipSubmenuCharacterNoOp";
   ADDR $B37C;
 };
 LABEL {
-  NAME "EquipSubmenuMoveLeftOrUp";
+  NAME "EquipSubmenuCharacterMoveLeftOrUp";
   ADDR $B37F;
 };
 LABEL {
-  NAME "EquipSubmenuMoveRightOrDown";
+  NAME "EquipSubmenuCharacterMoveRightOrDown";
   ADDR $B39C;
+};
+LABEL {
+  NAME "EquipSubmenuItemButtonPressTable";
+  ADDR $B3EB;
+};
+LABEL {
+  NAME "EquipSubmenuItemExit";
+  ADDR $B3FB;
+};
+LABEL {
+  NAME "EquipSubmenuItemNoOp";
+  ADDR $B404;
+};
+LABEL {
+  NAME "EquipSubmenuItemMoveLeftOrRight";
+  ADDR $B407;
+};
+LABEL {
+  NAME "EquipSubmenuItemMoveDown";
+  ADDR $B421;
+};
+LABEL {
+  NAME "EquipSubmenuItemMoveUp";
+  ADDR $B431;
+};
+LABEL {
+  NAME "EquipSubmenuItemSelectCategory";
+  ADDR $B443;
+};
+LABEL {
+  NAME "EquipSubmenuEquipmentCategoryButtonPressTable";
+  ADDR $B4D8;
+};
+LABEL {
+  NAME "EquipSubmenuEquipmentCategoryExit";
+  ADDR $B4E8;
+};
+LABEL {
+  NAME "EquipSubmenuEquipmentCategorySelectItem";
+  ADDR $C587;
+};
+LABEL {
+  NAME "EquipSubmenuEquipmentCategoryNoOp";
+  ADDR $B500;
+};
+LABEL {
+  NAME "EquipSubmenuEquipmentCategoryUp";
+  ADDR $B503;
+};
+LABEL {
+  NAME "EquipSubmenuEquipmentCategoryDown";
+  ADDR $B523;
+};
+LABEL {
+  NAME "EquipSubmenuEquipmentCategoryLeft";
+  ADDR $B537;
+};
+LABEL {
+  NAME "EquipSubmenuEquipmentCategoryRight";
+  ADDR $B56B;
 };
 LABEL {
   NAME "EquipSubmenuCursorPixelPositionTable";
@@ -1027,6 +1281,62 @@ LABEL {
 LABEL {
   NAME "ItemTableCharacterStartIndexAndSize";
   ADDR $BC70;
+};
+LABEL {
+  NAME "EquipSubmenuWeaponCategoryButtonPressTable";
+  ADDR $C153;
+};
+LABEL {
+  NAME "EquipSubmenuWeaponCategoryExit";
+  ADDR $C163;
+};
+LABEL {
+  NAME "EquipSubmenuWeaponCategoryNoOp";
+  ADDR $C178;
+};
+LABEL {
+  NAME "EquipSubmenuWeaponCategoryUp";
+  ADDR $C17B;
+};
+LABEL {
+  NAME "EquipSubmenuWeaponCategoryDown";
+  ADDR $C195;
+};
+LABEL {
+  NAME "EquipSubmenuWeaponCategoryLeftPrevPage";
+  ADDR $C1A9;
+};
+LABEL {
+  NAME "EquipSubmenuWeaponCategoryRightNextPage";
+  ADDR $C1D7;
+};
+LABEL {
+  NAME "EquipSubmenuMateriaCategoryButtonPressTable";
+  ADDR $C370;
+};
+LABEL {
+  NAME "EquipSubmenuMateriaCategoryExit";
+  ADDR $C380;
+};
+LABEL {
+  NAME "EquipSubmenuMateriaCategoryNoOp";
+  ADDR $C395;
+};
+LABEL {
+  NAME "EquipSubmenuMateriaCategoryUp";
+  ADDR $C398;
+};
+LABEL {
+  NAME "EquipSubmenuMateriaCategoryDown";
+  ADDR $C3B2;
+};
+LABEL {
+  NAME "EquipSubmenuMateriaCategoryLeftPrevPage";
+  ADDR $C3C6;
+};
+LABEL {
+  NAME "EquipSubmenuMateriaCategoryRightNextPage";
+  ADDR $C3F4;
 };
 LABEL {
   NAME "SetPartyMemberMateria";
@@ -1077,12 +1387,44 @@ LABEL {
   ADDR $C6D3;
 };
 LABEL {
+  NAME "ItemSubmenuListItemButtonPressTable";
+  ADDR $C75A;
+};
+LABEL {
+  NAME "ItemSubmenuListItemExit";
+  ADDR $C76A;
+};
+LABEL {
   NAME "StoreNewItemMenuCursorPos";
   ADDR $C797;
 };
 LABEL {
+  NAME "ItemSubmenuListItemNoOp";
+  ADDR $C783;
+};
+LABEL {
+  NAME "ItemSubmenuListItemUp";
+  ADDR $C786;
+};
+LABEL {
+  NAME "ItemSubmenuListItemDown";
+  ADDR $C7A6;
+};
+LABEL {
+  NAME "ItemSubmenuListItemLeftPrevPage";
+  ADDR $C7BA;
+};
+LABEL {
   NAME "StoreNewItemMenuPagePos";
   ADDR $C7CB;
+};
+LABEL {
+  NAME "ItemSubmenuListItemRightNextPage";
+  ADDR $C7EB;
+};
+LABEL {
+  NAME "ItemSubmenuListItemUseItem";
+  ADDR $C802;
 };
 LABEL {
   NAME "ItemToUseIsNotSmokeItem";
@@ -1170,6 +1512,34 @@ LABEL {
   ADDR  $CCD8;
 };
 LABEL {
+  NAME "MagicSubmenuLevelUpMenuButtonPressTable";
+  ADDR $CCFC;
+};
+LABEL {
+  NAME "MagicSubmenuLevelUpMenuExit";
+  ADDR $CD0C;
+};
+LABEL {
+  NAME "MagicSubmenuLevelUpMenuNoOp";
+  ADDR $CD1C;
+};
+LABEL {
+  NAME "MagicSubmenuLevelUpMenuLeftOrRight";
+  ADDR $CD1F;
+};
+LABEL {
+  NAME "MagicSubmenuLevelUpMenuDown";
+  ADDR $CD44;
+};
+LABEL {
+  NAME "MagicSubmenuLevelUpMenuUp";
+  ADDR $CD5E;
+};
+LABEL {
+  NAME "MagicSubmenuLevelUpMenuSelectMagicCommand";
+  ADDR $CD8A;
+};
+LABEL {
   NAME "IncreaseCharacterMP";
   ADDR  $CDC7;
 };
@@ -1194,11 +1564,11 @@ LABEL {
   ADDR $CE1B;
 };
 LABEL {
-  NAME "SetMasteredStringIndex";
+  NAME "SetMateriaMasteredStringIndex";
   ADDR $CE8F;
 };
 LABEL {
-  NAME "SetNotEnoughExpStringIndex";
+  NAME "SetMateriaNotEnoughExpStringIndex";
   ADDR $CE99;
 };
 LABEL {
@@ -1208,6 +1578,30 @@ LABEL {
 LABEL {
   NAME "MagicSubmenuReadPlayerMateria";
   ADDR $D31E;
+};
+LABEL {
+  NAME "PartySubmenuBrowseButtonPressTable";
+  ADDR $D4E3;
+};
+LABEL {
+  NAME "PartySubmenuBrowseExit";
+  ADDR $D4F3;
+};
+LABEL {
+  NAME "PartySubmenuBrowseNoOp";
+  ADDR $D4F5;
+};
+LABEL {
+  NAME "PartySubmenuBrowseUp";
+  ADDR $D4F8;
+};
+LABEL {
+  NAME "PartySubmenuBrowseDown";
+  ADDR $D512;
+};
+LABEL {
+  NAME "PartySubmenuBrowseSelectMember";
+  ADDR $D526;
 };
 LABEL {
   NAME "PartySubmenuSelectMemberButtonPressTable";
@@ -1264,6 +1658,42 @@ LABEL {
 LABEL {
   NAME "SaveGameCopyDataLoopPart3";
   ADDR $D76F;
+};
+LABEL {
+  NAME "WeaponShopLevelUpMenuButtonPressTable";
+  ADDR $DA3A;
+};
+LABEL {
+  NAME "WeaponShopLevelUpMenuExit";
+  ADDR $DA4A;
+};
+LABEL {
+  NAME "WeaponShopLevelUpMenuNoOp";
+  ADDR $DA4C;
+};
+LABEL {
+  NAME "WeaponShopLevelUpMenuUp";
+  ADDR $DA4F;
+};
+LABEL {
+  NAME "WeaponShopLevelUpMenuDown";
+  ADDR $DA62;
+};
+LABEL {
+  NAME "WeaponShopLevelUpMenuSelectWeapon";
+  ADDR $DA6F;
+};
+LABEL {
+  NAME "SetWeaponMasteredStringIndex";
+  ADDR $DAF6;
+};
+LABEL {
+  NAME "SetWeaponNotEnoughExpStringIndex";
+  ADDR $DB0A;
+};
+LABEL {
+  NAME "WeaponShopLevelUpMenuCursorPixelPositionTable";
+  ADDR $DB36;
 };
 LABEL {
   NAME "LoadAsmCodeToUpdatePPU";
@@ -1328,6 +1758,44 @@ LABEL {
 LABEL {
   NAME "ShopItemMenuCursorCategoryTabPixelPositionTable";
   ADDR  $E2E0;
+};
+LABEL {
+  NAME "ItemFieldNotIndex1_Strength";
+  ADDR  $E343;
+};
+LABEL {
+  NAME "ItemFieldIndex6WeaponCaitSith";
+  ADDR  $E365;
+};
+LABEL {
+  NAME "ItemFieldIndex6WeaponRedXIII";
+  ADDR  $E368;
+};
+LABEL {
+  NAME "ItemFieldIndex6WeaponAerith";
+  ADDR  $E36B;
+};
+LABEL {
+  NAME "ItemFieldIndex6WeaponTifa";
+  ADDR  $E36E;
+};
+LABEL {
+  NAME "ItemFieldIndex6WeaponBarret";
+  ADDR  $E371;
+};
+LABEL {
+  NAME "ItemFieldIndex6WeaponCloud";
+  ADDR  $E374;
+};
+LABEL {
+  NAME "ItemFieldNotIndex6_PartyMemberIndex";
+  ADDR  $E377;
+  COMMENT "Set all other weapon attributes to 0, except for the Strength value";
+};
+LABEL {
+  NAME "ItemIsNotInCategory4_Weapon";
+  ADDR  $E37A;
+  COMMENT "For all other item types, read stat value directly from bank 5";
 };
 LABEL {
   NAME "SaveRAMPlayerInventoryItemIndexAddressTable";

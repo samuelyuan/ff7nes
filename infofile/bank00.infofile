@@ -565,6 +565,10 @@ LABEL {
   ADDR $99C7;
 };
 LABEL {
+  NAME "Bank00BackgroundSceneRoomIndex96";
+  ADDR $9B91;
+};
+LABEL {
   NAME "Bank00LoadBackgroundSceneIdTable1";
   ADDR  $9F7D;
 };

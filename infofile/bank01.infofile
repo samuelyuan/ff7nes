@@ -49,6 +49,15 @@ RANGE {
 };
 
 LABEL {
+  NAME "MapBankAndIndexTable";
+  ADDR  $8014;
+  COMMENT "For most maps, only first byte is uesd. The left 2 bits are image index, right 6 bits are the bank number. For shops, a combination of first and third byte is used.";
+};
+LABEL {
+  NAME "MapTransitionTable";
+  ADDR  $8544;
+};
+LABEL {
   NAME "Map00Bank36Image0MapTransitionRow0";
   ADDR  $86c0;
 };
@@ -3253,63 +3262,63 @@ LABEL {
   ADDR  $a66d;
 };
 LABEL {
-  NAME "Mapa0Bank2eImage1MapTransitionRow0";
+  NAME "MapA0Bank2eImage1MapTransitionRow0";
   ADDR  $a678;
 };
 LABEL {
-  NAME "Mapa0Bank2eImage1MapTransitionRow1";
+  NAME "MapA0Bank2eImage1MapTransitionRow1";
   ADDR  $a682;
 };
 LABEL {
-  NAME "Mapa1Bank2eImage1MapTransitionRow0";
+  NAME "MapA1Bank2eImage1MapTransitionRow0";
   ADDR  $a68d;
 };
 LABEL {
-  NAME "Mapa1Bank2eImage1MapTransitionRow1";
+  NAME "MapA1Bank2eImage1MapTransitionRow1";
   ADDR  $a697;
 };
 LABEL {
-  NAME "Mapa2Bank2eImage1MapTransitionRow0";
+  NAME "MapA2Bank2eImage1MapTransitionRow0";
   ADDR  $a6a2;
 };
 LABEL {
-  NAME "Mapa2Bank2eImage1MapTransitionRow1";
+  NAME "MapA2Bank2eImage1MapTransitionRow1";
   ADDR  $a6ac;
 };
 LABEL {
-  NAME "Mapa2Bank2eImage1MapTransitionRow2";
+  NAME "MapA2Bank2eImage1MapTransitionRow2";
   ADDR  $a6b6;
 };
 LABEL {
-  NAME "Mapa2Bank2eImage1MapTransitionRow3";
+  NAME "MapA2Bank2eImage1MapTransitionRow3";
   ADDR  $a6c0;
 };
 LABEL {
-  NAME "Mapa3Bank2eImage1MapTransitionRow0";
+  NAME "MapA3Bank2eImage1MapTransitionRow0";
   ADDR  $a6c1;
 };
 LABEL {
-  NAME "Mapa3Bank2eImage1MapTransitionRow1";
+  NAME "MapA3Bank2eImage1MapTransitionRow1";
   ADDR  $a6cb;
 };
 LABEL {
-  NAME "Mapa3Bank2eImage1MapTransitionRow2";
+  NAME "MapA3Bank2eImage1MapTransitionRow2";
   ADDR  $a6d5;
 };
 LABEL {
-  NAME "Mapa3Bank2eImage1MapTransitionRow3";
+  NAME "MapA3Bank2eImage1MapTransitionRow3";
   ADDR  $a6df;
 };
 LABEL {
-  NAME "Mapa4Bank2eImage3MapTransitionRow0";
+  NAME "MapA4Bank2eImage3MapTransitionRow0";
   ADDR  $a6ea;
 };
 LABEL {
-  NAME "Mapa5Bank2fImage0MapTransitionRow0";
+  NAME "MapA5Bank2fImage0MapTransitionRow0";
   ADDR  $a6f5;
 };
 LABEL {
-  NAME "Mapa5Bank2fImage0MapTransitionRow1";
+  NAME "MapA5Bank2fImage0MapTransitionRow1";
   ADDR  $a6ff;
 };
 LABEL {
@@ -3367,4 +3376,16 @@ LABEL {
 LABEL {
   NAME "SaveScreenPalette";
   ADDR  $D1BD;
+};
+LABEL {
+  NAME "WeaponLevelUpScreenTileset";
+  ADDR  $D1DD;
+};
+LABEL {
+  NAME "WeaponLevelUpScreenTilemap";
+  ADDR  $D37D;
+};
+LABEL {
+  NAME "WeaponLevelUpScreenPalette";
+  ADDR  $D77D;
 };

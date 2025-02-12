@@ -4701,7 +4701,7 @@ L9B90:
         rts                                     ; 9B90 60                       `
 
 ; ----------------------------------------------------------------------------
-L9B91:
+Bank00BackgroundSceneRoomIndex96:
         rts                                     ; 9B91 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -5088,7 +5088,7 @@ Bank00BackgroundSceneRoomIndexTablePart2:
         .addr   L9B8E                           ; 9D37 8E 9B                    ..
         .addr   L9B8F                           ; 9D39 8F 9B                    ..
         .addr   L9B90                           ; 9D3B 90 9B                    ..
-        .addr   L9B91                           ; 9D3D 91 9B                    ..
+        .addr   Bank00BackgroundSceneRoomIndex96; 9D3D 91 9B                    ..
         .addr   L9B92                           ; 9D3F 92 9B                    ..
         .addr   L9B93                           ; 9D41 93 9B                    ..
         .addr   L9B94                           ; 9D43 94 9B                    ..

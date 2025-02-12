@@ -2,14 +2,15 @@
 
 ; ----------------------------------------------------------------------------
 ; ----------------------------------------------------------------------------
-        .addr   L8544                           ; 8000 44 85                    D.
-        .addr   L8014                           ; 8002 14 80                    ..
+        .addr   MapTransitionTable              ; 8000 44 85                    D.
+        .addr   MapBankAndIndexTable            ; 8002 14 80                    ..
         .addr   Bank01MenuGraphics              ; 8004 25 A7                    %.
         .addr   LD79D                           ; 8006 9D D7                    ..
 ; ----------------------------------------------------------------------------
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8008 00 00 00 00 00 00 00 00  ........
         .byte   $40,$40,$14,$80                 ; 8010 40 40 14 80              @@..
-L8014:
+; For most maps, only first byte is uesd. The left 2 bits are image index, right 6 bits are the bank number. For shops, a combination of first and third byte is used.
+MapBankAndIndexTable:
         .byte   $36,$36,$00,$80,$80,$06,$00,$00 ; 8014 36 36 00 80 80 06 00 00  66......
         .byte   $10,$10,$00,$80,$80,$06,$00,$00 ; 801C 10 10 00 80 80 06 00 00  ........
         .byte   $50,$50,$00,$80,$80,$06,$00,$00 ; 8024 50 50 00 80 80 06 00 00  PP......
@@ -177,7 +178,7 @@ L8014:
         .byte   $EE,$EE,$00,$80,$80,$06,$00,$00 ; 8534 EE EE 00 80 80 06 00 00  ........
         .byte   $2F,$2F,$00,$80,$80,$06,$00,$00 ; 853C 2F 2F 00 80 80 06 00 00  //......
 ; ----------------------------------------------------------------------------
-L8544:
+MapTransitionTable:
         .addr   Map00Bank36Image0MapTransitionRow0; 8544 C0 86                  ..
         .addr   Map01Bank10Image0MapTransitionRow0; 8546 C3 89                  ..
         .addr   Map02Bank10Image1MapTransitionRow0; 8548 0A 8A                  ..
@@ -338,12 +339,12 @@ L8544:
         .addr   Map9dBank2dImage3MapTransitionRow0; 867E 2F A6                  /.
         .addr   Map9eBank2eImage1MapTransitionRow0; 8680 44 A6                  D.
         .addr   Map9fBank2eImage1MapTransitionRow0; 8682 63 A6                  c.
-        .addr   Mapa0Bank2eImage1MapTransitionRow0; 8684 78 A6                  x.
-        .addr   Mapa1Bank2eImage1MapTransitionRow0; 8686 8D A6                  ..
-        .addr   Mapa2Bank2eImage1MapTransitionRow0; 8688 A2 A6                  ..
-        .addr   Mapa3Bank2eImage1MapTransitionRow0; 868A C1 A6                  ..
-        .addr   Mapa4Bank2eImage3MapTransitionRow0; 868C EA A6                  ..
-        .addr   Mapa5Bank2fImage0MapTransitionRow0; 868E F5 A6                  ..
+        .addr   MapA0Bank2eImage1MapTransitionRow0; 8684 78 A6                  x.
+        .addr   MapA1Bank2eImage1MapTransitionRow0; 8686 8D A6                  ..
+        .addr   MapA2Bank2eImage1MapTransitionRow0; 8688 A2 A6                  ..
+        .addr   MapA3Bank2eImage1MapTransitionRow0; 868A C1 A6                  ..
+        .addr   MapA4Bank2eImage3MapTransitionRow0; 868C EA A6                  ..
+        .addr   MapA5Bank2fImage0MapTransitionRow0; 868E F5 A6                  ..
         .addr   LA70A                           ; 8690 0A A7                    ..
         .addr   LA70B                           ; 8692 0B A7                    ..
         .addr   LA70C                           ; 8694 0C A7                    ..
@@ -2726,48 +2727,48 @@ Map9fBank2eImage1MapTransitionRow0:
 Map9fBank2eImage1MapTransitionRow1:
         .byte   $91,$01,$0E,$48,$47,$00,$70,$00 ; A66D 91 01 0E 48 47 00 70 00  ...HG.p.
         .byte   $50,$01,$FF                     ; A675 50 01 FF                 P..
-Mapa0Bank2eImage1MapTransitionRow0:
+MapA0Bank2eImage1MapTransitionRow0:
         .byte   $60,$47,$20,$76,$01,$01,$80,$00 ; A678 60 47 20 76 01 01 80 00  `G v....
         .byte   $A0,$02                         ; A680 A0 02                    ..
-Mapa0Bank2eImage1MapTransitionRow1:
+MapA0Bank2eImage1MapTransitionRow1:
         .byte   $91,$03,$0E,$4A,$47,$00,$80,$00 ; A682 91 03 0E 4A 47 00 80 00  ...JG...
         .byte   $40,$02,$FF                     ; A68A 40 02 FF                 @..
-Mapa1Bank2eImage1MapTransitionRow0:
+MapA1Bank2eImage1MapTransitionRow0:
         .byte   $60,$47,$30,$B6,$02,$00,$70,$00 ; A68D 60 47 30 B6 02 00 70 00  `G0...p.
         .byte   $90,$03                         ; A695 90 03                    ..
-Mapa1Bank2eImage1MapTransitionRow1:
+MapA1Bank2eImage1MapTransitionRow1:
         .byte   $91,$02,$0E,$49,$47,$00,$70,$00 ; A697 91 02 0E 49 47 00 70 00  ...IG.p.
         .byte   $30,$03,$FF                     ; A69F 30 03 FF                 0..
-Mapa2Bank2eImage1MapTransitionRow0:
+MapA2Bank2eImage1MapTransitionRow0:
         .byte   $60,$47,$40,$76,$01,$09,$80,$00 ; A6A2 60 47 40 76 01 09 80 00  `G@v....
         .byte   $80,$04                         ; A6AA 80 04                    ..
-Mapa2Bank2eImage1MapTransitionRow1:
+MapA2Bank2eImage1MapTransitionRow1:
         .byte   $92,$00,$00,$00,$00,$00,$80,$00 ; A6AC 92 00 00 00 00 00 80 00  ........
         .byte   $20,$04                         ; A6B4 20 04                     .
-Mapa2Bank2eImage1MapTransitionRow2:
+MapA2Bank2eImage1MapTransitionRow2:
         .byte   $91,$00,$0E,$46,$47,$00,$C0,$00 ; A6B6 91 00 0E 46 47 00 C0 00  ...FG...
         .byte   $20,$04                         ; A6BE 20 04                     .
-Mapa2Bank2eImage1MapTransitionRow3:
+MapA2Bank2eImage1MapTransitionRow3:
         .byte   $03                             ; A6C0 03                       .
-Mapa3Bank2eImage1MapTransitionRow0:
+MapA3Bank2eImage1MapTransitionRow0:
         .byte   $00,$00,$00,$00,$00,$04,$00,$0C ; A6C1 00 00 00 00 00 04 00 0C  ........
         .byte   $71,$FF                         ; A6C9 71 FF                    q.
-Mapa3Bank2eImage1MapTransitionRow1:
+MapA3Bank2eImage1MapTransitionRow1:
         .byte   $60,$47,$D0,$86,$01,$0E,$80,$00 ; A6CB 60 47 D0 86 01 0E 80 00  `G......
         .byte   $80,$05                         ; A6D3 80 05                    ..
-Mapa3Bank2eImage1MapTransitionRow2:
+MapA3Bank2eImage1MapTransitionRow2:
         .byte   $03,$00,$00,$00,$00,$00,$01,$00 ; A6D5 03 00 00 00 00 00 01 00  ........
         .byte   $0C,$6E                         ; A6DD 0C 6E                    .n
-Mapa3Bank2eImage1MapTransitionRow3:
+MapA3Bank2eImage1MapTransitionRow3:
         .byte   $03,$00,$00,$00,$00,$00,$02,$00 ; A6DF 03 00 00 00 00 00 02 00  ........
         .byte   $0E,$39,$FF                     ; A6E7 0E 39 FF                 .9.
-Mapa4Bank2eImage3MapTransitionRow0:
+MapA4Bank2eImage3MapTransitionRow0:
         .byte   $60,$4A,$70,$66,$02,$00,$C0,$FF ; A6EA 60 4A 70 66 02 00 C0 FF  `Jpf....
         .byte   $60,$05,$FF                     ; A6F2 60 05 FF                 `..
-Mapa5Bank2fImage0MapTransitionRow0:
+MapA5Bank2fImage0MapTransitionRow0:
         .byte   $90,$59,$80,$C9,$00,$00,$E0,$00 ; A6F5 90 59 80 C9 00 00 E0 00  .Y......
         .byte   $60,$02                         ; A6FD 60 02                    `.
-Mapa5Bank2fImage0MapTransitionRow1:
+MapA5Bank2fImage0MapTransitionRow1:
         .byte   $90,$01,$80,$79,$01,$00,$E0,$00 ; A6FF 90 01 80 79 01 00 E0 00  ...y....
         .byte   $A0,$00,$FF                     ; A707 A0 00 FF                 ...
 LA70A:
@@ -2836,10 +2837,10 @@ Bank01MenuGraphics:
         .addr   SaveScreenTileset               ; A73F 9D CC                    ..
         .addr   SaveScreenTilemap               ; A741 BD CD                    ..
         .addr   SaveScreenPalette               ; A743 BD D1                    ..
-        .addr   LD1DD                           ; A745 DD D1                    ..
-        .addr   LD1DD                           ; A747 DD D1                    ..
-        .addr   LD37D                           ; A749 7D D3                    }.
-        .addr   LD77D                           ; A74B 7D D7                    }.
+        .addr   WeaponLevelUpScreenTileset      ; A745 DD D1                    ..
+        .addr   WeaponLevelUpScreenTileset      ; A747 DD D1                    ..
+        .addr   WeaponLevelUpScreenTilemap      ; A749 7D D3                    }.
+        .addr   WeaponLevelUpScreenPalette      ; A74B 7D D7                    }.
 ; ----------------------------------------------------------------------------
 MainMenuBottomPartTileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A74D 00 00 00 00 00 00 00 00  ........
@@ -4216,7 +4217,7 @@ SaveScreenPalette:
         .byte   $0F,$0F,$0F,$0F,$0F,$0F,$0F,$0F ; D1C5 0F 0F 0F 0F 0F 0F 0F 0F  ........
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; D1CD 0F 17 30 36 0F 17 30 36  ..06..06
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; D1D5 0F 17 30 36 0F 17 30 36  ..06..06
-LD1DD:
+WeaponLevelUpScreenTileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D1DD 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D1E5 00 00 00 00 00 00 00 00  ........
         .byte   $00,$3F,$60,$5F,$5F,$5F,$5F,$5F ; D1ED 00 3F 60 5F 5F 5F 5F 5F  .?`_____
@@ -4269,7 +4270,7 @@ LD1DD:
         .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF ; D365 FF FF FF FF FF FF FF FF  ........
         .byte   $FF,$FF,$FF,$7F,$7F,$FF,$FF,$FF ; D36D FF FF FF 7F 7F FF FF FF  ........
         .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF ; D375 FF FF FF FF FF FF FF FF  ........
-LD37D:
+WeaponLevelUpScreenTilemap:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D37D 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D385 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D38D 00 00 00 00 00 00 00 00  ........
@@ -4398,7 +4399,7 @@ LD37D:
         .byte   $40,$50,$50,$50,$50,$50,$50,$10 ; D765 40 50 50 50 50 50 50 10  @PPPPPP.
         .byte   $44,$55,$55,$55,$55,$55,$55,$11 ; D76D 44 55 55 55 55 55 55 11  DUUUUUU.
         .byte   $40,$20,$10,$00,$30,$20,$E0,$80 ; D775 40 20 10 00 30 20 E0 80  @ ..0 ..
-LD77D:
+WeaponLevelUpScreenPalette:
         .byte   $0F,$30,$00,$02,$0F,$30,$29,$02 ; D77D 0F 30 00 02 0F 30 29 02  .0...0).
         .byte   $0F,$0F,$0F,$0F,$0F,$0F,$0F,$0F ; D785 0F 0F 0F 0F 0F 0F 0F 0F  ........
         .byte   $0F,$17,$30,$36,$0F,$17,$30,$36 ; D78D 0F 17 30 36 0F 17 30 36  ..06..06

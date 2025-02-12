@@ -6,6 +6,10 @@ This project builds the following rom:
 
 * game.nes ```md5: 62b74bb9f3146d5ef81a19ec9042c5bf```
 
+Translations of the rom can be found in other branches:
+
+* [ff7-pt-br.nes](https://github.com/samuelyuan/ff7nes/tree/pt-br-patch) ```md5: e28035707a9bc9e41ee84127b03c4ce4```
+
 # Game Memory
 
 This reference table shows where the game reads and writes data to in RAM. 
@@ -27,6 +31,9 @@ This reference table shows where the game reads and writes data to in RAM.
 | 0x0141 | 1 | Current bank to load data from |
 | 0x0149 | 1 | Bank to return to after finishing loading |
 | 0x0200-0x02FF | 256 | Each 8x8 sprite block takes 4 bytes (byte 0 - sprite Y, byte 1 - tile index, byte 2 - palette index, byte 3 - sprite X) |
+| 0x0614 | 1 | Number of pages of items. Each page has at most 6 items. |
+| 0x0616 | 1 | Total number of items in item or shop menu |
+| 0x0645 | 1 | Starting point for item indexes in item menu or shop menu |
 | 0x0770 | 1 | Source of total tilemap rows |
 | 0x0771 | 1 | Source of total tilemap cols |
 | 0x0772 | 1 | Source of initial tilemap screen index |
@@ -105,8 +112,22 @@ To get the values for party member at index i, you must add i to the base addres
 | 0x6277-0x6284 | 14 | Red XIII Weapon Status/Levels |
 | 0x6285-0x6291 | 13 | Cait Sith Weapon Status/Levels |
 | 0x6292-0x629F | 14 | Cid Weapon Status/Levels |
-| 0x6300-0x6367 | 104 | Unknown |
+| 0x62A0-0x62AF | 16 | Cloud Weapon Exp lower byte |
+| 0x62B0-0x62BF | 16 | Barret Weapon Exp lower byte |
+| 0x62C0-0x62CF | 16 | Tifa Weapon Exp lower byte |
+| 0x62D0-0x62DA | 11 | Aerith Weapon Exp lower byte |
+| 0x62DB-0x62E8 | 14 | Red XIII Weapon Exp lower byte |
+| 0x62E9-0x62F5 | 13 | Cait Sith Weapon Exp lower byte |
+| 0x62F6-0x6303 | 14 | Cid Weapon Exp lower byte |
+| 0x6304-0x6313 | 16 | Cloud Weapon Exp upper byte |
+| 0x6314-0x6323 | 16 | Barret Weapon Exp upper byte |
+| 0x6324-0x6333 | 16 | Tifa Weapon Exp upper byte |
+| 0x6334-0x633E | 11 | Aerith Weapon Exp upper byte |
+| 0x633F-0x634C | 14 | Red XIII Weapon Exp upper byte |
+| 0x634D-0x6359 | 13 | Cait Sith Weapon Exp upper byte |
+| 0x635A-0x6367 | 14 | Cid Weapon Exp upper byte |
 | 0x6368-0x636E | 7 | Materia Equipped Status/Level (Equipped flag is leftmost bit, level is between 1 - 9) |
+| 0X636F-0x637C | 14 | Unknown |
 | 0x637D-0x6385 | 9 | Fire Materia Magic Spell Levels |
 | 0x6386-0x638E | 9 | Water Materia Magic Spell Levels |
 | 0x638F-0x6397 | 9 | Bolt Materia Magic Spell Levels |
@@ -138,6 +159,17 @@ To get the values for party member at index i, you must add i to the base addres
 | 0x6479-0x64B8 | 64 | Menu Screen Graphics Tile Attributes |
 | 0x64B9-0x64FF | 71 | Unknown |
 | 0x6500-0x67FF | 768 | Game Save 1 Data Part 1 (copied from 0x6000-0x62FF) |
+| 0x6E30-0x6E37 | 8 | Unknown audio field |
+| 0x6E38 | 1 | Unknown audio field |
+| 0x6E39 | 1 | Unknown audio field |
+| 0x6E3B | 1 | Unknown audio field |
+| 0x6E64 | 1 | Unknown audio field |
+| 0x6E6C | 1 | Unknown audio field |
+| 0x6EB0-0x6EB2 | 3 | Unknown audio field |
+| 0x6EB3-0x6EB5 | 3 | Unknown audio field |
+| 0x6EB6-0x6EB8 | 3 | Unknown audio field |
+| 0x6EB9-0x6EBB | 3 | Unknown audio field |
+| 0x6EBC-0x6EBE | 3 | Unknown audio field |
 | 0x6F47 | 1 | Number of party members (copied from 0x603C) |
 | 0x6F48-0x6F4E | 7 | Party member index (copied from 0x603D-0x6042) |
 | 0x6F4F | 1 | Battle Screen Enemy count (1 - 6) |

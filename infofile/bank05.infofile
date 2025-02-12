@@ -34,6 +34,16 @@ RANGE {
 };
 RANGE {
   START $C93A;
+  END $D43F;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $D440;
+  END $E3DF;
+  TYPE WORDTABLE;
+};
+RANGE {
+  START $E3E0;
   END $F10A;
   TYPE BYTETABLE;
 };
@@ -160,7 +170,7 @@ LABEL {
   COMMENT "Stores max HP, Str, Vit, Int, Spr, Agl. The 7th variable is unknown. All variables are 2 bytes and each character takes 14 bytes.";
 };
 LABEL {
-  NAME "ExpNeededForNextLevel";
+  NAME "PartyMemberExpNeededForNextLevel";
   ADDR $C79E;
 };
 LABEL {
@@ -182,6 +192,14 @@ LABEL {
 LABEL {
   NAME "ShopItemRingStats";
   ADDR $D11A;
+};
+LABEL {
+  NAME "WeaponItemStats";
+  ADDR $D2B0;
+};
+LABEL {
+  NAME "WeaponExpNeededForNextLevel";
+  ADDR $D440;
 };
 LABEL {
   NAME "MateriaStats";

@@ -3016,7 +3016,7 @@ L945B:
         rts                                     ; 945D 60                       `
 
 ; ----------------------------------------------------------------------------
-L945E:
+LoadMenuItemSprites:
         lda     #$04                            ; 945E A9 04                    ..
         sta     $9C                             ; 9460 85 9C                    ..
         lda     #$F0                            ; 9462 A9 F0                    ..
@@ -3037,7 +3037,7 @@ L9464:
         rts                                     ; 9478 60                       `
 
 ; ----------------------------------------------------------------------------
-LoadItemStatsFromBank5:
+LoadItemStatsFromBank5_800A:
         lda     #$05                            ; 9479 A9 05                    ..
         sta     $0141                           ; 947B 8D 41 01                 .A.
         lda     $4F                             ; 947E A5 4F                    .O
@@ -3105,7 +3105,7 @@ ShopItemMenuWriteItemStatsForDisplay:
         rts                                     ; 94F7 60                       `
 
 ; ----------------------------------------------------------------------------
-LoadUnknownStatsFromBank5_800C:
+LoadWeaponItemStatsFromBank5_800C:
         lda     #$05                            ; 94F8 A9 05                    ..
         sta     $0141                           ; 94FA 8D 41 01                 .A.
         lda     $4F                             ; 94FD A5 4F                    .O
@@ -3150,7 +3150,7 @@ L953A:
         sta     $6F29                           ; 954D 8D 29 6F                 .)o
         tay                                     ; 9550 A8                       .
         dey                                     ; 9551 88                       .
-        beq     L9561                           ; 9552 F0 0D                    ..
+        beq     LoadWeaponExpLevelUpStatsFromBank5_800E; 9552 F0 0D             ..
 L9554:
         lda     $6F25                           ; 9554 AD 25 6F                 .%o
         clc                                     ; 9557 18                       .
@@ -3158,7 +3158,7 @@ L9554:
         sta     $6F25                           ; 955B 8D 25 6F                 .%o
         dey                                     ; 955E 88                       .
         bne     L9554                           ; 955F D0 F3                    ..
-L9561:
+LoadWeaponExpLevelUpStatsFromBank5_800E:
         ldy     $6F24                           ; 9561 AC 24 6F                 .$o
         lda     $629F,y                         ; 9564 B9 9F 62                 ..b
         sta     $6F2A                           ; 9567 8D 2A 6F                 .*o
@@ -3565,34 +3565,34 @@ L9847:
         txa                                     ; 9848 8A                       .
         asl     a                               ; 9849 0A                       .
         tax                                     ; 984A AA                       .
-        lda     L9859,x                         ; 984B BD 59 98                 .Y.
+        lda     HealingItemShopMenuBuySellTabButtonPressTable,x; 984B BD 59 98  .Y.
         sta     L0002                           ; 984E 85 02                    ..
         inx                                     ; 9850 E8                       .
-        lda     L9859,x                         ; 9851 BD 59 98                 .Y.
+        lda     HealingItemShopMenuBuySellTabButtonPressTable,x; 9851 BD 59 98  .Y.
         sta     $03                             ; 9854 85 03                    ..
         jmp     (L0002)                         ; 9856 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-L9859:
-        .addr   L987C                           ; 9859 7C 98                    |.
-        .addr   L9869                           ; 985B 69 98                    i.
-        .addr   L986B                           ; 985D 6B 98                    k.
-        .addr   L986B                           ; 985F 6B 98                    k.
-        .addr   L986B                           ; 9861 6B 98                    k.
-        .addr   L986B                           ; 9863 6B 98                    k.
-        .addr   L986E                           ; 9865 6E 98                    n.
-        .addr   L986E                           ; 9867 6E 98                    n.
+HealingItemShopMenuBuySellTabButtonPressTable:
+        .addr   HealingItemShopMenuBuySellTabSelectTab; 9859 7C 98              |.
+        .addr   HealingItemShopMenuBuySellTabExit; 985B 69 98                   i.
+        .addr   HealingItemShopMenuBuySellTabNoOp; 985D 6B 98                   k.
+        .addr   HealingItemShopMenuBuySellTabNoOp; 985F 6B 98                   k.
+        .addr   HealingItemShopMenuBuySellTabNoOp; 9861 6B 98                   k.
+        .addr   HealingItemShopMenuBuySellTabNoOp; 9863 6B 98                   k.
+        .addr   HealingItemShopMenuBuySellTabMoveLeftOrRight; 9865 6E 98        n.
+        .addr   HealingItemShopMenuBuySellTabMoveLeftOrRight; 9867 6E 98        n.
 ; ----------------------------------------------------------------------------
-L9869:
+HealingItemShopMenuBuySellTabExit:
         clc                                     ; 9869 18                       .
         rts                                     ; 986A 60                       `
 
 ; ----------------------------------------------------------------------------
-L986B:
+HealingItemShopMenuBuySellTabNoOp:
         jmp     L9835                           ; 986B 4C 35 98                 L5.
 
 ; ----------------------------------------------------------------------------
-L986E:
+HealingItemShopMenuBuySellTabMoveLeftOrRight:
         lda     $6F42                           ; 986E AD 42 6F                 .Bo
         eor     #$01                            ; 9871 49 01                    I.
         sta     $6F42                           ; 9873 8D 42 6F                 .Bo
@@ -3600,7 +3600,7 @@ L986E:
         jmp     L982F                           ; 9879 4C 2F 98                 L/.
 
 ; ----------------------------------------------------------------------------
-L987C:
+HealingItemShopMenuBuySellTabSelectTab:
         jsr     L9C7C                           ; 987C 20 7C 9C                  |.
         lda     #$00                            ; 987F A9 00                    ..
         sta     $0613                           ; 9881 8D 13 06                 ...
@@ -3629,25 +3629,25 @@ L98AA:
         txa                                     ; 98AB 8A                       .
         asl     a                               ; 98AC 0A                       .
         tax                                     ; 98AD AA                       .
-        lda     L98BC,x                         ; 98AE BD BC 98                 ...
+        lda     HealingItemShopMenuItemListButtonPressTable,x; 98AE BD BC 98    ...
         sta     L0002                           ; 98B1 85 02                    ..
         inx                                     ; 98B3 E8                       .
-        lda     L98BC,x                         ; 98B4 BD BC 98                 ...
+        lda     HealingItemShopMenuItemListButtonPressTable,x; 98B4 BD BC 98    ...
         sta     $03                             ; 98B7 85 03                    ..
         jmp     (L0002)                         ; 98B9 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-L98BC:
-        .addr   L995D                           ; 98BC 5D 99                    ].
-        .addr   L98CC                           ; 98BE CC 98                    ..
-        .addr   L98DE                           ; 98C0 DE 98                    ..
-        .addr   L98DE                           ; 98C2 DE 98                    ..
-        .addr   L98E1                           ; 98C4 E1 98                    ..
-        .addr   L9901                           ; 98C6 01 99                    ..
-        .addr   L9915                           ; 98C8 15 99                    ..
-        .addr   L9946                           ; 98CA 46 99                    F.
+HealingItemShopMenuItemListButtonPressTable:
+        .addr   HealingItemShopMenuItemListSelectItem; 98BC 5D 99               ].
+        .addr   HealingItemShopMenuItemListExit ; 98BE CC 98                    ..
+        .addr   HealingItemShopMenuItemListNoOp ; 98C0 DE 98                    ..
+        .addr   HealingItemShopMenuItemListNoOp ; 98C2 DE 98                    ..
+        .addr   HealingItemShopMenuItemListMoveUp; 98C4 E1 98                   ..
+        .addr   HealingItemShopMenuItemListMoveDown; 98C6 01 99                 ..
+        .addr   HealingItemShopMenuItemListMoveLeftPrevPage; 98C8 15 99         ..
+        .addr   HealingItemShopMenuItemListMoveRightNextPage; 98CA 46 99        F.
 ; ----------------------------------------------------------------------------
-L98CC:
+HealingItemShopMenuItemListExit:
         jsr     LCBD8                           ; 98CC 20 D8 CB                  ..
         jsr     LCB15                           ; 98CF 20 15 CB                  ..
         jsr     LCB4D                           ; 98D2 20 4D CB                  M.
@@ -3656,11 +3656,11 @@ L98CC:
         jmp     L982F                           ; 98DB 4C 2F 98                 L/.
 
 ; ----------------------------------------------------------------------------
-L98DE:
+HealingItemShopMenuItemListNoOp:
         jmp     L9898                           ; 98DE 4C 98 98                 L..
 
 ; ----------------------------------------------------------------------------
-L98E1:
+HealingItemShopMenuItemListMoveUp:
         lda     $0615                           ; 98E1 AD 15 06                 ...
         cmp     #$02                            ; 98E4 C9 02                    ..
         bcc     L9898                           ; 98E6 90 B0                    ..
@@ -3677,7 +3677,7 @@ L98F2:
         jmp     L9892                           ; 98FE 4C 92 98                 L..
 
 ; ----------------------------------------------------------------------------
-L9901:
+HealingItemShopMenuItemListMoveDown:
         lda     $0615                           ; 9901 AD 15 06                 ...
         cmp     #$02                            ; 9904 C9 02                    ..
         bcc     L9898                           ; 9906 90 90                    ..
@@ -3687,7 +3687,7 @@ L9901:
         bcc     L98F2                           ; 990F 90 E1                    ..
         ldx     #$00                            ; 9911 A2 00                    ..
         beq     L98F2                           ; 9913 F0 DD                    ..
-L9915:
+HealingItemShopMenuItemListMoveLeftPrevPage:
         lda     $0614                           ; 9915 AD 14 06                 ...
         cmp     #$02                            ; 9918 C9 02                    ..
         bcc     L995A                           ; 991A 90 3E                    .>
@@ -3710,7 +3710,7 @@ L9926:
         jmp     L9892                           ; 9943 4C 92 98                 L..
 
 ; ----------------------------------------------------------------------------
-L9946:
+HealingItemShopMenuItemListMoveRightNextPage:
         lda     $0614                           ; 9946 AD 14 06                 ...
         cmp     #$02                            ; 9949 C9 02                    ..
         bcc     L995A                           ; 994B 90 0D                    ..
@@ -3724,7 +3724,7 @@ L995A:
         jmp     L9898                           ; 995A 4C 98 98                 L..
 
 ; ----------------------------------------------------------------------------
-L995D:
+HealingItemShopMenuItemListSelectItem:
         jsr     LCA16                           ; 995D 20 16 CA                  ..
         clc                                     ; 9960 18                       .
         adc     $6F43                           ; 9961 6D 43 6F                 mCo
@@ -3820,40 +3820,40 @@ L9A0F:
         txa                                     ; 9A10 8A                       .
         asl     a                               ; 9A11 0A                       .
         tax                                     ; 9A12 AA                       .
-        lda     L9A21,x                         ; 9A13 BD 21 9A                 .!.
+        lda     HealingItemShopChooseSellQuantityButtonPressTable,x; 9A13 BD 21 9A.!.
         sta     L0002                           ; 9A16 85 02                    ..
         inx                                     ; 9A18 E8                       .
-        lda     L9A21,x                         ; 9A19 BD 21 9A                 .!.
+        lda     HealingItemShopChooseSellQuantityButtonPressTable,x; 9A19 BD 21 9A.!.
         sta     $03                             ; 9A1C 85 03                    ..
         jmp     (L0002)                         ; 9A1E 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-L9A21:
-        .addr   L9A31                           ; 9A21 31 9A                    1.
-        .addr   L9A36                           ; 9A23 36 9A                    6.
-        .addr   L9A38                           ; 9A25 38 9A                    8.
-        .addr   L9A38                           ; 9A27 38 9A                    8.
-        .addr   L9A4D                           ; 9A29 4D 9A                    M.
-        .addr   L9A3B                           ; 9A2B 3B 9A                    ;.
-        .addr   L9A3B                           ; 9A2D 3B 9A                    ;.
-        .addr   L9A4D                           ; 9A2F 4D 9A                    M.
+HealingItemShopChooseSellQuantityButtonPressTable:
+        .addr   HealingItemShopChooseSellQuantityConfirmAmount; 9A21 31 9A      1.
+        .addr   HealingItemShopChooseSellQuantityExit; 9A23 36 9A               6.
+        .addr   HealingItemShopChooseSellQuantityNoOp; 9A25 38 9A               8.
+        .addr   HealingItemShopChooseSellQuantityNoOp; 9A27 38 9A               8.
+        .addr   HealingItemShopChooseSellQuantityMoveRightOrUp; 9A29 4D 9A      M.
+        .addr   HealingItemShopChooseSellQuantityMoveLeftOrDown; 9A2B 3B 9A     ;.
+        .addr   HealingItemShopChooseSellQuantityMoveLeftOrDown; 9A2D 3B 9A     ;.
+        .addr   HealingItemShopChooseSellQuantityMoveRightOrUp; 9A2F 4D 9A      M.
 ; ----------------------------------------------------------------------------
-L9A31:
+HealingItemShopChooseSellQuantityConfirmAmount:
         jsr     L9A66                           ; 9A31 20 66 9A                  f.
         sec                                     ; 9A34 38                       8
         rts                                     ; 9A35 60                       `
 
 ; ----------------------------------------------------------------------------
-L9A36:
+HealingItemShopChooseSellQuantityExit:
         clc                                     ; 9A36 18                       .
         rts                                     ; 9A37 60                       `
 
 ; ----------------------------------------------------------------------------
-L9A38:
+HealingItemShopChooseSellQuantityNoOp:
         jmp     L9A00                           ; 9A38 4C 00 9A                 L..
 
 ; ----------------------------------------------------------------------------
-L9A3B:
+HealingItemShopChooseSellQuantityMoveLeftOrDown:
         ldx     $6F19                           ; 9A3B AE 19 6F                 ..o
         dex                                     ; 9A3E CA                       .
         beq     L9A00                           ; 9A3F F0 BF                    ..
@@ -3863,7 +3863,7 @@ L9A3B:
         jmp     L9A00                           ; 9A4A 4C 00 9A                 L..
 
 ; ----------------------------------------------------------------------------
-L9A4D:
+HealingItemShopChooseSellQuantityMoveRightOrUp:
         ldx     $6F24                           ; 9A4D AE 24 6F                 .$o
         lda     $60CE,x                         ; 9A50 BD CE 60                 ..`
         cmp     $6F19                           ; 9A53 CD 19 6F                 ..o
@@ -4019,40 +4019,40 @@ L9B7E:
         txa                                     ; 9B7F 8A                       .
         asl     a                               ; 9B80 0A                       .
         tax                                     ; 9B81 AA                       .
-        lda     L9B90,x                         ; 9B82 BD 90 9B                 ...
+        lda     HealingItemShopChooseBuyQuantityButtonPressTable,x; 9B82 BD 90 9B...
         sta     L0002                           ; 9B85 85 02                    ..
         inx                                     ; 9B87 E8                       .
-        lda     L9B90,x                         ; 9B88 BD 90 9B                 ...
+        lda     HealingItemShopChooseBuyQuantityButtonPressTable,x; 9B88 BD 90 9B...
         sta     $03                             ; 9B8B 85 03                    ..
         jmp     (L0002)                         ; 9B8D 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-L9B90:
-        .addr   L9BA0                           ; 9B90 A0 9B                    ..
-        .addr   L9BA5                           ; 9B92 A5 9B                    ..
-        .addr   L9BA7                           ; 9B94 A7 9B                    ..
-        .addr   L9BA7                           ; 9B96 A7 9B                    ..
-        .addr   L9BBC                           ; 9B98 BC 9B                    ..
-        .addr   L9BAA                           ; 9B9A AA 9B                    ..
-        .addr   L9BAA                           ; 9B9C AA 9B                    ..
-        .addr   L9BBC                           ; 9B9E BC 9B                    ..
+HealingItemShopChooseBuyQuantityButtonPressTable:
+        .addr   HealingItemShopChooseBuyQuantityConfirmAmount; 9B90 A0 9B       ..
+        .addr   HealingItemShopChooseBuyQuantityExit; 9B92 A5 9B                ..
+        .addr   HealingItemShopChooseBuyQuantityNoOp; 9B94 A7 9B                ..
+        .addr   HealingItemShopChooseBuyQuantityNoOp; 9B96 A7 9B                ..
+        .addr   HealingItemShopChooseBuyQuantityMoveRightOrUp; 9B98 BC 9B       ..
+        .addr   HealingItemShopChooseBuyQuantityMoveLeftOrDown; 9B9A AA 9B      ..
+        .addr   HealingItemShopChooseBuyQuantityMoveLeftOrDown; 9B9C AA 9B      ..
+        .addr   HealingItemShopChooseBuyQuantityMoveRightOrUp; 9B9E BC 9B       ..
 ; ----------------------------------------------------------------------------
-L9BA0:
-        jsr     L9BE1                           ; 9BA0 20 E1 9B                  ..
+HealingItemShopChooseBuyQuantityConfirmAmount:
+        jsr     HealingItemShopBuyItemAndSubtractGil; 9BA0 20 E1 9B              ..
         sec                                     ; 9BA3 38                       8
         rts                                     ; 9BA4 60                       `
 
 ; ----------------------------------------------------------------------------
-L9BA5:
+HealingItemShopChooseBuyQuantityExit:
         clc                                     ; 9BA5 18                       .
         rts                                     ; 9BA6 60                       `
 
 ; ----------------------------------------------------------------------------
-L9BA7:
+HealingItemShopChooseBuyQuantityNoOp:
         jmp     L9B6F                           ; 9BA7 4C 6F 9B                 Lo.
 
 ; ----------------------------------------------------------------------------
-L9BAA:
+HealingItemShopChooseBuyQuantityMoveLeftOrDown:
         ldx     $6F19                           ; 9BAA AE 19 6F                 ..o
         dex                                     ; 9BAD CA                       .
         beq     L9B6F                           ; 9BAE F0 BF                    ..
@@ -4062,7 +4062,7 @@ L9BAA:
         jmp     L9B6F                           ; 9BB9 4C 6F 9B                 Lo.
 
 ; ----------------------------------------------------------------------------
-L9BBC:
+HealingItemShopChooseBuyQuantityMoveRightOrUp:
         ldx     $6F24                           ; 9BBC AE 24 6F                 .$o
         lda     $60CE,x                         ; 9BBF BD CE 60                 ..`
         clc                                     ; 9BC2 18                       .
@@ -4082,7 +4082,7 @@ L9BD8:
         jmp     L9B6F                           ; 9BDE 4C 6F 9B                 Lo.
 
 ; ----------------------------------------------------------------------------
-L9BE1:
+HealingItemShopBuyItemAndSubtractGil:
         lda     $602E                           ; 9BE1 AD 2E 60                 ..`
         sec                                     ; 9BE4 38                       8
         sbc     $6F27                           ; 9BE5 ED 27 6F                 .'o
@@ -4147,10 +4147,10 @@ L9C60:
         lda     $6F42                           ; 9C60 AD 42 6F                 .Bo
         asl     a                               ; 9C63 0A                       .
         tax                                     ; 9C64 AA                       .
-        lda     ShopItemMenuCursorBuySellTabPixelPositionTable,x; 9C65 BD 78 9C .x.
+        lda     ShopMenuCursorBuySellTabPixelPositionTable,x; 9C65 BD 78 9C     .x.
         sta     $AD                             ; 9C68 85 AD                    ..
         inx                                     ; 9C6A E8                       .
-        lda     ShopItemMenuCursorBuySellTabPixelPositionTable,x; 9C6B BD 78 9C .x.
+        lda     ShopMenuCursorBuySellTabPixelPositionTable,x; 9C6B BD 78 9C     .x.
         sta     $AC                             ; 9C6E 85 AC                    ..
         ldx     #$F0                            ; 9C70 A2 F0                    ..
         lda     #$00                            ; 9C72 A9 00                    ..
@@ -4158,7 +4158,7 @@ L9C60:
         rts                                     ; 9C77 60                       `
 
 ; ----------------------------------------------------------------------------
-ShopItemMenuCursorBuySellTabPixelPositionTable:
+ShopMenuCursorBuySellTabPixelPositionTable:
         .byte   $18,$10,$40,$10                 ; 9C78 18 10 40 10              ..@.
 ; ----------------------------------------------------------------------------
 L9C7C:
@@ -4178,7 +4178,7 @@ L9C8E:
 L9C91:
         ldx     #$01                            ; 9C91 A2 01                    ..
         ldy     #$00                            ; 9C93 A0 00                    ..
-L9C95:
+HealingItemShopCopyPlayerItemQuantityForSaleLoop:
         lda     $60CE,x                         ; 9C95 BD CE 60                 ..`
         beq     L9C9F                           ; 9C98 F0 05                    ..
         txa                                     ; 9C9A 8A                       .
@@ -4187,10 +4187,10 @@ L9C95:
 L9C9F:
         inx                                     ; 9C9F E8                       .
         cpx     #$12                            ; 9CA0 E0 12                    ..
-        bne     L9C95                           ; 9CA2 D0 F1                    ..
+        bne     HealingItemShopCopyPlayerItemQuantityForSaleLoop; 9CA2 D0 F1    ..
 L9CA4:
         tya                                     ; 9CA4 98                       .
-        bne     L9CB5                           ; 9CA5 D0 0E                    ..
+        bne     HealingItemShopPlayerSellItemsCountNumberOfPages; 9CA5 D0 0E    ..
         lda     #$00                            ; 9CA7 A9 00                    ..
         sta     $0645                           ; 9CA9 8D 45 06                 .E.
         lda     #$01                            ; 9CAC A9 01                    ..
@@ -4199,7 +4199,7 @@ L9CA4:
         rts                                     ; 9CB4 60                       `
 
 ; ----------------------------------------------------------------------------
-L9CB5:
+HealingItemShopPlayerSellItemsCountNumberOfPages:
         sta     $0616                           ; 9CB5 8D 16 06                 ...
         ldx     #$01                            ; 9CB8 A2 01                    ..
         sec                                     ; 9CBA 38                       8
@@ -4350,16 +4350,9 @@ ShopItemPotionCost:
         .byte   $00,$62,$63,$00,$36,$37,$38,$39 ; 9DC9 00 62 63 00 36 37 38 39  .bc.6789
         .byte   $00                             ; 9DD1 00                       .
 L9DD2:
-        .byte   $DF,$60                         ; 9DD2 DF 60                    .`
+        .byte   $DF,$60,$16,$61,$96,$61,$FF,$61 ; 9DD2 DF 60 16 61 96 61 FF 61  .`.a.a.a
+        .byte   $01,$38,$01,$81,$01,$6A,$01,$3B ; 9DDA 01 38 01 81 01 6A 01 3B  .8...j.;
 ; ----------------------------------------------------------------------------
-        asl     $61,x                           ; 9DD4 16 61                    .a
-        stx     $61,y                           ; 9DD6 96 61                    .a
-        .byte   $FF                             ; 9DD8 FF                       .
-        adc     ($01,x)                         ; 9DD9 61 01                    a.
-        sec                                     ; 9DDB 38                       8
-        ora     ($81,x)                         ; 9DDC 01 81                    ..
-        ora     ($6A,x)                         ; 9DDE 01 6A                    .j
-        ora     ($3B,x)                         ; 9DE0 01 3B                    .;
 ShopMenuEquipmentEntryPoint:
         jsr     Bank0eSetMemoryAddress0200Main  ; 9DE2 20 94 DF                  ..
         jsr     Bank0eScreenRefresh             ; 9DE5 20 78 DF                  x.
@@ -4402,34 +4395,34 @@ L9E2E:
         txa                                     ; 9E2F 8A                       .
         asl     a                               ; 9E30 0A                       .
         tax                                     ; 9E31 AA                       .
-        lda     ShopBuySellTabButtonPressTable,x; 9E32 BD 40 9E                 .@.
+        lda     EquipmentShopBuySellTabButtonPressTable,x; 9E32 BD 40 9E        .@.
         sta     L0002                           ; 9E35 85 02                    ..
         inx                                     ; 9E37 E8                       .
-        lda     ShopBuySellTabButtonPressTable,x; 9E38 BD 40 9E                 .@.
+        lda     EquipmentShopBuySellTabButtonPressTable,x; 9E38 BD 40 9E        .@.
         sta     $03                             ; 9E3B 85 03                    ..
         jmp     (L0002)                         ; 9E3D 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-ShopBuySellTabButtonPressTable:
-        .addr   ShopBuySellTabSelectOption      ; 9E40 63 9E                    c.
-        .addr   ShopBuySellTabExit              ; 9E42 50 9E                    P.
-        .addr   ShopBuySellTabNoOp              ; 9E44 52 9E                    R.
-        .addr   ShopBuySellTabNoOp              ; 9E46 52 9E                    R.
-        .addr   ShopBuySellTabNoOp              ; 9E48 52 9E                    R.
-        .addr   ShopBuySellTabNoOp              ; 9E4A 52 9E                    R.
-        .addr   ShopBuySellTabSwitchOption      ; 9E4C 55 9E                    U.
-        .addr   ShopBuySellTabSwitchOption      ; 9E4E 55 9E                    U.
+EquipmentShopBuySellTabButtonPressTable:
+        .addr   EquipmentShopBuySellTabSelectOption; 9E40 63 9E                 c.
+        .addr   EquipmentShopBuySellTabExit     ; 9E42 50 9E                    P.
+        .addr   EquipmentShopBuySellTabNoOp     ; 9E44 52 9E                    R.
+        .addr   EquipmentShopBuySellTabNoOp     ; 9E46 52 9E                    R.
+        .addr   EquipmentShopBuySellTabNoOp     ; 9E48 52 9E                    R.
+        .addr   EquipmentShopBuySellTabNoOp     ; 9E4A 52 9E                    R.
+        .addr   EquipmentShopBuySellTabSwitchOption; 9E4C 55 9E                 U.
+        .addr   EquipmentShopBuySellTabSwitchOption; 9E4E 55 9E                 U.
 ; ----------------------------------------------------------------------------
-ShopBuySellTabExit:
+EquipmentShopBuySellTabExit:
         clc                                     ; 9E50 18                       .
         rts                                     ; 9E51 60                       `
 
 ; ----------------------------------------------------------------------------
-ShopBuySellTabNoOp:
+EquipmentShopBuySellTabNoOp:
         jmp     L9E1C                           ; 9E52 4C 1C 9E                 L..
 
 ; ----------------------------------------------------------------------------
-ShopBuySellTabSwitchOption:
+EquipmentShopBuySellTabSwitchOption:
         lda     $6F42                           ; 9E55 AD 42 6F                 .Bo
         eor     #$01                            ; 9E58 49 01                    I.
         sta     $6F42                           ; 9E5A 8D 42 6F                 .Bo
@@ -4437,7 +4430,7 @@ ShopBuySellTabSwitchOption:
         jmp     L9E16                           ; 9E60 4C 16 9E                 L..
 
 ; ----------------------------------------------------------------------------
-ShopBuySellTabSelectOption:
+EquipmentShopBuySellTabSelectOption:
         lda     #$00                            ; 9E63 A9 00                    ..
         sta     $6FCA                           ; 9E65 8D CA 6F                 ..o
         jsr     LA289                           ; 9E68 20 89 A2                  ..
@@ -4461,34 +4454,34 @@ L9E83:
         txa                                     ; 9E84 8A                       .
         asl     a                               ; 9E85 0A                       .
         tax                                     ; 9E86 AA                       .
-        lda     ShopCategoryTabButtonPressTable,x; 9E87 BD 95 9E                ...
+        lda     EquipmentShopCategoryTabButtonPressTable,x; 9E87 BD 95 9E       ...
         sta     L0002                           ; 9E8A 85 02                    ..
         inx                                     ; 9E8C E8                       .
-        lda     ShopCategoryTabButtonPressTable,x; 9E8D BD 95 9E                ...
+        lda     EquipmentShopCategoryTabButtonPressTable,x; 9E8D BD 95 9E       ...
         sta     $03                             ; 9E90 85 03                    ..
         jmp     (L0002)                         ; 9E92 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-ShopCategoryTabButtonPressTable:
-        .addr   ShopCategoryTabSelectOption     ; 9E95 D0 9E                    ..
-        .addr   ShopCategoryTabExit             ; 9E97 A5 9E                    ..
-        .addr   ShopCategoryTabNoOp             ; 9E99 AB 9E                    ..
-        .addr   ShopCategoryTabNoOp             ; 9E9B AB 9E                    ..
-        .addr   ShopCategoryTabNoOp             ; 9E9D AB 9E                    ..
-        .addr   ShopCategoryTabNoOp             ; 9E9F AB 9E                    ..
-        .addr   ShopCategoryTabMoveLeft         ; 9EA1 AE 9E                    ..
-        .addr   ShopCategoryTabMoveRight        ; 9EA3 BF 9E                    ..
+EquipmentShopCategoryTabButtonPressTable:
+        .addr   EquipmentShopCategoryTabSelectOption; 9E95 D0 9E                ..
+        .addr   EquipmentShopCategoryTabExit    ; 9E97 A5 9E                    ..
+        .addr   EquipmentShopCategoryTabNoOp    ; 9E99 AB 9E                    ..
+        .addr   EquipmentShopCategoryTabNoOp    ; 9E9B AB 9E                    ..
+        .addr   EquipmentShopCategoryTabNoOp    ; 9E9D AB 9E                    ..
+        .addr   EquipmentShopCategoryTabNoOp    ; 9E9F AB 9E                    ..
+        .addr   EquipmentShopCategoryTabMoveLeft; 9EA1 AE 9E                    ..
+        .addr   EquipmentShopCategoryTabMoveRight; 9EA3 BF 9E                   ..
 ; ----------------------------------------------------------------------------
-ShopCategoryTabExit:
+EquipmentShopCategoryTabExit:
         jsr     L9C60                           ; 9EA5 20 60 9C                  `.
         jmp     L9E16                           ; 9EA8 4C 16 9E                 L..
 
 ; ----------------------------------------------------------------------------
-ShopCategoryTabNoOp:
+EquipmentShopCategoryTabNoOp:
         jmp     L9E71                           ; 9EAB 4C 71 9E                 Lq.
 
 ; ----------------------------------------------------------------------------
-ShopCategoryTabMoveLeft:
+EquipmentShopCategoryTabMoveLeft:
         lda     $6FCA                           ; 9EAE AD CA 6F                 ..o
         jsr     LE2F0                           ; 9EB1 20 F0 E2                  ..
         nop                                     ; 9EB4 EA                       .
@@ -4498,7 +4491,7 @@ ShopCategoryTabMoveLeft:
         jmp     L9E6B                           ; 9EBC 4C 6B 9E                 Lk.
 
 ; ----------------------------------------------------------------------------
-ShopCategoryTabMoveRight:
+EquipmentShopCategoryTabMoveRight:
         lda     $6FCA                           ; 9EBF AD CA 6F                 ..o
         jsr     LE300                           ; 9EC2 20 00 E3                  ..
         nop                                     ; 9EC5 EA                       .
@@ -4508,7 +4501,7 @@ ShopCategoryTabMoveRight:
         jmp     L9E6B                           ; 9ECD 4C 6B 9E                 Lk.
 
 ; ----------------------------------------------------------------------------
-ShopCategoryTabSelectOption:
+EquipmentShopCategoryTabSelectOption:
         jsr     ShopListItemsForBuyOrSell       ; 9ED0 20 CD A2                  ..
         lda     #$00                            ; 9ED3 A9 00                    ..
         sta     $0613                           ; 9ED5 8D 13 06                 ...
@@ -4537,25 +4530,25 @@ L9EFE:
         txa                                     ; 9EFF 8A                       .
         asl     a                               ; 9F00 0A                       .
         tax                                     ; 9F01 AA                       .
-        lda     ShopItemMenuButtonPressTable,x  ; 9F02 BD 10 9F                 ...
+        lda     EquipmentShopItemMenuButtonPressTable,x; 9F02 BD 10 9F          ...
         sta     L0002                           ; 9F05 85 02                    ..
         inx                                     ; 9F07 E8                       .
-        lda     ShopItemMenuButtonPressTable,x  ; 9F08 BD 10 9F                 ...
+        lda     EquipmentShopItemMenuButtonPressTable,x; 9F08 BD 10 9F          ...
         sta     $03                             ; 9F0B 85 03                    ..
         jmp     (L0002)                         ; 9F0D 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-ShopItemMenuButtonPressTable:
-        .addr   ShopItemMenuSelectItemToBuyOrSell; 9F10 B1 9F                   ..
-        .addr   ShopItemMenuExitItemList        ; 9F12 20 9F                     .
-        .addr   ShopItemMenuNoOp                ; 9F14 32 9F                    2.
-        .addr   ShopItemMenuNoOp                ; 9F16 32 9F                    2.
-        .addr   ShopItemMenuMoveUpSamePage      ; 9F18 35 9F                    5.
-        .addr   ShopItemMenuMoveDownSamePage    ; 9F1A 55 9F                    U.
-        .addr   ShopItemMenuMoveLeftNewPage     ; 9F1C 69 9F                    i.
-        .addr   ShopItemMenuMoveRightNewPage    ; 9F1E 9A 9F                    ..
+EquipmentShopItemMenuButtonPressTable:
+        .addr   EquipmentShopItemMenuSelectItemToBuyOrSell; 9F10 B1 9F          ..
+        .addr   EquipmentShopItemMenuExitItemList; 9F12 20 9F                    .
+        .addr   EquipmentShopItemMenuNoOp       ; 9F14 32 9F                    2.
+        .addr   EquipmentShopItemMenuNoOp       ; 9F16 32 9F                    2.
+        .addr   EquipmentShopItemMenuMoveUpSamePage; 9F18 35 9F                 5.
+        .addr   EquipmentShopItemMenuMoveDownSamePage; 9F1A 55 9F               U.
+        .addr   EquipmentShopItemMenuMoveLeftNewPage; 9F1C 69 9F                i.
+        .addr   EquipmentShopItemMenuMoveRightNewPage; 9F1E 9A 9F               ..
 ; ----------------------------------------------------------------------------
-ShopItemMenuExitItemList:
+EquipmentShopItemMenuExitItemList:
         jsr     LCBD8                           ; 9F20 20 D8 CB                  ..
         jsr     LA51B                           ; 9F23 20 1B A5                  ..
         jsr     LA444                           ; 9F26 20 44 A4                  D.
@@ -4564,11 +4557,11 @@ ShopItemMenuExitItemList:
         jmp     L9E6B                           ; 9F2F 4C 6B 9E                 Lk.
 
 ; ----------------------------------------------------------------------------
-ShopItemMenuNoOp:
+EquipmentShopItemMenuNoOp:
         jmp     L9EEC                           ; 9F32 4C EC 9E                 L..
 
 ; ----------------------------------------------------------------------------
-ShopItemMenuMoveUpSamePage:
+EquipmentShopItemMenuMoveUpSamePage:
         lda     $0615                           ; 9F35 AD 15 06                 ...
         cmp     #$02                            ; 9F38 C9 02                    ..
         bcc     L9EEC                           ; 9F3A 90 B0                    ..
@@ -4585,7 +4578,7 @@ L9F46:
         jmp     L9EE6                           ; 9F52 4C E6 9E                 L..
 
 ; ----------------------------------------------------------------------------
-ShopItemMenuMoveDownSamePage:
+EquipmentShopItemMenuMoveDownSamePage:
         lda     $0615                           ; 9F55 AD 15 06                 ...
         cmp     #$02                            ; 9F58 C9 02                    ..
         bcc     L9EEC                           ; 9F5A 90 90                    ..
@@ -4595,7 +4588,7 @@ ShopItemMenuMoveDownSamePage:
         bcc     L9F46                           ; 9F63 90 E1                    ..
         ldx     #$00                            ; 9F65 A2 00                    ..
         beq     L9F46                           ; 9F67 F0 DD                    ..
-ShopItemMenuMoveLeftNewPage:
+EquipmentShopItemMenuMoveLeftNewPage:
         lda     $0614                           ; 9F69 AD 14 06                 ...
         cmp     #$02                            ; 9F6C C9 02                    ..
         bcc     L9FAE                           ; 9F6E 90 3E                    .>
@@ -4618,7 +4611,7 @@ L9F7A:
         jmp     L9EE6                           ; 9F97 4C E6 9E                 L..
 
 ; ----------------------------------------------------------------------------
-ShopItemMenuMoveRightNewPage:
+EquipmentShopItemMenuMoveRightNewPage:
         lda     $0614                           ; 9F9A AD 14 06                 ...
         cmp     #$02                            ; 9F9D C9 02                    ..
         bcc     L9FAE                           ; 9F9F 90 0D                    ..
@@ -4632,7 +4625,7 @@ L9FAE:
         jmp     L9EEC                           ; 9FAE 4C EC 9E                 L..
 
 ; ----------------------------------------------------------------------------
-ShopItemMenuSelectItemToBuyOrSell:
+EquipmentShopItemMenuSelectItemToBuyOrSell:
         jsr     LCA16                           ; 9FB1 20 16 CA                  ..
         clc                                     ; 9FB4 18                       .
         adc     $6F43                           ; 9FB5 6D 43 6F                 mCo
@@ -4701,7 +4694,7 @@ LA023:
         jsr     LA553                           ; A02B 20 53 A5                  S.
         jsr     LA58B                           ; A02E 20 8B A5                  ..
         lda     $6F24                           ; A031 AD 24 6F                 .$o
-        jsr     LoadUnknownStatsFromBank5_801C  ; A034 20 B2 A5                  ..
+        jsr     LoadShopItemCostFromBank5_801C  ; A034 20 B2 A5                  ..
         lda     $8E                             ; A037 A5 8E                    ..
         sta     $6F25                           ; A039 8D 25 6F                 .%o
         sta     $6F27                           ; A03C 8D 27 6F                 .'o
@@ -4728,40 +4721,40 @@ LA063:
         txa                                     ; A064 8A                       .
         asl     a                               ; A065 0A                       .
         tax                                     ; A066 AA                       .
-        lda     LA075,x                         ; A067 BD 75 A0                 .u.
+        lda     EquipmentShopChooseSellQuantityButtonPressTable,x; A067 BD 75 A0.u.
         sta     L0002                           ; A06A 85 02                    ..
         inx                                     ; A06C E8                       .
-        lda     LA075,x                         ; A06D BD 75 A0                 .u.
+        lda     EquipmentShopChooseSellQuantityButtonPressTable,x; A06D BD 75 A0.u.
         sta     $03                             ; A070 85 03                    ..
         jmp     (L0002)                         ; A072 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-LA075:
-        .addr   LA085                           ; A075 85 A0                    ..
-        .addr   LA08A                           ; A077 8A A0                    ..
-        .addr   LA08C                           ; A079 8C A0                    ..
-        .addr   LA08C                           ; A07B 8C A0                    ..
-        .addr   LA0A1                           ; A07D A1 A0                    ..
-        .addr   LA08F                           ; A07F 8F A0                    ..
-        .addr   LA08F                           ; A081 8F A0                    ..
-        .addr   LA0A1                           ; A083 A1 A0                    ..
+EquipmentShopChooseSellQuantityButtonPressTable:
+        .addr   EquipmentShopChooseSellQuantityConfirmAmount; A075 85 A0        ..
+        .addr   EquipmentShopChooseSellQuantityExit; A077 8A A0                 ..
+        .addr   EquipmentShopChooseSellQuantityNoOp; A079 8C A0                 ..
+        .addr   EquipmentShopChooseSellQuantityNoOp; A07B 8C A0                 ..
+        .addr   EquipmentShopChooseSellQuantityMoveRightOrUp; A07D A1 A0        ..
+        .addr   EquipmentShopChooseSellQuantityMoveLeftOrDown; A07F 8F A0       ..
+        .addr   EquipmentShopChooseSellQuantityMoveLeftOrDown; A081 8F A0       ..
+        .addr   EquipmentShopChooseSellQuantityMoveRightOrUp; A083 A1 A0        ..
 ; ----------------------------------------------------------------------------
-LA085:
-        jsr     ShopSellItem                    ; A085 20 C9 A0                  ..
+EquipmentShopChooseSellQuantityConfirmAmount:
+        jsr     EquipmentShopSellItem           ; A085 20 C9 A0                  ..
         sec                                     ; A088 38                       8
         rts                                     ; A089 60                       `
 
 ; ----------------------------------------------------------------------------
-LA08A:
+EquipmentShopChooseSellQuantityExit:
         clc                                     ; A08A 18                       .
         rts                                     ; A08B 60                       `
 
 ; ----------------------------------------------------------------------------
-LA08C:
+EquipmentShopChooseSellQuantityNoOp:
         jmp     LA054                           ; A08C 4C 54 A0                 LT.
 
 ; ----------------------------------------------------------------------------
-LA08F:
+EquipmentShopChooseSellQuantityMoveLeftOrDown:
         ldx     $6F19                           ; A08F AE 19 6F                 ..o
         dex                                     ; A092 CA                       .
         beq     LA054                           ; A093 F0 BF                    ..
@@ -4771,7 +4764,7 @@ LA08F:
         jmp     LA054                           ; A09E 4C 54 A0                 LT.
 
 ; ----------------------------------------------------------------------------
-LA0A1:
+EquipmentShopChooseSellQuantityMoveRightOrUp:
         lda     $6FCA                           ; A0A1 AD CA 6F                 ..o
         asl     a                               ; A0A4 0A                       .
         tay                                     ; A0A5 A8                       .
@@ -4791,7 +4784,7 @@ LA0A1:
         jmp     LA054                           ; A0C6 4C 54 A0                 LT.
 
 ; ----------------------------------------------------------------------------
-ShopSellItem:
+EquipmentShopSellItem:
         lda     $602E                           ; A0C9 AD 2E 60                 ..`
         clc                                     ; A0CC 18                       .
         adc     $6F27                           ; A0CD 6D 27 6F                 m'o
@@ -4875,7 +4868,7 @@ LA13E:
 ; ----------------------------------------------------------------------------
 LA16C:
         lda     $6F24                           ; A16C AD 24 6F                 .$o
-        jsr     LoadUnknownStatsFromBank5_801C  ; A16F 20 B2 A5                  ..
+        jsr     LoadShopItemCostFromBank5_801C  ; A16F 20 B2 A5                  ..
         lda     $8E                             ; A172 A5 8E                    ..
         sta     $6F25                           ; A174 8D 25 6F                 .%o
         sta     $6F27                           ; A177 8D 27 6F                 .'o
@@ -4923,40 +4916,40 @@ LA1C6:
         txa                                     ; A1C7 8A                       .
         asl     a                               ; A1C8 0A                       .
         tax                                     ; A1C9 AA                       .
-        lda     LA1D8,x                         ; A1CA BD D8 A1                 ...
+        lda     EquipmentShopChooseBuyQuantityButtonPressTable,x; A1CA BD D8 A1 ...
         sta     L0002                           ; A1CD 85 02                    ..
         inx                                     ; A1CF E8                       .
-        lda     LA1D8,x                         ; A1D0 BD D8 A1                 ...
+        lda     EquipmentShopChooseBuyQuantityButtonPressTable,x; A1D0 BD D8 A1 ...
         sta     $03                             ; A1D3 85 03                    ..
         jmp     (L0002)                         ; A1D5 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-LA1D8:
-        .addr   LA1E8                           ; A1D8 E8 A1                    ..
-        .addr   LA1ED                           ; A1DA ED A1                    ..
-        .addr   LA1EF                           ; A1DC EF A1                    ..
-        .addr   LA1EF                           ; A1DE EF A1                    ..
-        .addr   LA204                           ; A1E0 04 A2                    ..
-        .addr   LA1F2                           ; A1E2 F2 A1                    ..
-        .addr   LA1F2                           ; A1E4 F2 A1                    ..
-        .addr   LA204                           ; A1E6 04 A2                    ..
+EquipmentShopChooseBuyQuantityButtonPressTable:
+        .addr   EquipmentShopChooseBuyQuantityButtonConfirmQuantity; A1D8 E8 A1 ..
+        .addr   EquipmentShopChooseBuyQuantityExit; A1DA ED A1                  ..
+        .addr   EquipmentShopChooseBuyQuantityNoOp; A1DC EF A1                  ..
+        .addr   EquipmentShopChooseBuyQuantityNoOp; A1DE EF A1                  ..
+        .addr   EquipmentShopChooseBuyQuantityMoveRightOrUp; A1E0 04 A2         ..
+        .addr   EquipmentShopChooseBuyQuantityMoveLeftOrDown; A1E2 F2 A1        ..
+        .addr   EquipmentShopChooseBuyQuantityMoveLeftOrDown; A1E4 F2 A1        ..
+        .addr   EquipmentShopChooseBuyQuantityMoveRightOrUp; A1E6 04 A2         ..
 ; ----------------------------------------------------------------------------
-LA1E8:
-        jsr     ShopBuyItem                     ; A1E8 20 38 A2                  8.
+EquipmentShopChooseBuyQuantityButtonConfirmQuantity:
+        jsr     EquipmentShopBuyItem            ; A1E8 20 38 A2                  8.
         sec                                     ; A1EB 38                       8
         rts                                     ; A1EC 60                       `
 
 ; ----------------------------------------------------------------------------
-LA1ED:
+EquipmentShopChooseBuyQuantityExit:
         clc                                     ; A1ED 18                       .
         rts                                     ; A1EE 60                       `
 
 ; ----------------------------------------------------------------------------
-LA1EF:
+EquipmentShopChooseBuyQuantityNoOp:
         jmp     LA1B7                           ; A1EF 4C B7 A1                 L..
 
 ; ----------------------------------------------------------------------------
-LA1F2:
+EquipmentShopChooseBuyQuantityMoveLeftOrDown:
         ldx     $6F19                           ; A1F2 AE 19 6F                 ..o
         dex                                     ; A1F5 CA                       .
         beq     LA1B7                           ; A1F6 F0 BF                    ..
@@ -4966,7 +4959,7 @@ LA1F2:
         jmp     LA1B7                           ; A201 4C B7 A1                 L..
 
 ; ----------------------------------------------------------------------------
-LA204:
+EquipmentShopChooseBuyQuantityMoveRightOrUp:
         lda     $6FCA                           ; A204 AD CA 6F                 ..o
         asl     a                               ; A207 0A                       .
         tay                                     ; A208 A8                       .
@@ -4996,7 +4989,7 @@ LA22F:
         jmp     LA1B7                           ; A235 4C B7 A1                 L..
 
 ; ----------------------------------------------------------------------------
-ShopBuyItem:
+EquipmentShopBuyItem:
         lda     $602E                           ; A238 AD 2E 60                 ..`
         sec                                     ; A23B 38                       8
         sbc     $6F27                           ; A23C ED 27 6F                 .'o
@@ -5089,7 +5082,7 @@ ShopLoadAllItemIndexesInCategoryLoop:
         iny                                     ; A2EB C8                       .
         bne     ShopLoadAllItemIndexesInCategoryLoop; A2EC D0 F6                ..
 ShopFinishedLoadingAllItemsInCategory:
-        jmp     LA325                           ; A2EE 4C 25 A3                 L%.
+        jmp     CountNumberItemMenuPages        ; A2EE 4C 25 A3                 L%.
 
 ; ----------------------------------------------------------------------------
 ShopSellOptionSelectedListItemsInInventory:
@@ -5123,9 +5116,9 @@ PlayerItemIndexZeroJump:
         bne     ListPlayerItemsInInventoryLoop  ; A321 D0 F2                    ..
         txa                                     ; A323 8A                       .
         tay                                     ; A324 A8                       .
-LA325:
+CountNumberItemMenuPages:
         tya                                     ; A325 98                       .
-        bne     LA336                           ; A326 D0 0E                    ..
+        bne     CountNumberItemMenuPagesMoreThanZero; A326 D0 0E                ..
         lda     #$00                            ; A328 A9 00                    ..
         sta     $0645                           ; A32A 8D 45 06                 .E.
         lda     #$01                            ; A32D A9 01                    ..
@@ -5134,17 +5127,17 @@ LA325:
         rts                                     ; A335 60                       `
 
 ; ----------------------------------------------------------------------------
-LA336:
+CountNumberItemMenuPagesMoreThanZero:
         sta     $0616                           ; A336 8D 16 06                 ...
         ldx     #$01                            ; A339 A2 01                    ..
         sec                                     ; A33B 38                       8
-LA33C:
+ItemMenuCountNumberOfPagesLoop:
         sbc     #$06                            ; A33C E9 06                    ..
-        bcc     LA345                           ; A33E 90 05                    ..
-        beq     LA345                           ; A340 F0 03                    ..
+        bcc     FinishedCountingPages           ; A33E 90 05                    ..
+        beq     FinishedCountingPages           ; A340 F0 03                    ..
         inx                                     ; A342 E8                       .
-        bne     LA33C                           ; A343 D0 F7                    ..
-LA345:
+        bne     ItemMenuCountNumberOfPagesLoop  ; A343 D0 F7                    ..
+FinishedCountingPages:
         stx     $0614                           ; A345 8E 14 06                 ...
         rts                                     ; A348 60                       `
 
@@ -5243,7 +5236,7 @@ LA374:
         lda     #$00                            ; A3F3 A9 00                    ..
         sta     $0617                           ; A3F5 8D 17 06                 ...
         pla                                     ; A3F8 68                       h
-        jsr     LoadUnknownStatsFromBank5_801C  ; A3F9 20 B2 A5                  ..
+        jsr     LoadShopItemCostFromBank5_801C  ; A3F9 20 B2 A5                  ..
         lda     #$00                            ; A3FC A9 00                    ..
         sta     $90                             ; A3FE 85 90                    ..
         jsr     L81D5                           ; A400 20 D5 81                  ..
@@ -5321,7 +5314,7 @@ ShopItemMenuSaveNewItemIndex:
         sta     $6F24                           ; A47E 8D 24 6F                 .$o
         lda     $6FCA                           ; A481 AD CA 6F                 ..o
         sta     $6F23                           ; A484 8D 23 6F                 .#o
-        jsr     LoadItemStatsFromBank5          ; A487 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5_800A     ; A487 20 79 94                  y.
         lda     #$00                            ; A48A A9 00                    ..
         sta     $0617                           ; A48C 8D 17 06                 ...
         lda     #$05                            ; A48F A9 05                    ..
@@ -5490,7 +5483,7 @@ LA58B:
         rts                                     ; A5B1 60                       `
 
 ; ----------------------------------------------------------------------------
-LoadUnknownStatsFromBank5_801C:
+LoadShopItemCostFromBank5_801C:
         pha                                     ; A5B2 48                       H
         lda     #$05                            ; A5B3 A9 05                    ..
         sta     $0141                           ; A5B5 8D 41 01                 .A.
@@ -6744,7 +6737,7 @@ SetCharacterStatsOtherAttributes:
         sta     $6F24                           ; AEAD 8D 24 6F                 .$o
         lda     #$00                            ; AEB0 A9 00                    ..
         sta     $6F23                           ; AEB2 8D 23 6F                 .#o
-        jsr     LoadItemStatsFromBank5          ; AEB5 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5_800A     ; AEB5 20 79 94                  y.
         jsr     LAF4F                           ; AEB8 20 4F AF                  O.
 LAEBB:
         lda     $605F,x                         ; AEBB BD 5F 60                 ._`
@@ -6752,7 +6745,7 @@ LAEBB:
         sta     $6F24                           ; AEC0 8D 24 6F                 .$o
         lda     #$01                            ; AEC3 A9 01                    ..
         sta     $6F23                           ; AEC5 8D 23 6F                 .#o
-        jsr     LoadItemStatsFromBank5          ; AEC8 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5_800A     ; AEC8 20 79 94                  y.
         jsr     LAF4F                           ; AECB 20 4F AF                  O.
 LAECE:
         lda     $6066,x                         ; AECE BD 66 60                 .f`
@@ -6760,7 +6753,7 @@ LAECE:
         sta     $6F24                           ; AED3 8D 24 6F                 .$o
         lda     #$02                            ; AED6 A9 02                    ..
         sta     $6F23                           ; AED8 8D 23 6F                 .#o
-        jsr     LoadItemStatsFromBank5          ; AEDB 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5_800A     ; AEDB 20 79 94                  y.
         jsr     LAF4F                           ; AEDE 20 4F AF                  O.
 LAEE1:
         lda     $606D,x                         ; AEE1 BD 6D 60                 .m`
@@ -6768,7 +6761,7 @@ LAEE1:
         sta     $6F24                           ; AEE6 8D 24 6F                 .$o
         lda     #$03                            ; AEE9 A9 03                    ..
         sta     $6F23                           ; AEEB 8D 23 6F                 .#o
-        jsr     LoadItemStatsFromBank5          ; AEEE 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5_800A     ; AEEE 20 79 94                  y.
         jsr     LAF4F                           ; AEF1 20 4F AF                  O.
 LAEF4:
         txa                                     ; AEF4 8A                       .
@@ -6962,7 +6955,7 @@ LB05F:
 ; ----------------------------------------------------------------------------
 LB06C:
         sta     $6F24                           ; B06C 8D 24 6F                 .$o
-        jsr     LoadUnknownStatsFromBank5_800C  ; B06F 20 F8 94                  ..
+        jsr     LoadWeaponItemStatsFromBank5_800C; B06F 20 F8 94                 ..
         lda     #$07                            ; B072 A9 07                    ..
         sta     $0A                             ; B074 85 0A                    ..
         lda     #$00                            ; B076 A9 00                    ..
@@ -7334,34 +7327,34 @@ LB358:
         txa                                     ; B359 8A                       .
         asl     a                               ; B35A 0A                       .
         tax                                     ; B35B AA                       .
-        lda     EquipSubmenuButtonPressTable,x  ; B35C BD 6A B3                 .j.
+        lda     EquipSubmenuCharacterButtonPressTable,x; B35C BD 6A B3          .j.
         sta     L0002                           ; B35F 85 02                    ..
         inx                                     ; B361 E8                       .
-        lda     EquipSubmenuButtonPressTable,x  ; B362 BD 6A B3                 .j.
+        lda     EquipSubmenuCharacterButtonPressTable,x; B362 BD 6A B3          .j.
         sta     $03                             ; B365 85 03                    ..
         jmp     (L0002)                         ; B367 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-EquipSubmenuButtonPressTable:
+EquipSubmenuCharacterButtonPressTable:
         .addr   EquipSubmenuSelectCharacter     ; B36A B0 B3                    ..
-        .addr   EquipSubmenuExit                ; B36C 7A B3                    z.
-        .addr   EquipSubmenuNoOp                ; B36E 7C B3                    |.
-        .addr   EquipSubmenuNoOp                ; B370 7C B3                    |.
-        .addr   EquipSubmenuMoveLeftOrUp        ; B372 7F B3                    ..
-        .addr   EquipSubmenuMoveRightOrDown     ; B374 9C B3                    ..
-        .addr   EquipSubmenuMoveLeftOrUp        ; B376 7F B3                    ..
-        .addr   EquipSubmenuMoveRightOrDown     ; B378 9C B3                    ..
+        .addr   EquipSubmenuCharacterExit       ; B36C 7A B3                    z.
+        .addr   EquipSubmenuCharacterNoOp       ; B36E 7C B3                    |.
+        .addr   EquipSubmenuCharacterNoOp       ; B370 7C B3                    |.
+        .addr   EquipSubmenuCharacterMoveLeftOrUp; B372 7F B3                   ..
+        .addr   EquipSubmenuCharacterMoveRightOrDown; B374 9C B3                ..
+        .addr   EquipSubmenuCharacterMoveLeftOrUp; B376 7F B3                   ..
+        .addr   EquipSubmenuCharacterMoveRightOrDown; B378 9C B3                ..
 ; ----------------------------------------------------------------------------
-EquipSubmenuExit:
+EquipSubmenuCharacterExit:
         clc                                     ; B37A 18                       .
         rts                                     ; B37B 60                       `
 
 ; ----------------------------------------------------------------------------
-EquipSubmenuNoOp:
+EquipSubmenuCharacterNoOp:
         jmp     LB349                           ; B37C 4C 49 B3                 LI.
 
 ; ----------------------------------------------------------------------------
-EquipSubmenuMoveLeftOrUp:
+EquipSubmenuCharacterMoveLeftOrUp:
         lda     $603B                           ; B37F AD 3B 60                 .;`
         cmp     #$02                            ; B382 C9 02                    ..
         bcc     LB349                           ; B384 90 C3                    ..
@@ -7377,7 +7370,7 @@ LB390:
         jmp     LB349                           ; B399 4C 49 B3                 LI.
 
 ; ----------------------------------------------------------------------------
-EquipSubmenuMoveRightOrDown:
+EquipSubmenuCharacterMoveRightOrDown:
         lda     $603B                           ; B39C AD 3B 60                 .;`
         cmp     #$02                            ; B39F C9 02                    ..
         bcc     LB349                           ; B3A1 90 A6                    ..
@@ -7414,35 +7407,35 @@ LB3D9:
         txa                                     ; B3DA 8A                       .
         asl     a                               ; B3DB 0A                       .
         tax                                     ; B3DC AA                       .
-        lda     LB3EB,x                         ; B3DD BD EB B3                 ...
+        lda     EquipSubmenuItemButtonPressTable,x; B3DD BD EB B3               ...
         sta     L0002                           ; B3E0 85 02                    ..
         inx                                     ; B3E2 E8                       .
-        lda     LB3EB,x                         ; B3E3 BD EB B3                 ...
+        lda     EquipSubmenuItemButtonPressTable,x; B3E3 BD EB B3               ...
         sta     $03                             ; B3E6 85 03                    ..
         jmp     (L0002)                         ; B3E8 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-LB3EB:
-        .addr   LB443                           ; B3EB 43 B4                    C.
-        .addr   LB3FB                           ; B3ED FB B3                    ..
-        .addr   LB404                           ; B3EF 04 B4                    ..
-        .addr   LB404                           ; B3F1 04 B4                    ..
-        .addr   LB431                           ; B3F3 31 B4                    1.
-        .addr   LB421                           ; B3F5 21 B4                    !.
-        .addr   LB407                           ; B3F7 07 B4                    ..
-        .addr   LB407                           ; B3F9 07 B4                    ..
+EquipSubmenuItemButtonPressTable:
+        .addr   EquipSubmenuItemSelectCategory  ; B3EB 43 B4                    C.
+        .addr   EquipSubmenuItemExit            ; B3ED FB B3                    ..
+        .addr   EquipSubmenuItemNoOp            ; B3EF 04 B4                    ..
+        .addr   EquipSubmenuItemNoOp            ; B3F1 04 B4                    ..
+        .addr   EquipSubmenuItemMoveUp          ; B3F3 31 B4                    1.
+        .addr   EquipSubmenuItemMoveDown        ; B3F5 21 B4                    !.
+        .addr   EquipSubmenuItemMoveLeftOrRight ; B3F7 07 B4                    ..
+        .addr   EquipSubmenuItemMoveLeftOrRight ; B3F9 07 B4                    ..
 ; ----------------------------------------------------------------------------
-LB3FB:
+EquipSubmenuItemExit:
         jsr     LB5FA                           ; B3FB 20 FA B5                  ..
         jsr     LBB93                           ; B3FE 20 93 BB                  ..
         jmp     LB349                           ; B401 4C 49 B3                 LI.
 
 ; ----------------------------------------------------------------------------
-LB404:
+EquipSubmenuItemNoOp:
         jmp     LB3C7                           ; B404 4C C7 B3                 L..
 
 ; ----------------------------------------------------------------------------
-LB407:
+EquipSubmenuItemMoveLeftOrRight:
         lda     $6F21                           ; B407 AD 21 6F                 .!o
         eor     #$01                            ; B40A 49 01                    I.
         beq     LB3C7                           ; B40C F0 B9                    ..
@@ -7456,7 +7449,7 @@ LB412:
         jmp     LB3C1                           ; B41E 4C C1 B3                 L..
 
 ; ----------------------------------------------------------------------------
-LB421:
+EquipSubmenuItemMoveDown:
         lda     $6F21                           ; B421 AD 21 6F                 .!o
         clc                                     ; B424 18                       .
         adc     #$02                            ; B425 69 02                    i.
@@ -7466,7 +7459,7 @@ LB421:
 LB42D:
         lda     #$04                            ; B42D A9 04                    ..
         bne     LB412                           ; B42F D0 E1                    ..
-LB431:
+EquipSubmenuItemMoveUp:
         lda     $6F21                           ; B431 AD 21 6F                 .!o
         sec                                     ; B434 38                       8
         sbc     #$02                            ; B435 E9 02                    ..
@@ -7477,7 +7470,7 @@ LB431:
 LB43F:
         lda     #$06                            ; B43F A9 06                    ..
         bne     LB412                           ; B441 D0 CF                    ..
-LB443:
+EquipSubmenuItemSelectCategory:
         jsr     LB5FA                           ; B443 20 FA B5                  ..
         jsr     LBB93                           ; B446 20 93 BB                  ..
         lda     $6F23                           ; B449 AD 23 6F                 .#o
@@ -7551,25 +7544,25 @@ LB4C6:
         txa                                     ; B4C7 8A                       .
         asl     a                               ; B4C8 0A                       .
         tax                                     ; B4C9 AA                       .
-        lda     LB4D8,x                         ; B4CA BD D8 B4                 ...
+        lda     EquipSubmenuEquipmentCategoryButtonPressTable,x; B4CA BD D8 B4  ...
         sta     L0002                           ; B4CD 85 02                    ..
         inx                                     ; B4CF E8                       .
-        lda     LB4D8,x                         ; B4D0 BD D8 B4                 ...
+        lda     EquipSubmenuEquipmentCategoryButtonPressTable,x; B4D0 BD D8 B4  ...
         sta     $03                             ; B4D3 85 03                    ..
         jmp     (L0002)                         ; B4D5 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-LB4D8:
-        .addr   LC587                           ; B4D8 87 C5                    ..
-        .addr   LB4E8                           ; B4DA E8 B4                    ..
-        .addr   LB500                           ; B4DC 00 B5                    ..
-        .addr   LB500                           ; B4DE 00 B5                    ..
-        .addr   LB503                           ; B4E0 03 B5                    ..
-        .addr   LB523                           ; B4E2 23 B5                    #.
-        .addr   LB537                           ; B4E4 37 B5                    7.
-        .addr   LB56B                           ; B4E6 6B B5                    k.
+EquipSubmenuEquipmentCategoryButtonPressTable:
+        .addr   EquipSubmenuEquipmentCategorySelectItem; B4D8 87 C5             ..
+        .addr   EquipSubmenuEquipmentCategoryExit; B4DA E8 B4                   ..
+        .addr   EquipSubmenuEquipmentCategoryNoOp; B4DC 00 B5                   ..
+        .addr   EquipSubmenuEquipmentCategoryNoOp; B4DE 00 B5                   ..
+        .addr   EquipSubmenuEquipmentCategoryUp ; B4E0 03 B5                    ..
+        .addr   EquipSubmenuEquipmentCategoryDown; B4E2 23 B5                   #.
+        .addr   EquipSubmenuEquipmentCategoryLeft; B4E4 37 B5                   7.
+        .addr   EquipSubmenuEquipmentCategoryRight; B4E6 6B B5                  k.
 ; ----------------------------------------------------------------------------
-LB4E8:
+EquipSubmenuEquipmentCategoryExit:
         jsr     LB5FA                           ; B4E8 20 FA B5                  ..
         jsr     LBF54                           ; B4EB 20 54 BF                  T.
         jsr     LBB93                           ; B4EE 20 93 BB                  ..
@@ -7580,11 +7573,11 @@ LB4E8:
         jmp     LB3C1                           ; B4FD 4C C1 B3                 L..
 
 ; ----------------------------------------------------------------------------
-LB500:
+EquipSubmenuEquipmentCategoryNoOp:
         jmp     LB4B4                           ; B500 4C B4 B4                 L..
 
 ; ----------------------------------------------------------------------------
-LB503:
+EquipSubmenuEquipmentCategoryUp:
         lda     $0615                           ; B503 AD 15 06                 ...
         cmp     #$02                            ; B506 C9 02                    ..
         bcc     LB4B4                           ; B508 90 AA                    ..
@@ -7601,7 +7594,7 @@ LB514:
         jmp     LB4AE                           ; B520 4C AE B4                 L..
 
 ; ----------------------------------------------------------------------------
-LB523:
+EquipSubmenuEquipmentCategoryDown:
         lda     $0615                           ; B523 AD 15 06                 ...
         cmp     #$02                            ; B526 C9 02                    ..
         bcc     LB4B4                           ; B528 90 8A                    ..
@@ -7611,7 +7604,7 @@ LB523:
         bcc     LB514                           ; B531 90 E1                    ..
         ldx     #$00                            ; B533 A2 00                    ..
         beq     LB514                           ; B535 F0 DD                    ..
-LB537:
+EquipSubmenuEquipmentCategoryLeft:
         lda     $0614                           ; B537 AD 14 06                 ...
         cmp     #$02                            ; B53A C9 02                    ..
         bcc     LB568                           ; B53C 90 2A                    .*
@@ -7638,7 +7631,7 @@ LB568:
         jmp     LB4B4                           ; B568 4C B4 B4                 L..
 
 ; ----------------------------------------------------------------------------
-LB56B:
+EquipSubmenuEquipmentCategoryRight:
         lda     $0614                           ; B56B AD 14 06                 ...
         cmp     #$02                            ; B56E C9 02                    ..
         bcc     LB568                           ; B570 90 F6                    ..
@@ -7716,7 +7709,7 @@ EquipSubmenuCursorPixelPositionTable:
 ; ----------------------------------------------------------------------------
 LB5FA:
         ldx     #$F0                            ; B5FA A2 F0                    ..
-        jsr     L945E                           ; B5FC 20 5E 94                  ^.
+        jsr     LoadMenuItemSprites             ; B5FC 20 5E 94                  ^.
         rts                                     ; B5FF 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -7764,21 +7757,10 @@ LB641:
 
 ; ----------------------------------------------------------------------------
 LB643:
-        .byte   $04                             ; B643 04                       .
-        cpy     #$20                            ; B644 C0 20                    . 
-        .byte   $D4                             ; B646 D4                       .
-        ora     $C0                             ; B647 05 C0                    ..
-        and     ($34,x)                         ; B649 21 34                    !4
-        asl     $C0                             ; B64B 06 C0                    ..
-        and     ($94,x)                         ; B64D 21 94                    !.
-        .byte   $07                             ; B64F 07                       .
-        cpy     #$21                            ; B650 C0 21                    .!
-        .byte   $F4                             ; B652 F4                       .
-        php                                     ; B653 08                       .
-        cpy     #$21                            ; B654 C0 21                    .!
-        .byte   $87                             ; B656 87                       .
-        ora     #$C0                            ; B657 09 C0                    ..
-        and     ($E7,x)                         ; B659 21 E7                    !.
+        .byte   $04,$C0,$20,$D4,$05,$C0,$21,$34 ; B643 04 C0 20 D4 05 C0 21 34  .. ...!4
+        .byte   $06,$C0,$21,$94,$07,$C0,$21,$F4 ; B64B 06 C0 21 94 07 C0 21 F4  ..!...!.
+        .byte   $08,$C0,$21,$87,$09,$C0,$21,$E7 ; B653 08 C0 21 87 09 C0 21 E7  ..!...!.
+; ----------------------------------------------------------------------------
 LB65B:
         ldx     $6F21                           ; B65B AE 21 6F                 .!o
         lda     LB817,x                         ; B65E BD 17 B8                 ...
@@ -7806,7 +7788,7 @@ LB685:
 
 ; ----------------------------------------------------------------------------
 LB686:
-        jsr     LoadItemStatsFromBank5          ; B686 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5_800A     ; B686 20 79 94                  y.
         lda     #$00                            ; B689 A9 00                    ..
         sta     $0617                           ; B68B 8D 17 06                 ...
         lda     #$05                            ; B68E A9 05                    ..
@@ -7884,7 +7866,7 @@ LB70C:
 
 ; ----------------------------------------------------------------------------
 LB711:
-        jsr     LoadUnknownStatsFromBank5_800C  ; B711 20 F8 94                  ..
+        jsr     LoadWeaponItemStatsFromBank5_800C; B711 20 F8 94                 ..
         lda     #$01                            ; B714 A9 01                    ..
         sta     $0617                           ; B716 8D 17 06                 ...
         lda     #$F6                            ; B719 A9 F6                    ..
@@ -8537,7 +8519,7 @@ LBDAC:
 ; ----------------------------------------------------------------------------
 LBDBA:
         sta     $6F24                           ; BDBA 8D 24 6F                 .$o
-        jsr     LoadItemStatsFromBank5          ; BDBD 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5_800A     ; BDBD 20 79 94                  y.
         lda     #$00                            ; BDC0 A9 00                    ..
         sta     $0617                           ; BDC2 8D 17 06                 ...
         lda     #$05                            ; BDC5 A9 05                    ..
@@ -8920,7 +8902,7 @@ LC00E:
         sta     $69                             ; C011 85 69                    .i
         jsr     L8B18                           ; C013 20 18 8B                  ..
         jsr     Bank0eScreenRefresh             ; C016 20 78 DF                  x.
-        jsr     LoadUnknownStatsFromBank5_800C  ; C019 20 F8 94                  ..
+        jsr     LoadWeaponItemStatsFromBank5_800C; C019 20 F8 94                 ..
         lda     #$01                            ; C01C A9 01                    ..
         sta     $0617                           ; C01E 8D 17 06                 ...
         lda     #$F6                            ; C021 A9 F6                    ..
@@ -9075,25 +9057,25 @@ LC141:
         txa                                     ; C142 8A                       .
         asl     a                               ; C143 0A                       .
         tax                                     ; C144 AA                       .
-        lda     LC153,x                         ; C145 BD 53 C1                 .S.
+        lda     EquipSubmenuWeaponCategoryButtonPressTable,x; C145 BD 53 C1     .S.
         sta     L0002                           ; C148 85 02                    ..
         inx                                     ; C14A E8                       .
-        lda     LC153,x                         ; C14B BD 53 C1                 .S.
+        lda     EquipSubmenuWeaponCategoryButtonPressTable,x; C14B BD 53 C1     .S.
         sta     $03                             ; C14E 85 03                    ..
         jmp     (L0002)                         ; C150 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-LC153:
+EquipSubmenuWeaponCategoryButtonPressTable:
         .addr   SetPartyMemberWeapon            ; C153 F2 C4                    ..
-        .addr   LC163                           ; C155 63 C1                    c.
-        .addr   LC178                           ; C157 78 C1                    x.
-        .addr   LC178                           ; C159 78 C1                    x.
-        .addr   LC17B                           ; C15B 7B C1                    {.
-        .addr   LC195                           ; C15D 95 C1                    ..
-        .addr   LC1A9                           ; C15F A9 C1                    ..
-        .addr   LC1D7                           ; C161 D7 C1                    ..
+        .addr   EquipSubmenuWeaponCategoryExit  ; C155 63 C1                    c.
+        .addr   EquipSubmenuWeaponCategoryNoOp  ; C157 78 C1                    x.
+        .addr   EquipSubmenuWeaponCategoryNoOp  ; C159 78 C1                    x.
+        .addr   EquipSubmenuWeaponCategoryUp    ; C15B 7B C1                    {.
+        .addr   EquipSubmenuWeaponCategoryDown  ; C15D 95 C1                    ..
+        .addr   EquipSubmenuWeaponCategoryLeftPrevPage; C15F A9 C1              ..
+        .addr   EquipSubmenuWeaponCategoryRightNextPage; C161 D7 C1             ..
 ; ----------------------------------------------------------------------------
-LC163:
+EquipSubmenuWeaponCategoryExit:
         jsr     LB5FA                           ; C163 20 FA B5                  ..
         jsr     LBB93                           ; C166 20 93 BB                  ..
         jsr     LB5D2                           ; C169 20 D2 B5                  ..
@@ -9103,11 +9085,11 @@ LC163:
         jmp     LB3C1                           ; C175 4C C1 B3                 L..
 
 ; ----------------------------------------------------------------------------
-LC178:
+EquipSubmenuWeaponCategoryNoOp:
         jmp     LC12F                           ; C178 4C 2F C1                 L/.
 
 ; ----------------------------------------------------------------------------
-LC17B:
+EquipSubmenuWeaponCategoryUp:
         lda     $0615                           ; C17B AD 15 06                 ...
         cmp     #$02                            ; C17E C9 02                    ..
         bcc     LC12F                           ; C180 90 AD                    ..
@@ -9122,7 +9104,7 @@ LC18C:
         jmp     LC129                           ; C192 4C 29 C1                 L).
 
 ; ----------------------------------------------------------------------------
-LC195:
+EquipSubmenuWeaponCategoryDown:
         lda     $0615                           ; C195 AD 15 06                 ...
         cmp     #$02                            ; C198 C9 02                    ..
         bcc     LC12F                           ; C19A 90 93                    ..
@@ -9132,7 +9114,7 @@ LC195:
         bcc     LC18C                           ; C1A3 90 E7                    ..
         ldx     #$00                            ; C1A5 A2 00                    ..
         beq     LC18C                           ; C1A7 F0 E3                    ..
-LC1A9:
+EquipSubmenuWeaponCategoryLeftPrevPage:
         lda     $0614                           ; C1A9 AD 14 06                 ...
         cmp     #$02                            ; C1AC C9 02                    ..
         bcc     LC1D4                           ; C1AE 90 24                    .$
@@ -9157,7 +9139,7 @@ LC1D4:
         jmp     LC12F                           ; C1D4 4C 2F C1                 L/.
 
 ; ----------------------------------------------------------------------------
-LC1D7:
+EquipSubmenuWeaponCategoryRightNextPage:
         lda     $0614                           ; C1D7 AD 14 06                 ...
         cmp     #$02                            ; C1DA C9 02                    ..
         bcc     LC1D4                           ; C1DC 90 F6                    ..
@@ -9377,25 +9359,25 @@ LC35E:
         txa                                     ; C35F 8A                       .
         asl     a                               ; C360 0A                       .
         tax                                     ; C361 AA                       .
-        lda     LC370,x                         ; C362 BD 70 C3                 .p.
+        lda     EquipSubmenuMateriaCategoryButtonPressTable,x; C362 BD 70 C3    .p.
         sta     L0002                           ; C365 85 02                    ..
         inx                                     ; C367 E8                       .
-        lda     LC370,x                         ; C368 BD 70 C3                 .p.
+        lda     EquipSubmenuMateriaCategoryButtonPressTable,x; C368 BD 70 C3    .p.
         sta     $03                             ; C36B 85 03                    ..
         jmp     (L0002)                         ; C36D 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-LC370:
+EquipSubmenuMateriaCategoryButtonPressTable:
         .addr   SetPartyMemberMateria           ; C370 08 C4                    ..
-        .addr   LC380                           ; C372 80 C3                    ..
-        .addr   LC395                           ; C374 95 C3                    ..
-        .addr   LC395                           ; C376 95 C3                    ..
-        .addr   LC398                           ; C378 98 C3                    ..
-        .addr   LC3B2                           ; C37A B2 C3                    ..
-        .addr   LC3C6                           ; C37C C6 C3                    ..
-        .addr   LC3F4                           ; C37E F4 C3                    ..
+        .addr   EquipSubmenuMateriaCategoryExit ; C372 80 C3                    ..
+        .addr   EquipSubmenuMateriaCategoryNoOp ; C374 95 C3                    ..
+        .addr   EquipSubmenuMateriaCategoryNoOp ; C376 95 C3                    ..
+        .addr   EquipSubmenuMateriaCategoryUp   ; C378 98 C3                    ..
+        .addr   EquipSubmenuMateriaCategoryDown ; C37A B2 C3                    ..
+        .addr   EquipSubmenuMateriaCategoryLeftPrevPage; C37C C6 C3             ..
+        .addr   EquipSubmenuMateriaCategoryRightNextPage; C37E F4 C3            ..
 ; ----------------------------------------------------------------------------
-LC380:
+EquipSubmenuMateriaCategoryExit:
         jsr     LB5FA                           ; C380 20 FA B5                  ..
         jsr     LBB93                           ; C383 20 93 BB                  ..
         jsr     LB5D2                           ; C386 20 D2 B5                  ..
@@ -9405,11 +9387,11 @@ LC380:
         jmp     LB3C1                           ; C392 4C C1 B3                 L..
 
 ; ----------------------------------------------------------------------------
-LC395:
+EquipSubmenuMateriaCategoryNoOp:
         jmp     LC34C                           ; C395 4C 4C C3                 LL.
 
 ; ----------------------------------------------------------------------------
-LC398:
+EquipSubmenuMateriaCategoryUp:
         lda     $0615                           ; C398 AD 15 06                 ...
         cmp     #$02                            ; C39B C9 02                    ..
         bcc     LC34C                           ; C39D 90 AD                    ..
@@ -9424,7 +9406,7 @@ LC3A9:
         jmp     LC346                           ; C3AF 4C 46 C3                 LF.
 
 ; ----------------------------------------------------------------------------
-LC3B2:
+EquipSubmenuMateriaCategoryDown:
         lda     $0615                           ; C3B2 AD 15 06                 ...
         cmp     #$02                            ; C3B5 C9 02                    ..
         bcc     LC34C                           ; C3B7 90 93                    ..
@@ -9434,7 +9416,7 @@ LC3B2:
         bcc     LC3A9                           ; C3C0 90 E7                    ..
         ldx     #$00                            ; C3C2 A2 00                    ..
         beq     LC3A9                           ; C3C4 F0 E3                    ..
-LC3C6:
+EquipSubmenuMateriaCategoryLeftPrevPage:
         lda     $0614                           ; C3C6 AD 14 06                 ...
         cmp     #$02                            ; C3C9 C9 02                    ..
         bcc     LC3F1                           ; C3CB 90 24                    .$
@@ -9459,7 +9441,7 @@ LC3F1:
         jmp     LC34C                           ; C3F1 4C 4C C3                 LL.
 
 ; ----------------------------------------------------------------------------
-LC3F4:
+EquipSubmenuMateriaCategoryRightNextPage:
         lda     $0614                           ; C3F4 AD 14 06                 ...
         cmp     #$02                            ; C3F7 C9 02                    ..
         bcc     LC3F1                           ; C3F9 90 F6                    ..
@@ -9670,7 +9652,7 @@ LC57F:
         jmp     LC12F                           ; C584 4C 2F C1                 L/.
 
 ; ----------------------------------------------------------------------------
-LC587:
+EquipSubmenuEquipmentCategorySelectItem:
         lda     #$00                            ; C587 A9 00                    ..
         sta     $6F25                           ; C589 8D 25 6F                 .%o
         lda     $6F23                           ; C58C AD 23 6F                 .#o
@@ -9706,7 +9688,7 @@ LC587:
         txa                                     ; C5C5 8A                       .
         pha                                     ; C5C6 48                       H
         jsr     LC49D                           ; C5C7 20 9D C4                  ..
-        jsr     LoadItemStatsFromBank5          ; C5CA 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5_800A     ; C5CA 20 79 94                  y.
         pla                                     ; C5CD 68                       h
         tax                                     ; C5CE AA                       .
 SetPartyMemberAccessory:
@@ -9747,7 +9729,7 @@ SetPlayerAccessoryToItemId:
         jsr     LC49D                           ; C610 20 9D C4                  ..
         lda     $6F25                           ; C613 AD 25 6F                 .%o
         pha                                     ; C616 48                       H
-        jsr     LoadItemStatsFromBank5          ; C617 20 79 94                  y.
+        jsr     LoadItemStatsFromBank5_800A     ; C617 20 79 94                  y.
         pla                                     ; C61A 68                       h
         sta     $6F26                           ; C61B 8D 26 6F                 .&o
 LC61E:
@@ -9911,25 +9893,25 @@ LC748:
         txa                                     ; C749 8A                       .
         asl     a                               ; C74A 0A                       .
         tax                                     ; C74B AA                       .
-        lda     LC75A,x                         ; C74C BD 5A C7                 .Z.
+        lda     ItemSubmenuListItemButtonPressTable,x; C74C BD 5A C7            .Z.
         sta     L0002                           ; C74F 85 02                    ..
         inx                                     ; C751 E8                       .
-        lda     LC75A,x                         ; C752 BD 5A C7                 .Z.
+        lda     ItemSubmenuListItemButtonPressTable,x; C752 BD 5A C7            .Z.
         sta     $03                             ; C755 85 03                    ..
         jmp     (L0002)                         ; C757 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-LC75A:
-        .addr   LC802                           ; C75A 02 C8                    ..
-        .addr   LC76A                           ; C75C 6A C7                    j.
-        .addr   LC783                           ; C75E 83 C7                    ..
-        .addr   LC783                           ; C760 83 C7                    ..
-        .addr   LC786                           ; C762 86 C7                    ..
-        .addr   LC7A6                           ; C764 A6 C7                    ..
-        .addr   LC7BA                           ; C766 BA C7                    ..
-        .addr   LC7EB                           ; C768 EB C7                    ..
+ItemSubmenuListItemButtonPressTable:
+        .addr   ItemSubmenuListItemUseItem      ; C75A 02 C8                    ..
+        .addr   ItemSubmenuListItemExit         ; C75C 6A C7                    j.
+        .addr   ItemSubmenuListItemNoOp         ; C75E 83 C7                    ..
+        .addr   ItemSubmenuListItemNoOp         ; C760 83 C7                    ..
+        .addr   ItemSubmenuListItemUp           ; C762 86 C7                    ..
+        .addr   ItemSubmenuListItemDown         ; C764 A6 C7                    ..
+        .addr   ItemSubmenuListItemLeftPrevPage ; C766 BA C7                    ..
+        .addr   ItemSubmenuListItemRightNextPage; C768 EB C7                    ..
 ; ----------------------------------------------------------------------------
-LC76A:
+ItemSubmenuListItemExit:
         lda     $060E                           ; C76A AD 0E 06                 ...
         bne     LC781                           ; C76D D0 12                    ..
         jsr     LCBD8                           ; C76F 20 D8 CB                  ..
@@ -9945,11 +9927,11 @@ LC781:
         rts                                     ; C782 60                       `
 
 ; ----------------------------------------------------------------------------
-LC783:
+ItemSubmenuListItemNoOp:
         jmp     LC736                           ; C783 4C 36 C7                 L6.
 
 ; ----------------------------------------------------------------------------
-LC786:
+ItemSubmenuListItemUp:
         lda     $0615                           ; C786 AD 15 06                 ...
         cmp     #$02                            ; C789 C9 02                    ..
         bcc     LC736                           ; C78B 90 A9                    ..
@@ -9966,7 +9948,7 @@ StoreNewItemMenuCursorPos:
         jmp     LC730                           ; C7A3 4C 30 C7                 L0.
 
 ; ----------------------------------------------------------------------------
-LC7A6:
+ItemSubmenuListItemDown:
         lda     $0615                           ; C7A6 AD 15 06                 ...
         cmp     #$02                            ; C7A9 C9 02                    ..
         bcc     LC736                           ; C7AB 90 89                    ..
@@ -9976,7 +9958,7 @@ LC7A6:
         bcc     StoreNewItemMenuCursorPos       ; C7B4 90 E1                    ..
         ldx     #$00                            ; C7B6 A2 00                    ..
         beq     StoreNewItemMenuCursorPos       ; C7B8 F0 DD                    ..
-LC7BA:
+ItemSubmenuListItemLeftPrevPage:
         lda     $0614                           ; C7BA AD 14 06                 ...
         cmp     #$02                            ; C7BD C9 02                    ..
         bcc     LC7FF                           ; C7BF 90 3E                    .>
@@ -9999,7 +9981,7 @@ StoreNewItemMenuPagePos:
         jmp     LC730                           ; C7E8 4C 30 C7                 L0.
 
 ; ----------------------------------------------------------------------------
-LC7EB:
+ItemSubmenuListItemRightNextPage:
         lda     $0614                           ; C7EB AD 14 06                 ...
         cmp     #$02                            ; C7EE C9 02                    ..
         bcc     LC7FF                           ; C7F0 90 0D                    ..
@@ -10013,7 +9995,7 @@ LC7FF:
         jmp     LC736                           ; C7FF 4C 36 C7                 L6.
 
 ; ----------------------------------------------------------------------------
-LC802:
+ItemSubmenuListItemUseItem:
         jsr     LCA16                           ; C802 20 16 CA                  ..
         clc                                     ; C805 18                       .
         adc     $6F43                           ; C806 6D 43 6F                 mCo
@@ -10561,7 +10543,7 @@ LCBBA:
 ; ----------------------------------------------------------------------------
 LCBD8:
         ldx     #$F0                            ; CBD8 A2 F0                    ..
-        jsr     L945E                           ; CBDA 20 5E 94                  ^.
+        jsr     LoadMenuItemSprites             ; CBDA 20 5E 94                  ^.
         rts                                     ; CBDD 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -10734,25 +10716,25 @@ LCCEA:
         txa                                     ; CCEB 8A                       .
         asl     a                               ; CCEC 0A                       .
         tax                                     ; CCED AA                       .
-        lda     LCCFC,x                         ; CCEE BD FC CC                 ...
+        lda     MagicSubmenuLevelUpMenuButtonPressTable,x; CCEE BD FC CC        ...
         sta     L0002                           ; CCF1 85 02                    ..
         inx                                     ; CCF3 E8                       .
-        lda     LCCFC,x                         ; CCF4 BD FC CC                 ...
+        lda     MagicSubmenuLevelUpMenuButtonPressTable,x; CCF4 BD FC CC        ...
         sta     $03                             ; CCF7 85 03                    ..
         jmp     (L0002)                         ; CCF9 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-LCCFC:
-        .addr   LCD8A                           ; CCFC 8A CD                    ..
-        .addr   LCD0C                           ; CCFE 0C CD                    ..
-        .addr   LCD1C                           ; CD00 1C CD                    ..
-        .addr   LCD1C                           ; CD02 1C CD                    ..
-        .addr   LCD5E                           ; CD04 5E CD                    ^.
-        .addr   LCD44                           ; CD06 44 CD                    D.
-        .addr   LCD1F                           ; CD08 1F CD                    ..
-        .addr   LCD1F                           ; CD0A 1F CD                    ..
+MagicSubmenuLevelUpMenuButtonPressTable:
+        .addr   MagicSubmenuLevelUpMenuSelectMagicCommand; CCFC 8A CD           ..
+        .addr   MagicSubmenuLevelUpMenuExit     ; CCFE 0C CD                    ..
+        .addr   MagicSubmenuLevelUpMenuNoOp     ; CD00 1C CD                    ..
+        .addr   MagicSubmenuLevelUpMenuNoOp     ; CD02 1C CD                    ..
+        .addr   MagicSubmenuLevelUpMenuUp       ; CD04 5E CD                    ^.
+        .addr   MagicSubmenuLevelUpMenuDown     ; CD06 44 CD                    D.
+        .addr   MagicSubmenuLevelUpMenuLeftOrRight; CD08 1F CD                  ..
+        .addr   MagicSubmenuLevelUpMenuLeftOrRight; CD0A 1F CD                  ..
 ; ----------------------------------------------------------------------------
-LCD0C:
+MagicSubmenuLevelUpMenuExit:
         lda     $060E                           ; CD0C AD 0E 06                 ...
         bne     LCD1A                           ; CD0F D0 09                    ..
         jsr     LCF26                           ; CD11 20 26 CF                  &.
@@ -10765,11 +10747,11 @@ LCD1A:
         rts                                     ; CD1B 60                       `
 
 ; ----------------------------------------------------------------------------
-LCD1C:
+MagicSubmenuLevelUpMenuNoOp:
         jmp     MagicSubmenuUpdateScreen        ; CD1C 4C D8 CC                 L..
 
 ; ----------------------------------------------------------------------------
-LCD1F:
+MagicSubmenuLevelUpMenuLeftOrRight:
         lda     $0616                           ; CD1F AD 16 06                 ...
         cmp     #$02                            ; CD22 C9 02                    ..
         bcc     MagicSubmenuUpdateScreen        ; CD24 90 B2                    ..
@@ -10787,7 +10769,7 @@ LCD30:
         jmp     LCCD2                           ; CD41 4C D2 CC                 L..
 
 ; ----------------------------------------------------------------------------
-LCD44:
+MagicSubmenuLevelUpMenuDown:
         lda     $0616                           ; CD44 AD 16 06                 ...
         cmp     #$03                            ; CD47 C9 03                    ..
         bcc     MagicSubmenuUpdateScreen        ; CD49 90 8D                    ..
@@ -10804,7 +10786,7 @@ LCD5B:
         jmp     MagicSubmenuUpdateScreen        ; CD5B 4C D8 CC                 L..
 
 ; ----------------------------------------------------------------------------
-LCD5E:
+MagicSubmenuLevelUpMenuUp:
         lda     $0616                           ; CD5E AD 16 06                 ...
         cmp     #$03                            ; CD61 C9 03                    ..
         bcc     LCD5B                           ; CD63 90 F6                    ..
@@ -10827,7 +10809,7 @@ LCD82:
         sec                                     ; CD85 38                       8
         sbc     #$02                            ; CD86 E9 02                    ..
         bne     LCD30                           ; CD88 D0 A6                    ..
-LCD8A:
+MagicSubmenuLevelUpMenuSelectMagicCommand:
         ldx     $6F44                           ; CD8A AE 44 6F                 .Do
         lda     $0645,x                         ; CD8D BD 45 06                 .E.
         bne     LCD95                           ; CD90 D0 03                    ..
@@ -10912,13 +10894,13 @@ LevelUpMateriaSpell:
         jsr     MagicSubmenuReadPlayerMateria   ; CE24 20 1E D3                  ..
         lda     $6F25                           ; CE27 AD 25 6F                 .%o
         cmp     #$14                            ; CE2A C9 14                    ..
-        bcs     SetMasteredStringIndex          ; CE2C B0 61                    .a
+        bcs     SetMateriaMasteredStringIndex   ; CE2C B0 61                    .a
         lda     $6F27                           ; CE2E AD 27 6F                 .'o
         sec                                     ; CE31 38                       8
         sbc     $6F2D                           ; CE32 ED 2D 6F                 .-o
         lda     $6F28                           ; CE35 AD 28 6F                 .(o
         sbc     $6F2E                           ; CE38 ED 2E 6F                 ..o
-        bcc     SetNotEnoughExpStringIndex      ; CE3B 90 5C                    .\
+        bcc     SetMateriaNotEnoughExpStringIndex; CE3B 90 5C                   .\
         lda     #$20                            ; CE3D A9 20                    . 
         jsr     LFEDE                           ; CE3F 20 DE FE                  ..
         ldx     #$14                            ; CE42 A2 14                    ..
@@ -10954,13 +10936,13 @@ LCE7D:
         jmp     MagicSubmenuUpdateScreen        ; CE8C 4C D8 CC                 L..
 
 ; ----------------------------------------------------------------------------
-SetMasteredStringIndex:
+SetMateriaMasteredStringIndex:
         lda     #$00                            ; CE8F A9 00                    ..
         sta     $6A                             ; CE91 85 6A                    .j
         lda     #$44                            ; CE93 A9 44                    .D
         sta     $69                             ; CE95 85 69                    .i
         bne     LCE7D                           ; CE97 D0 E4                    ..
-SetNotEnoughExpStringIndex:
+SetMateriaNotEnoughExpStringIndex:
         lda     #$00                            ; CE99 A9 00                    ..
         sta     $6A                             ; CE9B 85 6A                    .j
         lda     #$45                            ; CE9D A9 45                    .E
@@ -11036,7 +11018,7 @@ LCF12:
 ; ----------------------------------------------------------------------------
 LCF26:
         ldx     #$F0                            ; CF26 A2 F0                    ..
-        jsr     L945E                           ; CF28 20 5E 94                  ^.
+        jsr     LoadMenuItemSprites             ; CF28 20 5E 94                  ^.
         rts                                     ; CF2B 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -11659,34 +11641,34 @@ LD4D1:
         txa                                     ; D4D2 8A                       .
         asl     a                               ; D4D3 0A                       .
         tax                                     ; D4D4 AA                       .
-        lda     LD4E3,x                         ; D4D5 BD E3 D4                 ...
+        lda     PartySubmenuBrowseButtonPressTable,x; D4D5 BD E3 D4             ...
         sta     L0002                           ; D4D8 85 02                    ..
         inx                                     ; D4DA E8                       .
-        lda     LD4E3,x                         ; D4DB BD E3 D4                 ...
+        lda     PartySubmenuBrowseButtonPressTable,x; D4DB BD E3 D4             ...
         sta     $03                             ; D4DE 85 03                    ..
         jmp     (L0002)                         ; D4E0 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-LD4E3:
-        .addr   LD526                           ; D4E3 26 D5                    &.
-        .addr   LD4F3                           ; D4E5 F3 D4                    ..
-        .addr   LD4F5                           ; D4E7 F5 D4                    ..
-        .addr   LD4F5                           ; D4E9 F5 D4                    ..
-        .addr   LD4F8                           ; D4EB F8 D4                    ..
-        .addr   LD512                           ; D4ED 12 D5                    ..
-        .addr   LD4F5                           ; D4EF F5 D4                    ..
-        .addr   LD4F5                           ; D4F1 F5 D4                    ..
+PartySubmenuBrowseButtonPressTable:
+        .addr   PartySubmenuBrowseSelectMember  ; D4E3 26 D5                    &.
+        .addr   PartySubmenuBrowseExit          ; D4E5 F3 D4                    ..
+        .addr   PartySubmenuBrowseNoOp          ; D4E7 F5 D4                    ..
+        .addr   PartySubmenuBrowseNoOp          ; D4E9 F5 D4                    ..
+        .addr   PartySubmenuBrowseUp            ; D4EB F8 D4                    ..
+        .addr   PartySubmenuBrowseDown          ; D4ED 12 D5                    ..
+        .addr   PartySubmenuBrowseNoOp          ; D4EF F5 D4                    ..
+        .addr   PartySubmenuBrowseNoOp          ; D4F1 F5 D4                    ..
 ; ----------------------------------------------------------------------------
-LD4F3:
+PartySubmenuBrowseExit:
         clc                                     ; D4F3 18                       .
         rts                                     ; D4F4 60                       `
 
 ; ----------------------------------------------------------------------------
-LD4F5:
+PartySubmenuBrowseNoOp:
         jmp     LD4BF                           ; D4F5 4C BF D4                 L..
 
 ; ----------------------------------------------------------------------------
-LD4F8:
+PartySubmenuBrowseUp:
         lda     $603B                           ; D4F8 AD 3B 60                 .;`
         cmp     #$02                            ; D4FB C9 02                    ..
         bcc     LD4BF                           ; D4FD 90 C0                    ..
@@ -11701,7 +11683,7 @@ LD509:
         jmp     LD4B9                           ; D50F 4C B9 D4                 L..
 
 ; ----------------------------------------------------------------------------
-LD512:
+PartySubmenuBrowseDown:
         lda     $603B                           ; D512 AD 3B 60                 .;`
         cmp     #$02                            ; D515 C9 02                    ..
         bcc     LD4BF                           ; D517 90 A6                    ..
@@ -11711,7 +11693,7 @@ LD512:
         bcc     LD509                           ; D520 90 E7                    ..
         ldx     #$00                            ; D522 A2 00                    ..
         beq     LD509                           ; D524 F0 E3                    ..
-LD526:
+PartySubmenuBrowseSelectMember:
         lda     $603B                           ; D526 AD 3B 60                 .;`
         cmp     #$02                            ; D529 C9 02                    ..
         bcc     LD4BF                           ; D52B 90 92                    ..
@@ -11928,7 +11910,7 @@ LD693:
 ; ----------------------------------------------------------------------------
 LD699:
         ldx     #$00                            ; D699 A2 00                    ..
-        jsr     L945E                           ; D69B 20 5E 94                  ^.
+        jsr     LoadMenuItemSprites             ; D69B 20 5E 94                  ^.
         rts                                     ; D69E 60                       `
 
 ; ----------------------------------------------------------------------------
@@ -12444,34 +12426,34 @@ LDA28:
         txa                                     ; DA29 8A                       .
         asl     a                               ; DA2A 0A                       .
         tax                                     ; DA2B AA                       .
-        lda     LDA3A,x                         ; DA2C BD 3A DA                 .:.
+        lda     WeaponShopLevelUpMenuButtonPressTable,x; DA2C BD 3A DA          .:.
         sta     L0002                           ; DA2F 85 02                    ..
         inx                                     ; DA31 E8                       .
-        lda     LDA3A,x                         ; DA32 BD 3A DA                 .:.
+        lda     WeaponShopLevelUpMenuButtonPressTable,x; DA32 BD 3A DA          .:.
         sta     $03                             ; DA35 85 03                    ..
         jmp     (L0002)                         ; DA37 6C 02 00                 l..
 
 ; ----------------------------------------------------------------------------
-LDA3A:
-        .addr   LDA6F                           ; DA3A 6F DA                    o.
-        .addr   LDA4A                           ; DA3C 4A DA                    J.
-        .addr   LDA4C                           ; DA3E 4C DA                    L.
-        .addr   LDA4C                           ; DA40 4C DA                    L.
-        .addr   LDA4F                           ; DA42 4F DA                    O.
-        .addr   LDA62                           ; DA44 62 DA                    b.
-        .addr   LDA4C                           ; DA46 4C DA                    L.
-        .addr   LDA4C                           ; DA48 4C DA                    L.
+WeaponShopLevelUpMenuButtonPressTable:
+        .addr   WeaponShopLevelUpMenuSelectWeapon; DA3A 6F DA                   o.
+        .addr   WeaponShopLevelUpMenuExit       ; DA3C 4A DA                    J.
+        .addr   WeaponShopLevelUpMenuNoOp       ; DA3E 4C DA                    L.
+        .addr   WeaponShopLevelUpMenuNoOp       ; DA40 4C DA                    L.
+        .addr   WeaponShopLevelUpMenuUp         ; DA42 4F DA                    O.
+        .addr   WeaponShopLevelUpMenuDown       ; DA44 62 DA                    b.
+        .addr   WeaponShopLevelUpMenuNoOp       ; DA46 4C DA                    L.
+        .addr   WeaponShopLevelUpMenuNoOp       ; DA48 4C DA                    L.
 ; ----------------------------------------------------------------------------
-LDA4A:
+WeaponShopLevelUpMenuExit:
         clc                                     ; DA4A 18                       .
         rts                                     ; DA4B 60                       `
 
 ; ----------------------------------------------------------------------------
-LDA4C:
+WeaponShopLevelUpMenuNoOp:
         jmp     LDA16                           ; DA4C 4C 16 DA                 L..
 
 ; ----------------------------------------------------------------------------
-LDA4F:
+WeaponShopLevelUpMenuUp:
         ldx     $6F42                           ; DA4F AE 42 6F                 .Bo
         dex                                     ; DA52 CA                       .
         bpl     LDA59                           ; DA53 10 04                    ..
@@ -12483,30 +12465,30 @@ LDA59:
         jmp     LDA10                           ; DA5F 4C 10 DA                 L..
 
 ; ----------------------------------------------------------------------------
-LDA62:
+WeaponShopLevelUpMenuDown:
         ldx     $6F42                           ; DA62 AE 42 6F                 .Bo
         inx                                     ; DA65 E8                       .
         cpx     $0616                           ; DA66 EC 16 06                 ...
         bcc     LDA59                           ; DA69 90 EE                    ..
         ldx     #$00                            ; DA6B A2 00                    ..
         beq     LDA59                           ; DA6D F0 EA                    ..
-LDA6F:
+WeaponShopLevelUpMenuSelectWeapon:
         ldx     $6F42                           ; DA6F AE 42 6F                 .Bo
         lda     $603C,x                         ; DA72 BD 3C 60                 .<`
         tax                                     ; DA75 AA                       .
         lda     $6074,x                         ; DA76 BD 74 60                 .t`
         beq     LDA16                           ; DA79 F0 9B                    ..
         sta     $6F24                           ; DA7B 8D 24 6F                 .$o
-        jsr     LoadUnknownStatsFromBank5_800C  ; DA7E 20 F8 94                  ..
+        jsr     LoadWeaponItemStatsFromBank5_800C; DA7E 20 F8 94                 ..
         lda     $6F29                           ; DA81 AD 29 6F                 .)o
         cmp     #$14                            ; DA84 C9 14                    ..
-        bcs     LDAF6                           ; DA86 B0 6E                    .n
+        bcs     SetWeaponMasteredStringIndex    ; DA86 B0 6E                    .n
         lda     $6F2A                           ; DA88 AD 2A 6F                 .*o
         sec                                     ; DA8B 38                       8
         sbc     $6F2C                           ; DA8C ED 2C 6F                 .,o
         lda     $6F2B                           ; DA8F AD 2B 6F                 .+o
         sbc     $6F2D                           ; DA92 ED 2D 6F                 .-o
-        bcc     LDB0A                           ; DA95 90 73                    .s
+        bcc     SetWeaponNotEnoughExpStringIndex; DA95 90 73                    .s
         lda     #$20                            ; DA97 A9 20                    . 
         jsr     LFEDE                           ; DA99 20 DE FE                  ..
         ldx     #$14                            ; DA9C A2 14                    ..
@@ -12546,7 +12528,7 @@ LDA6F:
         jmp     LDA16                           ; DAF3 4C 16 DA                 L..
 
 ; ----------------------------------------------------------------------------
-LDAF6:
+SetWeaponMasteredStringIndex:
         lda     #$00                            ; DAF6 A9 00                    ..
         sta     $6A                             ; DAF8 85 6A                    .j
         lda     #$44                            ; DAFA A9 44                    .D
@@ -12557,7 +12539,7 @@ LDAF6:
         jmp     LDA16                           ; DB07 4C 16 DA                 L..
 
 ; ----------------------------------------------------------------------------
-LDB0A:
+SetWeaponNotEnoughExpStringIndex:
         lda     #$00                            ; DB0A A9 00                    ..
         sta     $6A                             ; DB0C 85 6A                    .j
         lda     #$45                            ; DB0E A9 45                    .E
@@ -12572,10 +12554,10 @@ LDB1E:
         lda     $6F42                           ; DB1E AD 42 6F                 .Bo
         asl     a                               ; DB21 0A                       .
         tax                                     ; DB22 AA                       .
-        lda     LDB36,x                         ; DB23 BD 36 DB                 .6.
+        lda     WeaponShopLevelUpMenuCursorPixelPositionTable,x; DB23 BD 36 DB  .6.
         sta     $AD                             ; DB26 85 AD                    ..
         inx                                     ; DB28 E8                       .
-        lda     LDB36,x                         ; DB29 BD 36 DB                 .6.
+        lda     WeaponShopLevelUpMenuCursorPixelPositionTable,x; DB29 BD 36 DB  .6.
         sta     $AC                             ; DB2C 85 AC                    ..
         ldx     #$F0                            ; DB2E A2 F0                    ..
         lda     #$00                            ; DB30 A9 00                    ..
@@ -12583,7 +12565,7 @@ LDB1E:
         rts                                     ; DB35 60                       `
 
 ; ----------------------------------------------------------------------------
-LDB36:
+WeaponShopLevelUpMenuCursorPixelPositionTable:
         .byte   $10,$28,$10,$58,$10,$88         ; DB36 10 28 10 58 10 88        .(.X..
 ; ----------------------------------------------------------------------------
 LDB3C:
@@ -12672,7 +12654,7 @@ LDBB8:
         jsr     Bank0eScreenRefresh             ; DBC4 20 78 DF                  x.
         jsr     L8F0A                           ; DBC7 20 0A 8F                  ..
         jsr     Bank0eScreenRefresh             ; DBCA 20 78 DF                  x.
-        jsr     LoadUnknownStatsFromBank5_800C  ; DBCD 20 F8 94                  ..
+        jsr     LoadWeaponItemStatsFromBank5_800C; DBCD 20 F8 94                 ..
         lda     #$01                            ; DBD0 A9 01                    ..
         sta     $0617                           ; DBD2 8D 17 06                 ...
         lda     #$F6                            ; DBD5 A9 F6                    ..
@@ -13564,9 +13546,9 @@ LE307:
 ShopItemMenuReadItemStatsForDisplay:
         lda     $6FCA                           ; E310 AD CA 6F                 ..o
         cmp     #$04                            ; E313 C9 04                    ..
-        bne     LE37A                           ; E315 D0 63                    .c
+        bne     ItemIsNotInCategory4_Weapon     ; E315 D0 63                    .c
         cpy     #$01                            ; E317 C0 01                    ..
-        bne     LE343                           ; E319 D0 28                    .(
+        bne     ItemFieldNotIndex1_Strength     ; E319 D0 28                    .(
         lda     #$00                            ; E31B A9 00                    ..
         sta     $03                             ; E31D 85 03                    ..
         lda     $6F24                           ; E31F AD 24 6F                 .$o
@@ -13589,62 +13571,64 @@ ShopItemMenuReadItemStatsForDisplay:
         rts                                     ; E342 60                       `
 
 ; ----------------------------------------------------------------------------
-LE343:
+ItemFieldNotIndex1_Strength:
         cpy     #$06                            ; E343 C0 06                    ..
-        bne     LE377                           ; E345 D0 30                    .0
+        bne     ItemFieldNotIndex6_PartyMemberIndex; E345 D0 30                 .0
         lda     $6F24                           ; E347 AD 24 6F                 .$o
         cmp     #$11                            ; E34A C9 11                    ..
-        bcc     LE374                           ; E34C 90 26                    .&
+        bcc     ItemFieldIndex6WeaponCloud      ; E34C 90 26                    .&
         cmp     #$21                            ; E34E C9 21                    .!
-        bcc     LE371                           ; E350 90 1F                    ..
+        bcc     ItemFieldIndex6WeaponBarret     ; E350 90 1F                    ..
         cmp     #$31                            ; E352 C9 31                    .1
-        bcc     LE36E                           ; E354 90 18                    ..
+        bcc     ItemFieldIndex6WeaponTifa       ; E354 90 18                    ..
         cmp     #$3C                            ; E356 C9 3C                    .<
-        bcc     LE36B                           ; E358 90 11                    ..
+        bcc     ItemFieldIndex6WeaponAerith     ; E358 90 11                    ..
         cmp     #$4A                            ; E35A C9 4A                    .J
-        bcc     LE368                           ; E35C 90 0A                    ..
+        bcc     ItemFieldIndex6WeaponRedXIII    ; E35C 90 0A                    ..
         cmp     #$57                            ; E35E C9 57                    .W
-        bcc     LE365                           ; E360 90 03                    ..
+        bcc     ItemFieldIndex6WeaponCaitSith   ; E360 90 03                    ..
         lda     #$06                            ; E362 A9 06                    ..
         rts                                     ; E364 60                       `
 
 ; ----------------------------------------------------------------------------
-LE365:
+ItemFieldIndex6WeaponCaitSith:
         lda     #$05                            ; E365 A9 05                    ..
         rts                                     ; E367 60                       `
 
 ; ----------------------------------------------------------------------------
-LE368:
+ItemFieldIndex6WeaponRedXIII:
         lda     #$04                            ; E368 A9 04                    ..
         rts                                     ; E36A 60                       `
 
 ; ----------------------------------------------------------------------------
-LE36B:
+ItemFieldIndex6WeaponAerith:
         lda     #$03                            ; E36B A9 03                    ..
         rts                                     ; E36D 60                       `
 
 ; ----------------------------------------------------------------------------
-LE36E:
+ItemFieldIndex6WeaponTifa:
         lda     #$02                            ; E36E A9 02                    ..
         rts                                     ; E370 60                       `
 
 ; ----------------------------------------------------------------------------
-LE371:
+ItemFieldIndex6WeaponBarret:
         lda     #$01                            ; E371 A9 01                    ..
         rts                                     ; E373 60                       `
 
 ; ----------------------------------------------------------------------------
-LE374:
+ItemFieldIndex6WeaponCloud:
         lda     #$00                            ; E374 A9 00                    ..
         rts                                     ; E376 60                       `
 
 ; ----------------------------------------------------------------------------
-LE377:
+; Set all other weapon attributes to 0, except for the Strength value
+ItemFieldNotIndex6_PartyMemberIndex:
         lda     #$00                            ; E377 A9 00                    ..
         rts                                     ; E379 60                       `
 
 ; ----------------------------------------------------------------------------
-LE37A:
+; For all other item types, read stat value directly from bank 5
+ItemIsNotInCategory4_Weapon:
         jsr     L0140                           ; E37A 20 40 01                  @.
         rts                                     ; E37D 60                       `
 

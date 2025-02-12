@@ -275,6 +275,26 @@ LABEL {
   ADDR  $9C96;
 };
 LABEL {
+  NAME "ResetSaveRAMForAudioLoop";
+  ADDR  $A081;
+};
+LABEL {
+  NAME "RunAudioOpcode";
+  ADDR  $A3D7;
+};
+LABEL {
+  NAME "AudioOpcodeTable";
+  ADDR  $A3ED;
+};
+LABEL {
+  NAME "AudioOpcode0f";
+  ADDR  $A5D1;
+};
+LABEL {
+  NAME "AudioOpcode12";
+  ADDR  $A6A6;
+};
+LABEL {
   NAME "MusicThemeTable";
   ADDR  $B8A1;
 };

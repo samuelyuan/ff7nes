@@ -4855,10 +4855,10 @@ LA077:
         sta     $4015                           ; A079 8D 15 40                 ..@
         sta     $6F11                           ; A07C 8D 11 6F                 ..o
         ldx     #$00                            ; A07F A2 00                    ..
-LA081:
+ResetSaveRAMForAudioLoop:
         sta     $6E00,x                         ; A081 9D 00 6E                 ..n
         inx                                     ; A084 E8                       .
-        bne     LA081                           ; A085 D0 FA                    ..
+        bne     ResetSaveRAMForAudioLoop        ; A085 D0 FA                    ..
         lda     #$8D                            ; A087 A9 8D                    ..
         sta     L6EF0                           ; A089 8D F0 6E                 ..n
         lda     #$40                            ; A08C A9 40                    .@
@@ -5198,7 +5198,7 @@ LA2FB:
         bcc     LA30E                           ; A2FF 90 0D                    ..
         cmp     #$C0                            ; A301 C9 C0                    ..
         bcc     LA308                           ; A303 90 03                    ..
-        jmp     LA3D7                           ; A305 4C D7 A3                 L..
+        jmp     RunAudioOpcode                  ; A305 4C D7 A3                 L..
 
 ; ----------------------------------------------------------------------------
 LA308:
@@ -5323,13 +5323,13 @@ LA3CC:
         rts                                     ; A3D6 60                       `
 
 ; ----------------------------------------------------------------------------
-LA3D7:
+RunAudioOpcode:
         and     #$3F                            ; A3D7 29 3F                    )?
         asl     a                               ; A3D9 0A                       .
         tax                                     ; A3DA AA                       .
-        lda     LA3ED,x                         ; A3DB BD ED A3                 ...
+        lda     AudioOpcodeTable,x              ; A3DB BD ED A3                 ...
         sta     L00C5                           ; A3DE 85 C5                    ..
-        lda     LA3ED+1,x                       ; A3E0 BD EE A3                 ...
+        lda     AudioOpcodeTable+1,x            ; A3E0 BD EE A3                 ...
         sta     $C6                             ; A3E3 85 C6                    ..
         ldx     $6E38                           ; A3E5 AE 38 6E                 .8n
         iny                                     ; A3E8 C8                       .
@@ -5337,7 +5337,7 @@ LA3D7:
         jmp     (L00C5)                         ; A3EA 6C C5 00                 l..
 
 ; ----------------------------------------------------------------------------
-LA3ED:
+AudioOpcodeTable:
         .addr   LA439                           ; A3ED 39 A4                    9.
         .addr   LA43E                           ; A3EF 3E A4                    >.
         .addr   LA446                           ; A3F1 46 A4                    F.
@@ -5353,10 +5353,10 @@ LA3ED:
         .addr   LA4CD                           ; A405 CD A4                    ..
         .addr   LA4D7                           ; A407 D7 A4                    ..
         .addr   LA5BE                           ; A409 BE A5                    ..
-        .addr   LA5D1                           ; A40B D1 A5                    ..
+        .addr   AudioOpcode0f                   ; A40B D1 A5                    ..
         .addr   LA60F                           ; A40D 0F A6                    ..
         .addr   LA65E                           ; A40F 5E A6                    ^.
-        .addr   LA6A6                           ; A411 A6 A6                    ..
+        .addr   AudioOpcode12                   ; A411 A6 A6                    ..
         .addr   LA6B3                           ; A413 B3 A6                    ..
         .addr   LA716                           ; A415 16 A7                    ..
         .addr   LA72D                           ; A417 2D A7                    -.
@@ -5643,7 +5643,7 @@ LA5C8:
         rts                                     ; A5D0 60                       `
 
 ; ----------------------------------------------------------------------------
-LA5D1:
+AudioOpcode0f:
         lda     $6E74,x                         ; A5D1 BD 74 6E                 .tn
         bne     LA5DB                           ; A5D4 D0 05                    ..
         lda     ($C7),y                         ; A5D6 B1 C7                    ..
@@ -5767,7 +5767,7 @@ LA65E:
         rts                                     ; A6A5 60                       `
 
 ; ----------------------------------------------------------------------------
-LA6A6:
+AudioOpcode12:
         lda     ($C7),y                         ; A6A6 B1 C7                    ..
         clc                                     ; A6A8 18                       .
         adc     $6EAC,x                         ; A6A9 7D AC 6E                 }.n
