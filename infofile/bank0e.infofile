@@ -1091,6 +1091,10 @@ LABEL {
   ADDR $A73E;
 };
 LABEL {
+  NAME "RefreshScreenAfterRunItemLogic";
+  ADDR $A753;
+};
+LABEL {
   NAME "StatusSubmenuButtonPressTable";
   ADDR $A774;
 };
@@ -1145,6 +1149,10 @@ LABEL {
 LABEL {
   NAME "PlayerHealthGreaterZero";
   ADDR $A897;
+};
+LABEL {
+  NAME "UseItemHeroDrink";
+  ADDR $A89D;
 };
 LABEL {
   NAME "UseItemStrengthPlus";

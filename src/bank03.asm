@@ -7376,32 +7376,32 @@ MusicThemeTable:
         .addr   MusicTitleScreenTheme           ; B8A3 DF B8                    ..
         .addr   MusicTownTheme                  ; B8A5 4A C4                    J.
         .addr   MusicOverworldTheme             ; B8A7 D0 D9                    ..
-        .addr   LDBB6                           ; B8A9 B6 DB                    ..
+        .addr   MusicKalmTheme                  ; B8A9 B6 DB                    ..
         .addr   LDCA3                           ; B8AB A3 DC                    ..
         .addr   LBB58                           ; B8AD 58 BB                    X.
         .addr   LBE08                           ; B8AF 08 BE                    ..
         .addr   LC2FF                           ; B8B1 FF C2                    ..
         .addr   LDDDF                           ; B8B3 DF DD                    ..
-        .addr   LE123                           ; B8B5 23 E1                    #.
-        .addr   LE251                           ; B8B7 51 E2                    Q.
+        .addr   MusicNorthCorelTheme            ; B8B5 23 E1                    #.
+        .addr   MusicChocoboFarmTheme           ; B8B7 51 E2                    Q.
         .addr   MusicNibelheimTheme             ; B8B9 2C E4                    ,.
         .addr   LE57D                           ; B8BB 7D E5                    }.
         .addr   MusicTifaTheme                  ; B8BD 8D E8                    ..
-        .addr   LEA6D                           ; B8BF 6D EA                    m.
+        .addr   MusicGoldSaucerTheme            ; B8BF 6D EA                    m.
         .addr   LEC2A                           ; B8C1 2A EC                    *.
         .addr   MusicInfiltratingShinraTheme    ; B8C3 02 FB                    ..
-        .addr   LEDF8                           ; B8C5 F8 ED                    ..
-        .addr   LEEF2                           ; B8C7 F2 EE                    ..
+        .addr   MusicMythrilMinesTheme          ; B8C5 F8 ED                    ..
+        .addr   MusicJunonOrRocketTownTheme     ; B8C7 F2 EE                    ..
         .addr   MusicAerithTheme                ; B8C9 9A F0                    ..
         .addr   MusicForgottenCityTheme         ; B8CB 4D F2                    M.
         .addr   MusicShinraCompanyTheme         ; B8CD 21 F3                    !.
-        .addr   LC563                           ; B8CF 63 C5                    c.
-        .addr   LF410                           ; B8D1 10 F4                    ..
-        .addr   LF505                           ; B8D3 05 F5                    ..
-        .addr   LF702                           ; B8D5 02 F7                    ..
+        .addr   MusicCostaDelSolTheme           ; B8CF 63 C5                    c.
+        .addr   MusicGaeaCliffTheme             ; B8D1 10 F4                    ..
+        .addr   MusicIcicleInnTheme             ; B8D3 05 F5                    ..
+        .addr   MusicGongagaTheme               ; B8D5 02 F7                    ..
         .addr   LF7F3                           ; B8D7 F3 F7                    ..
         .addr   LF96D                           ; B8D9 6D F9                    m.
-        .addr   LC563                           ; B8DB 63 C5                    c.
+        .addr   MusicCostaDelSolTheme           ; B8DB 63 C5                    c.
 ; ----------------------------------------------------------------------------
         .byte   $00,$00                         ; B8DD 00 00                    ..
 MusicTitleScreenTheme:
@@ -7813,7 +7813,7 @@ MusicTownTheme:
         .byte   $03,$01,$49,$49,$47,$49,$49,$49 ; C552 03 01 49 49 47 49 49 49  ..IIGIII
         .byte   $47,$CF,$12,$0D,$01,$49,$47,$4A ; C55A 47 CF 12 0D 01 49 47 4A  G....IGJ
         .byte   $D0                             ; C562 D0                       .
-LC563:
+MusicCostaDelSolTheme:
         .byte   $FF,$00,$0E,$00,$01,$59,$00,$02 ; C563 FF 00 0E 00 01 59 00 02  .....Y..
         .byte   $AC,$00,$03,$07,$01,$FF,$CC,$60 ; C56B AC 00 03 07 01 FF CC 60  .......`
         .byte   $C7,$FF,$C4,$6D,$CD,$03,$00,$DB ; C573 C7 FF C4 6D CD 03 00 DB  ...m....
@@ -10942,7 +10942,7 @@ MusicOverworldTheme:
         .byte   $DB,$07,$00,$1E,$78,$D8,$00,$DE ; DBA0 DB 07 00 1E 78 D8 00 DE  ....x...
         .byte   $06,$CD,$03,$01,$D8,$0C,$08,$3F ; DBA8 06 CD 03 01 D8 0C 08 3F  .......?
         .byte   $C9,$C9,$C9,$C9,$C9,$D0         ; DBB0 C9 C9 C9 C9 C9 D0        ......
-LDBB6:
+MusicKalmTheme:
         .byte   $FF,$00,$0E,$00,$01,$62,$00,$02 ; DBB6 FF 00 0E 00 01 62 00 02  .....b..
         .byte   $BB,$00,$03,$D6,$00,$FF,$CC,$C8 ; DBBE BB 00 03 D6 00 FF CC C8  ........
         .byte   $C7,$FF,$C4,$6E,$CD,$03,$00,$DB ; DBC6 C7 FF C4 6E CD 03 00 DB  ...n....
@@ -11120,7 +11120,7 @@ LDDDF:
         .byte   $FF,$C4,$19,$CD,$03,$00,$DE,$06 ; E10F FF C4 19 CD 03 00 DE 06  ........
         .byte   $CD,$03,$01,$D8,$00,$3F,$C9,$CE ; E117 CD 03 01 D8 00 3F C9 CE  .....?..
         .byte   $3F,$3D,$03,$D0                 ; E11F 3F 3D 03 D0              ?=..
-LE123:
+MusicNorthCorelTheme:
         .byte   $FF,$00,$0E,$00,$01,$CB,$00,$02 ; E123 FF 00 0E 00 01 CB 00 02  ........
         .byte   $F0,$00,$03,$0F,$01,$FF,$CC,$60 ; E12B F0 00 03 0F 01 FF CC 60  .......`
         .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; E133 C7 FF C4 FF CD 03 00 DB  ........
@@ -11159,7 +11159,7 @@ LE123:
         .byte   $DB,$07,$00,$1E,$78,$D8,$00,$DE ; E23B DB 07 00 1E 78 D8 00 DE  ....x...
         .byte   $06,$CD,$03,$01,$D8,$0C,$08,$3F ; E243 06 CD 03 01 D8 0C 08 3F  .......?
         .byte   $C9,$C9,$C9,$C9,$C9,$D0         ; E24B C9 C9 C9 C9 C9 D0        ......
-LE251:
+MusicChocoboFarmTheme:
         .byte   $FF,$00,$0E,$00,$01,$DB,$00,$02 ; E251 FF 00 0E 00 01 DB 00 02  ........
         .byte   $4B,$01,$03,$B9,$01,$FF,$CC,$C8 ; E259 4B 01 03 B9 01 FF CC C8  K.......
         .byte   $C7,$FF,$C4,$6D,$CD,$03,$00,$DB ; E261 C7 FF C4 6D CD 03 00 DB  ...m....
@@ -11424,7 +11424,7 @@ MusicTifaTheme:
         .byte   $07,$00,$1E,$78,$D8,$00,$DE,$06 ; EA55 07 00 1E 78 D8 00 DE 06  ...x....
         .byte   $CD,$03,$01,$D8,$0C,$08,$3F,$C9 ; EA5D CD 03 01 D8 0C 08 3F C9  ......?.
         .byte   $C9,$C9,$C9,$C9,$C9,$C9,$C9,$D0 ; EA65 C9 C9 C9 C9 C9 C9 C9 D0  ........
-LEA6D:
+MusicGoldSaucerTheme:
         .byte   $FF,$00,$0E,$00,$01,$B4,$00,$02 ; EA6D FF 00 0E 00 01 B4 00 02  ........
         .byte   $7D,$01,$03,$9D,$01,$FF,$CC,$A0 ; EA75 7D 01 03 9D 01 FF CC A0  }.......
         .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; EA7D C7 FF C4 FF CD 03 00 DB  ........
@@ -11540,7 +11540,7 @@ LEC2A:
         .byte   $00,$1E,$78,$D8,$00,$DE,$06,$CD ; EDE2 00 1E 78 D8 00 DE 06 CD  ..x.....
         .byte   $03,$01,$D8,$0C,$08,$3F,$C9,$C9 ; EDEA 03 01 D8 0C 08 3F C9 C9  .....?..
         .byte   $C9,$C9,$C9,$C9,$C9,$D0         ; EDF2 C9 C9 C9 C9 C9 D0        ......
-LEDF8:
+MusicMythrilMinesTheme:
         .byte   $FF,$00,$0E,$00,$01,$3B,$00,$02 ; EDF8 FF 00 0E 00 01 3B 00 02  .....;..
         .byte   $68,$00,$03,$DB,$00,$FF,$CC,$BB ; EE00 68 00 03 DB 00 FF CC BB  h.......
         .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; EE08 C7 FF C4 FF CD 03 00 DB  ........
@@ -11573,7 +11573,7 @@ LEDF8:
         .byte   $78,$D8,$00,$DE,$06,$CD,$03,$01 ; EEE0 78 D8 00 DE 06 CD 03 01  x.......
         .byte   $D8,$0C,$08,$3F,$C9,$C9,$C9,$C9 ; EEE8 D8 0C 08 3F C9 C9 C9 C9  ...?....
         .byte   $C9,$D0                         ; EEF0 C9 D0                    ..
-LEEF2:
+MusicJunonOrRocketTownTheme:
         .byte   $FF,$00,$0E,$00,$01,$82,$00,$02 ; EEF2 FF 00 0E 00 01 82 00 02  ........
         .byte   $02,$01,$03,$88,$01,$FF,$CC,$88 ; EEFA 02 01 03 88 01 FF CC 88  ........
         .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; EF02 C7 FF C4 FF CD 03 00 DB  ........
@@ -11742,7 +11742,7 @@ MusicShinraCompanyTheme:
         .byte   $00,$1E,$78,$D8,$00,$DE,$06,$CD ; F3F9 00 1E 78 D8 00 DE 06 CD  ..x.....
         .byte   $03,$01,$D8,$0C,$08,$3F,$C9,$C9 ; F401 03 01 D8 0C 08 3F C9 C9  .....?..
         .byte   $C9,$C9,$C9,$C9,$C9,$C9,$D0     ; F409 C9 C9 C9 C9 C9 C9 D0     .......
-LF410:
+MusicGaeaCliffTheme:
         .byte   $FF,$00,$0E,$00,$01,$4F,$00,$02 ; F410 FF 00 0E 00 01 4F 00 02  .....O..
         .byte   $93,$00,$03,$D8,$00,$FF,$CC,$66 ; F418 93 00 03 D8 00 FF CC 66  .......f
         .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; F420 C7 FF C4 FF CD 03 00 DB  ........
@@ -11774,7 +11774,7 @@ LF410:
         .byte   $00,$DB,$07,$00,$1E,$78,$D8,$00 ; F4F0 00 DB 07 00 1E 78 D8 00  .....x..
         .byte   $DE,$06,$CD,$03,$01,$D8,$0C,$08 ; F4F8 DE 06 CD 03 01 D8 0C 08  ........
         .byte   $3F,$C9,$C9,$C9,$D0             ; F500 3F C9 C9 C9 D0           ?....
-LF505:
+MusicIcicleInnTheme:
         .byte   $FF,$00,$0E,$00,$01,$61,$00,$02 ; F505 FF 00 0E 00 01 61 00 02  .....a..
         .byte   $5E,$01,$03,$DD,$01,$FF,$CC,$BB ; F50D 5E 01 03 DD 01 FF CC BB  ^.......
         .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; F515 C7 FF C4 FF CD 03 00 DB  ........
@@ -11839,7 +11839,7 @@ LF505:
         .byte   $00,$1E,$78,$D8,$00,$DE,$06,$CD ; F6ED 00 1E 78 D8 00 DE 06 CD  ..x.....
         .byte   $03,$01,$D8,$0C,$08,$3F,$C9,$C9 ; F6F5 03 01 D8 0C 08 3F C9 C9  .....?..
         .byte   $C9,$C9,$C9,$C9,$D0             ; F6FD C9 C9 C9 C9 D0           .....
-LF702:
+MusicGongagaTheme:
         .byte   $FF,$00,$0E,$00,$01,$90,$00,$02 ; F702 FF 00 0E 00 01 90 00 02  ........
         .byte   $B0,$00,$03,$D2,$00,$FF,$CC,$77 ; F70A B0 00 03 D2 00 FF CC 77  .......w
         .byte   $C7,$FF,$C4,$FF,$CD,$03,$00,$DB ; F712 C7 FF C4 FF CD 03 00 DB  ........

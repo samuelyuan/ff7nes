@@ -5724,7 +5724,7 @@ LA74A:
         lda     $6F1E                           ; A74A AD 1E 6F                 ..o
         sta     $6F1F                           ; A74D 8D 1F 6F                 ..o
         jsr     LA99F                           ; A750 20 9F A9                  ..
-LA753:
+RefreshScreenAfterRunItemLogic:
         jsr     Bank0eScreenRefresh             ; A753 20 78 DF                  x.
         ldx     #$08                            ; A756 A2 08                    ..
         lda     $22                             ; A758 A5 22                    ."
@@ -5733,7 +5733,7 @@ LA75A:
         bcs     LA762                           ; A75B B0 05                    ..
         dex                                     ; A75D CA                       .
         bne     LA75A                           ; A75E D0 FA                    ..
-        beq     LA753                           ; A760 F0 F1                    ..
+        beq     RefreshScreenAfterRunItemLogic  ; A760 F0 F1                    ..
 LA762:
         dex                                     ; A762 CA                       .
         txa                                     ; A763 8A                       .
@@ -5763,13 +5763,13 @@ StatusSubmenuExit:
 
 ; ----------------------------------------------------------------------------
 StatusSubmenuNoOp:
-        jmp     LA753                           ; A786 4C 53 A7                 LS.
+        jmp     RefreshScreenAfterRunItemLogic  ; A786 4C 53 A7                 LS.
 
 ; ----------------------------------------------------------------------------
 StatusSubmenuMoveLeftOrUp:
         lda     $603B                           ; A789 AD 3B 60                 .;`
         cmp     #$02                            ; A78C C9 02                    ..
-        bcc     LA753                           ; A78E 90 C3                    ..
+        bcc     RefreshScreenAfterRunItemLogic  ; A78E 90 C3                    ..
         ldx     $6F1F                           ; A790 AE 1F 6F                 ..o
         dex                                     ; A793 CA                       .
         bpl     LA79A                           ; A794 10 04                    ..
@@ -5779,13 +5779,13 @@ LA79A:
         stx     $6F1F                           ; A79A 8E 1F 6F                 ..o
         jsr     MenuGraphicsRefresh             ; A79D 20 0D E0                  ..
         jsr     LA99F                           ; A7A0 20 9F A9                  ..
-        jmp     LA753                           ; A7A3 4C 53 A7                 LS.
+        jmp     RefreshScreenAfterRunItemLogic  ; A7A3 4C 53 A7                 LS.
 
 ; ----------------------------------------------------------------------------
 StatusSubmenuMoveRightOrDown:
         lda     $603B                           ; A7A6 AD 3B 60                 .;`
         cmp     #$02                            ; A7A9 C9 02                    ..
-        bcc     LA753                           ; A7AB 90 A6                    ..
+        bcc     RefreshScreenAfterRunItemLogic  ; A7AB 90 A6                    ..
         ldx     $6F1F                           ; A7AD AE 1F 6F                 ..o
         inx                                     ; A7B0 E8                       .
         cpx     $603B                           ; A7B1 EC 3B 60                 .;`
@@ -5796,14 +5796,14 @@ StatusSubmenuUseItemOnPartyMember:
         lda     $6F20                           ; A7BA AD 20 6F                 . o
         cmp     #$01                            ; A7BD C9 01                    ..
         beq     ItemIsInCategory1               ; A7BF F0 03                    ..
-        jmp     LA753                           ; A7C1 4C 53 A7                 LS.
+        jmp     RefreshScreenAfterRunItemLogic  ; A7C1 4C 53 A7                 LS.
 
 ; ----------------------------------------------------------------------------
 ItemIsInCategory1:
         ldx     $6F24                           ; A7C4 AE 24 6F                 .$o
         lda     $60CE,x                         ; A7C7 BD CE 60                 ..`
         bne     HealingItemQuantityGreaterZero  ; A7CA D0 03                    ..
-        jmp     LA753                           ; A7CC 4C 53 A7                 LS.
+        jmp     RefreshScreenAfterRunItemLogic  ; A7CC 4C 53 A7                 LS.
 
 ; ----------------------------------------------------------------------------
 HealingItemQuantityGreaterZero:
@@ -5824,7 +5824,7 @@ HealingItemTable:
         .addr   LA870                           ; A7E7 70 A8                    p.
         .addr   UseItemPhoenixDown              ; A7E9 73 A8                    s.
         .addr   LA89A                           ; A7EB 9A A8                    ..
-        .addr   LA89D                           ; A7ED 9D A8                    ..
+        .addr   UseItemHeroDrink                ; A7ED 9D A8                    ..
         .addr   UseItemStrengthPlus             ; A7EF C8 A8                    ..
         .addr   UseItemVitalityPlus             ; A7F1 F3 A8                    ..
         .addr   UseItemIntelligencePlus         ; A7F3 1E A9                    ..
@@ -5854,7 +5854,7 @@ UseHealingItemHP:
         jsr     DecrementItemQuantity           ; A828 20 E8 B1                  ..
         jsr     LB225                           ; A82B 20 25 B2                  %.
 CharacterHPAlreadyFull:
-        jmp     LA753                           ; A82E 4C 53 A7                 LS.
+        jmp     RefreshScreenAfterRunItemLogic  ; A82E 4C 53 A7                 LS.
 
 ; ----------------------------------------------------------------------------
 LA831:
@@ -5887,7 +5887,7 @@ LA852:
         bne     LA847                           ; A859 D0 EC                    ..
         jsr     DecrementItemQuantity           ; A85B 20 E8 B1                  ..
         jsr     LB225                           ; A85E 20 25 B2                  %.
-        jmp     LA753                           ; A861 4C 53 A7                 LS.
+        jmp     RefreshScreenAfterRunItemLogic  ; A861 4C 53 A7                 LS.
 
 ; ----------------------------------------------------------------------------
 HealingItemHPValues:
@@ -5895,7 +5895,7 @@ HealingItemHPValues:
         .byte   $90,$01,$0F,$27                 ; A86C 90 01 0F 27              ...'
 ; ----------------------------------------------------------------------------
 LA870:
-        jmp     LA753                           ; A870 4C 53 A7                 LS.
+        jmp     RefreshScreenAfterRunItemLogic  ; A870 4C 53 A7                 LS.
 
 ; ----------------------------------------------------------------------------
 UseItemPhoenixDown:
@@ -5919,14 +5919,14 @@ UseItemPhoenixDown:
         jsr     LB2F5                           ; A891 20 F5 B2                  ..
         jsr     LB225                           ; A894 20 25 B2                  %.
 PlayerHealthGreaterZero:
-        jmp     LA753                           ; A897 4C 53 A7                 LS.
+        jmp     RefreshScreenAfterRunItemLogic  ; A897 4C 53 A7                 LS.
 
 ; ----------------------------------------------------------------------------
 LA89A:
-        jmp     LA753                           ; A89A 4C 53 A7                 LS.
+        jmp     RefreshScreenAfterRunItemLogic  ; A89A 4C 53 A7                 LS.
 
 ; ----------------------------------------------------------------------------
-LA89D:
+UseItemHeroDrink:
         ldx     $6F1F                           ; A89D AE 1F 6F                 ..o
         lda     $603C,x                         ; A8A0 BD 3C 60                 .<`
         tax                                     ; A8A3 AA                       .
@@ -5944,7 +5944,7 @@ LA89D:
         jsr     DecrementItemQuantity           ; A8BF 20 E8 B1                  ..
         jsr     LB225                           ; A8C2 20 25 B2                  %.
 LA8C5:
-        jmp     LA753                           ; A8C5 4C 53 A7                 LS.
+        jmp     RefreshScreenAfterRunItemLogic  ; A8C5 4C 53 A7                 LS.
 
 ; ----------------------------------------------------------------------------
 UseItemStrengthPlus:
@@ -5965,7 +5965,7 @@ UseItemStrengthPlus:
         jsr     DecrementItemQuantity           ; A8EA 20 E8 B1                  ..
         jsr     LB225                           ; A8ED 20 25 B2                  %.
 LA8F0:
-        jmp     LA753                           ; A8F0 4C 53 A7                 LS.
+        jmp     RefreshScreenAfterRunItemLogic  ; A8F0 4C 53 A7                 LS.
 
 ; ----------------------------------------------------------------------------
 UseItemVitalityPlus:
@@ -5986,7 +5986,7 @@ UseItemVitalityPlus:
         jsr     DecrementItemQuantity           ; A915 20 E8 B1                  ..
         jsr     LB225                           ; A918 20 25 B2                  %.
 LA91B:
-        jmp     LA753                           ; A91B 4C 53 A7                 LS.
+        jmp     RefreshScreenAfterRunItemLogic  ; A91B 4C 53 A7                 LS.
 
 ; ----------------------------------------------------------------------------
 UseItemIntelligencePlus:
@@ -6007,7 +6007,7 @@ UseItemIntelligencePlus:
         jsr     DecrementItemQuantity           ; A940 20 E8 B1                  ..
         jsr     LB225                           ; A943 20 25 B2                  %.
 LA946:
-        jmp     LA753                           ; A946 4C 53 A7                 LS.
+        jmp     RefreshScreenAfterRunItemLogic  ; A946 4C 53 A7                 LS.
 
 ; ----------------------------------------------------------------------------
 UseItemSpiritPlus:
@@ -6028,7 +6028,7 @@ UseItemSpiritPlus:
         jsr     DecrementItemQuantity           ; A96B 20 E8 B1                  ..
         jsr     LB225                           ; A96E 20 25 B2                  %.
 LA971:
-        jmp     LA753                           ; A971 4C 53 A7                 LS.
+        jmp     RefreshScreenAfterRunItemLogic  ; A971 4C 53 A7                 LS.
 
 ; ----------------------------------------------------------------------------
 UseItemAgilityPlus:
@@ -6049,7 +6049,7 @@ UseItemAgilityPlus:
         jsr     DecrementItemQuantity           ; A996 20 E8 B1                  ..
         jsr     LB225                           ; A999 20 25 B2                  %.
 LA99C:
-        jmp     LA753                           ; A99C 4C 53 A7                 LS.
+        jmp     RefreshScreenAfterRunItemLogic  ; A99C 4C 53 A7                 LS.
 
 ; ----------------------------------------------------------------------------
 LA99F:

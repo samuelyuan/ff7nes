@@ -45,7 +45,7 @@ RANGE {
 RANGE {
   START $96d3;
   END $9756;
-  TYPE BYTETABLE;
+  TYPE CODE;
 };
 RANGE {
   START $9757;
@@ -124,6 +124,16 @@ RANGE {
 };
 RANGE {
   START $A561;
+  END $A603;
+  TYPE CODE;
+};
+RANGE {
+  START $A604;
+  END $A613;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $A614;
   END $A674;
   TYPE CODE;
 };
@@ -134,7 +144,17 @@ RANGE {
 };
 RANGE {
   START $A68B;
-  END $a88c;
+  END $A6F3;
+  TYPE CODE;
+};
+RANGE {
+  START $A6F4;
+  END $A6FF;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $A700;
+  END $A88C;
   TYPE CODE;
 };
 RANGE {
@@ -179,6 +199,16 @@ RANGE {
 };
 RANGE {
   START $B22A;
+  END $B27C;
+  TYPE CODE;
+};
+RANGE {
+  START $B27D;
+  END $B28C;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $B28D;
   END $B599;
   TYPE CODE;
 };
@@ -189,6 +219,16 @@ RANGE {
 };
 RANGE {
   START $B5A6;
+  END $B71C;
+  TYPE CODE;
+};
+RANGE {
+  START $B71D;
+  END $B72D;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $B72E;
   END $B7A0;
   TYPE CODE;
 };
@@ -199,6 +239,16 @@ RANGE {
 };
 RANGE {
   START $B7B1;
+  END $B81E;
+  TYPE CODE;
+};
+RANGE {
+  START $B81F;
+  END $B82E;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $B82F;
   END $BA7D;
   TYPE CODE;
 };
@@ -259,6 +309,16 @@ RANGE {
 };
 RANGE {
   START $C686;
+  END $C73F;
+  TYPE CODE;
+};
+RANGE {
+  START $C740;
+  END $C74F;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $C750;
   END $C7E8;
   TYPE CODE;
 };
@@ -285,7 +345,7 @@ RANGE {
 RANGE {
   START $DAD8;
   END $DADF;
-  TYPE BYTETABLE;
+  TYPE ADDRTABLE;
 };
 RANGE {
   START $DAE0;
@@ -304,6 +364,16 @@ RANGE {
 };
 RANGE {
   START $DB5A;
+  END $E47C;
+  TYPE CODE;
+};
+RANGE {
+  START $E47D;
+  END $E484;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $E485;
   END $E7DC;
   TYPE CODE;
 };
@@ -378,13 +448,13 @@ RANGE {
   TYPE CODE;
 };
 RANGE {
-  START $f4ed;
-  END $fbaf;
+  START $F4ED;
+  END $FBAF;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $fbb0;
-  END $ffff;
+  START $FBB0;
+  END $FFFF;
   TYPE CODE;
 };
 
@@ -397,8 +467,76 @@ LABEL {
   ADDR $8B56;
 };
 LABEL {
+  NAME "BattleMenuItemOptionTable";
+  ADDR $A675;
+};
+LABEL {
+  NAME "BattleMenuItemOptionUseHealingItem";
+  ADDR $A68B;
+};
+LABEL {
+  NAME "BattleMenuItemOptionUseHeroDrink";
+  ADDR $A72D;
+};
+LABEL {
+  NAME "BattleMenuItemOptionUseStrengthPlus";
+  ADDR $A758;
+};
+LABEL {
+  NAME "BattleMenuItemOptionUseVitalityPlus";
+  ADDR $A783;
+};
+LABEL {
+  NAME "BattleMenuItemOptionUseIntelligencePlus";
+  ADDR $A7AE;
+};
+LABEL {
+  NAME "BattleMenuItemOptionUseSpiritPlus";
+  ADDR $A7D9;
+};
+LABEL {
+  NAME "BattleMenuItemOptionUseAgilityPlus";
+  ADDR $A804;
+};
+LABEL {
+  NAME "ItemOptionSelectItemButtonPressTable";
+  ADDR $B27D;
+};
+LABEL {
+  NAME "ItemOptionSelectItemExit";
+  ADDR $B28D;
+};
+LABEL {
+  NAME "ItemOptionSelectItemNoOp";
+  ADDR $B2A6;
+};
+LABEL {
+  NAME "ItemOptionSelectItemMoveUp";
+  ADDR $B2A9;
+};
+LABEL {
+  NAME "ItemOptionSelectItemMoveDown";
+  ADDR $B2C9;
+};
+LABEL {
+  NAME "ItemOptionSelectItemMoveLeftPrevPage";
+  ADDR $B2DD;
+};
+LABEL {
+  NAME "ItemOptionSelectItemMoveRightNextPage";
+  ADDR $B30E;
+};
+LABEL {
+  NAME "ItemOptionSelectItemConfirm";
+  ADDR $B325;
+};
+LABEL {
   NAME "BattleMenuItemSubmenuCursorPixelPositionTable";
   ADDR $B59A;
+};
+LABEL {
+  NAME "MagicOptionSelectSkillButtonPressTable";
+  ADDR $B81F;
 };
 LABEL {
   NAME "BattleScreenEntryPoint";
@@ -465,12 +603,100 @@ LABEL {
   ADDR $C617;
 };
 LABEL {
+  NAME "AttackOptionSelectEnemyButtonPressTable";
+  ADDR $C676;
+};
+LABEL {
+  NAME "AttackOptionSelectEnemyConfirm";
+  ADDR $C686;
+};
+LABEL {
+  NAME "AttackOptionSelectEnemyExit";
+  ADDR $C68B;
+};
+LABEL {
+  NAME "AttackOptionSelectEnemyNoOp";
+  ADDR $C690;
+};
+LABEL {
+  NAME "AttackOptionSelectEnemyMoveLeftOrUp";
+  ADDR $C693;
+};
+LABEL {
+  NAME "AttackOptionSelectEnemyMoveRightOrDown";
+  ADDR $C6AB;
+};
+LABEL {
+  NAME "ItemOptionSelectCharacterButtonPressTable";
+  ADDR $C740;
+};
+LABEL {
+  NAME "ItemOptionSelectCharacterConfirm";
+  ADDR $C750;
+};
+LABEL {
+  NAME "ItemOptionSelectCharacterExit";
+  ADDR $C755;
+};
+LABEL {
+  NAME "ItemOptionSelectCharacterNoOp";
+  ADDR $C75A;
+};
+LABEL {
+  NAME "ItemOptionSelectCharacterMoveUp";
+  ADDR $C75D;
+};
+LABEL {
+  NAME "ItemOptionSelectCharacterMoveDown";
+  ADDR $C775;
+};
+LABEL {
   NAME "LoadCharacterStatsFromBank5";
   ADDR $C8F3;
 };
 LABEL {
   NAME "LoadEnemyStats";
   ADDR $C916;
+};
+LABEL {
+  NAME "BattleMenuPartyStatsApplyItems";
+  ADDR $CF20;
+};
+LABEL {
+  NAME "BattleMenuPartyStatsApplyBodyArmorItem";
+  ADDR $CF59;
+};
+LABEL {
+  NAME "BattleMenuPartyStatsApplyBraceletItem";
+  ADDR $CF6C;
+};
+LABEL {
+  NAME "BattleMenuPartyStatsApplyRingItem";
+  ADDR $CF7F;
+};
+LABEL {
+  NAME "BattleMenuPartyStatsApplyHeroDrink";
+  ADDR $CF92;
+};
+LABEL {
+  NAME "BattleMenuPartyStatsApplyStrengthPlus";
+  ADDR $CFCF;
+};
+LABEL {
+  NAME "BattleMenuPartyStatsApplyVitalityPlus";
+  ADDR $CFE3;
+};
+LABEL {
+  NAME "BattleMenuPartyStatsApplyIntelligencePlus";
+  ADDR $CFF7;
+};
+LABEL {
+  NAME "BattleMenuPartyStatsApplySpiritPlus";
+  ADDR $D00B;
+};
+LABEL {
+  NAME "BattleMenuPartyStatsApplyAgilityPlus";
+  ADDR $D01F;
 };
 LABEL {
   NAME "CalculatePlayerDefenseFromEnemy";

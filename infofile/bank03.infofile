@@ -311,6 +311,10 @@ LABEL {
   ADDR  $C44A;
 };
 LABEL {
+  NAME "MusicCostaDelSolTheme";
+  ADDR  $C563;
+};
+LABEL {
   NAME "ScrollBufferScreenUp";
   ADDR  $D13A;
 };
@@ -327,12 +331,36 @@ LABEL {
   ADDR  $D9D0;
 };
 LABEL {
+  NAME "MusicKalmTheme";
+  ADDR  $DBB6;
+};
+LABEL {
+  NAME "MusicNorthCorelTheme";
+  ADDR  $E123;
+};
+LABEL {
+  NAME "MusicChocoboFarmTheme";
+  ADDR  $E251;
+};
+LABEL {
   NAME "MusicNibelheimTheme";
   ADDR  $E42C;
 };
 LABEL {
   NAME "MusicTifaTheme";
   ADDR  $E88D;
+};
+LABEL {
+  NAME "MusicGoldSaucerTheme";
+  ADDR  $EA6D;
+};
+LABEL {
+  NAME "MusicMythrilMinesTheme";
+  ADDR  $EDF8;
+};
+LABEL {
+  NAME "MusicJunonOrRocketTownTheme";
+  ADDR  $EEF2;
 };
 LABEL {
   NAME "MusicAerithTheme";
@@ -345,6 +373,18 @@ LABEL {
 LABEL {
   NAME "MusicShinraCompanyTheme";
   ADDR  $F321;
+};
+LABEL {
+  NAME "MusicGaeaCliffTheme";
+  ADDR  $F410;
+};
+LABEL {
+  NAME "MusicIcicleInnTheme";
+  ADDR  $F505;
+};
+LABEL {
+  NAME "MusicGongagaTheme";
+  ADDR  $F702;
 };
 LABEL {
   NAME "MusicInfiltratingShinraTheme";

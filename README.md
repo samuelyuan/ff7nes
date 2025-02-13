@@ -83,12 +83,12 @@ To get the values for party member at index i, you must add i to the base addres
 | 0x6082-0x6088 | 7 | Party Member Exp Lower Byte |
 | 0x6089-0x608F | 7 | Party Member Exp Middle Byte |
 | 0x6090-0x6096 | 7 | Party Member Exp Upper Byte |
-| 0x6097-0x609D | 7 | Unknown |
-| 0x609E-0x60A4 | 7 | Unknown |
-| 0x60A5-0x60AB | 7 | Unknown |
-| 0x60AC-0x60B2 | 7 | Unknown |
-| 0x60B3-0x60B9 | 7 | Unknown |
-| 0x60BA-0x60C0 | 7 | Unknown |
+| 0x6097-0x609D | 7 | Party Member Num Times Used Hero Drink |
+| 0x609E-0x60A4 | 7 | Party Member Num Times Used Strength+ |
+| 0x60A5-0x60AB | 7 | Party Member Num Times Used Vitality+ |
+| 0x60AC-0x60B2 | 7 | Party Member Num Times Used Intelligence+ |
+| 0x60B3-0x60B9 | 7 | Party Member Num Times Used Spirit+ |
+| 0x60BA-0x60C0 | 7 | Party Member Num Times Used Agility+ |
 | 0x60C1-0x60C7 | 7 | Party Member Total Health Lower Byte |
 | 0x60C8-0x60CE | 7 | Party Member Total Health Lower Byte |
 | 0x60CF-0x60D8 | 10 | Player Healing Items count |
