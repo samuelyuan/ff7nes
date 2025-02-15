@@ -12,7 +12,7 @@ L06F0           := $06F0
 L6800           := $6800
 ; ----------------------------------------------------------------------------
 L8000:
-        jmp     LE8D2                           ; 8000 4C D2 E8                 L..
+        jmp     ProgramEntryPoint               ; 8000 4C D2 E8                 L..
 
 ; ----------------------------------------------------------------------------
 L8003:
@@ -3245,7 +3245,7 @@ L93B0:
 
 ; ----------------------------------------------------------------------------
 L93B6:
-        jmp     LE8D2                           ; 93B6 4C D2 E8                 L..
+        jmp     ProgramEntryPoint               ; 93B6 4C D2 E8                 L..
 
 ; ----------------------------------------------------------------------------
         jmp     Bank00LoadNextScriptOpcode      ; 93B9 4C D9 88                 L..
@@ -7964,7 +7964,7 @@ LD1CB:
         lda     $6F17                           ; D1D3 AD 17 6F                 ..o
         cmp     #$03                            ; D1D6 C9 03                    ..
         bne     LD1CB                           ; D1D8 D0 F1                    ..
-        jsr     LF33B                           ; D1DA 20 3B F3                  ;.
+        jsr     InitMemoryRange0200To02FF       ; D1DA 20 3B F3                  ;.
         jmp     InitPlayerMain                  ; D1DD 4C 44 E9                 LD.
 
 ; ----------------------------------------------------------------------------
@@ -9499,9 +9499,9 @@ LoadMapDataFromBank1:
         pha                                     ; DD09 48                       H
         lda     $03                             ; DD0A A5 03                    ..
         pha                                     ; DD0C 48                       H
-        jsr     LEAB6                           ; DD0D 20 B6 EA                  ..
-        jsr     LEF60                           ; DD10 20 60 EF                  `.
-        jsr     LEAC7                           ; DD13 20 C7 EA                  ..
+        jsr     DivideBankNumBy16               ; DD0D 20 B6 EA                  ..
+        jsr     CopyAsmCodeInEF6F               ; DD10 20 60 EF                  `.
+        jsr     CopyValues0x50And0x51To0x86And0x87; DD13 20 C7 EA                ..
         lda     $50                             ; DD16 A5 50                    .P
         and     #$3F                            ; DD18 29 3F                    )?
         sta     $50                             ; DD1A 85 50                    .P
@@ -11001,15 +11001,15 @@ LE868:
 LE870:
         jsr     Bank00ScreenRefresh             ; E870 20 36 EA                  6.
         jsr     CopyAsmCodeBytesMain            ; E873 20 9D F0                  ..
-        jsr     LF10B                           ; E876 20 0B F1                  ..
+        jsr     CopyCodeStartingFromF140ToMemory; E876 20 0B F1                  ..
         lda     #$00                            ; E879 A9 00                    ..
         sta     $4F                             ; E87B 85 4F                    .O
         lda     #$FF                            ; E87D A9 FF                    ..
         sta     $83                             ; E87F 85 83                    ..
-        jsr     LEAB6                           ; E881 20 B6 EA                  ..
-        jsr     LF2C9                           ; E884 20 C9 F2                  ..
-        jsr     LEF60                           ; E887 20 60 EF                  `.
-        jsr     LEAC7                           ; E88A 20 C7 EA                  ..
+        jsr     DivideBankNumBy16               ; E881 20 B6 EA                  ..
+        jsr     WaitForVBlank                   ; E884 20 C9 F2                  ..
+        jsr     CopyAsmCodeInEF6F               ; E887 20 60 EF                  `.
+        jsr     CopyValues0x50And0x51To0x86And0x87; E88A 20 C7 EA                ..
         lda     $50                             ; E88D A5 50                    .P
         and     #$3F                            ; E88F 29 3F                    )?
         sta     $50                             ; E891 85 50                    .P
@@ -11046,7 +11046,7 @@ LE870:
         jmp     LE9B5                           ; E8CF 4C B5 E9                 L..
 
 ; ----------------------------------------------------------------------------
-LE8D2:
+ProgramEntryPoint:
         sei                                     ; E8D2 78                       x
         cld                                     ; E8D3 D8                       .
         lda     #$00                            ; E8D4 A9 00                    ..
@@ -11058,20 +11058,20 @@ LE8D2:
         txs                                     ; E8E4 9A                       .
         jsr     ResetGameMemoryMain             ; E8E5 20 D4 F2                  ..
         jsr     CopyAsmCodeBytesMain            ; E8E8 20 9D F0                  ..
-        jsr     LF10B                           ; E8EB 20 0B F1                  ..
+        jsr     CopyCodeStartingFromF140ToMemory; E8EB 20 0B F1                  ..
         jsr     LF316                           ; E8EE 20 16 F3                  ..
-        jsr     LF2C9                           ; E8F1 20 C9 F2                  ..
-        jsr     LF2C9                           ; E8F4 20 C9 F2                  ..
-        jsr     LF2C9                           ; E8F7 20 C9 F2                  ..
-        jsr     LF2C9                           ; E8FA 20 C9 F2                  ..
-        jsr     LF323                           ; E8FD 20 23 F3                  #.
-        jsr     LF33B                           ; E900 20 3B F3                  ;.
-        jsr     LF28E                           ; E903 20 8E F2                  ..
-        jsr     LEF5A                           ; E906 20 5A EF                  Z.
+        jsr     WaitForVBlank                   ; E8F1 20 C9 F2                  ..
+        jsr     WaitForVBlank                   ; E8F4 20 C9 F2                  ..
+        jsr     WaitForVBlank                   ; E8F7 20 C9 F2                  ..
+        jsr     WaitForVBlank                   ; E8FA 20 C9 F2                  ..
+        jsr     ResetPPUMemory0000To3EFF        ; E8FD 20 23 F3                  #.
+        jsr     InitMemoryRange0200To02FF       ; E900 20 3B F3                  ;.
+        jsr     Fill0EInPPUMemory3F00To3FFF     ; E903 20 8E F2                  ..
+        jsr     StoreFFin0300                   ; E906 20 5A EF                  Z.
         lda     #$FF                            ; E909 A9 FF                    ..
         sta     $83                             ; E90B 85 83                    ..
-        jsr     LFED0                           ; E90D 20 D0 FE                  ..
-        jsr     LF2C9                           ; E910 20 C9 F2                  ..
+        jsr     Bank00JumpBank03_FED0           ; E90D 20 D0 FE                  ..
+        jsr     WaitForVBlank                   ; E910 20 C9 F2                  ..
         lda     #$88                            ; E913 A9 88                    ..
         sta     $15                             ; E915 85 15                    ..
         sta     $1C                             ; E917 85 1C                    ..
@@ -11098,7 +11098,7 @@ LE8D2:
 InitPlayerMain:
         jsr     Bank00ScreenRefresh             ; E944 20 36 EA                  6.
         jsr     CopyAsmCodeBytesMain            ; E947 20 9D F0                  ..
-        jsr     LF10B                           ; E94A 20 0B F1                  ..
+        jsr     CopyCodeStartingFromF140ToMemory; E94A 20 0B F1                  ..
         jsr     InitPlayerVariablesSaveRAM      ; E94D 20 52 D4                  R.
         lda     #$01                            ; E950 A9 01                    ..
         sta     $603B                           ; E952 8D 3B 60                 .;`
@@ -11119,9 +11119,9 @@ InitPlayerMain:
         sta     $51                             ; E977 85 51                    .Q
         lda     #$01                            ; E979 A9 01                    ..
         sta     $89                             ; E97B 85 89                    ..
-        jsr     LEAB6                           ; E97D 20 B6 EA                  ..
-        jsr     LEF60                           ; E980 20 60 EF                  `.
-        jsr     LEAC7                           ; E983 20 C7 EA                  ..
+        jsr     DivideBankNumBy16               ; E97D 20 B6 EA                  ..
+        jsr     CopyAsmCodeInEF6F               ; E980 20 60 EF                  `.
+        jsr     CopyValues0x50And0x51To0x86And0x87; E983 20 C7 EA                ..
         lda     $50                             ; E986 A5 50                    .P
         and     #$3F                            ; E988 29 3F                    )?
         sta     $50                             ; E98A 85 50                    .P
@@ -11333,7 +11333,7 @@ LEAB5:
         rts                                     ; EAB5 60                       `
 
 ; ----------------------------------------------------------------------------
-LEAB6:
+DivideBankNumBy16:
         lda     $50                             ; EAB6 A5 50                    .P
         lsr     a                               ; EAB8 4A                       J
         lsr     a                               ; EAB9 4A                       J
@@ -11349,7 +11349,7 @@ LEAB6:
         rts                                     ; EAC6 60                       `
 
 ; ----------------------------------------------------------------------------
-LEAC7:
+CopyValues0x50And0x51To0x86And0x87:
         lda     $50                             ; EAC7 A5 50                    .P
         sta     $86                             ; EAC9 85 86                    ..
         lda     $51                             ; EACB A5 51                    .Q
@@ -12104,13 +12104,13 @@ LEF24:
         rts                                     ; EF59 60                       `
 
 ; ----------------------------------------------------------------------------
-LEF5A:
+StoreFFin0300:
         lda     #$FF                            ; EF5A A9 FF                    ..
         sta     $0300                           ; EF5C 8D 00 03                 ...
         rts                                     ; EF5F 60                       `
 
 ; ----------------------------------------------------------------------------
-LEF60:
+CopyAsmCodeInEF6F:
         ldy     #$00                            ; EF60 A0 00                    ..
 LEF62:
         lda     LEF6F,y                         ; EF62 B9 6F EF                 .o.
@@ -12122,35 +12122,134 @@ LEF62:
 
 ; ----------------------------------------------------------------------------
 LEF6F:
-        .byte   $A5,$80,$8D,$00,$52,$A5,$50,$8D ; EF6F A5 80 8D 00 52 A5 50 8D  ....R.P.
-        .byte   $00,$50,$A5,$50,$4A,$4A,$4A,$4A ; EF77 00 50 A5 50 4A 4A 4A 4A  .P.PJJJJ
-        .byte   $4A,$4A,$0A,$AA,$BD,$00,$80,$85 ; EF7F 4A 4A 0A AA BD 00 80 85  JJ......
-        .byte   $02,$E8,$BD,$00,$80,$85,$03,$A0 ; EF87 02 E8 BD 00 80 85 03 A0  ........
-        .byte   $00,$B1,$02,$99,$70,$07,$C8,$C0 ; EF8F 00 B1 02 99 70 07 C8 C0  ....p...
-        .byte   $0E,$D0,$F6,$AD,$70,$07,$85,$06 ; EF97 0E D0 F6 AD 70 07 85 06  ....p...
-        .byte   $A9,$00,$85,$07,$AD,$71,$07,$AA ; EF9F A9 00 85 07 AD 71 07 AA  .....q..
-        .byte   $A5,$07,$18,$65,$06,$85,$07,$CA ; EFA7 A5 07 18 65 06 85 07 CA  ...e....
-        .byte   $D0,$F6,$0A,$85,$06,$85,$07,$A2 ; EFAF D0 F6 0A 85 06 85 07 A2  ........
-        .byte   $00,$B1,$02,$9D,$80,$07,$C8,$E8 ; EFB7 00 B1 02 9D 80 07 C8 E8  ........
-        .byte   $C6,$06,$D0,$F5,$A2,$00,$B1,$02 ; EFBF C6 06 D0 F5 A2 00 B1 02  ........
-        .byte   $9D,$A8,$07,$C8,$E8,$C6,$07,$D0 ; EFC7 9D A8 07 C8 E8 C6 07 D0  ........
-        .byte   $F5,$B1,$02,$8D,$D0,$07,$C8,$B1 ; EFCF F5 B1 02 8D D0 07 C8 B1  ........
-        .byte   $02,$8D,$D1,$07,$C8,$AD,$75,$07 ; EFD7 02 8D D1 07 C8 AD 75 07  ......u.
-        .byte   $0A,$85,$06,$85,$07,$A2,$00,$B1 ; EFDF 0A 85 06 85 07 A2 00 B1  ........
-        .byte   $02,$9D,$D2,$07,$C8,$E8,$C6,$06 ; EFE7 02 9D D2 07 C8 E8 C6 06  ........
-        .byte   $D0,$F5,$A2,$00,$B1,$02,$9D,$E6 ; EFEF D0 F5 A2 00 B1 02 9D E6  ........
-        .byte   $07,$C8,$E8,$C6,$07,$D0,$F5,$AD ; EFF7 07 C8 E8 C6 07 D0 F5 AD  ........
-        .byte   $75,$07,$C9,$02,$90,$2B,$A5,$81 ; EFFF 75 07 C9 02 90 2B A5 81  u....+..
-        .byte   $8D,$00,$52,$A5,$51,$8D,$00,$50 ; F007 8D 00 52 A5 51 8D 00 50  ..R.Q..P
-        .byte   $A5,$51,$4A,$4A,$4A,$4A,$4A,$4A ; F00F A5 51 4A 4A 4A 4A 4A 4A  .QJJJJJJ
-        .byte   $0A,$AA,$BD,$00,$80,$85,$02,$E8 ; F017 0A AA BD 00 80 85 02 E8  ........
-        .byte   $BD,$00,$80,$85,$03,$A0,$00,$B1 ; F01F BD 00 80 85 03 A0 00 B1  ........
-        .byte   $02,$99,$E6,$07,$C8,$C0,$14,$D0 ; F027 02 99 E6 07 C8 C0 14 D0  ........
-        .byte   $F6,$A9,$00,$85,$D5,$AD,$77,$07 ; F02F F6 A9 00 85 D5 AD 77 07  ......w.
-        .byte   $F0,$0C,$A9,$FF,$85,$D5,$A9,$10 ; F037 F0 0C A9 FF 85 D5 A9 10  ........
-        .byte   $8D,$70,$07,$8D,$71,$07,$A9,$00 ; F03F 8D 70 07 8D 71 07 A9 00  .p..q...
-        .byte   $8D,$00,$50,$A9,$00,$8D,$00,$52 ; F047 8D 00 50 A9 00 8D 00 52  ..P....R
-        .byte   $60                             ; F04F 60                       `
+        lda     $80                             ; EF6F A5 80                    ..
+        sta     $5200                           ; EF71 8D 00 52                 ..R
+        lda     $50                             ; EF74 A5 50                    .P
+        sta     $5000                           ; EF76 8D 00 50                 ..P
+        lda     $50                             ; EF79 A5 50                    .P
+        lsr     a                               ; EF7B 4A                       J
+        lsr     a                               ; EF7C 4A                       J
+        lsr     a                               ; EF7D 4A                       J
+        lsr     a                               ; EF7E 4A                       J
+        lsr     a                               ; EF7F 4A                       J
+        lsr     a                               ; EF80 4A                       J
+        asl     a                               ; EF81 0A                       .
+        tax                                     ; EF82 AA                       .
+        lda     L8000,x                         ; EF83 BD 00 80                 ...
+        sta     L0002                           ; EF86 85 02                    ..
+        inx                                     ; EF88 E8                       .
+        lda     L8000,x                         ; EF89 BD 00 80                 ...
+        sta     $03                             ; EF8C 85 03                    ..
+        ldy     #$00                            ; EF8E A0 00                    ..
+LEF90:
+        lda     (L0002),y                       ; EF90 B1 02                    ..
+        sta     $0770,y                         ; EF92 99 70 07                 .p.
+        iny                                     ; EF95 C8                       .
+        cpy     #$0E                            ; EF96 C0 0E                    ..
+        bne     LEF90                           ; EF98 D0 F6                    ..
+        lda     $0770                           ; EF9A AD 70 07                 .p.
+        sta     $06                             ; EF9D 85 06                    ..
+        lda     #$00                            ; EF9F A9 00                    ..
+        sta     $07                             ; EFA1 85 07                    ..
+        lda     $0771                           ; EFA3 AD 71 07                 .q.
+        tax                                     ; EFA6 AA                       .
+LEFA7:
+        lda     $07                             ; EFA7 A5 07                    ..
+        clc                                     ; EFA9 18                       .
+        adc     $06                             ; EFAA 65 06                    e.
+        sta     $07                             ; EFAC 85 07                    ..
+        dex                                     ; EFAE CA                       .
+        bne     LEFA7                           ; EFAF D0 F6                    ..
+        asl     a                               ; EFB1 0A                       .
+        sta     $06                             ; EFB2 85 06                    ..
+        sta     $07                             ; EFB4 85 07                    ..
+        ldx     #$00                            ; EFB6 A2 00                    ..
+LEFB8:
+        lda     (L0002),y                       ; EFB8 B1 02                    ..
+        sta     $0780,x                         ; EFBA 9D 80 07                 ...
+        iny                                     ; EFBD C8                       .
+        inx                                     ; EFBE E8                       .
+        dec     $06                             ; EFBF C6 06                    ..
+        bne     LEFB8                           ; EFC1 D0 F5                    ..
+        ldx     #$00                            ; EFC3 A2 00                    ..
+LEFC5:
+        lda     (L0002),y                       ; EFC5 B1 02                    ..
+        sta     $07A8,x                         ; EFC7 9D A8 07                 ...
+        iny                                     ; EFCA C8                       .
+        inx                                     ; EFCB E8                       .
+        dec     $07                             ; EFCC C6 07                    ..
+        bne     LEFC5                           ; EFCE D0 F5                    ..
+        lda     (L0002),y                       ; EFD0 B1 02                    ..
+        sta     $07D0                           ; EFD2 8D D0 07                 ...
+        iny                                     ; EFD5 C8                       .
+        lda     (L0002),y                       ; EFD6 B1 02                    ..
+        sta     $07D1                           ; EFD8 8D D1 07                 ...
+        iny                                     ; EFDB C8                       .
+        lda     $0775                           ; EFDC AD 75 07                 .u.
+        asl     a                               ; EFDF 0A                       .
+        sta     $06                             ; EFE0 85 06                    ..
+        sta     $07                             ; EFE2 85 07                    ..
+        ldx     #$00                            ; EFE4 A2 00                    ..
+LEFE6:
+        lda     (L0002),y                       ; EFE6 B1 02                    ..
+        sta     $07D2,x                         ; EFE8 9D D2 07                 ...
+        iny                                     ; EFEB C8                       .
+        inx                                     ; EFEC E8                       .
+        dec     $06                             ; EFED C6 06                    ..
+        bne     LEFE6                           ; EFEF D0 F5                    ..
+        ldx     #$00                            ; EFF1 A2 00                    ..
+LEFF3:
+        lda     (L0002),y                       ; EFF3 B1 02                    ..
+        sta     $07E6,x                         ; EFF5 9D E6 07                 ...
+        iny                                     ; EFF8 C8                       .
+        inx                                     ; EFF9 E8                       .
+        dec     $07                             ; EFFA C6 07                    ..
+        bne     LEFF3                           ; EFFC D0 F5                    ..
+        lda     $0775                           ; EFFE AD 75 07                 .u.
+        cmp     #$02                            ; F001 C9 02                    ..
+        bcc     LF030                           ; F003 90 2B                    .+
+        lda     $81                             ; F005 A5 81                    ..
+        sta     $5200                           ; F007 8D 00 52                 ..R
+        lda     $51                             ; F00A A5 51                    .Q
+        sta     $5000                           ; F00C 8D 00 50                 ..P
+        lda     $51                             ; F00F A5 51                    .Q
+        lsr     a                               ; F011 4A                       J
+        lsr     a                               ; F012 4A                       J
+        lsr     a                               ; F013 4A                       J
+        lsr     a                               ; F014 4A                       J
+        lsr     a                               ; F015 4A                       J
+        lsr     a                               ; F016 4A                       J
+        asl     a                               ; F017 0A                       .
+        tax                                     ; F018 AA                       .
+        lda     L8000,x                         ; F019 BD 00 80                 ...
+        sta     L0002                           ; F01C 85 02                    ..
+        inx                                     ; F01E E8                       .
+        lda     L8000,x                         ; F01F BD 00 80                 ...
+        sta     $03                             ; F022 85 03                    ..
+        ldy     #$00                            ; F024 A0 00                    ..
+LF026:
+        lda     (L0002),y                       ; F026 B1 02                    ..
+        sta     $07E6,y                         ; F028 99 E6 07                 ...
+        iny                                     ; F02B C8                       .
+        cpy     #$14                            ; F02C C0 14                    ..
+        bne     LF026                           ; F02E D0 F6                    ..
+LF030:
+        lda     #$00                            ; F030 A9 00                    ..
+        sta     $D5                             ; F032 85 D5                    ..
+        lda     $0777                           ; F034 AD 77 07                 .w.
+        beq     LF045                           ; F037 F0 0C                    ..
+        lda     #$FF                            ; F039 A9 FF                    ..
+        sta     $D5                             ; F03B 85 D5                    ..
+        lda     #$10                            ; F03D A9 10                    ..
+        sta     $0770                           ; F03F 8D 70 07                 .p.
+        sta     $0771                           ; F042 8D 71 07                 .q.
+LF045:
+        lda     #$00                            ; F045 A9 00                    ..
+        sta     $5000                           ; F047 8D 00 50                 ..P
+        lda     #$00                            ; F04A A9 00                    ..
+        sta     $5200                           ; F04C 8D 00 52                 ..R
+        rts                                     ; F04F 60                       `
+
 ; ----------------------------------------------------------------------------
 StoreMapRowsAndColumns:
         ldx     #$00                            ; F050 A2 00                    ..
@@ -12276,7 +12375,7 @@ AsmCodeForAddr0100:
         rts                                     ; F10A 60                       `
 
 ; ----------------------------------------------------------------------------
-LF10B:
+CopyCodeStartingFromF140ToMemory:
         ldx     #$00                            ; F10B A2 00                    ..
 LF10D:
         lda     LF174,x                         ; F10D BD 74 F1                 .t.
@@ -12300,14 +12399,14 @@ LF127:
         bne     LF127                           ; F130 D0 F5                    ..
         ldx     #$00                            ; F132 A2 00                    ..
 LF134:
-        lda     LF140,x                         ; F134 BD 40 F1                 .@.
+        lda     CopyDataF800ToFDFFTo6800To6DFF,x; F134 BD 40 F1                 .@.
         sta     L0400,x                         ; F137 9D 00 04                 ...
         inx                                     ; F13A E8                       .
         bne     LF134                           ; F13B D0 F7                    ..
         jmp     L0400                           ; F13D 4C 00 04                 L..
 
 ; ----------------------------------------------------------------------------
-LF140:
+CopyDataF800ToFDFFTo6800To6DFF:
         lda     #$01                            ; F140 A9 01                    ..
         sta     $5000                           ; F142 8D 00 50                 ..P
         ldx     #$00                            ; F145 A2 00                    ..
@@ -12487,7 +12586,7 @@ LF268:
         rts                                     ; F28D 60                       `
 
 ; ----------------------------------------------------------------------------
-LF28E:
+Fill0EInPPUMemory3F00To3FFF:
         lda     #$3F                            ; F28E A9 3F                    .?
         sta     $2006                           ; F290 8D 06 20                 .. 
         lda     #$00                            ; F293 A9 00                    ..
@@ -12529,9 +12628,9 @@ LF2BD:
         .byte   $02,$02,$02,$05,$05,$05,$08,$08 ; F2BD 02 02 02 05 05 05 08 08  ........
         .byte   $08,$0B,$0B,$0B                 ; F2C5 08 0B 0B 0B              ....
 ; ----------------------------------------------------------------------------
-LF2C9:
+WaitForVBlank:
         lda     $2002                           ; F2C9 AD 02 20                 .. 
-        bmi     LF2C9                           ; F2CC 30 FB                    0.
+        bmi     WaitForVBlank                   ; F2CC 30 FB                    0.
 LF2CE:
         lda     $2002                           ; F2CE AD 02 20                 .. 
         bpl     LF2CE                           ; F2D1 10 FB                    ..
@@ -12577,7 +12676,7 @@ LF316:
         rts                                     ; F322 60                       `
 
 ; ----------------------------------------------------------------------------
-LF323:
+ResetPPUMemory0000To3EFF:
         lda     #$00                            ; F323 A9 00                    ..
         sta     $2006                           ; F325 8D 06 20                 .. 
         sta     $2006                           ; F328 8D 06 20                 .. 
@@ -12589,11 +12688,11 @@ LF32E:
         bne     LF32E                           ; F332 D0 FA                    ..
         dex                                     ; F334 CA                       .
         bne     LF32E                           ; F335 D0 F7                    ..
-        jsr     LF28E                           ; F337 20 8E F2                  ..
+        jsr     Fill0EInPPUMemory3F00To3FFF     ; F337 20 8E F2                  ..
         rts                                     ; F33A 60                       `
 
 ; ----------------------------------------------------------------------------
-LF33B:
+InitMemoryRange0200To02FF:
         ldx     #$00                            ; F33B A2 00                    ..
         lda     #$F0                            ; F33D A9 F0                    ..
 LF33F:
@@ -12614,15 +12713,15 @@ LF349:
 
 ; ----------------------------------------------------------------------------
 LF350:
-        jsr     LF2C9                           ; F350 20 C9 F2                  ..
+        jsr     WaitForVBlank                   ; F350 20 C9 F2                  ..
         dex                                     ; F353 CA                       .
         bne     LF350                           ; F354 D0 FA                    ..
         rts                                     ; F356 60                       `
 
 ; ----------------------------------------------------------------------------
-        jsr     LEAB6                           ; F357 20 B6 EA                  ..
-        jsr     LEF60                           ; F35A 20 60 EF                  `.
-        jsr     LEAC7                           ; F35D 20 C7 EA                  ..
+        jsr     DivideBankNumBy16               ; F357 20 B6 EA                  ..
+        jsr     CopyAsmCodeInEF6F               ; F35A 20 60 EF                  `.
+        jsr     CopyValues0x50And0x51To0x86And0x87; F35D 20 C7 EA                ..
         lda     $50                             ; F360 A5 50                    .P
         and     #$3F                            ; F362 29 3F                    )?
         sta     $50                             ; F364 85 50                    .P
@@ -12719,7 +12818,7 @@ LF3E6:
         jsr     Bank00ScreenRefresh             ; F40F 20 36 EA                  6.
         ldx     #$FF                            ; F412 A2 FF                    ..
         txs                                     ; F414 9A                       .
-        jmp     LE8D2                           ; F415 4C D2 E8                 L..
+        jmp     ProgramEntryPoint               ; F415 4C D2 E8                 L..
 
 ; ----------------------------------------------------------------------------
 LF418:
@@ -13585,10 +13684,10 @@ LFE90:
         rts                                     ; FECF 60                       `
 
 ; ----------------------------------------------------------------------------
-LFED0:
+Bank00JumpBank03_FED0:
         lda     #$03                            ; FED0 A9 03                    ..
         sta     $5000                           ; FED2 8D 00 50                 ..P
-        jsr     LFED0                           ; FED5 20 D0 FE                  ..
+        jsr     Bank00JumpBank03_FED0           ; FED5 20 D0 FE                  ..
         lda     #$00                            ; FED8 A9 00                    ..
         sta     $5000                           ; FEDA 8D 00 50                 ..P
         rts                                     ; FEDD 60                       `

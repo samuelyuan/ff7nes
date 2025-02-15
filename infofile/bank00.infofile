@@ -240,30 +240,10 @@ RANGE {
 RANGE {
   START $EF6F;
   END $F04F;
-  TYPE BYTETABLE;
+  TYPE CODE;
 };
 RANGE {
   START $F050;
-  END $F0AA;
-  TYPE CODE;
-};
-RANGE {
-  START $F0AB;
-  END $F10A;
-  TYPE CODE;
-};
-RANGE {
-  START $F10B;
-  END $F13F;
-  TYPE CODE;
-};
-RANGE {
-  START $F140;
-  END $F192;
-  TYPE CODE;
-};
-RANGE {
-  START $F193;
   END $F1CD;
   TYPE CODE;
 };
@@ -284,41 +264,11 @@ RANGE {
 };
 RANGE {
   START $F2C9;
-  END $F476;
-  TYPE CODE;
-};
-RANGE {
-  START $F477;
-  END $F484;
-  TYPE CODE;
-};
-RANGE {
-  START $F485;
-  END $F531;
-  TYPE CODE;
-};
-RANGE {
-  START $F532;
-  END $F54F;
-  TYPE CODE;
-};
-RANGE {
-  START $F550;
   END $F5BF;
   TYPE CODE;
 };
 RANGE {
   START $F5C0;
-  END $F858;
-  TYPE BYTETABLE;
-};
-RANGE {
-  START $F859;
-  END $FB50;
-  TYPE BYTETABLE;
-};
-RANGE {
-  START $FB51;
   END $FBFC;
   TYPE BYTETABLE;
 };
@@ -1000,6 +950,10 @@ LABEL {
   ADDR $E042;
 };
 LABEL {
+  NAME "ProgramEntryPoint";
+  ADDR $E8D2;
+};
+LABEL {
   NAME "InitPlayerMain";
   ADDR $E944;
 };
@@ -1032,6 +986,22 @@ LABEL {
   ADDR $EA36;
 };
 LABEL {
+  NAME "DivideBankNumBy16";
+  ADDR $EAB6;
+};
+LABEL {
+  NAME "CopyValues0x50And0x51To0x86And0x87";
+  ADDR $EAC7;
+};
+LABEL {
+  NAME "StoreFFin0300";
+  ADDR $EF5A;
+};
+LABEL {
+  NAME "CopyAsmCodeInEF6F";
+  ADDR $EF60;
+};
+LABEL {
   NAME "StoreMapRowsAndColumns";
   ADDR $F050;
 };
@@ -1048,12 +1018,36 @@ LABEL {
   ADDR $F0AB;
 };
 LABEL {
+  NAME "CopyCodeStartingFromF140ToMemory";
+  ADDR $F10B;
+};
+LABEL {
+  NAME "CopyDataF800ToFDFFTo6800To6DFF";
+  ADDR $F140;
+};
+LABEL {
+  NAME "Fill0EInPPUMemory3F00To3FFF";
+  ADDR $F28E;
+};
+LABEL {
+  NAME "WaitForVBlank";
+  ADDR $F2C9;
+};
+LABEL {
   NAME "ResetGameMemoryMain";
   ADDR $F2D4;
 };
 LABEL {
   NAME "ResetGameMemoryLoop";
   ADDR $F2D7;
+};
+LABEL {
+  NAME "ResetPPUMemory0000To3EFF";
+  ADDR $F323;
+};
+LABEL {
+  NAME "InitMemoryRange0200To02FF";
+  ADDR $F33B;
 };
 LABEL {
   NAME "LoadAsmCodeForJumpToBattleScreen";
@@ -1094,4 +1088,8 @@ LABEL {
 LABEL {
   NAME "Bank00JumpBank03";
   ADDR $FD08;
+};
+LABEL {
+  NAME "Bank00JumpBank03_FED0";
+  ADDR $FED0;
 };
