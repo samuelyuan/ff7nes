@@ -20,10 +20,21 @@ This reference table shows where the game reads and writes data to in RAM.
 |---------|--------------|-------------|
 | 0x0000 | 1 | Total Tilemap Rows |
 | 0x0001 | 1 | Total Tilemap Columns |
+| 0x0013 | 1 | Relative scroll X to screen |
+| 0x0014 | 1 | Relative scroll Y to screen (e.g. when absolute scroll Y = 0xF0, it is 0x00 relative to next tilemap) |
 | 0x0017 | 1 | Tilemap Screen Index |
+| 0x0018 | 1 | Absolute scroll X lower byte |
+| 0x0019 | 1 | Absolute scroll X upper byte |
+| 0x001A | 1 | Absolute scroll Y lower byte |
+| 0x001B | 1 | Absolute scroll Y upper byte |
 | 0x0020 | 1 | Controller Button Press |
-| 0x0050 | 1 | Current bank to load map |
-| 0x0051 | 1 | Current bank to load map. Usually same as 0x0050 unless it's an interior area like a shop. |
+| 0x0050 | 1 | Current bank index 0 to load map = (Original value in 0x86) & 0x3F |
+| 0x0051 | 1 | Current bank index 1 to load map = (Original value in 0x87) & 0x3F |
+| 0x0080 | 1 | (Original value in 0x86) >> 4 |
+| 0x0081 | 1 | (Original value in 0x87) >> 4 |
+| 0x0086 | 1 | Store original map bank number index 0 |
+| 0x0087 | 1 | Store original map bank number index 1 |
+| 0x0089 | 1 | Index in map array in bank 1 |
 | 0x00CF | 1 | Dialogue Flag (set to 0xFF when dialogue is displayed, else set to 0) |
 | 0x00D5 | 1 | Overworld Flag (set to 0xFF in overworld, else set to 0) |
 | 0x00D8 | 1 | Number of characters in current dialog box |
@@ -268,6 +279,7 @@ Values stored in 0x6000:
 | 0 | Cloud sets bomb on Sector 7 reactor |
 | 1 | Barret talks to Cloud before they descend stairs |
 | 2 | Biggs and Jessie decipher code |
+| 3 | Unknown |
 | 4 | Barret joins Cloud at reactor entrance |
 | 5 | Cloud meets Avalanche members |
 | 6 | Cloud battles 2nd group of guards |
@@ -277,6 +289,7 @@ Values stored in 0x6001:
 
 | Bit Index | String |
 |-----------|--------|
+| 0 | Unknown |
 | 1 | Cloud rejoins Avalanche at end of traincar |
 | 2 | Cloud entered train |
 | 3 | Cloud defeated guards |
@@ -383,9 +396,14 @@ Values stored in 0x6008:
 
 | Bit Index | String |
 |-----------|--------|
+| 0 | Party returns to Aerith's house and finds Aerith's mom near entrance |
 | 1 | Party escaped and jumped off plate |
 | 2 | Turks set explosion on Sector 7 plate |
-| 4 | Party top of Sector 7 plate |
+| 3 | Party finishes climbing staircase to Sector 7 plate |
+| 4 | Party reaches top of Sector 7 plate |
+| 5 | Cloud finds injured Jessie on Sector 7 plate |
+| 6 | Cloud finds injured Biggs on Sector 7 plate |
+| 7 | Party reaches bottom of Sector 7 plate and finds Wedge collapsed |
 
 Values stored in 0x6009:
 
@@ -398,12 +416,13 @@ Values stored in 0x6009:
 | 4 | Wall Market weapon shop owner gives Cloud a battery to repair broken wire |
 | 5 | Party meets outside Aerith's house to discuss going to Shinra Building |
 | 6 | Party goes downstairs to tell Aerith's mom that Aerith is taken by Turks |
-| 7 | Party returns to Aerith's house and Barret talks to Marlene |
+| 7 | Cloud goes upstairs in Aerith's house and Barret talks to Marlene |
 
 Values stored in 0x600A
 
 | Bit Index | String |
 |-----------|--------|
+| 0 | Unknown |
 | 1 | Party has a conversation before entering 61F |
 | 2 | Party fights guards on 60F |
 | 3 | Party climbs to 60F using stairs |
@@ -417,6 +436,7 @@ Values stored in 0x600B
 | Bit Index | String |
 |-----------|--------|
 | 0 | Cloud uses keycard on 64F |
+| 1 | Unknown |
 | 2 | Cloud answers correct password to mayor and gets 64F card and 65F card |
 | 3 | Flag that is also set when Cloud sees hint in top left library but nothing happens after |
 | 4 | Cloud sees hint in bottom left library that says Curse President Shinra |
@@ -435,6 +455,7 @@ Values stored in 0x600C
 | 4 | Cloud opens up 65F switch in middle left (opens up switch in top right) |
 | 5 | Cloud opens up 65F switch in top middle (opens up switch in top left) |
 | 6 | Cloud used 65F keycard |
+| 7 | Unknown |
 
 Values stored in 0x600D 
 
@@ -442,6 +463,7 @@ Values stored in 0x600D
 |-----------|--------|
 | 0 | Cloud gets caught by Tseng on 69F |
 | 1 | Party uses keycard on 68F |
+| 2 | Unknown |
 | 3 | Party finds Aerith and RedXIII on 68F |
 | 4 | Hojo goes up to 67F and party follows behind |
 | 5 | Party follows Hojo and reaches experiment room |
@@ -479,6 +501,7 @@ Values stored in 0x6010
 | Bit Index | String |
 |-----------|--------|
 | 0 | Party finds dead Zolom before entering Mythril Mines |
+| 1 | Unknown |
 | 2 | Cloud buys Chocobo Lure from Choco Billy |
 | 3 | Party enters Chocobo Farm and meets Choco Billy |
 | 4 | Party enters Kalm Inn and Cloud tells his story |
@@ -628,6 +651,7 @@ Values stored in 0x601C
 | 4 | Cloud approaches Aerith at Water Altar |
 | 5 | Party rests in inn in Forgotten City |
 | 6 | Cloud found Lunar Harp in Bone Valley |
+| 7 | Unknown |
 
 Values stored in 0x601D
 
@@ -647,8 +671,10 @@ Values stored in 0x601E
 | Bit Index | String |
 |-----------|--------|
 | 0 | Party chase after Elena and Shinra soldier north of Icicle Inn |
+| 1 | Unknown |
 | 2 | Party gets buggy and leaves Corel Prison |
 | 3 | Cloud leaves Junon parade to find some soldiers near airship |
+| 4 | Unknown |
 | 5 | Cloud and Tifa get back to Materia Tree after exploring Cloud's memories |
 | 6 | Cloud enters Materia Tree and finds Shinra |
 | 7 | Shinra enters Materia Tree for the first time |

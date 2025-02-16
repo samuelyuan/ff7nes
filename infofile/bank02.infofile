@@ -358,8 +358,20 @@ LABEL {
   ADDR  $B509;
 };
 LABEL {
+  NAME "ScenePartyReachesTopSector7Plate";
+  ADDR  $B5C0;
+};
+LABEL {
+  NAME "SceneSector7Explodes";
+  ADDR  $B6B7;
+};
+LABEL {
   NAME "SceneEscapedSector7Explosion";
   ADDR  $B6D7;
+};
+LABEL {
+  NAME "SceneAerithHouseCloudTalksToAerithMom";
+  ADDR  $B702;
 };
 LABEL {
   NAME "SceneAerithHouseBarretTalksToMarlene";

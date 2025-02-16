@@ -591,6 +591,22 @@ LABEL {
   ADDR  $AA42;
 };
 LABEL {
+  NAME "SceneCloudFindsInjuredWedgeBottomSector7Plate";
+  ADDR  $AB31;
+};
+LABEL {
+  NAME "SceneCloudFindsInjuredBiggsSector7Plate";
+  ADDR  $ABB9;
+};
+LABEL {
+  NAME "SceneCloudFindsInjuredJessieSector7Plate";
+  ADDR  $ABDB;
+};
+LABEL {
+  NAME "ScenePartyFinishesClimbingStaircaseSector7Plate";
+  ADDR  $AC0F;
+};
+LABEL {
   NAME "SceneWallMarketDiscoveredBrokenWire";
   ADDR  $AC27;
 };

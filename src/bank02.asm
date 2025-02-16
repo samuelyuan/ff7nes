@@ -7758,7 +7758,7 @@ LB5A6:
         .byte   $50,$02,$30,$09,$03,$00,$00,$50 ; B5AE 50 02 30 09 03 00 00 50  P.0....P
         .byte   $04,$20,$09,$01,$05,$00,$70,$08 ; B5B6 04 20 09 01 05 00 70 08  . ....p.
         .byte   $00,$FF                         ; B5BE 00 FF                    ..
-LB5C0:
+ScenePartyReachesTopSector7Plate:
         .byte   $02,$41,$03,$44,$02,$45,$06,$44 ; B5C0 02 41 03 44 02 45 06 44  .A.D.E.D
         .byte   $09,$02,$08,$00,$70,$08,$10,$08 ; B5C8 09 02 08 00 70 08 10 08  ....p...
         .byte   $00,$20,$01,$08,$00,$80,$00,$29 ; B5D0 00 20 01 08 00 80 00 29  . .....)
@@ -7792,7 +7792,7 @@ LB6A4:
         .byte   $03,$46,$02,$44,$09,$02,$0B,$00 ; B6A4 03 46 02 44 09 02 0B 00  .F.D....
         .byte   $80,$09,$C0,$09,$01,$02,$00,$A0 ; B6AC 80 09 C0 09 01 02 00 A0  ........
         .byte   $09,$E0,$FF                     ; B6B4 09 E0 FF                 ...
-LB6B7:
+SceneSector7Explodes:
         .byte   $02,$44,$03,$46,$06,$46,$29,$03 ; B6B7 02 44 03 46 06 46 29 03  .D.F.F).
         .byte   $82,$02,$05,$02,$FF             ; B6BF 82 02 05 02 FF           .....
 LB6C4:
@@ -7806,7 +7806,7 @@ SceneEscapedSector7Explosion:
         .byte   $08,$03,$80,$00,$16,$03,$04,$81 ; B6EF 08 03 80 00 16 03 04 81  ........
         .byte   $0F,$03,$0F,$04,$0A,$03,$04,$FF ; B6F7 0F 03 0F 04 0A 03 04 FF  ........
         .byte   $0E,$00,$FF                     ; B6FF 0E 00 FF                 ...
-LB702:
+SceneAerithHouseCloudTalksToAerithMom:
         .byte   $02,$47,$03,$48,$06,$48,$08,$00 ; B702 02 47 03 48 06 48 08 00  .G.H.H..
         .byte   $80,$08,$08,$00,$10,$00,$09,$03 ; B70A 80 08 08 00 10 00 09 03  ........
         .byte   $08,$00,$80,$00,$60,$09,$04,$05 ; B712 08 00 80 00 60 09 04 05  ....`...
@@ -9147,12 +9147,12 @@ Bank02SceneScriptTablePart1:
         .addr   LB54F                           ; D7A1 4F B5                    O.
         .addr   LB59E                           ; D7A3 9E B5                    ..
         .addr   LB5A6                           ; D7A5 A6 B5                    ..
-        .addr   LB5C0                           ; D7A7 C0 B5                    ..
+        .addr   ScenePartyReachesTopSector7Plate; D7A7 C0 B5                    ..
         .addr   LB6A4                           ; D7A9 A4 B6                    ..
-        .addr   LB6B7                           ; D7AB B7 B6                    ..
+        .addr   SceneSector7Explodes            ; D7AB B7 B6                    ..
         .addr   LB6C4                           ; D7AD C4 B6                    ..
         .addr   SceneEscapedSector7Explosion    ; D7AF D7 B6                    ..
-        .addr   LB702                           ; D7B1 02 B7                    ..
+        .addr   SceneAerithHouseCloudTalksToAerithMom; D7B1 02 B7               ..
         .addr   LB763                           ; D7B3 63 B7                    c.
         .addr   SceneAerithHouseBarretTalksToMarlene; D7B5 76 B7                v.
         .addr   LB7B1                           ; D7B7 B1 B7                    ..

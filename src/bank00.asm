@@ -5845,7 +5845,7 @@ LAB0C:
         .byte   $00,$00,$04,$03,$14,$FF,$13,$0A ; AB1C 00 00 04 03 14 FF 13 0A  ........
         .byte   $00,$FF,$0A,$05,$06,$07,$FF,$12 ; AB24 00 FF 0A 05 06 07 FF 12  ........
         .byte   $04,$03,$15,$FF,$FF             ; AB2C 04 03 15 FF FF           .....
-LAB31:
+SceneCloudFindsInjuredWedgeBottomSector7Plate:
         .byte   $02,$40,$03,$41,$01,$0B,$01,$00 ; AB31 02 40 03 41 01 0B 01 00  .@.A....
         .byte   $00,$40,$00,$06,$41,$08,$00,$20 ; AB39 00 40 00 06 41 08 00 20  .@..A.. 
         .byte   $04,$08,$00,$80,$00,$09,$05,$0B ; AB41 04 08 00 80 00 09 05 0B  ........
@@ -5863,14 +5863,14 @@ LAB31:
         .byte   $08,$06,$80,$01,$08,$05,$40,$00 ; ABA1 08 06 80 01 08 05 40 00  ......@.
         .byte   $29,$03,$5B,$03,$1F,$03,$08,$06 ; ABA9 29 03 5B 03 1F 03 08 06  ).[.....
         .byte   $10,$01,$0A,$06,$FF,$05,$00,$FF ; ABB1 10 01 0A 06 FF 05 00 FF  ........
-LABB9:
+SceneCloudFindsInjuredBiggsSector7Plate:
         .byte   $02,$41,$03,$44,$03,$42,$01,$FF ; ABB9 02 41 03 44 03 42 01 FF  .A.D.B..
         .byte   $00,$50,$02,$40,$00,$06,$42,$08 ; ABC1 00 50 02 40 00 06 42 08  .P.@..B.
         .byte   $00,$80,$00,$29,$03,$65,$03,$FF ; ABC9 00 80 00 29 03 65 03 FF  ...).e..
 LABD1:
         .byte   $03,$44,$0D,$10,$04,$04,$03,$67 ; ABD1 03 44 0D 10 04 04 03 67  .D.....g
         .byte   $FF,$FF                         ; ABD9 FF FF                    ..
-LABDB:
+SceneCloudFindsInjuredJessieSector7Plate:
         .byte   $02,$41,$03,$44,$03,$43,$01,$FF ; ABDB 02 41 03 44 03 43 01 FF  .A.D.C..
         .byte   $00,$60,$04,$20,$00,$06,$43,$08 ; ABE3 00 60 04 20 00 06 43 08  .`. ..C.
         .byte   $00,$20,$00,$29,$03,$68,$05,$FF ; ABEB 00 20 00 29 03 68 05 FF  . .).h..
@@ -5881,7 +5881,7 @@ LABFD:
         .byte   $03,$44,$01,$05,$00,$80,$00,$C0 ; ABFD 03 44 01 05 00 80 00 C0  .D......
         .byte   $00,$04,$03,$FB,$FF,$08,$00,$80 ; AC05 00 04 03 FB FF 08 00 80  ........
         .byte   $01,$FF                         ; AC0D 01 FF                    ..
-LAC0F:
+ScenePartyFinishesClimbingStaircaseSector7Plate:
         .byte   $02,$41,$03,$45,$01,$08,$00,$80 ; AC0F 02 41 03 45 01 08 00 80  .A.E....
         .byte   $05,$C0,$00,$06,$45,$FF         ; AC17 05 C0 00 06 45 FF        ....E.
 LAC1D:
@@ -7241,13 +7241,13 @@ Bank00SceneScriptTablePart1:
         .addr   LAAFC                           ; CCB3 FC AA                    ..
         .addr   LAB04                           ; CCB5 04 AB                    ..
         .addr   LAB0C                           ; CCB7 0C AB                    ..
-        .addr   LAB31                           ; CCB9 31 AB                    1.
-        .addr   LABB9                           ; CCBB B9 AB                    ..
+        .addr   SceneCloudFindsInjuredWedgeBottomSector7Plate; CCB9 31 AB       1.
+        .addr   SceneCloudFindsInjuredBiggsSector7Plate; CCBB B9 AB             ..
         .addr   LABD1                           ; CCBD D1 AB                    ..
-        .addr   LABDB                           ; CCBF DB AB                    ..
+        .addr   SceneCloudFindsInjuredJessieSector7Plate; CCBF DB AB            ..
         .addr   LABF3                           ; CCC1 F3 AB                    ..
         .addr   LABFD                           ; CCC3 FD AB                    ..
-        .addr   LAC0F                           ; CCC5 0F AC                    ..
+        .addr   ScenePartyFinishesClimbingStaircaseSector7Plate; CCC5 0F AC     ..
         .addr   LAC1D                           ; CCC7 1D AC                    ..
         .addr   SceneWallMarketDiscoveredBrokenWire; CCC9 27 AC                 '.
         .addr   LAC39                           ; CCCB 39 AC                    9.
