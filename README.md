@@ -2,11 +2,9 @@
 
 Decompilation of the NES version of Final Fantasy VII Advent Children.
 
+This branch contains the Brazilian Portuguese patch, which is built on top of the Advent Children mod. It includes modifications to the strings folder, as well as updates to the menu and font graphics.
+
 This project builds the following rom:
-
-* game.nes ```md5: 62b74bb9f3146d5ef81a19ec9042c5bf```
-
-Translations of the rom can be found in other branches:
 
 * [ff7-pt-br.nes](https://github.com/samuelyuan/ff7nes/tree/pt-br-patch) ```md5: e28035707a9bc9e41ee84127b03c4ce4```
 
