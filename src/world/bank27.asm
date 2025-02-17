@@ -2,38 +2,38 @@
 
 ; ----------------------------------------------------------------------------
 ; ----------------------------------------------------------------------------
-        .addr   L8012                           ; 8000 12 80                    ..
-        .addr   LA6FD                           ; 8002 FD A6                    ..
-        .addr   LB679                           ; 8004 79 B6                    y.
-        .addr   LDC8E                           ; 8006 8E DC                    ..
+        .addr   Bank27MapImage00                ; 8000 12 80                    ..
+        .addr   Bank27MapImage00Tileset         ; 8002 FD A6                    ..
+        .addr   Bank27MapImage01                ; 8004 79 B6                    y.
+        .addr   Bank27MapImage01Tileset         ; 8006 8E DC                    ..
 ; ----------------------------------------------------------------------------
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8008 00 00 00 00 00 00 00 00  ........
         .byte   $40,$40                         ; 8010 40 40                    @@
-L8012:
+Bank27MapImage00:
         .byte   $01,$06,$00,$00,$00,$06,$00,$00 ; 8012 01 06 00 00 00 06 00 00  ........
 ; ----------------------------------------------------------------------------
-        .addr   LA42D                           ; 801A 2D A4                    -.
+        .addr   Bank27MapImage00Collision       ; 801A 2D A4                    -.
         .addr   L8046                           ; 801C 46 80                    F.
         .addr   L98B5                           ; 801E B5 98                    ..
-        .addr   L80B5                           ; 8020 B5 80                    ..
-        .addr   L8475                           ; 8022 75 84                    u.
-        .addr   L8835                           ; 8024 35 88                    5.
-        .addr   L8BF5                           ; 8026 F5 8B                    ..
-        .addr   L8FB5                           ; 8028 B5 8F                    ..
-        .addr   L9375                           ; 802A 75 93                    u.
-        .addr   L9735                           ; 802C 35 97                    5.
-        .addr   L9775                           ; 802E 75 97                    u.
-        .addr   L97B5                           ; 8030 B5 97                    ..
-        .addr   L97F5                           ; 8032 F5 97                    ..
-        .addr   L9835                           ; 8034 35 98                    5.
-        .addr   L9875                           ; 8036 75 98                    u.
+        .addr   Bank27MapImage00SubImage00Tilemap; 8020 B5 80                   ..
+        .addr   Bank27MapImage00SubImage01Tilemap; 8022 75 84                   u.
+        .addr   Bank27MapImage00SubImage02Tilemap; 8024 35 88                   5.
+        .addr   Bank27MapImage00SubImage03Tilemap; 8026 F5 8B                   ..
+        .addr   Bank27MapImage00SubImage04Tilemap; 8028 B5 8F                   ..
+        .addr   Bank27MapImage00SubImage05Tilemap; 802A 75 93                   u.
+        .addr   Bank27MapImage00SubImage00TileAttr; 802C 35 97                  5.
+        .addr   Bank27MapImage00SubImage01TileAttr; 802E 75 97                  u.
+        .addr   Bank27MapImage00SubImage02TileAttr; 8030 B5 97                  ..
+        .addr   Bank27MapImage00SubImage03TileAttr; 8032 F5 97                  ..
+        .addr   Bank27MapImage00SubImage04TileAttr; 8034 35 98                  5.
+        .addr   Bank27MapImage00SubImage05TileAttr; 8036 75 98                  u.
         .addr   LA165                           ; 8038 65 A1                    e.
-        .addr   LA105                           ; 803A 05 A1                    ..
-        .addr   LA115                           ; 803C 15 A1                    ..
-        .addr   LA125                           ; 803E 25 A1                    %.
-        .addr   LA135                           ; 8040 35 A1                    5.
-        .addr   LA145                           ; 8042 45 A1                    E.
-        .addr   LA155                           ; 8044 55 A1                    U.
+        .addr   Bank27MapImage00SubImage00Palette; 803A 05 A1                   ..
+        .addr   Bank27MapImage00SubImage01Palette; 803C 15 A1                   ..
+        .addr   Bank27MapImage00SubImage02Palette; 803E 25 A1                   %.
+        .addr   Bank27MapImage00SubImage03Palette; 8040 35 A1                   5.
+        .addr   Bank27MapImage00SubImage04Palette; 8042 45 A1                   E.
+        .addr   Bank27MapImage00SubImage05Palette; 8044 55 A1                   U.
 ; ----------------------------------------------------------------------------
 L8046:
         .byte   $00,$03,$00,$00,$80,$00,$80,$00 ; 8046 00 03 00 00 80 00 80 00  ........
@@ -81,7 +81,7 @@ L8046:
         .addr   LA415                           ; 80B2 15 A4                    ..
 ; ----------------------------------------------------------------------------
         .byte   $FF                             ; 80B4 FF                       .
-L80B5:
+Bank27MapImage00SubImage00Tilemap:
         .byte   $00,$00,$62,$62,$62,$62,$62,$62 ; 80B5 00 00 62 62 62 62 62 62  ..bbbbbb
         .byte   $62,$62,$62,$62,$62,$62,$62,$62 ; 80BD 62 62 62 62 62 62 62 62  bbbbbbbb
         .byte   $62,$62,$62,$62,$62,$62,$62,$62 ; 80C5 62 62 62 62 62 62 62 62  bbbbbbbb
@@ -202,7 +202,7 @@ L80B5:
         .byte   $04,$03,$04,$03,$04,$03,$04,$03 ; 845D 04 03 04 03 04 03 04 03  ........
         .byte   $42,$43,$04,$03,$04,$03,$00,$00 ; 8465 42 43 04 03 04 03 00 00  BC......
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 846D 00 00 00 00 00 00 00 00  ........
-L8475:
+Bank27MapImage00SubImage01Tilemap:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8475 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 847D 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8485 00 00 00 00 00 00 00 00  ........
@@ -323,7 +323,7 @@ L8475:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 881D 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8825 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 882D 00 00 00 00 00 00 00 00  ........
-L8835:
+Bank27MapImage00SubImage02Tilemap:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8835 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 883D 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8845 00 00 00 00 00 00 00 00  ........
@@ -444,7 +444,7 @@ L8835:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8BDD 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8BE5 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8BED 00 00 00 00 00 00 00 00  ........
-L8BF5:
+Bank27MapImage00SubImage03Tilemap:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8BF5 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8BFD 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8C05 00 00 00 00 00 00 00 00  ........
@@ -565,7 +565,7 @@ L8BF5:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8F9D 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8FA5 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8FAD 00 00 00 00 00 00 00 00  ........
-L8FB5:
+Bank27MapImage00SubImage04Tilemap:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8FB5 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8FBD 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8FC5 00 00 00 00 00 00 00 00  ........
@@ -686,7 +686,7 @@ L8FB5:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 935D 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 9365 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 936D 00 00 00 00 00 00 00 00  ........
-L9375:
+Bank27MapImage00SubImage05Tilemap:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 9375 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 937D 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 9385 00 00 00 00 00 00 00 00  ........
@@ -807,7 +807,7 @@ L9375:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 971D 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 9725 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 972D 00 00 00 00 00 00 00 00  ........
-L9735:
+Bank27MapImage00SubImage00TileAttr:
         .byte   $AA,$5A,$5A,$5A,$5A,$6A,$5A,$8A ; 9735 AA 5A 5A 5A 5A 6A 5A 8A  .ZZZZjZ.
         .byte   $AA,$55,$11,$55,$55,$66,$55,$88 ; 973D AA 55 11 55 55 66 55 88  .U.UUfU.
         .byte   $AA,$59,$55,$55,$65,$66,$55,$99 ; 9745 AA 59 55 55 65 66 55 99  .YUUefU.
@@ -816,7 +816,7 @@ L9735:
         .byte   $AA,$55,$55,$55,$55,$55,$55,$99 ; 975D AA 55 55 55 55 55 55 99  .UUUUUU.
         .byte   $5A,$5A,$5A,$5A,$5A,$5A,$5A,$5A ; 9765 5A 5A 5A 5A 5A 5A 5A 5A  ZZZZZZZZ
         .byte   $55,$55,$55,$55,$55,$55,$55,$55 ; 976D 55 55 55 55 55 55 55 55  UUUUUUUU
-L9775:
+Bank27MapImage00SubImage01TileAttr:
         .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF ; 9775 FF FF FF FF FF FF FF FF  ........
         .byte   $B3,$AA,$FC,$AA,$AA,$EC,$00,$EE ; 977D B3 AA FC AA AA EC 00 EE  ........
         .byte   $BB,$AA,$AA,$5A,$5A,$DE,$AA,$EE ; 9785 BB AA AA 5A 5A DE AA EE  ...ZZ...
@@ -825,7 +825,7 @@ L9775:
         .byte   $FB,$FA,$FA,$FA,$FA,$FA,$FA,$FE ; 979D FB FA FA FA FA FA FA FE  ........
         .byte   $AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA ; 97A5 AA AA AA AA AA AA AA AA  ........
         .byte   $00,$FF,$00,$FF,$00,$FF,$00,$FF ; 97AD 00 FF 00 FF 00 FF 00 FF  ........
-L97B5:
+Bank27MapImage00SubImage02TileAttr:
         .byte   $00,$00,$FF,$FF,$FF,$FF,$FF,$00 ; 97B5 00 00 FF FF FF FF FF 00  ........
         .byte   $00,$00,$77,$55,$55,$75,$FF,$00 ; 97BD 00 00 77 55 55 75 FF 00  ..wUUu..
         .byte   $00,$00,$73,$50,$50,$10,$FF,$00 ; 97C5 00 00 73 50 50 10 FF 00  ..sPP...
@@ -834,7 +834,7 @@ L97B5:
         .byte   $00,$00,$55,$5F,$5F,$57,$55,$00 ; 97DD 00 00 55 5F 5F 57 55 00  ..U__WU.
         .byte   $00,$00,$00,$55,$55,$55,$FF,$00 ; 97E5 00 00 00 55 55 55 FF 00  ...UUU..
         .byte   $00,$FF,$00,$FF,$00,$FF,$00,$FF ; 97ED 00 FF 00 FF 00 FF 00 FF  ........
-L97F5:
+Bank27MapImage00SubImage03TileAttr:
         .byte   $00,$00,$AA,$AA,$AA,$AA,$00,$00 ; 97F5 00 00 AA AA AA AA 00 00  ........
         .byte   $00,$00,$AA,$A5,$85,$AA,$00,$00 ; 97FD 00 00 AA A5 85 AA 00 00  ........
         .byte   $00,$22,$66,$00,$00,$AA,$FF,$FF ; 9805 00 22 66 00 00 AA FF FF  ."f.....
@@ -843,7 +843,7 @@ L97F5:
         .byte   $00,$FF,$A2,$A0,$A0,$AA,$AA,$AA ; 981D 00 FF A2 A0 A0 AA AA AA  ........
         .byte   $AA,$AA,$AA,$AA,$AA,$AA,$AA,$00 ; 9825 AA AA AA AA AA AA AA 00  ........
         .byte   $00,$FF,$00,$FF,$00,$FF,$00,$FF ; 982D 00 FF 00 FF 00 FF 00 FF  ........
-L9835:
+Bank27MapImage00SubImage04TileAttr:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 9835 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$08,$00,$82,$00,$00,$00 ; 983D 00 00 08 00 82 00 00 00  ........
         .byte   $00,$00,$88,$AA,$AA,$00,$00,$00 ; 9845 00 00 88 AA AA 00 00 00  ........
@@ -852,7 +852,7 @@ L9835:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 985D 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 9865 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 986D 00 00 00 00 00 00 00 00  ........
-L9875:
+Bank27MapImage00SubImage05TileAttr:
         .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF ; 9875 FF FF FF FF FF FF FF FF  ........
         .byte   $FF,$3B,$54,$02,$00,$11,$DC,$FF ; 987D FF 3B 54 02 00 11 DC FF  .;T.....
         .byte   $FF,$77,$55,$55,$53,$5D,$DD,$FF ; 9885 FF 77 55 55 53 5D DD FF  .wUUS]..
@@ -1128,22 +1128,22 @@ L98B5:
         .byte   $28,$F4,$72,$72,$EC,$E0,$E0,$E0 ; A0ED 28 F4 72 72 EC E0 E0 E0  (.rr....
         .byte   $E8,$D4,$1E,$3E,$EC,$E0,$A0,$C0 ; A0F5 E8 D4 1E 3E EC E0 A0 C0  ...>....
         .byte   $28,$F4,$72,$72,$EC,$E0,$E0,$C0 ; A0FD 28 F4 72 72 EC E0 E0 C0  (.rr....
-LA105:
+Bank27MapImage00SubImage00Palette:
         .byte   $0F,$36,$17,$00,$0F,$10,$36,$00 ; A105 0F 36 17 00 0F 10 36 00  .6....6.
         .byte   $0F,$10,$27,$17,$0F,$30,$26,$16 ; A10D 0F 10 27 17 0F 30 26 16  ..'..0&.
-LA115:
+Bank27MapImage00SubImage01Palette:
         .byte   $0F,$10,$27,$00,$0F,$17,$10,$27 ; A115 0F 10 27 00 0F 17 10 27  ..'....'
         .byte   $0F,$10,$27,$17,$0F,$30,$10,$17 ; A11D 0F 10 27 17 0F 30 10 17  ..'..0..
-LA125:
+Bank27MapImage00SubImage02Palette:
         .byte   $0F,$10,$27,$17,$0F,$17,$00,$10 ; A125 0F 10 27 17 0F 17 00 10  ..'.....
         .byte   $0F,$00,$10,$17,$0F,$30,$10,$00 ; A12D 0F 00 10 17 0F 30 10 00  .....0..
-LA135:
+Bank27MapImage00SubImage03Palette:
         .byte   $0F,$10,$27,$17,$0F,$00,$10,$17 ; A135 0F 10 27 17 0F 00 10 17  ..'.....
         .byte   $0F,$30,$10,$00,$0F,$30,$0F,$0F ; A13D 0F 30 10 00 0F 30 0F 0F  .0...0..
-LA145:
+Bank27MapImage00SubImage04Palette:
         .byte   $0F,$10,$20,$00,$0F,$37,$28,$16 ; A145 0F 10 20 00 0F 37 28 16  .. ..7(.
         .byte   $0F,$37,$27,$17,$0F,$30,$0F,$0F ; A14D 0F 37 27 17 0F 30 0F 0F  .7'..0..
-LA155:
+Bank27MapImage00SubImage05Palette:
         .byte   $0F,$10,$30,$00,$0F,$10,$27,$00 ; A155 0F 10 30 00 0F 10 27 00  ..0...'.
         .byte   $0F,$16,$20,$00,$0F,$30,$28,$17 ; A15D 0F 16 20 00 0F 30 28 17  .. ..0(.
 LA165:
@@ -1246,7 +1246,7 @@ LA41D:
         .byte   $74,$03,$75,$03,$81,$03,$82,$03 ; A41D 74 03 75 03 81 03 82 03  t.u.....
 LA425:
         .byte   $76,$01,$76,$41,$83,$41,$84,$01 ; A425 76 01 76 41 83 41 84 01  v.vA.A..
-LA42D:
+Bank27MapImage00Collision:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A42D 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A435 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A43D 00 00 00 00 00 00 00 00  ........
@@ -1338,15 +1338,15 @@ LA42D:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A6ED 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A6F5 00 00 00 00 00 00 00 00  ........
 ; ----------------------------------------------------------------------------
-LA6FD:
-        .addr   LA709                           ; A6FD 09 A7                    ..
-        .addr   LAB49                           ; A6FF 49 AB                    I.
-        .addr   LAE99                           ; A701 99 AE                    ..
-        .addr   LB029                           ; A703 29 B0                    ).
-        .addr   LB1F9                           ; A705 F9 B1                    ..
-        .addr   LB3C9                           ; A707 C9 B3                    ..
+Bank27MapImage00Tileset:
+        .addr   Bank27MapImage00SubImage00Tileset; A6FD 09 A7                   ..
+        .addr   Bank27MapImage00SubImage01Tileset; A6FF 49 AB                   I.
+        .addr   Bank27MapImage00SubImage02Tileset; A701 99 AE                   ..
+        .addr   Bank27MapImage00SubImage03Tileset; A703 29 B0                   ).
+        .addr   Bank27MapImage00SubImage04Tileset; A705 F9 B1                   ..
+        .addr   Bank27MapImage00SubImage05Tileset; A707 C9 B3                   ..
 ; ----------------------------------------------------------------------------
-LA709:
+Bank27MapImage00SubImage00Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A709 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A711 00 00 00 00 00 00 00 00  ........
         .byte   $00,$FF,$2A,$80,$00,$FF,$94,$21 ; A719 00 FF 2A 80 00 FF 94 21  ..*....!
@@ -1483,7 +1483,7 @@ LA709:
         .byte   $5A,$2A,$1A,$1A,$28,$5A,$F8,$FA ; AB31 5A 2A 1A 1A 28 5A F8 FA  Z*..(Z..
         .byte   $00,$7E,$3A,$7E,$7E,$7E,$3A,$00 ; AB39 00 7E 3A 7E 7E 7E 3A 00  .~:~~~:.
         .byte   $00,$FE,$82,$C2,$E2,$F2,$BA,$FE ; AB41 00 FE 82 C2 E2 F2 BA FE  ........
-LAB49:
+Bank27MapImage00SubImage01Tileset:
         .byte   $5B,$4D,$56,$60,$7F,$00,$DF,$10 ; AB49 5B 4D 56 60 7F 00 DF 10  [MV`....
         .byte   $56,$5B,$4D,$60,$7F,$00,$5F,$00 ; AB51 56 5B 4D 60 7F 00 5F 00  V[M`.._.
         .byte   $46,$49,$59,$56,$59,$5F,$7F,$40 ; AB59 46 49 59 56 59 5F 7F 40  FIYVY_.@
@@ -1590,7 +1590,7 @@ LAB49:
         .byte   $00,$7E,$6A,$56,$6A,$56,$7E,$00 ; AE81 00 7E 6A 56 6A 56 7E 00  .~jVjV~.
         .byte   $00,$FF,$AB,$D5,$AB,$D5,$FF,$00 ; AE89 00 FF AB D5 AB D5 FF 00  ........
         .byte   $00,$FF,$D5,$AB,$D5,$AB,$FF,$00 ; AE91 00 FF D5 AB D5 AB FF 00  ........
-LAE99:
+Bank27MapImage00SubImage02Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE99 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AEA1 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$5D,$FB,$FF,$FF,$FF,$FF ; AEA9 00 00 5D FB FF FF FF FF  ..].....
@@ -1641,7 +1641,7 @@ LAE99:
         .byte   $67,$67,$17,$17,$17,$10,$1F,$00 ; B011 67 67 17 17 17 10 1F 00  gg......
         .byte   $FA,$FA,$FA,$FA,$FA,$FA,$FA,$02 ; B019 FA FA FA FA FA FA FA 02  ........
         .byte   $E8,$E8,$E8,$E8,$E8,$08,$F8,$00 ; B021 E8 E8 E8 E8 E8 08 F8 00  ........
-LB029:
+Bank27MapImage00SubImage03Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B029 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B031 00 00 00 00 00 00 00 00  ........
         .byte   $66,$E6,$CE,$0D,$1D,$FB,$F7,$0F ; B039 66 E6 CE 0D 1D FB F7 0F  f.......
@@ -1700,7 +1700,7 @@ LB029:
         .byte   $40,$68,$48,$28,$08,$08,$08,$00 ; B1E1 40 68 48 28 08 08 08 00  @hH(....
         .byte   $01,$03,$01,$00,$02,$02,$02,$02 ; B1E9 01 03 01 00 02 02 02 02  ........
         .byte   $01,$0B,$09,$0A,$08,$08,$08,$00 ; B1F1 01 0B 09 0A 08 08 08 00  ........
-LB1F9:
+Bank27MapImage00SubImage04Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B1F9 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B201 00 00 00 00 00 00 00 00  ........
         .byte   $00,$FE,$FE,$00,$EF,$EF,$00,$7F ; B209 00 FE FE 00 EF EF 00 7F  ........
@@ -1759,7 +1759,7 @@ LB1F9:
         .byte   $00,$08,$08,$28,$28,$28,$28,$20 ; B3B1 00 08 08 28 28 28 28 20  ...(((( 
         .byte   $01,$0B,$09,$0A,$08,$08,$08,$00 ; B3B9 01 0B 09 0A 08 08 08 00  ........
         .byte   $00,$08,$08,$0A,$0A,$0A,$0A,$02 ; B3C1 00 08 08 0A 0A 0A 0A 02  ........
-LB3C9:
+Bank27MapImage00SubImage05Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B3C9 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B3D1 00 00 00 00 00 00 00 00  ........
         .byte   $00,$FE,$FE,$00,$EF,$EF,$00,$7F ; B3D9 00 FE FE 00 EF EF 00 7F  ........
@@ -1846,31 +1846,31 @@ LB3C9:
         .byte   $4A,$44,$00,$00,$0C,$4A,$4F,$0F ; B661 4A 44 00 00 0C 4A 4F 0F  JD...JO.
         .byte   $20,$10,$00,$00,$12,$20,$02,$00 ; B669 20 10 00 00 12 20 02 00   .... ..
         .byte   $5A,$2A,$1A,$1A,$28,$5A,$F8,$FA ; B671 5A 2A 1A 1A 28 5A F8 FA  Z*..(Z..
-LB679:
+Bank27MapImage01:
         .byte   $01,$06,$00,$00,$00,$06,$00,$00 ; B679 01 06 00 00 00 06 00 00  ........
 ; ----------------------------------------------------------------------------
-        .addr   LD9BE                           ; B681 BE D9                    ..
+        .addr   Bank27MapImage01Collision       ; B681 BE D9                    ..
         .addr   LB6AD                           ; B683 AD B6                    ..
         .addr   LCF26                           ; B685 26 CF                    &.
-        .addr   LB726                           ; B687 26 B7                    &.
-        .addr   LBAE6                           ; B689 E6 BA                    ..
-        .addr   LBEA6                           ; B68B A6 BE                    ..
-        .addr   LC266                           ; B68D 66 C2                    f.
-        .addr   LC626                           ; B68F 26 C6                    &.
-        .addr   LC9E6                           ; B691 E6 C9                    ..
-        .addr   LCDA6                           ; B693 A6 CD                    ..
-        .addr   LCDE6                           ; B695 E6 CD                    ..
-        .addr   LCE26                           ; B697 26 CE                    &.
-        .addr   LCE66                           ; B699 66 CE                    f.
-        .addr   LCEA6                           ; B69B A6 CE                    ..
-        .addr   LCEE6                           ; B69D E6 CE                    ..
+        .addr   Bank27MapImage01SubImage00Tilemap; B687 26 B7                   &.
+        .addr   Bank27MapImage01SubImage01Tilemap; B689 E6 BA                   ..
+        .addr   Bank27MapImage01SubImage02Tilemap; B68B A6 BE                   ..
+        .addr   Bank27MapImage01SubImage03Tilemap; B68D 66 C2                   f.
+        .addr   Bank27MapImage01SubImage04Tilemap; B68F 26 C6                   &.
+        .addr   Bank27MapImage01SubImage05Tilemap; B691 E6 C9                   ..
+        .addr   Bank27MapImage01SubImage00TileAttr; B693 A6 CD                  ..
+        .addr   Bank27MapImage01SubImage01TileAttr; B695 E6 CD                  ..
+        .addr   Bank27MapImage01SubImage02TileAttr; B697 26 CE                  &.
+        .addr   Bank27MapImage01SubImage03TileAttr; B699 66 CE                  f.
+        .addr   Bank27MapImage01SubImage04TileAttr; B69B A6 CE                  ..
+        .addr   Bank27MapImage01SubImage05TileAttr; B69D E6 CE                  ..
         .addr   LD726                           ; B69F 26 D7                    &.
-        .addr   LD6C6                           ; B6A1 C6 D6                    ..
-        .addr   LD6D6                           ; B6A3 D6 D6                    ..
-        .addr   LD6E6                           ; B6A5 E6 D6                    ..
-        .addr   LD6F6                           ; B6A7 F6 D6                    ..
-        .addr   LD706                           ; B6A9 06 D7                    ..
-        .addr   LD716                           ; B6AB 16 D7                    ..
+        .addr   Bank27MapImage01SubImage00Palette; B6A1 C6 D6                   ..
+        .addr   Bank27MapImage01SubImage01Palette; B6A3 D6 D6                   ..
+        .addr   Bank27MapImage01SubImage02Palette; B6A5 E6 D6                   ..
+        .addr   Bank27MapImage01SubImage03Palette; B6A7 F6 D6                   ..
+        .addr   Bank27MapImage01SubImage04Palette; B6A9 06 D7                   ..
+        .addr   Bank27MapImage01SubImage05Palette; B6AB 16 D7                   ..
 ; ----------------------------------------------------------------------------
 LB6AD:
         .byte   $00,$03,$00,$00,$80,$00,$80,$00 ; B6AD 00 03 00 00 80 00 80 00  ........
@@ -1922,7 +1922,7 @@ LB6AD:
         .addr   LD976                           ; B723 76 D9                    v.
 ; ----------------------------------------------------------------------------
         .byte   $FF                             ; B725 FF                       .
-LB726:
+Bank27MapImage01SubImage00Tilemap:
         .byte   $4D,$61,$70,$20,$66,$6F,$72,$20 ; B726 4D 61 70 20 66 6F 72 20  Map for 
         .byte   $41,$65,$72,$69,$74,$68,$27,$73 ; B72E 41 65 72 69 74 68 27 73  Aerith's
         .byte   $20,$68,$6F,$75,$73,$65,$20,$69 ; B736 20 68 6F 75 73 65 20 69   house i
@@ -2043,7 +2043,7 @@ LB726:
         .byte   $04,$03,$04,$03,$04,$03,$04,$03 ; BACE 04 03 04 03 04 03 04 03  ........
         .byte   $55,$56,$04,$03,$04,$03,$00,$00 ; BAD6 55 56 04 03 04 03 00 00  UV......
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BADE 00 00 00 00 00 00 00 00  ........
-LBAE6:
+Bank27MapImage01SubImage01Tilemap:
         .byte   $4D,$61,$70,$20,$66,$6F,$72,$20 ; BAE6 4D 61 70 20 66 6F 72 20  Map for 
         .byte   $53,$65,$63,$00,$36,$20,$57,$65 ; BAEE 53 65 63 00 36 20 57 65  Sec.6 We
         .byte   $61,$70,$6F,$6E,$20,$53,$68,$6F ; BAF6 61 70 6F 6E 20 53 68 6F  apon Sho
@@ -2164,7 +2164,7 @@ LBAE6:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE8E 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE96 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BE9E 00 00 00 00 00 00 00 00  ........
-LBEA6:
+Bank27MapImage01SubImage02Tilemap:
         .byte   $4D,$61,$70,$20,$66,$6F,$72,$20 ; BEA6 4D 61 70 20 66 6F 72 20  Map for 
         .byte   $53,$65,$63,$00,$36,$20,$4D,$61 ; BEAE 53 65 63 00 36 20 4D 61  Sec.6 Ma
         .byte   $67,$69,$63,$20,$53,$68,$6F,$70 ; BEB6 67 69 63 20 53 68 6F 70  gic Shop
@@ -2285,7 +2285,7 @@ LBEA6:
         .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF ; C24E FF FF FF FF FF FF FF FF  ........
         .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF ; C256 FF FF FF FF FF FF FF FF  ........
         .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF,$4D ; C25E FF FF FF FF FF FF FF 4D  .......M
-LC266:
+Bank27MapImage01SubImage03Tilemap:
         .byte   $61,$70,$20,$66,$6F,$72,$20,$63 ; C266 61 70 20 66 6F 72 20 63  ap for c
         .byte   $6C,$6F,$74,$68,$69,$6E,$67,$20 ; C26E 6C 6F 74 68 69 6E 67 20  lothing 
         .byte   $73,$68,$6F,$70,$20,$73,$74,$61 ; C276 73 68 6F 70 20 73 74 61  shop sta
@@ -2406,7 +2406,7 @@ LC266:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C60E 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C616 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C61E 00 00 00 00 00 00 00 00  ........
-LC626:
+Bank27MapImage01SubImage04Tilemap:
         .byte   $00,$00,$53,$65,$63,$36,$20,$49 ; C626 00 00 53 65 63 36 20 49  ..Sec6 I
         .byte   $6E,$6E,$20,$61,$6E,$64,$20,$49 ; C62E 6E 6E 20 61 6E 64 20 49  nn and I
         .byte   $74,$65,$6D,$20,$73,$68,$6F,$70 ; C636 74 65 6D 20 73 68 6F 70  tem shop
@@ -2527,7 +2527,7 @@ LC626:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C9CE 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C9D6 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C9DE 00 00 00 00 00 00 00 00  ........
-LC9E6:
+Bank27MapImage01SubImage05Tilemap:
         .byte   $00,$00,$55,$70,$70,$65,$72,$20 ; C9E6 00 00 55 70 70 65 72 20  ..Upper 
         .byte   $66,$6C,$6F,$6F,$72,$20,$6F,$66 ; C9EE 66 6C 6F 6F 72 20 6F 66  floor of
         .byte   $20,$41,$65,$72,$69,$74,$68,$27 ; C9F6 20 41 65 72 69 74 68 27   Aerith'
@@ -2648,7 +2648,7 @@ LC9E6:
         .byte   $66,$66,$66,$66,$66,$66,$66,$66 ; CD8E 66 66 66 66 66 66 66 66  ffffffff
         .byte   $66,$66,$66,$66,$66,$66,$66,$66 ; CD96 66 66 66 66 66 66 66 66  ffffffff
         .byte   $66,$66,$66,$66,$66,$66,$66,$66 ; CD9E 66 66 66 66 66 66 66 66  ffffffff
-LCDA6:
+Bank27MapImage01SubImage00TileAttr:
         .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF ; CDA6 FF FF FF FF FF FF FF FF  ........
         .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF ; CDAE FF FF FF FF FF FF FF FF  ........
         .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF ; CDB6 FF FF FF FF FF FF FF FF  ........
@@ -2657,7 +2657,7 @@ LCDA6:
         .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF ; CDCE FF FF FF FF FF FF FF FF  ........
         .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF ; CDD6 FF FF FF FF FF FF FF FF  ........
         .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF ; CDDE FF FF FF FF FF FF FF FF  ........
-LCDE6:
+Bank27MapImage01SubImage01TileAttr:
         .byte   $55,$55,$55,$55,$55,$55,$55,$55 ; CDE6 55 55 55 55 55 55 55 55  UUUUUUUU
         .byte   $55,$44,$55,$55,$55,$55,$51,$55 ; CDEE 55 44 55 55 55 55 51 55  UDUUUUQU
         .byte   $55,$00,$00,$00,$00,$00,$00,$55 ; CDF6 55 00 00 00 00 00 00 55  U......U
@@ -2666,7 +2666,7 @@ LCDE6:
         .byte   $55,$55,$55,$55,$55,$55,$55,$55 ; CE0E 55 55 55 55 55 55 55 55  UUUUUUUU
         .byte   $55,$55,$55,$55,$55,$55,$55,$55 ; CE16 55 55 55 55 55 55 55 55  UUUUUUUU
         .byte   $55,$55,$55,$55,$55,$55,$55,$55 ; CE1E 55 55 55 55 55 55 55 55  UUUUUUUU
-LCE26:
+Bank27MapImage01SubImage02TileAttr:
         .byte   $00,$00,$AA,$AA,$AA,$AA,$AA,$00 ; CE26 00 00 AA AA AA AA AA 00  ........
         .byte   $00,$00,$AA,$55,$FF,$BB,$AA,$00 ; CE2E 00 00 AA 55 FF BB AA 00  ...U....
         .byte   $00,$00,$AA,$A2,$A0,$A8,$AA,$00 ; CE36 00 00 AA A2 A0 A8 AA 00  ........
@@ -2675,7 +2675,7 @@ LCE26:
         .byte   $AA,$AA,$55,$5A,$5A,$56,$55,$AA ; CE4E AA AA 55 5A 5A 56 55 AA  ..UZZVU.
         .byte   $AA,$AA,$AA,$55,$56,$55,$AA,$AA ; CE56 AA AA AA 55 56 55 AA AA  ...UVU..
         .byte   $AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA ; CE5E AA AA AA AA AA AA AA AA  ........
-LCE66:
+Bank27MapImage01SubImage03TileAttr:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE66 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$50,$00,$00,$00,$00 ; CE6E 00 00 00 50 00 00 00 00  ...P....
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CE76 00 00 00 00 00 00 00 00  ........
@@ -2684,7 +2684,7 @@ LCE66:
         .byte   $55,$55,$50,$50,$50,$50,$55,$55 ; CE8E 55 55 50 50 50 50 55 55  UUPPPPUU
         .byte   $55,$55,$55,$55,$55,$55,$55,$55 ; CE96 55 55 55 55 55 55 55 55  UUUUUUUU
         .byte   $55,$55,$55,$55,$55,$55,$55,$55 ; CE9E 55 55 55 55 55 55 55 55  UUUUUUUU
-LCEA6:
+Bank27MapImage01SubImage04TileAttr:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CEA6 00 00 00 00 00 00 00 00  ........
         .byte   $00,$AA,$AA,$88,$AA,$88,$AA,$00 ; CEAE 00 AA AA 88 AA 88 AA 00  ........
         .byte   $00,$66,$66,$24,$05,$24,$09,$00 ; CEB6 00 66 66 24 05 24 09 00  .ff$.$..
@@ -2693,7 +2693,7 @@ LCEA6:
         .byte   $AA,$AA,$AA,$A0,$A0,$A8,$AA,$AA ; CECE AA AA AA A0 A0 A8 AA AA  ........
         .byte   $AA,$AA,$AA,$AA,$AA,$AA,$AA,$AA ; CED6 AA AA AA AA AA AA AA AA  ........
         .byte   $AA,$00,$AA,$00,$AA,$00,$AA,$00 ; CEDE AA 00 AA 00 AA 00 AA 00  ........
-LCEE6:
+Bank27MapImage01SubImage05TileAttr:
         .byte   $00,$10,$00,$00,$00,$00,$00,$00 ; CEE6 00 10 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$80,$80,$F0,$00 ; CEEE 00 00 00 00 80 80 F0 00  ........
         .byte   $00,$00,$00,$33,$08,$C8,$FF,$00 ; CEF6 00 00 00 33 08 C8 FF 00  ...3....
@@ -2947,22 +2947,22 @@ LCF26:
         .byte   $3F,$1F,$2F,$4F,$3F,$07,$07,$00 ; D6AE 3F 1F 2F 4F 3F 07 07 00  ?./O?...
         .byte   $FC,$F8,$1C,$38,$20,$E0,$A0,$00 ; D6B6 FC F8 1C 38 20 E0 A0 00  ...8 ...
         .byte   $FC,$F8,$F4,$F8,$E0,$E0,$E0,$00 ; D6BE FC F8 F4 F8 E0 E0 E0 00  ........
-LD6C6:
+Bank27MapImage01SubImage00Palette:
         .byte   $0F,$28,$17,$18,$0F,$30,$27,$00 ; D6C6 0F 28 17 18 0F 30 27 00  .(...0'.
         .byte   $0F,$36,$17,$00,$0F,$30,$17,$00 ; D6CE 0F 36 17 00 0F 30 17 00  .6...0..
-LD6D6:
+Bank27MapImage01SubImage01Palette:
         .byte   $0F,$17,$00,$27,$0F,$17,$00,$10 ; D6D6 0F 17 00 27 0F 17 00 10  ...'....
         .byte   $0F,$00,$10,$11,$0F,$30,$29,$2A ; D6DE 0F 00 10 11 0F 30 29 2A  .....0)*
-LD6E6:
+Bank27MapImage01SubImage02Palette:
         .byte   $0F,$2A,$27,$17,$0F,$22,$00,$17 ; D6E6 0F 2A 27 17 0F 22 00 17  .*'.."..
         .byte   $0F,$10,$00,$17,$0F,$30,$27,$17 ; D6EE 0F 10 00 17 0F 30 27 17  .....0'.
-LD6F6:
+Bank27MapImage01SubImage03Palette:
         .byte   $0F,$27,$00,$17,$0F,$27,$30,$17 ; D6F6 0F 27 00 17 0F 27 30 17  .'...'0.
         .byte   $0F,$30,$10,$00,$0F,$30,$0F,$0F ; D6FE 0F 30 10 00 0F 30 0F 0F  .0...0..
-LD706:
+Bank27MapImage01SubImage04Palette:
         .byte   $0F,$27,$00,$17,$0F,$27,$00,$30 ; D706 0F 27 00 17 0F 27 00 30  .'...'.0
         .byte   $0F,$00,$22,$30,$0F,$30,$0F,$0F ; D70E 0F 00 22 30 0F 30 0F 0F  .."0.0..
-LD716:
+Bank27MapImage01SubImage05Palette:
         .byte   $0F,$17,$37,$07,$0F,$16,$07,$27 ; D716 0F 17 37 07 0F 16 07 27  ..7....'
         .byte   $0F,$30,$17,$00,$0F,$30,$17,$00 ; D71E 0F 30 17 00 0F 30 17 00  .0...0..
 LD726:
@@ -3057,7 +3057,7 @@ LD99E:
         .byte   $69,$01,$6A,$01,$76,$01,$77,$01 ; D9A6 69 01 6A 01 76 01 77 01  i.j.v.w.
         .byte   $6B,$01,$6C,$01,$78,$03,$79,$03 ; D9AE 6B 01 6C 01 78 03 79 03  k.l.x.y.
         .byte   $67,$03,$68,$03,$5A,$01,$5B,$01 ; D9B6 67 03 68 03 5A 01 5B 01  g.h.Z.[.
-LD9BE:
+Bank27MapImage01Collision:
         .byte   $00,$00,$10,$00,$00,$00,$00,$00 ; D9BE 00 00 10 00 00 00 00 00  ........
         .byte   $00,$00,$10,$00,$00,$00,$00,$00 ; D9C6 00 00 10 00 00 00 00 00  ........
         .byte   $00,$00,$10,$00,$00,$00,$00,$00 ; D9CE 00 00 10 00 00 00 00 00  ........
@@ -3149,15 +3149,15 @@ LD9BE:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC7E 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DC86 00 00 00 00 00 00 00 00  ........
 ; ----------------------------------------------------------------------------
-LDC8E:
-        .addr   LDC9A                           ; DC8E 9A DC                    ..
-        .addr   LE05A                           ; DC90 5A E0                    Z.
-        .addr   LE22A                           ; DC92 2A E2                    *.
-        .addr   LE3BA                           ; DC94 BA E3                    ..
-        .addr   LE58A                           ; DC96 8A E5                    ..
-        .addr   LE85A                           ; DC98 5A E8                    Z.
+Bank27MapImage01Tileset:
+        .addr   Bank27MapImage01SubImage00Tileset; DC8E 9A DC                   ..
+        .addr   Bank27MapImage01SubImage01Tileset; DC90 5A E0                   Z.
+        .addr   Bank27MapImage01SubImage02Tileset; DC92 2A E2                   *.
+        .addr   Bank27MapImage01SubImage03Tileset; DC94 BA E3                   ..
+        .addr   Bank27MapImage01SubImage04Tileset; DC96 8A E5                   ..
+        .addr   Bank27MapImage01SubImage05Tileset; DC98 5A E8                   Z.
 ; ----------------------------------------------------------------------------
-LDC9A:
+Bank27MapImage01SubImage00Tileset:
         .byte   $00,$1F,$1F,$00,$00,$1F,$1F,$00 ; DC9A 00 1F 1F 00 00 1F 1F 00  ........
         .byte   $40,$40,$40,$5F,$40,$40,$40,$5F ; DCA2 40 40 40 5F 40 40 40 5F  @@@_@@@_
         .byte   $57,$FE,$57,$BB,$FD,$77,$DE,$B5 ; DCAA 57 FE 57 BB FD 77 DE B5  W.W..w..
@@ -3278,7 +3278,7 @@ LDC9A:
         .byte   $00,$42,$00,$48,$40,$0A,$28,$04 ; E042 00 42 00 48 40 0A 28 04  .B.H@.(.
         .byte   $28,$10,$28,$7D,$7C,$38,$00,$FF ; E04A 28 10 28 7D 7C 38 00 FF  (.(}|8..
         .byte   $83,$AB,$BB,$75,$65,$BB,$C7,$FF ; E052 83 AB BB 75 65 BB C7 FF  ...ue...
-LE05A:
+Bank27MapImage01SubImage01Tileset:
         .byte   $00,$FF,$00,$00,$00,$00,$00,$00 ; E05A 00 FF 00 00 00 00 00 00  ........
         .byte   $00,$FF,$00,$AA,$55,$AA,$55,$AA ; E062 00 FF 00 AA 55 AA 55 AA  ....U.U.
         .byte   $00,$FF,$80,$80,$80,$80,$80,$80 ; E06A 00 FF 80 80 80 80 80 80  ........
@@ -3337,7 +3337,7 @@ LE05A:
         .byte   $00,$3C,$20,$08,$28,$28,$28,$00 ; E212 00 3C 20 08 28 28 28 00  .< .(((.
         .byte   $00,$00,$00,$00,$00,$00,$00,$02 ; E21A 00 00 00 00 00 00 00 02  ........
         .byte   $00,$1E,$02,$08,$0A,$0A,$0A,$00 ; E222 00 1E 02 08 0A 0A 0A 00  ........
-LE22A:
+Bank27MapImage01SubImage02Tileset:
         .byte   $00,$08,$1D,$11,$1D,$00,$7F,$00 ; E22A 00 08 1D 11 1D 00 7F 00  ........
         .byte   $00,$48,$41,$4D,$41,$3F,$7F,$00 ; E232 00 48 41 4D 41 3F 7F 00  .HAMA?..
         .byte   $93,$29,$44,$82,$44,$29,$93,$C7 ; E23A 93 29 44 82 44 29 93 C7  .)D.D)..
@@ -3388,7 +3388,7 @@ LE22A:
         .byte   $40,$60,$40,$00,$20,$20,$20,$20 ; E3A2 40 60 40 00 20 20 20 20  @`@.    
         .byte   $01,$0B,$09,$0A,$08,$08,$08,$00 ; E3AA 01 0B 09 0A 08 08 08 00  ........
         .byte   $01,$03,$01,$00,$02,$02,$02,$02 ; E3B2 01 03 01 00 02 02 02 02  ........
-LE3BA:
+Bank27MapImage01SubImage03Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E3BA 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E3C2 00 00 00 00 00 00 00 00  ........
         .byte   $00,$C2,$98,$00,$02,$02,$8C,$C2 ; E3CA 00 C2 98 00 02 02 8C C2  ........
@@ -3447,7 +3447,7 @@ LE3BA:
         .byte   $00,$08,$08,$28,$28,$28,$28,$20 ; E572 00 08 08 28 28 28 28 20  ...(((( 
         .byte   $01,$0B,$09,$0A,$08,$08,$08,$00 ; E57A 01 0B 09 0A 08 08 08 00  ........
         .byte   $00,$08,$08,$0A,$0A,$0A,$0A,$02 ; E582 00 08 08 0A 0A 0A 0A 02  ........
-LE58A:
+Bank27MapImage01SubImage04Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E58A 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E592 00 00 00 00 00 00 00 00  ........
         .byte   $E2,$A2,$3C,$95,$29,$88,$12,$35 ; E59A E2 A2 3C 95 29 88 12 35  ..<.)..5
@@ -3538,7 +3538,7 @@ LE58A:
         .byte   $40,$68,$48,$28,$08,$08,$08,$00 ; E842 40 68 48 28 08 08 08 00  @hH(....
         .byte   $01,$03,$01,$00,$02,$02,$02,$02 ; E84A 01 03 01 00 02 02 02 02  ........
         .byte   $01,$0B,$09,$0A,$08,$08,$08,$00 ; E852 01 0B 09 0A 08 08 08 00  ........
-LE85A:
+Bank27MapImage01SubImage05Tileset:
         .byte   $00,$63,$6F,$6F,$6F,$68,$40,$00 ; E85A 00 63 6F 6F 6F 68 40 00  .coooh@.
         .byte   $00,$00,$00,$00,$00,$00,$07,$2F ; E862 00 00 00 00 00 00 07 2F  ......./
         .byte   $00,$C6,$F6,$F6,$F6,$16,$02,$00 ; E86A 00 C6 F6 F6 F6 16 02 00  ........

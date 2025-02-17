@@ -357,3 +357,124 @@ RANGE {
   END $fffe;
   TYPE BYTETABLE;
 };
+
+LABEL {
+  NAME "Bank11MapImage00";
+  ADDR  $8012;
+};
+LABEL {
+  NAME "Bank11MapImage00Collision";
+  ADDR  $95F9;
+};
+LABEL {
+  NAME "Bank11MapImage00SubImage00Tilemap";
+  ADDR  $8089;
+};
+LABEL {
+  NAME "Bank11MapImage00SubImage01Tilemap";
+  ADDR  $8449;
+};
+LABEL {
+  NAME "Bank11MapImage00SubImage00TileAttr";
+  ADDR  $8809;
+};
+LABEL {
+  NAME "Bank11MapImage00SubImage01TileAttr";
+  ADDR  $8849;
+};
+LABEL {
+  NAME "Bank11MapImage00Palette";
+  ADDR  $9389;
+};
+LABEL {
+  NAME "Bank11MapImage00Tileset";
+  ADDR  $8889;
+};
+LABEL {
+  NAME "Bank11MapImage01";
+  ADDR  $96E9;
+};
+LABEL {
+  NAME "Bank11MapImage01Collision";
+  ADDR  $A5DA;
+};
+LABEL {
+  NAME "Bank11MapImage01SubImage00Tilemap";
+  ADDR  $971A;
+};
+LABEL {
+  NAME "Bank11MapImage01SubImage01Tilemap";
+  ADDR  $9ADA;
+};
+LABEL {
+  NAME "Bank11MapImage01SubImage00TileAttr";
+  ADDR  $9E9A;
+};
+LABEL {
+  NAME "Bank11MapImage01SubImage01TileAttr";
+  ADDR  $9EDA;
+};
+LABEL {
+  NAME "Bank11MapImage01Palette";
+  ADDR  $A4FA;
+};
+LABEL {
+  NAME "Bank11MapImage01Tileset";
+  ADDR  $9F1A;
+};
+LABEL {
+  NAME "Bank11MapImage02";
+  ADDR  $A6CA;
+};
+LABEL {
+  NAME "Bank11MapImage02Collision";
+  ADDR  $BA2D;
+};
+LABEL {
+  NAME "Bank11MapImage02SubImage00Tilemap";
+  ADDR  $A73D;
+};
+LABEL {
+  NAME "Bank11MapImage02SubImage00TileAttr";
+  ADDR  $AAFD;
+};
+LABEL {
+  NAME "Bank11MapImage02Palette";
+  ADDR  $B72D;
+};
+LABEL {
+  NAME "Bank11MapImage02Tileset";
+  ADDR  $AB3D;
+};
+LABEL {
+  NAME "Bank11MapImage03";
+  ADDR  $BAA5;
+};
+LABEL {
+  NAME "Bank11MapImage03Collision";
+  ADDR  $D1E2;
+};
+LABEL {
+  NAME "Bank11MapImage03SubImage00Tilemap";
+  ADDR  $BB12;
+};
+LABEL {
+  NAME "Bank11MapImage03SubImage01Tilemap";
+  ADDR  $BED2;
+};
+LABEL {
+  NAME "Bank11MapImage03SubImage00TileAttr";
+  ADDR  $C292;
+};
+LABEL {
+  NAME "Bank11MapImage03SubImage01TileAttr";
+  ADDR  $C2D2;
+};
+LABEL {
+  NAME "Bank11MapImage03Palette";
+  ADDR  $CF22;
+};
+LABEL {
+  NAME "Bank11MapImage03Tileset";
+  ADDR  $C312;
+};

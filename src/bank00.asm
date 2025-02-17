@@ -9500,7 +9500,7 @@ LoadMapDataFromBank1:
         lda     $03                             ; DD0A A5 03                    ..
         pha                                     ; DD0C 48                       H
         jsr     DivideBankNumBy16               ; DD0D 20 B6 EA                  ..
-        jsr     CopyAsmCodeInEF6F               ; DD10 20 60 EF                  `.
+        jsr     CopyAndRunAsmCodeToGetMapData   ; DD10 20 60 EF                  `.
         jsr     CopyValues0x50And0x51To0x86And0x87; DD13 20 C7 EA                ..
         lda     $50                             ; DD16 A5 50                    .P
         and     #$3F                            ; DD18 29 3F                    )?
@@ -11008,7 +11008,7 @@ LE870:
         sta     $83                             ; E87F 85 83                    ..
         jsr     DivideBankNumBy16               ; E881 20 B6 EA                  ..
         jsr     WaitForVBlank                   ; E884 20 C9 F2                  ..
-        jsr     CopyAsmCodeInEF6F               ; E887 20 60 EF                  `.
+        jsr     CopyAndRunAsmCodeToGetMapData   ; E887 20 60 EF                  `.
         jsr     CopyValues0x50And0x51To0x86And0x87; E88A 20 C7 EA                ..
         lda     $50                             ; E88D A5 50                    .P
         and     #$3F                            ; E88F 29 3F                    )?
@@ -11120,7 +11120,7 @@ InitPlayerMain:
         lda     #$01                            ; E979 A9 01                    ..
         sta     $89                             ; E97B 85 89                    ..
         jsr     DivideBankNumBy16               ; E97D 20 B6 EA                  ..
-        jsr     CopyAsmCodeInEF6F               ; E980 20 60 EF                  `.
+        jsr     CopyAndRunAsmCodeToGetMapData   ; E980 20 60 EF                  `.
         jsr     CopyValues0x50And0x51To0x86And0x87; E983 20 C7 EA                ..
         lda     $50                             ; E986 A5 50                    .P
         and     #$3F                            ; E988 29 3F                    )?
@@ -12110,10 +12110,10 @@ StoreFFin0300:
         rts                                     ; EF5F 60                       `
 
 ; ----------------------------------------------------------------------------
-CopyAsmCodeInEF6F:
+CopyAndRunAsmCodeToGetMapData:
         ldy     #$00                            ; EF60 A0 00                    ..
 LEF62:
-        lda     LEF6F,y                         ; EF62 B9 6F EF                 .o.
+        lda     LoadAddrFromBankToGetMapData,y  ; EF62 B9 6F EF                 .o.
         sta     L0400,y                         ; EF65 99 00 04                 ...
         iny                                     ; EF68 C8                       .
         bne     LEF62                           ; EF69 D0 F7                    ..
@@ -12121,7 +12121,7 @@ LEF62:
         rts                                     ; EF6E 60                       `
 
 ; ----------------------------------------------------------------------------
-LEF6F:
+LoadAddrFromBankToGetMapData:
         lda     $80                             ; EF6F A5 80                    ..
         sta     $5200                           ; EF71 8D 00 52                 ..R
         lda     $50                             ; EF74 A5 50                    .P
@@ -12720,7 +12720,7 @@ LF350:
 
 ; ----------------------------------------------------------------------------
         jsr     DivideBankNumBy16               ; F357 20 B6 EA                  ..
-        jsr     CopyAsmCodeInEF6F               ; F35A 20 60 EF                  `.
+        jsr     CopyAndRunAsmCodeToGetMapData   ; F35A 20 60 EF                  `.
         jsr     CopyValues0x50And0x51To0x86And0x87; F35D 20 C7 EA                ..
         lda     $50                             ; F360 A5 50                    .P
         and     #$3F                            ; F362 29 3F                    )?

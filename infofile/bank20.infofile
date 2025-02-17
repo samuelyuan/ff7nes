@@ -277,3 +277,172 @@ RANGE {
   END $fffe;
   TYPE BYTETABLE;
 };
+
+LABEL {
+  NAME "Bank20MapImage00";
+  ADDR  $8012;
+};
+LABEL {
+  NAME "Bank20MapImage00Collision";
+  ADDR  $9D99;
+};
+LABEL {
+  NAME "Bank20MapImage00SubImage00Tilemap";
+  ADDR  $8069;
+};
+LABEL {
+  NAME "Bank20MapImage00SubImage01Tilemap";
+  ADDR  $8429;
+};
+LABEL {
+  NAME "Bank20MapImage00SubImage02Tilemap";
+  ADDR  $87E9;
+};
+LABEL {
+  NAME "Bank20MapImage00SubImage03Tilemap";
+  ADDR  $8BA9;
+};
+LABEL {
+  NAME "Bank20MapImage00SubImage00TileAttr";
+  ADDR  $8F69;
+};
+LABEL {
+  NAME "Bank20MapImage00SubImage01TileAttr";
+  ADDR  $8FA9;
+};
+LABEL {
+  NAME "Bank20MapImage00SubImage02TileAttr";
+  ADDR  $8FE9;
+};
+LABEL {
+  NAME "Bank20MapImage00SubImage03TileAttr";
+  ADDR  $9029;
+};
+LABEL {
+  NAME "Bank20MapImage00Palette";
+  ADDR  $9B99;
+};
+LABEL {
+  NAME "Bank20MapImage00Tileset";
+  ADDR  $9069;
+};
+LABEL {
+  NAME "Bank20MapImage01";
+  ADDR  $9F79;
+};
+LABEL {
+  NAME "Bank20MapImage01Collision";
+  ADDR  $BF04;
+};
+LABEL {
+  NAME "Bank20MapImage01SubImage00Tilemap";
+  ADDR  $9FF4;
+};
+LABEL {
+  NAME "Bank20MapImage01SubImage01Tilemap";
+  ADDR  $A3B4;
+};
+LABEL {
+  NAME "Bank20MapImage01SubImage02Tilemap";
+  ADDR  $A774;
+};
+LABEL {
+  NAME "Bank20MapImage01SubImage00TileAttr";
+  ADDR  $AB34;
+};
+LABEL {
+  NAME "Bank20MapImage01SubImage01TileAttr";
+  ADDR  $AB74;
+};
+LABEL {
+  NAME "Bank20MapImage01SubImage02TileAttr";
+  ADDR  $ABB4;
+};
+LABEL {
+  NAME "Bank20MapImage01Palette";
+  ADDR  $BC44;
+};
+LABEL {
+  NAME "Bank20MapImage01Tileset";
+  ADDR  $ABF4;
+};
+LABEL {
+  NAME "Bank20MapImage02";
+  ADDR  $C06C;
+};
+LABEL {
+  NAME "Bank20MapImage02Collision";
+  ADDR  $E073;
+};
+LABEL {
+  NAME "Bank20MapImage02SubImage00Tilemap";
+  ADDR  $C0C3;
+};
+LABEL {
+  NAME "Bank20MapImage02SubImage01Tilemap";
+  ADDR  $C483;
+};
+LABEL {
+  NAME "Bank20MapImage02SubImage02Tilemap";
+  ADDR  $C843;
+};
+LABEL {
+  NAME "Bank20MapImage02SubImage03Tilemap";
+  ADDR  $CC03;
+};
+LABEL {
+  NAME "Bank20MapImage02SubImage00TileAttr";
+  ADDR  $CFC3;
+};
+LABEL {
+  NAME "Bank20MapImage02SubImage01TileAttr";
+  ADDR  $D003;
+};
+LABEL {
+  NAME "Bank20MapImage02SubImage02TileAttr";
+  ADDR  $D043;
+};
+LABEL {
+  NAME "Bank20MapImage02SubImage03TileAttr";
+  ADDR  $D083;
+};
+LABEL {
+  NAME "Bank20MapImage02Palette";
+  ADDR  $DE73;
+};
+LABEL {
+  NAME "Bank20MapImage02Tileset";
+  ADDR  $D0C3;
+};
+LABEL {
+  NAME "Bank20MapImage03";
+  ADDR  $E253;
+};
+LABEL {
+  NAME "Bank20MapImage03Collision";
+  ADDR  $ECBA;
+};
+LABEL {
+  NAME "Bank20MapImage03SubImage00Tilemap";
+  ADDR  $E27A;
+};
+LABEL {
+  NAME "Bank20MapImage03SubImage01Tilemap";
+  ADDR  $E63A;
+};
+LABEL {
+  NAME "Bank20MapImage03SubImage00TileAttr";
+  ADDR  $E9FA;
+};
+LABEL {
+  NAME "Bank20MapImage03SubImage01TileAttr";
+  ADDR  $EA3A;
+};
+LABEL {
+  NAME "Bank20MapImage03Palette";
+  ADDR  $EC3A;
+};
+LABEL {
+  NAME "Bank20MapImage03Tileset";
+  ADDR  $EA7A;
+};

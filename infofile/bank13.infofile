@@ -347,3 +347,204 @@ RANGE {
   END $fffe;
   TYPE BYTETABLE;
 };
+
+LABEL {
+  NAME "Bank13MapImage00";
+  ADDR  $8012;
+};
+LABEL {
+  NAME "Bank13MapImage00Collision";
+  ADDR  $A953;
+};
+LABEL {
+  NAME "Bank13MapImage00SubImage00Tilemap";
+  ADDR  $8093;
+};
+LABEL {
+  NAME "Bank13MapImage00SubImage01Tilemap";
+  ADDR  $8453;
+};
+LABEL {
+  NAME "Bank13MapImage00SubImage02Tilemap";
+  ADDR  $8813;
+};
+LABEL {
+  NAME "Bank13MapImage00SubImage03Tilemap";
+  ADDR  $8BD3;
+};
+LABEL {
+  NAME "Bank13MapImage00SubImage04Tilemap";
+  ADDR  $8F93;
+};
+LABEL {
+  NAME "Bank13MapImage00SubImage05Tilemap";
+  ADDR  $9353;
+};
+LABEL {
+  NAME "Bank13MapImage00SubImage06Tilemap";
+  ADDR  $9713;
+};
+LABEL {
+  NAME "Bank13MapImage00SubImage00TileAttr";
+  ADDR  $9AD3;
+};
+LABEL {
+  NAME "Bank13MapImage00SubImage01TileAttr";
+  ADDR  $9B13;
+};
+LABEL {
+  NAME "Bank13MapImage00SubImage02TileAttr";
+  ADDR  $9B53;
+};
+LABEL {
+  NAME "Bank13MapImage00SubImage03TileAttr";
+  ADDR  $9B93;
+};
+LABEL {
+  NAME "Bank13MapImage00SubImage04TileAttr";
+  ADDR  $9BD3;
+};
+LABEL {
+  NAME "Bank13MapImage00SubImage05TileAttr";
+  ADDR  $9C13;
+};
+LABEL {
+  NAME "Bank13MapImage00SubImage06TileAttr";
+  ADDR  $9C53;
+};
+LABEL {
+  NAME "Bank13MapImage00Palette";
+  ADDR  $A6C3;
+};
+LABEL {
+  NAME "Bank13MapImage00Tileset";
+  ADDR  $9C93;
+};
+LABEL {
+  NAME "Bank13MapImage01";
+  ADDR  $AC9B;
+};
+LABEL {
+  NAME "Bank13MapImage01Collision";
+  ADDR  $C412;
+};
+LABEL {
+  NAME "Bank13MapImage01SubImage00Tilemap";
+  ADDR  $AD1A;
+};
+LABEL {
+  NAME "Bank13MapImage01SubImage01Tilemap";
+  ADDR  $B0DA;
+};
+LABEL {
+  NAME "Bank13MapImage01SubImage02Tilemap";
+  ADDR  $B49A;
+};
+LABEL {
+  NAME "Bank13MapImage01SubImage03Tilemap";
+  ADDR  $B85A;
+};
+LABEL {
+  NAME "Bank13MapImage01SubImage00TileAttr";
+  ADDR  $BC1A;
+};
+LABEL {
+  NAME "Bank13MapImage01SubImage01TileAttr";
+  ADDR  $BC5A;
+};
+LABEL {
+  NAME "Bank13MapImage01SubImage02TileAttr";
+  ADDR  $BC9A;
+};
+LABEL {
+  NAME "Bank13MapImage01SubImage03TileAttr";
+  ADDR  $BCDA;
+};
+LABEL {
+  NAME "Bank13MapImage01Palette";
+  ADDR  $C2BA;
+};
+LABEL {
+  NAME "Bank13MapImage01Tileset";
+  ADDR  $BD1A;
+};
+LABEL {
+  NAME "Bank13MapImage02";
+  ADDR  $C5F2;
+};
+LABEL {
+  NAME "Bank13MapImage02Collision";
+  ADDR  $D593;
+};
+LABEL {
+  NAME "Bank13MapImage02SubImage00Tilemap";
+  ADDR  $C623;
+};
+LABEL {
+  NAME "Bank13MapImage02SubImage01Tilemap";
+  ADDR  $C9E3;
+};
+LABEL {
+  NAME "Bank13MapImage02SubImage00TileAttr";
+  ADDR  $CDA3;
+};
+LABEL {
+  NAME "Bank13MapImage02SubImage01TileAttr";
+  ADDR  $CDE3;
+};
+LABEL {
+  NAME "Bank13MapImage02Palette";
+  ADDR  $D4B3;
+};
+LABEL {
+  NAME "Bank13MapImage02Tileset";
+  ADDR  $CE23;
+};
+LABEL {
+  NAME "Bank13MapImage03";
+  ADDR  $D683;
+};
+LABEL {
+  NAME "Bank13MapImage03Collision";
+  ADDR  $F7A8;
+};
+LABEL {
+  NAME "Bank13MapImage03SubImage00Tilemap";
+  ADDR  $D6F8;
+};
+LABEL {
+  NAME "Bank13MapImage03SubImage01Tilemap";
+  ADDR  $DAB8;
+};
+LABEL {
+  NAME "Bank13MapImage03SubImage02Tilemap";
+  ADDR  $DE78;
+};
+LABEL {
+  NAME "Bank13MapImage03SubImage03Tilemap";
+  ADDR  $E238;
+};
+LABEL {
+  NAME "Bank13MapImage03SubImage00TileAttr";
+  ADDR  $E5F8;
+};
+LABEL {
+  NAME "Bank13MapImage03SubImage01TileAttr";
+  ADDR  $E638;
+};
+LABEL {
+  NAME "Bank13MapImage03SubImage02TileAttr";
+  ADDR  $E678;
+};
+LABEL {
+  NAME "Bank13MapImage03SubImage03TileAttr";
+  ADDR  $E6B8;
+};
+LABEL {
+  NAME "Bank13MapImage03Palette";
+  ADDR  $F4D8;
+};
+LABEL {
+  NAME "Bank13MapImage03Tileset";
+  ADDR  $E6F8;
+};

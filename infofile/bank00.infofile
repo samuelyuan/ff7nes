@@ -1014,8 +1014,12 @@ LABEL {
   ADDR $EF5A;
 };
 LABEL {
-  NAME "CopyAsmCodeInEF6F";
+  NAME "CopyAndRunAsmCodeToGetMapData";
   ADDR $EF60;
+};
+LABEL {
+  NAME "LoadAddrFromBankToGetMapData";
+  ADDR $EF6F;
 };
 LABEL {
   NAME "StoreMapRowsAndColumns";

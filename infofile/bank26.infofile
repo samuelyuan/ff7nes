@@ -237,3 +237,100 @@ RANGE {
   END $fffe;
   TYPE BYTETABLE;
 };
+
+LABEL {
+  NAME "Bank26MapImage00";
+  ADDR  $8012;
+};
+LABEL {
+  NAME "Bank26MapImage00Collision";
+  ADDR  $8CCD;
+};
+LABEL {
+  NAME "Bank26MapImage00SubImage00Tilemap";
+  ADDR  $805D;
+};
+LABEL {
+  NAME "Bank26MapImage00SubImage00TileAttr";
+  ADDR  $841D;
+};
+LABEL {
+  NAME "Bank26MapImage00Palette";
+  ADDR  $8ACD;
+};
+LABEL {
+  NAME "Bank26MapImage00Tileset";
+  ADDR  $845D;
+};
+LABEL {
+  NAME "Bank26MapImage01";
+  ADDR  $8D45;
+};
+LABEL {
+  NAME "Bank26MapImage01Collision";
+  ADDR  $97EC;
+};
+LABEL {
+  NAME "Bank26MapImage01SubImage00Tilemap";
+  ADDR  $8D7C;
+};
+LABEL {
+  NAME "Bank26MapImage01SubImage00TileAttr";
+  ADDR  $913C;
+};
+LABEL {
+  NAME "Bank26MapImage01Palette";
+  ADDR  $96AC;
+};
+LABEL {
+  NAME "Bank26MapImage01Tileset";
+  ADDR  $917C;
+};
+LABEL {
+  NAME "Bank26MapImage02";
+  ADDR  $9864;
+};
+LABEL {
+  NAME "Bank26MapImage02Collision";
+  ADDR  $A58F;
+};
+LABEL {
+  NAME "Bank26MapImage02SubImage00Tilemap";
+  ADDR  $98AF;
+};
+LABEL {
+  NAME "Bank26MapImage02SubImage00TileAttr";
+  ADDR  $9C6F;
+};
+LABEL {
+  NAME "Bank26MapImage02Palette";
+  ADDR  $A38F;
+};
+LABEL {
+  NAME "Bank26MapImage02Tileset";
+  ADDR  $9CAF;
+};
+LABEL {
+  NAME "Bank26MapImage03";
+  ADDR  $A607;
+};
+LABEL {
+  NAME "Bank26MapImage03Collision";
+  ADDR  $B134;
+};
+LABEL {
+  NAME "Bank26MapImage03SubImage00Tilemap";
+  ADDR  $A634;
+};
+LABEL {
+  NAME "Bank26MapImage03SubImage00TileAttr";
+  ADDR  $A9F4;
+};
+LABEL {
+  NAME "Bank26MapImage03Palette";
+  ADDR  $B054;
+};
+LABEL {
+  NAME "Bank26MapImage03Tileset";
+  ADDR  $AA34;
+};

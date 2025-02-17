@@ -27,15 +27,15 @@ LABEL {
 };
 LABEL {
   NAME "OverworldTilemapSectionRow12Col2";
-  ADDR  $87c0;
+  ADDR  $87C0;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow12Col3";
-  ADDR  $8b80;
+  ADDR  $8B80;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow12Col4";
-  ADDR  $8f40;
+  ADDR  $8F40;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow12Col5";
@@ -43,105 +43,105 @@ LABEL {
 };
 LABEL {
   NAME "OverworldTilemapSectionRow12Col6";
-  ADDR  $96c0;
+  ADDR  $96C0;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow12Col7";
-  ADDR  $9a80;
+  ADDR  $9A80;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow12Col8";
-  ADDR  $9e40;
+  ADDR  $9E40;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow12Col9";
-  ADDR  $a200;
+  ADDR  $A200;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow12Col10";
-  ADDR  $a5c0;
+  ADDR  $A5C0;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow12Col11";
-  ADDR  $a980;
+  ADDR  $A980;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow12Col12";
-  ADDR  $ad40;
+  ADDR  $AD40;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow12Col13";
-  ADDR  $b100;
+  ADDR  $B100;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow12Col14";
-  ADDR  $b4c0;
+  ADDR  $B4C0;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow12Col15";
-  ADDR  $b880;
+  ADDR  $B880;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow13Col0";
-  ADDR  $bc40;
+  ADDR  $BC40;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow13Col1";
-  ADDR  $c000;
+  ADDR  $C000;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow13Col2";
-  ADDR  $c3c0;
+  ADDR  $C3C0;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow13Col3";
-  ADDR  $c780;
+  ADDR  $C780;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow13Col4";
-  ADDR  $cb40;
+  ADDR  $CB40;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow13Col5";
-  ADDR  $cf00;
+  ADDR  $CF00;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow13Col6";
-  ADDR  $d2c0;
+  ADDR  $D2C0;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow13Col7";
-  ADDR  $d680;
+  ADDR  $D680;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow13Col8";
-  ADDR  $da40;
+  ADDR  $DA40;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow13Col9";
-  ADDR  $de00;
+  ADDR  $DE00;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow13Col10";
-  ADDR  $e1c0;
+  ADDR  $E1C0;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow13Col11";
-  ADDR  $e580;
+  ADDR  $E580;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow13Col12";
-  ADDR  $e940;
+  ADDR  $E940;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow13Col13";
-  ADDR  $ed00;
+  ADDR  $ED00;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow13Col14";
-  ADDR  $f0c0;
+  ADDR  $F0C0;
 };
 LABEL {
   NAME "OverworldTilemapSectionRow13Col15";
-  ADDR  $f480;
+  ADDR  $F480;
 };
