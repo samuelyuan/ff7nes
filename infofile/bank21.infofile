@@ -368,14 +368,14 @@ RANGE {
   TYPE BYTETABLE;
 };
 RANGE {
-  START $fba9;
-  END $fbb0;
-  TYPE BYTETABLE;
+  START $FBA9;
+  END $FBAC;
+  TYPE ADDRTABLE;
 };
 RANGE {
-  START $fbb1;
-  END $fbcc;
-  TYPE ADDRTABLE;
+  START $FBAD;
+  END $FBCC;
+  TYPE BYTETABLE;
 };
 RANGE {
   START $fbcd;
@@ -616,6 +616,14 @@ LABEL {
   ADDR  $F641;
 };
 LABEL {
-  NAME "Bank21MapImage03";
+  NAME "Bank2cMapImage00Tileset";
   ADDR  $FBA9;
+};
+LABEL {
+  NAME "Bank2cMapImage00SubImage00Tileset";
+  ADDR  $FBAD;
+};
+LABEL {
+  NAME "Bank2cMapImage00SubImage01Tileset";
+  ADDR  $FCCD;
 };

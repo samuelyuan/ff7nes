@@ -29,6 +29,76 @@ RANGE {
 };
 RANGE {
   START $802e;
+  END $8035;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8036;
+  END $8037;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8038;
+  END $803f;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8040;
+  END $8041;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8042;
+  END $8049;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $804a;
+  END $804b;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $804c;
+  END $8053;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8054;
+  END $8055;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8056;
+  END $805d;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $805e;
+  END $805f;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8060;
+  END $8067;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8068;
+  END $8069;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $806a;
+  END $8071;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8072;
+  END $8073;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8074;
   END $9374;
   TYPE BYTETABLE;
 };
@@ -44,6 +114,116 @@ RANGE {
 };
 RANGE {
   START $93a3;
+  END $93aa;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $93ab;
+  END $93ac;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $93ad;
+  END $93b4;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $93b5;
+  END $93b6;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $93b7;
+  END $93be;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $93bf;
+  END $93c0;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $93c1;
+  END $93c8;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $93c9;
+  END $93ca;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $93cb;
+  END $93d2;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $93d3;
+  END $93d4;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $93d5;
+  END $93dc;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $93dd;
+  END $93de;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $93df;
+  END $93e6;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $93e7;
+  END $93e8;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $93e9;
+  END $93f0;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $93f1;
+  END $93f2;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $93f3;
+  END $93fa;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $93fb;
+  END $93fc;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $93fd;
+  END $9404;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $9405;
+  END $9406;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $9407;
+  END $940e;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $940f;
+  END $9410;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $9411;
   END $b561;
   TYPE BYTETABLE;
 };
@@ -74,6 +254,337 @@ RANGE {
 };
 RANGE {
   START $bfe4;
+  END $bfeb;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $bfec;
+  END $bfed;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $bfee;
+  END $bff5;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $bff6;
+  END $bff7;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $bff8;
+  END $bfff;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c000;
+  END $c001;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $c002;
+  END $c009;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c00a;
+  END $c00b;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $c00c;
+  END $c013;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c014;
+  END $c015;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $c016;
+  END $c01d;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c01e;
+  END $c01f;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $c020;
+  END $c027;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c028;
+  END $c029;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $c02a;
+  END $c031;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c032;
+  END $c033;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $c034;
+  END $c03b;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c03c;
+  END $c03d;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $c03e;
+  END $c045;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c046;
+  END $c047;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $c048;
+  END $c04f;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c050;
+  END $c051;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $c052;
+  END $c059;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c05a;
+  END $c05b;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $c05c;
+  END $c063;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c064;
+  END $c065;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $c066;
+  END $c06d;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c06e;
+  END $c06f;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $c070;
+  END $c077;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $c078;
+  END $c079;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $c07a;
   END $fffe;
   TYPE BYTETABLE;
 };
+
+LABEL {
+  NAME "Bank2cMapImage00";
+  ADDR  $8012;
+};
+LABEL {
+  NAME "Bank2cMapImage00Collision";
+  ADDR  $9285;
+};
+LABEL {
+  NAME "Bank2cMapImage00SubImage00Tilemap";
+  ADDR  $8075;
+};
+LABEL {
+  NAME "Bank2cMapImage00SubImage01Tilemap";
+  ADDR  $8435;
+};
+LABEL {
+  NAME "Bank2cMapImage00SubImage00TileAttr";
+  ADDR  $87F5;
+};
+LABEL {
+  NAME "Bank2cMapImage00SubImage01TileAttr";
+  ADDR  $8835;
+};
+LABEL {
+  NAME "Bank2cMapImage00SubImage00Palette";
+  ADDR  $8FB5;
+};
+LABEL {
+  NAME "Bank2cMapImage00SubImage01Palette";
+  ADDR  $8FC5;
+};
+LABEL {
+  NAME "Bank2cMapImage01";
+  ADDR  $9375;
+};
+LABEL {
+  NAME "Bank2cMapImage01Collision";
+  ADDR  $B30A;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage00Tilemap";
+  ADDR  $9412;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage02Tilemap";
+  ADDR  $97D2;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage02Tilemap";
+  ADDR  $9B92;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage03Tilemap";
+  ADDR  $9F52;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage04Tilemap";
+  ADDR  $A312;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage00TileAttr";
+  ADDR  $A6D2;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage02TileAttr";
+  ADDR  $A712;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage02TileAttr";
+  ADDR  $A752;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage03TileAttr";
+  ADDR  $A792;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage04TileAttr";
+  ADDR  $A7D2;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage00Palette";
+  ADDR  $B042;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage02Palette";
+  ADDR  $B052;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage02Palette";
+  ADDR  $B062;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage03Palette";
+  ADDR  $B072;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage04Palette";
+  ADDR  $B082;
+};
+LABEL {
+  NAME "Bank2cMapImage01Tileset";
+  ADDR  $B562;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage00Tileset";
+  ADDR  $B56C;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage01Tileset";
+  ADDR  $B83C;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage02Tileset";
+  ADDR  $BA0C;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage03Tileset";
+  ADDR  $BBDC;
+};
+LABEL {
+  NAME "Bank2cMapImage01SubImage04Tileset";
+  ADDR  $BD6C;
+};
+LABEL {
+  NAME "Bank2cMapImage02";
+  ADDR  $BFBC;
+};
+LABEL {
+  NAME "Bank2cMapImage02Collision";
+  ADDR  $D88B;
+};
+LABEL {
+  NAME "Bank2cMapImage02SubImage00Tilemap";
+  ADDR  $DA80;
+};
+LABEL {
+  NAME "Bank2cMapImage02SubImage02Tilemap";
+  ADDR  $C3EB;
+};
+LABEL {
+  NAME "Bank2cMapImage02SubImage02Tilemap";
+  ADDR  $C7AB;
+};
+LABEL {
+  NAME "Bank2cMapImage02SubImage03Tilemap";
+  ADDR  $CB6B;
+};
+LABEL {
+  NAME "Bank2cMapImage02SubImage00TileAttr";
+  ADDR  $CF2B;
+};
+LABEL {
+  NAME "Bank2cMapImage02SubImage02TileAttr";
+  ADDR  $CF6B;
+};
+LABEL {
+  NAME "Bank2cMapImage02SubImage02TileAttr";
+  ADDR  $CFAB;
+};
+LABEL {
+  NAME "Bank2cMapImage02SubImage03TileAttr";
+  ADDR  $CFEB;
+};
+LABEL {
+  NAME "Bank2cMapImage02SubImage00Palette";
+  ADDR  $D64B;
+};
+LABEL {
+  NAME "Bank2cMapImage02SubImage02Palette";
+  ADDR  $D65B;
+};
+LABEL {
+  NAME "Bank2cMapImage02SubImage02Palette";
+  ADDR  $D66B;
+};
+LABEL {
+  NAME "Bank2cMapImage02SubImage03Palette";
+  ADDR  $D67B;
+};  
