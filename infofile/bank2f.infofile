@@ -47,3 +47,32 @@ RANGE {
   END $fffe;
   TYPE BYTETABLE;
 };
+
+LABEL {
+  NAME "Bank2fMapImage00";
+  ADDR  $8012;
+};
+LABEL {
+  NAME "Bank2fMapImage00Collision";
+  ADDR  $8959;
+};
+LABEL {
+  NAME "Bank2fMapImage00SubImage00Tilemap";
+  ADDR  $8049;
+};
+LABEL {
+  NAME "Bank2fMapImage00SubImage00TileAttr";
+  ADDR  $8409;
+};
+LABEL {
+  NAME "Bank2fMapImage00SpritePalette";
+  ADDR  $8829;
+};
+LABEL {
+  NAME "Bank2fMapImage00BackgroundPalette";
+  ADDR  $8819;
+};
+LABEL {
+  NAME "Bank2fMapImage00Tileset";
+  ADDR  $8449;
+};

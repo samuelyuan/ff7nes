@@ -19,8 +19,8 @@ Bank11MapImage00:
         .addr   Bank11MapImage00SubImage01Tilemap; 8022 49 84                   I.
         .addr   Bank11MapImage00SubImage00TileAttr; 8024 09 88                  ..
         .addr   Bank11MapImage00SubImage01TileAttr; 8026 49 88                  I.
-        .addr   L9399                           ; 8028 99 93                    ..
-        .addr   Bank11MapImage00Palette         ; 802A 89 93                    ..
+        .addr   Bank11MapImage00SpritePalette   ; 8028 99 93                    ..
+        .addr   Bank11MapImage00BackgroundPalette; 802A 89 93                   ..
         .addr   Bank11MapImage00Tileset         ; 802C 89 88                    ..
 ; ----------------------------------------------------------------------------
 L802E:
@@ -675,10 +675,10 @@ L8C69:
         .byte   $1F,$1F,$1F,$1F,$0F,$07,$03,$02 ; 9371 1F 1F 1F 1F 0F 07 03 02  ........
         .byte   $70,$70,$70,$20,$20,$20,$C0,$40 ; 9379 70 70 70 20 20 20 C0 40  ppp   .@
         .byte   $F0,$D0,$D0,$E0,$E0,$E0,$C0,$40 ; 9381 F0 D0 D0 E0 E0 E0 C0 40  .......@
-Bank11MapImage00Palette:
+Bank11MapImage00BackgroundPalette:
         .byte   $0F,$10,$00,$1C,$0F,$10,$0C,$1C ; 9389 0F 10 00 1C 0F 10 0C 1C  ........
         .byte   $0F,$10,$00,$27,$0F,$30,$00,$28 ; 9391 0F 10 00 27 0F 30 00 28  ...'.0.(
-L9399:
+Bank11MapImage00SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; 9399 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$16,$0F,$0F,$36,$17,$0F ; 93A1 0F 36 16 0F 0F 36 17 0F  .6...6..
 L93A9:
@@ -804,8 +804,8 @@ Bank11MapImage01:
         .addr   Bank11MapImage01SubImage01Tilemap; 96F9 DA 9A                   ..
         .addr   Bank11MapImage01SubImage00TileAttr; 96FB 9A 9E                  ..
         .addr   Bank11MapImage01SubImage01TileAttr; 96FD DA 9E                  ..
-        .addr   LA50A                           ; 96FF 0A A5                    ..
-        .addr   Bank11MapImage01Palette         ; 9701 FA A4                    ..
+        .addr   Bank11MapImage01SpritePalette   ; 96FF 0A A5                    ..
+        .addr   Bank11MapImage01BackgroundPalette; 9701 FA A4                   ..
         .addr   Bank11MapImage01Tileset         ; 9703 1A 9F                    ..
 ; ----------------------------------------------------------------------------
 L9705:
@@ -1268,10 +1268,10 @@ LA31A:
         .byte   $37,$78,$78,$78,$3F,$0F,$0F,$3F ; A4E2 37 78 78 78 3F 0F 0F 3F  7xxx?..?
         .byte   $E8,$EC,$FC,$F8,$F0,$F0,$F0,$18 ; A4EA E8 EC FC F8 F0 F0 F0 18  ........
         .byte   $F8,$1C,$14,$18,$F0,$F0,$F0,$F8 ; A4F2 F8 1C 14 18 F0 F0 F0 F8  ........
-Bank11MapImage01Palette:
+Bank11MapImage01BackgroundPalette:
         .byte   $0F,$06,$27,$38,$0F,$37,$16,$07 ; A4FA 0F 06 27 38 0F 37 16 07  ..'8.7..
         .byte   $0F,$37,$27,$16,$0F,$30,$0F,$0F ; A502 0F 37 27 16 0F 30 0F 0F  .7'..0..
-LA50A:
+Bank11MapImage01SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; A50A 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$16,$0F,$0F,$36,$17,$0F ; A512 0F 36 16 0F 0F 36 17 0F  .6...6..
 LA51A:
@@ -1339,8 +1339,8 @@ Bank11MapImage02:
         .addr   LACED                           ; A6D6 ED AC                    ..
         .addr   Bank11MapImage02SubImage00Tilemap; A6D8 3D A7                   =.
         .addr   Bank11MapImage02SubImage00TileAttr; A6DA FD AA                  ..
-        .addr   LB73D                           ; A6DC 3D B7                    =.
-        .addr   Bank11MapImage02Palette         ; A6DE 2D B7                    -.
+        .addr   Bank11MapImage02SpritePalette   ; A6DC 3D B7                    =.
+        .addr   Bank11MapImage02BackgroundPalette; A6DE 2D B7                   -.
         .addr   Bank11MapImage02Tileset         ; A6E0 3D AB                    =.
 ; ----------------------------------------------------------------------------
 LA6E2:
@@ -1895,10 +1895,10 @@ LACED:
         .byte   $1F,$1F,$1F,$3F,$17,$0F,$04,$07 ; B715 1F 1F 1F 3F 17 0F 04 07  ...?....
         .byte   $F0,$F8,$F4,$D2,$6C,$F0,$A0,$E0 ; B71D F0 F8 F4 D2 6C F0 A0 E0  ....l...
         .byte   $F0,$E8,$FC,$FE,$EC,$F0,$E0,$E0 ; B725 F0 E8 FC FE EC F0 E0 E0  ........
-Bank11MapImage02Palette:
+Bank11MapImage02BackgroundPalette:
         .byte   $0F,$10,$12,$27,$0F,$10,$18,$00 ; B72D 0F 10 12 27 0F 10 18 00  ...'....
         .byte   $0F,$1B,$0B,$27,$0F,$20,$0B,$27 ; B735 0F 1B 0B 27 0F 20 0B 27  ...'. .'
-LB73D:
+Bank11MapImage02SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; B73D 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$16,$0F,$0F,$36,$17,$0F ; B745 0F 36 16 0F 0F 36 17 0F  .6...6..
 LB74D:
@@ -2028,8 +2028,8 @@ Bank11MapImage03:
         .addr   Bank11MapImage03SubImage01Tilemap; BAB5 D2 BE                   ..
         .addr   Bank11MapImage03SubImage00TileAttr; BAB7 92 C2                  ..
         .addr   Bank11MapImage03SubImage01TileAttr; BAB9 D2 C2                  ..
-        .addr   LCF32                           ; BABB 32 CF                    2.
-        .addr   Bank11MapImage03Palette         ; BABD 22 CF                    ".
+        .addr   Bank11MapImage03SpritePalette   ; BABB 32 CF                    2.
+        .addr   Bank11MapImage03BackgroundPalette; BABD 22 CF                   ".
         .addr   Bank11MapImage03Tileset         ; BABF 12 C3                    ..
 ; ----------------------------------------------------------------------------
 LBAC1:
@@ -2714,10 +2714,10 @@ LC7A2:
         .byte   $0E,$1E,$26,$26,$1F,$05,$03,$01 ; CF0A 0E 1E 26 26 1F 05 03 01  ..&&....
         .byte   $D0,$C8,$EC,$BC,$E8,$E0,$E0,$E0 ; CF12 D0 C8 EC BC E8 E0 E0 E0  ........
         .byte   $70,$78,$74,$F4,$E8,$E0,$20,$60 ; CF1A 70 78 74 F4 E8 E0 20 60  pxt... `
-Bank11MapImage03Palette:
+Bank11MapImage03BackgroundPalette:
         .byte   $0F,$37,$00,$10,$0F,$36,$08,$18 ; CF22 0F 37 00 10 0F 36 08 18  .7...6..
         .byte   $0F,$26,$36,$10,$0F,$30,$26,$10 ; CF2A 0F 26 36 10 0F 30 26 10  .&6..0&.
-LCF32:
+Bank11MapImage03SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; CF32 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$16,$0F,$0F,$36,$17,$0F ; CF3A 0F 36 16 0F 0F 36 17 0F  .6...6..
 LCF42:

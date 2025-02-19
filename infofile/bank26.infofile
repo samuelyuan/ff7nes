@@ -255,7 +255,11 @@ LABEL {
   ADDR  $841D;
 };
 LABEL {
-  NAME "Bank26MapImage00Palette";
+  NAME "Bank26MapImage00SpritePalette";
+  ADDR  $8ADD;
+};
+LABEL {
+  NAME "Bank26MapImage00BackgroundPalette";
   ADDR  $8ACD;
 };
 LABEL {
@@ -279,7 +283,11 @@ LABEL {
   ADDR  $913C;
 };
 LABEL {
-  NAME "Bank26MapImage01Palette";
+  NAME "Bank26MapImage01SpritePalette";
+  ADDR  $96BC;
+};
+LABEL {
+  NAME "Bank26MapImage01BackgroundPalette";
   ADDR  $96AC;
 };
 LABEL {
@@ -303,7 +311,11 @@ LABEL {
   ADDR  $9C6F;
 };
 LABEL {
-  NAME "Bank26MapImage02Palette";
+  NAME "Bank26MapImage02SpritePalette";
+  ADDR  $A39F;
+};
+LABEL {
+  NAME "Bank26MapImage02BackgroundPalette";
   ADDR  $A38F;
 };
 LABEL {
@@ -327,7 +339,11 @@ LABEL {
   ADDR  $A9F4;
 };
 LABEL {
-  NAME "Bank26MapImage03Palette";
+  NAME "Bank26MapImage03SpritePalette";
+  ADDR  $B064;
+};
+LABEL {
+  NAME "Bank26MapImage03BackgroundPalette";
   ADDR  $B054;
 };
 LABEL {

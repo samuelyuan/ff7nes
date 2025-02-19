@@ -27,13 +27,13 @@ Bank29MapImage00:
         .addr   Bank29MapImage00SubImage03TileAttr; 8032 F5 97                  ..
         .addr   Bank29MapImage00SubImage04TileAttr; 8034 35 98                  5.
         .addr   Bank29MapImage00SubImage05TileAttr; 8036 75 98                  u.
-        .addr   LA0E5                           ; 8038 E5 A0                    ..
-        .addr   Bank29MapImage00SubImage00Palette; 803A 85 A0                   ..
-        .addr   Bank29MapImage00SubImage01Palette; 803C 95 A0                   ..
-        .addr   Bank29MapImage00SubImage02Palette; 803E A5 A0                   ..
-        .addr   Bank29MapImage00SubImage03Palette; 8040 B5 A0                   ..
-        .addr   Bank29MapImage00SubImage04Palette; 8042 C5 A0                   ..
-        .addr   Bank29MapImage00SubImage05Palette; 8044 D5 A0                   ..
+        .addr   Bank29MapImage00SpritePalette   ; 8038 E5 A0                    ..
+        .addr   Bank29MapImage00SubImage00BackgroundPalette; 803A 85 A0         ..
+        .addr   Bank29MapImage00SubImage01BackgroundPalette; 803C 95 A0         ..
+        .addr   Bank29MapImage00SubImage02BackgroundPalette; 803E A5 A0         ..
+        .addr   Bank29MapImage00SubImage03BackgroundPalette; 8040 B5 A0         ..
+        .addr   Bank29MapImage00SubImage04BackgroundPalette; 8042 C5 A0         ..
+        .addr   Bank29MapImage00SubImage05BackgroundPalette; 8044 D5 A0         ..
 ; ----------------------------------------------------------------------------
 L8046:
         .byte   $00,$03,$00,$00,$80,$00,$80,$00 ; 8046 00 03 00 00 80 00 80 00  ........
@@ -1112,25 +1112,25 @@ L98B5:
         .byte   $0F,$13,$3A,$1D,$04,$08,$0B,$07 ; A06D 0F 13 3A 1D 04 08 0B 07  ..:.....
         .byte   $30,$F8,$B4,$72,$EC,$F0,$F0,$E0 ; A075 30 F8 B4 72 EC F0 F0 E0  0..r....
         .byte   $F0,$C8,$5C,$BE,$2C,$10,$10,$E0 ; A07D F0 C8 5C BE 2C 10 10 E0  ..\.,...
-Bank29MapImage00SubImage00Palette:
+Bank29MapImage00SubImage00BackgroundPalette:
         .byte   $0F,$37,$18,$16,$0F,$37,$18,$1B ; A085 0F 37 18 16 0F 37 18 1B  .7...7..
         .byte   $0F,$0F,$0F,$0F,$0F,$30,$10,$03 ; A08D 0F 0F 0F 0F 0F 30 10 03  .....0..
-Bank29MapImage00SubImage01Palette:
+Bank29MapImage00SubImage01BackgroundPalette:
         .byte   $0F,$18,$10,$37,$0F,$17,$10,$37 ; A095 0F 18 10 37 0F 17 10 37  ...7...7
         .byte   $0F,$17,$22,$37,$0F,$30,$0F,$0F ; A09D 0F 17 22 37 0F 30 0F 0F  .."7.0..
-Bank29MapImage00SubImage02Palette:
+Bank29MapImage00SubImage02BackgroundPalette:
         .byte   $0F,$18,$10,$37,$0F,$17,$10,$37 ; A0A5 0F 18 10 37 0F 17 10 37  ...7...7
         .byte   $0F,$17,$22,$37,$0F,$30,$0F,$0F ; A0AD 0F 17 22 37 0F 30 0F 0F  .."7.0..
-Bank29MapImage00SubImage03Palette:
+Bank29MapImage00SubImage03BackgroundPalette:
         .byte   $0F,$17,$10,$37,$0F,$17,$18,$30 ; A0B5 0F 17 10 37 0F 17 18 30  ...7...0
         .byte   $0F,$18,$10,$37,$0F,$30,$27,$08 ; A0BD 0F 18 10 37 0F 30 27 08  ...7.0'.
-Bank29MapImage00SubImage04Palette:
+Bank29MapImage00SubImage04BackgroundPalette:
         .byte   $0F,$17,$37,$08,$0F,$11,$10,$08 ; A0C5 0F 17 37 08 0F 11 10 08  ..7.....
         .byte   $0F,$28,$10,$08,$0F,$30,$27,$08 ; A0CD 0F 28 10 08 0F 30 27 08  .(...0'.
-Bank29MapImage00SubImage05Palette:
+Bank29MapImage00SubImage05BackgroundPalette:
         .byte   $0F,$17,$10,$11,$0F,$30,$27,$18 ; A0D5 0F 17 10 11 0F 30 27 18  .....0'.
         .byte   $0F,$10,$17,$11,$0F,$30,$36,$17 ; A0DD 0F 10 17 11 0F 30 36 17  .....06.
-LA0E5:
+Bank29MapImage00SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; A0E5 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$16,$0F,$0F,$36,$17,$0F ; A0ED 0F 36 16 0F 0F 36 17 0F  .6...6..
 LA0F5:
@@ -1791,9 +1791,9 @@ Bank29MapImage01:
         .addr   Bank29MapImage01SubImage01Tilemap; B499 AC B8                   ..
         .addr   Bank29MapImage01SubImage00TileAttr; B49B 6C BC                  l.
         .addr   Bank29MapImage01SubImage01TileAttr; B49D AC BC                  ..
-        .addr   LC44C                           ; B49F 4C C4                    L.
-        .addr   Bank29MapImage01SubImage00Palette; B4A1 2C C4                   ,.
-        .addr   Bank29MapImage01SubImage01Palette; B4A3 3C C4                   <.
+        .addr   Bank29MapImage01SpritePalette   ; B49F 4C C4                    L.
+        .addr   Bank29MapImage01SubImage00BackgroundPalette; B4A1 2C C4         ,.
+        .addr   Bank29MapImage01SubImage01BackgroundPalette; B4A3 3C C4         <.
 ; ----------------------------------------------------------------------------
 LB4A5:
         .byte   $00,$03,$00,$00,$80,$00,$80,$00 ; B4A5 00 03 00 00 80 00 80 00  ........
@@ -2318,13 +2318,13 @@ LBCEC:
         .byte   $1F,$1F,$0F,$07,$07,$0F,$13,$09 ; C414 1F 1F 0F 07 07 0F 13 09  ........
         .byte   $D0,$D0,$20,$70,$F0,$F0,$78,$F0 ; C41C D0 D0 20 70 F0 F0 78 F0  .. p..x.
         .byte   $F0,$F0,$E0,$90,$90,$F0,$C8,$90 ; C424 F0 F0 E0 90 90 F0 C8 90  ........
-Bank29MapImage01SubImage00Palette:
+Bank29MapImage01SubImage00BackgroundPalette:
         .byte   $0F,$37,$18,$16,$0F,$37,$00,$16 ; C42C 0F 37 18 16 0F 37 00 16  .7...7..
         .byte   $0F,$37,$18,$22,$0F,$30,$17,$22 ; C434 0F 37 18 22 0F 30 17 22  .7.".0."
-Bank29MapImage01SubImage01Palette:
+Bank29MapImage01SubImage01BackgroundPalette:
         .byte   $0F,$22,$17,$30,$0F,$37,$17,$10 ; C43C 0F 22 17 30 0F 37 17 10  .".0.7..
         .byte   $0F,$10,$17,$00,$0F,$30,$10,$00 ; C444 0F 10 17 00 0F 30 10 00  .....0..
-LC44C:
+Bank29MapImage01SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; C44C 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$16,$0F,$0F,$36,$17,$0F ; C454 0F 36 16 0F 0F 36 17 0F  .6...6..
 LC45C:

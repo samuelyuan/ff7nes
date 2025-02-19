@@ -1,11 +1,14 @@
         .setcpu "6502"
 
 ; ----------------------------------------------------------------------------
+L4040           := $4040
+L55AA           := $55AA
+L7F00           := $7F00
 ; ----------------------------------------------------------------------------
         .addr   Bank21MapImage00                ; 8000 12 80                    ..
         .addr   Bank21MapImage01                ; 8002 2F CF                    /.
         .addr   Bank21MapImage02                ; 8004 0A F2                    ..
-        .addr   Bank2cMapImage00Tileset         ; 8006 A9 FB                    ..
+        .addr   Bank21MapImage03                ; 8006 A9 FB                    ..
 ; ----------------------------------------------------------------------------
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8008 00 00 00 00 00 00 00 00  ........
         .byte   $40,$40                         ; 8010 40 40                    @@
@@ -47,8 +50,8 @@ Bank21MapImage00:
         .addr   Bank21MapImage00SubImage13TileAttr; 805A CF BF                  ..
         .addr   Bank21MapImage00SubImage14TileAttr; 805C 0F C0                  ..
         .addr   Bank21MapImage00SubImage15TileAttr; 805E 4F C0                  O.
-        .addr   LC61F                           ; 8060 1F C6                    ..
-        .addr   Bank21MapImage00Palette         ; 8062 0F C6                    ..
+        .addr   Bank21MapImage00SpritePalette   ; 8060 1F C6                    ..
+        .addr   Bank21MapImage00BackgroundPalette; 8062 0F C6                   ..
         .addr   Bank21MapImage00Tileset         ; 8064 8F C0                    ..
 ; ----------------------------------------------------------------------------
 L8066:
@@ -2326,10 +2329,10 @@ Bank21MapImage00Tileset:
         .byte   $C4,$BA,$64,$50,$54,$70,$A4,$DA ; C5F7 C4 BA 64 50 54 70 A4 DA  ..dPTp..
         .byte   $F4,$FA,$F4,$FA,$F4,$FA,$F4,$FA ; C5FF F4 FA F4 FA F4 FA F4 FA  ........
         .byte   $B0,$72,$64,$5A,$50,$4A,$B4,$CA ; C607 B0 72 64 5A 50 4A B4 CA  .rdZPJ..
-Bank21MapImage00Palette:
+Bank21MapImage00BackgroundPalette:
         .byte   $0F,$17,$27,$28,$0F,$17,$27,$1B ; C60F 0F 17 27 28 0F 17 27 1B  ..'(..'.
         .byte   $0F,$17,$27,$10,$0F,$30,$38,$28 ; C617 0F 17 27 10 0F 30 38 28  ..'..08(
-LC61F:
+Bank21MapImage00SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; C61F 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$16,$0F,$0F,$36,$17,$0F ; C627 0F 36 16 0F 0F 36 17 0F  .6...6..
 LC62F:
@@ -2643,8 +2646,8 @@ Bank21MapImage01:
         .addr   Bank21MapImage01SubImage03TileAttr; CF4F BA E6                  ..
         .addr   Bank21MapImage01SubImage04TileAttr; CF51 FA E6                  ..
         .addr   Bank21MapImage01SubImage05TileAttr; CF53 3A E7                  :.
-        .addr   LEE0A                           ; CF55 0A EE                    ..
-        .addr   Bank21MapImage01Palette         ; CF57 FA ED                    ..
+        .addr   Bank21MapImage01SpritePalette   ; CF55 0A EE                    ..
+        .addr   Bank21MapImage01BackgroundPalette; CF57 FA ED                   ..
         .addr   Bank21MapImage01Tileset         ; CF59 7A E7                    z.
 ; ----------------------------------------------------------------------------
 LCF5B:
@@ -3651,10 +3654,10 @@ LEB3A:
         .byte   $F7,$7F,$3F,$1F,$3F,$3F,$1F,$1E ; EDE2 F7 7F 3F 1F 3F 3F 1F 1E  ..?.??..
         .byte   $C0,$38,$84,$4A,$A4,$9A,$CC,$F8 ; EDEA C0 38 84 4A A4 9A CC F8  .8.J....
         .byte   $C0,$F8,$FC,$FE,$FC,$FE,$FC,$78 ; EDF2 C0 F8 FC FE FC FE FC 78  .......x
-Bank21MapImage01Palette:
+Bank21MapImage01BackgroundPalette:
         .byte   $0F,$00,$10,$30,$0F,$00,$10,$1B ; EDFA 0F 00 10 30 0F 00 10 1B  ...0....
         .byte   $0F,$00,$10,$26,$0F,$30,$17,$27 ; EE02 0F 00 10 26 0F 30 17 27  ...&.0.'
-LEE0A:
+Bank21MapImage01SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; EE0A 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$16,$0F,$0F,$36,$17,$0F ; EE12 0F 36 16 0F 0F 36 17 0F  .6...6..
 LEE1A:
@@ -3795,8 +3798,8 @@ Bank21MapImage02:
         .addr   LF651                           ; F216 51 F6                    Q.
         .addr   Bank21MapImage02SubImage00Tilemap; F218 41 F2                   A.
         .addr   Bank21MapImage02SubImage00TileAttr; F21A 01 F6                  ..
-        .addr   LFA01                           ; F21C 01 FA                    ..
-        .addr   Bank21MapImage02Palette         ; F21E F1 F9                    ..
+        .addr   Bank21MapImage02SpritePalette   ; F21C 01 FA                    ..
+        .addr   Bank21MapImage02BackgroundPalette; F21E F1 F9                   ..
         .addr   Bank21MapImage02Tileset         ; F220 41 F6                    A.
 ; ----------------------------------------------------------------------------
 LF222:
@@ -4064,10 +4067,10 @@ LF671:
         .byte   $0A,$0C,$1E,$3E,$4C,$48,$3D,$07 ; F9D9 0A 0C 1E 3E 4C 48 3D 07  ...>LH=.
         .byte   $F0,$D0,$A8,$C8,$E8,$F8,$F8,$F8 ; F9E1 F0 D0 A8 C8 E8 F8 F8 F8  ........
         .byte   $50,$30,$78,$78,$18,$38,$98,$A8 ; F9E9 50 30 78 78 18 38 98 A8  P0xx.8..
-Bank21MapImage02Palette:
+Bank21MapImage02BackgroundPalette:
         .byte   $0F,$18,$28,$06,$0F,$26,$16,$06 ; F9F1 0F 18 28 06 0F 26 16 06  ..(..&..
         .byte   $0F,$11,$0F,$0F,$0F,$30,$0F,$0F ; F9F9 0F 11 0F 0F 0F 30 0F 0F  .....0..
-LFA01:
+Bank21MapImage02SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; FA01 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$16,$0F,$0F,$36,$17,$0F ; FA09 0F 36 16 0F 0F 36 17 0F  .6...6..
 LFA11:
@@ -4125,16 +4128,24 @@ Bank21MapImage02Collision:
         .byte   $11,$11,$11,$11,$11,$11,$11,$11 ; FB91 11 11 11 11 11 11 11 11  ........
         .byte   $11,$11,$11,$11,$11,$11,$11,$11 ; FB99 11 11 11 11 11 11 11 11  ........
         .byte   $11,$11,$11,$11,$11,$11,$11,$11 ; FBA1 11 11 11 11 11 11 11 11  ........
+Bank21MapImage03:
+        .byte   $AD,$FB,$CD,$FC,$00,$7F,$40,$40 ; FBA9 AD FB CD FC 00 7F 40 40  ......@@
 ; ----------------------------------------------------------------------------
-Bank2cMapImage00Tileset:
-        .addr   Bank2cMapImage00SubImage00Tileset; FBA9 AD FB                   ..
-        .addr   Bank2cMapImage00SubImage01Tileset; FBAB CD FC                   ..
+        .addr   L4040                           ; FBB1 40 40                    @@
+        .addr   L4040                           ; FBB3 40 40                    @@
+        .addr   L7F00                           ; FBB5 00 7F                    ..
+        .addr   L4040                           ; FBB7 40 40                    @@
+        .addr   L4040                           ; FBB9 40 40                    @@
+        .addr   L4040                           ; FBBB 40 40                    @@
+        .addr   L55AA                           ; FBBD AA 55                    .U
+        .addr   L55AA                           ; FBBF AA 55                    .U
+        .addr   L55AA                           ; FBC1 AA 55                    .U
+        .addr   L55AA                           ; FBC3 AA 55                    .U
+        .addr   L55AA                           ; FBC5 AA 55                    .U
+        .addr   L55AA                           ; FBC7 AA 55                    .U
+        .addr   L55AA                           ; FBC9 AA 55                    .U
+        .addr   L55AA                           ; FBCB AA 55                    .U
 ; ----------------------------------------------------------------------------
-Bank2cMapImage00SubImage00Tileset:
-        .byte   $00,$7F,$40,$40,$40,$40,$40,$40 ; FBAD 00 7F 40 40 40 40 40 40  ..@@@@@@
-        .byte   $00,$7F,$40,$40,$40,$40,$40,$40 ; FBB5 00 7F 40 40 40 40 40 40  ..@@@@@@
-        .byte   $AA,$55,$AA,$55,$AA,$55,$AA,$55 ; FBBD AA 55 AA 55 AA 55 AA 55  .U.U.U.U
-        .byte   $AA,$55,$AA,$55,$AA,$55,$AA,$55 ; FBC5 AA 55 AA 55 AA 55 AA 55  .U.U.U.U
         .byte   $00,$94,$00,$A9,$00,$55,$00,$CA ; FBCD 00 94 00 A9 00 55 00 CA  .....U..
         .byte   $00,$FF,$00,$FF,$00,$FF,$00,$FF ; FBD5 00 FF 00 FF 00 FF 00 FF  ........
         .byte   $00,$7F,$5F,$4F,$7F,$7F,$7F,$7F ; FBDD 00 7F 5F 4F 7F 7F 7F 7F  .._O....
@@ -4167,7 +4178,6 @@ Bank2cMapImage00SubImage00Tileset:
         .byte   $40,$40,$40,$40,$00,$5F,$5F,$5F ; FCB5 40 40 40 40 00 5F 5F 5F  @@@@.___
         .byte   $02,$02,$02,$02,$00,$FA,$FA,$02 ; FCBD 02 02 02 02 00 FA FA 02  ........
         .byte   $02,$02,$02,$02,$00,$FA,$FA,$FA ; FCC5 02 02 02 02 00 FA FA FA  ........
-Bank2cMapImage00SubImage01Tileset:
         .byte   $AA,$55,$AA,$55,$AA,$55,$AA,$55 ; FCCD AA 55 AA 55 AA 55 AA 55  .U.U.U.U
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FCD5 00 00 00 00 00 00 00 00  ........
         .byte   $05,$30,$60,$08,$07,$88,$C4,$00 ; FCDD 05 30 60 08 07 88 C4 00  .0`.....

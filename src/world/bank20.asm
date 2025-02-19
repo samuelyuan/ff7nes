@@ -23,8 +23,8 @@ Bank20MapImage00:
         .addr   Bank20MapImage00SubImage01TileAttr; 802A A9 8F                  ..
         .addr   Bank20MapImage00SubImage02TileAttr; 802C E9 8F                  ..
         .addr   Bank20MapImage00SubImage03TileAttr; 802E 29 90                  ).
-        .addr   L9BA9                           ; 8030 A9 9B                    ..
-        .addr   Bank20MapImage00Palette         ; 8032 99 9B                    ..
+        .addr   Bank20MapImage00SpritePalette   ; 8030 A9 9B                    ..
+        .addr   Bank20MapImage00BackgroundPalette; 8032 99 9B                   ..
         .addr   Bank20MapImage00Tileset         ; 8034 69 90                    i.
 ; ----------------------------------------------------------------------------
 L8036:
@@ -929,10 +929,10 @@ L9709:
         .byte   $00,$F7,$7F,$3F,$1F,$3C,$38,$1E ; 9B81 00 F7 7F 3F 1F 3C 38 1E  ...?.<8.
         .byte   $00,$C0,$F0,$FC,$FE,$FC,$FE,$FC ; 9B89 00 C0 F0 FC FE FC FE FC  ........
         .byte   $00,$C0,$F0,$FC,$FE,$FC,$1E,$FC ; 9B91 00 C0 F0 FC FE FC 1E FC  ........
-Bank20MapImage00Palette:
+Bank20MapImage00BackgroundPalette:
         .byte   $0F,$27,$10,$12,$0F,$27,$17,$07 ; 9B99 0F 27 10 12 0F 27 17 07  .'...'..
         .byte   $0F,$17,$10,$00,$0F,$30,$17,$12 ; 9BA1 0F 17 10 00 0F 30 17 12  .....0..
-L9BA9:
+Bank20MapImage00SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; 9BA9 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$16,$0F,$0F,$36,$17,$0F ; 9BB1 0F 36 16 0F 0F 36 17 0F  .6...6..
 L9BB9:
@@ -1073,8 +1073,8 @@ Bank20MapImage01:
         .addr   Bank20MapImage01SubImage00TileAttr; 9F8D 34 AB                  4.
         .addr   Bank20MapImage01SubImage01TileAttr; 9F8F 74 AB                  t.
         .addr   Bank20MapImage01SubImage02TileAttr; 9F91 B4 AB                  ..
-        .addr   LBC54                           ; 9F93 54 BC                    T.
-        .addr   Bank20MapImage01Palette         ; 9F95 44 BC                    D.
+        .addr   Bank20MapImage01SpritePalette   ; 9F93 54 BC                    T.
+        .addr   Bank20MapImage01BackgroundPalette; 9F95 44 BC                   D.
         .addr   Bank20MapImage01Tileset         ; 9F97 F4 AB                    ..
 ; ----------------------------------------------------------------------------
 L9F99:
@@ -2028,10 +2028,10 @@ Bank20MapImage01Tileset:
         .byte   $05,$05,$EB,$5D,$FD,$B5,$42,$00 ; BC2C 05 05 EB 5D FD B5 42 00  ...]..B.
         .byte   $E0,$E0,$77,$EA,$F5,$EF,$42,$00 ; BC34 E0 E0 77 EA F5 EF 42 00  ..w...B.
         .byte   $A0,$A0,$D7,$BA,$BF,$AD,$42,$00 ; BC3C A0 A0 D7 BA BF AD 42 00  ......B.
-Bank20MapImage01Palette:
+Bank20MapImage01BackgroundPalette:
         .byte   $0F,$19,$17,$30,$0F,$18,$37,$22 ; BC44 0F 19 17 30 0F 18 37 22  ...0..7"
         .byte   $0F,$00,$19,$17,$0F,$30,$1C,$0C ; BC4C 0F 00 19 17 0F 30 1C 0C  .....0..
-LBC54:
+Bank20MapImage01SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; BC54 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$30,$0F,$0F,$36,$17,$0F ; BC5C 0F 36 30 0F 0F 36 17 0F  .60..6..
         .byte   $1D,$00,$1E,$00,$23,$01,$24,$01 ; BC64 1D 00 1E 00 23 01 24 01  ....#.$.
@@ -2178,8 +2178,8 @@ Bank20MapImage02:
         .addr   Bank20MapImage02SubImage01TileAttr; C084 03 D0                  ..
         .addr   Bank20MapImage02SubImage02TileAttr; C086 43 D0                  C.
         .addr   Bank20MapImage02SubImage03TileAttr; C088 83 D0                  ..
-        .addr   LDE83                           ; C08A 83 DE                    ..
-        .addr   Bank20MapImage02Palette         ; C08C 73 DE                    s.
+        .addr   Bank20MapImage02SpritePalette   ; C08A 83 DE                    ..
+        .addr   Bank20MapImage02BackgroundPalette; C08C 73 DE                   s.
         .addr   Bank20MapImage02Tileset         ; C08E C3 D0                    ..
 ; ----------------------------------------------------------------------------
 LC090:
@@ -3164,10 +3164,10 @@ LD9D3:
         .byte   $1A,$10,$3D,$4A,$4C,$3F,$0B,$0F ; DE5B 1A 10 3D 4A 4C 3F 0B 0F  ..=JL?..
         .byte   $F8,$FC,$FE,$FC,$F0,$F0,$F0,$F8 ; DE63 F8 FC FE FC F0 F0 F0 F8  ........
         .byte   $58,$0C,$3A,$5C,$30,$10,$F0,$A8 ; DE6B 58 0C 3A 5C 30 10 F0 A8  X.:\0...
-Bank20MapImage02Palette:
+Bank20MapImage02BackgroundPalette:
         .byte   $0D,$17,$19,$27,$0D,$32,$12,$22 ; DE73 0D 17 19 27 0D 32 12 22  ...'.2."
         .byte   $0D,$17,$08,$27,$0D,$30,$20,$10 ; DE7B 0D 17 08 27 0D 30 20 10  ...'.0 .
-LDE83:
+Bank20MapImage02SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; DE83 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$16,$0F,$0F,$36,$17,$0F ; DE8B 0F 36 16 0F 0F 36 17 0F  .6...6..
 LDE93:
@@ -3306,8 +3306,8 @@ Bank20MapImage03:
         .addr   Bank20MapImage03SubImage01Tilemap; E263 3A E6                   :.
         .addr   Bank20MapImage03SubImage00TileAttr; E265 FA E9                  ..
         .addr   Bank20MapImage03SubImage01TileAttr; E267 3A EA                  :.
-        .addr   LEC4A                           ; E269 4A EC                    J.
-        .addr   Bank20MapImage03Palette         ; E26B 3A EC                    :.
+        .addr   Bank20MapImage03SpritePalette   ; E269 4A EC                    J.
+        .addr   Bank20MapImage03BackgroundPalette; E26B 3A EC                   :.
         .addr   Bank20MapImage03Tileset         ; E26D 7A EA                    z.
 ; ----------------------------------------------------------------------------
 LE26F:
@@ -3634,10 +3634,10 @@ LEB3A:
         .byte   $7F,$3F,$4F,$4F,$3F,$0F,$07,$3F ; EC22 7F 3F 4F 4F 3F 0F 07 3F  .?OO?..?
         .byte   $E8,$C8,$FC,$38,$F0,$10,$10,$38 ; EC2A E8 C8 FC 38 F0 10 10 38  ...8...8
         .byte   $F8,$F8,$F4,$F8,$F0,$F0,$F0,$F8 ; EC32 F8 F8 F4 F8 F0 F0 F0 F8  ........
-Bank20MapImage03Palette:
+Bank20MapImage03BackgroundPalette:
         .byte   $0F,$37,$27,$30,$0F,$30,$28,$18 ; EC3A 0F 37 27 30 0F 30 28 18  .7'0.0(.
         .byte   $0F,$30,$37,$1B,$0F,$30,$27,$19 ; EC42 0F 30 37 1B 0F 30 27 19  .07..0'.
-LEC4A:
+Bank20MapImage03SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; EC4A 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$19,$0F,$0F,$36,$17,$0F ; EC52 0F 36 19 0F 0F 36 17 0F  .6...6..
 LEC5A:

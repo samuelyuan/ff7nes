@@ -27,13 +27,13 @@ Bank27MapImage00:
         .addr   Bank27MapImage00SubImage03TileAttr; 8032 F5 97                  ..
         .addr   Bank27MapImage00SubImage04TileAttr; 8034 35 98                  5.
         .addr   Bank27MapImage00SubImage05TileAttr; 8036 75 98                  u.
-        .addr   LA165                           ; 8038 65 A1                    e.
-        .addr   Bank27MapImage00SubImage00Palette; 803A 05 A1                   ..
-        .addr   Bank27MapImage00SubImage01Palette; 803C 15 A1                   ..
-        .addr   Bank27MapImage00SubImage02Palette; 803E 25 A1                   %.
-        .addr   Bank27MapImage00SubImage03Palette; 8040 35 A1                   5.
-        .addr   Bank27MapImage00SubImage04Palette; 8042 45 A1                   E.
-        .addr   Bank27MapImage00SubImage05Palette; 8044 55 A1                   U.
+        .addr   Bank27MapImage00SpritePalette   ; 8038 65 A1                    e.
+        .addr   Bank27MapImage00SubImage00BackgroundPalette; 803A 05 A1         ..
+        .addr   Bank27MapImage00SubImage01BackgroundPalette; 803C 15 A1         ..
+        .addr   Bank27MapImage00SubImage02BackgroundPalette; 803E 25 A1         %.
+        .addr   Bank27MapImage00SubImage03BackgroundPalette; 8040 35 A1         5.
+        .addr   Bank27MapImage00SubImage04BackgroundPalette; 8042 45 A1         E.
+        .addr   Bank27MapImage00SubImage05BackgroundPalette; 8044 55 A1         U.
 ; ----------------------------------------------------------------------------
 L8046:
         .byte   $00,$03,$00,$00,$80,$00,$80,$00 ; 8046 00 03 00 00 80 00 80 00  ........
@@ -1128,25 +1128,25 @@ L98B5:
         .byte   $28,$F4,$72,$72,$EC,$E0,$E0,$E0 ; A0ED 28 F4 72 72 EC E0 E0 E0  (.rr....
         .byte   $E8,$D4,$1E,$3E,$EC,$E0,$A0,$C0 ; A0F5 E8 D4 1E 3E EC E0 A0 C0  ...>....
         .byte   $28,$F4,$72,$72,$EC,$E0,$E0,$C0 ; A0FD 28 F4 72 72 EC E0 E0 C0  (.rr....
-Bank27MapImage00SubImage00Palette:
+Bank27MapImage00SubImage00BackgroundPalette:
         .byte   $0F,$36,$17,$00,$0F,$10,$36,$00 ; A105 0F 36 17 00 0F 10 36 00  .6....6.
         .byte   $0F,$10,$27,$17,$0F,$30,$26,$16 ; A10D 0F 10 27 17 0F 30 26 16  ..'..0&.
-Bank27MapImage00SubImage01Palette:
+Bank27MapImage00SubImage01BackgroundPalette:
         .byte   $0F,$10,$27,$00,$0F,$17,$10,$27 ; A115 0F 10 27 00 0F 17 10 27  ..'....'
         .byte   $0F,$10,$27,$17,$0F,$30,$10,$17 ; A11D 0F 10 27 17 0F 30 10 17  ..'..0..
-Bank27MapImage00SubImage02Palette:
+Bank27MapImage00SubImage02BackgroundPalette:
         .byte   $0F,$10,$27,$17,$0F,$17,$00,$10 ; A125 0F 10 27 17 0F 17 00 10  ..'.....
         .byte   $0F,$00,$10,$17,$0F,$30,$10,$00 ; A12D 0F 00 10 17 0F 30 10 00  .....0..
-Bank27MapImage00SubImage03Palette:
+Bank27MapImage00SubImage03BackgroundPalette:
         .byte   $0F,$10,$27,$17,$0F,$00,$10,$17 ; A135 0F 10 27 17 0F 00 10 17  ..'.....
         .byte   $0F,$30,$10,$00,$0F,$30,$0F,$0F ; A13D 0F 30 10 00 0F 30 0F 0F  .0...0..
-Bank27MapImage00SubImage04Palette:
+Bank27MapImage00SubImage04BackgroundPalette:
         .byte   $0F,$10,$20,$00,$0F,$37,$28,$16 ; A145 0F 10 20 00 0F 37 28 16  .. ..7(.
         .byte   $0F,$37,$27,$17,$0F,$30,$0F,$0F ; A14D 0F 37 27 17 0F 30 0F 0F  .7'..0..
-Bank27MapImage00SubImage05Palette:
+Bank27MapImage00SubImage05BackgroundPalette:
         .byte   $0F,$10,$30,$00,$0F,$10,$27,$00 ; A155 0F 10 30 00 0F 10 27 00  ..0...'.
         .byte   $0F,$16,$20,$00,$0F,$30,$28,$17 ; A15D 0F 16 20 00 0F 30 28 17  .. ..0(.
-LA165:
+Bank27MapImage00SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; A165 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$16,$0F,$0F,$36,$17,$0F ; A16D 0F 36 16 0F 0F 36 17 0F  .6...6..
 LA175:
@@ -1864,13 +1864,13 @@ Bank27MapImage01:
         .addr   Bank27MapImage01SubImage03TileAttr; B699 66 CE                  f.
         .addr   Bank27MapImage01SubImage04TileAttr; B69B A6 CE                  ..
         .addr   Bank27MapImage01SubImage05TileAttr; B69D E6 CE                  ..
-        .addr   LD726                           ; B69F 26 D7                    &.
-        .addr   Bank27MapImage01SubImage00Palette; B6A1 C6 D6                   ..
-        .addr   Bank27MapImage01SubImage01Palette; B6A3 D6 D6                   ..
-        .addr   Bank27MapImage01SubImage02Palette; B6A5 E6 D6                   ..
-        .addr   Bank27MapImage01SubImage03Palette; B6A7 F6 D6                   ..
-        .addr   Bank27MapImage01SubImage04Palette; B6A9 06 D7                   ..
-        .addr   Bank27MapImage01SubImage05Palette; B6AB 16 D7                   ..
+        .addr   Bank27MapImage01SpritePalette   ; B69F 26 D7                    &.
+        .addr   Bank27MapImage01SubImage00BackgroundPalette; B6A1 C6 D6         ..
+        .addr   Bank27MapImage01SubImage01BackgroundPalette; B6A3 D6 D6         ..
+        .addr   Bank27MapImage01SubImage02BackgroundPalette; B6A5 E6 D6         ..
+        .addr   Bank27MapImage01SubImage03BackgroundPalette; B6A7 F6 D6         ..
+        .addr   Bank27MapImage01SubImage04BackgroundPalette; B6A9 06 D7         ..
+        .addr   Bank27MapImage01SubImage05BackgroundPalette; B6AB 16 D7         ..
 ; ----------------------------------------------------------------------------
 LB6AD:
         .byte   $00,$03,$00,$00,$80,$00,$80,$00 ; B6AD 00 03 00 00 80 00 80 00  ........
@@ -2947,25 +2947,25 @@ LCF26:
         .byte   $3F,$1F,$2F,$4F,$3F,$07,$07,$00 ; D6AE 3F 1F 2F 4F 3F 07 07 00  ?./O?...
         .byte   $FC,$F8,$1C,$38,$20,$E0,$A0,$00 ; D6B6 FC F8 1C 38 20 E0 A0 00  ...8 ...
         .byte   $FC,$F8,$F4,$F8,$E0,$E0,$E0,$00 ; D6BE FC F8 F4 F8 E0 E0 E0 00  ........
-Bank27MapImage01SubImage00Palette:
+Bank27MapImage01SubImage00BackgroundPalette:
         .byte   $0F,$28,$17,$18,$0F,$30,$27,$00 ; D6C6 0F 28 17 18 0F 30 27 00  .(...0'.
         .byte   $0F,$36,$17,$00,$0F,$30,$17,$00 ; D6CE 0F 36 17 00 0F 30 17 00  .6...0..
-Bank27MapImage01SubImage01Palette:
+Bank27MapImage01SubImage01BackgroundPalette:
         .byte   $0F,$17,$00,$27,$0F,$17,$00,$10 ; D6D6 0F 17 00 27 0F 17 00 10  ...'....
         .byte   $0F,$00,$10,$11,$0F,$30,$29,$2A ; D6DE 0F 00 10 11 0F 30 29 2A  .....0)*
-Bank27MapImage01SubImage02Palette:
+Bank27MapImage01SubImage02BackgroundPalette:
         .byte   $0F,$2A,$27,$17,$0F,$22,$00,$17 ; D6E6 0F 2A 27 17 0F 22 00 17  .*'.."..
         .byte   $0F,$10,$00,$17,$0F,$30,$27,$17 ; D6EE 0F 10 00 17 0F 30 27 17  .....0'.
-Bank27MapImage01SubImage03Palette:
+Bank27MapImage01SubImage03BackgroundPalette:
         .byte   $0F,$27,$00,$17,$0F,$27,$30,$17 ; D6F6 0F 27 00 17 0F 27 30 17  .'...'0.
         .byte   $0F,$30,$10,$00,$0F,$30,$0F,$0F ; D6FE 0F 30 10 00 0F 30 0F 0F  .0...0..
-Bank27MapImage01SubImage04Palette:
+Bank27MapImage01SubImage04BackgroundPalette:
         .byte   $0F,$27,$00,$17,$0F,$27,$00,$30 ; D706 0F 27 00 17 0F 27 00 30  .'...'.0
         .byte   $0F,$00,$22,$30,$0F,$30,$0F,$0F ; D70E 0F 00 22 30 0F 30 0F 0F  .."0.0..
-Bank27MapImage01SubImage05Palette:
+Bank27MapImage01SubImage05BackgroundPalette:
         .byte   $0F,$17,$37,$07,$0F,$16,$07,$27 ; D716 0F 17 37 07 0F 16 07 27  ..7....'
         .byte   $0F,$30,$17,$00,$0F,$30,$17,$00 ; D71E 0F 30 17 00 0F 30 17 00  .0...0..
-LD726:
+Bank27MapImage01SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; D726 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$16,$0F,$0F,$36,$17,$0F ; D72E 0F 36 16 0F 0F 36 17 0F  .6...6..
 LD736:

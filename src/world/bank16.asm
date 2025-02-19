@@ -20,8 +20,8 @@ Bank16MapImage00:
         .addr   Bank16MapImage00SubImage01Tilemap; 8022 0D 84                   ..
         .addr   Bank16MapImage00SubImage00TileAttr; 8024 CD 87                  ..
         .addr   Bank16MapImage00SubImage01TileAttr; 8026 0D 88                  ..
-        .addr   L919D                           ; 8028 9D 91                    ..
-        .addr   Bank16MapImage00Palette         ; 802A 8D 91                    ..
+        .addr   Bank16MapImage00SpritePalette   ; 8028 9D 91                    ..
+        .addr   Bank16MapImage00BackgroundPalette; 802A 8D 91                   ..
         .addr   Bank16MapImage00Tileset         ; 802C 4D 88                    M.
 ; ----------------------------------------------------------------------------
 L802E:
@@ -596,10 +596,10 @@ L8DED:
         .byte   $1F,$1F,$1F,$3F,$17,$0F,$04,$07 ; 9175 1F 1F 1F 3F 17 0F 04 07  ...?....
         .byte   $F0,$F8,$F4,$D2,$6C,$F0,$A0,$E0 ; 917D F0 F8 F4 D2 6C F0 A0 E0  ....l...
         .byte   $F0,$E8,$FC,$FE,$EC,$F0,$E0,$E0 ; 9185 F0 E8 FC FE EC F0 E0 E0  ........
-Bank16MapImage00Palette:
+Bank16MapImage00BackgroundPalette:
         .byte   $0F,$37,$00,$10,$0F,$36,$08,$18 ; 918D 0F 37 00 10 0F 36 08 18  .7...6..
         .byte   $0F,$26,$36,$10,$0F,$30,$26,$10 ; 9195 0F 26 36 10 0F 30 26 10  .&6..0&.
-L919D:
+Bank16MapImage00SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; 919D 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$16,$0F,$0F,$36,$17,$0F ; 91A5 0F 36 16 0F 0F 36 17 0F  .6...6..
 L91AD:
@@ -700,8 +700,8 @@ Bank16MapImage01:
         .addr   Bank16MapImage01SubImage08TileAttr; 93F1 8E BF                  ..
         .addr   Bank16MapImage01SubImage09TileAttr; 93F3 CE BF                  ..
         .addr   Bank16MapImage01SubImage10TileAttr; 93F5 0E C0                  ..
-        .addr   LCA9E                           ; 93F7 9E CA                    ..
-        .addr   Bank16MapImage01Palette         ; 93F9 8E CA                    ..
+        .addr   Bank16MapImage01SpritePalette   ; 93F7 9E CA                    ..
+        .addr   Bank16MapImage01BackgroundPalette; 93F9 8E CA                   ..
         .addr   Bank16MapImage01Tileset         ; 93FB 4E C0                    N.
 ; ----------------------------------------------------------------------------
 L93FD:
@@ -2498,10 +2498,10 @@ LC45E:
         .byte   $53,$53,$1C,$88,$17,$20,$43,$88 ; CA76 53 53 1C 88 17 20 43 88  SS... C.
         .byte   $53,$53,$1C,$88,$17,$20,$43,$88 ; CA7E 53 53 1C 88 17 20 43 88  SS... C.
         .byte   $5E,$5D,$1B,$8F,$27,$50,$23,$88 ; CA86 5E 5D 1B 8F 27 50 23 88  ^]..'P#.
-Bank16MapImage01Palette:
+Bank16MapImage01BackgroundPalette:
         .byte   $0F,$10,$17,$27,$0F,$11,$10,$00 ; CA8E 0F 10 17 27 0F 11 10 00  ...'....
         .byte   $0F,$27,$10,$00,$0F,$30,$10,$00 ; CA96 0F 27 10 00 0F 30 10 00  .'...0..
-LCA9E:
+Bank16MapImage01SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; CA9E 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$16,$0F,$0F,$36,$17,$0F ; CAA6 0F 36 16 0F 0F 36 17 0F  .6...6..
 LCAAE:
@@ -2766,8 +2766,8 @@ Bank16MapImage02:
         .addr   Bank16MapImage02SubImage05TileAttr; D20E 8D F1                  ..
         .addr   Bank16MapImage02SubImage06TileAttr; D210 CD F1                  ..
         .addr   Bank16MapImage02SubImage07TileAttr; D212 0D F2                  ..
-        .addr   LF93D                           ; D214 3D F9                    =.
-        .addr   Bank16MapImage02Palette         ; D216 2D F9                    -.
+        .addr   Bank16MapImage02SpritePalette   ; D214 3D F9                    =.
+        .addr   Bank16MapImage02BackgroundPalette; D216 2D F9                   -.
         .addr   Bank16MapImage02Tileset         ; D218 4D F2                    M.
 ; ----------------------------------------------------------------------------
 LD21A:
@@ -4054,10 +4054,10 @@ LF4AD:
         .byte   $7E,$7F,$7F,$7F,$7F,$7F,$7F,$3F ; F915 7E 7F 7F 7F 7F 7F 7F 3F  ~......?
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F91D 00 00 00 00 00 00 00 00  ........
         .byte   $60,$FB,$FF,$FF,$FF,$FF,$CD,$32 ; F925 60 FB FF FF FF FF CD 32  `......2
-Bank16MapImage02Palette:
+Bank16MapImage02BackgroundPalette:
         .byte   $0F,$21,$10,$11,$0F,$2B,$10,$1B ; F92D 0F 21 10 11 0F 2B 10 1B  .!...+..
         .byte   $0F,$16,$10,$06,$0F,$30,$00,$10 ; F935 0F 16 10 06 0F 30 00 10  .....0..
-LF93D:
+Bank16MapImage02SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; F93D 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$16,$0F,$0F,$36,$17,$0F ; F945 0F 36 16 0F 0F 36 17 0F  .6...6..
 LF94D:
