@@ -814,7 +814,7 @@ L84AE:
         rts                                     ; 84AF 60                       `
 
 ; ----------------------------------------------------------------------------
-L84B0:
+InitScrollLocation:
         ldx     #$00                            ; 84B0 A2 00                    ..
         lda     $17                             ; 84B2 A5 17                    ..
 L84B4:
@@ -9540,7 +9540,7 @@ LoadMapDataFromBank1:
         sta     $17                             ; DD5B 85 17                    ..
 LDD5D:
         jsr     LF1BE                           ; DD5D 20 BE F1                  ..
-        jsr     L84B0                           ; DD60 20 B0 84                  ..
+        jsr     InitScrollLocation              ; DD60 20 B0 84                  ..
         jsr     Bank00ScreenRefresh             ; DD63 20 36 EA                  6.
         jsr     L6800                           ; DD66 20 00 68                  .h
         pla                                     ; DD69 68                       h
@@ -11034,7 +11034,7 @@ LE870:
         sta     $86                             ; E8B2 85 86                    ..
         pla                                     ; E8B4 68                       h
         sta     $50                             ; E8B5 85 50                    .P
-        jsr     L84B0                           ; E8B7 20 B0 84                  ..
+        jsr     InitScrollLocation              ; E8B7 20 B0 84                  ..
         jsr     Bank00ScreenRefresh             ; E8BA 20 36 EA                  6.
         jsr     L6800                           ; E8BD 20 00 68                  .h
         jsr     Bank00ScreenRefresh             ; E8C0 20 36 EA                  6.
@@ -11129,7 +11129,7 @@ InitPlayerMain:
         and     #$3F                            ; E98E 29 3F                    )?
         sta     $51                             ; E990 85 51                    .Q
         jsr     StoreMapRowsAndColumns          ; E992 20 50 F0                  P.
-        jsr     L84B0                           ; E995 20 B0 84                  ..
+        jsr     InitScrollLocation              ; E995 20 B0 84                  ..
         jsr     L6800                           ; E998 20 00 68                  .h
         jsr     Bank00ScreenRefresh             ; E99B 20 36 EA                  6.
         jsr     LEBAA                           ; E99E 20 AA EB                  ..
@@ -12141,12 +12141,12 @@ LoadAddrFromBankToGetMapData:
         lda     L8000,x                         ; EF89 BD 00 80                 ...
         sta     $03                             ; EF8C 85 03                    ..
         ldy     #$00                            ; EF8E A0 00                    ..
-LEF90:
+CopyFirst0x0EBytesMapHeader:
         lda     (L0002),y                       ; EF90 B1 02                    ..
         sta     $0770,y                         ; EF92 99 70 07                 .p.
         iny                                     ; EF95 C8                       .
         cpy     #$0E                            ; EF96 C0 0E                    ..
-        bne     LEF90                           ; EF98 D0 F6                    ..
+        bne     CopyFirst0x0EBytesMapHeader     ; EF98 D0 F6                    ..
         lda     $0770                           ; EF9A AD 70 07                 .p.
         sta     $06                             ; EF9D 85 06                    ..
         lda     #$00                            ; EF9F A9 00                    ..
@@ -12164,21 +12164,21 @@ LEFA7:
         sta     $06                             ; EFB2 85 06                    ..
         sta     $07                             ; EFB4 85 07                    ..
         ldx     #$00                            ; EFB6 A2 00                    ..
-LEFB8:
+LoadMapTilemapAddresses:
         lda     (L0002),y                       ; EFB8 B1 02                    ..
         sta     $0780,x                         ; EFBA 9D 80 07                 ...
         iny                                     ; EFBD C8                       .
         inx                                     ; EFBE E8                       .
         dec     $06                             ; EFBF C6 06                    ..
-        bne     LEFB8                           ; EFC1 D0 F5                    ..
+        bne     LoadMapTilemapAddresses         ; EFC1 D0 F5                    ..
         ldx     #$00                            ; EFC3 A2 00                    ..
-LEFC5:
+LoadMapTileAttributesAddresses:
         lda     (L0002),y                       ; EFC5 B1 02                    ..
         sta     $07A8,x                         ; EFC7 9D A8 07                 ...
         iny                                     ; EFCA C8                       .
         inx                                     ; EFCB E8                       .
         dec     $07                             ; EFCC C6 07                    ..
-        bne     LEFC5                           ; EFCE D0 F5                    ..
+        bne     LoadMapTileAttributesAddresses  ; EFCE D0 F5                    ..
         lda     (L0002),y                       ; EFD0 B1 02                    ..
         sta     $07D0                           ; EFD2 8D D0 07                 ...
         iny                                     ; EFD5 C8                       .
@@ -12190,24 +12190,24 @@ LEFC5:
         sta     $06                             ; EFE0 85 06                    ..
         sta     $07                             ; EFE2 85 07                    ..
         ldx     #$00                            ; EFE4 A2 00                    ..
-LEFE6:
+LoadMapPaletteAddresses:
         lda     (L0002),y                       ; EFE6 B1 02                    ..
         sta     $07D2,x                         ; EFE8 9D D2 07                 ...
         iny                                     ; EFEB C8                       .
         inx                                     ; EFEC E8                       .
         dec     $06                             ; EFED C6 06                    ..
-        bne     LEFE6                           ; EFEF D0 F5                    ..
+        bne     LoadMapPaletteAddresses         ; EFEF D0 F5                    ..
         ldx     #$00                            ; EFF1 A2 00                    ..
-LEFF3:
+LoadMapTilesetAddresses:
         lda     (L0002),y                       ; EFF3 B1 02                    ..
         sta     $07E6,x                         ; EFF5 9D E6 07                 ...
         iny                                     ; EFF8 C8                       .
         inx                                     ; EFF9 E8                       .
         dec     $07                             ; EFFA C6 07                    ..
-        bne     LEFF3                           ; EFFC D0 F5                    ..
+        bne     LoadMapTilesetAddresses         ; EFFC D0 F5                    ..
         lda     $0775                           ; EFFE AD 75 07                 .u.
         cmp     #$02                            ; F001 C9 02                    ..
-        bcc     LF030                           ; F003 90 2B                    .+
+        bcc     MapUsesSinglePalette            ; F003 90 2B                    .+
         lda     $81                             ; F005 A5 81                    ..
         sta     $5200                           ; F007 8D 00 52                 ..R
         lda     $51                             ; F00A A5 51                    .Q
@@ -12227,13 +12227,13 @@ LEFF3:
         lda     L8000,x                         ; F01F BD 00 80                 ...
         sta     $03                             ; F022 85 03                    ..
         ldy     #$00                            ; F024 A0 00                    ..
-LF026:
+MapCopyTilesetAddressForEachPalette:
         lda     (L0002),y                       ; F026 B1 02                    ..
         sta     $07E6,y                         ; F028 99 E6 07                 ...
         iny                                     ; F02B C8                       .
         cpy     #$14                            ; F02C C0 14                    ..
-        bne     LF026                           ; F02E D0 F6                    ..
-LF030:
+        bne     MapCopyTilesetAddressForEachPalette; F02E D0 F6                 ..
+MapUsesSinglePalette:
         lda     #$00                            ; F030 A9 00                    ..
         sta     $D5                             ; F032 85 D5                    ..
         lda     $0777                           ; F034 AD 77 07                 .w.
@@ -12739,7 +12739,7 @@ LF350:
         sta     $1E                             ; F37D 85 1E                    ..
         lda     $A6                             ; F37F A5 A6                    ..
         sta     $1C                             ; F381 85 1C                    ..
-        jsr     L84B0                           ; F383 20 B0 84                  ..
+        jsr     InitScrollLocation              ; F383 20 B0 84                  ..
         jsr     L6800                           ; F386 20 00 68                  .h
         jsr     LEBAA                           ; F389 20 AA EB                  ..
         lda     #$00                            ; F38C A9 00                    ..

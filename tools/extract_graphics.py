@@ -114,7 +114,8 @@ class NESImage:
                 colorIndex = self.convert2bppToIndex(self.getTileInTileset(tilemapIndex))
                 if len(colorIndex) == 0:
                     print (f"Attempt to get tilemap index {tilemapIndex}. Tileset data length is {len(self.dataTileset) // 16}")
-                    raise Exception("Color index shouldn't be an empty array.")
+                    # raise Exception("Color index shouldn't be an empty array.")
+                    continue
 
                 paletteIndex = self.getPaletteIndex(row=i, col=j, totalCols=numCols)
                 colorPalette = self.colorPalettes[paletteIndex]
@@ -134,7 +135,9 @@ class MapBankImagePoint:
         storeIndex = rowData[2]
         self.imageBankNum = combinedValue1 & 0x3f
         self.imageBankIndex = (combinedValue1 >> 6) & 0x03
-        
+        self.tilesetBankNum = combinedValue2 & 0x3f
+        self.tilesetBankIndex  = (combinedValue2 >> 6) & 0x03
+
         self.isStore = combinedValue1 != combinedValue2
         self.storeIndex = storeIndex
 
@@ -149,6 +152,7 @@ class MapBankImage:
     def __init__(self, nesFile):
         self.indexToBankLocation = []
         self.bankLocationToIndex = {}
+        self.bankLocationToTileset = {}
 
         bankNum = 0x01
         bankData = nesFile.getBankDataBlock(bankNum)
@@ -161,6 +165,7 @@ class MapBankImage:
             self.indexToBankLocation.append(transitionPoint)
             print ("Transition point:", transitionPoint, ", key:", transitionPoint.getKey())
             self.bankLocationToIndex[transitionPoint.getKey()] = imageCount
+            self.bankLocationToTileset[(transitionPoint.imageBankNum, transitionPoint.imageBankIndex)] = (transitionPoint.tilesetBankNum, transitionPoint.tilesetBankIndex)
             imageCount += 1
 
 class MapTransitionPoint():
@@ -338,10 +343,10 @@ def drawTransitionTiles(nesFile, image, imageIndex, indexToBankLocation):
         
     return image
 
-def extractAllBackgroundImages1(nesFile):
+def extractAllBackgroundImagesBank10To2F(nesFile):
     mapBankImage = MapBankImage(nesFile)
 
-    for bankNum in range(0x10, 0x27):
+    for bankNum in range(0x10, 0x30):
         hexStr = str(hex(bankNum)).replace("0x", "")
         print (f"Checking bank {hexStr}...")
         bankData = nesFile.getBankDataBlock(bankNum)
@@ -350,18 +355,25 @@ def extractAllBackgroundImages1(nesFile):
         print (f"Found {len(imageStartAddrs)} in bank {hexStr}")
 
         imageCount = 0
-        for startAddr in imageStartAddrs:
+        for imageIndex, startAddr in enumerate(imageStartAddrs):
             print ("Start addr:", hex(startAddr))
+
+            if (bankNum, imageIndex) not in mapBankImage.bankLocationToTileset:
+                print (f"Warn: skip bank {bankNum} image index {imageIndex} because corresponding tileset isn't found")
+                continue
 
             totalCols = bankData[startAddr - 0x8000]
             totalRows = bankData[startAddr + 1 - 0x8000]
+            totalPalettes = bankData[startAddr + 5 - 0x8000]
             totalImages = totalCols * totalRows
-            print (f"Rows: {totalRows}, Cols: {totalCols}, Total: {totalImages}")
+            print (f"Rows: {totalRows}, Cols: {totalCols}, Total images: {totalImages}, total palettes: {totalPalettes}")
 
-            if totalImages >= 100:
-                print ("Warn: skip because too large and may be invalid data")
-                continue
-            
+            (tilesetBankNum, tilesetImageIndex) = mapBankImage.bankLocationToTileset[(bankNum, imageIndex)] 
+            print (f"For map at bank {hexStr} index {imageIndex}, tileset is at bank {hex(tilesetBankNum)} index {tilesetImageIndex}")
+
+            tilesetBankData = nesFile.getBankDataBlock(tilesetBankNum)
+            tilesetBankImageStartAddrs = nesFile.getAddressBlock(tilesetBankNum, 0x00, 0x10)
+
             startCollisionDataLoc = (startAddr + 8) - 0x8000
             startCollisionDataAddr = nesFile.getRelativeAddress(bankData, startCollisionDataLoc)
 
@@ -372,74 +384,19 @@ def extractAllBackgroundImages1(nesFile):
             tileAttrAddrs = nesFile.getAddressBlock(bankNum, startTileAttrAddrLoc, startTileAttrAddrLoc + (2 * totalImages))
 
             startPaletteAddrLoc = startTileAttrAddrLoc + (totalImages * 2) + 2
-            startPaletteAddr = nesFile.getRelativeAddress(bankData, startPaletteAddrLoc)
-
-            startTilesetAddrLoc = startPaletteAddrLoc + 2
-            startTilesetAddr = nesFile.getRelativeAddress(bankData, startTilesetAddrLoc)
-
-            imageBlock = []
-            for j in range(totalImages):
-                partialImage = NESImage(
-                    dataTilemap=nesFile.getBlock(bankData, dataStart=tilemapAddrs[j], dataLength=(30*32)),
-                    dataTileAttributes=nesFile.getBlock(bankData, dataStart=tileAttrAddrs[j], dataLength=(8*8)),
-                    dataPalettes=nesFile.getBlock(bankData, dataStart=startPaletteAddr, dataLength=16),
-                    dataTileset=nesFile.getBlock(bankData, dataStart=startTilesetAddr, dataLength=(256*16)),
-                )
-                imageBlock.append(partialImage.convertToImage(30, 32))
-
-            image = combineImages(imageBlock, totalRows=totalRows, totalCols=totalCols, partialImageRows=30, partialImageCols=32)
-            imageFilename = f'{outputFolderName}/bank{hexStr}_image{str(imageCount).zfill(3)}.png'
-            image.save(imageFilename)
-            print (f'Saved image to {imageFilename}')
-
-            collisionData = nesFile.getBlock(bankData, dataStart=startCollisionDataAddr, dataLength=(15*8*totalImages))
-            debugImage = drawCollisionData(image=image, totalCols=totalCols, collisionData=collisionData)
-            imageTransitionIndex = mapBankImage.bankLocationToIndex[f'{str(hex(bankNum)).replace("0x", "")}-{imageCount}']
-            debugImage = drawTransitionTiles(nesFile, debugImage, imageTransitionIndex, indexToBankLocation=mapBankImage.indexToBankLocation)
-            debugImageFilename = f"{getImageFilenameWithoutExt(imageFilename)}_debug.png"
-            debugImage.save(debugImageFilename)
             
-            imageCount += 1
+            if totalPalettes == 1:
+                startTilesetAddrLoc = startPaletteAddrLoc + 2
 
-def extractAllBackgroundImages2(nesFile):
-    mapBankImage = MapBankImage(nesFile)
-
-    for bankNum in range(0x27, 0x2c):
-        hexStr = str(hex(bankNum)).replace("0x", "")
-        print (f"Checking bank {hexStr}...")
-        bankData = nesFile.getBankDataBlock(bankNum)
-
-        imageStartAddrs = nesFile.getAddressBlock(bankNum, 0x00, 0x10)
-        print (f"Found {len(imageStartAddrs)} in bank {hexStr}")
-
-        imageCount = 0
-        for i in range(0, len(imageStartAddrs), 2):
-            startAddr = imageStartAddrs[i]
-            print ("Start addr:", hex(startAddr))
-
-            totalCols = bankData[startAddr - 0x8000]
-            totalRows = bankData[startAddr + 1 - 0x8000]
-            totalImages = totalCols * totalRows
-            print (f"Rows: {totalRows}, Cols: {totalCols}, Total: {totalImages}")
-
-            if totalImages >= 100:
-                print ("Warn: skip because too large and may be invalid data")
-                continue
-            
-            startCollisionDataLoc = (startAddr + 8) - 0x8000
-            startCollisionDataAddr = nesFile.getRelativeAddress(bankData, startCollisionDataLoc)
-
-            startTilemapAddrLoc = (startAddr + 14) - 0x8000
-            tilemapAddrs = nesFile.getAddressBlock(bankNum, startTilemapAddrLoc, startTilemapAddrLoc + (2 * totalImages))
-
-            startTileAttrAddrLoc = startTilemapAddrLoc + (totalImages * 2)
-            tileAttrAddrs = nesFile.getAddressBlock(bankNum, startTileAttrAddrLoc, startTileAttrAddrLoc + (2 * totalImages))
-
-            startPaletteAddrLoc = startTileAttrAddrLoc + (totalImages * 2) + 2
-            paletteAddrs = nesFile.getAddressBlock(bankNum, startPaletteAddrLoc, startPaletteAddrLoc + (2 * totalImages))
-
-            startTilesetAddrLoc = imageStartAddrs[i + 1] - 0x8000
-            tilesetAddrs = nesFile.getAddressBlock(bankNum, startTilesetAddrLoc, startTilesetAddrLoc + (2 * totalImages))
+                startPaletteAddr = nesFile.getRelativeAddress(bankData, startPaletteAddrLoc)
+                startTilesetAddr = nesFile.getRelativeAddress(bankData, startTilesetAddrLoc)
+                paletteAddrs = [startPaletteAddr] * totalImages
+                tilesetAddrs = [startTilesetAddr] * totalImages
+            else:
+                startTilesetAddrLoc = tilesetBankImageStartAddrs[tilesetImageIndex] - 0x8000
+                
+                paletteAddrs = nesFile.getAddressBlock(bankNum, startPaletteAddrLoc, startPaletteAddrLoc + (2 * totalImages))
+                tilesetAddrs = nesFile.getAddressBlock(tilesetBankNum, startTilesetAddrLoc, startTilesetAddrLoc + (2 * totalImages))
 
             imageBlock = []
             for j in range(totalImages):
@@ -447,7 +404,7 @@ def extractAllBackgroundImages2(nesFile):
                     dataTilemap=nesFile.getBlock(bankData, dataStart=tilemapAddrs[j], dataLength=(30*32)),
                     dataTileAttributes=nesFile.getBlock(bankData, dataStart=tileAttrAddrs[j], dataLength=(8*8)),
                     dataPalettes=nesFile.getBlock(bankData, dataStart=paletteAddrs[j], dataLength=16),
-                    dataTileset=nesFile.getBlock(bankData, dataStart=tilesetAddrs[j], dataLength=(256*16)),
+                    dataTileset=nesFile.getBlock(tilesetBankData, dataStart=tilesetAddrs[j], dataLength=(256*16)),
                 )
                 imageBlock.append(partialImage.convertToImage(30, 32))
 
@@ -462,6 +419,7 @@ def extractAllBackgroundImages2(nesFile):
             debugImage = drawTransitionTiles(nesFile, debugImage, imageTransitionIndex, indexToBankLocation=mapBankImage.indexToBankLocation)
             debugImageFilename = f"{getImageFilenameWithoutExt(imageFilename)}_debug.png"
             debugImage.save(debugImageFilename)
+            
             imageCount += 1
 
 def extractSpritesBank32(nesFile):
@@ -771,9 +729,14 @@ def extractOverworldBank36(nesFile):
     bankNum = 0x36
     bankData = nesFile.getBankDataBlock(bankNum)
 
-    dataTileAttributes = nesFile.getBlock(bankData, dataStart=0x990B, dataLength=0xD90B-0x990B) 
-    dataTileset = nesFile.getBlock(bankData, dataStart=0x805B, dataLength=0x950B-0x805B) 
-    dataPalettes = nesFile.getBlock(bankData, dataStart=0x950B, dataLength=32)
+    dataHeader = nesFile.getAddressBlock(bankNum, 0x20, 0x28)
+    tileAttrStartAddr = dataHeader[0]
+    backgroundPaletteStartAddr = dataHeader[2]
+    tilesetStartAddr = dataHeader[3]
+
+    dataTileAttributes = nesFile.getBlock(bankData, dataStart=tileAttrStartAddr+(256*2), dataLength=256*0x40)
+    dataTileset = nesFile.getBlock(bankData, dataStart=tilesetStartAddr, dataLength=backgroundPaletteStartAddr-tilesetStartAddr) 
+    dataPalettes = nesFile.getBlock(bankData, dataStart=backgroundPaletteStartAddr, dataLength=32)
 
     imageBlock = []
     imageCount = 0
@@ -814,8 +777,7 @@ def main():
 
     createFolder(outputFolderName)
 
-    extractAllBackgroundImages1(nesFile)
-    extractAllBackgroundImages2(nesFile)
+    extractAllBackgroundImagesBank10To2F(nesFile)
 
     extractSpritesBank32(nesFile)
     extractSpritesBank33(nesFile)

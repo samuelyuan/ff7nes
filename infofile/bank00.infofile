@@ -301,6 +301,10 @@ LABEL {
   ADDR  $8380;
 };
 LABEL {
+  NAME "InitScrollLocation";
+  ADDR  $84B0;
+};
+LABEL {
   NAME "Bank00MovePlayerRight";
   ADDR  $8563;
 };
@@ -1020,6 +1024,34 @@ LABEL {
 LABEL {
   NAME "LoadAddrFromBankToGetMapData";
   ADDR $EF6F;
+};
+LABEL {
+  NAME "CopyFirst0x0EBytesMapHeader";
+  ADDR $EF90;
+};
+LABEL {
+  NAME "LoadMapTilemapAddresses";
+  ADDR $EFB8;
+};
+LABEL {
+  NAME "LoadMapTileAttributesAddresses";
+  ADDR $EFC5;
+};
+LABEL {
+  NAME "LoadMapPaletteAddresses";
+  ADDR $EFE6;
+};
+LABEL {
+  NAME "LoadMapTilesetAddresses";
+  ADDR $EFF3;
+};
+LABEL {
+  NAME "MapCopyTilesetAddressForEachPalette";
+  ADDR $F026;
+};
+LABEL {
+  NAME "MapUsesSinglePalette";
+  ADDR $F030;
 };
 LABEL {
   NAME "StoreMapRowsAndColumns";

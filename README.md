@@ -28,12 +28,12 @@ This reference table shows where the game reads and writes data to in RAM.
 | 0x001A | 1 | Absolute scroll Y lower byte |
 | 0x001B | 1 | Absolute scroll Y upper byte |
 | 0x0020 | 1 | Controller Button Press |
-| 0x0050 | 1 | Current bank index 0 to load map = (Original value in 0x86) & 0x3F |
-| 0x0051 | 1 | Current bank index 1 to load map = (Original value in 0x87) & 0x3F |
+| 0x0050 | 1 | Current bank index to load map data = (Original value in 0x86) & 0x3F |
+| 0x0051 | 1 | Current bank index to load map tileset = (Original value in 0x87) & 0x3F |
 | 0x0080 | 1 | (Original value in 0x86) >> 4 |
 | 0x0081 | 1 | (Original value in 0x87) >> 4 |
-| 0x0086 | 1 | Store original map bank number index 0 |
-| 0x0087 | 1 | Store original map bank number index 1 |
+| 0x0086 | 1 | Store original map bank number for loading map data |
+| 0x0087 | 1 | Store original map bank number for loading tileset |
 | 0x0089 | 1 | Index in map array in bank 1 |
 | 0x00CF | 1 | Dialogue Flag (set to 0xFF when dialogue is displayed, else set to 0) |
 | 0x00D5 | 1 | Overworld Flag (set to 0xFF in overworld, else set to 0) |
