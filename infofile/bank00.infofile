@@ -1014,6 +1014,14 @@ LABEL {
   ADDR $EAC7;
 };
 LABEL {
+  NAME "LoadSpriteAddresses";
+  ADDR $EBAA;
+};
+LABEL {
+  NAME "LoadMapCollisionAddress";
+  ADDR $EC73;
+};
+LABEL {
   NAME "StoreFFin0300";
   ADDR $EF5A;
 };
@@ -1052,6 +1060,10 @@ LABEL {
 LABEL {
   NAME "MapUsesSinglePalette";
   ADDR $F030;
+};
+LABEL {
+  NAME "MapNotOverworld";
+  ADDR $F045;
 };
 LABEL {
   NAME "StoreMapRowsAndColumns";

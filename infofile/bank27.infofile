@@ -29,6 +29,11 @@ RANGE {
 };
 RANGE {
   START $8046;
+  END $8047;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $8048;
   END $804d;
   TYPE BYTETABLE;
 };
@@ -164,6 +169,11 @@ RANGE {
 };
 RANGE {
   START $b6ad;
+  END $b6ae;
+  TYPE BYTETABLE;
+};
+RANGE {
+  START $b6af;
   END $b6b4;
   TYPE BYTETABLE;
 };
@@ -303,10 +313,6 @@ LABEL {
   ADDR  $8012;
 };
 LABEL {
-  NAME "Bank27MapImage00Collision";
-  ADDR  $A42D;
-};
-LABEL {
   NAME "Bank27MapImage00SubImage00Tilemap";
   ADDR  $80B5;
 };
@@ -355,10 +361,6 @@ LABEL {
   ADDR  $9875;
 };
 LABEL {
-  NAME "Bank27MapImage00SpritePalette";
-  ADDR  $A165;
-};
-LABEL {
   NAME "Bank27MapImage00SubImage00BackgroundPalette";
   ADDR  $A105;
 };
@@ -381,6 +383,14 @@ LABEL {
 LABEL {
   NAME "Bank27MapImage00SubImage05BackgroundPalette";
   ADDR  $A155;
+};
+LABEL {
+  NAME "Bank27MapImage00SpritePalette";
+  ADDR  $A165;
+};
+LABEL {
+  NAME "Bank27MapImage00Collision";
+  ADDR  $A42D;
 };
 LABEL {
   NAME "Bank27MapImage00Tileset";
@@ -411,114 +421,114 @@ LABEL {
   ADDR  $B3C9;
 };
 LABEL {
-  NAME "Bank27MapImage01";
+  NAME "Bank27MapImage02";
   ADDR  $B679;
 };
 LABEL {
-  NAME "Bank27MapImage01Collision";
-  ADDR  $D9BE;
-};
-LABEL {
-  NAME "Bank27MapImage01SubImage00Tilemap";
+  NAME "Bank27MapImage02SubImage00Tilemap";
   ADDR  $B726;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage01Tilemap";
+  NAME "Bank27MapImage02SubImage01Tilemap";
   ADDR  $BAE6;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage02Tilemap";
+  NAME "Bank27MapImage02SubImage02Tilemap";
   ADDR  $BEA6;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage03Tilemap";
+  NAME "Bank27MapImage02SubImage03Tilemap";
   ADDR  $C266;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage04Tilemap";
+  NAME "Bank27MapImage02SubImage04Tilemap";
   ADDR  $C626;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage05Tilemap";
+  NAME "Bank27MapImage02SubImage05Tilemap";
   ADDR  $C9E6;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage00TileAttr";
+  NAME "Bank27MapImage02SubImage00TileAttr";
   ADDR  $CDA6;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage01TileAttr";
+  NAME "Bank27MapImage02SubImage01TileAttr";
   ADDR  $CDE6;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage02TileAttr";
+  NAME "Bank27MapImage02SubImage02TileAttr";
   ADDR  $CE26;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage03TileAttr";
+  NAME "Bank27MapImage02SubImage03TileAttr";
   ADDR  $CE66;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage04TileAttr";
+  NAME "Bank27MapImage02SubImage04TileAttr";
   ADDR  $CEA6;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage05TileAttr";
+  NAME "Bank27MapImage02SubImage05TileAttr";
   ADDR  $CEE6;
 };
 LABEL {
-  NAME "Bank27MapImage01SpritePalette";
-  ADDR  $D726;
-};
-LABEL {
-  NAME "Bank27MapImage01SubImage00BackgroundPalette";
+  NAME "Bank27MapImage02SubImage00BackgroundPalette";
   ADDR  $D6C6;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage01BackgroundPalette";
+  NAME "Bank27MapImage02SubImage01BackgroundPalette";
   ADDR  $D6D6;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage02BackgroundPalette";
+  NAME "Bank27MapImage02SubImage02BackgroundPalette";
   ADDR  $D6E6;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage03BackgroundPalette";
+  NAME "Bank27MapImage02SubImage03BackgroundPalette";
   ADDR  $D6F6;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage04BackgroundPalette";
+  NAME "Bank27MapImage02SubImage04BackgroundPalette";
   ADDR  $D706;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage05BackgroundPalette";
+  NAME "Bank27MapImage02SubImage05BackgroundPalette";
   ADDR  $D716;
 };
 LABEL {
-  NAME "Bank27MapImage01Tileset";
+  NAME "Bank27MapImage02SpritePalette";
+  ADDR  $D726;
+};
+LABEL {
+  NAME "Bank27MapImage02Collision";
+  ADDR  $D9BE;
+};
+LABEL {
+  NAME "Bank27MapImage02Tileset";
   ADDR  $DC8E;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage00Tileset";
+  NAME "Bank27MapImage02SubImage00Tileset";
   ADDR  $DC9A;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage01Tileset";
+  NAME "Bank27MapImage02SubImage01Tileset";
   ADDR  $E05A;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage02Tileset";
+  NAME "Bank27MapImage02SubImage02Tileset";
   ADDR  $E22A;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage03Tileset";
+  NAME "Bank27MapImage02SubImage03Tileset";
   ADDR  $E3BA;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage04Tileset";
+  NAME "Bank27MapImage02SubImage04Tileset";
   ADDR  $E58A;
 };
 LABEL {
-  NAME "Bank27MapImage01SubImage05Tileset";
+  NAME "Bank27MapImage02SubImage05Tileset";
   ADDR  $E85A;
 };

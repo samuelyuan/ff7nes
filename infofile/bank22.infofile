@@ -333,10 +333,6 @@ LABEL {
   ADDR  $8012;
 };
 LABEL {
-  NAME "Bank22MapImage00Collision";
-  ADDR  $943B;
-};
-LABEL {
   NAME "Bank22MapImage00SubImage00Tilemap";
   ADDR  $806B;
 };
@@ -353,24 +349,24 @@ LABEL {
   ADDR  $882B;
 };
 LABEL {
-  NAME "Bank22MapImage00SpritePalette";
-  ADDR  $91EB;
+  NAME "Bank22MapImage00Tileset";
+  ADDR  $886B;
 };
 LABEL {
   NAME "Bank22MapImage00BackgroundPalette";
   ADDR  $91DB;
 };
 LABEL {
-  NAME "Bank22MapImage00Tileset";
-  ADDR  $886B;
+  NAME "Bank22MapImage00SpritePalette";
+  ADDR  $91EB;
+};
+LABEL {
+  NAME "Bank22MapImage00Collision";
+  ADDR  $943B;
 };
 LABEL {
   NAME "Bank22MapImage01";
   ADDR  $952B;
-};
-LABEL {
-  NAME "Bank22MapImage01Collision";
-  ADDR  $AEDC;
 };
 LABEL {
   NAME "Bank22MapImage01SubImage00Tilemap";
@@ -397,24 +393,24 @@ LABEL {
   ADDR  $A15C;
 };
 LABEL {
-  NAME "Bank22MapImage01SpritePalette";
-  ADDR  $AC7C;
+  NAME "Bank22MapImage01Tileset";
+  ADDR  $A19C;
 };
 LABEL {
   NAME "Bank22MapImage01BackgroundPalette";
   ADDR  $AC6C;
 };
 LABEL {
-  NAME "Bank22MapImage01Tileset";
-  ADDR  $A19C;
+  NAME "Bank22MapImage01SpritePalette";
+  ADDR  $AC7C;
+};
+LABEL {
+  NAME "Bank22MapImage01Collision";
+  ADDR  $AEDC;
 };
 LABEL {
   NAME "Bank22MapImage02";
   ADDR  $B044;
-};
-LABEL {
-  NAME "Bank22MapImage02Collision";
-  ADDR  $C777;
 };
 LABEL {
   NAME "Bank22MapImage02SubImage00Tilemap";
@@ -449,24 +445,24 @@ LABEL {
   ADDR  $C047;
 };
 LABEL {
-  NAME "Bank22MapImage02SpritePalette";
-  ADDR  $C647;
+  NAME "Bank22MapImage02Tileset";
+  ADDR  $C087;
 };
 LABEL {
   NAME "Bank22MapImage02BackgroundPalette";
   ADDR  $C637;
 };
 LABEL {
-  NAME "Bank22MapImage02Tileset";
-  ADDR  $C087;
+  NAME "Bank22MapImage02SpritePalette";
+  ADDR  $C647;
+};
+LABEL {
+  NAME "Bank22MapImage02Collision";
+  ADDR  $C777;
 };
 LABEL {
   NAME "Bank22MapImage03";
   ADDR  $C957;
-};
-LABEL {
-  NAME "Bank22MapImage03Collision";
-  ADDR  $E816;
 };
 LABEL {
   NAME "Bank22MapImage03SubImage00Tilemap";
@@ -493,14 +489,18 @@ LABEL {
   ADDR  $D588;
 };
 LABEL {
-  NAME "Bank22MapImage03SpritePalette";
-  ADDR  $E506;
+  NAME "Bank22MapImage03Tileset";
+  ADDR  $D5C8;
 };
 LABEL {
   NAME "Bank22MapImage03BackgroundPalette";
   ADDR  $E4F6;
 };
 LABEL {
-  NAME "Bank22MapImage03Tileset";
-  ADDR  $D5C8;
+  NAME "Bank22MapImage03SpritePalette";
+  ADDR  $E506;
+};
+LABEL {
+  NAME "Bank22MapImage03Collision";
+  ADDR  $E816;
 };

@@ -29,21 +29,36 @@ RANGE {
 };
 RANGE {
   START $802a;
-  END $89d0;
+  END $8031;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $89d1;
-  END $89d8;
+  START $8032;
+  END $8033;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8034;
+  END $803b;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $89d9;
-  END $89e4;
+  START $803c;
+  END $803d;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $803e;
+  END $8045;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $89e5;
+  START $8046;
+  END $8047;
+  TYPE ADDRTABLE;
+};
+RANGE {
+  START $8048;
   END $fffe;
   TYPE BYTETABLE;
 };
@@ -51,10 +66,6 @@ RANGE {
 LABEL {
   NAME "Bank2fMapImage00";
   ADDR  $8012;
-};
-LABEL {
-  NAME "Bank2fMapImage00Collision";
-  ADDR  $8959;
 };
 LABEL {
   NAME "Bank2fMapImage00SubImage00Tilemap";
@@ -65,14 +76,18 @@ LABEL {
   ADDR  $8409;
 };
 LABEL {
-  NAME "Bank2fMapImage00SpritePalette";
-  ADDR  $8829;
+  NAME "Bank2fMapImage00Tileset";
+  ADDR  $8449;
 };
 LABEL {
   NAME "Bank2fMapImage00BackgroundPalette";
   ADDR  $8819;
 };
 LABEL {
-  NAME "Bank2fMapImage00Tileset";
-  ADDR  $8449;
+  NAME "Bank2fMapImage00SpritePalette";
+  ADDR  $8829;
+};
+LABEL {
+  NAME "Bank2fMapImage00Collision";
+  ADDR  $8959;
 };

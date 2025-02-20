@@ -146,7 +146,7 @@ L80B1:
         adc     #$00                            ; 80CA 69 00                    i.
         sta     $0A                             ; 80CC 85 0A                    ..
         jsr     L8833                           ; 80CE 20 33 88                  3.
-        jsr     LEC73                           ; 80D1 20 73 EC                  s.
+        jsr     LoadMapCollisionAddress         ; 80D1 20 73 EC                  s.
         lda     $09                             ; 80D4 A5 09                    ..
         beq     L80E9                           ; 80D6 F0 11                    ..
         tax                                     ; 80D8 AA                       .
@@ -342,7 +342,7 @@ L81D8:
 
 ; ----------------------------------------------------------------------------
 L81F6:
-        jsr     LEC73                           ; 81F6 20 73 EC                  s.
+        jsr     LoadMapCollisionAddress         ; 81F6 20 73 EC                  s.
         ldx     $09                             ; 81F9 A6 09                    ..
         beq     L820D                           ; 81FB F0 10                    ..
 L81FD:
@@ -543,7 +543,7 @@ L8317:
         adc     #$00                            ; 8321 69 00                    i.
         sta     $0A                             ; 8323 85 0A                    ..
         jsr     L8833                           ; 8325 20 33 88                  3.
-        jsr     LEC73                           ; 8328 20 73 EC                  s.
+        jsr     LoadMapCollisionAddress         ; 8328 20 73 EC                  s.
         lda     $09                             ; 832B A5 09                    ..
         beq     L8340                           ; 832D F0 11                    ..
         tax                                     ; 832F AA                       .
@@ -741,7 +741,7 @@ L842F:
         adc     #$0F                            ; 8447 69 0F                    i.
         sta     $0A                             ; 8449 85 0A                    ..
 L844B:
-        jsr     LEC73                           ; 844B 20 73 EC                  s.
+        jsr     LoadMapCollisionAddress         ; 844B 20 73 EC                  s.
         lda     $09                             ; 844E A5 09                    ..
         beq     L8463                           ; 8450 F0 11                    ..
         tax                                     ; 8452 AA                       .
@@ -9524,7 +9524,7 @@ LoadMapDataFromBank1:
         lda     $03                             ; DD36 A5 03                    ..
         pha                                     ; DD38 48                       H
         jsr     Bank00ScreenRefresh             ; DD39 20 36 EA                  6.
-        jsr     LEBAA                           ; DD3C 20 AA EB                  ..
+        jsr     LoadSpriteAddresses             ; DD3C 20 AA EB                  ..
         jsr     LE0E7                           ; DD3F 20 E7 E0                  ..
         lda     #$00                            ; DD42 A9 00                    ..
         jsr     LEBFB                           ; DD44 20 FB EB                  ..
@@ -11132,7 +11132,7 @@ InitPlayerMain:
         jsr     InitScrollLocation              ; E995 20 B0 84                  ..
         jsr     L6800                           ; E998 20 00 68                  .h
         jsr     Bank00ScreenRefresh             ; E99B 20 36 EA                  6.
-        jsr     LEBAA                           ; E99E 20 AA EB                  ..
+        jsr     LoadSpriteAddresses             ; E99E 20 AA EB                  ..
         lda     #$00                            ; E9A1 A9 00                    ..
         jsr     LEBFB                           ; E9A3 20 FB EB                  ..
         jsr     Bank00ScreenRefresh             ; E9A6 20 36 EA                  6.
@@ -11480,7 +11480,7 @@ LEB92:
         .byte   $00,$01,$02,$02,$01,$00,$00,$00 ; EB9A 00 01 02 02 01 00 00 00  ........
         .byte   $00,$01,$02,$03,$02,$01,$00,$00 ; EBA2 00 01 02 03 02 01 00 00  ........
 ; ----------------------------------------------------------------------------
-LEBAA:
+LoadSpriteAddresses:
         ldx     #$00                            ; EBAA A2 00                    ..
         lda     $077A,x                         ; EBAC BD 7A 07                 .z.
         sta     L0002                           ; EBAF 85 02                    ..
@@ -11608,7 +11608,7 @@ LEC40:
         rts                                     ; EC72 60                       `
 
 ; ----------------------------------------------------------------------------
-LEC73:
+LoadMapCollisionAddress:
         clc                                     ; EC73 18                       .
         ror     $0A                             ; EC74 66 0A                    f.
         ror     $09                             ; EC76 66 09                    f.
@@ -12237,13 +12237,13 @@ MapUsesSinglePalette:
         lda     #$00                            ; F030 A9 00                    ..
         sta     $D5                             ; F032 85 D5                    ..
         lda     $0777                           ; F034 AD 77 07                 .w.
-        beq     LF045                           ; F037 F0 0C                    ..
+        beq     MapNotOverworld                 ; F037 F0 0C                    ..
         lda     #$FF                            ; F039 A9 FF                    ..
         sta     $D5                             ; F03B 85 D5                    ..
         lda     #$10                            ; F03D A9 10                    ..
         sta     $0770                           ; F03F 8D 70 07                 .p.
         sta     $0771                           ; F042 8D 71 07                 .q.
-LF045:
+MapNotOverworld:
         lda     #$00                            ; F045 A9 00                    ..
         sta     $5000                           ; F047 8D 00 50                 ..P
         lda     #$00                            ; F04A A9 00                    ..
@@ -12741,7 +12741,7 @@ LF350:
         sta     $1C                             ; F381 85 1C                    ..
         jsr     InitScrollLocation              ; F383 20 B0 84                  ..
         jsr     L6800                           ; F386 20 00 68                  .h
-        jsr     LEBAA                           ; F389 20 AA EB                  ..
+        jsr     LoadSpriteAddresses             ; F389 20 AA EB                  ..
         lda     #$00                            ; F38C A9 00                    ..
         jsr     LEBFB                           ; F38E 20 FB EB                  ..
         rts                                     ; F391 60                       `

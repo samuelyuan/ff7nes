@@ -1,4 +1,5 @@
 from nesfile import NESFile
+import collections
 
 class MapBankImagePoint:
     def __init__(self, rowData):
@@ -7,16 +8,27 @@ class MapBankImagePoint:
         storeIndex = rowData[2]
         self.imageBankNum = combinedValue1 & 0x3f
         self.imageBankIndex = (combinedValue1 >> 6) & 0x03
-        
+        self.tilesetBankNum = combinedValue2 & 0x3f
+        self.tilesetBankIndex  = (combinedValue2 >> 6) & 0x03
+
         self.isStore = combinedValue1 != combinedValue2
         self.storeIndex = storeIndex
 
-    def getKey(self):
-        bankHexStr = str(hex(self.imageBankNum)).replace("0x", "")
-        if self.isStore:
-            return f'{bankHexStr}-{self.storeIndex}'
-        else:
-            return f'{bankHexStr}-{self.imageBankIndex}'
+class MapBankImage:
+    def __init__(self, nesFile):
+        self.indexToBankLocation = []
+        self.bankLocationToTileset = {}
+
+        bankNum = 0x01
+        bankData = nesFile.getBankDataBlock(bankNum)
+
+        blockStartAddrs = nesFile.getAddressBlock(bankNum, 0x00, 0x10)
+        imageCount = 0
+        for addr in range(blockStartAddrs[1], blockStartAddrs[0], 8):
+            row = bankData[addr - 0x8000 : addr + 8 - 0x8000]
+            transitionPoint = MapBankImagePoint(row)
+            self.indexToBankLocation.append(transitionPoint)
+            imageCount += 1
 
 def convertToHex(num):
     return str(hex(num)).replace("0x", "")
@@ -51,90 +63,6 @@ def generateLabel(labelStr, startAddr):
     data += "};" + "\n"
     return data
 
-def findBoundariesMapType1(nesFile, bankNum):
-    dataBank = nesFile.getBankDataBlock(bankNum)
-    boundaries = []
-
-    boundaries.append((0x8000, "ADDRTABLE"))
-    boundaries.append((0x8008, "BYTETABLE"))
-
-    headerAddr = nesFile.getAddressBlock(bankNum, 0x00, 0x08)
-
-    for i in range(0, len(headerAddr), 1):
-        startAddr = headerAddr[i]
-        totalCol = dataBank[startAddr - 0x8000]
-        totalRow = dataBank[startAddr + 1 - 0x8000]
-        totalImages = totalCol * totalRow
-
-        unknownAddr0xa = nesFile.getWord(dataBank[startAddr + 0xa - 0x8000: startAddr + 0xc - 0x8000])
-        startBlockAddr = unknownAddr0xa
-        while dataBank[startBlockAddr - 0x8000] != 0xFF:
-            boundaries.append((startBlockAddr, "BYTETABLE"))
-            boundaries.append((startBlockAddr + 8, "ADDRTABLE"))
-            startBlockAddr += 0xa
-        boundaries.append((startBlockAddr, "BYTETABLE"))
-
-        boundaries.append((startAddr, "BYTETABLE"))
-        boundaries.append((startAddr + 8, "ADDRTABLE"))
-
-        if totalImages >= 100:
-            print ("Warn, too many images:", totalImages)
-            totalImages = 4
-
-        # for banks 0x10 to 0x27
-        # 4 for offset, 3 for unknown, totalImages for tilemap, totalImages for tileAttr, 2 for palette, 1 for tilest
-        totalAddr = 4 + 3 + (2 * totalImages) + 2 + 1
-
-        boundaries.append((startAddr + (2 * totalAddr), "BYTETABLE"))
-
-    boundaries = list(set(boundaries))
-    boundaries.sort()
-    return boundaries
-
-def findBoundariesMapType2(nesFile, bankNum):
-    dataBank = nesFile.getBankDataBlock(bankNum)
-    boundaries = []
-
-    boundaries.append((0x8000, "ADDRTABLE"))
-    boundaries.append((0x8008, "BYTETABLE"))
-
-    headerAddr = nesFile.getAddressBlock(bankNum, 0x00, 0x08)
-
-    for i in range(0, len(headerAddr), 2):
-        startAddr = headerAddr[i]
-        totalCol = dataBank[startAddr - 0x8000]
-        totalRow = dataBank[startAddr + 1 - 0x8000]
-        totalImages = totalCol * totalRow
-
-        unknownAddr0xa = nesFile.getWord(dataBank[startAddr + 0xa - 0x8000: startAddr + 0xc - 0x8000])
-        startBlockAddr = unknownAddr0xa
-        while dataBank[startBlockAddr - 0x8000] != 0xFF:
-            boundaries.append((startBlockAddr, "BYTETABLE"))
-            boundaries.append((startBlockAddr + 8, "ADDRTABLE"))
-            startBlockAddr += 0xa
-        boundaries.append((startBlockAddr, "BYTETABLE"))
-
-        boundaries.append((startAddr, "BYTETABLE"))
-        boundaries.append((startAddr + 8, "ADDRTABLE"))
-
-        if totalImages >= 100:
-            print ("Warn, too many images:", totalImages)
-            totalImages = 4
-
-        # for banks 0x27 to 0x2C
-        # 4 for offset, 3 for unknown, totalImages for tilemap, totalImages for tileAttr, totalImages for palette, 1 for tilest
-        totalAddr = 4 + 3 + (2 * totalImages) + totalImages + 1
-        boundaries.append((startAddr + (2 * totalAddr), "BYTETABLE"))
-
-        # only for banks 0x27 to 0x2C
-        tilemapStartAddr = headerAddr[i + 1]
-        boundaries.append((tilemapStartAddr, "ADDRTABLE"))
-        boundaries.append((tilemapStartAddr + (totalImages * 2), "BYTETABLE"))
-
-    boundaries = list(set(boundaries))
-    boundaries.sort()
-    return boundaries
-
 def generateRangeFromArr(arr):
     arr.append((0xffff, ""))
     data = ""
@@ -142,110 +70,206 @@ def generateRangeFromArr(arr):
         data += generateRange(startAddr=convertToHex(arr[i][0]), endAddr=convertToHex(arr[i + 1][0] - 1), type=arr[i][1])
     return data
 
-def generateMapType1Labels(nesFile, bankNum):
-    bankNumStr = convertToHex(bankNum).zfill(2)
-    headerAddr = nesFile.getAddressBlock(bankNum, 0x00, 0x08)
-    bankData = nesFile.getBankDataBlock(bankNum)
+def findBoundariesSpriteAddrRef(nesFile, dataBank, startAddr):
+    boundaries = []
+    unknownAddr0xa = nesFile.getRelativeAddress(dataBank, startAddr + 0xa)
+    startBlockAddr = unknownAddr0xa
+    while dataBank[startBlockAddr - 0x8000] != 0xFF:
+        boundaries.append((startBlockAddr, "BYTETABLE"))
+        boundaries.append((startBlockAddr + 8, "ADDRTABLE"))
+        startBlockAddr += 0xa
+    boundaries.append((startBlockAddr, "BYTETABLE"))
+    return boundaries
 
-    data = ""
-    for i in range(0, len(headerAddr)):
-        data += generateLabel(f'Bank{bankNumStr}MapImage{str(i).zfill(2)}', headerAddr[i])
+def calculateMapInfoBoundaries(nesFile, tilesetParent):
+    mapInfoBoundaryBank = collections.defaultdict(list)
+    for key, value in tilesetParent.items():
+        parentBankNum, parentImageIndex, totalImages = value
 
-        totalCols = bankData[headerAddr[i] - 0x8000]
-        totalRows = bankData[headerAddr[i] + 1 - 0x8000]
-        totalImages = totalCols * totalRows
-        startAddr = headerAddr[i]
-
-        if totalImages >= 100:
-            print ("Warn: skip because too large and may be invalid data")
-            continue
+        headerAddr = nesFile.getAddressBlock(parentBankNum, 0x00, 0x08)
+        startAddr = headerAddr[parentImageIndex]
+        boundaries = []
         
-        startCollisionDataLoc = (startAddr + 8) - 0x8000
-        startCollisionDataAddr = nesFile.getRelativeAddress(bankData, startCollisionDataLoc)
-        data += generateLabel(f'Bank{bankNumStr}MapImage{str(i).zfill(2)}Collision', startCollisionDataAddr)
+        boundaries.append((startAddr, "BYTETABLE"))
+        # beginning of address array
+        boundaries.append((startAddr + 8, "ADDRTABLE"))
 
-        startTilemapAddrLoc = (startAddr + 14) - 0x8000
-        tilemapAddrs = nesFile.getAddressBlock(bankNum, startTilemapAddrLoc, startTilemapAddrLoc + (2 * totalImages))
-        for j, addr in enumerate(tilemapAddrs):
-            data += generateLabel(f'Bank{bankNumStr}MapImage{str(i).zfill(2)}SubImage{str(j).zfill(2)}Tilemap', addr)
+        parentDataBlock = nesFile.getBankDataBlock(parentBankNum)
+        totalPalettes = parentDataBlock[startAddr + 5 - 0x8000]
+        if totalPalettes == 1:
+            # 3 for unknown, totalImages for tilemap, totalImages for tileAttr, (1 + 1) for palette, 1 for tileset
+            totalAddr = 3 + (2 * totalImages) + 2 + 1
+        else:
+            # 3 for unknown, totalImages for tilemap, totalImages for tileAttr, (totalImages + 1) for palette, 1 for tileset
+            totalAddr = 3 + (2 * totalImages) + (totalImages + 1) + 1
+        # end of address array
+        boundaries.append((startAddr + 8 + (2 * totalAddr), "BYTETABLE"))
+
+        # the next section is a mix of byte arrays and address arrays
+        boundaries.extend(findBoundariesSpriteAddrRef(nesFile, nesFile.getBankDataBlock(parentBankNum), startAddr))
+
+        mapInfoBoundaryBank[parentBankNum].extend(boundaries)
+    return mapInfoBoundaryBank
+
+def calculateTilesetBoundaries(nesFile, tilesetParent):
+    tilesetBoundaryBank = collections.defaultdict(list)
+    for key, value in tilesetParent.items():
+        tilesetBankNum, tilesetImageIndex = key
+        parentBankNum, parentImageIndex, totalImages = value
+        if not(tilesetBankNum == parentBankNum and tilesetImageIndex == parentImageIndex):
+            # Tileset is in different location than map data
+            headerAddr = nesFile.getAddressBlock(tilesetBankNum, 0x00, 0x08)
+            startAddr = headerAddr[tilesetImageIndex]
+            tilesetBoundaryBank[tilesetBankNum].append((startAddr, "ADDRTABLE"))
+            tilesetBoundaryBank[tilesetBankNum].append((startAddr + (totalImages * 2), "BYTETABLE"))
+    return tilesetBoundaryBank
+
+def calculateMapInfoLabels(nesFile, tilesetParent):
+    mapInfoLabelBank = collections.defaultdict(list)
+    for _, value in tilesetParent.items():
+        parentBankNum, parentImageIndex, totalImages = value
+
+        headerAddr = nesFile.getAddressBlock(parentBankNum, 0x00, 0x08)
+        startAddr = headerAddr[parentImageIndex]
+        parentBankData = nesFile.getBankDataBlock(parentBankNum)
+        totalPalettes = parentBankData[startAddr + 5 - 0x8000]
+
+        labelPrefixStr = f'Bank{convertToHex(parentBankNum).zfill(2)}MapImage{str(parentImageIndex).zfill(2)}'
+
+        labelStr = f'{labelPrefixStr}'
+        mapInfoLabelBank[parentBankNum].append((startAddr, labelStr))
+
+        startCollisionDataLoc = startAddr + 8 - 0x8000
+        startCollisionDataAddr = nesFile.getRelativeAddress(parentBankData, startCollisionDataLoc)
+        labelStr = f'{labelPrefixStr}Collision'
+        mapInfoLabelBank[parentBankNum].append((startCollisionDataAddr, labelStr))
+
+        startTilemapAddrLoc = startAddr + 14 - 0x8000
+        tilemapAddrs = nesFile.getAddressBlock(parentBankNum, startTilemapAddrLoc, startTilemapAddrLoc + (totalImages * 2))
+        for tilemapIndex, addr in enumerate(tilemapAddrs):
+            labelStr = f'{labelPrefixStr}SubImage{str(tilemapIndex).zfill(2)}Tilemap'
+            mapInfoLabelBank[parentBankNum].append((addr, labelStr))
 
         startTileAttrAddrLoc = startTilemapAddrLoc + (totalImages * 2)
-        tileAttrAddrs = nesFile.getAddressBlock(bankNum, startTileAttrAddrLoc, startTileAttrAddrLoc + (2 * totalImages))
-        for j, addr in enumerate(tileAttrAddrs):
-            data += generateLabel(f'Bank{bankNumStr}MapImage{str(i).zfill(2)}SubImage{str(j).zfill(2)}TileAttr', addr)
+        tileAttrAddrs = nesFile.getAddressBlock(parentBankNum, startTileAttrAddrLoc, startTileAttrAddrLoc + (totalImages * 2))
+        for tileAttrIndex, addr in enumerate(tileAttrAddrs):
+            labelStr = f'{labelPrefixStr}SubImage{str(tileAttrIndex).zfill(2)}TileAttr'
+            mapInfoLabelBank[parentBankNum].append((addr, labelStr))
 
-        startPaletteAddrLoc = startTileAttrAddrLoc + (totalImages * 2) + 2
-        startPaletteAddr = nesFile.getRelativeAddress(bankData, startPaletteAddrLoc)
-        data += generateLabel(f'Bank{bankNumStr}MapImage{str(i).zfill(2)}Palette', startPaletteAddr)
+        # Sprite palette is on every map
+        startSpritePaletteAddrLoc = startTileAttrAddrLoc + (totalImages * 2)
+        startSpritePaletteAddr = nesFile.getRelativeAddress(parentBankData, startSpritePaletteAddrLoc)
+        labelStr = f'{labelPrefixStr}SpritePalette'
+        mapInfoLabelBank[parentBankNum].append((startSpritePaletteAddr, labelStr))
 
-        startTilesetAddrLoc = startPaletteAddrLoc + 2
-        startTilesetAddr = nesFile.getRelativeAddress(bankData, startTilesetAddrLoc)
-        data += generateLabel(f'Bank{bankNumStr}MapImage{str(i).zfill(2)}Tileset', startTilesetAddr)
-    return data
+        startPaletteAddrLoc = startSpritePaletteAddrLoc + 2
+        if totalPalettes == 1:
+            # All subimages share the same palette
+            startPaletteAddr = nesFile.getRelativeAddress(parentBankData, startPaletteAddrLoc)
+            labelStr = f'{labelPrefixStr}BackgroundPalette'
+            mapInfoLabelBank[parentBankNum].append((startPaletteAddr, labelStr))
 
-def generateMapType2Labels(nesFile, bankNum):
-    bankNumStr = convertToHex(bankNum).zfill(2)
-    headerAddr = nesFile.getAddressBlock(bankNum, 0x00, 0x08)
-    bankData = nesFile.getBankDataBlock(bankNum)
+            # All subimages share the same tileset
+            startTilesetAddrLoc = startPaletteAddrLoc + 2
+            startTilesetAddr = nesFile.getRelativeAddress(parentBankData, startTilesetAddrLoc)
+            labelStr = f'{labelPrefixStr}Tileset'
+            mapInfoLabelBank[parentBankNum].append((startTilesetAddr, labelStr))
+        else:
+            # Each subimage has its own palette and tileset is stored in a separate location
+            paletteAddrs = nesFile.getAddressBlock(parentBankNum, startPaletteAddrLoc - 0x8000, startPaletteAddrLoc + (totalImages * 2) - 0x8000)
+            for paletteIndex, addr in enumerate(paletteAddrs):
+                labelStr = f'{labelPrefixStr}SubImage{str(paletteIndex).zfill(2)}BackgroundPalette'
+                mapInfoLabelBank[parentBankNum].append((addr, labelStr))
 
-    data = ""
-    for i in range(0, len(headerAddr), 2):
-        data += generateLabel(f'Bank{bankNumStr}MapImage{str(i//2).zfill(2)}', headerAddr[i])
+    return mapInfoLabelBank
 
-        totalCols = bankData[headerAddr[i] - 0x8000]
-        totalRows = bankData[headerAddr[i] + 1 - 0x8000]
-        totalImages = totalCols * totalRows
-        startAddr = headerAddr[i]
+def calculateTilesetLabels(nesFile, tilesetParent):
+    tilesetLabelBank = collections.defaultdict(list)
+    for key, value in tilesetParent.items():
+        tilesetBankNum, tilesetImageIndex = key
+        parentBankNum, parentImageIndex, totalImages = value
+        if not(tilesetBankNum == parentBankNum and tilesetImageIndex == parentImageIndex):
+            # Tileset is in different location than map data
+            headerAddr = nesFile.getAddressBlock(tilesetBankNum, 0x00, 0x08)
+            startAddr = headerAddr[tilesetImageIndex]
 
-        startCollisionDataLoc = (startAddr + 8) - 0x8000
-        startCollisionDataAddr = nesFile.getRelativeAddress(bankData, startCollisionDataLoc)
-        data += generateLabel(f'Bank{bankNumStr}MapImage{str(i//2).zfill(2)}Collision', startCollisionDataAddr)
+            labelPrefixStr = f'Bank{convertToHex(parentBankNum).zfill(2)}MapImage{str(parentImageIndex).zfill(2)}';
 
-        startTilemapAddrLoc = (startAddr + 14) - 0x8000
-        tilemapAddrs = nesFile.getAddressBlock(bankNum, startTilemapAddrLoc, startTilemapAddrLoc + (2 * totalImages))
-        for j, addr in enumerate(tilemapAddrs):
-            data += generateLabel(f'Bank{bankNumStr}MapImage{str(i//2).zfill(2)}SubImage{str(j).zfill(2)}Tilemap', addr)
+            labelStr = f'{labelPrefixStr}Tileset'
+            tilesetLabelBank[tilesetBankNum].append((startAddr, labelStr))
 
-        startTileAttrAddrLoc = startTilemapAddrLoc + (totalImages * 2)
-        tileAttrAddrs = nesFile.getAddressBlock(bankNum, startTileAttrAddrLoc, startTileAttrAddrLoc + (2 * totalImages))
-        for j, addr in enumerate(tileAttrAddrs):
-            data += generateLabel(f'Bank{bankNumStr}MapImage{str(i//2).zfill(2)}SubImage{str(j).zfill(2)}TileAttr', addr)
+            tilesetAddrs = nesFile.getAddressBlock(tilesetBankNum, startAddr - 0x8000, startAddr + (totalImages * 2) - 0x8000)
+            for tilesetIndex, addr in enumerate(tilesetAddrs):
+                labelStr = f'{labelPrefixStr}SubImage{str(tilesetIndex).zfill(2)}Tileset'
+                tilesetLabelBank[tilesetBankNum].append((addr, labelStr))
+    return tilesetLabelBank
 
-        startPaletteAddrLoc = startTileAttrAddrLoc + (totalImages * 2) + 2
-        paletteAddrs = nesFile.getAddressBlock(bankNum, startPaletteAddrLoc, startPaletteAddrLoc + (2 * totalImages))
-        for j, addr in enumerate(paletteAddrs):
-            data += generateLabel(f'Bank{bankNumStr}MapImage{str(i//2).zfill(2)}SubImage{str(j).zfill(2)}Palette', addr)
-
-        # Tileset header
-        data += generateLabel(f'Bank{bankNumStr}MapImage{str(i//2).zfill(2)}Tileset', headerAddr[i + 1])
-
-        # Tileset image array
-        tilesetStartAddr = headerAddr[i + 1] - 0x8000
-        tilesetAddrs = nesFile.getAddressBlock(bankNum, tilesetStartAddr, tilesetStartAddr + (2 * totalImages))
-        for j, addr in enumerate(tilesetAddrs):
-            data += generateLabel(f'Bank{bankNumStr}MapImage{str(i//2).zfill(2)}SubImage{str(j).zfill(2)}Tileset', addr)
-    return data
-
-def generateInfoFile(nesFile, bankNum, boundaryGroup):
+def writeAndSaveToInfoFile(bankNum, boundaryBank, labelsBank):
     bankNumStr = convertToHex(bankNum).zfill(2)
     with open(f"infofile/bank{bankNumStr}.infofile", "w") as f:
-        print ("Generate file for bank", bankNumStr)
-        bankStart = (bankNum * 0x8000) + 0x10
-        boundaryArr = []
-        if boundaryGroup == 1:
-            boundaryArr = findBoundariesMapType1(nesFile, bankNum)
-        elif boundaryGroup == 2:
-            boundaryArr = findBoundariesMapType2(nesFile, bankNum)
-
-        data = ""
-        data += generateInfoFileHeader(bankNumStr, bankStart)
-        data += generateRangeFromArr(boundaryArr)
+        print("Generate file for bank", bankNumStr)
+        data = generateInfoFileHeader(bankNumStr, (bankNum * 0x8000) + 0x10)
+        if bankNum in boundaryBank:
+            boundaryBank[bankNum] = list(set(boundaryBank[bankNum]))
+            boundaryBank[bankNum].sort()
+            data += generateRangeFromArr(boundaryBank[bankNum])
         data += "\n"
-        if boundaryGroup == 1:
-            data += generateMapType1Labels(nesFile, bankNum)
-        elif boundaryGroup == 2:
-            data += generateMapType2Labels(nesFile, bankNum)
+        if bankNum in labelsBank:
+            labelsBank[bankNum] = list(set(labelsBank[bankNum]))
+            labelsBank[bankNum].sort()
+            for label in labelsBank[bankNum]:
+                data += generateLabel(label[1], label[0])
         f.write(data)
+
+def generateMapInfoFile(nesFile):
+    mapBankImage = MapBankImage(nesFile)
+    bankLocationToTileset = {}
+    for transitionPoint in mapBankImage.indexToBankLocation:
+        key = (transitionPoint.imageBankNum, transitionPoint.imageBankIndex)
+        value = (transitionPoint.tilesetBankNum, transitionPoint.tilesetBankIndex)
+
+        if not(0x10 <= key[0] <= 0x2f):
+            continue
+
+        bankLocationToTileset[key] = value
+
+    boundaryBank = collections.defaultdict(list)
+    labelsBank = collections.defaultdict(list)
+
+    for bankNum in range(0x10, 0x2f):
+        # Append at top of file
+        boundaryBank[bankNum].append((0x8000, "ADDRTABLE"))
+        boundaryBank[bankNum].append((0x8008, "BYTETABLE"))
+    # bank 0x2f only has 2 addresses in header instead of 4
+    boundaryBank[0x2f].append((0x8000, "ADDRTABLE"))
+    boundaryBank[0x2f].append((0x8004, "BYTETABLE"))
+
+    tilesetParent = {}
+    for key, value in bankLocationToTileset.items():
+        parentBankNum, parentImageIndex = key
+        headerAddr = nesFile.getAddressBlock(parentBankNum, 0x00, 0x08)
+        startAddr = headerAddr[parentImageIndex]
+        parentDataBlock = nesFile.getBankDataBlock(parentBankNum)
+        totalCol = parentDataBlock[startAddr - 0x8000]
+        totalRow = parentDataBlock[startAddr + 1 - 0x8000]
+        totalImages = totalCol * totalRow
+        tilesetParent[value] = (parentBankNum, parentImageIndex, totalImages)
+
+    mapInfoBoundaries = calculateMapInfoBoundaries(nesFile, tilesetParent)
+    tilesetBoundaries = calculateTilesetBoundaries(nesFile, tilesetParent)
+    for boundariesDict in [mapInfoBoundaries, tilesetBoundaries]:
+        for bankNum, boundaries in boundariesDict.items():
+            boundaryBank[bankNum].extend(boundaries)
+
+    mapInfoLabelBank = calculateMapInfoLabels(nesFile, tilesetParent)
+    tilesetLabelBank = calculateTilesetLabels(nesFile, tilesetParent)
+    for labelsDict in [mapInfoLabelBank, tilesetLabelBank]:
+        for bankNum, labels in labelsDict.items():
+            labelsBank[bankNum].extend(labels)
+
+    # Generate info files for banks 0x10 to 0x2F
+    for bankNum in range(0x10, 0x30):
+        writeAndSaveToInfoFile(bankNum, boundaryBank, labelsBank)
 
 def generateIncludeData(bankNumStr):
     data = ""
@@ -304,37 +328,39 @@ def generateInfoFileBank1(nesFile):
         transitionPoint = MapBankImagePoint(row)
         indexToBankLocation.append(transitionPoint)
 
-    with open(f"bank{bankNumStr}.infofile", "w") as f:
-        data = ""
+    labels = []
+    for imageIndex in range(0, 190):
+        curAddr = roomTransitionDataAddrs[imageIndex]
+        rowNum = 0
 
-        for imageIndex in range(0, 190):
-            curAddr = roomTransitionDataAddrs[imageIndex]
-            rowNum = 0
+        if imageIndex >= len(indexToBankLocation):
+            break
+        imageBankNum = convertToHex(indexToBankLocation[imageIndex].imageBankNum)
+        imageBankIndex = str(indexToBankLocation[imageIndex].imageBankIndex)
 
-            if imageIndex >= len(indexToBankLocation):
-                break
-            imageBankNum = convertToHex(indexToBankLocation[imageIndex].imageBankNum)
-            imageBankIndex = str(indexToBankLocation[imageIndex].imageBankIndex)
-
-            while bankData[curAddr - 0x8000] != 0xff:
-                transitionRowLabel = f'Map{convertToHex(imageIndex).zfill(2)}Bank{imageBankNum}Image{imageBankIndex}MapTransitionRow{rowNum}'
-                if (bankData[curAddr - 0x8000] >> 4) & 0x0f == 0:
-                    data += generateLabel(transitionRowLabel, curAddr)
-                    curAddr += 0xa
-                    rowNum += 1
-                    continue
-
-                data += generateLabel(transitionRowLabel, curAddr)
+        while bankData[curAddr - 0x8000] != 0xff:
+            transitionRowLabel = f'Map{convertToHex(imageIndex).zfill(2)}Bank{imageBankNum}Image{imageBankIndex}MapTransitionRow{rowNum}'
+            if (bankData[curAddr - 0x8000] >> 4) & 0x0f == 0:
+                labels.append((curAddr, transitionRowLabel))
                 curAddr += 0xa
                 rowNum += 1
+                continue
+
+            labels.append((curAddr, transitionRowLabel))
+            curAddr += 0xa
+            rowNum += 1
+
+    data = ""
+    data += generateInfoFileHeader(bankNumStr, (bankNum * 0x8000) + 0x10)
+    for label in labels:
+        data += generateLabel(label[1], label[0])
+
+    with open(f"bank{bankNumStr}.infofile", "w") as f:
         f.write(data)
 
 def main():
     nesFile = NESFile("game.nes")
-    for bankNum in range(0x10, 0x27):
-        generateInfoFile(nesFile, bankNum, boundaryGroup=1)
-    for bankNum in range(0x27, 0x2c):
-        generateInfoFile(nesFile, bankNum, boundaryGroup=2)
+    generateMapInfoFile(nesFile)
     for bankNum in range(0x37, 0x3f):
         generateOverworldInfoFile(nesFile, bankNum)
 

@@ -4,8 +4,8 @@
 ; ----------------------------------------------------------------------------
         .addr   Bank29MapImage00                ; 8000 12 80                    ..
         .addr   Bank29MapImage00Tileset         ; 8002 2D A6                    -.
-        .addr   Bank29MapImage01                ; 8004 89 B4                    ..
-        .addr   Bank29MapImage01Tileset         ; 8006 EC C7                    ..
+        .addr   Bank29MapImage02                ; 8004 89 B4                    ..
+        .addr   Bank29MapImage02Tileset         ; 8006 EC C7                    ..
 ; ----------------------------------------------------------------------------
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8008 00 00 00 00 00 00 00 00  ........
         .byte   $40,$40                         ; 8010 40 40                    @@
@@ -1781,19 +1781,19 @@ Bank29MapImage00SubImage05Tileset:
         .byte   $40,$68,$48,$28,$08,$08,$08,$00 ; B471 40 68 48 28 08 08 08 00  @hH(....
         .byte   $01,$03,$01,$00,$02,$02,$02,$02 ; B479 01 03 01 00 02 02 02 02  ........
         .byte   $01,$0B,$09,$0A,$08,$08,$08,$00 ; B481 01 0B 09 0A 08 08 08 00  ........
-Bank29MapImage01:
+Bank29MapImage02:
         .byte   $01,$02,$00,$00,$00,$02,$00,$00 ; B489 01 02 00 00 00 02 00 00  ........
 ; ----------------------------------------------------------------------------
-        .addr   Bank29MapImage01Collision       ; B491 FC C6                    ..
+        .addr   Bank29MapImage02Collision       ; B491 FC C6                    ..
         .addr   LB4A5                           ; B493 A5 B4                    ..
         .addr   LBCEC                           ; B495 EC BC                    ..
-        .addr   Bank29MapImage01SubImage00Tilemap; B497 EC B4                   ..
-        .addr   Bank29MapImage01SubImage01Tilemap; B499 AC B8                   ..
-        .addr   Bank29MapImage01SubImage00TileAttr; B49B 6C BC                  l.
-        .addr   Bank29MapImage01SubImage01TileAttr; B49D AC BC                  ..
-        .addr   Bank29MapImage01SpritePalette   ; B49F 4C C4                    L.
-        .addr   Bank29MapImage01SubImage00BackgroundPalette; B4A1 2C C4         ,.
-        .addr   Bank29MapImage01SubImage01BackgroundPalette; B4A3 3C C4         <.
+        .addr   Bank29MapImage02SubImage00Tilemap; B497 EC B4                   ..
+        .addr   Bank29MapImage02SubImage01Tilemap; B499 AC B8                   ..
+        .addr   Bank29MapImage02SubImage00TileAttr; B49B 6C BC                  l.
+        .addr   Bank29MapImage02SubImage01TileAttr; B49D AC BC                  ..
+        .addr   Bank29MapImage02SpritePalette   ; B49F 4C C4                    L.
+        .addr   Bank29MapImage02SubImage00BackgroundPalette; B4A1 2C C4         ,.
+        .addr   Bank29MapImage02SubImage01BackgroundPalette; B4A3 3C C4         <.
 ; ----------------------------------------------------------------------------
 LB4A5:
         .byte   $00,$03,$00,$00,$80,$00,$80,$00 ; B4A5 00 03 00 00 80 00 80 00  ........
@@ -1825,7 +1825,7 @@ LB4A5:
         .addr   LC69C                           ; B4E9 9C C6                    ..
 ; ----------------------------------------------------------------------------
         .byte   $FF                             ; B4EB FF                       .
-Bank29MapImage01SubImage00Tilemap:
+Bank29MapImage02SubImage00Tilemap:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B4EC 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B4F4 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B4FC 00 00 00 00 00 00 00 00  ........
@@ -1946,7 +1946,7 @@ Bank29MapImage01SubImage00Tilemap:
         .byte   $04,$03,$04,$03,$04,$03,$04,$03 ; B894 04 03 04 03 04 03 04 03  ........
         .byte   $36,$37,$04,$03,$04,$03,$00,$00 ; B89C 36 37 04 03 04 03 00 00  67......
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B8A4 00 00 00 00 00 00 00 00  ........
-Bank29MapImage01SubImage01Tilemap:
+Bank29MapImage02SubImage01Tilemap:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B8AC 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B8B4 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B8BC 00 00 00 00 00 00 00 00  ........
@@ -2067,7 +2067,7 @@ Bank29MapImage01SubImage01Tilemap:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC54 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC5C 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BC64 00 00 00 00 00 00 00 00  ........
-Bank29MapImage01SubImage00TileAttr:
+Bank29MapImage02SubImage00TileAttr:
         .byte   $FF,$00,$00,$00,$FF,$FF,$FF,$FF ; BC6C FF 00 00 00 FF FF FF FF  ........
         .byte   $FF,$00,$55,$55,$77,$5D,$55,$DD ; BC74 FF 00 55 55 77 5D 55 DD  ..UUw]U.
         .byte   $FF,$00,$00,$00,$1D,$3F,$3F,$FF ; BC7C FF 00 00 00 1D 3F 3F FF  .....??.
@@ -2076,7 +2076,7 @@ Bank29MapImage01SubImage00TileAttr:
         .byte   $FF,$00,$00,$CC,$05,$05,$05,$05 ; BC94 FF 00 00 CC 05 05 05 05  ........
         .byte   $5F,$5F,$7F,$5F,$5F,$00,$00,$00 ; BC9C 5F 5F 7F 5F 5F 00 00 00  __.__...
         .byte   $55,$55,$55,$55,$55,$00,$00,$00 ; BCA4 55 55 55 55 55 00 00 00  UUUUU...
-Bank29MapImage01SubImage01TileAttr:
+Bank29MapImage02SubImage01TileAttr:
         .byte   $FF,$7F,$5F,$5F,$5F,$5F,$DF,$FF ; BCAC FF 7F 5F 5F 5F 5F DF FF  ..____..
         .byte   $FF,$77,$55,$55,$55,$55,$DD,$FF ; BCB4 FF 77 55 55 55 55 DD FF  .wUUUU..
         .byte   $FF,$77,$55,$AE,$AA,$55,$DD,$FF ; BCBC FF 77 55 AE AA 55 DD FF  .wU..U..
@@ -2318,13 +2318,13 @@ LBCEC:
         .byte   $1F,$1F,$0F,$07,$07,$0F,$13,$09 ; C414 1F 1F 0F 07 07 0F 13 09  ........
         .byte   $D0,$D0,$20,$70,$F0,$F0,$78,$F0 ; C41C D0 D0 20 70 F0 F0 78 F0  .. p..x.
         .byte   $F0,$F0,$E0,$90,$90,$F0,$C8,$90 ; C424 F0 F0 E0 90 90 F0 C8 90  ........
-Bank29MapImage01SubImage00BackgroundPalette:
+Bank29MapImage02SubImage00BackgroundPalette:
         .byte   $0F,$37,$18,$16,$0F,$37,$00,$16 ; C42C 0F 37 18 16 0F 37 00 16  .7...7..
         .byte   $0F,$37,$18,$22,$0F,$30,$17,$22 ; C434 0F 37 18 22 0F 30 17 22  .7.".0."
-Bank29MapImage01SubImage01BackgroundPalette:
+Bank29MapImage02SubImage01BackgroundPalette:
         .byte   $0F,$22,$17,$30,$0F,$37,$17,$10 ; C43C 0F 22 17 30 0F 37 17 10  .".0.7..
         .byte   $0F,$10,$17,$00,$0F,$30,$10,$00 ; C444 0F 10 17 00 0F 30 10 00  .....0..
-Bank29MapImage01SpritePalette:
+Bank29MapImage02SpritePalette:
         .byte   $0F,$36,$28,$0F,$0F,$36,$12,$0F ; C44C 0F 36 28 0F 0F 36 12 0F  .6(..6..
         .byte   $0F,$36,$16,$0F,$0F,$36,$17,$0F ; C454 0F 36 16 0F 0F 36 17 0F  .6...6..
 LC45C:
@@ -2418,7 +2418,7 @@ LC69C:
         .byte   $6C,$03,$6D,$03,$51,$43,$50,$43 ; C6E4 6C 03 6D 03 51 43 50 43  l.m.QCPC
         .byte   $6C,$03,$6D,$03,$53,$43,$52,$43 ; C6EC 6C 03 6D 03 53 43 52 43  l.m.SCRC
         .byte   $6C,$03,$6D,$03,$51,$43,$50,$43 ; C6F4 6C 03 6D 03 51 43 50 43  l.m.QCPC
-Bank29MapImage01Collision:
+Bank29MapImage02Collision:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C6FC 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C704 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C70C 00 00 00 00 00 00 00 00  ........
@@ -2450,11 +2450,11 @@ Bank29MapImage01Collision:
         .byte   $00,$00,$00,$01,$00,$00,$00,$00 ; C7DC 00 00 00 01 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C7E4 00 00 00 00 00 00 00 00  ........
 ; ----------------------------------------------------------------------------
-Bank29MapImage01Tileset:
-        .addr   Bank29MapImage01SubImage00Tileset; C7EC F0 C7                   ..
-        .addr   Bank29MapImage01SubImage01Tileset; C7EE 70 CB                   p.
+Bank29MapImage02Tileset:
+        .addr   Bank29MapImage02SubImage00Tileset; C7EC F0 C7                   ..
+        .addr   Bank29MapImage02SubImage01Tileset; C7EE 70 CB                   p.
 ; ----------------------------------------------------------------------------
-Bank29MapImage01SubImage00Tileset:
+Bank29MapImage02SubImage00Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C7F0 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C7F8 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C800 00 00 00 00 00 00 00 00  ........
@@ -2567,7 +2567,7 @@ Bank29MapImage01SubImage00Tileset:
         .byte   $00,$08,$08,$28,$28,$28,$28,$20 ; CB58 00 08 08 28 28 28 28 20  ...(((( 
         .byte   $01,$0B,$09,$0A,$08,$08,$08,$00 ; CB60 01 0B 09 0A 08 08 08 00  ........
         .byte   $00,$08,$08,$0A,$0A,$0A,$0A,$02 ; CB68 00 08 08 0A 0A 0A 0A 02  ........
-Bank29MapImage01SubImage01Tileset:
+Bank29MapImage02SubImage01Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB70 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CB78 00 00 00 00 00 00 00 00  ........
         .byte   $EE,$EE,$EE,$EE,$EE,$EE,$EE,$EE ; CB80 EE EE EE EE EE EE EE EE  ........

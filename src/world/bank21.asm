@@ -1,14 +1,11 @@
         .setcpu "6502"
 
 ; ----------------------------------------------------------------------------
-L4040           := $4040
-L55AA           := $55AA
-L7F00           := $7F00
 ; ----------------------------------------------------------------------------
         .addr   Bank21MapImage00                ; 8000 12 80                    ..
         .addr   Bank21MapImage01                ; 8002 2F CF                    /.
         .addr   Bank21MapImage02                ; 8004 0A F2                    ..
-        .addr   Bank21MapImage03                ; 8006 A9 FB                    ..
+        .addr   Bank2cMapImage00Tileset         ; 8006 A9 FB                    ..
 ; ----------------------------------------------------------------------------
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8008 00 00 00 00 00 00 00 00  ........
         .byte   $40,$40                         ; 8010 40 40                    @@
@@ -4128,24 +4125,16 @@ Bank21MapImage02Collision:
         .byte   $11,$11,$11,$11,$11,$11,$11,$11 ; FB91 11 11 11 11 11 11 11 11  ........
         .byte   $11,$11,$11,$11,$11,$11,$11,$11 ; FB99 11 11 11 11 11 11 11 11  ........
         .byte   $11,$11,$11,$11,$11,$11,$11,$11 ; FBA1 11 11 11 11 11 11 11 11  ........
-Bank21MapImage03:
-        .byte   $AD,$FB,$CD,$FC,$00,$7F,$40,$40 ; FBA9 AD FB CD FC 00 7F 40 40  ......@@
 ; ----------------------------------------------------------------------------
-        .addr   L4040                           ; FBB1 40 40                    @@
-        .addr   L4040                           ; FBB3 40 40                    @@
-        .addr   L7F00                           ; FBB5 00 7F                    ..
-        .addr   L4040                           ; FBB7 40 40                    @@
-        .addr   L4040                           ; FBB9 40 40                    @@
-        .addr   L4040                           ; FBBB 40 40                    @@
-        .addr   L55AA                           ; FBBD AA 55                    .U
-        .addr   L55AA                           ; FBBF AA 55                    .U
-        .addr   L55AA                           ; FBC1 AA 55                    .U
-        .addr   L55AA                           ; FBC3 AA 55                    .U
-        .addr   L55AA                           ; FBC5 AA 55                    .U
-        .addr   L55AA                           ; FBC7 AA 55                    .U
-        .addr   L55AA                           ; FBC9 AA 55                    .U
-        .addr   L55AA                           ; FBCB AA 55                    .U
+Bank2cMapImage00Tileset:
+        .addr   Bank2cMapImage00SubImage00Tileset; FBA9 AD FB                   ..
+        .addr   Bank2cMapImage00SubImage01Tileset; FBAB CD FC                   ..
 ; ----------------------------------------------------------------------------
+Bank2cMapImage00SubImage00Tileset:
+        .byte   $00,$7F,$40,$40,$40,$40,$40,$40 ; FBAD 00 7F 40 40 40 40 40 40  ..@@@@@@
+        .byte   $00,$7F,$40,$40,$40,$40,$40,$40 ; FBB5 00 7F 40 40 40 40 40 40  ..@@@@@@
+        .byte   $AA,$55,$AA,$55,$AA,$55,$AA,$55 ; FBBD AA 55 AA 55 AA 55 AA 55  .U.U.U.U
+        .byte   $AA,$55,$AA,$55,$AA,$55,$AA,$55 ; FBC5 AA 55 AA 55 AA 55 AA 55  .U.U.U.U
         .byte   $00,$94,$00,$A9,$00,$55,$00,$CA ; FBCD 00 94 00 A9 00 55 00 CA  .....U..
         .byte   $00,$FF,$00,$FF,$00,$FF,$00,$FF ; FBD5 00 FF 00 FF 00 FF 00 FF  ........
         .byte   $00,$7F,$5F,$4F,$7F,$7F,$7F,$7F ; FBDD 00 7F 5F 4F 7F 7F 7F 7F  .._O....
@@ -4178,6 +4167,7 @@ Bank21MapImage03:
         .byte   $40,$40,$40,$40,$00,$5F,$5F,$5F ; FCB5 40 40 40 40 00 5F 5F 5F  @@@@.___
         .byte   $02,$02,$02,$02,$00,$FA,$FA,$02 ; FCBD 02 02 02 02 00 FA FA 02  ........
         .byte   $02,$02,$02,$02,$00,$FA,$FA,$FA ; FCC5 02 02 02 02 00 FA FA FA  ........
+Bank2cMapImage00SubImage01Tileset:
         .byte   $AA,$55,$AA,$55,$AA,$55,$AA,$55 ; FCCD AA 55 AA 55 AA 55 AA 55  .U.U.U.U
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FCD5 00 00 00 00 00 00 00 00  ........
         .byte   $05,$30,$60,$08,$07,$88,$C4,$00 ; FCDD 05 30 60 08 07 88 C4 00  .0`.....
