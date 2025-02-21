@@ -3,9 +3,7 @@ import collections
 
 class MapBankImagePoint:
     def __init__(self, rowData):
-        combinedValue1 = rowData[0]
-        combinedValue2 = rowData[1]
-        storeIndex = rowData[2]
+        combinedValue1, combinedValue2, storeIndex = rowData[:3]
         self.imageBankNum = combinedValue1 & 0x3f
         self.imageBankIndex = (combinedValue1 >> 6) & 0x03
         self.tilesetBankNum = combinedValue2 & 0x3f
@@ -34,41 +32,42 @@ def convertToHex(num):
     return str(hex(num)).replace("0x", "")
 
 def generateInfoFileHeader(bankNumStr, bankStart):
-    curAddr = str(hex(bankStart)).replace("0x", "$")
-    data = 'GLOBAL {' + "\n"
-    data += '  INPUTNAME "game.nes";' + "\n"
-    data += f'  OUTPUTNAME "bank{bankNumStr}.asm";' + "\n"
-    data += f'  INPUTOFFS {curAddr};' + "\n"
-    data += '  INPUTSIZE $8000;' + "\n"
-    data += '  COMMENTS $4;' + "\n"
-    data += f'  STARTADDR $8000;' + "\n"
-    data += '  LABELBREAK $1;' + "\n"
-    data += '};' + "\n"
-    return data
+    curAddr = hex(bankStart).replace("0x", "$")
+    return (
+        'GLOBAL {\n'
+        '  INPUTNAME "game.nes";\n'
+        f'  OUTPUTNAME "bank{bankNumStr}.asm";\n'
+        f'  INPUTOFFS {curAddr};\n'
+        '  INPUTSIZE $8000;\n'
+        '  COMMENTS $4;\n'
+        '  STARTADDR $8000;\n'
+        '  LABELBREAK $1;\n'
+        '};\n'
+    )
 
 def generateRange(startAddr, endAddr, type):
-    data = ""
-    data += "RANGE {" + "\n"
-    data += f'  START ${startAddr};' + "\n"
-    data += f'  END ${endAddr};' + "\n"
-    data += f'  TYPE {type};' + "\n"
-    data += '};' + "\n"
-    return data
+    return (
+        "RANGE {\n"
+        f'  START ${startAddr};\n'
+        f'  END ${endAddr};\n'
+        f'  TYPE {type};\n'
+        '};\n'
+    )
 
 def generateLabel(labelStr, startAddr):
-    data = ""
-    data += "LABEL {" + "\n"
-    data += f'  NAME "{labelStr}";' + "\n"
-    data += f'  ADDR  ${convertToHex(startAddr).upper()};' + "\n"
-    data += "};" + "\n"
-    return data
+    return (
+        "LABEL {\n"
+        f'  NAME "{labelStr}";\n'
+        f'  ADDR  ${convertToHex(startAddr).upper()};\n'
+        "};\n"
+    )
 
 def generateRangeFromArr(arr):
     arr.append((0xffff, ""))
-    data = ""
-    for i in range(len(arr) - 1):
-        data += generateRange(startAddr=convertToHex(arr[i][0]), endAddr=convertToHex(arr[i + 1][0] - 1), type=arr[i][1])
-    return data
+    return "".join(
+        generateRange(convertToHex(arr[i][0]), convertToHex(arr[i + 1][0] - 1), arr[i][1])
+        for i in range(len(arr) - 1)
+    )
 
 def findBoundariesSpriteAddrRef(nesFile, dataBank, startAddr):
     boundaries = []
@@ -218,7 +217,7 @@ def writeAndSaveToInfoFile(bankNum, boundaryBank, labelsBank):
             labelsBank[bankNum] = list(set(labelsBank[bankNum]))
             labelsBank[bankNum].sort()
             for label in labelsBank[bankNum]:
-                data += generateLabel(label[1], label[0])
+                data += generateLabel(labelStr=label[1], startAddr=label[0])
         f.write(data)
 
 def generateMapInfoFile(nesFile):
@@ -236,13 +235,13 @@ def generateMapInfoFile(nesFile):
     boundaryBank = collections.defaultdict(list)
     labelsBank = collections.defaultdict(list)
 
-    for bankNum in range(0x10, 0x2f):
-        # Append at top of file
+    for bankNum in range(0x10, 0x30):
         boundaryBank[bankNum].append((0x8000, "ADDRTABLE"))
-        boundaryBank[bankNum].append((0x8008, "BYTETABLE"))
-    # bank 0x2f only has 2 addresses in header instead of 4
-    boundaryBank[0x2f].append((0x8000, "ADDRTABLE"))
-    boundaryBank[0x2f].append((0x8004, "BYTETABLE"))
+        if bankNum == 0x2f:
+            # bank 0x2f only has 2 addresses in header instead of 4
+            boundaryBank[bankNum].append((0x8004, "BYTETABLE"))
+        else:
+            boundaryBank[bankNum].append((0x8008, "BYTETABLE"))
 
     tilesetParent = {}
     for key, value in bankLocationToTileset.items():
@@ -272,23 +271,22 @@ def generateMapInfoFile(nesFile):
         writeAndSaveToInfoFile(bankNum, boundaryBank, labelsBank)
 
 def generateIncludeData(bankNumStr):
-    data = ""
-    data += f'.scope bank{bankNumStr}'
-    data += f'.segment "PRG{bankNumStr}"'
-    data += f'.include "src/world/bank{bankNumStr}.asm"'
-    data += '.endscope'
-    return data
+    return (
+        f'.scope bank{bankNumStr}'
+        f'.segment "PRG{bankNumStr}"'
+        f'.include "src/world/bank{bankNumStr}.asm"'
+        '.endscope'
+    )
 
 def generateMakefileData(bankNum):
-    bankNumStr = convertToHex(bankNum).zfill(2)
-    return f'da65 -i src/world/bank{bankNumStr}.infofile'
+    return f'da65 -i src/world/bank{convertToHex(bankNum).zfill(2)}.infofile'
 
 def generateLayoutData(bankNum, startAddr):
     bankNumStr = convertToHex(bankNum).zfill(2)
-    data = ""
-    data += f'PRG{bankNumStr}: start = {startAddr}, size = $8000;'
-    data += f'PRG{bankNumStr}: load = PRG{bankNumStr}, type = ro;'
-    return data
+    return (
+        f'PRG{bankNumStr}: start = {startAddr}, size = $8000;'
+        f'PRG{bankNumStr}: load = PRG{bankNumStr}, type = ro;'
+    )
 
 def generateOverworldInfoFile(nesFile, bankNum):
     bankNumStr = convertToHex(bankNum).zfill(2)
@@ -316,17 +314,13 @@ def generateOverworldInfoFile(nesFile, bankNum):
 def generateInfoFileBank1(nesFile):
     bankNum = 0x01
     bankNumStr = convertToHex(bankNum).zfill(2)
-    startAddrArr = nesFile.getAddressBlock(bankNum, 0x00, 0x40)
 
     blockStartAddrs = nesFile.getAddressBlock(bankNum, 0x00, 0x10)
     roomTransitionDataAddrs = nesFile.getAddressBlock(bankNum, blockStartAddrs[0] - 0x8000, blockStartAddrs[0] + (190*2) - 0x8000)
 
     bankData = nesFile.getBankDataBlock(bankNum)
-    indexToBankLocation = []
-    for addr in range(blockStartAddrs[1], blockStartAddrs[0], 8):
-        row = bankData[addr - 0x8000 : addr + 8 - 0x8000]
-        transitionPoint = MapBankImagePoint(row)
-        indexToBankLocation.append(transitionPoint)
+    mapBankImage = MapBankImage(nesFile)
+    indexToBankLocation = mapBankImage.indexToBankLocation
 
     labels = []
     for imageIndex in range(0, 190):
@@ -340,6 +334,11 @@ def generateInfoFileBank1(nesFile):
 
         while bankData[curAddr - 0x8000] != 0xff:
             transitionRowLabel = f'Map{convertToHex(imageIndex).zfill(2)}Bank{imageBankNum}Image{imageBankIndex}MapTransitionRow{rowNum}'
+
+            if (bankData[curAddr - 0x8000] >> 4) & 0x0f != 0:
+                otherBank = indexToBankLocation[bankData[curAddr + 1- 0x8000]]
+                transitionRowLabel += f'_ToBank{convertToHex(otherBank.imageBankNum)}Image{otherBank.imageBankIndex}'
+
             if (bankData[curAddr - 0x8000] >> 4) & 0x0f == 0:
                 labels.append((curAddr, transitionRowLabel))
                 curAddr += 0xa
