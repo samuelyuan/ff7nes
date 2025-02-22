@@ -16,7 +16,7 @@ L8000:
 
 ; ----------------------------------------------------------------------------
 L8003:
-        jsr     L810D                           ; 8003 20 0D 81                  ..
+        jsr     PlayerDirectionVar0301_SetLeft  ; 8003 20 0D 81                  ..
 L8006:
         bcc     L802C                           ; 8006 90 24                    .$
 L8009           := * + 1
@@ -191,7 +191,7 @@ L810B:
         rts                                     ; 810C 60                       `
 
 ; ----------------------------------------------------------------------------
-L810D:
+PlayerDirectionVar0301_SetLeft:
         ldy     #$01                            ; 810D A0 01                    ..
         lda     $0300,y                         ; 810F B9 00 03                 ...
         cmp     #$09                            ; 8112 C9 09                    ..
@@ -209,7 +209,7 @@ L8120:
 
 ; ----------------------------------------------------------------------------
 PlayerPressedDownButton:
-        jsr     L8241                           ; 8122 20 41 82                  A.
+        jsr     PlayerDirectionVar0301_SetSouth ; 8122 20 41 82                  A.
         bcc     L814B                           ; 8125 90 24                    .$
         lda     $BB                             ; 8127 A5 BB                    ..
         bne     L8135                           ; 8129 D0 0A                    ..
@@ -394,7 +394,7 @@ L823F:
         rts                                     ; 8240 60                       `
 
 ; ----------------------------------------------------------------------------
-L8241:
+PlayerDirectionVar0301_SetSouth:
         ldy     #$01                            ; 8241 A0 01                    ..
         lda     $0300,y                         ; 8243 B9 00 03                 ...
         cmp     #$03                            ; 8246 C9 03                    ..
@@ -415,7 +415,7 @@ L8258:
 
 ; ----------------------------------------------------------------------------
 PlayerPressedRightButton:
-        jsr     L836B                           ; 825A 20 6B 83                  k.
+        jsr     PlayerDirectionVar0301_SetEast  ; 825A 20 6B 83                  k.
         bcc     L8283                           ; 825D 90 24                    .$
         lda     $BB                             ; 825F A5 BB                    ..
         bne     L826D                           ; 8261 D0 0A                    ..
@@ -595,7 +595,7 @@ L8364:
         rts                                     ; 836A 60                       `
 
 ; ----------------------------------------------------------------------------
-L836B:
+PlayerDirectionVar0301_SetEast:
         ldy     #$01                            ; 836B A0 01                    ..
         lda     $0300,y                         ; 836D B9 00 03                 ...
         cmp     #$03                            ; 8370 C9 03                    ..
@@ -613,7 +613,7 @@ L837E:
 
 ; ----------------------------------------------------------------------------
 PlayerPressedUpButton:
-        jsr     L8497                           ; 8380 20 97 84                  ..
+        jsr     PlayerDirectionVar0301_SetNorth ; 8380 20 97 84                  ..
         bcc     L83A9                           ; 8383 90 24                    .$
         lda     $BB                             ; 8385 A5 BB                    ..
         bne     L8393                           ; 8387 D0 0A                    ..
@@ -794,7 +794,7 @@ L8495:
         rts                                     ; 8496 60                       `
 
 ; ----------------------------------------------------------------------------
-L8497:
+PlayerDirectionVar0301_SetNorth:
         ldy     #$01                            ; 8497 A0 01                    ..
         lda     $0300,y                         ; 8499 B9 00 03                 ...
         cmp     #$06                            ; 849C C9 06                    ..
@@ -8961,7 +8961,7 @@ LD950:
         rts                                     ; D979 60                       `
 
 ; ----------------------------------------------------------------------------
-LD97A:
+LoadBank1MapTransitionData:
         lda     #$80                            ; D97A A9 80                    ..
         sta     $03                             ; D97C 85 03                    ..
         lda     #$00                            ; D97E A9 00                    ..
@@ -9007,39 +9007,40 @@ LD9C4:
         beq     LDA0F                           ; D9CB F0 42                    .B
         and     #$0F                            ; D9CD 29 0F                    ).
         bne     LD9D7                           ; D9CF D0 06                    ..
-        jsr     LDBDB                           ; D9D1 20 DB DB                  ..
-        jmp     LD9FF                           ; D9D4 4C FF D9                 L..
+        jsr     Bank1TransitionRowIndex0_CheckPlayerDirection; D9D1 20 DB DB     ..
+        jmp     Bank1MoveToNextLineMapData      ; D9D4 4C FF D9                 L..
 
 ; ----------------------------------------------------------------------------
 LD9D7:
         cmp     #$01                            ; D9D7 C9 01                    ..
         bne     LD9E1                           ; D9D9 D0 06                    ..
         jsr     LDE60                           ; D9DB 20 60 DE                  `.
-        jmp     LD9FF                           ; D9DE 4C FF D9                 L..
+        jmp     Bank1MoveToNextLineMapData      ; D9DE 4C FF D9                 L..
 
 ; ----------------------------------------------------------------------------
 LD9E1:
         cmp     #$02                            ; D9E1 C9 02                    ..
         bne     LD9EB                           ; D9E3 D0 06                    ..
         jsr     LDF24                           ; D9E5 20 24 DF                  $.
-        jmp     LD9FF                           ; D9E8 4C FF D9                 L..
+        jmp     Bank1MoveToNextLineMapData      ; D9E8 4C FF D9                 L..
 
 ; ----------------------------------------------------------------------------
 LD9EB:
         cmp     #$03                            ; D9EB C9 03                    ..
         bne     CheckMapItemType0F_TreasureBox  ; D9ED D0 06                    ..
         jsr     LDAB7                           ; D9EF 20 B7 DA                  ..
-        jmp     LD9FF                           ; D9F2 4C FF D9                 L..
+        jmp     Bank1MoveToNextLineMapData      ; D9F2 4C FF D9                 L..
 
 ; ----------------------------------------------------------------------------
 CheckMapItemType0F_TreasureBox:
         cmp     #$0F                            ; D9F5 C9 0F                    ..
-        bne     LD9FF                           ; D9F7 D0 06                    ..
+        bne     Bank1MoveToNextLineMapData      ; D9F7 D0 06                    ..
         jsr     LE068                           ; D9F9 20 68 E0                  h.
-        jmp     LD9FF                           ; D9FC 4C FF D9                 L..
+        jmp     Bank1MoveToNextLineMapData      ; D9FC 4C FF D9                 L..
 
 ; ----------------------------------------------------------------------------
-LD9FF:
+; Add 0xa to base address, since each line takes 10 bytes
+Bank1MoveToNextLineMapData:
         lda     L0002                           ; D9FF A5 02                    ..
         clc                                     ; DA01 18                       .
         adc     #$0A                            ; DA02 69 0A                    i.
@@ -9325,7 +9326,7 @@ LDBBB:
         .byte   $05,$03,$03,$01,$00,$03,$FF,$05 ; DBCB 05 03 03 01 00 03 FF 05  ........
         .byte   $02,$02,$00,$00,$FF,$00,$00,$02 ; DBD3 02 02 00 00 FF 00 00 02  ........
 ; ----------------------------------------------------------------------------
-LDBDB:
+Bank1TransitionRowIndex0_CheckPlayerDirection:
         ldy     #$00                            ; DBDB A0 00                    ..
         jsr     L0140                           ; DBDD 20 40 01                  @.
         cmp     #$F0                            ; DBE0 C9 F0                    ..
@@ -11151,7 +11152,7 @@ LE9B5:
 ; ----------------------------------------------------------------------------
 LE9C5:
         jsr     L9BEB                           ; E9C5 20 EB 9B                  ..
-        jsr     LD97A                           ; E9C8 20 7A D9                  z.
+        jsr     LoadBank1MapTransitionData      ; E9C8 20 7A D9                  z.
         jsr     LDE11                           ; E9CB 20 11 DE                  ..
 LE9CE:
         jmp     LE9B5                           ; E9CE 4C B5 E9                 L..

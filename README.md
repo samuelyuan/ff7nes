@@ -10,6 +10,12 @@ Translations of the rom can be found in other branches:
 
 * [ff7-pt-br.nes](https://github.com/samuelyuan/ff7nes/tree/pt-br-patch) ```md5: e28035707a9bc9e41ee84127b03c4ce4```
 
+Scripts can be run to extract all maps from the game using the following command:
+
+```
+python ./tools/extract_graphics.py
+```
+
 # Game Memory
 
 This reference table shows where the game reads and writes data to in RAM. 
@@ -42,6 +48,7 @@ This reference table shows where the game reads and writes data to in RAM.
 | 0x0141 | 1 | Current bank to load data from |
 | 0x0149 | 1 | Bank to return to after finishing loading |
 | 0x0200-0x02FF | 256 | Each 8x8 sprite block takes 4 bytes (byte 0 - sprite Y, byte 1 - tile index, byte 2 - palette index, byte 3 - sprite X) |
+| 0x0301 | 1 | Player direction (0x02 = East, 0x05 = South, 0x08 = North, 0x0B = West) |
 | 0x0614 | 1 | Number of pages of items. Each page has at most 6 items. |
 | 0x0616 | 1 | Total number of items in item or shop menu |
 | 0x0645 | 1 | Starting point for item indexes in item menu or shop menu |
@@ -79,7 +86,8 @@ To get the values for party member at index i, you must add i to the base addres
 | 0x602E | 1 | Player Gil lower byte |
 | 0x602F | 1 | Player Gil middle byte |
 | 0x6030 | 1 | Player Gil upper byte |
-| 0x6031-0x6032 | 2 | Flag used for treasure items on the map |
+| 0x6031-0x6032 | 2 | Flag used for treasure items on the map, split into 8 bits |
+| 0X6033-0x603A | 8 | Unknown |
 | 0x603B | 1 | Number of characters in party (1 - 7) |
 | 0x603C-0x6042 | 7 | Party Member List Index |
 | 0x6043-0x6049 | 7 | Party Member Level |
@@ -267,6 +275,28 @@ Values stored in 0x623B:
 | 5 | Earth |
 | 6 | Light |
 | 7 | Ice |
+
+## Treasure Chests
+
+There are 15 treasure chests total.
+
+| Address-Bit Index | Location | Item |
+|-----------|--------|------|
+| 0x6031-7 | Bank10Image3 Sector 1 Mako Reactor Top Left | Potion |
+| 0x6031-6 | Bank10Image3 Sector 1 Mako Reactor Bottom Left | Ether |
+| 0x6031-5 | Bank13Image0 Sector 7 Mako Reactor Underground Top Platform Center | Int+ |
+| 0x6031-4 | Bank14Image0 Outside Aerith House Garden Left | Md Potion |
+| 0x6031-3 | Bank14Image0 Outside Aerith House Garden Center | Str+ |
+| 0x6031-2 | Bank14Image0 Outside Aerith House Garden Right | Phoenix |
+| 0x6031-1 | Bank13Image3 Outside Aerith House Slums Top Left | Hi Potion |
+| 0x6031-0 | Bank15Image3 Sewers Top Left | Md Potion |
+| 0x6032-7 | Bank15Image3 Sewers Top Right | Phoenix |
+| 0x6032-6 | Bank15Image3 Sewers Center | Spr+ |
+| 0x6032-5 | Bank1cImage2 Junon Dock Center | Agl+ |
+| 0x6032-4 | Bank1dImage1 Costa Del Sol Top Left | Md Potion |
+| 0x6032-3 | Bank1dImage1 Costa Del Sol Top Right | Smoke |
+| 0x6032-2 | Bank22Image1 Icicle Inn Bottom Left | Int+ |
+| 0x6032-1 | Bank22Image1 Icicle Inn Outside Clothing Shop | HP+ |
 
 ## Script Scene
 

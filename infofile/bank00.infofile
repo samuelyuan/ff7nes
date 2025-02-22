@@ -289,16 +289,32 @@ RANGE {
 };
 
 LABEL {
+  NAME "PlayerDirectionVar0301_SetLeft";
+  ADDR  $810D;
+};
+LABEL {
   NAME "PlayerPressedDownButton";
   ADDR  $8122;
+};
+LABEL {
+  NAME "PlayerDirectionVar0301_SetSouth";
+  ADDR  $8241;
 };
 LABEL {
   NAME "PlayerPressedRightButton";
   ADDR  $825A;
 };
 LABEL {
+  NAME "PlayerDirectionVar0301_SetEast";
+  ADDR  $836B;
+};
+LABEL {
   NAME "PlayerPressedUpButton";
   ADDR  $8380;
+};
+LABEL {
+  NAME "PlayerDirectionVar0301_SetNorth";
+  ADDR  $8497;
 };
 LABEL {
   NAME "InitScrollLocation";
@@ -938,8 +954,21 @@ LABEL {
   ADDR $D4F8;
 };
 LABEL {
+  NAME "LoadBank1MapTransitionData";
+  ADDR $D97A;
+};
+LABEL {
   NAME "CheckMapItemType0F_TreasureBox";
   ADDR $D9F5;
+};
+LABEL {
+  NAME "Bank1MoveToNextLineMapData";
+  ADDR $D9FF;
+  COMMENT "Add 0xa to base address, since each line takes 10 bytes";
+};
+LABEL {
+  NAME "Bank1TransitionRowIndex0_CheckPlayerDirection";
+  ADDR $DBDB;
 };
 LABEL {
   NAME "ChangeCurrentMap";

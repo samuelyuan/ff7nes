@@ -323,6 +323,7 @@ def generateInfoFileBank1(nesFile):
     indexToBankLocation = mapBankImage.indexToBankLocation
 
     labels = []
+    directionMap = {0x30: "East", 0x60: "South", 0x90: "North", 0xC0: "West"}
     for imageIndex in range(0, 190):
         curAddr = roomTransitionDataAddrs[imageIndex]
         rowNum = 0
@@ -335,11 +336,17 @@ def generateInfoFileBank1(nesFile):
         while bankData[curAddr - 0x8000] != 0xff:
             transitionRowLabel = f'Map{convertToHex(imageIndex).zfill(2)}Bank{imageBankNum}Image{imageBankIndex}MapTransitionRow{rowNum}'
 
-            if (bankData[curAddr - 0x8000] >> 4) & 0x0f != 0:
-                otherBank = indexToBankLocation[bankData[curAddr + 1- 0x8000]]
-                transitionRowLabel += f'_ToBank{convertToHex(otherBank.imageBankNum)}Image{otherBank.imageBankIndex}'
+            rowFirstValue = bankData[curAddr - 0x8000]
 
-            if (bankData[curAddr - 0x8000] >> 4) & 0x0f == 0:
+            if (rowFirstValue >> 4) & 0x0f != 0:
+                otherBank = indexToBankLocation[bankData[curAddr + 1 - 0x8000]]
+                direction = bankData[curAddr + 0 - 0x8000]
+                directionString = f'_Dir{directionMap[direction]}' if direction in directionMap else ""
+                transitionRowLabel += f'_ToBank{convertToHex(otherBank.imageBankNum)}Image{otherBank.imageBankIndex}{directionString}'
+            elif rowFirstValue == 0x0F:
+                transitionRowLabel += f"_TreasureChest"
+
+            if (rowFirstValue >> 4) & 0x0f == 0:
                 labels.append((curAddr, transitionRowLabel))
                 curAddr += 0xa
                 rowNum += 1
