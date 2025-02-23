@@ -1,5 +1,6 @@
 from nesfile import NESFile
 import collections
+import math
 
 class MapBankImagePoint:
     def __init__(self, rowData):
@@ -63,9 +64,9 @@ def generateLabel(labelStr, startAddr):
     )
 
 def generateRangeFromArr(arr):
-    arr.append((0xffff, ""))
+    arr.append((0xffff+1, ""))
     return "".join(
-        generateRange(convertToHex(arr[i][0]), convertToHex(arr[i + 1][0] - 1), arr[i][1])
+        generateRange(convertToHex(arr[i][0]).upper(), convertToHex(arr[i + 1][0] - 1).upper(), arr[i][1])
         for i in range(len(arr) - 1)
     )
 
@@ -142,6 +143,11 @@ def calculateMapInfoLabels(nesFile, tilesetParent):
         startCollisionDataAddr = nesFile.getRelativeAddress(parentBankData, startCollisionDataLoc)
         labelStr = f'{labelPrefixStr}Collision'
         mapInfoLabelBank[parentBankNum].append((startCollisionDataAddr, labelStr))
+
+        startSpriteTilesetDataLoc = startAddr + 12 - 0x8000
+        startSpriteTilesetDataAddr = nesFile.getRelativeAddress(parentBankData, startSpriteTilesetDataLoc)
+        labelStr = f'{labelPrefixStr}SpriteTileset'
+        mapInfoLabelBank[parentBankNum].append((startSpriteTilesetDataAddr, labelStr))
 
         startTilemapAddrLoc = startAddr + 14 - 0x8000
         tilemapAddrs = nesFile.getAddressBlock(parentBankNum, startTilemapAddrLoc, startTilemapAddrLoc + (totalImages * 2))
@@ -311,10 +317,7 @@ def generateOverworldInfoFile(nesFile, bankNum):
             colNum += 1
         f.write(data)
 
-def generateInfoFileBank1(nesFile):
-    bankNum = 0x01
-    bankNumStr = convertToHex(bankNum).zfill(2)
-
+def generateMapTransitionLabels(nesFile, bankNum):
     blockStartAddrs = nesFile.getAddressBlock(bankNum, 0x00, 0x10)
     roomTransitionDataAddrs = nesFile.getAddressBlock(bankNum, blockStartAddrs[0] - 0x8000, blockStartAddrs[0] + (190*2) - 0x8000)
 
@@ -356,12 +359,269 @@ def generateInfoFileBank1(nesFile):
             curAddr += 0xa
             rowNum += 1
 
-    data = ""
-    data += generateInfoFileHeader(bankNumStr, (bankNum * 0x8000) + 0x10)
-    for label in labels:
-        data += generateLabel(label[1], label[0])
+    return labels
+
+def generateInfoFileBank1(nesFile):
+    bankNum = 0x01
+    bankNumStr = convertToHex(bankNum).zfill(2)
+
+    data = generateInfoFileHeader(bankNumStr, (bankNum * 0x8000) + 0x10)
+
+    boundaries = [
+        (0x8000, "ADDRTABLE"),
+        (0x8008, "BYTETABLE"),
+        (0x8544, "ADDRTABLE"),
+        (0x86C0, "BYTETABLE"),
+        (0xA725, "ADDRTABLE"),
+        (0xA74D, "BYTETABLE"),
+        (0xD79D, "ADDRTABLE"),
+        (0xD81F, "BYTETABLE"),
+    ]
+    data += generateRangeFromArr(boundaries)
+
+    hardcodedLabels = [
+        (0x8014, "MapBankAndIndexTable"),
+        (0x8544, "MapTransitionTable"),
+        (0xA725, "Bank01MenuGraphics"),
+        (0xA74D, "MainMenuBottomPartTileset"),
+        (0xB37D, "MainMenuTopPartTileset"),
+        (0xBCED, "MainMenuTilemap"),
+        (0xC0ED, "MainMenuPalette"),
+    ]
+
+    # Generate labels for different screens
+    baseStrings = [
+        "ArmorWeaponShop",
+        "PartyMemberScreen",
+        "SaveScreen",
+        "WeaponLevelUpScreen",
+    ]
+    suffixes = ["Tileset", "Tileset", "Tilemap", "Palette"]
+    graphicsStartAddrs = nesFile.getAddressBlock(bankNum, 0xA72D - 0x8000, 0xA72D + (4*4*2) - 0x8000)
+    for i, startAddr in enumerate(graphicsStartAddrs):
+        baseString = baseStrings[i // 4]
+        suffix = suffixes[i % 4]
+        labelName = f"{baseString}{suffix}"
+        hardcodedLabels.append((startAddr, labelName))
+    hardcodedLabels = list(set(hardcodedLabels))
+
+    transitionLabels = generateMapTransitionLabels(nesFile, bankNum)
+
+    labels = []
+    labels.extend(transitionLabels)
+    labels.extend(hardcodedLabels)
+    labels.sort()
+
+    for addr, labelName in labels:
+        data += generateLabel(labelName, addr)
+
+    with open(f"infofile/bank{bankNumStr}.infofile", "w") as f:
+        f.write(data)
+
+def generateLabelsBlock(startAddr, endAddr, interval, stringBase):
+    labels = []
+    for i, addr in enumerate(range(startAddr, endAddr, interval)):
+        labelName = f"{stringBase}Index{i}"
+        labels.append((addr, labelName))
+    return labels
+
+def generatePartialInfoFileBank5(nesFile):
+    bankNum = 0x05
+    bankNumStr = convertToHex(bankNum).zfill(2)
+
+    data = generateInfoFileHeader(bankNumStr, (bankNum * 0x8000) + 0x10)
+
+    boundaries = [
+        (0x8000, "ADDRTABLE"),
+        (0x8008, "BYTETABLE"),
+    ]
+    data += generateRangeFromArr(boundaries)
+
+    labels = []
+    labels.extend(generateLabelsBlock(0xC234, 0xC79E, 14, "BaseCharacterStats"))
+    labels.extend(generateLabelsBlock(0xC93A, 0xCABB, 7, "ShopItemHeadgearStats"))
+    labels.extend(generateLabelsBlock(0xCABB, 0xCE3B, 7, "ShopItemBodyArmorStatsx"))
+    labels.extend(generateLabelsBlock(0xCE3B, 0xD11A, 7, "ShopItemBraceletStats"))
+    labels.extend(generateLabelsBlock(0xD11A, 0xD2B0, 7, "ShopItemRingStats"))
+    labels.extend(generateLabelsBlock(0xD2B0, 0xD440, 4, "WeaponItemStats"))
+    labels.extend(generateLabelsBlock(0xE3E0, 0xE51B, 5, "MateriaStats"))
+
+    for addr, labelName in labels:
+        data += generateLabel(labelName, addr)
 
     with open(f"bank{bankNumStr}.infofile", "w") as f:
+        f.write(data)
+
+def generateInfoFileSpritesBank32(nesFile):
+    bankNum = 0x32
+    startAddrArr = nesFile.getAddressBlock(bankNum, 0x00, 0x64)
+    bankNumStr = convertToHex(bankNum).zfill(2)
+
+    labels = []
+    labelAddrSet = set()
+    for index, startAddr in enumerate(startAddrArr):
+        if startAddr in labelAddrSet:
+            continue
+
+        spriteRow = 12
+        spriteCol = 4
+        totalTilemapSize = spriteRow * spriteCol
+        tileAttrSize = 2*2
+        paletteSize = 4*4
+
+        tilemapStartLoc = startAddr + 9
+        tileAttrStart = tilemapStartLoc + totalTilemapSize
+        paletteStart = tileAttrStart + tileAttrSize - 1
+        tilesetStart = paletteStart + paletteSize
+
+        labelPrefix = f"Bank32MagicSpriteIndex{index}"
+        labels.append((startAddr, labelPrefix))
+        labels.append((tilemapStartLoc, f"{labelPrefix}Tilemap"))
+        labels.append((tileAttrStart, f"{labelPrefix}TileAttr"))
+        labels.append((paletteStart, f"{labelPrefix}Palette"))
+        labels.append((tilesetStart, f"{labelPrefix}Tileset"))
+
+        labelAddrSet.add(startAddr)
+    
+    data = generateInfoFileHeader(bankNumStr, (bankNum * 0x8000) + 0x10)
+
+    boundaries = [
+        (0x8000, "ADDRTABLE"),
+        (0x8000 + (50*2), "BYTETABLE"),
+    ]
+    data += generateRangeFromArr(boundaries)
+
+    for addr, labelName in labels:
+        data += generateLabel(labelName, addr)
+
+    with open(f"infofile/bank{bankNumStr}.infofile", "w") as f:
+        f.write(data)
+
+def generateInfoFileSpritesBank33(nesFile):
+    bankNum = 0x33
+    bankData = nesFile.getBankDataBlock(bankNum)
+    startAddrArr = nesFile.getAddressBlock(bankNum, 0x00, 0x5e)
+    bankNumStr = convertToHex(bankNum).zfill(2)
+
+    labels = []
+    labelAddrSet = set()
+    for index, startAddr in enumerate(startAddrArr):
+        if startAddr in labelAddrSet:
+            continue
+
+        spriteCol = bankData[startAddr - 0x8000]
+        spriteRow = bankData[startAddr + 1 - 0x8000]
+        spriteTileCount = bankData[startAddr + 2 - 0x8000]
+
+        totalTilemapSize = spriteCol * spriteRow
+        tileAttrSize = 2*2
+        paletteSize = 2*4
+
+        tilemapStartLoc = startAddr + 7
+        tileAttrStart = tilemapStartLoc + totalTilemapSize
+        paletteStart = tileAttrStart + tileAttrSize
+        tilesetStart = paletteStart + paletteSize
+        
+        labelPrefix = f"Bank33SpriteIndex{index}"
+        labels.append((startAddr, labelPrefix))
+        labels.append((tilemapStartLoc, f"{labelPrefix}Tilemap"))
+        labels.append((tileAttrStart, f"{labelPrefix}TileAttr"))
+        labels.append((paletteStart, f"{labelPrefix}Palette"))
+        labels.append((tilesetStart, f"{labelPrefix}Tileset"))
+        labelAddrSet.add(startAddr)
+    
+    data = generateInfoFileHeader(bankNumStr, (bankNum * 0x8000) + 0x10)
+
+    boundaries = [
+        (0x8000, "ADDRTABLE"),
+        (0x8000 + (47*2), "BYTETABLE"),
+    ]
+    data += generateRangeFromArr(boundaries)
+
+    for addr, labelName in labels:
+        data += generateLabel(labelName, addr)
+
+    with open(f"infofile/bank{bankNumStr}.infofile", "w") as f:
+        f.write(data)
+
+def generateInfoFileSpritesBank34(nesFile):
+    bankNum = 0x34
+    bankData = nesFile.getBankDataBlock(bankNum)
+    startAddrArr = nesFile.getAddressBlock(bankNum, 0x00, 0x6a)
+    bankNumStr = convertToHex(bankNum).zfill(2)
+
+    labels = []
+    labelAddrSet = set()
+
+    spriteIndexMap = {
+        1: "OriginalCloud",
+        2: "OriginalBarret",
+        3: "OriginalTifa",
+        4: "OriginalAeris",
+        5: "OriginalRedXIII",
+        6: "OriginalCaithSith",
+        7: "OriginalCid",
+        8: "Guard", 
+        9: "Scorpion",
+        10: "Airbuster",
+        11: "Reno",
+        15: "Aps",
+        16: "Specimen",
+        17: "HundredGunner",
+        18: "Rufus",
+        19: "DarkNation",
+        20: "MotorBall",
+        22: "Jenova",
+        23: "Dyne",
+        24: "Rude",
+        27: "Palmer",
+        28: "RedDragon",
+        32: "BizarroSephiroth",
+        33: "SaferSephiroth",
+        34: "Zolom"
+    }
+
+    for index, startAddr in enumerate(startAddrArr):
+        if startAddr in [0xa9af, 0xbf50, 0xb2db, 0xb738]:
+            print ("Warn: Skip sprite at", hex(startAddr))
+            continue
+
+        if startAddr in labelAddrSet:
+            continue
+    
+        spriteRow, spriteCol, spriteTileCount = nesFile.getBlock(bankData, dataStart=startAddr, dataLength=3)
+
+        totalTilemapSize = spriteCol * spriteRow
+        tileAttrSize = int(math.ceil(spriteRow / 4)) * int(math.ceil(spriteCol / 4))
+        paletteSize = 8
+
+        tilemapStartLoc = startAddr + 7
+        tileAttrStart = tilemapStartLoc + totalTilemapSize
+        paletteStart = tileAttrStart + tileAttrSize
+        tilesetStart = paletteStart + paletteSize
+
+        labelPrefix = f"Bank34SpriteIndex{index}"
+        if index in spriteIndexMap:
+            labelPrefix += f"{spriteIndexMap[index]}"
+        labels.append((startAddr, labelPrefix))
+        labels.append((tilemapStartLoc, f"{labelPrefix}Tilemap"))
+        labels.append((tileAttrStart, f"{labelPrefix}TileAttr"))
+        labels.append((paletteStart, f"{labelPrefix}Palette"))
+        labels.append((tilesetStart, f"{labelPrefix}Tileset"))
+        labelAddrSet.add(startAddr)
+
+    data = generateInfoFileHeader(bankNumStr, (bankNum * 0x8000) + 0x10)
+
+    boundaries = [
+        (0x8000, "ADDRTABLE"),
+        (0x8000 + (47*2), "BYTETABLE"),
+    ]
+    data += generateRangeFromArr(boundaries)
+
+    for addr, labelName in labels:
+        data += generateLabel(labelName, addr)
+
+    with open(f"infofile/bank{bankNumStr}.infofile", "w") as f:
         f.write(data)
 
 def main():
@@ -371,6 +631,10 @@ def main():
         generateOverworldInfoFile(nesFile, bankNum)
 
     generateInfoFileBank1(nesFile)
+    generatePartialInfoFileBank5(nesFile)
+    generateInfoFileSpritesBank32(nesFile)
+    generateInfoFileSpritesBank33(nesFile)
+    generateInfoFileSpritesBank34(nesFile)
 
 if __name__ == "__main__":
     main()

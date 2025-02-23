@@ -14,6 +14,986 @@ RANGE {
 };
 RANGE {
   START $8064;
-  END $ffff;
+  END $FFFF;
   TYPE BYTETABLE;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex0";
+  ADDR  $8065;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex0Tilemap";
+  ADDR  $806E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex0TileAttr";
+  ADDR  $809E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex0Palette";
+  ADDR  $80A1;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex0Tileset";
+  ADDR  $80B1;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex2";
+  ADDR  $8271;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex2Tilemap";
+  ADDR  $827A;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex2TileAttr";
+  ADDR  $82AA;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex2Palette";
+  ADDR  $82AD;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex2Tileset";
+  ADDR  $82BD;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex3";
+  ADDR  $858D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex3Tilemap";
+  ADDR  $8596;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex3TileAttr";
+  ADDR  $85C6;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex3Palette";
+  ADDR  $85C9;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex3Tileset";
+  ADDR  $85D9;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex4";
+  ADDR  $8869;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex4Tilemap";
+  ADDR  $8872;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex4TileAttr";
+  ADDR  $88A2;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex4Palette";
+  ADDR  $88A5;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex4Tileset";
+  ADDR  $88B5;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex5";
+  ADDR  $8BA5;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex5Tilemap";
+  ADDR  $8BAE;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex5TileAttr";
+  ADDR  $8BDE;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex5Palette";
+  ADDR  $8BE1;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex5Tileset";
+  ADDR  $8BF1;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex6";
+  ADDR  $8E51;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex6Tilemap";
+  ADDR  $8E5A;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex6TileAttr";
+  ADDR  $8E8A;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex6Palette";
+  ADDR  $8E8D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex6Tileset";
+  ADDR  $8E9D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex7";
+  ADDR  $908D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex7Tilemap";
+  ADDR  $9096;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex7TileAttr";
+  ADDR  $90C6;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex7Palette";
+  ADDR  $90C9;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex7Tileset";
+  ADDR  $90D9;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex8";
+  ADDR  $9329;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex8Tilemap";
+  ADDR  $9332;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex8TileAttr";
+  ADDR  $9362;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex8Palette";
+  ADDR  $9365;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex8Tileset";
+  ADDR  $9375;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex9";
+  ADDR  $9515;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex9Tilemap";
+  ADDR  $951E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex9TileAttr";
+  ADDR  $954E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex9Palette";
+  ADDR  $9551;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex9Tileset";
+  ADDR  $9561;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex10";
+  ADDR  $9761;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex10Tilemap";
+  ADDR  $976A;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex10TileAttr";
+  ADDR  $979A;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex10Palette";
+  ADDR  $979D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex10Tileset";
+  ADDR  $97AD;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex11";
+  ADDR  $996D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex11Tilemap";
+  ADDR  $9976;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex11TileAttr";
+  ADDR  $99A6;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex11Palette";
+  ADDR  $99A9;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex11Tileset";
+  ADDR  $99B9;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex12";
+  ADDR  $9C29;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex12Tilemap";
+  ADDR  $9C32;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex12TileAttr";
+  ADDR  $9C62;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex12Palette";
+  ADDR  $9C65;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex12Tileset";
+  ADDR  $9C75;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex13";
+  ADDR  $9D05;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex13Tilemap";
+  ADDR  $9D0E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex13TileAttr";
+  ADDR  $9D3E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex13Palette";
+  ADDR  $9D41;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex13Tileset";
+  ADDR  $9D51;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex14";
+  ADDR  $9F31;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex14Tilemap";
+  ADDR  $9F3A;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex14TileAttr";
+  ADDR  $9F6A;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex14Palette";
+  ADDR  $9F6D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex14Tileset";
+  ADDR  $9F7D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex15";
+  ADDR  $A1DD;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex15Tilemap";
+  ADDR  $A1E6;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex15TileAttr";
+  ADDR  $A216;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex15Palette";
+  ADDR  $A219;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex15Tileset";
+  ADDR  $A229;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex16";
+  ADDR  $A469;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex16Tilemap";
+  ADDR  $A472;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex16TileAttr";
+  ADDR  $A4A2;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex16Palette";
+  ADDR  $A4A5;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex16Tileset";
+  ADDR  $A4B5;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex17";
+  ADDR  $A605;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex17Tilemap";
+  ADDR  $A60E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex17TileAttr";
+  ADDR  $A63E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex17Palette";
+  ADDR  $A641;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex17Tileset";
+  ADDR  $A651;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex18";
+  ADDR  $A921;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex18Tilemap";
+  ADDR  $A92A;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex18TileAttr";
+  ADDR  $A95A;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex18Palette";
+  ADDR  $A95D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex18Tileset";
+  ADDR  $A96D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex19";
+  ADDR  $AB6D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex19Tilemap";
+  ADDR  $AB76;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex19TileAttr";
+  ADDR  $ABA6;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex19Palette";
+  ADDR  $ABA9;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex19Tileset";
+  ADDR  $ABB9;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex20";
+  ADDR  $AE29;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex20Tilemap";
+  ADDR  $AE32;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex20TileAttr";
+  ADDR  $AE62;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex20Palette";
+  ADDR  $AE65;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex20Tileset";
+  ADDR  $AE75;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex21";
+  ADDR  $B105;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex21Tilemap";
+  ADDR  $B10E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex21TileAttr";
+  ADDR  $B13E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex21Palette";
+  ADDR  $B141;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex21Tileset";
+  ADDR  $B151;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex22";
+  ADDR  $B2C1;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex22Tilemap";
+  ADDR  $B2CA;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex22TileAttr";
+  ADDR  $B2FA;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex22Palette";
+  ADDR  $B2FD;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex22Tileset";
+  ADDR  $B30D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex23";
+  ADDR  $B5CD;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex23Tilemap";
+  ADDR  $B5D6;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex23TileAttr";
+  ADDR  $B606;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex23Palette";
+  ADDR  $B609;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex23Tileset";
+  ADDR  $B619;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex24";
+  ADDR  $B909;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex24Tilemap";
+  ADDR  $B912;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex24TileAttr";
+  ADDR  $B942;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex24Palette";
+  ADDR  $B945;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex24Tileset";
+  ADDR  $B955;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex25";
+  ADDR  $BB55;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex25Tilemap";
+  ADDR  $BB5E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex25TileAttr";
+  ADDR  $BB8E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex25Palette";
+  ADDR  $BB91;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex25Tileset";
+  ADDR  $BBA1;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex26";
+  ADDR  $BDB1;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex26Tilemap";
+  ADDR  $BDBA;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex26TileAttr";
+  ADDR  $BDEA;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex26Palette";
+  ADDR  $BDED;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex26Tileset";
+  ADDR  $BDFD;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex27";
+  ADDR  $C0ED;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex27Tilemap";
+  ADDR  $C0F6;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex27TileAttr";
+  ADDR  $C126;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex27Palette";
+  ADDR  $C129;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex27Tileset";
+  ADDR  $C139;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex28";
+  ADDR  $C439;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex28Tilemap";
+  ADDR  $C442;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex28TileAttr";
+  ADDR  $C472;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex28Palette";
+  ADDR  $C475;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex28Tileset";
+  ADDR  $C485;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex29";
+  ADDR  $C745;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex29Tilemap";
+  ADDR  $C74E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex29TileAttr";
+  ADDR  $C77E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex29Palette";
+  ADDR  $C781;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex29Tileset";
+  ADDR  $C791;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex30";
+  ADDR  $C9F1;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex30Tilemap";
+  ADDR  $C9FA;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex30TileAttr";
+  ADDR  $CA2A;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex30Palette";
+  ADDR  $CA2D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex30Tileset";
+  ADDR  $CA3D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex31";
+  ADDR  $CB8D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex31Tilemap";
+  ADDR  $CB96;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex31TileAttr";
+  ADDR  $CBC6;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex31Palette";
+  ADDR  $CBC9;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex31Tileset";
+  ADDR  $CBD9;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex32";
+  ADDR  $CE69;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex32Tilemap";
+  ADDR  $CE72;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex32TileAttr";
+  ADDR  $CEA2;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex32Palette";
+  ADDR  $CEA5;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex32Tileset";
+  ADDR  $CEB5;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex33";
+  ADDR  $D175;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex33Tilemap";
+  ADDR  $D17E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex33TileAttr";
+  ADDR  $D1AE;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex33Palette";
+  ADDR  $D1B1;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex33Tileset";
+  ADDR  $D1C1;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex34";
+  ADDR  $D4C1;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex34Tilemap";
+  ADDR  $D4CA;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex34TileAttr";
+  ADDR  $D4FA;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex34Palette";
+  ADDR  $D4FD;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex34Tileset";
+  ADDR  $D50D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex35";
+  ADDR  $D6DD;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex35Tilemap";
+  ADDR  $D6E6;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex35TileAttr";
+  ADDR  $D716;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex35Palette";
+  ADDR  $D719;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex35Tileset";
+  ADDR  $D729;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex36";
+  ADDR  $D9A9;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex36Tilemap";
+  ADDR  $D9B2;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex36TileAttr";
+  ADDR  $D9E2;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex36Palette";
+  ADDR  $D9E5;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex36Tileset";
+  ADDR  $D9F5;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex37";
+  ADDR  $DCA5;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex37Tilemap";
+  ADDR  $DCAE;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex37TileAttr";
+  ADDR  $DCDE;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex37Palette";
+  ADDR  $DCE1;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex37Tileset";
+  ADDR  $DCF1;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex38";
+  ADDR  $DEF1;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex38Tilemap";
+  ADDR  $DEFA;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex38TileAttr";
+  ADDR  $DF2A;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex38Palette";
+  ADDR  $DF2D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex38Tileset";
+  ADDR  $DF3D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex39";
+  ADDR  $E16D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex39Tilemap";
+  ADDR  $E176;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex39TileAttr";
+  ADDR  $E1A6;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex39Palette";
+  ADDR  $E1A9;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex39Tileset";
+  ADDR  $E1B9;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex40";
+  ADDR  $E419;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex40Tilemap";
+  ADDR  $E422;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex40TileAttr";
+  ADDR  $E452;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex40Palette";
+  ADDR  $E455;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex40Tileset";
+  ADDR  $E465;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex41";
+  ADDR  $E605;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex41Tilemap";
+  ADDR  $E60E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex41TileAttr";
+  ADDR  $E63E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex41Palette";
+  ADDR  $E641;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex41Tileset";
+  ADDR  $E651;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex42";
+  ADDR  $E891;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex42Tilemap";
+  ADDR  $E89A;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex42TileAttr";
+  ADDR  $E8CA;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex42Palette";
+  ADDR  $E8CD;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex42Tileset";
+  ADDR  $E8DD;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex43";
+  ADDR  $EBAD;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex43Tilemap";
+  ADDR  $EBB6;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex43TileAttr";
+  ADDR  $EBE6;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex43Palette";
+  ADDR  $EBE9;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex43Tileset";
+  ADDR  $EBF9;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex44";
+  ADDR  $EE39;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex44Tilemap";
+  ADDR  $EE42;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex44TileAttr";
+  ADDR  $EE72;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex44Palette";
+  ADDR  $EE75;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex44Tileset";
+  ADDR  $EE85;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex45";
+  ADDR  $F0F5;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex45Tilemap";
+  ADDR  $F0FE;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex45TileAttr";
+  ADDR  $F12E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex45Palette";
+  ADDR  $F131;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex45Tileset";
+  ADDR  $F141;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex46";
+  ADDR  $F431;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex46Tilemap";
+  ADDR  $F43A;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex46TileAttr";
+  ADDR  $F46A;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex46Palette";
+  ADDR  $F46D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex46Tileset";
+  ADDR  $F47D;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex47";
+  ADDR  $F5AD;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex47Tilemap";
+  ADDR  $F5B6;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex47TileAttr";
+  ADDR  $F5E6;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex47Palette";
+  ADDR  $F5E9;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex47Tileset";
+  ADDR  $F5F9;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex48";
+  ADDR  $F869;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex48Tilemap";
+  ADDR  $F872;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex48TileAttr";
+  ADDR  $F8A2;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex48Palette";
+  ADDR  $F8A5;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex48Tileset";
+  ADDR  $F8B5;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex49";
+  ADDR  $FA95;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex49Tilemap";
+  ADDR  $FA9E;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex49TileAttr";
+  ADDR  $FACE;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex49Palette";
+  ADDR  $FAD1;
+};
+LABEL {
+  NAME "Bank32MagicSpriteIndex49Tileset";
+  ADDR  $FAE1;
 };

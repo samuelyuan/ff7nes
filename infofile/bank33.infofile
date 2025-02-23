@@ -9,11 +9,951 @@ GLOBAL {
 };
 RANGE {
   START $8000;
-  END $805d;
+  END $805D;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $805e;
-  END $ffff;
+  START $805E;
+  END $FFFF;
   TYPE BYTETABLE;
+};
+LABEL {
+  NAME "Bank33SpriteIndex0";
+  ADDR  $805F;
+};
+LABEL {
+  NAME "Bank33SpriteIndex0Tilemap";
+  ADDR  $8066;
+};
+LABEL {
+  NAME "Bank33SpriteIndex0TileAttr";
+  ADDR  $808A;
+};
+LABEL {
+  NAME "Bank33SpriteIndex0Palette";
+  ADDR  $808E;
+};
+LABEL {
+  NAME "Bank33SpriteIndex0Tileset";
+  ADDR  $8096;
+};
+LABEL {
+  NAME "Bank33SpriteIndex1";
+  ADDR  $8206;
+};
+LABEL {
+  NAME "Bank33SpriteIndex1Tilemap";
+  ADDR  $820D;
+};
+LABEL {
+  NAME "Bank33SpriteIndex1TileAttr";
+  ADDR  $8231;
+};
+LABEL {
+  NAME "Bank33SpriteIndex1Palette";
+  ADDR  $8235;
+};
+LABEL {
+  NAME "Bank33SpriteIndex1Tileset";
+  ADDR  $823D;
+};
+LABEL {
+  NAME "Bank33SpriteIndex2";
+  ADDR  $83CD;
+};
+LABEL {
+  NAME "Bank33SpriteIndex2Tilemap";
+  ADDR  $83D4;
+};
+LABEL {
+  NAME "Bank33SpriteIndex2TileAttr";
+  ADDR  $83F8;
+};
+LABEL {
+  NAME "Bank33SpriteIndex2Palette";
+  ADDR  $83FC;
+};
+LABEL {
+  NAME "Bank33SpriteIndex2Tileset";
+  ADDR  $8404;
+};
+LABEL {
+  NAME "Bank33SpriteIndex3";
+  ADDR  $8594;
+};
+LABEL {
+  NAME "Bank33SpriteIndex3Tilemap";
+  ADDR  $859B;
+};
+LABEL {
+  NAME "Bank33SpriteIndex3TileAttr";
+  ADDR  $85BF;
+};
+LABEL {
+  NAME "Bank33SpriteIndex3Palette";
+  ADDR  $85C3;
+};
+LABEL {
+  NAME "Bank33SpriteIndex3Tileset";
+  ADDR  $85CB;
+};
+LABEL {
+  NAME "Bank33SpriteIndex4";
+  ADDR  $873B;
+};
+LABEL {
+  NAME "Bank33SpriteIndex4Tilemap";
+  ADDR  $8742;
+};
+LABEL {
+  NAME "Bank33SpriteIndex4TileAttr";
+  ADDR  $8766;
+};
+LABEL {
+  NAME "Bank33SpriteIndex4Palette";
+  ADDR  $876A;
+};
+LABEL {
+  NAME "Bank33SpriteIndex4Tileset";
+  ADDR  $8772;
+};
+LABEL {
+  NAME "Bank33SpriteIndex5";
+  ADDR  $8902;
+};
+LABEL {
+  NAME "Bank33SpriteIndex5Tilemap";
+  ADDR  $8909;
+};
+LABEL {
+  NAME "Bank33SpriteIndex5TileAttr";
+  ADDR  $892D;
+};
+LABEL {
+  NAME "Bank33SpriteIndex5Palette";
+  ADDR  $8931;
+};
+LABEL {
+  NAME "Bank33SpriteIndex5Tileset";
+  ADDR  $8939;
+};
+LABEL {
+  NAME "Bank33SpriteIndex6";
+  ADDR  $8AC9;
+};
+LABEL {
+  NAME "Bank33SpriteIndex6Tilemap";
+  ADDR  $8AD0;
+};
+LABEL {
+  NAME "Bank33SpriteIndex6TileAttr";
+  ADDR  $8AF4;
+};
+LABEL {
+  NAME "Bank33SpriteIndex6Palette";
+  ADDR  $8AF8;
+};
+LABEL {
+  NAME "Bank33SpriteIndex6Tileset";
+  ADDR  $8B00;
+};
+LABEL {
+  NAME "Bank33SpriteIndex7";
+  ADDR  $8C60;
+};
+LABEL {
+  NAME "Bank33SpriteIndex7Tilemap";
+  ADDR  $8C67;
+};
+LABEL {
+  NAME "Bank33SpriteIndex7TileAttr";
+  ADDR  $8C8B;
+};
+LABEL {
+  NAME "Bank33SpriteIndex7Palette";
+  ADDR  $8C8F;
+};
+LABEL {
+  NAME "Bank33SpriteIndex7Tileset";
+  ADDR  $8C97;
+};
+LABEL {
+  NAME "Bank33SpriteIndex8";
+  ADDR  $8EA7;
+};
+LABEL {
+  NAME "Bank33SpriteIndex8Tilemap";
+  ADDR  $8EAE;
+};
+LABEL {
+  NAME "Bank33SpriteIndex8TileAttr";
+  ADDR  $8ED2;
+};
+LABEL {
+  NAME "Bank33SpriteIndex8Palette";
+  ADDR  $8ED6;
+};
+LABEL {
+  NAME "Bank33SpriteIndex8Tileset";
+  ADDR  $8EDE;
+};
+LABEL {
+  NAME "Bank33SpriteIndex9";
+  ADDR  $90EE;
+};
+LABEL {
+  NAME "Bank33SpriteIndex9Tilemap";
+  ADDR  $90F5;
+};
+LABEL {
+  NAME "Bank33SpriteIndex9TileAttr";
+  ADDR  $9119;
+};
+LABEL {
+  NAME "Bank33SpriteIndex9Palette";
+  ADDR  $911D;
+};
+LABEL {
+  NAME "Bank33SpriteIndex9Tileset";
+  ADDR  $9125;
+};
+LABEL {
+  NAME "Bank33SpriteIndex10";
+  ADDR  $9335;
+};
+LABEL {
+  NAME "Bank33SpriteIndex10Tilemap";
+  ADDR  $933C;
+};
+LABEL {
+  NAME "Bank33SpriteIndex10TileAttr";
+  ADDR  $9360;
+};
+LABEL {
+  NAME "Bank33SpriteIndex10Palette";
+  ADDR  $9364;
+};
+LABEL {
+  NAME "Bank33SpriteIndex10Tileset";
+  ADDR  $936C;
+};
+LABEL {
+  NAME "Bank33SpriteIndex11";
+  ADDR  $956C;
+};
+LABEL {
+  NAME "Bank33SpriteIndex11Tilemap";
+  ADDR  $9573;
+};
+LABEL {
+  NAME "Bank33SpriteIndex11TileAttr";
+  ADDR  $9597;
+};
+LABEL {
+  NAME "Bank33SpriteIndex11Palette";
+  ADDR  $959B;
+};
+LABEL {
+  NAME "Bank33SpriteIndex11Tileset";
+  ADDR  $95A3;
+};
+LABEL {
+  NAME "Bank33SpriteIndex12";
+  ADDR  $9783;
+};
+LABEL {
+  NAME "Bank33SpriteIndex12Tilemap";
+  ADDR  $978A;
+};
+LABEL {
+  NAME "Bank33SpriteIndex12TileAttr";
+  ADDR  $97AE;
+};
+LABEL {
+  NAME "Bank33SpriteIndex12Palette";
+  ADDR  $97B2;
+};
+LABEL {
+  NAME "Bank33SpriteIndex12Tileset";
+  ADDR  $97BA;
+};
+LABEL {
+  NAME "Bank33SpriteIndex13";
+  ADDR  $99EA;
+};
+LABEL {
+  NAME "Bank33SpriteIndex13Tilemap";
+  ADDR  $99F1;
+};
+LABEL {
+  NAME "Bank33SpriteIndex13TileAttr";
+  ADDR  $9A15;
+};
+LABEL {
+  NAME "Bank33SpriteIndex13Palette";
+  ADDR  $9A19;
+};
+LABEL {
+  NAME "Bank33SpriteIndex13Tileset";
+  ADDR  $9A21;
+};
+LABEL {
+  NAME "Bank33SpriteIndex14";
+  ADDR  $9C31;
+};
+LABEL {
+  NAME "Bank33SpriteIndex14Tilemap";
+  ADDR  $9C38;
+};
+LABEL {
+  NAME "Bank33SpriteIndex14TileAttr";
+  ADDR  $9C5C;
+};
+LABEL {
+  NAME "Bank33SpriteIndex14Palette";
+  ADDR  $9C60;
+};
+LABEL {
+  NAME "Bank33SpriteIndex14Tileset";
+  ADDR  $9C68;
+};
+LABEL {
+  NAME "Bank33SpriteIndex15";
+  ADDR  $9E48;
+};
+LABEL {
+  NAME "Bank33SpriteIndex15Tilemap";
+  ADDR  $9E4F;
+};
+LABEL {
+  NAME "Bank33SpriteIndex15TileAttr";
+  ADDR  $9E73;
+};
+LABEL {
+  NAME "Bank33SpriteIndex15Palette";
+  ADDR  $9E77;
+};
+LABEL {
+  NAME "Bank33SpriteIndex15Tileset";
+  ADDR  $9E7F;
+};
+LABEL {
+  NAME "Bank33SpriteIndex16";
+  ADDR  $A0AF;
+};
+LABEL {
+  NAME "Bank33SpriteIndex16Tilemap";
+  ADDR  $A0B6;
+};
+LABEL {
+  NAME "Bank33SpriteIndex16TileAttr";
+  ADDR  $A0DA;
+};
+LABEL {
+  NAME "Bank33SpriteIndex16Palette";
+  ADDR  $A0DE;
+};
+LABEL {
+  NAME "Bank33SpriteIndex16Tileset";
+  ADDR  $A0E6;
+};
+LABEL {
+  NAME "Bank33SpriteIndex17";
+  ADDR  $A2B6;
+};
+LABEL {
+  NAME "Bank33SpriteIndex17Tilemap";
+  ADDR  $A2BD;
+};
+LABEL {
+  NAME "Bank33SpriteIndex17TileAttr";
+  ADDR  $A2E1;
+};
+LABEL {
+  NAME "Bank33SpriteIndex17Palette";
+  ADDR  $A2E5;
+};
+LABEL {
+  NAME "Bank33SpriteIndex17Tileset";
+  ADDR  $A2ED;
+};
+LABEL {
+  NAME "Bank33SpriteIndex18";
+  ADDR  $A4DD;
+};
+LABEL {
+  NAME "Bank33SpriteIndex18Tilemap";
+  ADDR  $A4E4;
+};
+LABEL {
+  NAME "Bank33SpriteIndex18TileAttr";
+  ADDR  $A508;
+};
+LABEL {
+  NAME "Bank33SpriteIndex18Palette";
+  ADDR  $A50C;
+};
+LABEL {
+  NAME "Bank33SpriteIndex18Tileset";
+  ADDR  $A514;
+};
+LABEL {
+  NAME "Bank33SpriteIndex19";
+  ADDR  $A754;
+};
+LABEL {
+  NAME "Bank33SpriteIndex19Tilemap";
+  ADDR  $A75B;
+};
+LABEL {
+  NAME "Bank33SpriteIndex19TileAttr";
+  ADDR  $A77F;
+};
+LABEL {
+  NAME "Bank33SpriteIndex19Palette";
+  ADDR  $A783;
+};
+LABEL {
+  NAME "Bank33SpriteIndex19Tileset";
+  ADDR  $A78B;
+};
+LABEL {
+  NAME "Bank33SpriteIndex20";
+  ADDR  $A96B;
+};
+LABEL {
+  NAME "Bank33SpriteIndex20Tilemap";
+  ADDR  $A972;
+};
+LABEL {
+  NAME "Bank33SpriteIndex20TileAttr";
+  ADDR  $A996;
+};
+LABEL {
+  NAME "Bank33SpriteIndex20Palette";
+  ADDR  $A99A;
+};
+LABEL {
+  NAME "Bank33SpriteIndex20Tileset";
+  ADDR  $A9A2;
+};
+LABEL {
+  NAME "Bank33SpriteIndex21";
+  ADDR  $ABC2;
+};
+LABEL {
+  NAME "Bank33SpriteIndex21Tilemap";
+  ADDR  $ABC9;
+};
+LABEL {
+  NAME "Bank33SpriteIndex21TileAttr";
+  ADDR  $ABED;
+};
+LABEL {
+  NAME "Bank33SpriteIndex21Palette";
+  ADDR  $ABF1;
+};
+LABEL {
+  NAME "Bank33SpriteIndex21Tileset";
+  ADDR  $ABF9;
+};
+LABEL {
+  NAME "Bank33SpriteIndex22";
+  ADDR  $ADE9;
+};
+LABEL {
+  NAME "Bank33SpriteIndex22Tilemap";
+  ADDR  $ADF0;
+};
+LABEL {
+  NAME "Bank33SpriteIndex22TileAttr";
+  ADDR  $AE14;
+};
+LABEL {
+  NAME "Bank33SpriteIndex22Palette";
+  ADDR  $AE18;
+};
+LABEL {
+  NAME "Bank33SpriteIndex22Tileset";
+  ADDR  $AE20;
+};
+LABEL {
+  NAME "Bank33SpriteIndex23";
+  ADDR  $B060;
+};
+LABEL {
+  NAME "Bank33SpriteIndex23Tilemap";
+  ADDR  $B067;
+};
+LABEL {
+  NAME "Bank33SpriteIndex23TileAttr";
+  ADDR  $B08B;
+};
+LABEL {
+  NAME "Bank33SpriteIndex23Palette";
+  ADDR  $B08F;
+};
+LABEL {
+  NAME "Bank33SpriteIndex23Tileset";
+  ADDR  $B097;
+};
+LABEL {
+  NAME "Bank33SpriteIndex24";
+  ADDR  $B2C7;
+};
+LABEL {
+  NAME "Bank33SpriteIndex24Tilemap";
+  ADDR  $B2CE;
+};
+LABEL {
+  NAME "Bank33SpriteIndex24TileAttr";
+  ADDR  $B2F2;
+};
+LABEL {
+  NAME "Bank33SpriteIndex24Palette";
+  ADDR  $B2F6;
+};
+LABEL {
+  NAME "Bank33SpriteIndex24Tileset";
+  ADDR  $B2FE;
+};
+LABEL {
+  NAME "Bank33SpriteIndex25";
+  ADDR  $B52E;
+};
+LABEL {
+  NAME "Bank33SpriteIndex25Tilemap";
+  ADDR  $B535;
+};
+LABEL {
+  NAME "Bank33SpriteIndex25TileAttr";
+  ADDR  $B559;
+};
+LABEL {
+  NAME "Bank33SpriteIndex25Palette";
+  ADDR  $B55D;
+};
+LABEL {
+  NAME "Bank33SpriteIndex25Tileset";
+  ADDR  $B565;
+};
+LABEL {
+  NAME "Bank33SpriteIndex26";
+  ADDR  $B7A5;
+};
+LABEL {
+  NAME "Bank33SpriteIndex26Tilemap";
+  ADDR  $B7AC;
+};
+LABEL {
+  NAME "Bank33SpriteIndex26TileAttr";
+  ADDR  $B7D0;
+};
+LABEL {
+  NAME "Bank33SpriteIndex26Palette";
+  ADDR  $B7D4;
+};
+LABEL {
+  NAME "Bank33SpriteIndex26Tileset";
+  ADDR  $B7DC;
+};
+LABEL {
+  NAME "Bank33SpriteIndex27";
+  ADDR  $BA1C;
+};
+LABEL {
+  NAME "Bank33SpriteIndex27Tilemap";
+  ADDR  $BA23;
+};
+LABEL {
+  NAME "Bank33SpriteIndex27TileAttr";
+  ADDR  $BA47;
+};
+LABEL {
+  NAME "Bank33SpriteIndex27Palette";
+  ADDR  $BA4B;
+};
+LABEL {
+  NAME "Bank33SpriteIndex27Tileset";
+  ADDR  $BA53;
+};
+LABEL {
+  NAME "Bank33SpriteIndex28";
+  ADDR  $BC53;
+};
+LABEL {
+  NAME "Bank33SpriteIndex28Tilemap";
+  ADDR  $BC5A;
+};
+LABEL {
+  NAME "Bank33SpriteIndex28TileAttr";
+  ADDR  $BC7E;
+};
+LABEL {
+  NAME "Bank33SpriteIndex28Palette";
+  ADDR  $BC82;
+};
+LABEL {
+  NAME "Bank33SpriteIndex28Tileset";
+  ADDR  $BC8A;
+};
+LABEL {
+  NAME "Bank33SpriteIndex29";
+  ADDR  $BEBA;
+};
+LABEL {
+  NAME "Bank33SpriteIndex29Tilemap";
+  ADDR  $BEC1;
+};
+LABEL {
+  NAME "Bank33SpriteIndex29TileAttr";
+  ADDR  $BEE5;
+};
+LABEL {
+  NAME "Bank33SpriteIndex29Palette";
+  ADDR  $BEE9;
+};
+LABEL {
+  NAME "Bank33SpriteIndex29Tileset";
+  ADDR  $BEF1;
+};
+LABEL {
+  NAME "Bank33SpriteIndex30";
+  ADDR  $C0B1;
+};
+LABEL {
+  NAME "Bank33SpriteIndex30Tilemap";
+  ADDR  $C0B8;
+};
+LABEL {
+  NAME "Bank33SpriteIndex30TileAttr";
+  ADDR  $C0DC;
+};
+LABEL {
+  NAME "Bank33SpriteIndex30Palette";
+  ADDR  $C0E0;
+};
+LABEL {
+  NAME "Bank33SpriteIndex30Tileset";
+  ADDR  $C0E8;
+};
+LABEL {
+  NAME "Bank33SpriteIndex31";
+  ADDR  $C2F8;
+};
+LABEL {
+  NAME "Bank33SpriteIndex31Tilemap";
+  ADDR  $C2FF;
+};
+LABEL {
+  NAME "Bank33SpriteIndex31TileAttr";
+  ADDR  $C323;
+};
+LABEL {
+  NAME "Bank33SpriteIndex31Palette";
+  ADDR  $C327;
+};
+LABEL {
+  NAME "Bank33SpriteIndex31Tileset";
+  ADDR  $C32F;
+};
+LABEL {
+  NAME "Bank33SpriteIndex32";
+  ADDR  $C51F;
+};
+LABEL {
+  NAME "Bank33SpriteIndex32Tilemap";
+  ADDR  $C526;
+};
+LABEL {
+  NAME "Bank33SpriteIndex32TileAttr";
+  ADDR  $C54A;
+};
+LABEL {
+  NAME "Bank33SpriteIndex32Palette";
+  ADDR  $C54E;
+};
+LABEL {
+  NAME "Bank33SpriteIndex32Tileset";
+  ADDR  $C556;
+};
+LABEL {
+  NAME "Bank33SpriteIndex33";
+  ADDR  $C736;
+};
+LABEL {
+  NAME "Bank33SpriteIndex33Tilemap";
+  ADDR  $C73D;
+};
+LABEL {
+  NAME "Bank33SpriteIndex33TileAttr";
+  ADDR  $C761;
+};
+LABEL {
+  NAME "Bank33SpriteIndex33Palette";
+  ADDR  $C765;
+};
+LABEL {
+  NAME "Bank33SpriteIndex33Tileset";
+  ADDR  $C76D;
+};
+LABEL {
+  NAME "Bank33SpriteIndex34";
+  ADDR  $C96D;
+};
+LABEL {
+  NAME "Bank33SpriteIndex34Tilemap";
+  ADDR  $C974;
+};
+LABEL {
+  NAME "Bank33SpriteIndex34TileAttr";
+  ADDR  $C998;
+};
+LABEL {
+  NAME "Bank33SpriteIndex34Palette";
+  ADDR  $C99C;
+};
+LABEL {
+  NAME "Bank33SpriteIndex34Tileset";
+  ADDR  $C9A4;
+};
+LABEL {
+  NAME "Bank33SpriteIndex35";
+  ADDR  $CBD4;
+};
+LABEL {
+  NAME "Bank33SpriteIndex35Tilemap";
+  ADDR  $CBDB;
+};
+LABEL {
+  NAME "Bank33SpriteIndex35TileAttr";
+  ADDR  $CBFF;
+};
+LABEL {
+  NAME "Bank33SpriteIndex35Palette";
+  ADDR  $CC03;
+};
+LABEL {
+  NAME "Bank33SpriteIndex35Tileset";
+  ADDR  $CC0B;
+};
+LABEL {
+  NAME "Bank33SpriteIndex36";
+  ADDR  $CE4B;
+};
+LABEL {
+  NAME "Bank33SpriteIndex36Tilemap";
+  ADDR  $CE52;
+};
+LABEL {
+  NAME "Bank33SpriteIndex36TileAttr";
+  ADDR  $CE76;
+};
+LABEL {
+  NAME "Bank33SpriteIndex36Palette";
+  ADDR  $CE7A;
+};
+LABEL {
+  NAME "Bank33SpriteIndex36Tileset";
+  ADDR  $CE82;
+};
+LABEL {
+  NAME "Bank33SpriteIndex37";
+  ADDR  $D0B2;
+};
+LABEL {
+  NAME "Bank33SpriteIndex37Tilemap";
+  ADDR  $D0B9;
+};
+LABEL {
+  NAME "Bank33SpriteIndex37TileAttr";
+  ADDR  $D0DD;
+};
+LABEL {
+  NAME "Bank33SpriteIndex37Palette";
+  ADDR  $D0E1;
+};
+LABEL {
+  NAME "Bank33SpriteIndex37Tileset";
+  ADDR  $D0E9;
+};
+LABEL {
+  NAME "Bank33SpriteIndex38";
+  ADDR  $D319;
+};
+LABEL {
+  NAME "Bank33SpriteIndex38Tilemap";
+  ADDR  $D320;
+};
+LABEL {
+  NAME "Bank33SpriteIndex38TileAttr";
+  ADDR  $D344;
+};
+LABEL {
+  NAME "Bank33SpriteIndex38Palette";
+  ADDR  $D348;
+};
+LABEL {
+  NAME "Bank33SpriteIndex38Tileset";
+  ADDR  $D350;
+};
+LABEL {
+  NAME "Bank33SpriteIndex39";
+  ADDR  $D580;
+};
+LABEL {
+  NAME "Bank33SpriteIndex39Tilemap";
+  ADDR  $D587;
+};
+LABEL {
+  NAME "Bank33SpriteIndex39TileAttr";
+  ADDR  $D5AB;
+};
+LABEL {
+  NAME "Bank33SpriteIndex39Palette";
+  ADDR  $D5AF;
+};
+LABEL {
+  NAME "Bank33SpriteIndex39Tileset";
+  ADDR  $D5B7;
+};
+LABEL {
+  NAME "Bank33SpriteIndex40";
+  ADDR  $D7F7;
+};
+LABEL {
+  NAME "Bank33SpriteIndex40Tilemap";
+  ADDR  $D7FE;
+};
+LABEL {
+  NAME "Bank33SpriteIndex40TileAttr";
+  ADDR  $D822;
+};
+LABEL {
+  NAME "Bank33SpriteIndex40Palette";
+  ADDR  $D826;
+};
+LABEL {
+  NAME "Bank33SpriteIndex40Tileset";
+  ADDR  $D82E;
+};
+LABEL {
+  NAME "Bank33SpriteIndex41";
+  ADDR  $DA5E;
+};
+LABEL {
+  NAME "Bank33SpriteIndex41Tilemap";
+  ADDR  $DA65;
+};
+LABEL {
+  NAME "Bank33SpriteIndex41TileAttr";
+  ADDR  $DA89;
+};
+LABEL {
+  NAME "Bank33SpriteIndex41Palette";
+  ADDR  $DA8D;
+};
+LABEL {
+  NAME "Bank33SpriteIndex41Tileset";
+  ADDR  $DA95;
+};
+LABEL {
+  NAME "Bank33SpriteIndex42";
+  ADDR  $DCB5;
+};
+LABEL {
+  NAME "Bank33SpriteIndex42Tilemap";
+  ADDR  $DCBC;
+};
+LABEL {
+  NAME "Bank33SpriteIndex42TileAttr";
+  ADDR  $DCE0;
+};
+LABEL {
+  NAME "Bank33SpriteIndex42Palette";
+  ADDR  $DCE4;
+};
+LABEL {
+  NAME "Bank33SpriteIndex42Tileset";
+  ADDR  $DCEC;
+};
+LABEL {
+  NAME "Bank33SpriteIndex43";
+  ADDR  $DF2C;
+};
+LABEL {
+  NAME "Bank33SpriteIndex43Tilemap";
+  ADDR  $DF33;
+};
+LABEL {
+  NAME "Bank33SpriteIndex43TileAttr";
+  ADDR  $DF57;
+};
+LABEL {
+  NAME "Bank33SpriteIndex43Palette";
+  ADDR  $DF5B;
+};
+LABEL {
+  NAME "Bank33SpriteIndex43Tileset";
+  ADDR  $DF63;
+};
+LABEL {
+  NAME "Bank33SpriteIndex44";
+  ADDR  $E193;
+};
+LABEL {
+  NAME "Bank33SpriteIndex44Tilemap";
+  ADDR  $E19A;
+};
+LABEL {
+  NAME "Bank33SpriteIndex44TileAttr";
+  ADDR  $E1BE;
+};
+LABEL {
+  NAME "Bank33SpriteIndex44Palette";
+  ADDR  $E1C2;
+};
+LABEL {
+  NAME "Bank33SpriteIndex44Tileset";
+  ADDR  $E1CA;
+};
+LABEL {
+  NAME "Bank33SpriteIndex45";
+  ADDR  $E40A;
+};
+LABEL {
+  NAME "Bank33SpriteIndex45Tilemap";
+  ADDR  $E411;
+};
+LABEL {
+  NAME "Bank33SpriteIndex45TileAttr";
+  ADDR  $E435;
+};
+LABEL {
+  NAME "Bank33SpriteIndex45Palette";
+  ADDR  $E439;
+};
+LABEL {
+  NAME "Bank33SpriteIndex45Tileset";
+  ADDR  $E441;
+};
+LABEL {
+  NAME "Bank33SpriteIndex46";
+  ADDR  $E681;
+};
+LABEL {
+  NAME "Bank33SpriteIndex46Tilemap";
+  ADDR  $E688;
+};
+LABEL {
+  NAME "Bank33SpriteIndex46TileAttr";
+  ADDR  $E6AC;
+};
+LABEL {
+  NAME "Bank33SpriteIndex46Palette";
+  ADDR  $E6B0;
+};
+LABEL {
+  NAME "Bank33SpriteIndex46Tileset";
+  ADDR  $E6B8;
 };

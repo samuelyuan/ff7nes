@@ -47,7 +47,6 @@ RANGE {
   END $FFFF;
   TYPE BYTETABLE;
 };
-
 LABEL {
   NAME "MapBankAndIndexTable";
   ADDR  $8014;
@@ -1118,58 +1117,6 @@ LABEL {
   ADDR  $9130;
 };
 LABEL {
-  NAME "Map21Bank18Image1MapTransitionRow0_ToBank18Image0_DirSouth";
-  ADDR  $E634;
-};
-LABEL {
-  NAME "Map21Bank18Image1MapTransitionRow1_ToBank18Image2_DirNorth";
-  ADDR  $E63E;
-};
-LABEL {
-  NAME "Map21Bank18Image1MapTransitionRow2";
-  ADDR  $E648;
-};
-LABEL {
-  NAME "Map21Bank18Image1MapTransitionRow3";
-  ADDR  $E652;
-};
-LABEL {
-  NAME "Map21Bank18Image1MapTransitionRow4";
-  ADDR  $E65C;
-};
-LABEL {
-  NAME "Map21Bank18Image1MapTransitionRow5";
-  ADDR  $E666;
-};
-LABEL {
-  NAME "Map21Bank18Image1MapTransitionRow6_ToBank10Image2";
-  ADDR  $E670;
-};
-LABEL {
-  NAME "Map21Bank18Image1MapTransitionRow7_ToBank10Image1";
-  ADDR  $E67A;
-};
-LABEL {
-  NAME "Map22Bank18Image2MapTransitionRow0_ToBank18Image1_DirSouth";
-  ADDR  $E600;
-};
-LABEL {
-  NAME "Map22Bank18Image2MapTransitionRow1_ToBank18Image3_DirNorth";
-  ADDR  $E60A;
-};
-LABEL {
-  NAME "Map22Bank18Image2MapTransitionRow2_ToBank36Image0";
-  ADDR  $E614;
-};
-LABEL {
-  NAME "Map22Bank18Image2MapTransitionRow3";
-  ADDR  $E61E;
-};
-LABEL {
-  NAME "Map22Bank18Image2MapTransitionRow4";
-  ADDR  $E628;
-};
-LABEL {
   NAME "Map23Bank18Image3MapTransitionRow0_ToBank18Image2_DirSouth";
   ADDR  $918D;
 };
@@ -2178,34 +2125,6 @@ LABEL {
   ADDR  $9B78;
 };
 LABEL {
-  NAME "Map41Bank20Image2MapTransitionRow0_ToBank21Image0_DirSouth";
-  ADDR  $E6C0;
-};
-LABEL {
-  NAME "Map41Bank20Image2MapTransitionRow1_ToBank21Image2_DirSouth";
-  ADDR  $E6CA;
-};
-LABEL {
-  NAME "Map41Bank20Image2MapTransitionRow2_ToBank36Image0_DirSouth";
-  ADDR  $E6D4;
-};
-LABEL {
-  NAME "Map41Bank20Image2MapTransitionRow3_ToBank36Image0_DirSouth";
-  ADDR  $E6DE;
-};
-LABEL {
-  NAME "Map41Bank20Image2MapTransitionRow4_ToBank36Image0_DirSouth";
-  ADDR  $E6E8;
-};
-LABEL {
-  NAME "Map41Bank20Image2MapTransitionRow5_ToBank36Image0_DirSouth";
-  ADDR  $E6F2;
-};
-LABEL {
-  NAME "Map41Bank20Image2MapTransitionRow6_ToBank2cImage3";
-  ADDR  $E6FC;
-};
-LABEL {
   NAME "Map42Bank21Image0MapTransitionRow0_ToBank26Image0_DirWest";
   ADDR  $9BC0;
 };
@@ -3114,14 +3033,6 @@ LABEL {
   ADDR  $A4F4;
 };
 LABEL {
-  NAME "Map8fBank2cImage3MapTransitionRow0_ToBank20Image2";
-  ADDR  $E6A0;
-};
-LABEL {
-  NAME "Map8fBank2cImage3MapTransitionRow1";
-  ADDR  $E6AA;
-};
-LABEL {
   NAME "Map90Bank2cImage3MapTransitionRow0_ToBank1fImage0_DirSouth";
   ADDR  $A50A;
 };
@@ -3321,7 +3232,6 @@ LABEL {
   NAME "Mapa5Bank2fImage0MapTransitionRow1_ToBank10Image0_DirNorth";
   ADDR  $A6FF;
 };
-
 LABEL {
   NAME "Bank01MenuGraphics";
   ADDR  $A725;
@@ -3389,4 +3299,92 @@ LABEL {
 LABEL {
   NAME "WeaponLevelUpScreenPalette";
   ADDR  $D77D;
+};
+LABEL {
+  NAME "Map22Bank18Image2MapTransitionRow0_ToBank18Image1_DirSouth";
+  ADDR  $E600;
+};
+LABEL {
+  NAME "Map22Bank18Image2MapTransitionRow1_ToBank18Image3_DirNorth";
+  ADDR  $E60A;
+};
+LABEL {
+  NAME "Map22Bank18Image2MapTransitionRow2_ToBank36Image0";
+  ADDR  $E614;
+};
+LABEL {
+  NAME "Map22Bank18Image2MapTransitionRow3";
+  ADDR  $E61E;
+};
+LABEL {
+  NAME "Map22Bank18Image2MapTransitionRow4";
+  ADDR  $E628;
+};
+LABEL {
+  NAME "Map21Bank18Image1MapTransitionRow0_ToBank18Image0_DirSouth";
+  ADDR  $E634;
+};
+LABEL {
+  NAME "Map21Bank18Image1MapTransitionRow1_ToBank18Image2_DirNorth";
+  ADDR  $E63E;
+};
+LABEL {
+  NAME "Map21Bank18Image1MapTransitionRow2";
+  ADDR  $E648;
+};
+LABEL {
+  NAME "Map21Bank18Image1MapTransitionRow3";
+  ADDR  $E652;
+};
+LABEL {
+  NAME "Map21Bank18Image1MapTransitionRow4";
+  ADDR  $E65C;
+};
+LABEL {
+  NAME "Map21Bank18Image1MapTransitionRow5";
+  ADDR  $E666;
+};
+LABEL {
+  NAME "Map21Bank18Image1MapTransitionRow6_ToBank10Image2";
+  ADDR  $E670;
+};
+LABEL {
+  NAME "Map21Bank18Image1MapTransitionRow7_ToBank10Image1";
+  ADDR  $E67A;
+};
+LABEL {
+  NAME "Map8fBank2cImage3MapTransitionRow0_ToBank20Image2";
+  ADDR  $E6A0;
+};
+LABEL {
+  NAME "Map8fBank2cImage3MapTransitionRow1";
+  ADDR  $E6AA;
+};
+LABEL {
+  NAME "Map41Bank20Image2MapTransitionRow0_ToBank21Image0_DirSouth";
+  ADDR  $E6C0;
+};
+LABEL {
+  NAME "Map41Bank20Image2MapTransitionRow1_ToBank21Image2_DirSouth";
+  ADDR  $E6CA;
+};
+LABEL {
+  NAME "Map41Bank20Image2MapTransitionRow2_ToBank36Image0_DirSouth";
+  ADDR  $E6D4;
+};
+LABEL {
+  NAME "Map41Bank20Image2MapTransitionRow3_ToBank36Image0_DirSouth";
+  ADDR  $E6DE;
+};
+LABEL {
+  NAME "Map41Bank20Image2MapTransitionRow4_ToBank36Image0_DirSouth";
+  ADDR  $E6E8;
+};
+LABEL {
+  NAME "Map41Bank20Image2MapTransitionRow5_ToBank36Image0_DirSouth";
+  ADDR  $E6F2;
+};
+LABEL {
+  NAME "Map41Bank20Image2MapTransitionRow6_ToBank2cImage3";
+  ADDR  $E6FC;
 };

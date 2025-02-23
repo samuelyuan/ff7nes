@@ -175,11 +175,6 @@ LABEL {
   ADDR $C027;
 };
 LABEL {
-  NAME "BaseCharacterStats";
-  ADDR $C234;
-  COMMENT "Stores max HP, Str, Vit, Int, Spr, Agl. The 7th variable is unknown. All variables are 2 bytes and each character takes 14 bytes.";
-};
-LABEL {
   NAME "PartyMemberExpNeededForNextLevel";
   ADDR $C79E;
 };
@@ -188,33 +183,8 @@ LABEL {
   ADDR $C932;
 };
 LABEL {
-  NAME "ShopItemHeadgearStats";
-  ADDR $C93A;
-};
-LABEL {
-  NAME "ShopItemBodyArmorStats";
-  ADDR $CABB;
-};
-LABEL {
-  NAME "ShopItemBraceletStats";
-  ADDR $CE3B;
-};
-LABEL {
-  NAME "ShopItemRingStats";
-  ADDR $D11A;
-};
-LABEL {
-  NAME "WeaponItemStats";
-  ADDR $D2B0;
-};
-LABEL {
   NAME "WeaponExpNeededForNextLevel";
   ADDR $D440;
-};
-LABEL {
-  NAME "MateriaStats";
-  ADDR $E3E0;
-  COMMENT "Each materia item has 5 bytes. First bytes is a base value, last byte is the amount to add for each additional level";
 };
 LABEL {
   NAME "MateriaExpNeededForNextLevel";
@@ -244,4 +214,2439 @@ LABEL {
 LABEL {
   NAME "ShopItemWeaponCost";
   ADDR $F470;
+};
+
+LABEL {
+  NAME "BaseCharacterStatsIndex0";
+  ADDR  $C234;
+  COMMENT "Stores max HP, Str, Vit, Int, Spr, Agl. The 7th variable is unknown. All variables are 2 bytes and each character takes 14 bytes.";
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex1";
+  ADDR  $C242;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex2";
+  ADDR  $C250;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex3";
+  ADDR  $C25E;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex4";
+  ADDR  $C26C;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex5";
+  ADDR  $C27A;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex6";
+  ADDR  $C288;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex7";
+  ADDR  $C296;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex8";
+  ADDR  $C2A4;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex9";
+  ADDR  $C2B2;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex10";
+  ADDR  $C2C0;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex11";
+  ADDR  $C2CE;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex12";
+  ADDR  $C2DC;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex13";
+  ADDR  $C2EA;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex14";
+  ADDR  $C2F8;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex15";
+  ADDR  $C306;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex16";
+  ADDR  $C314;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex17";
+  ADDR  $C322;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex18";
+  ADDR  $C330;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex19";
+  ADDR  $C33E;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex20";
+  ADDR  $C34C;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex21";
+  ADDR  $C35A;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex22";
+  ADDR  $C368;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex23";
+  ADDR  $C376;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex24";
+  ADDR  $C384;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex25";
+  ADDR  $C392;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex26";
+  ADDR  $C3A0;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex27";
+  ADDR  $C3AE;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex28";
+  ADDR  $C3BC;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex29";
+  ADDR  $C3CA;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex30";
+  ADDR  $C3D8;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex31";
+  ADDR  $C3E6;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex32";
+  ADDR  $C3F4;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex33";
+  ADDR  $C402;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex34";
+  ADDR  $C410;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex35";
+  ADDR  $C41E;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex36";
+  ADDR  $C42C;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex37";
+  ADDR  $C43A;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex38";
+  ADDR  $C448;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex39";
+  ADDR  $C456;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex40";
+  ADDR  $C464;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex41";
+  ADDR  $C472;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex42";
+  ADDR  $C480;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex43";
+  ADDR  $C48E;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex44";
+  ADDR  $C49C;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex45";
+  ADDR  $C4AA;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex46";
+  ADDR  $C4B8;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex47";
+  ADDR  $C4C6;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex48";
+  ADDR  $C4D4;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex49";
+  ADDR  $C4E2;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex50";
+  ADDR  $C4F0;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex51";
+  ADDR  $C4FE;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex52";
+  ADDR  $C50C;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex53";
+  ADDR  $C51A;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex54";
+  ADDR  $C528;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex55";
+  ADDR  $C536;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex56";
+  ADDR  $C544;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex57";
+  ADDR  $C552;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex58";
+  ADDR  $C560;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex59";
+  ADDR  $C56E;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex60";
+  ADDR  $C57C;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex61";
+  ADDR  $C58A;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex62";
+  ADDR  $C598;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex63";
+  ADDR  $C5A6;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex64";
+  ADDR  $C5B4;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex65";
+  ADDR  $C5C2;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex66";
+  ADDR  $C5D0;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex67";
+  ADDR  $C5DE;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex68";
+  ADDR  $C5EC;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex69";
+  ADDR  $C5FA;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex70";
+  ADDR  $C608;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex71";
+  ADDR  $C616;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex72";
+  ADDR  $C624;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex73";
+  ADDR  $C632;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex74";
+  ADDR  $C640;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex75";
+  ADDR  $C64E;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex76";
+  ADDR  $C65C;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex77";
+  ADDR  $C66A;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex78";
+  ADDR  $C678;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex79";
+  ADDR  $C686;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex80";
+  ADDR  $C694;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex81";
+  ADDR  $C6A2;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex82";
+  ADDR  $C6B0;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex83";
+  ADDR  $C6BE;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex84";
+  ADDR  $C6CC;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex85";
+  ADDR  $C6DA;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex86";
+  ADDR  $C6E8;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex87";
+  ADDR  $C6F6;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex88";
+  ADDR  $C704;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex89";
+  ADDR  $C712;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex90";
+  ADDR  $C720;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex91";
+  ADDR  $C72E;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex92";
+  ADDR  $C73C;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex93";
+  ADDR  $C74A;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex94";
+  ADDR  $C758;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex95";
+  ADDR  $C766;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex96";
+  ADDR  $C774;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex97";
+  ADDR  $C782;
+};
+LABEL {
+  NAME "BaseCharacterStatsIndex98";
+  ADDR  $C790;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex0";
+  ADDR  $C93A;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex1";
+  ADDR  $C941;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex2";
+  ADDR  $C948;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex3";
+  ADDR  $C94F;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex4";
+  ADDR  $C956;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex5";
+  ADDR  $C95D;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex6";
+  ADDR  $C964;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex7";
+  ADDR  $C96B;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex8";
+  ADDR  $C972;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex9";
+  ADDR  $C979;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex10";
+  ADDR  $C980;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex11";
+  ADDR  $C987;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex12";
+  ADDR  $C98E;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex13";
+  ADDR  $C995;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex14";
+  ADDR  $C99C;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex15";
+  ADDR  $C9A3;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex16";
+  ADDR  $C9AA;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex17";
+  ADDR  $C9B1;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex18";
+  ADDR  $C9B8;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex19";
+  ADDR  $C9BF;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex20";
+  ADDR  $C9C6;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex21";
+  ADDR  $C9CD;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex22";
+  ADDR  $C9D4;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex23";
+  ADDR  $C9DB;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex24";
+  ADDR  $C9E2;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex25";
+  ADDR  $C9E9;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex26";
+  ADDR  $C9F0;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex27";
+  ADDR  $C9F7;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex28";
+  ADDR  $C9FE;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex29";
+  ADDR  $CA05;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex30";
+  ADDR  $CA0C;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex31";
+  ADDR  $CA13;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex32";
+  ADDR  $CA1A;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex33";
+  ADDR  $CA21;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex34";
+  ADDR  $CA28;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex35";
+  ADDR  $CA2F;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex36";
+  ADDR  $CA36;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex37";
+  ADDR  $CA3D;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex38";
+  ADDR  $CA44;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex39";
+  ADDR  $CA4B;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex40";
+  ADDR  $CA52;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex41";
+  ADDR  $CA59;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex42";
+  ADDR  $CA60;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex43";
+  ADDR  $CA67;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex44";
+  ADDR  $CA6E;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex45";
+  ADDR  $CA75;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex46";
+  ADDR  $CA7C;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex47";
+  ADDR  $CA83;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex48";
+  ADDR  $CA8A;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex49";
+  ADDR  $CA91;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex50";
+  ADDR  $CA98;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex51";
+  ADDR  $CA9F;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex52";
+  ADDR  $CAA6;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex53";
+  ADDR  $CAAD;
+};
+LABEL {
+  NAME "ShopItemHeadgearStatsIndex54";
+  ADDR  $CAB4;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex0";
+  ADDR  $CABB;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex1";
+  ADDR  $CAC2;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex2";
+  ADDR  $CAC9;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex3";
+  ADDR  $CAD0;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex4";
+  ADDR  $CAD7;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex5";
+  ADDR  $CADE;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex6";
+  ADDR  $CAE5;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex7";
+  ADDR  $CAEC;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex8";
+  ADDR  $CAF3;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex9";
+  ADDR  $CAFA;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex10";
+  ADDR  $CB01;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex11";
+  ADDR  $CB08;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex12";
+  ADDR  $CB0F;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex13";
+  ADDR  $CB16;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex14";
+  ADDR  $CB1D;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex15";
+  ADDR  $CB24;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex16";
+  ADDR  $CB2B;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex17";
+  ADDR  $CB32;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex18";
+  ADDR  $CB39;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex19";
+  ADDR  $CB40;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex20";
+  ADDR  $CB47;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex21";
+  ADDR  $CB4E;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex22";
+  ADDR  $CB55;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex23";
+  ADDR  $CB5C;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex24";
+  ADDR  $CB63;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex25";
+  ADDR  $CB6A;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex26";
+  ADDR  $CB71;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex27";
+  ADDR  $CB78;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex28";
+  ADDR  $CB7F;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex29";
+  ADDR  $CB86;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex30";
+  ADDR  $CB8D;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex31";
+  ADDR  $CB94;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex32";
+  ADDR  $CB9B;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex33";
+  ADDR  $CBA2;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex34";
+  ADDR  $CBA9;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex35";
+  ADDR  $CBB0;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex36";
+  ADDR  $CBB7;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex37";
+  ADDR  $CBBE;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex38";
+  ADDR  $CBC5;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex39";
+  ADDR  $CBCC;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex40";
+  ADDR  $CBD3;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex41";
+  ADDR  $CBDA;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex42";
+  ADDR  $CBE1;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex43";
+  ADDR  $CBE8;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex44";
+  ADDR  $CBEF;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex45";
+  ADDR  $CBF6;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex46";
+  ADDR  $CBFD;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex47";
+  ADDR  $CC04;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex48";
+  ADDR  $CC0B;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex49";
+  ADDR  $CC12;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex50";
+  ADDR  $CC19;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex51";
+  ADDR  $CC20;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex52";
+  ADDR  $CC27;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex53";
+  ADDR  $CC2E;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex54";
+  ADDR  $CC35;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex55";
+  ADDR  $CC3C;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex56";
+  ADDR  $CC43;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex57";
+  ADDR  $CC4A;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex58";
+  ADDR  $CC51;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex59";
+  ADDR  $CC58;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex60";
+  ADDR  $CC5F;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex61";
+  ADDR  $CC66;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex62";
+  ADDR  $CC6D;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex63";
+  ADDR  $CC74;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex64";
+  ADDR  $CC7B;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex65";
+  ADDR  $CC82;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex66";
+  ADDR  $CC89;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex67";
+  ADDR  $CC90;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex68";
+  ADDR  $CC97;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex69";
+  ADDR  $CC9E;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex70";
+  ADDR  $CCA5;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex71";
+  ADDR  $CCAC;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex72";
+  ADDR  $CCB3;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex73";
+  ADDR  $CCBA;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex74";
+  ADDR  $CCC1;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex75";
+  ADDR  $CCC8;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex76";
+  ADDR  $CCCF;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex77";
+  ADDR  $CCD6;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex78";
+  ADDR  $CCDD;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex79";
+  ADDR  $CCE4;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex80";
+  ADDR  $CCEB;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex81";
+  ADDR  $CCF2;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex82";
+  ADDR  $CCF9;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex83";
+  ADDR  $CD00;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex84";
+  ADDR  $CD07;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex85";
+  ADDR  $CD0E;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex86";
+  ADDR  $CD15;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex87";
+  ADDR  $CD1C;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex88";
+  ADDR  $CD23;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex89";
+  ADDR  $CD2A;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex90";
+  ADDR  $CD31;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex91";
+  ADDR  $CD38;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex92";
+  ADDR  $CD3F;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex93";
+  ADDR  $CD46;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex94";
+  ADDR  $CD4D;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex95";
+  ADDR  $CD54;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex96";
+  ADDR  $CD5B;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex97";
+  ADDR  $CD62;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex98";
+  ADDR  $CD69;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex99";
+  ADDR  $CD70;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex100";
+  ADDR  $CD77;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex101";
+  ADDR  $CD7E;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex102";
+  ADDR  $CD85;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex103";
+  ADDR  $CD8C;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex104";
+  ADDR  $CD93;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex105";
+  ADDR  $CD9A;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex106";
+  ADDR  $CDA1;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex107";
+  ADDR  $CDA8;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex108";
+  ADDR  $CDAF;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex109";
+  ADDR  $CDB6;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex110";
+  ADDR  $CDBD;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex111";
+  ADDR  $CDC4;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex112";
+  ADDR  $CDCB;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex113";
+  ADDR  $CDD2;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex114";
+  ADDR  $CDD9;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex115";
+  ADDR  $CDE0;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex116";
+  ADDR  $CDE7;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex117";
+  ADDR  $CDEE;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex118";
+  ADDR  $CDF5;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex119";
+  ADDR  $CDFC;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex120";
+  ADDR  $CE03;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex121";
+  ADDR  $CE0A;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex122";
+  ADDR  $CE11;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex123";
+  ADDR  $CE18;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex124";
+  ADDR  $CE1F;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex125";
+  ADDR  $CE26;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex126";
+  ADDR  $CE2D;
+};
+LABEL {
+  NAME "ShopItemBodyArmorStatsxIndex127";
+  ADDR  $CE34;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex0";
+  ADDR  $CE3B;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex1";
+  ADDR  $CE42;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex2";
+  ADDR  $CE49;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex3";
+  ADDR  $CE50;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex4";
+  ADDR  $CE57;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex5";
+  ADDR  $CE5E;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex6";
+  ADDR  $CE65;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex7";
+  ADDR  $CE6C;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex8";
+  ADDR  $CE73;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex9";
+  ADDR  $CE7A;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex10";
+  ADDR  $CE81;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex11";
+  ADDR  $CE88;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex12";
+  ADDR  $CE8F;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex13";
+  ADDR  $CE96;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex14";
+  ADDR  $CE9D;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex15";
+  ADDR  $CEA4;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex16";
+  ADDR  $CEAB;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex17";
+  ADDR  $CEB2;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex18";
+  ADDR  $CEB9;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex19";
+  ADDR  $CEC0;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex20";
+  ADDR  $CEC7;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex21";
+  ADDR  $CECE;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex22";
+  ADDR  $CED5;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex23";
+  ADDR  $CEDC;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex24";
+  ADDR  $CEE3;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex25";
+  ADDR  $CEEA;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex26";
+  ADDR  $CEF1;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex27";
+  ADDR  $CEF8;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex28";
+  ADDR  $CEFF;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex29";
+  ADDR  $CF06;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex30";
+  ADDR  $CF0D;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex31";
+  ADDR  $CF14;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex32";
+  ADDR  $CF1B;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex33";
+  ADDR  $CF22;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex34";
+  ADDR  $CF29;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex35";
+  ADDR  $CF30;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex36";
+  ADDR  $CF37;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex37";
+  ADDR  $CF3E;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex38";
+  ADDR  $CF45;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex39";
+  ADDR  $CF4C;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex40";
+  ADDR  $CF53;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex41";
+  ADDR  $CF5A;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex42";
+  ADDR  $CF61;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex43";
+  ADDR  $CF68;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex44";
+  ADDR  $CF6F;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex45";
+  ADDR  $CF76;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex46";
+  ADDR  $CF7D;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex47";
+  ADDR  $CF84;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex48";
+  ADDR  $CF8B;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex49";
+  ADDR  $CF92;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex50";
+  ADDR  $CF99;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex51";
+  ADDR  $CFA0;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex52";
+  ADDR  $CFA7;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex53";
+  ADDR  $CFAE;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex54";
+  ADDR  $CFB5;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex55";
+  ADDR  $CFBC;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex56";
+  ADDR  $CFC3;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex57";
+  ADDR  $CFCA;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex58";
+  ADDR  $CFD1;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex59";
+  ADDR  $CFD8;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex60";
+  ADDR  $CFDF;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex61";
+  ADDR  $CFE6;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex62";
+  ADDR  $CFED;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex63";
+  ADDR  $CFF4;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex64";
+  ADDR  $CFFB;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex65";
+  ADDR  $D002;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex66";
+  ADDR  $D009;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex67";
+  ADDR  $D010;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex68";
+  ADDR  $D017;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex69";
+  ADDR  $D01E;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex70";
+  ADDR  $D025;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex71";
+  ADDR  $D02C;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex72";
+  ADDR  $D033;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex73";
+  ADDR  $D03A;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex74";
+  ADDR  $D041;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex75";
+  ADDR  $D048;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex76";
+  ADDR  $D04F;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex77";
+  ADDR  $D056;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex78";
+  ADDR  $D05D;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex79";
+  ADDR  $D064;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex80";
+  ADDR  $D06B;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex81";
+  ADDR  $D072;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex82";
+  ADDR  $D079;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex83";
+  ADDR  $D080;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex84";
+  ADDR  $D087;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex85";
+  ADDR  $D08E;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex86";
+  ADDR  $D095;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex87";
+  ADDR  $D09C;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex88";
+  ADDR  $D0A3;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex89";
+  ADDR  $D0AA;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex90";
+  ADDR  $D0B1;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex91";
+  ADDR  $D0B8;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex92";
+  ADDR  $D0BF;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex93";
+  ADDR  $D0C6;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex94";
+  ADDR  $D0CD;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex95";
+  ADDR  $D0D4;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex96";
+  ADDR  $D0DB;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex97";
+  ADDR  $D0E2;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex98";
+  ADDR  $D0E9;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex99";
+  ADDR  $D0F0;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex100";
+  ADDR  $D0F7;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex101";
+  ADDR  $D0FE;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex102";
+  ADDR  $D105;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex103";
+  ADDR  $D10C;
+};
+LABEL {
+  NAME "ShopItemBraceletStatsIndex104";
+  ADDR  $D113;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex0";
+  ADDR  $D11A;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex1";
+  ADDR  $D121;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex2";
+  ADDR  $D128;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex3";
+  ADDR  $D12F;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex4";
+  ADDR  $D136;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex5";
+  ADDR  $D13D;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex6";
+  ADDR  $D144;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex7";
+  ADDR  $D14B;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex8";
+  ADDR  $D152;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex9";
+  ADDR  $D159;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex10";
+  ADDR  $D160;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex11";
+  ADDR  $D167;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex12";
+  ADDR  $D16E;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex13";
+  ADDR  $D175;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex14";
+  ADDR  $D17C;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex15";
+  ADDR  $D183;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex16";
+  ADDR  $D18A;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex17";
+  ADDR  $D191;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex18";
+  ADDR  $D198;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex19";
+  ADDR  $D19F;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex20";
+  ADDR  $D1A6;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex21";
+  ADDR  $D1AD;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex22";
+  ADDR  $D1B4;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex23";
+  ADDR  $D1BB;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex24";
+  ADDR  $D1C2;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex25";
+  ADDR  $D1C9;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex26";
+  ADDR  $D1D0;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex27";
+  ADDR  $D1D7;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex28";
+  ADDR  $D1DE;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex29";
+  ADDR  $D1E5;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex30";
+  ADDR  $D1EC;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex31";
+  ADDR  $D1F3;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex32";
+  ADDR  $D1FA;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex33";
+  ADDR  $D201;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex34";
+  ADDR  $D208;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex35";
+  ADDR  $D20F;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex36";
+  ADDR  $D216;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex37";
+  ADDR  $D21D;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex38";
+  ADDR  $D224;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex39";
+  ADDR  $D22B;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex40";
+  ADDR  $D232;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex41";
+  ADDR  $D239;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex42";
+  ADDR  $D240;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex43";
+  ADDR  $D247;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex44";
+  ADDR  $D24E;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex45";
+  ADDR  $D255;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex46";
+  ADDR  $D25C;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex47";
+  ADDR  $D263;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex48";
+  ADDR  $D26A;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex49";
+  ADDR  $D271;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex50";
+  ADDR  $D278;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex51";
+  ADDR  $D27F;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex52";
+  ADDR  $D286;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex53";
+  ADDR  $D28D;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex54";
+  ADDR  $D294;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex55";
+  ADDR  $D29B;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex56";
+  ADDR  $D2A2;
+};
+LABEL {
+  NAME "ShopItemRingStatsIndex57";
+  ADDR  $D2A9;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex0";
+  ADDR  $D2B0;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex1";
+  ADDR  $D2B4;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex2";
+  ADDR  $D2B8;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex3";
+  ADDR  $D2BC;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex4";
+  ADDR  $D2C0;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex5";
+  ADDR  $D2C4;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex6";
+  ADDR  $D2C8;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex7";
+  ADDR  $D2CC;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex8";
+  ADDR  $D2D0;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex9";
+  ADDR  $D2D4;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex10";
+  ADDR  $D2D8;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex11";
+  ADDR  $D2DC;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex12";
+  ADDR  $D2E0;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex13";
+  ADDR  $D2E4;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex14";
+  ADDR  $D2E8;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex15";
+  ADDR  $D2EC;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex16";
+  ADDR  $D2F0;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex17";
+  ADDR  $D2F4;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex18";
+  ADDR  $D2F8;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex19";
+  ADDR  $D2FC;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex20";
+  ADDR  $D300;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex21";
+  ADDR  $D304;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex22";
+  ADDR  $D308;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex23";
+  ADDR  $D30C;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex24";
+  ADDR  $D310;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex25";
+  ADDR  $D314;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex26";
+  ADDR  $D318;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex27";
+  ADDR  $D31C;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex28";
+  ADDR  $D320;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex29";
+  ADDR  $D324;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex30";
+  ADDR  $D328;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex31";
+  ADDR  $D32C;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex32";
+  ADDR  $D330;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex33";
+  ADDR  $D334;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex34";
+  ADDR  $D338;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex35";
+  ADDR  $D33C;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex36";
+  ADDR  $D340;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex37";
+  ADDR  $D344;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex38";
+  ADDR  $D348;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex39";
+  ADDR  $D34C;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex40";
+  ADDR  $D350;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex41";
+  ADDR  $D354;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex42";
+  ADDR  $D358;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex43";
+  ADDR  $D35C;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex44";
+  ADDR  $D360;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex45";
+  ADDR  $D364;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex46";
+  ADDR  $D368;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex47";
+  ADDR  $D36C;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex48";
+  ADDR  $D370;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex49";
+  ADDR  $D374;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex50";
+  ADDR  $D378;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex51";
+  ADDR  $D37C;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex52";
+  ADDR  $D380;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex53";
+  ADDR  $D384;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex54";
+  ADDR  $D388;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex55";
+  ADDR  $D38C;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex56";
+  ADDR  $D390;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex57";
+  ADDR  $D394;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex58";
+  ADDR  $D398;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex59";
+  ADDR  $D39C;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex60";
+  ADDR  $D3A0;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex61";
+  ADDR  $D3A4;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex62";
+  ADDR  $D3A8;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex63";
+  ADDR  $D3AC;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex64";
+  ADDR  $D3B0;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex65";
+  ADDR  $D3B4;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex66";
+  ADDR  $D3B8;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex67";
+  ADDR  $D3BC;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex68";
+  ADDR  $D3C0;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex69";
+  ADDR  $D3C4;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex70";
+  ADDR  $D3C8;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex71";
+  ADDR  $D3CC;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex72";
+  ADDR  $D3D0;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex73";
+  ADDR  $D3D4;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex74";
+  ADDR  $D3D8;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex75";
+  ADDR  $D3DC;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex76";
+  ADDR  $D3E0;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex77";
+  ADDR  $D3E4;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex78";
+  ADDR  $D3E8;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex79";
+  ADDR  $D3EC;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex80";
+  ADDR  $D3F0;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex81";
+  ADDR  $D3F4;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex82";
+  ADDR  $D3F8;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex83";
+  ADDR  $D3FC;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex84";
+  ADDR  $D400;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex85";
+  ADDR  $D404;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex86";
+  ADDR  $D408;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex87";
+  ADDR  $D40C;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex88";
+  ADDR  $D410;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex89";
+  ADDR  $D414;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex90";
+  ADDR  $D418;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex91";
+  ADDR  $D41C;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex92";
+  ADDR  $D420;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex93";
+  ADDR  $D424;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex94";
+  ADDR  $D428;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex95";
+  ADDR  $D42C;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex96";
+  ADDR  $D430;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex97";
+  ADDR  $D434;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex98";
+  ADDR  $D438;
+};
+LABEL {
+  NAME "WeaponItemStatsIndex99";
+  ADDR  $D43C;
+};
+LABEL {
+  NAME "MateriaStatsIndex0";
+  ADDR  $E3E0;
+  COMMENT "Each materia item has 5 bytes. First bytes is a base value, last byte is the amount to add for each additional level";
+};
+LABEL {
+  NAME "MateriaStatsIndex1";
+  ADDR  $E3E5;
+};
+LABEL {
+  NAME "MateriaStatsIndex2";
+  ADDR  $E3EA;
+};
+LABEL {
+  NAME "MateriaStatsIndex3";
+  ADDR  $E3EF;
+};
+LABEL {
+  NAME "MateriaStatsIndex4";
+  ADDR  $E3F4;
+};
+LABEL {
+  NAME "MateriaStatsIndex5";
+  ADDR  $E3F9;
+};
+LABEL {
+  NAME "MateriaStatsIndex6";
+  ADDR  $E3FE;
+};
+LABEL {
+  NAME "MateriaStatsIndex7";
+  ADDR  $E403;
+};
+LABEL {
+  NAME "MateriaStatsIndex8";
+  ADDR  $E408;
+};
+LABEL {
+  NAME "MateriaStatsIndex9";
+  ADDR  $E40D;
+};
+LABEL {
+  NAME "MateriaStatsIndex10";
+  ADDR  $E412;
+};
+LABEL {
+  NAME "MateriaStatsIndex11";
+  ADDR  $E417;
+};
+LABEL {
+  NAME "MateriaStatsIndex12";
+  ADDR  $E41C;
+};
+LABEL {
+  NAME "MateriaStatsIndex13";
+  ADDR  $E421;
+};
+LABEL {
+  NAME "MateriaStatsIndex14";
+  ADDR  $E426;
+};
+LABEL {
+  NAME "MateriaStatsIndex15";
+  ADDR  $E42B;
+};
+LABEL {
+  NAME "MateriaStatsIndex16";
+  ADDR  $E430;
+};
+LABEL {
+  NAME "MateriaStatsIndex17";
+  ADDR  $E435;
+};
+LABEL {
+  NAME "MateriaStatsIndex18";
+  ADDR  $E43A;
+};
+LABEL {
+  NAME "MateriaStatsIndex19";
+  ADDR  $E43F;
+};
+LABEL {
+  NAME "MateriaStatsIndex20";
+  ADDR  $E444;
+};
+LABEL {
+  NAME "MateriaStatsIndex21";
+  ADDR  $E449;
+};
+LABEL {
+  NAME "MateriaStatsIndex22";
+  ADDR  $E44E;
+};
+LABEL {
+  NAME "MateriaStatsIndex23";
+  ADDR  $E453;
+};
+LABEL {
+  NAME "MateriaStatsIndex24";
+  ADDR  $E458;
+};
+LABEL {
+  NAME "MateriaStatsIndex25";
+  ADDR  $E45D;
+};
+LABEL {
+  NAME "MateriaStatsIndex26";
+  ADDR  $E462;
+};
+LABEL {
+  NAME "MateriaStatsIndex27";
+  ADDR  $E467;
+};
+LABEL {
+  NAME "MateriaStatsIndex28";
+  ADDR  $E46C;
+};
+LABEL {
+  NAME "MateriaStatsIndex29";
+  ADDR  $E471;
+};
+LABEL {
+  NAME "MateriaStatsIndex30";
+  ADDR  $E476;
+};
+LABEL {
+  NAME "MateriaStatsIndex31";
+  ADDR  $E47B;
+};
+LABEL {
+  NAME "MateriaStatsIndex32";
+  ADDR  $E480;
+};
+LABEL {
+  NAME "MateriaStatsIndex33";
+  ADDR  $E485;
+};
+LABEL {
+  NAME "MateriaStatsIndex34";
+  ADDR  $E48A;
+};
+LABEL {
+  NAME "MateriaStatsIndex35";
+  ADDR  $E48F;
+};
+LABEL {
+  NAME "MateriaStatsIndex36";
+  ADDR  $E494;
+};
+LABEL {
+  NAME "MateriaStatsIndex37";
+  ADDR  $E499;
+};
+LABEL {
+  NAME "MateriaStatsIndex38";
+  ADDR  $E49E;
+};
+LABEL {
+  NAME "MateriaStatsIndex39";
+  ADDR  $E4A3;
+};
+LABEL {
+  NAME "MateriaStatsIndex40";
+  ADDR  $E4A8;
+};
+LABEL {
+  NAME "MateriaStatsIndex41";
+  ADDR  $E4AD;
+};
+LABEL {
+  NAME "MateriaStatsIndex42";
+  ADDR  $E4B2;
+};
+LABEL {
+  NAME "MateriaStatsIndex43";
+  ADDR  $E4B7;
+};
+LABEL {
+  NAME "MateriaStatsIndex44";
+  ADDR  $E4BC;
+};
+LABEL {
+  NAME "MateriaStatsIndex45";
+  ADDR  $E4C1;
+};
+LABEL {
+  NAME "MateriaStatsIndex46";
+  ADDR  $E4C6;
+};
+LABEL {
+  NAME "MateriaStatsIndex47";
+  ADDR  $E4CB;
+};
+LABEL {
+  NAME "MateriaStatsIndex48";
+  ADDR  $E4D0;
+};
+LABEL {
+  NAME "MateriaStatsIndex49";
+  ADDR  $E4D5;
+};
+LABEL {
+  NAME "MateriaStatsIndex50";
+  ADDR  $E4DA;
+};
+LABEL {
+  NAME "MateriaStatsIndex51";
+  ADDR  $E4DF;
+};
+LABEL {
+  NAME "MateriaStatsIndex52";
+  ADDR  $E4E4;
+};
+LABEL {
+  NAME "MateriaStatsIndex53";
+  ADDR  $E4E9;
+};
+LABEL {
+  NAME "MateriaStatsIndex54";
+  ADDR  $E4EE;
+};
+LABEL {
+  NAME "MateriaStatsIndex55";
+  ADDR  $E4F3;
+};
+LABEL {
+  NAME "MateriaStatsIndex56";
+  ADDR  $E4F8;
+};
+LABEL {
+  NAME "MateriaStatsIndex57";
+  ADDR  $E4FD;
+};
+LABEL {
+  NAME "MateriaStatsIndex58";
+  ADDR  $E502;
+};
+LABEL {
+  NAME "MateriaStatsIndex59";
+  ADDR  $E507;
+};
+LABEL {
+  NAME "MateriaStatsIndex60";
+  ADDR  $E50C;
+};
+LABEL {
+  NAME "MateriaStatsIndex61";
+  ADDR  $E511;
+};
+LABEL {
+  NAME "MateriaStatsIndex62";
+  ADDR  $E516;
 };
