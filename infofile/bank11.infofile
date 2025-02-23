@@ -23,12 +23,12 @@ RANGE {
   TYPE BYTETABLE;
 };
 RANGE {
-  START $801a;
-  END $802d;
+  START $801A;
+  END $802D;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $802e;
+  START $802E;
   END $8035;
   TYPE BYTETABLE;
 };
@@ -39,7 +39,7 @@ RANGE {
 };
 RANGE {
   START $8038;
-  END $803f;
+  END $803F;
   TYPE BYTETABLE;
 };
 RANGE {
@@ -53,12 +53,12 @@ RANGE {
   TYPE BYTETABLE;
 };
 RANGE {
-  START $804a;
-  END $804b;
+  START $804A;
+  END $804B;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $804c;
+  START $804C;
   END $8053;
   TYPE BYTETABLE;
 };
@@ -69,12 +69,12 @@ RANGE {
 };
 RANGE {
   START $8056;
-  END $805d;
+  END $805D;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $805e;
-  END $805f;
+  START $805E;
+  END $805F;
   TYPE ADDRTABLE;
 };
 RANGE {
@@ -88,7 +88,7 @@ RANGE {
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $806a;
+  START $806A;
   END $8071;
   TYPE BYTETABLE;
 };
@@ -99,16 +99,16 @@ RANGE {
 };
 RANGE {
   START $8074;
-  END $807b;
+  END $807B;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $807c;
-  END $807d;
+  START $807C;
+  END $807D;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $807e;
+  START $807E;
   END $8085;
   TYPE BYTETABLE;
 };
@@ -119,31 +119,31 @@ RANGE {
 };
 RANGE {
   START $8088;
-  END $96e8;
+  END $96E8;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $96e9;
-  END $96f0;
+  START $96E9;
+  END $96F0;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $96f1;
+  START $96F1;
   END $9704;
   TYPE ADDRTABLE;
 };
 RANGE {
   START $9705;
-  END $970c;
+  END $970C;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $970d;
-  END $970e;
+  START $970D;
+  END $970E;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $970f;
+  START $970F;
   END $9716;
   TYPE BYTETABLE;
 };
@@ -154,207 +154,207 @@ RANGE {
 };
 RANGE {
   START $9719;
-  END $a6c9;
+  END $A6C9;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $a6ca;
-  END $a6d1;
+  START $A6CA;
+  END $A6D1;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $a6d2;
-  END $a6e1;
+  START $A6D2;
+  END $A6E1;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $a6e2;
-  END $a6e9;
+  START $A6E2;
+  END $A6E9;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $a6ea;
-  END $a6eb;
+  START $A6EA;
+  END $A6EB;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $a6ec;
-  END $a6f3;
+  START $A6EC;
+  END $A6F3;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $a6f4;
-  END $a6f5;
+  START $A6F4;
+  END $A6F5;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $a6f6;
-  END $a6fd;
+  START $A6F6;
+  END $A6FD;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $a6fe;
-  END $a6ff;
+  START $A6FE;
+  END $A6FF;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $a700;
-  END $a707;
+  START $A700;
+  END $A707;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $a708;
-  END $a709;
+  START $A708;
+  END $A709;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $a70a;
-  END $a711;
+  START $A70A;
+  END $A711;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $a712;
-  END $a713;
+  START $A712;
+  END $A713;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $a714;
-  END $a71b;
+  START $A714;
+  END $A71B;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $a71c;
-  END $a71d;
+  START $A71C;
+  END $A71D;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $a71e;
-  END $a725;
+  START $A71E;
+  END $A725;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $a726;
-  END $a727;
+  START $A726;
+  END $A727;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $a728;
-  END $a72f;
+  START $A728;
+  END $A72F;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $a730;
-  END $a731;
+  START $A730;
+  END $A731;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $a732;
-  END $a739;
+  START $A732;
+  END $A739;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $a73a;
-  END $a73b;
+  START $A73A;
+  END $A73B;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $a73c;
-  END $baa4;
+  START $A73C;
+  END $BAA4;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $baa5;
-  END $baac;
+  START $BAA5;
+  END $BAAC;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $baad;
-  END $bac0;
+  START $BAAD;
+  END $BAC0;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $bac1;
-  END $bac8;
+  START $BAC1;
+  END $BAC8;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $bac9;
-  END $baca;
+  START $BAC9;
+  END $BACA;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $bacb;
-  END $bad2;
+  START $BACB;
+  END $BAD2;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $bad3;
-  END $bad4;
+  START $BAD3;
+  END $BAD4;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $bad5;
-  END $badc;
+  START $BAD5;
+  END $BADC;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $badd;
-  END $bade;
+  START $BADD;
+  END $BADE;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $badf;
-  END $bae6;
+  START $BADF;
+  END $BAE6;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $bae7;
-  END $bae8;
+  START $BAE7;
+  END $BAE8;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $bae9;
-  END $baf0;
+  START $BAE9;
+  END $BAF0;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $baf1;
-  END $baf2;
+  START $BAF1;
+  END $BAF2;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $baf3;
-  END $bafa;
+  START $BAF3;
+  END $BAFA;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $bafb;
-  END $bafc;
+  START $BAFB;
+  END $BAFC;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $bafd;
-  END $bb04;
+  START $BAFD;
+  END $BB04;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $bb05;
-  END $bb06;
+  START $BB05;
+  END $BB06;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $bb07;
-  END $bb0e;
+  START $BB07;
+  END $BB0E;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $bb0f;
-  END $bb10;
+  START $BB0F;
+  END $BB10;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $bb11;
-  END $fffe;
+  START $BB11;
+  END $FFFF;
   TYPE BYTETABLE;
 };
 
@@ -381,6 +381,10 @@ LABEL {
 LABEL {
   NAME "Bank11MapImage00Tileset";
   ADDR  $8889;
+};
+LABEL {
+  NAME "Bank11MapImage00SpriteTileset";
+  ADDR  $8C69;
 };
 LABEL {
   NAME "Bank11MapImage00BackgroundPalette";
@@ -419,6 +423,10 @@ LABEL {
   ADDR  $9F1A;
 };
 LABEL {
+  NAME "Bank11MapImage01SpriteTileset";
+  ADDR  $A31A;
+};
+LABEL {
   NAME "Bank11MapImage01BackgroundPalette";
   ADDR  $A4FA;
 };
@@ -445,6 +453,10 @@ LABEL {
 LABEL {
   NAME "Bank11MapImage02Tileset";
   ADDR  $AB3D;
+};
+LABEL {
+  NAME "Bank11MapImage02SpriteTileset";
+  ADDR  $ACED;
 };
 LABEL {
   NAME "Bank11MapImage02BackgroundPalette";
@@ -481,6 +493,10 @@ LABEL {
 LABEL {
   NAME "Bank11MapImage03Tileset";
   ADDR  $C312;
+};
+LABEL {
+  NAME "Bank11MapImage03SpriteTileset";
+  ADDR  $C7A2;
 };
 LABEL {
   NAME "Bank11MapImage03BackgroundPalette";

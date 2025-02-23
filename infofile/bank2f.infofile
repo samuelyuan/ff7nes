@@ -23,12 +23,12 @@ RANGE {
   TYPE BYTETABLE;
 };
 RANGE {
-  START $801a;
+  START $801A;
   END $8029;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $802a;
+  START $802A;
   END $8031;
   TYPE BYTETABLE;
 };
@@ -39,16 +39,16 @@ RANGE {
 };
 RANGE {
   START $8034;
-  END $803b;
+  END $803B;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $803c;
-  END $803d;
+  START $803C;
+  END $803D;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $803e;
+  START $803E;
   END $8045;
   TYPE BYTETABLE;
 };
@@ -59,7 +59,7 @@ RANGE {
 };
 RANGE {
   START $8048;
-  END $fffe;
+  END $FFFF;
   TYPE BYTETABLE;
 };
 
@@ -78,6 +78,10 @@ LABEL {
 LABEL {
   NAME "Bank2fMapImage00Tileset";
   ADDR  $8449;
+};
+LABEL {
+  NAME "Bank2fMapImage00SpriteTileset";
+  ADDR  $8479;
 };
 LABEL {
   NAME "Bank2fMapImage00BackgroundPalette";

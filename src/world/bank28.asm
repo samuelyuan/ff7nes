@@ -14,7 +14,7 @@ Bank28MapImage00:
 ; ----------------------------------------------------------------------------
         .addr   Bank28MapImage00Collision       ; 801A D3 9B                    ..
         .addr   L803A                           ; 801C 3A 80                    :.
-        .addr   L90B3                           ; 801E B3 90                    ..
+        .addr   Bank28MapImage00SpriteTileset   ; 801E B3 90                    ..
         .addr   Bank28MapImage00SubImage00Tilemap; 8020 B3 80                   ..
         .addr   Bank28MapImage00SubImage01Tilemap; 8022 73 84                   s.
         .addr   Bank28MapImage00SubImage02Tilemap; 8024 33 88                   3.
@@ -599,7 +599,7 @@ Bank28MapImage00SubImage03TileAttr:
         .byte   $FF,$AA,$AA,$AA,$AA,$A5,$AA,$FF ; 909B FF AA AA AA AA A5 AA FF  ........
         .byte   $FF,$AA,$AA,$AA,$AA,$AA,$AA,$FF ; 90A3 FF AA AA AA AA AA AA FF  ........
         .byte   $FF,$AA,$AA,$AA,$AA,$AA,$AA,$FF ; 90AB FF AA AA AA AA AA AA FF  ........
-L90B3:
+Bank28MapImage00SpriteTileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 90B3 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 90BB 00 00 00 00 00 00 00 00  ........
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; 90C3 03 0C 10 2C 11 25 19 0F  ...,.%..
@@ -1345,7 +1345,7 @@ Bank28MapImage02:
 ; ----------------------------------------------------------------------------
         .addr   Bank28MapImage02Collision       ; A713 00 BC                    ..
         .addr   LA72D                           ; A715 2D A7                    -.
-        .addr   LB37E                           ; A717 7E B3                    ~.
+        .addr   Bank28MapImage02SpriteTileset   ; A717 7E B3                    ~.
         .addr   Bank28MapImage02SubImage00Tilemap; A719 7E A7                   ~.
         .addr   Bank28MapImage02SubImage01Tilemap; A71B 3E AB                   >.
         .addr   Bank28MapImage02SubImage02Tilemap; A71D FE AE                   ..
@@ -1781,7 +1781,7 @@ Bank28MapImage02SubImage02TileAttr:
         .byte   $55,$00,$00,$00,$00,$00,$00,$00 ; B366 55 00 00 00 00 00 00 00  U.......
         .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF ; B36E FF FF FF FF FF FF FF FF  ........
         .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF ; B376 FF FF FF FF FF FF FF FF  ........
-LB37E:
+Bank28MapImage02SpriteTileset:
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; B37E 03 0C 10 2C 11 25 19 0F  ...,.%..
         .byte   $03,$0F,$1F,$3F,$1F,$3F,$1F,$0F ; B386 03 0F 1F 3F 1F 3F 1F 0F  ...?.?..
         .byte   $EF,$12,$04,$04,$32,$7D,$7B,$F9 ; B38E EF 12 04 04 32 7D 7B F9  ....2}{.
@@ -4250,6 +4250,4 @@ Bank28MapImage02SubImage02Tileset:
         .byte   $04,$A9,$04,$8D,$00,$53,$A9,$00 ; FFE6 04 A9 04 8D 00 53 A9 00  .....S..
         .byte   $8D,$00,$50,$8D,$00,$52,$6C,$FC ; FFEE 8D 00 50 8D 00 52 6C FC  ..P..Rl.
         .byte   $FF,$EA,$EA,$40,$F9,$FF,$C0,$FF ; FFF6 FF EA EA 40 F9 FF C0 FF  ...@....
-        .byte   $F9                             ; FFFE F9                       .
-; ----------------------------------------------------------------------------
-        .byte   $FF                             ; FFFF FF                       .
+        .byte   $F9,$FF                         ; FFFE F9 FF                    ..

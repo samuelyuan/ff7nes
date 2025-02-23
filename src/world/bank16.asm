@@ -15,7 +15,7 @@ Bank16MapImage00:
 ; ----------------------------------------------------------------------------
         .addr   Bank16MapImage00Collision       ; 801A CD 92                    ..
         .addr   L802E                           ; 801C 2E 80                    ..
-        .addr   L8DED                           ; 801E ED 8D                    ..
+        .addr   Bank16MapImage00SpriteTileset   ; 801E ED 8D                    ..
         .addr   Bank16MapImage00SubImage00Tilemap; 8020 4D 80                   M.
         .addr   Bank16MapImage00SubImage01Tilemap; 8022 0D 84                   ..
         .addr   Bank16MapImage00SubImage00TileAttr; 8024 CD 87                  ..
@@ -479,7 +479,7 @@ Bank16MapImage00Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8DD5 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8DDD 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8DE5 00 00 00 00 00 00 00 00  ........
-L8DED:
+Bank16MapImage00SpriteTileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8DED 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8DF5 00 00 00 00 00 00 00 00  ........
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; 8DFD 03 0C 10 2C 11 25 19 0F  ...,.%..
@@ -677,7 +677,7 @@ Bank16MapImage01:
 ; ----------------------------------------------------------------------------
         .addr   Bank16MapImage01Collision       ; 93C5 BE CC                    ..
         .addr   L93FD                           ; 93C7 FD 93                    ..
-        .addr   LC45E                           ; 93C9 5E C4                    ^.
+        .addr   Bank16MapImage01SpriteTileset   ; 93C9 5E C4                    ^.
         .addr   Bank16MapImage01SubImage00Tilemap; 93CB 4E 94                   N.
         .addr   Bank16MapImage01SubImage01Tilemap; 93CD 0E 98                   ..
         .addr   Bank16MapImage01SubImage02Tilemap; 93CF CE 9B                   ..
@@ -2299,7 +2299,7 @@ Bank16MapImage01Tileset:
         .byte   $DF,$DF,$DF,$DF,$DF,$DF,$DF,$DF ; C446 DF DF DF DF DF DF DF DF  ........
         .byte   $FF,$FF,$FF,$FF,$00,$FF,$00,$10 ; C44E FF FF FF FF 00 FF 00 10  ........
         .byte   $00,$00,$00,$00,$00,$FF,$FF,$18 ; C456 00 00 00 00 00 FF FF 18  ........
-LC45E:
+Bank16MapImage01SpriteTileset:
         .byte   $C7,$FF,$FF,$FF,$FF,$FF,$FF,$00 ; C45E C7 FF FF FF FF FF FF 00  ........
         .byte   $C7,$FF,$FF,$FF,$FF,$FF,$FF,$00 ; C466 C7 FF FF FF FF FF FF 00  ........
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; C46E 03 0C 10 2C 11 25 19 0F  ...,.%..
@@ -2749,7 +2749,7 @@ Bank16MapImage02:
 ; ----------------------------------------------------------------------------
         .addr   Bank16MapImage02Collision       ; D1EE D5 FA                    ..
         .addr   LD21A                           ; D1F0 1A D2                    ..
-        .addr   LF4AD                           ; D1F2 AD F4                    ..
+        .addr   Bank16MapImage02SpriteTileset   ; D1F2 AD F4                    ..
         .addr   Bank16MapImage02SubImage00Tilemap; D1F4 4D D2                   M.
         .addr   Bank16MapImage02SubImage01Tilemap; D1F6 0D D6                   ..
         .addr   Bank16MapImage02SubImage02Tilemap; D1F8 CD D9                   ..
@@ -3909,7 +3909,7 @@ Bank16MapImage02Tileset:
         .byte   $D7,$7E,$8F,$05,$03,$1E,$1B,$0F ; F495 D7 7E 8F 05 03 1E 1B 0F  .~......
         .byte   $FC,$FD,$CD,$E1,$F9,$FD,$FD,$18 ; F49D FC FD CD E1 F9 FD FD 18  ........
         .byte   $06,$35,$7F,$2B,$3F,$07,$E5,$BF ; F4A5 06 35 7F 2B 3F 07 E5 BF  .5.+?...
-LF4AD:
+Bank16MapImage02SpriteTileset:
         .byte   $00,$78,$FE,$FE,$FE,$FE,$FE,$FE ; F4AD 00 78 FE FE FE FE FE FE  .x......
         .byte   $DE,$FB,$CE,$83,$83,$82,$9B,$BB ; F4B5 DE FB CE 83 83 82 9B BB  ........
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; F4BD 03 0C 10 2C 11 25 19 0F  ...,.%..
@@ -4280,6 +4280,4 @@ Bank16MapImage02Collision:
         .byte   $00,$04,$A9,$04,$8D,$00,$53,$A9 ; FFE5 00 04 A9 04 8D 00 53 A9  ......S.
         .byte   $00,$8D,$00,$50,$8D,$00,$52,$6C ; FFED 00 8D 00 50 8D 00 52 6C  ...P..Rl
         .byte   $FC,$FF,$EA,$EA,$40,$F9,$FF,$C0 ; FFF5 FC FF EA EA 40 F9 FF C0  ....@...
-        .byte   $FF,$F9                         ; FFFD FF F9                    ..
-; ----------------------------------------------------------------------------
-        .byte   $FF                             ; FFFF FF                       .
+        .byte   $FF,$F9,$FF                     ; FFFD FF F9 FF                 ...

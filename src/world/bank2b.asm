@@ -14,7 +14,7 @@ Bank2bMapImage00:
 ; ----------------------------------------------------------------------------
         .addr   Bank2bMapImage00Collision       ; 801A 2D 98                    -.
         .addr   L803A                           ; 801C 3A 80                    :.
-        .addr   L9095                           ; 801E 95 90                    ..
+        .addr   Bank2bMapImage00SpriteTileset   ; 801E 95 90                    ..
         .addr   Bank2bMapImage00SubImage00Tilemap; 8020 95 80                   ..
         .addr   Bank2bMapImage00SubImage01Tilemap; 8022 55 84                   U.
         .addr   Bank2bMapImage00SubImage02Tilemap; 8024 15 88                   ..
@@ -587,7 +587,7 @@ Bank2bMapImage00SubImage03TileAttr:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 907D 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 9085 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 908D 00 00 00 00 00 00 00 00  ........
-L9095:
+Bank2bMapImage00SpriteTileset:
         .byte   $0C,$1F,$2E,$17,$07,$07,$07,$04 ; 9095 0C 1F 2E 17 07 07 07 04  ........
         .byte   $0F,$17,$39,$14,$07,$04,$04,$07 ; 909D 0F 17 39 14 07 04 04 07  ..9.....
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; 90A5 03 0C 10 2C 11 25 19 0F  ...,.%..
@@ -1174,7 +1174,7 @@ Bank2bMapImage02:
 ; ----------------------------------------------------------------------------
         .addr   Bank2bMapImage02Collision       ; A21D 14 BE                    ..
         .addr   LA23D                           ; A21F 3D A2                    =.
-        .addr   LB2AC                           ; A221 AC B2                    ..
+        .addr   Bank2bMapImage02SpriteTileset   ; A221 AC B2                    ..
         .addr   Bank2bMapImage02SubImage00Tilemap; A223 AC A2                   ..
         .addr   Bank2bMapImage02SubImage01Tilemap; A225 6C A6                   l.
         .addr   Bank2bMapImage02SubImage02Tilemap; A227 2C AA                   ,.
@@ -1755,7 +1755,7 @@ Bank2bMapImage02SubImage03TileAttr:
         .byte   $00,$FF,$33,$00,$00,$00,$00,$00 ; B294 00 FF 33 00 00 00 00 00  ..3.....
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B29C 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B2A4 00 00 00 00 00 00 00 00  ........
-LB2AC:
+Bank2bMapImage02SpriteTileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B2AC 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B2B4 00 00 00 00 00 00 00 00  ........
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; B2BC 03 0C 10 2C 11 25 19 0F  ...,.%..
@@ -4254,6 +4254,4 @@ Bank2bMapImage02SubImage03Tileset:
         .byte   $4C,$00,$04,$A9,$04,$8D,$00,$53 ; FFE4 4C 00 04 A9 04 8D 00 53  L......S
         .byte   $A9,$00,$8D,$00,$50,$8D,$00,$52 ; FFEC A9 00 8D 00 50 8D 00 52  ....P..R
         .byte   $6C,$FC,$FF,$EA,$EA,$40,$F9,$FF ; FFF4 6C FC FF EA EA 40 F9 FF  l....@..
-        .byte   $C0,$FF,$F9                     ; FFFC C0 FF F9                 ...
-; ----------------------------------------------------------------------------
-        .byte   $FF                             ; FFFF FF                       .
+        .byte   $C0,$FF,$F9,$FF                 ; FFFC C0 FF F9 FF              ....

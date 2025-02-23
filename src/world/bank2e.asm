@@ -431,7 +431,7 @@ Bank2eMapImage01:
 ; ----------------------------------------------------------------------------
         .addr   Bank2eMapImage01Collision       ; 8CB7 BC B0                    ..
         .addr   L8CE3                           ; 8CB9 E3 8C                    ..
-        .addr   LA55C                           ; 8CBB 5C A5                    \.
+        .addr   Bank2eMapImage01SpriteTileset   ; 8CBB 5C A5                    \.
         .addr   Bank2eMapImage01SubImage00Tilemap; 8CBD 5C 8D                   \.
         .addr   Bank2eMapImage01SubImage01Tilemap; 8CBF 1C 91                   ..
         .addr   Bank2eMapImage01SubImage02Tilemap; 8CC1 DC 94                   ..
@@ -1282,7 +1282,7 @@ Bank2eMapImage01SubImage05TileAttr:
         .byte   $55,$50,$50,$5C,$5F,$55,$55,$55 ; A544 55 50 50 5C 5F 55 55 55  UPP\_UUU
         .byte   $55,$55,$55,$55,$55,$55,$55,$55 ; A54C 55 55 55 55 55 55 55 55  UUUUUUUU
         .byte   $55,$55,$55,$55,$55,$55,$55,$55 ; A554 55 55 55 55 55 55 55 55  UUUUUUUU
-LA55C:
+Bank2eMapImage01SpriteTileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A55C 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A564 00 00 00 00 00 00 00 00  ........
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; A56C 03 0C 10 2C 11 25 19 0F  ...,.%..
@@ -2231,7 +2231,7 @@ Bank2eMapImage03:
 ; ----------------------------------------------------------------------------
         .addr   Bank2eMapImage03Collision       ; C1F0 45 C9                    E.
         .addr   LC200                           ; C1F2 00 C2                    ..
-        .addr   LC625                           ; C1F4 25 C6                    %.
+        .addr   Bank2eMapImage03SpriteTileset   ; C1F4 25 C6                    %.
         .addr   Bank2eMapImage03SubImage00Tilemap; C1F6 BD C9                   ..
         .addr   Bank2eMapImage03SubImage00TileAttr; C1F8 D5 C5                  ..
         .addr   Bank2eMapImage03SpritePalette   ; C1FA 75 C8                    u.
@@ -2380,7 +2380,7 @@ Bank2eMapImage03SubImage00TileAttr:
 Bank2eMapImage03Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C615 00 00 00 00 00 00 00 00  ........
         .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF ; C61D FF FF FF FF FF FF FF FF  ........
-LC625:
+Bank2eMapImage03SpriteTileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C625 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C62D 00 00 00 00 00 00 00 00  ........
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; C635 03 0C 10 2C 11 25 19 0F  ...,.%..
@@ -4238,6 +4238,4 @@ Bank2eMapImage03SubImage00Tilemap:
         .byte   $00,$04,$A9,$04,$8D,$00,$53,$A9 ; FFE5 00 04 A9 04 8D 00 53 A9  ......S.
         .byte   $00,$8D,$00,$50,$8D,$00,$52,$6C ; FFED 00 8D 00 50 8D 00 52 6C  ...P..Rl
         .byte   $FC,$FF,$EA,$EA,$40,$F9,$FF,$C0 ; FFF5 FC FF EA EA 40 F9 FF C0  ....@...
-        .byte   $FF,$F9                         ; FFFD FF F9                    ..
-; ----------------------------------------------------------------------------
-        .byte   $FF                             ; FFFF FF                       .
+        .byte   $FF,$F9,$FF                     ; FFFD FF F9 FF                 ...

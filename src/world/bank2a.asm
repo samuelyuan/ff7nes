@@ -14,7 +14,7 @@ Bank2aMapImage00:
 ; ----------------------------------------------------------------------------
         .addr   Bank2aMapImage00Collision       ; 801A B1 95                    ..
         .addr   L8034                           ; 801C 34 80                    4.
-        .addr   L8C71                           ; 801E 71 8C                    q.
+        .addr   Bank2aMapImage00SpriteTileset   ; 801E 71 8C                    q.
         .addr   Bank2aMapImage00SubImage00Tilemap; 8020 71 80                   q.
         .addr   Bank2aMapImage00SubImage01Tilemap; 8022 31 84                   1.
         .addr   Bank2aMapImage00SubImage02Tilemap; 8024 F1 87                   ..
@@ -442,7 +442,7 @@ Bank2aMapImage00SubImage02TileAttr:
         .byte   $55,$55,$55,$55,$55,$55,$55,$55 ; 8C59 55 55 55 55 55 55 55 55  UUUUUUUU
         .byte   $55,$55,$55,$55,$55,$55,$55,$55 ; 8C61 55 55 55 55 55 55 55 55  UUUUUUUU
         .byte   $55,$55,$55,$55,$55,$55,$55,$55 ; 8C69 55 55 55 55 55 55 55 55  UUUUUUUU
-L8C71:
+Bank2aMapImage00SpriteTileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8C71 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 8C79 00 00 00 00 00 00 00 00  ........
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; 8C81 03 0C 10 2C 11 25 19 0F  ...,.%..
@@ -1087,7 +1087,7 @@ Bank2aMapImage02:
 ; ----------------------------------------------------------------------------
         .addr   Bank2aMapImage02Collision       ; 9FD7 EA BA                    ..
         .addr   L9FFD                           ; 9FD9 FD 9F                    ..
-        .addr   LB462                           ; 9FDB 62 B4                    b.
+        .addr   Bank2aMapImage02SpriteTileset   ; 9FDB 62 B4                    b.
         .addr   Bank2aMapImage02SubImage00Tilemap; 9FDD 62 A0                   b.
         .addr   Bank2aMapImage02SubImage01Tilemap; 9FDF 22 A4                   ".
         .addr   Bank2aMapImage02SubImage02Tilemap; 9FE1 E2 A7                   ..
@@ -1797,7 +1797,7 @@ Bank2aMapImage02SubImage04TileAttr:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B44A 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B452 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B45A 00 00 00 00 00 00 00 00  ........
-LB462:
+Bank2aMapImage02SpriteTileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B462 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B46A 00 00 00 00 00 00 00 00  ........
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; B472 03 0C 10 2C 11 25 19 0F  ...,.%..
@@ -4241,6 +4241,4 @@ Bank2aMapImage02SubImage04Tileset:
         .byte   $4C,$00,$04,$A9,$04,$8D,$00,$53 ; FFE4 4C 00 04 A9 04 8D 00 53  L......S
         .byte   $A9,$00,$8D,$00,$50,$8D,$00,$52 ; FFEC A9 00 8D 00 50 8D 00 52  ....P..R
         .byte   $6C,$FC,$FF,$EA,$EA,$40,$F9,$FF ; FFF4 6C FC FF EA EA 40 F9 FF  l....@..
-        .byte   $C0,$FF,$F9                     ; FFFC C0 FF F9                 ...
-; ----------------------------------------------------------------------------
-        .byte   $FF                             ; FFFF FF                       .
+        .byte   $C0,$FF,$F9,$FF                 ; FFFC C0 FF F9 FF              ....

@@ -14,7 +14,7 @@ Bank19MapImage00:
 ; ----------------------------------------------------------------------------
         .addr   Bank19MapImage00Collision       ; 801A 9D 9E                    ..
         .addr   L8036                           ; 801C 36 80                    6.
-        .addr   L948D                           ; 801E 8D 94                    ..
+        .addr   Bank19MapImage00SpriteTileset   ; 801E 8D 94                    ..
         .addr   Bank19MapImage00SubImage00Tilemap; 8020 7D 80                   }.
         .addr   Bank19MapImage00SubImage01Tilemap; 8022 3D 84                   =.
         .addr   Bank19MapImage00SubImage02Tilemap; 8024 FD 87                   ..
@@ -708,7 +708,7 @@ Bank19MapImage00Tileset:
         .byte   $42,$7A,$5E,$62,$40,$7E,$7E,$7E ; 9475 42 7A 5E 62 40 7E 7E 7E  Bz^b@~~~
         .byte   $7E,$7E,$7E,$70,$70,$70,$70,$00 ; 947D 7E 7E 7E 70 70 70 70 00  ~~~pppp.
         .byte   $7E,$7E,$7E,$70,$70,$70,$70,$00 ; 9485 7E 7E 7E 70 70 70 70 00  ~~~pppp.
-L948D:
+Bank19MapImage00SpriteTileset:
         .byte   $0F,$F0,$38,$5C,$2E,$56,$2A,$54 ; 948D 0F F0 38 5C 2E 56 2A 54  ..8\.V*T
         .byte   $00,$F7,$FB,$BD,$BE,$8E,$AE,$C2 ; 9495 00 F7 FB BD BE 8E AE C2  ........
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; 949D 03 0C 10 2C 11 25 19 0F  ...,.%..
@@ -1106,7 +1106,7 @@ Bank19MapImage01:
 ; ----------------------------------------------------------------------------
         .addr   Bank19MapImage01Collision       ; A085 EA BE                    ..
         .addr   LA0A1                           ; A087 A1 A0                    ..
-        .addr   LB442                           ; A089 42 B4                    B.
+        .addr   Bank19MapImage01SpriteTileset   ; A089 42 B4                    B.
         .addr   Bank19MapImage01SubImage00Tilemap; A08B F2 A0                   ..
         .addr   Bank19MapImage01SubImage01Tilemap; A08D B2 A4                   ..
         .addr   Bank19MapImage01SubImage02Tilemap; A08F 72 A8                   r.
@@ -1780,7 +1780,7 @@ Bank19MapImage01Tileset:
         .byte   $76,$76,$76,$00,$76,$76,$76,$00 ; B42A 76 76 76 00 76 76 76 00  vvv.vvv.
         .byte   $20,$61,$02,$44,$88,$13,$22,$45 ; B432 20 61 02 44 88 13 22 45   a.D.."E
         .byte   $AE,$76,$B9,$D9,$E6,$37,$BA,$CD ; B43A AE 76 B9 D9 E6 37 BA CD  .v...7..
-LB442:
+Bank19MapImage01SpriteTileset:
         .byte   $20,$61,$82,$84,$08,$13,$22,$4C ; B442 20 61 82 84 08 13 22 4C   a...."L
         .byte   $AE,$76,$B9,$D9,$E6,$67,$9A,$9D ; B44A AE 76 B9 D9 E6 67 9A 9D  .v...g..
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; B452 03 0C 10 2C 11 25 19 0F  ...,.%..
@@ -2198,7 +2198,7 @@ Bank19MapImage02:
 ; ----------------------------------------------------------------------------
         .addr   Bank19MapImage02Collision       ; C0D2 FB DA                    ..
         .addr   LC0EE                           ; C0D4 EE C0                    ..
-        .addr   LD23B                           ; C0D6 3B D2                    ;.
+        .addr   Bank19MapImage02SpriteTileset   ; C0D6 3B D2                    ;.
         .addr   Bank19MapImage02SubImage00Tilemap; C0D8 2B C1                   +.
         .addr   Bank19MapImage02SubImage01Tilemap; C0DA EB C4                   ..
         .addr   Bank19MapImage02SubImage02Tilemap; C0DC AB C8                   ..
@@ -2792,7 +2792,7 @@ Bank19MapImage02Tileset:
         .byte   $80,$FF,$DF,$FF,$FF,$FF,$FF,$FF ; D223 80 FF DF FF FF FF FF FF  ........
         .byte   $80,$80,$80,$90,$80,$FF,$00,$00 ; D22B 80 80 80 90 80 FF 00 00  ........
         .byte   $FF,$FF,$FF,$DF,$FF,$FF,$00,$FF ; D233 FF FF FF DF FF FF 00 FF  ........
-LD23B:
+Bank19MapImage02SpriteTileset:
         .byte   $70,$00,$70,$00,$00,$FF,$FF,$FF ; D23B 70 00 70 00 00 FF FF FF  p.p.....
         .byte   $FF,$FF,$FF,$FF,$00,$FF,$00,$00 ; D243 FF FF FF FF 00 FF 00 00  ........
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; D24B 03 0C 10 2C 11 25 19 0F  ...,.%..
@@ -3147,7 +3147,7 @@ Bank19MapImage03:
 ; ----------------------------------------------------------------------------
         .addr   Bank19MapImage03Collision       ; DCE3 C6 F4                    ..
         .addr   LDCF7                           ; DCE5 F7 DC                    ..
-        .addr   LE7F6                           ; DCE7 F6 E7                    ..
+        .addr   Bank19MapImage03SpriteTileset   ; DCE7 F6 E7                    ..
         .addr   Bank19MapImage03SubImage00Tilemap; DCE9 66 DD                   f.
         .addr   Bank19MapImage03SubImage01Tilemap; DCEB 26 E1                   &.
         .addr   Bank19MapImage03SubImage00TileAttr; DCED E6 E4                  ..
@@ -3545,7 +3545,7 @@ Bank19MapImage03Tileset:
         .byte   $17,$3A,$1D,$2A,$15,$2E,$16,$39 ; E7DE 17 3A 1D 2A 15 2E 16 39  .:.*...9
         .byte   $14,$A0,$44,$A8,$54,$88,$94,$60 ; E7E6 14 A0 44 A8 54 88 94 60  ..D.T..`
         .byte   $E8,$5C,$B8,$54,$A8,$74,$68,$9C ; E7EE E8 5C B8 54 A8 74 68 9C  .\.T.th.
-LE7F6:
+Bank19MapImage03SpriteTileset:
         .byte   $2A,$14,$0A,$11,$08,$85,$C0,$E0 ; E7F6 2A 14 0A 11 08 85 C0 E0  *.......
         .byte   $15,$2B,$35,$2E,$17,$8A,$80,$40 ; E7FE 15 2B 35 2E 17 8A 80 40  .+5....@
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; E806 03 0C 10 2C 11 25 19 0F  ...,.%..
@@ -4328,6 +4328,4 @@ Bank19MapImage03Collision:
         .byte   $04,$A9,$04,$8D,$00,$53,$A9,$00 ; FFE6 04 A9 04 8D 00 53 A9 00  .....S..
         .byte   $8D,$00,$50,$8D,$00,$52,$6C,$FC ; FFEE 8D 00 50 8D 00 52 6C FC  ..P..Rl.
         .byte   $FF,$EA,$EA,$40,$F9,$FF,$C0,$FF ; FFF6 FF EA EA 40 F9 FF C0 FF  ...@....
-        .byte   $F9                             ; FFFE F9                       .
-; ----------------------------------------------------------------------------
-        .byte   $FF                             ; FFFF FF                       .
+        .byte   $F9,$FF                         ; FFFE F9 FF                    ..

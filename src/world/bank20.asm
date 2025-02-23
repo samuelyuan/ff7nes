@@ -14,7 +14,7 @@ Bank20MapImage00:
 ; ----------------------------------------------------------------------------
         .addr   Bank20MapImage00Collision       ; 801A 99 9D                    ..
         .addr   L8036                           ; 801C 36 80                    6.
-        .addr   L9709                           ; 801E 09 97                    ..
+        .addr   Bank20MapImage00SpriteTileset   ; 801E 09 97                    ..
         .addr   Bank20MapImage00SubImage00Tilemap; 8020 69 80                   i.
         .addr   Bank20MapImage00SubImage01Tilemap; 8022 29 84                   ).
         .addr   Bank20MapImage00SubImage02Tilemap; 8024 E9 87                   ..
@@ -782,7 +782,7 @@ Bank20MapImage00Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 96F1 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 96F9 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 9701 00 00 00 00 00 00 00 00  ........
-L9709:
+Bank20MapImage00SpriteTileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 9709 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 9711 00 00 00 00 00 00 00 00  ........
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; 9719 03 0C 10 2C 11 25 19 0F  ...,.%..
@@ -1066,7 +1066,7 @@ Bank20MapImage01:
 ; ----------------------------------------------------------------------------
         .addr   Bank20MapImage01Collision       ; 9F81 04 BF                    ..
         .addr   L9F99                           ; 9F83 99 9F                    ..
-        .addr   LF160                           ; 9F85 60 F1                    `.
+        .addr   Bank20MapImage01SpriteTileset   ; 9F85 60 F1                    `.
         .addr   Bank20MapImage01SubImage00Tilemap; 9F87 F4 9F                   ..
         .addr   Bank20MapImage01SubImage01Tilemap; 9F89 B4 A3                   ..
         .addr   Bank20MapImage01SubImage02Tilemap; 9F8B 74 A7                   t.
@@ -2169,7 +2169,7 @@ Bank20MapImage02:
 ; ----------------------------------------------------------------------------
         .addr   Bank20MapImage02Collision       ; C074 73 E0                    s.
         .addr   LC090                           ; C076 90 C0                    ..
-        .addr   LD9D3                           ; C078 D3 D9                    ..
+        .addr   Bank20MapImage02SpriteTileset   ; C078 D3 D9                    ..
         .addr   Bank20MapImage02SubImage00Tilemap; C07A C3 C0                   ..
         .addr   Bank20MapImage02SubImage01Tilemap; C07C 83 C4                   ..
         .addr   Bank20MapImage02SubImage02Tilemap; C07E 43 C8                   C.
@@ -3015,7 +3015,7 @@ Bank20MapImage02Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9BB 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9C3 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9CB 00 00 00 00 00 00 00 00  ........
-LD9D3:
+Bank20MapImage02SpriteTileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9D3 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9DB 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D9E3 00 00 00 00 00 00 00 00  ........
@@ -3301,7 +3301,7 @@ Bank20MapImage03:
 ; ----------------------------------------------------------------------------
         .addr   Bank20MapImage03Collision       ; E25B BA EC                    ..
         .addr   LE26F                           ; E25D 6F E2                    o.
-        .addr   LEB3A                           ; E25F 3A EB                    :.
+        .addr   Bank20MapImage03SpriteTileset   ; E25F 3A EB                    :.
         .addr   Bank20MapImage03SubImage00Tilemap; E261 7A E2                   z.
         .addr   Bank20MapImage03SubImage01Tilemap; E263 3A E6                   :.
         .addr   Bank20MapImage03SubImage00TileAttr; E265 FA E9                  ..
@@ -3601,7 +3601,7 @@ Bank20MapImage03Tileset:
         .byte   $9C,$E1,$BD,$BC,$E5,$FC,$65,$B2 ; EB22 9C E1 BD BC E5 FC 65 B2  ......e.
         .byte   $00,$01,$04,$10,$06,$00,$00,$00 ; EB2A 00 01 04 10 06 00 00 00  ........
         .byte   $01,$06,$99,$87,$99,$83,$80,$D1 ; EB32 01 06 99 87 99 83 80 D1  ........
-LEB3A:
+Bank20MapImage03SpriteTileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB3A 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EB42 00 00 00 00 00 00 00 00  ........
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; EB4A 03 0C 10 2C 11 25 19 0F  ...,.%..
@@ -3812,7 +3812,7 @@ LF100:
         .byte   $77,$43,$76,$43,$7D,$43,$7C,$43 ; F148 77 43 76 43 7D 43 7C 43  wCvC}C|C
         .byte   $77,$43,$76,$43,$7F,$43,$7E,$43 ; F150 77 43 76 43 7F 43 7E 43  wCvC.C~C
         .byte   $77,$43,$76,$43,$7D,$43,$7C,$43 ; F158 77 43 76 43 7D 43 7C 43  wCvC}C|C
-LF160:
+Bank20MapImage01SpriteTileset:
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; F160 03 0C 10 2C 11 25 19 0F  ...,.%..
         .byte   $03,$0F,$1F,$3F,$1F,$3F,$1F,$0F ; F168 03 0F 1F 3F 1F 3F 1F 0F  ...?.?..
         .byte   $EF,$12,$04,$04,$32,$7D,$7B,$F9 ; F170 EF 12 04 04 32 7D 7B F9  ....2}{.
@@ -4280,6 +4280,4 @@ LF160:
         .byte   $04,$E8,$D0,$F7,$4C,$00,$04,$A9 ; FFE0 04 E8 D0 F7 4C 00 04 A9  ....L...
         .byte   $04,$8D,$00,$53,$A9,$00,$8D,$00 ; FFE8 04 8D 00 53 A9 00 8D 00  ...S....
         .byte   $50,$8D,$00,$52,$6C,$FC,$FF,$EA ; FFF0 50 8D 00 52 6C FC FF EA  P..Rl...
-        .byte   $EA,$40,$F9,$FF,$C0,$FF,$F9     ; FFF8 EA 40 F9 FF C0 FF F9     .@.....
-; ----------------------------------------------------------------------------
-        .byte   $FF                             ; FFFF FF                       .
+        .byte   $EA,$40,$F9,$FF,$C0,$FF,$F9,$FF ; FFF8 EA 40 F9 FF C0 FF F9 FF  .@......

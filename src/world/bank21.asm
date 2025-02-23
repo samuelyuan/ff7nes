@@ -14,7 +14,7 @@ Bank21MapImage00:
 ; ----------------------------------------------------------------------------
         .addr   Bank21MapImage00Collision       ; 801A AF C7                    ..
         .addr   L8066                           ; 801C 66 80                    f.
-        .addr   LF671                           ; 801E 71 F6                    q.
+        .addr   Bank21MapImage00SpriteTileset   ; 801E 71 F6                    q.
         .addr   Bank21MapImage00SubImage00Tilemap; 8020 8F 80                   ..
         .addr   Bank21MapImage00SubImage01Tilemap; 8022 4F 84                   O.
         .addr   Bank21MapImage00SubImage02Tilemap; 8024 0F 88                   ..
@@ -2630,7 +2630,7 @@ Bank21MapImage01:
 ; ----------------------------------------------------------------------------
         .addr   Bank21MapImage01Collision       ; CF37 3A EF                    :.
         .addr   LCF5B                           ; CF39 5B CF                    [.
-        .addr   LEB3A                           ; CF3B 3A EB                    :.
+        .addr   Bank21MapImage01SpriteTileset   ; CF3B 3A EB                    :.
         .addr   Bank21MapImage01SubImage00Tilemap; CF3D 7A CF                   z.
         .addr   Bank21MapImage01SubImage01Tilemap; CF3F 3A D3                   :.
         .addr   Bank21MapImage01SubImage02Tilemap; CF41 FA D6                   ..
@@ -3562,7 +3562,7 @@ Bank21MapImage01Tileset:
         .byte   $00,$82,$27,$53,$D7,$D3,$D7,$12 ; EB22 00 82 27 53 D7 D3 D7 12  ..'S....
         .byte   $00,$AA,$00,$FF,$AA,$55,$00,$00 ; EB2A 00 AA 00 FF AA 55 00 00  .....U..
         .byte   $00,$FF,$00,$00,$55,$AA,$FF,$FF ; EB32 00 FF 00 00 55 AA FF FF  ....U...
-LEB3A:
+Bank21MapImage01SpriteTileset:
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; EB3A 03 0C 10 2C 11 25 19 0F  ...,.%..
         .byte   $03,$0F,$1F,$3F,$1F,$3F,$1F,$0F ; EB42 03 0F 1F 3F 1F 3F 1F 0F  ...?.?..
         .byte   $EF,$12,$04,$04,$32,$7D,$7B,$F9 ; EB4A EF 12 04 04 32 7D 7B F9  ....2}{.
@@ -3792,7 +3792,7 @@ Bank21MapImage02:
 ; ----------------------------------------------------------------------------
         .addr   Bank21MapImage02Collision       ; F212 31 FB                    1.
         .addr   LF222                           ; F214 22 F2                    ".
-        .addr   LF651                           ; F216 51 F6                    Q.
+        .addr   Bank21MapImage02SpriteTileset   ; F216 51 F6                    Q.
         .addr   Bank21MapImage02SubImage00Tilemap; F218 41 F2                   A.
         .addr   Bank21MapImage02SubImage00TileAttr; F21A 01 F6                  ..
         .addr   Bank21MapImage02SpritePalette   ; F21C 01 FA                    ..
@@ -3946,12 +3946,12 @@ Bank21MapImage02SubImage00TileAttr:
 Bank21MapImage02Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F641 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F649 00 00 00 00 00 00 00 00  ........
-LF651:
+Bank21MapImage02SpriteTileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F651 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F659 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F661 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F669 00 00 00 00 00 00 00 00  ........
-LF671:
+Bank21MapImage00SpriteTileset:
         .byte   $03,$0C,$10,$2C,$11,$25,$19,$0F ; F671 03 0C 10 2C 11 25 19 0F  ...,.%..
         .byte   $03,$0F,$1F,$3F,$1F,$3F,$1F,$0F ; F679 03 0F 1F 3F 1F 3F 1F 0F  ...?.?..
         .byte   $EF,$12,$04,$04,$32,$7D,$7B,$F9 ; F681 EF 12 04 04 32 7D 7B F9  ....2}{.
@@ -4270,6 +4270,4 @@ Bank2cMapImage00SubImage01Tileset:
         .byte   $00,$04,$A9,$04,$8D,$00,$53,$A9 ; FFE5 00 04 A9 04 8D 00 53 A9  ......S.
         .byte   $00,$8D,$00,$50,$8D,$00,$52,$6C ; FFED 00 8D 00 50 8D 00 52 6C  ...P..Rl
         .byte   $FC,$FF,$EA,$EA,$40,$F9,$FF,$C0 ; FFF5 FC FF EA EA 40 F9 FF C0  ....@...
-        .byte   $FF,$F9                         ; FFFD FF F9                    ..
-; ----------------------------------------------------------------------------
-        .byte   $FF                             ; FFFF FF                       .
+        .byte   $FF,$F9,$FF                     ; FFFD FF F9 FF                 ...

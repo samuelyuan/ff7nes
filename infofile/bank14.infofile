@@ -23,18 +23,18 @@ RANGE {
   TYPE BYTETABLE;
 };
 RANGE {
-  START $801a;
+  START $801A;
   END $8045;
   TYPE ADDRTABLE;
 };
 RANGE {
   START $8046;
-  END $804d;
+  END $804D;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $804e;
-  END $804f;
+  START $804E;
+  END $804F;
   TYPE ADDRTABLE;
 };
 RANGE {
@@ -48,7 +48,7 @@ RANGE {
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $805a;
+  START $805A;
   END $8061;
   TYPE BYTETABLE;
 };
@@ -59,16 +59,16 @@ RANGE {
 };
 RANGE {
   START $8064;
-  END $806b;
+  END $806B;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $806c;
-  END $806d;
+  START $806C;
+  END $806D;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $806e;
+  START $806E;
   END $8075;
   TYPE BYTETABLE;
 };
@@ -79,142 +79,142 @@ RANGE {
 };
 RANGE {
   START $8078;
-  END $ac18;
+  END $AC18;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $ac19;
-  END $ac20;
+  START $AC19;
+  END $AC20;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $ac21;
-  END $ac4c;
+  START $AC21;
+  END $AC4C;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $ac4d;
-  END $ac54;
+  START $AC4D;
+  END $AC54;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $ac55;
-  END $ac56;
+  START $AC55;
+  END $AC56;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $ac57;
-  END $ac5e;
+  START $AC57;
+  END $AC5E;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $ac5f;
-  END $ac60;
+  START $AC5F;
+  END $AC60;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $ac61;
-  END $ac68;
+  START $AC61;
+  END $AC68;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $ac69;
-  END $ac6a;
+  START $AC69;
+  END $AC6A;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $ac6b;
-  END $ac72;
+  START $AC6B;
+  END $AC72;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $ac73;
-  END $ac74;
+  START $AC73;
+  END $AC74;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $ac75;
-  END $ac7c;
+  START $AC75;
+  END $AC7C;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $ac7d;
-  END $ac7e;
+  START $AC7D;
+  END $AC7E;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $ac7f;
-  END $dbef;
+  START $AC7F;
+  END $DBEF;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $dbf0;
-  END $dbf7;
+  START $DBF0;
+  END $DBF7;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $dbf8;
-  END $dc13;
+  START $DBF8;
+  END $DC13;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $dc14;
-  END $dc1b;
+  START $DC14;
+  END $DC1B;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $dc1c;
-  END $dc1d;
+  START $DC1C;
+  END $DC1D;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $dc1e;
-  END $f38e;
+  START $DC1E;
+  END $F38E;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $f38f;
-  END $f396;
+  START $F38F;
+  END $F396;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $f397;
-  END $f3a6;
+  START $F397;
+  END $F3A6;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $f3a7;
-  END $f3ae;
+  START $F3A7;
+  END $F3AE;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $f3af;
-  END $f3b0;
+  START $F3AF;
+  END $F3B0;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $f3b1;
-  END $f3b8;
+  START $F3B1;
+  END $F3B8;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $f3b9;
-  END $f3ba;
+  START $F3B9;
+  END $F3BA;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $f3bb;
-  END $f3c2;
+  START $F3BB;
+  END $F3C2;
   TYPE BYTETABLE;
 };
 RANGE {
-  START $f3c3;
-  END $f3c4;
+  START $F3C3;
+  END $F3C4;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $f3c5;
-  END $fffe;
+  START $F3C5;
+  END $FFFF;
   TYPE BYTETABLE;
 };
 
@@ -289,6 +289,10 @@ LABEL {
 LABEL {
   NAME "Bank14MapImage00Tileset";
   ADDR  $A079;
+};
+LABEL {
+  NAME "Bank14MapImage00SpriteTileset";
+  ADDR  $A489;
 };
 LABEL {
   NAME "Bank14MapImage00BackgroundPalette";
@@ -375,6 +379,10 @@ LABEL {
   ADDR  $CC80;
 };
 LABEL {
+  NAME "Bank14MapImage01SpriteTileset";
+  ADDR  $D0D0;
+};
+LABEL {
   NAME "Bank14MapImage01BackgroundPalette";
   ADDR  $D630;
 };
@@ -427,6 +435,10 @@ LABEL {
   ADDR  $EC1F;
 };
 LABEL {
+  NAME "Bank14MapImage02SpriteTileset";
+  ADDR  $F02F;
+};
+LABEL {
   NAME "Bank14MapImage02BackgroundPalette";
   ADDR  $F12F;
 };
@@ -453,6 +465,10 @@ LABEL {
 LABEL {
   NAME "Bank14MapImage03Tileset";
   ADDR  $F7C6;
+};
+LABEL {
+  NAME "Bank14MapImage03SpriteTileset";
+  ADDR  $F8D6;
 };
 LABEL {
   NAME "Bank14MapImage03BackgroundPalette";
