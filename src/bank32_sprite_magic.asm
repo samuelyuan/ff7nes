@@ -67,8 +67,8 @@ Bank32MagicSpriteIndex0Tilemap:
 Bank32MagicSpriteIndex0TileAttr:
         .byte   $FF,$FF,$FF                     ; 809E FF FF FF                 ...
 Bank32MagicSpriteIndex0Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; 80A1 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; 80A9 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; 80A1 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; 80A9 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex0Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 80B1 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 80B9 00 00 00 00 00 00 00 00  ........
@@ -139,8 +139,8 @@ Bank32MagicSpriteIndex2Tilemap:
 Bank32MagicSpriteIndex2TileAttr:
         .byte   $FF,$FF,$FF                     ; 82AA FF FF FF                 ...
 Bank32MagicSpriteIndex2Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; 82AD 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; 82B5 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; 82AD 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; 82B5 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex2Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 82BD 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 82C5 00 00 00 00 00 00 00 00  ........
@@ -245,8 +245,8 @@ Bank32MagicSpriteIndex3Tilemap:
 Bank32MagicSpriteIndex3TileAttr:
         .byte   $FF,$FF,$FF                     ; 85C6 FF FF FF                 ...
 Bank32MagicSpriteIndex3Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; 85C9 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; 85D1 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; 85C9 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; 85D1 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex3Tileset:
         .byte   $00,$00,$00,$00,$00,$10,$01,$0C ; 85D9 00 00 00 00 00 10 01 0C  ........
         .byte   $00,$00,$00,$00,$00,$00,$01,$0F ; 85E1 00 00 00 00 00 00 01 0F  ........
@@ -343,8 +343,8 @@ Bank32MagicSpriteIndex4Tilemap:
 Bank32MagicSpriteIndex4TileAttr:
         .byte   $FF,$FF,$FF                     ; 88A2 FF FF FF                 ...
 Bank32MagicSpriteIndex4Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; 88A5 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; 88AD 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; 88A5 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; 88AD 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex4Tileset:
         .byte   $00,$00,$A0,$80,$70,$10,$01,$08 ; 88B5 00 00 A0 80 70 10 01 08  ....p...
         .byte   $00,$00,$E0,$E0,$70,$00,$01,$08 ; 88BD 00 00 E0 E0 70 00 01 08  ....p...
@@ -453,8 +453,8 @@ Bank32MagicSpriteIndex5Tilemap:
 Bank32MagicSpriteIndex5TileAttr:
         .byte   $FF,$FF,$FF                     ; 8BDE FF FF FF                 ...
 Bank32MagicSpriteIndex5Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; 8BE1 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; 8BE9 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; 8BE1 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; 8BE9 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex5Tileset:
         .byte   $08,$00,$00,$01,$00,$10,$00,$00 ; 8BF1 08 00 00 01 00 10 00 00  ........
         .byte   $08,$00,$00,$01,$00,$10,$00,$30 ; 8BF9 08 00 00 01 00 10 00 30  .......0
@@ -545,8 +545,8 @@ Bank32MagicSpriteIndex6Tilemap:
 Bank32MagicSpriteIndex6TileAttr:
         .byte   $FF,$FF,$FF                     ; 8E8A FF FF FF                 ...
 Bank32MagicSpriteIndex6Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; 8E8D 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; 8E95 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; 8E8D 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; 8E95 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex6Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$03 ; 8E9D 00 00 00 00 00 00 00 03  ........
         .byte   $00,$0C,$18,$20,$40,$50,$41,$4F ; 8EA5 00 0C 18 20 40 50 41 4F  ... @PAO
@@ -623,8 +623,8 @@ Bank32MagicSpriteIndex7Tilemap:
 Bank32MagicSpriteIndex7TileAttr:
         .byte   $FF,$FF,$FF                     ; 90C6 FF FF FF                 ...
 Bank32MagicSpriteIndex7Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; 90C9 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; 90D1 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; 90C9 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; 90D1 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex7Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 90D9 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 90E1 00 00 00 00 00 00 00 00  ........
@@ -713,8 +713,8 @@ Bank32MagicSpriteIndex8Tilemap:
 Bank32MagicSpriteIndex8TileAttr:
         .byte   $FF,$FF,$FF                     ; 9362 FF FF FF                 ...
 Bank32MagicSpriteIndex8Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; 9365 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; 936D 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; 9365 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; 936D 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex8Tileset:
         .byte   $00,$01,$01,$16,$08,$08,$08,$08 ; 9375 00 01 01 16 08 08 08 08  ........
         .byte   $00,$01,$01,$17,$0D,$0D,$0F,$0F ; 937D 00 01 01 17 0D 0D 0F 0F  ........
@@ -781,8 +781,8 @@ Bank32MagicSpriteIndex9Tilemap:
 Bank32MagicSpriteIndex9TileAttr:
         .byte   $FF,$FF,$FF                     ; 954E FF FF FF                 ...
 Bank32MagicSpriteIndex9Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; 9551 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; 9559 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; 9551 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; 9559 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex9Tileset:
         .byte   $00,$00,$00,$00,$00,$10,$01,$0C ; 9561 00 00 00 00 00 10 01 0C  ........
         .byte   $00,$00,$00,$00,$00,$60,$C1,$8F ; 9569 00 00 00 00 00 60 C1 8F  .....`..
@@ -861,8 +861,8 @@ Bank32MagicSpriteIndex10Tilemap:
 Bank32MagicSpriteIndex10TileAttr:
         .byte   $00,$00,$00                     ; 979A 00 00 00                 ...
 Bank32MagicSpriteIndex10Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; 979D 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; 97A5 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; 979D 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; 97A5 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex10Tileset:
         .byte   $00,$00,$04,$0A,$04,$00,$00,$00 ; 97AD 00 00 04 0A 04 00 00 00  ........
         .byte   $00,$00,$04,$0A,$04,$00,$00,$00 ; 97B5 00 00 04 0A 04 00 00 00  ........
@@ -933,8 +933,8 @@ Bank32MagicSpriteIndex11Tilemap:
 Bank32MagicSpriteIndex11TileAttr:
         .byte   $00,$00,$00                     ; 99A6 00 00 00                 ...
 Bank32MagicSpriteIndex11Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; 99A9 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; 99B1 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; 99A9 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; 99B1 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex11Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 99B9 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 99C1 00 00 00 00 00 00 00 00  ........
@@ -1027,8 +1027,8 @@ Bank32MagicSpriteIndex12Tilemap:
 Bank32MagicSpriteIndex12TileAttr:
         .byte   $00,$00,$00                     ; 9C62 00 00 00                 ...
 Bank32MagicSpriteIndex12Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; 9C65 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; 9C6D 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; 9C65 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; 9C6D 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex12Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 9C75 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 9C7D 00 00 00 00 00 00 00 00  ........
@@ -1061,8 +1061,8 @@ Bank32MagicSpriteIndex13Tilemap:
 Bank32MagicSpriteIndex13TileAttr:
         .byte   $00,$00,$00                     ; 9D3E 00 00 00                 ...
 Bank32MagicSpriteIndex13Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; 9D41 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; 9D49 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; 9D41 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; 9D49 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex13Tileset:
         .byte   $00,$00,$00,$04,$00,$05,$05,$01 ; 9D51 00 00 00 04 00 05 05 01  ........
         .byte   $00,$00,$00,$04,$00,$05,$0D,$09 ; 9D59 00 00 00 04 00 05 0D 09  ........
@@ -1137,8 +1137,8 @@ Bank32MagicSpriteIndex14Tilemap:
 Bank32MagicSpriteIndex14TileAttr:
         .byte   $00,$00,$00                     ; 9F6A 00 00 00                 ...
 Bank32MagicSpriteIndex14Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; 9F6D 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; 9F75 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; 9F6D 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; 9F75 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex14Tileset:
         .byte   $08,$00,$00,$01,$00,$10,$00,$30 ; 9F7D 08 00 00 01 00 10 00 30  .......0
         .byte   $08,$00,$00,$01,$00,$10,$00,$00 ; 9F85 08 00 00 01 00 10 00 00  ........
@@ -1229,8 +1229,8 @@ Bank32MagicSpriteIndex15Tilemap:
 Bank32MagicSpriteIndex15TileAttr:
         .byte   $00,$00,$00                     ; A216 00 00 00                 ...
 Bank32MagicSpriteIndex15Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; A219 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; A221 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; A219 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; A221 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex15Tileset:
         .byte   $00,$00,$00,$00,$00,$08,$04,$00 ; A229 00 00 00 00 00 08 04 00  ........
         .byte   $00,$00,$00,$00,$00,$08,$04,$04 ; A231 00 00 00 00 00 08 04 04  ........
@@ -1317,8 +1317,8 @@ Bank32MagicSpriteIndex16Tilemap:
 Bank32MagicSpriteIndex16TileAttr:
         .byte   $00,$00,$00                     ; A4A2 00 00 00                 ...
 Bank32MagicSpriteIndex16Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; A4A5 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; A4AD 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; A4A5 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; A4AD 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex16Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A4B5 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A4BD 00 00 00 00 00 00 00 00  ........
@@ -1375,8 +1375,8 @@ Bank32MagicSpriteIndex17Tilemap:
 Bank32MagicSpriteIndex17TileAttr:
         .byte   $00,$00,$00                     ; A63E 00 00 00                 ...
 Bank32MagicSpriteIndex17Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; A641 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; A649 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; A641 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; A649 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex17Tileset:
         .byte   $00,$00,$00,$00,$00,$03,$06,$04 ; A651 00 00 00 00 00 03 06 04  ........
         .byte   $00,$00,$02,$10,$00,$03,$06,$26 ; A659 00 00 02 10 00 03 06 26  .......&
@@ -1481,8 +1481,8 @@ Bank32MagicSpriteIndex18Tilemap:
 Bank32MagicSpriteIndex18TileAttr:
         .byte   $00,$00,$00                     ; A95A 00 00 00                 ...
 Bank32MagicSpriteIndex18Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; A95D 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; A965 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; A95D 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; A965 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex18Tileset:
         .byte   $00,$00,$01,$01,$21,$00,$29,$21 ; A96D 00 00 01 01 21 00 29 21  ....!.)!
         .byte   $00,$00,$01,$01,$21,$00,$29,$21 ; A975 00 00 01 01 21 00 29 21  ....!.)!
@@ -1561,8 +1561,8 @@ Bank32MagicSpriteIndex19Tilemap:
 Bank32MagicSpriteIndex19TileAttr:
         .byte   $00,$00,$00                     ; ABA6 00 00 00                 ...
 Bank32MagicSpriteIndex19Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; ABA9 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; ABB1 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; ABA9 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; ABB1 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex19Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ABB9 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; ABC1 00 00 00 00 00 00 00 00  ........
@@ -1655,8 +1655,8 @@ Bank32MagicSpriteIndex20Tilemap:
 Bank32MagicSpriteIndex20TileAttr:
         .byte   $00,$00,$00                     ; AE62 00 00 00                 ...
 Bank32MagicSpriteIndex20Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; AE65 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; AE6D 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; AE65 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; AE6D 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex20Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE75 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; AE7D 00 00 00 00 00 00 00 00  ........
@@ -1753,8 +1753,8 @@ Bank32MagicSpriteIndex21Tilemap:
 Bank32MagicSpriteIndex21TileAttr:
         .byte   $00,$00,$00                     ; B13E 00 00 00                 ...
 Bank32MagicSpriteIndex21Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; B141 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; B149 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; B141 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; B149 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex21Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B151 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B159 00 00 00 00 00 00 00 00  ........
@@ -1815,8 +1815,8 @@ Bank32MagicSpriteIndex22Tilemap:
 Bank32MagicSpriteIndex22TileAttr:
         .byte   $00,$00,$00                     ; B2FA 00 00 00                 ...
 Bank32MagicSpriteIndex22Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; B2FD 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; B305 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; B2FD 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; B305 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex22Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B30D 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$02,$01 ; B315 00 00 00 00 00 00 02 01  ........
@@ -1919,8 +1919,8 @@ Bank32MagicSpriteIndex23Tilemap:
 Bank32MagicSpriteIndex23TileAttr:
         .byte   $00,$00,$00                     ; B606 00 00 00                 ...
 Bank32MagicSpriteIndex23Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; B609 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; B611 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; B609 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; B611 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex23Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; B619 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$01,$01,$00,$01 ; B621 00 00 00 00 01 01 00 01  ........
@@ -2029,8 +2029,8 @@ Bank32MagicSpriteIndex24Tilemap:
 Bank32MagicSpriteIndex24TileAttr:
         .byte   $00,$00,$00                     ; B942 00 00 00                 ...
 Bank32MagicSpriteIndex24Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; B945 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; B94D 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; B945 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; B94D 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex24Tileset:
         .byte   $08,$08,$08,$00,$08,$08,$00,$08 ; B955 08 08 08 00 08 08 00 08  ........
         .byte   $08,$08,$08,$00,$08,$08,$00,$0B ; B95D 08 08 08 00 08 08 00 0B  ........
@@ -2109,8 +2109,8 @@ Bank32MagicSpriteIndex25Tilemap:
 Bank32MagicSpriteIndex25TileAttr:
         .byte   $00,$00,$00                     ; BB8E 00 00 00                 ...
 Bank32MagicSpriteIndex25Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; BB91 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; BB99 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; BB91 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; BB99 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex25Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BBA1 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; BBA9 00 00 00 00 00 00 00 00  ........
@@ -2191,8 +2191,8 @@ Bank32MagicSpriteIndex26Tilemap:
 Bank32MagicSpriteIndex26TileAttr:
         .byte   $00,$00,$00                     ; BDEA 00 00 00                 ...
 Bank32MagicSpriteIndex26Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; BDED 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; BDF5 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; BDED 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; BDF5 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex26Tileset:
         .byte   $00,$00,$A0,$80,$70,$10,$01,$08 ; BDFD 00 00 A0 80 70 10 01 08  ....p...
         .byte   $00,$00,$E0,$E0,$70,$00,$01,$08 ; BE05 00 00 E0 E0 70 00 01 08  ....p...
@@ -2301,8 +2301,8 @@ Bank32MagicSpriteIndex27Tilemap:
 Bank32MagicSpriteIndex27TileAttr:
         .byte   $00,$00,$00                     ; C126 00 00 00                 ...
 Bank32MagicSpriteIndex27Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; C129 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; C131 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; C129 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; C131 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex27Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; C139 00 00 00 00 00 00 00 00  ........
         .byte   $00,$02,$40,$10,$18,$08,$02,$01 ; C141 00 02 40 10 18 08 02 01  ..@.....
@@ -2413,8 +2413,8 @@ Bank32MagicSpriteIndex28Tilemap:
 Bank32MagicSpriteIndex28TileAttr:
         .byte   $AA,$AA,$AA                     ; C472 AA AA AA                 ...
 Bank32MagicSpriteIndex28Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; C475 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; C47D 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; C475 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; C47D 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex28Tileset:
         .byte   $00,$00,$00,$00,$00,$01,$02,$04 ; C485 00 00 00 00 00 01 02 04  ........
         .byte   $00,$00,$00,$00,$00,$01,$02,$04 ; C48D 00 00 00 00 00 01 02 04  ........
@@ -2517,8 +2517,8 @@ Bank32MagicSpriteIndex29Tilemap:
 Bank32MagicSpriteIndex29TileAttr:
         .byte   $AA,$AA,$AA                     ; C77E AA AA AA                 ...
 Bank32MagicSpriteIndex29Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; C781 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; C789 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; C781 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; C789 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex29Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$08 ; C791 00 00 00 00 00 00 00 08  ........
         .byte   $00,$00,$03,$07,$03,$00,$03,$08 ; C799 00 00 03 07 03 00 03 08  ........
@@ -2609,8 +2609,8 @@ Bank32MagicSpriteIndex30Tilemap:
 Bank32MagicSpriteIndex30TileAttr:
         .byte   $AA,$AA,$AA                     ; CA2A AA AA AA                 ...
 Bank32MagicSpriteIndex30Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; CA2D 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; CA35 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; CA2D 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; CA35 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex30Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA3D 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; CA45 00 00 00 00 00 00 00 00  ........
@@ -2667,8 +2667,8 @@ Bank32MagicSpriteIndex31Tilemap:
 Bank32MagicSpriteIndex31TileAttr:
         .byte   $AA,$AA,$AA                     ; CBC6 AA AA AA                 ...
 Bank32MagicSpriteIndex31Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; CBC9 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; CBD1 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; CBC9 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; CBD1 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex31Tileset:
         .byte   $00,$00,$00,$00,$00,$10,$00,$03 ; CBD9 00 00 00 00 00 10 00 03  ........
         .byte   $00,$00,$00,$00,$00,$10,$01,$0C ; CBE1 00 00 00 00 00 10 01 0C  ........
@@ -2765,8 +2765,8 @@ Bank32MagicSpriteIndex32Tilemap:
 Bank32MagicSpriteIndex32TileAttr:
         .byte   $AA,$AA,$AA                     ; CEA2 AA AA AA                 ...
 Bank32MagicSpriteIndex32Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; CEA5 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; CEAD 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; CEA5 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; CEAD 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex32Tileset:
         .byte   $00,$00,$00,$00,$00,$2C,$00,$00 ; CEB5 00 00 00 00 00 2C 00 00  .....,..
         .byte   $00,$00,$00,$00,$44,$2C,$00,$00 ; CEBD 00 00 00 00 44 2C 00 00  ....D,..
@@ -2869,8 +2869,8 @@ Bank32MagicSpriteIndex33Tilemap:
 Bank32MagicSpriteIndex33TileAttr:
         .byte   $AA,$AA,$AA                     ; D1AE AA AA AA                 ...
 Bank32MagicSpriteIndex33Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; D1B1 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; D1B9 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; D1B1 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; D1B9 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex33Tileset:
         .byte   $00,$00,$00,$00,$01,$00,$00,$00 ; D1C1 00 00 00 00 01 00 00 00  ........
         .byte   $05,$08,$0F,$A0,$01,$00,$01,$D2 ; D1C9 05 08 0F A0 01 00 01 D2  ........
@@ -2981,8 +2981,8 @@ Bank32MagicSpriteIndex34Tilemap:
 Bank32MagicSpriteIndex34TileAttr:
         .byte   $AA,$AA,$AA                     ; D4FA AA AA AA                 ...
 Bank32MagicSpriteIndex34Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; D4FD 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; D505 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; D4FD 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; D505 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex34Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$08 ; D50D 00 00 00 00 00 00 00 08  ........
         .byte   $00,$00,$03,$07,$03,$00,$03,$08 ; D515 00 00 03 07 03 00 03 08  ........
@@ -3055,8 +3055,8 @@ Bank32MagicSpriteIndex35Tilemap:
 Bank32MagicSpriteIndex35TileAttr:
         .byte   $AA,$AA,$AA                     ; D716 AA AA AA                 ...
 Bank32MagicSpriteIndex35Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; D719 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; D721 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; D719 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; D721 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex35Tileset:
         .byte   $00,$00,$40,$00,$20,$00,$00,$00 ; D729 00 00 40 00 20 00 00 00  ..@. ...
         .byte   $00,$04,$04,$00,$22,$44,$44,$42 ; D731 00 04 04 00 22 44 44 42  ...."DDB
@@ -3151,8 +3151,8 @@ Bank32MagicSpriteIndex36Tilemap:
 Bank32MagicSpriteIndex36TileAttr:
         .byte   $AA,$AA,$AA                     ; D9E2 AA AA AA                 ...
 Bank32MagicSpriteIndex36Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; D9E5 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; D9ED 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; D9E5 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; D9ED 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex36Tileset:
         .byte   $01,$06,$08,$30,$00,$02,$0C,$30 ; D9F5 01 06 08 30 00 02 0C 30  ...0...0
         .byte   $01,$06,$08,$30,$00,$02,$0C,$30 ; D9FD 01 06 08 30 00 02 0C 30  ...0...0
@@ -3253,8 +3253,8 @@ Bank32MagicSpriteIndex37Tilemap:
 Bank32MagicSpriteIndex37TileAttr:
         .byte   $55,$55,$55                     ; DCDE 55 55 55                 UUU
 Bank32MagicSpriteIndex37Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; DCE1 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; DCE9 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; DCE1 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; DCE9 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex37Tileset:
         .byte   $00,$00,$00,$20,$00,$20,$00,$00 ; DCF1 00 00 00 20 00 20 00 00  ... . ..
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DCF9 00 00 00 00 00 00 00 00  ........
@@ -3333,8 +3333,8 @@ Bank32MagicSpriteIndex38Tilemap:
 Bank32MagicSpriteIndex38TileAttr:
         .byte   $A0,$AA,$AA                     ; DF2A A0 AA AA                 ...
 Bank32MagicSpriteIndex38Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; DF2D 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; DF35 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; DF2D 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; DF35 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex38Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF3D 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; DF45 00 00 00 00 00 00 00 00  ........
@@ -3419,8 +3419,8 @@ Bank32MagicSpriteIndex39Tilemap:
 Bank32MagicSpriteIndex39TileAttr:
         .byte   $AA,$AA,$AA                     ; E1A6 AA AA AA                 ...
 Bank32MagicSpriteIndex39Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; E1A9 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; E1B1 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; E1A9 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; E1B1 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex39Tileset:
         .byte   $08,$00,$00,$01,$00,$10,$00,$30 ; E1B9 08 00 00 01 00 10 00 30  .......0
         .byte   $08,$00,$00,$01,$00,$10,$00,$00 ; E1C1 08 00 00 01 00 10 00 00  ........
@@ -3511,8 +3511,8 @@ Bank32MagicSpriteIndex40Tilemap:
 Bank32MagicSpriteIndex40TileAttr:
         .byte   $A0,$A0,$AA                     ; E452 A0 A0 AA                 ...
 Bank32MagicSpriteIndex40Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; E455 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; E45D 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; E455 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; E45D 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex40Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E465 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E46D 00 00 00 00 00 00 00 00  ........
@@ -3579,8 +3579,8 @@ Bank32MagicSpriteIndex41Tilemap:
 Bank32MagicSpriteIndex41TileAttr:
         .byte   $55,$55,$55                     ; E63E 55 55 55                 UUU
 Bank32MagicSpriteIndex41Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; E641 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; E649 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; E641 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; E649 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex41Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$02,$01 ; E651 00 00 00 00 00 00 02 01  ........
         .byte   $00,$00,$00,$00,$00,$00,$02,$01 ; E659 00 00 00 00 00 00 02 01  ........
@@ -3667,8 +3667,8 @@ Bank32MagicSpriteIndex42Tilemap:
 Bank32MagicSpriteIndex42TileAttr:
         .byte   $AA,$AA,$AA                     ; E8CA AA AA AA                 ...
 Bank32MagicSpriteIndex42Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; E8CD 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; E8D5 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; E8CD 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; E8D5 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex42Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$01 ; E8DD 00 00 00 00 00 00 00 01  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E8E5 00 00 00 00 00 00 00 00  ........
@@ -3773,8 +3773,8 @@ Bank32MagicSpriteIndex43Tilemap:
 Bank32MagicSpriteIndex43TileAttr:
         .byte   $AA,$AA,$AA                     ; EBE6 AA AA AA                 ...
 Bank32MagicSpriteIndex43Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; EBE9 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; EBF1 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; EBE9 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; EBF1 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex43Tileset:
         .byte   $22,$2A,$2A,$28,$2A,$2A,$29,$29 ; EBF9 22 2A 2A 28 2A 2A 29 29  "**(**))
         .byte   $00,$08,$08,$08,$08,$08,$09,$09 ; EC01 00 08 08 08 08 08 09 09  ........
@@ -3861,8 +3861,8 @@ Bank32MagicSpriteIndex44Tilemap:
 Bank32MagicSpriteIndex44TileAttr:
         .byte   $AA,$AA,$AA                     ; EE72 AA AA AA                 ...
 Bank32MagicSpriteIndex44Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; EE75 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; EE7D 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; EE75 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; EE7D 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex44Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE85 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; EE8D 00 00 00 00 00 00 00 00  ........
@@ -3955,8 +3955,8 @@ Bank32MagicSpriteIndex45Tilemap:
 Bank32MagicSpriteIndex45TileAttr:
         .byte   $AA,$AA,$AA                     ; F12E AA AA AA                 ...
 Bank32MagicSpriteIndex45Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; F131 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; F139 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; F131 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; F139 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex45Tileset:
         .byte   $00,$00,$E0,$E0,$70,$10,$01,$08 ; F141 00 00 E0 E0 70 10 01 08  ....p...
         .byte   $00,$00,$A0,$80,$70,$00,$01,$08 ; F149 00 00 A0 80 70 00 01 08  ....p...
@@ -4065,8 +4065,8 @@ Bank32MagicSpriteIndex46Tilemap:
 Bank32MagicSpriteIndex46TileAttr:
         .byte   $15,$55,$55                     ; F46A 15 55 55                 .UU
 Bank32MagicSpriteIndex46Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; F46D 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; F475 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; F46D 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; F475 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex46Tileset:
         .byte   $18,$7E,$5E,$8F,$DF,$7E,$7E,$18 ; F47D 18 7E 5E 8F DF 7E 7E 18  .~^..~~.
         .byte   $18,$66,$62,$F1,$A1,$42,$66,$18 ; F485 18 66 62 F1 A1 42 66 18  .fb..Bf.
@@ -4119,8 +4119,8 @@ Bank32MagicSpriteIndex47Tilemap:
 Bank32MagicSpriteIndex47TileAttr:
         .byte   $00,$00,$00                     ; F5E6 00 00 00                 ...
 Bank32MagicSpriteIndex47Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; F5E9 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; F5F1 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; F5E9 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; F5F1 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex47Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F5F9 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F601 00 00 00 00 00 00 00 00  ........
@@ -4213,8 +4213,8 @@ Bank32MagicSpriteIndex48Tilemap:
 Bank32MagicSpriteIndex48TileAttr:
         .byte   $00,$00,$00                     ; F8A2 00 00 00                 ...
 Bank32MagicSpriteIndex48Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; F8A5 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; F8AD 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; F8A5 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; F8AD 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex48Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; F8B5 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$10 ; F8BD 00 00 00 00 00 00 00 10  ........
@@ -4289,8 +4289,8 @@ Bank32MagicSpriteIndex49Tilemap:
 Bank32MagicSpriteIndex49TileAttr:
         .byte   $00,$00,$00                     ; FACE 00 00 00                 ...
 Bank32MagicSpriteIndex49Palette:
-        .byte   $0F,$36,$38,$12,$0F,$36,$30,$16 ; FAD1 0F 36 38 12 0F 36 30 16  .68..60.
-        .byte   $0F,$27,$19,$18,$0F,$36,$16,$18 ; FAD9 0F 27 19 18 0F 36 16 18  .'...6..
+        .byte   $0F,$36,$38,$12,$0F,$36,$30,$17 ; FAD1 0F 36 38 12 0F 36 30 17  .68..60.
+        .byte   $0F,$27,$19,$18,$0F,$30,$16,$18 ; FAD9 0F 27 19 18 0F 30 16 18  .'...0..
 Bank32MagicSpriteIndex49Tileset:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; FAE1 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$10 ; FAE9 00 00 00 00 00 00 00 10  ........

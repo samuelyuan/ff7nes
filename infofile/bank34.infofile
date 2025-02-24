@@ -19,183 +19,23 @@ RANGE {
 };
 LABEL {
   NAME "Bank34SpriteIndex0";
-  ADDR  $B8F0;
+  ADDR  $806B;
 };
 LABEL {
   NAME "Bank34SpriteIndex0Tilemap";
-  ADDR  $B8F7;
+  ADDR  $8072;
 };
 LABEL {
   NAME "Bank34SpriteIndex0TileAttr";
-  ADDR  $B91B;
+  ADDR  $8096;
 };
 LABEL {
   NAME "Bank34SpriteIndex0Palette";
-  ADDR  $B91F;
+  ADDR  $809A;
 };
 LABEL {
   NAME "Bank34SpriteIndex0Tileset";
-  ADDR  $B927;
-};
-LABEL {
-  NAME "Bank34SpriteIndex1OriginalCloud";
-  ADDR  $B997;
-};
-LABEL {
-  NAME "Bank34SpriteIndex1OriginalCloudTilemap";
-  ADDR  $B99E;
-};
-LABEL {
-  NAME "Bank34SpriteIndex1OriginalCloudTileAttr";
-  ADDR  $B9C2;
-};
-LABEL {
-  NAME "Bank34SpriteIndex1OriginalCloudPalette";
-  ADDR  $B9C6;
-};
-LABEL {
-  NAME "Bank34SpriteIndex1OriginalCloudTileset";
-  ADDR  $B9CE;
-};
-LABEL {
-  NAME "Bank34SpriteIndex2OriginalBarret";
-  ADDR  $9670;
-};
-LABEL {
-  NAME "Bank34SpriteIndex2OriginalBarretTilemap";
-  ADDR  $9677;
-};
-LABEL {
-  NAME "Bank34SpriteIndex2OriginalBarretTileAttr";
-  ADDR  $969B;
-};
-LABEL {
-  NAME "Bank34SpriteIndex2OriginalBarretPalette";
-  ADDR  $969F;
-};
-LABEL {
-  NAME "Bank34SpriteIndex2OriginalBarretTileset";
-  ADDR  $96A7;
-};
-LABEL {
-  NAME "Bank34SpriteIndex3OriginalTifa";
-  ADDR  $A2F0;
-};
-LABEL {
-  NAME "Bank34SpriteIndex3OriginalTifaTilemap";
-  ADDR  $A2F7;
-};
-LABEL {
-  NAME "Bank34SpriteIndex3OriginalTifaTileAttr";
-  ADDR  $A31B;
-};
-LABEL {
-  NAME "Bank34SpriteIndex3OriginalTifaPalette";
-  ADDR  $A31F;
-};
-LABEL {
-  NAME "Bank34SpriteIndex3OriginalTifaTileset";
-  ADDR  $A327;
-};
-LABEL {
-  NAME "Bank34SpriteIndex4OriginalAeris";
-  ADDR  $975E;
-};
-LABEL {
-  NAME "Bank34SpriteIndex4OriginalAerisTilemap";
-  ADDR  $9765;
-};
-LABEL {
-  NAME "Bank34SpriteIndex4OriginalAerisTileAttr";
-  ADDR  $9789;
-};
-LABEL {
-  NAME "Bank34SpriteIndex4OriginalAerisPalette";
-  ADDR  $978D;
-};
-LABEL {
-  NAME "Bank34SpriteIndex4OriginalAerisTileset";
-  ADDR  $9795;
-};
-LABEL {
-  NAME "Bank34SpriteIndex5OriginalRedXIII";
-  ADDR  $984C;
-};
-LABEL {
-  NAME "Bank34SpriteIndex5OriginalRedXIIITilemap";
-  ADDR  $9853;
-};
-LABEL {
-  NAME "Bank34SpriteIndex5OriginalRedXIIITileAttr";
-  ADDR  $9877;
-};
-LABEL {
-  NAME "Bank34SpriteIndex5OriginalRedXIIIPalette";
-  ADDR  $987B;
-};
-LABEL {
-  NAME "Bank34SpriteIndex5OriginalRedXIIITileset";
-  ADDR  $9883;
-};
-LABEL {
-  NAME "Bank34SpriteIndex6OriginalCaithSith";
-  ADDR  $993A;
-};
-LABEL {
-  NAME "Bank34SpriteIndex6OriginalCaithSithTilemap";
-  ADDR  $9941;
-};
-LABEL {
-  NAME "Bank34SpriteIndex6OriginalCaithSithTileAttr";
-  ADDR  $9965;
-};
-LABEL {
-  NAME "Bank34SpriteIndex6OriginalCaithSithPalette";
-  ADDR  $9969;
-};
-LABEL {
-  NAME "Bank34SpriteIndex6OriginalCaithSithTileset";
-  ADDR  $9971;
-};
-LABEL {
-  NAME "Bank34SpriteIndex7OriginalCid";
-  ADDR  $A202;
-};
-LABEL {
-  NAME "Bank34SpriteIndex7OriginalCidTilemap";
-  ADDR  $A209;
-};
-LABEL {
-  NAME "Bank34SpriteIndex7OriginalCidTileAttr";
-  ADDR  $A22D;
-};
-LABEL {
-  NAME "Bank34SpriteIndex7OriginalCidPalette";
-  ADDR  $A231;
-};
-LABEL {
-  NAME "Bank34SpriteIndex7OriginalCidTileset";
-  ADDR  $A239;
-};
-LABEL {
-  NAME "Bank34SpriteIndex8Guard";
-  ADDR  $806D;
-};
-LABEL {
-  NAME "Bank34SpriteIndex8GuardTilemap";
-  ADDR  $8074;
-};
-LABEL {
-  NAME "Bank34SpriteIndex8GuardTileAttr";
-  ADDR  $8098;
-};
-LABEL {
-  NAME "Bank34SpriteIndex8GuardPalette";
-  ADDR  $809C;
-};
-LABEL {
-  NAME "Bank34SpriteIndex8GuardTileset";
-  ADDR  $80A4;
+  ADDR  $80A2;
 };
 LABEL {
   NAME "Bank34SpriteIndex9Scorpion";
@@ -296,6 +136,26 @@ LABEL {
 LABEL {
   NAME "Bank34SpriteIndex13Tileset";
   ADDR  $8CDB;
+};
+LABEL {
+  NAME "Bank34SpriteIndex14";
+  ADDR  $8E6B;
+};
+LABEL {
+  NAME "Bank34SpriteIndex14Tilemap";
+  ADDR  $8E72;
+};
+LABEL {
+  NAME "Bank34SpriteIndex14TileAttr";
+  ADDR  $8E96;
+};
+LABEL {
+  NAME "Bank34SpriteIndex14Palette";
+  ADDR  $8E9A;
+};
+LABEL {
+  NAME "Bank34SpriteIndex14Tileset";
+  ADDR  $8EA2;
 };
 LABEL {
   NAME "Bank34SpriteIndex15Aps";
@@ -479,23 +339,23 @@ LABEL {
 };
 LABEL {
   NAME "Bank34SpriteIndex27Palmer";
-  ADDR  $FD80;
+  ADDR  $B8EF;
 };
 LABEL {
   NAME "Bank34SpriteIndex27PalmerTilemap";
-  ADDR  $FD87;
+  ADDR  $B8F6;
 };
 LABEL {
   NAME "Bank34SpriteIndex27PalmerTileAttr";
-  ADDR  $FDAB;
+  ADDR  $B91A;
 };
 LABEL {
   NAME "Bank34SpriteIndex27PalmerPalette";
-  ADDR  $FDAF;
+  ADDR  $B91E;
 };
 LABEL {
   NAME "Bank34SpriteIndex27PalmerTileset";
-  ADDR  $FDB7;
+  ADDR  $B926;
 };
 LABEL {
   NAME "Bank34SpriteIndex28RedDragon";
@@ -516,6 +376,26 @@ LABEL {
 LABEL {
   NAME "Bank34SpriteIndex28RedDragonTileset";
   ADDR  $BB6C;
+};
+LABEL {
+  NAME "Bank34SpriteIndex29";
+  ADDR  $C07C;
+};
+LABEL {
+  NAME "Bank34SpriteIndex29Tilemap";
+  ADDR  $C083;
+};
+LABEL {
+  NAME "Bank34SpriteIndex29TileAttr";
+  ADDR  $C15B;
+};
+LABEL {
+  NAME "Bank34SpriteIndex29Palette";
+  ADDR  $C16A;
+};
+LABEL {
+  NAME "Bank34SpriteIndex29Tileset";
+  ADDR  $C172;
 };
 LABEL {
   NAME "Bank34SpriteIndex30";
@@ -539,23 +419,23 @@ LABEL {
 };
 LABEL {
   NAME "Bank34SpriteIndex31";
-  ADDR  $CAF8;
+  ADDR  $CA88;
 };
 LABEL {
   NAME "Bank34SpriteIndex31Tilemap";
-  ADDR  $CAFF;
+  ADDR  $CA8F;
 };
 LABEL {
   NAME "Bank34SpriteIndex31TileAttr";
-  ADDR  $CBD7;
+  ADDR  $CB67;
 };
 LABEL {
   NAME "Bank34SpriteIndex31Palette";
-  ADDR  $CBE6;
+  ADDR  $CB76;
 };
 LABEL {
   NAME "Bank34SpriteIndex31Tileset";
-  ADDR  $CBEE;
+  ADDR  $CB7E;
 };
 LABEL {
   NAME "Bank34SpriteIndex32BizarroSephiroth";
