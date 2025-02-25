@@ -24,6 +24,15 @@ class NESFile:
                 break
             addrBlock.append(startAddr)
         return addrBlock
+    
+    def getAddressBlockAll(self, bankNum, startAddressOffset, endAddressOffset):
+        addrBlock = []
+
+        bankData = self.getBankDataBlock(bankNum)
+        for i in range(startAddressOffset, endAddressOffset, 2):
+            startAddr = self.getWord(bankData[i : i + 2])
+            addrBlock.append(startAddr)
+        return addrBlock
 
     def getWord(self, data):
         return (0x100 * data[1]) + data[0]

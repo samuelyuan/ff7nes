@@ -2,7 +2,7 @@
 
 ; ----------------------------------------------------------------------------
 ; ----------------------------------------------------------------------------
-        .addr   L8019                           ; 8000 19 80                    ..
+        .addr   Bank06Block0                    ; 8000 19 80                    ..
         .addr   HeadgearNameStr                 ; 8002 31 83                    1.
         .addr   BodyArmorNameStr                ; 8004 78 85                    x.
         .addr   BraceletNameStr                 ; 8006 B8 8A                    ..
@@ -16,2846 +16,2846 @@
 ; ----------------------------------------------------------------------------
         .byte   $FF,$FF,$40                     ; 8016 FF FF 40                 ..@
 ; ----------------------------------------------------------------------------
-L8019:
-        .addr   L80B9                           ; 8019 B9 80                    ..
-        .addr   L80C1                           ; 801B C1 80                    ..
-        .addr   L80D3                           ; 801D D3 80                    ..
-        .addr   L80DD                           ; 801F DD 80                    ..
-        .addr   L80E7                           ; 8021 E7 80                    ..
-        .addr   L80F1                           ; 8023 F1 80                    ..
-        .addr   L80FB                           ; 8025 FB 80                    ..
-        .addr   L8103                           ; 8027 03 81                    ..
-        .addr   L810D                           ; 8029 0D 81                    ..
-        .addr   L8117                           ; 802B 17 81                    ..
-        .addr   L811B                           ; 802D 1B 81                    ..
-        .addr   L811F                           ; 802F 1F 81                    ..
-        .addr   L8123                           ; 8031 23 81                    #.
-        .addr   L8127                           ; 8033 27 81                    '.
-        .addr   L8131                           ; 8035 31 81                    1.
-        .addr   L8136                           ; 8037 36 81                    6.
-        .addr   L813B                           ; 8039 3B 81                    ;.
-        .addr   L8140                           ; 803B 40 81                    @.
-        .addr   L8145                           ; 803D 45 81                    E.
-        .addr   L814A                           ; 803F 4A 81                    J.
-        .addr   L814F                           ; 8041 4F 81                    O.
-        .addr   L8153                           ; 8043 53 81                    S.
-        .addr   L815F                           ; 8045 5F 81                    _.
-        .addr   L816B                           ; 8047 6B 81                    k.
-        .addr   L8174                           ; 8049 74 81                    t.
-        .addr   L817D                           ; 804B 7D 81                    }.
-        .addr   L8183                           ; 804D 83 81                    ..
-        .addr   L818A                           ; 804F 8A 81                    ..
-        .addr   L8192                           ; 8051 92 81                    ..
-        .addr   L8198                           ; 8053 98 81                    ..
-        .addr   L819F                           ; 8055 9F 81                    ..
-        .addr   L81A6                           ; 8057 A6 81                    ..
-        .addr   L81B0                           ; 8059 B0 81                    ..
-        .addr   L81B5                           ; 805B B5 81                    ..
-        .addr   L81BB                           ; 805D BB 81                    ..
-        .addr   L81C1                           ; 805F C1 81                    ..
-        .addr   L81C7                           ; 8061 C7 81                    ..
-        .addr   L81CD                           ; 8063 CD 81                    ..
-        .addr   L81D4                           ; 8065 D4 81                    ..
-        .addr   L81DE                           ; 8067 DE 81                    ..
-        .addr   L81EB                           ; 8069 EB 81                    ..
-        .addr   L81F8                           ; 806B F8 81                    ..
-        .addr   L8206                           ; 806D 06 82                    ..
-        .addr   L820F                           ; 806F 0F 82                    ..
-        .addr   L821B                           ; 8071 1B 82                    ..
-        .addr   L8227                           ; 8073 27 82                    '.
-        .addr   L822E                           ; 8075 2E 82                    ..
-        .addr   L823C                           ; 8077 3C 82                    <.
-        .addr   L824A                           ; 8079 4A 82                    J.
-        .addr   L8250                           ; 807B 50 82                    P.
-        .addr   L825A                           ; 807D 5A 82                    Z.
-        .addr   L8264                           ; 807F 64 82                    d.
-        .addr   L826A                           ; 8081 6A 82                    j.
-        .addr   L8270                           ; 8083 70 82                    p.
-        .addr   L827B                           ; 8085 7B 82                    {.
-        .addr   L8281                           ; 8087 81 82                    ..
-        .addr   L8287                           ; 8089 87 82                    ..
-        .addr   L828E                           ; 808B 8E 82                    ..
-        .addr   L8295                           ; 808D 95 82                    ..
-        .addr   L829D                           ; 808F 9D 82                    ..
-        .addr   L82AE                           ; 8091 AE 82                    ..
-        .addr   L82B3                           ; 8093 B3 82                    ..
-        .addr   L82B8                           ; 8095 B8 82                    ..
-        .addr   L82BD                           ; 8097 BD 82                    ..
-        .addr   L82C2                           ; 8099 C2 82                    ..
-        .addr   L82C7                           ; 809B C7 82                    ..
-        .addr   L82CC                           ; 809D CC 82                    ..
-        .addr   L82CF                           ; 809F CF 82                    ..
-        .addr   L82D5                           ; 80A1 D5 82                    ..
-        .addr   L82E0                           ; 80A3 E0 82                    ..
-        .addr   L82F1                           ; 80A5 F1 82                    ..
-        .addr   L82FC                           ; 80A7 FC 82                    ..
-        .addr   L8301                           ; 80A9 01 83                    ..
-        .addr   L830C                           ; 80AB 0C 83                    ..
-        .addr   L8311                           ; 80AD 11 83                    ..
-        .addr   L8316                           ; 80AF 16 83                    ..
-        .addr   L831B                           ; 80B1 1B 83                    ..
-        .addr   L8320                           ; 80B3 20 83                     .
-        .addr   L8325                           ; 80B5 25 83                    %.
-        .addr   L832A                           ; 80B7 2A 83                    *.
+Bank06Block0:
+        .addr   Bank06Block0Index0              ; 8019 B9 80                    ..
+        .addr   Bank06Block0Index1              ; 801B C1 80                    ..
+        .addr   Bank06Block0Index2              ; 801D D3 80                    ..
+        .addr   Bank06Block0Index3              ; 801F DD 80                    ..
+        .addr   Bank06Block0Index4              ; 8021 E7 80                    ..
+        .addr   Bank06Block0Index5              ; 8023 F1 80                    ..
+        .addr   Bank06Block0Index6              ; 8025 FB 80                    ..
+        .addr   Bank06Block0Index7              ; 8027 03 81                    ..
+        .addr   Bank06Block0Index8              ; 8029 0D 81                    ..
+        .addr   Bank06Block0Index9              ; 802B 17 81                    ..
+        .addr   Bank06Block0Index10             ; 802D 1B 81                    ..
+        .addr   Bank06Block0Index11             ; 802F 1F 81                    ..
+        .addr   Bank06Block0Index12             ; 8031 23 81                    #.
+        .addr   Bank06Block0Index13             ; 8033 27 81                    '.
+        .addr   Bank06Block0Index14             ; 8035 31 81                    1.
+        .addr   Bank06Block0Index15             ; 8037 36 81                    6.
+        .addr   Bank06Block0Index16             ; 8039 3B 81                    ;.
+        .addr   Bank06Block0Index17             ; 803B 40 81                    @.
+        .addr   Bank06Block0Index18             ; 803D 45 81                    E.
+        .addr   Bank06Block0Index19             ; 803F 4A 81                    J.
+        .addr   Bank06Block0Index20             ; 8041 4F 81                    O.
+        .addr   Bank06Block0Index21             ; 8043 53 81                    S.
+        .addr   Bank06Block0Index22             ; 8045 5F 81                    _.
+        .addr   Bank06Block0Index23             ; 8047 6B 81                    k.
+        .addr   Bank06Block0Index24             ; 8049 74 81                    t.
+        .addr   Bank06Block0Index25             ; 804B 7D 81                    }.
+        .addr   Bank06Block0Index26             ; 804D 83 81                    ..
+        .addr   Bank06Block0Index27             ; 804F 8A 81                    ..
+        .addr   Bank06Block0Index28             ; 8051 92 81                    ..
+        .addr   Bank06Block0Index29             ; 8053 98 81                    ..
+        .addr   Bank06Block0Index30             ; 8055 9F 81                    ..
+        .addr   Bank06Block0Index31             ; 8057 A6 81                    ..
+        .addr   Bank06Block0Index32             ; 8059 B0 81                    ..
+        .addr   Bank06Block0Index33             ; 805B B5 81                    ..
+        .addr   Bank06Block0Index34             ; 805D BB 81                    ..
+        .addr   Bank06Block0Index35             ; 805F C1 81                    ..
+        .addr   Bank06Block0Index36             ; 8061 C7 81                    ..
+        .addr   Bank06Block0Index37             ; 8063 CD 81                    ..
+        .addr   Bank06Block0Index38             ; 8065 D4 81                    ..
+        .addr   Bank06Block0Index39             ; 8067 DE 81                    ..
+        .addr   Bank06Block0Index40             ; 8069 EB 81                    ..
+        .addr   Bank06Block0Index41             ; 806B F8 81                    ..
+        .addr   Bank06Block0Index42             ; 806D 06 82                    ..
+        .addr   Bank06Block0Index43             ; 806F 0F 82                    ..
+        .addr   Bank06Block0Index44             ; 8071 1B 82                    ..
+        .addr   Bank06Block0Index45             ; 8073 27 82                    '.
+        .addr   Bank06Block0Index46             ; 8075 2E 82                    ..
+        .addr   Bank06Block0Index47             ; 8077 3C 82                    <.
+        .addr   Bank06Block0Index48             ; 8079 4A 82                    J.
+        .addr   Bank06Block0Index49             ; 807B 50 82                    P.
+        .addr   Bank06Block0Index50             ; 807D 5A 82                    Z.
+        .addr   Bank06Block0Index51             ; 807F 64 82                    d.
+        .addr   Bank06Block0Index52             ; 8081 6A 82                    j.
+        .addr   Bank06Block0Index53             ; 8083 70 82                    p.
+        .addr   Bank06Block0Index54             ; 8085 7B 82                    {.
+        .addr   Bank06Block0Index55             ; 8087 81 82                    ..
+        .addr   Bank06Block0Index56             ; 8089 87 82                    ..
+        .addr   Bank06Block0Index57             ; 808B 8E 82                    ..
+        .addr   Bank06Block0Index58             ; 808D 95 82                    ..
+        .addr   Bank06Block0Index59             ; 808F 9D 82                    ..
+        .addr   Bank06Block0Index60             ; 8091 AE 82                    ..
+        .addr   Bank06Block0Index61             ; 8093 B3 82                    ..
+        .addr   Bank06Block0Index62             ; 8095 B8 82                    ..
+        .addr   Bank06Block0Index63             ; 8097 BD 82                    ..
+        .addr   Bank06Block0Index64             ; 8099 C2 82                    ..
+        .addr   Bank06Block0Index65             ; 809B C7 82                    ..
+        .addr   Bank06Block0Index66             ; 809D CC 82                    ..
+        .addr   Bank06Block0Index67             ; 809F CF 82                    ..
+        .addr   Bank06Block0Index68             ; 80A1 D5 82                    ..
+        .addr   Bank06Block0Index69             ; 80A3 E0 82                    ..
+        .addr   Bank06Block0Index70             ; 80A5 F1 82                    ..
+        .addr   Bank06Block0Index71             ; 80A7 FC 82                    ..
+        .addr   Bank06Block0Index72             ; 80A9 01 83                    ..
+        .addr   Bank06Block0Index73             ; 80AB 0C 83                    ..
+        .addr   Bank06Block0Index74             ; 80AD 11 83                    ..
+        .addr   Bank06Block0Index75             ; 80AF 16 83                    ..
+        .addr   Bank06Block0Index76             ; 80B1 1B 83                    ..
+        .addr   Bank06Block0Index77             ; 80B3 20 83                     .
+        .addr   Bank06Block0Index78             ; 80B5 25 83                    %.
+        .addr   Bank06Block0Index79             ; 80B7 2A 83                    *.
 ; ----------------------------------------------------------------------------
-L80B9:
+Bank06Block0Index0:
         .byte   "Fight "                        ; 80B9 46 69 67 68 74 20        Fight 
         .byte   $0D,$0A                         ; 80BF 0D 0A                    ..
-L80C1:
+Bank06Block0Index1:
         .byte   "Shenzhen Nanjing"              ; 80C1 53 68 65 6E 7A 68 65 6E  Shenzhen
                                                 ; 80C9 20 4E 61 6E 6A 69 6E 67   Nanjing
         .byte   $0D,$0A                         ; 80D1 0D 0A                    ..
-L80D3:
+Bank06Block0Index2:
         .byte   "Cloud   "                      ; 80D3 43 6C 6F 75 64 20 20 20  Cloud   
         .byte   $0D,$0A                         ; 80DB 0D 0A                    ..
-L80DD:
+Bank06Block0Index3:
         .byte   "Barret  "                      ; 80DD 42 61 72 72 65 74 20 20  Barret  
         .byte   $0D,$0A                         ; 80E5 0D 0A                    ..
-L80E7:
+Bank06Block0Index4:
         .byte   "Tifa    "                      ; 80E7 54 69 66 61 20 20 20 20  Tifa    
         .byte   $0D,$0A                         ; 80EF 0D 0A                    ..
-L80F1:
+Bank06Block0Index5:
         .byte   "Aeris   "                      ; 80F1 41 65 72 69 73 20 20 20  Aeris   
         .byte   $0D,$0A                         ; 80F9 0D 0A                    ..
-L80FB:
+Bank06Block0Index6:
         .byte   "RedX` "                        ; 80FB 52 65 64 58 60 20        RedX` 
         .byte   $0D,$0A                         ; 8101 0D 0A                    ..
-L8103:
+Bank06Block0Index7:
         .byte   "CaitSith"                      ; 8103 43 61 69 74 53 69 74 68  CaitSith
         .byte   $0D,$0A                         ; 810B 0D 0A                    ..
-L810D:
+Bank06Block0Index8:
         .byte   "Cid     "                      ; 810D 43 69 64 20 20 20 20 20  Cid     
         .byte   $0D,$0A                         ; 8115 0D 0A                    ..
-L8117:
+Bank06Block0Index9:
         .byte   $C0,$B7,$0D,$0A                 ; 8117 C0 B7 0D 0A              ....
-L811B:
+Bank06Block0Index10:
         .byte   $C0,$B8,$0D,$0A                 ; 811B C0 B8 0D 0A              ....
-L811F:
+Bank06Block0Index11:
         .byte   $C0,$B9,$0D,$0A                 ; 811F C0 B9 0D 0A              ....
-L8123:
+Bank06Block0Index12:
         .byte   $C0,$BA,$0D,$0A                 ; 8123 C0 BA 0D 0A              ....
-L8127:
+Bank06Block0Index13:
         .byte   "        "                      ; 8127 20 20 20 20 20 20 20 20          
         .byte   $0D,$0A                         ; 812F 0D 0A                    ..
-L8131:
+Bank06Block0Index14:
         .byte   "HP "                           ; 8131 48 50 20                 HP 
         .byte   $0D,$0A                         ; 8134 0D 0A                    ..
-L8136:
+Bank06Block0Index15:
         .byte   "Str"                           ; 8136 53 74 72                 Str
         .byte   $0D,$0A                         ; 8139 0D 0A                    ..
-L813B:
+Bank06Block0Index16:
         .byte   "Vit"                           ; 813B 56 69 74                 Vit
         .byte   $0D,$0A                         ; 813E 0D 0A                    ..
-L8140:
+Bank06Block0Index17:
         .byte   "Int"                           ; 8140 49 6E 74                 Int
         .byte   $0D,$0A                         ; 8143 0D 0A                    ..
-L8145:
+Bank06Block0Index18:
         .byte   "Spr"                           ; 8145 53 70 72                 Spr
         .byte   $0D,$0A                         ; 8148 0D 0A                    ..
-L814A:
+Bank06Block0Index19:
         .byte   "Agl"                           ; 814A 41 67 6C                 Agl
         .byte   $0D,$0A                         ; 814D 0D 0A                    ..
-L814F:
+Bank06Block0Index20:
         .byte   "* "                            ; 814F 2A 20                    * 
         .byte   $0D,$0A                         ; 8151 0D 0A                    ..
-L8153:
+Bank06Block0Index21:
         .byte   "Fight One "                    ; 8153 46 69 67 68 74 20 4F 6E  Fight On
                                                 ; 815B 65 20                    e 
         .byte   $0D,$0A                         ; 815D 0D 0A                    ..
-L815F:
+Bank06Block0Index22:
         .byte   "Fight All "                    ; 815F 46 69 67 68 74 20 41 6C  Fight Al
                                                 ; 8167 6C 20                    l 
         .byte   $0D,$0A                         ; 8169 0D 0A                    ..
-L816B:
+Bank06Block0Index23:
         .byte   "To One "                       ; 816B 54 6F 20 4F 6E 65 20     To One 
         .byte   $0D,$0A                         ; 8172 0D 0A                    ..
-L8174:
+Bank06Block0Index24:
         .byte   "To All "                       ; 8174 54 6F 20 41 6C 6C 20     To All 
         .byte   $0D,$0A                         ; 817B 0D 0A                    ..
-L817D:
+Bank06Block0Index25:
         .byte   "None"                          ; 817D 4E 6F 6E 65              None
         .byte   $0D,$0A                         ; 8181 0D 0A                    ..
-L8183:
+Bank06Block0Index26:
         .byte   "Cloud"                         ; 8183 43 6C 6F 75 64           Cloud
         .byte   $0D,$0A                         ; 8188 0D 0A                    ..
-L818A:
+Bank06Block0Index27:
         .byte   "Barret"                        ; 818A 42 61 72 72 65 74        Barret
         .byte   $0D,$0A                         ; 8190 0D 0A                    ..
-L8192:
+Bank06Block0Index28:
         .byte   "Tifa"                          ; 8192 54 69 66 61              Tifa
         .byte   $0D,$0A                         ; 8196 0D 0A                    ..
-L8198:
+Bank06Block0Index29:
         .byte   "Aeris"                         ; 8198 41 65 72 69 73           Aeris
         .byte   $0D,$0A                         ; 819D 0D 0A                    ..
-L819F:
+Bank06Block0Index30:
         .byte   "RedX`"                         ; 819F 52 65 64 58 60           RedX`
         .byte   $0D,$0A                         ; 81A4 0D 0A                    ..
-L81A6:
+Bank06Block0Index31:
         .byte   "CaitSith"                      ; 81A6 43 61 69 74 53 69 74 68  CaitSith
         .byte   $0D,$0A                         ; 81AE 0D 0A                    ..
-L81B0:
+Bank06Block0Index32:
         .byte   "Cid"                           ; 81B0 43 69 64                 Cid
         .byte   $0D,$0A                         ; 81B3 0D 0A                    ..
-L81B5:
+Bank06Block0Index33:
         .byte   $C0,$BB,$C0,$BC,$0D,$0A         ; 81B5 C0 BB C0 BC 0D 0A        ......
-L81BB:
+Bank06Block0Index34:
         .byte   $C0,$BD,$C0,$BE,$0D,$0A         ; 81BB C0 BD C0 BE 0D 0A        ......
-L81C1:
+Bank06Block0Index35:
         .byte   $C0,$BF,$C0,$C0,$0D,$0A         ; 81C1 C0 BF C0 C0 0D 0A        ......
-L81C7:
+Bank06Block0Index36:
         .byte   $C0,$C1,$C0,$C2,$0D,$0A         ; 81C7 C0 C1 C0 C2 0D 0A        ......
-L81CD:
+Bank06Block0Index37:
         .byte   "Used "                         ; 81CD 55 73 65 64 20           Used 
         .byte   $0D,$0A                         ; 81D2 0D 0A                    ..
-L81D4:
+Bank06Block0Index38:
         .byte   "Escaped!"                      ; 81D4 45 73 63 61 70 65 64 21  Escaped!
         .byte   $0D,$0A                         ; 81DC 0D 0A                    ..
-L81DE:
+Bank06Block0Index39:
         .byte   "No escape__"                   ; 81DE 4E 6F 20 65 73 63 61 70  No escap
                                                 ; 81E6 65 5F 5F                 e__
         .byte   $0D,$0A                         ; 81E9 0D 0A                    ..
-L81EB:
+Bank06Block0Index40:
         .byte   "No effect__"                   ; 81EB 4E 6F 20 65 66 66 65 63  No effec
                                                 ; 81F3 74 5F 5F                 t__
         .byte   $0D,$0A                         ; 81F6 0D 0A                    ..
-L81F8:
+Bank06Block0Index41:
         .byte   "Healed Self "                  ; 81F8 48 65 61 6C 65 64 20 53  Healed S
                                                 ; 8200 65 6C 66 20              elf 
         .byte   $0D,$0A                         ; 8204 0D 0A                    ..
-L8206:
+Bank06Block0Index42:
         .byte   "Healed "                       ; 8206 48 65 61 6C 65 64 20     Healed 
         .byte   $0D,$0A                         ; 820D 0D 0A                    ..
-L820F:
+Bank06Block0Index43:
         .byte   "Defeated__"                    ; 820F 44 65 66 65 61 74 65 64  Defeated
                                                 ; 8217 5F 5F                    __
         .byte   $0D,$0A                         ; 8219 0D 0A                    ..
-L821B:
+Bank06Block0Index44:
         .byte   "Game Over!"                    ; 821B 47 61 6D 65 20 4F 76 65  Game Ove
                                                 ; 8223 72 21                    r!
         .byte   $0D,$0A                         ; 8225 0D 0A                    ..
-L8227:
+Bank06Block0Index45:
         .byte   "Self "                         ; 8227 53 65 6C 66 20           Self 
         .byte   $0D,$0A                         ; 822C 0D 0A                    ..
-L822E:
+Bank06Block0Index46:
         .byte   "HP Restored "                  ; 822E 48 50 20 52 65 73 74 6F  HP Resto
                                                 ; 8236 72 65 64 20              red 
         .byte   $0D,$0A                         ; 823A 0D 0A                    ..
-L823C:
+Bank06Block0Index47:
         .byte   "MP Restored "                  ; 823C 4D 50 20 52 65 73 74 6F  MP Resto
                                                 ; 8244 72 65 64 20              red 
         .byte   $0D,$0A                         ; 8248 0D 0A                    ..
-L824A:
+Bank06Block0Index48:
         .byte   "All "                          ; 824A 41 6C 6C 20              All 
         .byte   $0D,$0A                         ; 824E 0D 0A                    ..
-L8250:
+Bank06Block0Index49:
         .byte   "Revived "                      ; 8250 52 65 76 69 76 65 64 20  Revived 
         .byte   $0D,$0A                         ; 8258 0D 0A                    ..
-L825A:
+Bank06Block0Index50:
         .byte   "Victory!"                      ; 825A 56 69 63 74 6F 72 79 21  Victory!
         .byte   $0D,$0A                         ; 8262 0D 0A                    ..
-L8264:
+Bank06Block0Index51:
         .byte   "EXP:"                          ; 8264 45 58 50 3A              EXP:
         .byte   $0D,$0A                         ; 8268 0D 0A                    ..
-L826A:
+Bank06Block0Index52:
         .byte   "Gil:"                          ; 826A 47 69 6C 3A              Gil:
         .byte   $0D,$0A                         ; 826E 0D 0A                    ..
-L8270:
+Bank06Block0Index53:
         .byte   "Level Up!"                     ; 8270 4C 65 76 65 6C 20 55 70  Level Up
                                                 ; 8278 21                       !
         .byte   $0D,$0A                         ; 8279 0D 0A                    ..
-L827B:
+Bank06Block0Index54:
         .byte   "Got "                          ; 827B 47 6F 74 20              Got 
         .byte   $0D,$0A                         ; 827F 0D 0A                    ..
-L8281:
+Bank06Block0Index55:
         .byte   "Buy?"                          ; 8281 42 75 79 3F              Buy?
         .byte   $0D,$0A                         ; 8285 0D 0A                    ..
-L8287:
+Bank06Block0Index56:
         .byte   "Sell?"                         ; 8287 53 65 6C 6C 3F           Sell?
         .byte   $0D,$0A                         ; 828C 0D 0A                    ..
-L828E:
+Bank06Block0Index57:
         .byte   "Deal!"                         ; 828E 44 65 61 6C 21           Deal!
         .byte   $0D,$0A                         ; 8293 0D 0A                    ..
-L8295:
+Bank06Block0Index58:
         .byte   "Can't "                        ; 8295 43 61 6E 27 74 20        Can't 
         .byte   $0D,$0A                         ; 829B 0D 0A                    ..
-L829D:
+Bank06Block0Index59:
         .byte   "Not enough Gil!"               ; 829D 4E 6F 74 20 65 6E 6F 75  Not enou
                                                 ; 82A5 67 68 20 47 69 6C 21     gh Gil!
         .byte   $0D,$0A                         ; 82AC 0D 0A                    ..
-L82AE:
+Bank06Block0Index60:
         .byte   "HP "                           ; 82AE 48 50 20                 HP 
         .byte   $0D,$0A                         ; 82B1 0D 0A                    ..
-L82B3:
+Bank06Block0Index61:
         .byte   "Str"                           ; 82B3 53 74 72                 Str
         .byte   $0D,$0A                         ; 82B6 0D 0A                    ..
-L82B8:
+Bank06Block0Index62:
         .byte   "Vit"                           ; 82B8 56 69 74                 Vit
         .byte   $0D,$0A                         ; 82BB 0D 0A                    ..
-L82BD:
+Bank06Block0Index63:
         .byte   "Int"                           ; 82BD 49 6E 74                 Int
         .byte   $0D,$0A                         ; 82C0 0D 0A                    ..
-L82C2:
+Bank06Block0Index64:
         .byte   "Spr"                           ; 82C2 53 70 72                 Spr
         .byte   $0D,$0A                         ; 82C5 0D 0A                    ..
-L82C7:
+Bank06Block0Index65:
         .byte   "Agl"                           ; 82C7 41 67 6C                 Agl
         .byte   $0D,$0A                         ; 82CA 0D 0A                    ..
-L82CC:
+Bank06Block0Index66:
         .byte   " "                             ; 82CC 20                        
         .byte   $0D,$0A                         ; 82CD 0D 0A                    ..
-L82CF:
+Bank06Block0Index67:
         .byte   "None"                          ; 82CF 4E 6F 6E 65              None
         .byte   $0D,$0A                         ; 82D3 0D 0A                    ..
-L82D5:
+Bank06Block0Index68:
         .byte   "Mastered!"                     ; 82D5 4D 61 73 74 65 72 65 64  Mastered
                                                 ; 82DD 21                       !
         .byte   $0D,$0A                         ; 82DE 0D 0A                    ..
-L82E0:
+Bank06Block0Index69:
         .byte   "Not enough EXP!"               ; 82E0 4E 6F 74 20 65 6E 6F 75  Not enou
                                                 ; 82E8 67 68 20 45 58 50 21     gh EXP!
         .byte   $0D,$0A                         ; 82EF 0D 0A                    ..
-L82F1:
+Bank06Block0Index70:
         .byte   "Enhanced!"                     ; 82F1 45 6E 68 61 6E 63 65 64  Enhanced
                                                 ; 82F9 21                       !
         .byte   $0D,$0A                         ; 82FA 0D 0A                    ..
-L82FC:
+Bank06Block0Index71:
         .byte   "To "                           ; 82FC 54 6F 20                 To 
         .byte   $0D,$0A                         ; 82FF 0D 0A                    ..
-L8301:
+Bank06Block0Index72:
         .byte   "Equipped "                     ; 8301 45 71 75 69 70 70 65 64  Equipped
                                                 ; 8309 20                        
         .byte   $0D,$0A                         ; 830A 0D 0A                    ..
-L830C:
+Bank06Block0Index73:
         .byte   "Clo"                           ; 830C 43 6C 6F                 Clo
         .byte   $0D,$0A                         ; 830F 0D 0A                    ..
-L8311:
+Bank06Block0Index74:
         .byte   "Bar"                           ; 8311 42 61 72                 Bar
         .byte   $0D,$0A                         ; 8314 0D 0A                    ..
-L8316:
+Bank06Block0Index75:
         .byte   "Tif"                           ; 8316 54 69 66                 Tif
         .byte   $0D,$0A                         ; 8319 0D 0A                    ..
-L831B:
+Bank06Block0Index76:
         .byte   "Aer"                           ; 831B 41 65 72                 Aer
         .byte   $0D,$0A                         ; 831E 0D 0A                    ..
-L8320:
+Bank06Block0Index77:
         .byte   "Red"                           ; 8320 52 65 64                 Red
         .byte   $0D,$0A                         ; 8323 0D 0A                    ..
-L8325:
+Bank06Block0Index78:
         .byte   "Cat"                           ; 8325 43 61 74                 Cat
         .byte   $0D,$0A                         ; 8328 0D 0A                    ..
-L832A:
+Bank06Block0Index79:
         .byte   "Cid"                           ; 832A 43 69 64                 Cid
         .byte   $0D,$0A,$FF,$FF                 ; 832D 0D 0A FF FF              ....
 ; ----------------------------------------------------------------------------
 HeadgearNameStr:
-        .addr   L83A1                           ; 8331 A1 83                    ..
-        .addr   L83A7                           ; 8333 A7 83                    ..
-        .addr   L83AF                           ; 8335 AF 83                    ..
-        .addr   L83B7                           ; 8337 B7 83                    ..
-        .addr   L83BE                           ; 8339 BE 83                    ..
-        .addr   L83C6                           ; 833B C6 83                    ..
-        .addr   L83CE                           ; 833D CE 83                    ..
-        .addr   L83D7                           ; 833F D7 83                    ..
-        .addr   L83DF                           ; 8341 DF 83                    ..
-        .addr   L83E7                           ; 8343 E7 83                    ..
-        .addr   L83F1                           ; 8345 F1 83                    ..
-        .addr   L83F9                           ; 8347 F9 83                    ..
-        .addr   L8401                           ; 8349 01 84                    ..
-        .addr   L840A                           ; 834B 0A 84                    ..
-        .addr   L8412                           ; 834D 12 84                    ..
-        .addr   L841C                           ; 834F 1C 84                    ..
-        .addr   L8425                           ; 8351 25 84                    %.
-        .addr   L842F                           ; 8353 2F 84                    /.
-        .addr   L8437                           ; 8355 37 84                    7.
-        .addr   L843F                           ; 8357 3F 84                    ?.
-        .addr   L8446                           ; 8359 46 84                    F.
-        .addr   L844F                           ; 835B 4F 84                    O.
-        .addr   L8459                           ; 835D 59 84                    Y.
-        .addr   L8460                           ; 835F 60 84                    `.
-        .addr   L8467                           ; 8361 67 84                    g.
-        .addr   L846F                           ; 8363 6F 84                    o.
-        .addr   L8476                           ; 8365 76 84                    v.
-        .addr   L847E                           ; 8367 7E 84                    ~.
-        .addr   L8486                           ; 8369 86 84                    ..
-        .addr   L848F                           ; 836B 8F 84                    ..
-        .addr   L8497                           ; 836D 97 84                    ..
-        .addr   L849F                           ; 836F 9F 84                    ..
-        .addr   L84A8                           ; 8371 A8 84                    ..
-        .addr   L84B0                           ; 8373 B0 84                    ..
-        .addr   L84B7                           ; 8375 B7 84                    ..
-        .addr   L84BF                           ; 8377 BF 84                    ..
-        .addr   L84C9                           ; 8379 C9 84                    ..
-        .addr   L84D3                           ; 837B D3 84                    ..
-        .addr   L84DD                           ; 837D DD 84                    ..
-        .addr   L84E7                           ; 837F E7 84                    ..
-        .addr   L84F0                           ; 8381 F0 84                    ..
-        .addr   L84F7                           ; 8383 F7 84                    ..
-        .addr   L8500                           ; 8385 00 85                    ..
-        .addr   L8507                           ; 8387 07 85                    ..
-        .addr   L8510                           ; 8389 10 85                    ..
-        .addr   L8518                           ; 838B 18 85                    ..
-        .addr   L8521                           ; 838D 21 85                    !.
-        .addr   L8529                           ; 838F 29 85                    ).
-        .addr   L8533                           ; 8391 33 85                    3.
-        .addr   L853B                           ; 8393 3B 85                    ;.
-        .addr   L8544                           ; 8395 44 85                    D.
-        .addr   L854C                           ; 8397 4C 85                    L.
-        .addr   L8554                           ; 8399 54 85                    T.
-        .addr   L855D                           ; 839B 5D 85                    ].
-        .addr   L8565                           ; 839D 65 85                    e.
-        .addr   L856F                           ; 839F 6F 85                    o.
+        .addr   HeadgearNameStrIndex0           ; 8331 A1 83                    ..
+        .addr   HeadgearNameStrIndex1           ; 8333 A7 83                    ..
+        .addr   HeadgearNameStrIndex2           ; 8335 AF 83                    ..
+        .addr   HeadgearNameStrIndex3           ; 8337 B7 83                    ..
+        .addr   HeadgearNameStrIndex4           ; 8339 BE 83                    ..
+        .addr   HeadgearNameStrIndex5           ; 833B C6 83                    ..
+        .addr   HeadgearNameStrIndex6           ; 833D CE 83                    ..
+        .addr   HeadgearNameStrIndex7           ; 833F D7 83                    ..
+        .addr   HeadgearNameStrIndex8           ; 8341 DF 83                    ..
+        .addr   HeadgearNameStrIndex9           ; 8343 E7 83                    ..
+        .addr   HeadgearNameStrIndex10          ; 8345 F1 83                    ..
+        .addr   HeadgearNameStrIndex11          ; 8347 F9 83                    ..
+        .addr   HeadgearNameStrIndex12          ; 8349 01 84                    ..
+        .addr   HeadgearNameStrIndex13          ; 834B 0A 84                    ..
+        .addr   HeadgearNameStrIndex14          ; 834D 12 84                    ..
+        .addr   HeadgearNameStrIndex15          ; 834F 1C 84                    ..
+        .addr   HeadgearNameStrIndex16          ; 8351 25 84                    %.
+        .addr   HeadgearNameStrIndex17          ; 8353 2F 84                    /.
+        .addr   HeadgearNameStrIndex18          ; 8355 37 84                    7.
+        .addr   HeadgearNameStrIndex19          ; 8357 3F 84                    ?.
+        .addr   HeadgearNameStrIndex20          ; 8359 46 84                    F.
+        .addr   HeadgearNameStrIndex21          ; 835B 4F 84                    O.
+        .addr   HeadgearNameStrIndex22          ; 835D 59 84                    Y.
+        .addr   HeadgearNameStrIndex23          ; 835F 60 84                    `.
+        .addr   HeadgearNameStrIndex24          ; 8361 67 84                    g.
+        .addr   HeadgearNameStrIndex25          ; 8363 6F 84                    o.
+        .addr   HeadgearNameStrIndex26          ; 8365 76 84                    v.
+        .addr   HeadgearNameStrIndex27          ; 8367 7E 84                    ~.
+        .addr   HeadgearNameStrIndex28          ; 8369 86 84                    ..
+        .addr   HeadgearNameStrIndex29          ; 836B 8F 84                    ..
+        .addr   HeadgearNameStrIndex30          ; 836D 97 84                    ..
+        .addr   HeadgearNameStrIndex31          ; 836F 9F 84                    ..
+        .addr   HeadgearNameStrIndex32          ; 8371 A8 84                    ..
+        .addr   HeadgearNameStrIndex33          ; 8373 B0 84                    ..
+        .addr   HeadgearNameStrIndex34          ; 8375 B7 84                    ..
+        .addr   HeadgearNameStrIndex35          ; 8377 BF 84                    ..
+        .addr   HeadgearNameStrIndex36          ; 8379 C9 84                    ..
+        .addr   HeadgearNameStrIndex37          ; 837B D3 84                    ..
+        .addr   HeadgearNameStrIndex38          ; 837D DD 84                    ..
+        .addr   HeadgearNameStrIndex39          ; 837F E7 84                    ..
+        .addr   HeadgearNameStrIndex40          ; 8381 F0 84                    ..
+        .addr   HeadgearNameStrIndex41          ; 8383 F7 84                    ..
+        .addr   HeadgearNameStrIndex42          ; 8385 00 85                    ..
+        .addr   HeadgearNameStrIndex43          ; 8387 07 85                    ..
+        .addr   HeadgearNameStrIndex44          ; 8389 10 85                    ..
+        .addr   HeadgearNameStrIndex45          ; 838B 18 85                    ..
+        .addr   HeadgearNameStrIndex46          ; 838D 21 85                    !.
+        .addr   HeadgearNameStrIndex47          ; 838F 29 85                    ).
+        .addr   HeadgearNameStrIndex48          ; 8391 33 85                    3.
+        .addr   HeadgearNameStrIndex49          ; 8393 3B 85                    ;.
+        .addr   HeadgearNameStrIndex50          ; 8395 44 85                    D.
+        .addr   HeadgearNameStrIndex51          ; 8397 4C 85                    L.
+        .addr   HeadgearNameStrIndex52          ; 8399 54 85                    T.
+        .addr   HeadgearNameStrIndex53          ; 839B 5D 85                    ].
+        .addr   HeadgearNameStrIndex54          ; 839D 65 85                    e.
+        .addr   HeadgearNameStrIndex55          ; 839F 6F 85                    o.
 ; ----------------------------------------------------------------------------
-L83A1:
+HeadgearNameStrIndex0:
         .byte   "None"                          ; 83A1 4E 6F 6E 65              None
         .byte   $0D,$0A                         ; 83A5 0D 0A                    ..
-L83A7:
+HeadgearNameStrIndex1:
         .byte   "{Wrath"                        ; 83A7 7B 57 72 61 74 68        {Wrath
         .byte   $0D,$0A                         ; 83AD 0D 0A                    ..
-L83AF:
+HeadgearNameStrIndex2:
         .byte   "{Force"                        ; 83AF 7B 46 6F 72 63 65        {Force
         .byte   $0D,$0A                         ; 83B5 0D 0A                    ..
-L83B7:
+HeadgearNameStrIndex3:
         .byte   "{Lion"                         ; 83B7 7B 4C 69 6F 6E           {Lion
         .byte   $0D,$0A                         ; 83BC 0D 0A                    ..
-L83BE:
+HeadgearNameStrIndex4:
         .byte   "{White"                        ; 83BE 7B 57 68 69 74 65        {White
         .byte   $0D,$0A                         ; 83C4 0D 0A                    ..
-L83C6:
+HeadgearNameStrIndex5:
         .byte   "{Light"                        ; 83C6 7B 4C 69 67 68 74        {Light
         .byte   $0D,$0A                         ; 83CC 0D 0A                    ..
-L83CE:
+HeadgearNameStrIndex6:
         .byte   "{Sierra"                       ; 83CE 7B 53 69 65 72 72 61     {Sierra
         .byte   $0D,$0A                         ; 83D5 0D 0A                    ..
-L83D7:
+HeadgearNameStrIndex7:
         .byte   "{Valor"                        ; 83D7 7B 56 61 6C 6F 72        {Valor
         .byte   $0D,$0A                         ; 83DD 0D 0A                    ..
-L83DF:
+HeadgearNameStrIndex8:
         .byte   "{Skull"                        ; 83DF 7B 53 6B 75 6C 6C        {Skull
         .byte   $0D,$0A                         ; 83E5 0D 0A                    ..
-L83E7:
+HeadgearNameStrIndex9:
         .byte   "{Warlord"                      ; 83E7 7B 57 61 72 6C 6F 72 64  {Warlord
         .byte   $0D,$0A                         ; 83EF 0D 0A                    ..
-L83F1:
+HeadgearNameStrIndex10:
         .byte   "{Beast"                        ; 83F1 7B 42 65 61 73 74        {Beast
         .byte   $0D,$0A                         ; 83F7 0D 0A                    ..
-L83F9:
+HeadgearNameStrIndex11:
         .byte   "{Blaze"                        ; 83F9 7B 42 6C 61 7A 65        {Blaze
         .byte   $0D,$0A                         ; 83FF 0D 0A                    ..
-L8401:
+HeadgearNameStrIndex12:
         .byte   "{Tyrant"                       ; 8401 7B 54 79 72 61 6E 74     {Tyrant
         .byte   $0D,$0A                         ; 8408 0D 0A                    ..
-L840A:
+HeadgearNameStrIndex13:
         .byte   "{Frost"                        ; 840A 7B 46 72 6F 73 74        {Frost
         .byte   $0D,$0A                         ; 8410 0D 0A                    ..
-L8412:
+HeadgearNameStrIndex14:
         .byte   "{Violent"                      ; 8412 7B 56 69 6F 6C 65 6E 74  {Violent
         .byte   $0D,$0A                         ; 841A 0D 0A                    ..
-L841C:
+HeadgearNameStrIndex15:
         .byte   "{Forest"                       ; 841C 7B 46 6F 72 65 73 74     {Forest
         .byte   $0D,$0A                         ; 8423 0D 0A                    ..
-L8425:
+HeadgearNameStrIndex16:
         .byte   "{Element"                      ; 8425 7B 45 6C 65 6D 65 6E 74  {Element
         .byte   $0D,$0A                         ; 842D 0D 0A                    ..
-L842F:
+HeadgearNameStrIndex17:
         .byte   "{Blaze"                        ; 842F 7B 42 6C 61 7A 65        {Blaze
         .byte   $0D,$0A                         ; 8435 0D 0A                    ..
-L8437:
+HeadgearNameStrIndex18:
         .byte   "{Scale"                        ; 8437 7B 53 63 61 6C 65        {Scale
         .byte   $0D,$0A                         ; 843D 0D 0A                    ..
-L843F:
+HeadgearNameStrIndex19:
         .byte   "{Dual"                         ; 843F 7B 44 75 61 6C           {Dual
         .byte   $0D,$0A                         ; 8444 0D 0A                    ..
-L8446:
+HeadgearNameStrIndex20:
         .byte   "{Basket"                       ; 8446 7B 42 61 73 6B 65 74     {Basket
         .byte   $0D,$0A                         ; 844D 0D 0A                    ..
-L844F:
+HeadgearNameStrIndex21:
         .byte   "{Marshal"                      ; 844F 7B 4D 61 72 73 68 61 6C  {Marshal
         .byte   $0D,$0A                         ; 8457 0D 0A                    ..
-L8459:
+HeadgearNameStrIndex22:
         .byte   "{Pale"                         ; 8459 7B 50 61 6C 65           {Pale
         .byte   $0D,$0A                         ; 845E 0D 0A                    ..
-L8460:
+HeadgearNameStrIndex23:
         .byte   "{Lark"                         ; 8460 7B 4C 61 72 6B           {Lark
         .byte   $0D,$0A                         ; 8465 0D 0A                    ..
-L8467:
+HeadgearNameStrIndex24:
         .byte   "{Thief"                        ; 8467 7B 54 68 69 65 66        {Thief
         .byte   $0D,$0A                         ; 846D 0D 0A                    ..
-L846F:
+HeadgearNameStrIndex25:
         .byte   "{Rune"                         ; 846F 7B 52 75 6E 65           {Rune
         .byte   $0D,$0A                         ; 8474 0D 0A                    ..
-L8476:
+HeadgearNameStrIndex26:
         .byte   "{Flame"                        ; 8476 7B 46 6C 61 6D 65        {Flame
         .byte   $0D,$0A                         ; 847C 0D 0A                    ..
-L847E:
+HeadgearNameStrIndex27:
         .byte   "{Flint"                        ; 847E 7B 46 6C 69 6E 74        {Flint
         .byte   $0D,$0A                         ; 8484 0D 0A                    ..
-L8486:
+HeadgearNameStrIndex28:
         .byte   "{Dragon"                       ; 8486 7B 44 72 61 67 6F 6E     {Dragon
         .byte   $0D,$0A                         ; 848D 0D 0A                    ..
-L848F:
+HeadgearNameStrIndex29:
         .byte   "{Storm"                        ; 848F 7B 53 74 6F 72 6D        {Storm
         .byte   $0D,$0A                         ; 8495 0D 0A                    ..
-L8497:
+HeadgearNameStrIndex30:
         .byte   "{Guard"                        ; 8497 7B 47 75 61 72 64        {Guard
         .byte   $0D,$0A                         ; 849D 0D 0A                    ..
-L849F:
+HeadgearNameStrIndex31:
         .byte   "{Arcane"                       ; 849F 7B 41 72 63 61 6E 65     {Arcane
         .byte   $0D,$0A                         ; 84A6 0D 0A                    ..
-L84A8:
+HeadgearNameStrIndex32:
         .byte   "{Satin"                        ; 84A8 7B 53 61 74 69 6E        {Satin
         .byte   $0D,$0A                         ; 84AE 0D 0A                    ..
-L84B0:
+HeadgearNameStrIndex33:
         .byte   "{Silk"                         ; 84B0 7B 53 69 6C 6B           {Silk
         .byte   $0D,$0A                         ; 84B5 0D 0A                    ..
-L84B7:
+HeadgearNameStrIndex34:
         .byte   "{Demon"                        ; 84B7 7B 44 65 6D 6F 6E        {Demon
         .byte   $0D,$0A                         ; 84BD 0D 0A                    ..
-L84BF:
+HeadgearNameStrIndex35:
         .byte   "}DarkEye"                      ; 84BF 7D 44 61 72 6B 45 79 65  }DarkEye
         .byte   $0D,$0A                         ; 84C7 0D 0A                    ..
-L84C9:
+HeadgearNameStrIndex36:
         .byte   "{Crystal"                      ; 84C9 7B 43 72 79 73 74 61 6C  {Crystal
         .byte   $0D,$0A                         ; 84D1 0D 0A                    ..
-L84D3:
+HeadgearNameStrIndex37:
         .byte   "{Prophet"                      ; 84D3 7B 50 72 6F 70 68 65 74  {Prophet
         .byte   $0D,$0A                         ; 84DB 0D 0A                    ..
-L84DD:
+HeadgearNameStrIndex38:
         .byte   "{Scholar"                      ; 84DD 7B 53 63 68 6F 6C 61 72  {Scholar
         .byte   $0D,$0A                         ; 84E5 0D 0A                    ..
-L84E7:
+HeadgearNameStrIndex39:
         .byte   "{Goggle"                       ; 84E7 7B 47 6F 67 67 6C 65     {Goggle
         .byte   $0D,$0A                         ; 84EE 0D 0A                    ..
-L84F0:
+HeadgearNameStrIndex40:
         .byte   "{Mist"                         ; 84F0 7B 4D 69 73 74           {Mist
         .byte   $0D,$0A                         ; 84F5 0D 0A                    ..
-L84F7:
+HeadgearNameStrIndex41:
         .byte   "{Shroud"                       ; 84F7 7B 53 68 72 6F 75 64     {Shroud
         .byte   $0D,$0A                         ; 84FE 0D 0A                    ..
-L8500:
+HeadgearNameStrIndex42:
         .byte   "{Pope"                         ; 8500 7B 50 6F 70 65           {Pope
         .byte   $0D,$0A                         ; 8505 0D 0A                    ..
-L8507:
+HeadgearNameStrIndex43:
         .byte   "{Devout"                       ; 8507 7B 44 65 76 6F 75 74     {Devout
         .byte   $0D,$0A                         ; 850E 0D 0A                    ..
-L8510:
+HeadgearNameStrIndex44:
         .byte   "{Major"                        ; 8510 7B 4D 61 6A 6F 72        {Major
         .byte   $0D,$0A                         ; 8516 0D 0A                    ..
-L8518:
+HeadgearNameStrIndex45:
         .byte   "{Sacred"                       ; 8518 7B 53 61 63 72 65 64     {Sacred
         .byte   $0D,$0A                         ; 851F 0D 0A                    ..
-L8521:
+HeadgearNameStrIndex46:
         .byte   "{Spark"                        ; 8521 7B 53 70 61 72 6B        {Spark
         .byte   $0D,$0A                         ; 8527 0D 0A                    ..
-L8529:
+HeadgearNameStrIndex47:
         .byte   "{Crimson"                      ; 8529 7B 43 72 69 6D 73 6F 6E  {Crimson
         .byte   $0D,$0A                         ; 8531 0D 0A                    ..
-L8533:
+HeadgearNameStrIndex48:
         .byte   "{Pearl"                        ; 8533 7B 50 65 61 72 6C        {Pearl
         .byte   $0D,$0A                         ; 8539 0D 0A                    ..
-L853B:
+HeadgearNameStrIndex49:
         .byte   "{Bishop"                       ; 853B 7B 42 69 73 68 6F 70     {Bishop
         .byte   $0D,$0A                         ; 8542 0D 0A                    ..
-L8544:
+HeadgearNameStrIndex50:
         .byte   "{Scarf"                        ; 8544 7B 53 63 61 72 66        {Scarf
         .byte   $0D,$0A                         ; 854A 0D 0A                    ..
-L854C:
+HeadgearNameStrIndex51:
         .byte   "{Burqa"                        ; 854C 7B 42 75 72 71 61        {Burqa
         .byte   $0D,$0A                         ; 8552 0D 0A                    ..
-L8554:
+HeadgearNameStrIndex52:
         .byte   "{Rimmed"                       ; 8554 7B 52 69 6D 6D 65 64     {Rimmed
         .byte   $0D,$0A                         ; 855B 0D 0A                    ..
-L855D:
+HeadgearNameStrIndex53:
         .byte   "{Woven"                        ; 855D 7B 57 6F 76 65 6E        {Woven
         .byte   $0D,$0A                         ; 8563 0D 0A                    ..
-L8565:
+HeadgearNameStrIndex54:
         .byte   "{Knitted"                      ; 8565 7B 4B 6E 69 74 74 65 64  {Knitted
         .byte   $0D,$0A                         ; 856D 0D 0A                    ..
-L856F:
+HeadgearNameStrIndex55:
         .byte   "{Hood"                         ; 856F 7B 48 6F 6F 64           {Hood
         .byte   $0D,$0A,$FF,$FF                 ; 8574 0D 0A FF FF              ....
 ; ----------------------------------------------------------------------------
 BodyArmorNameStr:
-        .addr   L867A                           ; 8578 7A 86                    z.
-        .addr   L8680                           ; 857A 80 86                    ..
-        .addr   L868A                           ; 857C 8A 86                    ..
-        .addr   L8690                           ; 857E 90 86                    ..
-        .addr   L8698                           ; 8580 98 86                    ..
-        .addr   L86A0                           ; 8582 A0 86                    ..
-        .addr   L86AA                           ; 8584 AA 86                    ..
-        .addr   L86B4                           ; 8586 B4 86                    ..
-        .addr   L86BC                           ; 8588 BC 86                    ..
-        .addr   L86C5                           ; 858A C5 86                    ..
-        .addr   L86CE                           ; 858C CE 86                    ..
-        .addr   L86D6                           ; 858E D6 86                    ..
-        .addr   L86DE                           ; 8590 DE 86                    ..
-        .addr   L86E6                           ; 8592 E6 86                    ..
-        .addr   L86EF                           ; 8594 EF 86                    ..
-        .addr   L86F6                           ; 8596 F6 86                    ..
-        .addr   L86FE                           ; 8598 FE 86                    ..
-        .addr   L8707                           ; 859A 07 87                    ..
-        .addr   L8711                           ; 859C 11 87                    ..
-        .addr   L871A                           ; 859E 1A 87                    ..
-        .addr   L8722                           ; 85A0 22 87                    ".
-        .addr   L872A                           ; 85A2 2A 87                    *.
-        .addr   L8732                           ; 85A4 32 87                    2.
-        .addr   L873A                           ; 85A6 3A 87                    :.
-        .addr   L8744                           ; 85A8 44 87                    D.
-        .addr   L874A                           ; 85AA 4A 87                    J.
-        .addr   L8754                           ; 85AC 54 87                    T.
-        .addr   L875C                           ; 85AE 5C 87                    \.
-        .addr   L8764                           ; 85B0 64 87                    d.
-        .addr   L876D                           ; 85B2 6D 87                    m.
-        .addr   L8776                           ; 85B4 76 87                    v.
-        .addr   L877F                           ; 85B6 7F 87                    ..
-        .addr   L8788                           ; 85B8 88 87                    ..
-        .addr   L878F                           ; 85BA 8F 87                    ..
-        .addr   L8796                           ; 85BC 96 87                    ..
-        .addr   L879F                           ; 85BE 9F 87                    ..
-        .addr   L87A8                           ; 85C0 A8 87                    ..
-        .addr   L87B1                           ; 85C2 B1 87                    ..
-        .addr   L87B9                           ; 85C4 B9 87                    ..
-        .addr   L87C3                           ; 85C6 C3 87                    ..
-        .addr   L87CB                           ; 85C8 CB 87                    ..
-        .addr   L87D5                           ; 85CA D5 87                    ..
-        .addr   L87DF                           ; 85CC DF 87                    ..
-        .addr   L87E9                           ; 85CE E9 87                    ..
-        .addr   L87F1                           ; 85D0 F1 87                    ..
-        .addr   L87F9                           ; 85D2 F9 87                    ..
-        .addr   L8801                           ; 85D4 01 88                    ..
-        .addr   L8809                           ; 85D6 09 88                    ..
-        .addr   L8813                           ; 85D8 13 88                    ..
-        .addr   L881B                           ; 85DA 1B 88                    ..
-        .addr   L8825                           ; 85DC 25 88                    %.
-        .addr   L882E                           ; 85DE 2E 88                    ..
-        .addr   L8836                           ; 85E0 36 88                    6.
-        .addr   L8840                           ; 85E2 40 88                    @.
-        .addr   L8847                           ; 85E4 47 88                    G.
-        .addr   L8851                           ; 85E6 51 88                    Q.
-        .addr   L8858                           ; 85E8 58 88                    X.
-        .addr   L885F                           ; 85EA 5F 88                    _.
-        .addr   L8866                           ; 85EC 66 88                    f.
-        .addr   L886D                           ; 85EE 6D 88                    m.
-        .addr   L8877                           ; 85F0 77 88                    w.
-        .addr   L8880                           ; 85F2 80 88                    ..
-        .addr   L888A                           ; 85F4 8A 88                    ..
-        .addr   L8893                           ; 85F6 93 88                    ..
-        .addr   L889B                           ; 85F8 9B 88                    ..
-        .addr   L88A4                           ; 85FA A4 88                    ..
-        .addr   L88AE                           ; 85FC AE 88                    ..
-        .addr   L88B6                           ; 85FE B6 88                    ..
-        .addr   L88BD                           ; 8600 BD 88                    ..
-        .addr   L88C7                           ; 8602 C7 88                    ..
-        .addr   L88CE                           ; 8604 CE 88                    ..
-        .addr   L88D7                           ; 8606 D7 88                    ..
-        .addr   L88DF                           ; 8608 DF 88                    ..
-        .addr   L88E7                           ; 860A E7 88                    ..
-        .addr   L88F0                           ; 860C F0 88                    ..
-        .addr   L88F7                           ; 860E F7 88                    ..
-        .addr   L88FE                           ; 8610 FE 88                    ..
-        .addr   L8908                           ; 8612 08 89                    ..
-        .addr   L8911                           ; 8614 11 89                    ..
-        .addr   L891A                           ; 8616 1A 89                    ..
-        .addr   L8924                           ; 8618 24 89                    $.
-        .addr   L892C                           ; 861A 2C 89                    ,.
-        .addr   L8935                           ; 861C 35 89                    5.
-        .addr   L893C                           ; 861E 3C 89                    <.
-        .addr   L8946                           ; 8620 46 89                    F.
-        .addr   L894F                           ; 8622 4F 89                    O.
-        .addr   L8956                           ; 8624 56 89                    V.
-        .addr   L895D                           ; 8626 5D 89                    ].
-        .addr   L8963                           ; 8628 63 89                    c.
-        .addr   L896B                           ; 862A 6B 89                    k.
-        .addr   L8974                           ; 862C 74 89                    t.
-        .addr   L897C                           ; 862E 7C 89                    |.
-        .addr   L8983                           ; 8630 83 89                    ..
-        .addr   L898D                           ; 8632 8D 89                    ..
-        .addr   L8997                           ; 8634 97 89                    ..
-        .addr   L899F                           ; 8636 9F 89                    ..
-        .addr   L89A7                           ; 8638 A7 89                    ..
-        .addr   L89AF                           ; 863A AF 89                    ..
-        .addr   L89B7                           ; 863C B7 89                    ..
-        .addr   L89C1                           ; 863E C1 89                    ..
-        .addr   L89C8                           ; 8640 C8 89                    ..
-        .addr   L89CF                           ; 8642 CF 89                    ..
-        .addr   L89D7                           ; 8644 D7 89                    ..
-        .addr   L89DE                           ; 8646 DE 89                    ..
-        .addr   L89E6                           ; 8648 E6 89                    ..
-        .addr   L89EE                           ; 864A EE 89                    ..
-        .addr   L89F4                           ; 864C F4 89                    ..
-        .addr   L89FB                           ; 864E FB 89                    ..
-        .addr   L8A03                           ; 8650 03 8A                    ..
-        .addr   L8A0B                           ; 8652 0B 8A                    ..
-        .addr   L8A14                           ; 8654 14 8A                    ..
-        .addr   L8A1C                           ; 8656 1C 8A                    ..
-        .addr   L8A25                           ; 8658 25 8A                    %.
-        .addr   L8A2D                           ; 865A 2D 8A                    -.
-        .addr   L8A37                           ; 865C 37 8A                    7.
-        .addr   L8A3E                           ; 865E 3E 8A                    >.
-        .addr   L8A45                           ; 8660 45 8A                    E.
-        .addr   L8A4C                           ; 8662 4C 8A                    L.
-        .addr   L8A56                           ; 8664 56 8A                    V.
-        .addr   L8A5F                           ; 8666 5F 8A                    _.
-        .addr   L8A69                           ; 8668 69 8A                    i.
-        .addr   L8A72                           ; 866A 72 8A                    r.
-        .addr   L8A78                           ; 866C 78 8A                    x.
-        .addr   L8A80                           ; 866E 80 8A                    ..
-        .addr   L8A87                           ; 8670 87 8A                    ..
-        .addr   L8A90                           ; 8672 90 8A                    ..
-        .addr   L8A99                           ; 8674 99 8A                    ..
-        .addr   L8AA3                           ; 8676 A3 8A                    ..
-        .addr   L8AAC                           ; 8678 AC 8A                    ..
+        .addr   BodyArmorNameStrIndex0          ; 8578 7A 86                    z.
+        .addr   BodyArmorNameStrIndex1          ; 857A 80 86                    ..
+        .addr   BodyArmorNameStrIndex2          ; 857C 8A 86                    ..
+        .addr   BodyArmorNameStrIndex3          ; 857E 90 86                    ..
+        .addr   BodyArmorNameStrIndex4          ; 8580 98 86                    ..
+        .addr   BodyArmorNameStrIndex5          ; 8582 A0 86                    ..
+        .addr   BodyArmorNameStrIndex6          ; 8584 AA 86                    ..
+        .addr   BodyArmorNameStrIndex7          ; 8586 B4 86                    ..
+        .addr   BodyArmorNameStrIndex8          ; 8588 BC 86                    ..
+        .addr   BodyArmorNameStrIndex9          ; 858A C5 86                    ..
+        .addr   BodyArmorNameStrIndex10         ; 858C CE 86                    ..
+        .addr   BodyArmorNameStrIndex11         ; 858E D6 86                    ..
+        .addr   BodyArmorNameStrIndex12         ; 8590 DE 86                    ..
+        .addr   BodyArmorNameStrIndex13         ; 8592 E6 86                    ..
+        .addr   BodyArmorNameStrIndex14         ; 8594 EF 86                    ..
+        .addr   BodyArmorNameStrIndex15         ; 8596 F6 86                    ..
+        .addr   BodyArmorNameStrIndex16         ; 8598 FE 86                    ..
+        .addr   BodyArmorNameStrIndex17         ; 859A 07 87                    ..
+        .addr   BodyArmorNameStrIndex18         ; 859C 11 87                    ..
+        .addr   BodyArmorNameStrIndex19         ; 859E 1A 87                    ..
+        .addr   BodyArmorNameStrIndex20         ; 85A0 22 87                    ".
+        .addr   BodyArmorNameStrIndex21         ; 85A2 2A 87                    *.
+        .addr   BodyArmorNameStrIndex22         ; 85A4 32 87                    2.
+        .addr   BodyArmorNameStrIndex23         ; 85A6 3A 87                    :.
+        .addr   BodyArmorNameStrIndex24         ; 85A8 44 87                    D.
+        .addr   BodyArmorNameStrIndex25         ; 85AA 4A 87                    J.
+        .addr   BodyArmorNameStrIndex26         ; 85AC 54 87                    T.
+        .addr   BodyArmorNameStrIndex27         ; 85AE 5C 87                    \.
+        .addr   BodyArmorNameStrIndex28         ; 85B0 64 87                    d.
+        .addr   BodyArmorNameStrIndex29         ; 85B2 6D 87                    m.
+        .addr   BodyArmorNameStrIndex30         ; 85B4 76 87                    v.
+        .addr   BodyArmorNameStrIndex31         ; 85B6 7F 87                    ..
+        .addr   BodyArmorNameStrIndex32         ; 85B8 88 87                    ..
+        .addr   BodyArmorNameStrIndex33         ; 85BA 8F 87                    ..
+        .addr   BodyArmorNameStrIndex34         ; 85BC 96 87                    ..
+        .addr   BodyArmorNameStrIndex35         ; 85BE 9F 87                    ..
+        .addr   BodyArmorNameStrIndex36         ; 85C0 A8 87                    ..
+        .addr   BodyArmorNameStrIndex37         ; 85C2 B1 87                    ..
+        .addr   BodyArmorNameStrIndex38         ; 85C4 B9 87                    ..
+        .addr   BodyArmorNameStrIndex39         ; 85C6 C3 87                    ..
+        .addr   BodyArmorNameStrIndex40         ; 85C8 CB 87                    ..
+        .addr   BodyArmorNameStrIndex41         ; 85CA D5 87                    ..
+        .addr   BodyArmorNameStrIndex42         ; 85CC DF 87                    ..
+        .addr   BodyArmorNameStrIndex43         ; 85CE E9 87                    ..
+        .addr   BodyArmorNameStrIndex44         ; 85D0 F1 87                    ..
+        .addr   BodyArmorNameStrIndex45         ; 85D2 F9 87                    ..
+        .addr   BodyArmorNameStrIndex46         ; 85D4 01 88                    ..
+        .addr   BodyArmorNameStrIndex47         ; 85D6 09 88                    ..
+        .addr   BodyArmorNameStrIndex48         ; 85D8 13 88                    ..
+        .addr   BodyArmorNameStrIndex49         ; 85DA 1B 88                    ..
+        .addr   BodyArmorNameStrIndex50         ; 85DC 25 88                    %.
+        .addr   BodyArmorNameStrIndex51         ; 85DE 2E 88                    ..
+        .addr   BodyArmorNameStrIndex52         ; 85E0 36 88                    6.
+        .addr   BodyArmorNameStrIndex53         ; 85E2 40 88                    @.
+        .addr   BodyArmorNameStrIndex54         ; 85E4 47 88                    G.
+        .addr   BodyArmorNameStrIndex55         ; 85E6 51 88                    Q.
+        .addr   BodyArmorNameStrIndex56         ; 85E8 58 88                    X.
+        .addr   BodyArmorNameStrIndex57         ; 85EA 5F 88                    _.
+        .addr   BodyArmorNameStrIndex58         ; 85EC 66 88                    f.
+        .addr   BodyArmorNameStrIndex59         ; 85EE 6D 88                    m.
+        .addr   BodyArmorNameStrIndex60         ; 85F0 77 88                    w.
+        .addr   BodyArmorNameStrIndex61         ; 85F2 80 88                    ..
+        .addr   BodyArmorNameStrIndex62         ; 85F4 8A 88                    ..
+        .addr   BodyArmorNameStrIndex63         ; 85F6 93 88                    ..
+        .addr   BodyArmorNameStrIndex64         ; 85F8 9B 88                    ..
+        .addr   BodyArmorNameStrIndex65         ; 85FA A4 88                    ..
+        .addr   BodyArmorNameStrIndex66         ; 85FC AE 88                    ..
+        .addr   BodyArmorNameStrIndex67         ; 85FE B6 88                    ..
+        .addr   BodyArmorNameStrIndex68         ; 8600 BD 88                    ..
+        .addr   BodyArmorNameStrIndex69         ; 8602 C7 88                    ..
+        .addr   BodyArmorNameStrIndex70         ; 8604 CE 88                    ..
+        .addr   BodyArmorNameStrIndex71         ; 8606 D7 88                    ..
+        .addr   BodyArmorNameStrIndex72         ; 8608 DF 88                    ..
+        .addr   BodyArmorNameStrIndex73         ; 860A E7 88                    ..
+        .addr   BodyArmorNameStrIndex74         ; 860C F0 88                    ..
+        .addr   BodyArmorNameStrIndex75         ; 860E F7 88                    ..
+        .addr   BodyArmorNameStrIndex76         ; 8610 FE 88                    ..
+        .addr   BodyArmorNameStrIndex77         ; 8612 08 89                    ..
+        .addr   BodyArmorNameStrIndex78         ; 8614 11 89                    ..
+        .addr   BodyArmorNameStrIndex79         ; 8616 1A 89                    ..
+        .addr   BodyArmorNameStrIndex80         ; 8618 24 89                    $.
+        .addr   BodyArmorNameStrIndex81         ; 861A 2C 89                    ,.
+        .addr   BodyArmorNameStrIndex82         ; 861C 35 89                    5.
+        .addr   BodyArmorNameStrIndex83         ; 861E 3C 89                    <.
+        .addr   BodyArmorNameStrIndex84         ; 8620 46 89                    F.
+        .addr   BodyArmorNameStrIndex85         ; 8622 4F 89                    O.
+        .addr   BodyArmorNameStrIndex86         ; 8624 56 89                    V.
+        .addr   BodyArmorNameStrIndex87         ; 8626 5D 89                    ].
+        .addr   BodyArmorNameStrIndex88         ; 8628 63 89                    c.
+        .addr   BodyArmorNameStrIndex89         ; 862A 6B 89                    k.
+        .addr   BodyArmorNameStrIndex90         ; 862C 74 89                    t.
+        .addr   BodyArmorNameStrIndex91         ; 862E 7C 89                    |.
+        .addr   BodyArmorNameStrIndex92         ; 8630 83 89                    ..
+        .addr   BodyArmorNameStrIndex93         ; 8632 8D 89                    ..
+        .addr   BodyArmorNameStrIndex94         ; 8634 97 89                    ..
+        .addr   BodyArmorNameStrIndex95         ; 8636 9F 89                    ..
+        .addr   BodyArmorNameStrIndex96         ; 8638 A7 89                    ..
+        .addr   BodyArmorNameStrIndex97         ; 863A AF 89                    ..
+        .addr   BodyArmorNameStrIndex98         ; 863C B7 89                    ..
+        .addr   BodyArmorNameStrIndex99         ; 863E C1 89                    ..
+        .addr   BodyArmorNameStrIndex100        ; 8640 C8 89                    ..
+        .addr   BodyArmorNameStrIndex101        ; 8642 CF 89                    ..
+        .addr   BodyArmorNameStrIndex102        ; 8644 D7 89                    ..
+        .addr   BodyArmorNameStrIndex103        ; 8646 DE 89                    ..
+        .addr   BodyArmorNameStrIndex104        ; 8648 E6 89                    ..
+        .addr   BodyArmorNameStrIndex105        ; 864A EE 89                    ..
+        .addr   BodyArmorNameStrIndex106        ; 864C F4 89                    ..
+        .addr   BodyArmorNameStrIndex107        ; 864E FB 89                    ..
+        .addr   BodyArmorNameStrIndex108        ; 8650 03 8A                    ..
+        .addr   BodyArmorNameStrIndex109        ; 8652 0B 8A                    ..
+        .addr   BodyArmorNameStrIndex110        ; 8654 14 8A                    ..
+        .addr   BodyArmorNameStrIndex111        ; 8656 1C 8A                    ..
+        .addr   BodyArmorNameStrIndex112        ; 8658 25 8A                    %.
+        .addr   BodyArmorNameStrIndex113        ; 865A 2D 8A                    -.
+        .addr   BodyArmorNameStrIndex114        ; 865C 37 8A                    7.
+        .addr   BodyArmorNameStrIndex115        ; 865E 3E 8A                    >.
+        .addr   BodyArmorNameStrIndex116        ; 8660 45 8A                    E.
+        .addr   BodyArmorNameStrIndex117        ; 8662 4C 8A                    L.
+        .addr   BodyArmorNameStrIndex118        ; 8664 56 8A                    V.
+        .addr   BodyArmorNameStrIndex119        ; 8666 5F 8A                    _.
+        .addr   BodyArmorNameStrIndex120        ; 8668 69 8A                    i.
+        .addr   BodyArmorNameStrIndex121        ; 866A 72 8A                    r.
+        .addr   BodyArmorNameStrIndex122        ; 866C 78 8A                    x.
+        .addr   BodyArmorNameStrIndex123        ; 866E 80 8A                    ..
+        .addr   BodyArmorNameStrIndex124        ; 8670 87 8A                    ..
+        .addr   BodyArmorNameStrIndex125        ; 8672 90 8A                    ..
+        .addr   BodyArmorNameStrIndex126        ; 8674 99 8A                    ..
+        .addr   BodyArmorNameStrIndex127        ; 8676 A3 8A                    ..
+        .addr   BodyArmorNameStrIndex128        ; 8678 AC 8A                    ..
 ; ----------------------------------------------------------------------------
-L867A:
+BodyArmorNameStrIndex0:
         .byte   "None"                          ; 867A 4E 6F 6E 65              None
         .byte   $0D,$0A                         ; 867E 0D 0A                    ..
-L8680:
+BodyArmorNameStrIndex1:
         .byte   "|Dragoon"                      ; 8680 7C 44 72 61 67 6F 6F 6E  |Dragoon
         .byte   $0D,$0A                         ; 8688 0D 0A                    ..
-L868A:
+BodyArmorNameStrIndex2:
         .byte   "|Law"                          ; 868A 7C 4C 61 77              |Law
         .byte   $0D,$0A                         ; 868E 0D 0A                    ..
-L8690:
+BodyArmorNameStrIndex3:
         .byte   "|Light"                        ; 8690 7C 4C 69 67 68 74        |Light
         .byte   $0D,$0A                         ; 8696 0D 0A                    ..
-L8698:
+BodyArmorNameStrIndex4:
         .byte   "|Power"                        ; 8698 7C 50 6F 77 65 72        |Power
         .byte   $0D,$0A                         ; 869E 0D 0A                    ..
-L86A0:
+BodyArmorNameStrIndex5:
         .byte   "|Hilltop"                      ; 86A0 7C 48 69 6C 6C 74 6F 70  |Hilltop
         .byte   $0D,$0A                         ; 86A8 0D 0A                    ..
-L86AA:
+BodyArmorNameStrIndex6:
         .byte   "|Midgard"                      ; 86AA 7C 4D 69 64 67 61 72 64  |Midgard
         .byte   $0D,$0A                         ; 86B2 0D 0A                    ..
-L86B4:
+BodyArmorNameStrIndex7:
         .byte   "|Alloy"                        ; 86B4 7C 41 6C 6C 6F 79        |Alloy
         .byte   $0D,$0A                         ; 86BA 0D 0A                    ..
-L86BC:
+BodyArmorNameStrIndex8:
         .byte   "|Chrono"                       ; 86BC 7C 43 68 72 6F 6E 6F     |Chrono
         .byte   $0D,$0A                         ; 86C3 0D 0A                    ..
-L86C5:
+BodyArmorNameStrIndex9:
         .byte   "|Shaman"                       ; 86C5 7C 53 68 61 6D 61 6E     |Shaman
         .byte   $0D,$0A                         ; 86CC 0D 0A                    ..
-L86CE:
+BodyArmorNameStrIndex10:
         .byte   "|Crush"                        ; 86CE 7C 43 72 75 73 68        |Crush
         .byte   $0D,$0A                         ; 86D4 0D 0A                    ..
-L86D6:
+BodyArmorNameStrIndex11:
         .byte   "|Death"                        ; 86D6 7C 44 65 61 74 68        |Death
         .byte   $0D,$0A                         ; 86DC 0D 0A                    ..
-L86DE:
+BodyArmorNameStrIndex12:
         .byte   "|Valor"                        ; 86DE 7C 56 61 6C 6F 72        |Valor
         .byte   $0D,$0A                         ; 86E4 0D 0A                    ..
-L86E6:
+BodyArmorNameStrIndex13:
         .byte   "|Silver"                       ; 86E6 7C 53 69 6C 76 65 72     |Silver
         .byte   $0D,$0A                         ; 86ED 0D 0A                    ..
-L86EF:
+BodyArmorNameStrIndex14:
         .byte   "|Gear"                         ; 86EF 7C 47 65 61 72           |Gear
         .byte   $0D,$0A                         ; 86F4 0D 0A                    ..
-L86F6:
+BodyArmorNameStrIndex15:
         .byte   "|Board"                        ; 86F6 7C 42 6F 61 72 64        |Board
         .byte   $0D,$0A                         ; 86FC 0D 0A                    ..
-L86FE:
+BodyArmorNameStrIndex16:
         .byte   "|Defend"                       ; 86FE 7C 44 65 66 65 6E 64     |Defend
         .byte   $0D,$0A                         ; 8705 0D 0A                    ..
-L8707:
+BodyArmorNameStrIndex17:
         .byte   "|Serpent"                      ; 8707 7C 53 65 72 70 65 6E 74  |Serpent
         .byte   $0D,$0A                         ; 870F 0D 0A                    ..
-L8711:
+BodyArmorNameStrIndex18:
         .byte   "|Knight"                       ; 8711 7C 4B 6E 69 67 68 74     |Knight
         .byte   $0D,$0A                         ; 8718 0D 0A                    ..
-L871A:
+BodyArmorNameStrIndex19:
         .byte   "|Demon"                        ; 871A 7C 44 65 6D 6F 6E        |Demon
         .byte   $0D,$0A                         ; 8720 0D 0A                    ..
-L8722:
+BodyArmorNameStrIndex20:
         .byte   "|Ghost"                        ; 8722 7C 47 68 6F 73 74        |Ghost
         .byte   $0D,$0A                         ; 8728 0D 0A                    ..
-L872A:
+BodyArmorNameStrIndex21:
         .byte   "|Noble"                        ; 872A 7C 4E 6F 62 6C 65        |Noble
         .byte   $0D,$0A                         ; 8730 0D 0A                    ..
-L8732:
+BodyArmorNameStrIndex22:
         .byte   "|Titan"                        ; 8732 7C 54 69 74 61 6E        |Titan
         .byte   $0D,$0A                         ; 8738 0D 0A                    ..
-L873A:
+BodyArmorNameStrIndex23:
         .byte   "|Templar"                      ; 873A 7C 54 65 6D 70 6C 61 72  |Templar
         .byte   $0D,$0A                         ; 8742 0D 0A                    ..
-L8744:
+BodyArmorNameStrIndex24:
         .byte   "|Ice"                          ; 8744 7C 49 63 65              |Ice
         .byte   $0D,$0A                         ; 8748 0D 0A                    ..
-L874A:
+BodyArmorNameStrIndex25:
         .byte   "|Warlord"                      ; 874A 7C 57 61 72 6C 6F 72 64  |Warlord
         .byte   $0D,$0A                         ; 8752 0D 0A                    ..
-L8754:
+BodyArmorNameStrIndex26:
         .byte   "|Beast"                        ; 8754 7C 42 65 61 73 74        |Beast
         .byte   $0D,$0A                         ; 875A 0D 0A                    ..
-L875C:
+BodyArmorNameStrIndex27:
         .byte   "|Evade"                        ; 875C 7C 45 76 61 64 65        |Evade
         .byte   $0D,$0A                         ; 8762 0D 0A                    ..
-L8764:
+BodyArmorNameStrIndex28:
         .byte   "|Savage"                       ; 8764 7C 53 61 76 61 67 65     |Savage
         .byte   $0D,$0A                         ; 876B 0D 0A                    ..
-L876D:
+BodyArmorNameStrIndex29:
         .byte   "|Pagoda"                       ; 876D 7C 50 61 67 6F 64 61     |Pagoda
         .byte   $0D,$0A                         ; 8774 0D 0A                    ..
-L8776:
+BodyArmorNameStrIndex30:
         .byte   "|Anneal"                       ; 8776 7C 41 6E 6E 65 61 6C     |Anneal
         .byte   $0D,$0A                         ; 877D 0D 0A                    ..
-L877F:
+BodyArmorNameStrIndex31:
         .byte   "|Avenge"                       ; 877F 7C 41 76 65 6E 67 65     |Avenge
         .byte   $0D,$0A                         ; 8786 0D 0A                    ..
-L8788:
+BodyArmorNameStrIndex32:
         .byte   "|Pelt"                         ; 8788 7C 50 65 6C 74           |Pelt
         .byte   $0D,$0A                         ; 878D 0D 0A                    ..
-L878F:
+BodyArmorNameStrIndex33:
         .byte   "|Bone"                         ; 878F 7C 42 6F 6E 65           |Bone
         .byte   $0D,$0A                         ; 8794 0D 0A                    ..
-L8796:
+BodyArmorNameStrIndex34:
         .byte   "|Turtle"                       ; 8796 7C 54 75 72 74 6C 65     |Turtle
         .byte   $0D,$0A                         ; 879D 0D 0A                    ..
-L879F:
+BodyArmorNameStrIndex35:
         .byte   "|Lamell"                       ; 879F 7C 4C 61 6D 65 6C 6C     |Lamell
         .byte   $0D,$0A                         ; 87A6 0D 0A                    ..
-L87A8:
+BodyArmorNameStrIndex36:
         .byte   "|Mirage"                       ; 87A8 7C 4D 69 72 61 67 65     |Mirage
         .byte   $0D,$0A                         ; 87AF 0D 0A                    ..
-L87B1:
+BodyArmorNameStrIndex37:
         .byte   "|Scale"                        ; 87B1 7C 53 63 61 6C 65        |Scale
         .byte   $0D,$0A                         ; 87B7 0D 0A                    ..
-L87B9:
+BodyArmorNameStrIndex38:
         .byte   "|BluDrgn"                      ; 87B9 7C 42 6C 75 44 72 67 6E  |BluDrgn
         .byte   $0D,$0A                         ; 87C1 0D 0A                    ..
-L87C3:
+BodyArmorNameStrIndex39:
         .byte   "|Green"                        ; 87C3 7C 47 72 65 65 6E        |Green
         .byte   $0D,$0A                         ; 87C9 0D 0A                    ..
-L87CB:
+BodyArmorNameStrIndex40:
         .byte   "|Polishd"                      ; 87CB 7C 50 6F 6C 69 73 68 64  |Polishd
         .byte   $0D,$0A                         ; 87D3 0D 0A                    ..
-L87D5:
+BodyArmorNameStrIndex41:
         .byte   "|Marshal"                      ; 87D5 7C 4D 61 72 73 68 61 6C  |Marshal
         .byte   $0D,$0A                         ; 87DD 0D 0A                    ..
-L87DF:
+BodyArmorNameStrIndex42:
         .byte   "|SoulEat"                      ; 87DF 7C 53 6F 75 6C 45 61 74  |SoulEat
         .byte   $0D,$0A                         ; 87E7 0D 0A                    ..
-L87E9:
+BodyArmorNameStrIndex43:
         .byte   "|Chain"                        ; 87E9 7C 43 68 61 69 6E        |Chain
         .byte   $0D,$0A                         ; 87EF 0D 0A                    ..
-L87F1:
+BodyArmorNameStrIndex44:
         .byte   "|Frost"                        ; 87F1 7C 46 72 6F 73 74        |Frost
         .byte   $0D,$0A                         ; 87F7 0D 0A                    ..
-L87F9:
+BodyArmorNameStrIndex45:
         .byte   "|Necro"                        ; 87F9 7C 4E 65 63 72 6F        |Necro
         .byte   $0D,$0A                         ; 87FF 0D 0A                    ..
-L8801:
+BodyArmorNameStrIndex46:
         .byte   "|Dream"                        ; 8801 7C 44 72 65 61 6D        |Dream
         .byte   $0D,$0A                         ; 8807 0D 0A                    ..
-L8809:
+BodyArmorNameStrIndex47:
         .byte   "|IronRib"                      ; 8809 7C 49 72 6F 6E 52 69 62  |IronRib
         .byte   $0D,$0A                         ; 8811 0D 0A                    ..
-L8813:
+BodyArmorNameStrIndex48:
         .byte   "|Blood"                        ; 8813 7C 42 6C 6F 6F 64        |Blood
         .byte   $0D,$0A                         ; 8819 0D 0A                    ..
-L881B:
+BodyArmorNameStrIndex49:
         .byte   "|Berserk"                      ; 881B 7C 42 65 72 73 65 72 6B  |Berserk
         .byte   $0D,$0A                         ; 8823 0D 0A                    ..
-L8825:
+BodyArmorNameStrIndex50:
         .byte   "|Argent"                       ; 8825 7C 41 72 67 65 6E 74     |Argent
         .byte   $0D,$0A                         ; 882C 0D 0A                    ..
-L882E:
+BodyArmorNameStrIndex51:
         .byte   "|Rohan"                        ; 882E 7C 52 6F 68 61 6E        |Rohan
         .byte   $0D,$0A                         ; 8834 0D 0A                    ..
-L8836:
+BodyArmorNameStrIndex52:
         .byte   "|Vampire"                      ; 8836 7C 56 61 6D 70 69 72 65  |Vampire
         .byte   $0D,$0A                         ; 883E 0D 0A                    ..
-L8840:
+BodyArmorNameStrIndex53:
         .byte   "|Bane"                         ; 8840 7C 42 61 6E 65           |Bane
         .byte   $0D,$0A                         ; 8845 0D 0A                    ..
-L8847:
+BodyArmorNameStrIndex54:
         .byte   "|Leather"                      ; 8847 7C 4C 65 61 74 68 65 72  |Leather
         .byte   $0D,$0A                         ; 884F 0D 0A                    ..
-L8851:
+BodyArmorNameStrIndex55:
         .byte   "|Lark"                         ; 8851 7C 4C 61 72 6B           |Lark
         .byte   $0D,$0A                         ; 8856 0D 0A                    ..
-L8858:
+BodyArmorNameStrIndex56:
         .byte   "|Pale"                         ; 8858 7C 50 61 6C 65           |Pale
         .byte   $0D,$0A                         ; 885D 0D 0A                    ..
-L885F:
+BodyArmorNameStrIndex57:
         .byte   "|Dark"                         ; 885F 7C 44 61 72 6B           |Dark
         .byte   $0D,$0A                         ; 8864 0D 0A                    ..
-L8866:
+BodyArmorNameStrIndex58:
         .byte   "|Wolf"                         ; 8866 7C 57 6F 6C 66           |Wolf
         .byte   $0D,$0A                         ; 886B 0D 0A                    ..
-L886D:
+BodyArmorNameStrIndex59:
         .byte   "|Thunder"                      ; 886D 7C 54 68 75 6E 64 65 72  |Thunder
         .byte   $0D,$0A                         ; 8875 0D 0A                    ..
-L8877:
+BodyArmorNameStrIndex60:
         .byte   "|Ordeal"                       ; 8877 7C 4F 72 64 65 61 6C     |Ordeal
         .byte   $0D,$0A                         ; 887E 0D 0A                    ..
-L8880:
+BodyArmorNameStrIndex61:
         .byte   "|Sorcery"                      ; 8880 7C 53 6F 72 63 65 72 79  |Sorcery
         .byte   $0D,$0A                         ; 8888 0D 0A                    ..
-L888A:
+BodyArmorNameStrIndex62:
         .byte   "|Shroom"                       ; 888A 7C 53 68 72 6F 6F 6D     |Shroom
         .byte   $0D,$0A                         ; 8891 0D 0A                    ..
-L8893:
+BodyArmorNameStrIndex63:
         .byte   "|Grave"                        ; 8893 7C 47 72 61 76 65        |Grave
         .byte   $0D,$0A                         ; 8899 0D 0A                    ..
-L889B:
+BodyArmorNameStrIndex64:
         .byte   "|Serene"                       ; 889B 7C 53 65 72 65 6E 65     |Serene
         .byte   $0D,$0A                         ; 88A2 0D 0A                    ..
-L88A4:
+BodyArmorNameStrIndex65:
         .byte   "|RawHide"                      ; 88A4 7C 52 61 77 48 69 64 65  |RawHide
         .byte   $0D,$0A                         ; 88AC 0D 0A                    ..
-L88AE:
+BodyArmorNameStrIndex66:
         .byte   "|Night"                        ; 88AE 7C 4E 69 67 68 74        |Night
         .byte   $0D,$0A                         ; 88B4 0D 0A                    ..
-L88B6:
+BodyArmorNameStrIndex67:
         .byte   "|Wind"                         ; 88B6 7C 57 69 6E 64           |Wind
         .byte   $0D,$0A                         ; 88BB 0D 0A                    ..
-L88BD:
+BodyArmorNameStrIndex68:
         .byte   "|Feather"                      ; 88BD 7C 46 65 61 74 68 65 72  |Feather
         .byte   $0D,$0A                         ; 88C5 0D 0A                    ..
-L88C7:
+BodyArmorNameStrIndex69:
         .byte   "|Star"                         ; 88C7 7C 53 74 61 72           |Star
         .byte   $0D,$0A                         ; 88CC 0D 0A                    ..
-L88CE:
+BodyArmorNameStrIndex70:
         .byte   "|Shadow"                       ; 88CE 7C 53 68 61 64 6F 77     |Shadow
         .byte   $0D,$0A                         ; 88D5 0D 0A                    ..
-L88D7:
+BodyArmorNameStrIndex71:
         .byte   "|Heart"                        ; 88D7 7C 48 65 61 72 74        |Heart
         .byte   $0D,$0A                         ; 88DD 0D 0A                    ..
-L88DF:
+BodyArmorNameStrIndex72:
         .byte   "|Gloom"                        ; 88DF 7C 47 6C 6F 6F 6D        |Gloom
         .byte   $0D,$0A                         ; 88E5 0D 0A                    ..
-L88E7:
+BodyArmorNameStrIndex73:
         .byte   "|Plumed"                       ; 88E7 7C 50 6C 75 6D 65 64     |Plumed
         .byte   $0D,$0A                         ; 88EE 0D 0A                    ..
-L88F0:
+BodyArmorNameStrIndex74:
         .byte   "|Bear"                         ; 88F0 7C 42 65 61 72           |Bear
         .byte   $0D,$0A                         ; 88F5 0D 0A                    ..
-L88F7:
+BodyArmorNameStrIndex75:
         .byte   "}Wave"                         ; 88F7 7D 57 61 76 65           }Wave
         .byte   $0D,$0A                         ; 88FC 0D 0A                    ..
-L88FE:
+BodyArmorNameStrIndex76:
         .byte   "}Archaic"                      ; 88FE 7D 41 72 63 68 61 69 63  }Archaic
         .byte   $0D,$0A                         ; 8906 0D 0A                    ..
-L8908:
+BodyArmorNameStrIndex77:
         .byte   "}Master"                       ; 8908 7D 4D 61 73 74 65 72     }Master
         .byte   $0D,$0A                         ; 890F 0D 0A                    ..
-L8911:
+BodyArmorNameStrIndex78:
         .byte   "}Wisdom"                       ; 8911 7D 57 69 73 64 6F 6D     }Wisdom
         .byte   $0D,$0A                         ; 8918 0D 0A                    ..
-L891A:
+BodyArmorNameStrIndex79:
         .byte   "}Chiffon"                      ; 891A 7D 43 68 69 66 66 6F 6E  }Chiffon
         .byte   $0D,$0A                         ; 8922 0D 0A                    ..
-L8924:
+BodyArmorNameStrIndex80:
         .byte   "}Demon"                        ; 8924 7D 44 65 6D 6F 6E        }Demon
         .byte   $0D,$0A                         ; 892A 0D 0A                    ..
-L892C:
+BodyArmorNameStrIndex81:
         .byte   "}Belief"                       ; 892C 7D 42 65 6C 69 65 66     }Belief
         .byte   $0D,$0A                         ; 8933 0D 0A                    ..
-L8935:
+BodyArmorNameStrIndex82:
         .byte   "}Void"                         ; 8935 7D 56 6F 69 64           }Void
         .byte   $0D,$0A                         ; 893A 0D 0A                    ..
-L893C:
+BodyArmorNameStrIndex83:
         .byte   "}Prophet"                      ; 893C 7D 50 72 6F 70 68 65 74  }Prophet
         .byte   $0D,$0A                         ; 8944 0D 0A                    ..
-L8946:
+BodyArmorNameStrIndex84:
         .byte   "}Winter"                       ; 8946 7D 57 69 6E 74 65 72     }Winter
         .byte   $0D,$0A                         ; 894D 0D 0A                    ..
-L894F:
+BodyArmorNameStrIndex85:
         .byte   "}Bone"                         ; 894F 7D 42 6F 6E 65           }Bone
         .byte   $0D,$0A                         ; 8954 0D 0A                    ..
-L8956:
+BodyArmorNameStrIndex86:
         .byte   "}Mist"                         ; 8956 7D 4D 69 73 74           }Mist
         .byte   $0D,$0A                         ; 895B 0D 0A                    ..
-L895D:
+BodyArmorNameStrIndex87:
         .byte   "}Ice"                          ; 895D 7D 49 63 65              }Ice
         .byte   $0D,$0A                         ; 8961 0D 0A                    ..
-L8963:
+BodyArmorNameStrIndex88:
         .byte   "}Royal"                        ; 8963 7D 52 6F 79 61 6C        }Royal
         .byte   $0D,$0A                         ; 8969 0D 0A                    ..
-L896B:
+BodyArmorNameStrIndex89:
         .byte   "}Legion"                       ; 896B 7D 4C 65 67 69 6F 6E     }Legion
         .byte   $0D,$0A                         ; 8972 0D 0A                    ..
-L8974:
+BodyArmorNameStrIndex90:
         .byte   "}Piety"                        ; 8974 7D 50 69 65 74 79        }Piety
         .byte   $0D,$0A                         ; 897A 0D 0A                    ..
-L897C:
+BodyArmorNameStrIndex91:
         .byte   "}Mind"                         ; 897C 7D 4D 69 6E 64           }Mind
         .byte   $0D,$0A                         ; 8981 0D 0A                    ..
-L8983:
+BodyArmorNameStrIndex92:
         .byte   "}Eternal"                      ; 8983 7D 45 74 65 72 6E 61 6C  }Eternal
         .byte   $0D,$0A                         ; 898B 0D 0A                    ..
-L898D:
+BodyArmorNameStrIndex93:
         .byte   "}Courier"                      ; 898D 7D 43 6F 75 72 69 65 72  }Courier
         .byte   $0D,$0A                         ; 8995 0D 0A                    ..
-L8997:
+BodyArmorNameStrIndex94:
         .byte   "}Lunar"                        ; 8997 7D 4C 75 6E 61 72        }Lunar
         .byte   $0D,$0A                         ; 899D 0D 0A                    ..
-L899F:
+BodyArmorNameStrIndex95:
         .byte   "}Honor"                        ; 899F 7D 48 6F 6E 6F 72        }Honor
         .byte   $0D,$0A                         ; 89A5 0D 0A                    ..
-L89A7:
+BodyArmorNameStrIndex96:
         .byte   "}Elder"                        ; 89A7 7D 45 6C 64 65 72        }Elder
         .byte   $0D,$0A                         ; 89AD 0D 0A                    ..
-L89AF:
+BodyArmorNameStrIndex97:
         .byte   "}Vital"                        ; 89AF 7D 56 69 74 61 6C        }Vital
         .byte   $0D,$0A                         ; 89B5 0D 0A                    ..
-L89B7:
+BodyArmorNameStrIndex98:
         .byte   "}Thistle"                      ; 89B7 7D 54 68 69 73 74 6C 65  }Thistle
         .byte   $0D,$0A                         ; 89BF 0D 0A                    ..
-L89C1:
+BodyArmorNameStrIndex99:
         .byte   "}Dusk"                         ; 89C1 7D 44 75 73 6B           }Dusk
         .byte   $0D,$0A                         ; 89C6 0D 0A                    ..
-L89C8:
+BodyArmorNameStrIndex100:
         .byte   "}Dark"                         ; 89C8 7D 44 61 72 6B           }Dark
         .byte   $0D,$0A                         ; 89CD 0D 0A                    ..
-L89CF:
+BodyArmorNameStrIndex101:
         .byte   "}White"                        ; 89CF 7D 57 68 69 74 65        }White
         .byte   $0D,$0A                         ; 89D5 0D 0A                    ..
-L89D7:
+BodyArmorNameStrIndex102:
         .byte   "}Warm"                         ; 89D7 7D 57 61 72 6D           }Warm
         .byte   $0D,$0A                         ; 89DC 0D 0A                    ..
-L89DE:
+BodyArmorNameStrIndex103:
         .byte   "}Sheet"                        ; 89DE 7D 53 68 65 65 74        }Sheet
         .byte   $0D,$0A                         ; 89E4 0D 0A                    ..
-L89E6:
+BodyArmorNameStrIndex104:
         .byte   "}Color"                        ; 89E6 7D 43 6F 6C 6F 72        }Color
         .byte   $0D,$0A                         ; 89EC 0D 0A                    ..
-L89EE:
+BodyArmorNameStrIndex105:
         .byte   "}Red"                          ; 89EE 7D 52 65 64              }Red
         .byte   $0D,$0A                         ; 89F2 0D 0A                    ..
-L89F4:
+BodyArmorNameStrIndex106:
         .byte   "}Snow"                         ; 89F4 7D 53 6E 6F 77           }Snow
         .byte   $0D,$0A                         ; 89F9 0D 0A                    ..
-L89FB:
+BodyArmorNameStrIndex107:
         .byte   "}Cloth"                        ; 89FB 7D 43 6C 6F 74 68        }Cloth
         .byte   $0D,$0A                         ; 8A01 0D 0A                    ..
-L8A03:
+BodyArmorNameStrIndex108:
         .byte   "}Woven"                        ; 8A03 7D 57 6F 76 65 6E        }Woven
         .byte   $0D,$0A                         ; 8A09 0D 0A                    ..
-L8A0B:
+BodyArmorNameStrIndex109:
         .byte   "}Dressy"                       ; 8A0B 7D 44 72 65 73 73 79     }Dressy
         .byte   $0D,$0A                         ; 8A12 0D 0A                    ..
-L8A14:
+BodyArmorNameStrIndex110:
         .byte   "}Linen"                        ; 8A14 7D 4C 69 6E 65 6E        }Linen
         .byte   $0D,$0A                         ; 8A1A 0D 0A                    ..
-L8A1C:
+BodyArmorNameStrIndex111:
         .byte   "}Ragged"                       ; 8A1C 7D 52 61 67 67 65 64     }Ragged
         .byte   $0D,$0A                         ; 8A23 0D 0A                    ..
-L8A25:
+BodyArmorNameStrIndex112:
         .byte   "}Plain"                        ; 8A25 7D 50 6C 61 69 6E        }Plain
         .byte   $0D,$0A                         ; 8A2B 0D 0A                    ..
-L8A2D:
+BodyArmorNameStrIndex113:
         .byte   "}Burning"                      ; 8A2D 7D 42 75 72 6E 69 6E 67  }Burning
         .byte   $0D,$0A                         ; 8A35 0D 0A                    ..
-L8A37:
+BodyArmorNameStrIndex114:
         .byte   "}Soft"                         ; 8A37 7D 53 6F 66 74           }Soft
         .byte   $0D,$0A                         ; 8A3C 0D 0A                    ..
-L8A3E:
+BodyArmorNameStrIndex115:
         .byte   "}Silk"                         ; 8A3E 7D 53 69 6C 6B           }Silk
         .byte   $0D,$0A                         ; 8A43 0D 0A                    ..
-L8A45:
+BodyArmorNameStrIndex116:
         .byte   "}Dual"                         ; 8A45 7D 44 75 61 6C           }Dual
         .byte   $0D,$0A                         ; 8A4A 0D 0A                    ..
-L8A4C:
+BodyArmorNameStrIndex117:
         .byte   "}Student"                      ; 8A4C 7D 53 74 75 64 65 6E 74  }Student
         .byte   $0D,$0A                         ; 8A54 0D 0A                    ..
-L8A56:
+BodyArmorNameStrIndex118:
         .byte   "}Wizard"                       ; 8A56 7D 57 69 7A 61 72 64     }Wizard
         .byte   $0D,$0A                         ; 8A5D 0D 0A                    ..
-L8A5F:
+BodyArmorNameStrIndex119:
         .byte   "}Knitted"                      ; 8A5F 7D 4B 6E 69 74 74 65 64  }Knitted
         .byte   $0D,$0A                         ; 8A67 0D 0A                    ..
-L8A69:
+BodyArmorNameStrIndex120:
         .byte   "}Flaxen"                       ; 8A69 7D 46 6C 61 78 65 6E     }Flaxen
         .byte   $0D,$0A                         ; 8A70 0D 0A                    ..
-L8A72:
+BodyArmorNameStrIndex121:
         .byte   "}Web"                          ; 8A72 7D 57 65 62              }Web
         .byte   $0D,$0A                         ; 8A76 0D 0A                    ..
-L8A78:
+BodyArmorNameStrIndex122:
         .byte   "}Twill"                        ; 8A78 7D 54 77 69 6C 6C        }Twill
         .byte   $0D,$0A                         ; 8A7E 0D 0A                    ..
-L8A80:
+BodyArmorNameStrIndex123:
         .byte   "}Monk"                         ; 8A80 7D 4D 6F 6E 6B           }Monk
         .byte   $0D,$0A                         ; 8A85 0D 0A                    ..
-L8A87:
+BodyArmorNameStrIndex124:
         .byte   "}Cotton"                       ; 8A87 7D 43 6F 74 74 6F 6E     }Cotton
         .byte   $0D,$0A                         ; 8A8E 0D 0A                    ..
-L8A90:
+BodyArmorNameStrIndex125:
         .byte   "}Canvas"                       ; 8A90 7D 43 61 6E 76 61 73     }Canvas
         .byte   $0D,$0A                         ; 8A97 0D 0A                    ..
-L8A99:
+BodyArmorNameStrIndex126:
         .byte   "}Apprent"                      ; 8A99 7D 41 70 70 72 65 6E 74  }Apprent
         .byte   $0D,$0A                         ; 8AA1 0D 0A                    ..
-L8AA3:
+BodyArmorNameStrIndex127:
         .byte   "}Novice"                       ; 8AA3 7D 4E 6F 76 69 63 65     }Novice
         .byte   $0D,$0A                         ; 8AAA 0D 0A                    ..
-L8AAC:
+BodyArmorNameStrIndex128:
         .byte   "}Scholar"                      ; 8AAC 7D 53 63 68 6F 6C 61 72  }Scholar
         .byte   $0D,$0A,$FF,$FF                 ; 8AB4 0D 0A FF FF              ....
 ; ----------------------------------------------------------------------------
 BraceletNameStr:
-        .addr   L8B8C                           ; 8AB8 8C 8B                    ..
-        .addr   L8B92                           ; 8ABA 92 8B                    ..
-        .addr   L8B9A                           ; 8ABC 9A 8B                    ..
-        .addr   L8BA2                           ; 8ABE A2 8B                    ..
-        .addr   L8BA8                           ; 8AC0 A8 8B                    ..
-        .addr   L8BB1                           ; 8AC2 B1 8B                    ..
-        .addr   L8BB9                           ; 8AC4 B9 8B                    ..
-        .addr   L8BC2                           ; 8AC6 C2 8B                    ..
-        .addr   L8BCB                           ; 8AC8 CB 8B                    ..
-        .addr   L8BD4                           ; 8ACA D4 8B                    ..
-        .addr   L8BDE                           ; 8ACC DE 8B                    ..
-        .addr   L8BE6                           ; 8ACE E6 8B                    ..
-        .addr   L8BEF                           ; 8AD0 EF 8B                    ..
-        .addr   L8BF7                           ; 8AD2 F7 8B                    ..
-        .addr   L8C01                           ; 8AD4 01 8C                    ..
-        .addr   L8C0A                           ; 8AD6 0A 8C                    ..
-        .addr   L8C13                           ; 8AD8 13 8C                    ..
-        .addr   L8C1B                           ; 8ADA 1B 8C                    ..
-        .addr   L8C22                           ; 8ADC 22 8C                    ".
-        .addr   L8C2C                           ; 8ADE 2C 8C                    ,.
-        .addr   L8C36                           ; 8AE0 36 8C                    6.
-        .addr   L8C3F                           ; 8AE2 3F 8C                    ?.
-        .addr   L8C49                           ; 8AE4 49 8C                    I.
-        .addr   L8C50                           ; 8AE6 50 8C                    P.
-        .addr   L8C58                           ; 8AE8 58 8C                    X.
-        .addr   L8C5F                           ; 8AEA 5F 8C                    _.
-        .addr   L8C68                           ; 8AEC 68 8C                    h.
-        .addr   L8C72                           ; 8AEE 72 8C                    r.
-        .addr   L8C79                           ; 8AF0 79 8C                    y.
-        .addr   L8C83                           ; 8AF2 83 8C                    ..
-        .addr   L8C8B                           ; 8AF4 8B 8C                    ..
-        .addr   L8C93                           ; 8AF6 93 8C                    ..
-        .addr   L8C9B                           ; 8AF8 9B 8C                    ..
-        .addr   L8CA4                           ; 8AFA A4 8C                    ..
-        .addr   L8CAD                           ; 8AFC AD 8C                    ..
-        .addr   L8CB4                           ; 8AFE B4 8C                    ..
-        .addr   L8CBB                           ; 8B00 BB 8C                    ..
-        .addr   L8CC3                           ; 8B02 C3 8C                    ..
-        .addr   L8CCB                           ; 8B04 CB 8C                    ..
-        .addr   L8CD3                           ; 8B06 D3 8C                    ..
-        .addr   L8CDD                           ; 8B08 DD 8C                    ..
-        .addr   L8CE6                           ; 8B0A E6 8C                    ..
-        .addr   L8CED                           ; 8B0C ED 8C                    ..
-        .addr   L8CF6                           ; 8B0E F6 8C                    ..
-        .addr   L8CFE                           ; 8B10 FE 8C                    ..
-        .addr   L8D07                           ; 8B12 07 8D                    ..
-        .addr   L8D10                           ; 8B14 10 8D                    ..
-        .addr   L8D18                           ; 8B16 18 8D                    ..
-        .addr   L8D21                           ; 8B18 21 8D                    !.
-        .addr   L8D2A                           ; 8B1A 2A 8D                    *.
-        .addr   L8D33                           ; 8B1C 33 8D                    3.
-        .addr   L8D3D                           ; 8B1E 3D 8D                    =.
-        .addr   L8D46                           ; 8B20 46 8D                    F.
-        .addr   L8D50                           ; 8B22 50 8D                    P.
-        .addr   L8D59                           ; 8B24 59 8D                    Y.
-        .addr   L8D62                           ; 8B26 62 8D                    b.
-        .addr   L8D6B                           ; 8B28 6B 8D                    k.
-        .addr   L8D72                           ; 8B2A 72 8D                    r.
-        .addr   L8D7B                           ; 8B2C 7B 8D                    {.
-        .addr   L8D82                           ; 8B2E 82 8D                    ..
-        .addr   L8D8B                           ; 8B30 8B 8D                    ..
-        .addr   L8D92                           ; 8B32 92 8D                    ..
-        .addr   L8D98                           ; 8B34 98 8D                    ..
-        .addr   L8DA2                           ; 8B36 A2 8D                    ..
-        .addr   L8DAC                           ; 8B38 AC 8D                    ..
-        .addr   L8DB4                           ; 8B3A B4 8D                    ..
-        .addr   L8DBB                           ; 8B3C BB 8D                    ..
-        .addr   L8DC3                           ; 8B3E C3 8D                    ..
-        .addr   L8DCB                           ; 8B40 CB 8D                    ..
-        .addr   L8DD5                           ; 8B42 D5 8D                    ..
-        .addr   L8DDC                           ; 8B44 DC 8D                    ..
-        .addr   L8DE6                           ; 8B46 E6 8D                    ..
-        .addr   L8DEF                           ; 8B48 EF 8D                    ..
-        .addr   L8DF7                           ; 8B4A F7 8D                    ..
-        .addr   L8DFE                           ; 8B4C FE 8D                    ..
-        .addr   L8E05                           ; 8B4E 05 8E                    ..
-        .addr   L8E0F                           ; 8B50 0F 8E                    ..
-        .addr   L8E18                           ; 8B52 18 8E                    ..
-        .addr   L8E21                           ; 8B54 21 8E                    !.
-        .addr   L8E28                           ; 8B56 28 8E                    (.
-        .addr   L8E31                           ; 8B58 31 8E                    1.
-        .addr   L8E3A                           ; 8B5A 3A 8E                    :.
-        .addr   L8E42                           ; 8B5C 42 8E                    B.
-        .addr   L8E48                           ; 8B5E 48 8E                    H.
-        .addr   L8E4F                           ; 8B60 4F 8E                    O.
-        .addr   L8E59                           ; 8B62 59 8E                    Y.
-        .addr   L8E63                           ; 8B64 63 8E                    c.
-        .addr   L8E6A                           ; 8B66 6A 8E                    j.
-        .addr   L8E72                           ; 8B68 72 8E                    r.
-        .addr   L8E7C                           ; 8B6A 7C 8E                    |.
-        .addr   L8E84                           ; 8B6C 84 8E                    ..
-        .addr   L8E8A                           ; 8B6E 8A 8E                    ..
-        .addr   L8E92                           ; 8B70 92 8E                    ..
-        .addr   L8E9A                           ; 8B72 9A 8E                    ..
-        .addr   L8EA3                           ; 8B74 A3 8E                    ..
-        .addr   L8EAA                           ; 8B76 AA 8E                    ..
-        .addr   L8EB3                           ; 8B78 B3 8E                    ..
-        .addr   L8EBC                           ; 8B7A BC 8E                    ..
-        .addr   L8EC5                           ; 8B7C C5 8E                    ..
-        .addr   L8ECF                           ; 8B7E CF 8E                    ..
-        .addr   L8ED8                           ; 8B80 D8 8E                    ..
-        .addr   L8EE2                           ; 8B82 E2 8E                    ..
-        .addr   L8EEA                           ; 8B84 EA 8E                    ..
-        .addr   L8EF3                           ; 8B86 F3 8E                    ..
-        .addr   L8EFD                           ; 8B88 FD 8E                    ..
-        .addr   L8F04                           ; 8B8A 04 8F                    ..
+        .addr   BraceletNameStrIndex0           ; 8AB8 8C 8B                    ..
+        .addr   BraceletNameStrIndex1           ; 8ABA 92 8B                    ..
+        .addr   BraceletNameStrIndex2           ; 8ABC 9A 8B                    ..
+        .addr   BraceletNameStrIndex3           ; 8ABE A2 8B                    ..
+        .addr   BraceletNameStrIndex4           ; 8AC0 A8 8B                    ..
+        .addr   BraceletNameStrIndex5           ; 8AC2 B1 8B                    ..
+        .addr   BraceletNameStrIndex6           ; 8AC4 B9 8B                    ..
+        .addr   BraceletNameStrIndex7           ; 8AC6 C2 8B                    ..
+        .addr   BraceletNameStrIndex8           ; 8AC8 CB 8B                    ..
+        .addr   BraceletNameStrIndex9           ; 8ACA D4 8B                    ..
+        .addr   BraceletNameStrIndex10          ; 8ACC DE 8B                    ..
+        .addr   BraceletNameStrIndex11          ; 8ACE E6 8B                    ..
+        .addr   BraceletNameStrIndex12          ; 8AD0 EF 8B                    ..
+        .addr   BraceletNameStrIndex13          ; 8AD2 F7 8B                    ..
+        .addr   BraceletNameStrIndex14          ; 8AD4 01 8C                    ..
+        .addr   BraceletNameStrIndex15          ; 8AD6 0A 8C                    ..
+        .addr   BraceletNameStrIndex16          ; 8AD8 13 8C                    ..
+        .addr   BraceletNameStrIndex17          ; 8ADA 1B 8C                    ..
+        .addr   BraceletNameStrIndex18          ; 8ADC 22 8C                    ".
+        .addr   BraceletNameStrIndex19          ; 8ADE 2C 8C                    ,.
+        .addr   BraceletNameStrIndex20          ; 8AE0 36 8C                    6.
+        .addr   BraceletNameStrIndex21          ; 8AE2 3F 8C                    ?.
+        .addr   BraceletNameStrIndex22          ; 8AE4 49 8C                    I.
+        .addr   BraceletNameStrIndex23          ; 8AE6 50 8C                    P.
+        .addr   BraceletNameStrIndex24          ; 8AE8 58 8C                    X.
+        .addr   BraceletNameStrIndex25          ; 8AEA 5F 8C                    _.
+        .addr   BraceletNameStrIndex26          ; 8AEC 68 8C                    h.
+        .addr   BraceletNameStrIndex27          ; 8AEE 72 8C                    r.
+        .addr   BraceletNameStrIndex28          ; 8AF0 79 8C                    y.
+        .addr   BraceletNameStrIndex29          ; 8AF2 83 8C                    ..
+        .addr   BraceletNameStrIndex30          ; 8AF4 8B 8C                    ..
+        .addr   BraceletNameStrIndex31          ; 8AF6 93 8C                    ..
+        .addr   BraceletNameStrIndex32          ; 8AF8 9B 8C                    ..
+        .addr   BraceletNameStrIndex33          ; 8AFA A4 8C                    ..
+        .addr   BraceletNameStrIndex34          ; 8AFC AD 8C                    ..
+        .addr   BraceletNameStrIndex35          ; 8AFE B4 8C                    ..
+        .addr   BraceletNameStrIndex36          ; 8B00 BB 8C                    ..
+        .addr   BraceletNameStrIndex37          ; 8B02 C3 8C                    ..
+        .addr   BraceletNameStrIndex38          ; 8B04 CB 8C                    ..
+        .addr   BraceletNameStrIndex39          ; 8B06 D3 8C                    ..
+        .addr   BraceletNameStrIndex40          ; 8B08 DD 8C                    ..
+        .addr   BraceletNameStrIndex41          ; 8B0A E6 8C                    ..
+        .addr   BraceletNameStrIndex42          ; 8B0C ED 8C                    ..
+        .addr   BraceletNameStrIndex43          ; 8B0E F6 8C                    ..
+        .addr   BraceletNameStrIndex44          ; 8B10 FE 8C                    ..
+        .addr   BraceletNameStrIndex45          ; 8B12 07 8D                    ..
+        .addr   BraceletNameStrIndex46          ; 8B14 10 8D                    ..
+        .addr   BraceletNameStrIndex47          ; 8B16 18 8D                    ..
+        .addr   BraceletNameStrIndex48          ; 8B18 21 8D                    !.
+        .addr   BraceletNameStrIndex49          ; 8B1A 2A 8D                    *.
+        .addr   BraceletNameStrIndex50          ; 8B1C 33 8D                    3.
+        .addr   BraceletNameStrIndex51          ; 8B1E 3D 8D                    =.
+        .addr   BraceletNameStrIndex52          ; 8B20 46 8D                    F.
+        .addr   BraceletNameStrIndex53          ; 8B22 50 8D                    P.
+        .addr   BraceletNameStrIndex54          ; 8B24 59 8D                    Y.
+        .addr   BraceletNameStrIndex55          ; 8B26 62 8D                    b.
+        .addr   BraceletNameStrIndex56          ; 8B28 6B 8D                    k.
+        .addr   BraceletNameStrIndex57          ; 8B2A 72 8D                    r.
+        .addr   BraceletNameStrIndex58          ; 8B2C 7B 8D                    {.
+        .addr   BraceletNameStrIndex59          ; 8B2E 82 8D                    ..
+        .addr   BraceletNameStrIndex60          ; 8B30 8B 8D                    ..
+        .addr   BraceletNameStrIndex61          ; 8B32 92 8D                    ..
+        .addr   BraceletNameStrIndex62          ; 8B34 98 8D                    ..
+        .addr   BraceletNameStrIndex63          ; 8B36 A2 8D                    ..
+        .addr   BraceletNameStrIndex64          ; 8B38 AC 8D                    ..
+        .addr   BraceletNameStrIndex65          ; 8B3A B4 8D                    ..
+        .addr   BraceletNameStrIndex66          ; 8B3C BB 8D                    ..
+        .addr   BraceletNameStrIndex67          ; 8B3E C3 8D                    ..
+        .addr   BraceletNameStrIndex68          ; 8B40 CB 8D                    ..
+        .addr   BraceletNameStrIndex69          ; 8B42 D5 8D                    ..
+        .addr   BraceletNameStrIndex70          ; 8B44 DC 8D                    ..
+        .addr   BraceletNameStrIndex71          ; 8B46 E6 8D                    ..
+        .addr   BraceletNameStrIndex72          ; 8B48 EF 8D                    ..
+        .addr   BraceletNameStrIndex73          ; 8B4A F7 8D                    ..
+        .addr   BraceletNameStrIndex74          ; 8B4C FE 8D                    ..
+        .addr   BraceletNameStrIndex75          ; 8B4E 05 8E                    ..
+        .addr   BraceletNameStrIndex76          ; 8B50 0F 8E                    ..
+        .addr   BraceletNameStrIndex77          ; 8B52 18 8E                    ..
+        .addr   BraceletNameStrIndex78          ; 8B54 21 8E                    !.
+        .addr   BraceletNameStrIndex79          ; 8B56 28 8E                    (.
+        .addr   BraceletNameStrIndex80          ; 8B58 31 8E                    1.
+        .addr   BraceletNameStrIndex81          ; 8B5A 3A 8E                    :.
+        .addr   BraceletNameStrIndex82          ; 8B5C 42 8E                    B.
+        .addr   BraceletNameStrIndex83          ; 8B5E 48 8E                    H.
+        .addr   BraceletNameStrIndex84          ; 8B60 4F 8E                    O.
+        .addr   BraceletNameStrIndex85          ; 8B62 59 8E                    Y.
+        .addr   BraceletNameStrIndex86          ; 8B64 63 8E                    c.
+        .addr   BraceletNameStrIndex87          ; 8B66 6A 8E                    j.
+        .addr   BraceletNameStrIndex88          ; 8B68 72 8E                    r.
+        .addr   BraceletNameStrIndex89          ; 8B6A 7C 8E                    |.
+        .addr   BraceletNameStrIndex90          ; 8B6C 84 8E                    ..
+        .addr   BraceletNameStrIndex91          ; 8B6E 8A 8E                    ..
+        .addr   BraceletNameStrIndex92          ; 8B70 92 8E                    ..
+        .addr   BraceletNameStrIndex93          ; 8B72 9A 8E                    ..
+        .addr   BraceletNameStrIndex94          ; 8B74 A3 8E                    ..
+        .addr   BraceletNameStrIndex95          ; 8B76 AA 8E                    ..
+        .addr   BraceletNameStrIndex96          ; 8B78 B3 8E                    ..
+        .addr   BraceletNameStrIndex97          ; 8B7A BC 8E                    ..
+        .addr   BraceletNameStrIndex98          ; 8B7C C5 8E                    ..
+        .addr   BraceletNameStrIndex99          ; 8B7E CF 8E                    ..
+        .addr   BraceletNameStrIndex100         ; 8B80 D8 8E                    ..
+        .addr   BraceletNameStrIndex101         ; 8B82 E2 8E                    ..
+        .addr   BraceletNameStrIndex102         ; 8B84 EA 8E                    ..
+        .addr   BraceletNameStrIndex103         ; 8B86 F3 8E                    ..
+        .addr   BraceletNameStrIndex104         ; 8B88 FD 8E                    ..
+        .addr   BraceletNameStrIndex105         ; 8B8A 04 8F                    ..
 ; ----------------------------------------------------------------------------
-L8B8C:
+BraceletNameStrIndex0:
         .byte   "None"                          ; 8B8C 4E 6F 6E 65              None
         .byte   $0D,$0A                         ; 8B90 0D 0A                    ..
-L8B92:
+BraceletNameStrIndex1:
         .byte   "~Cloud"                        ; 8B92 7E 43 6C 6F 75 64        ~Cloud
         .byte   $0D,$0A                         ; 8B98 0D 0A                    ..
-L8B9A:
+BraceletNameStrIndex2:
         .byte   "~Arson"                        ; 8B9A 7E 41 72 73 6F 6E        ~Arson
         .byte   $0D,$0A                         ; 8BA0 0D 0A                    ..
-L8BA2:
+BraceletNameStrIndex3:
         .byte   "~Law"                          ; 8BA2 7E 4C 61 77              ~Law
         .byte   $0D,$0A                         ; 8BA6 0D 0A                    ..
-L8BA8:
+BraceletNameStrIndex4:
         .byte   "~Chitin"                       ; 8BA8 7E 43 68 69 74 69 6E     ~Chitin
         .byte   $0D,$0A                         ; 8BAF 0D 0A                    ..
-L8BB1:
+BraceletNameStrIndex5:
         .byte   "~Light"                        ; 8BB1 7E 4C 69 67 68 74        ~Light
         .byte   $0D,$0A                         ; 8BB7 0D 0A                    ..
-L8BB9:
+BraceletNameStrIndex6:
         .byte   "~Puppet"                       ; 8BB9 7E 50 75 70 70 65 74     ~Puppet
         .byte   $0D,$0A                         ; 8BC0 0D 0A                    ..
-L8BC2:
+BraceletNameStrIndex7:
         .byte   "~Winged"                       ; 8BC2 7E 57 69 6E 67 65 64     ~Winged
         .byte   $0D,$0A                         ; 8BC9 0D 0A                    ..
-L8BCB:
+BraceletNameStrIndex8:
         .byte   "~Silver"                       ; 8BCB 7E 53 69 6C 76 65 72     ~Silver
         .byte   $0D,$0A                         ; 8BD2 0D 0A                    ..
-L8BD4:
+BraceletNameStrIndex9:
         .byte   "~Eternal"                      ; 8BD4 7E 45 74 65 72 6E 61 6C  ~Eternal
         .byte   $0D,$0A                         ; 8BDC 0D 0A                    ..
-L8BDE:
+BraceletNameStrIndex10:
         .byte   "~Valor"                        ; 8BDE 7E 56 61 6C 6F 72        ~Valor
         .byte   $0D,$0A                         ; 8BE4 0D 0A                    ..
-L8BE6:
+BraceletNameStrIndex11:
         .byte   "~Elemnt"                       ; 8BE6 7E 45 6C 65 6D 6E 74     ~Elemnt
         .byte   $0D,$0A                         ; 8BED 0D 0A                    ..
-L8BEF:
+BraceletNameStrIndex12:
         .byte   "~Wrath"                        ; 8BEF 7E 57 72 61 74 68        ~Wrath
         .byte   $0D,$0A                         ; 8BF5 0D 0A                    ..
-L8BF7:
+BraceletNameStrIndex13:
         .byte   "~Command"                      ; 8BF7 7E 43 6F 6D 6D 61 6E 64  ~Command
         .byte   $0D,$0A                         ; 8BFF 0D 0A                    ..
-L8C01:
+BraceletNameStrIndex14:
         .byte   "~Emblem"                       ; 8C01 7E 45 6D 62 6C 65 6D     ~Emblem
         .byte   $0D,$0A                         ; 8C08 0D 0A                    ..
-L8C0A:
+BraceletNameStrIndex15:
         .byte   "~Halite"                       ; 8C0A 7E 48 61 6C 69 74 65     ~Halite
         .byte   $0D,$0A                         ; 8C11 0D 0A                    ..
-L8C13:
+BraceletNameStrIndex16:
         .byte   "~Envoy"                        ; 8C13 7E 45 6E 76 6F 79        ~Envoy
         .byte   $0D,$0A                         ; 8C19 0D 0A                    ..
-L8C1B:
+BraceletNameStrIndex17:
         .byte   "~Easy"                         ; 8C1B 7E 45 61 73 79           ~Easy
         .byte   $0D,$0A                         ; 8C20 0D 0A                    ..
-L8C22:
+BraceletNameStrIndex18:
         .byte   "~Defiant"                      ; 8C22 7E 44 65 66 69 61 6E 74  ~Defiant
         .byte   $0D,$0A                         ; 8C2A 0D 0A                    ..
-L8C2C:
+BraceletNameStrIndex19:
         .byte   "~General"                      ; 8C2C 7E 47 65 6E 65 72 61 6C  ~General
         .byte   $0D,$0A                         ; 8C34 0D 0A                    ..
-L8C36:
+BraceletNameStrIndex20:
         .byte   "~Valued"                       ; 8C36 7E 56 61 6C 75 65 64     ~Valued
         .byte   $0D,$0A                         ; 8C3D 0D 0A                    ..
-L8C3F:
+BraceletNameStrIndex21:
         .byte   "~Destryr"                      ; 8C3F 7E 44 65 73 74 72 79 72  ~Destryr
         .byte   $0D,$0A                         ; 8C47 0D 0A                    ..
-L8C49:
+BraceletNameStrIndex22:
         .byte   "~Fire"                         ; 8C49 7E 46 69 72 65           ~Fire
         .byte   $0D,$0A                         ; 8C4E 0D 0A                    ..
-L8C50:
+BraceletNameStrIndex23:
         .byte   "~Dream"                        ; 8C50 7E 44 72 65 61 6D        ~Dream
         .byte   $0D,$0A                         ; 8C56 0D 0A                    ..
-L8C58:
+BraceletNameStrIndex24:
         .byte   "~Dual"                         ; 8C58 7E 44 75 61 6C           ~Dual
         .byte   $0D,$0A                         ; 8C5D 0D 0A                    ..
-L8C5F:
+BraceletNameStrIndex25:
         .byte   "~Vortex"                       ; 8C5F 7E 56 6F 72 74 65 78     ~Vortex
         .byte   $0D,$0A                         ; 8C66 0D 0A                    ..
-L8C68:
+BraceletNameStrIndex26:
         .byte   "~Crescnt"                      ; 8C68 7E 43 72 65 73 63 6E 74  ~Crescnt
         .byte   $0D,$0A                         ; 8C70 0D 0A                    ..
-L8C72:
+BraceletNameStrIndex27:
         .byte   "~Wind"                         ; 8C72 7E 57 69 6E 64           ~Wind
         .byte   $0D,$0A                         ; 8C77 0D 0A                    ..
-L8C79:
+BraceletNameStrIndex28:
         .byte   "~Miracle"                      ; 8C79 7E 4D 69 72 61 63 6C 65  ~Miracle
         .byte   $0D,$0A                         ; 8C81 0D 0A                    ..
-L8C83:
+BraceletNameStrIndex29:
         .byte   "~Color"                        ; 8C83 7E 43 6F 6C 6F 72        ~Color
         .byte   $0D,$0A                         ; 8C89 0D 0A                    ..
-L8C8B:
+BraceletNameStrIndex30:
         .byte   "~Scute"                        ; 8C8B 7E 53 63 75 74 65        ~Scute
         .byte   $0D,$0A                         ; 8C91 0D 0A                    ..
-L8C93:
+BraceletNameStrIndex31:
         .byte   "~Heavy"                        ; 8C93 7E 48 65 61 76 79        ~Heavy
         .byte   $0D,$0A                         ; 8C99 0D 0A                    ..
-L8C9B:
+BraceletNameStrIndex32:
         .byte   "~Strong"                       ; 8C9B 7E 53 74 72 6F 6E 67     ~Strong
         .byte   $0D,$0A                         ; 8CA2 0D 0A                    ..
-L8CA4:
+BraceletNameStrIndex33:
         .byte   "~Bright"                       ; 8CA4 7E 42 72 69 67 68 74     ~Bright
         .byte   $0D,$0A                         ; 8CAB 0D 0A                    ..
-L8CAD:
+BraceletNameStrIndex34:
         .byte   "~Bear"                         ; 8CAD 7E 42 65 61 72           ~Bear
         .byte   $0D,$0A                         ; 8CB2 0D 0A                    ..
-L8CB4:
+BraceletNameStrIndex35:
         .byte   "~Mail"                         ; 8CB4 7E 4D 61 69 6C           ~Mail
         .byte   $0D,$0A                         ; 8CB9 0D 0A                    ..
-L8CBB:
+BraceletNameStrIndex36:
         .byte   "~Scale"                        ; 8CBB 7E 53 63 61 6C 65        ~Scale
         .byte   $0D,$0A                         ; 8CC1 0D 0A                    ..
-L8CC3:
+BraceletNameStrIndex37:
         .byte   "~Loose"                        ; 8CC3 7E 4C 6F 6F 73 65        ~Loose
         .byte   $0D,$0A                         ; 8CC9 0D 0A                    ..
-L8CCB:
+BraceletNameStrIndex38:
         .byte   "~Chain"                        ; 8CCB 7E 43 68 61 69 6E        ~Chain
         .byte   $0D,$0A                         ; 8CD1 0D 0A                    ..
-L8CD3:
+BraceletNameStrIndex39:
         .byte   "~Control"                      ; 8CD3 7E 43 6F 6E 74 72 6F 6C  ~Control
         .byte   $0D,$0A                         ; 8CDB 0D 0A                    ..
-L8CDD:
+BraceletNameStrIndex40:
         .byte   "~Connor"                       ; 8CDD 7E 43 6F 6E 6E 6F 72     ~Connor
         .byte   $0D,$0A                         ; 8CE4 0D 0A                    ..
-L8CE6:
+BraceletNameStrIndex41:
         .byte   "~Bane"                         ; 8CE6 7E 42 61 6E 65           ~Bane
         .byte   $0D,$0A                         ; 8CEB 0D 0A                    ..
-L8CED:
+BraceletNameStrIndex42:
         .byte   "~Killer"                       ; 8CED 7E 4B 69 6C 6C 65 72     ~Killer
         .byte   $0D,$0A                         ; 8CF4 0D 0A                    ..
-L8CF6:
+BraceletNameStrIndex43:
         .byte   "~World"                        ; 8CF6 7E 57 6F 72 6C 64        ~World
         .byte   $0D,$0A                         ; 8CFC 0D 0A                    ..
-L8CFE:
+BraceletNameStrIndex44:
         .byte   "~Wanton"                       ; 8CFE 7E 57 61 6E 74 6F 6E     ~Wanton
         .byte   $0D,$0A                         ; 8D05 0D 0A                    ..
-L8D07:
+BraceletNameStrIndex45:
         .byte   "~Aeolus"                       ; 8D07 7E 41 65 6F 6C 75 73     ~Aeolus
         .byte   $0D,$0A                         ; 8D0E 0D 0A                    ..
-L8D10:
+BraceletNameStrIndex46:
         .byte   "~Ghost"                        ; 8D10 7E 47 68 6F 73 74        ~Ghost
         .byte   $0D,$0A                         ; 8D16 0D 0A                    ..
-L8D18:
+BraceletNameStrIndex47:
         .byte   "~Canine"                       ; 8D18 7E 43 61 6E 69 6E 65     ~Canine
         .byte   $0D,$0A                         ; 8D1F 0D 0A                    ..
-L8D21:
+BraceletNameStrIndex48:
         .byte   "~Kensei"                       ; 8D21 7E 4B 65 6E 73 65 69     ~Kensei
         .byte   $0D,$0A                         ; 8D28 0D 0A                    ..
-L8D2A:
+BraceletNameStrIndex49:
         .byte   "~Raptor"                       ; 8D2A 7E 52 61 70 74 6F 72     ~Raptor
         .byte   $0D,$0A                         ; 8D31 0D 0A                    ..
-L8D33:
+BraceletNameStrIndex50:
         .byte   "~Baptist"                      ; 8D33 7E 42 61 70 74 69 73 74  ~Baptist
         .byte   $0D,$0A                         ; 8D3B 0D 0A                    ..
-L8D3D:
+BraceletNameStrIndex51:
         .byte   "~Slayer"                       ; 8D3D 7E 53 6C 61 79 65 72     ~Slayer
         .byte   $0D,$0A                         ; 8D44 0D 0A                    ..
-L8D46:
+BraceletNameStrIndex52:
         .byte   "~Thunder"                      ; 8D46 7E 54 68 75 6E 64 65 72  ~Thunder
         .byte   $0D,$0A                         ; 8D4E 0D 0A                    ..
-L8D50:
+BraceletNameStrIndex53:
         .byte   "~Travel"                       ; 8D50 7E 54 72 61 76 65 6C     ~Travel
         .byte   $0D,$0A                         ; 8D57 0D 0A                    ..
-L8D59:
+BraceletNameStrIndex54:
         .byte   "~Voodoo"                       ; 8D59 7E 56 6F 6F 64 6F 6F     ~Voodoo
         .byte   $0D,$0A                         ; 8D60 0D 0A                    ..
-L8D62:
+BraceletNameStrIndex55:
         .byte   "~Lamell"                       ; 8D62 7E 4C 61 6D 65 6C 6C     ~Lamell
         .byte   $0D,$0A                         ; 8D69 0D 0A                    ..
-L8D6B:
+BraceletNameStrIndex56:
         .byte   "~Fate"                         ; 8D6B 7E 46 61 74 65           ~Fate
         .byte   $0D,$0A                         ; 8D70 0D 0A                    ..
-L8D72:
+BraceletNameStrIndex57:
         .byte   "~Lizard"                       ; 8D72 7E 4C 69 7A 61 72 64     ~Lizard
         .byte   $0D,$0A                         ; 8D79 0D 0A                    ..
-L8D7B:
+BraceletNameStrIndex58:
         .byte   "~Moss"                         ; 8D7B 7E 4D 6F 73 73           ~Moss
         .byte   $0D,$0A                         ; 8D80 0D 0A                    ..
-L8D82:
+BraceletNameStrIndex59:
         .byte   "~Shadow"                       ; 8D82 7E 53 68 61 64 6F 77     ~Shadow
         .byte   $0D,$0A                         ; 8D89 0D 0A                    ..
-L8D8B:
+BraceletNameStrIndex60:
         .byte   "~Kuma"                         ; 8D8B 7E 4B 75 6D 61           ~Kuma
         .byte   $0D,$0A                         ; 8D90 0D 0A                    ..
-L8D92:
+BraceletNameStrIndex61:
         .byte   "~War"                          ; 8D92 7E 57 61 72              ~War
         .byte   $0D,$0A                         ; 8D96 0D 0A                    ..
-L8D98:
+BraceletNameStrIndex62:
         .byte   "~Bristle"                      ; 8D98 7E 42 72 69 73 74 6C 65  ~Bristle
         .byte   $0D,$0A                         ; 8DA0 0D 0A                    ..
-L8DA2:
+BraceletNameStrIndex63:
         .byte   "~Archaic"                      ; 8DA2 7E 41 72 63 68 61 69 63  ~Archaic
         .byte   $0D,$0A                         ; 8DAA 0D 0A                    ..
-L8DAC:
+BraceletNameStrIndex64:
         .byte   "~Demon"                        ; 8DAC 7E 44 65 6D 6F 6E        ~Demon
         .byte   $0D,$0A                         ; 8DB2 0D 0A                    ..
-L8DB4:
+BraceletNameStrIndex65:
         .byte   "~Mana"                         ; 8DB4 7E 4D 61 6E 61           ~Mana
         .byte   $0D,$0A                         ; 8DB9 0D 0A                    ..
-L8DBB:
+BraceletNameStrIndex66:
         .byte   "~Storm"                        ; 8DBB 7E 53 74 6F 72 6D        ~Storm
         .byte   $0D,$0A                         ; 8DC1 0D 0A                    ..
-L8DC3:
+BraceletNameStrIndex67:
         .byte   "~Magic"                        ; 8DC3 7E 4D 61 67 69 63        ~Magic
         .byte   $0D,$0A                         ; 8DC9 0D 0A                    ..
-L8DCB:
+BraceletNameStrIndex68:
         .byte   "~Prophet"                      ; 8DCB 7E 50 72 6F 70 68 65 74  ~Prophet
         .byte   $0D,$0A                         ; 8DD3 0D 0A                    ..
-L8DD5:
+BraceletNameStrIndex69:
         .byte   "~Mare"                         ; 8DD5 7E 4D 61 72 65           ~Mare
         .byte   $0D,$0A                         ; 8DDA 0D 0A                    ..
-L8DDC:
+BraceletNameStrIndex70:
         .byte   "~Acclaim"                      ; 8DDC 7E 41 63 63 6C 61 69 6D  ~Acclaim
         .byte   $0D,$0A                         ; 8DE4 0D 0A                    ..
-L8DE6:
+BraceletNameStrIndex71:
         .byte   "~Valley"                       ; 8DE6 7E 56 61 6C 6C 65 79     ~Valley
         .byte   $0D,$0A                         ; 8DED 0D 0A                    ..
-L8DEF:
+BraceletNameStrIndex72:
         .byte   "~Ashen"                        ; 8DEF 7E 41 73 68 65 6E        ~Ashen
         .byte   $0D,$0A                         ; 8DF5 0D 0A                    ..
-L8DF7:
+BraceletNameStrIndex73:
         .byte   "~Hope"                         ; 8DF7 7E 48 6F 70 65           ~Hope
         .byte   $0D,$0A                         ; 8DFC 0D 0A                    ..
-L8DFE:
+BraceletNameStrIndex74:
         .byte   "~Mist"                         ; 8DFE 7E 4D 69 73 74           ~Mist
         .byte   $0D,$0A                         ; 8E03 0D 0A                    ..
-L8E05:
+BraceletNameStrIndex75:
         .byte   "~Binding"                      ; 8E05 7E 42 69 6E 64 69 6E 67  ~Binding
         .byte   $0D,$0A                         ; 8E0D 0D 0A                    ..
-L8E0F:
+BraceletNameStrIndex76:
         .byte   "~Barren"                       ; 8E0F 7E 42 61 72 72 65 6E     ~Barren
         .byte   $0D,$0A                         ; 8E16 0D 0A                    ..
-L8E18:
+BraceletNameStrIndex77:
         .byte   "~Cleric"                       ; 8E18 7E 43 6C 65 72 69 63     ~Cleric
         .byte   $0D,$0A                         ; 8E1F 0D 0A                    ..
-L8E21:
+BraceletNameStrIndex78:
         .byte   "~Fang"                         ; 8E21 7E 46 61 6E 67           ~Fang
         .byte   $0D,$0A                         ; 8E26 0D 0A                    ..
-L8E28:
+BraceletNameStrIndex79:
         .byte   "~Devout"                       ; 8E28 7E 44 65 76 6F 75 74     ~Devout
         .byte   $0D,$0A                         ; 8E2F 0D 0A                    ..
-L8E31:
+BraceletNameStrIndex80:
         .byte   "~Sacred"                       ; 8E31 7E 53 61 63 72 65 64     ~Sacred
         .byte   $0D,$0A                         ; 8E38 0D 0A                    ..
-L8E3A:
+BraceletNameStrIndex81:
         .byte   "~Stone"                        ; 8E3A 7E 53 74 6F 6E 65        ~Stone
         .byte   $0D,$0A                         ; 8E40 0D 0A                    ..
-L8E42:
+BraceletNameStrIndex82:
         .byte   "~Sky"                          ; 8E42 7E 53 6B 79              ~Sky
         .byte   $0D,$0A                         ; 8E46 0D 0A                    ..
-L8E48:
+BraceletNameStrIndex83:
         .byte   "~Mage"                         ; 8E48 7E 4D 61 67 65           ~Mage
         .byte   $0D,$0A                         ; 8E4D 0D 0A                    ..
-L8E4F:
+BraceletNameStrIndex84:
         .byte   "~Vampire"                      ; 8E4F 7E 56 61 6D 70 69 72 65  ~Vampire
         .byte   $0D,$0A                         ; 8E57 0D 0A                    ..
-L8E59:
+BraceletNameStrIndex85:
         .byte   "~Courier"                      ; 8E59 7E 43 6F 75 72 69 65 72  ~Courier
         .byte   $0D,$0A                         ; 8E61 0D 0A                    ..
-L8E63:
+BraceletNameStrIndex86:
         .byte   "~Rain"                         ; 8E63 7E 52 61 69 6E           ~Rain
         .byte   $0D,$0A                         ; 8E68 0D 0A                    ..
-L8E6A:
+BraceletNameStrIndex87:
         .byte   "~Lunar"                        ; 8E6A 7E 4C 75 6E 61 72        ~Lunar
         .byte   $0D,$0A                         ; 8E70 0D 0A                    ..
-L8E72:
+BraceletNameStrIndex88:
         .byte   "~Natural"                      ; 8E72 7E 4E 61 74 75 72 61 6C  ~Natural
         .byte   $0D,$0A                         ; 8E7A 0D 0A                    ..
-L8E7C:
+BraceletNameStrIndex89:
         .byte   "~Sheet"                        ; 8E7C 7E 53 68 65 65 74        ~Sheet
         .byte   $0D,$0A                         ; 8E82 0D 0A                    ..
-L8E84:
+BraceletNameStrIndex90:
         .byte   "~Red"                          ; 8E84 7E 52 65 64              ~Red
         .byte   $0D,$0A                         ; 8E88 0D 0A                    ..
-L8E8A:
+BraceletNameStrIndex91:
         .byte   "~Thick"                        ; 8E8A 7E 54 68 69 63 6B        ~Thick
         .byte   $0D,$0A                         ; 8E90 0D 0A                    ..
-L8E92:
+BraceletNameStrIndex92:
         .byte   "~Woven"                        ; 8E92 7E 57 6F 76 65 6E        ~Woven
         .byte   $0D,$0A                         ; 8E98 0D 0A                    ..
-L8E9A:
+BraceletNameStrIndex93:
         .byte   "~Flaxen"                       ; 8E9A 7E 46 6C 61 78 65 6E     ~Flaxen
         .byte   $0D,$0A                         ; 8EA1 0D 0A                    ..
-L8EA3:
+BraceletNameStrIndex94:
         .byte   "~Firm"                         ; 8EA3 7E 46 69 72 6D           ~Firm
         .byte   $0D,$0A                         ; 8EA8 0D 0A                    ..
-L8EAA:
+BraceletNameStrIndex95:
         .byte   "~Dressy"                       ; 8EAA 7E 44 72 65 73 73 79     ~Dressy
         .byte   $0D,$0A                         ; 8EB1 0D 0A                    ..
-L8EB3:
+BraceletNameStrIndex96:
         .byte   "~Ragged"                       ; 8EB3 7E 52 61 67 67 65 64     ~Ragged
         .byte   $0D,$0A                         ; 8EBA 0D 0A                    ..
-L8EBC:
+BraceletNameStrIndex97:
         .byte   "~Broken"                       ; 8EBC 7E 42 72 6F 6B 65 6E     ~Broken
         .byte   $0D,$0A                         ; 8EC3 0D 0A                    ..
-L8EC5:
+BraceletNameStrIndex98:
         .byte   "~Hunting"                      ; 8EC5 7E 48 75 6E 74 69 6E 67  ~Hunting
         .byte   $0D,$0A                         ; 8ECD 0D 0A                    ..
-L8ECF:
+BraceletNameStrIndex99:
         .byte   "~Novice"                       ; 8ECF 7E 4E 6F 76 69 63 65     ~Novice
         .byte   $0D,$0A                         ; 8ED6 0D 0A                    ..
-L8ED8:
+BraceletNameStrIndex100:
         .byte   "~Assasin"                      ; 8ED8 7E 41 73 73 61 73 69 6E  ~Assasin
         .byte   $0D,$0A                         ; 8EE0 0D 0A                    ..
-L8EE2:
+BraceletNameStrIndex101:
         .byte   "~Thief"                        ; 8EE2 7E 54 68 69 65 66        ~Thief
         .byte   $0D,$0A                         ; 8EE8 0D 0A                    ..
-L8EEA:
+BraceletNameStrIndex102:
         .byte   "~Cotton"                       ; 8EEA 7E 43 6F 74 74 6F 6E     ~Cotton
         .byte   $0D,$0A                         ; 8EF1 0D 0A                    ..
-L8EF3:
+BraceletNameStrIndex103:
         .byte   "~Servant"                      ; 8EF3 7E 53 65 72 76 61 6E 74  ~Servant
         .byte   $0D,$0A                         ; 8EFB 0D 0A                    ..
-L8EFD:
+BraceletNameStrIndex104:
         .byte   "~Monk"                         ; 8EFD 7E 4D 6F 6E 6B           ~Monk
         .byte   $0D,$0A                         ; 8F02 0D 0A                    ..
-L8F04:
+BraceletNameStrIndex105:
         .byte   "~Recruit"                      ; 8F04 7E 52 65 63 72 75 69 74  ~Recruit
         .byte   $0D,$0A,$FF,$FF                 ; 8F0C 0D 0A FF FF              ....
 ; ----------------------------------------------------------------------------
 RingNameStr:
-        .addr   L8F86                           ; 8F10 86 8F                    ..
-        .addr   L8F8C                           ; 8F12 8C 8F                    ..
-        .addr   L8F96                           ; 8F14 96 8F                    ..
-        .addr   L8F9F                           ; 8F16 9F 8F                    ..
-        .addr   L8FA6                           ; 8F18 A6 8F                    ..
-        .addr   L8FAF                           ; 8F1A AF 8F                    ..
-        .addr   L8FB9                           ; 8F1C B9 8F                    ..
-        .addr   L8FC3                           ; 8F1E C3 8F                    ..
-        .addr   L8FCD                           ; 8F20 CD 8F                    ..
-        .addr   L8FD5                           ; 8F22 D5 8F                    ..
-        .addr   L8FDE                           ; 8F24 DE 8F                    ..
-        .addr   L8FE6                           ; 8F26 E6 8F                    ..
-        .addr   L8FEF                           ; 8F28 EF 8F                    ..
-        .addr   L8FF8                           ; 8F2A F8 8F                    ..
-        .addr   L9000                           ; 8F2C 00 90                    ..
-        .addr   L900A                           ; 8F2E 0A 90                    ..
-        .addr   L9013                           ; 8F30 13 90                    ..
-        .addr   L901C                           ; 8F32 1C 90                    ..
-        .addr   L9024                           ; 8F34 24 90                    $.
-        .addr   L902C                           ; 8F36 2C 90                    ,.
-        .addr   L9035                           ; 8F38 35 90                    5.
-        .addr   L903D                           ; 8F3A 3D 90                    =.
-        .addr   L9044                           ; 8F3C 44 90                    D.
-        .addr   L904C                           ; 8F3E 4C 90                    L.
-        .addr   L9054                           ; 8F40 54 90                    T.
-        .addr   L905D                           ; 8F42 5D 90                    ].
-        .addr   L9065                           ; 8F44 65 90                    e.
-        .addr   L906D                           ; 8F46 6D 90                    m.
-        .addr   L9074                           ; 8F48 74 90                    t.
-        .addr   L907B                           ; 8F4A 7B 90                    {.
-        .addr   L9083                           ; 8F4C 83 90                    ..
-        .addr   L908B                           ; 8F4E 8B 90                    ..
-        .addr   L9093                           ; 8F50 93 90                    ..
-        .addr   L909C                           ; 8F52 9C 90                    ..
-        .addr   L90A3                           ; 8F54 A3 90                    ..
-        .addr   L90AC                           ; 8F56 AC 90                    ..
-        .addr   L90B5                           ; 8F58 B5 90                    ..
-        .addr   L90BD                           ; 8F5A BD 90                    ..
-        .addr   L90C4                           ; 8F5C C4 90                    ..
-        .addr   L90CE                           ; 8F5E CE 90                    ..
-        .addr   L90D8                           ; 8F60 D8 90                    ..
-        .addr   L90DF                           ; 8F62 DF 90                    ..
-        .addr   L90E6                           ; 8F64 E6 90                    ..
-        .addr   L90ED                           ; 8F66 ED 90                    ..
-        .addr   L90F4                           ; 8F68 F4 90                    ..
-        .addr   L90FD                           ; 8F6A FD 90                    ..
-        .addr   L9105                           ; 8F6C 05 91                    ..
-        .addr   L910C                           ; 8F6E 0C 91                    ..
-        .addr   L9113                           ; 8F70 13 91                    ..
-        .addr   L911D                           ; 8F72 1D 91                    ..
-        .addr   L9127                           ; 8F74 27 91                    '.
-        .addr   L9130                           ; 8F76 30 91                    0.
-        .addr   L9137                           ; 8F78 37 91                    7.
-        .addr   L913E                           ; 8F7A 3E 91                    >.
-        .addr   L9147                           ; 8F7C 47 91                    G.
-        .addr   L9150                           ; 8F7E 50 91                    P.
-        .addr   L9158                           ; 8F80 58 91                    X.
-        .addr   L9161                           ; 8F82 61 91                    a.
-        .addr   L916B                           ; 8F84 6B 91                    k.
+        .addr   RingNameStrIndex0               ; 8F10 86 8F                    ..
+        .addr   RingNameStrIndex1               ; 8F12 8C 8F                    ..
+        .addr   RingNameStrIndex2               ; 8F14 96 8F                    ..
+        .addr   RingNameStrIndex3               ; 8F16 9F 8F                    ..
+        .addr   RingNameStrIndex4               ; 8F18 A6 8F                    ..
+        .addr   RingNameStrIndex5               ; 8F1A AF 8F                    ..
+        .addr   RingNameStrIndex6               ; 8F1C B9 8F                    ..
+        .addr   RingNameStrIndex7               ; 8F1E C3 8F                    ..
+        .addr   RingNameStrIndex8               ; 8F20 CD 8F                    ..
+        .addr   RingNameStrIndex9               ; 8F22 D5 8F                    ..
+        .addr   RingNameStrIndex10              ; 8F24 DE 8F                    ..
+        .addr   RingNameStrIndex11              ; 8F26 E6 8F                    ..
+        .addr   RingNameStrIndex12              ; 8F28 EF 8F                    ..
+        .addr   RingNameStrIndex13              ; 8F2A F8 8F                    ..
+        .addr   RingNameStrIndex14              ; 8F2C 00 90                    ..
+        .addr   RingNameStrIndex15              ; 8F2E 0A 90                    ..
+        .addr   RingNameStrIndex16              ; 8F30 13 90                    ..
+        .addr   RingNameStrIndex17              ; 8F32 1C 90                    ..
+        .addr   RingNameStrIndex18              ; 8F34 24 90                    $.
+        .addr   RingNameStrIndex19              ; 8F36 2C 90                    ,.
+        .addr   RingNameStrIndex20              ; 8F38 35 90                    5.
+        .addr   RingNameStrIndex21              ; 8F3A 3D 90                    =.
+        .addr   RingNameStrIndex22              ; 8F3C 44 90                    D.
+        .addr   RingNameStrIndex23              ; 8F3E 4C 90                    L.
+        .addr   RingNameStrIndex24              ; 8F40 54 90                    T.
+        .addr   RingNameStrIndex25              ; 8F42 5D 90                    ].
+        .addr   RingNameStrIndex26              ; 8F44 65 90                    e.
+        .addr   RingNameStrIndex27              ; 8F46 6D 90                    m.
+        .addr   RingNameStrIndex28              ; 8F48 74 90                    t.
+        .addr   RingNameStrIndex29              ; 8F4A 7B 90                    {.
+        .addr   RingNameStrIndex30              ; 8F4C 83 90                    ..
+        .addr   RingNameStrIndex31              ; 8F4E 8B 90                    ..
+        .addr   RingNameStrIndex32              ; 8F50 93 90                    ..
+        .addr   RingNameStrIndex33              ; 8F52 9C 90                    ..
+        .addr   RingNameStrIndex34              ; 8F54 A3 90                    ..
+        .addr   RingNameStrIndex35              ; 8F56 AC 90                    ..
+        .addr   RingNameStrIndex36              ; 8F58 B5 90                    ..
+        .addr   RingNameStrIndex37              ; 8F5A BD 90                    ..
+        .addr   RingNameStrIndex38              ; 8F5C C4 90                    ..
+        .addr   RingNameStrIndex39              ; 8F5E CE 90                    ..
+        .addr   RingNameStrIndex40              ; 8F60 D8 90                    ..
+        .addr   RingNameStrIndex41              ; 8F62 DF 90                    ..
+        .addr   RingNameStrIndex42              ; 8F64 E6 90                    ..
+        .addr   RingNameStrIndex43              ; 8F66 ED 90                    ..
+        .addr   RingNameStrIndex44              ; 8F68 F4 90                    ..
+        .addr   RingNameStrIndex45              ; 8F6A FD 90                    ..
+        .addr   RingNameStrIndex46              ; 8F6C 05 91                    ..
+        .addr   RingNameStrIndex47              ; 8F6E 0C 91                    ..
+        .addr   RingNameStrIndex48              ; 8F70 13 91                    ..
+        .addr   RingNameStrIndex49              ; 8F72 1D 91                    ..
+        .addr   RingNameStrIndex50              ; 8F74 27 91                    '.
+        .addr   RingNameStrIndex51              ; 8F76 30 91                    0.
+        .addr   RingNameStrIndex52              ; 8F78 37 91                    7.
+        .addr   RingNameStrIndex53              ; 8F7A 3E 91                    >.
+        .addr   RingNameStrIndex54              ; 8F7C 47 91                    G.
+        .addr   RingNameStrIndex55              ; 8F7E 50 91                    P.
+        .addr   RingNameStrIndex56              ; 8F80 58 91                    X.
+        .addr   RingNameStrIndex57              ; 8F82 61 91                    a.
+        .addr   RingNameStrIndex58              ; 8F84 6B 91                    k.
 ; ----------------------------------------------------------------------------
-L8F86:
+RingNameStrIndex0:
         .byte   "None"                          ; 8F86 4E 6F 6E 65              None
         .byte   $0D,$0A                         ; 8F8A 0D 0A                    ..
-L8F8C:
+RingNameStrIndex1:
         .byte   $7F                             ; 8F8C 7F                       .
         .byte   "Blessed"                       ; 8F8D 42 6C 65 73 73 65 64     Blessed
         .byte   $0D,$0A                         ; 8F94 0D 0A                    ..
-L8F96:
+RingNameStrIndex2:
         .byte   $7F                             ; 8F96 7F                       .
         .byte   "Change"                        ; 8F97 43 68 61 6E 67 65        Change
         .byte   $0D,$0A                         ; 8F9D 0D 0A                    ..
-L8F9F:
+RingNameStrIndex3:
         .byte   $7F                             ; 8F9F 7F                       .
         .byte   "Hide"                          ; 8FA0 48 69 64 65              Hide
         .byte   $0D,$0A                         ; 8FA4 0D 0A                    ..
-L8FA6:
+RingNameStrIndex4:
         .byte   $7F                             ; 8FA6 7F                       .
         .byte   "Strong"                        ; 8FA7 53 74 72 6F 6E 67        Strong
         .byte   $0D,$0A                         ; 8FAD 0D 0A                    ..
-L8FAF:
+RingNameStrIndex5:
         .byte   $7F                             ; 8FAF 7F                       .
         .byte   "Eclipse"                       ; 8FB0 45 63 6C 69 70 73 65     Eclipse
         .byte   $0D,$0A                         ; 8FB7 0D 0A                    ..
-L8FB9:
+RingNameStrIndex6:
         .byte   $7F                             ; 8FB9 7F                       .
         .byte   "Barrier"                       ; 8FBA 42 61 72 72 69 65 72     Barrier
         .byte   $0D,$0A                         ; 8FC1 0D 0A                    ..
-L8FC3:
+RingNameStrIndex7:
         .byte   $7F                             ; 8FC3 7F                       .
         .byte   "Harmony"                       ; 8FC4 48 61 72 6D 6F 6E 79     Harmony
         .byte   $0D,$0A                         ; 8FCB 0D 0A                    ..
-L8FCD:
+RingNameStrIndex8:
         .byte   $7F                             ; 8FCD 7F                       .
         .byte   "Pulse"                         ; 8FCE 50 75 6C 73 65           Pulse
         .byte   $0D,$0A                         ; 8FD3 0D 0A                    ..
-L8FD5:
+RingNameStrIndex9:
         .byte   $7F                             ; 8FD5 7F                       .
         .byte   "Sentry"                        ; 8FD6 53 65 6E 74 72 79        Sentry
         .byte   $0D,$0A                         ; 8FDC 0D 0A                    ..
-L8FDE:
+RingNameStrIndex10:
         .byte   $7F                             ; 8FDE 7F                       .
         .byte   "Guard"                         ; 8FDF 47 75 61 72 64           Guard
         .byte   $0D,$0A                         ; 8FE4 0D 0A                    ..
-L8FE6:
+RingNameStrIndex11:
         .byte   $7F                             ; 8FE6 7F                       .
         .byte   "Oracle"                        ; 8FE7 4F 72 61 63 6C 65        Oracle
         .byte   $0D,$0A                         ; 8FED 0D 0A                    ..
-L8FEF:
+RingNameStrIndex12:
         .byte   $7F                             ; 8FEF 7F                       .
         .byte   "Statue"                        ; 8FF0 53 74 61 74 75 65        Statue
         .byte   $0D,$0A                         ; 8FF6 0D 0A                    ..
-L8FF8:
+RingNameStrIndex13:
         .byte   $7F                             ; 8FF8 7F                       .
         .byte   "Frost"                         ; 8FF9 46 72 6F 73 74           Frost
         .byte   $0D,$0A                         ; 8FFE 0D 0A                    ..
-L9000:
+RingNameStrIndex14:
         .byte   $7F                             ; 9000 7F                       .
         .byte   "Redmoon"                       ; 9001 52 65 64 6D 6F 6F 6E     Redmoon
         .byte   $0D,$0A                         ; 9008 0D 0A                    ..
-L900A:
+RingNameStrIndex15:
         .byte   $7F                             ; 900A 7F                       .
         .byte   "Spirit"                        ; 900B 53 70 69 72 69 74        Spirit
         .byte   $0D,$0A                         ; 9011 0D 0A                    ..
-L9013:
+RingNameStrIndex16:
         .byte   $7F                             ; 9013 7F                       .
         .byte   "Roland"                        ; 9014 52 6F 6C 61 6E 64        Roland
         .byte   $0D,$0A                         ; 901A 0D 0A                    ..
-L901C:
+RingNameStrIndex17:
         .byte   $7F                             ; 901C 7F                       .
         .byte   "Flame"                         ; 901D 46 6C 61 6D 65           Flame
         .byte   $0D,$0A                         ; 9022 0D 0A                    ..
-L9024:
+RingNameStrIndex18:
         .byte   $7F                             ; 9024 7F                       .
         .byte   "Noble"                         ; 9025 4E 6F 62 6C 65           Noble
         .byte   $0D,$0A                         ; 902A 0D 0A                    ..
-L902C:
+RingNameStrIndex19:
         .byte   $7F                             ; 902C 7F                       .
         .byte   "Mirage"                        ; 902D 4D 69 72 61 67 65        Mirage
         .byte   $0D,$0A                         ; 9033 0D 0A                    ..
-L9035:
+RingNameStrIndex20:
         .byte   $7F                             ; 9035 7F                       .
         .byte   "Royal"                         ; 9036 52 6F 79 61 6C           Royal
         .byte   $0D,$0A                         ; 903B 0D 0A                    ..
-L903D:
+RingNameStrIndex21:
         .byte   $7F                             ; 903D 7F                       .
         .byte   "Pyro"                          ; 903E 50 79 72 6F              Pyro
         .byte   $0D,$0A                         ; 9042 0D 0A                    ..
-L9044:
+RingNameStrIndex22:
         .byte   $7F                             ; 9044 7F                       .
         .byte   "Flame"                         ; 9045 46 6C 61 6D 65           Flame
         .byte   $0D,$0A                         ; 904A 0D 0A                    ..
-L904C:
+RingNameStrIndex23:
         .byte   $7F                             ; 904C 7F                       .
         .byte   "Blaze"                         ; 904D 42 6C 61 7A 65           Blaze
         .byte   $0D,$0A                         ; 9052 0D 0A                    ..
-L9054:
+RingNameStrIndex24:
         .byte   $7F                             ; 9054 7F                       .
         .byte   "Wooden"                        ; 9055 57 6F 6F 64 65 6E        Wooden
         .byte   $0D,$0A                         ; 905B 0D 0A                    ..
-L905D:
+RingNameStrIndex25:
         .byte   $7F                             ; 905D 7F                       .
         .byte   "Tiger"                         ; 905E 54 69 67 65 72           Tiger
         .byte   $0D,$0A                         ; 9063 0D 0A                    ..
-L9065:
+RingNameStrIndex26:
         .byte   $7F                             ; 9065 7F                       .
         .byte   "Sarge"                         ; 9066 53 61 72 67 65           Sarge
         .byte   $0D,$0A                         ; 906B 0D 0A                    ..
-L906D:
+RingNameStrIndex27:
         .byte   $7F                             ; 906D 7F                       .
         .byte   "Warm"                          ; 906E 57 61 72 6D              Warm
         .byte   $0D,$0A                         ; 9072 0D 0A                    ..
-L9074:
+RingNameStrIndex28:
         .byte   $7F                             ; 9074 7F                       .
         .byte   "Thin"                          ; 9075 54 68 69 6E              Thin
         .byte   $0D,$0A                         ; 9079 0D 0A                    ..
-L907B:
+RingNameStrIndex29:
         .byte   $7F                             ; 907B 7F                       .
         .byte   "Woven"                         ; 907C 57 6F 76 65 6E           Woven
         .byte   $0D,$0A                         ; 9081 0D 0A                    ..
-L9083:
+RingNameStrIndex30:
         .byte   $7F                             ; 9083 7F                       .
         .byte   "Grunt"                         ; 9084 47 72 75 6E 74           Grunt
         .byte   $0D,$0A                         ; 9089 0D 0A                    ..
-L908B:
+RingNameStrIndex31:
         .byte   $7F                             ; 908B 7F                       .
         .byte   "Demon"                         ; 908C 44 65 6D 6F 6E           Demon
         .byte   $0D,$0A                         ; 9091 0D 0A                    ..
-L9093:
+RingNameStrIndex32:
         .byte   $7F                             ; 9093 7F                       .
         .byte   "Cortex"                        ; 9094 43 6F 72 74 65 78        Cortex
         .byte   $0D,$0A                         ; 909A 0D 0A                    ..
-L909C:
+RingNameStrIndex33:
         .byte   $7F                             ; 909C 7F                       .
         .byte   "Mage"                          ; 909D 4D 61 67 65              Mage
         .byte   $0D,$0A                         ; 90A1 0D 0A                    ..
-L90A3:
+RingNameStrIndex34:
         .byte   $7F                             ; 90A3 7F                       .
         .byte   "Simple"                        ; 90A4 53 69 6D 70 6C 65        Simple
         .byte   $0D,$0A                         ; 90AA 0D 0A                    ..
-L90AC:
+RingNameStrIndex35:
         .byte   $7F                             ; 90AC 7F                       .
         .byte   "Emblem"                        ; 90AD 45 6D 62 6C 65 6D        Emblem
         .byte   $0D,$0A                         ; 90B3 0D 0A                    ..
-L90B5:
+RingNameStrIndex36:
         .byte   $7F                             ; 90B5 7F                       .
         .byte   "Troop"                         ; 90B6 54 72 6F 6F 70           Troop
         .byte   $0D,$0A                         ; 90BB 0D 0A                    ..
-L90BD:
+RingNameStrIndex37:
         .byte   $7F                             ; 90BD 7F                       .
         .byte   "Lore"                          ; 90BE 4C 6F 72 65              Lore
         .byte   $0D,$0A                         ; 90C2 0D 0A                    ..
-L90C4:
+RingNameStrIndex38:
         .byte   $7F                             ; 90C4 7F                       .
         .byte   "Militry"                       ; 90C5 4D 69 6C 69 74 72 79     Militry
         .byte   $0D,$0A                         ; 90CC 0D 0A                    ..
-L90CE:
+RingNameStrIndex39:
         .byte   $7F                             ; 90CE 7F                       .
         .byte   "Soldier"                       ; 90CF 53 6F 6C 64 69 65 72     Soldier
         .byte   $0D,$0A                         ; 90D6 0D 0A                    ..
-L90D8:
+RingNameStrIndex40:
         .byte   $7F                             ; 90D8 7F                       .
         .byte   "Wave"                          ; 90D9 57 61 76 65              Wave
         .byte   $0D,$0A                         ; 90DD 0D 0A                    ..
-L90DF:
+RingNameStrIndex41:
         .byte   $7F                             ; 90DF 7F                       .
         .byte   "Spun"                          ; 90E0 53 70 75 6E              Spun
         .byte   $0D,$0A                         ; 90E4 0D 0A                    ..
-L90E6:
+RingNameStrIndex42:
         .byte   $7F                             ; 90E6 7F                       .
         .byte   "Worn"                          ; 90E7 57 6F 72 6E              Worn
         .byte   $0D,$0A                         ; 90EB 0D 0A                    ..
-L90ED:
+RingNameStrIndex43:
         .byte   $7F                             ; 90ED 7F                       .
         .byte   "Torn"                          ; 90EE 54 6F 72 6E              Torn
         .byte   $0D,$0A                         ; 90F2 0D 0A                    ..
-L90F4:
+RingNameStrIndex44:
         .byte   $7F                             ; 90F4 7F                       .
         .byte   "Daylit"                        ; 90F5 44 61 79 6C 69 74        Daylit
         .byte   $0D,$0A                         ; 90FB 0D 0A                    ..
-L90FD:
+RingNameStrIndex45:
         .byte   $7F                             ; 90FD 7F                       .
         .byte   "Mount"                         ; 90FE 4D 6F 75 6E 74           Mount
         .byte   $0D,$0A                         ; 9103 0D 0A                    ..
-L9105:
+RingNameStrIndex46:
         .byte   $7F                             ; 9105 7F                       .
         .byte   "Work"                          ; 9106 57 6F 72 6B              Work
         .byte   $0D,$0A                         ; 910A 0D 0A                    ..
-L910C:
+RingNameStrIndex47:
         .byte   $7F                             ; 910C 7F                       .
         .byte   "Reed"                          ; 910D 52 65 65 64              Reed
         .byte   $0D,$0A                         ; 9111 0D 0A                    ..
-L9113:
+RingNameStrIndex48:
         .byte   $7F                             ; 9113 7F                       .
         .byte   "Hunting"                       ; 9114 48 75 6E 74 69 6E 67     Hunting
         .byte   $0D,$0A                         ; 911B 0D 0A                    ..
-L911D:
+RingNameStrIndex49:
         .byte   $7F                             ; 911D 7F                       .
         .byte   "Natural"                       ; 911E 4E 61 74 75 72 61 6C     Natural
         .byte   $0D,$0A                         ; 9125 0D 0A                    ..
-L9127:
+RingNameStrIndex50:
         .byte   $7F                             ; 9127 7F                       .
         .byte   "Native"                        ; 9128 4E 61 74 69 76 65        Native
         .byte   $0D,$0A                         ; 912E 0D 0A                    ..
-L9130:
+RingNameStrIndex51:
         .byte   $7F                             ; 9130 7F                       .
         .byte   "Snow"                          ; 9131 53 6E 6F 77              Snow
         .byte   $0D,$0A                         ; 9135 0D 0A                    ..
-L9137:
+RingNameStrIndex52:
         .byte   $7F                             ; 9137 7F                       .
         .byte   "Wool"                          ; 9138 57 6F 6F 6C              Wool
         .byte   $0D,$0A                         ; 913C 0D 0A                    ..
-L913E:
+RingNameStrIndex53:
         .byte   $7F                             ; 913E 7F                       .
         .byte   "Flaxen"                        ; 913F 46 6C 61 78 65 6E        Flaxen
         .byte   $0D,$0A                         ; 9145 0D 0A                    ..
-L9147:
+RingNameStrIndex54:
         .byte   $7F                             ; 9147 7F                       .
         .byte   "Primal"                        ; 9148 50 72 69 6D 61 6C        Primal
         .byte   $0D,$0A                         ; 914E 0D 0A                    ..
-L9150:
+RingNameStrIndex55:
         .byte   $7F                             ; 9150 7F                       .
         .byte   "Scale"                         ; 9151 53 63 61 6C 65           Scale
         .byte   $0D,$0A                         ; 9156 0D 0A                    ..
-L9158:
+RingNameStrIndex56:
         .byte   $7F                             ; 9158 7F                       .
         .byte   "Canvas"                        ; 9159 43 61 6E 76 61 73        Canvas
         .byte   $0D,$0A                         ; 915F 0D 0A                    ..
-L9161:
+RingNameStrIndex57:
         .byte   $7F                             ; 9161 7F                       .
         .byte   "Ancient"                       ; 9162 41 6E 63 69 65 6E 74     Ancient
         .byte   $0D,$0A                         ; 9169 0D 0A                    ..
-L916B:
+RingNameStrIndex58:
         .byte   $7F                             ; 916B 7F                       .
         .byte   "Lowly"                         ; 916C 4C 6F 77 6C 79           Lowly
         .byte   $0D,$0A,$FF,$FF                 ; 9171 0D 0A FF FF              ....
 ; ----------------------------------------------------------------------------
 WeaponNameStr:
-        .addr   L923F                           ; 9175 3F 92                    ?.
-        .addr   L9245                           ; 9177 45 92                    E.
-        .addr   L924E                           ; 9179 4E 92                    N.
-        .addr   L9258                           ; 917B 58 92                    X.
-        .addr   L925F                           ; 917D 5F 92                    _.
-        .addr   L9269                           ; 917F 69 92                    i.
-        .addr   L9273                           ; 9181 73 92                    s.
-        .addr   L927D                           ; 9183 7D 92                    }.
-        .addr   L9287                           ; 9185 87 92                    ..
-        .addr   L928F                           ; 9187 8F 92                    ..
-        .addr   L9296                           ; 9189 96 92                    ..
-        .addr   L92A0                           ; 918B A0 92                    ..
-        .addr   L92AA                           ; 918D AA 92                    ..
-        .addr   L92B4                           ; 918F B4 92                    ..
-        .addr   L92BE                           ; 9191 BE 92                    ..
-        .addr   L92C7                           ; 9193 C7 92                    ..
-        .addr   L92D1                           ; 9195 D1 92                    ..
-        .addr   L92DA                           ; 9197 DA 92                    ..
-        .addr   L92E4                           ; 9199 E4 92                    ..
-        .addr   L92EE                           ; 919B EE 92                    ..
-        .addr   L92F7                           ; 919D F7 92                    ..
-        .addr   L9300                           ; 919F 00 93                    ..
-        .addr   L930A                           ; 91A1 0A 93                    ..
-        .addr   L9314                           ; 91A3 14 93                    ..
-        .addr   L931E                           ; 91A5 1E 93                    ..
-        .addr   L9323                           ; 91A7 23 93                    #.
-        .addr   L932D                           ; 91A9 2D 93                    -.
-        .addr   L9335                           ; 91AB 35 93                    5.
-        .addr   L933F                           ; 91AD 3F 93                    ?.
-        .addr   L9348                           ; 91AF 48 93                    H.
-        .addr   L9352                           ; 91B1 52 93                    R.
-        .addr   L9359                           ; 91B3 59 93                    Y.
-        .addr   L9362                           ; 91B5 62 93                    b.
-        .addr   L936B                           ; 91B7 6B 93                    k.
-        .addr   L9375                           ; 91B9 75 93                    u.
-        .addr   L937D                           ; 91BB 7D 93                    }.
-        .addr   L9387                           ; 91BD 87 93                    ..
-        .addr   L938F                           ; 91BF 8F 93                    ..
-        .addr   L9397                           ; 91C1 97 93                    ..
-        .addr   L93A1                           ; 91C3 A1 93                    ..
-        .addr   L93AA                           ; 91C5 AA 93                    ..
-        .addr   L93B4                           ; 91C7 B4 93                    ..
-        .addr   L93BC                           ; 91C9 BC 93                    ..
-        .addr   L93C6                           ; 91CB C6 93                    ..
-        .addr   L93CF                           ; 91CD CF 93                    ..
-        .addr   L93D6                           ; 91CF D6 93                    ..
-        .addr   L93E0                           ; 91D1 E0 93                    ..
-        .addr   L93E9                           ; 91D3 E9 93                    ..
-        .addr   L93F1                           ; 91D5 F1 93                    ..
-        .addr   L93F9                           ; 91D7 F9 93                    ..
-        .addr   L9401                           ; 91D9 01 94                    ..
-        .addr   L940B                           ; 91DB 0B 94                    ..
-        .addr   L9415                           ; 91DD 15 94                    ..
-        .addr   L941E                           ; 91DF 1E 94                    ..
-        .addr   L9426                           ; 91E1 26 94                    &.
-        .addr   L942F                           ; 91E3 2F 94                    /.
-        .addr   L9438                           ; 91E5 38 94                    8.
-        .addr   L9440                           ; 91E7 40 94                    @.
-        .addr   L944A                           ; 91E9 4A 94                    J.
-        .addr   L9454                           ; 91EB 54 94                    T.
-        .addr   L945E                           ; 91ED 5E 94                    ^.
-        .addr   L9468                           ; 91EF 68 94                    h.
-        .addr   L9472                           ; 91F1 72 94                    r.
-        .addr   L947B                           ; 91F3 7B 94                    {.
-        .addr   L9482                           ; 91F5 82 94                    ..
-        .addr   L948B                           ; 91F7 8B 94                    ..
-        .addr   L9495                           ; 91F9 95 94                    ..
-        .addr   L949D                           ; 91FB 9D 94                    ..
-        .addr   L94A4                           ; 91FD A4 94                    ..
-        .addr   L94AB                           ; 91FF AB 94                    ..
-        .addr   L94B5                           ; 9201 B5 94                    ..
-        .addr   L94BE                           ; 9203 BE 94                    ..
-        .addr   L94C8                           ; 9205 C8 94                    ..
-        .addr   L94D2                           ; 9207 D2 94                    ..
-        .addr   L94DC                           ; 9209 DC 94                    ..
-        .addr   L94E5                           ; 920B E5 94                    ..
-        .addr   L94ED                           ; 920D ED 94                    ..
-        .addr   L94F4                           ; 920F F4 94                    ..
-        .addr   L94FA                           ; 9211 FA 94                    ..
-        .addr   L9504                           ; 9213 04 95                    ..
-        .addr   L950C                           ; 9215 0C 95                    ..
-        .addr   L9514                           ; 9217 14 95                    ..
-        .addr   L951D                           ; 9219 1D 95                    ..
-        .addr   L9527                           ; 921B 27 95                    '.
-        .addr   L952E                           ; 921D 2E 95                    ..
-        .addr   L9537                           ; 921F 37 95                    7.
-        .addr   L9541                           ; 9221 41 95                    A.
-        .addr   L9549                           ; 9223 49 95                    I.
-        .addr   L9551                           ; 9225 51 95                    Q.
-        .addr   L9559                           ; 9227 59 95                    Y.
-        .addr   L9563                           ; 9229 63 95                    c.
-        .addr   L956D                           ; 922B 6D 95                    m.
-        .addr   L9577                           ; 922D 77 95                    w.
-        .addr   L957F                           ; 922F 7F 95                    ..
-        .addr   L9589                           ; 9231 89 95                    ..
-        .addr   L9590                           ; 9233 90 95                    ..
-        .addr   L9596                           ; 9235 96 95                    ..
-        .addr   L95A0                           ; 9237 A0 95                    ..
-        .addr   L95AA                           ; 9239 AA 95                    ..
-        .addr   L95B3                           ; 923B B3 95                    ..
-        .addr   L95BC                           ; 923D BC 95                    ..
+        .addr   WeaponNameStrIndex0             ; 9175 3F 92                    ?.
+        .addr   WeaponNameStrIndex1             ; 9177 45 92                    E.
+        .addr   WeaponNameStrIndex2             ; 9179 4E 92                    N.
+        .addr   WeaponNameStrIndex3             ; 917B 58 92                    X.
+        .addr   WeaponNameStrIndex4             ; 917D 5F 92                    _.
+        .addr   WeaponNameStrIndex5             ; 917F 69 92                    i.
+        .addr   WeaponNameStrIndex6             ; 9181 73 92                    s.
+        .addr   WeaponNameStrIndex7             ; 9183 7D 92                    }.
+        .addr   WeaponNameStrIndex8             ; 9185 87 92                    ..
+        .addr   WeaponNameStrIndex9             ; 9187 8F 92                    ..
+        .addr   WeaponNameStrIndex10            ; 9189 96 92                    ..
+        .addr   WeaponNameStrIndex11            ; 918B A0 92                    ..
+        .addr   WeaponNameStrIndex12            ; 918D AA 92                    ..
+        .addr   WeaponNameStrIndex13            ; 918F B4 92                    ..
+        .addr   WeaponNameStrIndex14            ; 9191 BE 92                    ..
+        .addr   WeaponNameStrIndex15            ; 9193 C7 92                    ..
+        .addr   WeaponNameStrIndex16            ; 9195 D1 92                    ..
+        .addr   WeaponNameStrIndex17            ; 9197 DA 92                    ..
+        .addr   WeaponNameStrIndex18            ; 9199 E4 92                    ..
+        .addr   WeaponNameStrIndex19            ; 919B EE 92                    ..
+        .addr   WeaponNameStrIndex20            ; 919D F7 92                    ..
+        .addr   WeaponNameStrIndex21            ; 919F 00 93                    ..
+        .addr   WeaponNameStrIndex22            ; 91A1 0A 93                    ..
+        .addr   WeaponNameStrIndex23            ; 91A3 14 93                    ..
+        .addr   WeaponNameStrIndex24            ; 91A5 1E 93                    ..
+        .addr   WeaponNameStrIndex25            ; 91A7 23 93                    #.
+        .addr   WeaponNameStrIndex26            ; 91A9 2D 93                    -.
+        .addr   WeaponNameStrIndex27            ; 91AB 35 93                    5.
+        .addr   WeaponNameStrIndex28            ; 91AD 3F 93                    ?.
+        .addr   WeaponNameStrIndex29            ; 91AF 48 93                    H.
+        .addr   WeaponNameStrIndex30            ; 91B1 52 93                    R.
+        .addr   WeaponNameStrIndex31            ; 91B3 59 93                    Y.
+        .addr   WeaponNameStrIndex32            ; 91B5 62 93                    b.
+        .addr   WeaponNameStrIndex33            ; 91B7 6B 93                    k.
+        .addr   WeaponNameStrIndex34            ; 91B9 75 93                    u.
+        .addr   WeaponNameStrIndex35            ; 91BB 7D 93                    }.
+        .addr   WeaponNameStrIndex36            ; 91BD 87 93                    ..
+        .addr   WeaponNameStrIndex37            ; 91BF 8F 93                    ..
+        .addr   WeaponNameStrIndex38            ; 91C1 97 93                    ..
+        .addr   WeaponNameStrIndex39            ; 91C3 A1 93                    ..
+        .addr   WeaponNameStrIndex40            ; 91C5 AA 93                    ..
+        .addr   WeaponNameStrIndex41            ; 91C7 B4 93                    ..
+        .addr   WeaponNameStrIndex42            ; 91C9 BC 93                    ..
+        .addr   WeaponNameStrIndex43            ; 91CB C6 93                    ..
+        .addr   WeaponNameStrIndex44            ; 91CD CF 93                    ..
+        .addr   WeaponNameStrIndex45            ; 91CF D6 93                    ..
+        .addr   WeaponNameStrIndex46            ; 91D1 E0 93                    ..
+        .addr   WeaponNameStrIndex47            ; 91D3 E9 93                    ..
+        .addr   WeaponNameStrIndex48            ; 91D5 F1 93                    ..
+        .addr   WeaponNameStrIndex49            ; 91D7 F9 93                    ..
+        .addr   WeaponNameStrIndex50            ; 91D9 01 94                    ..
+        .addr   WeaponNameStrIndex51            ; 91DB 0B 94                    ..
+        .addr   WeaponNameStrIndex52            ; 91DD 15 94                    ..
+        .addr   WeaponNameStrIndex53            ; 91DF 1E 94                    ..
+        .addr   WeaponNameStrIndex54            ; 91E1 26 94                    &.
+        .addr   WeaponNameStrIndex55            ; 91E3 2F 94                    /.
+        .addr   WeaponNameStrIndex56            ; 91E5 38 94                    8.
+        .addr   WeaponNameStrIndex57            ; 91E7 40 94                    @.
+        .addr   WeaponNameStrIndex58            ; 91E9 4A 94                    J.
+        .addr   WeaponNameStrIndex59            ; 91EB 54 94                    T.
+        .addr   WeaponNameStrIndex60            ; 91ED 5E 94                    ^.
+        .addr   WeaponNameStrIndex61            ; 91EF 68 94                    h.
+        .addr   WeaponNameStrIndex62            ; 91F1 72 94                    r.
+        .addr   WeaponNameStrIndex63            ; 91F3 7B 94                    {.
+        .addr   WeaponNameStrIndex64            ; 91F5 82 94                    ..
+        .addr   WeaponNameStrIndex65            ; 91F7 8B 94                    ..
+        .addr   WeaponNameStrIndex66            ; 91F9 95 94                    ..
+        .addr   WeaponNameStrIndex67            ; 91FB 9D 94                    ..
+        .addr   WeaponNameStrIndex68            ; 91FD A4 94                    ..
+        .addr   WeaponNameStrIndex69            ; 91FF AB 94                    ..
+        .addr   WeaponNameStrIndex70            ; 9201 B5 94                    ..
+        .addr   WeaponNameStrIndex71            ; 9203 BE 94                    ..
+        .addr   WeaponNameStrIndex72            ; 9205 C8 94                    ..
+        .addr   WeaponNameStrIndex73            ; 9207 D2 94                    ..
+        .addr   WeaponNameStrIndex74            ; 9209 DC 94                    ..
+        .addr   WeaponNameStrIndex75            ; 920B E5 94                    ..
+        .addr   WeaponNameStrIndex76            ; 920D ED 94                    ..
+        .addr   WeaponNameStrIndex77            ; 920F F4 94                    ..
+        .addr   WeaponNameStrIndex78            ; 9211 FA 94                    ..
+        .addr   WeaponNameStrIndex79            ; 9213 04 95                    ..
+        .addr   WeaponNameStrIndex80            ; 9215 0C 95                    ..
+        .addr   WeaponNameStrIndex81            ; 9217 14 95                    ..
+        .addr   WeaponNameStrIndex82            ; 9219 1D 95                    ..
+        .addr   WeaponNameStrIndex83            ; 921B 27 95                    '.
+        .addr   WeaponNameStrIndex84            ; 921D 2E 95                    ..
+        .addr   WeaponNameStrIndex85            ; 921F 37 95                    7.
+        .addr   WeaponNameStrIndex86            ; 9221 41 95                    A.
+        .addr   WeaponNameStrIndex87            ; 9223 49 95                    I.
+        .addr   WeaponNameStrIndex88            ; 9225 51 95                    Q.
+        .addr   WeaponNameStrIndex89            ; 9227 59 95                    Y.
+        .addr   WeaponNameStrIndex90            ; 9229 63 95                    c.
+        .addr   WeaponNameStrIndex91            ; 922B 6D 95                    m.
+        .addr   WeaponNameStrIndex92            ; 922D 77 95                    w.
+        .addr   WeaponNameStrIndex93            ; 922F 7F 95                    ..
+        .addr   WeaponNameStrIndex94            ; 9231 89 95                    ..
+        .addr   WeaponNameStrIndex95            ; 9233 90 95                    ..
+        .addr   WeaponNameStrIndex96            ; 9235 96 95                    ..
+        .addr   WeaponNameStrIndex97            ; 9237 A0 95                    ..
+        .addr   WeaponNameStrIndex98            ; 9239 AA 95                    ..
+        .addr   WeaponNameStrIndex99            ; 923B B3 95                    ..
+        .addr   WeaponNameStrIndex100           ; 923D BC 95                    ..
 ; ----------------------------------------------------------------------------
-L923F:
+WeaponNameStrIndex0:
         .byte   "None"                          ; 923F 4E 6F 6E 65              None
         .byte   $0D,$0A                         ; 9243 0D 0A                    ..
-L9245:
+WeaponNameStrIndex1:
         .byte   $80                             ; 9245 80                       .
         .byte   "Buster"                        ; 9246 42 75 73 74 65 72        Buster
         .byte   $0D,$0A                         ; 924C 0D 0A                    ..
-L924E:
+WeaponNameStrIndex2:
         .byte   $80                             ; 924E 80                       .
         .byte   "Mythril"                       ; 924F 4D 79 74 68 72 69 6C     Mythril
         .byte   $0D,$0A                         ; 9256 0D 0A                    ..
-L9258:
+WeaponNameStrIndex3:
         .byte   $80                             ; 9258 80                       .
         .byte   "Hard"                          ; 9259 48 61 72 64              Hard
         .byte   $0D,$0A                         ; 925D 0D 0A                    ..
-L925F:
+WeaponNameStrIndex4:
         .byte   $80                             ; 925F 80                       .
         .byte   "Butrfly"                       ; 9260 42 75 74 72 66 6C 79     Butrfly
         .byte   $0D,$0A                         ; 9267 0D 0A                    ..
-L9269:
+WeaponNameStrIndex5:
         .byte   $80                             ; 9269 80                       .
         .byte   "Enhance"                       ; 926A 45 6E 68 61 6E 63 65     Enhance
         .byte   $0D,$0A                         ; 9271 0D 0A                    ..
-L9273:
+WeaponNameStrIndex6:
         .byte   $80                             ; 9273 80                       .
         .byte   "Organic"                       ; 9274 4F 72 67 61 6E 69 63     Organic
         .byte   $0D,$0A                         ; 927B 0D 0A                    ..
-L927D:
+WeaponNameStrIndex7:
         .byte   $80                             ; 927D 80                       .
         .byte   "Crystal"                       ; 927E 43 72 79 73 74 61 6C     Crystal
         .byte   $0D,$0A                         ; 9285 0D 0A                    ..
-L9287:
+WeaponNameStrIndex8:
         .byte   $80                             ; 9287 80                       .
         .byte   "Force"                         ; 9288 46 6F 72 63 65           Force
         .byte   $0D,$0A                         ; 928D 0D 0A                    ..
-L928F:
+WeaponNameStrIndex9:
         .byte   $80                             ; 928F 80                       .
         .byte   "Rune"                          ; 9290 52 75 6E 65              Rune
         .byte   $0D,$0A                         ; 9294 0D 0A                    ..
-L9296:
+WeaponNameStrIndex10:
         .byte   $80                             ; 9296 80                       .
         .byte   "Murasam"                       ; 9297 4D 75 72 61 73 61 6D     Murasam
         .byte   $0D,$0A                         ; 929E 0D 0A                    ..
-L92A0:
+WeaponNameStrIndex11:
         .byte   $80                             ; 92A0 80                       .
         .byte   "Nailbat"                       ; 92A1 4E 61 69 6C 62 61 74     Nailbat
         .byte   $0D,$0A                         ; 92A8 0D 0A                    ..
-L92AA:
+WeaponNameStrIndex12:
         .byte   $80                             ; 92AA 80                       .
         .byte   "Yoshiyu"                       ; 92AB 59 6F 73 68 69 79 75     Yoshiyu
         .byte   $0D,$0A                         ; 92B2 0D 0A                    ..
-L92B4:
+WeaponNameStrIndex13:
         .byte   $80                             ; 92B4 80                       .
         .byte   "Apocaly"                       ; 92B5 41 70 6F 63 61 6C 79     Apocaly
         .byte   $0D,$0A                         ; 92BC 0D 0A                    ..
-L92BE:
+WeaponNameStrIndex14:
         .byte   $80                             ; 92BE 80                       .
         .byte   "Heaven"                        ; 92BF 48 65 61 76 65 6E        Heaven
         .byte   $0D,$0A                         ; 92C5 0D 0A                    ..
-L92C7:
+WeaponNameStrIndex15:
         .byte   $80                             ; 92C7 80                       .
         .byte   "Ragnrok"                       ; 92C8 52 61 67 6E 72 6F 6B     Ragnrok
         .byte   $0D,$0A                         ; 92CF 0D 0A                    ..
-L92D1:
+WeaponNameStrIndex16:
         .byte   $80                             ; 92D1 80                       .
         .byte   "Ultima"                        ; 92D2 55 6C 74 69 6D 61        Ultima
         .byte   $0D,$0A                         ; 92D8 0D 0A                    ..
-L92DA:
+WeaponNameStrIndex17:
         .byte   $81                             ; 92DA 81                       .
         .byte   "Gatling"                       ; 92DB 47 61 74 6C 69 6E 67     Gatling
         .byte   $0D,$0A                         ; 92E2 0D 0A                    ..
-L92E4:
+WeaponNameStrIndex18:
         .byte   $81                             ; 92E4 81                       .
         .byte   "Assault"                       ; 92E5 41 73 73 61 75 6C 74     Assault
         .byte   $0D,$0A                         ; 92EC 0D 0A                    ..
-L92EE:
+WeaponNameStrIndex19:
         .byte   $81                             ; 92EE 81                       .
         .byte   "Cannon"                        ; 92EF 43 61 6E 6E 6F 6E        Cannon
         .byte   $0D,$0A                         ; 92F5 0D 0A                    ..
-L92F7:
+WeaponNameStrIndex20:
         .byte   $81                             ; 92F7 81                       .
         .byte   "Atomic"                        ; 92F8 41 74 6F 6D 69 63        Atomic
         .byte   $0D,$0A                         ; 92FE 0D 0A                    ..
-L9300:
+WeaponNameStrIndex21:
         .byte   $81                             ; 9300 81                       .
         .byte   "HVulcan"                       ; 9301 48 56 75 6C 63 61 6E     HVulcan
         .byte   $0D,$0A                         ; 9308 0D 0A                    ..
-L930A:
+WeaponNameStrIndex22:
         .byte   $81                             ; 930A 81                       .
         .byte   "ChainSw"                       ; 930B 43 68 61 69 6E 53 77     ChainSw
         .byte   $0D,$0A                         ; 9312 0D 0A                    ..
-L9314:
+WeaponNameStrIndex23:
         .byte   $81                             ; 9314 81                       .
         .byte   "MicroLS"                       ; 9315 4D 69 63 72 6F 4C 53     MicroLS
         .byte   $0D,$0A                         ; 931C 0D 0A                    ..
-L931E:
+WeaponNameStrIndex24:
         .byte   $81                             ; 931E 81                       .
         .byte   "AM"                            ; 931F 41 4D                    AM
         .byte   $0D,$0A                         ; 9321 0D 0A                    ..
-L9323:
+WeaponNameStrIndex25:
         .byte   $81                             ; 9323 81                       .
         .byte   "Machine"                       ; 9324 4D 61 63 68 69 6E 65     Machine
         .byte   $0D,$0A                         ; 932B 0D 0A                    ..
-L932D:
+WeaponNameStrIndex26:
         .byte   $81                             ; 932D 81                       .
         .byte   "Drill"                         ; 932E 44 72 69 6C 6C           Drill
         .byte   $0D,$0A                         ; 9333 0D 0A                    ..
-L9335:
+WeaponNameStrIndex27:
         .byte   $81                             ; 9335 81                       .
         .byte   "Bazooka"                       ; 9336 42 61 7A 6F 6F 6B 61     Bazooka
         .byte   $0D,$0A                         ; 933D 0D 0A                    ..
-L933F:
+WeaponNameStrIndex28:
         .byte   $81                             ; 933F 81                       .
         .byte   "Rocket"                        ; 9340 52 6F 63 6B 65 74        Rocket
         .byte   $0D,$0A                         ; 9346 0D 0A                    ..
-L9348:
+WeaponNameStrIndex29:
         .byte   $81                             ; 9348 81                       .
         .byte   "Launchr"                       ; 9349 4C 61 75 6E 63 68 72     Launchr
         .byte   $0D,$0A                         ; 9350 0D 0A                    ..
-L9352:
+WeaponNameStrIndex30:
         .byte   $81                             ; 9352 81                       .
         .byte   "Pile"                          ; 9353 50 69 6C 65              Pile
         .byte   $0D,$0A                         ; 9357 0D 0A                    ..
-L9359:
+WeaponNameStrIndex31:
         .byte   $81                             ; 9359 81                       .
         .byte   "MaxRay"                        ; 935A 4D 61 78 52 61 79        MaxRay
         .byte   $0D,$0A                         ; 9360 0D 0A                    ..
-L9362:
+WeaponNameStrIndex32:
         .byte   $81                             ; 9362 81                       .
         .byte   "MScore"                        ; 9363 4D 53 63 6F 72 65        MScore
         .byte   $0D,$0A                         ; 9369 0D 0A                    ..
-L936B:
+WeaponNameStrIndex33:
         .byte   $82                             ; 936B 82                       .
         .byte   "Leather"                       ; 936C 4C 65 61 74 68 65 72     Leather
         .byte   $0D,$0A                         ; 9373 0D 0A                    ..
-L9375:
+WeaponNameStrIndex34:
         .byte   $82                             ; 9375 82                       .
         .byte   "Metal"                         ; 9376 4D 65 74 61 6C           Metal
         .byte   $0D,$0A                         ; 937B 0D 0A                    ..
-L937D:
+WeaponNameStrIndex35:
         .byte   $82                             ; 937D 82                       .
         .byte   "Mythril"                       ; 937E 4D 79 74 68 72 69 6C     Mythril
         .byte   $0D,$0A                         ; 9385 0D 0A                    ..
-L9387:
+WeaponNameStrIndex36:
         .byte   $82                             ; 9387 82                       .
         .byte   "Grand"                         ; 9388 47 72 61 6E 64           Grand
         .byte   $0D,$0A                         ; 938D 0D 0A                    ..
-L938F:
+WeaponNameStrIndex37:
         .byte   $82                             ; 938F 82                       .
         .byte   "Tiger"                         ; 9390 54 69 67 65 72           Tiger
         .byte   $0D,$0A                         ; 9395 0D 0A                    ..
-L9397:
+WeaponNameStrIndex38:
         .byte   $82                             ; 9397 82                       .
         .byte   "Diamond"                       ; 9398 44 69 61 6D 6F 6E 64     Diamond
         .byte   $0D,$0A                         ; 939F 0D 0A                    ..
-L93A1:
+WeaponNameStrIndex39:
         .byte   $82                             ; 93A1 82                       .
         .byte   "Dragon"                        ; 93A2 44 72 61 67 6F 6E        Dragon
         .byte   $0D,$0A                         ; 93A8 0D 0A                    ..
-L93AA:
+WeaponNameStrIndex40:
         .byte   $82                             ; 93AA 82                       .
         .byte   "Crystal"                       ; 93AB 43 72 79 73 74 61 6C     Crystal
         .byte   $0D,$0A                         ; 93B2 0D 0A                    ..
-L93B4:
+WeaponNameStrIndex41:
         .byte   $82                             ; 93B4 82                       .
         .byte   "Motor"                         ; 93B5 4D 6F 74 6F 72           Motor
         .byte   $0D,$0A                         ; 93BA 0D 0A                    ..
-L93BC:
+WeaponNameStrIndex42:
         .byte   $82                             ; 93BC 82                       .
         .byte   "Platnum"                       ; 93BD 50 6C 61 74 6E 75 6D     Platnum
         .byte   $0D,$0A                         ; 93C4 0D 0A                    ..
-L93C6:
+WeaponNameStrIndex43:
         .byte   $82                             ; 93C6 82                       .
         .byte   "Kaiser"                        ; 93C7 4B 61 69 73 65 72        Kaiser
         .byte   $0D,$0A                         ; 93CD 0D 0A                    ..
-L93CF:
+WeaponNameStrIndex44:
         .byte   $82                             ; 93CF 82                       .
         .byte   "Work"                          ; 93D0 57 6F 72 6B              Work
         .byte   $0D,$0A                         ; 93D4 0D 0A                    ..
-L93D6:
+WeaponNameStrIndex45:
         .byte   $82                             ; 93D6 82                       .
         .byte   "PwrSoul"                       ; 93D7 50 77 72 53 6F 75 6C     PwrSoul
         .byte   $0D,$0A                         ; 93DE 0D 0A                    ..
-L93E0:
+WeaponNameStrIndex46:
         .byte   $82                             ; 93E0 82                       .
         .byte   "Master"                        ; 93E1 4D 61 73 74 65 72        Master
         .byte   $0D,$0A                         ; 93E7 0D 0A                    ..
-L93E9:
+WeaponNameStrIndex47:
         .byte   $82                             ; 93E9 82                       .
         .byte   "God's"                         ; 93EA 47 6F 64 27 73           God's
         .byte   $0D,$0A                         ; 93EF 0D 0A                    ..
-L93F1:
+WeaponNameStrIndex48:
         .byte   $82                             ; 93F1 82                       .
         .byte   "Heart"                         ; 93F2 48 65 61 72 74           Heart
         .byte   $0D,$0A                         ; 93F7 0D 0A                    ..
-L93F9:
+WeaponNameStrIndex49:
         .byte   $83                             ; 93F9 83                       .
         .byte   "Guard"                         ; 93FA 47 75 61 72 64           Guard
         .byte   $0D,$0A                         ; 93FF 0D 0A                    ..
-L9401:
+WeaponNameStrIndex50:
         .byte   $83                             ; 9401 83                       .
         .byte   "Mythril"                       ; 9402 4D 79 74 68 72 69 6C     Mythril
         .byte   $0D,$0A                         ; 9409 0D 0A                    ..
-L940B:
+WeaponNameStrIndex51:
         .byte   $83                             ; 940B 83                       .
         .byte   "FulMetl"                       ; 940C 46 75 6C 4D 65 74 6C     FulMetl
         .byte   $0D,$0A                         ; 9413 0D 0A                    ..
-L9415:
+WeaponNameStrIndex52:
         .byte   $83                             ; 9415 83                       .
         .byte   "Strike"                        ; 9416 53 74 72 69 6B 65        Strike
         .byte   $0D,$0A                         ; 941C 0D 0A                    ..
-L941E:
+WeaponNameStrIndex53:
         .byte   $83                             ; 941E 83                       .
         .byte   "Prism"                         ; 941F 50 72 69 73 6D           Prism
         .byte   $0D,$0A                         ; 9424 0D 0A                    ..
-L9426:
+WeaponNameStrIndex54:
         .byte   $83                             ; 9426 83                       .
         .byte   "Aurora"                        ; 9427 41 75 72 6F 72 61        Aurora
         .byte   $0D,$0A                         ; 942D 0D 0A                    ..
-L942F:
+WeaponNameStrIndex55:
         .byte   $83                             ; 942F 83                       .
         .byte   "Wizard"                        ; 9430 57 69 7A 61 72 64        Wizard
         .byte   $0D,$0A                         ; 9436 0D 0A                    ..
-L9438:
+WeaponNameStrIndex56:
         .byte   $83                             ; 9438 83                       .
         .byte   "Wiser"                         ; 9439 57 69 73 65 72           Wiser
         .byte   $0D,$0A                         ; 943E 0D 0A                    ..
-L9440:
+WeaponNameStrIndex57:
         .byte   $83                             ; 9440 83                       .
         .byte   "FairyTl"                       ; 9441 46 61 69 72 79 54 6C     FairyTl
         .byte   $0D,$0A                         ; 9448 0D 0A                    ..
-L944A:
+WeaponNameStrIndex58:
         .byte   $83                             ; 944A 83                       .
         .byte   "Umbrela"                       ; 944B 55 6D 62 72 65 6C 61     Umbrela
         .byte   $0D,$0A                         ; 9452 0D 0A                    ..
-L9454:
+WeaponNameStrIndex59:
         .byte   $83                             ; 9454 83                       .
         .byte   "Princss"                       ; 9455 50 72 69 6E 63 73 73     Princss
         .byte   $0D,$0A                         ; 945C 0D 0A                    ..
-L945E:
+WeaponNameStrIndex60:
         .byte   $84                             ; 945E 84                       .
         .byte   "Mythril"                       ; 945F 4D 79 74 68 72 69 6C     Mythril
         .byte   $0D,$0A                         ; 9466 0D 0A                    ..
-L9468:
+WeaponNameStrIndex61:
         .byte   $84                             ; 9468 84                       .
         .byte   "Diamond"                       ; 9469 44 69 61 6D 6F 6E 64     Diamond
         .byte   $0D,$0A                         ; 9470 0D 0A                    ..
-L9472:
+WeaponNameStrIndex62:
         .byte   $84                             ; 9472 84                       .
         .byte   "Silver"                        ; 9473 53 69 6C 76 65 72        Silver
         .byte   $0D,$0A                         ; 9479 0D 0A                    ..
-L947B:
+WeaponNameStrIndex63:
         .byte   $84                             ; 947B 84                       .
         .byte   "Gold"                          ; 947C 47 6F 6C 64              Gold
         .byte   $0D,$0A                         ; 9480 0D 0A                    ..
-L9482:
+WeaponNameStrIndex64:
         .byte   $84                             ; 9482 84                       .
         .byte   "Adaman"                        ; 9483 41 64 61 6D 61 6E        Adaman
         .byte   $0D,$0A                         ; 9489 0D 0A                    ..
-L948B:
+WeaponNameStrIndex65:
         .byte   $84                             ; 948B 84                       .
         .byte   "Crystal"                       ; 948C 43 72 79 73 74 61 6C     Crystal
         .byte   $0D,$0A                         ; 9493 0D 0A                    ..
-L9495:
+WeaponNameStrIndex66:
         .byte   $84                             ; 9495 84                       .
         .byte   "Magic"                         ; 9496 4D 61 67 69 63           Magic
         .byte   $0D,$0A                         ; 949B 0D 0A                    ..
-L949D:
+WeaponNameStrIndex67:
         .byte   $84                             ; 949D 84                       .
         .byte   "Plus"                          ; 949E 50 6C 75 73              Plus
         .byte   $0D,$0A                         ; 94A2 0D 0A                    ..
-L94A4:
+WeaponNameStrIndex68:
         .byte   $84                             ; 94A4 84                       .
         .byte   "Cent"                          ; 94A5 43 65 6E 74              Cent
         .byte   $0D,$0A                         ; 94A9 0D 0A                    ..
-L94AB:
+WeaponNameStrIndex69:
         .byte   $94                             ; 94AB 94                       .
         .byte   "Hairpin"                       ; 94AC 48 61 69 72 70 69 6E     Hairpin
         .byte   $0D,$0A                         ; 94B3 0D 0A                    ..
-L94B5:
+WeaponNameStrIndex70:
         .byte   $84                             ; 94B5 84                       .
         .byte   "Seraph"                        ; 94B6 53 65 72 61 70 68        Seraph
         .byte   $0D,$0A                         ; 94BC 0D 0A                    ..
-L94BE:
+WeaponNameStrIndex71:
         .byte   $84                             ; 94BE 84                       .
         .byte   "Behemot"                       ; 94BF 42 65 68 65 6D 6F 74     Behemot
         .byte   $0D,$0A                         ; 94C6 0D 0A                    ..
-L94C8:
+WeaponNameStrIndex72:
         .byte   $84                             ; 94C8 84                       .
         .byte   "SprnGun"                       ; 94C9 53 70 72 6E 47 75 6E     SprnGun
         .byte   $0D,$0A                         ; 94D0 0D 0A                    ..
-L94D2:
+WeaponNameStrIndex73:
         .byte   $84                             ; 94D2 84                       .
         .byte   "LimMoon"                       ; 94D3 4C 69 6D 4D 6F 6F 6E     LimMoon
         .byte   $0D,$0A                         ; 94DA 0D 0A                    ..
-L94DC:
+WeaponNameStrIndex74:
         .byte   $85                             ; 94DC 85                       .
         .byte   "Yellow"                        ; 94DD 59 65 6C 6C 6F 77        Yellow
         .byte   $0D,$0A                         ; 94E3 0D 0A                    ..
-L94E5:
+WeaponNameStrIndex75:
         .byte   $85                             ; 94E5 85                       .
         .byte   "Green"                         ; 94E6 47 72 65 65 6E           Green
         .byte   $0D,$0A                         ; 94EB 0D 0A                    ..
-L94ED:
+WeaponNameStrIndex76:
         .byte   $85                             ; 94ED 85                       .
         .byte   "Blue"                          ; 94EE 42 6C 75 65              Blue
         .byte   $0D,$0A                         ; 94F2 0D 0A                    ..
-L94F4:
+WeaponNameStrIndex77:
         .byte   $85                             ; 94F4 85                       .
         .byte   "Red"                           ; 94F5 52 65 64                 Red
         .byte   $0D,$0A                         ; 94F8 0D 0A                    ..
-L94FA:
+WeaponNameStrIndex78:
         .byte   $85                             ; 94FA 85                       .
         .byte   "Crystal"                       ; 94FB 43 72 79 73 74 61 6C     Crystal
         .byte   $0D,$0A                         ; 9502 0D 0A                    ..
-L9504:
+WeaponNameStrIndex79:
         .byte   $85                             ; 9504 85                       .
         .byte   "White"                         ; 9505 57 68 69 74 65           White
         .byte   $0D,$0A                         ; 950A 0D 0A                    ..
-L950C:
+WeaponNameStrIndex80:
         .byte   $85                             ; 950C 85                       .
         .byte   "Black"                         ; 950D 42 6C 61 63 6B           Black
         .byte   $0D,$0A                         ; 9512 0D 0A                    ..
-L9514:
+WeaponNameStrIndex81:
         .byte   $85                             ; 9514 85                       .
         .byte   "Silver"                        ; 9515 53 69 6C 76 65 72        Silver
         .byte   $0D,$0A                         ; 951B 0D 0A                    ..
-L951D:
+WeaponNameStrIndex82:
         .byte   $85                             ; 951D 85                       .
         .byte   "Trumpet"                       ; 951E 54 72 75 6D 70 65 74     Trumpet
         .byte   $0D,$0A                         ; 9525 0D 0A                    ..
-L9527:
+WeaponNameStrIndex83:
         .byte   $85                             ; 9527 85                       .
         .byte   "Gold"                          ; 9528 47 6F 6C 64              Gold
         .byte   $0D,$0A                         ; 952C 0D 0A                    ..
-L952E:
+WeaponNameStrIndex84:
         .byte   $85                             ; 952E 85                       .
         .byte   "Battle"                        ; 952F 42 61 74 74 6C 65        Battle
         .byte   $0D,$0A                         ; 9535 0D 0A                    ..
-L9537:
+WeaponNameStrIndex85:
         .byte   $85                             ; 9537 85                       .
         .byte   "Starlit"                       ; 9538 53 74 61 72 6C 69 74     Starlit
         .byte   $0D,$0A                         ; 953F 0D 0A                    ..
-L9541:
+WeaponNameStrIndex86:
         .byte   $85                             ; 9541 85                       .
         .byte   "Shout"                         ; 9542 53 68 6F 75 74           Shout
         .byte   $0D,$0A                         ; 9547 0D 0A                    ..
-L9549:
+WeaponNameStrIndex87:
         .byte   $86                             ; 9549 86                       .
         .byte   "Spear"                         ; 954A 53 70 65 61 72           Spear
         .byte   $0D,$0A                         ; 954F 0D 0A                    ..
-L9551:
+WeaponNameStrIndex88:
         .byte   $86                             ; 9551 86                       .
         .byte   "Slash"                         ; 9552 53 6C 61 73 68           Slash
         .byte   $0D,$0A                         ; 9557 0D 0A                    ..
-L9559:
+WeaponNameStrIndex89:
         .byte   $86                             ; 9559 86                       .
         .byte   "Trident"                       ; 955A 54 72 69 64 65 6E 74     Trident
         .byte   $0D,$0A                         ; 9561 0D 0A                    ..
-L9563:
+WeaponNameStrIndex90:
         .byte   $86                             ; 9563 86                       .
         .byte   "MastAxe"                       ; 9564 4D 61 73 74 41 78 65     MastAxe
         .byte   $0D,$0A                         ; 956B 0D 0A                    ..
-L956D:
+WeaponNameStrIndex91:
         .byte   $86                             ; 956D 86                       .
         .byte   "Partsan"                       ; 956E 50 61 72 74 73 61 6E     Partsan
         .byte   $0D,$0A                         ; 9575 0D 0A                    ..
-L9577:
+WeaponNameStrIndex92:
         .byte   $86                             ; 9577 86                       .
         .byte   "Viper"                         ; 9578 56 69 70 65 72           Viper
         .byte   $0D,$0A                         ; 957D 0D 0A                    ..
-L957F:
+WeaponNameStrIndex93:
         .byte   $86                             ; 957F 86                       .
         .byte   "Javelin"                       ; 9580 4A 61 76 65 6C 69 6E     Javelin
         .byte   $0D,$0A                         ; 9587 0D 0A                    ..
-L9589:
+WeaponNameStrIndex94:
         .byte   $86                             ; 9589 86                       .
         .byte   "Grow"                          ; 958A 47 72 6F 77              Grow
         .byte   $0D,$0A                         ; 958E 0D 0A                    ..
-L9590:
+WeaponNameStrIndex95:
         .byte   $86                             ; 9590 86                       .
         .byte   "Mop"                           ; 9591 4D 6F 70                 Mop
         .byte   $0D,$0A                         ; 9594 0D 0A                    ..
-L9596:
+WeaponNameStrIndex96:
         .byte   $86                             ; 9596 86                       .
         .byte   "Dragoon"                       ; 9597 44 72 61 67 6F 6F 6E     Dragoon
         .byte   $0D,$0A                         ; 959E 0D 0A                    ..
-L95A0:
+WeaponNameStrIndex97:
         .byte   $86                             ; 95A0 86                       .
         .byte   "Scimitr"                       ; 95A1 53 63 69 6D 69 74 72     Scimitr
         .byte   $0D,$0A                         ; 95A8 0D 0A                    ..
-L95AA:
+WeaponNameStrIndex98:
         .byte   $86                             ; 95AA 86                       .
         .byte   "Flayer"                        ; 95AB 46 6C 61 79 65 72        Flayer
         .byte   $0D,$0A                         ; 95B1 0D 0A                    ..
-L95B3:
+WeaponNameStrIndex99:
         .byte   $86                             ; 95B3 86                       .
         .byte   "Spirit"                        ; 95B4 53 70 69 72 69 74        Spirit
         .byte   $0D,$0A                         ; 95BA 0D 0A                    ..
-L95BC:
+WeaponNameStrIndex100:
         .byte   $86                             ; 95BC 86                       .
         .byte   "Venus"                         ; 95BD 56 65 6E 75 73           Venus
         .byte   $0D,$0A,$FF,$FF                 ; 95C2 0D 0A FF FF              ....
 ; ----------------------------------------------------------------------------
 MateriaNameStr:
-        .addr   L95D6                           ; 95C6 D6 95                    ..
-        .addr   L95DC                           ; 95C8 DC 95                    ..
-        .addr   L95E3                           ; 95CA E3 95                    ..
-        .addr   L95EB                           ; 95CC EB 95                    ..
-        .addr   L95F2                           ; 95CE F2 95                    ..
-        .addr   L95F9                           ; 95D0 F9 95                    ..
-        .addr   L9601                           ; 95D2 01 96                    ..
-        .addr   L9609                           ; 95D4 09 96                    ..
+        .addr   MateriaNameStrIndex0            ; 95C6 D6 95                    ..
+        .addr   MateriaNameStrIndex1            ; 95C8 DC 95                    ..
+        .addr   MateriaNameStrIndex2            ; 95CA E3 95                    ..
+        .addr   MateriaNameStrIndex3            ; 95CC EB 95                    ..
+        .addr   MateriaNameStrIndex4            ; 95CE F2 95                    ..
+        .addr   MateriaNameStrIndex5            ; 95D0 F9 95                    ..
+        .addr   MateriaNameStrIndex6            ; 95D2 01 96                    ..
+        .addr   MateriaNameStrIndex7            ; 95D4 09 96                    ..
 ; ----------------------------------------------------------------------------
-L95D6:
+MateriaNameStrIndex0:
         .byte   "None"                          ; 95D6 4E 6F 6E 65              None
         .byte   $0D,$0A                         ; 95DA 0D 0A                    ..
-L95DC:
+MateriaNameStrIndex1:
         .byte   $87                             ; 95DC 87                       .
         .byte   "Fire"                          ; 95DD 46 69 72 65              Fire
         .byte   $0D,$0A                         ; 95E1 0D 0A                    ..
-L95E3:
+MateriaNameStrIndex2:
         .byte   $87                             ; 95E3 87                       .
         .byte   "Water"                         ; 95E4 57 61 74 65 72           Water
         .byte   $0D,$0A                         ; 95E9 0D 0A                    ..
-L95EB:
+MateriaNameStrIndex3:
         .byte   $87                             ; 95EB 87                       .
         .byte   "Bolt"                          ; 95EC 42 6F 6C 74              Bolt
         .byte   $0D,$0A                         ; 95F0 0D 0A                    ..
-L95F2:
+MateriaNameStrIndex4:
         .byte   $87                             ; 95F2 87                       .
         .byte   "Wind"                          ; 95F3 57 69 6E 64              Wind
         .byte   $0D,$0A                         ; 95F7 0D 0A                    ..
-L95F9:
+MateriaNameStrIndex5:
         .byte   $87                             ; 95F9 87                       .
         .byte   "Earth"                         ; 95FA 45 61 72 74 68           Earth
         .byte   $0D,$0A                         ; 95FF 0D 0A                    ..
-L9601:
+MateriaNameStrIndex6:
         .byte   $87                             ; 9601 87                       .
         .byte   "Light"                         ; 9602 4C 69 67 68 74           Light
         .byte   $0D,$0A                         ; 9607 0D 0A                    ..
-L9609:
+MateriaNameStrIndex7:
         .byte   $87                             ; 9609 87                       .
         .byte   "Ice "                          ; 960A 49 63 65 20              Ice 
         .byte   $0D,$0A,$FF,$FF                 ; 960E 0D 0A FF FF              ....
 ; ----------------------------------------------------------------------------
 MagicNameStr:
-        .addr   L9692                           ; 9612 92 96                    ..
-        .addr   L9698                           ; 9614 98 96                    ..
-        .addr   L96A1                           ; 9616 A1 96                    ..
-        .addr   L96AB                           ; 9618 AB 96                    ..
-        .addr   L96B4                           ; 961A B4 96                    ..
-        .addr   L96BE                           ; 961C BE 96                    ..
-        .addr   L96C7                           ; 961E C7 96                    ..
-        .addr   L96D1                           ; 9620 D1 96                    ..
-        .addr   L96DA                           ; 9622 DA 96                    ..
-        .addr   L96E4                           ; 9624 E4 96                    ..
-        .addr   L96ED                           ; 9626 ED 96                    ..
-        .addr   L96F7                           ; 9628 F7 96                    ..
-        .addr   L9700                           ; 962A 00 97                    ..
-        .addr   L970A                           ; 962C 0A 97                    ..
-        .addr   L9713                           ; 962E 13 97                    ..
-        .addr   L971D                           ; 9630 1D 97                    ..
-        .addr   L9726                           ; 9632 26 97                    &.
-        .addr   L9730                           ; 9634 30 97                    0.
-        .addr   L9739                           ; 9636 39 97                    9.
-        .addr   L9743                           ; 9638 43 97                    C.
-        .addr   L974C                           ; 963A 4C 97                    L.
-        .addr   L9755                           ; 963C 55 97                    U.
-        .addr   L975E                           ; 963E 5E 97                    ^.
-        .addr   L9767                           ; 9640 67 97                    g.
-        .addr   L9770                           ; 9642 70 97                    p.
-        .addr   L9779                           ; 9644 79 97                    y.
-        .addr   L9782                           ; 9646 82 97                    ..
-        .addr   L978B                           ; 9648 8B 97                    ..
-        .addr   L9794                           ; 964A 94 97                    ..
-        .addr   L979D                           ; 964C 9D 97                    ..
-        .addr   L97A7                           ; 964E A7 97                    ..
-        .addr   L97B0                           ; 9650 B0 97                    ..
-        .addr   L97B9                           ; 9652 B9 97                    ..
-        .addr   L97C2                           ; 9654 C2 97                    ..
-        .addr   L97CC                           ; 9656 CC 97                    ..
-        .addr   L97D5                           ; 9658 D5 97                    ..
-        .addr   L97DE                           ; 965A DE 97                    ..
-        .addr   L97E8                           ; 965C E8 97                    ..
-        .addr   L97F1                           ; 965E F1 97                    ..
-        .addr   L97FB                           ; 9660 FB 97                    ..
-        .addr   L9804                           ; 9662 04 98                    ..
-        .addr   L980E                           ; 9664 0E 98                    ..
-        .addr   L9817                           ; 9666 17 98                    ..
-        .addr   L9821                           ; 9668 21 98                    !.
-        .addr   L982A                           ; 966A 2A 98                    *.
-        .addr   L9834                           ; 966C 34 98                    4.
-        .addr   L983D                           ; 966E 3D 98                    =.
-        .addr   L9846                           ; 9670 46 98                    F.
-        .addr   L984F                           ; 9672 4F 98                    O.
-        .addr   L9858                           ; 9674 58 98                    X.
-        .addr   L9861                           ; 9676 61 98                    a.
-        .addr   L986A                           ; 9678 6A 98                    j.
-        .addr   L9873                           ; 967A 73 98                    s.
-        .addr   L987C                           ; 967C 7C 98                    |.
-        .addr   L9885                           ; 967E 85 98                    ..
-        .addr   L988F                           ; 9680 8F 98                    ..
-        .addr   L9898                           ; 9682 98 98                    ..
-        .addr   L98A2                           ; 9684 A2 98                    ..
-        .addr   L98AB                           ; 9686 AB 98                    ..
-        .addr   L98B5                           ; 9688 B5 98                    ..
-        .addr   L98BE                           ; 968A BE 98                    ..
-        .addr   L98C8                           ; 968C C8 98                    ..
-        .addr   L98D1                           ; 968E D1 98                    ..
-        .addr   L98DB                           ; 9690 DB 98                    ..
+        .addr   MagicNameStrIndex0              ; 9612 92 96                    ..
+        .addr   MagicNameStrIndex1              ; 9614 98 96                    ..
+        .addr   MagicNameStrIndex2              ; 9616 A1 96                    ..
+        .addr   MagicNameStrIndex3              ; 9618 AB 96                    ..
+        .addr   MagicNameStrIndex4              ; 961A B4 96                    ..
+        .addr   MagicNameStrIndex5              ; 961C BE 96                    ..
+        .addr   MagicNameStrIndex6              ; 961E C7 96                    ..
+        .addr   MagicNameStrIndex7              ; 9620 D1 96                    ..
+        .addr   MagicNameStrIndex8              ; 9622 DA 96                    ..
+        .addr   MagicNameStrIndex9              ; 9624 E4 96                    ..
+        .addr   MagicNameStrIndex10             ; 9626 ED 96                    ..
+        .addr   MagicNameStrIndex11             ; 9628 F7 96                    ..
+        .addr   MagicNameStrIndex12             ; 962A 00 97                    ..
+        .addr   MagicNameStrIndex13             ; 962C 0A 97                    ..
+        .addr   MagicNameStrIndex14             ; 962E 13 97                    ..
+        .addr   MagicNameStrIndex15             ; 9630 1D 97                    ..
+        .addr   MagicNameStrIndex16             ; 9632 26 97                    &.
+        .addr   MagicNameStrIndex17             ; 9634 30 97                    0.
+        .addr   MagicNameStrIndex18             ; 9636 39 97                    9.
+        .addr   MagicNameStrIndex19             ; 9638 43 97                    C.
+        .addr   MagicNameStrIndex20             ; 963A 4C 97                    L.
+        .addr   MagicNameStrIndex21             ; 963C 55 97                    U.
+        .addr   MagicNameStrIndex22             ; 963E 5E 97                    ^.
+        .addr   MagicNameStrIndex23             ; 9640 67 97                    g.
+        .addr   MagicNameStrIndex24             ; 9642 70 97                    p.
+        .addr   MagicNameStrIndex25             ; 9644 79 97                    y.
+        .addr   MagicNameStrIndex26             ; 9646 82 97                    ..
+        .addr   MagicNameStrIndex27             ; 9648 8B 97                    ..
+        .addr   MagicNameStrIndex28             ; 964A 94 97                    ..
+        .addr   MagicNameStrIndex29             ; 964C 9D 97                    ..
+        .addr   MagicNameStrIndex30             ; 964E A7 97                    ..
+        .addr   MagicNameStrIndex31             ; 9650 B0 97                    ..
+        .addr   MagicNameStrIndex32             ; 9652 B9 97                    ..
+        .addr   MagicNameStrIndex33             ; 9654 C2 97                    ..
+        .addr   MagicNameStrIndex34             ; 9656 CC 97                    ..
+        .addr   MagicNameStrIndex35             ; 9658 D5 97                    ..
+        .addr   MagicNameStrIndex36             ; 965A DE 97                    ..
+        .addr   MagicNameStrIndex37             ; 965C E8 97                    ..
+        .addr   MagicNameStrIndex38             ; 965E F1 97                    ..
+        .addr   MagicNameStrIndex39             ; 9660 FB 97                    ..
+        .addr   MagicNameStrIndex40             ; 9662 04 98                    ..
+        .addr   MagicNameStrIndex41             ; 9664 0E 98                    ..
+        .addr   MagicNameStrIndex42             ; 9666 17 98                    ..
+        .addr   MagicNameStrIndex43             ; 9668 21 98                    !.
+        .addr   MagicNameStrIndex44             ; 966A 2A 98                    *.
+        .addr   MagicNameStrIndex45             ; 966C 34 98                    4.
+        .addr   MagicNameStrIndex46             ; 966E 3D 98                    =.
+        .addr   MagicNameStrIndex47             ; 9670 46 98                    F.
+        .addr   MagicNameStrIndex48             ; 9672 4F 98                    O.
+        .addr   MagicNameStrIndex49             ; 9674 58 98                    X.
+        .addr   MagicNameStrIndex50             ; 9676 61 98                    a.
+        .addr   MagicNameStrIndex51             ; 9678 6A 98                    j.
+        .addr   MagicNameStrIndex52             ; 967A 73 98                    s.
+        .addr   MagicNameStrIndex53             ; 967C 7C 98                    |.
+        .addr   MagicNameStrIndex54             ; 967E 85 98                    ..
+        .addr   MagicNameStrIndex55             ; 9680 8F 98                    ..
+        .addr   MagicNameStrIndex56             ; 9682 98 98                    ..
+        .addr   MagicNameStrIndex57             ; 9684 A2 98                    ..
+        .addr   MagicNameStrIndex58             ; 9686 AB 98                    ..
+        .addr   MagicNameStrIndex59             ; 9688 B5 98                    ..
+        .addr   MagicNameStrIndex60             ; 968A BE 98                    ..
+        .addr   MagicNameStrIndex61             ; 968C C8 98                    ..
+        .addr   MagicNameStrIndex62             ; 968E D1 98                    ..
+        .addr   MagicNameStrIndex63             ; 9690 DB 98                    ..
 ; ----------------------------------------------------------------------------
-L9692:
+MagicNameStrIndex0:
         .byte   "None"                          ; 9692 4E 6F 6E 65              None
         .byte   $0D,$0A                         ; 9696 0D 0A                    ..
-L9698:
+MagicNameStrIndex1:
         .byte   $C0,$AF                         ; 9698 C0 AF                    ..
         .byte   "Fire"                          ; 969A 46 69 72 65              Fire
         .byte   $0D,$0A                         ; 969E 0D 0A                    ..
         .byte   "0"                             ; 96A0 30                       0
-L96A1:
+MagicNameStrIndex2:
         .byte   $C0,$AF                         ; 96A1 C0 AF                    ..
         .byte   "Blaze "                        ; 96A3 42 6C 61 7A 65 20        Blaze 
         .byte   $0D,$0A                         ; 96A9 0D 0A                    ..
-L96AB:
+MagicNameStrIndex3:
         .byte   $C0,$AF                         ; 96AB C0 AF                    ..
         .byte   "Fire2"                         ; 96AD 46 69 72 65 32           Fire2
         .byte   $0D,$0A                         ; 96B2 0D 0A                    ..
-L96B4:
+MagicNameStrIndex4:
         .byte   $C0,$AF                         ; 96B4 C0 AF                    ..
         .byte   "Blaze2"                        ; 96B6 42 6C 61 7A 65 32        Blaze2
         .byte   $0D,$0A                         ; 96BC 0D 0A                    ..
-L96BE:
+MagicNameStrIndex5:
         .byte   $C0,$AF                         ; 96BE C0 AF                    ..
         .byte   "Fire3"                         ; 96C0 46 69 72 65 33           Fire3
         .byte   $0D,$0A                         ; 96C5 0D 0A                    ..
-L96C7:
+MagicNameStrIndex6:
         .byte   $C0,$AF                         ; 96C7 C0 AF                    ..
         .byte   "Blaze3"                        ; 96C9 42 6C 61 7A 65 33        Blaze3
         .byte   $0D,$0A                         ; 96CF 0D 0A                    ..
-L96D1:
+MagicNameStrIndex7:
         .byte   $C0,$AF                         ; 96D1 C0 AF                    ..
         .byte   "Fire4"                         ; 96D3 46 69 72 65 34           Fire4
         .byte   $0D,$0A                         ; 96D8 0D 0A                    ..
-L96DA:
+MagicNameStrIndex8:
         .byte   $C0,$AF                         ; 96DA C0 AF                    ..
         .byte   "Blaze4"                        ; 96DC 42 6C 61 7A 65 34        Blaze4
         .byte   $0D,$0A                         ; 96E2 0D 0A                    ..
-L96E4:
+MagicNameStrIndex9:
         .byte   $C0,$AF                         ; 96E4 C0 AF                    ..
         .byte   "Ifrit"                         ; 96E6 49 66 72 69 74           Ifrit
         .byte   $0D,$0A                         ; 96EB 0D 0A                    ..
-L96ED:
+MagicNameStrIndex10:
         .byte   $C0,$B0                         ; 96ED C0 B0                    ..
         .byte   "Water "                        ; 96EF 57 61 74 65 72 20        Water 
         .byte   $0D,$0A                         ; 96F5 0D 0A                    ..
-L96F7:
+MagicNameStrIndex11:
         .byte   $C0,$B0                         ; 96F7 C0 B0                    ..
         .byte   "Flood"                         ; 96F9 46 6C 6F 6F 64           Flood
         .byte   $0D,$0A                         ; 96FE 0D 0A                    ..
-L9700:
+MagicNameStrIndex12:
         .byte   $C0,$B0                         ; 9700 C0 B0                    ..
         .byte   "Water2"                        ; 9702 57 61 74 65 72 32        Water2
         .byte   $0D,$0A                         ; 9708 0D 0A                    ..
-L970A:
+MagicNameStrIndex13:
         .byte   $C0,$B0                         ; 970A C0 B0                    ..
         .byte   "Cure2"                         ; 970C 43 75 72 65 32           Cure2
         .byte   $0D,$0A                         ; 9711 0D 0A                    ..
-L9713:
+MagicNameStrIndex14:
         .byte   $C0,$B0                         ; 9713 C0 B0                    ..
         .byte   "Water3"                        ; 9715 57 61 74 65 72 33        Water3
         .byte   $0D,$0A                         ; 971B 0D 0A                    ..
-L971D:
+MagicNameStrIndex15:
         .byte   $C0,$B0                         ; 971D C0 B0                    ..
         .byte   "Flood2"                        ; 971F 46 6C 6F 6F 64 32        Flood2
         .byte   $0D                             ; 9725 0D                       .
-L9726:
+MagicNameStrIndex16:
         .byte   $C0,$B0                         ; 9726 C0 B0                    ..
         .byte   "Water4"                        ; 9728 57 61 74 65 72 34        Water4
         .byte   $0D,$0A                         ; 972E 0D 0A                    ..
-L9730:
+MagicNameStrIndex17:
         .byte   $C0,$B0                         ; 9730 C0 B0                    ..
         .byte   "Cure3"                         ; 9732 43 75 72 65 33           Cure3
         .byte   $0D,$0A                         ; 9737 0D 0A                    ..
-L9739:
+MagicNameStrIndex18:
         .byte   $C0,$B0                         ; 9739 C0 B0                    ..
         .byte   "Leviat"                        ; 973B 4C 65 76 69 61 74        Leviat
         .byte   $0D,$0A                         ; 9741 0D 0A                    ..
-L9743:
+MagicNameStrIndex19:
         .byte   $C0,$B1                         ; 9743 C0 B1                    ..
         .byte   "Bolt "                         ; 9745 42 6F 6C 74 20           Bolt 
         .byte   $0D,$0A                         ; 974A 0D 0A                    ..
-L974C:
+MagicNameStrIndex20:
         .byte   $C0,$B1                         ; 974C C0 B1                    ..
         .byte   "Shock"                         ; 974E 53 68 6F 63 6B           Shock
         .byte   $0D,$0A                         ; 9753 0D 0A                    ..
-L9755:
+MagicNameStrIndex21:
         .byte   $C0,$B1                         ; 9755 C0 B1                    ..
         .byte   "Bolt2"                         ; 9757 42 6F 6C 74 32           Bolt2
         .byte   $0D,$0A                         ; 975C 0D 0A                    ..
-L975E:
+MagicNameStrIndex22:
         .byte   $C0,$B1                         ; 975E C0 B1                    ..
         .byte   "Shock2"                        ; 9760 53 68 6F 63 6B 32        Shock2
         .byte   $0D                             ; 9766 0D                       .
-L9767:
+MagicNameStrIndex23:
         .byte   $C0,$B1                         ; 9767 C0 B1                    ..
         .byte   "Bolt3"                         ; 9769 42 6F 6C 74 33           Bolt3
         .byte   $0D,$0A                         ; 976E 0D 0A                    ..
-L9770:
+MagicNameStrIndex24:
         .byte   $C0,$B1                         ; 9770 C0 B1                    ..
         .byte   "Shock3"                        ; 9772 53 68 6F 63 6B 33        Shock3
         .byte   $0D                             ; 9778 0D                       .
-L9779:
+MagicNameStrIndex25:
         .byte   $C0,$B1                         ; 9779 C0 B1                    ..
         .byte   "Bolt4"                         ; 977B 42 6F 6C 74 34           Bolt4
         .byte   $0D,$0A                         ; 9780 0D 0A                    ..
-L9782:
+MagicNameStrIndex26:
         .byte   $C0,$B1                         ; 9782 C0 B1                    ..
         .byte   "Shock4"                        ; 9784 53 68 6F 63 6B 34        Shock4
         .byte   $0D                             ; 978A 0D                       .
-L978B:
+MagicNameStrIndex27:
         .byte   $C0,$B1                         ; 978B C0 B1                    ..
         .byte   "Ramuh"                         ; 978D 52 61 6D 75 68           Ramuh
         .byte   $0D,$0A                         ; 9792 0D 0A                    ..
-L9794:
+MagicNameStrIndex28:
         .byte   $C0,$B2                         ; 9794 C0 B2                    ..
         .byte   "Aero "                         ; 9796 41 65 72 6F 20           Aero 
         .byte   $0D,$0A                         ; 979B 0D 0A                    ..
-L979D:
+MagicNameStrIndex29:
         .byte   $C0,$B2                         ; 979D C0 B2                    ..
         .byte   "Gale"                          ; 979F 47 61 6C 65              Gale
         .byte   $0D,$0A,$0D,$0A                 ; 97A3 0D 0A 0D 0A              ....
-L97A7:
+MagicNameStrIndex30:
         .byte   $C0,$B2                         ; 97A7 C0 B2                    ..
         .byte   "Aero2"                         ; 97A9 41 65 72 6F 32           Aero2
         .byte   $0D,$0A                         ; 97AE 0D 0A                    ..
-L97B0:
+MagicNameStrIndex31:
         .byte   $C0,$B2                         ; 97B0 C0 B2                    ..
         .byte   "Cure2"                         ; 97B2 43 75 72 65 32           Cure2
         .byte   $0D,$0A                         ; 97B7 0D 0A                    ..
-L97B9:
+MagicNameStrIndex32:
         .byte   $C0,$B2                         ; 97B9 C0 B2                    ..
         .byte   "Aero3"                         ; 97BB 41 65 72 6F 33           Aero3
         .byte   $0D,$0A                         ; 97C0 0D 0A                    ..
-L97C2:
+MagicNameStrIndex33:
         .byte   $C0,$B2                         ; 97C2 C0 B2                    ..
         .byte   "Gale2"                         ; 97C4 47 61 6C 65 32           Gale2
         .byte   $0D,$0A                         ; 97C9 0D 0A                    ..
         .byte   " "                             ; 97CB 20                        
-L97CC:
+MagicNameStrIndex34:
         .byte   $C0,$B2                         ; 97CC C0 B2                    ..
         .byte   "Aero4"                         ; 97CE 41 65 72 6F 34           Aero4
         .byte   $0D,$0A                         ; 97D3 0D 0A                    ..
-L97D5:
+MagicNameStrIndex35:
         .byte   $C0,$B2                         ; 97D5 C0 B2                    ..
         .byte   "Cure3"                         ; 97D7 43 75 72 65 33           Cure3
         .byte   $0D,$0A                         ; 97DC 0D 0A                    ..
-L97DE:
+MagicNameStrIndex36:
         .byte   $C0,$B2                         ; 97DE C0 B2                    ..
         .byte   "Typhon"                        ; 97E0 54 79 70 68 6F 6E        Typhon
         .byte   $0D,$0A                         ; 97E6 0D 0A                    ..
-L97E8:
+MagicNameStrIndex37:
         .byte   $C0,$B3                         ; 97E8 C0 B3                    ..
         .byte   "Stone"                         ; 97EA 53 74 6F 6E 65           Stone
         .byte   $0D,$0A                         ; 97EF 0D 0A                    ..
-L97F1:
+MagicNameStrIndex38:
         .byte   $C0,$B3                         ; 97F1 C0 B3                    ..
         .byte   "Quake "                        ; 97F3 51 75 61 6B 65 20        Quake 
         .byte   $0D,$0A                         ; 97F9 0D 0A                    ..
-L97FB:
+MagicNameStrIndex39:
         .byte   $C0,$B3                         ; 97FB C0 B3                    ..
         .byte   "Stone2"                        ; 97FD 53 74 6F 6E 65 32        Stone2
         .byte   $0D                             ; 9803 0D                       .
-L9804:
+MagicNameStrIndex40:
         .byte   $C0,$B3                         ; 9804 C0 B3                    ..
         .byte   "Quake2"                        ; 9806 51 75 61 6B 65 32        Quake2
         .byte   $0D,$0A                         ; 980C 0D 0A                    ..
-L980E:
+MagicNameStrIndex41:
         .byte   $C0,$B3                         ; 980E C0 B3                    ..
         .byte   "Stone3"                        ; 9810 53 74 6F 6E 65 33        Stone3
         .byte   $0D                             ; 9816 0D                       .
-L9817:
+MagicNameStrIndex42:
         .byte   $C0,$B3                         ; 9817 C0 B3                    ..
         .byte   "Quake3"                        ; 9819 51 75 61 6B 65 33        Quake3
         .byte   $0D,$0A                         ; 981F 0D 0A                    ..
-L9821:
+MagicNameStrIndex43:
         .byte   $C0,$B3                         ; 9821 C0 B3                    ..
         .byte   "Stone4"                        ; 9823 53 74 6F 6E 65 34        Stone4
         .byte   $0D                             ; 9829 0D                       .
-L982A:
+MagicNameStrIndex44:
         .byte   $C0,$B3                         ; 982A C0 B3                    ..
         .byte   "Quake4"                        ; 982C 51 75 61 6B 65 34        Quake4
         .byte   $0D,$0A                         ; 9832 0D 0A                    ..
-L9834:
+MagicNameStrIndex45:
         .byte   $C0,$B3                         ; 9834 C0 B3                    ..
         .byte   "Titan"                         ; 9836 54 69 74 61 6E           Titan
         .byte   $0D,$0A                         ; 983B 0D 0A                    ..
-L983D:
+MagicNameStrIndex46:
         .byte   $C0,$B4                         ; 983D C0 B4                    ..
         .byte   "Cure "                         ; 983F 43 75 72 65 20           Cure 
         .byte   $0D,$0A                         ; 9844 0D 0A                    ..
-L9846:
+MagicNameStrIndex47:
         .byte   $C0,$B4                         ; 9846 C0 B4                    ..
         .byte   "Dia"                           ; 9848 44 69 61                 Dia
         .byte   $0D,$0A,$00,$00                 ; 984B 0D 0A 00 00              ....
-L984F:
+MagicNameStrIndex48:
         .byte   $C0,$B4                         ; 984F C0 B4                    ..
         .byte   "Cure2"                         ; 9851 43 75 72 65 32           Cure2
         .byte   $0D,$0A                         ; 9856 0D 0A                    ..
-L9858:
+MagicNameStrIndex49:
         .byte   $C0,$B4                         ; 9858 C0 B4                    ..
         .byte   "Heal "                         ; 985A 48 65 61 6C 20           Heal 
         .byte   $0D,$0A                         ; 985F 0D 0A                    ..
-L9861:
+MagicNameStrIndex50:
         .byte   $C0,$B4                         ; 9861 C0 B4                    ..
         .byte   "Cure3"                         ; 9863 43 75 72 65 33           Cure3
         .byte   $0D,$0A                         ; 9868 0D 0A                    ..
-L986A:
+MagicNameStrIndex51:
         .byte   $C0,$B4                         ; 986A C0 B4                    ..
         .byte   "Dia2"                          ; 986C 44 69 61 32              Dia2
         .byte   $0D,$0A,$00                     ; 9870 0D 0A 00                 ...
-L9873:
+MagicNameStrIndex52:
         .byte   $C0,$B4                         ; 9873 C0 B4                    ..
         .byte   "Cure4"                         ; 9875 43 75 72 65 34           Cure4
         .byte   $0D,$0A                         ; 987A 0D 0A                    ..
-L987C:
+MagicNameStrIndex53:
         .byte   $C0,$B4                         ; 987C C0 B4                    ..
         .byte   "Heal2"                         ; 987E 48 65 61 6C 32           Heal2
         .byte   $0D,$0A                         ; 9883 0D 0A                    ..
-L9885:
+MagicNameStrIndex54:
         .byte   $C0,$B4                         ; 9885 C0 B4                    ..
         .byte   "Bahamt"                        ; 9887 42 61 68 61 6D 74        Bahamt
         .byte   $0D,$0A                         ; 988D 0D 0A                    ..
-L988F:
+MagicNameStrIndex55:
         .byte   $C0,$B5                         ; 988F C0 B5                    ..
         .byte   "Ice  "                         ; 9891 49 63 65 20 20           Ice  
         .byte   $0D,$0A                         ; 9896 0D 0A                    ..
-L9898:
+MagicNameStrIndex56:
         .byte   $C0,$B5                         ; 9898 C0 B5                    ..
         .byte   "Hail  "                        ; 989A 48 61 69 6C 20 20        Hail  
         .byte   $0D,$0A                         ; 98A0 0D 0A                    ..
-L98A2:
+MagicNameStrIndex57:
         .byte   $C0,$B5                         ; 98A2 C0 B5                    ..
         .byte   "Ice2 "                         ; 98A4 49 63 65 32 20           Ice2 
         .byte   $0D,$0A                         ; 98A9 0D 0A                    ..
-L98AB:
+MagicNameStrIndex58:
         .byte   $C0,$B5                         ; 98AB C0 B5                    ..
         .byte   "Hail2 "                        ; 98AD 48 61 69 6C 32 20        Hail2 
         .byte   $0D,$0A                         ; 98B3 0D 0A                    ..
-L98B5:
+MagicNameStrIndex59:
         .byte   $C0,$B5                         ; 98B5 C0 B5                    ..
         .byte   "Ice3 "                         ; 98B7 49 63 65 33 20           Ice3 
         .byte   $0D,$0A                         ; 98BC 0D 0A                    ..
-L98BE:
+MagicNameStrIndex60:
         .byte   $C0,$B5                         ; 98BE C0 B5                    ..
         .byte   "Hail3 "                        ; 98C0 48 61 69 6C 33 20        Hail3 
         .byte   $0D,$0A                         ; 98C6 0D 0A                    ..
-L98C8:
+MagicNameStrIndex61:
         .byte   $C0,$B5                         ; 98C8 C0 B5                    ..
         .byte   "Ice4 "                         ; 98CA 49 63 65 34 20           Ice4 
         .byte   $0D,$0A                         ; 98CF 0D 0A                    ..
-L98D1:
+MagicNameStrIndex62:
         .byte   $C0,$B5                         ; 98D1 C0 B5                    ..
         .byte   "Hail4 "                        ; 98D3 48 61 69 6C 34 20        Hail4 
         .byte   $0D,$0A                         ; 98D9 0D 0A                    ..
-L98DB:
+MagicNameStrIndex63:
         .byte   $C0,$B5                         ; 98DB C0 B5                    ..
         .byte   "Shiva"                         ; 98DD 53 68 69 76 61           Shiva
         .byte   $0D,$FF,$FF                     ; 98E2 0D FF FF                 ...
 ; ----------------------------------------------------------------------------
 ItemNameStr:
-        .addr   L9925                           ; 98E5 25 99                    %.
-        .addr   L992B                           ; 98E7 2B 99                    +.
-        .addr   L9933                           ; 98E9 33 99                    3.
-        .addr   L993D                           ; 98EB 3D 99                    =.
-        .addr   L9947                           ; 98ED 47 99                    G.
-        .addr   L9951                           ; 98EF 51 99                    Q.
-        .addr   L9957                           ; 98F1 57 99                    W.
-        .addr   L995F                           ; 98F3 5F 99                    _.
-        .addr   L9967                           ; 98F5 67 99                    g.
-        .addr   L996E                           ; 98F7 6E 99                    n.
-        .addr   L9977                           ; 98F9 77 99                    w.
-        .addr   L9980                           ; 98FB 80 99                    ..
-        .addr   LA420                           ; 98FD 20 A4                     .
-        .addr   L998C                           ; 98FF 8C 99                    ..
-        .addr   L9992                           ; 9901 92 99                    ..
-        .addr   L9998                           ; 9903 98 99                    ..
-        .addr   L999E                           ; 9905 9E 99                    ..
-        .addr   L99A4                           ; 9907 A4 99                    ..
-        .addr   L99AA                           ; 9909 AA 99                    ..
-        .addr   L99B3                           ; 990B B3 99                    ..
-        .addr   L99BD                           ; 990D BD 99                    ..
-        .addr   L99C7                           ; 990F C7 99                    ..
-        .addr   L99D1                           ; 9911 D1 99                    ..
-        .addr   L99D9                           ; 9913 D9 99                    ..
-        .addr   L99E3                           ; 9915 E3 99                    ..
-        .addr   L99ED                           ; 9917 ED 99                    ..
-        .addr   L99F7                           ; 9919 F7 99                    ..
-        .addr   L9A01                           ; 991B 01 9A                    ..
-        .addr   L9A0B                           ; 991D 0B 9A                    ..
-        .addr   L9A15                           ; 991F 15 9A                    ..
-        .addr   L9A1F                           ; 9921 1F 9A                    ..
-        .addr   L9A29                           ; 9923 29 9A                    ).
+        .addr   ItemNameStrIndex0               ; 98E5 25 99                    %.
+        .addr   ItemNameStrIndex1               ; 98E7 2B 99                    +.
+        .addr   ItemNameStrIndex2               ; 98E9 33 99                    3.
+        .addr   ItemNameStrIndex3               ; 98EB 3D 99                    =.
+        .addr   ItemNameStrIndex4               ; 98ED 47 99                    G.
+        .addr   ItemNameStrIndex5               ; 98EF 51 99                    Q.
+        .addr   ItemNameStrIndex6               ; 98F1 57 99                    W.
+        .addr   ItemNameStrIndex7               ; 98F3 5F 99                    _.
+        .addr   ItemNameStrIndex8               ; 98F5 67 99                    g.
+        .addr   ItemNameStrIndex9               ; 98F7 6E 99                    n.
+        .addr   ItemNameStrIndex10              ; 98F9 77 99                    w.
+        .addr   ItemNameStrIndex11              ; 98FB 80 99                    ..
+        .addr   ItemNameStrIndex12              ; 98FD 20 A4                     .
+        .addr   ItemNameStrIndex13              ; 98FF 8C 99                    ..
+        .addr   ItemNameStrIndex14              ; 9901 92 99                    ..
+        .addr   ItemNameStrIndex15              ; 9903 98 99                    ..
+        .addr   ItemNameStrIndex16              ; 9905 9E 99                    ..
+        .addr   ItemNameStrIndex17              ; 9907 A4 99                    ..
+        .addr   ItemNameStrIndex18              ; 9909 AA 99                    ..
+        .addr   ItemNameStrIndex19              ; 990B B3 99                    ..
+        .addr   ItemNameStrIndex20              ; 990D BD 99                    ..
+        .addr   ItemNameStrIndex21              ; 990F C7 99                    ..
+        .addr   ItemNameStrIndex22              ; 9911 D1 99                    ..
+        .addr   ItemNameStrIndex23              ; 9913 D9 99                    ..
+        .addr   ItemNameStrIndex24              ; 9915 E3 99                    ..
+        .addr   ItemNameStrIndex25              ; 9917 ED 99                    ..
+        .addr   ItemNameStrIndex26              ; 9919 F7 99                    ..
+        .addr   ItemNameStrIndex27              ; 991B 01 9A                    ..
+        .addr   ItemNameStrIndex28              ; 991D 0B 9A                    ..
+        .addr   ItemNameStrIndex29              ; 991F 15 9A                    ..
+        .addr   ItemNameStrIndex30              ; 9921 1F 9A                    ..
+        .addr   ItemNameStrIndex31              ; 9923 29 9A                    ).
 ; ----------------------------------------------------------------------------
-L9925:
+ItemNameStrIndex0:
         .byte   "None"                          ; 9925 4E 6F 6E 65              None
         .byte   $0D,$0A                         ; 9929 0D 0A                    ..
-L992B:
+ItemNameStrIndex1:
         .byte   "Potion"                        ; 992B 50 6F 74 69 6F 6E        Potion
         .byte   $0D,$0A                         ; 9931 0D 0A                    ..
-L9933:
+ItemNameStrIndex2:
         .byte   "Hi-Potion"                     ; 9933 48 69 2D 50 6F 74 69 6F  Hi-Potio
                                                 ; 993B 6E                       n
         .byte   $0D                             ; 993C 0D                       .
-L993D:
+ItemNameStrIndex3:
         .byte   "Low-Mega"                      ; 993D 4C 6F 77 2D 4D 65 67 61  Low-Mega
         .byte   $0D,$0A                         ; 9945 0D 0A                    ..
-L9947:
+ItemNameStrIndex4:
         .byte   "X-Potion"                      ; 9947 58 2D 50 6F 74 69 6F 6E  X-Potion
         .byte   $0D,$0A                         ; 994F 0D 0A                    ..
-L9951:
+ItemNameStrIndex5:
         .byte   "Mega"                          ; 9951 4D 65 67 61              Mega
         .byte   $0D,$0A                         ; 9955 0D 0A                    ..
-L9957:
+ItemNameStrIndex6:
         .byte   "Hi-Mega"                       ; 9957 48 69 2D 4D 65 67 61     Hi-Mega
         .byte   $0D                             ; 995E 0D                       .
-L995F:
+ItemNameStrIndex7:
         .byte   "X-Mega"                        ; 995F 58 2D 4D 65 67 61        X-Mega
         .byte   $0D,$0A                         ; 9965 0D 0A                    ..
-L9967:
+ItemNameStrIndex8:
         .byte   "Ether"                         ; 9967 45 74 68 65 72           Ether
         .byte   $0D,$0A                         ; 996C 0D 0A                    ..
-L996E:
+ItemNameStrIndex9:
         .byte   "Hi-Ether"                      ; 996E 48 69 2D 45 74 68 65 72  Hi-Ether
         .byte   $0D                             ; 9976 0D                       .
-L9977:
+ItemNameStrIndex10:
         .byte   "Phoenix"                       ; 9977 50 68 6F 65 6E 69 78     Phoenix
         .byte   $0D,$0A                         ; 997E 0D 0A                    ..
-L9980:
+ItemNameStrIndex11:
         .byte   "Smoke"                         ; 9980 53 6D 6F 6B 65           Smoke
         .byte   $0D,$0A                         ; 9985 0D 0A                    ..
         .byte   "HP+"                           ; 9987 48 50 2B                 HP+
         .byte   $0D,$0A                         ; 998A 0D 0A                    ..
-L998C:
+ItemNameStrIndex13:
         .byte   "Str+"                          ; 998C 53 74 72 2B              Str+
         .byte   $0D,$0A                         ; 9990 0D 0A                    ..
-L9992:
+ItemNameStrIndex14:
         .byte   "Vit+"                          ; 9992 56 69 74 2B              Vit+
         .byte   $0D,$0A                         ; 9996 0D 0A                    ..
-L9998:
+ItemNameStrIndex15:
         .byte   "Int+"                          ; 9998 49 6E 74 2B              Int+
         .byte   $0D,$0A                         ; 999C 0D 0A                    ..
-L999E:
+ItemNameStrIndex16:
         .byte   "Spr+"                          ; 999E 53 70 72 2B              Spr+
         .byte   $0D,$0A                         ; 99A2 0D 0A                    ..
-L99A4:
+ItemNameStrIndex17:
         .byte   "Agl+"                          ; 99A4 41 67 6C 2B              Agl+
         .byte   $0D,$0A                         ; 99A8 0D 0A                    ..
-L99AA:
+ItemNameStrIndex18:
         .byte   "Battery"                       ; 99AA 42 61 74 74 65 72 79     Battery
         .byte   $0D,$0A                         ; 99B1 0D 0A                    ..
-L99B3:
+ItemNameStrIndex19:
         .byte   "ChocLure"                      ; 99B3 43 68 6F 63 4C 75 72 65  ChocLure
         .byte   $0D,$0A                         ; 99BB 0D 0A                    ..
-L99BD:
+ItemNameStrIndex20:
         .byte   "DynePend"                      ; 99BD 44 79 6E 65 50 65 6E 64  DynePend
         .byte   $0D,$0A                         ; 99C5 0D 0A                    ..
-L99C7:
+ItemNameStrIndex21:
         .byte   "KeyStone"                      ; 99C7 4B 65 79 53 74 6F 6E 65  KeyStone
         .byte   $0D,$0A                         ; 99CF 0D 0A                    ..
-L99D1:
+ItemNameStrIndex22:
         .byte   "Black"                         ; 99D1 42 6C 61 63 6B           Black
         .byte   $87,$0D,$0A                     ; 99D6 87 0D 0A                 ...
-L99D9:
+ItemNameStrIndex23:
         .byte   "LunrHarp"                      ; 99D9 4C 75 6E 72 48 61 72 70  LunrHarp
         .byte   $0D,$0A                         ; 99E1 0D 0A                    ..
-L99E3:
+ItemNameStrIndex24:
         .byte   "61F Card"                      ; 99E3 36 31 46 20 43 61 72 64  61F Card
         .byte   $0D,$0A                         ; 99EB 0D 0A                    ..
-L99ED:
+ItemNameStrIndex25:
         .byte   "62F Card"                      ; 99ED 36 32 46 20 43 61 72 64  62F Card
         .byte   $0D,$0A                         ; 99F5 0D 0A                    ..
-L99F7:
+ItemNameStrIndex26:
         .byte   "64F Card"                      ; 99F7 36 34 46 20 43 61 72 64  64F Card
         .byte   $0D,$0A                         ; 99FF 0D 0A                    ..
-L9A01:
+ItemNameStrIndex27:
         .byte   "65F Card"                      ; 9A01 36 35 46 20 43 61 72 64  65F Card
         .byte   $0D,$0A                         ; 9A09 0D 0A                    ..
-L9A0B:
+ItemNameStrIndex28:
         .byte   "66F Card"                      ; 9A0B 36 36 46 20 43 61 72 64  66F Card
         .byte   $0D,$0A                         ; 9A13 0D 0A                    ..
-L9A15:
+ItemNameStrIndex29:
         .byte   "68F Card"                      ; 9A15 36 38 46 20 43 61 72 64  68F Card
         .byte   $0D,$0A                         ; 9A1D 0D 0A                    ..
-L9A1F:
+ItemNameStrIndex30:
         .byte   "Snowbord"                      ; 9A1F 53 6E 6F 77 62 6F 72 64  Snowbord
         .byte   $0D,$0A                         ; 9A27 0D 0A                    ..
-L9A29:
+ItemNameStrIndex31:
         .byte   "Map"                           ; 9A29 4D 61 70                 Map
         .byte   $0D,$0A,$FF,$FF                 ; 9A2C 0D 0A FF FF              ....
 ; ----------------------------------------------------------------------------
 ItemDescriptionStr:
-        .addr   L9A70                           ; 9A30 70 9A                    p.
-        .addr   LA452                           ; 9A32 52 A4                    R.
-        .addr   LA473                           ; 9A34 73 A4                    s.
-        .addr   LA4BB                           ; 9A36 BB A4                    ..
-        .addr   LA497                           ; 9A38 97 A4                    ..
-        .addr   LA4D9                           ; 9A3A D9 A4                    ..
-        .addr   LA4F7                           ; 9A3C F7 A4                    ..
-        .addr   LA515                           ; 9A3E 15 A5                    ..
-        .addr   LA536                           ; 9A40 36 A5                    6.
-        .addr   LA556                           ; 9A42 56 A5                    V.
-        .addr   LA57B                           ; 9A44 7B A5                    {.
-        .addr   LA5AA                           ; 9A46 AA A5                    ..
-        .addr   LA42B                           ; 9A48 2B A4                    +.
-        .addr   L9B87                           ; 9A4A 87 9B                    ..
-        .addr   L9B94                           ; 9A4C 94 9B                    ..
-        .addr   L9BA1                           ; 9A4E A1 9B                    ..
-        .addr   L9BB2                           ; 9A50 B2 9B                    ..
-        .addr   L9BBD                           ; 9A52 BD 9B                    ..
-        .addr   L9BC9                           ; 9A54 C9 9B                    ..
-        .addr   L9BDE                           ; 9A56 DE 9B                    ..
-        .addr   L9BFA                           ; 9A58 FA 9B                    ..
-        .addr   L9C0A                           ; 9A5A 0A 9C                    ..
-        .addr   L9C27                           ; 9A5C 27 9C                    '.
-        .addr   L9C4B                           ; 9A5E 4B 9C                    K.
-        .addr   L9C66                           ; 9A60 66 9C                    f.
-        .addr   L9C72                           ; 9A62 72 9C                    r.
-        .addr   L9C7E                           ; 9A64 7E 9C                    ~.
-        .addr   L9C8A                           ; 9A66 8A 9C                    ..
-        .addr   L9C96                           ; 9A68 96 9C                    ..
-        .addr   L9CA2                           ; 9A6A A2 9C                    ..
-        .addr   L9CAE                           ; 9A6C AE 9C                    ..
-        .addr   L9CCA                           ; 9A6E CA 9C                    ..
+        .addr   ItemDescriptionStrIndex0        ; 9A30 70 9A                    p.
+        .addr   ItemDescriptionStrIndex1        ; 9A32 52 A4                    R.
+        .addr   ItemDescriptionStrIndex2        ; 9A34 73 A4                    s.
+        .addr   ItemDescriptionStrIndex3        ; 9A36 BB A4                    ..
+        .addr   ItemDescriptionStrIndex4        ; 9A38 97 A4                    ..
+        .addr   ItemDescriptionStrIndex5        ; 9A3A D9 A4                    ..
+        .addr   ItemDescriptionStrIndex6        ; 9A3C F7 A4                    ..
+        .addr   ItemDescriptionStrIndex7        ; 9A3E 15 A5                    ..
+        .addr   ItemDescriptionStrIndex8        ; 9A40 36 A5                    6.
+        .addr   ItemDescriptionStrIndex9        ; 9A42 56 A5                    V.
+        .addr   ItemDescriptionStrIndex10       ; 9A44 7B A5                    {.
+        .addr   ItemDescriptionStrIndex11       ; 9A46 AA A5                    ..
+        .addr   ItemDescriptionStrIndex12       ; 9A48 2B A4                    +.
+        .addr   ItemDescriptionStrIndex13       ; 9A4A 87 9B                    ..
+        .addr   ItemDescriptionStrIndex14       ; 9A4C 94 9B                    ..
+        .addr   ItemDescriptionStrIndex15       ; 9A4E A1 9B                    ..
+        .addr   ItemDescriptionStrIndex16       ; 9A50 B2 9B                    ..
+        .addr   ItemDescriptionStrIndex17       ; 9A52 BD 9B                    ..
+        .addr   ItemDescriptionStrIndex18       ; 9A54 C9 9B                    ..
+        .addr   ItemDescriptionStrIndex19       ; 9A56 DE 9B                    ..
+        .addr   ItemDescriptionStrIndex20       ; 9A58 FA 9B                    ..
+        .addr   ItemDescriptionStrIndex21       ; 9A5A 0A 9C                    ..
+        .addr   ItemDescriptionStrIndex22       ; 9A5C 27 9C                    '.
+        .addr   ItemDescriptionStrIndex23       ; 9A5E 4B 9C                    K.
+        .addr   ItemDescriptionStrIndex24       ; 9A60 66 9C                    f.
+        .addr   ItemDescriptionStrIndex25       ; 9A62 72 9C                    r.
+        .addr   ItemDescriptionStrIndex26       ; 9A64 7E 9C                    ~.
+        .addr   ItemDescriptionStrIndex27       ; 9A66 8A 9C                    ..
+        .addr   ItemDescriptionStrIndex28       ; 9A68 96 9C                    ..
+        .addr   ItemDescriptionStrIndex29       ; 9A6A A2 9C                    ..
+        .addr   ItemDescriptionStrIndex30       ; 9A6C AE 9C                    ..
+        .addr   ItemDescriptionStrIndex31       ; 9A6E CA 9C                    ..
 ; ----------------------------------------------------------------------------
-L9A70:
+ItemDescriptionStrIndex0:
         .byte   "Nothing__"                     ; 9A70 4E 6F 74 68 69 6E 67 5F  Nothing_
                                                 ; 9A78 5F                       _
         .byte   $0D,$0A                         ; 9A79 0D 0A                    ..
@@ -2905,91 +2905,91 @@ L9A70:
         .byte   "Max HP +50"                    ; 9B7C 4D 61 78 20 48 50 20 2B  Max HP +
                                                 ; 9B84 35 30                    50
         .byte   $0D                             ; 9B86 0D                       .
-L9B87:
+ItemDescriptionStrIndex13:
         .byte   "Strength +1 "                  ; 9B87 53 74 72 65 6E 67 74 68  Strength
                                                 ; 9B8F 20 2B 31 20               +1 
         .byte   $0D                             ; 9B93 0D                       .
-L9B94:
+ItemDescriptionStrIndex14:
         .byte   "Vitality +1 "                  ; 9B94 56 69 74 61 6C 69 74 79  Vitality
                                                 ; 9B9C 20 2B 31 20               +1 
         .byte   $0D                             ; 9BA0 0D                       .
-L9BA1:
+ItemDescriptionStrIndex15:
         .byte   "Intelligence +1 "              ; 9BA1 49 6E 74 65 6C 6C 69 67  Intellig
                                                 ; 9BA9 65 6E 63 65 20 2B 31 20  ence +1 
         .byte   $0D                             ; 9BB1 0D                       .
-L9BB2:
+ItemDescriptionStrIndex16:
         .byte   "Spirit +1 "                    ; 9BB2 53 70 69 72 69 74 20 2B  Spirit +
                                                 ; 9BBA 31 20                    1 
         .byte   $0D                             ; 9BBC 0D                       .
-L9BBD:
+ItemDescriptionStrIndex17:
         .byte   "Agility +1 "                   ; 9BBD 41 67 69 6C 69 74 79 20  Agility 
                                                 ; 9BC5 2B 31 20                 +1 
         .byte   $0D                             ; 9BC8 0D                       .
-L9BC9:
+ItemDescriptionStrIndex18:
         .byte   "Provide electricity"           ; 9BC9 50 72 6F 76 69 64 65 20  Provide 
                                                 ; 9BD1 65 6C 65 63 74 72 69 63  electric
                                                 ; 9BD9 69 74 79                 ity
         .byte   $0D,$0A                         ; 9BDC 0D 0A                    ..
-L9BDE:
+ItemDescriptionStrIndex19:
         .byte   "Need this to catch chocobo"    ; 9BDE 4E 65 65 64 20 74 68 69  Need thi
                                                 ; 9BE6 73 20 74 6F 20 63 61 74  s to cat
                                                 ; 9BEE 63 68 20 63 68 6F 63 6F  ch choco
                                                 ; 9BF6 62 6F                    bo
         .byte   $0D,$0A                         ; 9BF8 0D 0A                    ..
-L9BFA:
+ItemDescriptionStrIndex20:
         .byte   "Dyne's Pendant"                ; 9BFA 44 79 6E 65 27 73 20 50  Dyne's P
                                                 ; 9C02 65 6E 64 61 6E 74        endant
         .byte   $0D,$0A                         ; 9C08 0D 0A                    ..
-L9C0A:
+ItemDescriptionStrIndex21:
         .byte   "Enter Temple of theAncients"   ; 9C0A 45 6E 74 65 72 20 54 65  Enter Te
                                                 ; 9C12 6D 70 6C 65 20 6F 66 20  mple of 
                                                 ; 9C1A 74 68 65 41 6E 63 69 65  theAncie
                                                 ; 9C22 6E 74 73                 nts
         .byte   $0D,$0A                         ; 9C25 0D 0A                    ..
-L9C27:
+ItemDescriptionStrIndex22:
         .byte   "Summon Meteor      __Don't do t"; 9C27 53 75 6D 6D 6F 6E 20 4D Summon M
                                                 ; 9C2F 65 74 65 6F 72 20 20 20  eteor   
                                                 ; 9C37 20 20 20 5F 5F 44 6F 6E     __Don
                                                 ; 9C3F 27 74 20 64 6F 20 74     't do t
         .byte   "hat"                           ; 9C46 68 61 74                 hat
         .byte   $0D,$0A                         ; 9C49 0D 0A                    ..
-L9C4B:
+ItemDescriptionStrIndex23:
         .byte   "Awaken Sleeping    Forest"     ; 9C4B 41 77 61 6B 65 6E 20 53  Awaken S
                                                 ; 9C53 6C 65 65 70 69 6E 67 20  leeping 
                                                 ; 9C5B 20 20 20 46 6F 72 65 73     Fores
                                                 ; 9C63 74                       t
         .byte   $0D,$0A                         ; 9C64 0D 0A                    ..
-L9C66:
+ItemDescriptionStrIndex24:
         .byte   "Access 61F"                    ; 9C66 41 63 63 65 73 73 20 36  Access 6
                                                 ; 9C6E 31 46                    1F
         .byte   $0D,$0A                         ; 9C70 0D 0A                    ..
-L9C72:
+ItemDescriptionStrIndex25:
         .byte   "Access 62F"                    ; 9C72 41 63 63 65 73 73 20 36  Access 6
                                                 ; 9C7A 32 46                    2F
         .byte   $0D,$0A                         ; 9C7C 0D 0A                    ..
-L9C7E:
+ItemDescriptionStrIndex26:
         .byte   "Access 64F"                    ; 9C7E 41 63 63 65 73 73 20 36  Access 6
                                                 ; 9C86 34 46                    4F
         .byte   $0D,$0A                         ; 9C88 0D 0A                    ..
-L9C8A:
+ItemDescriptionStrIndex27:
         .byte   "Access 65F"                    ; 9C8A 41 63 63 65 73 73 20 36  Access 6
                                                 ; 9C92 35 46                    5F
         .byte   $0D,$0A                         ; 9C94 0D 0A                    ..
-L9C96:
+ItemDescriptionStrIndex28:
         .byte   "Access 66F"                    ; 9C96 41 63 63 65 73 73 20 36  Access 6
                                                 ; 9C9E 36 46                    6F
         .byte   $0D,$0A                         ; 9CA0 0D 0A                    ..
-L9CA2:
+ItemDescriptionStrIndex29:
         .byte   "Access 68F"                    ; 9CA2 41 63 63 65 73 73 20 36  Access 6
                                                 ; 9CAA 38 46                    8F
         .byte   $0D,$0A                         ; 9CAC 0D 0A                    ..
-L9CAE:
+ItemDescriptionStrIndex30:
         .byte   "Get to Great       Glacier"    ; 9CAE 47 65 74 20 74 6F 20 47  Get to G
                                                 ; 9CB6 72 65 61 74 20 20 20 20  reat    
                                                 ; 9CBE 20 20 20 47 6C 61 63 69     Glaci
                                                 ; 9CC6 65 72                    er
         .byte   $0D,$0A                         ; 9CC8 0D 0A                    ..
-L9CCA:
+ItemDescriptionStrIndex31:
         .byte   "Map of Great       Glacier"    ; 9CCA 4D 61 70 20 6F 66 20 47  Map of G
                                                 ; 9CD2 72 65 61 74 20 20 20 20  reat    
                                                 ; 9CDA 20 20 20 47 6C 61 63 69     Glaci
@@ -2997,214 +2997,214 @@ L9CCA:
         .byte   $0D,$0A,$FF,$FF                 ; 9CE4 0D 0A FF FF              ....
 ; ----------------------------------------------------------------------------
 CharacterNameStr:
-        .addr   L9DB0                           ; 9CE8 B0 9D                    ..
-        .addr   L9DB9                           ; 9CEA B9 9D                    ..
-        .addr   L9DC0                           ; 9CEC C0 9D                    ..
-        .addr   L9DC8                           ; 9CEE C8 9D                    ..
-        .addr   L9DCE                           ; 9CF0 CE 9D                    ..
-        .addr   L9DD5                           ; 9CF2 D5 9D                    ..
-        .addr   L9DDC                           ; 9CF4 DC 9D                    ..
-        .addr   L9DE6                           ; 9CF6 E6 9D                    ..
-        .addr   L9DEB                           ; 9CF8 EB 9D                    ..
-        .addr   L9DF4                           ; 9CFA F4 9D                    ..
-        .addr   L9DFE                           ; 9CFC FE 9D                    ..
-        .addr   L9E08                           ; 9CFE 08 9E                    ..
-        .addr   L9E0E                           ; 9D00 0E 9E                    ..
-        .addr   L9E16                           ; 9D02 16 9E                    ..
-        .addr   L9DB0                           ; 9D04 B0 9D                    ..
-        .addr   L9E25                           ; 9D06 25 9E                    %.
-        .addr   L9E2A                           ; 9D08 2A 9E                    *.
-        .addr   L9E34                           ; 9D0A 34 9E                    4.
-        .addr   L9E3E                           ; 9D0C 3E 9E                    >.
-        .addr   L9E45                           ; 9D0E 45 9E                    E.
-        .addr   L9E4F                           ; 9D10 4F 9E                    O.
-        .addr   L9E59                           ; 9D12 59 9E                    Y.
-        .addr   L9E63                           ; 9D14 63 9E                    c.
-        .addr   L9E6B                           ; 9D16 6B 9E                    k.
-        .addr   L9E71                           ; 9D18 71 9E                    q.
-        .addr   L9E77                           ; 9D1A 77 9E                    w.
-        .addr   L9E81                           ; 9D1C 81 9E                    ..
-        .addr   L9E85                           ; 9D1E 85 9E                    ..
-        .addr   L9E8D                           ; 9D20 8D 9E                    ..
-        .addr   L9E97                           ; 9D22 97 9E                    ..
-        .addr   L9EA1                           ; 9D24 A1 9E                    ..
-        .addr   L9EA8                           ; 9D26 A8 9E                    ..
-        .addr   L9EB2                           ; 9D28 B2 9E                    ..
-        .addr   L9EBB                           ; 9D2A BB 9E                    ..
-        .addr   L9EC5                           ; 9D2C C5 9E                    ..
-        .addr   LA1CB                           ; 9D2E CB A1                    ..
-        .addr   L9ED4                           ; 9D30 D4 9E                    ..
-        .addr   LA1DC                           ; 9D32 DC A1                    ..
-        .addr   LA1E6                           ; 9D34 E6 A1                    ..
-        .addr   LA1F0                           ; 9D36 F0 A1                    ..
-        .addr   LA1F9                           ; 9D38 F9 A1                    ..
-        .addr   LA201                           ; 9D3A 01 A2                    ..
-        .addr   LA20B                           ; 9D3C 0B A2                    ..
-        .addr   LA215                           ; 9D3E 15 A2                    ..
-        .addr   LA21E                           ; 9D40 1E A2                    ..
-        .addr   LA227                           ; 9D42 27 A2                    '.
-        .addr   LA22F                           ; 9D44 2F A2                    /.
-        .addr   LA237                           ; 9D46 37 A2                    7.
-        .addr   LA23F                           ; 9D48 3F A2                    ?.
-        .addr   LA248                           ; 9D4A 48 A2                    H.
-        .addr   LA252                           ; 9D4C 52 A2                    R.
-        .addr   LA25C                           ; 9D4E 5C A2                    \.
-        .addr   LA266                           ; 9D50 66 A2                    f.
-        .addr   LA26F                           ; 9D52 6F A2                    o.
-        .addr   LA273                           ; 9D54 73 A2                    s.
-        .addr   LA27D                           ; 9D56 7D A2                    }.
-        .addr   LA284                           ; 9D58 84 A2                    ..
-        .addr   LA28E                           ; 9D5A 8E A2                    ..
-        .addr   LA298                           ; 9D5C 98 A2                    ..
-        .addr   LA2A2                           ; 9D5E A2 A2                    ..
-        .addr   LA2AC                           ; 9D60 AC A2                    ..
-        .addr   LA2B6                           ; 9D62 B6 A2                    ..
-        .addr   LA2BF                           ; 9D64 BF A2                    ..
-        .addr   LA2C5                           ; 9D66 C5 A2                    ..
-        .addr   LA2CF                           ; 9D68 CF A2                    ..
-        .addr   LA2D8                           ; 9D6A D8 A2                    ..
-        .addr   LA2DF                           ; 9D6C DF A2                    ..
-        .addr   LA2E9                           ; 9D6E E9 A2                    ..
-        .addr   LA2F3                           ; 9D70 F3 A2                    ..
-        .addr   LA2FD                           ; 9D72 FD A2                    ..
-        .addr   LA307                           ; 9D74 07 A3                    ..
-        .addr   LA310                           ; 9D76 10 A3                    ..
-        .addr   LA318                           ; 9D78 18 A3                    ..
-        .addr   LA322                           ; 9D7A 22 A3                    ".
-        .addr   LA32B                           ; 9D7C 2B A3                    +.
-        .addr   LA335                           ; 9D7E 35 A3                    5.
-        .addr   LA33B                           ; 9D80 3B A3                    ;.
-        .addr   LA342                           ; 9D82 42 A3                    B.
-        .addr   LA34A                           ; 9D84 4A A3                    J.
-        .addr   LA354                           ; 9D86 54 A3                    T.
-        .addr   LA35D                           ; 9D88 5D A3                    ].
-        .addr   LA365                           ; 9D8A 65 A3                    e.
-        .addr   LA36F                           ; 9D8C 6F A3                    o.
-        .addr   LA379                           ; 9D8E 79 A3                    y.
-        .addr   LA383                           ; 9D90 83 A3                    ..
-        .addr   LA38C                           ; 9D92 8C A3                    ..
-        .addr   LA396                           ; 9D94 96 A3                    ..
-        .addr   LA39F                           ; 9D96 9F A3                    ..
-        .addr   LA3A9                           ; 9D98 A9 A3                    ..
-        .addr   LA3B1                           ; 9D9A B1 A3                    ..
-        .addr   LA3BB                           ; 9D9C BB A3                    ..
-        .addr   LA3C4                           ; 9D9E C4 A3                    ..
-        .addr   LA3CE                           ; 9DA0 CE A3                    ..
-        .addr   LA3D8                           ; 9DA2 D8 A3                    ..
-        .addr   LA3E0                           ; 9DA4 E0 A3                    ..
-        .addr   LA3EA                           ; 9DA6 EA A3                    ..
-        .addr   LA3F4                           ; 9DA8 F4 A3                    ..
-        .addr   LA3FE                           ; 9DAA FE A3                    ..
-        .addr   LA408                           ; 9DAC 08 A4                    ..
-        .addr   LA411                           ; 9DAE 11 A4                    ..
+        .addr   CharacterNameStrIndex0          ; 9CE8 B0 9D                    ..
+        .addr   CharacterNameStrIndex1          ; 9CEA B9 9D                    ..
+        .addr   CharacterNameStrIndex2          ; 9CEC C0 9D                    ..
+        .addr   CharacterNameStrIndex3          ; 9CEE C8 9D                    ..
+        .addr   CharacterNameStrIndex4          ; 9CF0 CE 9D                    ..
+        .addr   CharacterNameStrIndex5          ; 9CF2 D5 9D                    ..
+        .addr   CharacterNameStrIndex6          ; 9CF4 DC 9D                    ..
+        .addr   CharacterNameStrIndex7          ; 9CF6 E6 9D                    ..
+        .addr   CharacterNameStrIndex8          ; 9CF8 EB 9D                    ..
+        .addr   CharacterNameStrIndex9          ; 9CFA F4 9D                    ..
+        .addr   CharacterNameStrIndex10         ; 9CFC FE 9D                    ..
+        .addr   CharacterNameStrIndex11         ; 9CFE 08 9E                    ..
+        .addr   CharacterNameStrIndex12         ; 9D00 0E 9E                    ..
+        .addr   CharacterNameStrIndex13         ; 9D02 16 9E                    ..
+        .addr   CharacterNameStrIndex0          ; 9D04 B0 9D                    ..
+        .addr   CharacterNameStrIndex15         ; 9D06 25 9E                    %.
+        .addr   CharacterNameStrIndex16         ; 9D08 2A 9E                    *.
+        .addr   CharacterNameStrIndex17         ; 9D0A 34 9E                    4.
+        .addr   CharacterNameStrIndex18         ; 9D0C 3E 9E                    >.
+        .addr   CharacterNameStrIndex19         ; 9D0E 45 9E                    E.
+        .addr   CharacterNameStrIndex20         ; 9D10 4F 9E                    O.
+        .addr   CharacterNameStrIndex21         ; 9D12 59 9E                    Y.
+        .addr   CharacterNameStrIndex22         ; 9D14 63 9E                    c.
+        .addr   CharacterNameStrIndex23         ; 9D16 6B 9E                    k.
+        .addr   CharacterNameStrIndex24         ; 9D18 71 9E                    q.
+        .addr   CharacterNameStrIndex25         ; 9D1A 77 9E                    w.
+        .addr   CharacterNameStrIndex26         ; 9D1C 81 9E                    ..
+        .addr   CharacterNameStrIndex27         ; 9D1E 85 9E                    ..
+        .addr   CharacterNameStrIndex28         ; 9D20 8D 9E                    ..
+        .addr   CharacterNameStrIndex29         ; 9D22 97 9E                    ..
+        .addr   CharacterNameStrIndex30         ; 9D24 A1 9E                    ..
+        .addr   CharacterNameStrIndex31         ; 9D26 A8 9E                    ..
+        .addr   CharacterNameStrIndex32         ; 9D28 B2 9E                    ..
+        .addr   CharacterNameStrIndex33         ; 9D2A BB 9E                    ..
+        .addr   CharacterNameStrIndex34         ; 9D2C C5 9E                    ..
+        .addr   CharacterNameStrIndex35         ; 9D2E CB A1                    ..
+        .addr   CharacterNameStrIndex36         ; 9D30 D4 9E                    ..
+        .addr   CharacterNameStrIndex37         ; 9D32 DC A1                    ..
+        .addr   CharacterNameStrIndex38         ; 9D34 E6 A1                    ..
+        .addr   CharacterNameStrIndex39         ; 9D36 F0 A1                    ..
+        .addr   CharacterNameStrIndex40         ; 9D38 F9 A1                    ..
+        .addr   CharacterNameStrIndex41         ; 9D3A 01 A2                    ..
+        .addr   CharacterNameStrIndex42         ; 9D3C 0B A2                    ..
+        .addr   CharacterNameStrIndex43         ; 9D3E 15 A2                    ..
+        .addr   CharacterNameStrIndex44         ; 9D40 1E A2                    ..
+        .addr   CharacterNameStrIndex45         ; 9D42 27 A2                    '.
+        .addr   CharacterNameStrIndex46         ; 9D44 2F A2                    /.
+        .addr   CharacterNameStrIndex47         ; 9D46 37 A2                    7.
+        .addr   CharacterNameStrIndex48         ; 9D48 3F A2                    ?.
+        .addr   CharacterNameStrIndex49         ; 9D4A 48 A2                    H.
+        .addr   CharacterNameStrIndex50         ; 9D4C 52 A2                    R.
+        .addr   CharacterNameStrIndex51         ; 9D4E 5C A2                    \.
+        .addr   CharacterNameStrIndex52         ; 9D50 66 A2                    f.
+        .addr   CharacterNameStrIndex53         ; 9D52 6F A2                    o.
+        .addr   CharacterNameStrIndex54         ; 9D54 73 A2                    s.
+        .addr   CharacterNameStrIndex55         ; 9D56 7D A2                    }.
+        .addr   CharacterNameStrIndex56         ; 9D58 84 A2                    ..
+        .addr   CharacterNameStrIndex57         ; 9D5A 8E A2                    ..
+        .addr   CharacterNameStrIndex58         ; 9D5C 98 A2                    ..
+        .addr   CharacterNameStrIndex59         ; 9D5E A2 A2                    ..
+        .addr   CharacterNameStrIndex60         ; 9D60 AC A2                    ..
+        .addr   CharacterNameStrIndex61         ; 9D62 B6 A2                    ..
+        .addr   CharacterNameStrIndex62         ; 9D64 BF A2                    ..
+        .addr   CharacterNameStrIndex63         ; 9D66 C5 A2                    ..
+        .addr   CharacterNameStrIndex64         ; 9D68 CF A2                    ..
+        .addr   CharacterNameStrIndex65         ; 9D6A D8 A2                    ..
+        .addr   CharacterNameStrIndex66         ; 9D6C DF A2                    ..
+        .addr   CharacterNameStrIndex67         ; 9D6E E9 A2                    ..
+        .addr   CharacterNameStrIndex68         ; 9D70 F3 A2                    ..
+        .addr   CharacterNameStrIndex69         ; 9D72 FD A2                    ..
+        .addr   CharacterNameStrIndex70         ; 9D74 07 A3                    ..
+        .addr   CharacterNameStrIndex71         ; 9D76 10 A3                    ..
+        .addr   CharacterNameStrIndex72         ; 9D78 18 A3                    ..
+        .addr   CharacterNameStrIndex73         ; 9D7A 22 A3                    ".
+        .addr   CharacterNameStrIndex74         ; 9D7C 2B A3                    +.
+        .addr   CharacterNameStrIndex75         ; 9D7E 35 A3                    5.
+        .addr   CharacterNameStrIndex76         ; 9D80 3B A3                    ;.
+        .addr   CharacterNameStrIndex77         ; 9D82 42 A3                    B.
+        .addr   CharacterNameStrIndex78         ; 9D84 4A A3                    J.
+        .addr   CharacterNameStrIndex79         ; 9D86 54 A3                    T.
+        .addr   CharacterNameStrIndex80         ; 9D88 5D A3                    ].
+        .addr   CharacterNameStrIndex81         ; 9D8A 65 A3                    e.
+        .addr   CharacterNameStrIndex82         ; 9D8C 6F A3                    o.
+        .addr   CharacterNameStrIndex83         ; 9D8E 79 A3                    y.
+        .addr   CharacterNameStrIndex84         ; 9D90 83 A3                    ..
+        .addr   CharacterNameStrIndex85         ; 9D92 8C A3                    ..
+        .addr   CharacterNameStrIndex86         ; 9D94 96 A3                    ..
+        .addr   CharacterNameStrIndex87         ; 9D96 9F A3                    ..
+        .addr   CharacterNameStrIndex88         ; 9D98 A9 A3                    ..
+        .addr   CharacterNameStrIndex89         ; 9D9A B1 A3                    ..
+        .addr   CharacterNameStrIndex90         ; 9D9C BB A3                    ..
+        .addr   CharacterNameStrIndex91         ; 9D9E C4 A3                    ..
+        .addr   CharacterNameStrIndex92         ; 9DA0 CE A3                    ..
+        .addr   CharacterNameStrIndex93         ; 9DA2 D8 A3                    ..
+        .addr   CharacterNameStrIndex94         ; 9DA4 E0 A3                    ..
+        .addr   CharacterNameStrIndex95         ; 9DA6 EA A3                    ..
+        .addr   CharacterNameStrIndex96         ; 9DA8 F4 A3                    ..
+        .addr   CharacterNameStrIndex97         ; 9DAA FE A3                    ..
+        .addr   CharacterNameStrIndex98         ; 9DAC 08 A4                    ..
+        .addr   CharacterNameStrIndex99         ; 9DAE 11 A4                    ..
 ; ----------------------------------------------------------------------------
-L9DB0:
+CharacterNameStrIndex0:
         .byte   "Lugia209"                      ; 9DB0 4C 75 67 69 61 32 30 39  Lugia209
         .byte   $0D                             ; 9DB8 0D                       .
-L9DB9:
+CharacterNameStrIndex1:
         .byte   "Cloud"                         ; 9DB9 43 6C 6F 75 64           Cloud
         .byte   $0D,$0A                         ; 9DBE 0D 0A                    ..
-L9DC0:
+CharacterNameStrIndex2:
         .byte   "Barret"                        ; 9DC0 42 61 72 72 65 74        Barret
         .byte   $0D,$0A                         ; 9DC6 0D 0A                    ..
-L9DC8:
+CharacterNameStrIndex3:
         .byte   "Tifa"                          ; 9DC8 54 69 66 61              Tifa
         .byte   $0D,$0A                         ; 9DCC 0D 0A                    ..
-L9DCE:
+CharacterNameStrIndex4:
         .byte   "Aeris"                         ; 9DCE 41 65 72 69 73           Aeris
         .byte   $0D,$0A                         ; 9DD3 0D 0A                    ..
-L9DD5:
+CharacterNameStrIndex5:
         .byte   "RedX`"                         ; 9DD5 52 65 64 58 60           RedX`
         .byte   $0D,$0A                         ; 9DDA 0D 0A                    ..
-L9DDC:
+CharacterNameStrIndex6:
         .byte   "CaitSith"                      ; 9DDC 43 61 69 74 53 69 74 68  CaitSith
         .byte   $0D,$0A                         ; 9DE4 0D 0A                    ..
-L9DE6:
+CharacterNameStrIndex7:
         .byte   "Cid"                           ; 9DE6 43 69 64                 Cid
         .byte   $0D,$0A                         ; 9DE9 0D 0A                    ..
-L9DEB:
+CharacterNameStrIndex8:
         .byte   "Guard"                         ; 9DEB 47 75 61 72 64           Guard
         .byte   $0D,$0A                         ; 9DF0 0D 0A                    ..
         .byte   "00"                            ; 9DF2 30 30                    00
-L9DF4:
+CharacterNameStrIndex9:
         .byte   "Scorpion"                      ; 9DF4 53 63 6F 72 70 69 6F 6E  Scorpion
         .byte   $0D,$0A                         ; 9DFC 0D 0A                    ..
-L9DFE:
+CharacterNameStrIndex10:
         .byte   "AirBustr"                      ; 9DFE 41 69 72 42 75 73 74 72  AirBustr
         .byte   $0D,$0A                         ; 9E06 0D 0A                    ..
-L9E08:
+CharacterNameStrIndex11:
         .byte   "Reno"                          ; 9E08 52 65 6E 6F              Reno
         .byte   $0D,$0A                         ; 9E0C 0D 0A                    ..
-L9E0E:
+CharacterNameStrIndex12:
         .byte   "Flunky"                        ; 9E0E 46 6C 75 6E 6B 79        Flunky
         .byte   $0D,$0A                         ; 9E14 0D 0A                    ..
-L9E16:
+CharacterNameStrIndex13:
         .byte   "General"                       ; 9E16 47 65 6E 65 72 61 6C     General
         .byte   $0D,$0A                         ; 9E1D 0D 0A                    ..
         .byte   "000000"                        ; 9E1F 30 30 30 30 30 30        000000
-L9E25:
+CharacterNameStrIndex15:
         .byte   "Aps"                           ; 9E25 41 70 73                 Aps
         .byte   $0D,$0A                         ; 9E28 0D 0A                    ..
-L9E2A:
+CharacterNameStrIndex16:
         .byte   "Specimen"                      ; 9E2A 53 70 65 63 69 6D 65 6E  Specimen
         .byte   $0D,$0A                         ; 9E32 0D 0A                    ..
-L9E34:
+CharacterNameStrIndex17:
         .byte   "H.Gunner"                      ; 9E34 48 2E 47 75 6E 6E 65 72  H.Gunner
         .byte   $0D,$0A                         ; 9E3C 0D 0A                    ..
-L9E3E:
+CharacterNameStrIndex18:
         .byte   "Rufus"                         ; 9E3E 52 75 66 75 73           Rufus
         .byte   $0D,$0A                         ; 9E43 0D 0A                    ..
-L9E45:
+CharacterNameStrIndex19:
         .byte   "DarkNatn"                      ; 9E45 44 61 72 6B 4E 61 74 6E  DarkNatn
         .byte   $0D,$0A                         ; 9E4D 0D 0A                    ..
-L9E4F:
+CharacterNameStrIndex20:
         .byte   "MotorBal"                      ; 9E4F 4D 6F 74 6F 72 42 61 6C  MotorBal
         .byte   $0D,$0A                         ; 9E57 0D 0A                    ..
-L9E59:
+CharacterNameStrIndex21:
         .byte   "BotmSwel"                      ; 9E59 42 6F 74 6D 53 77 65 6C  BotmSwel
         .byte   $0D,$0A                         ; 9E61 0D 0A                    ..
-L9E63:
+CharacterNameStrIndex22:
         .byte   "Jenova"                        ; 9E63 4A 65 6E 6F 76 61        Jenova
         .byte   $0D,$0A                         ; 9E69 0D 0A                    ..
-L9E6B:
+CharacterNameStrIndex23:
         .byte   "Dyne"                          ; 9E6B 44 79 6E 65              Dyne
         .byte   $0D,$0A                         ; 9E6F 0D 0A                    ..
-L9E71:
+CharacterNameStrIndex24:
         .byte   "Rude"                          ; 9E71 52 75 64 65              Rude
         .byte   $0D,$0A                         ; 9E75 0D 0A                    ..
-L9E77:
+CharacterNameStrIndex25:
         .byte   "GiNattak"                      ; 9E77 47 69 4E 61 74 74 61 6B  GiNattak
         .byte   $0D,$0A                         ; 9E7F 0D 0A                    ..
-L9E81:
+CharacterNameStrIndex26:
         .byte   "Gi"                            ; 9E81 47 69                    Gi
         .byte   $0D,$0A                         ; 9E83 0D 0A                    ..
-L9E85:
+CharacterNameStrIndex27:
         .byte   "Palmer"                        ; 9E85 50 61 6C 6D 65 72        Palmer
         .byte   $0D,$0A                         ; 9E8B 0D 0A                    ..
-L9E8D:
+CharacterNameStrIndex28:
         .byte   "R.Dragon"                      ; 9E8D 52 2E 44 72 61 67 6F 6E  R.Dragon
         .byte   $0D,$0A                         ; 9E95 0D 0A                    ..
-L9E97:
+CharacterNameStrIndex29:
         .byte   "DemnGate"                      ; 9E97 44 65 6D 6E 47 61 74 65  DemnGate
         .byte   $0D,$0A                         ; 9E9F 0D 0A                    ..
-L9EA1:
+CharacterNameStrIndex30:
         .byte   "Schizo"                        ; 9EA1 53 63 68 69 7A 6F        Schizo
         .byte   $0D                             ; 9EA7 0D                       .
-L9EA8:
+CharacterNameStrIndex31:
         .byte   "Sephirot"                      ; 9EA8 53 65 70 68 69 72 6F 74  Sephirot
         .byte   $0D,$0D                         ; 9EB0 0D 0D                    ..
-L9EB2:
+CharacterNameStrIndex32:
         .byte   "Sephirot"                      ; 9EB2 53 65 70 68 69 72 6F 74  Sephirot
         .byte   $0D                             ; 9EBA 0D                       .
-L9EBB:
+CharacterNameStrIndex33:
         .byte   "1WngAngl"                      ; 9EBB 31 57 6E 67 41 6E 67 6C  1WngAngl
         .byte   $0D,$0A                         ; 9EC3 0D 0A                    ..
-L9EC5:
+CharacterNameStrIndex34:
         .byte   "Zolom"                         ; 9EC5 5A 6F 6C 6F 6D           Zolom
         .byte   $0D,$0A                         ; 9ECA 0D 0A                    ..
         .byte   "Hornet"                        ; 9ECC 48 6F 72 6E 65 74        Hornet
         .byte   $0D,$0A                         ; 9ED2 0D 0A                    ..
-L9ED4:
+CharacterNameStrIndex36:
         .byte   "Goblin"                        ; 9ED4 47 6F 62 6C 69 6E        Goblin
         .byte   $0D,$0A                         ; 9EDA 0D 0A                    ..
         .byte   "BigRat"                        ; 9EDC 42 69 67 52 61 74        BigRat
@@ -3359,272 +3359,272 @@ L9ED4:
         .byte   $C6,$B2,$C1,$0D,$0A,$B0,$E5,$B0 ; A1B3 C6 B2 C1 0D 0A B0 E5 B0  ........
         .byte   $B0,$B4,$F4,$B0,$B1,$0D,$0A,$BC ; A1BB B0 B4 F4 B0 B1 0D 0A BC  ........
         .byte   $DC,$B8,$EA,$0D,$0A,$FF,$FF,$FF ; A1C3 DC B8 EA 0D 0A FF FF FF  ........
-LA1CB:
+CharacterNameStrIndex35:
         .byte   "B.Float"                       ; A1CB 42 2E 46 6C 6F 61 74     B.Float
         .byte   $0D,$0A                         ; A1D2 0D 0A                    ..
         .byte   "Goblin"                        ; A1D4 47 6F 62 6C 69 6E        Goblin
         .byte   $0D,$0A                         ; A1DA 0D 0A                    ..
-LA1DC:
+CharacterNameStrIndex37:
         .byte   "Gargoyle"                      ; A1DC 47 61 72 67 6F 79 6C 65  Gargoyle
         .byte   $0D,$0A                         ; A1E4 0D 0A                    ..
-LA1E6:
+CharacterNameStrIndex38:
         .byte   "Tonberry"                      ; A1E6 54 6F 6E 62 65 72 72 79  Tonberry
         .byte   $0D,$0A                         ; A1EE 0D 0A                    ..
-LA1F0:
+CharacterNameStrIndex39:
         .byte   "Gremlin"                       ; A1F0 47 72 65 6D 6C 69 6E     Gremlin
         .byte   $0D,$0A                         ; A1F7 0D 0A                    ..
-LA1F9:
+CharacterNameStrIndex40:
         .byte   "Needle"                        ; A1F9 4E 65 65 64 6C 65        Needle
         .byte   $0D,$0A                         ; A1FF 0D 0A                    ..
-LA201:
+CharacterNameStrIndex41:
         .byte   "Zolkartr"                      ; A201 5A 6F 6C 6B 61 72 74 72  Zolkartr
         .byte   $0D,$0A                         ; A209 0D 0A                    ..
-LA20B:
+CharacterNameStrIndex42:
         .byte   "Launcher"                      ; A20B 4C 61 75 6E 63 68 65 72  Launcher
         .byte   $0D,$0A                         ; A213 0D 0A                    ..
-LA215:
+CharacterNameStrIndex43:
         .byte   "M.Drive"                       ; A215 4D 2E 44 72 69 76 65     M.Drive
         .byte   $0D,$0A                         ; A21C 0D 0A                    ..
-LA21E:
+CharacterNameStrIndex44:
         .byte   "Crawler"                       ; A21E 43 72 61 77 6C 65 72     Crawler
         .byte   $0D,$0A                         ; A225 0D 0A                    ..
-LA227:
+CharacterNameStrIndex45:
         .byte   "Mirage"                        ; A227 4D 69 72 61 67 65        Mirage
         .byte   $0D,$0A                         ; A22D 0D 0A                    ..
-LA22F:
+CharacterNameStrIndex46:
         .byte   "Ceasar"                        ; A22F 43 65 61 73 61 72        Ceasar
         .byte   $0D,$0A                         ; A235 0D 0A                    ..
-LA237:
+CharacterNameStrIndex47:
         .byte   "Ninja"                         ; A237 4E 69 6E 6A 61           Ninja
         .byte   $0D,$0A,$0A                     ; A23C 0D 0A 0A                 ...
-LA23F:
+CharacterNameStrIndex48:
         .byte   "Cactuar"                       ; A23F 43 61 63 74 75 61 72     Cactuar
         .byte   $0D,$0A                         ; A246 0D 0A                    ..
-LA248:
+CharacterNameStrIndex49:
         .byte   "HedgePie"                      ; A248 48 65 64 67 65 50 69 65  HedgePie
         .byte   $0D,$0A                         ; A250 0D 0A                    ..
-LA252:
+CharacterNameStrIndex50:
         .byte   "RazrWeed"                      ; A252 52 61 7A 72 57 65 65 64  RazrWeed
         .byte   $0D,$0A                         ; A25A 0D 0A                    ..
-LA25C:
+CharacterNameStrIndex51:
         .byte   "Jayjujay"                      ; A25C 4A 61 79 6A 75 6A 61 79  Jayjujay
         .byte   $0D,$0A                         ; A264 0D 0A                    ..
-LA266:
+CharacterNameStrIndex52:
         .byte   "Warning"                       ; A266 57 61 72 6E 69 6E 67     Warning
         .byte   $0D,$0A                         ; A26D 0D 0A                    ..
-LA26F:
+CharacterNameStrIndex53:
         .byte   "Mu"                            ; A26F 4D 75                    Mu
         .byte   $0D,$0A                         ; A271 0D 0A                    ..
-LA273:
+CharacterNameStrIndex54:
         .byte   "Jemnezmy"                      ; A273 4A 65 6D 6E 65 7A 6D 79  Jemnezmy
         .byte   $0D,$0A                         ; A27B 0D 0A                    ..
-LA27D:
+CharacterNameStrIndex55:
         .byte   "Joker"                         ; A27D 4A 6F 6B 65 72           Joker
         .byte   $0D,$0A                         ; A282 0D 0A                    ..
-LA284:
+CharacterNameStrIndex56:
         .byte   "BrainPod"                      ; A284 42 72 61 69 6E 50 6F 64  BrainPod
         .byte   $0D,$0A                         ; A28C 0D 0A                    ..
-LA28E:
+CharacterNameStrIndex57:
         .byte   "Screamer"                      ; A28E 53 63 72 65 61 6D 65 72  Screamer
         .byte   $0D,$0A                         ; A296 0D 0A                    ..
-LA298:
+CharacterNameStrIndex58:
         .byte   "SneakStp"                      ; A298 53 6E 65 61 6B 53 74 70  SneakStp
         .byte   $0D,$0A                         ; A2A0 0D 0A                    ..
-LA2A2:
+CharacterNameStrIndex59:
         .byte   "BatryCap"                      ; A2A2 42 61 74 72 79 43 61 70  BatryCap
         .byte   $0D,$0A                         ; A2AA 0D 0A                    ..
-LA2AC:
+CharacterNameStrIndex60:
         .byte   "Ghroflgo"                      ; A2AC 47 68 72 6F 66 6C 67 6F  Ghroflgo
         .byte   $0D,$0A                         ; A2B4 0D 0A                    ..
-LA2B6:
+CharacterNameStrIndex61:
         .byte   "Sweeper"                       ; A2B6 53 77 65 65 70 65 72     Sweeper
         .byte   $0D,$0A                         ; A2BD 0D 0A                    ..
-LA2BF:
+CharacterNameStrIndex62:
         .byte   "Bomb"                          ; A2BF 42 6F 6D 62              Bomb
         .byte   $0D,$0A                         ; A2C3 0D 0A                    ..
-LA2C5:
+CharacterNameStrIndex63:
         .byte   "Alemange"                      ; A2C5 41 6C 65 6D 61 6E 67 65  Alemange
         .byte   $0D,$0A                         ; A2CD 0D 0A                    ..
-LA2CF:
+CharacterNameStrIndex64:
         .byte   "Spector"                       ; A2CF 53 70 65 63 74 6F 72     Spector
         .byte   $0D,$0A                         ; A2D6 0D 0A                    ..
-LA2D8:
+CharacterNameStrIndex65:
         .byte   "Cuahl"                         ; A2D8 43 75 61 68 6C           Cuahl
         .byte   $0D,$0A                         ; A2DD 0D 0A                    ..
-LA2DF:
+CharacterNameStrIndex66:
         .byte   "Zemzelet"                      ; A2DF 5A 65 6D 7A 65 6C 65 74  Zemzelet
         .byte   $0D,$0A                         ; A2E7 0D 0A                    ..
-LA2E9:
+CharacterNameStrIndex67:
         .byte   "Elfadunk"                      ; A2E9 45 6C 66 61 64 75 6E 6B  Elfadunk
         .byte   $0D,$0A                         ; A2F1 0D 0A                    ..
-LA2F3:
+CharacterNameStrIndex68:
         .byte   "Doorbull"                      ; A2F3 44 6F 6F 72 62 75 6C 6C  Doorbull
         .byte   $0D,$0A                         ; A2FB 0D 0A                    ..
-LA2FD:
+CharacterNameStrIndex69:
         .byte   "BlackBat"                      ; A2FD 42 6C 61 63 6B 42 61 74  BlackBat
         .byte   $0D,$0A                         ; A305 0D 0A                    ..
-LA307:
+CharacterNameStrIndex70:
         .byte   "Malboro"                       ; A307 4D 61 6C 62 6F 72 6F     Malboro
         .byte   $0D,$0A                         ; A30E 0D 0A                    ..
-LA310:
+CharacterNameStrIndex71:
         .byte   "Diablo"                        ; A310 44 69 61 62 6C 6F        Diablo
         .byte   $0D,$0A                         ; A316 0D 0A                    ..
-LA318:
+CharacterNameStrIndex72:
         .byte   "Chrstofr"                      ; A318 43 68 72 73 74 6F 66 72  Chrstofr
         .byte   $0D,$0A                         ; A320 0D 0A                    ..
-LA322:
+CharacterNameStrIndex73:
         .byte   "Ironite"                       ; A322 49 72 6F 6E 69 74 65     Ironite
         .byte   $0D,$0A                         ; A329 0D 0A                    ..
-LA32B:
+CharacterNameStrIndex74:
         .byte   "Hellhous"                      ; A32B 48 65 6C 6C 68 6F 75 73  Hellhous
         .byte   $0D,$0A                         ; A333 0D 0A                    ..
-LA335:
+CharacterNameStrIndex75:
         .byte   "Ochu"                          ; A335 4F 63 68 75              Ochu
         .byte   $0D,$0A                         ; A339 0D 0A                    ..
-LA33B:
+CharacterNameStrIndex76:
         .byte   "8-Eye"                         ; A33B 38 2D 45 79 65           8-Eye
         .byte   $0D,$0A                         ; A340 0D 0A                    ..
-LA342:
+CharacterNameStrIndex77:
         .byte   "D.Claw"                        ; A342 44 2E 43 6C 61 77        D.Claw
         .byte   $0D,$0A                         ; A348 0D 0A                    ..
-LA34A:
+CharacterNameStrIndex78:
         .byte   "Bndrsnch"                      ; A34A 42 6E 64 72 73 6E 63 68  Bndrsnch
         .byte   $0D,$0A                         ; A352 0D 0A                    ..
-LA354:
+CharacterNameStrIndex79:
         .byte   "Bad Rap"                       ; A354 42 61 64 20 52 61 70     Bad Rap
         .byte   $0D,$0A                         ; A35B 0D 0A                    ..
-LA35D:
+CharacterNameStrIndex80:
         .byte   "Bandit"                        ; A35D 42 61 6E 64 69 74        Bandit
         .byte   $0D,$0A                         ; A363 0D 0A                    ..
-LA365:
+CharacterNameStrIndex81:
         .byte   "Bgndrana"                      ; A365 42 67 6E 64 72 61 6E 61  Bgndrana
         .byte   $0D,$0A                         ; A36D 0D 0A                    ..
-LA36F:
+CharacterNameStrIndex82:
         .byte   "DorkFace"                      ; A36F 44 6F 72 6B 46 61 63 65  DorkFace
         .byte   $0D,$0A                         ; A377 0D 0A                    ..
-LA379:
+CharacterNameStrIndex83:
         .byte   "GrndHorn"                      ; A379 47 72 6E 64 48 6F 72 6E  GrndHorn
         .byte   $0D,$0A                         ; A381 0D 0A                    ..
-LA383:
+CharacterNameStrIndex84:
         .byte   "Unknown"                       ; A383 55 6E 6B 6E 6F 77 6E     Unknown
         .byte   $0D,$0A                         ; A38A 0D 0A                    ..
-LA38C:
+CharacterNameStrIndex85:
         .byte   "Grangaln"                      ; A38C 47 72 61 6E 67 61 6C 6E  Grangaln
         .byte   $0D,$0A                         ; A394 0D 0A                    ..
-LA396:
+CharacterNameStrIndex86:
         .byte   "X-Canon"                       ; A396 58 2D 43 61 6E 6F 6E     X-Canon
         .byte   $0D,$0A                         ; A39D 0D 0A                    ..
-LA39F:
+CharacterNameStrIndex87:
         .byte   "U.Lizard"                      ; A39F 55 2E 4C 69 7A 61 72 64  U.Lizard
         .byte   $0D,$0A                         ; A3A7 0D 0A                    ..
-LA3A9:
+CharacterNameStrIndex88:
         .byte   "Kimara"                        ; A3A9 4B 69 6D 61 72 61        Kimara
         .byte   $0D,$0A                         ; A3AF 0D 0A                    ..
-LA3B1:
+CharacterNameStrIndex89:
         .byte   "A.Dragon"                      ; A3B1 41 2E 44 72 61 67 6F 6E  A.Dragon
         .byte   $0D,$0A                         ; A3B9 0D 0A                    ..
-LA3BB:
+CharacterNameStrIndex90:
         .byte   "Sahagin"                       ; A3BB 53 61 68 61 67 69 6E     Sahagin
         .byte   $0D,$0A                         ; A3C2 0D 0A                    ..
-LA3C4:
+CharacterNameStrIndex91:
         .byte   "SwrdDanc"                      ; A3C4 53 77 72 64 44 61 6E 63  SwrdDanc
         .byte   $0D,$0A                         ; A3CC 0D 0A                    ..
-LA3CE:
+CharacterNameStrIndex92:
         .byte   "DverNest"                      ; A3CE 44 76 65 72 4E 65 73 74  DverNest
         .byte   $0D,$0A                         ; A3D6 0D 0A                    ..
-LA3D8:
+CharacterNameStrIndex93:
         .byte   "Eligor"                        ; A3D8 45 6C 69 67 6F 72        Eligor
         .byte   $0D,$0A                         ; A3DE 0D 0A                    ..
-LA3E0:
+CharacterNameStrIndex94:
         .byte   "Epiolnis"                      ; A3E0 45 70 69 6F 6C 6E 69 73  Epiolnis
         .byte   $0D,$0A                         ; A3E8 0D 0A                    ..
-LA3EA:
+CharacterNameStrIndex95:
         .byte   "A.Combat"                      ; A3EA 41 2E 43 6F 6D 62 61 74  A.Combat
         .byte   $0D,$0A                         ; A3F2 0D 0A                    ..
-LA3F4:
+CharacterNameStrIndex96:
         .byte   "DevlRide"                      ; A3F4 44 65 76 6C 52 69 64 65  DevlRide
         .byte   $0D,$0A                         ; A3FC 0D 0A                    ..
-LA3FE:
+CharacterNameStrIndex97:
         .byte   "HeadHunt"                      ; A3FE 48 65 61 64 48 75 6E 74  HeadHunt
         .byte   $0D,$0A                         ; A406 0D 0A                    ..
-LA408:
+CharacterNameStrIndex98:
         .byte   "Rilfsak"                       ; A408 52 69 6C 66 73 61 6B     Rilfsak
         .byte   $0D,$0A                         ; A40F 0D 0A                    ..
-LA411:
+CharacterNameStrIndex99:
         .byte   "Spiral"                        ; A411 53 70 69 72 61 6C        Spiral
         .byte   $0D,$0A,$FF,$FF,$FF,$FF,$FF,$FF ; A417 0D 0A FF FF FF FF FF FF  ........
         .byte   $FF                             ; A41F FF                       .
-LA420:
+ItemNameStrIndex12:
         .byte   "Hero Drink"                    ; A420 48 65 72 6F 20 44 72 69  Hero Dri
                                                 ; A428 6E 6B                    nk
         .byte   $0D                             ; A42A 0D                       .
-LA42B:
+ItemDescriptionStrIndex12:
         .byte   "Temporarilly       Increases HP"; A42B 54 65 6D 70 6F 72 61 72 Temporar
                                                 ; A433 69 6C 6C 79 20 20 20 20  illy    
                                                 ; A43B 20 20 20 49 6E 63 72 65     Incre
                                                 ; A443 61 73 65 73 20 48 50     ases HP
         .byte   " by 250"                       ; A44A 20 62 79 20 32 35 30      by 250
         .byte   $0D                             ; A451 0D                       .
-LA452:
+ItemDescriptionStrIndex1:
         .byte   "Restores 500 HP to a single all"; A452 52 65 73 74 6F 72 65 73 Restores
                                                 ; A45A 20 35 30 30 20 48 50 20   500 HP 
                                                 ; A462 74 6F 20 61 20 73 69 6E  to a sin
                                                 ; A46A 67 6C 65 20 61 6C 6C     gle all
         .byte   "y"                             ; A471 79                       y
         .byte   $0D                             ; A472 0D                       .
-LA473:
+ItemDescriptionStrIndex2:
         .byte   "Restores 1000 HP   to a single "; A473 52 65 73 74 6F 72 65 73 Restores
                                                 ; A47B 20 31 30 30 30 20 48 50   1000 HP
                                                 ; A483 20 20 20 74 6F 20 61 20     to a 
                                                 ; A48B 73 69 6E 67 6C 65 20     single 
         .byte   "ally"                          ; A492 61 6C 6C 79              ally
         .byte   $0D                             ; A496 0D                       .
-LA497:
+ItemDescriptionStrIndex4:
         .byte   "Fully restores HP  to a single "; A497 46 75 6C 6C 79 20 72 65 Fully re
                                                 ; A49F 73 74 6F 72 65 73 20 48  stores H
                                                 ; A4A7 50 20 20 74 6F 20 61 20  P  to a 
                                                 ; A4AF 73 69 6E 67 6C 65 20     single 
         .byte   "ally"                          ; A4B6 61 6C 6C 79              ally
         .byte   $0D                             ; A4BA 0D                       .
-LA4BB:
+ItemDescriptionStrIndex3:
         .byte   "Restores 200 HP to all allies" ; A4BB 52 65 73 74 6F 72 65 73  Restores
                                                 ; A4C3 20 32 30 30 20 48 50 20   200 HP 
                                                 ; A4CB 74 6F 20 61 6C 6C 20 61  to all a
                                                 ; A4D3 6C 6C 69 65 73           llies
         .byte   $0D                             ; A4D8 0D                       .
-LA4D9:
+ItemDescriptionStrIndex5:
         .byte   "Restores 500 HP to all allies" ; A4D9 52 65 73 74 6F 72 65 73  Restores
                                                 ; A4E1 20 35 30 30 20 48 50 20   500 HP 
                                                 ; A4E9 74 6F 20 61 6C 6C 20 61  to all a
                                                 ; A4F1 6C 6C 69 65 73           llies
         .byte   $0D                             ; A4F6 0D                       .
-LA4F7:
+ItemDescriptionStrIndex6:
         .byte   "Restores 1000 HP toall allies" ; A4F7 52 65 73 74 6F 72 65 73  Restores
                                                 ; A4FF 20 31 30 30 30 20 48 50   1000 HP
                                                 ; A507 20 74 6F 61 6C 6C 20 61   toall a
                                                 ; A50F 6C 6C 69 65 73           llies
         .byte   $0D                             ; A514 0D                       .
-LA515:
+ItemDescriptionStrIndex7:
         .byte   "Fully restores HP  to all allie"; A515 46 75 6C 6C 79 20 72 65 Fully re
                                                 ; A51D 73 74 6F 72 65 73 20 48  stores H
                                                 ; A525 50 20 20 74 6F 20 61 6C  P  to al
                                                 ; A52D 6C 20 61 6C 6C 69 65     l allie
         .byte   "s"                             ; A534 73                       s
         .byte   $0D                             ; A535 0D                       .
-LA536:
+ItemDescriptionStrIndex8:
         .byte   "Restores 5 MP to a single spell"; A536 52 65 73 74 6F 72 65 73 Restores
                                                 ; A53E 20 35 20 4D 50 20 74 6F   5 MP to
                                                 ; A546 20 61 20 73 69 6E 67 6C   a singl
                                                 ; A54E 65 20 73 70 65 6C 6C     e spell
         .byte   $0D                             ; A555 0D                       .
-LA556:
+ItemDescriptionStrIndex9:
         .byte   "Fully restores MP  to a single "; A556 46 75 6C 6C 79 20 72 65 Fully re
                                                 ; A55E 73 74 6F 72 65 73 20 4D  stores M
                                                 ; A566 50 20 20 74 6F 20 61 20  P  to a 
                                                 ; A56E 73 69 6E 67 6C 65 20     single 
         .byte   "spell"                         ; A575 73 70 65 6C 6C           spell
         .byte   $0D                             ; A57A 0D                       .
-LA57B:
+ItemDescriptionStrIndex10:
         .byte   "Revives an ally    with 25% of "; A57B 52 65 76 69 76 65 73 20 Revives 
                                                 ; A583 61 6E 20 61 6C 6C 79 20  an ally 
                                                 ; A58B 20 20 20 77 69 74 68 20     with 
@@ -3634,7 +3634,7 @@ LA57B:
         .byte   "irHP"                          ; A59D 69 72 48 50              irHP
         .byte   $0D,$00,$00,$00,$00,$00,$00,$00 ; A5A1 0D 00 00 00 00 00 00 00  ........
         .byte   $00                             ; A5A9 00                       .
-LA5AA:
+ItemDescriptionStrIndex11:
         .byte   "Easily escape from a fight"    ; A5AA 45 61 73 69 6C 79 20 65  Easily e
                                                 ; A5B2 73 63 61 70 65 20 66 72  scape fr
                                                 ; A5BA 6F 6D 20 61 20 66 69 67  om a fig

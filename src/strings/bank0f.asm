@@ -2,8 +2,8 @@
 
 ; ----------------------------------------------------------------------------
 ; ----------------------------------------------------------------------------
-        .addr   L9001                           ; 8000 01 90                    ..
-        .addr   LC7CF                           ; 8002 CF C7                    ..
+        .addr   Bank0fDialogueBlock0            ; 8000 01 90                    ..
+        .addr   Bank0fDialogueBlock1            ; 8002 CF C7                    ..
 ; ----------------------------------------------------------------------------
         .byte   $FF,$FF,$40,$00,$00,$00,$00,$00 ; 8004 FF FF 40 00 00 00 00 00  ..@.....
         .byte   $00,$00,$00,$00                 ; 800C 00 00 00 00              ....
@@ -520,261 +520,261 @@ FontGraphicsTileset:
         .byte   $FF,$FF,$FF,$FF,$FF,$FF,$FF,$FF ; 8FF8 FF FF FF FF FF FF FF FF  ........
         .byte   $40                             ; 9000 40                       @
 ; ----------------------------------------------------------------------------
-L9001:
-        .addr   L91F9                           ; 9001 F9 91                    ..
-        .addr   L922D                           ; 9003 2D 92                    -.
-        .addr   L927F                           ; 9005 7F 92                    ..
-        .addr   L928B                           ; 9007 8B 92                    ..
-        .addr   L929A                           ; 9009 9A 92                    ..
-        .addr   L92D4                           ; 900B D4 92                    ..
-        .addr   L92F1                           ; 900D F1 92                    ..
-        .addr   L930B                           ; 900F 0B 93                    ..
-        .addr   L932A                           ; 9011 2A 93                    *.
-        .addr   L9341                           ; 9013 41 93                    A.
-        .addr   L9364                           ; 9015 64 93                    d.
-        .addr   L9387                           ; 9017 87 93                    ..
-        .addr   L93A9                           ; 9019 A9 93                    ..
-        .addr   L93D7                           ; 901B D7 93                    ..
-        .addr   L93E4                           ; 901D E4 93                    ..
-        .addr   L940F                           ; 901F 0F 94                    ..
-        .addr   L943E                           ; 9021 3E 94                    >.
-        .addr   L946C                           ; 9023 6C 94                    l.
-        .addr   L9476                           ; 9025 76 94                    v.
-        .addr   L94B1                           ; 9027 B1 94                    ..
-        .addr   L9512                           ; 9029 12 95                    ..
-        .addr   L957C                           ; 902B 7C 95                    |.
-        .addr   L9588                           ; 902D 88 95                    ..
-        .addr   L958F                           ; 902F 8F 95                    ..
-        .addr   L95AA                           ; 9031 AA 95                    ..
-        .addr   L95BA                           ; 9033 BA 95                    ..
-        .addr   L95C5                           ; 9035 C5 95                    ..
-        .addr   L95DC                           ; 9037 DC 95                    ..
-        .addr   L9628                           ; 9039 28 96                    (.
-        .addr   L964F                           ; 903B 4F 96                    O.
-        .addr   L96A2                           ; 903D A2 96                    ..
-        .addr   L96ED                           ; 903F ED 96                    ..
-        .addr   L972E                           ; 9041 2E 97                    ..
-        .addr   L9769                           ; 9043 69 97                    i.
-        .addr   L9772                           ; 9045 72 97                    r.
-        .addr   L9797                           ; 9047 97 97                    ..
-        .addr   L97C2                           ; 9049 C2 97                    ..
-        .addr   L97CE                           ; 904B CE 97                    ..
-        .addr   L9834                           ; 904D 34 98                    4.
-        .addr   L984C                           ; 904F 4C 98                    L.
-        .addr   L987E                           ; 9051 7E 98                    ~.
-        .addr   L988A                           ; 9053 8A 98                    ..
-        .addr   L98E9                           ; 9055 E9 98                    ..
-        .addr   L98F3                           ; 9057 F3 98                    ..
-        .addr   L991B                           ; 9059 1B 99                    ..
-        .addr   L9939                           ; 905B 39 99                    9.
-        .addr   L9950                           ; 905D 50 99                    P.
-        .addr   L99B0                           ; 905F B0 99                    ..
-        .addr   L99D9                           ; 9061 D9 99                    ..
-        .addr   L9A23                           ; 9063 23 9A                    #.
-        .addr   L9A36                           ; 9065 36 9A                    6.
-        .addr   L9B65                           ; 9067 65 9B                    e.
-        .addr   L9B7B                           ; 9069 7B 9B                    {.
-        .addr   L9C23                           ; 906B 23 9C                    #.
-        .addr   L9C50                           ; 906D 50 9C                    P.
-        .addr   L9C77                           ; 906F 77 9C                    w.
-        .addr   L9C89                           ; 9071 89 9C                    ..
-        .addr   L9C9A                           ; 9073 9A 9C                    ..
-        .addr   L9CA5                           ; 9075 A5 9C                    ..
-        .addr   L9D11                           ; 9077 11 9D                    ..
-        .addr   L9D2D                           ; 9079 2D 9D                    -.
-        .addr   L9D3E                           ; 907B 3E 9D                    >.
-        .addr   L9D60                           ; 907D 60 9D                    `.
-        .addr   L9DA9                           ; 907F A9 9D                    ..
-        .addr   L9E0A                           ; 9081 0A 9E                    ..
-        .addr   L9E33                           ; 9083 33 9E                    3.
-        .addr   L9EAB                           ; 9085 AB 9E                    ..
-        .addr   L9EEC                           ; 9087 EC 9E                    ..
-        .addr   L9F0F                           ; 9089 0F 9F                    ..
-        .addr   L9F83                           ; 908B 83 9F                    ..
-        .addr   L9FCC                           ; 908D CC 9F                    ..
-        .addr   LA05E                           ; 908F 5E A0                    ^.
-        .addr   LA06D                           ; 9091 6D A0                    m.
-        .addr   LA05E                           ; 9093 5E A0                    ^.
-        .addr   LA075                           ; 9095 75 A0                    u.
-        .addr   LA08D                           ; 9097 8D A0                    ..
-        .addr   LA0B3                           ; 9099 B3 A0                    ..
-        .addr   LA0C3                           ; 909B C3 A0                    ..
-        .addr   LA0D4                           ; 909D D4 A0                    ..
-        .addr   LA111                           ; 909F 11 A1                    ..
-        .addr   LA15D                           ; 90A1 5D A1                    ].
-        .addr   LA187                           ; 90A3 87 A1                    ..
-        .addr   LA1B3                           ; 90A5 B3 A1                    ..
-        .addr   LA1CE                           ; 90A7 CE A1                    ..
-        .addr   LA224                           ; 90A9 24 A2                    $.
-        .addr   LA248                           ; 90AB 48 A2                    H.
-        .addr   LA26D                           ; 90AD 6D A2                    m.
-        .addr   LA27B                           ; 90AF 7B A2                    {.
-        .addr   LA293                           ; 90B1 93 A2                    ..
-        .addr   LA2F5                           ; 90B3 F5 A2                    ..
-        .addr   LA320                           ; 90B5 20 A3                     .
-        .addr   LA32F                           ; 90B7 2F A3                    /.
-        .addr   LA3A6                           ; 90B9 A6 A3                    ..
-        .addr   LA3D1                           ; 90BB D1 A3                    ..
-        .addr   LA42C                           ; 90BD 2C A4                    ,.
-        .addr   LA477                           ; 90BF 77 A4                    w.
-        .addr   LA4BB                           ; 90C1 BB A4                    ..
-        .addr   LA4F5                           ; 90C3 F5 A4                    ..
-        .addr   LA540                           ; 90C5 40 A5                    @.
-        .addr   LA55E                           ; 90C7 5E A5                    ^.
-        .addr   LA58F                           ; 90C9 8F A5                    ..
-        .addr   LA5E5                           ; 90CB E5 A5                    ..
-        .addr   LA61F                           ; 90CD 1F A6                    ..
-        .addr   LA632                           ; 90CF 32 A6                    2.
-        .addr   LA682                           ; 90D1 82 A6                    ..
-        .addr   LA6BC                           ; 90D3 BC A6                    ..
-        .addr   LA6D1                           ; 90D5 D1 A6                    ..
-        .addr   LA735                           ; 90D7 35 A7                    5.
-        .addr   LA744                           ; 90D9 44 A7                    D.
-        .addr   LA787                           ; 90DB 87 A7                    ..
-        .addr   LA7A9                           ; 90DD A9 A7                    ..
-        .addr   LA7BB                           ; 90DF BB A7                    ..
-        .addr   LA80E                           ; 90E1 0E A8                    ..
-        .addr   LA83B                           ; 90E3 3B A8                    ;.
-        .addr   LA882                           ; 90E5 82 A8                    ..
-        .addr   LA88F                           ; 90E7 8F A8                    ..
-        .addr   LA8BE                           ; 90E9 BE A8                    ..
-        .addr   LA8DD                           ; 90EB DD A8                    ..
-        .addr   LA94F                           ; 90ED 4F A9                    O.
-        .addr   LA961                           ; 90EF 61 A9                    a.
-        .addr   LA9BE                           ; 90F1 BE A9                    ..
-        .addr   LA9CF                           ; 90F3 CF A9                    ..
-        .addr   LAA17                           ; 90F5 17 AA                    ..
-        .addr   LAA20                           ; 90F7 20 AA                     .
-        .addr   LAA7E                           ; 90F9 7E AA                    ~.
-        .addr   LAAA2                           ; 90FB A2 AA                    ..
-        .addr   LAB42                           ; 90FD 42 AB                    B.
-        .addr   LAA17                           ; 90FF 17 AA                    ..
-        .addr   LAB67                           ; 9101 67 AB                    g.
-        .addr   LAB7C                           ; 9103 7C AB                    |.
-        .addr   LABD2                           ; 9105 D2 AB                    ..
-        .addr   LAC15                           ; 9107 15 AC                    ..
-        .addr   LAC3B                           ; 9109 3B AC                    ;.
-        .addr   LACA8                           ; 910B A8 AC                    ..
-        .addr   LACB6                           ; 910D B6 AC                    ..
-        .addr   LACC0                           ; 910F C0 AC                    ..
-        .addr   LACCA                           ; 9111 CA AC                    ..
-        .addr   LACD1                           ; 9113 D1 AC                    ..
-        .addr   LACF3                           ; 9115 F3 AC                    ..
-        .addr   LAD06                           ; 9117 06 AD                    ..
-        .addr   LAD0B                           ; 9119 0B AD                    ..
-        .addr   LAD17                           ; 911B 17 AD                    ..
-        .addr   LAD47                           ; 911D 47 AD                    G.
-        .addr   LAD50                           ; 911F 50 AD                    P.
-        .addr   LADC0                           ; 9121 C0 AD                    ..
-        .addr   LADCD                           ; 9123 CD AD                    ..
-        .addr   LADD5                           ; 9125 D5 AD                    ..
-        .addr   LADEF                           ; 9127 EF AD                    ..
-        .addr   LAE13                           ; 9129 13 AE                    ..
-        .addr   LAE72                           ; 912B 72 AE                    r.
-        .addr   LAE93                           ; 912D 93 AE                    ..
-        .addr   LAEFB                           ; 912F FB AE                    ..
-        .addr   LAF69                           ; 9131 69 AF                    i.
-        .addr   LB096                           ; 9133 96 B0                    ..
-        .addr   LB0A8                           ; 9135 A8 B0                    ..
-        .addr   LB0D5                           ; 9137 D5 B0                    ..
-        .addr   LB109                           ; 9139 09 B1                    ..
-        .addr   LAD06                           ; 913B 06 AD                    ..
-        .addr   LB11F                           ; 913D 1F B1                    ..
-        .addr   LB140                           ; 913F 40 B1                    @.
-        .addr   LB14C                           ; 9141 4C B1                    L.
-        .addr   LB175                           ; 9143 75 B1                    u.
-        .addr   LB1B4                           ; 9145 B4 B1                    ..
-        .addr   LB1DB                           ; 9147 DB B1                    ..
-        .addr   LB1F9                           ; 9149 F9 B1                    ..
-        .addr   LB232                           ; 914B 32 B2                    2.
-        .addr   LB241                           ; 914D 41 B2                    A.
-        .addr   LB25D                           ; 914F 5D B2                    ].
-        .addr   LB272                           ; 9151 72 B2                    r.
-        .addr   LB28B                           ; 9153 8B B2                    ..
-        .addr   LB2AE                           ; 9155 AE B2                    ..
-        .addr   LAD06                           ; 9157 06 AD                    ..
-        .addr   LB2C2                           ; 9159 C2 B2                    ..
-        .addr   LB2E0                           ; 915B E0 B2                    ..
-        .addr   LB2FF                           ; 915D FF B2                    ..
-        .addr   LB321                           ; 915F 21 B3                    !.
-        .addr   LB333                           ; 9161 33 B3                    3.
-        .addr   LB350                           ; 9163 50 B3                    P.
-        .addr   LB36C                           ; 9165 6C B3                    l.
-        .addr   LB395                           ; 9167 95 B3                    ..
-        .addr   LB3C5                           ; 9169 C5 B3                    ..
-        .addr   LB649                           ; 916B 49 B6                    I.
-        .addr   LB751                           ; 916D 51 B7                    Q.
-        .addr   LB76B                           ; 916F 6B B7                    k.
-        .addr   LB88F                           ; 9171 8F B8                    ..
-        .addr   LB8D1                           ; 9173 D1 B8                    ..
-        .addr   LB90B                           ; 9175 0B B9                    ..
-        .addr   LB91B                           ; 9177 1B B9                    ..
-        .addr   LB9AD                           ; 9179 AD B9                    ..
-        .addr   LB9C0                           ; 917B C0 B9                    ..
-        .addr   LBA25                           ; 917D 25 BA                    %.
-        .addr   LBA79                           ; 917F 79 BA                    y.
-        .addr   LBBE8                           ; 9181 E8 BB                    ..
-        .addr   LBC48                           ; 9183 48 BC                    H.
-        .addr   LBC86                           ; 9185 86 BC                    ..
-        .addr   LBCB1                           ; 9187 B1 BC                    ..
-        .addr   LBCDE                           ; 9189 DE BC                    ..
-        .addr   LBD05                           ; 918B 05 BD                    ..
-        .addr   LBD0E                           ; 918D 0E BD                    ..
-        .addr   LBD12                           ; 918F 12 BD                    ..
-        .addr   LBD9B                           ; 9191 9B BD                    ..
-        .addr   LBE15                           ; 9193 15 BE                    ..
-        .addr   LBE26                           ; 9195 26 BE                    &.
-        .addr   LBE3B                           ; 9197 3B BE                    ;.
-        .addr   LBE5D                           ; 9199 5D BE                    ].
-        .addr   LBE65                           ; 919B 65 BE                    e.
-        .addr   LBE7B                           ; 919D 7B BE                    {.
-        .addr   LBEC3                           ; 919F C3 BE                    ..
-        .addr   LBF20                           ; 91A1 20 BF                     .
-        .addr   LBF57                           ; 91A3 57 BF                    W.
-        .addr   LBF6B                           ; 91A5 6B BF                    k.
-        .addr   LBFA6                           ; 91A7 A6 BF                    ..
-        .addr   LBFFD                           ; 91A9 FD BF                    ..
-        .addr   LC025                           ; 91AB 25 C0                    %.
-        .addr   LC0A5                           ; 91AD A5 C0                    ..
-        .addr   LC0D9                           ; 91AF D9 C0                    ..
-        .addr   LC10A                           ; 91B1 0A C1                    ..
-        .addr   LC13B                           ; 91B3 3B C1                    ;.
-        .addr   LC16E                           ; 91B5 6E C1                    n.
-        .addr   LAD06                           ; 91B7 06 AD                    ..
-        .addr   LC1A9                           ; 91B9 A9 C1                    ..
-        .addr   LC1CA                           ; 91BB CA C1                    ..
-        .addr   LC1CE                           ; 91BD CE C1                    ..
-        .addr   LC1D2                           ; 91BF D2 C1                    ..
-        .addr   LC1ED                           ; 91C1 ED C1                    ..
-        .addr   LC21C                           ; 91C3 1C C2                    ..
-        .addr   LC22F                           ; 91C5 2F C2                    /.
-        .addr   LC251                           ; 91C7 51 C2                    Q.
-        .addr   LC271                           ; 91C9 71 C2                    q.
-        .addr   LC2AE                           ; 91CB AE C2                    ..
-        .addr   LC2DC                           ; 91CD DC C2                    ..
-        .addr   LC2F2                           ; 91CF F2 C2                    ..
-        .addr   LC332                           ; 91D1 32 C3                    2.
-        .addr   LC366                           ; 91D3 66 C3                    f.
-        .addr   LC3B1                           ; 91D5 B1 C3                    ..
-        .addr   LC3CD                           ; 91D7 CD C3                    ..
-        .addr   LC409                           ; 91D9 09 C4                    ..
-        .addr   LC429                           ; 91DB 29 C4                    ).
-        .addr   LC44B                           ; 91DD 4B C4                    K.
-        .addr   LC474                           ; 91DF 74 C4                    t.
-        .addr   LC4CB                           ; 91E1 CB C4                    ..
-        .addr   LC58D                           ; 91E3 8D C5                    ..
-        .addr   LC5E7                           ; 91E5 E7 C5                    ..
-        .addr   LC630                           ; 91E7 30 C6                    0.
-        .addr   LC66A                           ; 91E9 6A C6                    j.
-        .addr   LC6B6                           ; 91EB B6 C6                    ..
-        .addr   LC6FE                           ; 91ED FE C6                    ..
-        .addr   LC71F                           ; 91EF 1F C7                    ..
-        .addr   LC739                           ; 91F1 39 C7                    9.
-        .addr   LC74D                           ; 91F3 4D C7                    M.
-        .addr   LC773                           ; 91F5 73 C7                    s.
-        .addr   LC7B4                           ; 91F7 B4 C7                    ..
+Bank0fDialogueBlock0:
+        .addr   Bank0fDialogueBlock0Index0      ; 9001 F9 91                    ..
+        .addr   Bank0fDialogueBlock0Index1      ; 9003 2D 92                    -.
+        .addr   Bank0fDialogueBlock0Index2      ; 9005 7F 92                    ..
+        .addr   Bank0fDialogueBlock0Index3      ; 9007 8B 92                    ..
+        .addr   Bank0fDialogueBlock0Index4      ; 9009 9A 92                    ..
+        .addr   Bank0fDialogueBlock0Index5      ; 900B D4 92                    ..
+        .addr   Bank0fDialogueBlock0Index6      ; 900D F1 92                    ..
+        .addr   Bank0fDialogueBlock0Index7      ; 900F 0B 93                    ..
+        .addr   Bank0fDialogueBlock0Index8      ; 9011 2A 93                    *.
+        .addr   Bank0fDialogueBlock0Index9      ; 9013 41 93                    A.
+        .addr   Bank0fDialogueBlock0Index10     ; 9015 64 93                    d.
+        .addr   Bank0fDialogueBlock0Index11     ; 9017 87 93                    ..
+        .addr   Bank0fDialogueBlock0Index12     ; 9019 A9 93                    ..
+        .addr   Bank0fDialogueBlock0Index13     ; 901B D7 93                    ..
+        .addr   Bank0fDialogueBlock0Index14     ; 901D E4 93                    ..
+        .addr   Bank0fDialogueBlock0Index15     ; 901F 0F 94                    ..
+        .addr   Bank0fDialogueBlock0Index16     ; 9021 3E 94                    >.
+        .addr   Bank0fDialogueBlock0Index17     ; 9023 6C 94                    l.
+        .addr   Bank0fDialogueBlock0Index18     ; 9025 76 94                    v.
+        .addr   Bank0fDialogueBlock0Index19     ; 9027 B1 94                    ..
+        .addr   Bank0fDialogueBlock0Index20     ; 9029 12 95                    ..
+        .addr   Bank0fDialogueBlock0Index21     ; 902B 7C 95                    |.
+        .addr   Bank0fDialogueBlock0Index22     ; 902D 88 95                    ..
+        .addr   Bank0fDialogueBlock0Index23     ; 902F 8F 95                    ..
+        .addr   Bank0fDialogueBlock0Index24     ; 9031 AA 95                    ..
+        .addr   Bank0fDialogueBlock0Index25     ; 9033 BA 95                    ..
+        .addr   Bank0fDialogueBlock0Index26     ; 9035 C5 95                    ..
+        .addr   Bank0fDialogueBlock0Index27     ; 9037 DC 95                    ..
+        .addr   Bank0fDialogueBlock0Index28     ; 9039 28 96                    (.
+        .addr   Bank0fDialogueBlock0Index29     ; 903B 4F 96                    O.
+        .addr   Bank0fDialogueBlock0Index30     ; 903D A2 96                    ..
+        .addr   Bank0fDialogueBlock0Index31     ; 903F ED 96                    ..
+        .addr   Bank0fDialogueBlock0Index32     ; 9041 2E 97                    ..
+        .addr   Bank0fDialogueBlock0Index33     ; 9043 69 97                    i.
+        .addr   Bank0fDialogueBlock0Index34     ; 9045 72 97                    r.
+        .addr   Bank0fDialogueBlock0Index35     ; 9047 97 97                    ..
+        .addr   Bank0fDialogueBlock0Index36     ; 9049 C2 97                    ..
+        .addr   Bank0fDialogueBlock0Index37     ; 904B CE 97                    ..
+        .addr   Bank0fDialogueBlock0Index38     ; 904D 34 98                    4.
+        .addr   Bank0fDialogueBlock0Index39     ; 904F 4C 98                    L.
+        .addr   Bank0fDialogueBlock0Index40     ; 9051 7E 98                    ~.
+        .addr   Bank0fDialogueBlock0Index41     ; 9053 8A 98                    ..
+        .addr   Bank0fDialogueBlock0Index42     ; 9055 E9 98                    ..
+        .addr   Bank0fDialogueBlock0Index43     ; 9057 F3 98                    ..
+        .addr   Bank0fDialogueBlock0Index44     ; 9059 1B 99                    ..
+        .addr   Bank0fDialogueBlock0Index45     ; 905B 39 99                    9.
+        .addr   Bank0fDialogueBlock0Index46     ; 905D 50 99                    P.
+        .addr   Bank0fDialogueBlock0Index47     ; 905F B0 99                    ..
+        .addr   Bank0fDialogueBlock0Index48     ; 9061 D9 99                    ..
+        .addr   Bank0fDialogueBlock0Index49     ; 9063 23 9A                    #.
+        .addr   Bank0fDialogueBlock0Index50     ; 9065 36 9A                    6.
+        .addr   Bank0fDialogueBlock0Index51     ; 9067 65 9B                    e.
+        .addr   Bank0fDialogueBlock0Index52     ; 9069 7B 9B                    {.
+        .addr   Bank0fDialogueBlock0Index53     ; 906B 23 9C                    #.
+        .addr   Bank0fDialogueBlock0Index54     ; 906D 50 9C                    P.
+        .addr   Bank0fDialogueBlock0Index55     ; 906F 77 9C                    w.
+        .addr   Bank0fDialogueBlock0Index56     ; 9071 89 9C                    ..
+        .addr   Bank0fDialogueBlock0Index57     ; 9073 9A 9C                    ..
+        .addr   Bank0fDialogueBlock0Index58     ; 9075 A5 9C                    ..
+        .addr   Bank0fDialogueBlock0Index59     ; 9077 11 9D                    ..
+        .addr   Bank0fDialogueBlock0Index60     ; 9079 2D 9D                    -.
+        .addr   Bank0fDialogueBlock0Index61     ; 907B 3E 9D                    >.
+        .addr   Bank0fDialogueBlock0Index62     ; 907D 60 9D                    `.
+        .addr   Bank0fDialogueBlock0Index63     ; 907F A9 9D                    ..
+        .addr   Bank0fDialogueBlock0Index64     ; 9081 0A 9E                    ..
+        .addr   Bank0fDialogueBlock0Index65     ; 9083 33 9E                    3.
+        .addr   Bank0fDialogueBlock0Index66     ; 9085 AB 9E                    ..
+        .addr   Bank0fDialogueBlock0Index67     ; 9087 EC 9E                    ..
+        .addr   Bank0fDialogueBlock0Index68     ; 9089 0F 9F                    ..
+        .addr   Bank0fDialogueBlock0Index69     ; 908B 83 9F                    ..
+        .addr   Bank0fDialogueBlock0Index70     ; 908D CC 9F                    ..
+        .addr   Bank0fDialogueBlock0Index71     ; 908F 5E A0                    ^.
+        .addr   Bank0fDialogueBlock0Index72     ; 9091 6D A0                    m.
+        .addr   Bank0fDialogueBlock0Index71     ; 9093 5E A0                    ^.
+        .addr   Bank0fDialogueBlock0Index74     ; 9095 75 A0                    u.
+        .addr   Bank0fDialogueBlock0Index75     ; 9097 8D A0                    ..
+        .addr   Bank0fDialogueBlock0Index76     ; 9099 B3 A0                    ..
+        .addr   Bank0fDialogueBlock0Index77     ; 909B C3 A0                    ..
+        .addr   Bank0fDialogueBlock0Index78     ; 909D D4 A0                    ..
+        .addr   Bank0fDialogueBlock0Index79     ; 909F 11 A1                    ..
+        .addr   Bank0fDialogueBlock0Index80     ; 90A1 5D A1                    ].
+        .addr   Bank0fDialogueBlock0Index81     ; 90A3 87 A1                    ..
+        .addr   Bank0fDialogueBlock0Index82     ; 90A5 B3 A1                    ..
+        .addr   Bank0fDialogueBlock0Index83     ; 90A7 CE A1                    ..
+        .addr   Bank0fDialogueBlock0Index84     ; 90A9 24 A2                    $.
+        .addr   Bank0fDialogueBlock0Index85     ; 90AB 48 A2                    H.
+        .addr   Bank0fDialogueBlock0Index86     ; 90AD 6D A2                    m.
+        .addr   Bank0fDialogueBlock0Index87     ; 90AF 7B A2                    {.
+        .addr   Bank0fDialogueBlock0Index88     ; 90B1 93 A2                    ..
+        .addr   Bank0fDialogueBlock0Index89     ; 90B3 F5 A2                    ..
+        .addr   Bank0fDialogueBlock0Index90     ; 90B5 20 A3                     .
+        .addr   Bank0fDialogueBlock0Index91     ; 90B7 2F A3                    /.
+        .addr   Bank0fDialogueBlock0Index92     ; 90B9 A6 A3                    ..
+        .addr   Bank0fDialogueBlock0Index93     ; 90BB D1 A3                    ..
+        .addr   Bank0fDialogueBlock0Index94     ; 90BD 2C A4                    ,.
+        .addr   Bank0fDialogueBlock0Index95     ; 90BF 77 A4                    w.
+        .addr   Bank0fDialogueBlock0Index96     ; 90C1 BB A4                    ..
+        .addr   Bank0fDialogueBlock0Index97     ; 90C3 F5 A4                    ..
+        .addr   Bank0fDialogueBlock0Index98     ; 90C5 40 A5                    @.
+        .addr   Bank0fDialogueBlock0Index99     ; 90C7 5E A5                    ^.
+        .addr   Bank0fDialogueBlock0Index100    ; 90C9 8F A5                    ..
+        .addr   Bank0fDialogueBlock0Index101    ; 90CB E5 A5                    ..
+        .addr   Bank0fDialogueBlock0Index102    ; 90CD 1F A6                    ..
+        .addr   Bank0fDialogueBlock0Index103    ; 90CF 32 A6                    2.
+        .addr   Bank0fDialogueBlock0Index104    ; 90D1 82 A6                    ..
+        .addr   Bank0fDialogueBlock0Index105    ; 90D3 BC A6                    ..
+        .addr   Bank0fDialogueBlock0Index106    ; 90D5 D1 A6                    ..
+        .addr   Bank0fDialogueBlock0Index107    ; 90D7 35 A7                    5.
+        .addr   Bank0fDialogueBlock0Index108    ; 90D9 44 A7                    D.
+        .addr   Bank0fDialogueBlock0Index109    ; 90DB 87 A7                    ..
+        .addr   Bank0fDialogueBlock0Index110    ; 90DD A9 A7                    ..
+        .addr   Bank0fDialogueBlock0Index111    ; 90DF BB A7                    ..
+        .addr   Bank0fDialogueBlock0Index112    ; 90E1 0E A8                    ..
+        .addr   Bank0fDialogueBlock0Index113    ; 90E3 3B A8                    ;.
+        .addr   Bank0fDialogueBlock0Index114    ; 90E5 82 A8                    ..
+        .addr   Bank0fDialogueBlock0Index115    ; 90E7 8F A8                    ..
+        .addr   Bank0fDialogueBlock0Index116    ; 90E9 BE A8                    ..
+        .addr   Bank0fDialogueBlock0Index117    ; 90EB DD A8                    ..
+        .addr   Bank0fDialogueBlock0Index118    ; 90ED 4F A9                    O.
+        .addr   Bank0fDialogueBlock0Index119    ; 90EF 61 A9                    a.
+        .addr   Bank0fDialogueBlock0Index120    ; 90F1 BE A9                    ..
+        .addr   Bank0fDialogueBlock0Index121    ; 90F3 CF A9                    ..
+        .addr   Bank0fDialogueBlock0Index122    ; 90F5 17 AA                    ..
+        .addr   Bank0fDialogueBlock0Index123    ; 90F7 20 AA                     .
+        .addr   Bank0fDialogueBlock0Index124    ; 90F9 7E AA                    ~.
+        .addr   Bank0fDialogueBlock0Index125    ; 90FB A2 AA                    ..
+        .addr   Bank0fDialogueBlock0Index126    ; 90FD 42 AB                    B.
+        .addr   Bank0fDialogueBlock0Index122    ; 90FF 17 AA                    ..
+        .addr   Bank0fDialogueBlock0Index128    ; 9101 67 AB                    g.
+        .addr   Bank0fDialogueBlock0Index129    ; 9103 7C AB                    |.
+        .addr   Bank0fDialogueBlock0Index130    ; 9105 D2 AB                    ..
+        .addr   Bank0fDialogueBlock0Index131    ; 9107 15 AC                    ..
+        .addr   Bank0fDialogueBlock0Index132    ; 9109 3B AC                    ;.
+        .addr   Bank0fDialogueBlock0Index133    ; 910B A8 AC                    ..
+        .addr   Bank0fDialogueBlock0Index134    ; 910D B6 AC                    ..
+        .addr   Bank0fDialogueBlock0Index135    ; 910F C0 AC                    ..
+        .addr   Bank0fDialogueBlock0Index136    ; 9111 CA AC                    ..
+        .addr   Bank0fDialogueBlock0Index137    ; 9113 D1 AC                    ..
+        .addr   Bank0fDialogueBlock0Index138    ; 9115 F3 AC                    ..
+        .addr   Bank0fDialogueBlock0Index139    ; 9117 06 AD                    ..
+        .addr   Bank0fDialogueBlock0Index140    ; 9119 0B AD                    ..
+        .addr   Bank0fDialogueBlock0Index141    ; 911B 17 AD                    ..
+        .addr   Bank0fDialogueBlock0Index142    ; 911D 47 AD                    G.
+        .addr   Bank0fDialogueBlock0Index143    ; 911F 50 AD                    P.
+        .addr   Bank0fDialogueBlock0Index144    ; 9121 C0 AD                    ..
+        .addr   Bank0fDialogueBlock0Index145    ; 9123 CD AD                    ..
+        .addr   Bank0fDialogueBlock0Index146    ; 9125 D5 AD                    ..
+        .addr   Bank0fDialogueBlock0Index147    ; 9127 EF AD                    ..
+        .addr   Bank0fDialogueBlock0Index148    ; 9129 13 AE                    ..
+        .addr   Bank0fDialogueBlock0Index149    ; 912B 72 AE                    r.
+        .addr   Bank0fDialogueBlock0Index150    ; 912D 93 AE                    ..
+        .addr   Bank0fDialogueBlock0Index151    ; 912F FB AE                    ..
+        .addr   Bank0fDialogueBlock0Index152    ; 9131 69 AF                    i.
+        .addr   Bank0fDialogueBlock0Index153    ; 9133 96 B0                    ..
+        .addr   Bank0fDialogueBlock0Index154    ; 9135 A8 B0                    ..
+        .addr   Bank0fDialogueBlock0Index155    ; 9137 D5 B0                    ..
+        .addr   Bank0fDialogueBlock0Index156    ; 9139 09 B1                    ..
+        .addr   Bank0fDialogueBlock0Index139    ; 913B 06 AD                    ..
+        .addr   Bank0fDialogueBlock0Index158    ; 913D 1F B1                    ..
+        .addr   Bank0fDialogueBlock0Index159    ; 913F 40 B1                    @.
+        .addr   Bank0fDialogueBlock0Index160    ; 9141 4C B1                    L.
+        .addr   Bank0fDialogueBlock0Index161    ; 9143 75 B1                    u.
+        .addr   Bank0fDialogueBlock0Index162    ; 9145 B4 B1                    ..
+        .addr   Bank0fDialogueBlock0Index163    ; 9147 DB B1                    ..
+        .addr   Bank0fDialogueBlock0Index164    ; 9149 F9 B1                    ..
+        .addr   Bank0fDialogueBlock0Index165    ; 914B 32 B2                    2.
+        .addr   Bank0fDialogueBlock0Index166    ; 914D 41 B2                    A.
+        .addr   Bank0fDialogueBlock0Index167    ; 914F 5D B2                    ].
+        .addr   Bank0fDialogueBlock0Index168    ; 9151 72 B2                    r.
+        .addr   Bank0fDialogueBlock0Index169    ; 9153 8B B2                    ..
+        .addr   Bank0fDialogueBlock0Index170    ; 9155 AE B2                    ..
+        .addr   Bank0fDialogueBlock0Index139    ; 9157 06 AD                    ..
+        .addr   Bank0fDialogueBlock0Index172    ; 9159 C2 B2                    ..
+        .addr   Bank0fDialogueBlock0Index173    ; 915B E0 B2                    ..
+        .addr   Bank0fDialogueBlock0Index174    ; 915D FF B2                    ..
+        .addr   Bank0fDialogueBlock0Index175    ; 915F 21 B3                    !.
+        .addr   Bank0fDialogueBlock0Index176    ; 9161 33 B3                    3.
+        .addr   Bank0fDialogueBlock0Index177    ; 9163 50 B3                    P.
+        .addr   Bank0fDialogueBlock0Index178    ; 9165 6C B3                    l.
+        .addr   Bank0fDialogueBlock0Index179    ; 9167 95 B3                    ..
+        .addr   Bank0fDialogueBlock0Index180    ; 9169 C5 B3                    ..
+        .addr   Bank0fDialogueBlock0Index181    ; 916B 49 B6                    I.
+        .addr   Bank0fDialogueBlock0Index182    ; 916D 51 B7                    Q.
+        .addr   Bank0fDialogueBlock0Index183    ; 916F 6B B7                    k.
+        .addr   Bank0fDialogueBlock0Index184    ; 9171 8F B8                    ..
+        .addr   Bank0fDialogueBlock0Index185    ; 9173 D1 B8                    ..
+        .addr   Bank0fDialogueBlock0Index186    ; 9175 0B B9                    ..
+        .addr   Bank0fDialogueBlock0Index187    ; 9177 1B B9                    ..
+        .addr   Bank0fDialogueBlock0Index188    ; 9179 AD B9                    ..
+        .addr   Bank0fDialogueBlock0Index189    ; 917B C0 B9                    ..
+        .addr   Bank0fDialogueBlock0Index190    ; 917D 25 BA                    %.
+        .addr   Bank0fDialogueBlock0Index191    ; 917F 79 BA                    y.
+        .addr   Bank0fDialogueBlock0Index192    ; 9181 E8 BB                    ..
+        .addr   Bank0fDialogueBlock0Index193    ; 9183 48 BC                    H.
+        .addr   Bank0fDialogueBlock0Index194    ; 9185 86 BC                    ..
+        .addr   Bank0fDialogueBlock0Index195    ; 9187 B1 BC                    ..
+        .addr   Bank0fDialogueBlock0Index196    ; 9189 DE BC                    ..
+        .addr   Bank0fDialogueBlock0Index197    ; 918B 05 BD                    ..
+        .addr   Bank0fDialogueBlock0Index198    ; 918D 0E BD                    ..
+        .addr   Bank0fDialogueBlock0Index199    ; 918F 12 BD                    ..
+        .addr   Bank0fDialogueBlock0Index200    ; 9191 9B BD                    ..
+        .addr   Bank0fDialogueBlock0Index201    ; 9193 15 BE                    ..
+        .addr   Bank0fDialogueBlock0Index202    ; 9195 26 BE                    &.
+        .addr   Bank0fDialogueBlock0Index203    ; 9197 3B BE                    ;.
+        .addr   Bank0fDialogueBlock0Index204    ; 9199 5D BE                    ].
+        .addr   Bank0fDialogueBlock0Index205    ; 919B 65 BE                    e.
+        .addr   Bank0fDialogueBlock0Index206    ; 919D 7B BE                    {.
+        .addr   Bank0fDialogueBlock0Index207    ; 919F C3 BE                    ..
+        .addr   Bank0fDialogueBlock0Index208    ; 91A1 20 BF                     .
+        .addr   Bank0fDialogueBlock0Index209    ; 91A3 57 BF                    W.
+        .addr   Bank0fDialogueBlock0Index210    ; 91A5 6B BF                    k.
+        .addr   Bank0fDialogueBlock0Index211    ; 91A7 A6 BF                    ..
+        .addr   Bank0fDialogueBlock0Index212    ; 91A9 FD BF                    ..
+        .addr   Bank0fDialogueBlock0Index213    ; 91AB 25 C0                    %.
+        .addr   Bank0fDialogueBlock0Index214    ; 91AD A5 C0                    ..
+        .addr   Bank0fDialogueBlock0Index215    ; 91AF D9 C0                    ..
+        .addr   Bank0fDialogueBlock0Index216    ; 91B1 0A C1                    ..
+        .addr   Bank0fDialogueBlock0Index217    ; 91B3 3B C1                    ;.
+        .addr   Bank0fDialogueBlock0Index218    ; 91B5 6E C1                    n.
+        .addr   Bank0fDialogueBlock0Index139    ; 91B7 06 AD                    ..
+        .addr   Bank0fDialogueBlock0Index220    ; 91B9 A9 C1                    ..
+        .addr   Bank0fDialogueBlock0Index221    ; 91BB CA C1                    ..
+        .addr   Bank0fDialogueBlock0Index222    ; 91BD CE C1                    ..
+        .addr   Bank0fDialogueBlock0Index223    ; 91BF D2 C1                    ..
+        .addr   Bank0fDialogueBlock0Index224    ; 91C1 ED C1                    ..
+        .addr   Bank0fDialogueBlock0Index225    ; 91C3 1C C2                    ..
+        .addr   Bank0fDialogueBlock0Index226    ; 91C5 2F C2                    /.
+        .addr   Bank0fDialogueBlock0Index227    ; 91C7 51 C2                    Q.
+        .addr   Bank0fDialogueBlock0Index228    ; 91C9 71 C2                    q.
+        .addr   Bank0fDialogueBlock0Index229    ; 91CB AE C2                    ..
+        .addr   Bank0fDialogueBlock0Index230    ; 91CD DC C2                    ..
+        .addr   Bank0fDialogueBlock0Index231    ; 91CF F2 C2                    ..
+        .addr   Bank0fDialogueBlock0Index232    ; 91D1 32 C3                    2.
+        .addr   Bank0fDialogueBlock0Index233    ; 91D3 66 C3                    f.
+        .addr   Bank0fDialogueBlock0Index234    ; 91D5 B1 C3                    ..
+        .addr   Bank0fDialogueBlock0Index235    ; 91D7 CD C3                    ..
+        .addr   Bank0fDialogueBlock0Index236    ; 91D9 09 C4                    ..
+        .addr   Bank0fDialogueBlock0Index237    ; 91DB 29 C4                    ).
+        .addr   Bank0fDialogueBlock0Index238    ; 91DD 4B C4                    K.
+        .addr   Bank0fDialogueBlock0Index239    ; 91DF 74 C4                    t.
+        .addr   Bank0fDialogueBlock0Index240    ; 91E1 CB C4                    ..
+        .addr   Bank0fDialogueBlock0Index241    ; 91E3 8D C5                    ..
+        .addr   Bank0fDialogueBlock0Index242    ; 91E5 E7 C5                    ..
+        .addr   Bank0fDialogueBlock0Index243    ; 91E7 30 C6                    0.
+        .addr   Bank0fDialogueBlock0Index244    ; 91E9 6A C6                    j.
+        .addr   Bank0fDialogueBlock0Index245    ; 91EB B6 C6                    ..
+        .addr   Bank0fDialogueBlock0Index246    ; 91ED FE C6                    ..
+        .addr   Bank0fDialogueBlock0Index247    ; 91EF 1F C7                    ..
+        .addr   Bank0fDialogueBlock0Index248    ; 91F1 39 C7                    9.
+        .addr   Bank0fDialogueBlock0Index249    ; 91F3 4D C7                    M.
+        .addr   Bank0fDialogueBlock0Index250    ; 91F5 73 C7                    s.
+        .addr   Bank0fDialogueBlock0Index251    ; 91F7 B4 C7                    ..
 ; ----------------------------------------------------------------------------
-L91F9:
+Bank0fDialogueBlock0Index0:
         .byte   "Kotch:All right\ladies!Line up "; 91F9 4B 6F 74 63 68 3A 41 6C Kotch:Al
                                                 ; 9201 6C 20 72 69 67 68 74 5C  l right\
                                                 ; 9209 6C 61 64 69 65 73 21 4C  ladies!L
@@ -783,7 +783,7 @@ L91F9:
                                                 ; 9220 20 6F 66 20 74 68 65 20   of the 
                                                 ; 9228 44 6F 6E 21              Don!
         .byte   $0A                             ; 922C 0A                       .
-L922D:
+Bank0fDialogueBlock0Index1:
         .byte   "@OCorneo:Hmm!Good,\splendid!Now"; 922D 40 4F 43 6F 72 6E 65 6F @OCorneo
                                                 ; 9235 3A 48 6D 6D 21 47 6F 6F  :Hmm!Goo
                                                 ; 923D 64 2C 5C 73 70 6C 65 6E  d,\splen
@@ -796,15 +796,15 @@ L922D:
                                                 ; 9273 5C 48 6D 6D 5F 5F 68 6D  \Hmm__hm
                                                 ; 927B 6D 5F 21                 m_!
         .byte   $0A                             ; 927E 0A                       .
-L927F:
+Bank0fDialogueBlock0Index2:
         .byte   "@OThis one?"                   ; 927F 40 4F 54 68 69 73 20 6F  @OThis o
                                                 ; 9287 6E 65 3F                 ne?
         .byte   $0A                             ; 928A 0A                       .
-L928B:
+Bank0fDialogueBlock0Index3:
         .byte   "@OOr this one?"                ; 928B 40 4F 4F 72 20 74 68 69  @OOr thi
                                                 ; 9293 73 20 6F 6E 65 3F        s one?
         .byte   $0A                             ; 9299 0A                       .
-L929A:
+Bank0fDialogueBlock0Index4:
         .byte   "@OWoo-hoo,I've made\up my mind!"; 929A 40 4F 57 6F 6F 2D 68 6F @OWoo-ho
                                                 ; 92A2 6F 2C 49 27 76 65 20 6D  o,I've m
                                                 ; 92AA 61 64 65 5C 75 70 20 6D  ade\up m
@@ -814,51 +814,51 @@ L929A:
                                                 ; 92C9 6E 69 67 68 74 5C 69 73  night\is
                                                 ; 92D1 5F 5F                    __
         .byte   $0A                             ; 92D3 0A                       .
-L92D4:
+Bank0fDialogueBlock0Index5:
         .byte   "@OThis healthy\looking girl!"  ; 92D4 40 4F 54 68 69 73 20 68  @OThis h
                                                 ; 92DC 65 61 6C 74 68 79 5C 6C  ealthy\l
                                                 ; 92E4 6F 6F 6B 69 6E 67 20 67  ooking g
                                                 ; 92EC 69 72 6C 21              irl!
         .byte   $0A                             ; 92F0 0A                       .
-L92F1:
+Bank0fDialogueBlock0Index6:
         .byte   "@3Fu,fu,fu__Be nice,\Don."     ; 92F1 40 33 46 75 2C 66 75 2C  @3Fu,fu,
                                                 ; 92F9 66 75 5F 5F 42 65 20 6E  fu__Be n
                                                 ; 9301 69 63 65 2C 5C 44 6F 6E  ice,\Don
                                                 ; 9309 2E                       .
         .byte   $0A                             ; 930A 0A                       .
-L930B:
+Bank0fDialogueBlock0Index7:
         .byte   "@OYou can have the\other ones!"; 930B 40 4F 59 6F 75 20 63 61  @OYou ca
                                                 ; 9313 6E 20 68 61 76 65 20 74  n have t
                                                 ; 931B 68 65 5C 6F 74 68 65 72  he\other
                                                 ; 9323 20 6F 6E 65 73 21         ones!
         .byte   $0A                             ; 9329 0A                       .
-L932A:
+Bank0fDialogueBlock0Index8:
         .byte   "Yes,sir!Thank you\sir!"        ; 932A 59 65 73 2C 73 69 72 21  Yes,sir!
                                                 ; 9332 54 68 61 6E 6B 20 79 6F  Thank yo
                                                 ; 933A 75 5C 73 69 72 21        u\sir!
         .byte   $0A                             ; 9340 0A                       .
-L9341:
+Bank0fDialogueBlock0Index9:
         .byte   "@OWell then,shall we\go my pret"; 9341 40 4F 57 65 6C 6C 20 74 @OWell t
                                                 ; 9349 68 65 6E 2C 73 68 61 6C  hen,shal
                                                 ; 9351 6C 20 77 65 5C 67 6F 20  l we\go 
                                                 ; 9359 6D 79 20 70 72 65 74     my pret
         .byte   "ty?"                           ; 9360 74 79 3F                 ty?
         .byte   $0A                             ; 9363 0A                       .
-L9364:
+Bank0fDialogueBlock0Index10:
         .byte   "Scotch:Hey guys!\We've got gues"; 9364 53 63 6F 74 63 68 3A 48 Scotch:H
                                                 ; 936C 65 79 20 67 75 79 73 21  ey guys!
                                                 ; 9374 5C 57 65 27 76 65 20 67  \We've g
                                                 ; 937C 6F 74 20 67 75 65 73     ot gues
         .byte   "ts."                           ; 9383 74 73 2E                 ts.
         .byte   $0A                             ; 9386 0A                       .
-L9387:
+Bank0fDialogueBlock0Index11:
         .byte   "We'll take REAL\good care of yo"; 9387 57 65 27 6C 6C 20 74 61 We'll ta
                                                 ; 938F 6B 65 20 52 45 41 4C 5C  ke REAL\
                                                 ; 9397 67 6F 6F 64 20 63 61 72  good car
                                                 ; 939F 65 20 6F 66 20 79 6F     e of yo
         .byte   "u."                            ; 93A6 75 2E                    u.
         .byte   $0A                             ; 93A8 0A                       .
-L93A9:
+Bank0fDialogueBlock0Index12:
         .byte   "This is all thanks\to the big b"; 93A9 54 68 69 73 20 69 73 20 This is 
                                                 ; 93B1 61 6C 6C 20 74 68 61 6E  all than
                                                 ; 93B9 6B 73 5C 74 6F 20 74 68  ks\to th
@@ -866,11 +866,11 @@ L93A9:
         .byte   "oss,DonCorneo!"                ; 93C8 6F 73 73 2C 44 6F 6E 43  oss,DonC
                                                 ; 93D0 6F 72 6E 65 6F 21        orneo!
         .byte   $0A                             ; 93D6 0A                       .
-L93D7:
+Bank0fDialogueBlock0Index13:
         .byte   "Hey!Hey!Hey!"                  ; 93D7 48 65 79 21 48 65 79 21  Hey!Hey!
                                                 ; 93DF 48 65 79 21              Hey!
         .byte   $0A                             ; 93E3 0A                       .
-L93E4:
+Bank0fDialogueBlock0Index14:
         .byte   "Heh,heh__Well\sweatie,are you, "; 93E4 48 65 68 2C 68 65 68 5F Heh,heh_
                                                 ; 93EC 5F 57 65 6C 6C 5C 73 77  _Well\sw
                                                 ; 93F4 65 61 74 69 65 2C 61 72  eatie,ar
@@ -878,7 +878,7 @@ L93E4:
         .byte   "\uh, ready?"                   ; 9403 5C 75 68 2C 20 72 65 61  \uh, rea
                                                 ; 940B 64 79 3F                 dy?
         .byte   $0A                             ; 940E 0A                       .
-L940F:
+Bank0fDialogueBlock0Index15:
         .byte   "Hey__what's wrong?\Want me to k"; 940F 48 65 79 5F 5F 77 68 61 Hey__wha
                                                 ; 9417 74 27 73 20 77 72 6F 6E  t's wron
                                                 ; 941F 67 3F 5C 57 61 6E 74 20  g?\Want 
@@ -886,7 +886,7 @@ L940F:
         .byte   "eep youcompany?"               ; 942E 65 65 70 20 79 6F 75 63  eep youc
                                                 ; 9436 6F 6D 70 61 6E 79 3F     ompany?
         .byte   $0A                             ; 943D 0A                       .
-L943E:
+Bank0fDialogueBlock0Index16:
         .byte   "@1No__I'm flattered,\but no tha"; 943E 40 31 4E 6F 5F 5F 49 27 @1No__I'
                                                 ; 9446 6D 20 66 6C 61 74 74 65  m flatte
                                                 ; 944E 72 65 64 2C 5C 62 75 74  red,\but
@@ -894,11 +894,11 @@ L943E:
         .byte   "nks.\Because__"                ; 945D 6E 6B 73 2E 5C 42 65 63  nks.\Bec
                                                 ; 9465 61 75 73 65 5F 5F        ause__
         .byte   $0A                             ; 946B 0A                       .
-L946C:
+Bank0fDialogueBlock0Index17:
         .byte   "Because_?"                     ; 946C 42 65 63 61 75 73 65 5F  Because_
                                                 ; 9474 3F                       ?
         .byte   $0A                             ; 9475 0A                       .
-L9476:
+Bank0fDialogueBlock0Index18:
         .byte   "@1Because__I ain't\INTERESTED i"; 9476 40 31 42 65 63 61 75 73 @1Becaus
                                                 ; 947E 65 5F 5F 49 20 61 69 6E  e__I ain
                                                 ; 9486 27 74 5C 49 4E 54 45 52  't\INTER
@@ -908,7 +908,7 @@ L9476:
                                                 ; 94A5 73 20 6C 69 6B 65 5C 79  s like\y
                                                 ; 94AD 6F 75 21                 ou!
         .byte   $0A                             ; 94B0 0A                       .
-L94B1:
+Bank0fDialogueBlock0Index19:
         .byte   "Wha__a MAN!?God\damn it!You thi"; 94B1 57 68 61 5F 5F 61 20 4D Wha__a M
                                                 ; 94B9 41 4E 21 3F 47 6F 64 5C  AN!?God\
                                                 ; 94C1 64 61 6D 6E 20 69 74 21  damn it!
@@ -923,7 +923,7 @@ L94B1:
                                                 ; 9507 75 74 5C 6F 66 20 68     ut\of h
         .byte   "im!"                           ; 950E 69 6D 21                 im!
         .byte   $0A                             ; 9511 0A                       .
-L9512:
+Bank0fDialogueBlock0Index20:
         .byte   "Grr!C'mon,What's\the matter wit"; 9512 47 72 72 21 43 27 6D 6F Grr!C'mo
                                                 ; 951A 6E 2C 57 68 61 74 27 73  n,What's
                                                 ; 9522 5C 74 68 65 20 6D 61 74  \the mat
@@ -939,33 +939,33 @@ L9512:
         .byte   "w it's done!"                  ; 956F 77 20 69 74 27 73 20 64  w it's d
                                                 ; 9577 6F 6E 65 21              one!
         .byte   $0A                             ; 957B 0A                       .
-L957C:
+Bank0fDialogueBlock0Index21:
         .byte   "@4No_!Help!"                   ; 957C 40 34 4E 6F 5F 21 48 65  @4No_!He
                                                 ; 9584 6C 70 21                 lp!
         .byte   $0A                             ; 9587 0A                       .
-L9588:
+Bank0fDialogueBlock0Index22:
         .byte   "@4No_!"                        ; 9588 40 34 4E 6F 5F 21        @4No_!
         .byte   $0A                             ; 958E 0A                       .
-L958F:
+Bank0fDialogueBlock0Index23:
         .byte   "Kotch:Ha ha ha__\Wait,you!"    ; 958F 4B 6F 74 63 68 3A 48 61  Kotch:Ha
                                                 ; 9597 20 68 61 20 68 61 5F 5F   ha ha__
                                                 ; 959F 5C 57 61 69 74 2C 79 6F  \Wait,yo
                                                 ; 95A7 75 21                    u!
         .byte   $0A                             ; 95A9 0A                       .
-L95AA:
+Bank0fDialogueBlock0Index24:
         .byte   "@4I'm so sorry!"               ; 95AA 40 34 49 27 6D 20 73 6F  @4I'm so
                                                 ; 95B2 20 73 6F 72 72 79 21      sorry!
         .byte   $0A                             ; 95B9 0A                       .
-L95BA:
+Bank0fDialogueBlock0Index25:
         .byte   "Oh,oh,oh__"                    ; 95BA 4F 68 2C 6F 68 2C 6F 68  Oh,oh,oh
                                                 ; 95C2 5F 5F                    __
         .byte   $0A                             ; 95C4 0A                       .
-L95C5:
+Bank0fDialogueBlock0Index26:
         .byte   "@1Aeris!You all\right?"        ; 95C5 40 31 41 65 72 69 73 21  @1Aeris!
                                                 ; 95CD 59 6F 75 20 61 6C 6C 5C  You all\
                                                 ; 95D5 72 69 67 68 74 3F        right?
         .byte   $0A                             ; 95DB 0A                       .
-L95DC:
+Bank0fDialogueBlock0Index27:
         .byte   "@4I told you.I'm usedto danger."; 95DC 40 34 49 20 74 6F 6C 64 @4I told
                                                 ; 95E4 20 79 6F 75 2E 49 27 6D   you.I'm
                                                 ; 95EC 20 75 73 65 64 74 6F 20   usedto 
@@ -977,14 +977,14 @@ L95DC:
         .byte   "was pounding."                 ; 961A 77 61 73 20 70 6F 75 6E  was poun
                                                 ; 9622 64 69 6E 67 2E           ding.
         .byte   $0A                             ; 9627 0A                       .
-L9628:
+Bank0fDialogueBlock0Index28:
         .byte   "@OWoo-hoo!Come,come,\don't be s"; 9628 40 4F 57 6F 6F 2D 68 6F @OWoo-ho
                                                 ; 9630 6F 21 43 6F 6D 65 2C 63  o!Come,c
                                                 ; 9638 6F 6D 65 2C 5C 64 6F 6E  ome,\don
                                                 ; 9640 27 74 20 62 65 20 73     't be s
         .byte   "o shy__"                       ; 9647 6F 20 73 68 79 5F 5F     o shy__
         .byte   $0A                             ; 964E 0A                       .
-L964F:
+Bank0fDialogueBlock0Index29:
         .byte   "@3I know__But you\know,Don Corn"; 964F 40 33 49 20 6B 6E 6F 77 @3I know
                                                 ; 9657 5F 5F 42 75 74 20 79 6F  __But yo
                                                 ; 965F 75 5C 6B 6E 6F 77 2C 44  u\know,D
@@ -997,7 +997,7 @@ L964F:
                                                 ; 9695 72 65 20 77 65 73 74 61  re westa
                                                 ; 969D 72 74 5F 5F              rt__
         .byte   $0A                             ; 96A1 0A                       .
-L96A2:
+Bank0fDialogueBlock0Index30:
         .byte   "@OHm?Oh,you mean\about THAT?Don"; 96A2 40 4F 48 6D 3F 4F 68 2C @OHm?Oh,
                                                 ; 96AA 79 6F 75 20 6D 65 61 6E  you mean
                                                 ; 96B2 5C 61 62 6F 75 74 20 54  \about T
@@ -1009,7 +1009,7 @@ L96A2:
         .byte   " better\now?"                  ; 96E0 20 62 65 74 74 65 72 5C   better\
                                                 ; 96E8 6E 6F 77 3F              now?
         .byte   $0A                             ; 96EC 0A                       .
-L96ED:
+Bank0fDialogueBlock0Index31:
         .byte   "@3No__I'm not asking\about that"; 96ED 40 33 4E 6F 5F 5F 49 27 @3No__I'
                                                 ; 96F5 6D 20 6E 6F 74 20 61 73  m not as
                                                 ; 96FD 6B 69 6E 67 5C 61 62 6F  king\abo
@@ -1020,7 +1020,7 @@ L96ED:
                                                 ; 9724 5C 6E 6F 74 20 79 65     \not ye
         .byte   "t!"                            ; 972B 74 21                    t!
         .byte   $0A                             ; 972D 0A                       .
-L972E:
+Bank0fDialogueBlock0Index32:
         .byte   "@OCome!Come!Aoooh!I\can't wait "; 972E 40 4F 43 6F 6D 65 21 43 @OCome!C
                                                 ; 9736 6F 6D 65 21 41 6F 6F 6F  ome!Aooo
                                                 ; 973E 68 21 49 5C 63 61 6E 27  h!I\can'
@@ -1030,17 +1030,17 @@ L972E:
                                                 ; 975D 63 6F 6D 65 73 5C 70 61  comes\pa
                                                 ; 9765 70 61 21                 pa!
         .byte   $0A                             ; 9768 0A                       .
-L9769:
+Bank0fDialogueBlock0Index33:
         .byte   "@3Cloud!"                      ; 9769 40 33 43 6C 6F 75 64 21  @3Cloud!
         .byte   $0A                             ; 9771 0A                       .
-L9772:
+Bank0fDialogueBlock0Index34:
         .byte   "@OWha__what the hell?Who goes t"; 9772 40 4F 57 68 61 5F 5F 77 @OWha__w
                                                 ; 977A 68 61 74 20 74 68 65 20  hat the 
                                                 ; 9782 68 65 6C 6C 3F 57 68 6F  hell?Who
                                                 ; 978A 20 67 6F 65 73 20 74      goes t
         .byte   "here?"                         ; 9791 68 65 72 65 3F           here?
         .byte   $0A                             ; 9796 0A                       .
-L9797:
+Bank0fDialogueBlock0Index35:
         .byte   "@3You still don't getit do you,"; 9797 40 33 59 6F 75 20 73 74 @3You st
                                                 ; 979F 69 6C 6C 20 64 6F 6E 27  ill don'
                                                 ; 97A7 74 20 67 65 74 69 74 20  t getit 
@@ -1048,11 +1048,11 @@ L9797:
         .byte   "Don\Corneo?"                   ; 97B6 44 6F 6E 5C 43 6F 72 6E  Don\Corn
                                                 ; 97BE 65 6F 3F                 eo?
         .byte   $0A                             ; 97C1 0A                       .
-L97C2:
+Bank0fDialogueBlock0Index36:
         .byte   "@OGet what?"                   ; 97C2 40 4F 47 65 74 20 77 68  @OGet wh
                                                 ; 97CA 61 74 3F                 at?
         .byte   $0A                             ; 97CD 0A                       .
-L97CE:
+Bank0fDialogueBlock0Index37:
         .byte   "@3Shut up,we're\asking the\ques"; 97CE 40 33 53 68 75 74 20 75 @3Shut u
                                                 ; 97D6 70 2C 77 65 27 72 65 5C  p,we're\
                                                 ; 97DE 61 73 6B 69 6E 67 20 74  asking t
@@ -1067,12 +1067,12 @@ L97CE:
                                                 ; 9824 64 6F 6E 27 74 20 74     don't t
         .byte   "ell us__"                      ; 982B 65 6C 6C 20 75 73 5F 5F  ell us__
         .byte   $0A                             ; 9833 0A                       .
-L9834:
+Bank0fDialogueBlock0Index38:
         .byte   "@1__I'll chop them\off."       ; 9834 40 31 5F 5F 49 27 6C 6C  @1__I'll
                                                 ; 983C 20 63 68 6F 70 20 74 68   chop th
                                                 ; 9844 65 6D 5C 6F 66 66 2E     em\off.
         .byte   $0A                             ; 984B 0A                       .
-L984C:
+Bank0fDialogueBlock0Index39:
         .byte   "@ONo!Not that!I'll\talk!I'll te"; 984C 40 4F 4E 6F 21 4E 6F 74 @ONo!Not
                                                 ; 9854 20 74 68 61 74 21 49 27   that!I'
                                                 ; 985C 6C 6C 5C 74 61 6C 6B 21  ll\talk!
@@ -1081,11 +1081,11 @@ L984C:
                                                 ; 9873 76 65 72 79 74 68 69 6E  verythin
                                                 ; 987B 67 21                    g!
         .byte   $0A                             ; 987D 0A                       .
-L987E:
+Bank0fDialogueBlock0Index40:
         .byte   "@3So__talk."                   ; 987E 40 33 53 6F 5F 5F 74 61  @3So__ta
                                                 ; 9886 6C 6B 2E                 lk.
         .byte   $0A                             ; 9889 0A                       .
-L988A:
+Bank0fDialogueBlock0Index41:
         .byte   "@O__I made 'em find\out where t"; 988A 40 4F 5F 5F 49 20 6D 61 @O__I ma
                                                 ; 9892 64 65 20 27 65 6D 20 66  de 'em f
                                                 ; 989A 69 6E 64 5C 6F 75 74 20  ind\out 
@@ -1100,29 +1100,29 @@ L988A:
                                                 ; 98E0 64 20 74 6F 5C 64 6F     d to\do
         .byte   "."                             ; 98E7 2E                       .
         .byte   $0A                             ; 98E8 0A                       .
-L98E9:
+Bank0fDialogueBlock0Index42:
         .byte   "@3By who?"                     ; 98E9 40 33 42 79 20 77 68 6F  @3By who
                                                 ; 98F1 3F                       ?
         .byte   $0A                             ; 98F2 0A                       .
-L98F3:
+Bank0fDialogueBlock0Index43:
         .byte   "@ONo_!If I told you\that,I'd be"; 98F3 40 4F 4E 6F 5F 21 49 66 @ONo_!If
                                                 ; 98FB 20 49 20 74 6F 6C 64 20   I told 
                                                 ; 9903 79 6F 75 5C 74 68 61 74  you\that
                                                 ; 990B 2C 49 27 64 20 62 65     ,I'd be
         .byte   " killed!"                      ; 9912 20 6B 69 6C 6C 65 64 21   killed!
         .byte   $0A                             ; 991A 0A                       .
-L991B:
+Bank0fDialogueBlock0Index44:
         .byte   "@3Talk!If you don't\tell us__" ; 991B 40 33 54 61 6C 6B 21 49  @3Talk!I
                                                 ; 9923 66 20 79 6F 75 20 64 6F  f you do
                                                 ; 992B 6E 27 74 5C 74 65 6C 6C  n't\tell
                                                 ; 9933 20 75 73 5F 5F            us__
         .byte   $0A                             ; 9938 0A                       .
-L9939:
+Bank0fDialogueBlock0Index45:
         .byte   "@4__I'll rip them\off."        ; 9939 40 34 5F 5F 49 27 6C 6C  @4__I'll
                                                 ; 9941 20 72 69 70 20 74 68 65   rip the
                                                 ; 9949 6D 5C 6F 66 66 2E        m\off.
         .byte   $0A                             ; 994F 0A                       .
-L9950:
+Bank0fDialogueBlock0Index46:
         .byte   "@OWaaah_!It was\Heidegger of\Sh"; 9950 40 4F 57 61 61 61 68 5F @OWaaah_
                                                 ; 9958 21 49 74 20 77 61 73 5C  !It was\
                                                 ; 9960 48 65 69 64 65 67 67 65  Heidegge
@@ -1137,7 +1137,7 @@ L9950:
                                                 ; 99A6 6E 74 65 6E 61 6E 63     ntenanc
         .byte   "e!"                            ; 99AD 65 21                    e!
         .byte   $0A                             ; 99AF 0A                       .
-L99B0:
+Bank0fDialogueBlock0Index47:
         .byte   "@1The head of Public\Safety Mai"; 99B0 40 31 54 68 65 20 68 65 @1The he
                                                 ; 99B8 61 64 20 6F 66 20 50 75  ad of Pu
                                                 ; 99C0 62 6C 69 63 5C 53 61 66  blic\Saf
@@ -1145,7 +1145,7 @@ L99B0:
         .byte   "ntenance?"                     ; 99CF 6E 74 65 6E 61 6E 63 65  ntenance
                                                 ; 99D7 3F                       ?
         .byte   $0A                             ; 99D8 0A                       .
-L99D9:
+Bank0fDialogueBlock0Index48:
         .byte   "@3Did you say the\Shinra!?What "; 99D9 40 33 44 69 64 20 79 6F @3Did yo
                                                 ; 99E1 75 20 73 61 79 20 74 68  u say th
                                                 ; 99E9 65 5C 53 68 69 6E 72 61  e\Shinra
@@ -1157,12 +1157,12 @@ L99D9:
         .byte   "t tell us__"                   ; 9A17 74 20 74 65 6C 6C 20 75  t tell u
                                                 ; 9A1F 73 5F 5F                 s__
         .byte   $0A                             ; 9A22 0A                       .
-L9A23:
+Bank0fDialogueBlock0Index49:
         .byte   "@3I'll smash them."            ; 9A23 40 33 49 27 6C 6C 20 73  @3I'll s
                                                 ; 9A2B 6D 61 73 68 20 74 68 65  mash the
                                                 ; 9A33 6D 2E                    m.
         .byte   $0A                             ; 9A35 0A                       .
-L9A36:
+Bank0fDialogueBlock0Index50:
         .byte   "@O__You're serious,\aren't you_"; 9A36 40 4F 5F 5F 59 6F 75 27 @O__You'
                                                 ; 9A3E 72 65 20 73 65 72 69 6F  re serio
                                                 ; 9A46 75 73 2C 5C 61 72 65 6E  us,\aren
@@ -1203,12 +1203,12 @@ L9A36:
                                                 ; 9B55 61 74 65 20 61 62 6F 76  ate abov
                                                 ; 9B5D 65 5C 74 68 65 6D 2E     e\them.
         .byte   $0A                             ; 9B64 0A                       .
-L9B65:
+Bank0fDialogueBlock0Index51:
         .byte   "@3Break the support!?"         ; 9B65 40 33 42 72 65 61 6B 20  @3Break 
                                                 ; 9B6D 74 68 65 20 73 75 70 70  the supp
                                                 ; 9B75 6F 72 74 21 3F           ort!?
         .byte   $0A                             ; 9B7A 0A                       .
-L9B7B:
+Bank0fDialogueBlock0Index52:
         .byte   "@OYou know what's\going to happ"; 9B7B 40 4F 59 6F 75 20 6B 6E @OYou kn
                                                 ; 9B83 6F 77 20 77 68 61 74 27  ow what'
                                                 ; 9B8B 73 5C 67 6F 69 6E 67 20  s\going 
@@ -1232,7 +1232,7 @@ L9B7B:
         .byte   "re in Sec.6."                  ; 9C16 72 65 20 69 6E 20 53 65  re in Se
                                                 ; 9C1E 63 2E 36 2E              c.6.
         .byte   $0A                             ; 9C22 0A                       .
-L9C23:
+Bank0fDialogueBlock0Index53:
         .byte   "@3They're going to\wipe out the"; 9C23 40 33 54 68 65 79 27 72 @3They'r
                                                 ; 9C2B 65 20 67 6F 69 6E 67 20  e going 
                                                 ; 9C33 74 6F 5C 77 69 70 65 20  to\wipe 
@@ -1240,27 +1240,27 @@ L9C23:
         .byte   " Sec.7\Slums?"                 ; 9C42 20 53 65 63 2E 37 5C 53   Sec.7\S
                                                 ; 9C4A 6C 75 6D 73 3F           lums?
         .byte   $0A                             ; 9C4F 0A                       .
-L9C50:
+Bank0fDialogueBlock0Index54:
         .byte   "@3Cloud,will you comewith me to"; 9C50 40 33 43 6C 6F 75 64 2C @3Cloud,
                                                 ; 9C58 77 69 6C 6C 20 79 6F 75  will you
                                                 ; 9C60 20 63 6F 6D 65 77 69 74   comewit
                                                 ; 9C68 68 20 6D 65 20 74 6F     h me to
         .byte   " Sec.7?"                       ; 9C6F 20 53 65 63 2E 37 3F      Sec.7?
         .byte   $0A                             ; 9C76 0A                       .
-L9C77:
+Bank0fDialogueBlock0Index55:
         .byte   "@1Of course,Tifa."             ; 9C77 40 31 4F 66 20 63 6F 75  @1Of cou
                                                 ; 9C7F 72 73 65 2C 54 69 66 61  rse,Tifa
                                                 ; 9C87 2E                       .
         .byte   $0A                             ; 9C88 0A                       .
-L9C89:
+Bank0fDialogueBlock0Index56:
         .byte   "@OJust a second!"              ; 9C89 40 4F 4A 75 73 74 20 61  @OJust a
                                                 ; 9C91 20 73 65 63 6F 6E 64 21   second!
         .byte   $0A                             ; 9C99 0A                       .
-L9C9A:
+Bank0fDialogueBlock0Index57:
         .byte   "@1Shut up!"                    ; 9C9A 40 31 53 68 75 74 20 75  @1Shut u
                                                 ; 9CA2 70 21                    p!
         .byte   $0A                             ; 9CA4 0A                       .
-L9CA5:
+Bank0fDialogueBlock0Index58:
         .byte   "@ONo wait,it'll only\take a sec"; 9CA5 40 4F 4E 6F 20 77 61 69 @ONo wai
                                                 ; 9CAD 74 2C 69 74 27 6C 6C 20  t,it'll 
                                                 ; 9CB5 6F 6E 6C 79 5C 74 61 6B  only\tak
@@ -1276,24 +1276,24 @@ L9CA5:
         .byte   "out the truth?"                ; 9D02 6F 75 74 20 74 68 65 20  out the 
                                                 ; 9D0A 74 72 75 74 68 3F        truth?
         .byte   $0A                             ; 9D10 0A                       .
-L9D11:
+Bank0fDialogueBlock0Index59:
         .byte   "@1They're sure\they'll win."   ; 9D11 40 31 54 68 65 79 27 72  @1They'r
                                                 ; 9D19 65 20 73 75 72 65 5C 74  e sure\t
                                                 ; 9D21 68 65 79 27 6C 6C 20 77  hey'll w
                                                 ; 9D29 69 6E 2E                 in.
         .byte   $0A                             ; 9D2C 0A                       .
-L9D2D:
+Bank0fDialogueBlock0Index60:
         .byte   "@OWoo-hoo!Right!"              ; 9D2D 40 4F 57 6F 6F 2D 68 6F  @OWoo-ho
                                                 ; 9D35 6F 21 52 69 67 68 74 21  o!Right!
         .byte   $0A                             ; 9D3D 0A                       .
-L9D3E:
+Bank0fDialogueBlock0Index61:
         .byte   "@=How are the\preparations goin"; 9D3E 40 3D 48 6F 77 20 61 72 @=How ar
                                                 ; 9D46 65 20 74 68 65 5C 70 72  e the\pr
                                                 ; 9D4E 65 70 61 72 61 74 69 6F  eparatio
                                                 ; 9D56 6E 73 20 67 6F 69 6E     ns goin
         .byte   "g?"                            ; 9D5D 67 3F                    g?
         .byte   $0A                             ; 9D5F 0A                       .
-L9D60:
+Bank0fDialogueBlock0Index62:
         .byte   "@?Heidegger:Ha,ha,ha!Smoothly,v"; 9D60 40 3F 48 65 69 64 65 67 @?Heideg
                                                 ; 9D68 67 65 72 3A 48 61 2C 68  ger:Ha,h
                                                 ; 9D70 61 2C 68 61 21 53 6D 6F  a,ha!Smo
@@ -1305,7 +1305,7 @@ L9D60:
         .byte   "s to this."                    ; 9D9E 73 20 74 6F 20 74 68 69  s to thi
                                                 ; 9DA6 73 2E                    s.
         .byte   $0A                             ; 9DA8 0A                       .
-L9DA9:
+Bank0fDialogueBlock0Index63:
         .byte   "@BReeve:President!Arewe really "; 9DA9 40 42 52 65 65 76 65 3A @BReeve:
                                                 ; 9DB1 50 72 65 73 69 64 65 6E  Presiden
                                                 ; 9DB9 74 21 41 72 65 77 65 20  t!Arewe 
@@ -1320,7 +1320,7 @@ L9DA9:
                                                 ; 9DFF 5C 6D 65 6D 62 65 72     \member
         .byte   "s__"                           ; 9E06 73 5F 5F                 s__
         .byte   $0A                             ; 9E09 0A                       .
-L9E0A:
+Bank0fDialogueBlock0Index64:
         .byte   "@=What's the problem,Reeve?You "; 9E0A 40 3D 57 68 61 74 27 73 @=What's
                                                 ; 9E12 20 74 68 65 20 70 72 6F   the pro
                                                 ; 9E1A 62 6C 65 6D 2C 52 65 65  blem,Ree
@@ -1328,7 +1328,7 @@ L9E0A:
         .byte   "want out?"                     ; 9E29 77 61 6E 74 20 6F 75 74  want out
                                                 ; 9E31 3F                       ?
         .byte   $0A                             ; 9E32 0A                       .
-L9E33:
+Bank0fDialogueBlock0Index65:
         .byte   "@B__No.But,as head ofthe Urban\"; 9E33 40 42 5F 5F 4E 6F 2E 42 @B__No.B
                                                 ; 9E3B 75 74 2C 61 73 20 68 65  ut,as he
                                                 ; 9E43 61 64 20 6F 66 74 68 65  ad ofthe
@@ -1346,7 +1346,7 @@ L9E33:
                                                 ; 9EA0 61 74 27 73 20 77 68 79  at's why
                                                 ; 9EA8 5F 5F                    __
         .byte   $0A                             ; 9EAA 0A                       .
-L9EAB:
+Bank0fDialogueBlock0Index66:
         .byte   "@?Reeve,you should\flush those\"; 9EAB 40 3F 52 65 65 76 65 2C @?Reeve,
                                                 ; 9EB3 79 6F 75 20 73 68 6F 75  you shou
                                                 ; 9EBB 6C 64 5C 66 6C 75 73 68  ld\flush
@@ -1357,14 +1357,14 @@ L9EAB:
                                                 ; 9EE2 20 6D 6F 72 6E 69 6E      mornin
         .byte   "g!"                            ; 9EE9 67 21                    g!
         .byte   $0A                             ; 9EEB 0A                       .
-L9EEC:
+Bank0fDialogueBlock0Index67:
         .byte   "@BThe Mayor's againstthis anywa"; 9EEC 40 42 54 68 65 20 4D 61 @BThe Ma
                                                 ; 9EF4 79 6F 72 27 73 20 61 67  yor's ag
                                                 ; 9EFC 61 69 6E 73 74 74 68 69  ainstthi
                                                 ; 9F04 73 20 61 6E 79 77 61     s anywa
         .byte   "y__"                           ; 9F0B 79 5F 5F                 y__
         .byte   $0A                             ; 9F0E 0A                       .
-L9F0F:
+Bank0fDialogueBlock0Index68:
         .byte   "@?Mayor?He just sits\in his bui"; 9F0F 40 3F 4D 61 79 6F 72 3F @?Mayor?
                                                 ; 9F17 48 65 20 6A 75 73 74 20  He just 
                                                 ; 9F1F 73 69 74 73 5C 69 6E 20  sits\in 
@@ -1381,7 +1381,7 @@ L9F0F:
                                                 ; 9F74 65 78 63 75 73 65 20 6D  excuse m
                                                 ; 9F7C 65 5C 73 69 72 21        e\sir!
         .byte   $0A                             ; 9F82 0A                       .
-L9F83:
+Bank0fDialogueBlock0Index69:
         .byte   "@=You're tired.Why\don't you ta"; 9F83 40 3D 59 6F 75 27 72 65 @=You're
                                                 ; 9F8B 20 74 69 72 65 64 2E 57   tired.W
                                                 ; 9F93 68 79 5C 64 6F 6E 27 74  hy\don't
@@ -1393,7 +1393,7 @@ L9F83:
         .byte   "somewhere."                    ; 9FC1 73 6F 6D 65 77 68 65 72  somewher
                                                 ; 9FC9 65 2E                    e.
         .byte   $0A                             ; 9FCB 0A                       .
-L9FCC:
+Bank0fDialogueBlock0Index70:
         .byte   "@=We'll destroy Sec.7and report"; 9FCC 40 3D 57 65 27 6C 6C 20 @=We'll 
                                                 ; 9FD4 64 65 73 74 72 6F 79 20  destroy 
                                                 ; 9FDC 53 65 63 2E 37 61 6E 64  Sec.7and
@@ -1414,34 +1414,34 @@ L9FCC:
                                                 ; A050 73 20 69 73 5C 70 65 72  s is\per
                                                 ; A058 66 65 63 74 2E           fect.
         .byte   $0A                             ; A05D 0A                       .
-LA05E:
+Bank0fDialogueBlock0Index71:
         .byte   "@1You alright?"                ; A05E 40 31 59 6F 75 20 61 6C  @1You al
                                                 ; A066 72 69 67 68 74 3F        right?
         .byte   $0A                             ; A06C 0A                       .
-LA06D:
+Bank0fDialogueBlock0Index72:
         .byte   "@4Yeah."                       ; A06D 40 34 59 65 61 68 2E     @4Yeah.
         .byte   $0A                             ; A074 0A                       .
-LA075:
+Bank0fDialogueBlock0Index74:
         .byte   "@3Man!This is\terrible."       ; A075 40 33 4D 61 6E 21 54 68  @3Man!Th
                                                 ; A07D 69 73 20 69 73 5C 74 65  is is\te
                                                 ; A085 72 72 69 62 6C 65 2E     rrible.
         .byte   $0A                             ; A08C 0A                       .
-LA08D:
+Bank0fDialogueBlock0Index75:
         .byte   "@4Well,the worst is\over__Maybe"; A08D 40 34 57 65 6C 6C 2C 74 @4Well,t
                                                 ; A095 68 65 20 77 6F 72 73 74  he worst
                                                 ; A09D 20 69 73 5C 6F 76 65 72   is\over
                                                 ; A0A5 5F 5F 4D 61 79 62 65     __Maybe
         .byte   " not__"                        ; A0AC 20 6E 6F 74 5F 5F         not__
         .byte   $0A                             ; A0B2 0A                       .
-LA0B3:
+Bank0fDialogueBlock0Index76:
         .byte   "Tifa joins you."               ; A0B3 54 69 66 61 20 6A 6F 69  Tifa joi
                                                 ; A0BB 6E 73 20 79 6F 75 2E     ns you.
         .byte   $0A                             ; A0C2 0A                       .
-LA0C3:
+Bank0fDialogueBlock0Index77:
         .byte   "Aeris joins you."              ; A0C3 41 65 72 69 73 20 6A 6F  Aeris jo
                                                 ; A0CB 69 6E 73 20 79 6F 75 2E  ins you.
         .byte   $0A                             ; A0D3 0A                       .
-LA0D4:
+Bank0fDialogueBlock0Index78:
         .byte   "@3It's too late__\Marlene__Barr"; A0D4 40 33 49 74 27 73 20 74 @3It's t
                                                 ; A0DC 6F 6F 20 6C 61 74 65 5F  oo late_
                                                 ; A0E4 5F 5C 4D 61 72 6C 65 6E  _\Marlen
@@ -1451,7 +1451,7 @@ LA0D4:
                                                 ; A103 6F 66 20 74 68 65 5C 73  of the\s
                                                 ; A10B 6C 75 6D 73 2E           lums.
         .byte   $0A                             ; A110 0A                       .
-LA111:
+Bank0fDialogueBlock0Index79:
         .byte   "@4Don't give up,nevergive up ho"; A111 40 34 44 6F 6E 27 74 20 @4Don't 
                                                 ; A119 67 69 76 65 20 75 70 2C  give up,
                                                 ; A121 6E 65 76 65 72 67 69 76  nevergiv
@@ -1463,7 +1463,7 @@ LA111:
         .byte   "pillar,right?"                 ; A14F 70 69 6C 6C 61 72 2C 72  pillar,r
                                                 ; A157 69 67 68 74 3F           ight?
         .byte   $0A                             ; A15C 0A                       .
-LA15D:
+Bank0fDialogueBlock0Index80:
         .byte   "@3__Yeah__you're\right!We still"; A15D 40 33 5F 5F 59 65 61 68 @3__Yeah
                                                 ; A165 5F 5F 79 6F 75 27 72 65  __you're
                                                 ; A16D 5C 72 69 67 68 74 21 57  \right!W
@@ -1471,7 +1471,7 @@ LA15D:
         .byte   " havetime."                    ; A17C 20 68 61 76 65 74 69 6D   havetim
                                                 ; A184 65 2E                    e.
         .byte   $0A                             ; A186 0A                       .
-LA187:
+Bank0fDialogueBlock0Index81:
         .byte   "@1Aeris.I got you\mixed up in a"; A187 40 31 41 65 72 69 73 2E @1Aeris.
                                                 ; A18F 49 20 67 6F 74 20 79 6F  I got yo
                                                 ; A197 75 5C 6D 69 78 65 64 20  u\mixed 
@@ -1479,13 +1479,13 @@ LA187:
         .byte   "ll of\this__"                  ; A1A6 6C 6C 20 6F 66 5C 74 68  ll of\th
                                                 ; A1AE 69 73 5F 5F              is__
         .byte   $0A                             ; A1B2 0A                       .
-LA1B3:
+Bank0fDialogueBlock0Index82:
         .byte   "@4Don't tell me to gohome."    ; A1B3 40 34 44 6F 6E 27 74 20  @4Don't 
                                                 ; A1BB 74 65 6C 6C 20 6D 65 20  tell me 
                                                 ; A1C3 74 6F 20 67 6F 68 6F 6D  to gohom
                                                 ; A1CB 65 2E                    e.
         .byte   $0A                             ; A1CD 0A                       .
-LA1CE:
+Bank0fDialogueBlock0Index83:
         .byte   "@3Let's see__If we\can just get"; A1CE 40 33 4C 65 74 27 73 20 @3Let's 
                                                 ; A1D6 73 65 65 5F 5F 49 66 20  see__If 
                                                 ; A1DE 77 65 5C 63 61 6E 20 6A  we\can j
@@ -1498,30 +1498,30 @@ LA1CE:
                                                 ; A214 65 74 20 6F 75 74 20 6F  et out o
                                                 ; A21C 66 20 68 65 72 65 2E     f here.
         .byte   $0A                             ; A223 0A                       .
-LA224:
+Bank0fDialogueBlock0Index84:
         .byte   "@3We made it!The\pillar's stand"; A224 40 33 57 65 20 6D 61 64 @3We mad
                                                 ; A22C 65 20 69 74 21 54 68 65  e it!The
                                                 ; A234 5C 70 69 6C 6C 61 72 27  \pillar'
                                                 ; A23C 73 20 73 74 61 6E 64     s stand
         .byte   "ing!"                          ; A243 69 6E 67 21              ing!
         .byte   $0A                             ; A247 0A                       .
-LA248:
+Bank0fDialogueBlock0Index85:
         .byte   "@1Wait!You hear\something__abov"; A248 40 31 57 61 69 74 21 59 @1Wait!Y
                                                 ; A250 6F 75 20 68 65 61 72 5C  ou hear\
                                                 ; A258 73 6F 6D 65 74 68 69 6E  somethin
                                                 ; A260 67 5F 5F 61 62 6F 76     g__abov
         .byte   "e\us?"                         ; A267 65 5C 75 73 3F           e\us?
         .byte   $0A                             ; A26C 0A                       .
-LA26D:
+Bank0fDialogueBlock0Index86:
         .byte   "@4__gun fire?"                 ; A26D 40 34 5F 5F 67 75 6E 20  @4__gun 
                                                 ; A275 66 69 72 65 3F           fire?
         .byte   $0A                             ; A27A 0A                       .
-LA27B:
+Bank0fDialogueBlock0Index87:
         .byte   "@1Wedge!You all\right!?"       ; A27B 40 31 57 65 64 67 65 21  @1Wedge!
                                                 ; A283 59 6F 75 20 61 6C 6C 5C  You all\
                                                 ; A28B 72 69 67 68 74 21 3F     right!?
         .byte   $0A                             ; A292 0A                       .
-LA293:
+Bank0fDialogueBlock0Index88:
         .byte   "@:__Cloud__You\remembered__my\n"; A293 40 3A 5F 5F 43 6C 6F 75 @:__Clou
                                                 ; A29B 64 5F 5F 59 6F 75 5C 72  d__You\r
                                                 ; A2A3 65 6D 65 6D 62 65 72 65  emembere
@@ -1536,7 +1536,7 @@ LA293:
                                                 ; A2E9 74 20 61 6E 79 20 68     t any h
         .byte   "elp."                          ; A2F0 65 6C 70 2E              elp.
         .byte   $0A                             ; A2F4 0A                       .
-LA2F5:
+Bank0fDialogueBlock0Index89:
         .byte   "@1I'm going up!Aeris!You look a"; A2F5 40 31 49 27 6D 20 67 6F @1I'm go
                                                 ; A2FD 69 6E 67 20 75 70 21 41  ing up!A
                                                 ; A305 65 72 69 73 21 59 6F 75  eris!You
@@ -1544,11 +1544,11 @@ LA2F5:
         .byte   "fter\Wedge."                   ; A314 66 74 65 72 5C 57 65 64  fter\Wed
                                                 ; A31C 67 65 2E                 ge.
         .byte   $0A                             ; A31F 0A                       .
-LA320:
+Bank0fDialogueBlock0Index90:
         .byte   "@4Don't worry."                ; A320 40 34 44 6F 6E 27 74 20  @4Don't 
                                                 ; A328 77 6F 72 72 79 2E        worry.
         .byte   $0A                             ; A32E 0A                       .
-LA32F:
+Bank0fDialogueBlock0Index91:
         .byte   "@3Aeris,do me a\favor.I have a "; A32F 40 33 41 65 72 69 73 2C @3Aeris,
                                                 ; A337 64 6F 20 6D 65 20 61 5C  do me a\
                                                 ; A33F 66 61 76 6F 72 2E 49 20  favor.I 
@@ -1566,7 +1566,7 @@ LA32F:
                                                 ; A39C 65 5C 74 68 65 72 65 5F  e\there_
                                                 ; A3A4 5F                       _
         .byte   $0A                             ; A3A5 0A                       .
-LA3A6:
+Bank0fDialogueBlock0Index92:
         .byte   "@4Don't worry.I'll\put her some"; A3A6 40 34 44 6F 6E 27 74 20 @4Don't 
                                                 ; A3AE 77 6F 72 72 79 2E 49 27  worry.I'
                                                 ; A3B6 6C 6C 5C 70 75 74 20 68  ll\put h
@@ -1574,7 +1574,7 @@ LA3A6:
         .byte   "where\safe."                   ; A3C5 77 68 65 72 65 5C 73 61  where\sa
                                                 ; A3CD 66 65 2E                 fe.
         .byte   $0A                             ; A3D0 0A                       .
-LA3D1:
+Bank0fDialogueBlock0Index93:
         .byte   "@3It's dangerous\here!Everyone "; A3D1 40 33 49 74 27 73 20 64 @3It's d
                                                 ; A3D9 61 6E 67 65 72 6F 75 73  angerous
                                                 ; A3E1 5C 68 65 72 65 21 45 76  \here!Ev
@@ -1588,7 +1588,7 @@ LA3D1:
                                                 ; A41F 6F 75 74 20 6F 66 53 65  out ofSe
                                                 ; A427 63 2E 37 21              c.7!
         .byte   $0A                             ; A42B 0A                       .
-LA42C:
+Bank0fDialogueBlock0Index94:
         .byte   "L,look__This is my\job,so I hav"; A42C 4C 2C 6C 6F 6F 6B 5F 5F L,look__
                                                 ; A434 54 68 69 73 20 69 73 20  This is 
                                                 ; A43C 6D 79 5C 6A 6F 62 2C 73  my\job,s
@@ -1600,7 +1600,7 @@ LA42C:
         .byte   "last\minute."                  ; A46A 6C 61 73 74 5C 6D 69 6E  last\min
                                                 ; A472 75 74 65 2E              ute.
         .byte   $0A                             ; A476 0A                       .
-LA477:
+Bank0fDialogueBlock0Index95:
         .byte   "Umm__I just LOVE\men with a sen"; A477 55 6D 6D 5F 5F 49 20 6A Umm__I j
                                                 ; A47F 75 73 74 20 4C 4F 56 45  ust LOVE
                                                 ; A487 5C 6D 65 6E 20 77 69 74  \men wit
@@ -1611,7 +1611,7 @@ LA477:
                                                 ; A4AE 72 65 20 77 69 74 68     re with
         .byte   " you."                         ; A4B5 20 79 6F 75 2E            you.
         .byte   $0A                             ; A4BA 0A                       .
-LA4BB:
+Bank0fDialogueBlock0Index96:
         .byte   "Doh!And this was\supposed to be"; A4BB 44 6F 68 21 41 6E 64 20 Doh!And 
                                                 ; A4C3 74 68 69 73 20 77 61 73  this was
                                                 ; A4CB 5C 73 75 70 70 6F 73 65  \suppose
@@ -1621,7 +1621,7 @@ LA4BB:
                                                 ; A4EA 73 6F 6D 65 74 68 69 6E  somethin
                                                 ; A4F2 67 21                    g!
         .byte   $0A                             ; A4F4 0A                       .
-LA4F5:
+Bank0fDialogueBlock0Index97:
         .byte   "I never thought\this would ever"; A4F5 49 20 6E 65 76 65 72 20 I never 
                                                 ; A4FD 74 68 6F 75 67 68 74 5C  thought\
                                                 ; A505 74 68 69 73 20 77 6F 75  this wou
@@ -1633,13 +1633,13 @@ LA4F5:
         .byte   "ingtomorrow!"                  ; A533 69 6E 67 74 6F 6D 6F 72  ingtomor
                                                 ; A53B 72 6F 77 21              row!
         .byte   $0A                             ; A53F 0A                       .
-LA540:
+Bank0fDialogueBlock0Index98:
         .byte   "Uh oh__There goes\the pillar." ; A540 55 68 20 6F 68 5F 5F 54  Uh oh__T
                                                 ; A548 68 65 72 65 20 67 6F 65  here goe
                                                 ; A550 73 5C 74 68 65 20 70 69  s\the pi
                                                 ; A558 6C 6C 61 72 2E           llar.
         .byte   $0A                             ; A55D 0A                       .
-LA55E:
+Bank0fDialogueBlock0Index99:
         .byte   "Uhh__Help!My\strange and\wonder"; A55E 55 68 68 5F 5F 48 65 6C Uhh__Hel
                                                 ; A566 70 21 4D 79 5C 73 74 72  p!My\str
                                                 ; A56E 61 6E 67 65 20 61 6E 64  ange and
@@ -1648,7 +1648,7 @@ LA55E:
                                                 ; A585 6C 65 5C 70 6C 61 63 65  le\place
                                                 ; A58D 2E                       .
         .byte   $0A                             ; A58E 0A                       .
-LA58F:
+Bank0fDialogueBlock0Index100:
         .byte   "If things get too\hairy,we'll e"; A58F 49 66 20 74 68 69 6E 67 If thing
                                                 ; A597 73 20 67 65 74 20 74 6F  s get to
                                                 ; A59F 6F 5C 68 61 69 72 79 2C  o\hairy,
@@ -1661,7 +1661,7 @@ LA58F:
                                                 ; A5D5 70 65 6E 5C 76 65 72 79  pen\very
                                                 ; A5DD 20 6F 66 74 65 6E 2E      often.
         .byte   $0A                             ; A5E4 0A                       .
-LA5E5:
+Bank0fDialogueBlock0Index101:
         .byte   "@8Cloud__so you don'tcare__what"; A5E5 40 38 43 6C 6F 75 64 5F @8Cloud_
                                                 ; A5ED 5F 73 6F 20 79 6F 75 20  _so you 
                                                 ; A5F5 64 6F 6E 27 74 63 61 72  don'tcar
@@ -1671,12 +1671,12 @@ LA5E5:
                                                 ; A614 5F 5F 5C 50 6C 61 6E 65  __\Plane
                                                 ; A61C 74 3F                    t?
         .byte   $0A                             ; A61E 0A                       .
-LA61F:
+Bank0fDialogueBlock0Index102:
         .byte   "@1You're wounded__"            ; A61F 40 31 59 6F 75 27 72 65  @1You're
                                                 ; A627 20 77 6F 75 6E 64 65 64   wounded
                                                 ; A62F 5F 5F                    __
         .byte   $0A                             ; A631 0A                       .
-LA632:
+Bank0fDialogueBlock0Index103:
         .byte   "@8Thanks,Cloud__don'tworry 'bou"; A632 40 38 54 68 61 6E 6B 73 @8Thanks
                                                 ; A63A 2C 43 6C 6F 75 64 5F 5F  ,Cloud__
                                                 ; A642 64 6F 6E 27 74 77 6F 72  don'twor
@@ -1689,7 +1689,7 @@ LA632:
                                                 ; A678 65 6C 70 5C 68 69 6D 5F  elp\him_
                                                 ; A680 5F                       _
         .byte   $0A                             ; A681 0A                       .
-LA682:
+Bank0fDialogueBlock0Index104:
         .byte   "@9__Cloud__I'm glad__I could ta"; A682 40 39 5F 5F 43 6C 6F 75 @9__Clou
                                                 ; A68A 64 5F 5F 49 27 6D 20 67  d__I'm g
                                                 ; A692 6C 61 64 5F 5F 49 20 63  lad__I c
@@ -1699,7 +1699,7 @@ LA682:
                                                 ; A6B1 6C 61 73 74 20 74 69 6D  last tim
                                                 ; A6B9 65 2E                    e.
         .byte   $0A                             ; A6BB 0A                       .
-LA6BC:
+Bank0fDialogueBlock0Index105:
         .byte   "@1Don't say "                  ; A6BC 40 31 44 6F 6E 27 74 20  @1Don't 
                                                 ; A6C4 73 61 79 20              say 
         .byte   $22                             ; A6C8 22                       "
@@ -1707,7 +1707,7 @@ LA6BC:
         .byte   $22                             ; A6CD 22                       "
         .byte   "__"                            ; A6CE 5F 5F                    __
         .byte   $0A                             ; A6D0 0A                       .
-LA6D1:
+Bank0fDialogueBlock0Index106:
         .byte   "@9That's__all right__Because of"; A6D1 40 39 54 68 61 74 27 73 @9That's
                                                 ; A6D9 5F 5F 61 6C 6C 20 72 69  __all ri
                                                 ; A6E1 67 68 74 5F 5F 42 65 63  ght__Bec
@@ -1722,11 +1722,11 @@ LA6D1:
                                                 ; A727 5C 70 75 6E 69 73 68     \punish
         .byte   "ment__"                        ; A72E 6D 65 6E 74 5F 5F        ment__
         .byte   $0A                             ; A734 0A                       .
-LA735:
+Bank0fDialogueBlock0Index107:
         .byte   "@1Is that so__"                ; A735 40 31 49 73 20 74 68 61  @1Is tha
                                                 ; A73D 74 20 73 6F 5F 5F        t so__
         .byte   $0A                             ; A743 0A                       .
-LA744:
+Bank0fDialogueBlock0Index108:
         .byte   "@9__Ha__cool__as\usual__ex-SOLD"; A744 40 39 5F 5F 48 61 5F 5F @9__Ha__
                                                 ; A74C 63 6F 6F 6C 5F 5F 61 73  cool__as
                                                 ; A754 5C 75 73 75 61 6C 5F 5F  \usual__
@@ -1737,19 +1737,19 @@ LA744:
                                                 ; A77B 74 5F 5F 69 6E 20 79     t__in y
         .byte   "ou__"                          ; A782 6F 75 5F 5F              ou__
         .byte   $0A                             ; A786 0A                       .
-LA787:
+Bank0fDialogueBlock0Index109:
         .byte   "@2Tifa!Cloud!You\came!Be carefu"; A787 40 32 54 69 66 61 21 43 @2Tifa!C
                                                 ; A78F 6C 6F 75 64 21 59 6F 75  loud!You
                                                 ; A797 5C 63 61 6D 65 21 42 65  \came!Be
                                                 ; A79F 20 63 61 72 65 66 75      carefu
         .byte   "l!"                            ; A7A6 6C 21                    l!
         .byte   $0A                             ; A7A8 0A                       .
-LA7A9:
+Bank0fDialogueBlock0Index110:
         .byte   "@3Here they come!"             ; A7A9 40 33 48 65 72 65 20 74  @3Here t
                                                 ; A7B1 68 65 79 20 63 6F 6D 65  hey come
                                                 ; A7B9 21                       !
         .byte   $0A                             ; A7BA 0A                       .
-LA7BB:
+Bank0fDialogueBlock0Index111:
         .byte   "@DYou're too late.\Once I push "; A7BB 40 44 59 6F 75 27 72 65 @DYou're
                                                 ; A7C3 20 74 6F 6F 20 6C 61 74   too lat
                                                 ; A7CB 65 2E 5C 4F 6E 63 65 20  e.\Once 
@@ -1762,7 +1762,7 @@ LA7BB:
                                                 ; A801 63 63 6F 6D 70 6C 69 73  ccomplis
                                                 ; A809 68 65 64 2E              hed.
         .byte   $0A                             ; A80D 0A                       .
-LA80E:
+Bank0fDialogueBlock0Index112:
         .byte   "@3We have to disarm\it!Cloud!Ba"; A80E 40 33 57 65 20 68 61 76 @3We hav
                                                 ; A816 65 20 74 6F 20 64 69 73  e to dis
                                                 ; A81E 61 72 6D 5C 69 74 21 43  arm\it!C
@@ -1770,7 +1770,7 @@ LA80E:
         .byte   "rret!\Please!"                 ; A82D 72 72 65 74 21 5C 50 6C  rret!\Pl
                                                 ; A835 65 61 73 65 21           ease!
         .byte   $0A                             ; A83A 0A                       .
-LA83B:
+Bank0fDialogueBlock0Index113:
         .byte   "@DI can't have you dothat.No on"; A83B 40 44 49 20 63 61 6E 27 @DI can'
                                                 ; A843 74 20 68 61 76 65 20 79  t have y
                                                 ; A84B 6F 75 20 64 6F 74 68 61  ou dotha
@@ -1781,11 +1781,11 @@ LA83B:
                                                 ; A872 20 61 6E 64 74 68 65      andthe
         .byte   " Turks__"                      ; A879 20 54 75 72 6B 73 5F 5F   Turks__
         .byte   $0A                             ; A881 0A                       .
-LA882:
+Bank0fDialogueBlock0Index114:
         .byte   "@DIt's time."                  ; A882 40 44 49 74 27 73 20 74  @DIt's t
                                                 ; A88A 69 6D 65 2E              ime.
         .byte   $0A                             ; A88E 0A                       .
-LA88F:
+Bank0fDialogueBlock0Index115:
         .byte   "@3Cloud!I don't know\how to sto"; A88F 40 33 43 6C 6F 75 64 21 @3Cloud!
                                                 ; A897 49 20 64 6F 6E 27 74 20  I don't 
                                                 ; A89F 6B 6E 6F 77 5C 68 6F 77  know\how
@@ -1793,13 +1793,13 @@ LA88F:
         .byte   "p this!\Try it!"               ; A8AE 70 20 74 68 69 73 21 5C  p this!\
                                                 ; A8B6 54 72 79 20 69 74 21     Try it!
         .byte   $0A                             ; A8BD 0A                       .
-LA8BE:
+Bank0fDialogueBlock0Index116:
         .byte   "@1It's not a normal\time bomb."; A8BE 40 31 49 74 27 73 20 6E  @1It's n
                                                 ; A8C6 6F 74 20 61 20 6E 6F 72  ot a nor
                                                 ; A8CE 6D 61 6C 5C 74 69 6D 65  mal\time
                                                 ; A8D6 20 62 6F 6D 62 2E         bomb.
         .byte   $0A                             ; A8DC 0A                       .
-LA8DD:
+Bank0fDialogueBlock0Index117:
         .byte   "@CTseng:That's right.You'll hav"; A8DD 40 43 54 73 65 6E 67 3A @CTseng:
                                                 ; A8E5 54 68 61 74 27 73 20 72  That's r
                                                 ; A8ED 69 67 68 74 2E 59 6F 75  ight.You
@@ -1816,12 +1816,12 @@ LA8DD:
                                                 ; A942 20 74 6F 75 63 68 65 73   touches
                                                 ; A94A 20 69 74 2E               it.
         .byte   $0A                             ; A94E 0A                       .
-LA94F:
+Bank0fDialogueBlock0Index118:
         .byte   "@3Please,stop it!"             ; A94F 40 33 50 6C 65 61 73 65  @3Please
                                                 ; A957 2C 73 74 6F 70 20 69 74  ,stop it
                                                 ; A95F 21                       !
         .byte   $0A                             ; A960 0A                       .
-LA961:
+Bank0fDialogueBlock0Index119:
         .byte   "@CHa,ha,ha__Only a\Shinra Execu"; A961 40 43 48 61 2C 68 61 2C @CHa,ha,
                                                 ; A969 68 61 5F 5F 4F 6E 6C 79  ha__Only
                                                 ; A971 20 61 5C 53 68 69 6E 72   a\Shinr
@@ -1835,11 +1835,11 @@ LA961:
                                                 ; A9AF 65 6C 65 61 73 65 20 53  elease S
                                                 ; A9B7 79 73 74 65 6D 2E        ystem.
         .byte   $0A                             ; A9BD 0A                       .
-LA9BE:
+Bank0fDialogueBlock0Index120:
         .byte   "@2Shut yer hole!"              ; A9BE 40 32 53 68 75 74 20 79  @2Shut y
                                                 ; A9C6 65 72 20 68 6F 6C 65 21  er hole!
         .byte   $0A                             ; A9CE 0A                       .
-LA9CF:
+Bank0fDialogueBlock0Index121:
         .byte   "@CI wouldn't try\that__You just"; A9CF 40 43 49 20 77 6F 75 6C @CI woul
                                                 ; A9D7 64 6E 27 74 20 74 72 79  dn't try
                                                 ; A9DF 5C 74 68 61 74 5F 5F 59  \that__Y
@@ -1851,10 +1851,10 @@ LA9CF:
         .byte   "al\guest."                     ; AA0D 61 6C 5C 67 75 65 73 74  al\guest
                                                 ; AA15 2E                       .
         .byte   $0A                             ; AA16 0A                       .
-LAA17:
+Bank0fDialogueBlock0Index122:
         .byte   "@3Aeris!"                      ; AA17 40 33 41 65 72 69 73 21  @3Aeris!
         .byte   $0A                             ; AA1F 0A                       .
-LAA20:
+Bank0fDialogueBlock0Index123:
         .byte   "@COh,you know each\other?How ni"; AA20 40 43 4F 68 2C 79 6F 75 @COh,you
                                                 ; AA28 20 6B 6E 6F 77 20 65 61   know ea
                                                 ; AA30 63 68 5C 6F 74 68 65 72  ch\other
@@ -1868,14 +1868,14 @@ LAA20:
                                                 ; AA6E 68 6F 75 6C 64 5C 74 68  hould\th
                                                 ; AA76 61 6E 6B 20 6D 65 2E     ank me.
         .byte   $0A                             ; AA7D 0A                       .
-LAA7E:
+Bank0fDialogueBlock0Index124:
         .byte   "@1What are you gonna\do with Ae"; AA7E 40 31 57 68 61 74 20 61 @1What a
                                                 ; AA86 72 65 20 79 6F 75 20 67  re you g
                                                 ; AA8E 6F 6E 6E 61 5C 64 6F 20  onna\do 
                                                 ; AA96 77 69 74 68 20 41 65     with Ae
         .byte   "ris?"                          ; AA9D 72 69 73 3F              ris?
         .byte   $0A                             ; AAA1 0A                       .
-LAAA2:
+Bank0fDialogueBlock0Index125:
         .byte   "@CI haven't decided.\Our orders"; AAA2 40 43 49 20 68 61 76 65 @CI have
                                                 ; AAAA 6E 27 74 20 64 65 63 69  n't deci
                                                 ; AAB2 64 65 64 2E 5C 4F 75 72  ded.\Our
@@ -1898,19 +1898,19 @@ LAAA2:
                                                 ; AB36 5C 50 72 65 73 69 64     \Presid
         .byte   "ent."                          ; AB3D 65 6E 74 2E              ent.
         .byte   $0A                             ; AB41 0A                       .
-LAB42:
+Bank0fDialogueBlock0Index126:
         .byte   "@4Tifa,don't worry!\She's all r"; AB42 40 34 54 69 66 61 2C 64 @4Tifa,d
                                                 ; AB4A 6F 6E 27 74 20 77 6F 72  on't wor
                                                 ; AB52 72 79 21 5C 53 68 65 27  ry!\She'
                                                 ; AB5A 73 20 61 6C 6C 20 72     s all r
         .byte   "ight!"                         ; AB61 69 67 68 74 21           ight!
         .byte   $0A                             ; AB66 0A                       .
-LAB67:
+Bank0fDialogueBlock0Index128:
         .byte   "@4Hurry and get out!"          ; AB67 40 34 48 75 72 72 79 20  @4Hurry 
                                                 ; AB6F 61 6E 64 20 67 65 74 20  and get 
                                                 ; AB77 6F 75 74 21              out!
         .byte   $0A                             ; AB7B 0A                       .
-LAB7C:
+Bank0fDialogueBlock0Index129:
         .byte   "@CHa,ha,ha__Well,it\should be s"; AB7C 40 43 48 61 2C 68 61 2C @CHa,ha,
                                                 ; AB84 68 61 5F 5F 57 65 6C 6C  ha__Well
                                                 ; AB8C 2C 69 74 5C 73 68 6F 75  ,it\shou
@@ -1923,7 +1923,7 @@ LAB7C:
                                                 ; ABC2 65 73 63 61 70 65 20 69  escape i
                                                 ; ABCA 6E 20 74 69 6D 65 3F     n time?
         .byte   $0A                             ; ABD1 0A                       .
-LABD2:
+Bank0fDialogueBlock0Index130:
         .byte   "@3Once that plate\starts coming"; ABD2 40 33 4F 6E 63 65 20 74 @3Once t
                                                 ; ABDA 68 61 74 20 70 6C 61 74  hat plat
                                                 ; ABE2 65 5C 73 74 61 72 74 73  e\starts
@@ -1934,14 +1934,14 @@ LABD2:
                                                 ; AC09 6F 74 74 61 20 68 75     otta hu
         .byte   "rry!"                          ; AC10 72 72 79 21              rry!
         .byte   $0A                             ; AC14 0A                       .
-LAC15:
+Bank0fDialogueBlock0Index131:
         .byte   "@2Yo,we can use this\wire to ge"; AC15 40 32 59 6F 2C 77 65 20 @2Yo,we 
                                                 ; AC1D 63 61 6E 20 75 73 65 20  can use 
                                                 ; AC25 74 68 69 73 5C 77 69 72  this\wir
                                                 ; AC2D 65 20 74 6F 20 67 65     e to ge
         .byte   "t out!"                        ; AC34 74 20 6F 75 74 21        t out!
         .byte   $0A                             ; AC3A 0A                       .
-LAC3B:
+Bank0fDialogueBlock0Index132:
         .byte   "@2Biggs__Wedge__\Jessie__Marlen"; AC3B 40 32 42 69 67 67 73 5F @2Biggs_
                                                 ; AC43 5F 57 65 64 67 65 5F 5F  _Wedge__
                                                 ; AC4B 5C 4A 65 73 73 69 65 5F  \Jessie_
@@ -1957,41 +1957,41 @@ LAC3B:
         .byte   "ll for!?ARGGHH!"               ; AC98 6C 6C 20 66 6F 72 21 3F  ll for!?
                                                 ; ACA0 41 52 47 47 48 48 21     ARGGHH!
         .byte   $0A                             ; ACA7 0A                       .
-LACA8:
+Bank0fDialogueBlock0Index133:
         .byte   "@1Hey,Barret!"                 ; ACA8 40 31 48 65 79 2C 42 61  @1Hey,Ba
                                                 ; ACB0 72 72 65 74 21           rret!
         .byte   $0A                             ; ACB5 0A                       .
-LACB6:
+Bank0fDialogueBlock0Index134:
         .byte   "@3Barret!"                     ; ACB6 40 33 42 61 72 72 65 74  @3Barret
                                                 ; ACBE 21                       !
         .byte   $0A                             ; ACBF 0A                       .
-LACC0:
+Bank0fDialogueBlock0Index135:
         .byte   "@2ARGGHH!"                     ; ACC0 40 32 41 52 47 47 48 48  @2ARGGHH
                                                 ; ACC8 21                       !
         .byte   $0A                             ; ACC9 0A                       .
-LACCA:
+Bank0fDialogueBlock0Index136:
         .byte   "@1Hey!"                        ; ACCA 40 31 48 65 79 21        @1Hey!
         .byte   $0A                             ; ACD0 0A                       .
-LACD1:
+Bank0fDialogueBlock0Index137:
         .byte   "@3Barret,stop__Pleasestop,Barre"; ACD1 40 33 42 61 72 72 65 74 @3Barret
                                                 ; ACD9 2C 73 74 6F 70 5F 5F 50  ,stop__P
                                                 ; ACE1 6C 65 61 73 65 73 74 6F  leasesto
                                                 ; ACE9 70 2C 42 61 72 72 65     p,Barre
         .byte   "t."                            ; ACF0 74 2E                    t.
         .byte   $0A                             ; ACF2 0A                       .
-LACF3:
+Bank0fDialogueBlock0Index138:
         .byte   "@2URGHH!God damn__"            ; ACF3 40 32 55 52 47 48 48 21  @2URGHH!
                                                 ; ACFB 47 6F 64 20 64 61 6D 6E  God damn
                                                 ; AD03 5F 5F                    __
         .byte   $0A                             ; AD05 0A                       .
-LAD06:
+Bank0fDialogueBlock0Index139:
         .byte   "@1__"                          ; AD06 40 31 5F 5F              @1__
         .byte   $0A                             ; AD0A 0A                       .
-LAD0B:
+Bank0fDialogueBlock0Index140:
         .byte   "@2Marlene__"                   ; AD0B 40 32 4D 61 72 6C 65 6E  @2Marlen
                                                 ; AD13 65 5F 5F                 e__
         .byte   $0A                             ; AD16 0A                       .
-LAD17:
+Bank0fDialogueBlock0Index141:
         .byte   "@3__Barret_?Marlene\is__I think"; AD17 40 33 5F 5F 42 61 72 72 @3__Barr
                                                 ; AD1F 65 74 5F 3F 4D 61 72 6C  et_?Marl
                                                 ; AD27 65 6E 65 5C 69 73 5F 5F  ene\is__
@@ -1999,10 +1999,10 @@ LAD17:
         .byte   " Marleneis safe."              ; AD36 20 4D 61 72 6C 65 6E 65   Marlene
                                                 ; AD3E 69 73 20 73 61 66 65 2E  is safe.
         .byte   $0A                             ; AD46 0A                       .
-LAD47:
+Bank0fDialogueBlock0Index142:
         .byte   "@2__huh?"                      ; AD47 40 32 5F 5F 68 75 68 3F  @2__huh?
         .byte   $0A                             ; AD4F 0A                       .
-LAD50:
+Bank0fDialogueBlock0Index143:
         .byte   "@3Right before they\took Aeris,"; AD50 40 33 52 69 67 68 74 20 @3Right 
                                                 ; AD58 62 65 66 6F 72 65 20 74  before t
                                                 ; AD60 68 65 79 5C 74 6F 6F 6B  hey\took
@@ -2020,27 +2020,27 @@ LAD50:
                                                 ; ADB0 20 61 62 6F 75 74 5C      about\
         .byte   "Marlene."                      ; ADB7 4D 61 72 6C 65 6E 65 2E  Marlene.
         .byte   $0A                             ; ADBF 0A                       .
-LADC0:
+Bank0fDialogueBlock0Index144:
         .byte   "@2R,really!?"                  ; ADC0 40 32 52 2C 72 65 61 6C  @2R,real
                                                 ; ADC8 6C 79 21 3F              ly!?
         .byte   $0A                             ; ADCC 0A                       .
-LADCD:
+Bank0fDialogueBlock0Index145:
         .byte   "@3But__"                       ; ADCD 40 33 42 75 74 5F 5F     @3But__
         .byte   $0A                             ; ADD4 0A                       .
-LADD5:
+Bank0fDialogueBlock0Index146:
         .byte   "@2Biggs__Wedge__\Jessie__"     ; ADD5 40 32 42 69 67 67 73 5F  @2Biggs_
                                                 ; ADDD 5F 57 65 64 67 65 5F 5F  _Wedge__
                                                 ; ADE5 5C 4A 65 73 73 69 65 5F  \Jessie_
                                                 ; ADED 5F                       _
         .byte   $0A                             ; ADEE 0A                       .
-LADEF:
+Bank0fDialogueBlock0Index147:
         .byte   "@1All 3 of them were\in the pil"; ADEF 40 31 41 6C 6C 20 33 20 @1All 3 
                                                 ; ADF7 6F 66 20 74 68 65 6D 20  of them 
                                                 ; ADFF 77 65 72 65 5C 69 6E 20  were\in 
                                                 ; AE07 74 68 65 20 70 69 6C     the pil
         .byte   "lar."                          ; AE0E 6C 61 72 2E              lar.
         .byte   $0A                             ; AE12 0A                       .
-LAE13:
+Bank0fDialogueBlock0Index148:
         .byte   "@2Think I don't know\that?But__"; AE13 40 32 54 68 69 6E 6B 20 @2Think 
                                                 ; AE1B 49 20 64 6F 6E 27 74 20  I don't 
                                                 ; AE23 6B 6E 6F 77 5C 74 68 61  know\tha
@@ -2055,14 +2055,14 @@ LAE13:
                                                 ; AE69 61 73 20 64 65 61 64     as dead
         .byte   "!"                             ; AE70 21                       !
         .byte   $0A                             ; AE71 0A                       .
-LAE72:
+Bank0fDialogueBlock0Index149:
         .byte   "@3And the other\people in Sec.7"; AE72 40 33 41 6E 64 20 74 68 @3And th
                                                 ; AE7A 65 20 6F 74 68 65 72 5C  e other\
                                                 ; AE82 70 65 6F 70 6C 65 20 69  people i
                                                 ; AE8A 6E 20 53 65 63 2E 37     n Sec.7
         .byte   "."                             ; AE91 2E                       .
         .byte   $0A                             ; AE92 0A                       .
-LAE93:
+Bank0fDialogueBlock0Index150:
         .byte   "@2This is all screwedup!They de"; AE93 40 32 54 68 69 73 20 69 @2This i
                                                 ; AE9B 73 20 61 6C 6C 20 73 63  s all sc
                                                 ; AEA3 72 65 77 65 64 75 70 21  rewedup!
@@ -2078,7 +2078,7 @@ LAE93:
         .byte   "nypeople__"                    ; AEF0 6E 79 70 65 6F 70 6C 65  nypeople
                                                 ; AEF8 5F 5F                    __
         .byte   $0A                             ; AEFA 0A                       .
-LAEFB:
+Bank0fDialogueBlock0Index151:
         .byte   "@3__are you saying\it's our fau"; AEFB 40 33 5F 5F 61 72 65 20 @3__are 
                                                 ; AF03 79 6F 75 20 73 61 79 69  you sayi
                                                 ; AF0B 6E 67 5C 69 74 27 73 20  ng\it's 
@@ -2094,7 +2094,7 @@ LAEFB:
         .byte   "s because of\us?"              ; AF58 73 20 62 65 63 61 75 73  s becaus
                                                 ; AF60 65 20 6F 66 5C 75 73 3F  e of\us?
         .byte   $0A                             ; AF68 0A                       .
-LAF69:
+Bank0fDialogueBlock0Index152:
         .byte   "@2No,Tifa!That ain't\it!Hell no"; AF69 40 32 4E 6F 2C 54 69 66 @2No,Tif
                                                 ; AF71 61 21 54 68 61 74 20 61  a!That a
                                                 ; AF79 69 6E 27 74 5C 69 74 21  in't\it!
@@ -2135,12 +2135,12 @@ LAF69:
                                                 ; B088 74 20 72 69 64 20 6F 66  t rid of
                                                 ; B090 74 68 65 6D 21           them!
         .byte   $0A                             ; B095 0A                       .
-LB096:
+Bank0fDialogueBlock0Index153:
         .byte   "@3__I don't know."             ; B096 40 33 5F 5F 49 20 64 6F  @3__I do
                                                 ; B09E 6E 27 74 20 6B 6E 6F 77  n't know
                                                 ; B0A6 2E                       .
         .byte   $0A                             ; B0A7 0A                       .
-LB0A8:
+Bank0fDialogueBlock0Index154:
         .byte   "@2What don't you\know!?You don'"; B0A8 40 32 57 68 61 74 20 64 @2What d
                                                 ; B0B0 6F 6E 27 74 20 79 6F 75  on't you
                                                 ; B0B8 5C 6B 6E 6F 77 21 3F 59  \know!?Y
@@ -2148,7 +2148,7 @@ LB0A8:
         .byte   "t\believe me?"                 ; B0C7 74 5C 62 65 6C 69 65 76  t\believ
                                                 ; B0CF 65 20 6D 65 3F           e me?
         .byte   $0A                             ; B0D4 0A                       .
-LB0D5:
+Bank0fDialogueBlock0Index155:
         .byte   "@3It's not that.I'm\not sure ab"; B0D5 40 33 49 74 27 73 20 6E @3It's n
                                                 ; B0DD 6F 74 20 74 68 61 74 2E  ot that.
                                                 ; B0E5 49 27 6D 5C 6E 6F 74 20  I'm\not 
@@ -2157,25 +2157,25 @@ LB0D5:
                                                 ; B0FC 4D 79 20 66 65 65 6C 69  My feeli
                                                 ; B104 6E 67 73 2E              ngs.
         .byte   $0A                             ; B108 0A                       .
-LB109:
+Bank0fDialogueBlock0Index156:
         .byte   "@2An' what about you?"         ; B109 40 32 41 6E 27 20 77 68  @2An' wh
                                                 ; B111 61 74 20 61 62 6F 75 74  at about
                                                 ; B119 20 79 6F 75 3F            you?
         .byte   $0A                             ; B11E 0A                       .
-LB11F:
+Bank0fDialogueBlock0Index158:
         .byte   "@2Yo! Cloud!"                  ; B11F 40 32 59 6F 21 20 43 6C  @2Yo! Cl
                                                 ; B127 6F 75 64 21              oud!
         .byte   $0A                             ; B12B 0A                       .
-LB12C:
+Bank0fDialogueBlock1Index99:
         .byte   "Palmer:Oh man!"                ; B12C 50 61 6C 6D 65 72 3A 4F  Palmer:O
                                                 ; B134 68 20 6D 61 6E 21        h man!
         .byte   $0A                             ; B13A 0A                       .
         .byte   "00000"                         ; B13B 30 30 30 30 30           00000
-LB140:
+Bank0fDialogueBlock0Index159:
         .byte   "@3Oh!Aeris!"                   ; B140 40 33 4F 68 21 41 65 72  @3Oh!Aer
                                                 ; B148 69 73 21                 is!
         .byte   $0A                             ; B14B 0A                       .
-LB14C:
+Bank0fDialogueBlock0Index160:
         .byte   "@2Oh yeah,that girl.\What's up "; B14C 40 32 4F 68 20 79 65 61 @2Oh yea
                                                 ; B154 68 2C 74 68 61 74 20 67  h,that g
                                                 ; B15C 69 72 6C 2E 5C 57 68 61  irl.\Wha
@@ -2183,7 +2183,7 @@ LB14C:
         .byte   "with her?"                     ; B16B 77 69 74 68 20 68 65 72  with her
                                                 ; B173 3F                       ?
         .byte   $0A                             ; B174 0A                       .
-LB175:
+Bank0fDialogueBlock0Index161:
         .byte   "@3__I don't really\know__But sh"; B175 40 33 5F 5F 49 20 64 6F @3__I do
                                                 ; B17D 6E 27 74 20 72 65 61 6C  n't real
                                                 ; B185 6C 79 5C 6B 6E 6F 77 5F  ly\know_
@@ -2193,20 +2193,20 @@ LB175:
                                                 ; B1A4 74 20 4D 61 72 6C 65 6E  t Marlen
                                                 ; B1AC 65 5C 77 69 74 68 2E     e\with.
         .byte   $0A                             ; B1B3 0A                       .
-LB1B4:
+Bank0fDialogueBlock0Index162:
         .byte   "@2Tifa.There ain't noturnin' ba"; B1B4 40 32 54 69 66 61 2E 54 @2Tifa.T
                                                 ; B1BC 68 65 72 65 20 61 69 6E  here ain
                                                 ; B1C4 27 74 20 6E 6F 74 75 72  't notur
                                                 ; B1CC 6E 69 6E 27 20 62 61     nin' ba
         .byte   "ck now."                       ; B1D3 63 6B 20 6E 6F 77 2E     ck now.
         .byte   $0A                             ; B1DA 0A                       .
-LB1DB:
+Bank0fDialogueBlock0Index163:
         .byte   "@3You're going to\help Aeris?" ; B1DB 40 33 59 6F 75 27 72 65  @3You're
                                                 ; B1E3 20 67 6F 69 6E 67 20 74   going t
                                                 ; B1EB 6F 5C 68 65 6C 70 20 41  o\help A
                                                 ; B1F3 65 72 69 73 3F           eris?
         .byte   $0A                             ; B1F8 0A                       .
-LB1F9:
+Bank0fDialogueBlock0Index164:
         .byte   "@1Yeah__But before\that,there's"; B1F9 40 31 59 65 61 68 5F 5F @1Yeah__
                                                 ; B201 42 75 74 20 62 65 66 6F  But befo
                                                 ; B209 72 65 5C 74 68 61 74 2C  re\that,
@@ -2216,75 +2216,75 @@ LB1F9:
                                                 ; B228 74 20 74 6F 6B 6E 6F 77  t toknow
                                                 ; B230 2E                       .
         .byte   $0A                             ; B231 0A                       .
-LB232:
+Bank0fDialogueBlock0Index165:
         .byte   "@3What's that?"                ; B232 40 33 57 68 61 74 27 73  @3What's
                                                 ; B23A 20 74 68 61 74 3F         that?
         .byte   $0A                             ; B240 0A                       .
-LB241:
+Bank0fDialogueBlock0Index166:
         .byte   "@1It's about the\Ancients__"   ; B241 40 31 49 74 27 73 20 61  @1It's a
                                                 ; B249 62 6F 75 74 20 74 68 65  bout the
                                                 ; B251 5C 41 6E 63 69 65 6E 74  \Ancient
                                                 ; B259 73 5F 5F                 s__
         .byte   $0A                             ; B25C 0A                       .
-LB25D:
+Bank0fDialogueBlock0Index167:
         .byte   "@3Are you all right?"          ; B25D 40 33 41 72 65 20 79 6F  @3Are yo
                                                 ; B265 75 20 61 6C 6C 20 72 69  u all ri
                                                 ; B26D 67 68 74 3F              ght?
         .byte   $0A                             ; B271 0A                       .
-LB272:
+Bank0fDialogueBlock0Index168:
         .byte   "@2Pull it together,\man!"      ; B272 40 32 50 75 6C 6C 20 69  @2Pull i
                                                 ; B27A 74 20 74 6F 67 65 74 68  t togeth
                                                 ; B282 65 72 2C 5C 6D 61 6E 21  er,\man!
         .byte   $0A                             ; B28A 0A                       .
-LB28B:
+Bank0fDialogueBlock0Index169:
         .byte   "@1Aeris's home isn't\far.Let's "; B28B 40 31 41 65 72 69 73 27 @1Aeris'
                                                 ; B293 73 20 68 6F 6D 65 20 69  s home i
                                                 ; B29B 73 6E 27 74 5C 66 61 72  sn't\far
                                                 ; B2A3 2E 4C 65 74 27 73 20     .Let's 
         .byte   "go."                           ; B2AA 67 6F 2E                 go.
         .byte   $0A                             ; B2AD 0A                       .
-LB2AE:
+Bank0fDialogueBlock0Index170:
         .byte   "@NCloud__wasn't it?"           ; B2AE 40 4E 43 6C 6F 75 64 5F  @NCloud_
                                                 ; B2B6 5F 77 61 73 6E 27 74 20  _wasn't 
                                                 ; B2BE 69 74 3F                 it?
         .byte   $0A                             ; B2C1 0A                       .
-LB2C2:
+Bank0fDialogueBlock0Index172:
         .byte   "@NIt's about Aeris,\isn't it?" ; B2C2 40 4E 49 74 27 73 20 61  @NIt's a
                                                 ; B2CA 62 6F 75 74 20 41 65 72  bout Aer
                                                 ; B2D2 69 73 2C 5C 69 73 6E 27  is,\isn'
                                                 ; B2DA 74 20 69 74 3F           t it?
         .byte   $0A                             ; B2DF 0A                       .
-LB2E0:
+Bank0fDialogueBlock0Index173:
         .byte   "@1__Sorry.The Shinra\have her."; B2E0 40 31 5F 5F 53 6F 72 72  @1__Sorr
                                                 ; B2E8 79 2E 54 68 65 20 53 68  y.The Sh
                                                 ; B2F0 69 6E 72 61 5C 68 61 76  inra\hav
                                                 ; B2F8 65 20 68 65 72 2E        e her.
         .byte   $0A                             ; B2FE 0A                       .
-LB2FF:
+Bank0fDialogueBlock0Index174:
         .byte   "@NI know.They took\her from her"; B2FF 40 4E 49 20 6B 6E 6F 77 @NI know
                                                 ; B307 2E 54 68 65 79 20 74 6F  .They to
                                                 ; B30F 6F 6B 5C 68 65 72 20 66  ok\her f
                                                 ; B317 72 6F 6D 20 68 65 72     rom her
         .byte   "e."                            ; B31E 65 2E                    e.
         .byte   $0A                             ; B320 0A                       .
-LB321:
+Bank0fDialogueBlock0Index175:
         .byte   "@1They were here?"             ; B321 40 31 54 68 65 79 20 77  @1They w
                                                 ; B329 65 72 65 20 68 65 72 65  ere here
                                                 ; B331 3F                       ?
         .byte   $0A                             ; B332 0A                       .
-LB333:
+Bank0fDialogueBlock0Index176:
         .byte   "@NThat's what Aeris\wanted__"  ; B333 40 4E 54 68 61 74 27 73  @NThat's
                                                 ; B33B 20 77 68 61 74 20 41 65   what Ae
                                                 ; B343 72 69 73 5C 77 61 6E 74  ris\want
                                                 ; B34B 65 64 5F 5F              ed__
         .byte   $0A                             ; B34F 0A                       .
-LB350:
+Bank0fDialogueBlock0Index177:
         .byte   "@1Why is Shinra afterAeris?"   ; B350 40 31 57 68 79 20 69 73  @1Why is
                                                 ; B358 20 53 68 69 6E 72 61 20   Shinra 
                                                 ; B360 61 66 74 65 72 41 65 72  afterAer
                                                 ; B368 69 73 3F                 is?
         .byte   $0A                             ; B36B 0A                       .
-LB36C:
+Bank0fDialogueBlock0Index178:
         .byte   "@NAeris is an\Ancient.The sole\"; B36C 40 4E 41 65 72 69 73 20 @NAeris 
                                                 ; B374 69 73 20 61 6E 5C 41 6E  is an\An
                                                 ; B37C 63 69 65 6E 74 2E 54 68  cient.Th
@@ -2292,7 +2292,7 @@ LB36C:
         .byte   "survivor."                     ; B38B 73 75 72 76 69 76 6F 72  survivor
                                                 ; B393 2E                       .
         .byte   $0A                             ; B394 0A                       .
-LB395:
+Bank0fDialogueBlock0Index179:
         .byte   "@2__What did you say?But,aren't"; B395 40 32 5F 5F 57 68 61 74 @2__What
                                                 ; B39D 20 64 69 64 20 79 6F 75   did you
                                                 ; B3A5 20 73 61 79 3F 42 75 74   say?But
@@ -2300,7 +2300,7 @@ LB395:
         .byte   " you her\mother?"              ; B3B4 20 79 6F 75 20 68 65 72   you her
                                                 ; B3BC 5C 6D 6F 74 68 65 72 3F  \mother?
         .byte   $0A                             ; B3C4 0A                       .
-LB3C5:
+Bank0fDialogueBlock0Index180:
         .byte   "@N__Not her real\mother.Oh__it "; B3C5 40 4E 5F 5F 4E 6F 74 20 @N__Not 
                                                 ; B3CD 68 65 72 20 72 65 61 6C  her real
                                                 ; B3D5 5C 6D 6F 74 68 65 72 2E  \mother.
@@ -2389,7 +2389,7 @@ LB3C5:
         .byte   " with me."                     ; B63F 20 77 69 74 68 20 6D 65   with me
                                                 ; B647 2E                       .
         .byte   $0A                             ; B648 0A                       .
-LB649:
+Bank0fDialogueBlock0Index181:
         .byte   "Aeris and I became\close very q"; B649 41 65 72 69 73 20 61 6E Aeris an
                                                 ; B651 64 20 49 20 62 65 63 61  d I beca
                                                 ; B659 6D 65 5C 63 6C 6F 73 65  me\close
@@ -2425,13 +2425,13 @@ LB649:
         .byte   "y other things."               ; B741 79 20 6F 74 68 65 72 20  y other 
                                                 ; B749 74 68 69 6E 67 73 2E     things.
         .byte   $0A                             ; B750 0A                       .
-LB751:
+Bank0fDialogueBlock0Index182:
         .byte   "@2Returned to the\planet?"     ; B751 40 32 52 65 74 75 72 6E  @2Return
                                                 ; B759 65 64 20 74 6F 20 74 68  ed to th
                                                 ; B761 65 5C 70 6C 61 6E 65 74  e\planet
                                                 ; B769 3F                       ?
         .byte   $0A                             ; B76A 0A                       .
-LB76B:
+Bank0fDialogueBlock0Index183:
         .byte   "@NI didn't know what\she meant."; B76B 40 4E 49 20 64 69 64 6E @NI didn
                                                 ; B773 27 74 20 6B 6E 6F 77 20  't know 
                                                 ; B77B 77 68 61 74 5C 73 68 65  what\she
@@ -2471,7 +2471,7 @@ LB76B:
         .byte   "ver\noticed."                  ; B882 76 65 72 5C 6E 6F 74 69  ver\noti
                                                 ; B88A 63 65 64 2E              ced.
         .byte   $0A                             ; B88E 0A                       .
-LB88F:
+Bank0fDialogueBlock0Index184:
         .byte   "@1It's amazing how\she's avoide"; B88F 40 31 49 74 27 73 20 61 @1It's a
                                                 ; B897 6D 61 7A 69 6E 67 20 68  mazing h
                                                 ; B89F 6F 77 5C 73 68 65 27 73  ow\she's
@@ -2482,7 +2482,7 @@ LB88F:
                                                 ; B8C6 73 65 20 79 65 61 72     se year
         .byte   "s__"                           ; B8CD 73 5F 5F                 s__
         .byte   $0A                             ; B8D0 0A                       .
-LB8D1:
+Bank0fDialogueBlock0Index185:
         .byte   "@NThe Shinra needed\her.So I gu"; B8D1 40 4E 54 68 65 20 53 68 @NThe Sh
                                                 ; B8D9 69 6E 72 61 20 6E 65 65  inra nee
                                                 ; B8E1 64 65 64 5C 68 65 72 2E  ded\her.
@@ -2492,11 +2492,11 @@ LB8D1:
                                                 ; B900 20 68 61 72 6D 20 68 65   harm he
                                                 ; B908 72 2E                    r.
         .byte   $0A                             ; B90A 0A                       .
-LB90B:
+Bank0fDialogueBlock0Index186:
         .byte   "@3But,why now__"               ; B90B 40 33 42 75 74 2C 77 68  @3But,wh
                                                 ; B913 79 20 6E 6F 77 5F 5F     y now__
         .byte   $0A                             ; B91A 0A                       .
-LB91B:
+Bank0fDialogueBlock0Index187:
         .byte   "@NShe brought a\little girl her"; B91B 40 4E 53 68 65 20 62 72 @NShe br
                                                 ; B923 6F 75 67 68 74 20 61 5C  ought a\
                                                 ; B92B 6C 69 74 74 6C 65 20 67  little g
@@ -2517,12 +2517,12 @@ LB91B:
                                                 ; B99F 69 72 6C 27 73 5C 73 61  irl's\sa
                                                 ; B9A7 66 65 74 79 2E           fety.
         .byte   $0A                             ; B9AC 0A                       .
-LB9AD:
+Bank0fDialogueBlock0Index188:
         .byte   "@1Must be Marlene."            ; B9AD 40 31 4D 75 73 74 20 62  @1Must b
                                                 ; B9B5 65 20 4D 61 72 6C 65 6E  e Marlen
                                                 ; B9BD 65 2E                    e.
         .byte   $0A                             ; B9BF 0A                       .
-LB9C0:
+Bank0fDialogueBlock0Index189:
         .byte   "@2Marlene!Aeris was\caught beca"; B9C0 40 32 4D 61 72 6C 65 6E @2Marlen
                                                 ; B9C8 65 21 41 65 72 69 73 20  e!Aeris 
                                                 ; B9D0 77 61 73 5C 63 61 75 67  was\caug
@@ -2537,7 +2537,7 @@ LB9C0:
                                                 ; BA16 65 61 6C 6C 79 5F 5F     eally__
         .byte   "sorry__"                       ; BA1D 73 6F 72 72 79 5F 5F     sorry__
         .byte   $0A                             ; BA24 0A                       .
-LBA25:
+Bank0fDialogueBlock0Index190:
         .byte   "@NYou're her father!?How in the"; BA25 40 4E 59 6F 75 27 72 65 @NYou're
                                                 ; BA2D 20 68 65 72 20 66 61 74   her fat
                                                 ; BA35 68 65 72 21 3F 48 6F 77  her!?How
@@ -2550,7 +2550,7 @@ LBA25:
                                                 ; BA6B 6E 65 6C 69 6B 65 20 74  nelike t
                                                 ; BA73 68 61 74 21 3F           hat!?
         .byte   $0A                             ; BA78 0A                       .
-LBA79:
+Bank0fDialogueBlock0Index191:
         .byte   "@2__please don't\start with tha"; BA79 40 32 5F 5F 70 6C 65 61 @2__plea
                                                 ; BA81 73 65 20 64 6F 6E 27 74  se don't
                                                 ; BA89 5C 73 74 61 72 74 20 77  \start w
@@ -2600,7 +2600,7 @@ LBA79:
                                                 ; BBDE 6C 65 73 2C 5C 6E 6F 77  les,\now
                                                 ; BBE6 2E                       .
         .byte   $0A                             ; BBE7 0A                       .
-LBBE8:
+Bank0fDialogueBlock0Index192:
         .byte   "@NI think I\understand what\you"; BBE8 40 4E 49 20 74 68 69 6E @NI thin
                                                 ; BBF0 6B 20 49 5C 75 6E 64 65  k I\unde
                                                 ; BBF8 72 73 74 61 6E 64 20 77  rstand w
@@ -2615,7 +2615,7 @@ LBBE8:
                                                 ; BC3E 20 73 65 65 20 68 65      see he
         .byte   "r."                            ; BC45 72 2E                    r.
         .byte   $0A                             ; BC47 0A                       .
-LBC48:
+Bank0fDialogueBlock0Index193:
         .byte   "@3It's my fault__I\was the one "; BC48 40 33 49 74 27 73 20 6D @3It's m
                                                 ; BC50 79 20 66 61 75 6C 74 5F  y fault_
                                                 ; BC58 5F 49 5C 77 61 73 20 74  _I\was t
@@ -2625,7 +2625,7 @@ LBC48:
                                                 ; BC77 6F 6C 76 65 64 20 69 6E  olved in
                                                 ; BC7F 5C 74 68 69 73 2E        \this.
         .byte   $0A                             ; BC85 0A                       .
-LBC86:
+Bank0fDialogueBlock0Index194:
         .byte   "@NDon't say that.\Aeris doesn't"; BC86 40 4E 44 6F 6E 27 74 20 @NDon't 
                                                 ; BC8E 73 61 79 20 74 68 61 74  say that
                                                 ; BC96 2E 5C 41 65 72 69 73 20  .\Aeris 
@@ -2633,7 +2633,7 @@ LBC86:
         .byte   " thinkthat."                   ; BCA5 20 74 68 69 6E 6B 74 68   thinkth
                                                 ; BCAD 61 74 2E                 at.
         .byte   $0A                             ; BCB0 0A                       .
-LBCB1:
+Bank0fDialogueBlock0Index195:
         .byte   "@2I'm so glad__I'm soglad you'r"; BCB1 40 32 49 27 6D 20 73 6F @2I'm so
                                                 ; BCB9 20 67 6C 61 64 5F 5F 49   glad__I
                                                 ; BCC1 27 6D 20 73 6F 67 6C 61  'm sogla
@@ -2641,20 +2641,20 @@ LBCB1:
         .byte   "e all\right__"                 ; BCD0 65 20 61 6C 6C 5C 72 69  e all\ri
                                                 ; BCD8 67 68 74 5F 5F           ght__
         .byte   $0A                             ; BCDD 0A                       .
-LBCDE:
+Bank0fDialogueBlock0Index196:
         .byte   "@;Daddy,don't cry.\Your whisker"; BCDE 40 3B 44 61 64 64 79 2C @;Daddy,
                                                 ; BCE6 64 6F 6E 27 74 20 63 72  don't cr
                                                 ; BCEE 79 2E 5C 59 6F 75 72 20  y.\Your 
                                                 ; BCF6 77 68 69 73 6B 65 72     whisker
         .byte   "s hurt!"                       ; BCFD 73 20 68 75 72 74 21     s hurt!
         .byte   $0A                             ; BD04 0A                       .
-LBD05:
+Bank0fDialogueBlock0Index197:
         .byte   "@2Cloud!"                      ; BD05 40 32 43 6C 6F 75 64 21  @2Cloud!
         .byte   $0A                             ; BD0D 0A                       .
-LBD0E:
+Bank0fDialogueBlock0Index198:
         .byte   "@1?"                           ; BD0E 40 31 3F                 @1?
         .byte   $0A                             ; BD11 0A                       .
-LBD12:
+Bank0fDialogueBlock0Index199:
         .byte   "@2You gonna go help\Aeris,right"; BD12 40 32 59 6F 75 20 67 6F @2You go
                                                 ; BD1A 6E 6E 61 20 67 6F 20 68  nna go h
                                                 ; BD22 65 6C 70 5C 41 65 72 69  elp\Aeri
@@ -2674,7 +2674,7 @@ LBD12:
         .byte   "comin',\too!"                  ; BD8E 63 6F 6D 69 6E 27 2C 5C  comin',\
                                                 ; BD96 74 6F 6F 21              too!
         .byte   $0A                             ; BD9A 0A                       .
-LBD9B:
+Bank0fDialogueBlock0Index200:
         .byte   "@;Guess what?Guess\what?Aeris w"; BD9B 40 3B 47 75 65 73 73 20 @;Guess 
                                                 ; BDA3 77 68 61 74 3F 47 75 65  what?Gue
                                                 ; BDAB 73 73 5C 77 68 61 74 3F  ss\what?
@@ -2692,31 +2692,31 @@ LBD9B:
                                                 ; BE08 73 20 79 6F 75 2C 43 6C  s you,Cl
                                                 ; BE10 6F 75 64 21              oud!
         .byte   $0A                             ; BE14 0A                       .
-LBE15:
+Bank0fDialogueBlock0Index201:
         .byte   "@1Let's hope so."              ; BE15 40 31 4C 65 74 27 73 20  @1Let's 
                                                 ; BE1D 68 6F 70 65 20 73 6F 2E  hope so.
         .byte   $0A                             ; BE25 0A                       .
-LBE26:
+Bank0fDialogueBlock0Index202:
         .byte   "@;I won't tell Tifa."          ; BE26 40 3B 49 20 77 6F 6E 27  @;I won'
                                                 ; BE2E 74 20 74 65 6C 6C 20 54  t tell T
                                                 ; BE36 69 66 61 2E              ifa.
         .byte   $0A                             ; BE3A 0A                       .
-LBE3B:
+Bank0fDialogueBlock0Index203:
         .byte   "@3You're going after\Aeris,righ"; BE3B 40 33 59 6F 75 27 72 65 @3You're
                                                 ; BE43 20 67 6F 69 6E 67 20 61   going a
                                                 ; BE4B 66 74 65 72 5C 41 65 72  fter\Aer
                                                 ; BE53 69 73 2C 72 69 67 68     is,righ
         .byte   "t?"                            ; BE5A 74 3F                    t?
         .byte   $0A                             ; BE5C 0A                       .
-LBE5D:
+Bank0fDialogueBlock0Index204:
         .byte   "@1Yeah."                       ; BE5D 40 31 59 65 61 68 2E     @1Yeah.
         .byte   $0A                             ; BE64 0A                       .
-LBE65:
+Bank0fDialogueBlock0Index205:
         .byte   "@3I'm going with you."         ; BE65 40 33 49 27 6D 20 67 6F  @3I'm go
                                                 ; BE6D 69 6E 67 20 77 69 74 68  ing with
                                                 ; BE75 20 79 6F 75 2E            you.
         .byte   $0A                             ; BE7A 0A                       .
-LBE7B:
+Bank0fDialogueBlock0Index206:
         .byte   "@1We're going right\into Shinra"; BE7B 40 31 57 65 27 72 65 20 @1We're 
                                                 ; BE83 67 6F 69 6E 67 20 72 69  going ri
                                                 ; BE8B 67 68 74 5C 69 6E 74 6F  ght\into
@@ -2728,7 +2728,7 @@ LBE7B:
         .byte   "he worst."                     ; BEB9 68 65 20 77 6F 72 73 74  he worst
                                                 ; BEC1 2E                       .
         .byte   $0A                             ; BEC2 0A                       .
-LBEC3:
+Bank0fDialogueBlock0Index207:
         .byte   "@3I know.Right now,I\feel I hav"; BEC3 40 33 49 20 6B 6E 6F 77 @3I know
                                                 ; BECB 2E 52 69 67 68 74 20 6E  .Right n
                                                 ; BED3 6F 77 2C 49 5C 66 65 65  ow,I\fee
@@ -2742,7 +2742,7 @@ LBEC3:
                                                 ; BF11 49 27 6C 6C 20 67 6F 5C  I'll go\
                                                 ; BF19 63 72 61 7A 79 2E        crazy.
         .byte   $0A                             ; BF1F 0A                       .
-LBF20:
+Bank0fDialogueBlock0Index208:
         .byte   "@2Sorry,but can you\take care o"; BF20 40 32 53 6F 72 72 79 2C @2Sorry,
                                                 ; BF28 62 75 74 20 63 61 6E 20  but can 
                                                 ; BF30 79 6F 75 5C 74 61 6B 65  you\take
@@ -2751,12 +2751,12 @@ LBF20:
                                                 ; BF47 65 20 61 20 62 69 74 5C  e a bit\
                                                 ; BF4F 6C 6F 6E 67 65 72 3F     longer?
         .byte   $0A                             ; BF56 0A                       .
-LBF57:
+Bank0fDialogueBlock0Index209:
         .byte   "@NYes,I don't mind."           ; BF57 40 4E 59 65 73 2C 49 20  @NYes,I 
                                                 ; BF5F 64 6F 6E 27 74 20 6D 69  don't mi
                                                 ; BF67 6E 64 2E                 nd.
         .byte   $0A                             ; BF6A 0A                       .
-LBF6B:
+Bank0fDialogueBlock0Index210:
         .byte   "@2This place is\dangerous now.Y"; BF6B 40 32 54 68 69 73 20 70 @2This p
                                                 ; BF73 6C 61 63 65 20 69 73 5C  lace is\
                                                 ; BF7B 64 61 6E 67 65 72 6F 75  dangerou
@@ -2766,7 +2766,7 @@ LBF6B:
                                                 ; BF9A 65 77 68 65 72 65 65 6C  ewhereel
                                                 ; BFA2 73 65 2E                 se.
         .byte   $0A                             ; BFA5 0A                       .
-LBFA6:
+Bank0fDialogueBlock0Index211:
         .byte   "@N__You're right.But\promise me"; BFA6 40 4E 5F 5F 59 6F 75 27 @N__You'
                                                 ; BFAE 72 65 20 72 69 67 68 74  re right
                                                 ; BFB6 2E 42 75 74 5C 70 72 6F  .But\pro
@@ -2779,14 +2779,14 @@ LBFA6:
                                                 ; BFEC 79 6F 75 72 73 65 6C 66  yourself
                                                 ; BFF4 20 6B 69 6C 6C 65 64 2E   killed.
         .byte   $0A                             ; BFFC 0A                       .
-LBFFD:
+Bank0fDialogueBlock0Index212:
         .byte   "@3How do we get to\the Shinra\B"; BFFD 40 33 48 6F 77 20 64 6F @3How do
                                                 ; C005 20 77 65 20 67 65 74 20   we get 
                                                 ; C00D 74 6F 5C 74 68 65 20 53  to\the S
                                                 ; C015 68 69 6E 72 61 5C 42     hinra\B
         .byte   "uilding?"                      ; C01C 75 69 6C 64 69 6E 67 3F  uilding?
         .byte   $0A                             ; C024 0A                       .
-LC025:
+Bank0fDialogueBlock0Index213:
         .byte   "@2There ain't no\train that goe"; C025 40 32 54 68 65 72 65 20 @2There 
                                                 ; C02D 61 69 6E 27 74 20 6E 6F  ain't no
                                                 ; C035 5C 74 72 61 69 6E 20 74  \train t
@@ -2805,7 +2805,7 @@ LC025:
                                                 ; C09A 69 6E 67 5C 74 68 65     ing\the
         .byte   "re."                           ; C0A1 72 65 2E                 re.
         .byte   $0A                             ; C0A4 0A                       .
-LC0A5:
+Bank0fDialogueBlock0Index214:
         .byte   "You goin' up to theplate?You be"; C0A5 59 6F 75 20 67 6F 69 6E You goin
                                                 ; C0AD 27 20 75 70 20 74 6F 20  ' up to 
                                                 ; C0B5 74 68 65 70 6C 61 74 65  theplate
@@ -2814,7 +2814,7 @@ LC0A5:
                                                 ; C0CC 65 20 61 20 62 61 74 74  e a batt
                                                 ; C0D4 65 72 79 2E              ery.
         .byte   $0A                             ; C0D8 0A                       .
-LC0D9:
+Bank0fDialogueBlock0Index215:
         .byte   "@1You're gonna sell\me somethin"; C0D9 40 31 59 6F 75 27 72 65 @1You're
                                                 ; C0E1 20 67 6F 6E 6E 61 20 73   gonna s
                                                 ; C0E9 65 6C 6C 5C 6D 65 20 73  ell\me s
@@ -2823,7 +2823,7 @@ LC0D9:
                                                 ; C100 73 74 20 66 6F 75 6E 64  st found
                                                 ; C108 3F                       ?
         .byte   $0A                             ; C109 0A                       .
-LC10A:
+Bank0fDialogueBlock0Index216:
         .byte   "Hey,you knew?But I\repaired it,"; C10A 48 65 79 2C 79 6F 75 20 Hey,you 
                                                 ; C112 6B 6E 65 77 3F 42 75 74  knew?But
                                                 ; C11A 20 49 5C 72 65 70 61 69   I\repai
@@ -2832,7 +2832,7 @@ LC10A:
                                                 ; C131 6C 6C 20 72 69 67 68 74  ll right
                                                 ; C139 2E                       .
         .byte   $0A                             ; C13A 0A                       .
-LC13B:
+Bank0fDialogueBlock0Index217:
         .byte   "@1Why do I need a\battery to cl"; C13B 40 31 57 68 79 20 64 6F @1Why do
                                                 ; C143 20 49 20 6E 65 65 64 20   I need 
                                                 ; C14B 61 5C 62 61 74 74 65 72  a\batter
@@ -2841,7 +2841,7 @@ LC13B:
                                                 ; C162 20 74 68 65 20 70 6C 61   the pla
                                                 ; C16A 74 65 3F                 te?
         .byte   $0A                             ; C16D 0A                       .
-LC16E:
+Bank0fDialogueBlock0Index218:
         .byte   "You'll find out\when you get th"; C16E 59 6F 75 27 6C 6C 20 66 You'll f
                                                 ; C176 69 6E 64 20 6F 75 74 5C  ind out\
                                                 ; C17E 77 68 65 6E 20 79 6F 75  when you
@@ -2851,26 +2851,26 @@ LC16E:
                                                 ; C19D 30 47 20 66 6F 72 5C 6F  0G for\o
                                                 ; C1A5 6E 65 3F                 ne?
         .byte   $0A                             ; C1A8 0A                       .
-LC1A9:
+Bank0fDialogueBlock0Index220:
         .byte   "Yes             No             "; C1A9 59 65 73 20 20 20 20 20 Yes     
                                                 ; C1B1 20 20 20 20 20 20 20 20          
                                                 ; C1B9 4E 6F 20 20 20 20 20 20  No      
                                                 ; C1C1 20 20 20 20 20 20 20            
         .byte   " "                             ; C1C8 20                        
         .byte   $0A                             ; C1C9 0A                       .
-LC1CA:
+Bank0fDialogueBlock0Index221:
         .byte   "Buy"                           ; C1CA 42 75 79                 Buy
         .byte   $0A                             ; C1CD 0A                       .
-LC1CE:
+Bank0fDialogueBlock0Index222:
         .byte   "Buy"                           ; C1CE 42 75 79                 Buy
         .byte   $0A                             ; C1D1 0A                       .
-LC1D2:
+Bank0fDialogueBlock0Index223:
         .byte   "@1All right,I'll takethem."    ; C1D2 40 31 41 6C 6C 20 72 69  @1All ri
                                                 ; C1DA 67 68 74 2C 49 27 6C 6C  ght,I'll
                                                 ; C1E2 20 74 61 6B 65 74 68 65   takethe
                                                 ; C1EA 6D 2E                    m.
         .byte   $0A                             ; C1EC 0A                       .
-LC1ED:
+Bank0fDialogueBlock0Index224:
         .byte   "Everyone climbed upthis wire.Lo"; C1ED 45 76 65 72 79 6F 6E 65 Everyone
                                                 ; C1F5 20 63 6C 69 6D 62 65 64   climbed
                                                 ; C1FD 20 75 70 74 68 69 73 20   upthis 
@@ -2878,25 +2878,25 @@ LC1ED:
         .byte   "oks\scary__Brr."               ; C20C 6F 6B 73 5C 73 63 61 72  oks\scar
                                                 ; C214 79 5F 5F 42 72 72 2E     y__Brr.
         .byte   $0A                             ; C21B 0A                       .
-LC21C:
+Bank0fDialogueBlock0Index225:
         .byte   "@3Can we climb it?"            ; C21C 40 33 43 61 6E 20 77 65  @3Can we
                                                 ; C224 20 63 6C 69 6D 62 20 69   climb i
                                                 ; C22C 74 3F                    t?
         .byte   $0A                             ; C22E 0A                       .
-LC22F:
+Bank0fDialogueBlock0Index226:
         .byte   "Yeah.It leads to\the Upper Worl"; C22F 59 65 61 68 2E 49 74 20 Yeah.It 
                                                 ; C237 6C 65 61 64 73 20 74 6F  leads to
                                                 ; C23F 5C 74 68 65 20 55 70 70  \the Upp
                                                 ; C247 65 72 20 57 6F 72 6C     er Worl
         .byte   "d."                            ; C24E 64 2E                    d.
         .byte   $0A                             ; C250 0A                       .
-LC251:
+Bank0fDialogueBlock0Index227:
         .byte   "@2Awright!We'll climbthis wire!"; C251 40 32 41 77 72 69 67 68 @2Awrigh
                                                 ; C259 74 21 57 65 27 6C 6C 20  t!We'll 
                                                 ; C261 63 6C 69 6D 62 74 68 69  climbthi
                                                 ; C269 73 20 77 69 72 65 21     s wire!
         .byte   $0A                             ; C270 0A                       .
-LC271:
+Bank0fDialogueBlock0Index228:
         .byte   "@1There's no way we\can do this"; C271 40 31 54 68 65 72 65 27 @1There'
                                                 ; C279 73 20 6E 6F 20 77 61 79  s no way
                                                 ; C281 20 77 65 5C 63 61 6E 20   we\can 
@@ -2906,7 +2906,7 @@ LC271:
                                                 ; C2A0 72 20 69 74 5C 67 6F 65  r it\goe
                                                 ; C2A8 73 20 75 70 3F           s up?
         .byte   $0A                             ; C2AD 0A                       .
-LC2AE:
+Bank0fDialogueBlock0Index229:
         .byte   "@2There IS a way!\Look!What's t"; C2AE 40 32 54 68 65 72 65 20 @2There 
                                                 ; C2B6 49 53 20 61 20 77 61 79  IS a way
                                                 ; C2BE 21 5C 4C 6F 6F 6B 21 57  !\Look!W
@@ -2914,12 +2914,12 @@ LC2AE:
         .byte   "hat\look like?"                ; C2CD 68 61 74 5C 6C 6F 6F 6B  hat\look
                                                 ; C2D5 20 6C 69 6B 65 3F         like?
         .byte   $0A                             ; C2DB 0A                       .
-LC2DC:
+Bank0fDialogueBlock0Index230:
         .byte   "@1Just a normal wire."         ; C2DC 40 31 4A 75 73 74 20 61  @1Just a
                                                 ; C2E4 20 6E 6F 72 6D 61 6C 20   normal 
                                                 ; C2EC 77 69 72 65 2E           wire.
         .byte   $0A                             ; C2F1 0A                       .
-LC2F2:
+Bank0fDialogueBlock0Index231:
         .byte   "@2Oh yeah?Well to me\it looks l"; C2F2 40 32 4F 68 20 79 65 61 @2Oh yea
                                                 ; C2FA 68 3F 57 65 6C 6C 20 74  h?Well t
                                                 ; C302 6F 20 6D 65 5C 69 74 20  o me\it 
@@ -2930,7 +2930,7 @@ LC2F2:
                                                 ; C329 6F 66 20 68 6F 70 65     of hope
         .byte   "."                             ; C330 2E                       .
         .byte   $0A                             ; C331 0A                       .
-LC332:
+Bank0fDialogueBlock0Index232:
         .byte   "@3You're right.This\is the only"; C332 40 33 59 6F 75 27 72 65 @3You're
                                                 ; C33A 20 72 69 67 68 74 2E 54   right.T
                                                 ; C342 68 69 73 5C 69 73 20 74  his\is t
@@ -2939,7 +2939,7 @@ LC332:
                                                 ; C359 73 61 76 65 20 41 65 72  save Aer
                                                 ; C361 69 73 5F 5F              is__
         .byte   $0A                             ; C365 0A                       .
-LC366:
+Bank0fDialogueBlock0Index233:
         .byte   "@1Ok,that was a bad\analogy,but"; C366 40 31 4F 6B 2C 74 68 61 @1Ok,tha
                                                 ; C36E 74 20 77 61 73 20 61 20  t was a 
                                                 ; C376 62 61 64 5C 61 6E 61 6C  bad\anal
@@ -2951,13 +2951,13 @@ LC366:
         .byte   "el.Let's go!"                  ; C3A4 65 6C 2E 4C 65 74 27 73  el.Let's
                                                 ; C3AC 20 67 6F 21               go!
         .byte   $0A                             ; C3B0 0A                       .
-LC3B1:
+Bank0fDialogueBlock0Index234:
         .byte   "@1We can't climb any\more__"   ; C3B1 40 31 57 65 20 63 61 6E  @1We can
                                                 ; C3B9 27 74 20 63 6C 69 6D 62  't climb
                                                 ; C3C1 20 61 6E 79 5C 6D 6F 72   any\mor
                                                 ; C3C9 65 5F 5F                 e__
         .byte   $0A                             ; C3CC 0A                       .
-LC3CD:
+Bank0fDialogueBlock0Index235:
         .byte   "@3We could reach thatwire if__O"; C3CD 40 33 57 65 20 63 6F 75 @3We cou
                                                 ; C3D5 6C 64 20 72 65 61 63 68  ld reach
                                                 ; C3DD 20 74 68 61 74 77 69 72   thatwir
@@ -2967,20 +2967,20 @@ LC3CD:
                                                 ; C3FC 74 74 65 72 79 5C 68 65  ttery\he
                                                 ; C404 72 65 5F 5F              re__
         .byte   $0A                             ; C408 0A                       .
-LC409:
+Bank0fDialogueBlock0Index236:
         .byte   "@2Dammit!Now how do\we get up!?"; C409 40 32 44 61 6D 6D 69 74 @2Dammit
                                                 ; C411 21 4E 6F 77 20 68 6F 77  !Now how
                                                 ; C419 20 64 6F 5C 77 65 20 67   do\we g
                                                 ; C421 65 74 20 75 70 21 3F     et up!?
         .byte   $0A                             ; C428 0A                       .
-LC429:
+Bank0fDialogueBlock0Index237:
         .byte   "@3It worked!Now we\can reach it"; C429 40 33 49 74 20 77 6F 72 @3It wor
                                                 ; C431 6B 65 64 21 4E 6F 77 20  ked!Now 
                                                 ; C439 77 65 5C 63 61 6E 20 72  we\can r
                                                 ; C441 65 61 63 68 20 69 74     each it
         .byte   "__"                            ; C448 5F 5F                    __
         .byte   $0A                             ; C44A 0A                       .
-LC44B:
+Bank0fDialogueBlock0Index238:
         .byte   "@2Hey,you oughta knowthis build"; C44B 40 32 48 65 79 2C 79 6F @2Hey,yo
                                                 ; C453 75 20 6F 75 67 68 74 61  u oughta
                                                 ; C45B 20 6B 6E 6F 77 74 68 69   knowthi
@@ -2988,7 +2988,7 @@ LC44B:
         .byte   "ing well."                     ; C46A 69 6E 67 20 77 65 6C 6C  ing well
                                                 ; C472 2E                       .
         .byte   $0A                             ; C473 0A                       .
-LC474:
+Bank0fDialogueBlock0Index239:
         .byte   "@1__Not really,now\that I think"; C474 40 31 5F 5F 4E 6F 74 20 @1__Not 
                                                 ; C47C 72 65 61 6C 6C 79 2C 6E  really,n
                                                 ; C484 6F 77 5C 74 68 61 74 20  ow\that 
@@ -3001,7 +3001,7 @@ LC474:
                                                 ; C4BA 72 20 62 65 65 6E 74 6F  r beento
                                                 ; C4C2 20 74 68 65 20 48 51 2E   the HQ.
         .byte   $0A                             ; C4CA 0A                       .
-LC4CB:
+Bank0fDialogueBlock0Index240:
         .byte   "@2I heard about this\place befo"; C4CB 40 32 49 20 68 65 61 72 @2I hear
                                                 ; C4D3 64 20 61 62 6F 75 74 20  d about 
                                                 ; C4DB 74 68 69 73 5C 70 6C 61  this\pla
@@ -3028,7 +3028,7 @@ LC4CB:
                                                 ; C57E 67 68 74 2C 5C 6C 65     ght,\le
         .byte   "t's go!"                       ; C585 74 27 73 20 67 6F 21     t's go!
         .byte   $0A                             ; C58C 0A                       .
-LC58D:
+Bank0fDialogueBlock0Index241:
         .byte   "@3Wait a second!\You're not thi"; C58D 40 33 57 61 69 74 20 61 @3Wait a
                                                 ; C595 20 73 65 63 6F 6E 64 21   second!
                                                 ; C59D 5C 59 6F 75 27 72 65 20  \You're 
@@ -3042,7 +3042,7 @@ LC58D:
                                                 ; C5DB 63 65 2C 61 72 65 20 79  ce,are y
                                                 ; C5E3 6F 75 3F                 ou?
         .byte   $0A                             ; C5E6 0A                       .
-LC5E7:
+Bank0fDialogueBlock0Index242:
         .byte   "@2Well what else doesit look li"; C5E7 40 32 57 65 6C 6C 20 77 @2Well w
                                                 ; C5EF 68 61 74 20 65 6C 73 65  hat else
                                                 ; C5F7 20 64 6F 65 73 69 74 20   doesit 
@@ -3054,7 +3054,7 @@ LC5E7:
         .byte   "butt and__"                    ; C625 62 75 74 74 20 61 6E 64  butt and
                                                 ; C62D 5F 5F                    __
         .byte   $0A                             ; C62F 0A                       .
-LC630:
+Bank0fDialogueBlock0Index243:
         .byte   "@3That's not going towork!We've"; C630 40 33 54 68 61 74 27 73 @3That's
                                                 ; C638 20 6E 6F 74 20 67 6F 69   not goi
                                                 ; C640 6E 67 20 74 6F 77 6F 72  ng towor
@@ -3064,7 +3064,7 @@ LC630:
                                                 ; C65F 74 68 65 72 20 77 61 79  ther way
                                                 ; C667 5F 5F                    __
         .byte   $0A                             ; C669 0A                       .
-LC66A:
+Bank0fDialogueBlock0Index244:
         .byte   "@2Ain't gonna be no\other way!I"; C66A 40 32 41 69 6E 27 74 20 @2Ain't 
                                                 ; C672 67 6F 6E 6E 61 20 62 65  gonna be
                                                 ; C67A 20 6E 6F 5C 6F 74 68 65   no\othe
@@ -3076,7 +3076,7 @@ LC66A:
         .byte   "s,\Aeris'll__"                 ; C6A8 73 2C 5C 41 65 72 69 73  s,\Aeris
                                                 ; C6B0 27 6C 6C 5F 5F           'll__
         .byte   $0A                             ; C6B5 0A                       .
-LC6B6:
+Bank0fDialogueBlock0Index245:
         .byte   "@3I know that!But if\we get cau"; C6B6 40 33 49 20 6B 6E 6F 77 @3I know
                                                 ; C6BE 20 74 68 61 74 21 42 75   that!Bu
                                                 ; C6C6 74 20 69 66 5C 77 65 20  t if\we 
@@ -3088,32 +3088,32 @@ LC6B6:
         .byte   "ld we do?"                     ; C6F4 6C 64 20 77 65 20 64 6F  ld we do
                                                 ; C6FC 3F                       ?
         .byte   $0A                             ; C6FD 0A                       .
-LC6FE:
+Bank0fDialogueBlock0Index246:
         .byte   "Bust on in      Sneak in quietl"; C6FE 42 75 73 74 20 6F 6E 20 Bust on 
                                                 ; C706 69 6E 20 20 20 20 20 20  in      
                                                 ; C70E 53 6E 65 61 6B 20 69 6E  Sneak in
                                                 ; C716 20 71 75 69 65 74 6C      quietl
         .byte   "y"                             ; C71D 79                       y
         .byte   $0A                             ; C71E 0A                       .
-LC71F:
+Bank0fDialogueBlock0Index247:
         .byte   "@1Let's sneak in\quietly."     ; C71F 40 31 4C 65 74 27 73 20  @1Let's 
                                                 ; C727 73 6E 65 61 6B 20 69 6E  sneak in
                                                 ; C72F 5C 71 75 69 65 74 6C 79  \quietly
                                                 ; C737 2E                       .
         .byte   $0A                             ; C738 0A                       .
-LC739:
+Bank0fDialogueBlock0Index248:
         .byte   "@1Let's bust on in!"           ; C739 40 31 4C 65 74 27 73 20  @1Let's 
                                                 ; C741 62 75 73 74 20 6F 6E 20  bust on 
                                                 ; C749 69 6E 21                 in!
         .byte   $0A                             ; C74C 0A                       .
-LC74D:
+Bank0fDialogueBlock0Index249:
         .byte   "@2That's more like\it!C'mon,let"; C74D 40 32 54 68 61 74 27 73 @2That's
                                                 ; C755 20 6D 6F 72 65 20 6C 69   more li
                                                 ; C75D 6B 65 5C 69 74 21 43 27  ke\it!C'
                                                 ; C765 6D 6F 6E 2C 6C 65 74     mon,let
         .byte   "'s go!"                        ; C76C 27 73 20 67 6F 21        's go!
         .byte   $0A                             ; C772 0A                       .
-LC773:
+Bank0fDialogueBlock0Index250:
         .byte   "Excuse me!If you\don't have an\"; C773 45 78 63 75 73 65 20 6D Excuse m
                                                 ; C77B 65 21 49 66 20 79 6F 75  e!If you
                                                 ; C783 5C 64 6F 6E 27 74 20 68  \don't h
@@ -3124,262 +3124,262 @@ LC773:
                                                 ; C7AA 68 61 76 65 20 74 6F     have to
         .byte   "__"                            ; C7B1 5F 5F                    __
         .byte   $0A                             ; C7B3 0A                       .
-LC7B4:
+Bank0fDialogueBlock0Index251:
         .byte   "Barret!?This isn't\good!"      ; C7B4 42 61 72 72 65 74 21 3F  Barret!?
                                                 ; C7BC 54 68 69 73 20 69 73 6E  This isn
                                                 ; C7C4 27 74 5C 67 6F 6F 64 21  't\good!
         .byte   $0A,$FF,$FF                     ; C7CC 0A FF FF                 ...
 ; ----------------------------------------------------------------------------
-LC7CF:
-        .addr   LC9BD                           ; C7CF BD C9                    ..
-        .addr   LCA39                           ; C7D1 39 CA                    9.
-        .addr   LCA55                           ; C7D3 55 CA                    U.
-        .addr   LCA9B                           ; C7D5 9B CA                    ..
-        .addr   LCAB2                           ; C7D7 B2 CA                    ..
-        .addr   LCADB                           ; C7D9 DB CA                    ..
-        .addr   LCAF5                           ; C7DB F5 CA                    ..
-        .addr   LCB28                           ; C7DD 28 CB                    (.
-        .addr   LCB61                           ; C7DF 61 CB                    a.
-        .addr   LCB97                           ; C7E1 97 CB                    ..
-        .addr   LCBB5                           ; C7E3 B5 CB                    ..
-        .addr   LCBE7                           ; C7E5 E7 CB                    ..
-        .addr   LCC07                           ; C7E7 07 CC                    ..
-        .addr   LCC33                           ; C7E9 33 CC                    3.
-        .addr   LCC9A                           ; C7EB 9A CC                    ..
-        .addr   LCCAB                           ; C7ED AB CC                    ..
-        .addr   LCCD6                           ; C7EF D6 CC                    ..
-        .addr   LCD21                           ; C7F1 21 CD                    !.
-        .addr   LCD3F                           ; C7F3 3F CD                    ?.
-        .addr   LCD65                           ; C7F5 65 CD                    e.
-        .addr   LCD75                           ; C7F7 75 CD                    u.
-        .addr   LCD9B                           ; C7F9 9B CD                    ..
-        .addr   LCDC4                           ; C7FB C4 CD                    ..
-        .addr   LCDDE                           ; C7FD DE CD                    ..
-        .addr   LCE20                           ; C7FF 20 CE                     .
-        .addr   LCE31                           ; C801 31 CE                    1.
-        .addr   LCE4D                           ; C803 4D CE                    M.
-        .addr   LCE61                           ; C805 61 CE                    a.
-        .addr   LCE6C                           ; C807 6C CE                    l.
-        .addr   LCE7B                           ; C809 7B CE                    {.
-        .addr   LCE8D                           ; C80B 8D CE                    ..
-        .addr   LCE94                           ; C80D 94 CE                    ..
-        .addr   LCEE0                           ; C80F E0 CE                    ..
-        .addr   LCF07                           ; C811 07 CF                    ..
-        .addr   LCF40                           ; C813 40 CF                    @.
-        .addr   LCF45                           ; C815 45 CF                    E.
-        .addr   LCF66                           ; C817 66 CF                    f.
-        .addr   LCFF6                           ; C819 F6 CF                    ..
-        .addr   LD037                           ; C81B 37 D0                    7.
-        .addr   LD062                           ; C81D 62 D0                    b.
-        .addr   LD079                           ; C81F 79 D0                    y.
-        .addr   LD096                           ; C821 96 D0                    ..
-        .addr   LD0B0                           ; C823 B0 D0                    ..
-        .addr   LD0C8                           ; C825 C8 D0                    ..
-        .addr   LD125                           ; C827 25 D1                    %.
-        .addr   LD12A                           ; C829 2A D1                    *.
-        .addr   LD175                           ; C82B 75 D1                    u.
-        .addr   LD1C4                           ; C82D C4 D1                    ..
-        .addr   LD215                           ; C82F 15 D2                    ..
-        .addr   LD269                           ; C831 69 D2                    i.
-        .addr   LD289                           ; C833 89 D2                    ..
-        .addr   LD298                           ; C835 98 D2                    ..
-        .addr   LD2A6                           ; C837 A6 D2                    ..
-        .addr   LD2DA                           ; C839 DA D2                    ..
-        .addr   LD2F6                           ; C83B F6 D2                    ..
-        .addr   LD325                           ; C83D 25 D3                    %.
-        .addr   LD36F                           ; C83F 6F D3                    o.
-        .addr   LD3C8                           ; C841 C8 D3                    ..
-        .addr   LD3F7                           ; C843 F7 D3                    ..
-        .addr   LD44D                           ; C845 4D D4                    M.
-        .addr   LD49A                           ; C847 9A D4                    ..
-        .addr   LD4CB                           ; C849 CB D4                    ..
-        .addr   LD4ED                           ; C84B ED D4                    ..
-        .addr   LD4F0                           ; C84D F0 D4                    ..
-        .addr   LD4FF                           ; C84F FF D4                    ..
-        .addr   LD510                           ; C851 10 D5                    ..
-        .addr   LD4ED                           ; C853 ED D4                    ..
-        .addr   LD5B9                           ; C855 B9 D5                    ..
-        .addr   LD6C1                           ; C857 C1 D6                    ..
-        .addr   LD6CF                           ; C859 CF D6                    ..
-        .addr   LD732                           ; C85B 32 D7                    2.
-        .addr   LD73C                           ; C85D 3C D7                    <.
-        .addr   LD99B                           ; C85F 9B D9                    ..
-        .addr   LDA3B                           ; C861 3B DA                    ;.
-        .addr   LDBAA                           ; C863 AA DB                    ..
-        .addr   LDBB2                           ; C865 B2 DB                    ..
-        .addr   LDBDB                           ; C867 DB DB                    ..
-        .addr   LDCA6                           ; C869 A6 DC                    ..
-        .addr   LDD44                           ; C86B 44 DD                    D.
-        .addr   LDD52                           ; C86D 52 DD                    R.
-        .addr   LDD60                           ; C86F 60 DD                    `.
-        .addr   LDE56                           ; C871 56 DE                    V.
-        .addr   LDE67                           ; C873 67 DE                    g.
-        .addr   LDE8E                           ; C875 8E DE                    ..
-        .addr   LDEE6                           ; C877 E6 DE                    ..
-        .addr   LDF27                           ; C879 27 DF                    '.
-        .addr   LDF51                           ; C87B 51 DF                    Q.
-        .addr   LDF5F                           ; C87D 5F DF                    _.
-        .addr   LDFB3                           ; C87F B3 DF                    ..
-        .addr   LE010                           ; C881 10 E0                    ..
-        .addr   LE03A                           ; C883 3A E0                    :.
-        .addr   LE058                           ; C885 58 E0                    X.
-        .addr   LE127                           ; C887 27 E1                    '.
-        .addr   LE13F                           ; C889 3F E1                    ?.
-        .addr   LE147                           ; C88B 47 E1                    G.
-        .addr   LE189                           ; C88D 89 E1                    ..
-        .addr   LE1A0                           ; C88F A0 E1                    ..
-        .addr   LE1FB                           ; C891 FB E1                    ..
-        .addr   LE258                           ; C893 58 E2                    X.
-        .addr   LB12C                           ; C895 2C B1                    ,.
-        .addr   LE2AA                           ; C897 AA E2                    ..
-        .addr   LE2E9                           ; C899 E9 E2                    ..
-        .addr   LE34D                           ; C89B 4D E3                    M.
-        .addr   LE391                           ; C89D 91 E3                    ..
-        .addr   LE3A5                           ; C89F A5 E3                    ..
-        .addr   LE3BC                           ; C8A1 BC E3                    ..
-        .addr   LE452                           ; C8A3 52 E4                    R.
-        .addr   LE475                           ; C8A5 75 E4                    u.
-        .addr   LE569                           ; C8A7 69 E5                    i.
-        .addr   LE5A2                           ; C8A9 A2 E5                    ..
-        .addr   LE5F1                           ; C8AB F1 E5                    ..
-        .addr   LE60F                           ; C8AD 0F E6                    ..
-        .addr   LE637                           ; C8AF 37 E6                    7.
-        .addr   LE642                           ; C8B1 42 E6                    B.
-        .addr   LE64E                           ; C8B3 4E E6                    N.
-        .addr   LE66E                           ; C8B5 6E E6                    n.
-        .addr   LE6D2                           ; C8B7 D2 E6                    ..
-        .addr   LE728                           ; C8B9 28 E7                    (.
-        .addr   LE742                           ; C8BB 42 E7                    B.
-        .addr   LE77E                           ; C8BD 7E E7                    ~.
-        .addr   LE797                           ; C8BF 97 E7                    ..
-        .addr   LE7E0                           ; C8C1 E0 E7                    ..
-        .addr   LE816                           ; C8C3 16 E8                    ..
-        .addr   LE829                           ; C8C5 29 E8                    ).
-        .addr   LE83B                           ; C8C7 3B E8                    ;.
-        .addr   LE847                           ; C8C9 47 E8                    G.
-        .addr   LE863                           ; C8CB 63 E8                    c.
-        .addr   LE8AA                           ; C8CD AA E8                    ..
-        .addr   LE8B3                           ; C8CF B3 E8                    ..
-        .addr   LE8E1                           ; C8D1 E1 E8                    ..
-        .addr   LE8FC                           ; C8D3 FC E8                    ..
-        .addr   LE90A                           ; C8D5 0A E9                    ..
-        .addr   LE92D                           ; C8D7 2D E9                    -.
-        .addr   LE95E                           ; C8D9 5E E9                    ^.
-        .addr   LE9E1                           ; C8DB E1 E9                    ..
-        .addr   LE9E8                           ; C8DD E8 E9                    ..
-        .addr   LEA5B                           ; C8DF 5B EA                    [.
-        .addr   LEA69                           ; C8E1 69 EA                    i.
-        .addr   LEA8B                           ; C8E3 8B EA                    ..
-        .addr   LEB1D                           ; C8E5 1D EB                    ..
-        .addr   LEB4F                           ; C8E7 4F EB                    O.
-        .addr   LEB63                           ; C8E9 63 EB                    c.
-        .addr   LEB82                           ; C8EB 82 EB                    ..
-        .addr   LEB97                           ; C8ED 97 EB                    ..
-        .addr   LEBCE                           ; C8EF CE EB                    ..
-        .addr   LEBEE                           ; C8F1 EE EB                    ..
-        .addr   LEBFE                           ; C8F3 FE EB                    ..
-        .addr   LEC15                           ; C8F5 15 EC                    ..
-        .addr   LEC31                           ; C8F7 31 EC                    1.
-        .addr   LEC72                           ; C8F9 72 EC                    r.
-        .addr   LEC9E                           ; C8FB 9E EC                    ..
-        .addr   LECAC                           ; C8FD AC EC                    ..
-        .addr   LECD9                           ; C8FF D9 EC                    ..
-        .addr   LED38                           ; C901 38 ED                    8.
-        .addr   LED49                           ; C903 49 ED                    I.
-        .addr   LED5D                           ; C905 5D ED                    ].
-        .addr   LEDA1                           ; C907 A1 ED                    ..
-        .addr   LEDAC                           ; C909 AC ED                    ..
-        .addr   LEDC3                           ; C90B C3 ED                    ..
-        .addr   LEDE9                           ; C90D E9 ED                    ..
-        .addr   LEE26                           ; C90F 26 EE                    &.
-        .addr   LEE36                           ; C911 36 EE                    6.
-        .addr   LEEC7                           ; C913 C7 EE                    ..
-        .addr   LEEE8                           ; C915 E8 EE                    ..
-        .addr   LEF41                           ; C917 41 EF                    A.
-        .addr   LEF9F                           ; C919 9F EF                    ..
-        .addr   LEFE3                           ; C91B E3 EF                    ..
-        .addr   LF024                           ; C91D 24 F0                    $.
-        .addr   LF05C                           ; C91F 5C F0                    \.
-        .addr   LF0E7                           ; C921 E7 F0                    ..
-        .addr   LF0F5                           ; C923 F5 F0                    ..
-        .addr   LF109                           ; C925 09 F1                    ..
-        .addr   LF128                           ; C927 28 F1                    (.
-        .addr   LF141                           ; C929 41 F1                    A.
-        .addr   LF17D                           ; C92B 7D F1                    }.
-        .addr   LFE88                           ; C92D 88 FE                    ..
-        .addr   LFE9C                           ; C92F 9C FE                    ..
-        .addr   LFEAF                           ; C931 AF FE                    ..
-        .addr   LFF57                           ; C933 57 FF                    W.
-        .addr   LF197                           ; C935 97 F1                    ..
-        .addr   LF1F8                           ; C937 F8 F1                    ..
-        .addr   LF227                           ; C939 27 F2                    '.
-        .addr   LF2A5                           ; C93B A5 F2                    ..
-        .addr   LF2C3                           ; C93D C3 F2                    ..
-        .addr   LF373                           ; C93F 73 F3                    s.
-        .addr   LF38A                           ; C941 8A F3                    ..
-        .addr   LF40E                           ; C943 0E F4                    ..
-        .addr   LF42C                           ; C945 2C F4                    ,.
-        .addr   LF455                           ; C947 55 F4                    U.
-        .addr   LF48A                           ; C949 8A F4                    ..
-        .addr   LF49C                           ; C94B 9C F4                    ..
-        .addr   LF4AA                           ; C94D AA F4                    ..
-        .addr   LF4BB                           ; C94F BB F4                    ..
-        .addr   LF4D9                           ; C951 D9 F4                    ..
-        .addr   LF4F7                           ; C953 F7 F4                    ..
-        .addr   LF515                           ; C955 15 F5                    ..
-        .addr   LF69B                           ; C957 9B F6                    ..
-        .addr   LF6F1                           ; C959 F1 F6                    ..
-        .addr   LF702                           ; C95B 02 F7                    ..
-        .addr   LF707                           ; C95D 07 F7                    ..
-        .addr   LF720                           ; C95F 20 F7                     .
-        .addr   LF72D                           ; C961 2D F7                    -.
-        .addr   LF75A                           ; C963 5A F7                    Z.
-        .addr   LF76D                           ; C965 6D F7                    m.
-        .addr   LF77F                           ; C967 7F F7                    ..
-        .addr   LF796                           ; C969 96 F7                    ..
-        .addr   LF7A9                           ; C96B A9 F7                    ..
-        .addr   LF7E3                           ; C96D E3 F7                    ..
-        .addr   LF803                           ; C96F 03 F8                    ..
-        .addr   LF824                           ; C971 24 F8                    $.
-        .addr   LF835                           ; C973 35 F8                    5.
-        .addr   LF855                           ; C975 55 F8                    U.
-        .addr   LF883                           ; C977 83 F8                    ..
-        .addr   LF88B                           ; C979 8B F8                    ..
-        .addr   LF8B2                           ; C97B B2 F8                    ..
-        .addr   LF984                           ; C97D 84 F9                    ..
-        .addr   LF99D                           ; C97F 9D F9                    ..
-        .addr   LF9BE                           ; C981 BE F9                    ..
-        .addr   LF9D9                           ; C983 D9 F9                    ..
-        .addr   LF9FA                           ; C985 FA F9                    ..
-        .addr   LFA4A                           ; C987 4A FA                    J.
-        .addr   LFA5D                           ; C989 5D FA                    ].
-        .addr   LFB70                           ; C98B 70 FB                    p.
-        .addr   LFB8C                           ; C98D 8C FB                    ..
-        .addr   LFBB2                           ; C98F B2 FB                    ..
-        .addr   LFBC5                           ; C991 C5 FB                    ..
-        .addr   LFBD6                           ; C993 D6 FB                    ..
-        .addr   LFBE6                           ; C995 E6 FB                    ..
-        .addr   LFC09                           ; C997 09 FC                    ..
-        .addr   LFC24                           ; C999 24 FC                    $.
-        .addr   LFC46                           ; C99B 46 FC                    F.
-        .addr   LFC50                           ; C99D 50 FC                    P.
-        .addr   LFC8D                           ; C99F 8D FC                    ..
-        .addr   LFCBC                           ; C9A1 BC FC                    ..
-        .addr   LFCFB                           ; C9A3 FB FC                    ..
-        .addr   LFD2B                           ; C9A5 2B FD                    +.
-        .addr   LFD78                           ; C9A7 78 FD                    x.
-        .addr   LFD90                           ; C9A9 90 FD                    ..
-        .addr   LFDAE                           ; C9AB AE FD                    ..
-        .addr   LFDBC                           ; C9AD BC FD                    ..
-        .addr   LFDC4                           ; C9AF C4 FD                    ..
-        .addr   LFDE7                           ; C9B1 E7 FD                    ..
-        .addr   LFE1F                           ; C9B3 1F FE                    ..
-        .addr   LFE40                           ; C9B5 40 FE                    @.
-        .addr   LDCA6                           ; C9B7 A6 DC                    ..
-        .addr   LFF89                           ; C9B9 89 FF                    ..
-        .addr   LFE72                           ; C9BB 72 FE                    r.
+Bank0fDialogueBlock1:
+        .addr   Bank0fDialogueBlock1Index0      ; C7CF BD C9                    ..
+        .addr   Bank0fDialogueBlock1Index1      ; C7D1 39 CA                    9.
+        .addr   Bank0fDialogueBlock1Index2      ; C7D3 55 CA                    U.
+        .addr   Bank0fDialogueBlock1Index3      ; C7D5 9B CA                    ..
+        .addr   Bank0fDialogueBlock1Index4      ; C7D7 B2 CA                    ..
+        .addr   Bank0fDialogueBlock1Index5      ; C7D9 DB CA                    ..
+        .addr   Bank0fDialogueBlock1Index6      ; C7DB F5 CA                    ..
+        .addr   Bank0fDialogueBlock1Index7      ; C7DD 28 CB                    (.
+        .addr   Bank0fDialogueBlock1Index8      ; C7DF 61 CB                    a.
+        .addr   Bank0fDialogueBlock1Index9      ; C7E1 97 CB                    ..
+        .addr   Bank0fDialogueBlock1Index10     ; C7E3 B5 CB                    ..
+        .addr   Bank0fDialogueBlock1Index11     ; C7E5 E7 CB                    ..
+        .addr   Bank0fDialogueBlock1Index12     ; C7E7 07 CC                    ..
+        .addr   Bank0fDialogueBlock1Index13     ; C7E9 33 CC                    3.
+        .addr   Bank0fDialogueBlock1Index14     ; C7EB 9A CC                    ..
+        .addr   Bank0fDialogueBlock1Index15     ; C7ED AB CC                    ..
+        .addr   Bank0fDialogueBlock1Index16     ; C7EF D6 CC                    ..
+        .addr   Bank0fDialogueBlock1Index17     ; C7F1 21 CD                    !.
+        .addr   Bank0fDialogueBlock1Index18     ; C7F3 3F CD                    ?.
+        .addr   Bank0fDialogueBlock1Index19     ; C7F5 65 CD                    e.
+        .addr   Bank0fDialogueBlock1Index20     ; C7F7 75 CD                    u.
+        .addr   Bank0fDialogueBlock1Index21     ; C7F9 9B CD                    ..
+        .addr   Bank0fDialogueBlock1Index22     ; C7FB C4 CD                    ..
+        .addr   Bank0fDialogueBlock1Index23     ; C7FD DE CD                    ..
+        .addr   Bank0fDialogueBlock1Index24     ; C7FF 20 CE                     .
+        .addr   Bank0fDialogueBlock1Index25     ; C801 31 CE                    1.
+        .addr   Bank0fDialogueBlock1Index26     ; C803 4D CE                    M.
+        .addr   Bank0fDialogueBlock1Index27     ; C805 61 CE                    a.
+        .addr   Bank0fDialogueBlock1Index28     ; C807 6C CE                    l.
+        .addr   Bank0fDialogueBlock1Index29     ; C809 7B CE                    {.
+        .addr   Bank0fDialogueBlock1Index30     ; C80B 8D CE                    ..
+        .addr   Bank0fDialogueBlock1Index31     ; C80D 94 CE                    ..
+        .addr   Bank0fDialogueBlock1Index32     ; C80F E0 CE                    ..
+        .addr   Bank0fDialogueBlock1Index33     ; C811 07 CF                    ..
+        .addr   Bank0fDialogueBlock1Index34     ; C813 40 CF                    @.
+        .addr   Bank0fDialogueBlock1Index35     ; C815 45 CF                    E.
+        .addr   Bank0fDialogueBlock1Index36     ; C817 66 CF                    f.
+        .addr   Bank0fDialogueBlock1Index37     ; C819 F6 CF                    ..
+        .addr   Bank0fDialogueBlock1Index38     ; C81B 37 D0                    7.
+        .addr   Bank0fDialogueBlock1Index39     ; C81D 62 D0                    b.
+        .addr   Bank0fDialogueBlock1Index40     ; C81F 79 D0                    y.
+        .addr   Bank0fDialogueBlock1Index41     ; C821 96 D0                    ..
+        .addr   Bank0fDialogueBlock1Index42     ; C823 B0 D0                    ..
+        .addr   Bank0fDialogueBlock1Index43     ; C825 C8 D0                    ..
+        .addr   Bank0fDialogueBlock1Index44     ; C827 25 D1                    %.
+        .addr   Bank0fDialogueBlock1Index45     ; C829 2A D1                    *.
+        .addr   Bank0fDialogueBlock1Index46     ; C82B 75 D1                    u.
+        .addr   Bank0fDialogueBlock1Index47     ; C82D C4 D1                    ..
+        .addr   Bank0fDialogueBlock1Index48     ; C82F 15 D2                    ..
+        .addr   Bank0fDialogueBlock1Index49     ; C831 69 D2                    i.
+        .addr   Bank0fDialogueBlock1Index50     ; C833 89 D2                    ..
+        .addr   Bank0fDialogueBlock1Index51     ; C835 98 D2                    ..
+        .addr   Bank0fDialogueBlock1Index52     ; C837 A6 D2                    ..
+        .addr   Bank0fDialogueBlock1Index53     ; C839 DA D2                    ..
+        .addr   Bank0fDialogueBlock1Index54     ; C83B F6 D2                    ..
+        .addr   Bank0fDialogueBlock1Index55     ; C83D 25 D3                    %.
+        .addr   Bank0fDialogueBlock1Index56     ; C83F 6F D3                    o.
+        .addr   Bank0fDialogueBlock1Index57     ; C841 C8 D3                    ..
+        .addr   Bank0fDialogueBlock1Index58     ; C843 F7 D3                    ..
+        .addr   Bank0fDialogueBlock1Index59     ; C845 4D D4                    M.
+        .addr   Bank0fDialogueBlock1Index60     ; C847 9A D4                    ..
+        .addr   Bank0fDialogueBlock1Index61     ; C849 CB D4                    ..
+        .addr   Bank0fDialogueBlock1Index62     ; C84B ED D4                    ..
+        .addr   Bank0fDialogueBlock1Index63     ; C84D F0 D4                    ..
+        .addr   Bank0fDialogueBlock1Index64     ; C84F FF D4                    ..
+        .addr   Bank0fDialogueBlock1Index65     ; C851 10 D5                    ..
+        .addr   Bank0fDialogueBlock1Index62     ; C853 ED D4                    ..
+        .addr   Bank0fDialogueBlock1Index67     ; C855 B9 D5                    ..
+        .addr   Bank0fDialogueBlock1Index68     ; C857 C1 D6                    ..
+        .addr   Bank0fDialogueBlock1Index69     ; C859 CF D6                    ..
+        .addr   Bank0fDialogueBlock1Index70     ; C85B 32 D7                    2.
+        .addr   Bank0fDialogueBlock1Index71     ; C85D 3C D7                    <.
+        .addr   Bank0fDialogueBlock1Index72     ; C85F 9B D9                    ..
+        .addr   Bank0fDialogueBlock1Index73     ; C861 3B DA                    ;.
+        .addr   Bank0fDialogueBlock1Index74     ; C863 AA DB                    ..
+        .addr   Bank0fDialogueBlock1Index75     ; C865 B2 DB                    ..
+        .addr   Bank0fDialogueBlock1Index76     ; C867 DB DB                    ..
+        .addr   Bank0fDialogueBlock1Index77     ; C869 A6 DC                    ..
+        .addr   Bank0fDialogueBlock1Index78     ; C86B 44 DD                    D.
+        .addr   Bank0fDialogueBlock1Index79     ; C86D 52 DD                    R.
+        .addr   Bank0fDialogueBlock1Index80     ; C86F 60 DD                    `.
+        .addr   Bank0fDialogueBlock1Index81     ; C871 56 DE                    V.
+        .addr   Bank0fDialogueBlock1Index82     ; C873 67 DE                    g.
+        .addr   Bank0fDialogueBlock1Index83     ; C875 8E DE                    ..
+        .addr   Bank0fDialogueBlock1Index84     ; C877 E6 DE                    ..
+        .addr   Bank0fDialogueBlock1Index85     ; C879 27 DF                    '.
+        .addr   Bank0fDialogueBlock1Index86     ; C87B 51 DF                    Q.
+        .addr   Bank0fDialogueBlock1Index87     ; C87D 5F DF                    _.
+        .addr   Bank0fDialogueBlock1Index88     ; C87F B3 DF                    ..
+        .addr   Bank0fDialogueBlock1Index89     ; C881 10 E0                    ..
+        .addr   Bank0fDialogueBlock1Index90     ; C883 3A E0                    :.
+        .addr   Bank0fDialogueBlock1Index91     ; C885 58 E0                    X.
+        .addr   Bank0fDialogueBlock1Index92     ; C887 27 E1                    '.
+        .addr   Bank0fDialogueBlock1Index93     ; C889 3F E1                    ?.
+        .addr   Bank0fDialogueBlock1Index94     ; C88B 47 E1                    G.
+        .addr   Bank0fDialogueBlock1Index95     ; C88D 89 E1                    ..
+        .addr   Bank0fDialogueBlock1Index96     ; C88F A0 E1                    ..
+        .addr   Bank0fDialogueBlock1Index97     ; C891 FB E1                    ..
+        .addr   Bank0fDialogueBlock1Index98     ; C893 58 E2                    X.
+        .addr   Bank0fDialogueBlock1Index99     ; C895 2C B1                    ,.
+        .addr   Bank0fDialogueBlock1Index100    ; C897 AA E2                    ..
+        .addr   Bank0fDialogueBlock1Index101    ; C899 E9 E2                    ..
+        .addr   Bank0fDialogueBlock1Index102    ; C89B 4D E3                    M.
+        .addr   Bank0fDialogueBlock1Index103    ; C89D 91 E3                    ..
+        .addr   Bank0fDialogueBlock1Index104    ; C89F A5 E3                    ..
+        .addr   Bank0fDialogueBlock1Index105    ; C8A1 BC E3                    ..
+        .addr   Bank0fDialogueBlock1Index106    ; C8A3 52 E4                    R.
+        .addr   Bank0fDialogueBlock1Index107    ; C8A5 75 E4                    u.
+        .addr   Bank0fDialogueBlock1Index108    ; C8A7 69 E5                    i.
+        .addr   Bank0fDialogueBlock1Index109    ; C8A9 A2 E5                    ..
+        .addr   Bank0fDialogueBlock1Index110    ; C8AB F1 E5                    ..
+        .addr   Bank0fDialogueBlock1Index111    ; C8AD 0F E6                    ..
+        .addr   Bank0fDialogueBlock1Index112    ; C8AF 37 E6                    7.
+        .addr   Bank0fDialogueBlock1Index113    ; C8B1 42 E6                    B.
+        .addr   Bank0fDialogueBlock1Index114    ; C8B3 4E E6                    N.
+        .addr   Bank0fDialogueBlock1Index115    ; C8B5 6E E6                    n.
+        .addr   Bank0fDialogueBlock1Index116    ; C8B7 D2 E6                    ..
+        .addr   Bank0fDialogueBlock1Index117    ; C8B9 28 E7                    (.
+        .addr   Bank0fDialogueBlock1Index118    ; C8BB 42 E7                    B.
+        .addr   Bank0fDialogueBlock1Index119    ; C8BD 7E E7                    ~.
+        .addr   Bank0fDialogueBlock1Index120    ; C8BF 97 E7                    ..
+        .addr   Bank0fDialogueBlock1Index121    ; C8C1 E0 E7                    ..
+        .addr   Bank0fDialogueBlock1Index122    ; C8C3 16 E8                    ..
+        .addr   Bank0fDialogueBlock1Index123    ; C8C5 29 E8                    ).
+        .addr   Bank0fDialogueBlock1Index124    ; C8C7 3B E8                    ;.
+        .addr   Bank0fDialogueBlock1Index125    ; C8C9 47 E8                    G.
+        .addr   Bank0fDialogueBlock1Index126    ; C8CB 63 E8                    c.
+        .addr   Bank0fDialogueBlock1Index127    ; C8CD AA E8                    ..
+        .addr   Bank0fDialogueBlock1Index128    ; C8CF B3 E8                    ..
+        .addr   Bank0fDialogueBlock1Index129    ; C8D1 E1 E8                    ..
+        .addr   Bank0fDialogueBlock1Index130    ; C8D3 FC E8                    ..
+        .addr   Bank0fDialogueBlock1Index131    ; C8D5 0A E9                    ..
+        .addr   Bank0fDialogueBlock1Index132    ; C8D7 2D E9                    -.
+        .addr   Bank0fDialogueBlock1Index133    ; C8D9 5E E9                    ^.
+        .addr   Bank0fDialogueBlock1Index134    ; C8DB E1 E9                    ..
+        .addr   Bank0fDialogueBlock1Index135    ; C8DD E8 E9                    ..
+        .addr   Bank0fDialogueBlock1Index136    ; C8DF 5B EA                    [.
+        .addr   Bank0fDialogueBlock1Index137    ; C8E1 69 EA                    i.
+        .addr   Bank0fDialogueBlock1Index138    ; C8E3 8B EA                    ..
+        .addr   Bank0fDialogueBlock1Index139    ; C8E5 1D EB                    ..
+        .addr   Bank0fDialogueBlock1Index140    ; C8E7 4F EB                    O.
+        .addr   Bank0fDialogueBlock1Index141    ; C8E9 63 EB                    c.
+        .addr   Bank0fDialogueBlock1Index142    ; C8EB 82 EB                    ..
+        .addr   Bank0fDialogueBlock1Index143    ; C8ED 97 EB                    ..
+        .addr   Bank0fDialogueBlock1Index144    ; C8EF CE EB                    ..
+        .addr   Bank0fDialogueBlock1Index145    ; C8F1 EE EB                    ..
+        .addr   Bank0fDialogueBlock1Index146    ; C8F3 FE EB                    ..
+        .addr   Bank0fDialogueBlock1Index147    ; C8F5 15 EC                    ..
+        .addr   Bank0fDialogueBlock1Index148    ; C8F7 31 EC                    1.
+        .addr   Bank0fDialogueBlock1Index149    ; C8F9 72 EC                    r.
+        .addr   Bank0fDialogueBlock1Index150    ; C8FB 9E EC                    ..
+        .addr   Bank0fDialogueBlock1Index151    ; C8FD AC EC                    ..
+        .addr   Bank0fDialogueBlock1Index152    ; C8FF D9 EC                    ..
+        .addr   Bank0fDialogueBlock1Index153    ; C901 38 ED                    8.
+        .addr   Bank0fDialogueBlock1Index154    ; C903 49 ED                    I.
+        .addr   Bank0fDialogueBlock1Index155    ; C905 5D ED                    ].
+        .addr   Bank0fDialogueBlock1Index156    ; C907 A1 ED                    ..
+        .addr   Bank0fDialogueBlock1Index157    ; C909 AC ED                    ..
+        .addr   Bank0fDialogueBlock1Index158    ; C90B C3 ED                    ..
+        .addr   Bank0fDialogueBlock1Index159    ; C90D E9 ED                    ..
+        .addr   Bank0fDialogueBlock1Index160    ; C90F 26 EE                    &.
+        .addr   Bank0fDialogueBlock1Index161    ; C911 36 EE                    6.
+        .addr   Bank0fDialogueBlock1Index162    ; C913 C7 EE                    ..
+        .addr   Bank0fDialogueBlock1Index163    ; C915 E8 EE                    ..
+        .addr   Bank0fDialogueBlock1Index164    ; C917 41 EF                    A.
+        .addr   Bank0fDialogueBlock1Index165    ; C919 9F EF                    ..
+        .addr   Bank0fDialogueBlock1Index166    ; C91B E3 EF                    ..
+        .addr   Bank0fDialogueBlock1Index167    ; C91D 24 F0                    $.
+        .addr   Bank0fDialogueBlock1Index168    ; C91F 5C F0                    \.
+        .addr   Bank0fDialogueBlock1Index169    ; C921 E7 F0                    ..
+        .addr   Bank0fDialogueBlock1Index170    ; C923 F5 F0                    ..
+        .addr   Bank0fDialogueBlock1Index171    ; C925 09 F1                    ..
+        .addr   Bank0fDialogueBlock1Index172    ; C927 28 F1                    (.
+        .addr   Bank0fDialogueBlock1Index173    ; C929 41 F1                    A.
+        .addr   Bank0fDialogueBlock1Index174    ; C92B 7D F1                    }.
+        .addr   Bank0fDialogueBlock1Index175    ; C92D 88 FE                    ..
+        .addr   Bank0fDialogueBlock1Index176    ; C92F 9C FE                    ..
+        .addr   Bank0fDialogueBlock1Index177    ; C931 AF FE                    ..
+        .addr   Bank0fDialogueBlock1Index178    ; C933 57 FF                    W.
+        .addr   Bank0fDialogueBlock1Index179    ; C935 97 F1                    ..
+        .addr   Bank0fDialogueBlock1Index180    ; C937 F8 F1                    ..
+        .addr   Bank0fDialogueBlock1Index181    ; C939 27 F2                    '.
+        .addr   Bank0fDialogueBlock1Index182    ; C93B A5 F2                    ..
+        .addr   Bank0fDialogueBlock1Index183    ; C93D C3 F2                    ..
+        .addr   Bank0fDialogueBlock1Index184    ; C93F 73 F3                    s.
+        .addr   Bank0fDialogueBlock1Index185    ; C941 8A F3                    ..
+        .addr   Bank0fDialogueBlock1Index186    ; C943 0E F4                    ..
+        .addr   Bank0fDialogueBlock1Index187    ; C945 2C F4                    ,.
+        .addr   Bank0fDialogueBlock1Index188    ; C947 55 F4                    U.
+        .addr   Bank0fDialogueBlock1Index189    ; C949 8A F4                    ..
+        .addr   Bank0fDialogueBlock1Index190    ; C94B 9C F4                    ..
+        .addr   Bank0fDialogueBlock1Index191    ; C94D AA F4                    ..
+        .addr   Bank0fDialogueBlock1Index192    ; C94F BB F4                    ..
+        .addr   Bank0fDialogueBlock1Index193    ; C951 D9 F4                    ..
+        .addr   Bank0fDialogueBlock1Index194    ; C953 F7 F4                    ..
+        .addr   Bank0fDialogueBlock1Index195    ; C955 15 F5                    ..
+        .addr   Bank0fDialogueBlock1Index196    ; C957 9B F6                    ..
+        .addr   Bank0fDialogueBlock1Index197    ; C959 F1 F6                    ..
+        .addr   Bank0fDialogueBlock1Index198    ; C95B 02 F7                    ..
+        .addr   Bank0fDialogueBlock1Index199    ; C95D 07 F7                    ..
+        .addr   Bank0fDialogueBlock1Index200    ; C95F 20 F7                     .
+        .addr   Bank0fDialogueBlock1Index201    ; C961 2D F7                    -.
+        .addr   Bank0fDialogueBlock1Index202    ; C963 5A F7                    Z.
+        .addr   Bank0fDialogueBlock1Index203    ; C965 6D F7                    m.
+        .addr   Bank0fDialogueBlock1Index204    ; C967 7F F7                    ..
+        .addr   Bank0fDialogueBlock1Index205    ; C969 96 F7                    ..
+        .addr   Bank0fDialogueBlock1Index206    ; C96B A9 F7                    ..
+        .addr   Bank0fDialogueBlock1Index207    ; C96D E3 F7                    ..
+        .addr   Bank0fDialogueBlock1Index208    ; C96F 03 F8                    ..
+        .addr   Bank0fDialogueBlock1Index209    ; C971 24 F8                    $.
+        .addr   Bank0fDialogueBlock1Index210    ; C973 35 F8                    5.
+        .addr   Bank0fDialogueBlock1Index211    ; C975 55 F8                    U.
+        .addr   Bank0fDialogueBlock1Index212    ; C977 83 F8                    ..
+        .addr   Bank0fDialogueBlock1Index213    ; C979 8B F8                    ..
+        .addr   Bank0fDialogueBlock1Index214    ; C97B B2 F8                    ..
+        .addr   Bank0fDialogueBlock1Index215    ; C97D 84 F9                    ..
+        .addr   Bank0fDialogueBlock1Index216    ; C97F 9D F9                    ..
+        .addr   Bank0fDialogueBlock1Index217    ; C981 BE F9                    ..
+        .addr   Bank0fDialogueBlock1Index218    ; C983 D9 F9                    ..
+        .addr   Bank0fDialogueBlock1Index219    ; C985 FA F9                    ..
+        .addr   Bank0fDialogueBlock1Index220    ; C987 4A FA                    J.
+        .addr   Bank0fDialogueBlock1Index221    ; C989 5D FA                    ].
+        .addr   Bank0fDialogueBlock1Index222    ; C98B 70 FB                    p.
+        .addr   Bank0fDialogueBlock1Index223    ; C98D 8C FB                    ..
+        .addr   Bank0fDialogueBlock1Index224    ; C98F B2 FB                    ..
+        .addr   Bank0fDialogueBlock1Index225    ; C991 C5 FB                    ..
+        .addr   Bank0fDialogueBlock1Index226    ; C993 D6 FB                    ..
+        .addr   Bank0fDialogueBlock1Index227    ; C995 E6 FB                    ..
+        .addr   Bank0fDialogueBlock1Index228    ; C997 09 FC                    ..
+        .addr   Bank0fDialogueBlock1Index229    ; C999 24 FC                    $.
+        .addr   Bank0fDialogueBlock1Index230    ; C99B 46 FC                    F.
+        .addr   Bank0fDialogueBlock1Index231    ; C99D 50 FC                    P.
+        .addr   Bank0fDialogueBlock1Index232    ; C99F 8D FC                    ..
+        .addr   Bank0fDialogueBlock1Index233    ; C9A1 BC FC                    ..
+        .addr   Bank0fDialogueBlock1Index234    ; C9A3 FB FC                    ..
+        .addr   Bank0fDialogueBlock1Index235    ; C9A5 2B FD                    +.
+        .addr   Bank0fDialogueBlock1Index236    ; C9A7 78 FD                    x.
+        .addr   Bank0fDialogueBlock1Index237    ; C9A9 90 FD                    ..
+        .addr   Bank0fDialogueBlock1Index238    ; C9AB AE FD                    ..
+        .addr   Bank0fDialogueBlock1Index239    ; C9AD BC FD                    ..
+        .addr   Bank0fDialogueBlock1Index240    ; C9AF C4 FD                    ..
+        .addr   Bank0fDialogueBlock1Index241    ; C9B1 E7 FD                    ..
+        .addr   Bank0fDialogueBlock1Index242    ; C9B3 1F FE                    ..
+        .addr   Bank0fDialogueBlock1Index243    ; C9B5 40 FE                    @.
+        .addr   Bank0fDialogueBlock1Index77     ; C9B7 A6 DC                    ..
+        .addr   Bank0fDialogueBlock1Index245    ; C9B9 89 FF                    ..
+        .addr   Bank0fDialogueBlock1Index246    ; C9BB 72 FE                    r.
 ; ----------------------------------------------------------------------------
-LC9BD:
+Bank0fDialogueBlock1Index0:
         .byte   "@2Don't need no\appointment__Th"; C9BD 40 32 44 6F 6E 27 74 20 @2Don't 
                                                 ; C9C5 6E 65 65 64 20 6E 6F 5C  need no\
                                                 ; C9CD 61 70 70 6F 69 6E 74 6D  appointm
@@ -3397,13 +3397,13 @@ LC9BD:
                                                 ; CA2A 6F 75 74 74 61 5C 74 68  outta\th
                                                 ; CA32 65 20 77 61 79 21        e way!
         .byte   $0A                             ; CA38 0A                       .
-LCA39:
+Bank0fDialogueBlock1Index1:
         .byte   "Who do they think\they are?"   ; CA39 57 68 6F 20 64 6F 20 74  Who do t
                                                 ; CA41 68 65 79 20 74 68 69 6E  hey thin
                                                 ; CA49 6B 5C 74 68 65 79 20 61  k\they a
                                                 ; CA51 72 65 3F                 re?
         .byte   $0A                             ; CA54 0A                       .
-LCA55:
+Bank0fDialogueBlock1Index2:
         .byte   "@LGuard: Hey, you\don't think t"; CA55 40 4C 47 75 61 72 64 3A @LGuard:
                                                 ; CA5D 20 48 65 79 2C 20 79 6F   Hey, yo
                                                 ; CA65 75 5C 64 6F 6E 27 74 20  u\don't 
@@ -3414,12 +3414,12 @@ LCA55:
                                                 ; CA8C 72 73 21 53 69 65 7A     rs!Siez
         .byte   "e\them!"                       ; CA93 65 5C 74 68 65 6D 21     e\them!
         .byte   $0A                             ; CA9A 0A                       .
-LCA9B:
+Bank0fDialogueBlock1Index3:
         .byte   "@2Let's go to the\top!"        ; CA9B 40 32 4C 65 74 27 73 20  @2Let's 
                                                 ; CAA3 67 6F 20 74 6F 20 74 68  go to th
                                                 ; CAAB 65 5C 74 6F 70 21        e\top!
         .byte   $0A                             ; CAB1 0A                       .
-LCAB2:
+Bank0fDialogueBlock1Index4:
         .byte   "@1We should use the\elevators i"; CAB2 40 31 57 65 20 73 68 6F @1We sho
                                                 ; CABA 75 6C 64 20 75 73 65 20  uld use 
                                                 ; CAC2 74 68 65 5C 65 6C 65 76  the\elev
@@ -3427,13 +3427,13 @@ LCAB2:
         .byte   "f we\can."                     ; CAD1 66 20 77 65 5C 63 61 6E  f we\can
                                                 ; CAD9 2E                       .
         .byte   $0A                             ; CADA 0A                       .
-LCADB:
+Bank0fDialogueBlock1Index5:
         .byte   "@1Let's sneak in\quietly."     ; CADB 40 31 4C 65 74 27 73 20  @1Let's 
                                                 ; CAE3 73 6E 65 61 6B 20 69 6E  sneak in
                                                 ; CAEB 5C 71 75 69 65 74 6C 79  \quietly
                                                 ; CAF3 2E                       .
         .byte   $0A                             ; CAF4 0A                       .
-LCAF5:
+Bank0fDialogueBlock1Index6:
         .byte   "@3See?Let's be\careful and find"; CAF5 40 33 53 65 65 3F 4C 65 @3See?Le
                                                 ; CAFD 74 27 73 20 62 65 5C 63  t's be\c
                                                 ; CB05 61 72 65 66 75 6C 20 61  areful a
@@ -3442,7 +3442,7 @@ LCAF5:
                                                 ; CB1C 72 65 6E 74 20 72 6F 75  rent rou
                                                 ; CB24 74 65 21                 te!
         .byte   $0A                             ; CB27 0A                       .
-LCB28:
+Bank0fDialogueBlock1Index7:
         .byte   "@2Yo__You really\gonna take the"; CB28 40 32 59 6F 5F 5F 59 6F @2Yo__Yo
                                                 ; CB30 75 20 72 65 61 6C 6C 79  u really
                                                 ; CB38 5C 67 6F 6E 6E 61 20 74  \gonna t
@@ -3452,7 +3452,7 @@ LCB28:
                                                 ; CB57 65 20 77 61 79 5C 75 70  e way\up
                                                 ; CB5F 3F                       ?
         .byte   $0A                             ; CB60 0A                       .
-LCB61:
+Bank0fDialogueBlock1Index8:
         .byte   "@3Well we've got to\get to Aeri"; CB61 40 33 57 65 6C 6C 20 77 @3Well w
                                                 ; CB69 65 27 76 65 20 67 6F 74  e've got
                                                 ; CB71 20 74 6F 5C 67 65 74 20   to\get 
@@ -3461,13 +3461,13 @@ LCB61:
                                                 ; CB88 70 20 68 65 72 20 73 6F  p her so
                                                 ; CB90 6D 65 68 6F 77 2E        mehow.
         .byte   $0A                             ; CB96 0A                       .
-LCB97:
+Bank0fDialogueBlock1Index9:
         .byte   "@2Talk about out of\the way__" ; CB97 40 32 54 61 6C 6B 20 61  @2Talk a
                                                 ; CB9F 62 6F 75 74 20 6F 75 74  bout out
                                                 ; CBA7 20 6F 66 5C 74 68 65 20   of\the 
                                                 ; CBAF 77 61 79 5F 5F           way__
         .byte   $0A                             ; CBB4 0A                       .
-LCBB5:
+Bank0fDialogueBlock1Index10:
         .byte   "@3I don't have time\to argue wi"; CBB5 40 33 49 20 64 6F 6E 27 @3I don'
                                                 ; CBBD 74 20 68 61 76 65 20 74  t have t
                                                 ; CBC5 69 6D 65 5C 74 6F 20 61  ime\to a
@@ -3476,13 +3476,13 @@ LCBB5:
                                                 ; CBDC 49 27 6D 20 67 6F 69 6E  I'm goin
                                                 ; CBE4 67 21                    g!
         .byte   $0A                             ; CBE6 0A                       .
-LCBE7:
+Bank0fDialogueBlock1Index11:
         .byte   "@2Y,yo,Tifa!Don't go\off alone!"; CBE7 40 32 59 2C 79 6F 2C 54 @2Y,yo,T
                                                 ; CBEF 69 66 61 21 44 6F 6E 27  ifa!Don'
                                                 ; CBF7 74 20 67 6F 5C 6F 66 66  t go\off
                                                 ; CBFF 20 61 6C 6F 6E 65 21      alone!
         .byte   $0A                             ; CC06 0A                       .
-LCC07:
+Bank0fDialogueBlock1Index12:
         .byte   "@2Don't know__why thehell__we g"; CC07 40 32 44 6F 6E 27 74 20 @2Don't 
                                                 ; CC0F 6B 6E 6F 77 5F 5F 77 68  know__wh
                                                 ; CC17 79 20 74 68 65 68 65 6C  y thehel
@@ -3490,7 +3490,7 @@ LCC07:
         .byte   "otta\climb__"                  ; CC26 6F 74 74 61 5C 63 6C 69  otta\cli
                                                 ; CC2E 6D 62 5F 5F              mb__
         .byte   $0A                             ; CC32 0A                       .
-LCC33:
+Bank0fDialogueBlock1Index13:
         .byte   "@1__because we don't\want to st"; CC33 40 31 5F 5F 62 65 63 61 @1__beca
                                                 ; CC3B 75 73 65 20 77 65 20 64  use we d
                                                 ; CC43 6F 6E 27 74 5C 77 61 6E  on't\wan
@@ -3506,11 +3506,11 @@ LCC33:
         .byte   " though__"                     ; CC90 20 74 68 6F 75 67 68 5F   though_
                                                 ; CC98 5F                       _
         .byte   $0A                             ; CC99 0A                       .
-LCC9A:
+Bank0fDialogueBlock1Index14:
         .byte   "@2__heh heh heh."              ; CC9A 40 32 5F 5F 68 65 68 20  @2__heh 
                                                 ; CCA2 68 65 68 20 68 65 68 2E  heh heh.
         .byte   $0A                             ; CCAA 0A                       .
-LCCAB:
+Bank0fDialogueBlock1Index15:
         .byte   "@1Knock it off.You'regiving me "; CCAB 40 31 4B 6E 6F 63 6B 20 @1Knock 
                                                 ; CCB3 69 74 20 6F 66 66 2E 59  it off.Y
                                                 ; CCBB 6F 75 27 72 65 67 69 76  ou'regiv
@@ -3518,7 +3518,7 @@ LCCAB:
         .byte   "the\creeps."                   ; CCCA 74 68 65 5C 63 72 65 65  the\cree
                                                 ; CCD2 70 73 2E                 ps.
         .byte   $0A                             ; CCD5 0A                       .
-LCCD6:
+Bank0fDialogueBlock1Index16:
         .byte   "@2So even you will\fight for so"; CCD6 40 32 53 6F 20 65 76 65 @2So eve
                                                 ; CCDE 6E 20 79 6F 75 20 77 69  n you wi
                                                 ; CCE6 6C 6C 5C 66 69 67 68 74  ll\fight
@@ -3530,31 +3530,31 @@ LCCD6:
         .byte   "ong I\guess."                  ; CD14 6F 6E 67 20 49 5C 67 75  ong I\gu
                                                 ; CD1C 65 73 73 2E              ess.
         .byte   $0A                             ; CD20 0A                       .
-LCD21:
+Bank0fDialogueBlock1Index17:
         .byte   "@1Who cares what you\figured!" ; CD21 40 31 57 68 6F 20 63 61  @1Who ca
                                                 ; CD29 72 65 73 20 77 68 61 74  res what
                                                 ; CD31 20 79 6F 75 5C 66 69 67   you\fig
                                                 ; CD39 75 72 65 64 21           ured!
         .byte   $0A                             ; CD3E 0A                       .
-LCD3F:
+Bank0fDialogueBlock1Index18:
         .byte   "@2I'm just sayin'\mebbe I was w"; CD3F 40 32 49 27 6D 20 6A 75 @2I'm ju
                                                 ; CD47 73 74 20 73 61 79 69 6E  st sayin
                                                 ; CD4F 27 5C 6D 65 62 62 65 20  '\mebbe 
                                                 ; CD57 49 20 77 61 73 20 77     I was w
         .byte   "rong__"                        ; CD5E 72 6F 6E 67 5F 5F        rong__
         .byte   $0A                             ; CD64 0A                       .
-LCD65:
+Bank0fDialogueBlock1Index19:
         .byte   "@3Heh heh heh__"               ; CD65 40 33 48 65 68 20 68 65  @3Heh he
                                                 ; CD6D 68 20 68 65 68 5F 5F     h heh__
         .byte   $0A                             ; CD74 0A                       .
-LCD75:
+Bank0fDialogueBlock1Index20:
         .byte   "@1What's that\supposed to mean,"; CD75 40 31 57 68 61 74 27 73 @1What's
                                                 ; CD7D 20 74 68 61 74 5C 73 75   that\su
                                                 ; CD85 70 70 6F 73 65 64 20 74  pposed t
                                                 ; CD8D 6F 20 6D 65 61 6E 2C     o mean,
         .byte   "\Tifa?"                        ; CD94 5C 54 69 66 61 3F        \Tifa?
         .byte   $0A                             ; CD9A 0A                       .
-LCD9B:
+Bank0fDialogueBlock1Index21:
         .byte   "@2How much farther dothese stai"; CD9B 40 32 48 6F 77 20 6D 75 @2How mu
                                                 ; CDA3 63 68 20 66 61 72 74 68  ch farth
                                                 ; CDAB 65 72 20 64 6F 74 68 65  er dothe
@@ -3562,13 +3562,13 @@ LCD9B:
         .byte   "rs go on?"                     ; CDBA 72 73 20 67 6F 20 6F 6E  rs go on
                                                 ; CDC2 3F                       ?
         .byte   $0A                             ; CDC3 0A                       .
-LCDC4:
+Bank0fDialogueBlock1Index22:
         .byte   "@3Why don't you ask\them?"     ; CDC4 40 33 57 68 79 20 64 6F  @3Why do
                                                 ; CDCC 6E 27 74 20 79 6F 75 20  n't you 
                                                 ; CDD4 61 73 6B 5C 74 68 65 6D  ask\them
                                                 ; CDDC 3F                       ?
         .byte   $0A                             ; CDDD 0A                       .
-LCDDE:
+Bank0fDialogueBlock1Index23:
         .byte   "@2It's not one of\them endless\"; CDDE 40 32 49 74 27 73 20 6E @2It's n
                                                 ; CDE6 6F 74 20 6F 6E 65 20 6F  ot one o
                                                 ; CDEE 66 5C 74 68 65 6D 20 65  f\them e
@@ -3579,38 +3579,38 @@ LCDDE:
                                                 ; CE15 27 79 61 5C 74 68 69     'ya\thi
         .byte   "nk?"                           ; CE1C 6E 6B 3F                 nk?
         .byte   $0A                             ; CE1F 0A                       .
-LCE20:
+Bank0fDialogueBlock1Index24:
         .byte   "@3Of course not!"              ; CE20 40 33 4F 66 20 63 6F 75  @3Of cou
                                                 ; CE28 72 73 65 20 6E 6F 74 21  rse not!
         .byte   $0A                             ; CE30 0A                       .
-LCE31:
+Bank0fDialogueBlock1Index25:
         .byte   "@2Right__couldn't be\that__"   ; CE31 40 32 52 69 67 68 74 5F  @2Right_
                                                 ; CE39 5F 63 6F 75 6C 64 6E 27  _couldn'
                                                 ; CE41 74 20 62 65 5C 74 68 61  t be\tha
                                                 ; CE49 74 5F 5F                 t__
         .byte   $0A                             ; CE4C 0A                       .
-LCE4D:
+Bank0fDialogueBlock1Index26:
         .byte   "@2Are we there yet?"           ; CE4D 40 32 41 72 65 20 77 65  @2Are we
                                                 ; CE55 20 74 68 65 72 65 20 79   there y
                                                 ; CE5D 65 74 3F                 et?
         .byte   $0A                             ; CE60 0A                       .
-LCE61:
+Bank0fDialogueBlock1Index27:
         .byte   "@3Not yet."                    ; CE61 40 33 4E 6F 74 20 79 65  @3Not ye
                                                 ; CE69 74 2E                    t.
         .byte   $0A                             ; CE6B 0A                       .
-LCE6C:
+Bank0fDialogueBlock1Index28:
         .byte   "@2__we close? "                ; CE6C 40 32 5F 5F 77 65 20 63  @2__we c
                                                 ; CE74 6C 6F 73 65 3F 20        lose? 
         .byte   $0A                             ; CE7A 0A                       .
-LCE7B:
+Bank0fDialogueBlock1Index29:
         .byte   "@3I said not yet!"             ; CE7B 40 33 49 20 73 61 69 64  @3I said
                                                 ; CE83 20 6E 6F 74 20 79 65 74   not yet
                                                 ; CE8B 21                       !
         .byte   $0A                             ; CE8C 0A                       .
-LCE8D:
+Bank0fDialogueBlock1Index30:
         .byte   "@2Yo__"                        ; CE8D 40 32 59 6F 5F 5F        @2Yo__
         .byte   $0A                             ; CE93 0A                       .
-LCE94:
+Bank0fDialogueBlock1Index31:
         .byte   "@3Look,don't even\ask!We're way"; CE94 40 33 4C 6F 6F 6B 2C 64 @3Look,d
                                                 ; CE9C 6F 6E 27 74 20 65 76 65  on't eve
                                                 ; CEA4 6E 5C 61 73 6B 21 57 65  n\ask!We
@@ -3622,14 +3622,14 @@ LCE94:
         .byte   "g there,\OK!?"                 ; CED2 67 20 74 68 65 72 65 2C  g there,
                                                 ; CEDA 5C 4F 4B 21 3F           \OK!?
         .byte   $0A                             ; CEDF 0A                       .
-LCEE0:
+Bank0fDialogueBlock1Index32:
         .byte   "@2Damn,man!I've had\it!I'm goin"; CEE0 40 32 44 61 6D 6E 2C 6D @2Damn,m
                                                 ; CEE8 61 6E 21 49 27 76 65 20  an!I've 
                                                 ; CEF0 68 61 64 5C 69 74 21 49  had\it!I
                                                 ; CEF8 27 6D 20 67 6F 69 6E     'm goin
         .byte   "g back!"                       ; CEFF 67 20 62 61 63 6B 21     g back!
         .byte   $0A                             ; CF06 0A                       .
-LCF07:
+Bank0fDialogueBlock1Index33:
         .byte   "@3And take just as\long going d"; CF07 40 33 41 6E 64 20 74 61 @3And ta
                                                 ; CF0F 6B 65 20 6A 75 73 74 20  ke just 
                                                 ; CF17 61 73 5C 6C 6F 6E 67 20  as\long 
@@ -3639,17 +3639,17 @@ LCF07:
                                                 ; CF36 6F 6D 69 6E 67 20 75 70  oming up
                                                 ; CF3E 3F                       ?
         .byte   $0A                             ; CF3F 0A                       .
-LCF40:
+Bank0fDialogueBlock1Index34:
         .byte   "@2__"                          ; CF40 40 32 5F 5F              @2__
         .byte   $0A                             ; CF44 0A                       .
-LCF45:
+Bank0fDialogueBlock1Index35:
         .byte   "@3C'mon,Barret.Pull\it together"; CF45 40 33 43 27 6D 6F 6E 2C @3C'mon,
                                                 ; CF4D 42 61 72 72 65 74 2E 50  Barret.P
                                                 ; CF55 75 6C 6C 5C 69 74 20 74  ull\it t
                                                 ; CF5D 6F 67 65 74 68 65 72     ogether
         .byte   "!"                             ; CF64 21                       !
         .byte   $0A                             ; CF65 0A                       .
-LCF66:
+Bank0fDialogueBlock1Index36:
         .byte   "@2Yeah,well all I\know is I'm j"; CF66 40 32 59 65 61 68 2C 77 @2Yeah,w
                                                 ; CF6E 65 6C 6C 20 61 6C 6C 20  ell all 
                                                 ; CF76 49 5C 6B 6E 6F 77 20 69  I\know i
@@ -3670,7 +3670,7 @@ LCF66:
                                                 ; CFEA 73 6F 6D 65 74 68 69 6E  somethin
                                                 ; CFF2 27 5F 5F                 '__
         .byte   $0A                             ; CFF5 0A                       .
-LCFF6:
+Bank0fDialogueBlock1Index37:
         .byte   "@3What about me!?I'm\human too!"; CFF6 40 33 57 68 61 74 20 61 @3What a
                                                 ; CFFE 62 6F 75 74 20 6D 65 21  bout me!
                                                 ; D006 3F 49 27 6D 5C 68 75 6D  ?I'm\hum
@@ -3681,7 +3681,7 @@ LCFF6:
                                                 ; D02D 67 6F 69 6E 67 20 6F     going o
         .byte   "n!"                            ; D034 6E 21                    n!
         .byte   $0A                             ; D036 0A                       .
-LD037:
+Bank0fDialogueBlock1Index38:
         .byte   "@2What're ya\ignorant?I didn't\"; D037 40 32 57 68 61 74 27 72 @2What'r
                                                 ; D03F 65 20 79 61 5C 69 67 6E  e ya\ign
                                                 ; D047 6F 72 61 6E 74 3F 49 20  orant?I 
@@ -3689,29 +3689,29 @@ LD037:
         .byte   "mean that__"                   ; D056 6D 65 61 6E 20 74 68 61  mean tha
                                                 ; D05E 74 5F 5F                 t__
         .byte   $0A                             ; D061 0A                       .
-LD062:
+Bank0fDialogueBlock1Index39:
         .byte   "@3All right,all\right!"        ; D062 40 33 41 6C 6C 20 72 69  @3All ri
                                                 ; D06A 67 68 74 2C 61 6C 6C 5C  ght,all\
                                                 ; D072 72 69 67 68 74 21        right!
         .byte   $0A                             ; D078 0A                       .
-LD079:
+Bank0fDialogueBlock1Index40:
         .byte   "@3Cloud,you go on\ahead too!"  ; D079 40 33 43 6C 6F 75 64 2C  @3Cloud,
                                                 ; D081 79 6F 75 20 67 6F 20 6F  you go o
                                                 ; D089 6E 5C 61 68 65 61 64 20  n\ahead 
                                                 ; D091 74 6F 6F 21              too!
         .byte   $0A                             ; D095 0A                       .
-LD096:
+Bank0fDialogueBlock1Index41:
         .byte   "@2Yo__What floor is\this?"     ; D096 40 32 59 6F 5F 5F 57 68  @2Yo__Wh
                                                 ; D09E 61 74 20 66 6C 6F 6F 72  at floor
                                                 ; D0A6 20 69 73 5C 74 68 69 73   is\this
                                                 ; D0AE 3F                       ?
         .byte   $0A                             ; D0AF 0A                       .
-LD0B0:
+Bank0fDialogueBlock1Index42:
         .byte   "@3__I gave up\counting."       ; D0B0 40 33 5F 5F 49 20 67 61  @3__I ga
                                                 ; D0B8 76 65 20 75 70 5C 63 6F  ve up\co
                                                 ; D0C0 75 6E 74 69 6E 67 2E     unting.
         .byte   $0A                             ; D0C7 0A                       .
-LD0C8:
+Bank0fDialogueBlock1Index43:
         .byte   "@2Why they gotta\build these\bu"; D0C8 40 32 57 68 79 20 74 68 @2Why th
                                                 ; D0D0 65 79 20 67 6F 74 74 61  ey gotta
                                                 ; D0D8 5C 62 75 69 6C 64 20 74  \build t
@@ -3725,10 +3725,10 @@ LD0C8:
                                                 ; D116 20 6E 6F 5C 64 61 6D 6E   no\damn
                                                 ; D11E 20 67 6F 6F 64 2E         good.
         .byte   $0A                             ; D124 0A                       .
-LD125:
+Bank0fDialogueBlock1Index44:
         .byte   "@3__"                          ; D125 40 33 5F 5F              @3__
         .byte   $0A                             ; D129 0A                       .
-LD12A:
+Bank0fDialogueBlock1Index45:
         .byte   "@2huff__Man,I'm\beat__Marlene,D"; D12A 40 32 68 75 66 66 5F 5F @2huff__
                                                 ; D132 4D 61 6E 2C 49 27 6D 5C  Man,I'm\
                                                 ; D13A 62 65 61 74 5F 5F 4D 61  beat__Ma
@@ -3740,7 +3740,7 @@ LD12A:
         .byte   " more\time__"                  ; D168 20 6D 6F 72 65 5C 74 69   more\ti
                                                 ; D170 6D 65 5F 5F              me__
         .byte   $0A                             ; D174 0A                       .
-LD175:
+Bank0fDialogueBlock1Index46:
         .byte   "@3Would you stop\acting like a\"; D175 40 33 57 6F 75 6C 64 20 @3Would 
                                                 ; D17D 79 6F 75 20 73 74 6F 70  you stop
                                                 ; D185 5C 61 63 74 69 6E 67 20  \acting 
@@ -3752,7 +3752,7 @@ LD175:
         .byte   "it\more!__maybe."              ; D1B3 69 74 5C 6D 6F 72 65 21  it\more!
                                                 ; D1BB 5F 5F 6D 61 79 62 65 2E  __maybe.
         .byte   $0A                             ; D1C3 0A                       .
-LD1C4:
+Bank0fDialogueBlock1Index47:
         .byte   "@2F__finally__M__madeit__N__nev"; D1C4 40 32 46 5F 5F 66 69 6E @2F__fin
                                                 ; D1CC 61 6C 6C 79 5F 5F 4D 5F  ally__M_
                                                 ; D1D4 5F 6D 61 64 65 69 74 5F  _madeit_
@@ -3765,7 +3765,7 @@ LD1C4:
                                                 ; D20A 20 6D 79 5C 6C 69 66 65   my\life
                                                 ; D212 5F 5F                    __
         .byte   $0A                             ; D214 0A                       .
-LD215:
+Bank0fDialogueBlock1Index48:
         .byte   "@3huff__puff__this\really takes"; D215 40 33 68 75 66 66 5F 5F @3huff__
                                                 ; D21D 70 75 66 66 5F 5F 74 68  puff__th
                                                 ; D225 69 73 5C 72 65 61 6C 6C  is\reall
@@ -3778,21 +3778,21 @@ LD215:
                                                 ; D25B 72 20 67 65 74 5C 72 65  r get\re
                                                 ; D263 61 64 79 5F 21           ady_!
         .byte   $0A                             ; D268 0A                       .
-LD269:
+Bank0fDialogueBlock1Index49:
         .byte   "@LGuard: Destroy the intruders!"; D269 40 4C 47 75 61 72 64 3A @LGuard:
                                                 ; D271 20 44 65 73 74 72 6F 79   Destroy
                                                 ; D279 20 74 68 65 20 69 6E 74   the int
                                                 ; D281 72 75 64 65 72 73 21     ruders!
         .byte   $0A                             ; D288 0A                       .
-LD289:
+Bank0fDialogueBlock1Index50:
         .byte   "@1What's this?"                ; D289 40 31 57 68 61 74 27 73  @1What's
                                                 ; D291 20 74 68 69 73 3F         this?
         .byte   $0A                             ; D297 0A                       .
-LD298:
+Bank0fDialogueBlock1Index51:
         .byte   "Got 61F Card."                 ; D298 47 6F 74 20 36 31 46 20  Got 61F 
                                                 ; D2A0 43 61 72 64 2E           Card.
         .byte   $0A                             ; D2A5 0A                       .
-LD2A6:
+Bank0fDialogueBlock1Index52:
         .byte   "@2This is the real\thing.Don't "; D2A6 40 32 54 68 69 73 20 69 @2This i
                                                 ; D2AE 73 20 74 68 65 20 72 65  s the re
                                                 ; D2B6 61 6C 5C 74 68 69 6E 67  al\thing
@@ -3801,13 +3801,13 @@ LD2A6:
                                                 ; D2CD 20 67 75 61 72 64 20 64   guard d
                                                 ; D2D5 6F 77 6E 2E              own.
         .byte   $0A                             ; D2D9 0A                       .
-LD2DA:
+Bank0fDialogueBlock1Index53:
         .byte   "@3I hope Aeris is allright."   ; D2DA 40 33 49 20 68 6F 70 65  @3I hope
                                                 ; D2E2 20 41 65 72 69 73 20 69   Aeris i
                                                 ; D2EA 73 20 61 6C 6C 72 69 67  s allrig
                                                 ; D2F2 68 74 2E                 ht.
         .byte   $0A                             ; D2F5 0A                       .
-LD2F6:
+Bank0fDialogueBlock1Index54:
         .byte   "What's keeping her?Did she forg"; D2F6 57 68 61 74 27 73 20 6B What's k
                                                 ; D2FE 65 65 70 69 6E 67 20 68  eeping h
                                                 ; D306 65 72 3F 44 69 64 20 73  er?Did s
@@ -3815,7 +3815,7 @@ LD2F6:
         .byte   "et her\keycard?"               ; D315 65 74 20 68 65 72 5C 6B  et her\k
                                                 ; D31D 65 79 63 61 72 64 3F     eycard?
         .byte   $0A                             ; D324 0A                       .
-LD325:
+Bank0fDialogueBlock1Index55:
         .byte   "Even employees\can't walk aroun"; D325 45 76 65 6E 20 65 6D 70 Even emp
                                                 ; D32D 6C 6F 79 65 65 73 5C 63  loyees\c
                                                 ; D335 61 6E 27 74 20 77 61 6C  an't wal
@@ -3827,7 +3827,7 @@ LD325:
         .byte   "a\keycard__"                   ; D363 61 5C 6B 65 79 63 61 72  a\keycar
                                                 ; D36B 64 5F 5F                 d__
         .byte   $0A                             ; D36E 0A                       .
-LD36F:
+Bank0fDialogueBlock1Index56:
         .byte   "This is the lounge\floor.Above "; D36F 54 68 69 73 20 69 73 20 This is 
                                                 ; D377 74 68 65 20 6C 6F 75 6E  the loun
                                                 ; D37F 67 65 5C 66 6C 6F 6F 72  ge\floor
@@ -3841,7 +3841,7 @@ LD36F:
                                                 ; D3BD 65 20 63 6F 6D 70 61 6E  e compan
                                                 ; D3C5 79 2E                    y.
         .byte   $0A                             ; D3C7 0A                       .
-LD3C8:
+Bank0fDialogueBlock1Index57:
         .byte   "It's tough working\under someon"; D3C8 49 74 27 73 20 74 6F 75 It's tou
                                                 ; D3D0 67 68 20 77 6F 72 6B 69  gh worki
                                                 ; D3D8 6E 67 5C 75 6E 64 65 72  ng\under
@@ -3849,7 +3849,7 @@ LD3C8:
         .byte   "e.Tiresyou out."               ; D3E7 65 2E 54 69 72 65 73 79  e.Tiresy
                                                 ; D3EF 6F 75 20 6F 75 74 2E     ou out.
         .byte   $0A                             ; D3F6 0A                       .
-LD3F7:
+Bank0fDialogueBlock1Index58:
         .byte   "I thought I heard aruckus downs"; D3F7 49 20 74 68 6F 75 67 68 I though
                                                 ; D3FF 74 20 49 20 68 65 61 72  t I hear
                                                 ; D407 64 20 61 72 75 63 6B 75  d arucku
@@ -3862,7 +3862,7 @@ LD3F7:
                                                 ; D43D 20 77 61 73 5C 61 6C 6C   was\all
                                                 ; D445 20 61 62 6F 75 74 3F      about?
         .byte   $0A                             ; D44C 0A                       .
-LD44D:
+Bank0fDialogueBlock1Index59:
         .byte   "No idea.But no needto worry bec"; D44D 4E 6F 20 69 64 65 61 2E No idea.
                                                 ; D455 42 75 74 20 6E 6F 20 6E  But no n
                                                 ; D45D 65 65 64 74 6F 20 77 6F  eedto wo
@@ -3874,7 +3874,7 @@ LD44D:
         .byte   "floor is\safe."                ; D48B 66 6C 6F 6F 72 20 69 73  floor is
                                                 ; D493 5C 73 61 66 65 2E        \safe.
         .byte   $0A                             ; D499 0A                       .
-LD49A:
+Bank0fDialogueBlock1Index60:
         .byte   "The hell are you?\What're you d"; D49A 54 68 65 20 68 65 6C 6C The hell
                                                 ; D4A2 20 61 72 65 20 79 6F 75   are you
                                                 ; D4AA 3F 5C 57 68 61 74 27 72  ?\What'r
@@ -3883,25 +3883,25 @@ LD49A:
                                                 ; D4C1 75 6E 64 20 68 65 72 65  und here
                                                 ; D4C9 3F                       ?
         .byte   $0A                             ; D4CA 0A                       .
-LD4CB:
+Bank0fDialogueBlock1Index61:
         .byte   "Where's Aeris?  __             "; D4CB 57 68 65 72 65 27 73 20 Where's 
                                                 ; D4D3 41 65 72 69 73 3F 20 20  Aeris?  
                                                 ; D4DB 5F 5F 20 20 20 20 20 20  __      
                                                 ; D4E3 20 20 20 20 20 20 20            
         .byte   "  "                            ; D4EA 20 20                      
         .byte   $0A                             ; D4EC 0A                       .
-LD4ED:
+Bank0fDialogueBlock1Index62:
         .byte   "__"                            ; D4ED 5F 5F                    __
         .byte   $0A                             ; D4EF 0A                       .
-LD4F0:
+Bank0fDialogueBlock1Index63:
         .byte   "Where's Aeris?"                ; D4F0 57 68 65 72 65 27 73 20  Where's 
                                                 ; D4F8 41 65 72 69 73 3F        Aeris?
         .byte   $0A                             ; D4FE 0A                       .
-LD4FF:
+Bank0fDialogueBlock1Index64:
         .byte   "@1Where's Aeris?"              ; D4FF 40 31 57 68 65 72 65 27  @1Where'
                                                 ; D507 73 20 41 65 72 69 73 3F  s Aeris?
         .byte   $0A                             ; D50F 0A                       .
-LD510:
+Bank0fDialogueBlock1Index65:
         .byte   "Aeris,you mean thatkid.The\rece"; D510 41 65 72 69 73 2C 79 6F Aeris,yo
                                                 ; D518 75 20 6D 65 61 6E 20 74  u mean t
                                                 ; D520 68 61 74 6B 69 64 2E 54  hatkid.T
@@ -3925,7 +3925,7 @@ LD510:
         .byte   "someone else?"                 ; D5AB 73 6F 6D 65 6F 6E 65 20  someone 
                                                 ; D5B3 65 6C 73 65 3F           else?
         .byte   $0A                             ; D5B8 0A                       .
-LD5B9:
+Bank0fDialogueBlock1Index67:
         .byte   "Oh,I see.So you\must be the wha"; D5B9 4F 68 2C 49 20 73 65 65 Oh,I see
                                                 ; D5C1 2E 53 6F 20 79 6F 75 5C  .So you\
                                                 ; D5C9 6D 75 73 74 20 62 65 20  must be 
@@ -3961,11 +3961,11 @@ LD5B9:
         .byte   "\give you this."               ; D6B1 5C 67 69 76 65 20 79 6F  \give yo
                                                 ; D6B9 75 20 74 68 69 73 2E     u this.
         .byte   $0A                             ; D6C0 0A                       .
-LD6C1:
+Bank0fDialogueBlock1Index68:
         .byte   "Got 62F Card."                 ; D6C1 47 6F 74 20 36 32 46 20  Got 62F 
                                                 ; D6C9 43 61 72 64 2E           Card.
         .byte   $0A                             ; D6CE 0A                       .
-LD6CF:
+Bank0fDialogueBlock1Index69:
         .byte   "I don't remember\seeing your fa"; D6CF 49 20 64 6F 6E 27 74 20 I don't 
                                                 ; D6D7 72 65 6D 65 6D 62 65 72  remember
                                                 ; D6DF 5C 73 65 65 69 6E 67 20  \seeing 
@@ -3980,11 +3980,11 @@ LD6CF:
                                                 ; D725 6F 6D 65 5F 5F 74 68     ome__th
         .byte   "ings."                         ; D72C 69 6E 67 73 2E           ings.
         .byte   $0A                             ; D731 0A                       .
-LD732:
+Bank0fDialogueBlock1Index70:
         .byte   "@1Things?"                     ; D732 40 31 54 68 69 6E 67 73  @1Things
                                                 ; D73A 3F                       ?
         .byte   $0A                             ; D73B 0A                       .
-LD73C:
+Bank0fDialogueBlock1Index71:
         .byte   "Wipe that stupid\look off your "; D73C 57 69 70 65 20 74 68 61 Wipe tha
                                                 ; D744 74 20 73 74 75 70 69 64  t stupid
                                                 ; D74C 5C 6C 6F 6F 6B 20 6F 66  \look of
@@ -4065,7 +4065,7 @@ LD73C:
                                                 ; D991 20 74 6F 5C 77 6F 72 6B   to\work
                                                 ; D999 21                       !
         .byte   $0A                             ; D99A 0A                       .
-LD99B:
+Bank0fDialogueBlock1Index72:
         .byte   "@IHart:How do you do?This is th"; D99B 40 49 48 61 72 74 3A 48 @IHart:H
                                                 ; D9A3 6F 77 20 64 6F 20 79 6F  ow do yo
                                                 ; D9AB 75 20 64 6F 3F 54 68 69  u do?Thi
@@ -4088,7 +4088,7 @@ LD99B:
                                                 ; DA2F 74 6F 20 61 73 6B 20     to ask 
         .byte   "me__"                          ; DA36 6D 65 5F 5F              me__
         .byte   $0A                             ; DA3A 0A                       .
-LDA3B:
+Bank0fDialogueBlock1Index73:
         .byte   "@HDomino:Hmm?Oh,and\who might y"; DA3B 40 48 44 6F 6D 69 6E 6F @HDomino
                                                 ; DA43 3A 48 6D 6D 3F 4F 68 2C  :Hmm?Oh,
                                                 ; DA4B 61 6E 64 5C 77 68 6F 20  and\who 
@@ -4138,10 +4138,10 @@ LDA3B:
                                                 ; DBA0 5C 6B 65 79 63 61 72 64  \keycard
                                                 ; DBA8 2E                       .
         .byte   $0A                             ; DBA9 0A                       .
-LDBAA:
+Bank0fDialogueBlock1Index74:
         .byte   "@1What?"                       ; DBAA 40 31 57 68 61 74 3F     @1What?
         .byte   $0A                             ; DBB1 0A                       .
-LDBB2:
+Bank0fDialogueBlock1Index75:
         .byte   "@HA:MAKO\B:BEST\(Look for clues"; DBB2 40 48 41 3A 4D 41 4B 4F @HA:MAKO
                                                 ; DBBA 5C 42 3A 42 45 53 54 5C  \B:BEST\
                                                 ; DBC2 28 4C 6F 6F 6B 20 66 6F  (Look fo
@@ -4149,7 +4149,7 @@ LDBB2:
         .byte   " to this)"                     ; DBD1 20 74 6F 20 74 68 69 73   to this
                                                 ; DBD9 29                       )
         .byte   $0A                             ; DBDA 0A                       .
-LDBDB:
+Bank0fDialogueBlock1Index76:
         .byte   "@IDid you speak with\the Mayor?"; DBDB 40 49 44 69 64 20 79 6F @IDid yo
                                                 ; DBE3 75 20 73 70 65 61 6B 20  u speak 
                                                 ; DBEB 77 69 74 68 5C 74 68 65  with\the
@@ -4177,7 +4177,7 @@ LDBDB:
         .byte   " I can\help you."              ; DC95 20 49 20 63 61 6E 5C 68   I can\h
                                                 ; DC9D 65 6C 70 20 79 6F 75 2E  elp you.
         .byte   $0A                             ; DCA5 0A                       .
-LDCA6:
+Bank0fDialogueBlock1Index77:
         .byte   "@HBEST!! God,I love\the sound o"; DCA6 40 48 42 45 53 54 21 21 @HBEST!!
                                                 ; DCAE 20 47 6F 64 2C 49 20 6C   God,I l
                                                 ; DCB6 6F 76 65 5C 74 68 65 20  ove\the 
@@ -4200,15 +4200,15 @@ LDCA6:
                                                 ; DD3A 2C 74 61 6B 65 5C 69     ,take\i
         .byte   "t."                            ; DD41 74 2E                    t.
         .byte   $0A                             ; DD43 0A                       .
-LDD44:
+Bank0fDialogueBlock1Index78:
         .byte   "Got 64F Card."                 ; DD44 47 6F 74 20 36 34 46 20  Got 64F 
                                                 ; DD4C 43 61 72 64 2E           Card.
         .byte   $0A                             ; DD51 0A                       .
-LDD52:
+Bank0fDialogueBlock1Index79:
         .byte   "Got 65F Card."                 ; DD52 47 6F 74 20 36 35 46 20  Got 65F 
                                                 ; DD5A 43 61 72 64 2E           Card.
         .byte   $0A                             ; DD5F 0A                       .
-LDD60:
+Bank0fDialogueBlock1Index80:
         .byte   "@HWhy would I do\something like"; DD60 40 48 57 68 79 20 77 6F @HWhy wo
                                                 ; DD68 75 6C 64 20 49 20 64 6F  uld I do
                                                 ; DD70 5C 73 6F 6D 65 74 68 69  \somethi
@@ -4242,18 +4242,18 @@ LDD60:
                                                 ; DE49 65 68 20 68 65 68 5C 68  eh heh\h
                                                 ; DE51 65 68 5F 5F              eh__
         .byte   $0A                             ; DE55 0A                       .
-LDE56:
+Bank0fDialogueBlock1Index81:
         .byte   "__huff__wheeze__"              ; DE56 5F 5F 68 75 66 66 5F 5F  __huff__
                                                 ; DE5E 77 68 65 65 7A 65 5F 5F  wheeze__
         .byte   $0A                             ; DE66 0A                       .
-LDE67:
+Bank0fDialogueBlock1Index82:
         .byte   "I'm starting to\worry about my\"; DE67 49 27 6D 20 73 74 61 72 I'm star
                                                 ; DE6F 74 69 6E 67 20 74 6F 5C  ting to\
                                                 ; DE77 77 6F 72 72 79 20 61 62  worry ab
                                                 ; DE7F 6F 75 74 20 6D 79 5C     out my\
         .byte   "belly__"                       ; DE86 62 65 6C 6C 79 5F 5F     belly__
         .byte   $0A                             ; DE8D 0A                       .
-LDE8E:
+Bank0fDialogueBlock1Index83:
         .byte   "Hmph,hmph__Since\I'm head of\se"; DE8E 48 6D 70 68 2C 68 6D 70 Hmph,hmp
                                                 ; DE96 68 5F 5F 53 69 6E 63 65  h__Since
                                                 ; DE9E 5C 49 27 6D 20 68 65 61  \I'm hea
@@ -4267,7 +4267,7 @@ LDE8E:
                                                 ; DEDC 6E 74 20 74 6F 5C 6D 65  nt to\me
                                                 ; DEE4 2E                       .
         .byte   $0A                             ; DEE5 0A                       .
-LDEE6:
+Bank0fDialogueBlock1Index84:
         .byte   "You must be a\visitor.Please fe"; DEE6 59 6F 75 20 6D 75 73 74 You must
                                                 ; DEEE 20 62 65 20 61 5C 76 69   be a\vi
                                                 ; DEF6 73 69 74 6F 72 2E 50 6C  sitor.Pl
@@ -4278,7 +4278,7 @@ LDEE6:
                                                 ; DF1D 20 6D 61 63 68 69 6E      machin
         .byte   "es"                            ; DF24 65 73                    es
         .byte   $0A                             ; DF26 0A                       .
-LDF27:
+Bank0fDialogueBlock1Index85:
         .byte   "You look tired,\why don't you t"; DF27 59 6F 75 20 6C 6F 6F 6B You look
                                                 ; DF2F 20 74 69 72 65 64 2C 5C   tired,\
                                                 ; DF37 77 68 79 20 64 6F 6E 27  why don'
@@ -4286,11 +4286,11 @@ LDF27:
         .byte   "ake a nap?"                    ; DF46 61 6B 65 20 61 20 6E 61  ake a na
                                                 ; DF4E 70 3F                    p?
         .byte   $0A                             ; DF50 0A                       .
-LDF51:
+Bank0fDialogueBlock1Index86:
         .byte   "Got 66F Card."                 ; DF51 47 6F 74 20 36 36 46 20  Got 66F 
                                                 ; DF59 43 61 72 64 2E           Card.
         .byte   $0A                             ; DF5E 0A                       .
-LDF5F:
+Bank0fDialogueBlock1Index87:
         .byte   "@1They're having an\executive m"; DF5F 40 31 54 68 65 79 27 72 @1They'r
                                                 ; DF67 65 20 68 61 76 69 6E 67  e having
                                                 ; DF6F 20 61 6E 5C 65 78 65 63   an\exec
@@ -4304,7 +4304,7 @@ LDF5F:
                                                 ; DFAD 65 6E 74 2E              ent.
         .byte   $0A                             ; DFB1 0A                       .
         .byte   "0"                             ; DFB2 30                       0
-LDFB3:
+Bank0fDialogueBlock1Index88:
         .byte   "It gives me the\feeling that I "; DFB3 49 74 20 67 69 76 65 73 It gives
                                                 ; DFBB 20 6D 65 20 74 68 65 5C   me the\
                                                 ; DFC3 66 65 65 6C 69 6E 67 20  feeling 
@@ -4318,7 +4318,7 @@ LDFB3:
                                                 ; E001 77 69 74 68 20 6D 79 5C  with my\
                                                 ; E009 68 61 6E 64 73 2E        hands.
         .byte   $0A                             ; E00F 0A                       .
-LE010:
+Bank0fDialogueBlock1Index89:
         .byte   "Come on,We're\building the futu"; E010 43 6F 6D 65 20 6F 6E 2C Come on,
                                                 ; E018 57 65 27 72 65 5C 62 75  We're\bu
                                                 ; E020 69 6C 64 69 6E 67 20 74  ilding t
@@ -4326,13 +4326,13 @@ LE010:
         .byte   "reof Mako!"                    ; E02F 72 65 6F 66 20 4D 61 6B  reof Mak
                                                 ; E037 6F 21                    o!
         .byte   $0A                             ; E039 0A                       .
-LE03A:
+Bank0fDialogueBlock1Index90:
         .byte   "@2Geez_!That's a\lotta suits!" ; E03A 40 32 47 65 65 7A 5F 21  @2Geez_!
                                                 ; E042 54 68 61 74 27 73 20 61  That's a
                                                 ; E04A 5C 6C 6F 74 74 61 20 73  \lotta s
                                                 ; E052 75 69 74 73 21           uits!
         .byte   $0A                             ; E057 0A                       .
-LE058:
+Bank0fDialogueBlock1Index91:
         .byte   "@BWe have the damage\estimates "; E058 40 42 57 65 20 68 61 76 @BWe hav
                                                 ; E060 65 20 74 68 65 20 64 61  e the da
                                                 ; E068 6D 61 67 65 5C 65 73 74  mage\est
@@ -4361,15 +4361,15 @@ LE058:
                                                 ; E11A 64 20 53 65 63 2E 37 20  d Sec.7 
                                                 ; E122 69 73 5F 5F              is__
         .byte   $0A                             ; E126 0A                       .
-LE127:
+Bank0fDialogueBlock1Index92:
         .byte   "@=We're not\rebuilding."       ; E127 40 3D 57 65 27 72 65 20  @=We're 
                                                 ; E12F 6E 6F 74 5C 72 65 62 75  not\rebu
                                                 ; E137 69 6C 64 69 6E 67 2E     ilding.
         .byte   $0A                             ; E13E 0A                       .
-LE13F:
+Bank0fDialogueBlock1Index93:
         .byte   "@BWhat?"                       ; E13F 40 42 57 68 61 74 3F     @BWhat?
         .byte   $0A                             ; E146 0A                       .
-LE147:
+Bank0fDialogueBlock1Index94:
         .byte   "@=We're leaving Sec.7as it is.A"; E147 40 3D 57 65 27 72 65 20 @=We're 
                                                 ; E14F 6C 65 61 76 69 6E 67 20  leaving 
                                                 ; E157 53 65 63 2E 37 61 73 20  Sec.7as 
@@ -4380,12 +4380,12 @@ LE147:
                                                 ; E17E 64 67 61 72 20 70 6C     dgar pl
         .byte   "an."                           ; E185 61 6E 2E                 an.
         .byte   $0A                             ; E188 0A                       .
-LE189:
+Bank0fDialogueBlock1Index95:
         .byte   "@B__then the\Ancients?"        ; E189 40 42 5F 5F 74 68 65 6E  @B__then
                                                 ; E191 20 74 68 65 5C 41 6E 63   the\Anc
                                                 ; E199 69 65 6E 74 73 3F        ients?
         .byte   $0A                             ; E19F 0A                       .
-LE1A0:
+Bank0fDialogueBlock1Index96:
         .byte   "@=The Promised Land\will soon b"; E1A0 40 3D 54 68 65 20 50 72 @=The Pr
                                                 ; E1A8 6F 6D 69 73 65 64 20 4C  omised L
                                                 ; E1B0 61 6E 64 5C 77 69 6C 6C  and\will
@@ -4399,7 +4399,7 @@ LE1A0:
                                                 ; E1EE 20 65 76 65 72 79 20 61   every a
                                                 ; E1F6 72 65 61 2E              rea.
         .byte   $0A                             ; E1FA 0A                       .
-LE1FB:
+Bank0fDialogueBlock1Index97:
         .byte   "Palmer: Rate hike! \Rate hike!T"; E1FB 50 61 6C 6D 65 72 3A 20 Palmer: 
                                                 ; E203 52 61 74 65 20 68 69 6B  Rate hik
                                                 ; E20B 65 21 20 5C 52 61 74 65  e! \Rate
@@ -4413,7 +4413,7 @@ LE1FB:
                                                 ; E249 69 6E 20 74 68 65 5C 62  in the\b
                                                 ; E251 75 64 67 65 74 21        udget!
         .byte   $0A                             ; E257 0A                       .
-LE258:
+Bank0fDialogueBlock1Index98:
         .byte   "@=Reeve and Scarlet\will divide"; E258 40 3D 52 65 65 76 65 20 @=Reeve 
                                                 ; E260 61 6E 64 20 53 63 61 72  and Scar
                                                 ; E268 6C 65 74 5C 77 69 6C 6C  let\will
@@ -4427,7 +4427,7 @@ LE258:
         .byte   $0A                             ; E2A0 0A                       .
         .byte   "000000000"                     ; E2A1 30 30 30 30 30 30 30 30  00000000
                                                 ; E2A9 30                       0
-LE2AA:
+Bank0fDialogueBlock1Index100:
         .byte   "@BSir,if you raise\the rates,th"; E2AA 40 42 53 69 72 2C 69 66 @BSir,if
                                                 ; E2B2 20 79 6F 75 20 72 61 69   you rai
                                                 ; E2BA 73 65 5C 74 68 65 20 72  se\the r
@@ -4437,7 +4437,7 @@ LE2AA:
                                                 ; E2D9 73 65 5C 63 6F 6E 66 69  se\confi
                                                 ; E2E1 64 65 6E 63 65 5F 5F     dence__
         .byte   $0A                             ; E2E8 0A                       .
-LE2E9:
+Bank0fDialogueBlock1Index101:
         .byte   "@=It'll be all right.The ignora"; E2E9 40 3D 49 74 27 6C 6C 20 @=It'll 
                                                 ; E2F1 62 65 20 61 6C 6C 20 72  be all r
                                                 ; E2F9 69 67 68 74 2E 54 68 65  ight.The
@@ -4452,7 +4452,7 @@ LE2E9:
                                                 ; E33F 6E 63 5C 65 76 65 6E     nc\even
         .byte   " more."                        ; E346 20 6D 6F 72 65 2E         more.
         .byte   $0A                             ; E34C 0A                       .
-LE34D:
+Bank0fDialogueBlock1Index102:
         .byte   "@?Ha ha ha!After all,we're the "; E34D 40 3F 48 61 20 68 61 20 @?Ha ha 
                                                 ; E355 68 61 21 41 66 74 65 72  ha!After
                                                 ; E35D 20 61 6C 6C 2C 77 65 27   all,we'
@@ -4463,17 +4463,17 @@ LE34D:
                                                 ; E384 6D 5C 41 56 41 4C 41     m\AVALA
         .byte   "NCHE!"                         ; E38B 4E 43 48 45 21           NCHE!
         .byte   $0A                             ; E390 0A                       .
-LE391:
+Bank0fDialogueBlock1Index103:
         .byte   "@2That dirty #$*$^!"           ; E391 40 32 54 68 61 74 20 64  @2That d
                                                 ; E399 69 72 74 79 20 23 24 2A  irty #$*
                                                 ; E3A1 24 5E 21                 $^!
         .byte   $0A                             ; E3A4 0A                       .
-LE3A5:
+Bank0fDialogueBlock1Index104:
         .byte   "@=Hojo.How's the\girl?"        ; E3A5 40 3D 48 6F 6A 6F 2E 48  @=Hojo.H
                                                 ; E3AD 6F 77 27 73 20 74 68 65  ow's the
                                                 ; E3B5 5C 67 69 72 6C 3F        \girl?
         .byte   $0A                             ; E3BB 0A                       .
-LE3BC:
+Bank0fDialogueBlock1Index105:
         .byte   "@AHojo:As a specimen,she is inf"; E3BC 40 41 48 6F 6A 6F 3A 41 @AHojo:A
                                                 ; E3C4 73 20 61 20 73 70 65 63  s a spec
                                                 ; E3CC 69 6D 65 6E 2C 73 68 65  imen,she
@@ -4495,14 +4495,14 @@ LE3BC:
                                                 ; E448 65 20 69 73 20 31 38 25  e is 18%
                                                 ; E450 2E                       .
         .byte   $0A                             ; E451 0A                       .
-LE452:
+Bank0fDialogueBlock1Index106:
         .byte   "@=How long will the\research ta"; E452 40 3D 48 6F 77 20 6C 6F @=How lo
                                                 ; E45A 6E 67 20 77 69 6C 6C 20  ng will 
                                                 ; E462 74 68 65 5C 72 65 73 65  the\rese
                                                 ; E46A 61 72 63 68 20 74 61     arch ta
         .byte   "ke?"                           ; E471 6B 65 3F                 ke?
         .byte   $0A                             ; E474 0A                       .
-LE475:
+Bank0fDialogueBlock1Index107:
         .byte   "@AProbably 120 years.It's proba"; E475 40 41 50 72 6F 62 61 62 @AProbab
                                                 ; E47D 6C 79 20 31 32 30 20 79  ly 120 y
                                                 ; E485 65 61 72 73 2E 49 74 27  ears.It'
@@ -4536,7 +4536,7 @@ LE475:
                                                 ; E55E 20 6C 6F 6E 67 74 69 6D   longtim
                                                 ; E566 65 2E                    e.
         .byte   $0A                             ; E568 0A                       .
-LE569:
+Bank0fDialogueBlock1Index108:
         .byte   "@=What about the\Promised Land?"; E569 40 3D 57 68 61 74 20 61 @=What a
                                                 ; E571 62 6F 75 74 20 74 68 65  bout the
                                                 ; E579 5C 50 72 6F 6D 69 73 65  \Promise
@@ -4546,7 +4546,7 @@ LE569:
                                                 ; E598 75 72 5C 70 6C 61 6E 73  ur\plans
                                                 ; E5A0 3F                       ?
         .byte   $0A                             ; E5A1 0A                       .
-LE5A2:
+Bank0fDialogueBlock1Index109:
         .byte   "@AThat's what I need\to plan.Th"; E5A2 40 41 54 68 61 74 27 73 @AThat's
                                                 ; E5AA 20 77 68 61 74 20 49 20   what I 
                                                 ; E5B2 6E 65 65 64 5C 74 6F 20  need\to 
@@ -4558,34 +4558,34 @@ LE5A2:
         .byte   " her weaknesses."              ; E5E0 20 68 65 72 20 77 65 61   her wea
                                                 ; E5E8 6B 6E 65 73 73 65 73 2E  knesses.
         .byte   $0A                             ; E5F0 0A                       .
-LE5F1:
+Bank0fDialogueBlock1Index110:
         .byte   "@=That concludes our\meeting." ; E5F1 40 3D 54 68 61 74 20 63  @=That c
                                                 ; E5F9 6F 6E 63 6C 75 64 65 73  oncludes
                                                 ; E601 20 6F 75 72 5C 6D 65 65   our\mee
                                                 ; E609 74 69 6E 67 2E           ting.
         .byte   $0A                             ; E60E 0A                       .
-LE60F:
+Bank0fDialogueBlock1Index111:
         .byte   "@1They were talking\about Aeris"; E60F 40 31 54 68 65 79 20 77 @1They w
                                                 ; E617 65 72 65 20 74 61 6C 6B  ere talk
                                                 ; E61F 69 6E 67 5C 61 62 6F 75  ing\abou
                                                 ; E627 74 20 41 65 72 69 73     t Aeris
         .byte   "__right?"                      ; E62E 5F 5F 72 69 67 68 74 3F  __right?
         .byte   $0A                             ; E636 0A                       .
-LE637:
+Bank0fDialogueBlock1Index112:
         .byte   "@2I dunno."                    ; E637 40 32 49 20 64 75 6E 6E  @2I dunn
                                                 ; E63F 6F 2E                    o.
         .byte   $0A                             ; E641 0A                       .
-LE642:
+Bank0fDialogueBlock1Index113:
         .byte   "@3Probably."                   ; E642 40 33 50 72 6F 62 61 62  @3Probab
                                                 ; E64A 6C 79 2E                 ly.
         .byte   $0A                             ; E64D 0A                       .
-LE64E:
+Bank0fDialogueBlock1Index114:
         .byte   "@1Let's follow 'em.\Hojo__huh_?"; E64E 40 31 4C 65 74 27 73 20 @1Let's 
                                                 ; E656 66 6F 6C 6C 6F 77 20 27  follow '
                                                 ; E65E 65 6D 2E 5C 48 6F 6A 6F  em.\Hojo
                                                 ; E666 5F 5F 68 75 68 5F 3F     __huh_?
         .byte   $0A                             ; E66D 0A                       .
-LE66E:
+Bank0fDialogueBlock1Index115:
         .byte   "@2I remember him.ThatHojo guy.H"; E66E 40 32 49 20 72 65 6D 65 @2I reme
                                                 ; E676 6D 62 65 72 20 68 69 6D  mber him
                                                 ; E67E 2E 54 68 61 74 48 6F 6A  .ThatHoj
@@ -4600,7 +4600,7 @@ LE66E:
                                                 ; E6C4 79 6F 75 20 6B 6E 6F     you kno
         .byte   "w him?"                        ; E6CB 77 20 68 69 6D 3F        w him?
         .byte   $0A                             ; E6D1 0A                       .
-LE6D2:
+Bank0fDialogueBlock1Index116:
         .byte   "@1This is the first\time I've a"; E6D2 40 31 54 68 69 73 20 69 @1This i
                                                 ; E6DA 73 20 74 68 65 20 66 69  s the fi
                                                 ; E6E2 72 73 74 5C 74 69 6D 65  rst\time
@@ -4613,13 +4613,13 @@ LE6D2:
                                                 ; E718 68 65 5C 6C 6F 6F 6B 73  he\looks
                                                 ; E720 20 6C 69 6B 65 5F 5F      like__
         .byte   $0A                             ; E727 0A                       .
-LE728:
+Bank0fDialogueBlock1Index117:
         .byte   "Is this today's\specimen?"     ; E728 49 73 20 74 68 69 73 20  Is this 
                                                 ; E730 74 6F 64 61 79 27 73 5C  today's\
                                                 ; E738 73 70 65 63 69 6D 65 6E  specimen
                                                 ; E740 3F                       ?
         .byte   $0A                             ; E741 0A                       .
-LE742:
+Bank0fDialogueBlock1Index118:
         .byte   "@AYes.We're starting\right away"; E742 40 41 59 65 73 2E 57 65 @AYes.We
                                                 ; E74A 27 72 65 20 73 74 61 72  're star
                                                 ; E752 74 69 6E 67 5C 72 69 67  ting\rig
@@ -4629,12 +4629,12 @@ LE742:
                                                 ; E771 75 70 70 65 72 20 6C 65  upper le
                                                 ; E779 76 65 6C 2E              vel.
         .byte   $0A                             ; E77D 0A                       .
-LE77E:
+Bank0fDialogueBlock1Index119:
         .byte   "@AMy precious\specimen__"      ; E77E 40 41 4D 79 20 70 72 65  @AMy pre
                                                 ; E786 63 69 6F 75 73 5C 73 70  cious\sp
                                                 ; E78E 65 63 69 6D 65 6E 5F 5F  ecimen__
         .byte   $0A                             ; E796 0A                       .
-LE797:
+Bank0fDialogueBlock1Index120:
         .byte   "@3Precious specimen__Is it goin"; E797 40 33 50 72 65 63 69 6F @3Precio
                                                 ; E79F 75 73 20 73 70 65 63 69  us speci
                                                 ; E7A7 6D 65 6E 5F 5F 49 73 20  men__Is 
@@ -4646,7 +4646,7 @@ LE797:
         .byte   "xperiment?"                    ; E7D5 78 70 65 72 69 6D 65 6E  xperimen
                                                 ; E7DD 74 3F                    t?
         .byte   $0A                             ; E7DF 0A                       .
-LE7E0:
+Bank0fDialogueBlock1Index121:
         .byte   "@1Jenova__\Sephiroth's__So__\th"; E7E0 40 31 4A 65 6E 6F 76 61 @1Jenova
                                                 ; E7E8 5F 5F 5C 53 65 70 68 69  __\Sephi
                                                 ; E7F0 72 6F 74 68 27 73 5F 5F  roth's__
@@ -4655,27 +4655,27 @@ LE7E0:
                                                 ; E807 6F 75 67 68 74 20 69 74  ought it
                                                 ; E80F 5C 68 65 72 65 2E        \here.
         .byte   $0A                             ; E815 0A                       .
-LE816:
+Bank0fDialogueBlock1Index122:
         .byte   "@3Cloud,be strong!"            ; E816 40 33 43 6C 6F 75 64 2C  @3Cloud,
                                                 ; E81E 62 65 20 73 74 72 6F 6E  be stron
                                                 ; E826 67 21                    g!
         .byte   $0A                             ; E828 0A                       .
-LE829:
+Bank0fDialogueBlock1Index123:
         .byte   "@1Did you see it?"             ; E829 40 31 44 69 64 20 79 6F  @1Did yo
                                                 ; E831 75 20 73 65 65 20 69 74  u see it
                                                 ; E839 3F                       ?
         .byte   $0A                             ; E83A 0A                       .
-LE83B:
+Bank0fDialogueBlock1Index124:
         .byte   "@2See what?"                   ; E83B 40 32 53 65 65 20 77 68  @2See wh
                                                 ; E843 61 74 3F                 at?
         .byte   $0A                             ; E846 0A                       .
-LE847:
+Bank0fDialogueBlock1Index125:
         .byte   "@1It's moving__still\alive?"   ; E847 40 31 49 74 27 73 20 6D  @1It's m
                                                 ; E84F 6F 76 69 6E 67 5F 5F 73  oving__s
                                                 ; E857 74 69 6C 6C 5C 61 6C 69  till\ali
                                                 ; E85F 76 65 3F                 ve?
         .byte   $0A                             ; E862 0A                       .
-LE863:
+Bank0fDialogueBlock1Index126:
         .byte   "@2Where's its $#&*&@\head?This "; E863 40 32 57 68 65 72 65 27 @2Where'
                                                 ; E86B 73 20 69 74 73 20 24 23  s its $#
                                                 ; E873 26 2A 26 40 5C 68 65 61  &*&@\hea
@@ -4686,10 +4686,10 @@ LE863:
                                                 ; E89A 74 27 73 20 6B 65 65     t's kee
         .byte   "p goin'."                      ; E8A1 70 20 67 6F 69 6E 27 2E  p goin'.
         .byte   $0A                             ; E8A9 0A                       .
-LE8AA:
+Bank0fDialogueBlock1Index127:
         .byte   "@1Aeris!"                      ; E8AA 40 31 41 65 72 69 73 21  @1Aeris!
         .byte   $0A                             ; E8B2 0A                       .
-LE8B3:
+Bank0fDialogueBlock1Index128:
         .byte   "@AAeris?Oh,is that\her name?Wha"; E8B3 40 41 41 65 72 69 73 3F @AAeris?
                                                 ; E8BB 4F 68 2C 69 73 20 74 68  Oh,is th
                                                 ; E8C3 61 74 5C 68 65 72 20 6E  at\her n
@@ -4697,24 +4697,24 @@ LE8B3:
         .byte   "t do\you want?"                ; E8D2 74 20 64 6F 5C 79 6F 75  t do\you
                                                 ; E8DA 20 77 61 6E 74 3F         want?
         .byte   $0A                             ; E8E0 0A                       .
-LE8E1:
+Bank0fDialogueBlock1Index129:
         .byte   "@1We're taking Aeris\back."    ; E8E1 40 31 57 65 27 72 65 20  @1We're 
                                                 ; E8E9 74 61 6B 69 6E 67 20 41  taking A
                                                 ; E8F1 65 72 69 73 5C 62 61 63  eris\bac
                                                 ; E8F9 6B 2E                    k.
         .byte   $0A                             ; E8FB 0A                       .
-LE8FC:
+Bank0fDialogueBlock1Index130:
         .byte   "@AOutsiders__"                 ; E8FC 40 41 4F 75 74 73 69 64  @AOutsid
                                                 ; E904 65 72 73 5F 5F           ers__
         .byte   $0A                             ; E909 0A                       .
-LE90A:
+Bank0fDialogueBlock1Index131:
         .byte   "@2Shoulda noticed it\earlier,yo"; E90A 40 32 53 68 6F 75 6C 64 @2Should
                                                 ; E912 61 20 6E 6F 74 69 63 65  a notice
                                                 ; E91A 64 20 69 74 5C 65 61 72  d it\ear
                                                 ; E922 6C 69 65 72 2C 79 6F     lier,yo
         .byte   "u__"                           ; E929 75 5F 5F                 u__
         .byte   $0A                             ; E92C 0A                       .
-LE92D:
+Bank0fDialogueBlock1Index132:
         .byte   "@AThere's so many\frivolous thi"; E92D 40 41 54 68 65 72 65 27 @AThere'
                                                 ; E935 73 20 73 6F 20 6D 61 6E  s so man
                                                 ; E93D 79 5C 66 72 69 76 6F 6C  y\frivol
@@ -4723,7 +4723,7 @@ LE92D:
                                                 ; E954 69 73 20 77 6F 72 6C 64  is world
                                                 ; E95C 2E                       .
         .byte   $0A                             ; E95D 0A                       .
-LE95E:
+Bank0fDialogueBlock1Index133:
         .byte   "@AAre you going to\kill me?I do"; E95E 40 41 41 72 65 20 79 6F @AAre yo
                                                 ; E966 75 20 67 6F 69 6E 67 20  u going 
                                                 ; E96E 74 6F 5C 6B 69 6C 6C 20  to\kill 
@@ -4742,10 +4742,10 @@ LE95E:
                                                 ; E9D3 65 72 61 74 65 20 69     erate i
         .byte   "t?Hmm?"                        ; E9DA 74 3F 48 6D 6D 3F        t?Hmm?
         .byte   $0A                             ; E9E0 0A                       .
-LE9E1:
+Bank0fDialogueBlock1Index134:
         .byte   "@1Ugh."                        ; E9E1 40 31 55 67 68 2E        @1Ugh.
         .byte   $0A                             ; E9E7 0A                       .
-LE9E8:
+Bank0fDialogueBlock1Index135:
         .byte   "@AThat's right.I\recommend you "; E9E8 40 41 54 68 61 74 27 73 @AThat's
                                                 ; E9F0 20 72 69 67 68 74 2E 49   right.I
                                                 ; E9F8 5C 72 65 63 6F 6D 6D 65  \recomme
@@ -4762,18 +4762,18 @@ LE9E8:
                                                 ; EA4D 74 68 65 20 53 70 65 63  the Spec
                                                 ; EA55 69 6D 65 6E 21           imen!
         .byte   $0A                             ; EA5A 0A                       .
-LEA5B:
+Bank0fDialogueBlock1Index136:
         .byte   "@4Cloud,help!"                 ; EA5B 40 34 43 6C 6F 75 64 2C  @4Cloud,
                                                 ; EA63 68 65 6C 70 21           help!
         .byte   $0A                             ; EA68 0A                       .
-LEA69:
+Bank0fDialogueBlock1Index137:
         .byte   "@1What do you think\you're doin"; EA69 40 31 57 68 61 74 20 64 @1What d
                                                 ; EA71 6F 20 79 6F 75 20 74 68  o you th
                                                 ; EA79 69 6E 6B 5C 79 6F 75 27  ink\you'
                                                 ; EA81 72 65 20 64 6F 69 6E     re doin
         .byte   "'?"                            ; EA88 27 3F                    '?
         .byte   $0A                             ; EA8A 0A                       .
-LEA8B:
+Bank0fDialogueBlock1Index138:
         .byte   "@ALending a helping\hand to an\"; EA8B 40 41 4C 65 6E 64 69 6E @ALendin
                                                 ; EA93 67 20 61 20 68 65 6C 70  g a help
                                                 ; EA9B 69 6E 67 5C 68 61 6E 64  ing\hand
@@ -4794,7 +4794,7 @@ LEA8B:
                                                 ; EB0F 6C 6C 5C 64 69 73 61 70  ll\disap
                                                 ; EB17 70 65 61 72 2E           pear.
         .byte   $0A                             ; EB1C 0A                       .
-LEB1D:
+Bank0fDialogueBlock1Index139:
         .byte   "@3__animal?That's\terrible!Aeri"; EB1D 40 33 5F 5F 61 6E 69 6D @3__anim
                                                 ; EB25 61 6C 3F 54 68 61 74 27  al?That'
                                                 ; EB2D 73 5C 74 65 72 72 69 62  s\terrib
@@ -4803,23 +4803,23 @@ LEB1D:
                                                 ; EB44 6D 61 6E 20 62 65 69 6E  man bein
                                                 ; EB4C 67 21                    g!
         .byte   $0A                             ; EB4E 0A                       .
-LEB4F:
+Bank0fDialogueBlock1Index140:
         .byte   "@2You're gonna pay!"           ; EB4F 40 32 59 6F 75 27 72 65  @2You're
                                                 ; EB57 20 67 6F 6E 6E 61 20 70   gonna p
                                                 ; EB5F 61 79 21                 ay!
         .byte   $0A                             ; EB62 0A                       .
-LEB63:
+Bank0fDialogueBlock1Index141:
         .byte   "@1Barret!Can't you doanything!"; EB63 40 31 42 61 72 72 65 74  @1Barret
                                                 ; EB6B 21 43 61 6E 27 74 20 79  !Can't y
                                                 ; EB73 6F 75 20 64 6F 61 6E 79  ou doany
                                                 ; EB7B 74 68 69 6E 67 21        thing!
         .byte   $0A                             ; EB81 0A                       .
-LEB82:
+Bank0fDialogueBlock1Index142:
         .byte   "@2Awright!Step back!"          ; EB82 40 32 41 77 72 69 67 68  @2Awrigh
                                                 ; EB8A 74 21 53 74 65 70 20 62  t!Step b
                                                 ; EB92 61 63 6B 21              ack!
         .byte   $0A                             ; EB96 0A                       .
-LEB97:
+Bank0fDialogueBlock1Index143:
         .byte   "@AStop!Wh__what are\you do__Oh!"; EB97 40 41 53 74 6F 70 21 57 @AStop!W
                                                 ; EB9F 68 5F 5F 77 68 61 74 20  h__what 
                                                 ; EBA7 61 72 65 5C 79 6F 75 20  are\you 
@@ -4828,28 +4828,28 @@ LEB97:
                                                 ; EBBE 6F 75 73 5C 73 70 65 63  ous\spec
                                                 ; EBC6 69 6D 65 6E 73 5F 5F     imens__
         .byte   $0A                             ; EBCD 0A                       .
-LEBCE:
+Bank0fDialogueBlock1Index144:
         .byte   "@1Now's our chance toget Aeris!"; EBCE 40 31 4E 6F 77 27 73 20 @1Now's 
                                                 ; EBD6 6F 75 72 20 63 68 61 6E  our chan
                                                 ; EBDE 63 65 20 74 6F 67 65 74  ce toget
                                                 ; EBE6 20 41 65 72 69 73 21      Aeris!
         .byte   $0A                             ; EBED 0A                       .
-LEBEE:
+Bank0fDialogueBlock1Index145:
         .byte   "@4Thanks,Cloud."               ; EBEE 40 34 54 68 61 6E 6B 73  @4Thanks
                                                 ; EBF6 2C 43 6C 6F 75 64 2E     ,Cloud.
         .byte   $0A                             ; EBFD 0A                       .
-LEBFE:
+Bank0fDialogueBlock1Index146:
         .byte   "@3Cloud__what's\wrong?"        ; EBFE 40 33 43 6C 6F 75 64 5F  @3Cloud_
                                                 ; EC06 5F 77 68 61 74 27 73 5C  _what's\
                                                 ; EC0E 77 72 6F 6E 67 3F        wrong?
         .byte   $0A                             ; EC14 0A                       .
-LEC15:
+Bank0fDialogueBlock1Index147:
         .byte   "@1__The elevator is\moving."   ; EC15 40 31 5F 5F 54 68 65 20  @1__The 
                                                 ; EC1D 65 6C 65 76 61 74 6F 72  elevator
                                                 ; EC25 20 69 73 5C 6D 6F 76 69   is\movi
                                                 ; EC2D 6E 67 2E                 ng.
         .byte   $0A                             ; EC30 0A                       .
-LEC31:
+Bank0fDialogueBlock1Index148:
         .byte   "@AThis is no ordinaryspecimen.T"; EC31 40 41 54 68 69 73 20 69 @AThis i
                                                 ; EC39 73 20 6E 6F 20 6F 72 64  s no ord
                                                 ; EC41 69 6E 61 72 79 73 70 65  inaryspe
@@ -4860,7 +4860,7 @@ LEC31:
                                                 ; EC68 73 70 65 63 69 6D 65     specime
         .byte   "n!"                            ; EC6F 6E 21                    n!
         .byte   $0A                             ; EC71 0A                       .
-LEC72:
+Bank0fDialogueBlock1Index149:
         .byte   "@5He's rather strong.I'll help "; EC72 40 35 48 65 27 73 20 72 @5He's r
                                                 ; EC7A 61 74 68 65 72 20 73 74  ather st
                                                 ; EC82 72 6F 6E 67 2E 49 27 6C  rong.I'l
@@ -4868,11 +4868,11 @@ LEC72:
         .byte   "you all\out."                  ; EC91 79 6F 75 20 61 6C 6C 5C  you all\
                                                 ; EC99 6F 75 74 2E              out.
         .byte   $0A                             ; EC9D 0A                       .
-LEC9E:
+Bank0fDialogueBlock1Index150:
         .byte   "@3It talked!?"                 ; EC9E 40 33 49 74 20 74 61 6C  @3It tal
                                                 ; ECA6 6B 65 64 21 3F           ked!?
         .byte   $0A                             ; ECAB 0A                       .
-LECAC:
+Bank0fDialogueBlock1Index151:
         .byte   "@5I'll talk as much\as you want"; ECAC 40 35 49 27 6C 6C 20 74 @5I'll t
                                                 ; ECB4 61 6C 6B 20 61 73 20 6D  alk as m
                                                 ; ECBC 75 63 68 5C 61 73 20 79  uch\as y
@@ -4880,7 +4880,7 @@ LECAC:
         .byte   " later,\Miss."                 ; ECCB 20 6C 61 74 65 72 2C 5C   later,\
                                                 ; ECD3 4D 69 73 73 2E           Miss.
         .byte   $0A                             ; ECD8 0A                       .
-LECD9:
+Bank0fDialogueBlock1Index152:
         .byte   "@1We'll take care of\that monst"; ECD9 40 31 57 65 27 6C 6C 20 @1We'll 
                                                 ; ECE1 74 61 6B 65 20 63 61 72  take car
                                                 ; ECE9 65 20 6F 66 5C 74 68 61  e of\tha
@@ -4895,16 +4895,16 @@ LECD9:
                                                 ; ED2F 65 20 6F 66 68 65 72     e ofher
         .byte   "!"                             ; ED36 21                       !
         .byte   $0A                             ; ED37 0A                       .
-LED38:
+Bank0fDialogueBlock1Index153:
         .byte   "RedX` joins you."              ; ED38 52 65 64 58 60 20 6A 6F  RedX` jo
                                                 ; ED40 69 6E 73 20 79 6F 75 2E  ins you.
         .byte   $0A                             ; ED48 0A                       .
-LED49:
+Bank0fDialogueBlock1Index154:
         .byte   "@1What's your name?"           ; ED49 40 31 57 68 61 74 27 73  @1What's
                                                 ; ED51 20 79 6F 75 72 20 6E 61   your na
                                                 ; ED59 6D 65 3F                 me?
         .byte   $0A                             ; ED5C 0A                       .
-LED5D:
+Bank0fDialogueBlock1Index155:
         .byte   "@5Hojo has named me,\RedX`.A na"; ED5D 40 35 48 6F 6A 6F 20 68 @5Hojo h
                                                 ; ED65 61 73 20 6E 61 6D 65 64  as named
                                                 ; ED6D 20 6D 65 2C 5C 52 65 64   me,\Red
@@ -4915,23 +4915,23 @@ LED5D:
                                                 ; ED94 6F 65 76 65 72 20 74     oever t
         .byte   "o me."                         ; ED9B 6F 20 6D 65 2E           o me.
         .byte   $0A                             ; EDA0 0A                       .
-LEDA1:
+Bank0fDialogueBlock1Index156:
         .byte   "@1Come on!"                    ; EDA1 40 31 43 6F 6D 65 20 6F  @1Come o
                                                 ; EDA9 6E 21                    n!
         .byte   $0A                             ; EDAB 0A                       .
-LEDAC:
+Bank0fDialogueBlock1Index157:
         .byte   "@1Aeris,you all\right?"        ; EDAC 40 31 41 65 72 69 73 2C  @1Aeris,
                                                 ; EDB4 79 6F 75 20 61 6C 6C 5C  you all\
                                                 ; EDBC 72 69 67 68 74 3F        right?
         .byte   $0A                             ; EDC2 0A                       .
-LEDC3:
+Bank0fDialogueBlock1Index158:
         .byte   "@3She seems all\right,__in many"; EDC3 40 33 53 68 65 20 73 65 @3She se
                                                 ; EDCB 65 6D 73 20 61 6C 6C 5C  ems all\
                                                 ; EDD3 72 69 67 68 74 2C 5F 5F  right,__
                                                 ; EDDB 69 6E 20 6D 61 6E 79     in many
         .byte   "\ways."                        ; EDE2 5C 77 61 79 73 2E        \ways.
         .byte   $0A                             ; EDE8 0A                       .
-LEDE9:
+Bank0fDialogueBlock1Index159:
         .byte   "@5I have a right to\choose,too."; EDE9 40 35 49 20 68 61 76 65 @5I have
                                                 ; EDF1 20 61 20 72 69 67 68 74   a right
                                                 ; EDF9 20 74 6F 5C 63 68 6F 6F   to\choo
@@ -4941,11 +4941,11 @@ LEDE9:
                                                 ; EE18 65 67 67 65 64 5C 74 68  egged\th
                                                 ; EE20 69 6E 67 73 2E           ings.
         .byte   $0A                             ; EE25 0A                       .
-LEE26:
+Bank0fDialogueBlock1Index160:
         .byte   "@2What are you?"               ; EE26 40 32 57 68 61 74 20 61  @2What a
                                                 ; EE2E 72 65 20 79 6F 75 3F     re you?
         .byte   $0A                             ; EE35 0A                       .
-LEE36:
+Bank0fDialogueBlock1Index161:
         .byte   "@5An informed\question.But\diff"; EE36 40 35 41 6E 20 69 6E 66 @5An inf
                                                 ; EE3E 6F 72 6D 65 64 5C 71 75  ormed\qu
                                                 ; EE46 65 73 74 69 6F 6E 2E 42  estion.B
@@ -4966,14 +4966,14 @@ LEE36:
                                                 ; EEBA 65 61 64 5C 74 68 65 20  ead\the 
                                                 ; EEC2 77 61 79 2E              way.
         .byte   $0A                             ; EEC6 0A                       .
-LEEC7:
+Bank0fDialogueBlock1Index162:
         .byte   "@4Cloud__so you did\come for me"; EEC7 40 34 43 6C 6F 75 64 5F @4Cloud_
                                                 ; EECF 5F 73 6F 20 79 6F 75 20  _so you 
                                                 ; EED7 64 69 64 5C 63 6F 6D 65  did\come
                                                 ; EEDF 20 66 6F 72 20 6D 65      for me
         .byte   "."                             ; EEE6 2E                       .
         .byte   $0A                             ; EEE7 0A                       .
-LEEE8:
+Bank0fDialogueBlock1Index163:
         .byte   "@5I apologize for\what happened"; EEE8 40 35 49 20 61 70 6F 6C @5I apol
                                                 ; EEF0 6F 67 69 7A 65 20 66 6F  ogize fo
                                                 ; EEF8 72 5C 77 68 61 74 20 68  r\what h
@@ -4987,7 +4987,7 @@ LEEE8:
                                                 ; EF36 66 66 20 67 75 61 72 64  ff guard
                                                 ; EF3E 5F 5F                    __
         .byte   $0A                             ; EF40 0A                       .
-LEF41:
+Bank0fDialogueBlock1Index164:
         .byte   "@2Now we've saved\Aeris,ain't n"; EF41 40 32 4E 6F 77 20 77 65 @2Now we
                                                 ; EF49 27 76 65 20 73 61 76 65  've save
                                                 ; EF51 64 5C 41 65 72 69 73 2C  d\Aeris,
@@ -5001,7 +5001,7 @@ LEF41:
                                                 ; EF8F 65 6C 6C 20 6F 75 74 74  ell outt
                                                 ; EF97 61 5C 68 65 72 65 21     a\here!
         .byte   $0A                             ; EF9E 0A                       .
-LEF9F:
+Bank0fDialogueBlock1Index165:
         .byte   "@1If all of us go\together,we'l"; EF9F 40 31 49 66 20 61 6C 6C @1If all
                                                 ; EFA7 20 6F 66 20 75 73 20 67   of us g
                                                 ; EFAF 6F 5C 74 6F 67 65 74 68  o\togeth
@@ -5012,7 +5012,7 @@ LEF9F:
                                                 ; EFD6 69 6E 74 6F 20 67 72     into gr
         .byte   "oups."                         ; EFDD 6F 75 70 73 2E           oups.
         .byte   $0A                             ; EFE2 0A                       .
-LEFE3:
+Bank0fDialogueBlock1Index166:
         .byte   "@2I'll see you later!We'll be w"; EFE3 40 32 49 27 6C 6C 20 73 @2I'll s
                                                 ; EFEB 65 65 20 79 6F 75 20 6C  ee you l
                                                 ; EFF3 61 74 65 72 21 57 65 27  ater!We'
@@ -5023,7 +5023,7 @@ LEFE3:
                                                 ; F01A 45 6C 65 76 61 74 6F     Elevato
         .byte   "r."                            ; F021 72 2E                    r.
         .byte   $0A                             ; F023 0A                       .
-LF024:
+Bank0fDialogueBlock1Index167:
         .byte   "@3We'll be going\first!Meet at "; F024 40 33 57 65 27 6C 6C 20 @3We'll 
                                                 ; F02C 62 65 20 67 6F 69 6E 67  be going
                                                 ; F034 5C 66 69 72 73 74 21 4D  \first!M
@@ -5032,7 +5032,7 @@ LF024:
                                                 ; F04B 20 46 6C 6F 6F 72 5C 45   Floor\E
                                                 ; F053 6C 65 76 61 74 6F 72 2E  levator.
         .byte   $0A                             ; F05B 0A                       .
-LF05C:
+Bank0fDialogueBlock1Index168:
         .byte   "Please don't kill\me.I only did"; F05C 50 6C 65 61 73 65 20 64 Please d
                                                 ; F064 6F 6E 27 74 20 6B 69 6C  on't kil
                                                 ; F06C 6C 5C 6D 65 2E 49 20 6F  l\me.I o
@@ -5052,27 +5052,27 @@ LF05C:
         .byte   " wasthe enemy?"                ; F0D8 20 77 61 73 74 68 65 20   wasthe 
                                                 ; F0E0 65 6E 65 6D 79 3F        enemy?
         .byte   $0A                             ; F0E6 0A                       .
-LF0E7:
+Bank0fDialogueBlock1Index169:
         .byte   "Got 68F Card."                 ; F0E7 47 6F 74 20 36 38 46 20  Got 68F 
                                                 ; F0EF 43 61 72 64 2E           Card.
         .byte   $0A                             ; F0F4 0A                       .
-LF0F5:
+Bank0fDialogueBlock1Index170:
         .byte   "@1H,hey!What is it?"           ; F0F5 40 31 48 2C 68 65 79 21  @1H,hey!
                                                 ; F0FD 57 68 61 74 20 69 73 20  What is 
                                                 ; F105 69 74 3F                 it?
         .byte   $0A                             ; F108 0A                       .
-LF109:
+Bank0fDialogueBlock1Index171:
         .byte   "@CGoing somewhere?            "; F109 40 43 47 6F 69 6E 67 20  @CGoing 
                                                 ; F111 73 6F 6D 65 77 68 65 72  somewher
                                                 ; F119 65 3F 20 20 20 20 20 20  e?      
                                                 ; F121 20 20 20 20 20 20              
         .byte   $0A                             ; F127 0A                       .
-LF128:
+Bank0fDialogueBlock1Index172:
         .byte   "@1Turks?Must be a\trap__"      ; F128 40 31 54 75 72 6B 73 3F  @1Turks?
                                                 ; F130 4D 75 73 74 20 62 65 20  Must be 
                                                 ; F138 61 5C 74 72 61 70 5F 5F  a\trap__
         .byte   $0A                             ; F140 0A                       .
-LF141:
+Bank0fDialogueBlock1Index173:
         .byte   "@CIt must have been areal thril"; F141 40 43 49 74 20 6D 75 73 @CIt mus
                                                 ; F149 74 20 68 61 76 65 20 62  t have b
                                                 ; F151 65 65 6E 20 61 72 65 61  een area
@@ -5082,13 +5082,13 @@ LF141:
                                                 ; F170 6F 75 20 65 6E 6A 6F 79  ou enjoy
                                                 ; F178 5C 69 74 3F              \it?
         .byte   $0A                             ; F17C 0A                       .
-LF17D:
+Bank0fDialogueBlock1Index174:
         .byte   "@1You all got caught,too?"     ; F17D 40 31 59 6F 75 20 61 6C  @1You al
                                                 ; F185 6C 20 67 6F 74 20 63 61  l got ca
                                                 ; F18D 75 67 68 74 2C 74 6F 6F  ught,too
                                                 ; F195 3F                       ?
         .byte   $0A                             ; F196 0A                       .
-LF197:
+Bank0fDialogueBlock1Index179:
         .byte   "@=Cetra,or the\Ancients will sh"; F197 40 3D 43 65 74 72 61 2C @=Cetra,
                                                 ; F19F 6F 72 20 74 68 65 5C 41  or the\A
                                                 ; F1A7 6E 63 69 65 6E 74 73 20  ncients 
@@ -5103,7 +5103,7 @@ LF197:
                                                 ; F1ED 6F 75 74 6F 66 20 68     outof h
         .byte   "er."                           ; F1F4 65 72 2E                 er.
         .byte   $0A                             ; F1F7 0A                       .
-LF1F8:
+Bank0fDialogueBlock1Index180:
         .byte   "@5The Promised Land?\Isn't that"; F1F8 40 35 54 68 65 20 50 72 @5The Pr
                                                 ; F200 6F 6D 69 73 65 64 20 4C  omised L
                                                 ; F208 61 6E 64 3F 5C 49 73 6E  and?\Isn
@@ -5111,7 +5111,7 @@ LF1F8:
         .byte   " just a\legend?"               ; F217 20 6A 75 73 74 20 61 5C   just a\
                                                 ; F21F 6C 65 67 65 6E 64 3F     legend?
         .byte   $0A                             ; F226 0A                       .
-LF227:
+Bank0fDialogueBlock1Index181:
         .byte   "@=Even so,it's just\too appeali"; F227 40 3D 45 76 65 6E 20 73 @=Even s
                                                 ; F22F 6F 2C 69 74 27 73 20 6A  o,it's j
                                                 ; F237 75 73 74 5C 74 6F 6F 20  ust\too 
@@ -5130,13 +5130,13 @@ LF227:
                                                 ; F29C 65 72 74 69 6C 65 5F     ertile_
         .byte   "_"                             ; F2A3 5F                       _
         .byte   $0A                             ; F2A4 0A                       .
-LF2A5:
+Bank0fDialogueBlock1Index182:
         .byte   "@2Then there's gotta\be Mako!" ; F2A5 40 32 54 68 65 6E 20 74  @2Then t
                                                 ; F2AD 68 65 72 65 27 73 20 67  here's g
                                                 ; F2B5 6F 74 74 61 5C 62 65 20  otta\be 
                                                 ; F2BD 4D 61 6B 6F 21           Mako!
         .byte   $0A                             ; F2C2 0A                       .
-LF2C3:
+Bank0fDialogueBlock1Index183:
         .byte   "@=Exactly.That is whyour money "; F2C3 40 3D 45 78 61 63 74 6C @=Exactl
                                                 ; F2CB 79 2E 54 68 61 74 20 69  y.That i
                                                 ; F2D3 73 20 77 68 79 6F 75 72  s whyour
@@ -5161,12 +5161,12 @@ LF2C3:
                                                 ; F366 20 6E 65 77 5C 67 6C 6F   new\glo
                                                 ; F36E 72 79 5F 5F              ry__
         .byte   $0A                             ; F372 0A                       .
-LF373:
+Bank0fDialogueBlock1Index184:
         .byte   "@2@$#^%!Quit\dreamin'!"        ; F373 40 32 40 24 23 5E 25 21  @2@$#^%!
                                                 ; F37B 51 75 69 74 5C 64 72 65  Quit\dre
                                                 ; F383 61 6D 69 6E 27 21        amin'!
         .byte   $0A                             ; F389 0A                       .
-LF38A:
+Bank0fDialogueBlock1Index185:
         .byte   "@=Oh really,don't youknow?These"; F38A 40 3D 4F 68 20 72 65 61 @=Oh rea
                                                 ; F392 6C 6C 79 2C 64 6F 6E 27  lly,don'
                                                 ; F39A 74 20 79 6F 75 6B 6E 6F  t youkno
@@ -5185,13 +5185,13 @@ LF38A:
                                                 ; F3FF 72 20 6F 75 72 5C 6D     r our\m
         .byte   "eeting."                       ; F406 65 65 74 69 6E 67 2E     eeting.
         .byte   $0A                             ; F40D 0A                       .
-LF40E:
+Bank0fDialogueBlock1Index186:
         .byte   "@ERude:Come on!Outta\his way!" ; F40E 40 45 52 75 64 65 3A 43  @ERude:C
                                                 ; F416 6F 6D 65 20 6F 6E 21 4F  ome on!O
                                                 ; F41E 75 74 74 61 5C 68 69 73  utta\his
                                                 ; F426 20 77 61 79 21            way!
         .byte   $0A                             ; F42B 0A                       .
-LF42C:
+Bank0fDialogueBlock1Index187:
         .byte   "@2Hold it!I got a lotI wanna sa"; F42C 40 32 48 6F 6C 64 20 69 @2Hold i
                                                 ; F434 74 21 49 20 67 6F 74 20  t!I got 
                                                 ; F43C 61 20 6C 6F 74 49 20 77  a lotI w
@@ -5199,7 +5199,7 @@ LF42C:
         .byte   "y to you!"                     ; F44B 79 20 74 6F 20 79 6F 75  y to you
                                                 ; F453 21                       !
         .byte   $0A                             ; F454 0A                       .
-LF455:
+Bank0fDialogueBlock1Index188:
         .byte   "@=If you need\something else__\"; F455 40 3D 49 66 20 79 6F 75 @=If you
                                                 ; F45D 20 6E 65 65 64 5C 73 6F   need\so
                                                 ; F465 6D 65 74 68 69 6E 67 20  mething 
@@ -5208,38 +5208,38 @@ LF455:
                                                 ; F47C 6D 79 5C 73 65 63 72 65  my\secre
                                                 ; F484 74 61 72 79 2E           tary.
         .byte   $0A                             ; F489 0A                       .
-LF48A:
+Bank0fDialogueBlock1Index189:
         .byte   "@3Can we get out?"             ; F48A 40 33 43 61 6E 20 77 65  @3Can we
                                                 ; F492 20 67 65 74 20 6F 75 74   get out
                                                 ; F49A 3F                       ?
         .byte   $0A                             ; F49B 0A                       .
-LF49C:
+Bank0fDialogueBlock1Index190:
         .byte   "@1Kinda hard."                 ; F49C 40 31 4B 69 6E 64 61 20  @1Kinda 
                                                 ; F4A4 68 61 72 64 2E           hard.
         .byte   $0A                             ; F4A9 0A                       .
-LF4AA:
+Bank0fDialogueBlock1Index191:
         .byte   "@3Don't give up!"              ; F4AA 40 33 44 6F 6E 27 74 20  @3Don't 
                                                 ; F4B2 67 69 76 65 20 75 70 21  give up!
         .byte   $0A                             ; F4BA 0A                       .
-LF4BB:
+Bank0fDialogueBlock1Index192:
         .byte   "@1(I wonder how \everyone else"; F4BB 40 31 28 49 20 77 6F 6E  @1(I won
                                                 ; F4C3 64 65 72 20 68 6F 77 20  der how 
                                                 ; F4CB 5C 65 76 65 72 79 6F 6E  \everyon
                                                 ; F4D3 65 20 65 6C 73 65        e else
-LF4D9:
+Bank0fDialogueBlock1Index193:
         .byte   " is\doing__)"                  ; F4D9 20 69 73 5C 64 6F 69 6E   is\doin
                                                 ; F4E1 67 5F 5F 29              g__)
         .byte   $0A                             ; F4E5 0A                       .
         .byte   "RedX`\is doing__"              ; F4E6 52 65 64 58 60 5C 69 73  RedX`\is
                                                 ; F4EE 20 64 6F 69 6E 67 5F 5F   doing__
         .byte   $0A                             ; F4F6 0A                       .
-LF4F7:
+Bank0fDialogueBlock1Index194:
         .byte   "I wonder how Aeris\is doing__" ; F4F7 49 20 77 6F 6E 64 65 72  I wonder
                                                 ; F4FF 20 68 6F 77 20 41 65 72   how Aer
                                                 ; F507 69 73 5C 69 73 20 64 6F  is\is do
                                                 ; F50F 69 6E 67 5F 5F           ing__
         .byte   $0A                             ; F514 0A                       .
-LF515:
+Bank0fDialogueBlock1Index195:
         .byte   "@2Hey!Aeris is an\Ancient and t"; F515 40 32 48 65 79 21 41 65 @2Hey!Ae
                                                 ; F51D 72 69 73 20 69 73 20 61  ris is a
                                                 ; F525 6E 5C 41 6E 63 69 65 6E  n\Ancien
@@ -5292,7 +5292,7 @@ LF515:
                                                 ; F691 74 5C 77 65 61 6B 65 72  t\weaker
                                                 ; F699 2E                       .
         .byte   $0A                             ; F69A 0A                       .
-LF69B:
+Bank0fDialogueBlock1Index196:
         .byte   "@2I can't just leave\'em be.I'm"; F69B 40 32 49 20 63 61 6E 27 @2I can'
                                                 ; F6A3 74 20 6A 75 73 74 20 6C  t just l
                                                 ; F6AB 65 61 76 65 5C 27 65 6D  eave\'em
@@ -5305,23 +5305,23 @@ LF69B:
                                                 ; F6E1 5F 61 6E 64 20 41 65 72  _and Aer
                                                 ; F6E9 69 73 5C 74 6F 6F 2E     is\too.
         .byte   $0A                             ; F6F0 0A                       .
-LF6F1:
+Bank0fDialogueBlock1Index197:
         .byte   "@2How 'bout you?"              ; F6F1 40 32 48 6F 77 20 27 62  @2How 'b
                                                 ; F6F9 6F 75 74 20 79 6F 75 3F  out you?
         .byte   $0A                             ; F701 0A                       .
-LF702:
+Bank0fDialogueBlock1Index198:
         .byte   "@5__"                          ; F702 40 35 5F 5F              @5__
         .byte   $0A                             ; F706 0A                       .
-LF707:
+Bank0fDialogueBlock1Index199:
         .byte   "@2You're so damn\boring."      ; F707 40 32 59 6F 75 27 72 65  @2You're
                                                 ; F70F 20 73 6F 20 64 61 6D 6E   so damn
                                                 ; F717 5C 62 6F 72 69 6E 67 2E  \boring.
         .byte   $0A                             ; F71F 0A                       .
-LF720:
+Bank0fDialogueBlock1Index200:
         .byte   "@5__Grandpa."                  ; F720 40 35 5F 5F 47 72 61 6E  @5__Gran
                                                 ; F728 64 70 61 2E              dpa.
         .byte   $0A                             ; F72C 0A                       .
-LF72D:
+Bank0fDialogueBlock1Index201:
         .byte   "@2Grandpa!?Ha,ha,ha__Grandpa,hm"; F72D 40 32 47 72 61 6E 64 70 @2Grandp
                                                 ; F735 61 21 3F 48 61 2C 68 61  a!?Ha,ha
                                                 ; F73D 2C 68 61 5F 5F 47 72 61  ,ha__Gra
@@ -5329,27 +5329,27 @@ LF72D:
         .byte   "m__ha,ha,ha__"                 ; F74C 6D 5F 5F 68 61 2C 68 61  m__ha,ha
                                                 ; F754 2C 68 61 5F 5F           ,ha__
         .byte   $0A                             ; F759 0A                       .
-LF75A:
+Bank0fDialogueBlock1Index202:
         .byte   "@5What's so funny?"            ; F75A 40 35 57 68 61 74 27 73  @5What's
                                                 ; F762 20 73 6F 20 66 75 6E 6E   so funn
                                                 ; F76A 79 3F                    y?
         .byte   $0A                             ; F76C 0A                       .
-LF76D:
+Bank0fDialogueBlock1Index203:
         .byte   "@2Nothin'__ha,ha."             ; F76D 40 32 4E 6F 74 68 69 6E  @2Nothin
                                                 ; F775 27 5F 5F 68 61 2C 68 61  '__ha,ha
                                                 ; F77D 2E                       .
         .byte   $0A                             ; F77E 0A                       .
-LF77F:
+Bank0fDialogueBlock1Index204:
         .byte   "@4Cloud,are you\there?"        ; F77F 40 34 43 6C 6F 75 64 2C  @4Cloud,
                                                 ; F787 61 72 65 20 79 6F 75 5C  are you\
                                                 ; F78F 74 68 65 72 65 3F        there?
         .byte   $0A                             ; F795 0A                       .
-LF796:
+Bank0fDialogueBlock1Index205:
         .byte   "@1Aeris!?You safe?"            ; F796 40 31 41 65 72 69 73 21  @1Aeris!
                                                 ; F79E 3F 59 6F 75 20 73 61 66  ?You saf
                                                 ; F7A6 65 3F                    e?
         .byte   $0A                             ; F7A8 0A                       .
-LF7A9:
+Bank0fDialogueBlock1Index206:
         .byte   "@4Yeah,I'm all right.I knew tha"; F7A9 40 34 59 65 61 68 2C 49 @4Yeah,I
                                                 ; F7B1 27 6D 20 61 6C 6C 20 72  'm all r
                                                 ; F7B9 69 67 68 74 2E 49 20 6B  ight.I k
@@ -5359,30 +5359,30 @@ LF7A9:
                                                 ; F7D8 6D 65 20 66 6F 72 20 6D  me for m
                                                 ; F7E0 65 2E                    e.
         .byte   $0A                             ; F7E2 0A                       .
-LF7E3:
+Bank0fDialogueBlock1Index207:
         .byte   "@1Hey,I'm your\bodyguard,right?"; F7E3 40 31 48 65 79 2C 49 27 @1Hey,I'
                                                 ; F7EB 6D 20 79 6F 75 72 5C 62  m your\b
                                                 ; F7F3 6F 64 79 67 75 61 72 64  odyguard
                                                 ; F7FB 2C 72 69 67 68 74 3F     ,right?
         .byte   $0A                             ; F802 0A                       .
-LF803:
+Bank0fDialogueBlock1Index208:
         .byte   "@4The deal was for 1\date,right"; F803 40 34 54 68 65 20 64 65 @4The de
                                                 ; F80B 61 6C 20 77 61 73 20 66  al was f
                                                 ; F813 6F 72 20 31 5C 64 61 74  or 1\dat
                                                 ; F81B 65 2C 72 69 67 68 74     e,right
         .byte   "?"                             ; F822 3F                       ?
         .byte   $0A                             ; F823 0A                       .
-LF824:
+Bank0fDialogueBlock1Index209:
         .byte   "@3__oh,I get it."              ; F824 40 33 5F 5F 6F 68 2C 49  @3__oh,I
                                                 ; F82C 20 67 65 74 20 69 74 2E   get it.
         .byte   $0A                             ; F834 0A                       .
-LF835:
+Bank0fDialogueBlock1Index210:
         .byte   "@4_!?Tifa!Tifa,you'rethere too!"; F835 40 34 5F 21 3F 54 69 66 @4_!?Tif
                                                 ; F83D 61 21 54 69 66 61 2C 79  a!Tifa,y
                                                 ; F845 6F 75 27 72 65 74 68 65  ou'rethe
                                                 ; F84D 72 65 20 74 6F 6F 21     re too!
         .byte   $0A                             ; F854 0A                       .
-LF855:
+Bank0fDialogueBlock1Index211:
         .byte   "@3EXCUSE me.You know,Aeris,I ha"; F855 40 33 45 58 43 55 53 45 @3EXCUSE
                                                 ; F85D 20 6D 65 2E 59 6F 75 20   me.You 
                                                 ; F865 6B 6E 6F 77 2C 41 65 72  know,Aer
@@ -5390,17 +5390,17 @@ LF855:
         .byte   "ve a\question."                ; F874 76 65 20 61 5C 71 75 65  ve a\que
                                                 ; F87C 73 74 69 6F 6E 2E        stion.
         .byte   $0A                             ; F882 0A                       .
-LF883:
+Bank0fDialogueBlock1Index212:
         .byte   "@4What?"                       ; F883 40 34 57 68 61 74 3F     @4What?
         .byte   $0A                             ; F88A 0A                       .
-LF88B:
+Bank0fDialogueBlock1Index213:
         .byte   "@3Does the Promised\Land really"; F88B 40 33 44 6F 65 73 20 74 @3Does t
                                                 ; F893 68 65 20 50 72 6F 6D 69  he Promi
                                                 ; F89B 73 65 64 5C 4C 61 6E 64  sed\Land
                                                 ; F8A3 20 72 65 61 6C 6C 79      really
         .byte   " exist?"                       ; F8AA 20 65 78 69 73 74 3F      exist?
         .byte   $0A                             ; F8B1 0A                       .
-LF8B2:
+Bank0fDialogueBlock1Index214:
         .byte   "@4__I don't know.All\I know is_"; F8B2 40 34 5F 5F 49 20 64 6F @4__I do
                                                 ; F8BA 6E 27 74 20 6B 6E 6F 77  n't know
                                                 ; F8C2 2E 41 6C 6C 5C 49 20 6B  .All\I k
@@ -5429,32 +5429,32 @@ LF8B2:
                                                 ; F974 72 65 6D 65 20 68 61 70  reme hap
                                                 ; F97C 70 69 6E 65 73 73 2E     piness.
         .byte   $0A                             ; F983 0A                       .
-LF984:
+Bank0fDialogueBlock1Index215:
         .byte   "@3__What does that\mean?"      ; F984 40 33 5F 5F 57 68 61 74  @3__What
                                                 ; F98C 20 64 6F 65 73 20 74 68   does th
                                                 ; F994 61 74 5C 6D 65 61 6E 3F  at\mean?
         .byte   $0A                             ; F99C 0A                       .
-LF99D:
+Bank0fDialogueBlock1Index216:
         .byte   "@4More than words__I\don't know"; F99D 40 34 4D 6F 72 65 20 74 @4More t
                                                 ; F9A5 68 61 6E 20 77 6F 72 64  han word
                                                 ; F9AD 73 5F 5F 49 5C 64 6F 6E  s__I\don
                                                 ; F9B5 27 74 20 6B 6E 6F 77     't know
         .byte   "."                             ; F9BC 2E                       .
         .byte   $0A                             ; F9BD 0A                       .
-LF9BE:
+Bank0fDialogueBlock1Index217:
         .byte   "@1__Speak with the\Planet?"    ; F9BE 40 31 5F 5F 53 70 65 61  @1__Spea
                                                 ; F9C6 6B 20 77 69 74 68 20 74  k with t
                                                 ; F9CE 68 65 5C 50 6C 61 6E 65  he\Plane
                                                 ; F9D6 74 3F                    t?
         .byte   $0A                             ; F9D8 0A                       .
-LF9D9:
+Bank0fDialogueBlock1Index218:
         .byte   "@3Just what does the\Planet say"; F9D9 40 33 4A 75 73 74 20 77 @3Just w
                                                 ; F9E1 68 61 74 20 64 6F 65 73  hat does
                                                 ; F9E9 20 74 68 65 5C 50 6C 61   the\Pla
                                                 ; F9F1 6E 65 74 20 73 61 79     net say
         .byte   "?"                             ; F9F8 3F                       ?
         .byte   $0A                             ; F9F9 0A                       .
-LF9FA:
+Bank0fDialogueBlock1Index219:
         .byte   "@4It's full of peopleand noise."; F9FA 40 34 49 74 27 73 20 66 @4It's f
                                                 ; FA02 75 6C 6C 20 6F 66 20 70  ull of p
                                                 ; FA0A 65 6F 70 6C 65 61 6E 64  eopleand
@@ -5467,12 +5467,12 @@ LF9FA:
                                                 ; FA40 65 5C 73 61 79 69 6E 67  e\saying
                                                 ; FA48 2E                       .
         .byte   $0A                             ; FA49 0A                       .
-LFA4A:
+Bank0fDialogueBlock1Index220:
         .byte   "@1You hear it now?"            ; FA4A 40 31 59 6F 75 20 68 65  @1You he
                                                 ; FA52 61 72 20 69 74 20 6E 6F  ar it no
                                                 ; FA5A 77 3F                    w?
         .byte   $0A                             ; FA5C 0A                       .
-LFA5D:
+Bank0fDialogueBlock1Index221:
         .byte   "@4I,I only heard it\at the Chur"; FA5D 40 34 49 2C 49 20 6F 6E @4I,I on
                                                 ; FA65 6C 79 20 68 65 61 72 64  ly heard
                                                 ; FA6D 20 69 74 5C 61 74 20 74   it\at t
@@ -5510,57 +5510,57 @@ LFA5D:
                                                 ; FB65 65 77 75 70 2C 62 75 74  ewup,but
                                                 ; FB6D 5F 5F                    __
         .byte   $0A                             ; FB6F 0A                       .
-LFB70:
+Bank0fDialogueBlock1Index222:
         .byte   "@1Let's just get somesleep."   ; FB70 40 31 4C 65 74 27 73 20  @1Let's 
                                                 ; FB78 6A 75 73 74 20 67 65 74  just get
                                                 ; FB80 20 73 6F 6D 65 73 6C 65   somesle
                                                 ; FB88 65 70 2E                 ep.
         .byte   $0A                             ; FB8B 0A                       .
-LFB8C:
+Bank0fDialogueBlock1Index223:
         .byte   "@1The door's open__\When did it"; FB8C 40 31 54 68 65 20 64 6F @1The do
                                                 ; FB94 6F 72 27 73 20 6F 70 65  or's ope
                                                 ; FB9C 6E 5F 5F 5C 57 68 65 6E  n__\When
                                                 ; FBA4 20 64 69 64 20 69 74      did it
         .byte   " open?"                        ; FBAB 20 6F 70 65 6E 3F         open?
         .byte   $0A                             ; FBB1 0A                       .
-LFBB2:
+Bank0fDialogueBlock1Index224:
         .byte   "@1What's happened?"            ; FBB2 40 31 57 68 61 74 27 73  @1What's
                                                 ; FBBA 20 68 61 70 70 65 6E 65   happene
                                                 ; FBC2 64 3F                    d?
         .byte   $0A                             ; FBC4 0A                       .
-LFBC5:
+Bank0fDialogueBlock1Index225:
         .byte   "@1Tifa__Wake up!"              ; FBC5 40 31 54 69 66 61 5F 5F  @1Tifa__
                                                 ; FBCD 57 61 6B 65 20 75 70 21  Wake up!
         .byte   $0A                             ; FBD5 0A                       .
-LFBD6:
+Bank0fDialogueBlock1Index226:
         .byte   "@3What's wrong?"               ; FBD6 40 33 57 68 61 74 27 73  @3What's
                                                 ; FBDE 20 77 72 6F 6E 67 3F      wrong?
         .byte   $0A                             ; FBE5 0A                       .
-LFBE6:
+Bank0fDialogueBlock1Index227:
         .byte   "@1Something's wrong.\Look outsi"; FBE6 40 31 53 6F 6D 65 74 68 @1Someth
                                                 ; FBEE 69 6E 67 27 73 20 77 72  ing's wr
                                                 ; FBF6 6F 6E 67 2E 5C 4C 6F 6F  ong.\Loo
                                                 ; FBFE 6B 20 6F 75 74 73 69     k outsi
         .byte   "de."                           ; FC05 64 65 2E                 de.
         .byte   $0A                             ; FC08 0A                       .
-LFC09:
+Bank0fDialogueBlock1Index228:
         .byte   "@3I wonder what\happened__"    ; FC09 40 33 49 20 77 6F 6E 64  @3I wond
                                                 ; FC11 65 72 20 77 68 61 74 5C  er what\
                                                 ; FC19 68 61 70 70 65 6E 65 64  happened
                                                 ; FC21 5F 5F                    __
         .byte   $0A                             ; FC23 0A                       .
-LFC24:
+Bank0fDialogueBlock1Index229:
         .byte   "@1He should have the\key on him"; FC24 40 31 48 65 20 73 68 6F @1He sho
                                                 ; FC2C 75 6C 64 20 68 61 76 65  uld have
                                                 ; FC34 20 74 68 65 5C 6B 65 79   the\key
                                                 ; FC3C 20 6F 6E 20 68 69 6D      on him
         .byte   "__"                            ; FC43 5F 5F                    __
         .byte   $0A                             ; FC45 0A                       .
-LFC46:
+Bank0fDialogueBlock1Index230:
         .byte   "Got Keys."                     ; FC46 47 6F 74 20 4B 65 79 73  Got Keys
                                                 ; FC4E 2E                       .
         .byte   $0A                             ; FC4F 0A                       .
-LFC50:
+Bank0fDialogueBlock1Index231:
         .byte   "@1Come on,Tifa,get\Aeris,I'll g"; FC50 40 31 43 6F 6D 65 20 6F @1Come o
                                                 ; FC58 6E 2C 54 69 66 61 2C 67  n,Tifa,g
                                                 ; FC60 65 74 5C 41 65 72 69 73  et\Aeris
@@ -5570,7 +5570,7 @@ LFC50:
                                                 ; FC7F 64 20 52 65 64 58 60 2E  d RedX`.
                                                 ; FC87 20 20 20 20 20                
         .byte   $0A                             ; FC8C 0A                       .
-LFC8D:
+Bank0fDialogueBlock1Index232:
         .byte   "@1Barret,RedX`__come\with me.So"; FC8D 40 31 42 61 72 72 65 74 @1Barret
                                                 ; FC95 2C 52 65 64 58 60 5F 5F  ,RedX`__
                                                 ; FC9D 63 6F 6D 65 5C 77 69 74  come\wit
@@ -5578,7 +5578,7 @@ LFC8D:
         .byte   "mething'swrong."               ; FCAC 6D 65 74 68 69 6E 67 27  mething'
                                                 ; FCB4 73 77 72 6F 6E 67 2E     swrong.
         .byte   $0A                             ; FCBB 0A                       .
-LFCBC:
+Bank0fDialogueBlock1Index233:
         .byte   "@2How'd you get in?\Why's the d"; FCBC 40 32 48 6F 77 27 64 20 @2How'd 
                                                 ; FCC4 79 6F 75 20 67 65 74 20  you get 
                                                 ; FCCC 69 6E 3F 5C 57 68 79 27  in?\Why'
@@ -5588,7 +5588,7 @@ LFCBC:
                                                 ; FCEB 6C 6C 27 73 5C 67 6F 69  ll's\goi
                                                 ; FCF3 6E 27 20 6F 6E 21 3F     n' on!?
         .byte   $0A                             ; FCFA 0A                       .
-LFCFB:
+Bank0fDialogueBlock1Index234:
         .byte   "@5No human could've\done this.I"; FCFB 40 35 4E 6F 20 68 75 6D @5No hum
                                                 ; FD03 61 6E 20 63 6F 75 6C 64  an could
                                                 ; FD0B 27 76 65 5C 64 6F 6E 65  've\done
@@ -5596,7 +5596,7 @@ LFCFB:
         .byte   "'ll go\on ahead."              ; FD1A 27 6C 6C 20 67 6F 5C 6F  'll go\o
                                                 ; FD22 6E 20 61 68 65 61 64 2E  n ahead.
         .byte   $0A                             ; FD2A 0A                       .
-LFD2B:
+Bank0fDialogueBlock1Index235:
         .byte   "@2I'll clean up back\here,so yo"; FD2B 40 32 49 27 6C 6C 20 63 @2I'll c
                                                 ; FD33 6C 65 61 6E 20 75 70 20  lean up 
                                                 ; FD3B 62 61 63 6B 5C 68 65 72  back\her
@@ -5608,25 +5608,25 @@ LFD2B:
         .byte   "ght by Shinra!"                ; FD69 67 68 74 20 62 79 20 53  ght by S
                                                 ; FD71 68 69 6E 72 61 21        hinra!
         .byte   $0A                             ; FD77 0A                       .
-LFD78:
+Bank0fDialogueBlock1Index236:
         .byte   "Tifa and Aeris joinyou."       ; FD78 54 69 66 61 20 61 6E 64  Tifa and
                                                 ; FD80 20 41 65 72 69 73 20 6A   Aeris j
                                                 ; FD88 6F 69 6E 79 6F 75 2E     oinyou.
         .byte   $0A                             ; FD8F 0A                       .
-LFD90:
+Bank0fDialogueBlock1Index237:
         .byte   "@3Come on,let's\follow RedX`!" ; FD90 40 33 43 6F 6D 65 20 6F  @3Come o
                                                 ; FD98 6E 2C 6C 65 74 27 73 5C  n,let's\
                                                 ; FDA0 66 6F 6C 6C 6F 77 20 52  follow R
                                                 ; FDA8 65 64 58 60 21           edX`!
         .byte   $0A                             ; FDAD 0A                       .
-LFDAE:
+Bank0fDialogueBlock1Index238:
         .byte   "Used keycard."                 ; FDAE 55 73 65 64 20 6B 65 79  Used key
                                                 ; FDB6 63 61 72 64 2E           card.
         .byte   $0A                             ; FDBB 0A                       .
-LFDBC:
+Bank0fDialogueBlock1Index239:
         .byte   "Locked!"                       ; FDBC 4C 6F 63 6B 65 64 21     Locked!
         .byte   $0A                             ; FDC3 0A                       .
-LFDC4:
+Bank0fDialogueBlock1Index240:
         .byte   $22                             ; FDC4 22                       "
         .byte   "Shinra's World\Domination Plan"; FDC5 53 68 69 6E 72 61 27 73  Shinra's
                                                 ; FDCD 20 57 6F 72 6C 64 5C 44   World\D
@@ -5635,7 +5635,7 @@ LFDC4:
         .byte   $22                             ; FDE3 22                       "
         .byte   "__"                            ; FDE4 5F 5F                    __
         .byte   $0A                             ; FDE6 0A                       .
-LFDE7:
+Bank0fDialogueBlock1Index241:
         .byte   "The mayor's diary__"           ; FDE7 54 68 65 20 6D 61 79 6F  The mayo
                                                 ; FDEF 72 27 73 20 64 69 61 72  r's diar
                                                 ; FDF7 79 5F 5F                 y__
@@ -5646,14 +5646,14 @@ LFDE7:
                                                 ; FE13 68 6F 72 74 20 6C 69     hort li
         .byte   "fe!"                           ; FE1A 66 65 21                 fe!
         .byte   $22,$0A                         ; FE1D 22 0A                    ".
-LFE1F:
+Bank0fDialogueBlock1Index242:
         .byte   "MAKO            BEST           "; FE1F 4D 41 4B 4F 20 20 20 20 MAKO    
                                                 ; FE27 20 20 20 20 20 20 20 20          
                                                 ; FE2F 42 45 53 54 20 20 20 20  BEST    
                                                 ; FE37 20 20 20 20 20 20 20            
         .byte   " "                             ; FE3E 20                        
         .byte   $0A                             ; FE3F 0A                       .
-LFE40:
+Bank0fDialogueBlock1Index243:
         .byte   "@HYou must be\impossibly stupid"; FE40 40 48 59 6F 75 20 6D 75 @HYou mu
                                                 ; FE48 73 74 20 62 65 5C 69 6D  st be\im
                                                 ; FE50 70 6F 73 73 69 62 6C 79  possibly
@@ -5663,22 +5663,22 @@ LFE40:
         .byte   "Pressed button__"              ; FE61 50 72 65 73 73 65 64 20  Pressed 
                                                 ; FE69 62 75 74 74 6F 6E 5F 5F  button__
         .byte   $0A                             ; FE71 0A                       .
-LFE72:
+Bank0fDialogueBlock1Index246:
         .byte   "Please don't kill\me!"         ; FE72 50 6C 65 61 73 65 20 64  Please d
                                                 ; FE7A 6F 6E 27 74 20 6B 69 6C  on't kil
                                                 ; FE82 6C 5C 6D 65 21           l\me!
         .byte   $0A                             ; FE87 0A                       .
-LFE88:
+Bank0fDialogueBlock1Index175:
         .byte   "@1Where is Aerith!?"           ; FE88 40 31 57 68 65 72 65 20  @1Where 
                                                 ; FE90 69 73 20 41 65 72 69 74  is Aerit
                                                 ; FE98 68 21 3F                 h!?
         .byte   $0A                             ; FE9B 0A                       .
-LFE9C:
+Bank0fDialogueBlock1Index176:
         .byte   "@=In a safe place."            ; FE9C 40 3D 49 6E 20 61 20 73  @=In a s
                                                 ; FEA4 61 66 65 20 70 6C 61 63  afe plac
                                                 ; FEAC 65 2E                    e.
         .byte   $0A                             ; FEAE 0A                       .
-LFEAF:
+Bank0fDialogueBlock1Index177:
         .byte   "@=She's the last\surviving Anci"; FEAF 40 3D 53 68 65 27 73 20 @=She's 
                                                 ; FEB7 74 68 65 20 6C 61 73 74  the last
                                                 ; FEBF 5C 73 75 72 76 69 76 69  \survivi
@@ -5702,7 +5702,7 @@ LFEAF:
         .byte   " in history."                  ; FF4A 20 69 6E 20 68 69 73 74   in hist
                                                 ; FF52 6F 72 79 2E              ory.
         .byte   $0A                             ; FF56 0A                       .
-LFF57:
+Bank0fDialogueBlock1Index178:
         .byte   "@5Cetra__That girl,\she's a sur"; FF57 40 35 43 65 74 72 61 5F @5Cetra_
                                                 ; FF5F 5F 54 68 61 74 20 67 69  _That gi
                                                 ; FF67 72 6C 2C 5C 73 68 65 27  rl,\she'
@@ -5711,7 +5711,7 @@ LFF57:
                                                 ; FF7E 74 68 65 20 43 65 74 72  the Cetr
                                                 ; FF86 61 3F                    a?
         .byte   $0A                             ; FF88 0A                       .
-LFF89:
+Bank0fDialogueBlock1Index245:
         .byte   "There's a switch.\*Click*__Hm? "; FF89 54 68 65 72 65 27 73 20 There's 
                                                 ; FF91 61 20 73 77 69 74 63 68  a switch
                                                 ; FF99 2E 5C 2A 43 6C 69 63 6B  .\*Click
@@ -5719,13 +5719,13 @@ LFF89:
         .byte   "I\heard something\open."       ; FFA8 49 5C 68 65 61 72 64 20  I\heard 
                                                 ; FFB0 73 6F 6D 65 74 68 69 6E  somethin
                                                 ; FFB8 67 5C 6F 70 65 6E 2E     g\open.
+        .byte   $0A                             ; FFBF 0A                       .
 ; ----------------------------------------------------------------------------
-        .byte   $0A,$78,$D8,$A9,$00,$8D,$00,$20 ; FFBF 0A 78 D8 A9 00 8D 00 20  .x..... 
-        .byte   $8D,$01,$20,$A2,$0A,$AD,$02,$20 ; FFC7 8D 01 20 A2 0A AD 02 20  .. .... 
-        .byte   $30,$FB,$AD,$02,$20,$10,$FB,$CA ; FFCF 30 FB AD 02 20 10 FB CA  0... ...
-        .byte   $D0,$F3,$A2,$00,$BD,$E7,$FF,$9D ; FFD7 D0 F3 A2 00 BD E7 FF 9D  ........
-        .byte   $00,$04,$E8,$D0,$F7,$4C,$00,$04 ; FFDF 00 04 E8 D0 F7 4C 00 04  .....L..
-        .byte   $A9,$04,$8D,$00,$53,$A9,$00,$8D ; FFE7 A9 04 8D 00 53 A9 00 8D  ....S...
-        .byte   $00,$50,$8D,$00,$52,$6C,$FC,$FF ; FFEF 00 50 8D 00 52 6C FC FF  .P..Rl..
-        .byte   $EA,$EA,$40,$F9,$FF,$C0,$FF,$F9 ; FFF7 EA EA 40 F9 FF C0 FF F9  ..@.....
-        .byte   $FF                             ; FFFF FF                       .
+        .byte   $78,$D8,$A9,$00,$8D,$00,$20,$8D ; FFC0 78 D8 A9 00 8D 00 20 8D  x..... .
+        .byte   $01,$20,$A2,$0A,$AD,$02,$20,$30 ; FFC8 01 20 A2 0A AD 02 20 30  . .... 0
+        .byte   $FB,$AD,$02,$20,$10,$FB,$CA,$D0 ; FFD0 FB AD 02 20 10 FB CA D0  ... ....
+        .byte   $F3,$A2,$00,$BD,$E7,$FF,$9D,$00 ; FFD8 F3 A2 00 BD E7 FF 9D 00  ........
+        .byte   $04,$E8,$D0,$F7,$4C,$00,$04,$A9 ; FFE0 04 E8 D0 F7 4C 00 04 A9  ....L...
+        .byte   $04,$8D,$00,$53,$A9,$00,$8D,$00 ; FFE8 04 8D 00 53 A9 00 8D 00  ...S....
+        .byte   $50,$8D,$00,$52,$6C,$FC,$FF,$EA ; FFF0 50 8D 00 52 6C FC FF EA  P..Rl...
+        .byte   $EA,$40,$F9,$FF,$C0,$FF,$F9,$FF ; FFF8 EA 40 F9 FF C0 FF F9 FF  .@......
