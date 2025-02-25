@@ -669,7 +669,7 @@ def generateInfoFileForStringBank(nesFile, bankNum, stringCounts, bankStringBloc
         f.write(data)
 
 def generateInfoFileStringBank6(nesFile):
-    stringCounts = [80, 56, 129, 106, 59, 101, 8, 64, 32, 32, 100]
+    stringCounts = [73, 56, 129, 106, 59, 101, 8, 64, 32, 32, 100]
     bankStringBlockName = [
         "Bank06Block0",
         "HeadgearNameStr",
@@ -687,7 +687,7 @@ def generateInfoFileStringBank6(nesFile):
     generateInfoFileForStringBank(nesFile, 0x06, stringCounts, bankStringBlockName, endAllTextAddr)
 
 def generateInfoFileStringBank7(nesFile):
-    stringCounts = [255, 255, 68]
+    stringCounts = [255, 254, 68]
     bankStringBlockName = [
         "Bank07DialogueBlock0",
         "Bank07DialogueBlock1",
@@ -757,6 +757,14 @@ def main():
     generateInfoFileSpritesBank32(nesFile)
     generateInfoFileSpritesBank33(nesFile)
     generateInfoFileSpritesBank34(nesFile)
+
+    generateInfoFileStringBank6(nesFile)
+    generateInfoFileStringBank7(nesFile)
+    generateInfoFileStringBank0A(nesFile)
+    generateInfoFileStringBank0B(nesFile)
+    generateInfoFileStringBank0C(nesFile)
+    generateInfoFileStringBank0D(nesFile)
+    generateInfoFileStringBank0F(nesFile)
 
     generateInfoFileStringBank6(nesFile)
     generateInfoFileStringBank7(nesFile)

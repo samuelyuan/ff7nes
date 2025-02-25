@@ -2,8 +2,11 @@
 
 ; ----------------------------------------------------------------------------
 L0002           := $0002
+L000E           := $000E
 L00C1           := $00C1
 L00C5           := $00C5
+L00D2           := $00D2
+L00FF           := $00FF
 L0100           := $0100
 L0110           := $0110
 L0120           := $0120
@@ -434,7 +437,7 @@ L82A7:
         beq     L82C4                           ; 82AA F0 18                    ..
         pla                                     ; 82AC 68                       h
         pha                                     ; 82AD 48                       H
-        cmp     $D2                             ; 82AE C5 D2                    ..
+        cmp     L00D2                           ; 82AE C5 D2                    ..
         bcc     L82C4                           ; 82B0 90 12                    ..
         cmp     $D3                             ; 82B2 C5 D3                    ..
         bcs     L82C4                           ; 82B4 B0 0E                    ..
@@ -459,7 +462,7 @@ L82C9:
         beq     L82E9                           ; 82CC F0 1B                    ..
         pla                                     ; 82CE 68                       h
         pha                                     ; 82CF 48                       H
-        cmp     $D2                             ; 82D0 C5 D2                    ..
+        cmp     L00D2                           ; 82D0 C5 D2                    ..
         bcc     L82E9                           ; 82D2 90 15                    ..
         cmp     $D3                             ; 82D4 C5 D3                    ..
         bcs     L82E9                           ; 82D6 B0 11                    ..
@@ -484,7 +487,7 @@ StartDialogueBox01:
         lda     #$FF                            ; 82EE A9 FF                    ..
         sta     $CF                             ; 82F0 85 CF                    ..
         lda     #$B0                            ; 82F2 A9 B0                    ..
-        sta     $D2                             ; 82F4 85 D2                    ..
+        sta     L00D2                           ; 82F4 85 D2                    ..
         lda     #$E0                            ; 82F6 A9 E0                    ..
         sta     $D3                             ; 82F8 85 D3                    ..
         lda     #$10                            ; 82FA A9 10                    ..
@@ -498,7 +501,7 @@ StartDialogueBox02:
         lda     #$FF                            ; 8303 A9 FF                    ..
         sta     $CF                             ; 8305 85 CF                    ..
         lda     #$20                            ; 8307 A9 20                    . 
-        sta     $D2                             ; 8309 85 D2                    ..
+        sta     L00D2                           ; 8309 85 D2                    ..
         lda     #$80                            ; 830B A9 80                    ..
         sta     $D3                             ; 830D 85 D3                    ..
         lda     #$A0                            ; 830F A9 A0                    ..
@@ -512,7 +515,7 @@ StartDialogueBox03:
         lda     #$FF                            ; 8318 A9 FF                    ..
         sta     $CF                             ; 831A 85 CF                    ..
         lda     #$20                            ; 831C A9 20                    . 
-        sta     $D2                             ; 831E 85 D2                    ..
+        sta     L00D2                           ; 831E 85 D2                    ..
         lda     #$40                            ; 8320 A9 40                    .@
         sta     $D3                             ; 8322 85 D3                    ..
         lda     #$40                            ; 8324 A9 40                    .@
@@ -2385,13 +2388,13 @@ L900E:
         asl     a                               ; 9020 0A                       .
         asl     a                               ; 9021 0A                       .
         asl     a                               ; 9022 0A                       .
-        sta     $0E                             ; 9023 85 0E                    ..
+        sta     L000E                           ; 9023 85 0E                    ..
         lda     $06                             ; 9025 A5 06                    ..
         lsr     a                               ; 9027 4A                       J
         lsr     a                               ; 9028 4A                       J
         clc                                     ; 9029 18                       .
-        adc     $0E                             ; 902A 65 0E                    e.
-        sta     $0E                             ; 902C 85 0E                    ..
+        adc     L000E                           ; 902A 65 0E                    e.
+        sta     L000E                           ; 902C 85 0E                    ..
         lda     $11                             ; 902E A5 11                    ..
         bne     L9056                           ; 9030 D0 24                    .$
         lda     $07                             ; 9032 A5 07                    ..
@@ -2456,10 +2459,10 @@ L9087:
         inx                                     ; 9092 E8                       .
         lda     #$C0                            ; 9093 A9 C0                    ..
         clc                                     ; 9095 18                       .
-        adc     $0E                             ; 9096 65 0E                    e.
+        adc     L000E                           ; 9096 65 0E                    e.
         sta     $0700,x                         ; 9098 9D 00 07                 ...
         inx                                     ; 909B E8                       .
-        ldy     $0E                             ; 909C A4 0E                    ..
+        ldy     L000E                           ; 909C A4 0E                    ..
 L909E:
         lda     $12                             ; 909E A5 12                    ..
         bne     L90A9                           ; 90A0 D0 07                    ..
@@ -2515,10 +2518,10 @@ L90D1:
         inx                                     ; 90E3 E8                       .
         lda     #$C0                            ; 90E4 A9 C0                    ..
         clc                                     ; 90E6 18                       .
-        adc     $0E                             ; 90E7 65 0E                    e.
+        adc     L000E                           ; 90E7 65 0E                    e.
         sta     $0700,x                         ; 90E9 9D 00 07                 ...
         inx                                     ; 90EC E8                       .
-        ldy     $0E                             ; 90ED A4 0E                    ..
+        ldy     L000E                           ; 90ED A4 0E                    ..
         lda     $12                             ; 90EF A5 12                    ..
         bne     L90FA                           ; 90F1 D0 07                    ..
         jsr     L0110                           ; 90F3 20 10 01                  ..
@@ -2637,8 +2640,8 @@ CheckIfCharIsHanzi:
 
 ; ----------------------------------------------------------------------------
 CharIsEnglishLetter:
-        jsr     LD8B0                           ; 9199 20 B0 D8                  ..
-        nop                                     ; 919C EA                       .
+        lda     #$01                            ; 9199 A9 01                    ..
+        sta     $53                             ; 919B 85 53                    .S
         lda     L0002                           ; 919D A5 02                    ..
         clc                                     ; 919F 18                       .
         adc     #$01                            ; 91A0 69 01                    i.
@@ -2662,8 +2665,7 @@ L91B6:
         lda     #$00                            ; 91BE A9 00                    ..
         sta     $D8                             ; 91C0 85 D8                    ..
         lda     #$14                            ; 91C2 A9 14                    ..
-        nop                                     ; 91C4 EA                       .
-        nop                                     ; 91C5 EA                       .
+        sta     $42                             ; 91C4 85 42                    .B
 L91C6:
         jsr     L92AC                           ; 91C6 20 AC 92                  ..
 L91C9:
@@ -2675,7 +2677,7 @@ L91C9:
         inc     $D8                             ; 91D3 E6 D8                    ..
 L91D5:
         lda     $42                             ; 91D5 A5 42                    .B
-        cmp     #$4F                            ; 91D7 C9 4F                    .O
+        cmp     #$27                            ; 91D7 C9 27                    .'
         bcs     L91DE                           ; 91D9 B0 03                    ..
         jmp     LoadDialogString1               ; 91DB 4C 5E 91                 L^.
 
@@ -2795,8 +2797,8 @@ LoadDialogString2:
 
 ; ----------------------------------------------------------------------------
 L92AC:
-        jsr     ManageCharacterPositionCount    ; 92AC 20 10 D9                  ..
-        nop                                     ; 92AF EA                       .
+        lda     #$01                            ; 92AC A9 01                    ..
+        sta     $11                             ; 92AE 85 11                    ..
         lda     #$00                            ; 92B0 A9 00                    ..
         sta     $78                             ; 92B2 85 78                    .x
         jsr     L9497                           ; 92B4 20 97 94                  ..
@@ -2809,8 +2811,8 @@ L92AC:
 
 ; ----------------------------------------------------------------------------
 L92C5:
-        jsr     ManageCharacterPositionCount    ; 92C5 20 10 D9                  ..
-        nop                                     ; 92C8 EA                       .
+        lda     #$00                            ; 92C5 A9 00                    ..
+        sta     $11                             ; 92C7 85 11                    ..
         lda     #$00                            ; 92C9 A9 00                    ..
         sta     $78                             ; 92CB 85 78                    .x
         jsr     L9497                           ; 92CD 20 97 94                  ..
@@ -2843,9 +2845,8 @@ L92FF:
         sta     $0D                             ; 9301 85 0D                    ..
         lda     $42                             ; 9303 A5 42                    .B
         asl     a                               ; 9305 0A                       .
-        nop                                     ; 9306 EA                       .
-        nop                                     ; 9307 EA                       .
-        nop                                     ; 9308 EA                       .
+        rol     $0D                             ; 9306 26 0D                    &.
+        asl     a                               ; 9308 0A                       .
         rol     $0D                             ; 9309 26 0D                    &.
         asl     a                               ; 930B 0A                       .
         rol     $0D                             ; 930C 26 0D                    &.
@@ -2896,7 +2897,7 @@ AsmCodeLoadHanziFromBank8or9:
         lda     #$FF                            ; 9357 A9 FF                    ..
 L9359:
         inx                                     ; 9359 E8                       .
-        sta     $0710,x                         ; 935A 9D 10 07                 ...
+        sta     $0700,x                         ; 935A 9D 00 07                 ...
         dey                                     ; 935D 88                       .
         bne     L9359                           ; 935E D0 F9                    ..
         ldy     #$08                            ; 9360 A0 08                    ..
@@ -2918,7 +2919,7 @@ L9377:
         lda     ($04),y                         ; 9377 B1 04                    ..
         eor     #$FF                            ; 9379 49 FF                    I.
         inx                                     ; 937B E8                       .
-        sta     $06F0,x                         ; 937C 9D F0 06                 ...
+        sta     $0700,x                         ; 937C 9D 00 07                 ...
         iny                                     ; 937F C8                       .
         cpy     #$08                            ; 9380 C0 08                    ..
         bne     L9377                           ; 9382 D0 F3                    ..
@@ -3152,7 +3153,8 @@ L94E6:
         pla                                     ; 94F6 68                       h
         inx                                     ; 94F7 E8                       .
         sta     $0700,x                         ; 94F8 9D 00 07                 ...
-        jsr     LD960                           ; 94FB 20 60 D9                  `.
+        lda     $42                             ; 94FB A5 42                    .B
+        asl     a                               ; 94FD 0A                       .
         clc                                     ; 94FE 18                       .
         adc     #$B0                            ; 94FF 69 B0                    i.
         tay                                     ; 9501 A8                       .
@@ -3189,31 +3191,30 @@ L952A:
         lda     #$01                            ; 952C A9 01                    ..
         sta     $0700,x                         ; 952E 9D 00 07                 ...
 L9531:
-        lda     $0702                           ; 9531 AD 02 07                 ...
-        sta     $0706                           ; 9534 8D 06 07                 ...
-        lda     $0703                           ; 9537 AD 03 07                 ...
-        sta     $0707                           ; 953A 8D 07 07                 ...
-        lda     $0704                           ; 953D AD 04 07                 ...
-        sta     $0708                           ; 9540 8D 08 07                 ...
-        inx                                     ; 9543 E8                       .
-        inx                                     ; 9544 E8                       .
-        inx                                     ; 9545 E8                       .
-        iny                                     ; 9546 C8                       .
-        iny                                     ; 9547 C8                       .
-        iny                                     ; 9548 C8                       .
-        nop                                     ; 9549 EA                       .
-        nop                                     ; 954A EA                       .
-        nop                                     ; 954B EA                       .
-        nop                                     ; 954C EA                       .
-        nop                                     ; 954D EA                       .
-        nop                                     ; 954E EA                       .
-        nop                                     ; 954F EA                       .
-        nop                                     ; 9550 EA                       .
-        nop                                     ; 9551 EA                       .
-        nop                                     ; 9552 EA                       .
-        nop                                     ; 9553 EA                       .
-        nop                                     ; 9554 EA                       .
-        nop                                     ; 9555 EA                       .
+        lda     $0A                             ; 9531 A5 0A                    ..
+        clc                                     ; 9533 18                       .
+        adc     $06                             ; 9534 65 06                    e.
+        pha                                     ; 9536 48                       H
+        lda     $0B                             ; 9537 A5 0B                    ..
+        adc     $09                             ; 9539 65 09                    e.
+        inx                                     ; 953B E8                       .
+        sta     $0700,x                         ; 953C 9D 00 07                 ...
+        pla                                     ; 953F 68                       h
+        inx                                     ; 9540 E8                       .
+        sta     $0700,x                         ; 9541 9D 00 07                 ...
+        lda     $42                             ; 9544 A5 42                    .B
+        asl     a                               ; 9546 0A                       .
+        clc                                     ; 9547 18                       .
+        adc     #$B0                            ; 9548 69 B0                    i.
+        tay                                     ; 954A A8                       .
+        iny                                     ; 954B C8                       .
+        lda     $53                             ; 954C A5 53                    .S
+        bne     L9551                           ; 954E D0 01                    ..
+        iny                                     ; 9550 C8                       .
+L9551:
+        inx                                     ; 9551 E8                       .
+        tya                                     ; 9552 98                       .
+        sta     $0700,x                         ; 9553 9D 00 07                 ...
         lda     $53                             ; 9556 A5 53                    .S
         bne     L9564                           ; 9558 D0 0A                    ..
         lda     $12                             ; 955A A5 12                    ..
@@ -3433,50 +3434,36 @@ LoadCharacterDialoguePortrait:
 LoadCharacterPortraitFromId:
         iny                                     ; 96B4 C8                       .
         jsr     L0140                           ; 96B5 20 40 01                  @.
-        sec                                     ; 96B8 38                       8
-        sbc     #$30                            ; 96B9 E9 30                    .0
-        nop                                     ; 96BB EA                       .
-        nop                                     ; 96BC EA                       .
-        nop                                     ; 96BD EA                       .
-        nop                                     ; 96BE EA                       .
-        nop                                     ; 96BF EA                       .
-        nop                                     ; 96C0 EA                       .
-        nop                                     ; 96C1 EA                       .
-        nop                                     ; 96C2 EA                       .
-        nop                                     ; 96C3 EA                       .
-        nop                                     ; 96C4 EA                       .
-        nop                                     ; 96C5 EA                       .
-        nop                                     ; 96C6 EA                       .
-        nop                                     ; 96C7 EA                       .
-        nop                                     ; 96C8 EA                       .
-        nop                                     ; 96C9 EA                       .
-        nop                                     ; 96CA EA                       .
-        nop                                     ; 96CB EA                       .
-        nop                                     ; 96CC EA                       .
-        nop                                     ; 96CD EA                       .
-        nop                                     ; 96CE EA                       .
-        nop                                     ; 96CF EA                       .
-        nop                                     ; 96D0 EA                       .
-        nop                                     ; 96D1 EA                       .
-        nop                                     ; 96D2 EA                       .
-        nop                                     ; 96D3 EA                       .
-        nop                                     ; 96D4 EA                       .
-        nop                                     ; 96D5 EA                       .
-        nop                                     ; 96D6 EA                       .
-        nop                                     ; 96D7 EA                       .
-        nop                                     ; 96D8 EA                       .
-        nop                                     ; 96D9 EA                       .
-        nop                                     ; 96DA EA                       .
-        nop                                     ; 96DB EA                       .
-        nop                                     ; 96DC EA                       .
-        nop                                     ; 96DD EA                       .
-        nop                                     ; 96DE EA                       .
-        nop                                     ; 96DF EA                       .
-        nop                                     ; 96E0 EA                       .
-        nop                                     ; 96E1 EA                       .
-        nop                                     ; 96E2 EA                       .
-        nop                                     ; 96E3 EA                       .
-        nop                                     ; 96E4 EA                       .
+        and     #$0F                            ; 96B8 29 0F                    ).
+        beq     L96C5                           ; 96BA F0 09                    ..
+        tax                                     ; 96BC AA                       .
+        lda     #$00                            ; 96BD A9 00                    ..
+        clc                                     ; 96BF 18                       .
+L96C0:
+        adc     #$64                            ; 96C0 69 64                    id
+        dex                                     ; 96C2 CA                       .
+        bne     L96C0                           ; 96C3 D0 FB                    ..
+L96C5:
+        sta     $07                             ; 96C5 85 07                    ..
+        iny                                     ; 96C7 C8                       .
+        jsr     L0140                           ; 96C8 20 40 01                  @.
+        and     #$0F                            ; 96CB 29 0F                    ).
+        beq     L96D8                           ; 96CD F0 09                    ..
+        tax                                     ; 96CF AA                       .
+        lda     #$00                            ; 96D0 A9 00                    ..
+        clc                                     ; 96D2 18                       .
+L96D3:
+        adc     #$0A                            ; 96D3 69 0A                    i.
+        dex                                     ; 96D5 CA                       .
+        bne     L96D3                           ; 96D6 D0 FB                    ..
+L96D8:
+        sta     $08                             ; 96D8 85 08                    ..
+        iny                                     ; 96DA C8                       .
+        jsr     L0140                           ; 96DB 20 40 01                  @.
+        and     #$0F                            ; 96DE 29 0F                    ).
+        clc                                     ; 96E0 18                       .
+        adc     $07                             ; 96E1 65 07                    e.
+        adc     $08                             ; 96E3 65 08                    e.
         sta     $07                             ; 96E5 85 07                    ..
         lda     $03                             ; 96E7 A5 03                    ..
         pha                                     ; 96E9 48                       H
@@ -3488,7 +3475,7 @@ LoadCharacterPortraitFromId:
         jsr     L979D                           ; 96F5 20 9D 97                  ..
         pla                                     ; 96F8 68                       h
         clc                                     ; 96F9 18                       .
-        adc     #$02                            ; 96FA 69 02                    i.
+        adc     #$04                            ; 96FA 69 04                    i.
         sta     L0002                           ; 96FC 85 02                    ..
         pla                                     ; 96FE 68                       h
         adc     #$00                            ; 96FF 69 00                    i.
@@ -5821,6 +5808,7 @@ LA6D9:
         lda     $6ECE,y                         ; A6F9 B9 CE 6E                 ..n
         jsr     LAB74                           ; A6FC 20 74 AB                  t.
         iny                                     ; A6FF C8                       .
+LA701           := * + 1
         lda     $6ECE,y                         ; A700 B9 CE 6E                 ..n
         jsr     LAB74                           ; A703 20 74 AB                  t.
         ldx     $6E38                           ; A706 AE 38 6E                 .8n
