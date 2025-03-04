@@ -19,11 +19,11 @@ RANGE {
 };
 RANGE {
   START $8019;
-  END $80B8;
+  END $80AE;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $80B9;
+  START $80AF;
   END $8330;
   TYPE TEXTTABLE;
 };
@@ -124,11 +124,11 @@ RANGE {
 };
 RANGE {
   START $9DB0;
-  END $A5C5;
+  END $FEED;
   TYPE TEXTTABLE;
 };
 RANGE {
-  START $A5C6;
+  START $FEEE;
   END $FFFF;
   TYPE BYTETABLE;
 };
@@ -139,323 +139,275 @@ LABEL {
 };
 LABEL {
   NAME "Bank06Block0Index0";
-  ADDR  $80B9;
+  ADDR  $80B0;
 };
 LABEL {
   NAME "Bank06Block0Index1";
-  ADDR  $80C1;
+  ADDR  $80C2;
 };
 LABEL {
   NAME "Bank06Block0Index2";
-  ADDR  $80D3;
+  ADDR  $80D4;
 };
 LABEL {
   NAME "Bank06Block0Index3";
-  ADDR  $80DD;
+  ADDR  $80DE;
 };
 LABEL {
   NAME "Bank06Block0Index4";
-  ADDR  $80E7;
+  ADDR  $80E8;
 };
 LABEL {
   NAME "Bank06Block0Index5";
-  ADDR  $80F1;
+  ADDR  $80F2;
 };
 LABEL {
   NAME "Bank06Block0Index6";
-  ADDR  $80FB;
+  ADDR  $80FC;
 };
 LABEL {
   NAME "Bank06Block0Index7";
-  ADDR  $8103;
+  ADDR  $8106;
 };
 LABEL {
   NAME "Bank06Block0Index8";
-  ADDR  $810D;
+  ADDR  $8110;
 };
 LABEL {
   NAME "Bank06Block0Index9";
-  ADDR  $8117;
+  ADDR  $811A;
 };
 LABEL {
   NAME "Bank06Block0Index10";
-  ADDR  $811B;
+  ADDR  $811E;
 };
 LABEL {
   NAME "Bank06Block0Index11";
-  ADDR  $811F;
+  ADDR  $8122;
 };
 LABEL {
   NAME "Bank06Block0Index12";
-  ADDR  $8123;
+  ADDR  $8126;
 };
 LABEL {
   NAME "Bank06Block0Index13";
-  ADDR  $8127;
+  ADDR  $812A;
 };
 LABEL {
   NAME "Bank06Block0Index14";
-  ADDR  $8131;
+  ADDR  $8134;
 };
 LABEL {
   NAME "Bank06Block0Index15";
-  ADDR  $8136;
+  ADDR  $8139;
 };
 LABEL {
   NAME "Bank06Block0Index16";
-  ADDR  $813B;
+  ADDR  $813E;
 };
 LABEL {
   NAME "Bank06Block0Index17";
-  ADDR  $8140;
+  ADDR  $8143;
 };
 LABEL {
   NAME "Bank06Block0Index18";
-  ADDR  $8145;
+  ADDR  $8148;
 };
 LABEL {
   NAME "Bank06Block0Index19";
-  ADDR  $814A;
+  ADDR  $814D;
 };
 LABEL {
   NAME "Bank06Block0Index20";
-  ADDR  $814F;
+  ADDR  $8152;
 };
 LABEL {
   NAME "Bank06Block0Index21";
-  ADDR  $8153;
+  ADDR  $8156;
 };
 LABEL {
   NAME "Bank06Block0Index22";
-  ADDR  $815F;
+  ADDR  $8161;
 };
 LABEL {
   NAME "Bank06Block0Index23";
-  ADDR  $816B;
+  ADDR  $816F;
 };
 LABEL {
   NAME "Bank06Block0Index24";
-  ADDR  $8174;
+  ADDR  $8179;
 };
 LABEL {
   NAME "Bank06Block0Index25";
-  ADDR  $817D;
+  ADDR  $8186;
 };
 LABEL {
   NAME "Bank06Block0Index26";
-  ADDR  $8183;
+  ADDR  $818C;
 };
 LABEL {
   NAME "Bank06Block0Index27";
-  ADDR  $818A;
+  ADDR  $8193;
 };
 LABEL {
   NAME "Bank06Block0Index28";
-  ADDR  $8192;
+  ADDR  $819B;
 };
 LABEL {
   NAME "Bank06Block0Index29";
-  ADDR  $8198;
+  ADDR  $81A1;
 };
 LABEL {
   NAME "Bank06Block0Index30";
-  ADDR  $819F;
+  ADDR  $81A8;
 };
 LABEL {
   NAME "Bank06Block0Index31";
-  ADDR  $81A6;
+  ADDR  $81B1;
 };
 LABEL {
   NAME "Bank06Block0Index32";
-  ADDR  $81B0;
-};
-LABEL {
-  NAME "Bank06Block0Index33";
-  ADDR  $81B5;
-};
-LABEL {
-  NAME "Bank06Block0Index34";
   ADDR  $81BB;
 };
 LABEL {
+  NAME "Bank06Block0Index33";
+  ADDR  $81C0;
+};
+LABEL {
+  NAME "Bank06Block0Index34";
+  ADDR  $81C6;
+};
+LABEL {
   NAME "Bank06Block0Index35";
-  ADDR  $81C1;
+  ADDR  $81CC;
 };
 LABEL {
   NAME "Bank06Block0Index36";
-  ADDR  $81C7;
+  ADDR  $81D2;
 };
 LABEL {
   NAME "Bank06Block0Index37";
-  ADDR  $81CD;
+  ADDR  $81D8;
 };
 LABEL {
   NAME "Bank06Block0Index38";
-  ADDR  $81D4;
+  ADDR  $81DF;
 };
 LABEL {
   NAME "Bank06Block0Index39";
-  ADDR  $81DE;
+  ADDR  $81E9;
 };
 LABEL {
   NAME "Bank06Block0Index40";
-  ADDR  $81EB;
-};
-LABEL {
-  NAME "Bank06Block0Index41";
   ADDR  $81F8;
 };
 LABEL {
-  NAME "Bank06Block0Index42";
+  NAME "Bank06Block0Index41";
   ADDR  $8206;
 };
 LABEL {
+  NAME "Bank06Block0Index42";
+  ADDR  $8214;
+};
+LABEL {
   NAME "Bank06Block0Index43";
-  ADDR  $820F;
+  ADDR  $821D;
 };
 LABEL {
   NAME "Bank06Block0Index44";
-  ADDR  $821B;
+  ADDR  $822A;
 };
 LABEL {
   NAME "Bank06Block0Index45";
-  ADDR  $8227;
+  ADDR  $8238;
 };
 LABEL {
   NAME "Bank06Block0Index46";
-  ADDR  $822E;
+  ADDR  $823F;
 };
 LABEL {
   NAME "Bank06Block0Index47";
-  ADDR  $823C;
+  ADDR  $824F;
 };
 LABEL {
   NAME "Bank06Block0Index48";
-  ADDR  $824A;
+  ADDR  $825F;
 };
 LABEL {
   NAME "Bank06Block0Index49";
-  ADDR  $8250;
+  ADDR  $8267;
 };
 LABEL {
   NAME "Bank06Block0Index50";
-  ADDR  $825A;
+  ADDR  $8271;
 };
 LABEL {
   NAME "Bank06Block0Index51";
-  ADDR  $8264;
-};
-LABEL {
-  NAME "Bank06Block0Index52";
-  ADDR  $826A;
-};
-LABEL {
-  NAME "Bank06Block0Index53";
-  ADDR  $8270;
-};
-LABEL {
-  NAME "Bank06Block0Index54";
   ADDR  $827B;
 };
 LABEL {
-  NAME "Bank06Block0Index55";
+  NAME "Bank06Block0Index52";
   ADDR  $8281;
 };
 LABEL {
-  NAME "Bank06Block0Index56";
+  NAME "Bank06Block0Index53";
   ADDR  $8287;
 };
 LABEL {
+  NAME "Bank06Block0Index54";
+  ADDR  $8298;
+};
+LABEL {
+  NAME "Bank06Block0Index55";
+  ADDR  $82A1;
+};
+LABEL {
+  NAME "Bank06Block0Index56";
+  ADDR  $82AB;
+};
+LABEL {
   NAME "Bank06Block0Index57";
-  ADDR  $828E;
+  ADDR  $82B4;
 };
 LABEL {
   NAME "Bank06Block0Index58";
-  ADDR  $8295;
+  ADDR  $82C0;
 };
 LABEL {
   NAME "Bank06Block0Index59";
-  ADDR  $829D;
-};
-LABEL {
-  NAME "Bank06Block0Index60";
-  ADDR  $82AE;
-};
-LABEL {
-  NAME "Bank06Block0Index61";
-  ADDR  $82B3;
-};
-LABEL {
-  NAME "Bank06Block0Index62";
-  ADDR  $82B8;
-};
-LABEL {
-  NAME "Bank06Block0Index63";
-  ADDR  $82BD;
-};
-LABEL {
-  NAME "Bank06Block0Index64";
-  ADDR  $82C2;
-};
-LABEL {
-  NAME "Bank06Block0Index65";
-  ADDR  $82C7;
+  ADDR  $82CB;
 };
 LABEL {
   NAME "Bank06Block0Index66";
-  ADDR  $82CC;
+  ADDR  $82E4;
 };
 LABEL {
   NAME "Bank06Block0Index67";
-  ADDR  $82CF;
+  ADDR  $82E7;
 };
 LABEL {
   NAME "Bank06Block0Index68";
-  ADDR  $82D5;
+  ADDR  $82ED;
 };
 LABEL {
   NAME "Bank06Block0Index69";
-  ADDR  $82E0;
+  ADDR  $82F8;
 };
 LABEL {
   NAME "Bank06Block0Index70";
-  ADDR  $82F1;
+  ADDR  $830B;
 };
 LABEL {
   NAME "Bank06Block0Index71";
-  ADDR  $82FC;
+  ADDR  $8317;
 };
 LABEL {
   NAME "Bank06Block0Index72";
-  ADDR  $8301;
+  ADDR  $831E;
 };
 LABEL {
   NAME "Bank06Block0Index73";
-  ADDR  $830C;
-};
-LABEL {
-  NAME "Bank06Block0Index74";
-  ADDR  $8311;
-};
-LABEL {
-  NAME "Bank06Block0Index75";
-  ADDR  $8316;
-};
-LABEL {
-  NAME "Bank06Block0Index76";
-  ADDR  $831B;
-};
-LABEL {
-  NAME "Bank06Block0Index77";
-  ADDR  $8320;
-};
-LABEL {
-  NAME "Bank06Block0Index78";
-  ADDR  $8325;
-};
-LABEL {
-  NAME "Bank06Block0Index79";
-  ADDR  $832A;
+  ADDR  $8329;
 };
 LABEL {
   NAME "HeadgearNameStr";
@@ -471,31 +423,31 @@ LABEL {
 };
 LABEL {
   NAME "HeadgearNameStrIndex2";
-  ADDR  $83AF;
+  ADDR  $83AD;
 };
 LABEL {
   NAME "HeadgearNameStrIndex3";
-  ADDR  $83B7;
+  ADDR  $83B5;
 };
 LABEL {
   NAME "HeadgearNameStrIndex4";
-  ADDR  $83BE;
+  ADDR  $83BC;
 };
 LABEL {
   NAME "HeadgearNameStrIndex5";
-  ADDR  $83C6;
+  ADDR  $83C5;
 };
 LABEL {
   NAME "HeadgearNameStrIndex6";
-  ADDR  $83CE;
+  ADDR  $83CB;
 };
 LABEL {
   NAME "HeadgearNameStrIndex7";
-  ADDR  $83D7;
+  ADDR  $83D3;
 };
 LABEL {
   NAME "HeadgearNameStrIndex8";
-  ADDR  $83DF;
+  ADDR  $83DD;
 };
 LABEL {
   NAME "HeadgearNameStrIndex9";
@@ -503,23 +455,23 @@ LABEL {
 };
 LABEL {
   NAME "HeadgearNameStrIndex10";
-  ADDR  $83F1;
+  ADDR  $83F2;
 };
 LABEL {
   NAME "HeadgearNameStrIndex11";
-  ADDR  $83F9;
+  ADDR  $83FA;
 };
 LABEL {
   NAME "HeadgearNameStrIndex12";
-  ADDR  $8401;
+  ADDR  $8402;
 };
 LABEL {
   NAME "HeadgearNameStrIndex13";
-  ADDR  $840A;
+  ADDR  $840B;
 };
 LABEL {
   NAME "HeadgearNameStrIndex14";
-  ADDR  $8412;
+  ADDR  $8414;
 };
 LABEL {
   NAME "HeadgearNameStrIndex15";
@@ -527,163 +479,151 @@ LABEL {
 };
 LABEL {
   NAME "HeadgearNameStrIndex16";
-  ADDR  $8425;
+  ADDR  $8427;
 };
 LABEL {
   NAME "HeadgearNameStrIndex17";
-  ADDR  $842F;
+  ADDR  $8432;
 };
 LABEL {
   NAME "HeadgearNameStrIndex18";
-  ADDR  $8437;
+  ADDR  $843A;
 };
 LABEL {
   NAME "HeadgearNameStrIndex19";
-  ADDR  $843F;
+  ADDR  $8443;
 };
 LABEL {
   NAME "HeadgearNameStrIndex20";
-  ADDR  $8446;
+  ADDR  $844B;
 };
 LABEL {
   NAME "HeadgearNameStrIndex21";
-  ADDR  $844F;
+  ADDR  $8453;
 };
 LABEL {
   NAME "HeadgearNameStrIndex22";
-  ADDR  $8459;
+  ADDR  $845E;
 };
 LABEL {
   NAME "HeadgearNameStrIndex23";
-  ADDR  $8460;
-};
-LABEL {
-  NAME "HeadgearNameStrIndex24";
   ADDR  $8467;
 };
 LABEL {
+  NAME "HeadgearNameStrIndex24";
+  ADDR  $8471;
+};
+LABEL {
   NAME "HeadgearNameStrIndex25";
-  ADDR  $846F;
+  ADDR  $847A;
 };
 LABEL {
   NAME "HeadgearNameStrIndex26";
-  ADDR  $8476;
+  ADDR  $8481;
 };
 LABEL {
   NAME "HeadgearNameStrIndex27";
-  ADDR  $847E;
+  ADDR  $8489;
 };
 LABEL {
   NAME "HeadgearNameStrIndex28";
-  ADDR  $8486;
+  ADDR  $8491;
 };
 LABEL {
   NAME "HeadgearNameStrIndex29";
-  ADDR  $848F;
+  ADDR  $849A;
 };
 LABEL {
   NAME "HeadgearNameStrIndex30";
-  ADDR  $8497;
+  ADDR  $84A5;
 };
 LABEL {
   NAME "HeadgearNameStrIndex31";
-  ADDR  $849F;
+  ADDR  $84AE;
 };
 LABEL {
   NAME "HeadgearNameStrIndex32";
-  ADDR  $84A8;
-};
-LABEL {
-  NAME "HeadgearNameStrIndex33";
-  ADDR  $84B0;
-};
-LABEL {
-  NAME "HeadgearNameStrIndex34";
   ADDR  $84B7;
 };
 LABEL {
-  NAME "HeadgearNameStrIndex35";
+  NAME "HeadgearNameStrIndex33";
   ADDR  $84BF;
 };
 LABEL {
+  NAME "HeadgearNameStrIndex34";
+  ADDR  $84C6;
+};
+LABEL {
+  NAME "HeadgearNameStrIndex35";
+  ADDR  $84D0;
+};
+LABEL {
   NAME "HeadgearNameStrIndex36";
-  ADDR  $84C9;
+  ADDR  $84DA;
 };
 LABEL {
   NAME "HeadgearNameStrIndex37";
-  ADDR  $84D3;
+  ADDR  $84E4;
 };
 LABEL {
   NAME "HeadgearNameStrIndex38";
-  ADDR  $84DD;
+  ADDR  $84EE;
 };
 LABEL {
   NAME "HeadgearNameStrIndex39";
-  ADDR  $84E7;
+  ADDR  $84F6;
 };
 LABEL {
   NAME "HeadgearNameStrIndex40";
-  ADDR  $84F0;
+  ADDR  $84FF;
 };
 LABEL {
   NAME "HeadgearNameStrIndex41";
-  ADDR  $84F7;
-};
-LABEL {
-  NAME "HeadgearNameStrIndex42";
-  ADDR  $8500;
-};
-LABEL {
-  NAME "HeadgearNameStrIndex43";
   ADDR  $8507;
 };
 LABEL {
-  NAME "HeadgearNameStrIndex44";
-  ADDR  $8510;
+  NAME "HeadgearNameStrIndex42";
+  ADDR  $8511;
 };
 LABEL {
-  NAME "HeadgearNameStrIndex45";
+  NAME "HeadgearNameStrIndex43";
   ADDR  $8518;
 };
 LABEL {
-  NAME "HeadgearNameStrIndex46";
+  NAME "HeadgearNameStrIndex44";
   ADDR  $8521;
 };
 LABEL {
-  NAME "HeadgearNameStrIndex47";
+  NAME "HeadgearNameStrIndex45";
   ADDR  $8529;
 };
 LABEL {
-  NAME "HeadgearNameStrIndex48";
+  NAME "HeadgearNameStrIndex46";
   ADDR  $8533;
 };
 LABEL {
+  NAME "HeadgearNameStrIndex47";
+  ADDR  $853C;
+};
+LABEL {
+  NAME "HeadgearNameStrIndex48";
+  ADDR  $8547;
+};
+LABEL {
   NAME "HeadgearNameStrIndex49";
-  ADDR  $853B;
+  ADDR  $8550;
 };
 LABEL {
   NAME "HeadgearNameStrIndex50";
-  ADDR  $8544;
+  ADDR  $8558;
 };
 LABEL {
   NAME "HeadgearNameStrIndex51";
-  ADDR  $854C;
+  ADDR  $8563;
 };
 LABEL {
   NAME "HeadgearNameStrIndex52";
-  ADDR  $8554;
-};
-LABEL {
-  NAME "HeadgearNameStrIndex53";
-  ADDR  $855D;
-};
-LABEL {
-  NAME "HeadgearNameStrIndex54";
-  ADDR  $8565;
-};
-LABEL {
-  NAME "HeadgearNameStrIndex55";
-  ADDR  $856F;
+  ADDR  $856B;
 };
 LABEL {
   NAME "BodyArmorNameStr";
@@ -699,71 +639,71 @@ LABEL {
 };
 LABEL {
   NAME "BodyArmorNameStrIndex2";
-  ADDR  $868A;
+  ADDR  $8689;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex3";
-  ADDR  $8690;
+  ADDR  $868F;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex4";
-  ADDR  $8698;
+  ADDR  $8695;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex5";
-  ADDR  $86A0;
+  ADDR  $869D;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex6";
-  ADDR  $86AA;
+  ADDR  $86A6;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex7";
-  ADDR  $86B4;
+  ADDR  $86B0;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex8";
-  ADDR  $86BC;
+  ADDR  $86B7;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex9";
-  ADDR  $86C5;
+  ADDR  $86C0;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex10";
-  ADDR  $86CE;
+  ADDR  $86C7;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex11";
-  ADDR  $86D6;
+  ADDR  $86D1;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex12";
-  ADDR  $86DE;
+  ADDR  $86D9;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex13";
-  ADDR  $86E6;
+  ADDR  $86E3;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex14";
-  ADDR  $86EF;
+  ADDR  $86EB;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex15";
-  ADDR  $86F6;
+  ADDR  $86F2;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex16";
-  ADDR  $86FE;
+  ADDR  $86FA;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex17";
-  ADDR  $8707;
+  ADDR  $8705;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex18";
-  ADDR  $8711;
+  ADDR  $8710;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex19";
@@ -771,15 +711,15 @@ LABEL {
 };
 LABEL {
   NAME "BodyArmorNameStrIndex20";
-  ADDR  $8722;
+  ADDR  $8724;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex21";
-  ADDR  $872A;
+  ADDR  $872B;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex22";
-  ADDR  $8732;
+  ADDR  $8733;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex23";
@@ -787,423 +727,411 @@ LABEL {
 };
 LABEL {
   NAME "BodyArmorNameStrIndex24";
-  ADDR  $8744;
+  ADDR  $8746;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex25";
-  ADDR  $874A;
+  ADDR  $874D;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex26";
-  ADDR  $8754;
+  ADDR  $8758;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex27";
-  ADDR  $875C;
+  ADDR  $8760;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex28";
-  ADDR  $8764;
+  ADDR  $8769;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex29";
-  ADDR  $876D;
+  ADDR  $8771;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex30";
-  ADDR  $8776;
+  ADDR  $877A;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex31";
-  ADDR  $877F;
+  ADDR  $8784;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex32";
-  ADDR  $8788;
+  ADDR  $878D;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex33";
-  ADDR  $878F;
+  ADDR  $8794;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex34";
-  ADDR  $8796;
+  ADDR  $879B;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex35";
-  ADDR  $879F;
+  ADDR  $87A4;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex36";
-  ADDR  $87A8;
+  ADDR  $87AD;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex37";
-  ADDR  $87B1;
+  ADDR  $87B7;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex38";
-  ADDR  $87B9;
+  ADDR  $87C0;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex39";
-  ADDR  $87C3;
+  ADDR  $87CA;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex40";
-  ADDR  $87CB;
+  ADDR  $87D2;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex41";
-  ADDR  $87D5;
+  ADDR  $87DC;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex42";
-  ADDR  $87DF;
+  ADDR  $87E7;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex43";
-  ADDR  $87E9;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex44";
   ADDR  $87F1;
 };
 LABEL {
+  NAME "BodyArmorNameStrIndex44";
+  ADDR  $87FC;
+};
+LABEL {
   NAME "BodyArmorNameStrIndex45";
-  ADDR  $87F9;
+  ADDR  $8807;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex46";
-  ADDR  $8801;
+  ADDR  $880F;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex47";
-  ADDR  $8809;
+  ADDR  $8817;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex48";
-  ADDR  $8813;
+  ADDR  $8821;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex49";
-  ADDR  $881B;
+  ADDR  $882A;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex50";
-  ADDR  $8825;
+  ADDR  $8834;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex51";
-  ADDR  $882E;
+  ADDR  $883E;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex52";
-  ADDR  $8836;
+  ADDR  $8846;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex53";
-  ADDR  $8840;
+  ADDR  $8850;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex54";
-  ADDR  $8847;
+  ADDR  $8857;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex55";
-  ADDR  $8851;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex56";
-  ADDR  $8858;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex57";
   ADDR  $885F;
 };
 LABEL {
+  NAME "BodyArmorNameStrIndex56";
+  ADDR  $8867;
+};
+LABEL {
+  NAME "BodyArmorNameStrIndex57";
+  ADDR  $8870;
+};
+LABEL {
   NAME "BodyArmorNameStrIndex58";
-  ADDR  $8866;
+  ADDR  $887A;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex59";
-  ADDR  $886D;
+  ADDR  $8881;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex60";
-  ADDR  $8877;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex61";
-  ADDR  $8880;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex62";
   ADDR  $888A;
 };
 LABEL {
+  NAME "BodyArmorNameStrIndex61";
+  ADDR  $8894;
+};
+LABEL {
+  NAME "BodyArmorNameStrIndex62";
+  ADDR  $889C;
+};
+LABEL {
   NAME "BodyArmorNameStrIndex63";
-  ADDR  $8893;
+  ADDR  $88A5;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex64";
-  ADDR  $889B;
+  ADDR  $88AD;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex65";
-  ADDR  $88A4;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex66";
-  ADDR  $88AE;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex67";
   ADDR  $88B6;
 };
 LABEL {
+  NAME "BodyArmorNameStrIndex66";
+  ADDR  $88C0;
+};
+LABEL {
+  NAME "BodyArmorNameStrIndex67";
+  ADDR  $88C8;
+};
+LABEL {
   NAME "BodyArmorNameStrIndex68";
-  ADDR  $88BD;
+  ADDR  $88D0;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex69";
-  ADDR  $88C7;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex70";
-  ADDR  $88CE;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex71";
   ADDR  $88D7;
 };
 LABEL {
+  NAME "BodyArmorNameStrIndex70";
+  ADDR  $88E1;
+};
+LABEL {
+  NAME "BodyArmorNameStrIndex71";
+  ADDR  $88EA;
+};
+LABEL {
   NAME "BodyArmorNameStrIndex72";
-  ADDR  $88DF;
+  ADDR  $88F4;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex73";
-  ADDR  $88E7;
+  ADDR  $88FD;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex74";
-  ADDR  $88F0;
+  ADDR  $8905;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex75";
-  ADDR  $88F7;
+  ADDR  $890C;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex76";
-  ADDR  $88FE;
+  ADDR  $8913;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex77";
-  ADDR  $8908;
+  ADDR  $891D;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex78";
-  ADDR  $8911;
+  ADDR  $8926;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex79";
-  ADDR  $891A;
+  ADDR  $892F;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex80";
-  ADDR  $8924;
+  ADDR  $8939;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex81";
-  ADDR  $892C;
+  ADDR  $8943;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex82";
-  ADDR  $8935;
+  ADDR  $894C;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex83";
-  ADDR  $893C;
+  ADDR  $8954;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex84";
-  ADDR  $8946;
+  ADDR  $895E;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex85";
-  ADDR  $894F;
+  ADDR  $8968;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex86";
-  ADDR  $8956;
+  ADDR  $896F;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex87";
-  ADDR  $895D;
+  ADDR  $8977;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex88";
-  ADDR  $8963;
+  ADDR  $897E;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex89";
-  ADDR  $896B;
+  ADDR  $8985;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex90";
-  ADDR  $8974;
+  ADDR  $898E;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex91";
-  ADDR  $897C;
+  ADDR  $8998;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex92";
-  ADDR  $8983;
+  ADDR  $89A0;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex93";
-  ADDR  $898D;
+  ADDR  $89A9;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex94";
-  ADDR  $8997;
+  ADDR  $89B3;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex95";
-  ADDR  $899F;
+  ADDR  $89BB;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex96";
-  ADDR  $89A7;
+  ADDR  $89C3;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex97";
-  ADDR  $89AF;
+  ADDR  $89CC;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex98";
-  ADDR  $89B7;
+  ADDR  $89D4;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex99";
-  ADDR  $89C1;
+  ADDR  $89DC;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex100";
-  ADDR  $89C8;
+  ADDR  $89E5;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex101";
-  ADDR  $89CF;
+  ADDR  $89ED;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex102";
-  ADDR  $89D7;
+  ADDR  $89F6;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex103";
-  ADDR  $89DE;
+  ADDR  $89FF;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex104";
-  ADDR  $89E6;
+  ADDR  $8A07;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex105";
-  ADDR  $89EE;
+  ADDR  $8A0D;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex106";
-  ADDR  $89F4;
+  ADDR  $8A15;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex107";
-  ADDR  $89FB;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex108";
-  ADDR  $8A03;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex109";
-  ADDR  $8A0B;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex110";
-  ADDR  $8A14;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex111";
   ADDR  $8A1C;
 };
 LABEL {
+  NAME "BodyArmorNameStrIndex108";
+  ADDR  $8A23;
+};
+LABEL {
+  NAME "BodyArmorNameStrIndex109";
+  ADDR  $8A2C;
+};
+LABEL {
+  NAME "BodyArmorNameStrIndex110";
+  ADDR  $8A33;
+};
+LABEL {
+  NAME "BodyArmorNameStrIndex111";
+  ADDR  $8A3B;
+};
+LABEL {
   NAME "BodyArmorNameStrIndex112";
-  ADDR  $8A25;
+  ADDR  $8A44;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex113";
-  ADDR  $8A2D;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex114";
-  ADDR  $8A37;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex115";
-  ADDR  $8A3E;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex116";
-  ADDR  $8A45;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex117";
   ADDR  $8A4C;
 };
 LABEL {
-  NAME "BodyArmorNameStrIndex118";
-  ADDR  $8A56;
+  NAME "BodyArmorNameStrIndex114";
+  ADDR  $8A57;
 };
 LABEL {
-  NAME "BodyArmorNameStrIndex119";
+  NAME "BodyArmorNameStrIndex115";
   ADDR  $8A5F;
 };
 LABEL {
+  NAME "BodyArmorNameStrIndex116";
+  ADDR  $8A66;
+};
+LABEL {
+  NAME "BodyArmorNameStrIndex117";
+  ADDR  $8A6E;
+};
+LABEL {
+  NAME "BodyArmorNameStrIndex118";
+  ADDR  $8A76;
+};
+LABEL {
+  NAME "BodyArmorNameStrIndex119";
+  ADDR  $8A7D;
+};
+LABEL {
   NAME "BodyArmorNameStrIndex120";
-  ADDR  $8A69;
+  ADDR  $8A85;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex121";
-  ADDR  $8A72;
+  ADDR  $8A8D;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex122";
-  ADDR  $8A78;
+  ADDR  $8A94;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex123";
-  ADDR  $8A80;
+  ADDR  $8A9C;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex124";
-  ADDR  $8A87;
+  ADDR  $8AA4;
 };
 LABEL {
   NAME "BodyArmorNameStrIndex125";
-  ADDR  $8A90;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex126";
-  ADDR  $8A99;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex127";
-  ADDR  $8AA3;
-};
-LABEL {
-  NAME "BodyArmorNameStrIndex128";
-  ADDR  $8AAC;
+  ADDR  $8AAE;
 };
 LABEL {
   NAME "BraceletNameStr";
@@ -1223,23 +1151,23 @@ LABEL {
 };
 LABEL {
   NAME "BraceletNameStrIndex3";
-  ADDR  $8BA2;
+  ADDR  $8BA4;
 };
 LABEL {
   NAME "BraceletNameStrIndex4";
-  ADDR  $8BA8;
+  ADDR  $8BAA;
 };
 LABEL {
   NAME "BraceletNameStrIndex5";
-  ADDR  $8BB1;
+  ADDR  $8BB4;
 };
 LABEL {
   NAME "BraceletNameStrIndex6";
-  ADDR  $8BB9;
+  ADDR  $8BBA;
 };
 LABEL {
   NAME "BraceletNameStrIndex7";
-  ADDR  $8BC2;
+  ADDR  $8BC3;
 };
 LABEL {
   NAME "BraceletNameStrIndex8";
@@ -1247,11 +1175,11 @@ LABEL {
 };
 LABEL {
   NAME "BraceletNameStrIndex9";
-  ADDR  $8BD4;
+  ADDR  $8BD3;
 };
 LABEL {
   NAME "BraceletNameStrIndex10";
-  ADDR  $8BDE;
+  ADDR  $8BDC;
 };
 LABEL {
   NAME "BraceletNameStrIndex11";
@@ -1259,23 +1187,23 @@ LABEL {
 };
 LABEL {
   NAME "BraceletNameStrIndex12";
-  ADDR  $8BEF;
+  ADDR  $8BF0;
 };
 LABEL {
   NAME "BraceletNameStrIndex13";
-  ADDR  $8BF7;
+  ADDR  $8BF6;
 };
 LABEL {
   NAME "BraceletNameStrIndex14";
-  ADDR  $8C01;
+  ADDR  $8BFE;
 };
 LABEL {
   NAME "BraceletNameStrIndex15";
-  ADDR  $8C0A;
+  ADDR  $8C08;
 };
 LABEL {
   NAME "BraceletNameStrIndex16";
-  ADDR  $8C13;
+  ADDR  $8C11;
 };
 LABEL {
   NAME "BraceletNameStrIndex17";
@@ -1283,15 +1211,15 @@ LABEL {
 };
 LABEL {
   NAME "BraceletNameStrIndex18";
-  ADDR  $8C22;
+  ADDR  $8C23;
 };
 LABEL {
   NAME "BraceletNameStrIndex19";
-  ADDR  $8C2C;
+  ADDR  $8C2D;
 };
 LABEL {
   NAME "BraceletNameStrIndex20";
-  ADDR  $8C36;
+  ADDR  $8C37;
 };
 LABEL {
   NAME "BraceletNameStrIndex21";
@@ -1311,23 +1239,23 @@ LABEL {
 };
 LABEL {
   NAME "BraceletNameStrIndex25";
-  ADDR  $8C5F;
+  ADDR  $8C60;
 };
 LABEL {
   NAME "BraceletNameStrIndex26";
-  ADDR  $8C68;
+  ADDR  $8C69;
 };
 LABEL {
   NAME "BraceletNameStrIndex27";
-  ADDR  $8C72;
+  ADDR  $8C73;
 };
 LABEL {
   NAME "BraceletNameStrIndex28";
-  ADDR  $8C79;
+  ADDR  $8C7B;
 };
 LABEL {
   NAME "BraceletNameStrIndex29";
-  ADDR  $8C83;
+  ADDR  $8C85;
 };
 LABEL {
   NAME "BraceletNameStrIndex30";
@@ -1335,303 +1263,291 @@ LABEL {
 };
 LABEL {
   NAME "BraceletNameStrIndex31";
-  ADDR  $8C93;
+  ADDR  $8C94;
 };
 LABEL {
   NAME "BraceletNameStrIndex32";
-  ADDR  $8C9B;
+  ADDR  $8C9D;
 };
 LABEL {
   NAME "BraceletNameStrIndex33";
-  ADDR  $8CA4;
+  ADDR  $8CA5;
 };
 LABEL {
   NAME "BraceletNameStrIndex34";
-  ADDR  $8CAD;
+  ADDR  $8CAE;
 };
 LABEL {
   NAME "BraceletNameStrIndex35";
-  ADDR  $8CB4;
+  ADDR  $8CB5;
 };
 LABEL {
   NAME "BraceletNameStrIndex36";
-  ADDR  $8CBB;
+  ADDR  $8CBF;
 };
 LABEL {
   NAME "BraceletNameStrIndex37";
-  ADDR  $8CC3;
+  ADDR  $8CC8;
 };
 LABEL {
   NAME "BraceletNameStrIndex38";
-  ADDR  $8CCB;
+  ADDR  $8CD0;
 };
 LABEL {
   NAME "BraceletNameStrIndex39";
-  ADDR  $8CD3;
+  ADDR  $8CD9;
 };
 LABEL {
   NAME "BraceletNameStrIndex40";
-  ADDR  $8CDD;
+  ADDR  $8CE3;
 };
 LABEL {
   NAME "BraceletNameStrIndex41";
-  ADDR  $8CE6;
+  ADDR  $8CEC;
 };
 LABEL {
   NAME "BraceletNameStrIndex42";
-  ADDR  $8CED;
-};
-LABEL {
-  NAME "BraceletNameStrIndex43";
   ADDR  $8CF6;
 };
 LABEL {
+  NAME "BraceletNameStrIndex43";
+  ADDR  $8CFD;
+};
+LABEL {
   NAME "BraceletNameStrIndex44";
-  ADDR  $8CFE;
+  ADDR  $8D05;
 };
 LABEL {
   NAME "BraceletNameStrIndex45";
-  ADDR  $8D07;
+  ADDR  $8D0F;
 };
 LABEL {
   NAME "BraceletNameStrIndex46";
-  ADDR  $8D10;
+  ADDR  $8D16;
 };
 LABEL {
   NAME "BraceletNameStrIndex47";
-  ADDR  $8D18;
+  ADDR  $8D1D;
 };
 LABEL {
   NAME "BraceletNameStrIndex48";
-  ADDR  $8D21;
+  ADDR  $8D26;
 };
 LABEL {
   NAME "BraceletNameStrIndex49";
-  ADDR  $8D2A;
+  ADDR  $8D2F;
 };
 LABEL {
   NAME "BraceletNameStrIndex50";
-  ADDR  $8D33;
+  ADDR  $8D38;
 };
 LABEL {
   NAME "BraceletNameStrIndex51";
-  ADDR  $8D3D;
+  ADDR  $8D42;
 };
 LABEL {
   NAME "BraceletNameStrIndex52";
-  ADDR  $8D46;
+  ADDR  $8D4C;
 };
 LABEL {
   NAME "BraceletNameStrIndex53";
-  ADDR  $8D50;
+  ADDR  $8D55;
 };
 LABEL {
   NAME "BraceletNameStrIndex54";
-  ADDR  $8D59;
+  ADDR  $8D5E;
 };
 LABEL {
   NAME "BraceletNameStrIndex55";
-  ADDR  $8D62;
+  ADDR  $8D67;
 };
 LABEL {
   NAME "BraceletNameStrIndex56";
-  ADDR  $8D6B;
+  ADDR  $8D70;
 };
 LABEL {
   NAME "BraceletNameStrIndex57";
-  ADDR  $8D72;
+  ADDR  $8D7A;
 };
 LABEL {
   NAME "BraceletNameStrIndex58";
-  ADDR  $8D7B;
+  ADDR  $8D84;
 };
 LABEL {
   NAME "BraceletNameStrIndex59";
-  ADDR  $8D82;
+  ADDR  $8D8C;
 };
 LABEL {
   NAME "BraceletNameStrIndex60";
-  ADDR  $8D8B;
+  ADDR  $8D95;
 };
 LABEL {
   NAME "BraceletNameStrIndex61";
-  ADDR  $8D92;
+  ADDR  $8D9C;
 };
 LABEL {
   NAME "BraceletNameStrIndex62";
-  ADDR  $8D98;
+  ADDR  $8DA5;
 };
 LABEL {
   NAME "BraceletNameStrIndex63";
-  ADDR  $8DA2;
+  ADDR  $8DAD;
 };
 LABEL {
   NAME "BraceletNameStrIndex64";
-  ADDR  $8DAC;
+  ADDR  $8DB7;
 };
 LABEL {
   NAME "BraceletNameStrIndex65";
-  ADDR  $8DB4;
+  ADDR  $8DC1;
 };
 LABEL {
   NAME "BraceletNameStrIndex66";
-  ADDR  $8DBB;
+  ADDR  $8DC8;
 };
 LABEL {
   NAME "BraceletNameStrIndex67";
-  ADDR  $8DC3;
+  ADDR  $8DD2;
 };
 LABEL {
   NAME "BraceletNameStrIndex68";
-  ADDR  $8DCB;
+  ADDR  $8DDA;
 };
 LABEL {
   NAME "BraceletNameStrIndex69";
-  ADDR  $8DD5;
+  ADDR  $8DE4;
 };
 LABEL {
   NAME "BraceletNameStrIndex70";
-  ADDR  $8DDC;
+  ADDR  $8DEB;
 };
 LABEL {
   NAME "BraceletNameStrIndex71";
-  ADDR  $8DE6;
+  ADDR  $8DF5;
 };
 LABEL {
   NAME "BraceletNameStrIndex72";
-  ADDR  $8DEF;
+  ADDR  $8DFC;
 };
 LABEL {
   NAME "BraceletNameStrIndex73";
-  ADDR  $8DF7;
-};
-LABEL {
-  NAME "BraceletNameStrIndex74";
-  ADDR  $8DFE;
-};
-LABEL {
-  NAME "BraceletNameStrIndex75";
   ADDR  $8E05;
 };
 LABEL {
-  NAME "BraceletNameStrIndex76";
+  NAME "BraceletNameStrIndex74";
   ADDR  $8E0F;
 };
 LABEL {
-  NAME "BraceletNameStrIndex77";
-  ADDR  $8E18;
+  NAME "BraceletNameStrIndex75";
+  ADDR  $8E17;
 };
 LABEL {
-  NAME "BraceletNameStrIndex78";
+  NAME "BraceletNameStrIndex76";
   ADDR  $8E21;
 };
 LABEL {
+  NAME "BraceletNameStrIndex77";
+  ADDR  $8E2B;
+};
+LABEL {
+  NAME "BraceletNameStrIndex78";
+  ADDR  $8E35;
+};
+LABEL {
   NAME "BraceletNameStrIndex79";
-  ADDR  $8E28;
+  ADDR  $8E3C;
 };
 LABEL {
   NAME "BraceletNameStrIndex80";
-  ADDR  $8E31;
+  ADDR  $8E45;
 };
 LABEL {
   NAME "BraceletNameStrIndex81";
-  ADDR  $8E3A;
-};
-LABEL {
-  NAME "BraceletNameStrIndex82";
-  ADDR  $8E42;
-};
-LABEL {
-  NAME "BraceletNameStrIndex83";
-  ADDR  $8E48;
-};
-LABEL {
-  NAME "BraceletNameStrIndex84";
   ADDR  $8E4F;
 };
 LABEL {
+  NAME "BraceletNameStrIndex82";
+  ADDR  $8E57;
+};
+LABEL {
+  NAME "BraceletNameStrIndex83";
+  ADDR  $8E5D;
+};
+LABEL {
+  NAME "BraceletNameStrIndex84";
+  ADDR  $8E64;
+};
+LABEL {
   NAME "BraceletNameStrIndex85";
-  ADDR  $8E59;
+  ADDR  $8E6E;
 };
 LABEL {
   NAME "BraceletNameStrIndex86";
-  ADDR  $8E63;
+  ADDR  $8E78;
 };
 LABEL {
   NAME "BraceletNameStrIndex87";
-  ADDR  $8E6A;
+  ADDR  $8E80;
 };
 LABEL {
   NAME "BraceletNameStrIndex88";
-  ADDR  $8E72;
+  ADDR  $8E88;
 };
 LABEL {
   NAME "BraceletNameStrIndex89";
-  ADDR  $8E7C;
-};
-LABEL {
-  NAME "BraceletNameStrIndex90";
-  ADDR  $8E84;
-};
-LABEL {
-  NAME "BraceletNameStrIndex91";
-  ADDR  $8E8A;
-};
-LABEL {
-  NAME "BraceletNameStrIndex92";
   ADDR  $8E92;
 };
 LABEL {
-  NAME "BraceletNameStrIndex93";
+  NAME "BraceletNameStrIndex90";
   ADDR  $8E9A;
 };
 LABEL {
+  NAME "BraceletNameStrIndex91";
+  ADDR  $8EA2;
+};
+LABEL {
+  NAME "BraceletNameStrIndex92";
+  ADDR  $8EAB;
+};
+LABEL {
+  NAME "BraceletNameStrIndex93";
+  ADDR  $8EB4;
+};
+LABEL {
   NAME "BraceletNameStrIndex94";
-  ADDR  $8EA3;
-};
-LABEL {
-  NAME "BraceletNameStrIndex95";
-  ADDR  $8EAA;
-};
-LABEL {
-  NAME "BraceletNameStrIndex96";
-  ADDR  $8EB3;
-};
-LABEL {
-  NAME "BraceletNameStrIndex97";
   ADDR  $8EBC;
 };
 LABEL {
+  NAME "BraceletNameStrIndex95";
+  ADDR  $8EC4;
+};
+LABEL {
+  NAME "BraceletNameStrIndex96";
+  ADDR  $8ECB;
+};
+LABEL {
+  NAME "BraceletNameStrIndex97";
+  ADDR  $8ED5;
+};
+LABEL {
   NAME "BraceletNameStrIndex98";
-  ADDR  $8EC5;
+  ADDR  $8EDF;
 };
 LABEL {
   NAME "BraceletNameStrIndex99";
-  ADDR  $8ECF;
+  ADDR  $8EE6;
 };
 LABEL {
   NAME "BraceletNameStrIndex100";
-  ADDR  $8ED8;
+  ADDR  $8EEF;
 };
 LABEL {
   NAME "BraceletNameStrIndex101";
-  ADDR  $8EE2;
+  ADDR  $8EF9;
 };
 LABEL {
   NAME "BraceletNameStrIndex102";
-  ADDR  $8EEA;
-};
-LABEL {
-  NAME "BraceletNameStrIndex103";
-  ADDR  $8EF3;
-};
-LABEL {
-  NAME "BraceletNameStrIndex104";
-  ADDR  $8EFD;
-};
-LABEL {
-  NAME "BraceletNameStrIndex105";
-  ADDR  $8F04;
+  ADDR  $8F02;
 };
 LABEL {
   NAME "RingNameStr";
@@ -1703,59 +1619,59 @@ LABEL {
 };
 LABEL {
   NAME "RingNameStrIndex16";
-  ADDR  $9013;
+  ADDR  $9011;
 };
 LABEL {
   NAME "RingNameStrIndex17";
-  ADDR  $901C;
+  ADDR  $901A;
 };
 LABEL {
   NAME "RingNameStrIndex18";
-  ADDR  $9024;
+  ADDR  $9022;
 };
 LABEL {
   NAME "RingNameStrIndex19";
-  ADDR  $902C;
+  ADDR  $902A;
 };
 LABEL {
   NAME "RingNameStrIndex20";
-  ADDR  $9035;
+  ADDR  $9034;
 };
 LABEL {
   NAME "RingNameStrIndex21";
-  ADDR  $903D;
+  ADDR  $903B;
 };
 LABEL {
   NAME "RingNameStrIndex22";
-  ADDR  $9044;
+  ADDR  $9043;
 };
 LABEL {
   NAME "RingNameStrIndex23";
-  ADDR  $904C;
+  ADDR  $904B;
 };
 LABEL {
   NAME "RingNameStrIndex24";
-  ADDR  $9054;
+  ADDR  $9052;
 };
 LABEL {
   NAME "RingNameStrIndex25";
-  ADDR  $905D;
+  ADDR  $9058;
 };
 LABEL {
   NAME "RingNameStrIndex26";
-  ADDR  $9065;
+  ADDR  $9060;
 };
 LABEL {
   NAME "RingNameStrIndex27";
-  ADDR  $906D;
+  ADDR  $906A;
 };
 LABEL {
   NAME "RingNameStrIndex28";
-  ADDR  $9074;
+  ADDR  $9073;
 };
 LABEL {
   NAME "RingNameStrIndex29";
-  ADDR  $907B;
+  ADDR  $907A;
 };
 LABEL {
   NAME "RingNameStrIndex30";
@@ -1767,111 +1683,107 @@ LABEL {
 };
 LABEL {
   NAME "RingNameStrIndex32";
-  ADDR  $9093;
+  ADDR  $9095;
 };
 LABEL {
   NAME "RingNameStrIndex33";
-  ADDR  $909C;
+  ADDR  $909E;
 };
 LABEL {
   NAME "RingNameStrIndex34";
-  ADDR  $90A3;
+  ADDR  $90A5;
 };
 LABEL {
   NAME "RingNameStrIndex35";
-  ADDR  $90AC;
+  ADDR  $90AE;
 };
 LABEL {
   NAME "RingNameStrIndex36";
-  ADDR  $90B5;
+  ADDR  $90B8;
 };
 LABEL {
   NAME "RingNameStrIndex37";
-  ADDR  $90BD;
+  ADDR  $90C0;
 };
 LABEL {
   NAME "RingNameStrIndex38";
-  ADDR  $90C4;
+  ADDR  $90C7;
 };
 LABEL {
   NAME "RingNameStrIndex39";
-  ADDR  $90CE;
+  ADDR  $90D1;
 };
 LABEL {
   NAME "RingNameStrIndex40";
-  ADDR  $90D8;
+  ADDR  $90DB;
 };
 LABEL {
   NAME "RingNameStrIndex41";
-  ADDR  $90DF;
+  ADDR  $90E2;
 };
 LABEL {
   NAME "RingNameStrIndex42";
-  ADDR  $90E6;
+  ADDR  $90E9;
 };
 LABEL {
   NAME "RingNameStrIndex43";
-  ADDR  $90ED;
+  ADDR  $90F1;
 };
 LABEL {
   NAME "RingNameStrIndex44";
-  ADDR  $90F4;
+  ADDR  $90FB;
 };
 LABEL {
   NAME "RingNameStrIndex45";
-  ADDR  $90FD;
-};
-LABEL {
-  NAME "RingNameStrIndex46";
   ADDR  $9105;
 };
 LABEL {
+  NAME "RingNameStrIndex46";
+  ADDR  $910D;
+};
+LABEL {
   NAME "RingNameStrIndex47";
-  ADDR  $910C;
+  ADDR  $9114;
 };
 LABEL {
   NAME "RingNameStrIndex48";
-  ADDR  $9113;
+  ADDR  $911B;
 };
 LABEL {
   NAME "RingNameStrIndex49";
-  ADDR  $911D;
+  ADDR  $9122;
 };
 LABEL {
   NAME "RingNameStrIndex50";
-  ADDR  $9127;
+  ADDR  $912C;
 };
 LABEL {
   NAME "RingNameStrIndex51";
-  ADDR  $9130;
+  ADDR  $9135;
 };
 LABEL {
   NAME "RingNameStrIndex52";
-  ADDR  $9137;
+  ADDR  $913C;
 };
 LABEL {
   NAME "RingNameStrIndex53";
-  ADDR  $913E;
+  ADDR  $9141;
 };
 LABEL {
   NAME "RingNameStrIndex54";
-  ADDR  $9147;
+  ADDR  $9149;
 };
 LABEL {
   NAME "RingNameStrIndex55";
-  ADDR  $9150;
+  ADDR  $9153;
 };
 LABEL {
   NAME "RingNameStrIndex56";
-  ADDR  $9158;
+  ADDR  $915C;
 };
 LABEL {
   NAME "RingNameStrIndex57";
-  ADDR  $9161;
-};
-LABEL {
-  NAME "RingNameStrIndex58";
-  ADDR  $916B;
+  ADDR  $9163;
 };
 LABEL {
   NAME "WeaponNameStr";
@@ -1891,123 +1803,123 @@ LABEL {
 };
 LABEL {
   NAME "WeaponNameStrIndex3";
-  ADDR  $9258;
+  ADDR  $9257;
 };
 LABEL {
   NAME "WeaponNameStrIndex4";
-  ADDR  $925F;
+  ADDR  $925E;
 };
 LABEL {
   NAME "WeaponNameStrIndex5";
-  ADDR  $9269;
+  ADDR  $9268;
 };
 LABEL {
   NAME "WeaponNameStrIndex6";
-  ADDR  $9273;
+  ADDR  $9272;
 };
 LABEL {
   NAME "WeaponNameStrIndex7";
-  ADDR  $927D;
+  ADDR  $927C;
 };
 LABEL {
   NAME "WeaponNameStrIndex8";
-  ADDR  $9287;
+  ADDR  $9286;
 };
 LABEL {
   NAME "WeaponNameStrIndex9";
-  ADDR  $928F;
+  ADDR  $928E;
 };
 LABEL {
   NAME "WeaponNameStrIndex10";
-  ADDR  $9296;
+  ADDR  $9295;
 };
 LABEL {
   NAME "WeaponNameStrIndex11";
-  ADDR  $92A0;
+  ADDR  $929F;
 };
 LABEL {
   NAME "WeaponNameStrIndex12";
-  ADDR  $92AA;
+  ADDR  $92A9;
 };
 LABEL {
   NAME "WeaponNameStrIndex13";
-  ADDR  $92B4;
+  ADDR  $92B3;
 };
 LABEL {
   NAME "WeaponNameStrIndex14";
-  ADDR  $92BE;
+  ADDR  $92BD;
 };
 LABEL {
   NAME "WeaponNameStrIndex15";
-  ADDR  $92C7;
+  ADDR  $92C3;
 };
 LABEL {
   NAME "WeaponNameStrIndex16";
-  ADDR  $92D1;
+  ADDR  $92CD;
 };
 LABEL {
   NAME "WeaponNameStrIndex17";
-  ADDR  $92DA;
+  ADDR  $92D6;
 };
 LABEL {
   NAME "WeaponNameStrIndex18";
-  ADDR  $92E4;
+  ADDR  $92E0;
 };
 LABEL {
   NAME "WeaponNameStrIndex19";
-  ADDR  $92EE;
+  ADDR  $92EA;
 };
 LABEL {
   NAME "WeaponNameStrIndex20";
-  ADDR  $92F7;
+  ADDR  $92F3;
 };
 LABEL {
   NAME "WeaponNameStrIndex21";
-  ADDR  $9300;
+  ADDR  $92FD;
 };
 LABEL {
   NAME "WeaponNameStrIndex22";
-  ADDR  $930A;
+  ADDR  $9307;
 };
 LABEL {
   NAME "WeaponNameStrIndex23";
-  ADDR  $9314;
+  ADDR  $9311;
 };
 LABEL {
   NAME "WeaponNameStrIndex24";
-  ADDR  $931E;
+  ADDR  $931B;
 };
 LABEL {
   NAME "WeaponNameStrIndex25";
-  ADDR  $9323;
+  ADDR  $9320;
 };
 LABEL {
   NAME "WeaponNameStrIndex26";
-  ADDR  $932D;
+  ADDR  $932A;
 };
 LABEL {
   NAME "WeaponNameStrIndex27";
-  ADDR  $9335;
+  ADDR  $9332;
 };
 LABEL {
   NAME "WeaponNameStrIndex28";
-  ADDR  $933F;
+  ADDR  $933B;
 };
 LABEL {
   NAME "WeaponNameStrIndex29";
-  ADDR  $9348;
+  ADDR  $9344;
 };
 LABEL {
   NAME "WeaponNameStrIndex30";
-  ADDR  $9352;
+  ADDR  $934E;
 };
 LABEL {
   NAME "WeaponNameStrIndex31";
-  ADDR  $9359;
+  ADDR  $9357;
 };
 LABEL {
   NAME "WeaponNameStrIndex32";
-  ADDR  $9362;
+  ADDR  $9361;
 };
 LABEL {
   NAME "WeaponNameStrIndex33";
@@ -2015,67 +1927,67 @@ LABEL {
 };
 LABEL {
   NAME "WeaponNameStrIndex34";
-  ADDR  $9375;
+  ADDR  $9373;
 };
 LABEL {
   NAME "WeaponNameStrIndex35";
-  ADDR  $937D;
+  ADDR  $937B;
 };
 LABEL {
   NAME "WeaponNameStrIndex36";
-  ADDR  $9387;
+  ADDR  $9384;
 };
 LABEL {
   NAME "WeaponNameStrIndex37";
-  ADDR  $938F;
+  ADDR  $938D;
 };
 LABEL {
   NAME "WeaponNameStrIndex38";
-  ADDR  $9397;
+  ADDR  $9395;
 };
 LABEL {
   NAME "WeaponNameStrIndex39";
-  ADDR  $93A1;
+  ADDR  $939F;
 };
 LABEL {
   NAME "WeaponNameStrIndex40";
-  ADDR  $93AA;
+  ADDR  $93A8;
 };
 LABEL {
   NAME "WeaponNameStrIndex41";
-  ADDR  $93B4;
+  ADDR  $93B2;
 };
 LABEL {
   NAME "WeaponNameStrIndex42";
-  ADDR  $93BC;
+  ADDR  $93BA;
 };
 LABEL {
   NAME "WeaponNameStrIndex43";
-  ADDR  $93C6;
+  ADDR  $93C4;
 };
 LABEL {
   NAME "WeaponNameStrIndex44";
-  ADDR  $93CF;
+  ADDR  $93CD;
 };
 LABEL {
   NAME "WeaponNameStrIndex45";
-  ADDR  $93D6;
+  ADDR  $93D4;
 };
 LABEL {
   NAME "WeaponNameStrIndex46";
-  ADDR  $93E0;
+  ADDR  $93DE;
 };
 LABEL {
   NAME "WeaponNameStrIndex47";
-  ADDR  $93E9;
+  ADDR  $93E7;
 };
 LABEL {
   NAME "WeaponNameStrIndex48";
-  ADDR  $93F1;
+  ADDR  $93EE;
 };
 LABEL {
   NAME "WeaponNameStrIndex49";
-  ADDR  $93F9;
+  ADDR  $93F8;
 };
 LABEL {
   NAME "WeaponNameStrIndex50";
@@ -2083,203 +1995,203 @@ LABEL {
 };
 LABEL {
   NAME "WeaponNameStrIndex51";
-  ADDR  $940B;
+  ADDR  $940A;
 };
 LABEL {
   NAME "WeaponNameStrIndex52";
-  ADDR  $9415;
+  ADDR  $9414;
 };
 LABEL {
   NAME "WeaponNameStrIndex53";
-  ADDR  $941E;
+  ADDR  $941C;
 };
 LABEL {
   NAME "WeaponNameStrIndex54";
-  ADDR  $9426;
+  ADDR  $9425;
 };
 LABEL {
   NAME "WeaponNameStrIndex55";
-  ADDR  $942F;
+  ADDR  $942E;
 };
 LABEL {
   NAME "WeaponNameStrIndex56";
-  ADDR  $9438;
+  ADDR  $9435;
 };
 LABEL {
   NAME "WeaponNameStrIndex57";
-  ADDR  $9440;
+  ADDR  $943D;
 };
 LABEL {
   NAME "WeaponNameStrIndex58";
-  ADDR  $944A;
+  ADDR  $9446;
 };
 LABEL {
   NAME "WeaponNameStrIndex59";
-  ADDR  $9454;
+  ADDR  $9450;
 };
 LABEL {
   NAME "WeaponNameStrIndex60";
-  ADDR  $945E;
+  ADDR  $9456;
 };
 LABEL {
   NAME "WeaponNameStrIndex61";
-  ADDR  $9468;
+  ADDR  $945F;
 };
 LABEL {
   NAME "WeaponNameStrIndex62";
-  ADDR  $9472;
+  ADDR  $9469;
 };
 LABEL {
   NAME "WeaponNameStrIndex63";
-  ADDR  $947B;
+  ADDR  $9471;
 };
 LABEL {
   NAME "WeaponNameStrIndex64";
-  ADDR  $9482;
+  ADDR  $9478;
 };
 LABEL {
   NAME "WeaponNameStrIndex65";
-  ADDR  $948B;
+  ADDR  $9481;
 };
 LABEL {
   NAME "WeaponNameStrIndex66";
-  ADDR  $9495;
+  ADDR  $948B;
 };
 LABEL {
   NAME "WeaponNameStrIndex67";
-  ADDR  $949D;
+  ADDR  $9493;
 };
 LABEL {
   NAME "WeaponNameStrIndex68";
-  ADDR  $94A4;
+  ADDR  $949A;
 };
 LABEL {
   NAME "WeaponNameStrIndex69";
-  ADDR  $94AB;
+  ADDR  $94A2;
 };
 LABEL {
   NAME "WeaponNameStrIndex70";
-  ADDR  $94B5;
+  ADDR  $94AB;
 };
 LABEL {
   NAME "WeaponNameStrIndex71";
-  ADDR  $94BE;
+  ADDR  $94B5;
 };
 LABEL {
   NAME "WeaponNameStrIndex72";
-  ADDR  $94C8;
+  ADDR  $94BF;
 };
 LABEL {
   NAME "WeaponNameStrIndex73";
-  ADDR  $94D2;
+  ADDR  $94C8;
 };
 LABEL {
   NAME "WeaponNameStrIndex74";
-  ADDR  $94DC;
+  ADDR  $94D0;
 };
 LABEL {
   NAME "WeaponNameStrIndex75";
-  ADDR  $94E5;
+  ADDR  $94DA;
 };
 LABEL {
   NAME "WeaponNameStrIndex76";
-  ADDR  $94ED;
+  ADDR  $94E2;
 };
 LABEL {
   NAME "WeaponNameStrIndex77";
-  ADDR  $94F4;
+  ADDR  $94E9;
 };
 LABEL {
   NAME "WeaponNameStrIndex78";
-  ADDR  $94FA;
+  ADDR  $94F1;
 };
 LABEL {
   NAME "WeaponNameStrIndex79";
-  ADDR  $9504;
+  ADDR  $94FB;
 };
 LABEL {
   NAME "WeaponNameStrIndex80";
-  ADDR  $950C;
+  ADDR  $9504;
 };
 LABEL {
   NAME "WeaponNameStrIndex81";
-  ADDR  $9514;
+  ADDR  $950C;
 };
 LABEL {
   NAME "WeaponNameStrIndex82";
-  ADDR  $951D;
+  ADDR  $9514;
 };
 LABEL {
   NAME "WeaponNameStrIndex83";
-  ADDR  $9527;
+  ADDR  $951D;
 };
 LABEL {
   NAME "WeaponNameStrIndex84";
-  ADDR  $952E;
+  ADDR  $9524;
 };
 LABEL {
   NAME "WeaponNameStrIndex85";
-  ADDR  $9537;
+  ADDR  $952E;
 };
 LABEL {
   NAME "WeaponNameStrIndex86";
-  ADDR  $9541;
+  ADDR  $9538;
 };
 LABEL {
   NAME "WeaponNameStrIndex87";
-  ADDR  $9549;
+  ADDR  $9540;
 };
 LABEL {
   NAME "WeaponNameStrIndex88";
-  ADDR  $9551;
+  ADDR  $9548;
 };
 LABEL {
   NAME "WeaponNameStrIndex89";
-  ADDR  $9559;
+  ADDR  $9550;
 };
 LABEL {
   NAME "WeaponNameStrIndex90";
-  ADDR  $9563;
+  ADDR  $955A;
 };
 LABEL {
   NAME "WeaponNameStrIndex91";
-  ADDR  $956D;
+  ADDR  $9563;
 };
 LABEL {
   NAME "WeaponNameStrIndex92";
-  ADDR  $9577;
+  ADDR  $956D;
 };
 LABEL {
   NAME "WeaponNameStrIndex93";
-  ADDR  $957F;
+  ADDR  $9575;
 };
 LABEL {
   NAME "WeaponNameStrIndex94";
-  ADDR  $9589;
+  ADDR  $957F;
 };
 LABEL {
   NAME "WeaponNameStrIndex95";
-  ADDR  $9590;
+  ADDR  $9588;
 };
 LABEL {
   NAME "WeaponNameStrIndex96";
-  ADDR  $9596;
+  ADDR  $958F;
 };
 LABEL {
   NAME "WeaponNameStrIndex97";
-  ADDR  $95A0;
+  ADDR  $9598;
 };
 LABEL {
   NAME "WeaponNameStrIndex98";
-  ADDR  $95AA;
+  ADDR  $95A1;
 };
 LABEL {
   NAME "WeaponNameStrIndex99";
-  ADDR  $95B3;
+  ADDR  $95AA;
 };
 LABEL {
   NAME "WeaponNameStrIndex100";
-  ADDR  $95BC;
+  ADDR  $95B1;
 };
 LABEL {
   NAME "MateriaNameStr";
@@ -2287,15 +2199,15 @@ LABEL {
 };
 LABEL {
   NAME "MateriaNameStrIndex0";
-  ADDR  $95D6;
+  ADDR  $95D7;
 };
 LABEL {
   NAME "MateriaNameStrIndex1";
-  ADDR  $95DC;
+  ADDR  $95DD;
 };
 LABEL {
   NAME "MateriaNameStrIndex2";
-  ADDR  $95E3;
+  ADDR  $95E4;
 };
 LABEL {
   NAME "MateriaNameStrIndex3";
@@ -2307,15 +2219,15 @@ LABEL {
 };
 LABEL {
   NAME "MateriaNameStrIndex5";
-  ADDR  $95F9;
+  ADDR  $95FA;
 };
 LABEL {
   NAME "MateriaNameStrIndex6";
-  ADDR  $9601;
+  ADDR  $9602;
 };
 LABEL {
   NAME "MateriaNameStrIndex7";
-  ADDR  $9609;
+  ADDR  $9608;
 };
 LABEL {
   NAME "MagicNameStr";
@@ -2331,251 +2243,251 @@ LABEL {
 };
 LABEL {
   NAME "MagicNameStrIndex2";
-  ADDR  $96A1;
+  ADDR  $96A0;
 };
 LABEL {
   NAME "MagicNameStrIndex3";
-  ADDR  $96AB;
+  ADDR  $96A9;
 };
 LABEL {
   NAME "MagicNameStrIndex4";
-  ADDR  $96B4;
+  ADDR  $96B2;
 };
 LABEL {
   NAME "MagicNameStrIndex5";
-  ADDR  $96BE;
+  ADDR  $96BC;
 };
 LABEL {
   NAME "MagicNameStrIndex6";
-  ADDR  $96C7;
+  ADDR  $96C5;
 };
 LABEL {
   NAME "MagicNameStrIndex7";
-  ADDR  $96D1;
+  ADDR  $96CF;
 };
 LABEL {
   NAME "MagicNameStrIndex8";
-  ADDR  $96DA;
+  ADDR  $96D8;
 };
 LABEL {
   NAME "MagicNameStrIndex9";
-  ADDR  $96E4;
+  ADDR  $96E2;
 };
 LABEL {
   NAME "MagicNameStrIndex10";
-  ADDR  $96ED;
+  ADDR  $96EB;
 };
 LABEL {
   NAME "MagicNameStrIndex11";
-  ADDR  $96F7;
+  ADDR  $96F3;
 };
 LABEL {
   NAME "MagicNameStrIndex12";
-  ADDR  $9700;
+  ADDR  $96FB;
 };
 LABEL {
   NAME "MagicNameStrIndex13";
-  ADDR  $970A;
+  ADDR  $9704;
 };
 LABEL {
   NAME "MagicNameStrIndex14";
-  ADDR  $9713;
+  ADDR  $970D;
 };
 LABEL {
   NAME "MagicNameStrIndex15";
-  ADDR  $971D;
+  ADDR  $9716;
 };
 LABEL {
   NAME "MagicNameStrIndex16";
-  ADDR  $9726;
+  ADDR  $971F;
 };
 LABEL {
   NAME "MagicNameStrIndex17";
-  ADDR  $9730;
+  ADDR  $9728;
 };
 LABEL {
   NAME "MagicNameStrIndex18";
-  ADDR  $9739;
+  ADDR  $9731;
 };
 LABEL {
   NAME "MagicNameStrIndex19";
-  ADDR  $9743;
+  ADDR  $973B;
 };
 LABEL {
   NAME "MagicNameStrIndex20";
-  ADDR  $974C;
+  ADDR  $9743;
 };
 LABEL {
   NAME "MagicNameStrIndex21";
-  ADDR  $9755;
+  ADDR  $974C;
 };
 LABEL {
   NAME "MagicNameStrIndex22";
-  ADDR  $975E;
+  ADDR  $9755;
 };
 LABEL {
   NAME "MagicNameStrIndex23";
-  ADDR  $9767;
+  ADDR  $975F;
 };
 LABEL {
   NAME "MagicNameStrIndex24";
-  ADDR  $9770;
+  ADDR  $9768;
 };
 LABEL {
   NAME "MagicNameStrIndex25";
-  ADDR  $9779;
+  ADDR  $9772;
 };
 LABEL {
   NAME "MagicNameStrIndex26";
-  ADDR  $9782;
+  ADDR  $977B;
 };
 LABEL {
   NAME "MagicNameStrIndex27";
-  ADDR  $978B;
+  ADDR  $9785;
 };
 LABEL {
   NAME "MagicNameStrIndex28";
-  ADDR  $9794;
+  ADDR  $978E;
 };
 LABEL {
   NAME "MagicNameStrIndex29";
-  ADDR  $979D;
+  ADDR  $9797;
 };
 LABEL {
   NAME "MagicNameStrIndex30";
-  ADDR  $97A7;
+  ADDR  $979F;
 };
 LABEL {
   NAME "MagicNameStrIndex31";
-  ADDR  $97B0;
+  ADDR  $97A8;
 };
 LABEL {
   NAME "MagicNameStrIndex32";
-  ADDR  $97B9;
+  ADDR  $97B1;
 };
 LABEL {
   NAME "MagicNameStrIndex33";
-  ADDR  $97C2;
+  ADDR  $97BA;
 };
 LABEL {
   NAME "MagicNameStrIndex34";
-  ADDR  $97CC;
+  ADDR  $97C3;
 };
 LABEL {
   NAME "MagicNameStrIndex35";
-  ADDR  $97D5;
+  ADDR  $97CC;
 };
 LABEL {
   NAME "MagicNameStrIndex36";
-  ADDR  $97DE;
+  ADDR  $97D5;
 };
 LABEL {
   NAME "MagicNameStrIndex37";
-  ADDR  $97E8;
+  ADDR  $97DE;
 };
 LABEL {
   NAME "MagicNameStrIndex38";
-  ADDR  $97F1;
+  ADDR  $97E7;
 };
 LABEL {
   NAME "MagicNameStrIndex39";
-  ADDR  $97FB;
+  ADDR  $97F0;
 };
 LABEL {
   NAME "MagicNameStrIndex40";
-  ADDR  $9804;
+  ADDR  $97FA;
 };
 LABEL {
   NAME "MagicNameStrIndex41";
-  ADDR  $980E;
+  ADDR  $9804;
 };
 LABEL {
   NAME "MagicNameStrIndex42";
-  ADDR  $9817;
+  ADDR  $980E;
 };
 LABEL {
   NAME "MagicNameStrIndex43";
-  ADDR  $9821;
+  ADDR  $9818;
 };
 LABEL {
   NAME "MagicNameStrIndex44";
-  ADDR  $982A;
+  ADDR  $9822;
 };
 LABEL {
   NAME "MagicNameStrIndex45";
-  ADDR  $9834;
+  ADDR  $982C;
 };
 LABEL {
   NAME "MagicNameStrIndex46";
-  ADDR  $983D;
+  ADDR  $9834;
 };
 LABEL {
   NAME "MagicNameStrIndex47";
-  ADDR  $9846;
+  ADDR  $983C;
 };
 LABEL {
   NAME "MagicNameStrIndex48";
-  ADDR  $984F;
+  ADDR  $9843;
 };
 LABEL {
   NAME "MagicNameStrIndex49";
-  ADDR  $9858;
+  ADDR  $984C;
 };
 LABEL {
   NAME "MagicNameStrIndex50";
-  ADDR  $9861;
+  ADDR  $9855;
 };
 LABEL {
   NAME "MagicNameStrIndex51";
-  ADDR  $986A;
+  ADDR  $985E;
 };
 LABEL {
   NAME "MagicNameStrIndex52";
-  ADDR  $9873;
+  ADDR  $9866;
 };
 LABEL {
   NAME "MagicNameStrIndex53";
-  ADDR  $987C;
+  ADDR  $986F;
 };
 LABEL {
   NAME "MagicNameStrIndex54";
-  ADDR  $9885;
+  ADDR  $9879;
 };
 LABEL {
   NAME "MagicNameStrIndex55";
-  ADDR  $988F;
+  ADDR  $9883;
 };
 LABEL {
   NAME "MagicNameStrIndex56";
-  ADDR  $9898;
+  ADDR  $988B;
 };
 LABEL {
   NAME "MagicNameStrIndex57";
-  ADDR  $98A2;
+  ADDR  $9893;
 };
 LABEL {
   NAME "MagicNameStrIndex58";
-  ADDR  $98AB;
+  ADDR  $989C;
 };
 LABEL {
   NAME "MagicNameStrIndex59";
-  ADDR  $98B5;
+  ADDR  $98A5;
 };
 LABEL {
   NAME "MagicNameStrIndex60";
-  ADDR  $98BE;
+  ADDR  $98AE;
 };
 LABEL {
   NAME "MagicNameStrIndex61";
-  ADDR  $98C8;
+  ADDR  $98B7;
 };
 LABEL {
   NAME "MagicNameStrIndex62";
-  ADDR  $98D1;
+  ADDR  $98C0;
 };
 LABEL {
   NAME "MagicNameStrIndex63";
-  ADDR  $98DB;
+  ADDR  $98C9;
 };
 LABEL {
   NAME "ItemNameStr";
@@ -2591,119 +2503,99 @@ LABEL {
 };
 LABEL {
   NAME "ItemNameStrIndex2";
-  ADDR  $9933;
+  ADDR  $9932;
 };
 LABEL {
   NAME "ItemNameStrIndex3";
-  ADDR  $993D;
+  ADDR  $9940;
 };
 LABEL {
   NAME "ItemNameStrIndex4";
-  ADDR  $9947;
+  ADDR  $994E;
 };
 LABEL {
   NAME "ItemNameStrIndex5";
-  ADDR  $9951;
-};
-LABEL {
-  NAME "ItemNameStrIndex6";
   ADDR  $9957;
 };
 LABEL {
+  NAME "ItemNameStrIndex6";
+  ADDR  $995D;
+};
+LABEL {
   NAME "ItemNameStrIndex7";
-  ADDR  $995F;
+  ADDR  $996A;
 };
 LABEL {
   NAME "ItemNameStrIndex8";
-  ADDR  $9967;
+  ADDR  $9972;
 };
 LABEL {
   NAME "ItemNameStrIndex9";
-  ADDR  $996E;
+  ADDR  $9978;
 };
 LABEL {
   NAME "ItemNameStrIndex10";
-  ADDR  $9977;
+  ADDR  $9985;
 };
 LABEL {
   NAME "ItemNameStrIndex11";
-  ADDR  $9980;
-};
-LABEL {
-  NAME "ItemNameStrIndex13";
   ADDR  $998C;
 };
 LABEL {
+  NAME "ItemNameStrIndex12";
+  ADDR  $9995;
+};
+LABEL {
+  NAME "ItemNameStrIndex13";
+  ADDR  $99A7;
+};
+LABEL {
   NAME "ItemNameStrIndex14";
-  ADDR  $9992;
+  ADDR  $99B1;
 };
 LABEL {
   NAME "ItemNameStrIndex15";
-  ADDR  $9998;
+  ADDR  $99BB;
 };
 LABEL {
   NAME "ItemNameStrIndex16";
-  ADDR  $999E;
+  ADDR  $99C5;
 };
 LABEL {
   NAME "ItemNameStrIndex17";
-  ADDR  $99A4;
+  ADDR  $99CF;
 };
 LABEL {
   NAME "ItemNameStrIndex18";
-  ADDR  $99AA;
-};
-LABEL {
-  NAME "ItemNameStrIndex19";
-  ADDR  $99B3;
-};
-LABEL {
-  NAME "ItemNameStrIndex20";
-  ADDR  $99BD;
-};
-LABEL {
-  NAME "ItemNameStrIndex21";
-  ADDR  $99C7;
-};
-LABEL {
-  NAME "ItemNameStrIndex22";
-  ADDR  $99D1;
-};
-LABEL {
-  NAME "ItemNameStrIndex23";
   ADDR  $99D9;
 };
 LABEL {
+  NAME "ItemNameStrIndex19";
+  ADDR  $99E2;
+};
+LABEL {
+  NAME "ItemNameStrIndex20";
+  ADDR  $99EC;
+};
+LABEL {
+  NAME "ItemNameStrIndex21";
+  ADDR  $99F6;
+};
+LABEL {
+  NAME "ItemNameStrIndex22";
+  ADDR  $9A02;
+};
+LABEL {
+  NAME "ItemNameStrIndex23";
+  ADDR  $9A0A;
+};
+LABEL {
   NAME "ItemNameStrIndex24";
-  ADDR  $99E3;
-};
-LABEL {
-  NAME "ItemNameStrIndex25";
-  ADDR  $99ED;
-};
-LABEL {
-  NAME "ItemNameStrIndex26";
-  ADDR  $99F7;
-};
-LABEL {
-  NAME "ItemNameStrIndex27";
-  ADDR  $9A01;
-};
-LABEL {
-  NAME "ItemNameStrIndex28";
-  ADDR  $9A0B;
-};
-LABEL {
-  NAME "ItemNameStrIndex29";
   ADDR  $9A15;
 };
 LABEL {
-  NAME "ItemNameStrIndex30";
-  ADDR  $9A1F;
-};
-LABEL {
-  NAME "ItemNameStrIndex31";
-  ADDR  $9A29;
+  NAME "ItemNameStrIndex25";
+  ADDR  $9A20;
 };
 LABEL {
   NAME "ItemDescriptionStr";
@@ -2714,80 +2606,88 @@ LABEL {
   ADDR  $9A70;
 };
 LABEL {
+  NAME "ItemDescriptionStrIndex1";
+  ADDR  $9A78;
+};
+LABEL {
+  NAME "ItemDescriptionStrIndex2";
+  ADDR  $9A96;
+};
+LABEL {
+  NAME "ItemDescriptionStrIndex3";
+  ADDR  $9AB4;
+};
+LABEL {
+  NAME "ItemDescriptionStrIndex4";
+  ADDR  $9AD2;
+};
+LABEL {
+  NAME "ItemDescriptionStrIndex5";
+  ADDR  $9AF0;
+};
+LABEL {
+  NAME "ItemDescriptionStrIndex6";
+  ADDR  $9B15;
+};
+LABEL {
+  NAME "ItemDescriptionStrIndex7";
+  ADDR  $9B3A;
+};
+LABEL {
+  NAME "ItemDescriptionStrIndex8";
+  ADDR  $9B5F;
+};
+LABEL {
+  NAME "ItemDescriptionStrIndex9";
+  ADDR  $9B7D;
+};
+LABEL {
+  NAME "ItemDescriptionStrIndex10";
+  ADDR  $9B9B;
+};
+LABEL {
+  NAME "ItemDescriptionStrIndex11";
+  ADDR  $9BAD;
+};
+LABEL {
+  NAME "ItemDescriptionStrIndex12";
+  ADDR  $9BC0;
+};
+LABEL {
   NAME "ItemDescriptionStrIndex13";
-  ADDR  $9B87;
+  ADDR  $9BE8;
 };
 LABEL {
   NAME "ItemDescriptionStrIndex14";
-  ADDR  $9B94;
+  ADDR  $9BFD;
 };
 LABEL {
   NAME "ItemDescriptionStrIndex15";
-  ADDR  $9BA1;
+  ADDR  $9C18;
 };
 LABEL {
   NAME "ItemDescriptionStrIndex16";
-  ADDR  $9BB2;
+  ADDR  $9C33;
 };
 LABEL {
   NAME "ItemDescriptionStrIndex17";
-  ADDR  $9BBD;
+  ADDR  $9C4E;
 };
 LABEL {
   NAME "ItemDescriptionStrIndex18";
-  ADDR  $9BC9;
+  ADDR  $9C69;
 };
 LABEL {
   NAME "ItemDescriptionStrIndex19";
-  ADDR  $9BDE;
+  ADDR  $9C7A;
 };
 LABEL {
   NAME "ItemDescriptionStrIndex20";
-  ADDR  $9BFA;
+  ADDR  $9C9D;
 };
 LABEL {
   NAME "ItemDescriptionStrIndex21";
-  ADDR  $9C0A;
-};
-LABEL {
-  NAME "ItemDescriptionStrIndex22";
-  ADDR  $9C27;
-};
-LABEL {
-  NAME "ItemDescriptionStrIndex23";
-  ADDR  $9C4B;
-};
-LABEL {
-  NAME "ItemDescriptionStrIndex24";
-  ADDR  $9C66;
-};
-LABEL {
-  NAME "ItemDescriptionStrIndex25";
-  ADDR  $9C72;
-};
-LABEL {
-  NAME "ItemDescriptionStrIndex26";
-  ADDR  $9C7E;
-};
-LABEL {
-  NAME "ItemDescriptionStrIndex27";
-  ADDR  $9C8A;
-};
-LABEL {
-  NAME "ItemDescriptionStrIndex28";
-  ADDR  $9C96;
-};
-LABEL {
-  NAME "ItemDescriptionStrIndex29";
-  ADDR  $9CA2;
-};
-LABEL {
-  NAME "ItemDescriptionStrIndex30";
-  ADDR  $9CAE;
-};
-LABEL {
-  NAME "ItemDescriptionStrIndex31";
-  ADDR  $9CCA;
+  ADDR  $9CAF;
 };
 LABEL {
   NAME "CharacterNameStr";
@@ -2799,115 +2699,119 @@ LABEL {
 };
 LABEL {
   NAME "CharacterNameStrIndex1";
-  ADDR  $9DB9;
+  ADDR  $9DBA;
 };
 LABEL {
   NAME "CharacterNameStrIndex2";
-  ADDR  $9DC0;
+  ADDR  $9DC1;
 };
 LABEL {
   NAME "CharacterNameStrIndex3";
-  ADDR  $9DC8;
+  ADDR  $9DC9;
 };
 LABEL {
   NAME "CharacterNameStrIndex4";
-  ADDR  $9DCE;
+  ADDR  $9DCF;
 };
 LABEL {
   NAME "CharacterNameStrIndex5";
-  ADDR  $9DD5;
+  ADDR  $9DD6;
 };
 LABEL {
   NAME "CharacterNameStrIndex6";
-  ADDR  $9DDC;
+  ADDR  $9DDF;
 };
 LABEL {
   NAME "CharacterNameStrIndex7";
-  ADDR  $9DE6;
+  ADDR  $9DE9;
 };
 LABEL {
   NAME "CharacterNameStrIndex8";
-  ADDR  $9DEB;
+  ADDR  $9DEE;
 };
 LABEL {
   NAME "CharacterNameStrIndex9";
-  ADDR  $9DF4;
+  ADDR  $9DF6;
 };
 LABEL {
   NAME "CharacterNameStrIndex10";
-  ADDR  $9DFE;
+  ADDR  $9E00;
 };
 LABEL {
   NAME "CharacterNameStrIndex11";
-  ADDR  $9E08;
+  ADDR  $9E09;
 };
 LABEL {
   NAME "CharacterNameStrIndex12";
-  ADDR  $9E0E;
+  ADDR  $9E0F;
 };
 LABEL {
   NAME "CharacterNameStrIndex13";
-  ADDR  $9E16;
+  ADDR  $9E17;
+};
+LABEL {
+  NAME "CharacterNameStrIndex14";
+  ADDR  $9E20;
 };
 LABEL {
   NAME "CharacterNameStrIndex15";
-  ADDR  $9E25;
-};
-LABEL {
-  NAME "CharacterNameStrIndex16";
   ADDR  $9E2A;
 };
 LABEL {
+  NAME "CharacterNameStrIndex16";
+  ADDR  $9E2F;
+};
+LABEL {
   NAME "CharacterNameStrIndex17";
-  ADDR  $9E34;
+  ADDR  $9E38;
 };
 LABEL {
   NAME "CharacterNameStrIndex18";
-  ADDR  $9E3E;
+  ADDR  $9E42;
 };
 LABEL {
   NAME "CharacterNameStrIndex19";
-  ADDR  $9E45;
+  ADDR  $9E49;
 };
 LABEL {
   NAME "CharacterNameStrIndex20";
-  ADDR  $9E4F;
+  ADDR  $9E52;
 };
 LABEL {
   NAME "CharacterNameStrIndex21";
-  ADDR  $9E59;
+  ADDR  $9E5B;
 };
 LABEL {
   NAME "CharacterNameStrIndex22";
-  ADDR  $9E63;
+  ADDR  $9E64;
 };
 LABEL {
   NAME "CharacterNameStrIndex23";
-  ADDR  $9E6B;
+  ADDR  $9E6C;
 };
 LABEL {
   NAME "CharacterNameStrIndex24";
-  ADDR  $9E71;
+  ADDR  $9E72;
 };
 LABEL {
   NAME "CharacterNameStrIndex25";
-  ADDR  $9E77;
+  ADDR  $9E78;
 };
 LABEL {
   NAME "CharacterNameStrIndex26";
-  ADDR  $9E81;
+  ADDR  $9E82;
 };
 LABEL {
   NAME "CharacterNameStrIndex27";
-  ADDR  $9E85;
+  ADDR  $9E86;
 };
 LABEL {
   NAME "CharacterNameStrIndex28";
-  ADDR  $9E8D;
+  ADDR  $9E8E;
 };
 LABEL {
   NAME "CharacterNameStrIndex29";
-  ADDR  $9E97;
+  ADDR  $9E98;
 };
 LABEL {
   NAME "CharacterNameStrIndex30";
@@ -2915,329 +2819,385 @@ LABEL {
 };
 LABEL {
   NAME "CharacterNameStrIndex31";
-  ADDR  $9EA8;
+  ADDR  $9EA9;
 };
 LABEL {
   NAME "CharacterNameStrIndex32";
-  ADDR  $9EB2;
+  ADDR  $9EB3;
 };
 LABEL {
   NAME "CharacterNameStrIndex33";
-  ADDR  $9EBB;
+  ADDR  $9EBD;
 };
 LABEL {
   NAME "CharacterNameStrIndex34";
-  ADDR  $9EC5;
-};
-LABEL {
-  NAME "CharacterNameStrIndex36";
-  ADDR  $9ED4;
+  ADDR  $9EC6;
 };
 LABEL {
   NAME "CharacterNameStrIndex35";
-  ADDR  $A1CB;
+  ADDR  $9ECD;
+};
+LABEL {
+  NAME "CharacterNameStrIndex36";
+  ADDR  $9ED6;
 };
 LABEL {
   NAME "CharacterNameStrIndex37";
-  ADDR  $A1DC;
+  ADDR  $9EDE;
 };
 LABEL {
   NAME "CharacterNameStrIndex38";
-  ADDR  $A1E6;
+  ADDR  $9EE7;
 };
 LABEL {
   NAME "CharacterNameStrIndex39";
-  ADDR  $A1F0;
+  ADDR  $9EF1;
 };
 LABEL {
   NAME "CharacterNameStrIndex40";
-  ADDR  $A1F9;
+  ADDR  $9EFA;
 };
 LABEL {
   NAME "CharacterNameStrIndex41";
-  ADDR  $A201;
+  ADDR  $9F02;
 };
 LABEL {
   NAME "CharacterNameStrIndex42";
-  ADDR  $A20B;
+  ADDR  $9F0C;
 };
 LABEL {
   NAME "CharacterNameStrIndex43";
-  ADDR  $A215;
+  ADDR  $9F16;
 };
 LABEL {
   NAME "CharacterNameStrIndex44";
-  ADDR  $A21E;
+  ADDR  $9F20;
 };
 LABEL {
   NAME "CharacterNameStrIndex45";
-  ADDR  $A227;
+  ADDR  $9F28;
 };
 LABEL {
   NAME "CharacterNameStrIndex46";
-  ADDR  $A22F;
+  ADDR  $9F31;
 };
 LABEL {
   NAME "CharacterNameStrIndex47";
-  ADDR  $A237;
+  ADDR  $9F39;
 };
 LABEL {
   NAME "CharacterNameStrIndex48";
-  ADDR  $A23F;
+  ADDR  $9F40;
 };
 LABEL {
   NAME "CharacterNameStrIndex49";
-  ADDR  $A248;
+  ADDR  $9F49;
 };
 LABEL {
   NAME "CharacterNameStrIndex50";
-  ADDR  $A252;
+  ADDR  $9F53;
 };
 LABEL {
   NAME "CharacterNameStrIndex51";
-  ADDR  $A25C;
+  ADDR  $9F5D;
 };
 LABEL {
   NAME "CharacterNameStrIndex52";
-  ADDR  $A266;
+  ADDR  $9F67;
 };
 LABEL {
   NAME "CharacterNameStrIndex53";
-  ADDR  $A26F;
+  ADDR  $9F6E;
 };
 LABEL {
   NAME "CharacterNameStrIndex54";
-  ADDR  $A273;
+  ADDR  $9F72;
 };
 LABEL {
   NAME "CharacterNameStrIndex55";
-  ADDR  $A27D;
+  ADDR  $9F7C;
 };
 LABEL {
   NAME "CharacterNameStrIndex56";
-  ADDR  $A284;
+  ADDR  $9F85;
 };
 LABEL {
   NAME "CharacterNameStrIndex57";
-  ADDR  $A28E;
+  ADDR  $9F8E;
 };
 LABEL {
   NAME "CharacterNameStrIndex58";
-  ADDR  $A298;
+  ADDR  $9F98;
 };
 LABEL {
   NAME "CharacterNameStrIndex59";
-  ADDR  $A2A2;
+  ADDR  $9FA2;
 };
 LABEL {
   NAME "CharacterNameStrIndex60";
-  ADDR  $A2AC;
+  ADDR  $9FAC;
 };
 LABEL {
   NAME "CharacterNameStrIndex61";
-  ADDR  $A2B6;
+  ADDR  $9FB6;
 };
 LABEL {
   NAME "CharacterNameStrIndex62";
-  ADDR  $A2BF;
+  ADDR  $9FBE;
 };
 LABEL {
   NAME "CharacterNameStrIndex63";
-  ADDR  $A2C5;
+  ADDR  $9FC5;
 };
 LABEL {
   NAME "CharacterNameStrIndex64";
-  ADDR  $A2CF;
+  ADDR  $9FCF;
 };
 LABEL {
   NAME "CharacterNameStrIndex65";
-  ADDR  $A2D8;
+  ADDR  $9FD9;
 };
 LABEL {
   NAME "CharacterNameStrIndex66";
-  ADDR  $A2DF;
+  ADDR  $9FE0;
 };
 LABEL {
   NAME "CharacterNameStrIndex67";
-  ADDR  $A2E9;
+  ADDR  $9FEA;
 };
 LABEL {
   NAME "CharacterNameStrIndex68";
-  ADDR  $A2F3;
+  ADDR  $9FF4;
 };
 LABEL {
   NAME "CharacterNameStrIndex69";
-  ADDR  $A2FD;
+  ADDR  $9FFD;
 };
 LABEL {
   NAME "CharacterNameStrIndex70";
-  ADDR  $A307;
+  ADDR  $A006;
 };
 LABEL {
   NAME "CharacterNameStrIndex71";
-  ADDR  $A310;
+  ADDR  $A00F;
 };
 LABEL {
   NAME "CharacterNameStrIndex72";
-  ADDR  $A318;
+  ADDR  $A017;
 };
 LABEL {
   NAME "CharacterNameStrIndex73";
-  ADDR  $A322;
+  ADDR  $A021;
 };
 LABEL {
   NAME "CharacterNameStrIndex74";
-  ADDR  $A32B;
+  ADDR  $A02A;
 };
 LABEL {
   NAME "CharacterNameStrIndex75";
-  ADDR  $A335;
+  ADDR  $A033;
 };
 LABEL {
   NAME "CharacterNameStrIndex76";
-  ADDR  $A33B;
+  ADDR  $A039;
 };
 LABEL {
   NAME "CharacterNameStrIndex77";
-  ADDR  $A342;
+  ADDR  $A042;
 };
 LABEL {
   NAME "CharacterNameStrIndex78";
-  ADDR  $A34A;
+  ADDR  $A04C;
 };
 LABEL {
   NAME "CharacterNameStrIndex79";
-  ADDR  $A354;
+  ADDR  $A056;
 };
 LABEL {
   NAME "CharacterNameStrIndex80";
-  ADDR  $A35D;
+  ADDR  $A05F;
 };
 LABEL {
   NAME "CharacterNameStrIndex81";
-  ADDR  $A365;
+  ADDR  $A068;
 };
 LABEL {
   NAME "CharacterNameStrIndex82";
-  ADDR  $A36F;
+  ADDR  $A072;
 };
 LABEL {
   NAME "CharacterNameStrIndex83";
-  ADDR  $A379;
+  ADDR  $A07A;
 };
 LABEL {
   NAME "CharacterNameStrIndex84";
-  ADDR  $A383;
+  ADDR  $A084;
 };
 LABEL {
   NAME "CharacterNameStrIndex85";
-  ADDR  $A38C;
+  ADDR  $A08E;
 };
 LABEL {
   NAME "CharacterNameStrIndex86";
-  ADDR  $A396;
+  ADDR  $A098;
 };
 LABEL {
   NAME "CharacterNameStrIndex87";
-  ADDR  $A39F;
+  ADDR  $A0A1;
 };
 LABEL {
   NAME "CharacterNameStrIndex88";
-  ADDR  $A3A9;
+  ADDR  $A0AB;
 };
 LABEL {
   NAME "CharacterNameStrIndex89";
-  ADDR  $A3B1;
+  ADDR  $A0B3;
 };
 LABEL {
   NAME "CharacterNameStrIndex90";
-  ADDR  $A3BB;
+  ADDR  $A0BD;
 };
 LABEL {
   NAME "CharacterNameStrIndex91";
-  ADDR  $A3C4;
+  ADDR  $A0C6;
 };
 LABEL {
   NAME "CharacterNameStrIndex92";
-  ADDR  $A3CE;
+  ADDR  $A0D0;
 };
 LABEL {
   NAME "CharacterNameStrIndex93";
-  ADDR  $A3D8;
+  ADDR  $A0DA;
 };
 LABEL {
   NAME "CharacterNameStrIndex94";
-  ADDR  $A3E0;
+  ADDR  $A0E2;
 };
 LABEL {
   NAME "CharacterNameStrIndex95";
-  ADDR  $A3EA;
+  ADDR  $A0EC;
+};
+LABEL {
+  NAME "ItemDescriptionStrIndex30";
+  ADDR  $FD05;
 };
 LABEL {
   NAME "CharacterNameStrIndex96";
-  ADDR  $A3F4;
+  ADDR  $FD20;
 };
 LABEL {
   NAME "CharacterNameStrIndex97";
-  ADDR  $A3FE;
+  ADDR  $FD29;
 };
 LABEL {
   NAME "CharacterNameStrIndex98";
-  ADDR  $A408;
+  ADDR  $FD32;
 };
 LABEL {
   NAME "CharacterNameStrIndex99";
-  ADDR  $A411;
+  ADDR  $FD3B;
 };
 LABEL {
-  NAME "ItemNameStrIndex12";
-  ADDR  $A420;
+  NAME "ItemDescriptionStrIndex22";
+  ADDR  $FD44;
 };
 LABEL {
-  NAME "ItemDescriptionStrIndex12";
-  ADDR  $A42B;
+  NAME "ItemDescriptionStrIndex23";
+  ADDR  $FD68;
 };
 LABEL {
-  NAME "ItemDescriptionStrIndex1";
-  ADDR  $A452;
+  NAME "ItemDescriptionStrIndex24";
+  ADDR  $FD87;
 };
 LABEL {
-  NAME "ItemDescriptionStrIndex2";
-  ADDR  $A473;
+  NAME "ItemDescriptionStrIndex25";
+  ADDR  $FD9C;
 };
 LABEL {
-  NAME "ItemDescriptionStrIndex4";
-  ADDR  $A497;
+  NAME "ItemDescriptionStrIndex26";
+  ADDR  $FDB1;
 };
 LABEL {
-  NAME "ItemDescriptionStrIndex3";
-  ADDR  $A4BB;
+  NAME "ItemDescriptionStrIndex27";
+  ADDR  $FDC6;
 };
 LABEL {
-  NAME "ItemDescriptionStrIndex5";
-  ADDR  $A4D9;
+  NAME "ItemDescriptionStrIndex28";
+  ADDR  $FDDB;
 };
 LABEL {
-  NAME "ItemDescriptionStrIndex6";
-  ADDR  $A4F7;
+  NAME "ItemDescriptionStrIndex29";
+  ADDR  $FDF0;
 };
 LABEL {
-  NAME "ItemDescriptionStrIndex7";
-  ADDR  $A515;
+  NAME "ItemDescriptionStrIndex31";
+  ADDR  $FE21;
 };
 LABEL {
-  NAME "ItemDescriptionStrIndex8";
-  ADDR  $A536;
+  NAME "ItemNameStrIndex26";
+  ADDR  $FE3D;
 };
 LABEL {
-  NAME "ItemDescriptionStrIndex9";
-  ADDR  $A556;
+  NAME "ItemNameStrIndex27";
+  ADDR  $FE48;
 };
 LABEL {
-  NAME "ItemDescriptionStrIndex10";
-  ADDR  $A57B;
+  NAME "ItemNameStrIndex28";
+  ADDR  $FE53;
 };
 LABEL {
-  NAME "ItemDescriptionStrIndex11";
-  ADDR  $A5AA;
+  NAME "ItemNameStrIndex29";
+  ADDR  $FE5E;
+};
+LABEL {
+  NAME "ItemNameStrIndex30";
+  ADDR  $FE69;
+};
+LABEL {
+  NAME "ItemNameStrIndex31";
+  ADDR  $FE72;
+};
+LABEL {
+  NAME "RingNameStrIndex58";
+  ADDR  $FE78;
+};
+LABEL {
+  NAME "BraceletNameStrIndex103";
+  ADDR  $FE82;
+};
+LABEL {
+  NAME "BraceletNameStrIndex104";
+  ADDR  $FE8A;
+};
+LABEL {
+  NAME "BraceletNameStrIndex105";
+  ADDR  $FE92;
+};
+LABEL {
+  NAME "BodyArmorNameStrIndex126";
+  ADDR  $FE9C;
+};
+LABEL {
+  NAME "BodyArmorNameStrIndex127";
+  ADDR  $FEA6;
+};
+LABEL {
+  NAME "BodyArmorNameStrIndex128";
+  ADDR  $FEAF;
+};
+LABEL {
+  NAME "HeadgearNameStrIndex53";
+  ADDR  $FEB7;
+};
+LABEL {
+  NAME "HeadgearNameStrIndex54";
+  ADDR  $FEC0;
+};
+LABEL {
+  NAME "HeadgearNameStrIndex55";
+  ADDR  $FEC8;
+};
+LABEL {
+  NAME "Bank06Block0Index74";
+  ADDR  $FED0;
 };
