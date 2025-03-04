@@ -44,6 +44,10 @@ RANGE {
 };
 
 LABEL {
+  NAME "FontGraphicsTileset";
+  ADDR  $8010;
+};
+LABEL {
   NAME "Bank0fDialogueBlock0";
   ADDR  $9001;
 };
