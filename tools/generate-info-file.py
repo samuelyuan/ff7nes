@@ -2,32 +2,25 @@ from nesfile import NESFile
 import collections
 import math
 
-class MapBankImagePoint:
+class ImageBankLocation:
     def __init__(self, rowData):
-        combinedValue1, combinedValue2, storeIndex = rowData[:3]
-        self.imageBankNum = combinedValue1 & 0x3f
-        self.imageBankIndex = (combinedValue1 >> 6) & 0x03
-        self.tilesetBankNum = combinedValue2 & 0x3f
-        self.tilesetBankIndex  = (combinedValue2 >> 6) & 0x03
+        self.imageBankNum = rowData[0] & 0x3f
+        self.imageBankIndex = (rowData[0] >> 6) & 0x03
+        self.tilesetBankNum = rowData[1] & 0x3f
+        self.tilesetBankIndex = (rowData[1] >> 6) & 0x03
+        self.isStore = rowData[0] != rowData[1]
+        self.storeIndex = rowData[2]
 
-        self.isStore = combinedValue1 != combinedValue2
-        self.storeIndex = storeIndex
+def createIndexToBankLocation(nesFile):
+    bankNum = 0x01
+    bankData = nesFile.getBankDataBlock(bankNum)
+    blockStartAddrs = nesFile.getAddressBlock(bankNum, 0x00, 0x10)
 
-class MapBankImage:
-    def __init__(self, nesFile):
-        self.indexToBankLocation = []
-        self.bankLocationToTileset = {}
-
-        bankNum = 0x01
-        bankData = nesFile.getBankDataBlock(bankNum)
-
-        blockStartAddrs = nesFile.getAddressBlock(bankNum, 0x00, 0x10)
-        imageCount = 0
-        for addr in range(blockStartAddrs[1], blockStartAddrs[0], 8):
-            row = bankData[addr - 0x8000 : addr + 8 - 0x8000]
-            transitionPoint = MapBankImagePoint(row)
-            self.indexToBankLocation.append(transitionPoint)
-            imageCount += 1
+    indexToBankLocation = [
+        ImageBankLocation(bankData[addr - 0x8000 : addr + 8 - 0x8000])
+        for addr in range(blockStartAddrs[1], blockStartAddrs[0], 8)
+    ]
+    return indexToBankLocation
 
 def convertToHex(num):
     return str(hex(num)).replace("0x", "")
@@ -227,16 +220,12 @@ def writeAndSaveToInfoFile(bankNum, boundaryBank, labelsBank):
         f.write(data)
 
 def generateMapInfoFile(nesFile):
-    mapBankImage = MapBankImage(nesFile)
-    bankLocationToTileset = {}
-    for transitionPoint in mapBankImage.indexToBankLocation:
-        key = (transitionPoint.imageBankNum, transitionPoint.imageBankIndex)
-        value = (transitionPoint.tilesetBankNum, transitionPoint.tilesetBankIndex)
-
-        if not(0x10 <= key[0] <= 0x2f):
-            continue
-
-        bankLocationToTileset[key] = value
+    indexToBankLocation = createIndexToBankLocation(nesFile)
+    bankLocationToTileset = {
+        (tp.imageBankNum, tp.imageBankIndex): (tp.tilesetBankNum, tp.tilesetBankIndex)
+        for tp in indexToBankLocation
+        if 0x10 <= tp.imageBankNum <= 0x2f
+    }
 
     boundaryBank = collections.defaultdict(list)
     labelsBank = collections.defaultdict(list)
@@ -322,30 +311,35 @@ def generateMapTransitionLabels(nesFile, bankNum):
     roomTransitionDataAddrs = nesFile.getAddressBlock(bankNum, blockStartAddrs[0] - 0x8000, blockStartAddrs[0] + (190*2) - 0x8000)
 
     bankData = nesFile.getBankDataBlock(bankNum)
-    mapBankImage = MapBankImage(nesFile)
-    indexToBankLocation = mapBankImage.indexToBankLocation
+    indexToBankLocation = createIndexToBankLocation(nesFile)
 
     labels = []
     directionMap = {0x30: "East", 0x60: "South", 0x90: "North", 0xC0: "West"}
+
+    def getImageBankLocationLabel(imageBankLocation):
+        baseStr = f'Bank{convertToHex(imageBankLocation.imageBankNum).zfill(2)}Image{imageBankLocation.imageBankIndex}'
+        if imageBankLocation.isStore:
+            baseStr += f'SubImage{imageBankLocation.storeIndex}'
+        return baseStr
+
     for imageIndex in range(0, 190):
         curAddr = roomTransitionDataAddrs[imageIndex]
         rowNum = 0
 
         if imageIndex >= len(indexToBankLocation):
             break
-        imageBankNum = convertToHex(indexToBankLocation[imageIndex].imageBankNum)
-        imageBankIndex = str(indexToBankLocation[imageIndex].imageBankIndex)
+        imageBankLocation = indexToBankLocation[imageIndex]
 
         while bankData[curAddr - 0x8000] != 0xff:
-            transitionRowLabel = f'Map{convertToHex(imageIndex).zfill(2)}Bank{imageBankNum}Image{imageBankIndex}MapTransitionRow{rowNum}'
+            transitionRowLabel = f'Map{convertToHex(imageIndex).zfill(2)}{getImageBankLocationLabel(imageBankLocation)}MapTransitionRow{rowNum}'
 
             rowFirstValue = bankData[curAddr - 0x8000]
 
-            if (rowFirstValue >> 4) & 0x0f != 0:
-                otherBank = indexToBankLocation[bankData[curAddr + 1 - 0x8000]]
+            if (rowFirstValue >> 4) & 0x0f != 0 and rowFirstValue & 0x0f == 0:
+                otherBankImageLocation = indexToBankLocation[bankData[curAddr + 1 - 0x8000]]
                 direction = bankData[curAddr + 0 - 0x8000]
                 directionString = f'_Dir{directionMap[direction]}' if direction in directionMap else ""
-                transitionRowLabel += f'_ToBank{convertToHex(otherBank.imageBankNum)}Image{otherBank.imageBankIndex}{directionString}'
+                transitionRowLabel += f'_To{getImageBankLocationLabel(otherBankImageLocation)}{directionString}'
             elif rowFirstValue == 0x0F:
                 transitionRowLabel += f"_TreasureChest"
 
@@ -419,11 +413,10 @@ def generateInfoFileBank1(nesFile):
         f.write(data)
 
 def generateLabelsBlock(startAddr, endAddr, interval, stringBase):
-    labels = []
-    for i, addr in enumerate(range(startAddr, endAddr, interval)):
-        labelName = f"{stringBase}Index{i}"
-        labels.append((addr, labelName))
-    return labels
+    return [
+        (addr, f"{stringBase}Index{i}")
+        for i, addr in enumerate(range(startAddr, endAddr, interval))
+    ]
 
 def generatePartialInfoFileBank5(nesFile):
     bankNum = 0x05
@@ -437,14 +430,23 @@ def generatePartialInfoFileBank5(nesFile):
     ]
     data += generateRangeFromArr(boundaries)
 
+    characterStatsAddr = nesFile.getRelativeAddress(nesFile.getBankDataBlock(bankNum), 0x8006)
+    partyMemberExpAddr = nesFile.getRelativeAddress(nesFile.getBankDataBlock(bankNum), 0x8008)
+    shopItemStatsAddr = nesFile.getRelativeAddress(nesFile.getBankDataBlock(bankNum), 0x800A)
+    shopItemStatsAddrBlock = nesFile.getAddressBlock(bankNum, shopItemStatsAddr - 0x8000, shopItemStatsAddr + 8 - 0x8000)
+    weaponItemStatsAddr = nesFile.getRelativeAddress(nesFile.getBankDataBlock(bankNum), 0x800C)
+    weaponExpStatsAddr = nesFile.getRelativeAddress(nesFile.getBankDataBlock(bankNum), 0x800E)
+    materiaStatsAddr = nesFile.getRelativeAddress(nesFile.getBankDataBlock(bankNum), 0x8010)
+    materiaExpAddr = nesFile.getRelativeAddress(nesFile.getBankDataBlock(bankNum), 0x8012)
+
     labels = []
-    labels.extend(generateLabelsBlock(0xC234, 0xC79E, 14, "BaseCharacterStats"))
-    labels.extend(generateLabelsBlock(0xC93A, 0xCABB, 7, "ShopItemHeadgearStats"))
-    labels.extend(generateLabelsBlock(0xCABB, 0xCE3B, 7, "ShopItemBodyArmorStatsx"))
-    labels.extend(generateLabelsBlock(0xCE3B, 0xD11A, 7, "ShopItemBraceletStats"))
-    labels.extend(generateLabelsBlock(0xD11A, 0xD2B0, 7, "ShopItemRingStats"))
-    labels.extend(generateLabelsBlock(0xD2B0, 0xD440, 4, "WeaponItemStats"))
-    labels.extend(generateLabelsBlock(0xE3E0, 0xE51B, 5, "MateriaStats"))
+    labels.extend(generateLabelsBlock(characterStatsAddr, partyMemberExpAddr, 14, "BaseCharacterStats"))
+    labels.extend(generateLabelsBlock(shopItemStatsAddrBlock[0], shopItemStatsAddrBlock[1], 7, "ShopItemHeadgearStats"))
+    labels.extend(generateLabelsBlock(shopItemStatsAddrBlock[1], shopItemStatsAddrBlock[2], 7, "ShopItemBodyArmorStatsx"))
+    labels.extend(generateLabelsBlock(shopItemStatsAddrBlock[2], shopItemStatsAddrBlock[3], 7, "ShopItemBraceletStats"))
+    labels.extend(generateLabelsBlock(shopItemStatsAddrBlock[3], weaponItemStatsAddr, 7, "ShopItemRingStats"))
+    labels.extend(generateLabelsBlock(weaponItemStatsAddr, weaponExpStatsAddr, 4, "WeaponItemStats"))
+    labels.extend(generateLabelsBlock(materiaStatsAddr, materiaExpAddr, 5, "MateriaStats"))
 
     for addr, labelName in labels:
         data += generateLabel(labelName, addr)

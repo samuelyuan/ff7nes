@@ -189,7 +189,7 @@ MapTransitionTable:
         .addr   Map07Bank11Image2MapTransitionRow0_ToBank11Image2_DirNorth; 8552 09 8B..
         .addr   Map08Bank11Image3MapTransitionRow0_ToBank23Image2_DirNorth; 8554 46 8BF.
         .addr   Map09Bank12Image0MapTransitionRow0_ToBank16Image1_DirNorth; 8556 A1 8B..
-        .addr   Map0aBank12Image1MapTransitionRow0_ToBank27Image0_DirEast; 8558 42 8CB.
+        .addr   Map0aBank12Image1MapTransitionRow0_ToBank27Image0SubImage1_DirEast; 8558 42 8CB.
         .addr   Map0bBank12Image2MapTransitionRow0_ToBank12Image2_DirEast; 855A 4D 8CM.
         .addr   Map0cBank13Image0MapTransitionRow0_ToBank12Image2_DirNorth; 855C 62 8Cb.
         .addr   Map0dBank13Image1MapTransitionRow0_ToBank13Image0_DirNorth; 855E 81 8C..
@@ -221,14 +221,14 @@ MapTransitionTable:
         .addr   Map27Bank19Image3MapTransitionRow0_ToBank15Image3_DirSouth; 8592 13 92..
         .addr   Map28Bank1aImage0MapTransitionRow0_ToBank19Image3_DirSouth; 8594 3C 92<.
         .addr   Map29Bank1aImage1MapTransitionRow0_ToBank36Image0_DirSouth; 8596 5B 92[.
-        .addr   Map2aBank1aImage2MapTransitionRow0_ToBank29Image0_DirNorth; 8598 D4 92..
+        .addr   Map2aBank1aImage2MapTransitionRow0_ToBank29Image0SubImage5_DirNorth; 8598 D4 92..
         .addr   Map2bBank1aImage3MapTransitionRow0_ToBank36Image0_DirSouth; 859A C5 93..
         .addr   Map2cBank1bImage0MapTransitionRow0_ToBank36Image0_DirSouth; 859C E4 93..
         .addr   Map2dBank1bImage1MapTransitionRow0_ToBank36Image0_DirSouth; 859E F9 93..
-        .addr   Map2eBank1bImage2MapTransitionRow0_ToBank2aImage0_DirNorth; 85A0 4A 94J.
+        .addr   Map2eBank1bImage2MapTransitionRow0_ToBank2aImage0SubImage2_DirNorth; 85A0 4A 94J.
         .addr   Map2fBank1cImage0MapTransitionRow0_ToBank1cImage1_DirEast; 85A2 EB 94..
-        .addr   Map30Bank1cImage1MapTransitionRow0_ToBank2aImage2_DirNorth; 85A4 0A 95..
-        .addr   Map31Bank1cImage2MapTransitionRow0_ToBank2aImage2_DirNorth; 85A6 8D 95..
+        .addr   Map30Bank1cImage1MapTransitionRow0_ToBank2aImage2SubImage4_DirNorth; 85A4 0A 95..
+        .addr   Map31Bank1cImage2MapTransitionRow0_ToBank2aImage2SubImage4_DirNorth; 85A6 8D 95..
         .addr   Map32Bank1cImage3MapTransitionRow0_ToBank36Image0_DirNorth; 85A8 CA 95..
         .addr   Map33Bank1dImage0MapTransitionRow0_ToBank23Image0_DirNorth; 85AA FD 95..
         .addr   Map34Bank1dImage1MapTransitionRow0_ToBank36Image0_DirNorth; 85AC 26 96&.
@@ -243,14 +243,14 @@ MapTransitionTable:
         .addr   Map3dBank1dImage3MapTransitionRow0_ToBank1fImage1_DirSouth; 85BE B3 99..
         .addr   Map3eBank1fImage2MapTransitionRow0_ToBank20Image0_DirSouth; 85C0 BE 99..
         .addr   Map3fBank20Image0MapTransitionRow0_ToBank22Image3_DirSouth; 85C2 C3 9A..
-        .addr   Map40Bank20Image1MapTransitionRow0_ToBank2dImage3_DirSouth; 85C4 CE 9A..
+        .addr   Map40Bank20Image1MapTransitionRow0_ToBank2dImage3SubImage4_DirSouth; 85C4 CE 9A..
         .addr   Map41Bank20Image2MapTransitionRow0_ToBank21Image0_DirSouth; 85C6 C0 E6..
         .addr   Map42Bank21Image0MapTransitionRow0_ToBank26Image0_DirWest; 85C8 C0 9B..
         .addr   Map43Bank1fImage3MapTransitionRow0_ToBank36Image0_DirSouth; 85CA 11 9C..
         .addr   Map44Bank20Image3MapTransitionRow0_ToBank36Image0_DirNorth; 85CC 4E 9CN.
         .addr   Map45Bank21Image1MapTransitionRow0_ToBank36Image0_DirSouth; 85CE 6D 9Cm.
         .addr   Map46Bank22Image0MapTransitionRow0_ToBank26Image2_DirNorth; 85D0 C8 9C..
-        .addr   Map47Bank22Image1MapTransitionRow0_ToBank2eImage1_DirNorth; 85D2 E7 9C..
+        .addr   Map47Bank22Image1MapTransitionRow0_ToBank2eImage1SubImage1_DirNorth; 85D2 E7 9C..
         .addr   Map48Bank22Image2MapTransitionRow0_ToBank26Image3_DirNorth; 85D4 9C 9D..
         .addr   Map49Bank23Image0MapTransitionRow0_ToBank1dImage0_DirNorth; 85D6 F7 9D..
         .addr   Map4aBank22Image3MapTransitionRow0_ToBank1fImage2_DirSouth; 85D8 84 9E..
@@ -270,79 +270,79 @@ MapTransitionTable:
         .addr   Map58Bank26Image1MapTransitionRow0_ToBank1fImage3_DirSouth; 85F4 D2 9F..
         .addr   Map59Bank26Image2MapTransitionRow0_ToBank21Image1_DirSouth; 85F6 FB 9F..
         .addr   Map5aBank26Image3MapTransitionRow0_ToBank36Image0_DirSouth; 85F8 06 A0..
-        .addr   Map5bBank27Image0MapTransitionRow0_ToBank12Image0_DirSouth; 85FA 11 A0..
-        .addr   Map5cBank27Image0MapTransitionRow0_ToBank12Image1_DirNorth; 85FC 1C A0..
-        .addr   Map5dBank27Image0MapTransitionRow0_ToBank12Image0_DirSouth; 85FE 77 A0w.
-        .addr   Map5eBank27Image0MapTransitionRow0_ToBank12Image0_DirSouth; 8600 8C A0..
-        .addr   Map5fBank27Image0MapTransitionRow0_ToBank12Image0_DirSouth; 8602 A1 A0..
-        .addr   Map60Bank27Image0MapTransitionRow0_ToBank27Image0_DirNorth; 8604 B6 A0..
-        .addr   Map61Bank27Image2MapTransitionRow0_ToBank27Image2_DirNorth; 8606 C1 A0..
-        .addr   Map62Bank27Image2MapTransitionRow0_ToBank13Image3_DirSouth; 8608 E0 A0..
-        .addr   Map63Bank27Image2MapTransitionRow0_ToBank13Image3_DirSouth; 860A F5 A0..
-        .addr   Map64Bank27Image2MapTransitionRow0_ToBank13Image3_DirSouth; 860C 0A A1..
-        .addr   Map65Bank27Image2MapTransitionRow0_ToBank13Image3_DirSouth; 860E 1F A1..
-        .addr   Map66Bank27Image2MapTransitionRow0_ToBank27Image2_DirNorth; 8610 3E A1>.
-        .addr   Map67Bank28Image0MapTransitionRow0_ToBank15Image0_DirSouth; 8612 49 A1I.
-        .addr   Map68Bank28Image0MapTransitionRow0_ToBank15Image0_DirSouth; 8614 5E A1^.
-        .addr   Map69Bank28Image0MapTransitionRow0_ToBank15Image0_DirSouth; 8616 73 A1s.
-        .addr   Map6aBank28Image0MapTransitionRow0_ToBank15Image0_DirSouth; 8618 92 A1..
-        .addr   Map6bBank28Image2MapTransitionRow0_ToBank28Image2_DirSouth; 861A 9D A1..
-        .addr   Map6cBank28Image2MapTransitionRow0_ToBank28Image2_DirSouth; 861C BC A1..
-        .addr   Map6dBank28Image2MapTransitionRow0_ToBank15Image2_DirSouth; 861E D1 A1..
-        .addr   Map6eBank29Image0MapTransitionRow0_ToBank1aImage2_DirSouth; 8620 DC A1..
-        .addr   Map6fBank29Image0MapTransitionRow0_ToBank1aImage2_DirSouth; 8622 F1 A1..
-        .addr   Map70Bank29Image0MapTransitionRow0_ToBank1aImage2_DirSouth; 8624 06 A2..
-        .addr   Map71Bank29Image0MapTransitionRow0_ToBank1aImage2_DirSouth; 8626 1B A2..
-        .addr   Map72Bank29Image0MapTransitionRow0_ToBank1aImage2_DirSouth; 8628 30 A20.
-        .addr   Map73Bank29Image0MapTransitionRow0_ToBank1aImage2_DirSouth; 862A 3B A2;.
-        .addr   Map74Bank29Image2MapTransitionRow0_ToBank1aImage3_DirEast; 862C 5A A2Z.
-        .addr   Map75Bank29Image2MapTransitionRow0_ToBank1aImage3_DirSouth; 862E 83 A2..
-        .addr   Map76Bank2aImage0MapTransitionRow0_ToBank1bImage2_DirSouth; 8630 A2 A2..
-        .addr   Map77Bank2aImage0MapTransitionRow0_ToBank1bImage2_DirSouth; 8632 B7 A2..
-        .addr   Map78Bank2aImage0MapTransitionRow0_ToBank1bImage2_DirSouth; 8634 CC A2..
-        .addr   Map79Bank2aImage2MapTransitionRow0_ToBank1cImage1_DirSouth; 8636 E1 A2..
-        .addr   Map7aBank2aImage2MapTransitionRow0_ToBank1cImage1_DirSouth; 8638 00 A3..
-        .addr   Map7bBank2aImage2MapTransitionRow0_ToBank1cImage1_DirSouth; 863A 15 A3..
-        .addr   Map7cBank2aImage2MapTransitionRow0_ToBank1cImage1_DirSouth; 863C 2A A3*.
-        .addr   Map7dBank2aImage2MapTransitionRow0_ToBank1cImage1_DirSouth; 863E 3F A3?.
-        .addr   Map7eBank2bImage0MapTransitionRow0_ToBank1dImage1_DirSouth; 8640 54 A3T.
-        .addr   Map7fBank2bImage0MapTransitionRow0_ToBank1dImage1_DirSouth; 8642 73 A3s.
-        .addr   Map80Bank2bImage0MapTransitionRow0_ToBank1dImage1_DirSouth; 8644 88 A3..
-        .addr   Map81Bank2bImage0MapTransitionRow0_ToBank1dImage1_DirSouth; 8646 A7 A3..
-        .addr   Map82Bank2bImage2MapTransitionRow0_ToBank1eImage0_DirSouth; 8648 D0 A3..
-        .addr   Map83Bank2bImage2MapTransitionRow0_ToBank1eImage0_DirSouth; 864A E5 A3..
-        .addr   Map84Bank2bImage2MapTransitionRow0_ToBank1eImage0_DirSouth; 864C FA A3..
-        .addr   Map85Bank2bImage2MapTransitionRow0_ToBank1eImage0_DirSouth; 864E 23 A4#.
-        .addr   Map86Bank2cImage0MapTransitionRow0_ToBank36Image0_DirSouth; 8650 38 A48.
-        .addr   Map87Bank2cImage0MapTransitionRow0_ToBank1eImage1_DirSouth; 8652 4D A4M.
-        .addr   Map88Bank2cImage1MapTransitionRow0_ToBank1eImage3_DirSouth; 8654 62 A4b.
-        .addr   Map89Bank2cImage1MapTransitionRow0_ToBank1eImage3_DirSouth; 8656 81 A4..
-        .addr   Map8aBank2cImage1MapTransitionRow0_ToBank1eImage3_DirSouth; 8658 96 A4..
-        .addr   Map8bBank2cImage1MapTransitionRow0_ToBank1eImage3_DirSouth; 865A AB A4..
-        .addr   Map8cBank2cImage1MapTransitionRow0_ToBank1eImage3_DirSouth; 865C C0 A4..
-        .addr   Map8dBank2cImage3MapTransitionRow0_ToBank1fImage0_DirSouth; 865E E9 A4..
-        .addr   Map8eBank2cImage3MapTransitionRow0_ToBank1fImage0_DirSouth; 8660 F4 A4..
-        .addr   Map8fBank2cImage3MapTransitionRow0_ToBank20Image2; 8662 A0 E6   ..
-        .addr   Map90Bank2cImage3MapTransitionRow0_ToBank1fImage0_DirSouth; 8664 0A A5..
-        .addr   Map91Bank2dImage1MapTransitionRow0_ToBank1fImage2_DirSouth; 8666 29 A5).
-        .addr   Map92Bank2dImage1MapTransitionRow0_ToBank1fImage2_DirSouth; 8668 34 A54.
-        .addr   Map93Bank2dImage1MapTransitionRow0_ToBank1fImage2_DirSouth; 866A 49 A5I.
-        .addr   Map94Bank2dImage1MapTransitionRow0_ToBank1fImage2_DirSouth; 866C 5E A5^.
-        .addr   Map95Bank2dImage1MapTransitionRow0_ToBank1fImage2_DirSouth; 866E 73 A5s.
-        .addr   Map96Bank2dImage1MapTransitionRow0_ToBank1fImage2_DirSouth; 8670 7E A5~.
-        .addr   Map97Bank2dImage1MapTransitionRow0_ToBank1fImage2_DirSouth; 8672 9D A5..
-        .addr   Map98Bank2dImage3MapTransitionRow0_ToBank20Image1_DirSouth; 8674 A8 A5..
-        .addr   Map99Bank2dImage3MapTransitionRow0_ToBank20Image1_DirSouth; 8676 C7 A5..
-        .addr   Map9aBank2dImage3MapTransitionRow0_ToBank20Image1_DirSouth; 8678 DC A5..
-        .addr   Map9bBank2dImage3MapTransitionRow0_ToBank20Image1_DirSouth; 867A F1 A5..
-        .addr   Map9cBank2dImage3MapTransitionRow0_ToBank20Image1_DirNorth; 867C 06 A6..
-        .addr   Map9dBank2dImage3MapTransitionRow0_ToBank20Image1_DirSouth; 867E 2F A6/.
-        .addr   Map9eBank2eImage1MapTransitionRow0_ToBank22Image1_DirSouth; 8680 44 A6D.
-        .addr   Map9fBank2eImage1MapTransitionRow0_ToBank22Image1_DirSouth; 8682 63 A6c.
-        .addr   Mapa0Bank2eImage1MapTransitionRow0_ToBank22Image1_DirSouth; 8684 78 A6x.
-        .addr   Mapa1Bank2eImage1MapTransitionRow0_ToBank22Image1_DirSouth; 8686 8D A6..
-        .addr   Mapa2Bank2eImage1MapTransitionRow0_ToBank22Image1_DirSouth; 8688 A2 A6..
-        .addr   Mapa3Bank2eImage1MapTransitionRow0; 868A C1 A6                  ..
+        .addr   Map5bBank27Image0SubImage0MapTransitionRow0_ToBank12Image0_DirSouth; 85FA 11 A0..
+        .addr   Map5cBank27Image0SubImage1MapTransitionRow0_ToBank12Image1_DirNorth; 85FC 1C A0..
+        .addr   Map5dBank27Image0SubImage2MapTransitionRow0_ToBank12Image0_DirSouth; 85FE 77 A0w.
+        .addr   Map5eBank27Image0SubImage3MapTransitionRow0_ToBank12Image0_DirSouth; 8600 8C A0..
+        .addr   Map5fBank27Image0SubImage4MapTransitionRow0_ToBank12Image0_DirSouth; 8602 A1 A0..
+        .addr   Map60Bank27Image0SubImage5MapTransitionRow0_ToBank27Image0SubImage1_DirNorth; 8604 B6 A0..
+        .addr   Map61Bank27Image2SubImage0MapTransitionRow0_ToBank27Image2SubImage5_DirNorth; 8606 C1 A0..
+        .addr   Map62Bank27Image2SubImage1MapTransitionRow0_ToBank13Image3_DirSouth; 8608 E0 A0..
+        .addr   Map63Bank27Image2SubImage2MapTransitionRow0_ToBank13Image3_DirSouth; 860A F5 A0..
+        .addr   Map64Bank27Image2SubImage3MapTransitionRow0_ToBank13Image3_DirSouth; 860C 0A A1..
+        .addr   Map65Bank27Image2SubImage4MapTransitionRow0_ToBank13Image3_DirSouth; 860E 1F A1..
+        .addr   Map66Bank27Image2SubImage5MapTransitionRow0_ToBank27Image2SubImage0_DirNorth; 8610 3E A1>.
+        .addr   Map67Bank28Image0SubImage0MapTransitionRow0_ToBank15Image0_DirSouth; 8612 49 A1I.
+        .addr   Map68Bank28Image0SubImage1MapTransitionRow0_ToBank15Image0_DirSouth; 8614 5E A1^.
+        .addr   Map69Bank28Image0SubImage2MapTransitionRow0_ToBank15Image0_DirSouth; 8616 73 A1s.
+        .addr   Map6aBank28Image0SubImage3MapTransitionRow0_ToBank15Image0_DirSouth; 8618 92 A1..
+        .addr   Map6bBank28Image2SubImage0MapTransitionRow0_ToBank28Image2SubImage2_DirSouth; 861A 9D A1..
+        .addr   Map6cBank28Image2SubImage1MapTransitionRow0_ToBank28Image2SubImage0_DirSouth; 861C BC A1..
+        .addr   Map6dBank28Image2SubImage2MapTransitionRow0_ToBank15Image2_DirSouth; 861E D1 A1..
+        .addr   Map6eBank29Image0SubImage0MapTransitionRow0_ToBank1aImage2_DirSouth; 8620 DC A1..
+        .addr   Map6fBank29Image0SubImage1MapTransitionRow0_ToBank1aImage2_DirSouth; 8622 F1 A1..
+        .addr   Map70Bank29Image0SubImage2MapTransitionRow0_ToBank1aImage2_DirSouth; 8624 06 A2..
+        .addr   Map71Bank29Image0SubImage3MapTransitionRow0_ToBank1aImage2_DirSouth; 8626 1B A2..
+        .addr   Map72Bank29Image0SubImage4MapTransitionRow0_ToBank1aImage2_DirSouth; 8628 30 A20.
+        .addr   Map73Bank29Image0SubImage5MapTransitionRow0_ToBank1aImage2_DirSouth; 862A 3B A2;.
+        .addr   Map74Bank29Image2SubImage0MapTransitionRow0_ToBank1aImage3_DirEast; 862C 5A A2Z.
+        .addr   Map75Bank29Image2SubImage1MapTransitionRow0_ToBank1aImage3_DirSouth; 862E 83 A2..
+        .addr   Map76Bank2aImage0SubImage0MapTransitionRow0_ToBank1bImage2_DirSouth; 8630 A2 A2..
+        .addr   Map77Bank2aImage0SubImage1MapTransitionRow0_ToBank1bImage2_DirSouth; 8632 B7 A2..
+        .addr   Map78Bank2aImage0SubImage2MapTransitionRow0_ToBank1bImage2_DirSouth; 8634 CC A2..
+        .addr   Map79Bank2aImage2SubImage0MapTransitionRow0_ToBank1cImage1_DirSouth; 8636 E1 A2..
+        .addr   Map7aBank2aImage2SubImage1MapTransitionRow0_ToBank1cImage1_DirSouth; 8638 00 A3..
+        .addr   Map7bBank2aImage2SubImage2MapTransitionRow0_ToBank1cImage1_DirSouth; 863A 15 A3..
+        .addr   Map7cBank2aImage2SubImage3MapTransitionRow0_ToBank1cImage1_DirSouth; 863C 2A A3*.
+        .addr   Map7dBank2aImage2SubImage4MapTransitionRow0_ToBank1cImage1_DirSouth; 863E 3F A3?.
+        .addr   Map7eBank2bImage0SubImage0MapTransitionRow0_ToBank1dImage1_DirSouth; 8640 54 A3T.
+        .addr   Map7fBank2bImage0SubImage1MapTransitionRow0_ToBank1dImage1_DirSouth; 8642 73 A3s.
+        .addr   Map80Bank2bImage0SubImage2MapTransitionRow0_ToBank1dImage1_DirSouth; 8644 88 A3..
+        .addr   Map81Bank2bImage0SubImage3MapTransitionRow0_ToBank1dImage1_DirSouth; 8646 A7 A3..
+        .addr   Map82Bank2bImage2SubImage0MapTransitionRow0_ToBank1eImage0_DirSouth; 8648 D0 A3..
+        .addr   Map83Bank2bImage2SubImage1MapTransitionRow0_ToBank1eImage0_DirSouth; 864A E5 A3..
+        .addr   Map84Bank2bImage2SubImage2MapTransitionRow0_ToBank1eImage0_DirSouth; 864C FA A3..
+        .addr   Map85Bank2bImage2SubImage3MapTransitionRow0_ToBank1eImage0_DirSouth; 864E 23 A4#.
+        .addr   Map86Bank2cImage0SubImage0MapTransitionRow0_ToBank36Image0_DirSouth; 8650 38 A48.
+        .addr   Map87Bank2cImage0SubImage1MapTransitionRow0_ToBank1eImage1_DirSouth; 8652 4D A4M.
+        .addr   Map88Bank2cImage1SubImage0MapTransitionRow0_ToBank1eImage3_DirSouth; 8654 62 A4b.
+        .addr   Map89Bank2cImage1SubImage1MapTransitionRow0_ToBank1eImage3_DirSouth; 8656 81 A4..
+        .addr   Map8aBank2cImage1SubImage2MapTransitionRow0_ToBank1eImage3_DirSouth; 8658 96 A4..
+        .addr   Map8bBank2cImage1SubImage3MapTransitionRow0_ToBank1eImage3_DirSouth; 865A AB A4..
+        .addr   Map8cBank2cImage1SubImage4MapTransitionRow0_ToBank1eImage3_DirSouth; 865C C0 A4..
+        .addr   Map8dBank2cImage3SubImage0MapTransitionRow0_ToBank1fImage0_DirSouth; 865E E9 A4..
+        .addr   Map8eBank2cImage3SubImage1MapTransitionRow0_ToBank1fImage0_DirSouth; 8660 F4 A4..
+        .addr   Map8fBank2cImage3SubImage2MapTransitionRow0_ToBank20Image2; 8662 A0 E6..
+        .addr   Map90Bank2cImage3SubImage3MapTransitionRow0_ToBank1fImage0_DirSouth; 8664 0A A5..
+        .addr   Map91Bank2dImage1SubImage0MapTransitionRow0_ToBank1fImage2_DirSouth; 8666 29 A5).
+        .addr   Map92Bank2dImage1SubImage1MapTransitionRow0_ToBank1fImage2_DirSouth; 8668 34 A54.
+        .addr   Map93Bank2dImage1SubImage2MapTransitionRow0_ToBank1fImage2_DirSouth; 866A 49 A5I.
+        .addr   Map94Bank2dImage1SubImage3MapTransitionRow0_ToBank1fImage2_DirSouth; 866C 5E A5^.
+        .addr   Map95Bank2dImage1SubImage4MapTransitionRow0_ToBank1fImage2_DirSouth; 866E 73 A5s.
+        .addr   Map96Bank2dImage1SubImage5MapTransitionRow0_ToBank1fImage2_DirSouth; 8670 7E A5~.
+        .addr   Map97Bank2dImage1SubImage6MapTransitionRow0_ToBank1fImage2_DirSouth; 8672 9D A5..
+        .addr   Map98Bank2dImage3SubImage0MapTransitionRow0_ToBank20Image1_DirSouth; 8674 A8 A5..
+        .addr   Map99Bank2dImage3SubImage1MapTransitionRow0_ToBank20Image1_DirSouth; 8676 C7 A5..
+        .addr   Map9aBank2dImage3SubImage2MapTransitionRow0_ToBank20Image1_DirSouth; 8678 DC A5..
+        .addr   Map9bBank2dImage3SubImage3MapTransitionRow0_ToBank20Image1_DirSouth; 867A F1 A5..
+        .addr   Map9cBank2dImage3SubImage4MapTransitionRow0_ToBank20Image1_DirNorth; 867C 06 A6..
+        .addr   Map9dBank2dImage3SubImage5MapTransitionRow0_ToBank20Image1_DirSouth; 867E 2F A6/.
+        .addr   Map9eBank2eImage1SubImage0MapTransitionRow0_ToBank22Image1_DirSouth; 8680 44 A6D.
+        .addr   Map9fBank2eImage1SubImage1MapTransitionRow0_ToBank22Image1_DirSouth; 8682 63 A6c.
+        .addr   Mapa0Bank2eImage1SubImage2MapTransitionRow0_ToBank22Image1_DirSouth; 8684 78 A6x.
+        .addr   Mapa1Bank2eImage1SubImage3MapTransitionRow0_ToBank22Image1_DirSouth; 8686 8D A6..
+        .addr   Mapa2Bank2eImage1SubImage4MapTransitionRow0_ToBank22Image1_DirSouth; 8688 A2 A6..
+        .addr   Mapa3Bank2eImage1SubImage5MapTransitionRow0; 868A C1 A6         ..
         .addr   Mapa4Bank2eImage3MapTransitionRow0_ToBank22Image3_DirSouth; 868C EA A6..
         .addr   Mapa5Bank2fImage0MapTransitionRow0_ToBank26Image2_DirNorth; 868E F5 A6..
         .addr   LA70A                           ; 8690 0A A7                    ..
@@ -757,19 +757,19 @@ Map09Bank12Image0MapTransitionRow3_ToBank11Image3_DirEast:
 Map09Bank12Image0MapTransitionRow4_ToBank16Image1_DirNorth:
         .byte   $90,$19,$80,$D9,$00,$00,$C0,$00 ; 8BC9 90 19 80 D9 00 00 C0 00  ........
         .byte   $30,$00                         ; 8BD1 30 00                    0.
-Map09Bank12Image0MapTransitionRow5_ToBank27Image0_DirNorth:
+Map09Bank12Image0MapTransitionRow5_ToBank27Image0SubImage0_DirNorth:
         .byte   $90,$5B,$80,$E9,$00,$00,$60,$00 ; 8BD3 90 5B 80 E9 00 00 60 00  .[....`.
         .byte   $70,$00                         ; 8BDB 70 00                    p.
-Map09Bank12Image0MapTransitionRow6_ToBank27Image0_DirNorth:
+Map09Bank12Image0MapTransitionRow6_ToBank27Image0SubImage1_DirNorth:
         .byte   $90,$5C,$D0,$D9,$00,$00,$60,$01 ; 8BDD 90 5C D0 D9 00 00 60 01  .\....`.
         .byte   $60,$00                         ; 8BE5 60 00                    `.
-Map09Bank12Image0MapTransitionRow7_ToBank27Image0_DirNorth:
+Map09Bank12Image0MapTransitionRow7_ToBank27Image0SubImage2_DirNorth:
         .byte   $90,$5D,$80,$C9,$00,$00,$70,$00 ; 8BE7 90 5D 80 C9 00 00 70 00  .]....p.
         .byte   $30,$01                         ; 8BEF 30 01                    0.
-Map09Bank12Image0MapTransitionRow8_ToBank27Image0_DirNorth:
+Map09Bank12Image0MapTransitionRow8_ToBank27Image0SubImage3_DirNorth:
         .byte   $90,$5E,$70,$C9,$00,$00,$90,$00 ; 8BF1 90 5E 70 C9 00 00 90 00  .^p.....
         .byte   $30,$01                         ; 8BF9 30 01                    0.
-Map09Bank12Image0MapTransitionRow9_ToBank27Image0_DirNorth:
+Map09Bank12Image0MapTransitionRow9_ToBank27Image0SubImage4_DirNorth:
         .byte   $90,$5F,$70,$C9,$00,$00,$B0,$00 ; 8BFB 90 5F 70 C9 00 00 B0 00  ._p.....
         .byte   $30,$01                         ; 8C03 30 01                    0.
 Map09Bank12Image0MapTransitionRow10:
@@ -790,7 +790,7 @@ Map09Bank12Image0MapTransitionRow14:
 Map09Bank12Image0MapTransitionRow15:
         .byte   $03,$00,$00,$00,$00,$00,$FF,$00 ; 8C37 03 00 00 00 00 00 FF 00  ........
         .byte   $00,$00,$FF                     ; 8C3F 00 00 FF                 ...
-Map0aBank12Image1MapTransitionRow0_ToBank27Image0_DirEast:
+Map0aBank12Image1MapTransitionRow0_ToBank27Image0SubImage1_DirEast:
         .byte   $30,$5C,$20,$63,$00,$00,$E0,$FF ; 8C42 30 5C 20 63 00 00 E0 FF  0\ c....
         .byte   $60,$00,$FF                     ; 8C4A 60 00 FF                 `..
 Map0bBank12Image2MapTransitionRow0_ToBank12Image2_DirEast:
@@ -880,19 +880,19 @@ Map11Bank13Image3MapTransitionRow4_ToBank14Image1_DirWest:
 Map11Bank13Image3MapTransitionRow5_ToBank14Image0_DirEast:
         .byte   $30,$10,$00,$63,$00,$00,$F0,$01 ; 8D6B 30 10 00 63 00 00 F0 01  0..c....
         .byte   $A0,$00                         ; 8D73 A0 00                    ..
-Map11Bank13Image3MapTransitionRow6_ToBank27Image2_DirNorth:
+Map11Bank13Image3MapTransitionRow6_ToBank27Image2SubImage0_DirNorth:
         .byte   $90,$61,$80,$E9,$00,$00,$10,$01 ; 8D75 90 61 80 E9 00 00 10 01  .a......
         .byte   $90,$00                         ; 8D7D 90 00                    ..
-Map11Bank13Image3MapTransitionRow7_ToBank27Image2_DirNorth:
+Map11Bank13Image3MapTransitionRow7_ToBank27Image2SubImage1_DirNorth:
         .byte   $90,$62,$70,$C9,$00,$00,$E0,$00 ; 8D7F 90 62 70 C9 00 00 E0 00  .bp.....
         .byte   $10,$01                         ; 8D87 10 01                    ..
-Map11Bank13Image3MapTransitionRow8_ToBank27Image2_DirNorth:
+Map11Bank13Image3MapTransitionRow8_ToBank27Image2SubImage2_DirNorth:
         .byte   $90,$63,$80,$C9,$00,$00,$E0,$00 ; 8D89 90 63 80 C9 00 00 E0 00  .c......
         .byte   $50,$01                         ; 8D91 50 01                    P.
-Map11Bank13Image3MapTransitionRow9_ToBank27Image2_DirNorth:
+Map11Bank13Image3MapTransitionRow9_ToBank27Image2SubImage3_DirNorth:
         .byte   $90,$64,$70,$C9,$00,$00,$50,$00 ; 8D93 90 64 70 C9 00 00 50 00  .dp...P.
         .byte   $70,$01                         ; 8D9B 70 01                    p.
-Map11Bank13Image3MapTransitionRow10_ToBank27Image2_DirNorth:
+Map11Bank13Image3MapTransitionRow10_ToBank27Image2SubImage4_DirNorth:
         .byte   $90,$65,$80,$C9,$00,$00,$50,$01 ; 8D9D 90 65 80 C9 00 00 50 01  .e....P.
         .byte   $80,$01                         ; 8DA5 80 01                    ..
 Map11Bank13Image3MapTransitionRow11_TreasureChest:
@@ -943,16 +943,16 @@ Map14Bank15Image0MapTransitionRow2_ToBank24Image3_DirWest:
 Map14Bank15Image0MapTransitionRow3_ToBank24Image3_DirWest:
         .byte   $C0,$52,$F0,$8C,$03,$00,$00,$00 ; 8E40 C0 52 F0 8C 03 00 00 00  .R......
         .byte   $50,$01                         ; 8E48 50 01                    P.
-Map14Bank15Image0MapTransitionRow4_ToBank28Image0_DirNorth:
+Map14Bank15Image0MapTransitionRow4_ToBank28Image0SubImage0_DirNorth:
         .byte   $90,$67,$70,$C9,$00,$00,$C0,$00 ; 8E4A 90 67 70 C9 00 00 C0 00  .gp.....
         .byte   $B0,$00                         ; 8E52 B0 00                    ..
-Map14Bank15Image0MapTransitionRow5_ToBank28Image0_DirNorth:
+Map14Bank15Image0MapTransitionRow5_ToBank28Image0SubImage1_DirNorth:
         .byte   $90,$68,$80,$D9,$00,$00,$50,$00 ; 8E54 90 68 80 D9 00 00 50 00  .h....P.
         .byte   $E0,$00                         ; 8E5C E0 00                    ..
-Map14Bank15Image0MapTransitionRow6_ToBank28Image0_DirNorth:
+Map14Bank15Image0MapTransitionRow6_ToBank28Image0SubImage2_DirNorth:
         .byte   $90,$69,$80,$C9,$00,$00,$90,$01 ; 8E5E 90 69 80 C9 00 00 90 01  .i......
         .byte   $E0,$00                         ; 8E66 E0 00                    ..
-Map14Bank15Image0MapTransitionRow7_ToBank28Image0_DirNorth:
+Map14Bank15Image0MapTransitionRow7_ToBank28Image0SubImage3_DirNorth:
         .byte   $90,$6A,$40,$D9,$00,$00,$40,$00 ; 8E68 90 6A 40 D9 00 00 40 00  .j@...@.
         .byte   $30,$01,$FF                     ; 8E70 30 01 FF                 0..
 Map15Bank15Image1MapTransitionRow0_ToBank15Image2_DirNorth:
@@ -976,13 +976,13 @@ Map15Bank15Image1MapTransitionRow5_ToBank16Image2_DirEast:
 Map16Bank15Image2MapTransitionRow0_ToBank15Image1_DirSouth:
         .byte   $60,$15,$70,$56,$00,$00,$80,$00 ; 8EB0 60 15 70 56 00 00 80 00  `.pV....
         .byte   $D0,$01                         ; 8EB8 D0 01                    ..
-Map16Bank15Image2MapTransitionRow1_ToBank28Image2_DirNorth:
+Map16Bank15Image2MapTransitionRow1_ToBank28Image2SubImage0_DirNorth:
         .byte   $90,$6B,$70,$C9,$00,$00,$80,$00 ; 8EBA 90 6B 70 C9 00 00 80 00  .kp.....
         .byte   $10,$00                         ; 8EC2 10 00                    ..
-Map16Bank15Image2MapTransitionRow2_ToBank28Image2_DirWest:
+Map16Bank15Image2MapTransitionRow2_ToBank28Image2SubImage1_DirWest:
         .byte   $C0,$6C,$F0,$7C,$00,$00,$00,$00 ; 8EC4 C0 6C F0 7C 00 00 00 00  .l.|....
         .byte   $40,$00                         ; 8ECC 40 00                    @.
-Map16Bank15Image2MapTransitionRow3_ToBank28Image2_DirNorth:
+Map16Bank15Image2MapTransitionRow3_ToBank28Image2SubImage2_DirNorth:
         .byte   $90,$6D,$80,$D9,$00,$00,$E0,$00 ; 8ECE 90 6D 80 D9 00 00 E0 00  .m......
         .byte   $20,$00,$FF                     ; 8ED6 20 00 FF                  ..
 Map17Bank15Image3MapTransitionRow0_ToBank16Image0_DirNorth:
@@ -1271,7 +1271,7 @@ Map29Bank1aImage1MapTransitionRow10_ToBank36Image0_DirSouth:
 Map29Bank1aImage1MapTransitionRow11_ToBank36Image0_DirSouth:
         .byte   $60,$00,$80,$76,$89,$91,$A0,$00 ; 92C9 60 00 80 76 89 91 A0 00  `..v....
         .byte   $C0,$02,$FF                     ; 92D1 C0 02 FF                 ...
-Map2aBank1aImage2MapTransitionRow0_ToBank29Image0_DirNorth:
+Map2aBank1aImage2MapTransitionRow0_ToBank29Image0SubImage5_DirNorth:
         .byte   $90,$73,$80,$C9,$00,$00,$30,$FF ; 92D4 90 73 80 C9 00 00 30 FF  .s....0.
         .byte   $60,$02                         ; 92DC 60 02                    `.
 Map2aBank1aImage2MapTransitionRow1_ToBank36Image0_DirSouth:
@@ -1280,22 +1280,22 @@ Map2aBank1aImage2MapTransitionRow1_ToBank36Image0_DirSouth:
 Map2aBank1aImage2MapTransitionRow2_ToBank36Image0_DirSouth:
         .byte   $60,$00,$80,$76,$7A,$A7,$30,$00 ; 92E8 60 00 80 76 7A A7 30 00  `..vz.0.
         .byte   $C0,$02                         ; 92F0 C0 02                    ..
-Map2aBank1aImage2MapTransitionRow3_ToBank29Image0_DirNorth:
+Map2aBank1aImage2MapTransitionRow3_ToBank29Image0SubImage0_DirNorth:
         .byte   $90,$6E,$40,$D9,$00,$00,$50,$00 ; 92F2 90 6E 40 D9 00 00 50 00  .n@...P.
         .byte   $D0,$00                         ; 92FA D0 00                    ..
-Map2aBank1aImage2MapTransitionRow4_ToBank29Image0_DirNorth:
+Map2aBank1aImage2MapTransitionRow4_ToBank29Image0SubImage1_DirNorth:
         .byte   $90,$6F,$80,$C9,$00,$00,$20,$00 ; 92FC 90 6F 80 C9 00 00 20 00  .o.... .
         .byte   $90,$00                         ; 9304 90 00                    ..
-Map2aBank1aImage2MapTransitionRow5_ToBank29Image0_DirNorth:
+Map2aBank1aImage2MapTransitionRow5_ToBank29Image0SubImage2_DirNorth:
         .byte   $90,$70,$70,$C9,$00,$00,$70,$00 ; 9306 90 70 70 C9 00 00 70 00  .pp...p.
         .byte   $90,$00                         ; 930E 90 00                    ..
-Map2aBank1aImage2MapTransitionRow6_ToBank29Image0_DirNorth:
+Map2aBank1aImage2MapTransitionRow6_ToBank29Image0SubImage3_DirNorth:
         .byte   $90,$71,$70,$C9,$00,$00,$C0,$00 ; 9310 90 71 70 C9 00 00 C0 00  .qp.....
         .byte   $90,$00                         ; 9318 90 00                    ..
-Map2aBank1aImage2MapTransitionRow7_ToBank29Image0_DirNorth:
+Map2aBank1aImage2MapTransitionRow7_ToBank29Image0SubImage4_DirNorth:
         .byte   $90,$72,$80,$D9,$00,$00,$C0,$00 ; 931A 90 72 80 D9 00 00 C0 00  .r......
         .byte   $00,$01                         ; 9322 00 01                    ..
-Map2aBank1aImage2MapTransitionRow8_ToBank29Image0_DirNorth:
+Map2aBank1aImage2MapTransitionRow8_ToBank29Image0SubImage5_DirNorth:
         .byte   $90,$73,$80,$C9,$00,$00,$30,$00 ; 9324 90 73 80 C9 00 00 30 00  .s....0.
         .byte   $60,$02                         ; 932C 60 02                    `.
 Map2aBank1aImage2MapTransitionRow9:
@@ -1346,10 +1346,10 @@ Map2aBank1aImage2MapTransitionRow23:
 Map2bBank1aImage3MapTransitionRow0_ToBank36Image0_DirSouth:
         .byte   $60,$00,$80,$76,$9C,$F5,$30,$00 ; 93C5 60 00 80 76 9C F5 30 00  `..v..0.
         .byte   $E0,$00                         ; 93CD E0 00                    ..
-Map2bBank1aImage3MapTransitionRow1_ToBank29Image2_DirNorth:
+Map2bBank1aImage3MapTransitionRow1_ToBank29Image2SubImage0_DirNorth:
         .byte   $90,$74,$80,$BA,$00,$00,$30,$00 ; 93CF 90 74 80 BA 00 00 30 00  .t....0.
         .byte   $A0,$00                         ; 93D7 A0 00                    ..
-Map2bBank1aImage3MapTransitionRow2_ToBank29Image2_DirNorth:
+Map2bBank1aImage3MapTransitionRow2_ToBank29Image2SubImage1_DirNorth:
         .byte   $90,$75,$70,$D9,$00,$00,$B0,$00 ; 93D9 90 75 70 D9 00 00 B0 00  .up.....
         .byte   $80,$00,$FF                     ; 93E1 80 00 FF                 ...
 Map2cBank1bImage0MapTransitionRow0_ToBank36Image0_DirSouth:
@@ -1382,7 +1382,7 @@ Map2dBank1bImage1MapTransitionRow6_ToBank1bImage1_DirNorth:
 Map2dBank1bImage1MapTransitionRow7_ToBank1bImage1_DirNorth:
         .byte   $90,$2D,$80,$76,$01,$BC,$30,$00 ; 943F 90 2D 80 76 01 BC 30 00  .-.v..0.
         .byte   $30,$00,$FF                     ; 9447 30 00 FF                 0..
-Map2eBank1bImage2MapTransitionRow0_ToBank2aImage0_DirNorth:
+Map2eBank1bImage2MapTransitionRow0_ToBank2aImage0SubImage2_DirNorth:
         .byte   $90,$78,$70,$D9,$00,$00,$50,$FF ; 944A 90 78 70 D9 00 00 50 FF  .xp...P.
         .byte   $60,$01                         ; 9452 60 01                    `.
 Map2eBank1bImage2MapTransitionRow1_ToBank1cImage0_DirWest:
@@ -1397,13 +1397,13 @@ Map2eBank1bImage2MapTransitionRow3_ToBank36Image0_DirEast:
 Map2eBank1bImage2MapTransitionRow4_ToBank1cImage0_DirSouth:
         .byte   $60,$2F,$D0,$16,$02,$00,$30,$01 ; 9472 60 2F D0 16 02 00 30 01  `/....0.
         .byte   $D0,$01                         ; 947A D0 01                    ..
-Map2eBank1bImage2MapTransitionRow5_ToBank2aImage0_DirNorth:
+Map2eBank1bImage2MapTransitionRow5_ToBank2aImage0SubImage0_DirNorth:
         .byte   $90,$76,$80,$D9,$00,$00,$E0,$00 ; 947C 90 76 80 D9 00 00 E0 00  .v......
         .byte   $50,$00                         ; 9484 50 00                    P.
-Map2eBank1bImage2MapTransitionRow6_ToBank2aImage0_DirNorth:
+Map2eBank1bImage2MapTransitionRow6_ToBank2aImage0SubImage1_DirNorth:
         .byte   $90,$77,$30,$B9,$00,$00,$90,$01 ; 9486 90 77 30 B9 00 00 90 01  .w0.....
         .byte   $A0,$00                         ; 948E A0 00                    ..
-Map2eBank1bImage2MapTransitionRow7_ToBank2aImage0_DirNorth:
+Map2eBank1bImage2MapTransitionRow7_ToBank2aImage0SubImage2_DirNorth:
         .byte   $90,$78,$70,$D9,$00,$00,$A0,$01 ; 9490 90 78 70 D9 00 00 A0 01  .xp.....
         .byte   $30,$01                         ; 9498 30 01                    0.
 Map2eBank1bImage2MapTransitionRow8:
@@ -1439,7 +1439,7 @@ Map2fBank1cImage0MapTransitionRow1_ToBank1bImage2_DirNorth:
 Map2fBank1cImage0MapTransitionRow2_ToBank1bImage2_DirNorth:
         .byte   $90,$2E,$80,$D9,$00,$BE,$C0,$02 ; 94FF 90 2E 80 D9 00 BE C0 02  ........
         .byte   $00,$00,$FF                     ; 9507 00 00 FF                 ...
-Map30Bank1cImage1MapTransitionRow0_ToBank2aImage2_DirNorth:
+Map30Bank1cImage1MapTransitionRow0_ToBank2aImage2SubImage4_DirNorth:
         .byte   $90,$7D,$70,$C9,$00,$00,$80,$F3 ; 950A 90 7D 70 C9 00 00 80 F3  .}p.....
         .byte   $40,$00                         ; 9512 40 00                    @.
 Map30Bank1cImage1MapTransitionRow1_ToBank1cImage0_DirNorth:
@@ -1457,19 +1457,19 @@ Map30Bank1cImage1MapTransitionRow4_ToBank1cImage2:
 Map30Bank1cImage1MapTransitionRow5_ToBank1cImage2:
         .byte   $F0,$31,$30,$E9,$04,$00,$00,$00 ; 953C F0 31 30 E9 04 00 00 00  .10.....
         .byte   $C0,$00                         ; 9544 C0 00                    ..
-Map30Bank1cImage1MapTransitionRow6_ToBank2aImage2_DirNorth:
+Map30Bank1cImage1MapTransitionRow6_ToBank2aImage2SubImage0_DirNorth:
         .byte   $90,$79,$80,$C9,$00,$00,$C0,$00 ; 9546 90 79 80 C9 00 00 C0 00  .y......
         .byte   $80,$00                         ; 954E 80 00                    ..
-Map30Bank1cImage1MapTransitionRow7_ToBank2aImage2_DirNorth:
+Map30Bank1cImage1MapTransitionRow7_ToBank2aImage2SubImage1_DirNorth:
         .byte   $90,$7A,$80,$C9,$00,$00,$60,$01 ; 9550 90 7A 80 C9 00 00 60 01  .z....`.
         .byte   $80,$00                         ; 9558 80 00                    ..
-Map30Bank1cImage1MapTransitionRow8_ToBank2aImage2_DirNorth:
+Map30Bank1cImage1MapTransitionRow8_ToBank2aImage2SubImage2_DirNorth:
         .byte   $90,$7B,$70,$C9,$00,$00,$C0,$03 ; 955A 90 7B 70 C9 00 00 C0 03  .{p.....
         .byte   $80,$00                         ; 9562 80 00                    ..
-Map30Bank1cImage1MapTransitionRow9_ToBank2aImage2_DirNorth:
+Map30Bank1cImage1MapTransitionRow9_ToBank2aImage2SubImage3_DirNorth:
         .byte   $90,$7C,$70,$C9,$00,$00,$90,$02 ; 9564 90 7C 70 C9 00 00 90 02  .|p.....
         .byte   $80,$00                         ; 956C 80 00                    ..
-Map30Bank1cImage1MapTransitionRow10_ToBank2aImage2_DirNorth:
+Map30Bank1cImage1MapTransitionRow10_ToBank2aImage2SubImage4_DirNorth:
         .byte   $90,$7D,$70,$C9,$00,$00,$40,$02 ; 956E 90 7D 70 C9 00 00 40 02  .}p...@.
         .byte   $80,$00                         ; 9576 80 00                    ..
 Map30Bank1cImage1MapTransitionRow11:
@@ -1478,7 +1478,7 @@ Map30Bank1cImage1MapTransitionRow11:
 Map30Bank1cImage1MapTransitionRow12:
         .byte   $03,$00,$00,$00,$00,$00,$04,$00 ; 9582 03 00 00 00 00 00 04 00  ........
         .byte   $05,$D2,$FF                     ; 958A 05 D2 FF                 ...
-Map31Bank1cImage2MapTransitionRow0_ToBank2aImage2_DirNorth:
+Map31Bank1cImage2MapTransitionRow0_ToBank2aImage2SubImage4_DirNorth:
         .byte   $90,$7D,$80,$8C,$00,$00,$80,$F3 ; 958D 90 7D 80 8C 00 00 80 F3  .}......
         .byte   $40,$00                         ; 9595 40 00                    @.
 Map31Bank1cImage2MapTransitionRow1_ToBank36Image0_DirNorth:
@@ -1529,16 +1529,16 @@ Map34Bank1dImage1MapTransitionRow0_ToBank36Image0_DirNorth:
 Map34Bank1dImage1MapTransitionRow1_ToBank36Image0_DirSouth:
         .byte   $60,$00,$80,$76,$86,$D6,$A0,$00 ; 9630 60 00 80 76 86 D6 A0 00  `..v....
         .byte   $D0,$01                         ; 9638 D0 01                    ..
-Map34Bank1dImage1MapTransitionRow2_ToBank2bImage0_DirNorth:
+Map34Bank1dImage1MapTransitionRow2_ToBank2bImage0SubImage1_DirNorth:
         .byte   $90,$7F,$50,$B9,$00,$00,$80,$02 ; 963A 90 7F 50 B9 00 00 80 02  ..P.....
         .byte   $10,$01                         ; 9642 10 01                    ..
-Map34Bank1dImage1MapTransitionRow3_ToBank2bImage0_DirNorth:
+Map34Bank1dImage1MapTransitionRow3_ToBank2bImage0SubImage0_DirNorth:
         .byte   $90,$7E,$70,$A9,$00,$00,$30,$02 ; 9644 90 7E 70 A9 00 00 30 02  .~p...0.
         .byte   $D0,$00                         ; 964C D0 00                    ..
-Map34Bank1dImage1MapTransitionRow4_ToBank2bImage0_DirNorth:
+Map34Bank1dImage1MapTransitionRow4_ToBank2bImage0SubImage2_DirNorth:
         .byte   $90,$80,$70,$C9,$00,$00,$90,$01 ; 964E 90 80 70 C9 00 00 90 01  ..p.....
         .byte   $A0,$00                         ; 9656 A0 00                    ..
-Map34Bank1dImage1MapTransitionRow5_ToBank2bImage0_DirNorth:
+Map34Bank1dImage1MapTransitionRow5_ToBank2bImage0SubImage3_DirNorth:
         .byte   $90,$81,$80,$C9,$00,$00,$50,$02 ; 9658 90 81 80 C9 00 00 50 02  ......P.
         .byte   $90,$00                         ; 9660 90 00                    ..
 Map34Bank1dImage1MapTransitionRow6:
@@ -1592,7 +1592,7 @@ Map36Bank1bImage3MapTransitionRow0_ToBank1eImage0_DirNorth:
 Map36Bank1bImage3MapTransitionRow1_ToBank1dImage2_DirNorth:
         .byte   $90,$35,$30,$63,$00,$00,$70,$FF ; 9704 90 35 30 63 00 00 70 FF  .50c..p.
         .byte   $10,$00                         ; 970C 10 00                    ..
-Map36Bank1bImage3MapTransitionRow2_ToBank2bImage2_DirSouth:
+Map36Bank1bImage3MapTransitionRow2_ToBank2bImage2SubImage3_DirSouth:
         .byte   $60,$85,$50,$93,$00,$00,$70,$FF ; 970E 60 85 50 93 00 00 70 FF  `.P...p.
         .byte   $C0,$02                         ; 9716 C0 02                    ..
 Map36Bank1bImage3MapTransitionRow3:
@@ -1619,7 +1619,7 @@ Map37Bank1eImage0MapTransitionRow2:
 Map37Bank1eImage0MapTransitionRow3_ToBank25Image1:
         .byte   $F0,$54,$40,$E9,$00,$00,$00,$00 ; 975F F0 54 40 E9 00 00 00 00  .T@.....
         .byte   $00,$01                         ; 9767 00 01                    ..
-Map37Bank1eImage0MapTransitionRow4_ToBank2bImage2_DirNorth:
+Map37Bank1eImage0MapTransitionRow4_ToBank2bImage2SubImage0_DirNorth:
         .byte   $90,$82,$70,$E9,$00,$00,$50,$00 ; 9769 90 82 70 E9 00 00 50 00  ..p...P.
         .byte   $20,$00                         ; 9771 20 00                     .
 Map37Bank1eImage0MapTransitionRow5:
@@ -1628,16 +1628,16 @@ Map37Bank1eImage0MapTransitionRow5:
 Map37Bank1eImage0MapTransitionRow6:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 977D 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00                         ; 9785 00 00                    ..
-Map37Bank1eImage0MapTransitionRow7_ToBank2bImage2:
+Map37Bank1eImage0MapTransitionRow7_ToBank2bImage2SubImage1:
         .byte   $F0,$83,$70,$E9,$00,$00,$F0,$01 ; 9787 F0 83 70 E9 00 00 F0 01  ..p.....
         .byte   $10,$01                         ; 978F 10 01                    ..
 Map37Bank1eImage0MapTransitionRow8:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; 9791 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00                         ; 9799 00 00                    ..
-Map37Bank1eImage0MapTransitionRow9_ToBank2bImage2_DirNorth:
+Map37Bank1eImage0MapTransitionRow9_ToBank2bImage2SubImage2_DirNorth:
         .byte   $90,$84,$70,$E9,$00,$00,$D0,$00 ; 979B 90 84 70 E9 00 00 D0 00  ..p.....
         .byte   $20,$00                         ; 97A3 20 00                     .
-Map37Bank1eImage0MapTransitionRow10_ToBank2bImage2_DirNorth:
+Map37Bank1eImage0MapTransitionRow10_ToBank2bImage2SubImage3_DirNorth:
         .byte   $90,$85,$70,$E9,$00,$00,$F0,$00 ; 97A5 90 85 70 E9 00 00 F0 00  ..p.....
         .byte   $00,$01                         ; 97AD 00 01                    ..
 Map37Bank1eImage0MapTransitionRow11:
@@ -1655,13 +1655,13 @@ Map38Bank1eImage1MapTransitionRow2_ToBank1eImage2_DirEast:
 Map38Bank1eImage1MapTransitionRow3_ToBank1eImage2_DirEast:
         .byte   $30,$39,$80,$D9,$02,$00,$F0,$01 ; 97D8 30 39 80 D9 02 00 F0 01  09......
         .byte   $B0,$02                         ; 97E0 B0 02                    ..
-Map38Bank1eImage1MapTransitionRow4_ToBank2cImage0_DirNorth:
+Map38Bank1eImage1MapTransitionRow4_ToBank2cImage0SubImage0_DirNorth:
         .byte   $90,$86,$70,$C9,$00,$00,$90,$00 ; 97E2 90 86 70 C9 00 00 90 00  ..p.....
         .byte   $40,$02                         ; 97EA 40 02                    @.
-Map38Bank1eImage1MapTransitionRow5_ToBank2cImage0_DirEast:
+Map38Bank1eImage1MapTransitionRow5_ToBank2cImage0SubImage1_DirEast:
         .byte   $30,$87,$30,$A3,$00,$00,$60,$01 ; 97EC 30 87 30 A3 00 00 60 01  0.0...`.
         .byte   $50,$02                         ; 97F4 50 02                    P.
-Map38Bank1eImage1MapTransitionRow6_ToBank2cImage0_DirNorth:
+Map38Bank1eImage1MapTransitionRow6_ToBank2cImage0SubImage1_DirNorth:
         .byte   $90,$87,$B0,$A9,$00,$00,$A0,$01 ; 97F6 90 87 B0 A9 00 00 A0 01  ........
         .byte   $60,$02                         ; 97FE 60 02                    `.
 Map38Bank1eImage1MapTransitionRow7:
@@ -1700,19 +1700,19 @@ Map39Bank1eImage2MapTransitionRow3_ToBank1eImage1_DirSouth:
 Map3aBank1eImage3MapTransitionRow0_ToBank36Image0_DirEast:
         .byte   $30,$00,$80,$86,$C5,$2B,$F0,$00 ; 9870 30 00 80 86 C5 2B F0 00  0....+..
         .byte   $80,$02                         ; 9878 80 02                    ..
-Map3aBank1eImage3MapTransitionRow1_ToBank2cImage1_DirNorth:
+Map3aBank1eImage3MapTransitionRow1_ToBank2cImage1SubImage0_DirNorth:
         .byte   $90,$88,$80,$C9,$00,$00,$20,$00 ; 987A 90 88 80 C9 00 00 20 00  ...... .
         .byte   $50,$00                         ; 9882 50 00                    P.
-Map3aBank1eImage3MapTransitionRow2_ToBank2cImage1_DirNorth:
+Map3aBank1eImage3MapTransitionRow2_ToBank2cImage1SubImage1_DirNorth:
         .byte   $90,$89,$70,$C9,$00,$00,$B0,$00 ; 9884 90 89 70 C9 00 00 B0 00  ..p.....
         .byte   $80,$00                         ; 988C 80 00                    ..
-Map3aBank1eImage3MapTransitionRow3_ToBank2cImage1_DirNorth:
+Map3aBank1eImage3MapTransitionRow3_ToBank2cImage1SubImage2_DirNorth:
         .byte   $90,$8A,$70,$C9,$00,$00,$30,$00 ; 988E 90 8A 70 C9 00 00 30 00  ..p...0.
         .byte   $C0,$00                         ; 9896 C0 00                    ..
-Map3aBank1eImage3MapTransitionRow4_ToBank2cImage1_DirNorth:
+Map3aBank1eImage3MapTransitionRow4_ToBank2cImage1SubImage3_DirNorth:
         .byte   $90,$8B,$80,$C9,$00,$00,$E0,$00 ; 9898 90 8B 80 C9 00 00 E0 00  ........
         .byte   $D0,$00                         ; 98A0 D0 00                    ..
-Map3aBank1eImage3MapTransitionRow5_ToBank2cImage1_DirNorth:
+Map3aBank1eImage3MapTransitionRow5_ToBank2cImage1SubImage4_DirNorth:
         .byte   $90,$8C,$50,$D9,$00,$00,$D0,$00 ; 98A2 90 8C 50 D9 00 00 D0 00  ..P.....
         .byte   $30,$00                         ; 98AA 30 00                    0.
 Map3aBank1eImage3MapTransitionRow6:
@@ -1745,16 +1745,16 @@ Map3bBank1fImage0MapTransitionRow2_ToBank36Image0_DirSouth:
 Map3bBank1fImage0MapTransitionRow3_ToBank1fImage1_DirNorth:
         .byte   $90,$3C,$30,$E9,$04,$00,$F0,$0F ; 9907 90 3C 30 E9 04 00 F0 0F  .<0.....
         .byte   $F0,$0F                         ; 990F F0 0F                    ..
-Map3bBank1fImage0MapTransitionRow4_ToBank2cImage3_DirNorth:
+Map3bBank1fImage0MapTransitionRow4_ToBank2cImage3SubImage0_DirNorth:
         .byte   $90,$8D,$20,$D9,$00,$00,$C0,$00 ; 9911 90 8D 20 D9 00 00 C0 00  .. .....
         .byte   $90,$00                         ; 9919 90 00                    ..
-Map3bBank1fImage0MapTransitionRow5_ToBank2cImage3_DirNorth:
+Map3bBank1fImage0MapTransitionRow5_ToBank2cImage3SubImage1_DirNorth:
         .byte   $90,$8E,$A0,$89,$00,$00,$D0,$00 ; 991B 90 8E A0 89 00 00 D0 00  ........
         .byte   $50,$01                         ; 9923 50 01                    P.
-Map3bBank1fImage0MapTransitionRow6_ToBank2cImage3_DirNorth:
+Map3bBank1fImage0MapTransitionRow6_ToBank2cImage3SubImage2_DirNorth:
         .byte   $90,$8F,$80,$A9,$00,$00,$00,$00 ; 9925 90 8F 80 A9 00 00 00 00  ........
         .byte   $00,$00                         ; 992D 00 00                    ..
-Map3bBank1fImage0MapTransitionRow7_ToBank2cImage3_DirNorth:
+Map3bBank1fImage0MapTransitionRow7_ToBank2cImage3SubImage3_DirNorth:
         .byte   $90,$90,$80,$C9,$00,$00,$40,$01 ; 992F 90 90 80 C9 00 00 40 01  ......@.
         .byte   $30,$01                         ; 9937 30 01                    0.
 Map3bBank1fImage0MapTransitionRow8:
@@ -1805,25 +1805,25 @@ Map3eBank1fImage2MapTransitionRow1_ToBank36Image0_DirSouth:
 Map3eBank1fImage2MapTransitionRow2_ToBank36Image0_DirNorth:
         .byte   $90,$00,$80,$79,$93,$C2,$60,$01 ; 99D2 90 00 80 79 93 C2 60 01  ...y..`.
         .byte   $10,$00                         ; 99DA 10 00                    ..
-Map3eBank1fImage2MapTransitionRow3_ToBank2dImage1_DirNorth:
+Map3eBank1fImage2MapTransitionRow3_ToBank2dImage1SubImage0_DirNorth:
         .byte   $90,$91,$70,$C9,$00,$00,$70,$00 ; 99DC 90 91 70 C9 00 00 70 00  ..p...p.
         .byte   $40,$00                         ; 99E4 40 00                    @.
-Map3eBank1fImage2MapTransitionRow4_ToBank2dImage1_DirNorth:
+Map3eBank1fImage2MapTransitionRow4_ToBank2dImage1SubImage1_DirNorth:
         .byte   $90,$92,$80,$C9,$00,$00,$A0,$00 ; 99E6 90 92 80 C9 00 00 A0 00  ........
         .byte   $D0,$00                         ; 99EE D0 00                    ..
-Map3eBank1fImage2MapTransitionRow5_ToBank2dImage1_DirNorth:
+Map3eBank1fImage2MapTransitionRow5_ToBank2dImage1SubImage2_DirNorth:
         .byte   $90,$93,$70,$C9,$00,$00,$C0,$00 ; 99F0 90 93 70 C9 00 00 C0 00  ..p.....
         .byte   $D0,$00                         ; 99F8 D0 00                    ..
-Map3eBank1fImage2MapTransitionRow6_ToBank2dImage1_DirNorth:
+Map3eBank1fImage2MapTransitionRow6_ToBank2dImage1SubImage3_DirNorth:
         .byte   $90,$94,$70,$C9,$00,$00,$E0,$00 ; 99FA 90 94 70 C9 00 00 E0 00  ..p.....
         .byte   $D0,$00                         ; 9A02 D0 00                    ..
-Map3eBank1fImage2MapTransitionRow7_ToBank2dImage1_DirNorth:
+Map3eBank1fImage2MapTransitionRow7_ToBank2dImage1SubImage4_DirNorth:
         .byte   $90,$95,$80,$E9,$00,$00,$D0,$00 ; 9A04 90 95 80 E9 00 00 D0 00  ........
         .byte   $20,$01                         ; 9A0C 20 01                     .
-Map3eBank1fImage2MapTransitionRow8_ToBank2dImage1_DirNorth:
+Map3eBank1fImage2MapTransitionRow8_ToBank2dImage1SubImage5_DirNorth:
         .byte   $90,$96,$80,$C9,$00,$00,$B0,$01 ; 9A0E 90 96 80 C9 00 00 B0 01  ........
         .byte   $30,$01                         ; 9A16 30 01                    0.
-Map3eBank1fImage2MapTransitionRow9_ToBank2dImage1_DirNorth:
+Map3eBank1fImage2MapTransitionRow9_ToBank2dImage1SubImage6_DirNorth:
         .byte   $90,$97,$90,$E9,$00,$00,$D0,$00 ; 9A18 90 97 90 E9 00 00 D0 00  ........
         .byte   $80,$01                         ; 9A20 80 01                    ..
 Map3eBank1fImage2MapTransitionRow10:
@@ -1877,7 +1877,7 @@ Map3eBank1fImage2MapTransitionRow25:
 Map3fBank20Image0MapTransitionRow0_ToBank22Image3_DirSouth:
         .byte   $60,$4A,$70,$73,$02,$00,$80,$FF ; 9AC3 60 4A 70 73 02 00 80 FF  `Jps....
         .byte   $D0,$01,$FF                     ; 9ACB D0 01 FF                 ...
-Map40Bank20Image1MapTransitionRow0_ToBank2dImage3_DirSouth:
+Map40Bank20Image1MapTransitionRow0_ToBank2dImage3SubImage4_DirSouth:
         .byte   $60,$9C,$80,$42,$00,$00,$60,$FF ; 9ACE 60 9C 80 42 00 00 60 FF  `..B..`.
         .byte   $60,$02                         ; 9AD6 60 02                    `.
 Map40Bank20Image1MapTransitionRow1_ToBank25Image2_DirSouth:
@@ -1889,28 +1889,28 @@ Map40Bank20Image1MapTransitionRow2_ToBank36Image0_DirSouth:
 Map40Bank20Image1MapTransitionRow3_ToBank36Image0_DirSouth:
         .byte   $60,$00,$80,$76,$83,$42,$30,$00 ; 9AEC 60 00 80 76 83 42 30 00  `..v.B0.
         .byte   $C0,$02                         ; 9AF4 C0 02                    ..
-Map40Bank20Image1MapTransitionRow4_ToBank2dImage3_DirNorth:
+Map40Bank20Image1MapTransitionRow4_ToBank2dImage3SubImage0_DirNorth:
         .byte   $90,$98,$80,$C9,$00,$00,$90,$00 ; 9AF6 90 98 80 C9 00 00 90 00  ........
         .byte   $A0,$02                         ; 9AFE A0 02                    ..
-Map40Bank20Image1MapTransitionRow5_ToBank2dImage3_DirNorth:
+Map40Bank20Image1MapTransitionRow5_ToBank2dImage3SubImage1_DirNorth:
         .byte   $90,$99,$70,$C9,$00,$00,$20,$00 ; 9B00 90 99 70 C9 00 00 20 00  ..p... .
         .byte   $70,$02                         ; 9B08 70 02                    p.
-Map40Bank20Image1MapTransitionRow6_ToBank2dImage3_DirNorth:
+Map40Bank20Image1MapTransitionRow6_ToBank2dImage3SubImage2_DirNorth:
         .byte   $90,$9A,$80,$C9,$00,$00,$B0,$00 ; 9B0A 90 9A 80 C9 00 00 B0 00  ........
         .byte   $40,$02                         ; 9B12 40 02                    @.
-Map40Bank20Image1MapTransitionRow7_ToBank2dImage3_DirNorth:
+Map40Bank20Image1MapTransitionRow7_ToBank2dImage3SubImage3_DirNorth:
         .byte   $90,$9B,$70,$C9,$00,$00,$C0,$00 ; 9B14 90 9B 70 C9 00 00 C0 00  ..p.....
         .byte   $40,$01                         ; 9B1C 40 01                    @.
-Map40Bank20Image1MapTransitionRow8_ToBank2dImage3_DirNorth:
+Map40Bank20Image1MapTransitionRow8_ToBank2dImage3SubImage4_DirNorth:
         .byte   $90,$9C,$80,$36,$00,$00,$10,$00 ; 9B1E 90 9C 80 36 00 00 10 00  ...6....
         .byte   $E0,$01                         ; 9B26 E0 01                    ..
-Map40Bank20Image1MapTransitionRow9_ToBank2dImage3_DirSouth:
+Map40Bank20Image1MapTransitionRow9_ToBank2dImage3SubImage4_DirSouth:
         .byte   $60,$9C,$60,$B9,$00,$00,$10,$00 ; 9B28 60 9C 60 B9 00 00 10 00  `.`.....
         .byte   $A0,$01                         ; 9B30 A0 01                    ..
-Map40Bank20Image1MapTransitionRow10_ToBank2dImage3_DirNorth:
+Map40Bank20Image1MapTransitionRow10_ToBank2dImage3SubImage5_DirNorth:
         .byte   $90,$9D,$70,$C9,$00,$00,$60,$00 ; 9B32 90 9D 70 C9 00 00 60 00  ..p...`.
         .byte   $10,$00                         ; 9B3A 10 00                    ..
-Map40Bank20Image1MapTransitionRow11_ToBank2dImage3_DirNorth:
+Map40Bank20Image1MapTransitionRow11_ToBank2dImage3SubImage5_DirNorth:
         .byte   $90,$9D,$70,$C9,$00,$00,$60,$00 ; 9B3C 90 9D 70 C9 00 00 60 00  ..p...`.
         .byte   $10,$00                         ; 9B44 10 00                    ..
 Map40Bank20Image1MapTransitionRow12:
@@ -2025,7 +2025,7 @@ Map46Bank22Image0MapTransitionRow1_ToBank21Image1:
 Map46Bank22Image0MapTransitionRow2_ToBank21Image1_DirNorth:
         .byte   $90,$45,$80,$5C,$01,$00,$10,$00 ; 9CDC 90 45 80 5C 01 00 10 00  .E.\....
         .byte   $00,$00,$FF                     ; 9CE4 00 00 FF                 ...
-Map47Bank22Image1MapTransitionRow0_ToBank2eImage1_DirNorth:
+Map47Bank22Image1MapTransitionRow0_ToBank2eImage1SubImage1_DirNorth:
         .byte   $90,$9F,$70,$83,$00,$00,$10,$F1 ; 9CE7 90 9F 70 83 00 00 10 F1  ..p.....
         .byte   $60,$00                         ; 9CEF 60 00                    `.
 Map47Bank22Image1MapTransitionRow1_ToBank22Image2_DirNorth:
@@ -2040,22 +2040,22 @@ Map47Bank22Image1MapTransitionRow3_ToBank36Image0_DirSouth:
 Map47Bank22Image1MapTransitionRow4_ToBank36Image0_DirSouth:
         .byte   $60,$00,$80,$76,$46,$16,$70,$00 ; 9D0F 60 00 80 76 46 16 70 00  `..vF.p.
         .byte   $C0,$02                         ; 9D17 C0 02                    ..
-Map47Bank22Image1MapTransitionRow5_ToBank2eImage1_DirNorth:
+Map47Bank22Image1MapTransitionRow5_ToBank2eImage1SubImage0_DirNorth:
         .byte   $90,$9E,$70,$D9,$00,$00,$B0,$00 ; 9D19 90 9E 70 D9 00 00 B0 00  ..p.....
         .byte   $F0,$00                         ; 9D21 F0 00                    ..
-Map47Bank22Image1MapTransitionRow6_ToBank2eImage1_DirNorth:
+Map47Bank22Image1MapTransitionRow6_ToBank2eImage1SubImage1_DirNorth:
         .byte   $90,$9F,$70,$C9,$00,$00,$D0,$00 ; 9D23 90 9F 70 C9 00 00 D0 00  ..p.....
         .byte   $A0,$01                         ; 9D2B A0 01                    ..
-Map47Bank22Image1MapTransitionRow7_ToBank2eImage1_DirNorth:
+Map47Bank22Image1MapTransitionRow7_ToBank2eImage1SubImage2_DirNorth:
         .byte   $90,$A0,$80,$C9,$00,$00,$20,$00 ; 9D2D 90 A0 80 C9 00 00 20 00  ...... .
         .byte   $60,$01                         ; 9D35 60 01                    `.
-Map47Bank22Image1MapTransitionRow8_ToBank2eImage1_DirNorth:
+Map47Bank22Image1MapTransitionRow8_ToBank2eImage1SubImage3_DirNorth:
         .byte   $90,$A1,$70,$C9,$00,$00,$30,$00 ; 9D37 90 A1 70 C9 00 00 30 00  ..p...0.
         .byte   $80,$02                         ; 9D3F 80 02                    ..
-Map47Bank22Image1MapTransitionRow9_ToBank2eImage1_DirNorth:
+Map47Bank22Image1MapTransitionRow9_ToBank2eImage1SubImage4_DirNorth:
         .byte   $90,$A2,$80,$C9,$00,$00,$40,$00 ; 9D41 90 A2 80 C9 00 00 40 00  ......@.
         .byte   $E0,$01                         ; 9D49 E0 01                    ..
-Map47Bank22Image1MapTransitionRow10_ToBank2eImage1_DirNorth:
+Map47Bank22Image1MapTransitionRow10_ToBank2eImage1SubImage5_DirNorth:
         .byte   $90,$A3,$80,$A9,$00,$00,$D0,$00 ; 9D4B 90 A3 80 A9 00 00 D0 00  ........
         .byte   $40,$02                         ; 9D53 40 02                    @.
 Map47Bank22Image1MapTransitionRow11:
@@ -2186,7 +2186,7 @@ Map4cBank23Image2MapTransitionRow3:
 Map4dBank21Image2MapTransitionRow0_ToBank23Image3_DirSouth:
         .byte   $60,$4E,$70,$73,$00,$00,$50,$FF ; 9F09 60 4E 70 73 00 00 50 FF  `Nps..P.
         .byte   $70,$00                         ; 9F11 70 00                    p.
-Map4dBank21Image2MapTransitionRow1_ToBank2cImage1_DirSouth:
+Map4dBank21Image2MapTransitionRow1_ToBank2cImage1SubImage0_DirSouth:
         .byte   $60,$88,$30,$56,$00,$00,$50,$FF ; 9F13 60 88 30 56 00 00 50 FF  `.0V..P.
         .byte   $70,$00,$FF                     ; 9F1B 70 00 FF                 p..
 Map4eBank23Image3MapTransitionRow0_ToBank13Image2_DirSouth:
@@ -2258,508 +2258,508 @@ Map59Bank26Image2MapTransitionRow0_ToBank21Image1_DirSouth:
 Map5aBank26Image3MapTransitionRow0_ToBank36Image0_DirSouth:
         .byte   $60,$00,$80,$76,$26,$26,$30,$00 ; A006 60 00 80 76 26 26 30 00  `..v&&0.
         .byte   $D0,$00,$FF                     ; A00E D0 00 FF                 ...
-Map5bBank27Image0MapTransitionRow0_ToBank12Image0_DirSouth:
+Map5bBank27Image0SubImage0MapTransitionRow0_ToBank12Image0_DirSouth:
         .byte   $60,$09,$60,$76,$00,$01,$80,$00 ; A011 60 09 60 76 00 01 80 00  `.`v....
         .byte   $E0,$00,$FF                     ; A019 E0 00 FF                 ...
-Map5cBank27Image0MapTransitionRow0_ToBank12Image1_DirNorth:
+Map5cBank27Image0SubImage1MapTransitionRow0_ToBank12Image1_DirNorth:
         .byte   $90,$0A,$70,$96,$00,$00,$40,$FF ; A01C 90 0A 70 96 00 00 40 FF  ..p...@.
         .byte   $E0,$04                         ; A024 E0 04                    ..
-Map5cBank27Image0MapTransitionRow1_ToBank27Image0_DirNorth:
+Map5cBank27Image0SubImage1MapTransitionRow1_ToBank27Image0SubImage5_DirNorth:
         .byte   $90,$60,$70,$46,$00,$00,$20,$FF ; A026 90 60 70 46 00 00 20 FF  .`pF.. .
         .byte   $10,$01                         ; A02E 10 01                    ..
-Map5cBank27Image0MapTransitionRow2_ToBank12Image0_DirSouth:
+Map5cBank27Image0SubImage1MapTransitionRow2_ToBank12Image0_DirSouth:
         .byte   $60,$09,$80,$76,$00,$E0,$D0,$00 ; A030 60 09 80 76 00 E0 D0 00  `..v....
         .byte   $C0,$01                         ; A038 C0 01                    ..
-Map5cBank27Image0MapTransitionRow3_ToBank27Image0_DirNorth:
+Map5cBank27Image0SubImage1MapTransitionRow3_ToBank27Image0SubImage5_DirNorth:
         .byte   $90,$60,$40,$36,$00,$00,$20,$00 ; A03A 90 60 40 36 00 00 20 00  .`@6.. .
         .byte   $10,$01                         ; A042 10 01                    ..
-Map5cBank27Image0MapTransitionRow4:
+Map5cBank27Image0SubImage1MapTransitionRow4:
         .byte   $03,$00,$00,$00,$00,$00,$02,$00 ; A044 03 00 00 00 00 00 02 00  ........
         .byte   $00,$6F                         ; A04C 00 6F                    .o
-Map5cBank27Image0MapTransitionRow5:
+Map5cBank27Image0SubImage1MapTransitionRow5:
         .byte   $03,$00,$00,$00,$00,$00,$05,$00 ; A04E 03 00 00 00 00 00 05 00  ........
         .byte   $00,$73                         ; A056 00 73                    .s
-Map5cBank27Image0MapTransitionRow6:
+Map5cBank27Image0SubImage1MapTransitionRow6:
         .byte   $03,$00,$00,$00,$00,$00,$03,$00 ; A058 03 00 00 00 00 00 03 00  ........
         .byte   $0E,$06                         ; A060 0E 06                    ..
-Map5cBank27Image0MapTransitionRow7:
+Map5cBank27Image0SubImage1MapTransitionRow7:
         .byte   $03,$00,$00,$00,$00,$00,$01,$00 ; A062 03 00 00 00 00 00 01 00  ........
         .byte   $0E,$07                         ; A06A 0E 07                    ..
-Map5cBank27Image0MapTransitionRow8_ToBank36Image0:
+Map5cBank27Image0SubImage1MapTransitionRow8:
         .byte   $91,$00,$0E,$46,$47,$00,$D0,$00 ; A06C 91 00 0E 46 47 00 D0 00  ...FG...
         .byte   $70,$01,$FF                     ; A074 70 01 FF                 p..
-Map5dBank27Image0MapTransitionRow0_ToBank12Image0_DirSouth:
+Map5dBank27Image0SubImage2MapTransitionRow0_ToBank12Image0_DirSouth:
         .byte   $60,$09,$70,$86,$00,$0C,$80,$00 ; A077 60 09 70 86 00 0C 80 00  `.p.....
         .byte   $A0,$02                         ; A07F A0 02                    ..
-Map5dBank27Image0MapTransitionRow1_ToBank10Image2:
+Map5dBank27Image0SubImage2MapTransitionRow1:
         .byte   $91,$03,$0E,$4A,$47,$00,$80,$00 ; A081 91 03 0E 4A 47 00 80 00  ...JG...
         .byte   $40,$02,$FF                     ; A089 40 02 FF                 @..
-Map5eBank27Image0MapTransitionRow0_ToBank12Image0_DirSouth:
+Map5eBank27Image0SubImage3MapTransitionRow0_ToBank12Image0_DirSouth:
         .byte   $60,$09,$80,$86,$00,$1C,$70,$00 ; A08C 60 09 80 86 00 1C 70 00  `.....p.
         .byte   $90,$03                         ; A094 90 03                    ..
-Map5eBank27Image0MapTransitionRow1_ToBank10Image1:
+Map5eBank27Image0SubImage3MapTransitionRow1:
         .byte   $91,$02,$0E,$49,$47,$00,$70,$00 ; A096 91 02 0E 49 47 00 70 00  ...IG.p.
         .byte   $30,$03,$FF                     ; A09E 30 03 FF                 0..
-Map5fBank27Image0MapTransitionRow0_ToBank12Image0_DirSouth:
+Map5fBank27Image0SubImage4MapTransitionRow0_ToBank12Image0_DirSouth:
         .byte   $60,$09,$80,$86,$00,$3C,$70,$00 ; A0A1 60 09 80 86 00 3C 70 00  `....<p.
         .byte   $80,$04                         ; A0A9 80 04                    ..
-Map5fBank27Image0MapTransitionRow1_ToBank10Image0:
+Map5fBank27Image0SubImage4MapTransitionRow1:
         .byte   $91,$01,$0E,$48,$47,$00,$70,$00 ; A0AB 91 01 0E 48 47 00 70 00  ...HG.p.
         .byte   $30,$04,$FF                     ; A0B3 30 04 FF                 0..
-Map60Bank27Image0MapTransitionRow0_ToBank27Image0_DirNorth:
+Map60Bank27Image0SubImage5MapTransitionRow0_ToBank27Image0SubImage1_DirNorth:
         .byte   $90,$5C,$20,$26,$00,$00,$40,$00 ; A0B6 90 5C 20 26 00 00 40 00  .\ &..@.
         .byte   $E0,$04,$FF                     ; A0BE E0 04 FF                 ...
-Map61Bank27Image2MapTransitionRow0_ToBank27Image2_DirNorth:
+Map61Bank27Image2SubImage0MapTransitionRow0_ToBank27Image2SubImage5_DirNorth:
         .byte   $90,$66,$40,$26,$00,$00,$40,$FF ; A0C1 90 66 40 26 00 00 40 FF  .f@&..@.
         .byte   $10,$00                         ; A0C9 10 00                    ..
-Map61Bank27Image2MapTransitionRow1_ToBank13Image3_DirSouth:
+Map61Bank27Image2SubImage0MapTransitionRow1_ToBank13Image3_DirSouth:
         .byte   $60,$11,$80,$76,$00,$93,$80,$00 ; A0CB 60 11 80 76 00 93 80 00  `..v....
         .byte   $E0,$00                         ; A0D3 E0 00                    ..
-Map61Bank27Image2MapTransitionRow2_ToBank27Image2_DirNorth:
+Map61Bank27Image2SubImage0MapTransitionRow2_ToBank27Image2SubImage5_DirNorth:
         .byte   $90,$66,$40,$26,$00,$00,$40,$00 ; A0D5 90 66 40 26 00 00 40 00  .f@&..@.
         .byte   $10,$00,$FF                     ; A0DD 10 00 FF                 ...
-Map62Bank27Image2MapTransitionRow0_ToBank13Image3_DirSouth:
+Map62Bank27Image2SubImage1MapTransitionRow0_ToBank13Image3_DirSouth:
         .byte   $60,$11,$80,$76,$00,$6B,$70,$00 ; A0E0 60 11 80 76 00 6B 70 00  `..v.kp.
         .byte   $B0,$01                         ; A0E8 B0 01                    ..
-Map62Bank27Image2MapTransitionRow1_ToBank10Image1:
+Map62Bank27Image2SubImage1MapTransitionRow1:
         .byte   $91,$02,$0E,$49,$47,$00,$70,$00 ; A0EA 91 02 0E 49 47 00 70 00  ...IG.p.
         .byte   $50,$01,$FF                     ; A0F2 50 01 FF                 P..
-Map63Bank27Image2MapTransitionRow0_ToBank13Image3_DirSouth:
+Map63Bank27Image2SubImage2MapTransitionRow0_ToBank13Image3_DirSouth:
         .byte   $60,$11,$80,$76,$02,$60,$80,$00 ; A0F5 60 11 80 76 02 60 80 00  `..v.`..
         .byte   $A0,$02                         ; A0FD A0 02                    ..
-Map63Bank27Image2MapTransitionRow1_ToBank10Image2:
+Map63Bank27Image2SubImage2MapTransitionRow1:
         .byte   $91,$03,$0E,$4A,$47,$00,$80,$00 ; A0FF 91 03 0E 4A 47 00 80 00  ...JG...
         .byte   $30,$02,$FF                     ; A107 30 02 FF                 0..
-Map64Bank27Image2MapTransitionRow0_ToBank13Image3_DirSouth:
+Map64Bank27Image2SubImage3MapTransitionRow0_ToBank13Image3_DirSouth:
         .byte   $60,$11,$50,$96,$02,$00,$70,$00 ; A10A 60 11 50 96 02 00 70 00  `.P...p.
         .byte   $90,$03                         ; A112 90 03                    ..
-Map64Bank27Image2MapTransitionRow1_ToBank10Image0:
+Map64Bank27Image2SubImage3MapTransitionRow1:
         .byte   $91,$01,$0E,$48,$47,$00,$70,$00 ; A114 91 01 0E 48 47 00 70 00  ...HG.p.
         .byte   $40,$03,$FF                     ; A11C 40 03 FF                 @..
-Map65Bank27Image2MapTransitionRow0_ToBank13Image3_DirSouth:
+Map65Bank27Image2SubImage4MapTransitionRow0_ToBank13Image3_DirSouth:
         .byte   $60,$11,$80,$A6,$02,$D0,$80,$00 ; A11F 60 11 80 A6 02 D0 80 00  `.......
         .byte   $80,$04                         ; A127 80 04                    ..
-Map65Bank27Image2MapTransitionRow1_ToBank36Image0:
+Map65Bank27Image2SubImage4MapTransitionRow1:
         .byte   $92,$00,$00,$00,$00,$00,$80,$00 ; A129 92 00 00 00 00 00 80 00  ........
         .byte   $20,$04                         ; A131 20 04                     .
-Map65Bank27Image2MapTransitionRow2_ToBank36Image0:
+Map65Bank27Image2SubImage4MapTransitionRow2:
         .byte   $91,$00,$0E,$46,$47,$00,$C0,$00 ; A133 91 00 0E 46 47 00 C0 00  ...FG...
         .byte   $20,$04,$FF                     ; A13B 20 04 FF                  ..
-Map66Bank27Image2MapTransitionRow0_ToBank27Image2_DirNorth:
+Map66Bank27Image2SubImage5MapTransitionRow0_ToBank27Image2SubImage0_DirNorth:
         .byte   $90,$61,$40,$16,$00,$00,$40,$00 ; A13E 90 61 40 16 00 00 40 00  .a@...@.
         .byte   $D0,$04,$FF                     ; A146 D0 04 FF                 ...
-Map67Bank28Image0MapTransitionRow0_ToBank15Image0_DirSouth:
+Map67Bank28Image0SubImage0MapTransitionRow0_ToBank15Image0_DirSouth:
         .byte   $60,$14,$80,$76,$00,$45,$70,$00 ; A149 60 14 80 76 00 45 70 00  `..v.Ep.
         .byte   $C0,$00                         ; A151 C0 00                    ..
-Map67Bank28Image0MapTransitionRow1_ToBank10Image1:
+Map67Bank28Image0SubImage0MapTransitionRow1:
         .byte   $91,$02,$0E,$49,$47,$00,$70,$00 ; A153 91 02 0E 49 47 00 70 00  ...IG.p.
         .byte   $60,$00,$FF                     ; A15B 60 00 FF                 `..
-Map68Bank28Image0MapTransitionRow0_ToBank15Image0_DirSouth:
+Map68Bank28Image0SubImage1MapTransitionRow0_ToBank15Image0_DirSouth:
         .byte   $60,$14,$50,$76,$00,$08,$80,$00 ; A15E 60 14 50 76 00 08 80 00  `.Pv....
         .byte   $C0,$01                         ; A166 C0 01                    ..
-Map68Bank28Image0MapTransitionRow1:
+Map68Bank28Image0SubImage1MapTransitionRow1:
         .byte   $03,$00,$00,$00,$00,$00,$04,$00 ; A168 03 00 00 00 00 00 04 00  ........
         .byte   $0E,$0E,$FF                     ; A170 0E 0E FF                 ...
-Map69Bank28Image0MapTransitionRow0_ToBank15Image0_DirSouth:
+Map69Bank28Image0SubImage2MapTransitionRow0_ToBank15Image0_DirSouth:
         .byte   $60,$14,$90,$76,$01,$08,$80,$00 ; A173 60 14 90 76 01 08 80 00  `..v....
         .byte   $A0,$02                         ; A17B A0 02                    ..
-Map69Bank28Image0MapTransitionRow1_ToBank36Image0:
+Map69Bank28Image0SubImage2MapTransitionRow1:
         .byte   $92,$00,$00,$00,$00,$00,$80,$00 ; A17D 92 00 00 00 00 00 80 00  ........
         .byte   $40,$02                         ; A185 40 02                    @.
-Map69Bank28Image0MapTransitionRow2_ToBank36Image0:
+Map69Bank28Image0SubImage2MapTransitionRow2:
         .byte   $91,$00,$0E,$46,$47,$00,$C0,$00 ; A187 91 00 0E 46 47 00 C0 00  ...FG...
         .byte   $40,$02,$FF                     ; A18F 40 02 FF                 @..
-Map6aBank28Image0MapTransitionRow0_ToBank15Image0_DirSouth:
+Map6aBank28Image0SubImage3MapTransitionRow0_ToBank15Image0_DirSouth:
         .byte   $60,$14,$40,$76,$00,$0D,$40,$00 ; A192 60 14 40 76 00 0D 40 00  `.@v..@.
         .byte   $A0,$03,$FF                     ; A19A A0 03 FF                 ...
-Map6bBank28Image2MapTransitionRow0_ToBank28Image2_DirSouth:
+Map6bBank28Image2SubImage0MapTransitionRow0_ToBank28Image2SubImage2_DirSouth:
         .byte   $60,$6D,$80,$76,$00,$00,$70,$FF ; A19D 60 6D 80 76 00 00 70 FF  `m.v..p.
         .byte   $C0,$00                         ; A1A5 C0 00                    ..
-Map6bBank28Image2MapTransitionRow1_ToBank19Image3_DirSouth:
+Map6bBank28Image2SubImage0MapTransitionRow1_ToBank19Image3_DirSouth:
         .byte   $60,$27,$80,$76,$00,$04,$70,$FF ; A1A7 60 27 80 76 00 04 70 FF  `'.v..p.
         .byte   $C0,$00                         ; A1AF C0 00                    ..
-Map6bBank28Image2MapTransitionRow2_ToBank15Image2_DirSouth:
+Map6bBank28Image2SubImage0MapTransitionRow2_ToBank15Image2_DirSouth:
         .byte   $60,$16,$80,$16,$00,$00,$70,$00 ; A1B1 60 16 80 16 00 00 70 00  `.....p.
         .byte   $C0,$00,$FF                     ; A1B9 C0 00 FF                 ...
-Map6cBank28Image2MapTransitionRow0_ToBank28Image2_DirSouth:
+Map6cBank28Image2SubImage1MapTransitionRow0_ToBank28Image2SubImage0_DirSouth:
         .byte   $60,$6B,$80,$76,$00,$00,$70,$FF ; A1BC 60 6B 80 76 00 00 70 FF  `k.v..p.
         .byte   $C0,$00                         ; A1C4 C0 00                    ..
-Map6cBank28Image2MapTransitionRow1_ToBank15Image2_DirEast:
+Map6cBank28Image2SubImage1MapTransitionRow1_ToBank15Image2_DirEast:
         .byte   $30,$16,$00,$43,$00,$00,$F0,$00 ; A1C6 30 16 00 43 00 00 F0 00  0..C....
         .byte   $60,$01,$FF                     ; A1CE 60 01 FF                 `..
-Map6dBank28Image2MapTransitionRow0_ToBank15Image2_DirSouth:
+Map6dBank28Image2SubImage2MapTransitionRow0_ToBank15Image2_DirSouth:
         .byte   $60,$16,$E0,$26,$00,$00,$80,$00 ; A1D1 60 16 E0 26 00 00 80 00  `..&....
         .byte   $B0,$02,$FF                     ; A1D9 B0 02 FF                 ...
-Map6eBank29Image0MapTransitionRow0_ToBank1aImage2_DirSouth:
+Map6eBank29Image0SubImage0MapTransitionRow0_ToBank1aImage2_DirSouth:
         .byte   $60,$2A,$50,$96,$00,$05,$40,$00 ; A1DC 60 2A 50 96 00 05 40 00  `*P...@.
         .byte   $D0,$00                         ; A1E4 D0 00                    ..
-Map6eBank29Image0MapTransitionRow1:
+Map6eBank29Image0SubImage0MapTransitionRow1:
         .byte   $03,$00,$00,$00,$00,$00,$05,$00 ; A1E6 03 00 00 00 00 00 05 00  ........
         .byte   $05,$8C,$FF                     ; A1EE 05 8C FF                 ...
-Map6fBank29Image0MapTransitionRow0_ToBank1aImage2_DirSouth:
+Map6fBank29Image0SubImage1MapTransitionRow0_ToBank1aImage2_DirSouth:
         .byte   $60,$2A,$20,$A6,$00,$00,$80,$00 ; A1F1 60 2A 20 A6 00 00 80 00  `* .....
         .byte   $B0,$01                         ; A1F9 B0 01                    ..
-Map6fBank29Image0MapTransitionRow1_ToBank10Image2:
+Map6fBank29Image0SubImage1MapTransitionRow1:
         .byte   $91,$03,$0E,$4A,$47,$00,$80,$00 ; A1FB 91 03 0E 4A 47 00 80 00  ...JG...
         .byte   $50,$01,$FF                     ; A203 50 01 FF                 P..
-Map70Bank29Image0MapTransitionRow0_ToBank1aImage2_DirSouth:
+Map70Bank29Image0SubImage2MapTransitionRow0_ToBank1aImage2_DirSouth:
         .byte   $60,$2A,$70,$A6,$00,$00,$70,$00 ; A206 60 2A 70 A6 00 00 70 00  `*p...p.
         .byte   $A0,$02                         ; A20E A0 02                    ..
-Map70Bank29Image0MapTransitionRow1_ToBank10Image1:
+Map70Bank29Image0SubImage2MapTransitionRow1:
         .byte   $91,$02,$0E,$49,$47,$00,$70,$00 ; A210 91 02 0E 49 47 00 70 00  ...IG.p.
         .byte   $40,$02,$FF                     ; A218 40 02 FF                 @..
-Map71Bank29Image0MapTransitionRow0_ToBank1aImage2_DirSouth:
+Map71Bank29Image0SubImage3MapTransitionRow0_ToBank1aImage2_DirSouth:
         .byte   $60,$2A,$C0,$A6,$00,$00,$70,$00 ; A21B 60 2A C0 A6 00 00 70 00  `*....p.
         .byte   $90,$03                         ; A223 90 03                    ..
-Map71Bank29Image0MapTransitionRow1_ToBank10Image0:
+Map71Bank29Image0SubImage3MapTransitionRow1:
         .byte   $91,$01,$0E,$48,$47,$00,$70,$00 ; A225 91 01 0E 48 47 00 70 00  ...HG.p.
         .byte   $40,$03,$FF                     ; A22D 40 03 FF                 @..
-Map72Bank29Image0MapTransitionRow0_ToBank1aImage2_DirSouth:
+Map72Bank29Image0SubImage4MapTransitionRow0_ToBank1aImage2_DirSouth:
         .byte   $60,$2A,$C0,$36,$00,$0E,$80,$00 ; A230 60 2A C0 36 00 0E 80 00  `*.6....
         .byte   $90,$04,$FF                     ; A238 90 04 FF                 ...
-Map73Bank29Image0MapTransitionRow0_ToBank1aImage2_DirSouth:
+Map73Bank29Image0SubImage5MapTransitionRow0_ToBank1aImage2_DirSouth:
         .byte   $60,$2A,$30,$96,$02,$00,$80,$00 ; A23B 60 2A 30 96 02 00 80 00  `*0.....
         .byte   $70,$05                         ; A243 70 05                    p.
-Map73Bank29Image0MapTransitionRow1_ToBank36Image0:
+Map73Bank29Image0SubImage5MapTransitionRow1:
         .byte   $92,$00,$00,$00,$00,$00,$80,$00 ; A245 92 00 00 00 00 00 80 00  ........
         .byte   $10,$05                         ; A24D 10 05                    ..
-Map73Bank29Image0MapTransitionRow2_ToBank36Image0:
+Map73Bank29Image0SubImage5MapTransitionRow2:
         .byte   $91,$00,$0E,$46,$47,$00,$C0,$00 ; A24F 91 00 0E 46 47 00 C0 00  ...FG...
         .byte   $10,$05,$FF                     ; A257 10 05 FF                 ...
-Map74Bank29Image2MapTransitionRow0_ToBank1aImage3_DirEast:
+Map74Bank29Image2SubImage0MapTransitionRow0_ToBank1aImage3_DirEast:
         .byte   $30,$2B,$30,$B6,$00,$00,$80,$00 ; A25A 30 2B 30 B6 00 00 80 00  0+0.....
         .byte   $B0,$00                         ; A262 B0 00                    ..
-Map74Bank29Image2MapTransitionRow1:
+Map74Bank29Image2SubImage0MapTransitionRow1:
         .byte   $03,$00,$00,$00,$00,$00,$06,$00 ; A264 03 00 00 00 00 00 06 00  ........
         .byte   $05,$8E                         ; A26C 05 8E                    ..
-Map74Bank29Image2MapTransitionRow2:
+Map74Bank29Image2SubImage0MapTransitionRow2:
         .byte   $03,$00,$00,$00,$00,$00,$06,$00 ; A26E 03 00 00 00 00 00 06 00  ........
         .byte   $05,$8F                         ; A276 05 8F                    ..
-Map74Bank29Image2MapTransitionRow3:
+Map74Bank29Image2SubImage0MapTransitionRow3:
         .byte   $03,$00,$00,$00,$00,$00,$06,$00 ; A278 03 00 00 00 00 00 06 00  ........
         .byte   $05,$90,$FF                     ; A280 05 90 FF                 ...
-Map75Bank29Image2MapTransitionRow0_ToBank1aImage3_DirSouth:
+Map75Bank29Image2SubImage1MapTransitionRow0_ToBank1aImage3_DirSouth:
         .byte   $60,$2B,$B0,$96,$00,$00,$70,$00 ; A283 60 2B B0 96 00 00 70 00  `+....p.
         .byte   $C0,$01                         ; A28B C0 01                    ..
-Map75Bank29Image2MapTransitionRow1:
+Map75Bank29Image2SubImage1MapTransitionRow1:
         .byte   $03,$00,$00,$00,$00,$00,$05,$00 ; A28D 03 00 00 00 00 00 05 00  ........
         .byte   $05,$A9                         ; A295 05 A9                    ..
-Map75Bank29Image2MapTransitionRow2:
+Map75Bank29Image2SubImage1MapTransitionRow2:
         .byte   $03,$00,$00,$00,$00,$00,$05,$00 ; A297 03 00 00 00 00 00 05 00  ........
         .byte   $05,$AA,$FF                     ; A29F 05 AA FF                 ...
-Map76Bank2aImage0MapTransitionRow0_ToBank1bImage2_DirSouth:
+Map76Bank2aImage0SubImage0MapTransitionRow0_ToBank1bImage2_DirSouth:
         .byte   $60,$2E,$80,$66,$00,$60,$80,$00 ; A2A2 60 2E 80 66 00 60 80 00  `..f.`..
         .byte   $D0,$00                         ; A2AA D0 00                    ..
-Map76Bank2aImage0MapTransitionRow1:
+Map76Bank2aImage0SubImage0MapTransitionRow1:
         .byte   $03,$00,$00,$00,$00,$00,$02,$00 ; A2AC 03 00 00 00 00 00 02 00  ........
         .byte   $05,$FD,$FF                     ; A2B4 05 FD FF                 ...
-Map77Bank2aImage0MapTransitionRow0_ToBank1bImage2_DirSouth:
+Map77Bank2aImage0SubImage1MapTransitionRow0_ToBank1bImage2_DirSouth:
         .byte   $60,$2E,$A0,$76,$00,$F4,$30,$00 ; A2B7 60 2E A0 76 00 F4 30 00  `..v..0.
         .byte   $A0,$01                         ; A2BF A0 01                    ..
-Map77Bank2aImage0MapTransitionRow1:
+Map77Bank2aImage0SubImage1MapTransitionRow1:
         .byte   $03,$00,$00,$00,$00,$00,$03,$00 ; A2C1 03 00 00 00 00 00 03 00  ........
         .byte   $05,$FE,$FF                     ; A2C9 05 FE FF                 ...
-Map78Bank2aImage0MapTransitionRow0_ToBank1bImage2_DirSouth:
+Map78Bank2aImage0SubImage2MapTransitionRow0_ToBank1bImage2_DirSouth:
         .byte   $60,$2E,$50,$89,$03,$00,$70,$FF ; A2CC 60 2E 50 89 03 00 70 FF  `.P...p.
         .byte   $B0,$02                         ; A2D4 B0 02                    ..
-Map78Bank2aImage0MapTransitionRow1_ToBank1bImage2_DirSouth:
+Map78Bank2aImage0SubImage2MapTransitionRow1_ToBank1bImage2_DirSouth:
         .byte   $60,$2E,$A0,$76,$01,$0D,$70,$00 ; A2D6 60 2E A0 76 01 0D 70 00  `..v..p.
         .byte   $B0,$02,$FF                     ; A2DE B0 02 FF                 ...
-Map79Bank2aImage2MapTransitionRow0_ToBank1cImage1_DirSouth:
+Map79Bank2aImage2SubImage0MapTransitionRow0_ToBank1cImage1_DirSouth:
         .byte   $60,$30,$80,$96,$00,$40,$80,$00 ; A2E1 60 30 80 96 00 40 80 00  `0...@..
         .byte   $C0,$00                         ; A2E9 C0 00                    ..
-Map79Bank2aImage2MapTransitionRow1_ToBank36Image0:
+Map79Bank2aImage2SubImage0MapTransitionRow1:
         .byte   $92,$00,$00,$00,$00,$00,$80,$00 ; A2EB 92 00 00 00 00 00 80 00  ........
         .byte   $60,$00                         ; A2F3 60 00                    `.
-Map79Bank2aImage2MapTransitionRow2_ToBank36Image0:
+Map79Bank2aImage2SubImage0MapTransitionRow2:
         .byte   $91,$00,$0E,$46,$47,$00,$C0,$00 ; A2F5 91 00 0E 46 47 00 C0 00  ...FG...
         .byte   $60,$00,$FF                     ; A2FD 60 00 FF                 `..
-Map7aBank2aImage2MapTransitionRow0_ToBank1cImage1_DirSouth:
+Map7aBank2aImage2SubImage1MapTransitionRow0_ToBank1cImage1_DirSouth:
         .byte   $60,$30,$80,$96,$00,$E0,$80,$00 ; A300 60 30 80 96 00 E0 80 00  `0......
         .byte   $B0,$01                         ; A308 B0 01                    ..
-Map7aBank2aImage2MapTransitionRow1_ToBank10Image2:
+Map7aBank2aImage2SubImage1MapTransitionRow1:
         .byte   $91,$03,$0E,$4A,$47,$00,$80,$00 ; A30A 91 03 0E 4A 47 00 80 00  ...JG...
         .byte   $50,$01,$FF                     ; A312 50 01 FF                 P..
-Map7bBank2aImage2MapTransitionRow0_ToBank1cImage1_DirSouth:
+Map7bBank2aImage2SubImage2MapTransitionRow0_ToBank1cImage1_DirSouth:
         .byte   $60,$30,$C0,$96,$03,$00,$70,$00 ; A315 60 30 C0 96 03 00 70 00  `0....p.
         .byte   $A0,$02                         ; A31D A0 02                    ..
-Map7bBank2aImage2MapTransitionRow1_ToBank10Image0:
+Map7bBank2aImage2SubImage2MapTransitionRow1:
         .byte   $91,$01,$0E,$48,$47,$00,$70,$00 ; A31F 91 01 0E 48 47 00 70 00  ...HG.p.
         .byte   $50,$02,$FF                     ; A327 50 02 FF                 P..
-Map7cBank2aImage2MapTransitionRow0_ToBank1cImage1_DirSouth:
+Map7cBank2aImage2SubImage3MapTransitionRow0_ToBank1cImage1_DirSouth:
         .byte   $60,$30,$80,$96,$02,$10,$70,$00 ; A32A 60 30 80 96 02 10 70 00  `0....p.
         .byte   $90,$03                         ; A332 90 03                    ..
-Map7cBank2aImage2MapTransitionRow1_ToBank10Image1:
+Map7cBank2aImage2SubImage3MapTransitionRow1:
         .byte   $91,$02,$0E,$49,$47,$00,$70,$00 ; A334 91 02 0E 49 47 00 70 00  ...IG.p.
         .byte   $30,$03,$FF                     ; A33C 30 03 FF                 0..
-Map7dBank2aImage2MapTransitionRow0_ToBank1cImage1_DirSouth:
+Map7dBank2aImage2SubImage4MapTransitionRow0_ToBank1cImage1_DirSouth:
         .byte   $60,$30,$80,$96,$01,$C0,$70,$FF ; A33F 60 30 80 96 01 C0 70 FF  `0....p.
         .byte   $80,$04                         ; A347 80 04                    ..
-Map7dBank2aImage2MapTransitionRow1_ToBank1cImage1_DirSouth:
+Map7dBank2aImage2SubImage4MapTransitionRow1_ToBank1cImage1_DirSouth:
         .byte   $60,$30,$80,$96,$01,$C0,$70,$00 ; A349 60 30 80 96 01 C0 70 00  `0....p.
         .byte   $80,$04,$FF                     ; A351 80 04 FF                 ...
-Map7eBank2bImage0MapTransitionRow0_ToBank1dImage1_DirSouth:
+Map7eBank2bImage0SubImage0MapTransitionRow0_ToBank1dImage1_DirSouth:
         .byte   $60,$34,$80,$86,$01,$B6,$70,$00 ; A354 60 34 80 86 01 B6 70 00  `4....p.
         .byte   $B0,$00                         ; A35C B0 00                    ..
-Map7eBank2bImage0MapTransitionRow1:
+Map7eBank2bImage0SubImage0MapTransitionRow1:
         .byte   $03,$00,$00,$00,$00,$00,$01,$00 ; A35E 03 00 00 00 00 00 01 00  ........
         .byte   $06,$93                         ; A366 06 93                    ..
-Map7eBank2bImage0MapTransitionRow2_ToBank10Image2:
+Map7eBank2bImage0SubImage0MapTransitionRow2:
         .byte   $91,$03,$00,$84,$85,$00,$70,$00 ; A368 91 03 00 84 85 00 70 00  ......p.
         .byte   $90,$00,$FF                     ; A370 90 00 FF                 ...
-Map7fBank2bImage0MapTransitionRow0_ToBank1dImage1_DirSouth:
+Map7fBank2bImage0SubImage1MapTransitionRow0_ToBank1dImage1_DirSouth:
         .byte   $60,$34,$80,$76,$02,$0B,$50,$00 ; A373 60 34 80 76 02 0B 50 00  `4.v..P.
         .byte   $B0,$01                         ; A37B B0 01                    ..
-Map7fBank2bImage0MapTransitionRow1_ToBank10Image1:
+Map7fBank2bImage0SubImage1MapTransitionRow1:
         .byte   $91,$02,$0E,$49,$47,$00,$80,$00 ; A37D 91 02 0E 49 47 00 80 00  ...IG...
         .byte   $90,$01,$FF                     ; A385 90 01 FF                 ...
-Map80Bank2bImage0MapTransitionRow0_ToBank1dImage1_DirSouth:
+Map80Bank2bImage0SubImage2MapTransitionRow0_ToBank1dImage1_DirSouth:
         .byte   $60,$34,$80,$76,$01,$14,$70,$00 ; A388 60 34 80 76 01 14 70 00  `4.v..p.
         .byte   $A0,$02                         ; A390 A0 02                    ..
-Map80Bank2bImage0MapTransitionRow1:
+Map80Bank2bImage0SubImage2MapTransitionRow1:
         .byte   $03,$00,$00,$00,$00,$00,$02,$00 ; A392 03 00 00 00 00 00 02 00  ........
         .byte   $06,$8F                         ; A39A 06 8F                    ..
-Map80Bank2bImage0MapTransitionRow2_ToBank10Image0:
+Map80Bank2bImage0SubImage2MapTransitionRow2:
         .byte   $91,$01,$0E,$48,$47,$00,$70,$00 ; A39C 91 01 0E 48 47 00 70 00  ...HG.p.
         .byte   $50,$02,$FF                     ; A3A4 50 02 FF                 P..
-Map81Bank2bImage0MapTransitionRow0_ToBank1dImage1_DirSouth:
+Map81Bank2bImage0SubImage3MapTransitionRow0_ToBank1dImage1_DirSouth:
         .byte   $60,$34,$80,$76,$01,$D3,$80,$00 ; A3A7 60 34 80 76 01 D3 80 00  `4.v....
         .byte   $90,$03                         ; A3AF 90 03                    ..
-Map81Bank2bImage0MapTransitionRow1:
+Map81Bank2bImage0SubImage3MapTransitionRow1:
         .byte   $03,$00,$00,$00,$00,$00,$03,$00 ; A3B1 03 00 00 00 00 00 03 00  ........
         .byte   $06,$91                         ; A3B9 06 91                    ..
-Map81Bank2bImage0MapTransitionRow2_ToBank36Image0:
+Map81Bank2bImage0SubImage3MapTransitionRow2:
         .byte   $92,$00,$00,$00,$00,$00,$80,$00 ; A3BB 92 00 00 00 00 00 80 00  ........
         .byte   $30,$03                         ; A3C3 30 03                    0.
-Map81Bank2bImage0MapTransitionRow3_ToBank36Image0:
+Map81Bank2bImage0SubImage3MapTransitionRow3:
         .byte   $91,$00,$0E,$46,$47,$00,$C0,$00 ; A3C5 91 00 0E 46 47 00 C0 00  ...FG...
         .byte   $30,$03,$FF                     ; A3CD 30 03 FF                 0..
-Map82Bank2bImage2MapTransitionRow0_ToBank1eImage0_DirSouth:
+Map82Bank2bImage2SubImage0MapTransitionRow0_ToBank1eImage0_DirSouth:
         .byte   $60,$37,$50,$36,$00,$00,$70,$00 ; A3D0 60 37 50 36 00 00 70 00  `7P6..p.
         .byte   $E0,$00                         ; A3D8 E0 00                    ..
-Map82Bank2bImage2MapTransitionRow1:
+Map82Bank2bImage2SubImage0MapTransitionRow1:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A3DA 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$FF                     ; A3E2 00 00 FF                 ...
-Map83Bank2bImage2MapTransitionRow0_ToBank1eImage0_DirSouth:
+Map83Bank2bImage2SubImage1MapTransitionRow0_ToBank1eImage0_DirSouth:
         .byte   $60,$37,$E0,$7A,$01,$0A,$70,$00 ; A3E5 60 37 E0 7A 01 0A 70 00  `7.z..p.
         .byte   $D0,$01                         ; A3ED D0 01                    ..
-Map83Bank2bImage2MapTransitionRow1:
+Map83Bank2bImage2SubImage1MapTransitionRow1:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; A3EF 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$FF                     ; A3F7 00 00 FF                 ...
-Map84Bank2bImage2MapTransitionRow0_ToBank1eImage0_DirSouth:
+Map84Bank2bImage2SubImage2MapTransitionRow0_ToBank1eImage0_DirSouth:
         .byte   $60,$37,$80,$36,$00,$50,$70,$00 ; A3FA 60 37 80 36 00 50 70 00  `7.6.Pp.
         .byte   $C0,$02                         ; A402 C0 02                    ..
-Map84Bank2bImage2MapTransitionRow1_ToBank1eImage0_DirSouth:
+Map84Bank2bImage2SubImage2MapTransitionRow1_ToBank1eImage0_DirSouth:
         .byte   $60,$37,$80,$36,$00,$50,$80,$00 ; A404 60 37 80 36 00 50 80 00  `7.6.P..
         .byte   $C0,$02                         ; A40C C0 02                    ..
-Map84Bank2bImage2MapTransitionRow2:
+Map84Bank2bImage2SubImage2MapTransitionRow2:
         .byte   $00,$00,$00,$00,$00,$00,$02,$00 ; A40E 00 00 00 00 00 00 02 00  ........
         .byte   $07,$14                         ; A416 07 14                    ..
-Map84Bank2bImage2MapTransitionRow3:
+Map84Bank2bImage2SubImage2MapTransitionRow3:
         .byte   $03,$00,$00,$00,$00,$00,$03,$00 ; A418 03 00 00 00 00 00 03 00  ........
         .byte   $07,$15,$FF                     ; A420 07 15 FF                 ...
-Map85Bank2bImage2MapTransitionRow0_ToBank1eImage0_DirSouth:
+Map85Bank2bImage2SubImage3MapTransitionRow0_ToBank1eImage0_DirSouth:
         .byte   $60,$37,$80,$76,$00,$7A,$70,$00 ; A423 60 37 80 76 00 7A 70 00  `7.v.zp.
         .byte   $B0,$03                         ; A42B B0 03                    ..
-Map85Bank2bImage2MapTransitionRow1_ToBank1eImage0_DirSouth:
+Map85Bank2bImage2SubImage3MapTransitionRow1_ToBank1eImage0_DirSouth:
         .byte   $60,$37,$80,$76,$00,$7A,$80,$00 ; A42D 60 37 80 76 00 7A 80 00  `7.v.z..
         .byte   $B0,$03,$FF                     ; A435 B0 03 FF                 ...
-Map86Bank2cImage0MapTransitionRow0_ToBank36Image0_DirSouth:
+Map86Bank2cImage0SubImage0MapTransitionRow0_ToBank36Image0_DirSouth:
         .byte   $60,$00,$80,$76,$A5,$8B,$70,$FF ; A438 60 00 80 76 A5 8B 70 FF  `..v..p.
         .byte   $C0,$00                         ; A440 C0 00                    ..
-Map86Bank2cImage0MapTransitionRow1_ToBank1eImage1_DirSouth:
+Map86Bank2cImage0SubImage0MapTransitionRow1_ToBank1eImage1_DirSouth:
         .byte   $60,$38,$80,$75,$04,$10,$70,$00 ; A442 60 38 80 75 04 10 70 00  `8.u..p.
         .byte   $C0,$00,$FF                     ; A44A C0 00 FF                 ...
-Map87Bank2cImage0MapTransitionRow0_ToBank1eImage1_DirSouth:
+Map87Bank2cImage0SubImage1MapTransitionRow0_ToBank1eImage1_DirSouth:
         .byte   $60,$38,$B0,$96,$04,$F0,$B0,$00 ; A44D 60 38 B0 96 04 F0 B0 00  `8......
         .byte   $C0,$01                         ; A455 C0 01                    ..
-Map87Bank2cImage0MapTransitionRow1_ToBank1eImage1_DirWest:
+Map87Bank2cImage0SubImage1MapTransitionRow1_ToBank1eImage1_DirWest:
         .byte   $C0,$38,$80,$7C,$04,$D0,$20,$00 ; A457 C0 38 80 7C 04 D0 20 00  .8.|.. .
         .byte   $90,$01,$FF                     ; A45F 90 01 FF                 ...
-Map88Bank2cImage1MapTransitionRow0_ToBank1eImage3_DirSouth:
+Map88Bank2cImage1SubImage0MapTransitionRow0_ToBank1eImage3_DirSouth:
         .byte   $60,$3A,$20,$66,$00,$00,$80,$00 ; A462 60 3A 20 66 00 00 80 00  `: f....
         .byte   $C0,$00                         ; A46A C0 00                    ..
-Map88Bank2cImage1MapTransitionRow1_ToBank36Image0:
+Map88Bank2cImage1SubImage0MapTransitionRow1:
         .byte   $92,$00,$00,$00,$00,$00,$80,$00 ; A46C 92 00 00 00 00 00 80 00  ........
         .byte   $60,$00                         ; A474 60 00                    `.
-Map88Bank2cImage1MapTransitionRow2_ToBank36Image0:
+Map88Bank2cImage1SubImage0MapTransitionRow2:
         .byte   $91,$00,$0E,$46,$47,$00,$C0,$00 ; A476 91 00 0E 46 47 00 C0 00  ...FG...
         .byte   $60,$00,$FF                     ; A47E 60 00 FF                 `..
-Map89Bank2cImage1MapTransitionRow0_ToBank1eImage3_DirSouth:
+Map89Bank2cImage1SubImage1MapTransitionRow0_ToBank1eImage3_DirSouth:
         .byte   $60,$3A,$B0,$76,$00,$02,$70,$00 ; A481 60 3A B0 76 00 02 70 00  `:.v..p.
         .byte   $B0,$01                         ; A489 B0 01                    ..
-Map89Bank2cImage1MapTransitionRow1_ToBank10Image1:
+Map89Bank2cImage1SubImage1MapTransitionRow1:
         .byte   $91,$02,$0E,$49,$47,$00,$70,$00 ; A48B 91 02 0E 49 47 00 70 00  ...IG.p.
         .byte   $50,$01,$FF                     ; A493 50 01 FF                 P..
-Map8aBank2cImage1MapTransitionRow0_ToBank1eImage3_DirSouth:
+Map8aBank2cImage1SubImage2MapTransitionRow0_ToBank1eImage3_DirSouth:
         .byte   $60,$3A,$30,$76,$00,$06,$70,$00 ; A496 60 3A 30 76 00 06 70 00  `:0v..p.
         .byte   $A0,$02                         ; A49E A0 02                    ..
-Map8aBank2cImage1MapTransitionRow1_ToBank10Image0:
+Map8aBank2cImage1SubImage2MapTransitionRow1:
         .byte   $91,$01,$0E,$48,$47,$00,$70,$00 ; A4A0 91 01 0E 48 47 00 70 00  ...HG.p.
         .byte   $40,$02,$FF                     ; A4A8 40 02 FF                 @..
-Map8bBank2cImage1MapTransitionRow0_ToBank1eImage3_DirSouth:
+Map8bBank2cImage1SubImage3MapTransitionRow0_ToBank1eImage3_DirSouth:
         .byte   $60,$3A,$E0,$76,$00,$07,$80,$00 ; A4AB 60 3A E0 76 00 07 80 00  `:.v....
         .byte   $90,$03                         ; A4B3 90 03                    ..
-Map8bBank2cImage1MapTransitionRow1_ToBank10Image2:
+Map8bBank2cImage1SubImage3MapTransitionRow1:
         .byte   $91,$03,$0E,$4A,$47,$00,$80,$00 ; A4B5 91 03 0E 4A 47 00 80 00  ...JG...
         .byte   $30,$03,$FF                     ; A4BD 30 03 FF                 0..
-Map8cBank2cImage1MapTransitionRow0_ToBank1eImage3_DirSouth:
+Map8cBank2cImage1SubImage4MapTransitionRow0_ToBank1eImage3_DirSouth:
         .byte   $60,$3A,$D0,$46,$00,$00,$50,$FF ; A4C0 60 3A D0 46 00 00 50 FF  `:.F..P.
         .byte   $90,$04                         ; A4C8 90 04                    ..
-Map8cBank2cImage1MapTransitionRow1_ToBank1eImage3_DirSouth:
+Map8cBank2cImage1SubImage4MapTransitionRow1_ToBank1eImage3_DirSouth:
         .byte   $60,$3A,$D0,$46,$00,$00,$50,$00 ; A4CA 60 3A D0 46 00 00 50 00  `:.F..P.
         .byte   $90,$04                         ; A4D2 90 04                    ..
-Map8cBank2cImage1MapTransitionRow2:
+Map8cBank2cImage1SubImage4MapTransitionRow2:
         .byte   $03,$00,$00,$00,$00,$00,$03,$00 ; A4D4 03 00 00 00 00 00 03 00  ........
         .byte   $07,$EC                         ; A4DC 07 EC                    ..
-Map8cBank2cImage1MapTransitionRow3:
+Map8cBank2cImage1SubImage4MapTransitionRow3:
         .byte   $03,$00,$00,$00,$00,$00,$04,$00 ; A4DE 03 00 00 00 00 00 04 00  ........
         .byte   $07,$ED,$FF                     ; A4E6 07 ED FF                 ...
-Map8dBank2cImage3MapTransitionRow0_ToBank1fImage0_DirSouth:
+Map8dBank2cImage3SubImage0MapTransitionRow0_ToBank1fImage0_DirSouth:
         .byte   $60,$3B,$80,$76,$00,$43,$20,$00 ; A4E9 60 3B 80 76 00 43 20 00  `;.v.C .
         .byte   $D0,$00,$FF                     ; A4F1 D0 00 FF                 ...
-Map8eBank2cImage3MapTransitionRow0_ToBank1fImage0_DirSouth:
+Map8eBank2cImage3SubImage1MapTransitionRow0_ToBank1fImage0_DirSouth:
         .byte   $60,$3B,$80,$76,$02,$50,$A0,$00 ; A4F4 60 3B 80 76 02 50 A0 00  `;.v.P..
         .byte   $A0,$01,$FF,$F0,$3B,$80,$76,$01 ; A4FC A0 01 FF F0 3B 80 76 01  ....;.v.
         .byte   $0A,$80,$00,$80,$02,$FF         ; A504 0A 80 00 80 02 FF        ......
-Map90Bank2cImage3MapTransitionRow0_ToBank1fImage0_DirSouth:
+Map90Bank2cImage3SubImage3MapTransitionRow0_ToBank1fImage0_DirSouth:
         .byte   $60,$3B,$80,$76,$00,$CD,$80,$00 ; A50A 60 3B 80 76 00 CD 80 00  `;.v....
         .byte   $90,$03                         ; A512 90 03                    ..
-Map90Bank2cImage3MapTransitionRow1_ToBank36Image0:
+Map90Bank2cImage3SubImage3MapTransitionRow1:
         .byte   $92,$00,$00,$00,$00,$00,$80,$00 ; A514 92 00 00 00 00 00 80 00  ........
         .byte   $30,$03                         ; A51C 30 03                    0.
-Map90Bank2cImage3MapTransitionRow2_ToBank36Image0:
+Map90Bank2cImage3SubImage3MapTransitionRow2:
         .byte   $91,$00,$0E,$46,$47,$00,$C0,$00 ; A51E 91 00 0E 46 47 00 C0 00  ...FG...
         .byte   $30,$03,$FF                     ; A526 30 03 FF                 0..
-Map91Bank2dImage1MapTransitionRow0_ToBank1fImage2_DirSouth:
+Map91Bank2dImage1SubImage0MapTransitionRow0_ToBank1fImage2_DirSouth:
         .byte   $60,$3E,$70,$56,$00,$00,$70,$00 ; A529 60 3E 70 56 00 00 70 00  `>pV..p.
         .byte   $D0,$00,$FF                     ; A531 D0 00 FF                 ...
-Map92Bank2dImage1MapTransitionRow0_ToBank1fImage2_DirSouth:
+Map92Bank2dImage1SubImage1MapTransitionRow0_ToBank1fImage2_DirSouth:
         .byte   $60,$3E,$80,$76,$00,$27,$80,$00 ; A534 60 3E 80 76 00 27 80 00  `>.v.'..
         .byte   $B0,$01                         ; A53C B0 01                    ..
-Map92Bank2dImage1MapTransitionRow1_ToBank10Image2:
+Map92Bank2dImage1SubImage1MapTransitionRow1:
         .byte   $91,$03,$0A,$B9,$BA,$00,$80,$00 ; A53E 91 03 0A B9 BA 00 80 00  ........
         .byte   $50,$01,$FF                     ; A546 50 01 FF                 P..
-Map93Bank2dImage1MapTransitionRow0_ToBank1fImage2_DirSouth:
+Map93Bank2dImage1SubImage2MapTransitionRow0_ToBank1fImage2_DirSouth:
         .byte   $60,$3E,$80,$76,$00,$47,$70,$00 ; A549 60 3E 80 76 00 47 70 00  `>.v.Gp.
         .byte   $A0,$02                         ; A551 A0 02                    ..
-Map93Bank2dImage1MapTransitionRow1_ToBank10Image1:
+Map93Bank2dImage1SubImage2MapTransitionRow1:
         .byte   $91,$02,$0A,$B7,$B8,$00,$70,$00 ; A553 91 02 0A B7 B8 00 70 00  ......p.
         .byte   $40,$02,$FF                     ; A55B 40 02 FF                 @..
-Map94Bank2dImage1MapTransitionRow0_ToBank1fImage2_DirSouth:
+Map94Bank2dImage1SubImage3MapTransitionRow0_ToBank1fImage2_DirSouth:
         .byte   $60,$3E,$80,$76,$00,$67,$70,$00 ; A55E 60 3E 80 76 00 67 70 00  `>.v.gp.
         .byte   $90,$03                         ; A566 90 03                    ..
-Map94Bank2dImage1MapTransitionRow1_ToBank10Image0:
+Map94Bank2dImage1SubImage3MapTransitionRow1:
         .byte   $91,$01,$0A,$B5,$B6,$00,$70,$00 ; A568 91 01 0A B5 B6 00 70 00  ......p.
         .byte   $30,$03,$FF                     ; A570 30 03 FF                 0..
-Map95Bank2dImage1MapTransitionRow0_ToBank1fImage2_DirSouth:
+Map95Bank2dImage1SubImage4MapTransitionRow0_ToBank1fImage2_DirSouth:
         .byte   $60,$3E,$80,$76,$00,$5C,$80,$00 ; A573 60 3E 80 76 00 5C 80 00  `>.v.\..
         .byte   $A0,$04,$FF                     ; A57B A0 04 FF                 ...
-Map96Bank2dImage1MapTransitionRow0_ToBank1fImage2_DirSouth:
+Map96Bank2dImage1SubImage5MapTransitionRow0_ToBank1fImage2_DirSouth:
         .byte   $60,$3E,$B0,$76,$01,$0D,$80,$00 ; A57E 60 3E B0 76 01 0D 80 00  `>.v....
         .byte   $70,$05                         ; A586 70 05                    p.
-Map96Bank2dImage1MapTransitionRow1_ToBank36Image0:
+Map96Bank2dImage1SubImage5MapTransitionRow1:
         .byte   $92,$00,$00,$00,$00,$00,$80,$00 ; A588 92 00 00 00 00 00 80 00  ........
         .byte   $10,$05                         ; A590 10 05                    ..
-Map96Bank2dImage1MapTransitionRow2_ToBank36Image0:
+Map96Bank2dImage1SubImage5MapTransitionRow2:
         .byte   $91,$00,$0A,$B3,$B4,$00,$C0,$00 ; A592 91 00 0A B3 B4 00 C0 00  ........
         .byte   $10,$05,$FF                     ; A59A 10 05 FF                 ...
-Map97Bank2dImage1MapTransitionRow0_ToBank1fImage2_DirSouth:
+Map97Bank2dImage1SubImage6MapTransitionRow0_ToBank1fImage2_DirSouth:
         .byte   $60,$3E,$80,$A6,$02,$50,$90,$00 ; A59D 60 3E 80 A6 02 50 90 00  `>...P..
         .byte   $80,$06,$FF                     ; A5A5 80 06 FF                 ...
-Map98Bank2dImage3MapTransitionRow0_ToBank20Image1_DirSouth:
+Map98Bank2dImage3SubImage0MapTransitionRow0_ToBank20Image1_DirSouth:
         .byte   $60,$40,$90,$D6,$02,$00,$80,$00 ; A5A8 60 40 90 D6 02 00 80 00  `@......
         .byte   $C0,$00                         ; A5B0 C0 00                    ..
-Map98Bank2dImage3MapTransitionRow1_ToBank36Image0:
+Map98Bank2dImage3SubImage0MapTransitionRow1:
         .byte   $92,$00,$00,$00,$00,$00,$80,$00 ; A5B2 92 00 00 00 00 00 80 00  ........
         .byte   $60,$00                         ; A5BA 60 00                    `.
-Map98Bank2dImage3MapTransitionRow2_ToBank36Image0:
+Map98Bank2dImage3SubImage0MapTransitionRow2:
         .byte   $91,$00,$0E,$46,$47,$00,$C0,$00 ; A5BC 91 00 0E 46 47 00 C0 00  ...FG...
         .byte   $60,$00,$FF                     ; A5C4 60 00 FF                 `..
-Map99Bank2dImage3MapTransitionRow0_ToBank20Image1_DirSouth:
+Map99Bank2dImage3SubImage1MapTransitionRow0_ToBank20Image1_DirSouth:
         .byte   $60,$40,$20,$A6,$02,$00,$70,$00 ; A5C7 60 40 20 A6 02 00 70 00  `@ ...p.
         .byte   $B0,$01                         ; A5CF B0 01                    ..
-Map99Bank2dImage3MapTransitionRow1_ToBank10Image1:
+Map99Bank2dImage3SubImage1MapTransitionRow1:
         .byte   $91,$02,$0E,$49,$47,$00,$70,$00 ; A5D1 91 02 0E 49 47 00 70 00  ...IG.p.
         .byte   $50,$01,$FF                     ; A5D9 50 01 FF                 P..
-Map9aBank2dImage3MapTransitionRow0_ToBank20Image1_DirSouth:
+Map9aBank2dImage3SubImage2MapTransitionRow0_ToBank20Image1_DirSouth:
         .byte   $60,$40,$B0,$76,$02,$00,$80,$00 ; A5DC 60 40 B0 76 02 00 80 00  `@.v....
         .byte   $A0,$02                         ; A5E4 A0 02                    ..
-Map9aBank2dImage3MapTransitionRow1_ToBank10Image2:
+Map9aBank2dImage3SubImage2MapTransitionRow1:
         .byte   $91,$03,$0E,$4A,$47,$00,$80,$00 ; A5E6 91 03 0E 4A 47 00 80 00  ...JG...
         .byte   $40,$02,$FF                     ; A5EE 40 02 FF                 @..
-Map9bBank2dImage3MapTransitionRow0_ToBank20Image1_DirSouth:
+Map9bBank2dImage3SubImage3MapTransitionRow0_ToBank20Image1_DirSouth:
         .byte   $60,$40,$C0,$76,$00,$0E,$70,$00 ; A5F1 60 40 C0 76 00 0E 70 00  `@.v..p.
         .byte   $90,$03                         ; A5F9 90 03                    ..
-Map9bBank2dImage3MapTransitionRow1_ToBank10Image0:
+Map9bBank2dImage3SubImage3MapTransitionRow1:
         .byte   $91,$01,$0E,$48,$47,$00,$70,$00 ; A5FB 91 01 0E 48 47 00 70 00  ...HG.p.
         .byte   $40,$03,$FF                     ; A603 40 03 FF                 @..
-Map9cBank2dImage3MapTransitionRow0_ToBank20Image1_DirNorth:
+Map9cBank2dImage3SubImage4MapTransitionRow0_ToBank20Image1_DirNorth:
         .byte   $90,$40,$10,$76,$01,$09,$30,$FF ; A606 90 40 10 76 01 09 30 FF  .@.v..0.
         .byte   $F0,$03                         ; A60E F0 03                    ..
-Map9cBank2dImage3MapTransitionRow1_ToBank20Image1_DirSouth:
+Map9cBank2dImage3SubImage4MapTransitionRow1_ToBank20Image1_DirSouth:
         .byte   $60,$40,$10,$69,$01,$04,$30,$FF ; A610 60 40 10 69 01 04 30 FF  `@.i..0.
         .byte   $90,$04                         ; A618 90 04                    ..
-Map9cBank2dImage3MapTransitionRow2_ToBank20Image1_DirSouth:
+Map9cBank2dImage3SubImage4MapTransitionRow2_ToBank20Image1_DirSouth:
         .byte   $60,$40,$10,$79,$01,$03,$60,$00 ; A61A 60 40 10 79 01 03 60 00  `@.y..`.
         .byte   $A0,$04                         ; A622 A0 04                    ..
-Map9cBank2dImage3MapTransitionRow3_ToBank20Image1_DirNorth:
+Map9cBank2dImage3SubImage4MapTransitionRow3_ToBank20Image1_DirNorth:
         .byte   $90,$40,$10,$76,$01,$09,$80,$00 ; A624 90 40 10 76 01 09 80 00  .@.v....
         .byte   $F0,$03,$FF                     ; A62C F0 03 FF                 ...
-Map9dBank2dImage3MapTransitionRow0_ToBank20Image1_DirSouth:
+Map9dBank2dImage3SubImage5MapTransitionRow0_ToBank20Image1_DirSouth:
         .byte   $60,$40,$60,$26,$00,$00,$70,$00 ; A62F 60 40 60 26 00 00 70 00  `@`&..p.
         .byte   $70,$05                         ; A637 70 05                    p.
-Map9dBank2dImage3MapTransitionRow1_ToBank20Image1_DirSouth:
+Map9dBank2dImage3SubImage5MapTransitionRow1_ToBank20Image1_DirSouth:
         .byte   $60,$40,$60,$26,$00,$00,$80,$00 ; A639 60 40 60 26 00 00 80 00  `@`&....
         .byte   $70,$05,$FF                     ; A641 70 05 FF                 p..
-Map9eBank2eImage1MapTransitionRow0_ToBank22Image1_DirSouth:
+Map9eBank2eImage1SubImage0MapTransitionRow0_ToBank22Image1_DirSouth:
         .byte   $60,$47,$B0,$86,$00,$08,$70,$00 ; A644 60 47 B0 86 00 08 70 00  `G....p.
         .byte   $D0,$00                         ; A64C D0 00                    ..
-Map9eBank2eImage1MapTransitionRow1:
+Map9eBank2eImage1SubImage0MapTransitionRow1:
         .byte   $03,$00,$00,$00,$00,$00,$03,$00 ; A64E 03 00 00 00 00 00 03 00  ........
         .byte   $0A,$88                         ; A656 0A 88                    ..
-Map9eBank2eImage1MapTransitionRow2:
+Map9eBank2eImage1SubImage0MapTransitionRow2:
         .byte   $03,$00,$00,$00,$00,$00,$03,$00 ; A658 03 00 00 00 00 00 03 00  ........
         .byte   $0A,$89,$FF                     ; A660 0A 89 FF                 ...
-Map9fBank2eImage1MapTransitionRow0_ToBank22Image1_DirSouth:
+Map9fBank2eImage1SubImage1MapTransitionRow0_ToBank22Image1_DirSouth:
         .byte   $60,$47,$D0,$76,$01,$05,$70,$00 ; A663 60 47 D0 76 01 05 70 00  `G.v..p.
         .byte   $B0,$01                         ; A66B B0 01                    ..
-Map9fBank2eImage1MapTransitionRow1_ToBank10Image0:
+Map9fBank2eImage1SubImage1MapTransitionRow1:
         .byte   $91,$01,$0E,$48,$47,$00,$70,$00 ; A66D 91 01 0E 48 47 00 70 00  ...HG.p.
         .byte   $50,$01,$FF                     ; A675 50 01 FF                 P..
-Mapa0Bank2eImage1MapTransitionRow0_ToBank22Image1_DirSouth:
+Mapa0Bank2eImage1SubImage2MapTransitionRow0_ToBank22Image1_DirSouth:
         .byte   $60,$47,$20,$76,$01,$01,$80,$00 ; A678 60 47 20 76 01 01 80 00  `G v....
         .byte   $A0,$02                         ; A680 A0 02                    ..
-Mapa0Bank2eImage1MapTransitionRow1_ToBank10Image2:
+Mapa0Bank2eImage1SubImage2MapTransitionRow1:
         .byte   $91,$03,$0E,$4A,$47,$00,$80,$00 ; A682 91 03 0E 4A 47 00 80 00  ...JG...
         .byte   $40,$02,$FF                     ; A68A 40 02 FF                 @..
-Mapa1Bank2eImage1MapTransitionRow0_ToBank22Image1_DirSouth:
+Mapa1Bank2eImage1SubImage3MapTransitionRow0_ToBank22Image1_DirSouth:
         .byte   $60,$47,$30,$B6,$02,$00,$70,$00 ; A68D 60 47 30 B6 02 00 70 00  `G0...p.
         .byte   $90,$03                         ; A695 90 03                    ..
-Mapa1Bank2eImage1MapTransitionRow1_ToBank10Image1:
+Mapa1Bank2eImage1SubImage3MapTransitionRow1:
         .byte   $91,$02,$0E,$49,$47,$00,$70,$00 ; A697 91 02 0E 49 47 00 70 00  ...IG.p.
         .byte   $30,$03,$FF                     ; A69F 30 03 FF                 0..
-Mapa2Bank2eImage1MapTransitionRow0_ToBank22Image1_DirSouth:
+Mapa2Bank2eImage1SubImage4MapTransitionRow0_ToBank22Image1_DirSouth:
         .byte   $60,$47,$40,$76,$01,$09,$80,$00 ; A6A2 60 47 40 76 01 09 80 00  `G@v....
         .byte   $80,$04                         ; A6AA 80 04                    ..
-Mapa2Bank2eImage1MapTransitionRow1_ToBank36Image0:
+Mapa2Bank2eImage1SubImage4MapTransitionRow1:
         .byte   $92,$00,$00,$00,$00,$00,$80,$00 ; A6AC 92 00 00 00 00 00 80 00  ........
         .byte   $20,$04                         ; A6B4 20 04                     .
-Mapa2Bank2eImage1MapTransitionRow2_ToBank36Image0:
+Mapa2Bank2eImage1SubImage4MapTransitionRow2:
         .byte   $91,$00,$0E,$46,$47,$00,$C0,$00 ; A6B6 91 00 0E 46 47 00 C0 00  ...FG...
         .byte   $20,$04                         ; A6BE 20 04                     .
-Mapa2Bank2eImage1MapTransitionRow3:
+Mapa2Bank2eImage1SubImage4MapTransitionRow3:
         .byte   $03                             ; A6C0 03                       .
-Mapa3Bank2eImage1MapTransitionRow0:
+Mapa3Bank2eImage1SubImage5MapTransitionRow0:
         .byte   $00,$00,$00,$00,$00,$04,$00,$0C ; A6C1 00 00 00 00 00 04 00 0C  ........
         .byte   $71,$FF                         ; A6C9 71 FF                    q.
-Mapa3Bank2eImage1MapTransitionRow1_ToBank22Image1_DirSouth:
+Mapa3Bank2eImage1SubImage5MapTransitionRow1_ToBank22Image1_DirSouth:
         .byte   $60,$47,$D0,$86,$01,$0E,$80,$00 ; A6CB 60 47 D0 86 01 0E 80 00  `G......
         .byte   $80,$05                         ; A6D3 80 05                    ..
-Mapa3Bank2eImage1MapTransitionRow2:
+Mapa3Bank2eImage1SubImage5MapTransitionRow2:
         .byte   $03,$00,$00,$00,$00,$00,$01,$00 ; A6D5 03 00 00 00 00 00 01 00  ........
         .byte   $0C,$6E                         ; A6DD 0C 6E                    .n
-Mapa3Bank2eImage1MapTransitionRow3:
+Mapa3Bank2eImage1SubImage5MapTransitionRow3:
         .byte   $03,$00,$00,$00,$00,$00,$02,$00 ; A6DF 03 00 00 00 00 00 02 00  ........
         .byte   $0E,$39,$FF                     ; A6E7 0E 39 FF                 .9.
 Mapa4Bank2eImage3MapTransitionRow0_ToBank22Image3_DirSouth:
@@ -4925,7 +4925,7 @@ Map22Bank18Image2MapTransitionRow0_ToBank18Image1_DirSouth:
 Map22Bank18Image2MapTransitionRow1_ToBank18Image3_DirNorth:
         .byte   $90,$23,$E0,$79,$00,$C7,$50,$01 ; E60A 90 23 E0 79 00 C7 50 01  .#.y..P.
         .byte   $C0,$00                         ; E612 C0 00                    ..
-Map22Bank18Image2MapTransitionRow2_ToBank36Image0:
+Map22Bank18Image2MapTransitionRow2:
         .byte   $91,$00,$0A,$8E,$8F,$00,$C0,$01 ; E614 91 00 0A 8E 8F 00 C0 01  ........
         .byte   $E0,$00                         ; E61C E0 00                    ..
 Map22Bank18Image2MapTransitionRow3:
@@ -4952,19 +4952,19 @@ Map21Bank18Image1MapTransitionRow4:
 Map21Bank18Image1MapTransitionRow5:
         .byte   $03,$00,$00,$00,$00,$00,$04,$00 ; E666 03 00 00 00 00 00 04 00  ........
         .byte   $04,$54                         ; E66E 04 54                    .T
-Map21Bank18Image1MapTransitionRow6_ToBank10Image2:
+Map21Bank18Image1MapTransitionRow6:
         .byte   $91,$03,$0A,$92,$93,$00,$10,$00 ; E670 91 03 0A 92 93 00 10 00  ........
         .byte   $10,$01                         ; E678 10 01                    ..
-Map21Bank18Image1MapTransitionRow7_ToBank10Image1:
+Map21Bank18Image1MapTransitionRow7:
         .byte   $91,$02,$0A,$94,$95,$00,$50,$01 ; E67A 91 02 0A 94 95 00 50 01  ......P.
         .byte   $30,$01,$FF,$FF,$00,$00,$00,$00 ; E682 30 01 FF FF 00 00 00 00  0.......
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E68A 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E692 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00         ; E69A 00 00 00 00 00 00        ......
-Map8fBank2cImage3MapTransitionRow0_ToBank20Image2:
+Map8fBank2cImage3SubImage2MapTransitionRow0_ToBank20Image2:
         .byte   $F0,$41,$30,$99,$03,$00,$80,$00 ; E6A0 F0 41 30 99 03 00 80 00  .A0.....
         .byte   $80,$02                         ; E6A8 80 02                    ..
-Map8fBank2cImage3MapTransitionRow1:
+Map8fBank2cImage3SubImage2MapTransitionRow1:
         .byte   $03,$00,$00,$00,$00,$00,$07,$00 ; E6AA 03 00 00 00 00 00 07 00  ........
         .byte   $0A,$B0,$FF,$00,$00,$00,$00,$00 ; E6B2 0A B0 FF 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00         ; E6BA 00 00 00 00 00 00        ......
@@ -4986,7 +4986,7 @@ Map41Bank20Image2MapTransitionRow4_ToBank36Image0_DirSouth:
 Map41Bank20Image2MapTransitionRow5_ToBank36Image0_DirSouth:
         .byte   $60,$00,$80,$76,$C8,$AC,$90,$00 ; E6F2 60 00 80 76 C8 AC 90 00  `..v....
         .byte   $B0,$03                         ; E6FA B0 03                    ..
-Map41Bank20Image2MapTransitionRow6_ToBank2cImage3:
+Map41Bank20Image2MapTransitionRow6_ToBank2cImage3SubImage2:
         .byte   $F0,$8F,$80,$A9,$C8,$00,$30,$00 ; E6FC F0 8F 80 A9 C8 00 30 00  ......0.
         .byte   $70,$03,$FF,$00,$00,$00,$00,$00 ; E704 70 03 FF 00 00 00 00 00  p.......
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; E70C 00 00 00 00 00 00 00 00  ........

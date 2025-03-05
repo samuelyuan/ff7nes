@@ -13,7 +13,7 @@ Translations of the rom can be found in other branches:
 Scripts can be run to extract all maps from the game using the following command:
 
 ```
-python ./tools/extract_graphics.py
+python ./tools/extract_background_images.py
 ```
 
 # Game Memory
@@ -146,7 +146,8 @@ To get the values for party member at index i, you must add i to the base addres
 | 0x634D-0x6359 | 13 | Cait Sith Weapon Exp upper byte |
 | 0x635A-0x6367 | 14 | Cid Weapon Exp upper byte |
 | 0x6368-0x636E | 7 | Materia Equipped Status/Level (Equipped flag is leftmost bit, level is between 1 - 9) |
-| 0X636F-0x637C | 14 | Unknown |
+| 0x636F-0x6375 | 7 | Materia Exp lower byte |
+| 0x6376-0x637C | 7 | Materia Exp upper byte |
 | 0x637D-0x6385 | 9 | Fire Materia Magic Spell Levels |
 | 0x6386-0x638E | 9 | Water Materia Magic Spell Levels |
 | 0x638F-0x6397 | 9 | Bolt Materia Magic Spell Levels |

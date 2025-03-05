@@ -4,3 +4,4 @@
 *.o.dep
 
 assets/
+__pycache__/
