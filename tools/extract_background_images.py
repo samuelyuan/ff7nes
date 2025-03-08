@@ -111,18 +111,18 @@ def drawTransitionTiles(nesFile, image, imageIndex, indexToBankLocation):
     blockStartAddrs = nesFile.getAddressBlock(bankNum, 0x00, 0x10)
     roomTransitionDataAddrs = nesFile.getAddressBlock(bankNum, blockStartAddrs[0] - 0x8000, blockStartAddrs[0] + (190*2) - 0x8000)
 
-    curAddr = roomTransitionDataAddrs[imageIndex] - 0x8000
-    roomTransitionRows = []
-    while bankData[curAddr] != 0xff:
-        rowData = bankData[curAddr : curAddr + 0xa]
-        if (rowData[0] >> 4) & 0x0f != 0:
-            roomTransitionRows.append(rowData)
-        curAddr += 0xa
+    def getRoomTransitionRows(curAddr):
+        roomTransitionRows = []
+        while bankData[curAddr] != 0xff:
+            rowData = bankData[curAddr : curAddr + 0xa]
+            if (rowData[0] >> 4) & 0x0f != 0:
+                roomTransitionRows.append(rowData)
+            curAddr += 0xa
+        return roomTransitionRows
 
-    for row in roomTransitionRows:
-        # This points to store counter
+    def drawTransition(row):
         if (row[0] & 0x0f != 0):
-            continue
+            return
         mapTransitionPoint = MapTransitionPoint(row)
         otherMapBankImagePoint = indexToBankLocation[mapTransitionPoint.otherImageIndex]
         otherImageBankLabel = otherMapBankImagePoint.getLabel()
@@ -134,7 +134,12 @@ def drawTransitionTiles(nesFile, image, imageIndex, indexToBankLocation):
         fillColor = (0, 128, 0, 128)
         draw.polygon(xy=rectangleBounds, fill=fillColor)
         draw.text((xMin, yMin), otherImageBankLabel, (255, 255, 255), font=defaultFont)
-        
+
+    curAddr = roomTransitionDataAddrs[imageIndex] - 0x8000
+    roomTransitionRows = getRoomTransitionRows(curAddr)
+    for row in roomTransitionRows:
+        drawTransition(row)
+    
     return image
 
 def createImageIndexToImageDetails(imageIndexStartAddrPairs, bankNum, bankData, bankLocationToTileset):

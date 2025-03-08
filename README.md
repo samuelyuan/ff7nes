@@ -41,6 +41,7 @@ This reference table shows where the game reads and writes data to in RAM.
 | 0x0086 | 1 | Store original map bank number for loading map data |
 | 0x0087 | 1 | Store original map bank number for loading tileset |
 | 0x0089 | 1 | Index in map array in bank 1 |
+| 0x00C7-0x00C8 | 2 | Dynamic Note Pointer for audio |
 | 0x00CF | 1 | Dialogue Flag (set to 0xFF when dialogue is displayed, else set to 0) |
 | 0x00D5 | 1 | Overworld Flag (set to 0xFF in overworld, else set to 0) |
 | 0x00D8 | 1 | Number of characters in current dialog box |

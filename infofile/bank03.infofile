@@ -287,14 +287,6 @@ LABEL {
   ADDR  $A3ED;
 };
 LABEL {
-  NAME "AudioOpcode0f";
-  ADDR  $A5D1;
-};
-LABEL {
-  NAME "AudioOpcode12";
-  ADDR  $A6A6;
-};
-LABEL {
   NAME "MusicThemeTable";
   ADDR  $B8A1;
 };
@@ -390,3 +382,273 @@ LABEL {
   NAME "MusicInfiltratingShinraTheme";
   ADDR  $FB02;
 };
+
+LABEL {
+  NAME "AudioOpcode00";
+  ADDR  $A439;
+};
+LABEL {
+  NAME "AudioOpcode01";
+  ADDR  $A43E;
+};
+LABEL {
+  NAME "AudioOpcode02";
+  ADDR  $A446;
+};
+LABEL {
+  NAME "AudioOpcode03";
+  ADDR  $A44A;
+};
+LABEL {
+  NAME "AudioOpcode04";
+  ADDR  $A46E;
+};
+LABEL {
+  NAME "AudioOpcode05";
+  ADDR  $A472;
+};
+LABEL {
+  NAME "AudioOpcode06";
+  ADDR  $A485;
+};
+LABEL {
+  NAME "AudioOpcode07";
+  ADDR  $A48C;
+};
+LABEL {
+  NAME "AudioOpcode08";
+  ADDR  $A497;
+};
+LABEL {
+  NAME "AudioOpcode09";
+  ADDR  $A49E;
+};
+LABEL {
+  NAME "AudioOpcode0a";
+  ADDR  $A4BB;
+};
+LABEL {
+  NAME "AudioOpcode0b";
+  ADDR  $A4C4;
+};
+LABEL {
+  NAME "AudioOpcode0c";
+  ADDR  $A4CD;
+};
+LABEL {
+  NAME "AudioOpcode0d";
+  ADDR  $A4D7;
+};
+LABEL {
+  NAME "AudioOpcode0e";
+  ADDR  $A5BE;
+};
+LABEL {
+  NAME "AudioOpcode0f";
+  ADDR  $A5D1;
+};
+LABEL {
+  NAME "AudioOpcode10";
+  ADDR  $A60F;
+};
+LABEL {
+  NAME "AudioOpcode11";
+  ADDR  $A65E;
+};
+LABEL {
+  NAME "AudioOpcode12";
+  ADDR  $A6A6;
+};
+LABEL {
+  NAME "AudioOpcode13";
+  ADDR  $A6B3;
+};
+LABEL {
+  NAME "AudioOpcode14";
+  ADDR  $A716;
+};
+LABEL {
+  NAME "AudioOpcode15";
+  ADDR  $A72D;
+};
+LABEL {
+  NAME "AudioOpcode16";
+  ADDR  $A73B;
+};
+LABEL {
+  NAME "AudioOpcode17";
+  ADDR  $A74C;
+};
+LABEL {
+  NAME "AudioOpcode18";
+  ADDR  $A75D;
+};
+LABEL {
+  NAME "AudioOpcode19";
+  ADDR  $A764;
+};
+LABEL {
+  NAME "AudioOpcode1a";
+  ADDR  $A79C;
+};
+LABEL {
+  NAME "AudioOpcode1b";
+  ADDR  $A7AC;
+};
+LABEL {
+  NAME "AudioOpcode1c";
+  ADDR  $A7E1;
+};
+LABEL {
+  NAME "AudioOpcode1d";
+  ADDR  $A7EB;
+};
+LABEL {
+  NAME "AudioOpcode1e";
+  ADDR  $A7F5;
+};
+LABEL {
+  NAME "AudioOpcode1f";
+  ADDR  $A800;
+};
+LABEL {
+  NAME "AudioOpcode20";
+  ADDR  $A82A;
+};
+LABEL {
+  NAME "AudioOpcode21";
+  ADDR  $A846;
+};
+LABEL {
+  NAME "AudioOpcode22";
+  ADDR  $A863;
+};
+LABEL {
+  NAME "AudioOpcode23";
+  ADDR  $A879;
+};
+LABEL {
+  NAME "AudioOpcode24";
+  ADDR  $A894;
+};
+LABEL {
+  NAME "AudioOpcode25";
+  ADDR  $A89F;
+};
+LABEL {
+  NAME "Song01Opcodes";
+  ADDR  $B8ED;
+};
+LABEL {
+  NAME "Song00Opcodes";
+  ADDR  $B98E;
+};
+LABEL {
+  NAME "Song06Opcodes";
+  ADDR  $BB66;
+};
+LABEL {
+  NAME "Song07Opcodes";
+  ADDR  $BE16;
+};
+LABEL {
+  NAME "Song08Opcodes";
+  ADDR  $C30D;
+};
+LABEL {
+  NAME "Song02Opcodes";
+  ADDR  $C458;
+};
+LABEL {
+  NAME "Song17Opcodes";
+  ADDR  $C571;
+};
+LABEL {
+  NAME "Song03Opcodes";
+  ADDR  $D9DE;
+};
+LABEL {
+  NAME "Song04Opcodes";
+  ADDR  $DBC4;
+};
+LABEL {
+  NAME "Song05Opcodes";
+  ADDR  $DCB1;
+};
+LABEL {
+  NAME "Song09Opcodes";
+  ADDR  $DDED;
+};
+LABEL {
+  NAME "Song0aOpcodes";
+  ADDR  $E131;
+};
+LABEL {
+  NAME "Song0bOpcodes";
+  ADDR  $E25F;
+};
+LABEL {
+  NAME "Song0cOpcodes";
+  ADDR  $E43A;
+};
+LABEL {
+  NAME "Song0dOpcodes";
+  ADDR  $E58B;
+};
+LABEL {
+  NAME "Song0eOpcodes";
+  ADDR  $E89B;
+};
+LABEL {
+  NAME "Song0fOpcodes";
+  ADDR  $EA7B;
+};
+LABEL {
+  NAME "Song10Opcodes";
+  ADDR  $EC38;
+};
+LABEL {
+  NAME "Song12Opcodes";
+  ADDR  $EE06;
+};
+LABEL {
+  NAME "Song13Opcodes";
+  ADDR  $EF00;
+};
+LABEL {
+  NAME "Song14Opcodes";
+  ADDR  $F0A8;
+};
+LABEL {
+  NAME "Song15Opcodes";
+  ADDR  $F25B;
+};
+LABEL {
+  NAME "Song16Opcodes";
+  ADDR  $F32F;
+};
+LABEL {
+  NAME "Song18Opcodes";
+  ADDR  $F41E;
+};
+LABEL {
+  NAME "Song19Opcodes";
+  ADDR  $F513;
+};
+LABEL {
+  NAME "Song1aOpcodes";
+  ADDR  $F710;
+};
+LABEL {
+  NAME "Song1bOpcodes";
+  ADDR  $F801;
+};
+LABEL {
+  NAME "Song1cOpcodes";
+  ADDR  $F97B;
+};
+LABEL {
+  NAME "Song11Opcodes";
+  ADDR  $FB10;
+};
+
