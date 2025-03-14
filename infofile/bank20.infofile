@@ -367,6 +367,10 @@ LABEL {
   ADDR  $ABF4;
 };
 LABEL {
+  NAME "Bank20MapImage01SpriteTileset";
+  ADDR  $B284;
+};
+LABEL {
   NAME "Bank20MapImage01BackgroundPalette";
   ADDR  $BC44;
 };
@@ -473,8 +477,4 @@ LABEL {
 LABEL {
   NAME "Bank20MapImage03Collision";
   ADDR  $ECBA;
-};
-LABEL {
-  NAME "Bank20MapImage01SpriteTileset";
-  ADDR  $F160;
 };

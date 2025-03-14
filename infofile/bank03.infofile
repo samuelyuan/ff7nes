@@ -159,12 +159,12 @@ RANGE {
 };
 RANGE {
   START $b8a1;
-  END $b8dc;
+  END $B8CC;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $b8dd;
-  END $c688;
+  START $B8CD;
+  END $C688;
   TYPE BYTETABLE;
 };
 RANGE {
@@ -306,22 +306,6 @@ LABEL {
   ADDR  $B8A1;
 };
 LABEL {
-  NAME "MusicOpeningMakoReactorTheme";
-  ADDR  $B980;
-};
-LABEL {
-  NAME "MusicTitleScreenTheme";
-  ADDR  $B8DF;
-};
-LABEL {
-  NAME "MusicTownTheme";
-  ADDR  $C44A;
-};
-LABEL {
-  NAME "MusicCostaDelSolTheme";
-  ADDR  $C563;
-};
-LABEL {
   NAME "ScrollBufferScreenUp";
   ADDR  $D13A;
 };
@@ -332,70 +316,6 @@ LABEL {
 LABEL {
   NAME "ManageCharacterPositionCount";
   ADDR  $D910;
-};
-LABEL {
-  NAME "MusicOverworldTheme";
-  ADDR  $D9D0;
-};
-LABEL {
-  NAME "MusicKalmTheme";
-  ADDR  $DBB6;
-};
-LABEL {
-  NAME "MusicNorthCorelTheme";
-  ADDR  $E123;
-};
-LABEL {
-  NAME "MusicChocoboFarmTheme";
-  ADDR  $E251;
-};
-LABEL {
-  NAME "MusicNibelheimTheme";
-  ADDR  $E42C;
-};
-LABEL {
-  NAME "MusicTifaTheme";
-  ADDR  $E88D;
-};
-LABEL {
-  NAME "MusicGoldSaucerTheme";
-  ADDR  $EA6D;
-};
-LABEL {
-  NAME "MusicMythrilMinesTheme";
-  ADDR  $EDF8;
-};
-LABEL {
-  NAME "MusicJunonOrRocketTownTheme";
-  ADDR  $EEF2;
-};
-LABEL {
-  NAME "MusicAerithTheme";
-  ADDR  $F09A;
-};
-LABEL {
-  NAME "MusicForgottenCityTheme";
-  ADDR  $F24D;
-};
-LABEL {
-  NAME "MusicShinraCompanyTheme";
-  ADDR  $F321;
-};
-LABEL {
-  NAME "MusicGaeaCliffTheme";
-  ADDR  $F410;
-};
-LABEL {
-  NAME "MusicIcicleInnTheme";
-  ADDR  $F505;
-};
-LABEL {
-  NAME "MusicGongagaTheme";
-  ADDR  $F702;
-};
-LABEL {
-  NAME "MusicInfiltratingShinraTheme";
-  ADDR  $FB02;
 };
 
 LABEL {
@@ -551,119 +471,34 @@ LABEL {
   ADDR  $A89F;
 };
 LABEL {
-  NAME "Song01Opcodes";
-  ADDR  $B8ED;
-};
-LABEL {
   NAME "Song00Opcodes";
-  ADDR  $B98E;
+  ADDR  $B8DB;
 };
 LABEL {
-  NAME "Song06Opcodes";
-  ADDR  $BB66;
-};
-LABEL {
-  NAME "Song07Opcodes";
-  ADDR  $BE16;
-};
-LABEL {
-  NAME "Song08Opcodes";
-  ADDR  $C30D;
+  NAME "Song01Opcodes";
+  ADDR  $B9DD;
 };
 LABEL {
   NAME "Song02Opcodes";
-  ADDR  $C458;
-};
-LABEL {
-  NAME "Song17Opcodes";
-  ADDR  $C571;
+  ADDR  $BB76;
 };
 LABEL {
   NAME "Song03Opcodes";
-  ADDR  $D9DE;
+  ADDR  $BC74;
 };
 LABEL {
   NAME "Song04Opcodes";
-  ADDR  $DBC4;
+  ADDR  $BDE9;
 };
 LABEL {
   NAME "Song05Opcodes";
-  ADDR  $DCB1;
+  ADDR  $BF71;
 };
 LABEL {
-  NAME "Song09Opcodes";
-  ADDR  $DDED;
+  NAME "Song06Opcodes";
+  ADDR  $C219;
 };
 LABEL {
-  NAME "Song0aOpcodes";
-  ADDR  $E131;
+  NAME "Song07Opcodes";
+  ADDR  $C46E;
 };
-LABEL {
-  NAME "Song0bOpcodes";
-  ADDR  $E25F;
-};
-LABEL {
-  NAME "Song0cOpcodes";
-  ADDR  $E43A;
-};
-LABEL {
-  NAME "Song0dOpcodes";
-  ADDR  $E58B;
-};
-LABEL {
-  NAME "Song0eOpcodes";
-  ADDR  $E89B;
-};
-LABEL {
-  NAME "Song0fOpcodes";
-  ADDR  $EA7B;
-};
-LABEL {
-  NAME "Song10Opcodes";
-  ADDR  $EC38;
-};
-LABEL {
-  NAME "Song12Opcodes";
-  ADDR  $EE06;
-};
-LABEL {
-  NAME "Song13Opcodes";
-  ADDR  $EF00;
-};
-LABEL {
-  NAME "Song14Opcodes";
-  ADDR  $F0A8;
-};
-LABEL {
-  NAME "Song15Opcodes";
-  ADDR  $F25B;
-};
-LABEL {
-  NAME "Song16Opcodes";
-  ADDR  $F32F;
-};
-LABEL {
-  NAME "Song18Opcodes";
-  ADDR  $F41E;
-};
-LABEL {
-  NAME "Song19Opcodes";
-  ADDR  $F513;
-};
-LABEL {
-  NAME "Song1aOpcodes";
-  ADDR  $F710;
-};
-LABEL {
-  NAME "Song1bOpcodes";
-  ADDR  $F801;
-};
-LABEL {
-  NAME "Song1cOpcodes";
-  ADDR  $F97B;
-};
-LABEL {
-  NAME "Song11Opcodes";
-  ADDR  $FB10;
-};
-

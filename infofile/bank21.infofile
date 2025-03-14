@@ -310,6 +310,10 @@ LABEL {
   ADDR  $C08F;
 };
 LABEL {
+  NAME "Bank21MapImage00SpriteTileset";
+  ADDR  $C19F;
+};
+LABEL {
   NAME "Bank21MapImage00BackgroundPalette";
   ADDR  $C60F;
 };
@@ -379,7 +383,7 @@ LABEL {
 };
 LABEL {
   NAME "Bank21MapImage01SpriteTileset";
-  ADDR  $EB3A;
+  ADDR  $EB4A;
 };
 LABEL {
   NAME "Bank21MapImage01BackgroundPalette";
@@ -412,10 +416,6 @@ LABEL {
 LABEL {
   NAME "Bank21MapImage02SpriteTileset";
   ADDR  $F651;
-};
-LABEL {
-  NAME "Bank21MapImage00SpriteTileset";
-  ADDR  $F671;
 };
 LABEL {
   NAME "Bank21MapImage02BackgroundPalette";

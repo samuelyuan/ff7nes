@@ -35,7 +35,7 @@ def generate_labels_opcodes(nes_file: NESFile, bank_num: int):
     return labels
 
 def generate_labels_songs(nes_file: NESFile, bank_num: int):
-    start_addr_arr = nes_file.getAddressBlock(bank_num, 0xB8A1 - 0x8000, 0xB8A1 - 0x8000 + (30 * 2))
+    start_addr_arr = nes_file.getAddressBlock(bank_num, 0xB8A1 - 0x8000, 0xB8A1 - 0x8000 + (22 * 2))
     labels = []
 
     # Generate labels for songs
