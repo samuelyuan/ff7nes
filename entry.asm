@@ -48,8 +48,7 @@
 
 .scope bank12
 .segment "PRG12"
-.incbin "src/gfx/bank09_chinesefont2_8000.chr"
-.incbin "src/gfx/bank09_unknown_e300.chr"
+.include "src/bank09_font_gfx.asm"
 .endscope
 
 .scope bank14
