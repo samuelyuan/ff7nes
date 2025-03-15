@@ -7377,18 +7377,18 @@ MusicThemeTable:
         .addr   MusicTownTheme                  ; B8A5 4A C4                    J.
         .addr   MusicOverworldTheme             ; B8A7 D0 D9                    ..
         .addr   MusicKalmTheme                  ; B8A9 B6 DB                    ..
-        .addr   LDCA3                           ; B8AB A3 DC                    ..
-        .addr   LBB58                           ; B8AD 58 BB                    X.
-        .addr   LBE08                           ; B8AF 08 BE                    ..
-        .addr   LC2FF                           ; B8B1 FF C2                    ..
-        .addr   LDDDF                           ; B8B3 DF DD                    ..
+        .addr   Song05                          ; B8AB A3 DC                    ..
+        .addr   Song06                          ; B8AD 58 BB                    X.
+        .addr   Song07                          ; B8AF 08 BE                    ..
+        .addr   Song08                          ; B8B1 FF C2                    ..
+        .addr   Song09                          ; B8B3 DF DD                    ..
         .addr   MusicNorthCorelTheme            ; B8B5 23 E1                    #.
         .addr   MusicChocoboFarmTheme           ; B8B7 51 E2                    Q.
         .addr   MusicNibelheimTheme             ; B8B9 2C E4                    ,.
-        .addr   LE57D                           ; B8BB 7D E5                    }.
+        .addr   Song0d                          ; B8BB 7D E5                    }.
         .addr   MusicTifaTheme                  ; B8BD 8D E8                    ..
         .addr   MusicGoldSaucerTheme            ; B8BF 6D EA                    m.
-        .addr   LEC2A                           ; B8C1 2A EC                    *.
+        .addr   Song10                          ; B8C1 2A EC                    *.
         .addr   MusicInfiltratingShinraTheme    ; B8C3 02 FB                    ..
         .addr   MusicMythrilMinesTheme          ; B8C5 F8 ED                    ..
         .addr   MusicJunonOrRocketTownTheme     ; B8C7 F2 EE                    ..
@@ -7399,8 +7399,8 @@ MusicThemeTable:
         .addr   MusicGaeaCliffTheme             ; B8D1 10 F4                    ..
         .addr   MusicIcicleInnTheme             ; B8D3 05 F5                    ..
         .addr   MusicGongagaTheme               ; B8D5 02 F7                    ..
-        .addr   LF7F3                           ; B8D7 F3 F7                    ..
-        .addr   LF96D                           ; B8D9 6D F9                    m.
+        .addr   Song1b                          ; B8D7 F3 F7                    ..
+        .addr   Song1c                          ; B8D9 6D F9                    m.
         .addr   MusicCostaDelSolTheme           ; B8DB 63 C5                    c.
 ; ----------------------------------------------------------------------------
         .byte   $00,$00                         ; B8DD 00 00                    ..
@@ -7489,7 +7489,7 @@ Song00Opcodes:
         .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; BB46 30 30 30 30 30 30 30 30  00000000
         .byte   $30,$30,$30,$30,$30,$30,$30,$30 ; BB4E 30 30 30 30 30 30 30 30  00000000
         .byte   $30,$30                         ; BB56 30 30                    00
-LBB58:
+Song06:
         .byte   $FF,$00,$14,$00,$01,$18,$01,$02 ; BB58 FF 00 14 00 01 18 01 02  ........
         .byte   $3C,$02,$03,$0E,$00,$FF         ; BB60 3C 02 03 0E 00 FF        <.....
 Song06Opcodes:
@@ -7578,7 +7578,7 @@ Song06Opcodes:
         .byte   $6E,$03,$6C,$01,$6C,$02,$C9,$6C ; BDF6 6E 03 6C 01 6C 02 C9 6C  n.l.l..l
         .byte   $01,$C9,$03,$6C,$04,$6C,$00,$C9 ; BDFE 01 C9 03 6C 04 6C 00 C9  ...l.l..
         .byte   $C9,$D0                         ; BE06 C9 D0                    ..
-LBE08:
+Song07:
         .byte   $FF,$00,$0E,$00,$01,$83,$01,$02 ; BE08 FF 00 0E 00 01 83 01 02  ........
         .byte   $AB,$03,$03,$CD,$04,$FF         ; BE10 AB 03 03 CD 04 FF        ......
 Song07Opcodes:
@@ -7740,7 +7740,7 @@ Song07Opcodes:
         .byte   $C9,$C9,$C9,$C9,$C9,$C9,$C9,$C9 ; C2EE C9 C9 C9 C9 C9 C9 C9 C9  ........
         .byte   $C9,$C9,$C9,$C9,$C9,$C9,$C9,$C9 ; C2F6 C9 C9 C9 C9 C9 C9 C9 C9  ........
         .byte   $D0                             ; C2FE D0                       .
-LC2FF:
+Song08:
         .byte   $FF,$00,$0E,$00,$01,$6C,$00,$02 ; C2FF FF 00 0E 00 01 6C 00 02  .....l..
         .byte   $CA,$00,$03,$2E,$01,$FF         ; C307 CA 00 03 2E 01 FF        ......
 Song08Opcodes:
@@ -10417,38 +10417,11 @@ LD800:
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D878 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D880 00 00 00 00 00 00 00 00  ........
         .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D888 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D890 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D898 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00,$00,$00,$00,$00,$00,$00 ; D8A0 00 00 00 00 00 00 00 00  ........
+        .byte   $00,$00,$A9,$00,$00,$00,$00,$00 ; D8A8 00 00 A9 00 00 00 00 00  ........
 ; ----------------------------------------------------------------------------
-        brk                                     ; D890 00                       .
-        brk                                     ; D891 00                       .
-        brk                                     ; D892 00                       .
-        brk                                     ; D893 00                       .
-        brk                                     ; D894 00                       .
-        brk                                     ; D895 00                       .
-        brk                                     ; D896 00                       .
-        brk                                     ; D897 00                       .
-        brk                                     ; D898 00                       .
-        brk                                     ; D899 00                       .
-        brk                                     ; D89A 00                       .
-        brk                                     ; D89B 00                       .
-        brk                                     ; D89C 00                       .
-        brk                                     ; D89D 00                       .
-        brk                                     ; D89E 00                       .
-        brk                                     ; D89F 00                       .
-        brk                                     ; D8A0 00                       .
-        brk                                     ; D8A1 00                       .
-        brk                                     ; D8A2 00                       .
-        brk                                     ; D8A3 00                       .
-        brk                                     ; D8A4 00                       .
-        brk                                     ; D8A5 00                       .
-        brk                                     ; D8A6 00                       .
-        brk                                     ; D8A7 00                       .
-        brk                                     ; D8A8 00                       .
-        brk                                     ; D8A9 00                       .
-        lda     #$00                            ; D8AA A9 00                    ..
-        brk                                     ; D8AC 00                       .
-        brk                                     ; D8AD 00                       .
-        brk                                     ; D8AE 00                       .
-        brk                                     ; D8AF 00                       .
 LD8B0:
         lda     #$01                            ; D8B0 A9 01                    ..
         sta     $53                             ; D8B2 85 53                    .S
@@ -10748,7 +10721,7 @@ Song04Opcodes:
         .byte   $CC,$FE,$C7,$FF,$C4,$4E,$CD,$45 ; DC8C CC FE C7 FF C4 4E CD 45  .....N.E
         .byte   $00,$D8,$00,$DE,$06,$20,$C9,$C9 ; DC94 00 D8 00 DE 06 20 C9 C9  ..... ..
         .byte   $C9,$C9,$C9,$C9,$C9,$C9,$D0     ; DC9C C9 C9 C9 C9 C9 C9 D0     .......
-LDCA3:
+Song05:
         .byte   $FF,$00,$0E,$00,$01,$33,$00,$02 ; DCA3 FF 00 0E 00 01 33 00 02  .....3..
         .byte   $62,$00,$03,$B6,$00,$FF         ; DCAB 62 00 03 B6 00 FF        b.....
 Song05Opcodes:
@@ -10790,7 +10763,7 @@ Song05Opcodes:
         .byte   $C9,$01,$46,$46,$06,$C9,$01,$46 ; DDC9 C9 01 46 46 06 C9 01 46  ..FF...F
         .byte   $46,$06,$C9,$01,$46,$46,$06,$C9 ; DDD1 46 06 C9 01 46 46 06 C9  F...FF..
         .byte   $01,$46,$46,$06,$C9,$D0         ; DDD9 01 46 46 06 C9 D0        .FF...
-LDDDF:
+Song09:
         .byte   $FF,$00,$0E,$00,$01,$F1,$00,$02 ; DDDF FF 00 0E 00 01 F1 00 02  ........
         .byte   $13,$02,$03,$2D,$03,$FF         ; DDE7 13 02 03 2D 03 FF        ...-..
 Song09Opcodes:
@@ -11044,7 +11017,7 @@ Song0cOpcodes:
         .byte   $DE,$3F,$C9,$D0,$CC,$FE,$C7,$FF ; E56A DE 3F C9 D0 CC FE C7 FF  .?......
         .byte   $C4,$00,$CD,$45,$00,$D8,$00,$DE ; E572 C4 00 CD 45 00 D8 00 DE  ...E....
         .byte   $3F,$C9,$D0                     ; E57A 3F C9 D0                 ?..
-LE57D:
+Song0d:
         .byte   $FF,$00,$0E,$00,$01,$09,$01,$02 ; E57D FF 00 0E 00 01 09 01 02  ........
         .byte   $70,$02,$03,$EB,$02,$FF         ; E585 70 02 03 EB 02 FF        p.....
 Song0dOpcodes:
@@ -11266,7 +11239,7 @@ Song0fOpcodes:
         .byte   $DB,$07,$00,$1E,$78,$D8,$00,$DE ; EC13 DB 07 00 1E 78 D8 00 DE  ....x...
         .byte   $06,$CD,$03,$01,$D8,$0C,$08,$3F ; EC1B 06 CD 03 01 D8 0C 08 3F  .......?
         .byte   $C9,$C9,$C9,$C9,$C9,$C9,$D0     ; EC23 C9 C9 C9 C9 C9 C9 D0     .......
-LEC2A:
+Song10:
         .byte   $FF,$00,$0E,$00,$01,$AD,$00,$02 ; EC2A FF 00 0E 00 01 AD 00 02  ........
         .byte   $43,$01,$03,$AD,$01,$FF         ; EC32 43 01 03 AD 01 FF        C.....
 Song10Opcodes:
@@ -11667,7 +11640,7 @@ Song1aOpcodes:
         .byte   $1E,$78,$D8,$00,$DE,$06,$CD,$03 ; F7E0 1E 78 D8 00 DE 06 CD 03  .x......
         .byte   $01,$D8,$0C,$08,$3F,$C9,$C9,$C9 ; F7E8 01 D8 0C 08 3F C9 C9 C9  ....?...
         .byte   $C9,$C9,$D0                     ; F7F0 C9 C9 D0                 ...
-LF7F3:
+Song1b:
         .byte   $FF,$00,$0E,$00,$01,$82,$00,$02 ; F7F3 FF 00 0E 00 01 82 00 02  ........
         .byte   $28,$01,$03,$5B,$01,$FF         ; F7FB 28 01 03 5B 01 FF        (..[..
 Song1bOpcodes:
@@ -11717,7 +11690,7 @@ Song1bOpcodes:
         .byte   $00,$1E,$78,$D8,$00,$DE,$06,$CD ; F959 00 1E 78 D8 00 DE 06 CD  ..x.....
         .byte   $03,$01,$D8,$0C,$08,$3F,$C9,$C9 ; F961 03 01 D8 0C 08 3F C9 C9  .....?..
         .byte   $C9,$C9,$C9,$D0                 ; F969 C9 C9 C9 D0              ....
-LF96D:
+Song1c:
         .byte   $FF,$00,$0E,$00,$01,$80,$00,$02 ; F96D FF 00 0E 00 01 80 00 02  ........
         .byte   $D1,$00,$03,$74,$01,$FF         ; F975 D1 00 03 74 01 FF        ...t..
 Song1cOpcodes:

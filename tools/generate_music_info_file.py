@@ -24,8 +24,12 @@ def generate_partial_info_file_for_bank3(nes_file):
         f.write(data)
 
 def generate_labels_opcodes(nes_file: NESFile, bank_num: int):
-    start_addr_arr = nes_file.getAddressBlock(bank_num, 0xA3ED - 0x8000, 0xA3ED - 0x8000 + (38 * 2))
+    opcode_table_addr = 0xA3ED
+    num_opcodes = 38
+    start_addr_arr = nes_file.getAddressBlock(bank_num, opcode_table_addr - 0x8000, opcode_table_addr - 0x8000 + (num_opcodes * 2))
     labels = []
+
+    labels.append((opcode_table_addr, "AudioOpcodeTable"))
 
     opcode_count = 0
     for addr in start_addr_arr:
@@ -35,8 +39,36 @@ def generate_labels_opcodes(nes_file: NESFile, bank_num: int):
     return labels
 
 def generate_labels_songs(nes_file: NESFile, bank_num: int):
-    start_addr_arr = nes_file.getAddressBlock(bank_num, 0xB8A1 - 0x8000, 0xB8A1 - 0x8000 + (30 * 2))
+    music_table_addr = 0xB8A1
+    num_songs = 30
+    start_addr_arr = nes_file.getAddressBlock(bank_num, music_table_addr - 0x8000, music_table_addr - 0x8000 + (num_songs * 2))
     labels = []
+
+    labels.append((music_table_addr, "MusicThemeTable"))
+
+    song_name_map = {
+        0: "MusicOpeningMakoReactorTheme",
+        1: "MusicTitleScreenTheme",
+        2: "MusicTownTheme",
+        3: "MusicOverworldTheme",
+        4: "MusicKalmTheme",
+        10: "MusicNorthCorelTheme",
+        11: "MusicChocoboFarmTheme",
+        12: "MusicNibelheimTheme",
+        14: "MusicTifaTheme",
+        15: "MusicGoldSaucerTheme",
+        17: "MusicInfiltratingShinraTheme",
+        18: "MusicMythrilMinesTheme",
+        19: "MusicJunonOrRocketTownTheme",
+        20: "MusicAerithTheme",
+        21: "MusicForgottenCityTheme",
+        22: "MusicShinraCompanyTheme",
+        23: "MusicCostaDelSolTheme",
+        24: "MusicGaeaCliffTheme",
+        25: "MusicIcicleInnTheme",
+        26: "MusicGongagaTheme",
+        29: "MusicCostaDelSolTheme",
+    }
 
     # Generate labels for songs
     addr_set = set()
@@ -44,6 +76,13 @@ def generate_labels_songs(nes_file: NESFile, bank_num: int):
     for addr in start_addr_arr:
         if addr in addr_set:
             continue
+
+        # Add song name
+        if label_count in song_name_map:
+            labels.append((addr, song_name_map[label_count]))
+        else:
+            labels.append((addr, song_name_map.get(label_count, f"Song{convert_to_hex(label_count).zfill(2)}")))
+
         # All songs start with "FF 00 _ _ 01 _ _ 02 _ _ 03 _ _ FF"
         labels.append((addr + 14, f"Song{convert_to_hex(label_count).zfill(2)}Opcodes"))
         label_count += 1
