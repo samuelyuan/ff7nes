@@ -402,7 +402,7 @@ LABEL {
 };
 LABEL {
   NAME "Bank1cMapImage00SpriteTileset";
-  ADDR  $903F;
+  ADDR  $906F;
 };
 LABEL {
   NAME "Bank1cMapImage00BackgroundPalette";

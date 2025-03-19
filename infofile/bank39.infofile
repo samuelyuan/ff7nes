@@ -9,12 +9,12 @@ GLOBAL {
 };
 RANGE {
   START $8000;
-  END $803f;
+  END $803F;
   TYPE ADDRTABLE;
 };
 RANGE {
   START $8040;
-  END $fffe;
+  END $FFFF;
   TYPE BYTETABLE;
 };
 LABEL {

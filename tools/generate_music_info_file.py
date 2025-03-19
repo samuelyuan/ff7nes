@@ -40,34 +40,13 @@ def generate_labels_opcodes(nes_file: NESFile, bank_num: int):
 
 def generate_labels_songs(nes_file: NESFile, bank_num: int):
     music_table_addr = 0xB8A1
-    num_songs = 30
+    num_songs = 22
     start_addr_arr = nes_file.getAddressBlock(bank_num, music_table_addr - 0x8000, music_table_addr - 0x8000 + (num_songs * 2))
     labels = []
 
     labels.append((music_table_addr, "MusicThemeTable"))
 
     song_name_map = {
-        0: "MusicOpeningMakoReactorTheme",
-        1: "MusicTitleScreenTheme",
-        2: "MusicTownTheme",
-        3: "MusicOverworldTheme",
-        4: "MusicKalmTheme",
-        10: "MusicNorthCorelTheme",
-        11: "MusicChocoboFarmTheme",
-        12: "MusicNibelheimTheme",
-        14: "MusicTifaTheme",
-        15: "MusicGoldSaucerTheme",
-        17: "MusicInfiltratingShinraTheme",
-        18: "MusicMythrilMinesTheme",
-        19: "MusicJunonOrRocketTownTheme",
-        20: "MusicAerithTheme",
-        21: "MusicForgottenCityTheme",
-        22: "MusicShinraCompanyTheme",
-        23: "MusicCostaDelSolTheme",
-        24: "MusicGaeaCliffTheme",
-        25: "MusicIcicleInnTheme",
-        26: "MusicGongagaTheme",
-        29: "MusicCostaDelSolTheme",
     }
 
     # Generate labels for songs

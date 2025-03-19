@@ -106,7 +106,7 @@ def main():
 
     bank_06 = StringBank(
         0x06, [
-            StringBlock(80, "Bank06Block0"),
+            StringBlock(73, "Bank06Block0"),
             StringBlock(56, "HeadgearNameStr"),
             StringBlock(129, "BodyArmorNameStr"),
             StringBlock(106, "BraceletNameStr"),
@@ -124,7 +124,7 @@ def main():
     bank_07 = StringBank(
         0x07, [
             StringBlock(255, "Bank07DialogueBlock0"),
-            StringBlock(255, "Bank07DialogueBlock1"),
+            StringBlock(254, "Bank07DialogueBlock1"),
             StringBlock(68, "Bank07DialogueBlock2"),
         ], 
         0xFFB8

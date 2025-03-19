@@ -377,6 +377,10 @@ LABEL {
   ADDR  $C535;
 };
 LABEL {
+  NAME "Bank24MapImage02Tileset";
+  ADDR  $C575;
+};
+LABEL {
   NAME "Bank24MapImage02SpriteTileset";
   ADDR  $C985;
 };
@@ -447,8 +451,4 @@ LABEL {
 LABEL {
   NAME "Bank24MapImage03Collision";
   ADDR  $E2A4;
-};
-LABEL {
-  NAME "Bank24MapImage02Tileset";
-  ADDR  $E440;
 };

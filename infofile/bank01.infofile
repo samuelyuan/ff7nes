@@ -65,11 +65,11 @@ LABEL {
   ADDR  $86CA;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow2_ToBank1aImage1";
+  NAME "Map00Bank36Image0MapTransitionRow2_ToBank1aImage1_DirNorth";
   ADDR  $86D4;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow3_ToBank1aImage1";
+  NAME "Map00Bank36Image0MapTransitionRow3_ToBank1aImage1_DirNorth";
   ADDR  $86DE;
 };
 LABEL {
@@ -77,31 +77,31 @@ LABEL {
   ADDR  $86E8;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow5_ToBank1aImage1";
+  NAME "Map00Bank36Image0MapTransitionRow5_ToBank1aImage2";
   ADDR  $86F2;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow6_ToBank1aImage1";
+  NAME "Map00Bank36Image0MapTransitionRow6_ToBank1aImage2";
   ADDR  $86FC;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow7";
+  NAME "Map00Bank36Image0MapTransitionRow7_ToBank1aImage2";
   ADDR  $8706;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow8";
+  NAME "Map00Bank36Image0MapTransitionRow8_ToBank1aImage2";
   ADDR  $8710;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow9";
+  NAME "Map00Bank36Image0MapTransitionRow9_ToBank1aImage2";
   ADDR  $871A;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow10";
+  NAME "Map00Bank36Image0MapTransitionRow10_ToBank1aImage2";
   ADDR  $8724;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow11";
+  NAME "Map00Bank36Image0MapTransitionRow11_ToBank1aImage2";
   ADDR  $872E;
 };
 LABEL {
@@ -109,31 +109,31 @@ LABEL {
   ADDR  $8738;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow13";
+  NAME "Map00Bank36Image0MapTransitionRow13_ToBank1aImage3";
   ADDR  $8742;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow14";
+  NAME "Map00Bank36Image0MapTransitionRow14_ToBank1aImage3";
   ADDR  $874C;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow15";
+  NAME "Map00Bank36Image0MapTransitionRow15_ToBank1aImage3";
   ADDR  $8756;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow16_ToBank1bImage0";
+  NAME "Map00Bank36Image0MapTransitionRow16_ToBank1bImage0_DirNorth";
   ADDR  $8760;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow17";
+  NAME "Map00Bank36Image0MapTransitionRow17_ToBank1bImage0_DirNorth";
   ADDR  $876A;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow18_ToBank1bImage1";
+  NAME "Map00Bank36Image0MapTransitionRow18_ToBank1bImage1_DirNorth";
   ADDR  $8774;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow19_ToBank1bImage1";
+  NAME "Map00Bank36Image0MapTransitionRow19_ToBank1bImage1_DirNorth";
   ADDR  $877E;
 };
 LABEL {
@@ -141,55 +141,55 @@ LABEL {
   ADDR  $8788;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow21";
+  NAME "Map00Bank36Image0MapTransitionRow21_ToBank1bImage2";
   ADDR  $8792;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow22";
+  NAME "Map00Bank36Image0MapTransitionRow22_ToBank1bImage2";
   ADDR  $879C;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow23";
+  NAME "Map00Bank36Image0MapTransitionRow23_ToBank1bImage2";
   ADDR  $87A6;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow24";
+  NAME "Map00Bank36Image0MapTransitionRow24_ToBank1bImage2";
   ADDR  $87B0;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow25";
+  NAME "Map00Bank36Image0MapTransitionRow25_ToBank1bImage2";
   ADDR  $87BA;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow26_ToBank1dImage1";
+  NAME "Map00Bank36Image0MapTransitionRow26_ToBank1dImage1_DirNorth";
   ADDR  $87C4;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow27_ToBank1dImage2";
+  NAME "Map00Bank36Image0MapTransitionRow27_ToBank1dImage2_DirSouth";
   ADDR  $87CE;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow28_ToBank14Image2";
+  NAME "Map00Bank36Image0MapTransitionRow28_ToBank1dImage2_DirSouth";
   ADDR  $87D8;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow29";
+  NAME "Map00Bank36Image0MapTransitionRow29_ToBank1dImage2_DirEast";
   ADDR  $87E2;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow30";
+  NAME "Map00Bank36Image0MapTransitionRow30_ToBank1dImage2_DirNorth";
   ADDR  $87EC;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow31";
+  NAME "Map00Bank36Image0MapTransitionRow31_ToBank1dImage2_DirNorth";
   ADDR  $87F6;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow32";
+  NAME "Map00Bank36Image0MapTransitionRow32_ToBank1bImage3_DirNorth";
   ADDR  $8800;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow33";
+  NAME "Map00Bank36Image0MapTransitionRow33_ToBank1bImage3_DirNorth";
   ADDR  $880A;
 };
 LABEL {
@@ -217,23 +217,23 @@ LABEL {
   ADDR  $8846;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow40_ToBank1fImage2_DirNorth";
+  NAME "Map00Bank36Image0MapTransitionRow40_ToBank1fImage2";
   ADDR  $8850;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow41_ToBank1fImage2_DirSouth";
+  NAME "Map00Bank36Image0MapTransitionRow41_ToBank1fImage2";
   ADDR  $885A;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow42";
+  NAME "Map00Bank36Image0MapTransitionRow42_ToBank1fImage2";
   ADDR  $8864;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow43";
+  NAME "Map00Bank36Image0MapTransitionRow43_ToBank1fImage2";
   ADDR  $886E;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow44_ToBank20Image1";
+  NAME "Map00Bank36Image0MapTransitionRow44_ToBank20Image1_DirNorth";
   ADDR  $8878;
 };
 LABEL {
@@ -257,11 +257,11 @@ LABEL {
   ADDR  $88AA;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow50";
+  NAME "Map00Bank36Image0MapTransitionRow50_ToBank20Image2";
   ADDR  $88B4;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow51_ToBank24Image1";
+  NAME "Map00Bank36Image0MapTransitionRow51_ToBank20Image2";
   ADDR  $88BE;
 };
 LABEL {
@@ -269,31 +269,31 @@ LABEL {
   ADDR  $88C8;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow53";
+  NAME "Map00Bank36Image0MapTransitionRow53_ToBank1fImage3";
   ADDR  $88D2;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow54";
+  NAME "Map00Bank36Image0MapTransitionRow54_ToBank1fImage3";
   ADDR  $88DC;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow55_ToBank20Image3";
+  NAME "Map00Bank36Image0MapTransitionRow55_ToBank20Image3_DirNorth";
   ADDR  $88E6;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow56";
+  NAME "Map00Bank36Image0MapTransitionRow56_ToBank21Image1_DirSouth";
   ADDR  $88F0;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow57";
+  NAME "Map00Bank36Image0MapTransitionRow57_ToBank21Image1_DirSouth";
   ADDR  $88FA;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow58";
+  NAME "Map00Bank36Image0MapTransitionRow58_ToBank21Image1_DirSouth";
   ADDR  $8904;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow59";
+  NAME "Map00Bank36Image0MapTransitionRow59_ToBank21Image1_DirWest";
   ADDR  $890E;
 };
 LABEL {
@@ -309,19 +309,19 @@ LABEL {
   ADDR  $892C;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow63";
+  NAME "Map00Bank36Image0MapTransitionRow63_ToBank22Image1";
   ADDR  $8936;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow64_ToBank22Image1_DirNorth";
+  NAME "Map00Bank36Image0MapTransitionRow64_ToBank22Image1";
   ADDR  $8940;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow65";
+  NAME "Map00Bank36Image0MapTransitionRow65_ToBank22Image1";
   ADDR  $894A;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow66";
+  NAME "Map00Bank36Image0MapTransitionRow66_ToBank22Image1";
   ADDR  $8954;
 };
 LABEL {
@@ -329,27 +329,27 @@ LABEL {
   ADDR  $895E;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow68_ToBank23Image0";
+  NAME "Map00Bank36Image0MapTransitionRow68_ToBank23Image0_DirNorth";
   ADDR  $8968;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow69_ToBank23Image0";
+  NAME "Map00Bank36Image0MapTransitionRow69_ToBank23Image0_DirNorth";
   ADDR  $8972;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow70";
+  NAME "Map00Bank36Image0MapTransitionRow70_ToBank22Image3";
   ADDR  $897C;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow71";
+  NAME "Map00Bank36Image0MapTransitionRow71_ToBank22Image3";
   ADDR  $8986;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow72";
+  NAME "Map00Bank36Image0MapTransitionRow72_ToBank22Image3";
   ADDR  $8990;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow73";
+  NAME "Map00Bank36Image0MapTransitionRow73_ToBank22Image3";
   ADDR  $899A;
 };
 LABEL {
@@ -357,11 +357,11 @@ LABEL {
   ADDR  $89A4;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow75";
+  NAME "Map00Bank36Image0MapTransitionRow75_ToBank22Image3";
   ADDR  $89AE;
 };
 LABEL {
-  NAME "Map00Bank36Image0MapTransitionRow76_ToBank22Image1_DirSouth";
+  NAME "Map00Bank36Image0MapTransitionRow76_ToBank22Image1";
   ADDR  $89B8;
 };
 LABEL {
@@ -625,7 +625,7 @@ LABEL {
   ADDR  $8C4D;
 };
 LABEL {
-  NAME "Map0bBank12Image2MapTransitionRow1_ToBank13Image0";
+  NAME "Map0bBank12Image2MapTransitionRow1_ToBank13Image0_DirEast";
   ADDR  $8C57;
 };
 LABEL {
@@ -797,11 +797,11 @@ LABEL {
   ADDR  $8E02;
 };
 LABEL {
-  NAME "Map13Bank14Image2MapTransitionRow0_ToBank36Image0_DirEast";
+  NAME "Map13Bank14Image2MapTransitionRow0_ToBank14Image1_DirEast";
   ADDR  $8E0D;
 };
 LABEL {
-  NAME "Map13Bank14Image2MapTransitionRow1_ToBank1dImage2_DirWest";
+  NAME "Map13Bank14Image2MapTransitionRow1_ToBank14Image1_DirWest";
   ADDR  $8E17;
 };
 LABEL {
@@ -1117,6 +1117,38 @@ LABEL {
   ADDR  $9130;
 };
 LABEL {
+  NAME "Map21Bank18Image1MapTransitionRow0_ToBank18Image0_DirSouth";
+  ADDR  $913B;
+};
+LABEL {
+  NAME "Map21Bank18Image1MapTransitionRow1_ToBank18Image2_DirNorth";
+  ADDR  $9145;
+};
+LABEL {
+  NAME "Map21Bank18Image1MapTransitionRow2";
+  ADDR  $914F;
+};
+LABEL {
+  NAME "Map21Bank18Image1MapTransitionRow3";
+  ADDR  $9159;
+};
+LABEL {
+  NAME "Map21Bank18Image1MapTransitionRow4";
+  ADDR  $9163;
+};
+LABEL {
+  NAME "Map21Bank18Image1MapTransitionRow5";
+  ADDR  $916D;
+};
+LABEL {
+  NAME "Map22Bank18Image2MapTransitionRow0_ToBank18Image1_DirSouth";
+  ADDR  $9178;
+};
+LABEL {
+  NAME "Map22Bank18Image2MapTransitionRow1_ToBank18Image3_DirNorth";
+  ADDR  $9182;
+};
+LABEL {
   NAME "Map23Bank18Image3MapTransitionRow0_ToBank18Image2_DirSouth";
   ADDR  $918D;
 };
@@ -1161,11 +1193,11 @@ LABEL {
   ADDR  $91F4;
 };
 LABEL {
-  NAME "Map26Bank19Image2MapTransitionRow2_ToBank19Image1_DirSouth";
+  NAME "Map26Bank19Image2MapTransitionRow2_ToBank19Image1_DirNorth";
   ADDR  $91FE;
 };
 LABEL {
-  NAME "Map26Bank19Image2MapTransitionRow3_ToBank19Image3_DirEast";
+  NAME "Map26Bank19Image2MapTransitionRow3_ToBank19Image3_DirNorth";
   ADDR  $9208;
 };
 LABEL {
@@ -1177,7 +1209,7 @@ LABEL {
   ADDR  $921D;
 };
 LABEL {
-  NAME "Map27Bank19Image3MapTransitionRow2_ToBank19Image2_DirSouth";
+  NAME "Map27Bank19Image3MapTransitionRow2_ToBank19Image2_DirNorth";
   ADDR  $9227;
 };
 LABEL {
@@ -1189,7 +1221,7 @@ LABEL {
   ADDR  $923C;
 };
 LABEL {
-  NAME "Map28Bank1aImage0MapTransitionRow1_ToBank19Image3_DirNorth";
+  NAME "Map28Bank1aImage0MapTransitionRow1_ToBank19Image3_DirSouth";
   ADDR  $9246;
 };
 LABEL {
@@ -1361,7 +1393,7 @@ LABEL {
   ADDR  $93EE;
 };
 LABEL {
-  NAME "Map2dBank1bImage1MapTransitionRow0_ToBank36Image0_DirSouth";
+  NAME "Map2dBank1bImage1MapTransitionRow0_ToBank36Image0_DirNorth";
   ADDR  $93F9;
 };
 LABEL {
@@ -1369,27 +1401,27 @@ LABEL {
   ADDR  $9403;
 };
 LABEL {
-  NAME "Map2dBank1bImage1MapTransitionRow2_ToBank36Image0_DirSouth";
+  NAME "Map2dBank1bImage1MapTransitionRow2_ToBank1bImage1_DirNorth";
   ADDR  $940D;
 };
 LABEL {
-  NAME "Map2dBank1bImage1MapTransitionRow3_ToBank36Image0_DirSouth";
+  NAME "Map2dBank1bImage1MapTransitionRow3_ToBank1bImage1_DirSouth";
   ADDR  $9417;
 };
 LABEL {
-  NAME "Map2dBank1bImage1MapTransitionRow4_ToBank1bImage1_DirNorth";
+  NAME "Map2dBank1bImage1MapTransitionRow4_ToBank1bImage1_DirWest";
   ADDR  $9421;
 };
 LABEL {
-  NAME "Map2dBank1bImage1MapTransitionRow5_ToBank1bImage1_DirNorth";
+  NAME "Map2dBank1bImage1MapTransitionRow5_ToBank1bImage1_DirEast";
   ADDR  $942B;
 };
 LABEL {
-  NAME "Map2dBank1bImage1MapTransitionRow6_ToBank1bImage1_DirNorth";
+  NAME "Map2dBank1bImage1MapTransitionRow6_ToBank1bImage1_DirWest";
   ADDR  $9435;
 };
 LABEL {
-  NAME "Map2dBank1bImage1MapTransitionRow7_ToBank1bImage1_DirNorth";
+  NAME "Map2dBank1bImage1MapTransitionRow7_ToBank1bImage1_DirEast";
   ADDR  $943F;
 };
 LABEL {
@@ -1401,15 +1433,15 @@ LABEL {
   ADDR  $9454;
 };
 LABEL {
-  NAME "Map2eBank1bImage2MapTransitionRow2_ToBank36Image0_DirEast";
+  NAME "Map2eBank1bImage2MapTransitionRow2_ToBank36Image0_DirSouth";
   ADDR  $945E;
 };
 LABEL {
-  NAME "Map2eBank1bImage2MapTransitionRow3_ToBank36Image0_DirEast";
+  NAME "Map2eBank1bImage2MapTransitionRow3_ToBank36Image0_DirSouth";
   ADDR  $9468;
 };
 LABEL {
-  NAME "Map2eBank1bImage2MapTransitionRow4_ToBank1cImage0_DirSouth";
+  NAME "Map2eBank1bImage2MapTransitionRow4_ToBank1cImage0_DirWest";
   ADDR  $9472;
 };
 LABEL {
@@ -1461,11 +1493,11 @@ LABEL {
   ADDR  $94EB;
 };
 LABEL {
-  NAME "Map2fBank1cImage0MapTransitionRow1_ToBank1bImage2_DirNorth";
+  NAME "Map2fBank1cImage0MapTransitionRow1_ToBank1bImage2_DirEast";
   ADDR  $94F5;
 };
 LABEL {
-  NAME "Map2fBank1cImage0MapTransitionRow2_ToBank1bImage2_DirNorth";
+  NAME "Map2fBank1cImage0MapTransitionRow2_ToBank1bImage2_DirEast";
   ADDR  $94FF;
 };
 LABEL {
@@ -1481,15 +1513,15 @@ LABEL {
   ADDR  $951E;
 };
 LABEL {
-  NAME "Map30Bank1cImage1MapTransitionRow3_ToBank1cImage2";
+  NAME "Map30Bank1cImage1MapTransitionRow3_ToBank1cImage2_DirNorth";
   ADDR  $9528;
 };
 LABEL {
-  NAME "Map30Bank1cImage1MapTransitionRow4_ToBank1cImage2";
+  NAME "Map30Bank1cImage1MapTransitionRow4_ToBank1cImage2_DirNorth";
   ADDR  $9532;
 };
 LABEL {
-  NAME "Map30Bank1cImage1MapTransitionRow5_ToBank1cImage2";
+  NAME "Map30Bank1cImage1MapTransitionRow5_ToBank1cImage2_DirNorth";
   ADDR  $953C;
 };
 LABEL {
@@ -1549,7 +1581,7 @@ LABEL {
   ADDR  $95CA;
 };
 LABEL {
-  NAME "Map32Bank1cImage3MapTransitionRow1_ToBank1dImage0_DirEast";
+  NAME "Map32Bank1cImage3MapTransitionRow1_ToBank1dImage0_DirNorth";
   ADDR  $95D4;
 };
 LABEL {
@@ -1569,7 +1601,7 @@ LABEL {
   ADDR  $95FD;
 };
 LABEL {
-  NAME "Map33Bank1dImage0MapTransitionRow1_ToBank1cImage3_DirNorth";
+  NAME "Map33Bank1dImage0MapTransitionRow1_ToBank1cImage3";
   ADDR  $9607;
 };
 LABEL {
@@ -1581,7 +1613,7 @@ LABEL {
   ADDR  $961B;
 };
 LABEL {
-  NAME "Map34Bank1dImage1MapTransitionRow0_ToBank36Image0_DirNorth";
+  NAME "Map34Bank1dImage1MapTransitionRow0_ToBank36Image0_DirSouth";
   ADDR  $9626;
 };
 LABEL {
@@ -1589,11 +1621,11 @@ LABEL {
   ADDR  $9630;
 };
 LABEL {
-  NAME "Map34Bank1dImage1MapTransitionRow2_ToBank2bImage0SubImage1_DirNorth";
+  NAME "Map34Bank1dImage1MapTransitionRow2_ToBank2bImage0SubImage0_DirNorth";
   ADDR  $963A;
 };
 LABEL {
-  NAME "Map34Bank1dImage1MapTransitionRow3_ToBank2bImage0SubImage0_DirNorth";
+  NAME "Map34Bank1dImage1MapTransitionRow3_ToBank2bImage0SubImage1_DirNorth";
   ADDR  $9644;
 };
 LABEL {
@@ -1633,19 +1665,19 @@ LABEL {
   ADDR  $969F;
 };
 LABEL {
-  NAME "Map35Bank1dImage2MapTransitionRow3_ToBank14Image2_DirNorth";
+  NAME "Map35Bank1dImage2MapTransitionRow3_ToBank36Image0_DirNorth";
   ADDR  $96A9;
 };
 LABEL {
-  NAME "Map35Bank1dImage2MapTransitionRow4_ToBank14Image2_DirNorth";
+  NAME "Map35Bank1dImage2MapTransitionRow4_ToBank36Image0_DirNorth";
   ADDR  $96B3;
 };
 LABEL {
-  NAME "Map35Bank1dImage2MapTransitionRow5_ToBank36Image0_DirEast";
+  NAME "Map35Bank1dImage2MapTransitionRow5_ToBank36Image0_DirSouth";
   ADDR  $96BD;
 };
 LABEL {
-  NAME "Map35Bank1dImage2MapTransitionRow6_ToBank36Image0_DirEast";
+  NAME "Map35Bank1dImage2MapTransitionRow6_ToBank36Image0_DirSouth";
   ADDR  $96C7;
 };
 LABEL {
@@ -1677,15 +1709,15 @@ LABEL {
   ADDR  $970E;
 };
 LABEL {
-  NAME "Map36Bank1bImage3MapTransitionRow3";
+  NAME "Map36Bank1bImage3MapTransitionRow3_ToBank36Image0_DirSouth";
   ADDR  $9718;
 };
 LABEL {
-  NAME "Map36Bank1bImage3MapTransitionRow4";
+  NAME "Map36Bank1bImage3MapTransitionRow4_ToBank36Image0_DirSouth";
   ADDR  $9722;
 };
 LABEL {
-  NAME "Map36Bank1bImage3MapTransitionRow5";
+  NAME "Map36Bank1bImage3MapTransitionRow5_ToBank36Image0_DirSouth";
   ADDR  $972C;
 };
 LABEL {
@@ -1701,11 +1733,11 @@ LABEL {
   ADDR  $974B;
 };
 LABEL {
-  NAME "Map37Bank1eImage0MapTransitionRow2";
+  NAME "Map37Bank1eImage0MapTransitionRow2_ToBank25Image1_DirNorth";
   ADDR  $9755;
 };
 LABEL {
-  NAME "Map37Bank1eImage0MapTransitionRow3_ToBank25Image1";
+  NAME "Map37Bank1eImage0MapTransitionRow3_ToBank25Image1_DirNorth";
   ADDR  $975F;
 };
 LABEL {
@@ -1713,19 +1745,19 @@ LABEL {
   ADDR  $9769;
 };
 LABEL {
-  NAME "Map37Bank1eImage0MapTransitionRow5";
+  NAME "Map37Bank1eImage0MapTransitionRow5_ToBank2bImage2SubImage0_DirNorth";
   ADDR  $9773;
 };
 LABEL {
-  NAME "Map37Bank1eImage0MapTransitionRow6";
+  NAME "Map37Bank1eImage0MapTransitionRow6_ToBank2bImage2SubImage1_DirNorth";
   ADDR  $977D;
 };
 LABEL {
-  NAME "Map37Bank1eImage0MapTransitionRow7_ToBank2bImage2SubImage1";
+  NAME "Map37Bank1eImage0MapTransitionRow7_ToBank2bImage2SubImage1_DirNorth";
   ADDR  $9787;
 };
 LABEL {
-  NAME "Map37Bank1eImage0MapTransitionRow8";
+  NAME "Map37Bank1eImage0MapTransitionRow8_ToBank2bImage2SubImage2_DirNorth";
   ADDR  $9791;
 };
 LABEL {
@@ -1737,7 +1769,7 @@ LABEL {
   ADDR  $97A5;
 };
 LABEL {
-  NAME "Map37Bank1eImage0MapTransitionRow11";
+  NAME "Map37Bank1eImage0MapTransitionRow11_ToBank2bImage2SubImage3_DirNorth";
   ADDR  $97AF;
 };
 LABEL {
@@ -1761,7 +1793,7 @@ LABEL {
   ADDR  $97E2;
 };
 LABEL {
-  NAME "Map38Bank1eImage1MapTransitionRow5_ToBank2cImage0SubImage1_DirEast";
+  NAME "Map38Bank1eImage1MapTransitionRow5_ToBank2cImage0SubImage1_DirSouth";
   ADDR  $97EC;
 };
 LABEL {
@@ -1797,23 +1829,23 @@ LABEL {
   ADDR  $983C;
 };
 LABEL {
-  NAME "Map39Bank1eImage2MapTransitionRow0_ToBank1eImage1_DirSouth";
+  NAME "Map39Bank1eImage2MapTransitionRow0_ToBank1eImage1_DirWest";
   ADDR  $9847;
 };
 LABEL {
-  NAME "Map39Bank1eImage2MapTransitionRow1_ToBank1eImage1_DirSouth";
+  NAME "Map39Bank1eImage2MapTransitionRow1_ToBank1eImage1_DirWest";
   ADDR  $9851;
 };
 LABEL {
-  NAME "Map39Bank1eImage2MapTransitionRow2_ToBank1eImage1_DirSouth";
+  NAME "Map39Bank1eImage2MapTransitionRow2_ToBank1eImage1_DirWest";
   ADDR  $985B;
 };
 LABEL {
-  NAME "Map39Bank1eImage2MapTransitionRow3_ToBank1eImage1_DirSouth";
+  NAME "Map39Bank1eImage2MapTransitionRow3_ToBank1eImage1_DirWest";
   ADDR  $9865;
 };
 LABEL {
-  NAME "Map3aBank1eImage3MapTransitionRow0_ToBank36Image0_DirEast";
+  NAME "Map3aBank1eImage3MapTransitionRow0_ToBank36Image0_DirSouth";
   ADDR  $9870;
 };
 LABEL {
@@ -1865,7 +1897,7 @@ LABEL {
   ADDR  $98E9;
 };
 LABEL {
-  NAME "Map3bBank1fImage0MapTransitionRow1_ToBank36Image0_DirWest";
+  NAME "Map3bBank1fImage0MapTransitionRow1_ToBank36Image0_DirSouth";
   ADDR  $98F3;
 };
 LABEL {
@@ -1917,11 +1949,11 @@ LABEL {
   ADDR  $996C;
 };
 LABEL {
-  NAME "Map3cBank1fImage1MapTransitionRow3_ToBank1fImage1_DirNorth";
+  NAME "Map3cBank1fImage1MapTransitionRow3_ToBank1fImage1_DirWest";
   ADDR  $9976;
 };
 LABEL {
-  NAME "Map3cBank1fImage1MapTransitionRow4_ToBank1fImage1_DirNorth";
+  NAME "Map3cBank1fImage1MapTransitionRow4_ToBank1fImage1_DirEast";
   ADDR  $9980;
 };
 LABEL {
@@ -1929,7 +1961,7 @@ LABEL {
   ADDR  $998A;
 };
 LABEL {
-  NAME "Map3cBank1fImage1MapTransitionRow6_ToBank1fImage1_DirSouth";
+  NAME "Map3cBank1fImage1MapTransitionRow6_ToBank1fImage1_DirNorth";
   ADDR  $9994;
 };
 LABEL {
@@ -1937,7 +1969,7 @@ LABEL {
   ADDR  $999E;
 };
 LABEL {
-  NAME "Map3cBank1fImage1MapTransitionRow8_ToBank1fImage1_DirSouth";
+  NAME "Map3cBank1fImage1MapTransitionRow8_ToBank1fImage1_DirNorth";
   ADDR  $99A8;
 };
 LABEL {
@@ -1953,7 +1985,7 @@ LABEL {
   ADDR  $99C8;
 };
 LABEL {
-  NAME "Map3eBank1fImage2MapTransitionRow2_ToBank36Image0_DirNorth";
+  NAME "Map3eBank1fImage2MapTransitionRow2_ToBank36Image0_DirSouth";
   ADDR  $99D2;
 };
 LABEL {
@@ -2125,11 +2157,35 @@ LABEL {
   ADDR  $9B78;
 };
 LABEL {
+  NAME "Map41Bank20Image2MapTransitionRow0_ToBank21Image0_DirSouth";
+  ADDR  $9B83;
+};
+LABEL {
+  NAME "Map41Bank20Image2MapTransitionRow1_ToBank21Image2_DirSouth";
+  ADDR  $9B8D;
+};
+LABEL {
+  NAME "Map41Bank20Image2MapTransitionRow2_ToBank36Image0_DirSouth";
+  ADDR  $9B97;
+};
+LABEL {
+  NAME "Map41Bank20Image2MapTransitionRow3_ToBank36Image0_DirSouth";
+  ADDR  $9BA1;
+};
+LABEL {
+  NAME "Map41Bank20Image2MapTransitionRow4_ToBank36Image0_DirSouth";
+  ADDR  $9BAB;
+};
+LABEL {
+  NAME "Map41Bank20Image2MapTransitionRow5_ToBank36Image0_DirSouth";
+  ADDR  $9BB5;
+};
+LABEL {
   NAME "Map42Bank21Image0MapTransitionRow0_ToBank26Image0_DirWest";
   ADDR  $9BC0;
 };
 LABEL {
-  NAME "Map42Bank21Image0MapTransitionRow1_ToBank26Image0_DirNorth";
+  NAME "Map42Bank21Image0MapTransitionRow1_ToBank26Image0_DirWest";
   ADDR  $9BCA;
 };
 LABEL {
@@ -2149,11 +2205,11 @@ LABEL {
   ADDR  $9BF2;
 };
 LABEL {
-  NAME "Map42Bank21Image0MapTransitionRow6";
+  NAME "Map42Bank21Image0MapTransitionRow6_ToBank21Image0_DirWest";
   ADDR  $9BFC;
 };
 LABEL {
-  NAME "Map42Bank21Image0MapTransitionRow7";
+  NAME "Map42Bank21Image0MapTransitionRow7_ToBank21Image0_DirEast";
   ADDR  $9C06;
 };
 LABEL {
@@ -2213,7 +2269,7 @@ LABEL {
   ADDR  $9C95;
 };
 LABEL {
-  NAME "Map45Bank21Image1MapTransitionRow5_ToBank22Image0";
+  NAME "Map45Bank21Image1MapTransitionRow5_ToBank22Image0_DirNorth";
   ADDR  $9C9F;
 };
 LABEL {
@@ -2233,11 +2289,11 @@ LABEL {
   ADDR  $9CC8;
 };
 LABEL {
-  NAME "Map46Bank22Image0MapTransitionRow1_ToBank21Image1";
+  NAME "Map46Bank22Image0MapTransitionRow1_ToBank21Image1_DirSouth";
   ADDR  $9CD2;
 };
 LABEL {
-  NAME "Map46Bank22Image0MapTransitionRow2_ToBank21Image1_DirNorth";
+  NAME "Map46Bank22Image0MapTransitionRow2_ToBank21Image1_DirSouth";
   ADDR  $9CDC;
 };
 LABEL {
@@ -2297,12 +2353,20 @@ LABEL {
   ADDR  $9D69;
 };
 LABEL {
-  NAME "Map47Bank22Image1MapTransitionRow14_TreasureChest";
+  NAME "Map47Bank22Image1MapTransitionRow14";
   ADDR  $9D73;
 };
 LABEL {
-  NAME "Map47Bank22Image1MapTransitionRow15_TreasureChest";
+  NAME "Map47Bank22Image1MapTransitionRow15";
   ADDR  $9D7D;
+};
+LABEL {
+  NAME "Map47Bank22Image1MapTransitionRow16_TreasureChest";
+  ADDR  $9D87;
+};
+LABEL {
+  NAME "Map47Bank22Image1MapTransitionRow17_TreasureChest";
+  ADDR  $9D91;
 };
 LABEL {
   NAME "Map48Bank22Image2MapTransitionRow0_ToBank26Image3_DirNorth";
@@ -2353,7 +2417,7 @@ LABEL {
   ADDR  $9E0B;
 };
 LABEL {
-  NAME "Map49Bank23Image0MapTransitionRow3_ToBank36Image0_DirSouth";
+  NAME "Map49Bank23Image0MapTransitionRow3_ToBank36Image0_DirNorth";
   ADDR  $9E15;
 };
 LABEL {
@@ -2429,7 +2493,7 @@ LABEL {
   ADDR  $9ECA;
 };
 LABEL {
-  NAME "Map4bBank23Image1MapTransitionRow0_ToBank24Image2_DirNorth";
+  NAME "Map4bBank23Image1MapTransitionRow0_ToBank21Image2_DirNorth";
   ADDR  $9ED5;
 };
 LABEL {
@@ -2461,27 +2525,27 @@ LABEL {
   ADDR  $9F1E;
 };
 LABEL {
-  NAME "Map4fBank24Image0MapTransitionRow0_ToBank18Image3_DirSouth";
+  NAME "Map4fBank24Image0MapTransitionRow0_ToBank18Image2_DirSouth";
   ADDR  $9F29;
 };
 LABEL {
-  NAME "Map4fBank24Image0MapTransitionRow1_ToBank19Image1_DirNorth";
+  NAME "Map4fBank24Image0MapTransitionRow1_ToBank19Image0_DirNorth";
   ADDR  $9F33;
 };
 LABEL {
-  NAME "Map50Bank24Image1MapTransitionRow0";
+  NAME "Map50Bank24Image1MapTransitionRow0_ToBank14Image1_DirEast";
   ADDR  $9F3E;
 };
 LABEL {
-  NAME "Map50Bank24Image1MapTransitionRow1_ToBank36Image0_DirSouth";
+  NAME "Map50Bank24Image1MapTransitionRow1_ToBank14Image1_DirWest";
   ADDR  $9F48;
 };
 LABEL {
-  NAME "Map51Bank24Image2MapTransitionRow0";
+  NAME "Map51Bank24Image2MapTransitionRow0_ToBank14Image1_DirEast";
   ADDR  $9F53;
 };
 LABEL {
-  NAME "Map51Bank24Image2MapTransitionRow1_ToBank36Image0_DirWest";
+  NAME "Map51Bank24Image2MapTransitionRow1_ToBank14Image1_DirWest";
   ADDR  $9F5D;
 };
 LABEL {
@@ -2501,7 +2565,7 @@ LABEL {
   ADDR  $9F88;
 };
 LABEL {
-  NAME "Map54Bank25Image1MapTransitionRow1_ToBank1eImage0_DirSouth";
+  NAME "Map54Bank25Image1MapTransitionRow1_ToBank2bImage2SubImage3_DirSouth";
   ADDR  $9F92;
 };
 LABEL {
@@ -2521,7 +2585,7 @@ LABEL {
   ADDR  $9FBD;
 };
 LABEL {
-  NAME "Map57Bank26Image0MapTransitionRow2_ToBank21Image0_DirSouth";
+  NAME "Map57Bank26Image0MapTransitionRow2_ToBank21Image0_DirEast";
   ADDR  $9FC7;
 };
 LABEL {
@@ -2773,7 +2837,7 @@ LABEL {
   ADDR  $A24F;
 };
 LABEL {
-  NAME "Map74Bank29Image2SubImage0MapTransitionRow0_ToBank1aImage3_DirEast";
+  NAME "Map74Bank29Image2SubImage0MapTransitionRow0_ToBank1aImage3_DirSouth";
   ADDR  $A25A;
 };
 LABEL {
@@ -2917,27 +2981,27 @@ LABEL {
   ADDR  $A3C5;
 };
 LABEL {
-  NAME "Map82Bank2bImage2SubImage0MapTransitionRow0_ToBank1eImage0_DirSouth";
+  NAME "Map82Bank2bImage2SubImage0MapTransitionRow0_ToBank2bImage2SubImage1_DirSouth";
   ADDR  $A3D0;
 };
 LABEL {
-  NAME "Map82Bank2bImage2SubImage0MapTransitionRow1";
+  NAME "Map82Bank2bImage2SubImage0MapTransitionRow1_ToBank25Image1_DirNorth";
   ADDR  $A3DA;
 };
 LABEL {
-  NAME "Map83Bank2bImage2SubImage1MapTransitionRow0_ToBank1eImage0_DirSouth";
+  NAME "Map83Bank2bImage2SubImage1MapTransitionRow0_ToBank2bImage2SubImage2_DirSouth";
   ADDR  $A3E5;
 };
 LABEL {
-  NAME "Map83Bank2bImage2SubImage1MapTransitionRow1";
+  NAME "Map83Bank2bImage2SubImage1MapTransitionRow1_ToBank2bImage2SubImage0_DirNorth";
   ADDR  $A3EF;
 };
 LABEL {
-  NAME "Map84Bank2bImage2SubImage2MapTransitionRow0_ToBank1eImage0_DirSouth";
+  NAME "Map84Bank2bImage2SubImage2MapTransitionRow0_ToBank2bImage2SubImage3_DirSouth";
   ADDR  $A3FA;
 };
 LABEL {
-  NAME "Map84Bank2bImage2SubImage2MapTransitionRow1_ToBank1eImage0_DirSouth";
+  NAME "Map84Bank2bImage2SubImage2MapTransitionRow1_ToBank2bImage2SubImage1_DirNorth";
   ADDR  $A404;
 };
 LABEL {
@@ -2953,7 +3017,7 @@ LABEL {
   ADDR  $A423;
 };
 LABEL {
-  NAME "Map85Bank2bImage2SubImage3MapTransitionRow1_ToBank1eImage0_DirSouth";
+  NAME "Map85Bank2bImage2SubImage3MapTransitionRow1_ToBank2bImage2SubImage2_DirNorth";
   ADDR  $A42D;
 };
 LABEL {
@@ -2969,7 +3033,7 @@ LABEL {
   ADDR  $A44D;
 };
 LABEL {
-  NAME "Map87Bank2cImage0SubImage1MapTransitionRow1_ToBank1eImage1_DirWest";
+  NAME "Map87Bank2cImage0SubImage1MapTransitionRow1_ToBank1eImage1_DirNorth";
   ADDR  $A457;
 };
 LABEL {
@@ -3031,6 +3095,10 @@ LABEL {
 LABEL {
   NAME "Map8eBank2cImage3SubImage1MapTransitionRow0_ToBank1fImage0_DirSouth";
   ADDR  $A4F4;
+};
+LABEL {
+  NAME "Map8fBank2cImage3SubImage2MapTransitionRow0_ToBank1fImage0_DirSouth";
+  ADDR  $A4FF;
 };
 LABEL {
   NAME "Map90Bank2cImage3SubImage3MapTransitionRow0_ToBank1fImage0_DirSouth";
@@ -3201,15 +3269,11 @@ LABEL {
   ADDR  $A6B6;
 };
 LABEL {
-  NAME "Mapa2Bank2eImage1SubImage4MapTransitionRow3";
-  ADDR  $A6C0;
-};
-LABEL {
-  NAME "Mapa3Bank2eImage1SubImage5MapTransitionRow0";
+  NAME "Mapa3Bank2eImage1SubImage5MapTransitionRow0_ToBank22Image1_DirSouth";
   ADDR  $A6C1;
 };
 LABEL {
-  NAME "Mapa3Bank2eImage1SubImage5MapTransitionRow1_ToBank22Image1_DirSouth";
+  NAME "Mapa3Bank2eImage1SubImage5MapTransitionRow1";
   ADDR  $A6CB;
 };
 LABEL {
@@ -3299,92 +3363,4 @@ LABEL {
 LABEL {
   NAME "WeaponLevelUpScreenPalette";
   ADDR  $D77D;
-};
-LABEL {
-  NAME "Map22Bank18Image2MapTransitionRow0_ToBank18Image1_DirSouth";
-  ADDR  $E600;
-};
-LABEL {
-  NAME "Map22Bank18Image2MapTransitionRow1_ToBank18Image3_DirNorth";
-  ADDR  $E60A;
-};
-LABEL {
-  NAME "Map22Bank18Image2MapTransitionRow2";
-  ADDR  $E614;
-};
-LABEL {
-  NAME "Map22Bank18Image2MapTransitionRow3";
-  ADDR  $E61E;
-};
-LABEL {
-  NAME "Map22Bank18Image2MapTransitionRow4";
-  ADDR  $E628;
-};
-LABEL {
-  NAME "Map21Bank18Image1MapTransitionRow0_ToBank18Image0_DirSouth";
-  ADDR  $E634;
-};
-LABEL {
-  NAME "Map21Bank18Image1MapTransitionRow1_ToBank18Image2_DirNorth";
-  ADDR  $E63E;
-};
-LABEL {
-  NAME "Map21Bank18Image1MapTransitionRow2";
-  ADDR  $E648;
-};
-LABEL {
-  NAME "Map21Bank18Image1MapTransitionRow3";
-  ADDR  $E652;
-};
-LABEL {
-  NAME "Map21Bank18Image1MapTransitionRow4";
-  ADDR  $E65C;
-};
-LABEL {
-  NAME "Map21Bank18Image1MapTransitionRow5";
-  ADDR  $E666;
-};
-LABEL {
-  NAME "Map21Bank18Image1MapTransitionRow6";
-  ADDR  $E670;
-};
-LABEL {
-  NAME "Map21Bank18Image1MapTransitionRow7";
-  ADDR  $E67A;
-};
-LABEL {
-  NAME "Map8fBank2cImage3SubImage2MapTransitionRow0_ToBank20Image2";
-  ADDR  $E6A0;
-};
-LABEL {
-  NAME "Map8fBank2cImage3SubImage2MapTransitionRow1";
-  ADDR  $E6AA;
-};
-LABEL {
-  NAME "Map41Bank20Image2MapTransitionRow0_ToBank21Image0_DirSouth";
-  ADDR  $E6C0;
-};
-LABEL {
-  NAME "Map41Bank20Image2MapTransitionRow1_ToBank21Image2_DirSouth";
-  ADDR  $E6CA;
-};
-LABEL {
-  NAME "Map41Bank20Image2MapTransitionRow2_ToBank36Image0_DirSouth";
-  ADDR  $E6D4;
-};
-LABEL {
-  NAME "Map41Bank20Image2MapTransitionRow3_ToBank36Image0_DirSouth";
-  ADDR  $E6DE;
-};
-LABEL {
-  NAME "Map41Bank20Image2MapTransitionRow4_ToBank36Image0_DirSouth";
-  ADDR  $E6E8;
-};
-LABEL {
-  NAME "Map41Bank20Image2MapTransitionRow5_ToBank36Image0_DirSouth";
-  ADDR  $E6F2;
-};
-LABEL {
-  NAME "Map41Bank20Image2MapTransitionRow6_ToBank2cImage3SubImage2";
-  ADDR  $E6FC;
 };

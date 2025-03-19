@@ -362,6 +362,10 @@ LABEL {
   ADDR  $C1E8;
 };
 LABEL {
+  NAME "Bank2eMapImage03SubImage00Tilemap";
+  ADDR  $C215;
+};
+LABEL {
   NAME "Bank2eMapImage03SubImage00TileAttr";
   ADDR  $C5D5;
 };
@@ -384,8 +388,4 @@ LABEL {
 LABEL {
   NAME "Bank2eMapImage03Collision";
   ADDR  $C945;
-};
-LABEL {
-  NAME "Bank2eMapImage03SubImage00Tilemap";
-  ADDR  $C9BD;
 };
