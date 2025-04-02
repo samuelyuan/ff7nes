@@ -20,6 +20,10 @@ python ./tools/extract_background_images.py
 
 The game stores important runtime data in specific RAM addresses including game state variables. For a detailed breakdown of memory usage, see the [Game Memory Reference](https://github.com/samuelyuan/ff7nes/blob/master/docs/game_memory.md).
 
+## Audio
+
+For detailed information about the note values, music opcodes, and how songs are structured in the game, refer to the [Audio Documentation](https://github.com/samuelyuan/ff7nes/blob/master/docs/audio.md).
+
 ## Hanzi Character Table
 
 The original game uses Hanzi characters, stored in banks 8 and 9, but the current patch does not. For a complete reference, see the [full table](https://github.com/samuelyuan/ff7nes/blob/master/docs/hanzi_table.md)
