@@ -1,0 +1,3046 @@
+Bank Number;Block Num;String Index;Line First Char;Portrait Id;Extracted String
+6;0;0;0;0;Fight 
+6;0;1;0;0;Shenzhen Nanjing
+6;0;2;0;0;Cloud   
+6;0;3;0;0;Barret  
+6;0;4;0;0;Tifa    
+6;0;5;0;0;Aeris   
+6;0;6;0;0;RedX` 
+6;0;7;0;0;CaitSith
+6;0;8;0;0;Cid     
+6;0;9;0;0;À·
+6;0;10;0;0;À¸
+6;0;11;0;0;À¹
+6;0;12;0;0;Àº
+6;0;13;0;0;        
+6;0;14;0;0;HP 
+6;0;15;0;0;Str
+6;0;16;0;0;Vit
+6;0;17;0;0;Int
+6;0;18;0;0;Spr
+6;0;19;0;0;Agl
+6;0;20;0;0;* 
+6;0;21;0;0;Fight One 
+6;0;22;0;0;Fight All 
+6;0;23;0;0;To One 
+6;0;24;0;0;To All 
+6;0;25;0;0;None
+6;0;26;0;0;Cloud
+6;0;27;0;0;Barret
+6;0;28;0;0;Tifa
+6;0;29;0;0;Aeris
+6;0;30;0;0;RedX`
+6;0;31;0;0;CaitSith
+6;0;32;0;0;Cid
+6;0;33;0;0;À»À¼
+6;0;34;0;0;À½À¾
+6;0;35;0;0;À¿ÀÀ
+6;0;36;0;0;ÀÁÀÂ
+6;0;37;0;0;Used 
+6;0;38;0;0;Escaped!
+6;0;39;0;0;No escape....
+6;0;40;0;0;No effect....
+6;0;41;0;0;Healed Self 
+6;0;42;0;0;Healed 
+6;0;43;0;0;Defeated....
+6;0;44;0;0;Game Over!
+6;0;45;0;0;Self 
+6;0;46;0;0;HP Restored 
+6;0;47;0;0;MP Restored 
+6;0;48;0;0;All 
+6;0;49;0;0;Revived 
+6;0;50;0;0;Victory!
+6;0;51;0;0;EXP:
+6;0;52;0;0;Gil:
+6;0;53;0;0;Level Up!
+6;0;54;0;0;Got 
+6;0;55;0;0;Buy?
+6;0;56;0;0;Sell?
+6;0;57;0;0;Deal!
+6;0;58;0;0;Can't 
+6;0;59;0;0;Not enough Gil!
+6;0;60;0;0;HP 
+6;0;61;0;0;Str
+6;0;62;0;0;Vit
+6;0;63;0;0;Int
+6;0;64;0;0;Spr
+6;0;65;0;0;Agl
+6;0;66;0;0; 
+6;0;67;0;0;None
+6;0;68;0;0;Mastered!
+6;0;69;0;0;Not enough EXP!
+6;0;70;0;0;Enhanced!
+6;0;71;0;0;To 
+6;0;72;0;0;Equipped 
+6;0;73;0;0;Clo
+6;0;74;0;0;Bar
+6;0;75;0;0;Tif
+6;0;76;0;0;Aer
+6;0;77;0;0;Red
+6;0;78;0;0;Cat
+6;0;79;0;0;Cid
+6;1;0;0;0;None
+6;1;1;0;0;{Wrath
+6;1;2;0;0;{Force
+6;1;3;0;0;{Lion
+6;1;4;0;0;{White
+6;1;5;0;0;{Light
+6;1;6;0;0;{Sierra
+6;1;7;0;0;{Valor
+6;1;8;0;0;{Skull
+6;1;9;0;0;{Warlord
+6;1;10;0;0;{Beast
+6;1;11;0;0;{Blaze
+6;1;12;0;0;{Tyrant
+6;1;13;0;0;{Frost
+6;1;14;0;0;{Violent
+6;1;15;0;0;{Forest
+6;1;16;0;0;{Element
+6;1;17;0;0;{Blaze
+6;1;18;0;0;{Scale
+6;1;19;0;0;{Dual
+6;1;20;0;0;{Basket
+6;1;21;0;0;{Marshal
+6;1;22;0;0;{Pale
+6;1;23;0;0;{Lark
+6;1;24;0;0;{Thief
+6;1;25;0;0;{Rune
+6;1;26;0;0;{Flame
+6;1;27;0;0;{Flint
+6;1;28;0;0;{Dragon
+6;1;29;0;0;{Storm
+6;1;30;0;0;{Guard
+6;1;31;0;0;{Arcane
+6;1;32;0;0;{Satin
+6;1;33;0;0;{Silk
+6;1;34;0;0;{Demon
+6;1;35;0;0;}DarkEye
+6;1;36;0;0;{Crystal
+6;1;37;0;0;{Prophet
+6;1;38;0;0;{Scholar
+6;1;39;0;0;{Goggle
+6;1;40;0;0;{Mist
+6;1;41;0;0;{Shroud
+6;1;42;0;0;{Pope
+6;1;43;0;0;{Devout
+6;1;44;0;0;{Major
+6;1;45;0;0;{Sacred
+6;1;46;0;0;{Spark
+6;1;47;0;0;{Crimson
+6;1;48;0;0;{Pearl
+6;1;49;0;0;{Bishop
+6;1;50;0;0;{Scarf
+6;1;51;0;0;{Burqa
+6;1;52;0;0;{Rimmed
+6;1;53;0;0;{Woven
+6;1;54;0;0;{Knitted
+6;1;55;0;0;{Hood
+6;2;0;0;0;None
+6;2;1;0;0;|Dragoon
+6;2;2;0;0;|Law
+6;2;3;0;0;|Light
+6;2;4;0;0;|Power
+6;2;5;0;0;|Hilltop
+6;2;6;0;0;|Midgard
+6;2;7;0;0;|Alloy
+6;2;8;0;0;|Chrono
+6;2;9;0;0;|Shaman
+6;2;10;0;0;|Crush
+6;2;11;0;0;|Death
+6;2;12;0;0;|Valor
+6;2;13;0;0;|Silver
+6;2;14;0;0;|Gear
+6;2;15;0;0;|Board
+6;2;16;0;0;|Defend
+6;2;17;0;0;|Serpent
+6;2;18;0;0;|Knight
+6;2;19;0;0;|Demon
+6;2;20;0;0;|Ghost
+6;2;21;0;0;|Noble
+6;2;22;0;0;|Titan
+6;2;23;0;0;|Templar
+6;2;24;0;0;|Ice
+6;2;25;0;0;|Warlord
+6;2;26;0;0;|Beast
+6;2;27;0;0;|Evade
+6;2;28;0;0;|Savage
+6;2;29;0;0;|Pagoda
+6;2;30;0;0;|Anneal
+6;2;31;0;0;|Avenge
+6;2;32;0;0;|Pelt
+6;2;33;0;0;|Bone
+6;2;34;0;0;|Turtle
+6;2;35;0;0;|Lamell
+6;2;36;0;0;|Mirage
+6;2;37;0;0;|Scale
+6;2;38;0;0;|BluDrgn
+6;2;39;0;0;|Green
+6;2;40;0;0;|Polishd
+6;2;41;0;0;|Marshal
+6;2;42;0;0;|SoulEat
+6;2;43;0;0;|Chain
+6;2;44;0;0;|Frost
+6;2;45;0;0;|Necro
+6;2;46;0;0;|Dream
+6;2;47;0;0;|IronRib
+6;2;48;0;0;|Blood
+6;2;49;0;0;|Berserk
+6;2;50;0;0;|Argent
+6;2;51;0;0;|Rohan
+6;2;52;0;0;|Vampire
+6;2;53;0;0;|Bane
+6;2;54;0;0;|Leather
+6;2;55;0;0;|Lark
+6;2;56;0;0;|Pale
+6;2;57;0;0;|Dark
+6;2;58;0;0;|Wolf
+6;2;59;0;0;|Thunder
+6;2;60;0;0;|Ordeal
+6;2;61;0;0;|Sorcery
+6;2;62;0;0;|Shroom
+6;2;63;0;0;|Grave
+6;2;64;0;0;|Serene
+6;2;65;0;0;|RawHide
+6;2;66;0;0;|Night
+6;2;67;0;0;|Wind
+6;2;68;0;0;|Feather
+6;2;69;0;0;|Star
+6;2;70;0;0;|Shadow
+6;2;71;0;0;|Heart
+6;2;72;0;0;|Gloom
+6;2;73;0;0;|Plumed
+6;2;74;0;0;|Bear
+6;2;75;0;0;}Wave
+6;2;76;0;0;}Archaic
+6;2;77;0;0;}Master
+6;2;78;0;0;}Wisdom
+6;2;79;0;0;}Chiffon
+6;2;80;0;0;}Demon
+6;2;81;0;0;}Belief
+6;2;82;0;0;}Void
+6;2;83;0;0;}Prophet
+6;2;84;0;0;}Winter
+6;2;85;0;0;}Bone
+6;2;86;0;0;}Mist
+6;2;87;0;0;}Ice
+6;2;88;0;0;}Royal
+6;2;89;0;0;}Legion
+6;2;90;0;0;}Piety
+6;2;91;0;0;}Mind
+6;2;92;0;0;}Eternal
+6;2;93;0;0;}Courier
+6;2;94;0;0;}Lunar
+6;2;95;0;0;}Honor
+6;2;96;0;0;}Elder
+6;2;97;0;0;}Vital
+6;2;98;0;0;}Thistle
+6;2;99;0;0;}Dusk
+6;2;100;0;0;}Dark
+6;2;101;0;0;}White
+6;2;102;0;0;}Warm
+6;2;103;0;0;}Sheet
+6;2;104;0;0;}Color
+6;2;105;0;0;}Red
+6;2;106;0;0;}Snow
+6;2;107;0;0;}Cloth
+6;2;108;0;0;}Woven
+6;2;109;0;0;}Dressy
+6;2;110;0;0;}Linen
+6;2;111;0;0;}Ragged
+6;2;112;0;0;}Plain
+6;2;113;0;0;}Burning
+6;2;114;0;0;}Soft
+6;2;115;0;0;}Silk
+6;2;116;0;0;}Dual
+6;2;117;0;0;}Student
+6;2;118;0;0;}Wizard
+6;2;119;0;0;}Knitted
+6;2;120;0;0;}Flaxen
+6;2;121;0;0;}Web
+6;2;122;0;0;}Twill
+6;2;123;0;0;}Monk
+6;2;124;0;0;}Cotton
+6;2;125;0;0;}Canvas
+6;2;126;0;0;}Apprent
+6;2;127;0;0;}Novice
+6;2;128;0;0;}Scholar
+6;3;0;0;0;None
+6;3;1;0;0;~Cloud
+6;3;2;0;0;~Arson
+6;3;3;0;0;~Law
+6;3;4;0;0;~Chitin
+6;3;5;0;0;~Light
+6;3;6;0;0;~Puppet
+6;3;7;0;0;~Winged
+6;3;8;0;0;~Silver
+6;3;9;0;0;~Eternal
+6;3;10;0;0;~Valor
+6;3;11;0;0;~Elemnt
+6;3;12;0;0;~Wrath
+6;3;13;0;0;~Command
+6;3;14;0;0;~Emblem
+6;3;15;0;0;~Halite
+6;3;16;0;0;~Envoy
+6;3;17;0;0;~Easy
+6;3;18;0;0;~Defiant
+6;3;19;0;0;~General
+6;3;20;0;0;~Valued
+6;3;21;0;0;~Destryr
+6;3;22;0;0;~Fire
+6;3;23;0;0;~Dream
+6;3;24;0;0;~Dual
+6;3;25;0;0;~Vortex
+6;3;26;0;0;~Crescnt
+6;3;27;0;0;~Wind
+6;3;28;0;0;~Miracle
+6;3;29;0;0;~Color
+6;3;30;0;0;~Scute
+6;3;31;0;0;~Heavy
+6;3;32;0;0;~Strong
+6;3;33;0;0;~Bright
+6;3;34;0;0;~Bear
+6;3;35;0;0;~Mail
+6;3;36;0;0;~Scale
+6;3;37;0;0;~Loose
+6;3;38;0;0;~Chain
+6;3;39;0;0;~Control
+6;3;40;0;0;~Connor
+6;3;41;0;0;~Bane
+6;3;42;0;0;~Killer
+6;3;43;0;0;~World
+6;3;44;0;0;~Wanton
+6;3;45;0;0;~Aeolus
+6;3;46;0;0;~Ghost
+6;3;47;0;0;~Canine
+6;3;48;0;0;~Kensei
+6;3;49;0;0;~Raptor
+6;3;50;0;0;~Baptist
+6;3;51;0;0;~Slayer
+6;3;52;0;0;~Thunder
+6;3;53;0;0;~Travel
+6;3;54;0;0;~Voodoo
+6;3;55;0;0;~Lamell
+6;3;56;0;0;~Fate
+6;3;57;0;0;~Lizard
+6;3;58;0;0;~Moss
+6;3;59;0;0;~Shadow
+6;3;60;0;0;~Kuma
+6;3;61;0;0;~War
+6;3;62;0;0;~Bristle
+6;3;63;0;0;~Archaic
+6;3;64;0;0;~Demon
+6;3;65;0;0;~Mana
+6;3;66;0;0;~Storm
+6;3;67;0;0;~Magic
+6;3;68;0;0;~Prophet
+6;3;69;0;0;~Mare
+6;3;70;0;0;~Acclaim
+6;3;71;0;0;~Valley
+6;3;72;0;0;~Ashen
+6;3;73;0;0;~Hope
+6;3;74;0;0;~Mist
+6;3;75;0;0;~Binding
+6;3;76;0;0;~Barren
+6;3;77;0;0;~Cleric
+6;3;78;0;0;~Fang
+6;3;79;0;0;~Devout
+6;3;80;0;0;~Sacred
+6;3;81;0;0;~Stone
+6;3;82;0;0;~Sky
+6;3;83;0;0;~Mage
+6;3;84;0;0;~Vampire
+6;3;85;0;0;~Courier
+6;3;86;0;0;~Rain
+6;3;87;0;0;~Lunar
+6;3;88;0;0;~Natural
+6;3;89;0;0;~Sheet
+6;3;90;0;0;~Red
+6;3;91;0;0;~Thick
+6;3;92;0;0;~Woven
+6;3;93;0;0;~Flaxen
+6;3;94;0;0;~Firm
+6;3;95;0;0;~Dressy
+6;3;96;0;0;~Ragged
+6;3;97;0;0;~Broken
+6;3;98;0;0;~Hunting
+6;3;99;0;0;~Novice
+6;3;100;0;0;~Assasin
+6;3;101;0;0;~Thief
+6;3;102;0;0;~Cotton
+6;3;103;0;0;~Servant
+6;3;104;0;0;~Monk
+6;3;105;0;0;~Recruit
+6;4;0;0;0;None
+6;4;1;0;0;Blessed
+6;4;2;0;0;Change
+6;4;3;0;0;Hide
+6;4;4;0;0;Strong
+6;4;5;0;0;Eclipse
+6;4;6;0;0;Barrier
+6;4;7;0;0;Harmony
+6;4;8;0;0;Pulse
+6;4;9;0;0;Sentry
+6;4;10;0;0;Guard
+6;4;11;0;0;Oracle
+6;4;12;0;0;Statue
+6;4;13;0;0;Frost
+6;4;14;0;0;Redmoon
+6;4;15;0;0;Spirit
+6;4;16;0;0;Roland
+6;4;17;0;0;Flame
+6;4;18;0;0;Noble
+6;4;19;0;0;Mirage
+6;4;20;0;0;Royal
+6;4;21;0;0;Pyro
+6;4;22;0;0;Flame
+6;4;23;0;0;Blaze
+6;4;24;0;0;Wooden
+6;4;25;0;0;Tiger
+6;4;26;0;0;Sarge
+6;4;27;0;0;Warm
+6;4;28;0;0;Thin
+6;4;29;0;0;Woven
+6;4;30;0;0;Grunt
+6;4;31;0;0;Demon
+6;4;32;0;0;Cortex
+6;4;33;0;0;Mage
+6;4;34;0;0;Simple
+6;4;35;0;0;Emblem
+6;4;36;0;0;Troop
+6;4;37;0;0;Lore
+6;4;38;0;0;Militry
+6;4;39;0;0;Soldier
+6;4;40;0;0;Wave
+6;4;41;0;0;Spun
+6;4;42;0;0;Worn
+6;4;43;0;0;Torn
+6;4;44;0;0;Daylit
+6;4;45;0;0;Mount
+6;4;46;0;0;Work
+6;4;47;0;0;Reed
+6;4;48;0;0;Hunting
+6;4;49;0;0;Natural
+6;4;50;0;0;Native
+6;4;51;0;0;Snow
+6;4;52;0;0;Wool
+6;4;53;0;0;Flaxen
+6;4;54;0;0;Primal
+6;4;55;0;0;Scale
+6;4;56;0;0;Canvas
+6;4;57;0;0;Ancient
+6;4;58;0;0;Lowly
+6;5;0;0;0;None
+6;5;1;0;0;Buster
+6;5;2;0;0;Mythril
+6;5;3;0;0;Hard
+6;5;4;0;0;Butrfly
+6;5;5;0;0;Enhance
+6;5;6;0;0;Organic
+6;5;7;0;0;Crystal
+6;5;8;0;0;Force
+6;5;9;0;0;Rune
+6;5;10;0;0;Murasam
+6;5;11;0;0;Nailbat
+6;5;12;0;0;Yoshiyu
+6;5;13;0;0;Apocaly
+6;5;14;0;0;Heaven
+6;5;15;0;0;Ragnrok
+6;5;16;0;0;Ultima
+6;5;17;0;0;Gatling
+6;5;18;0;0;Assault
+6;5;19;0;0;Cannon
+6;5;20;0;0;Atomic
+6;5;21;0;0;HVulcan
+6;5;22;0;0;ChainSw
+6;5;23;0;0;MicroLS
+6;5;24;0;0;AM
+6;5;25;0;0;Machine
+6;5;26;0;0;Drill
+6;5;27;0;0;Bazooka
+6;5;28;0;0;Rocket
+6;5;29;0;0;Launchr
+6;5;30;0;0;Pile
+6;5;31;0;0;MaxRay
+6;5;32;0;0;MScore
+6;5;33;0;0;Leather
+6;5;34;0;0;Metal
+6;5;35;0;0;Mythril
+6;5;36;0;0;Grand
+6;5;37;0;0;Tiger
+6;5;38;0;0;Diamond
+6;5;39;0;0;Dragon
+6;5;40;0;0;Crystal
+6;5;41;0;0;Motor
+6;5;42;0;0;Platnum
+6;5;43;0;0;Kaiser
+6;5;44;0;0;Work
+6;5;45;0;0;PwrSoul
+6;5;46;0;0;Master
+6;5;47;0;0;God's
+6;5;48;0;0;Heart
+6;5;49;0;0;Guard
+6;5;50;0;0;Mythril
+6;5;51;0;0;FulMetl
+6;5;52;0;0;Strike
+6;5;53;0;0;Prism
+6;5;54;0;0;Aurora
+6;5;55;0;0;Wizard
+6;5;56;0;0;Wiser
+6;5;57;0;0;FairyTl
+6;5;58;0;0;Umbrela
+6;5;59;0;0;Princss
+6;5;60;0;0;Mythril
+6;5;61;0;0;Diamond
+6;5;62;0;0;Silver
+6;5;63;0;0;Gold
+6;5;64;0;0;Adaman
+6;5;65;0;0;Crystal
+6;5;66;0;0;Magic
+6;5;67;0;0;Plus
+6;5;68;0;0;Cent
+6;5;69;0;0;Hairpin
+6;5;70;0;0;Seraph
+6;5;71;0;0;Behemot
+6;5;72;0;0;SprnGun
+6;5;73;0;0;LimMoon
+6;5;74;0;0;Yellow
+6;5;75;0;0;Green
+6;5;76;0;0;Blue
+6;5;77;0;0;Red
+6;5;78;0;0;Crystal
+6;5;79;0;0;White
+6;5;80;0;0;Black
+6;5;81;0;0;Silver
+6;5;82;0;0;Trumpet
+6;5;83;0;0;Gold
+6;5;84;0;0;Battle
+6;5;85;0;0;Starlit
+6;5;86;0;0;Shout
+6;5;87;0;0;Spear
+6;5;88;0;0;Slash
+6;5;89;0;0;Trident
+6;5;90;0;0;MastAxe
+6;5;91;0;0;Partsan
+6;5;92;0;0;Viper
+6;5;93;0;0;Javelin
+6;5;94;0;0;Grow
+6;5;95;0;0;Mop
+6;5;96;0;0;Dragoon
+6;5;97;0;0;Scimitr
+6;5;98;0;0;Flayer
+6;5;99;0;0;Spirit
+6;5;100;0;0;Venus
+6;6;0;0;0;None
+6;6;1;0;0;Fire
+6;6;2;0;0;Water
+6;6;3;0;0;Bolt
+6;6;4;0;0;Wind
+6;6;5;0;0;Earth
+6;6;6;0;0;Light
+6;6;7;0;0;Ice 
+6;7;0;0;0;None
+6;7;1;0;0;À¯Fire
+6;7;2;0;0;À¯Blaze 
+6;7;3;0;0;À¯Fire2
+6;7;4;0;0;À¯Blaze2
+6;7;5;0;0;À¯Fire3
+6;7;6;0;0;À¯Blaze3
+6;7;7;0;0;À¯Fire4
+6;7;8;0;0;À¯Blaze4
+6;7;9;0;0;À¯Ifrit
+6;7;10;0;0;À°Water 
+6;7;11;0;0;À°Flood
+6;7;12;0;0;À°Water2
+6;7;13;0;0;À°Cure2
+6;7;14;0;0;À°Water3
+6;7;15;0;0;À°Flood2
+6;7;16;0;0;À°Water4
+6;7;17;0;0;À°Cure3
+6;7;18;0;0;À°Leviat
+6;7;19;0;0;À±Bolt 
+6;7;20;0;0;À±Shock
+6;7;21;0;0;À±Bolt2
+6;7;22;0;0;À±Shock2
+6;7;23;0;0;À±Bolt3
+6;7;24;0;0;À±Shock3
+6;7;25;0;0;À±Bolt4
+6;7;26;0;0;À±Shock4
+6;7;27;0;0;À±Ramuh
+6;7;28;0;0;À²Aero 
+6;7;29;0;0;À²Gale
+6;7;30;0;0;À²Aero2
+6;7;31;0;0;À²Cure2
+6;7;32;0;0;À²Aero3
+6;7;33;0;0;À²Gale2
+6;7;34;0;0;À²Aero4
+6;7;35;0;0;À²Cure3
+6;7;36;0;0;À²Typhon
+6;7;37;0;0;À³Stone
+6;7;38;0;0;À³Quake 
+6;7;39;0;0;À³Stone2
+6;7;40;0;0;À³Quake2
+6;7;41;0;0;À³Stone3
+6;7;42;0;0;À³Quake3
+6;7;43;0;0;À³Stone4
+6;7;44;0;0;À³Quake4
+6;7;45;0;0;À³Titan
+6;7;46;0;0;À´Cure 
+6;7;47;0;0;À´Dia
+6;7;48;0;0;À´Cure2
+6;7;49;0;0;À´Heal 
+6;7;50;0;0;À´Cure3
+6;7;51;0;0;À´Dia2
+6;7;52;0;0;À´Cure4
+6;7;53;0;0;À´Heal2
+6;7;54;0;0;À´Bahamt
+6;7;55;0;0;ÀµIce  
+6;7;56;0;0;ÀµHail  
+6;7;57;0;0;ÀµIce2 
+6;7;58;0;0;ÀµHail2 
+6;7;59;0;0;ÀµIce3 
+6;7;60;0;0;ÀµHail3 
+6;7;61;0;0;ÀµIce4 
+6;7;62;0;0;ÀµHail4 
+6;7;63;0;0;ÀµShiva
+6;8;0;0;0;None
+6;8;1;0;0;Potion
+6;8;2;0;0;Hi-Potion
+6;8;3;0;0;Low-Mega
+6;8;4;0;0;X-Potion
+6;8;5;0;0;Mega
+6;8;6;0;0;Hi-Mega
+6;8;7;0;0;X-Mega
+6;8;8;0;0;Ether
+6;8;9;0;0;Hi-Ether
+6;8;10;0;0;Phoenix
+6;8;11;0;0;Smoke
+6;8;12;0;0;Hero Drink
+6;8;13;0;0;Str+
+6;8;14;0;0;Vit+
+6;8;15;0;0;Int+
+6;8;16;0;0;Spr+
+6;8;17;0;0;Agl+
+6;8;18;0;0;Battery
+6;8;19;0;0;ChocLure
+6;8;20;0;0;DynePend
+6;8;21;0;0;KeyStone
+6;8;22;0;0;Black
+6;8;23;0;0;LunrHarp
+6;8;24;0;0;61F Card
+6;8;25;0;0;62F Card
+6;8;26;0;0;64F Card
+6;8;27;0;0;65F Card
+6;8;28;0;0;66F Card
+6;8;29;0;0;68F Card
+6;8;30;0;0;Snowbord
+6;8;31;0;0;Map
+6;9;0;0;0;Nothing....
+6;9;1;0;0;Restores 500 HP to a single ally
+6;9;2;0;0;Restores 1000 HP   to a single ally
+6;9;3;0;0;Restores 200 HP to all allies
+6;9;4;0;0;Fully restores HP  to a single ally
+6;9;5;0;0;Restores 500 HP to all allies
+6;9;6;0;0;Restores 1000 HP toall allies
+6;9;7;0;0;Fully restores HP  to all allies
+6;9;8;0;0;Restores 5 MP to a single spell
+6;9;9;0;0;Fully restores MP  to a single spell
+6;9;10;0;0;Revives an ally    with 25% of HP
+6;9;11;0;0;Easily escape from a fight
+6;9;12;0;0;Temporarilly       Increases HP by 250
+6;9;13;0;0;Strength +1 
+6;9;14;0;0;Vitality +1 
+6;9;15;0;0;Intelligence +1 
+6;9;16;0;0;Spirit +1 
+6;9;17;0;0;Agility +1 
+6;9;18;0;0;Provide electricity
+6;9;19;0;0;Need this to catch chocobo
+6;9;20;0;0;Dyne's Pendant
+6;9;21;0;0;Enter Temple of theAncients
+6;9;22;0;0;Summon Meteor      ....Don't do that
+6;9;23;0;0;Awaken Sleeping    Forest
+6;9;24;0;0;Access 61F
+6;9;25;0;0;Access 62F
+6;9;26;0;0;Access 64F
+6;9;27;0;0;Access 65F
+6;9;28;0;0;Access 66F
+6;9;29;0;0;Access 68F
+6;9;30;0;0;Get to Great       Glacier
+6;9;31;0;0;Map of Great       Glacier
+6;10;0;0;0;Lugia209
+6;10;1;0;0;Cloud
+6;10;2;0;0;Barret
+6;10;3;0;0;Tifa
+6;10;4;0;0;Aeris
+6;10;5;0;0;RedX`
+6;10;6;0;0;CaitSith
+6;10;7;0;0;Cid
+6;10;8;0;0;Guard
+6;10;9;0;0;Scorpion
+6;10;10;0;0;AirBustr
+6;10;11;0;0;Reno
+6;10;12;0;0;Flunky
+6;10;13;0;0;General
+6;10;14;0;0;Lugia209
+6;10;15;0;0;Aps
+6;10;16;0;0;Specimen
+6;10;17;0;0;H.Gunner
+6;10;18;0;0;Rufus
+6;10;19;0;0;DarkNatn
+6;10;20;0;0;MotorBal
+6;10;21;0;0;BotmSwel
+6;10;22;0;0;Jenova
+6;10;23;0;0;Dyne
+6;10;24;0;0;Rude
+6;10;25;0;0;GiNattak
+6;10;26;0;0;Gi
+6;10;27;0;0;Palmer
+6;10;28;0;0;R.Dragon
+6;10;29;0;0;DemnGate
+6;10;30;0;0;Schizo
+6;10;31;0;0;Sephirot
+6;10;32;0;0;Sephirot
+6;10;33;0;0;1WngAngl
+6;10;34;0;0;Zolom
+6;10;35;0;0;B.Float
+6;10;36;0;0;Goblin
+6;10;37;0;0;Gargoyle
+6;10;38;0;0;Tonberry
+6;10;39;0;0;Gremlin
+6;10;40;0;0;Needle
+6;10;41;0;0;Zolkartr
+6;10;42;0;0;Launcher
+6;10;43;0;0;M.Drive
+6;10;44;0;0;Crawler
+6;10;45;0;0;Mirage
+6;10;46;0;0;Ceasar
+6;10;47;0;0;Ninja
+6;10;48;0;0;Cactuar
+6;10;49;0;0;HedgePie
+6;10;50;0;0;RazrWeed
+6;10;51;0;0;Jayjujay
+6;10;52;0;0;Warning
+6;10;53;0;0;Mu
+6;10;54;0;0;Jemnezmy
+6;10;55;0;0;Joker
+6;10;56;0;0;BrainPod
+6;10;57;0;0;Screamer
+6;10;58;0;0;SneakStp
+6;10;59;0;0;BatryCap
+6;10;60;0;0;Ghroflgo
+6;10;61;0;0;Sweeper
+6;10;62;0;0;Bomb
+6;10;63;0;0;Alemange
+6;10;64;0;0;Spector
+6;10;65;0;0;Cuahl
+6;10;66;0;0;Zemzelet
+6;10;67;0;0;Elfadunk
+6;10;68;0;0;Doorbull
+6;10;69;0;0;BlackBat
+6;10;70;0;0;Malboro
+6;10;71;0;0;Diablo
+6;10;72;0;0;Chrstofr
+6;10;73;0;0;Ironite
+6;10;74;0;0;Hellhous
+6;10;75;0;0;Ochu
+6;10;76;0;0;8-Eye
+6;10;77;0;0;D.Claw
+6;10;78;0;0;Bndrsnch
+6;10;79;0;0;Bad Rap
+6;10;80;0;0;Bandit
+6;10;81;0;0;Bgndrana
+6;10;82;0;0;DorkFace
+6;10;83;0;0;GrndHorn
+6;10;84;0;0;Unknown
+6;10;85;0;0;Grangaln
+6;10;86;0;0;X-Canon
+6;10;87;0;0;U.Lizard
+6;10;88;0;0;Kimara
+6;10;89;0;0;A.Dragon
+6;10;90;0;0;Sahagin
+6;10;91;0;0;SwrdDanc
+6;10;92;0;0;DverNest
+6;10;93;0;0;Eligor
+6;10;94;0;0;Epiolnis
+6;10;95;0;0;A.Combat
+6;10;96;0;0;DevlRide
+6;10;97;0;0;HeadHunt
+6;10;98;0;0;Rilfsak
+6;10;99;0;0;Spiral
+7;0;0;64;50;Barret:C'mon newcomer.Follow me.
+7;0;1;64;76;Guard: Intruder! 
+7;0;2;64;76;Guard: Intruder! 
+7;0;3;64;56;Biggs:Wow!You used to be in SOLDIER all right!Not everyday ya find one in a group likeAVALANCHE.
+7;0;4;64;57;Jessie:SOLDIER? Aren't they the enemy?What's he doing with us in AVALANCHE?
+7;0;5;64;56;Hold it,Jessie.He WAS in SOLDIER.He quit them and now is one of us.Didn'tcatch your name....
+7;0;6;64;49;Cloud:....Cloud.
+7;0;7;64;56;Cloud,eh?I'm....
+7;0;8;64;49;I don't care what your names are.Oncethis job's over.... I'm outta here.
+7;0;9;64;50;The hell you all doin'!?I thought I told you never to move in a group!
+7;0;10;64;50;Ex-SOLDIER,huh? Don't trust ya! (If you hold B while pressing the directional button,you can run)
+7;0;11;64;58;Wedge:I'll secure the escape passage.Concentrate on the mission,Cloud.Geez,we're really gonna blow this huge furnace up?This'll be somethin' to see!
+7;0;12;64;50;Yo!This your first time in a reactor?
+7;0;13;64;49;No.After all,I did work for Shinra, y'know.
+7;0;14;64;50;The planet's full of Mako energy. People here use it every day.It's the life blood of the planet.But Shinra keeps suckin' the blood out with these machines.
+7;0;15;64;49;I'm not here for a lecture.Let's just hurry.
+7;0;16;64;50;That's it!You're comin' with me fromnow on.
+7;0;17;0;0;Barret joins you.
+7;0;18;64;57;Biggs and I got thecode for this door.
+7;0;19;64;56;Code deciphered.
+7;0;20;64;56;Think how many of our people risked their lives,just for this code....
+7;0;21;64;57;Code deciphered.
+7;0;22;64;50;Little by little the reactors'll drain out all the life.And that'll bethat.
+7;0;23;64;49;It's not my problem.
+7;0;24;64;50;The planet's dyin',Cloud!
+7;0;25;64;49;The only thing I care about is finishin' this job before security andthe Roboguards comes.
+7;0;26;64;50;When we blow this place,this ain't gonna be nothin' more than a hunka junk.Cloud,you set the bomb.
+7;0;27;64;49;Shouldn't you do it?
+7;0;28;64;50;Jus' do it!I gotta watch to make sure you don't pull nothin'.
+7;0;29;0;0;(Watch out!) (This isn't just a reactor!)
+7;0;30;64;50;....What's wrong?
+7;0;31;64;49;Huh?
+7;0;32;64;50;What's wrong,Cloud?Hurry it up!
+7;0;33;64;49;Yeah,sorry.
+7;0;34;64;50;Heads up,here they come!
+7;0;35;64;49;Come on,let's get outta here!
+7;0;36;64;50;Let's finish this!
+7;0;37;64;50;We did it,let's getoutta here!
+7;0;38;64;49;You all right?
+7;0;39;64;57;My leg got stuck.
+7;0;40;64;49;I'll help you.
+7;0;41;64;57;Thanks!
+7;0;42;64;57;Alright,be careful.
+7;0;43;64;56;That should keep the planet going.... at least a little longer.
+7;0;44;64;58;Yeah.
+7;0;45;64;56;Let's go!
+7;0;46;64;50;All right,now let'sget out of here. Rendezvous at Sec.8station!Split up and get on the train!
+7;0;47;64;49;H,hey!
+7;0;48;64;50;If it's about your money save it 'til we're back at the hideout.
+7;0;49;64;52;FlowerGirl:Excuse me.What happened?
+7;0;50;64;49;Nothing....Don't see many flowers aroundhere.
+7;0;51;64;52;Oh,these?Do you like them?They're only a gil..?
+7;0;52;64;49;I'll buy one.
+7;0;53;64;52;Oh,thank you!Here you are!
+7;0;54;0;0;Just what the hell's going on!?
+7;0;55;0;0;Wonder what that ison the wall over there.Let's see.... \"Don't be fooled byShinra!Mako energy doesn't last forever!Mako is theplanet's lifesource!The end is in sight! Protectors of the planet:AVALANCHE\"
+7;0;56;64;76;Guard: Hey! You there!
+7;0;57;64;49;Shinra guards....  
+7;0;58;64;76;Guard: That's as  far as you go.
+7;0;59;64;49;I don't have time to be messin' around with you guys.
+7;0;60;64;76;Guard: Enough  babbling!Grab him!
+7;0;61;64;58;Cloud never came.
+7;0;62;64;56;Cloud....Wonder if hewas killed?
+7;0;63;64;50;No way!
+7;0;64;64;57;Cloud....
+7;0;65;64;56;Say,do you think Cloud's....going to fight to the end for AVALANCHE?
+7;0;66;64;50;The hell would I know?Do I look likea mind reader?Hmph!If y'all weren't such screw-ups....
+7;0;67;64;58;Hey Barret!What about our money..?
+7;0;68;64;50;....  
+7;0;69;64;58;Uh,nothin'....sorry. Ahh....
+7;0;70;64;56;Cloud!
+7;0;71;64;57;Cloud....
+7;0;72;64;58;Cloud!
+7;0;73;64;49;Looks like I'm a little late.
+7;0;74;64;50;You damn right, you're late!Come waltzin' in here makin' a big scene!
+7;0;75;64;49;It's no big deal. Just what I always do.
+7;0;76;64;50;Shi't!Havin' everyone worried like that you don'tgive a damn 'bout no one but yourself!
+7;0;77;64;49;Hmm....You were worried about me!
+7;0;78;64;50;Wha?I'm takin' it outta your money, hot stuff!Wake up! We're movin' out! Follow me!
+7;0;79;64;58;Hey,Cloud!You were great back there!
+7;0;80;64;56;Heh heh....Cloud! We'll do even better next time.
+7;0;81;64;57;Be careful,I'll shut this.
+7;0;82;64;57;Oh,Cloud!Your face is pitch-black.... There you go!Say, thanks for helping me back there at the Reactor!
+7;0;83;0;0;You see the headlines in the Shinra Times?The terrorists that bombed the #1 Reactor are based somewhere in the slums.
+7;0;84;0;0;Blowing up a Reactor....they sure put some thought into this one.
+7;0;85;0;0;They must have a real calculating leader.I wonder what they'll do next?
+7;0;86;64;50;Stop actin' like a damn kid.Si'down an' shu'up!
+7;0;87;64;57;Hey Cloud.You want to look at this with me? It's a map of the Midgar Rail System. I'll explain it to you. I like this kind ofstuff. Bombs and Monitors....You know,flashy stuff.
+7;0;88;64;57;This is a complete model of Midgar. A main support structure holds theplate up in the center, and there are other supports built in each section. The 8 reactors provide Midgar with electricity.At eachcheckpoint an ID sensor device is set up.It can checkthe ID's and backgrounds on each and every passenger on the train by linking itup to the central DB at Shinra HQ. ....Anyone could tell that we look suspicious, so we're using fake IDs.
+7;0;89;64;57;Speak of the devil.....That light means we're in the ID Security check area....When the lights go off, you never know what kind of creeps'll come out.Anyhow we're almost back now.
+7;0;90;64;50;Look....you can see the surface now, this city don't have no day or night.If that plateweren't there....we could see the sky.
+7;0;91;64;49;A floating city.... Pretty unsettling scenery.
+7;0;92;64;50;Huh? Never expect to hear that outta someone like you.... You jes' full of surprises. The upper world....a city on a plate.... It's cuz of that &^#$# 'pizza' that the people under- neath are sufferin!And the city below is full of poluted air. On topa that, the Reactor keeps drainin' up all theenergy.
+7;0;93;64;49;Then why doesn't everyone move onto the plate?
+7;0;94;64;50;Dunno.Probably 'cuzthey ain't got no money.Or, maybe.... 'cuz they love their land, no matter how polluted it gets.
+7;0;95;64;49;I know....no one lives in the slums because they want to. It's like this train. It can't runanywhere except where its rails take it.
+7;0;96;64;50;Yo! Get over here, all ya!
+7;0;97;64;50;This mission was a success.But don't get lazy now.The hard part's still to come!Don't y'allbe scared of that explosion!'Cause the next one's gonna be bigger than that!Meet backat the hideout!Moveout!
+7;0;98;0;0;You meet a lot of interesting people working at this train station.
+7;0;99;0;0;There's only the Train Graveyard around here,people say it's haunted.
+7;0;100;0;0;What?You're going to the Train Graveyard?It's too dangerous,I can't let you take the risk!
+7;0;101;0;0;Hey,you're new right? Let me tell you something aboutArmor,there are 4 kinds of them, your status screen will tell what can be equipped by eachcharacter. The Armor type will be displayed next to the armor in the shop menu.Be sure to check which Armor type you can equip before you buy.Oh!Before I forget,you can alsobuy weapons there too.Just be wise about your spending.
+7;0;102;0;0;Hey!I should tell you about Materia too! Listen up! Each Materia can let you cast different types of spells, each Materia can be leveled up in orderto learn new spellswith that Materia, but that's not all.Each individual spell can also level up and becomemore powerful too. Just keep casting magic to gain experience. Be sureto visit the magic shop to level up the spells. No needto thank me,I'm happy to help out the newbies.
+7;0;103;0;0;Huh?You come to seeit,too?
+7;0;104;0;0;There was a bombingon top.If this pillar should come down,everyone in the slums is dust....
+7;0;105;0;0;Hey!Let me tell yousomething about Weapons!As you use a weapon,it will gain EXP. Once it reaches a certain point you can go toa weapon shop to level up your weapons and increase their power.The same goesfor magic! Cool  huh? Oh! and although there isn't one here, there are Inns you can stay in to replenish your HP and MP. There's also item shops located inside of the Inns too. Just be careful on how you spend. Have fun!
+7;0;106;64;51;Marlene! Aren't yougoing to say anything to Cloud?
+7;0;107;64;51;Welcome home, Cloud.Looks like everything went well.Sorry about Marlene,she seems a little shy.Did you fight with Barret?
+7;0;108;64;49;Not this time.
+7;0;109;64;51;Hmm.You've grown up.When you were little you used to get into fights at the drop of a hat. Flowers?How nice.... You almost never see them here in the slums.But....A flower for me?Oh Cloud,you shouldn'thave....
+7;0;110;64;49;No big.
+7;0;111;64;51;Thank you,Cloud.It smells wonderful. Maybe I should fillthe store with flowers.
+7;0;112;64;58;Oh.Cloud!Tifa really knows how tocook.Mmm,mmm.... Anyway,let me tell you somethin'.
+7;0;113;64;49;About what?
+7;0;114;64;58;Tifa always lets metaste her cooking. And look at me now,I'm rolly-polly. Don't know whether I should be happy or sad.But it's thegood food and drinks that make this shop famous.
+7;0;115;64;57;Careless....You're getting all excited.Wonder whatfor..?
+7;0;116;64;56;Aah!Nothin' like that first drink after a job.Hic!Whydon't you have one too?
+7;0;117;64;49;Yeah,why not?
+7;0;118;64;56;Oh!That's more likeit!Even if you werewith SOLDIER,you'restill a rookie here.So you'd better listen to whatever I tell ya!Hic..!Oh....Don't tellBarret what I said.
+7;0;119;64;59;Papa welcome home!
+7;0;120;64;50;Hey,Marlene.
+7;0;121;64;51;You all right Barret?
+7;0;122;0;0;....That reminds me.
+7;0;123;64;49;(You again? ....Who are you?)
+7;0;124;0;0;....You'll find out soon.....But more importantly, 5 years ago in Nibelheim....When you went to Mt.Nibel then, Tifawas your guide,  right?
+7;0;125;64;49;(Yeah....I was surprised.)
+7;0;126;0;0;But where was Tifa other than that? ....It was a great place for you two to see each other again. ....Why couldn't you see each other alone?
+7;0;127;64;49;(I don't know, I can't remember clearly....)
+7;0;128;0;0;Why don't you try asking Tifa?
+7;0;129;64;49;(....Yeah.)
+7;0;130;0;0;Then, get up!
+7;0;131;64;51;Hey wake up. Wake up, Cloud!
+7;0;132;64;82;Yuffie:Ah, Cloud! Would you like me to upgrade your Materia?
+7;0;133;64;82;Come back anytime!
+7;0;134;64;50;Great!Get in here, fools!We're startin' the meetin'!
+7;0;135;64;51;You know,I'm relieved you made it back safely.
+7;0;136;64;49;What's with you allof a sudden?That wasn't even a toughjob.
+7;0;137;64;51;I guess not....You were in SOLDIER. Make sure you get your pay from Barret.
+7;0;138;64;49;Don't worry.Once I get that money,I'm outta here.
+7;0;139;64;51;Cloud,are you feeling all right?
+7;0;140;64;49;....Yeah....Why?
+7;0;141;64;51;No reason.You just look a little tiredI guess.You'd better go down below.
+7;0;142;0;0;
+7;0;143;64;49;Ugh!!(Everything's dark....wha? Tifa!?)
+7;0;144;0;0;(Papa....Sephiroth?))       (Sephiroth did thisto you,didn't he!?)(Sephiroth.... SOLDIER.... Mako Reactors.... Shinra....Everything)(I hate them all!!)
+7;0;145;64;58;The next mission will be to blow up the Sec.5 Reactor. Cloud,you're great!Don't you ever get nervous?Or are you like,impervious to feelings?
+7;0;146;64;58;Naw,that couldn't be it.
+7;0;147;64;57;Oops....Hey,Look at the news....What a blast.Think it was all because of my bomb?But all I really did was justmake it like the computer told me.Ohno!I must've made amiscalculation somewhere.
+7;0;148;64;50;Yo.Cloud!There's somethin' I wanna ask ya.Was there anyone from SOLDIERfighting us today?
+7;0;149;64;49;None.I'm positive.
+7;0;150;64;50;You sound pretty sure.
+7;0;151;64;49;If there was anyonefrom SOLDIER you wouldn't be standing here now.
+7;0;152;64;50;Don't go thinkin' you so bad jes cuz you was in SOLDIER.
+7;0;153;64;49;....
+7;0;154;64;50;Yeah,you're strong.Probably all them guys in SOLDIER are.But don't forget your skinny ass's working for AVALANCHE now!Don'tget no ideas 'bout hangin' on to Shinra.
+7;0;155;64;49;Stayin' with Shinra?You asked mea question and I answered it....that'sall.I'm going upstairs.I want to talk about my money.
+7;0;156;0;0;0000000000000000000000000000000000000000000@3Wait,Cloud!
+7;0;157;0;0;000000000000000000000000@3Wait,Cloud!
+7;0;158;64;51;Wait,Cloud!
+7;0;159;64;50;Tifa!Let him go! Looks like he stillmisses the Shinra!
+7;0;160;64;49;Shut up!I don't care about either Shinra or SOLDIER! But don't get me wrong!I don't care about AVALANCHE or the Planet for thatmatter!
+7;0;161;0;0;(Watch out!) (This isn't just a reactor!)
+7;0;162;0;0;!Let me tell yousomething about Weapons!As you use a weapon,it will gain EXP. Once it reaches a certain point you can go toa weapon shop to level up your weapons and increase their power.The same goesfor magic! Cool  huh? Oh! and although there isn't one here, there are Inns you can stay in to replenish your HP and MP. There's also item shops located inside of the Inns too. Just be careful on how you spend. Have fun!
+7;0;163;0;0;hops located inside of the Inns too. Just be careful on how you spend. Have fun!
+7;0;164;64;51;Listen,Cloud.I'm asking you.Please join us.
+7;0;165;64;49;Sorry Tifa....
+7;0;166;64;51;The Planet is dying.Slowly but surely it's dying. Someone has to do something.
+7;0;167;64;49;So let Barret and his buddies do something about it.It's got nothin' todo with me.
+7;0;168;64;51;So!You're really leaving!?You're just going to walk right out ignoring your childhood friend!?
+7;0;169;64;49;What?How can you say that!
+7;0;170;64;51;You forgot the promise,too.
+7;0;171;64;49;Promise?
+7;0;172;64;51;So you DID forget. Remember....Cloud.It was 7 years ago....
+7;0;173;0;0;00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000Sorry I'm late.
+7;0;174;0;0;00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000Sorry I'm late.
+7;0;175;0;0;0000000000000000000Sorry I'm late.
+7;0;176;0;0;Sorry I'm late.
+7;0;177;0;0;You said you wantedto talk to me aboutsomething?
+7;0;178;0;0;Come this spring.... I'm leaving this town for Midgar.
+7;0;179;0;0;All boys are leaving our town.
+7;0;180;0;0;But I'm different from all of them. I'm not just going to find a job.I want to join SOLDIER.I'm going to be the best there is,just like Sephiroth.
+7;0;181;0;0;Sephiroth....The Great Sephiroth. Isn't it hard to join SOLDIER?
+7;0;182;0;0;....I probably won't be able to come back to this town for a while.
+7;0;183;0;0;Will you be in the newspapers if you do well?
+7;0;184;0;0;I'll try.
+7;0;185;0;0;Hey,why don't we make a promise?Umm,if you get really famous and I'm everin a bind....You comesave me,all right?
+7;0;186;0;0;What?
+7;0;187;0;0;Whenever I'm in trouble,my hero will come and rescue me.I want toat least experiencethat once.
+7;0;188;0;0;What?
+7;0;189;0;0;Come on..!Promise me..!
+7;0;190;0;0;All right....I promise.
+7;0;191;64;51;You remember now?....Our promise?
+7;0;192;64;49;I'm not a hero and I'm not famous.I can't keep....the promise.
+7;0;193;64;51;But you got your childhood dream, didn't you?You joined SOLDIER.
+7;0;194;64;49;....
+7;0;195;64;51;So come on!You've got to keep your promise....
+7;0;196;64;50;Wait a sec big-timeSOLDIER!A promise is a promise!Here!
+7;0;197;0;0;Got 1500G.
+7;0;198;64;49;This is my pay? Don't make me laugh.
+7;0;199;64;51;What?Then you'll!!
+7;0;200;64;49;You got the next mission lined up? I'll do it for 3000.
+7;0;201;64;50;What!!?
+7;0;202;64;50;2000!
+7;0;203;64;51;Thanks,Cloud.
+7;0;204;64;51;Good Morning!Cloud!Did you sleep well?
+7;0;205;64;49;Barret's snoring kept me up....
+7;0;206;64;50;Our target's the Sec.5 Reactor.Head for the station first.I'll fill youin on the train.
+7;0;207;64;51;Marlene,you watch the store while we're gone!
+7;0;208;64;59;All right!Good Luck.
+7;0;209;0;0;Tifa joins you.
+7;0;210;64;49;Ugh!!(Everything's dark....wha? Tifa!?)
+7;0;211;0;0;....Everything)(I hate them all!!)
+7;0;212;0;0;you about Materia too! Listen up! Each Materia can let you cast different types of spells, each Materia can be leveled up in orderto learn new spellswith that Materia, but that's not all.Each individual spell can also level up and becomemore powerful too. Just keep casting magic to gain experience. Be sureto visit the magic shop to level up the spells. No needto thank me,I'm happy to help out the newbies.
+7;0;213;0;0;s of spells, each Materia can be leveled up in orderto learn new spellswith that Materia, but that's not all.Each individual spell can also level up and becomemore powerful too. Just keep casting magic to gain experience. Be sureto visit the magic shop to level up the spells. No needto thank me,I'm happy to help out the newbies.
+7;0;214;0;0;n be leveled up in orderto learn new spellswith that Materia, but that's not all.Each individual spell can also level up and becomemore powerful too. Just keep casting magic to gain experience. Be sureto visit the magic shop to level up the spells. No needto thank me,I'm happy to help out the newbies.
+7;0;215;0;0;o learn new spellswith that Materia, but that's not all.Each individual spell can also level up and becomemore powerful too. Just keep casting magic to gain experience. Be sureto visit the magic shop to level up the spells. No needto thank me,I'm happy to help out the newbies.
+7;0;216;0;0;l can also level up and becomemore powerful too. Just keep casting magic to gain experience. Be sureto visit the magic shop to level up the spells. No needto thank me,I'm happy to help out the newbies.
+7;0;217;0;0; too. Just keep casting magic to gain experience. Be sureto visit the magic shop to level up the spells. No needto thank me,I'm happy to help out the newbies.
+7;0;218;0;0;me,I'm happy to help out the newbies.
+7;0;219;64;50;YO!Looks like this ain't no private car!So split up!
+7;0;220;0;0;Manager:....Hoodlums again.God,Don't I just have all the luck....
+7;0;221;64;50;You say sumthin'?I said,'you say sumthin'!?
+7;0;222;64;50;Yo,look at that!It got empty alluva sudden.What's goin'on?
+7;0;223;0;0;DAMN!I....it's empty because of....g,guys like you....
+7;0;224;64;50;....
+7;0;225;0;0;Y,Y,YIPES!You.... you've seen the news,right? AVALANCHE says there'll be more bombings.Only devoted employees like me would go toMidgar on a day like today.
+7;0;226;64;50;You workin' for Shinra?
+7;0;227;0;0;I won't give in to violence!!
+7;0;228;64;51;Barret!
+7;0;229;64;50;&$#%!You lucky ^$#$,!
+7;0;230;64;49;So,what are we going to do now?
+7;0;231;64;50;Shit!The hell you so calm about?You bustin up my rhythm....
+7;0;232;64;51;Seems like they just finished connecting the cars.We're finally leaving.
+7;0;233;64;49;So what's our next target?
+7;0;234;64;50;Hah!Listen to Mr. Serious-about-his work! Awright....I'lltell ya!There's a security check point at the top plate.It's an ID scan system checkin' all the trains.
+7;0;235;64;51;Which Shinra is very proud of.
+7;0;236;64;50;We can't use our fake ID's anymore....
+7;0;237;64;84;Intercom:Good Morning,and welcometo Midgar Lines. Arrival time at Sec.4 station will be 11:45.
+7;0;238;64;51;That means we've only got 3 more minutes to the ID check point.
+7;0;239;64;50;Alright,in 3 minutes,we're jumpin' off this train.Got it!?
+7;0;240;64;51;That's odd.The ID check point was supposed to be further down.
+7;0;241;64;84;Intercom:Type A Security Alert! Unidentified passengers confirmed....A searchof all cars will beconducted!
+7;0;242;64;51;What's happening?
+7;0;243;64;50;What's goin' on!
+7;0;244;64;57;We're in trouble. I'll explain later.Hurry!Get to the next car!
+7;0;245;64;50;^%#@%!Someone blew it....Let's go!Keep it up!
+7;0;246;64;58;They're gonna lock the door,sir!
+7;0;247;64;50;Awright!We clear?
+7;0;248;64;50;Let's go!We're gonna dive outta here!
+7;0;249;64;51;Scary....huh.
+7;0;250;64;49;Too late to be saying that now. Why'd you come along anyway?
+7;0;251;64;56;Let's go!
+7;0;252;64;76;Dammit!
+7;0;253;64;56;Aah!Nothin' like that first drink after a job.Hic!Whydon't you have one too?
+7;0;254;64;51;No reason.You just look a little tiredI guess.You'd better go down below.
+7;1;0;64;51;Because....
+7;1;1;64;50;Hey you 2!There ain't no time for that!
+7;1;2;64;51;Yeah!I've made up my mind.Watch closely.I'm gonna jump!
+7;1;3;64;49;You don't care if Igo first?
+7;1;4;64;50;A leader always stays till the end.Don't worry 'bout me,just go!
+7;1;5;64;50;Later!You take careof the rest!
+7;1;6;64;50;Good,so far everything's going as planned.Better not let your guard down till we get tothe Sec.5 reactor. Biggs,Wedge,and Jessie got everything ready for us.So MOVE it. Well,the reactor's just down this tunnel!
+7;1;7;64;49;Those light beams are the Shinra's security sensors.Wecan't go any further.
+7;1;8;64;50;That's one damn tiny hole.You tellin' me to squeeze into that to get under the Plate?No way!Yo, Cloud,what're we gonna do?
+7;1;9;64;49;Look inside.
+7;1;10;64;51;There seems to be nothing that'll getus stuck in this duct.
+7;1;11;64;49;Looks like we don'thave any other choice but to go down.
+7;1;12;64;50;Don't be wastin' time.Never know when the Shinra'll find us.Cloud,you jes' gotta go.
+7;1;13;64;58;Cloud,this way.The reactor's up this ladder.
+7;1;14;64;57;I'm sorry.The ID scan problem on thetrain was all my fault.I made your ID card special....Sothat's why it happened.I put my heart into making it.But I failed.
+7;1;15;64;57;Next time,I'll giveyou something more decent.I'll be backat the hideout in the research room workin' on it.
+7;1;16;64;56;We're gonna pull out now.We'll meet up at the hideout. Cloud,we're countin' on you to blow the reactor!
+7;1;17;64;50;How did Jessie tellus to open the gate?
+7;1;18;64;51;We should be able to enter the codes she gave us into the 6 main computerterminals.
+7;1;19;64;50;Damn man,get a holdof yourself!
+7;1;20;64;51;You all right?
+7;1;21;64;49;....Tifa.
+7;1;22;64;51;Mmm?
+7;1;23;64;49;No....forget....Come on,let's hurry!
+7;1;24;64;50;Easy getaway,huh?
+7;1;25;64;51;Let's just hurry!
+7;1;26;64;50;This way!
+7;1;27;64;50;Shinra soldiers!? SHIT!What the hell's goin' on?
+7;1;28;64;49;A trap....
+7;1;29;64;50;Pres.Shinra?
+7;1;30;64;51;Why is the President here?
+7;1;31;64;61;Pres.Shinra:Hmm....Soyou all must be that....what was it?
+7;1;32;64;50;AVALANCHE!And don'tya forget it!And you're Pres.Shinra,huh?
+7;1;33;64;49;Long time no see, President
+7;1;34;64;61;....Long time no see?Oh....you.You're the one who quit SOLDIER and joined AVALANCHE.I knew you were exposed toMako,from the glow in your eyes....Tell me,traitor....what was your name?
+7;1;35;64;49;Cloud.
+7;1;36;64;61;Forgive me for asking,but I can't be expected to remember each person's name. Unless you become another Sephiroth. Yes,Sephiroth....He was brilliant. Perhaps too brilliant....
+7;1;37;64;49;Sephiroth..?
+7;1;38;64;50;Don't give a damn 'bout none of that!This place's goin' up with a big BANG soon!Serves y'all right!
+7;1;39;64;61;And such a waste ofgood fireworks,justto get rid of vermin like you....
+7;1;40;64;50;VERMIN?That's all you can say.... VERMIN!Y'all Shinra're the VERMIN,killing the planet!And that makes you King VERMIN!So shu'up jackass!
+7;1;41;64;61;....You are beginningto bore me.I'm a very busy man,so ifyou'll excuse me....Ihave a dinner I must attend.
+7;1;42;64;50;Dinner!?Don't gimmethat!I ain't even started wit' you yet!
+7;1;43;64;61;But,I've made arrangements for a playmate for you all.
+7;1;44;64;51;!?What's that noise?
+7;1;45;64;50;The hell is this!?
+7;1;46;64;61;Meet Airbuster,a techno-soldier.Our Weapon Development Dept created him. I'm sure the data he'll extract from your dead bodies will be of great use to us in futureexperiments.
+7;1;47;64;49;....Techno-soldier?
+7;1;48;64;61;Now then,if you'll excuse me.
+7;1;49;64;49;Wait,President!
+7;1;50;64;50;Yo,Cloud!We've gotta do somethin' about him!
+7;1;51;64;51;Help,Cloud!THIS....isfrom SOLDIER?
+7;1;52;64;49;No way!It's just a machine!
+7;1;53;64;50;I don't care what it is!I'm gonna bust him up!
+7;1;54;64;50;It's gonna blow! Let's go,Tifa!
+7;1;55;64;51;Barret!Can't you dosomething?
+7;1;56;64;50;Not a damn thing.
+7;1;57;64;51;Cloud!Please don't die!You can't die! There's still so much I want to tellyou!
+7;1;58;64;49;I know,Tifa....
+7;1;59;64;50;Hey,you gonna be awright?
+7;1;60;64;49;....You worry about yourselves!I'm all right,but take careof Tifa!
+7;1;61;64;50;....Alright.Sorry 'bout all this.
+7;1;62;64;49;Stop talkin' like this is the end!
+7;1;63;64;50;Alright,then,later.
+7;1;64;0;0;You all right? ....Can you hear me?@1....Yeah....00000000000Back then....You could get by with just skinned knees....@1What do you mean by\"back then\"?What about now?Can you get up?@1....What do you mean by \"that time\"?.... What about now?
+7;1;65;64;49;....Yeah....00000000000Back then....You could get by with just skinned knees....@1What do you mean by\"back then\"?What about now?Can you get up?@1....What do you mean by \"that time\"?.... What about now?
+7;1;66;0;0;Back then....You could get by with just skinned knees....@1What do you mean by\"back then\"?What about now?Can you get up?@1....What do you mean by \"that time\"?.... What about now?
+7;1;67;64;49;What do you mean by\"back then\"?What about now?Can you get up?@1....What do you mean by \"that time\"?.... What about now?
+7;1;68;0;0;What about now?Can you get up?@1....What do you mean by \"that time\"?.... What about now?
+7;1;69;64;49;....What do you mean by \"that time\"?.... What about now?
+7;1;70;0;0;Don't worry about me.You just worry about yourself now.
+7;1;71;64;49;....I'll give it a try.
+7;1;72;64;52;Oh! He moved!
+7;1;73;0;0;....How about that? Take it slow now. Little by little....
+7;1;74;64;52;Hello, hello?
+7;1;75;64;49;......I know.
+7;1;76;64;49;Hey....who are you?
+7;1;77;64;52;Hello, hello!
+7;1;78;64;52;You okay?This is a church in the Sec.5slums.You suddenly fell on top of me. You really gave me quite a scare.
+7;1;79;64;49;....I came crashing down?
+7;1;80;64;52;The roof and the flower bed must have broken your fall.You're lucky.
+7;1;81;64;49;Flower bed....is thisyours?Sorry about that.
+7;1;82;64;52;That's all right. The flowers here are quite resilientbecause this is a sacred place.They say you can't grow grass and flowers in Midgar.But for some reason,the flowers have no trouble blooming here.I love it here....So,we meet again.Don't you remember me?
+7;1;83;64;49;Yeah,I remember you,you were selling flowers.
+7;1;84;64;52;Oh,I'm so happy! Thanks for buying my flowers.Say,do you have any materia?
+7;1;85;64;49;Yes,some.Nowadays you can find materia anywhere.
+7;1;86;64;52;But mine is special.It's good for absolutely nothing.
+7;1;87;64;49;....Good for nothing?You probably just don't know how to use it.
+7;1;88;64;52;No,I do....it just doesn't do anything.I feel safe just having it.It was my mother's....Say,I feel like talking. Do you feel up to it?
+7;1;89;64;49;I don't mind
+7;1;90;64;52;Just a little longer.Oh!Now that you mention it....We don't know each other's names,do we?I'm Aeris,the flower girl.Nice tomeet you.
+7;1;91;64;49;The name's Cloud. Me....I do a little bit of everything.
+7;1;92;64;52;Aeris:Oh....a jack ofall trades.
+7;1;93;64;49;Yeah,I do whatever's needed. What's so funny? What are you laughing at?
+7;1;94;64;52;Sorry....I just....
+7;1;95;64;52;Sorry,bad timing onmy part.
+7;1;96;64;52;Cloud!Don't let it get to you!
+7;1;97;64;52;Say,Cloud.Have you ever been a bodyguard?You DO doeverything,right?
+7;1;98;64;49;Yeah,that's right.
+7;1;99;64;52;Then,get me out of here.Take me home.
+7;1;100;64;49;OK,I'll do it....but it'll cost you.
+7;1;101;64;52;Well then,let's see....How about if Igo out with you once?
+7;1;102;0;0;Aeris joins you.
+7;1;103;64;49;I don't know who you are,but....
+7;1;104;64;68;You don't know me? ....I know you
+7;1;105;64;49;Oh yeah....I know you.That uniform....
+7;1;106;64;76;Hey,sis, this one's a littleweird.
+7;1;107;64;49;Shut up!You Shinra spy!
+7;1;108;64;76;Reno!Want him taken out?
+7;1;109;64;68;Reno:I haven't decided yet.
+7;1;110;64;52;Don't fight here! You'll ruin the flowers!
+7;1;111;64;68;They were....Mako eyes.Yeah,all right.Back to work.Oh!And dont step onthe flowers......
+7;1;112;64;76;Hey Reno,you just stepped on them!
+7;1;113;64;76;They're all ruined!
+7;1;114;64;76;You're gonna catch holy hell!
+7;1;115;64;52;What should we do?
+7;1;116;64;49;Well we can't let them catch us,can we?Then,there's only one thing left.
+7;2;0;64;52;You know,mister.He always said that just once,he'd liketo dress up as a girl.So,That's why I wanted a cute dress for him....
+7;2;1;0;0;What?A tough lookinguy like that?
+7;2;2;64;52;So,how 'bout it? Will you make him one?
+7;2;3;0;0;....Might be interesting.I was gettin' a little bored just makin' regular clothes.
+7;2;4;64;52;Then you'll do it for us?
+7;2;5;0;0;Yeah,all right.Whatkind of dress you want?
+7;2;6;64;52;Something....that feels soft.And something....that shimmers.
+7;2;7;0;0;Hmm,got it.Y'know Igot a friend that has the same taste as him.I'll go talkto him.
+7;2;8;0;0;Oh,you're here.It'sready.Go try it on.
+7;2;9;64;49;How....do you put this thing on?
+7;2;10;64;52;Aren't you going tochange?
+7;2;11;64;49;Okay....I'm ready.
+7;2;12;0;0;Hmm,not bad.This may be a new business for me.
+7;2;13;0;0;Yeah,you're right. Should we try it?
+7;2;14;0;0;Thanks for showing us something new.Myfather's got his motivation back now.So the dress ison the house.
+7;2;15;64;52;Walk more nicely like....this.Miss Cloud.
+7;2;16;64;49;What do you mean 'nicely'?
+7;2;17;64;52;Oh you're so cute, Miss Cloud.Aaah,I want one.Do you have one that'll look good on me too?
+7;2;18;0;0;How's this?
+7;2;19;0;0;How about that one?
+7;2;20;0;0;Father,what are youtalking about?This one's much better.
+7;2;21;0;0;No,what are you saying?This one.
+7;2;22;64;52;....I want THIS one.
+7;2;23;64;52;I'm going to go change.
+7;2;24;64;52;....No peeking!
+7;2;25;64;52;So?How do I look?
+7;2;26;64;49;....
+7;2;27;64;52;Oh,you're no fun!
+7;2;28;64;77;Doorman:Damn!Your friend's hot,too! Come in,come in!2 ladies coming through!
+7;2;29;0;0;Hey,ladies.I'll go and let the Don know you're here. Wait here.Don't go wandering around....
+7;2;30;64;52;Now's our chance. Let's find Tifa.
+7;2;31;64;52;....Tifa?Nice to meetyou.I'm Aeris. Cloud's told me a lot about you.
+7;2;32;64;51;....And you are?Hey you're the one withCloud in the park....
+7;2;33;64;52;Right,with Cloud.
+7;2;34;64;51;Oh....
+7;2;35;64;52;Don't worry.We justmet.It's nothing.
+7;2;36;64;51;What do you mean, \"Don't worry\".... about what?No,don'tmisunderstand.Cloudand I grew up together.Nothing more.
+7;2;37;64;52;Poor Cloud,having to stand here and listen to both of us call him nothing.
+7;2;38;64;52;Right,Cloud?
+7;2;39;64;51;Cloud?
+7;2;40;64;51;Cloud!?Why are you dressed like that!?And what are you doing here!?Forget that,what happened to you after the fall!?Are you hurt?
+7;2;41;64;49;Hey,give me a chance to explain. I'm dressed like this....because therewas no other way toget in here.I'm allright.Aeris helped me out.
+7;2;42;64;51;Oh,Aeris did....
+7;2;43;64;49;Tifa,explain.What are you doing in a place like this?
+7;2;44;64;51;Yeah,umm....
+7;2;45;64;52;Ahem!I'll just plugmy ears.
+7;2;46;64;51;I'm glad you're OK.
+7;2;47;64;49;Thanks.What happened?
+7;2;48;64;51;When we got back from the #5 reactor,there was this weird man.So Barret caught him and squeezed some information out of him.
+7;2;49;64;49;That's when the Don's name popped up.
+7;2;50;64;51;Right,Don Corneo. Barret told me to leave the lech alone....But something's been bothering me.
+7;2;51;64;49;I see.So You wantedto get the story straight from Corneo's mouth.
+7;2;52;64;51;So I made it here, but now I'm in a bind.Corneo is looking for a bride.Everyday,he gets 3 girls, chooses one of them,and then....and,well....Anyway,I haveto be the girl....or I'm out for tonight.
+7;2;53;64;52;Sorry....but I overheard....If you know the 3 girls, there's no problem,right?
+7;2;54;64;51;I guess so,but....
+7;2;55;64;52;We have 2 here, right?
+7;2;56;64;49;No,Aeris!I can't have you get involved.
+7;2;57;64;52;Oh?So it's all right for Tifa to be in danger?
+7;2;58;64;49;No,I don't want Tifa in....
+7;2;59;64;51;Is it all right?
+7;2;60;64;52;I grew up in the slums....I'm used to danger.
+7;2;61;64;52;Do you trust me?
+7;2;62;64;51;Yes.Thanks,Ms Aeris.
+7;2;63;64;52;Call me Aeris.
+7;2;64;0;0;Hey!It's time, ladies!The Don is waiting!I told ya not to wander around....I tell ya, women nowadays.... Hurry up,will ya!
+7;2;65;64;49;I probably don't need to ask but theother girl is....me....right?
+7;2;66;64;51;You're right,there was no need....
+7;2;67;64;52;....to ask.
+10;0;0;64;50;He's dead....The leader of Shinra, Inc is dead.
+10;0;1;64;51;Then this sword must be..!?
+10;0;2;64;49;Sephiroth's!
+10;0;3;64;51;....Sephiroth is alive?
+10;0;4;64;49;....Looks like it. Only Sephiroth can use that sword.
+10;0;5;64;50;Who cares who did it!?This is the endof the Shinra now!
+10;0;6;0;0;P,p,p,please,don't kill me!
+10;0;7;64;49;What happened?
+10;0;8;0;0;Se....Sephiroth. Sephiroth came.
+10;0;9;64;49;Did you see him?Didyou see Sephiroth?
+10;0;10;0;0;Yeah,I saw him!I saw him with my owneyes!
+10;0;11;64;49;You really saw him?
+10;0;12;0;0;Uh!Would I lie to you at a time like this!?And I heard his voice too!Um,hewas saying something about notletting us have thePromised Land.
+10;0;13;64;51;Then what?Does thatmean that the Promised Land really exists and that Sephiroth's here to save it from Shinra?
+10;0;14;64;50;So he's a good guy then?
+10;0;15;64;49;Save the Promised Land?A good guy?No way!It's not that simple!I know him! Sephiroth's missionis different!
+10;0;16;64;50;Rufus!&*%$!I forgotabout him!
+10;0;17;64;51;Who's that?
+10;0;18;64;50;Vice President Rufus.The President's son.
+10;0;19;64;51;I wonder what kind of person he is....
+10;0;20;64;52;I've heard that no one's ever seen himbleed or cry.
+10;0;21;64;50;I heard that he's been assigned somewhere else for a long time....
+10;0;22;64;53;I only know his name.
+10;0;23;64;62;Rufus:So....So Sephiroth was actually here....By the way.
+10;0;24;64;62;Who are you guys?
+10;0;25;64;49;I'm Cloud,former SOLDIER 1st Class!
+10;0;26;64;50;I'm from AVALANCHE!
+10;0;27;64;51;Same here!
+10;0;28;64;52;....a flower girl from the slums.
+10;0;29;64;53;A research specimen.
+10;0;30;64;62;What a crew....Well, I'm Rufus.The President of Shinra,Inc.
+10;0;31;64;50;You only President,'cause your old mandied!
+10;0;32;64;62;That's right.I'll let you hear my newappointment speech.
+10;0;33;64;62;Old man tried to control the world with money.It seemsto have been working.
+10;0;34;64;62;The population thought that Shinrawould protect them.
+10;0;35;64;62;Work at Shinra,get your pay.If a terrorist attacks, the Shinra army will help you.It looks perfect on the outside.But,I do things differently.I'll control the world with fear.It takes too much to do it like my old man.
+10;0;36;64;62;A little fear will control the minds of the common people.There's no reason to waste money on them.
+10;0;37;64;51;He likes to make speeches just like his father.
+10;0;38;64;49;Get outta this building with Aeris!
+10;0;39;64;50;What?
+10;0;40;64;49;I'll explain later!Barret!This is the real crisis for thePlanet!
+10;0;41;64;50;The hell's that supposed to mean?
+10;0;42;64;49;I'll tell you later!Just take my word for it!I'll goafter I take care of him!
+10;0;43;64;50;Awright,Cloud!
+10;0;44;64;52;Cloud....I just thought of something.
+10;0;45;64;51;....I'll wait for Cloud!Everyone,get to the elevator!
+10;0;46;64;52;Hmm,it's going to get pretty ugly from here on.
+10;0;47;64;62;Why do you want to fight me?
+10;0;48;64;49;You seek the Promised Land and Sephiroth.
+10;0;49;64;62;Hm,exactly.Mm?Did you know that Sephiroth is an Ancient?
+10;0;50;64;49;A lot has happened.Anyway,I can't let either you or Sephiroth have the Promised Land!
+10;0;51;64;62;I see.I guess this means we won't become friends.
+10;0;52;64;62;Heh....That's all fortoday.
+10;0;53;64;51;Where's Rufus?
+10;0;54;64;49;I couldn't finish 'em.Looks like this's gonna get complicated.
+10;0;55;64;50;I'll go on ahead! *&^%(*....surrounded,huh?If I was alone this wouldn't be a thang but,I gotta reputation to protect.
+10;0;56;64;52;You all get out while you can.It's not you they're after....it's me.
+10;0;57;64;50;Yeah,well that ain't happenin'.Yougot caught up in this over Marlene. Now,it's my turn towatch out for you!
+10;0;58;64;50;Ok,playtime's over for you jackasses....
+10;0;59;64;52;Thank you,Mr. Barret!
+10;0;60;64;50;Who you callin' Mr.Barret?That don't sound right!
+10;0;61;64;53;Well then....If you are through talking,may I suggest that we think of a way to get out of here.
+10;0;62;64;50;Huh?Oh,oh yeah....Youa cold man.Just like somone else 'round here I know.
+10;0;63;64;53;Did you say something?
+10;0;64;64;50;Notta thing.So what're we gonna do?
+10;0;65;64;51;We can head out that way!        Let's hurry!
+10;0;66;64;50;Nowhere else to go....
+10;0;67;64;49;I have things to settle....
+10;0;68;64;51;We're all in this together.
+10;0;69;64;50;Well,what do we do now?
+10;0;70;64;49;Sephiroth is alive.I....I have to settlethe score.
+10;0;71;64;50;And that'll save the Planet?
+10;0;72;64;49;Seems like it.
+10;0;73;64;50;Awright,I'm going.
+10;0;74;64;52;I'll go too....I havethings that I want to find out.
+10;0;75;64;49;About the Ancients?
+10;0;76;64;52;....Many things.
+10;0;77;64;51;I guess this's goodbye,Midgar.
+10;0;78;64;53;I'm going back to my hometown.I'll gowith you as far as that.
+10;0;79;64;51;I guess this is thestart of our journey....
+10;0;80;64;49;You hate traveling?
+10;0;81;64;51;I don't know.But,I don't have anywhereelse to go.So I guess it doesn't really matter whether I like to travel or not.
+10;0;82;64;52;You know what?This is the first time I've ever left Midgar....
+10;0;83;64;49;It's dangerous.You sure you want to go?
+10;0;84;64;52;I thought you'd saythat!
+10;0;85;64;50;We told Aeris's momto go somewhere safe,so Marlene should be safe too.
+10;0;86;64;49;Yeah,she should be.
+10;0;87;64;52;She said she didn'twant to stay in Midgar anymore.... Maybe it's for the best.
+10;0;88;64;49;Then....Let's go!
+10;0;89;64;50;We need a group leader for our journey.'Course only me could be the leader.
+10;0;90;64;51;You think so..?
+10;0;91;64;52;It would have to beCloud.
+10;0;92;64;50;^#$^%....awright.Go Northeast to a towncalled Kalm.If something happens, we'll meet up there.
+10;0;93;64;51;So this is Kalm?
+10;0;94;64;52;Let's head to the Inn.
+10;0;95;64;51;Let's go Cloud.
+10;0;96;64;50;So Cloud, let's hear your story.... You know,about you and Sephiroth.
+10;0;97;64;49;....I wanted to be like Sephiroth, so I joined SOLDIER. After working with Sephiroth on a few missions, we became friends.
+10;0;98;64;50;You call that a friend?
+10;0;99;64;49;Yeah, well....He's older than me, and he hardly ever spoke about himself
+10;0;100;64;49;We trusted each other. Until one day....
+10;0;101;64;49;We were sent on a mision to Nibelheimto investigate a malfunctioning reactor. Tifa was our guide to lead us to the reactor.
+10;0;102;64;49;Inside the reactor we discovered creatures created by Shinra. Normal SODIER members are exposed to mako But these people were exposed to high amounts of Mako. Sephiroth was unlike normal members of SOLDIER..
+10;0;103;64;49;After realizing he may have been made the same way as those monsters, he went into the Shinra mansion and learned about the Cetra and The Jenova Project. A project to create a human with the powers of the Cetraby using Jenova's cells. He went mad and set the town on fire, my family,and friends were killed.
+10;0;104;64;51;My father....
+10;0;105;64;49;Tifa went after him. Inside the reactor I found Tifa injured. I went after Sephiroth.
+10;0;106;64;49;Sephiroth found his mother, Jenova He believed she was destined to rule the world.... and that's the end of my story.
+10;0;107;64;52;What happened to Sephiroth?
+10;0;108;64;49;In terms of skill I couldn't have killed him.
+10;0;109;64;51;Official records state Sephiroth is dead.
+10;0;110;64;52;Shinra owns the paper,so you can't rely on them.
+10;0;111;64;49;I want to know what happened then.I challenged Sephiroth and lived Why didn't he kill me?
+10;0;112;64;52;What about Jenova?
+10;0;113;64;49;Shinra shipped it to Midgar.
+10;0;114;64;52;It was missing from the Shinra building.
+10;0;115;64;50;Damn! Don't none ofthis make sense! I'm going!
+10;0;116;64;53;....what a fascinating story
+10;0;117;64;51;Let's get going
+10;0;118;0;0;so you can't rely on them.
+10;0;119;0;0;th and lived Why didn't he kill me?
+10;0;120;0;0;hy didn't he kill me?
+10;0;121;0;0;hinra building.
+10;0;122;0;0;ne ofthis make sense! I'm going!
+10;0;123;0;0; make sense! I'm going!
+10;0;124;0;0;Some guy in a black cloak walked east towards that grassy field.
+10;0;125;0;0;And he's got this killer sword,and islooking REAL scary....
+10;0;126;0;0;Thanks to Shinra, Inc developing Makoenergy for us, everything's more convenient now.
+10;0;127;0;0;The famous floatingcity,Midgar....Just once I'd love to see it in person.
+10;0;128;0;0;I heard Pres.Shinrawas killed.And his son Rufus,the new president,was badlyhurt.
+10;0;129;0;0;Hey,I bet that's news to you?
+10;0;130;0;0;Heh,heh,heh....This is just between us.I heard it was thatthere Ava-whaddya call-ums that attacked the Pres. Shinra and his son.
+10;0;131;0;0;Shinra is leading the world around bythe nose,and you guys are just gonnasit back and take it?
+10;0;132;0;0;I hear that the natural resources near the reactors are being sucked dry.We're better off with them bringing in the Mako energy.
+10;0;133;0;0;My old man was a miner,but he couldn't go to workafter monsters started appearing in the Mythril Mine.Now all he does is sit around getting drunk in the bar....
+10;0;134;0;0;Is it true that Shinra made a Monster?
+10;0;135;0;0;Yeah,well,either way,as long as we're using the reactor,we can't stand up to Shinra.
+10;0;136;0;0;I got my health,andenough to eat.... all's well.
+10;0;137;0;0;Thanks to Mako energy,life's pretty darn convenient.Thanks to Shinra.Don't youthink?
+10;0;138;0;0;Yeah,Mako energy's made our lives mucheasier.And it's allthanks to Shinra, Inc.
+10;0;139;0;0;Mako energy's made things a lot more convenient....But seems like a lot ofplants and animals have been disappearing at a rapid pace.I think the old life was better.Don't you think so?
+10;0;140;0;0;Me?I used to work in a coal mine downsouth called Mythril Mine.But, right around then, monsters started appearing.After that,business went to pot and now I spend the days heredrinking.
+10;0;141;0;0;It seems there was this group called AVALANCHE runnin' around,but I guess they finally got wiped out by SOLDIER.
+10;0;142;0;0;ChocoBill:Thinking of crossing the marshes?
+10;0;143;64;49;Yeah.
+10;0;144;0;0;Hmm,then it'll probably be safer for you to get a Chocobo.That way you can zip throughthe marshes with the Chocobo.It's the only way to avoid being attacked by the Midgar Zolom.MidgarZolom..?It's a serpent-like creature over 30 feet tall!It picks up on footsteps that enter the marshes....And then, BAM!It attacks!To avoid that,buy a Chocobo at the ChocoBill and ChocoBilly Chocobo Farm.To purchase a Chocobo,please talkto my grandson.He'sin the Chocobo stables at the far right end of the farm.
+10;0;145;0;0;ChocoBilly:Do you want a Chocobo?
+10;0;146;64;49;Mmm....
+10;0;147;64;49;Give me one.
+10;0;148;0;0;You old folks are out of luck!
+10;0;149;64;49;Old folks..?
+10;0;150;0;0;We're all out of Chocobos.I'm takingcare of those ones out there for someone else.
+10;0;151;0;0;You know,if you really want a Chocobo,you should go out and catch one.
+10;0;152;64;49;Where are they?
+10;0;153;0;0;You see the ChocoboForest out there? Wild Chocobo's willappear in those areas.But,if you don't have Chocobo Lure they won't come out.They're very cautious animals by nature.
+10;0;154;64;49;Chocobo Lure?
+10;0;155;0;0;Chocobo Lure is a type of materia which attracts Chocobos.If you equip this,they'll come to you.But, without it,they won't appear.
+10;0;156;0;0;Want to know how tocatch a Chocobo?
+10;0;157;64;49;How do I catch one?     
+10;0;158;0;0;Go to Chocobo Forest and use the Chocobo Lure at thebig tree!Whatever you do,don't make Chocobos angry. They're usually calm,but if you getthem angry,you'll get hurt.Oh,and remember,once you get off a Chocobo, it'll escape.
+10;0;159;0;0;Well then,shall we get down to business?I'll sell you the Chocobo Lure for 2000 gil, right now.You want it?
+10;0;160;0;0;Shera: It happened the day Shinra #26 was set to launch. The Captain was so happy back then. He'd always dreamedof flying into space. I was a mechanic on the rocket and my pre-launch check of the Engine Room uncovered a leak in one of the oxygen tanks. Diagnostics indicated it could compromise the launch. The Captaintold me not to worry, but I wouldn't risk failure. Unbeknownst to the Captain, I stayed in the Engine Room while he started the countdown. It was too late for me to join him in the cockpit when he finally realizedI was still in the Engine Room. The Captain ordered me to evacuate...but I couldn't. Not when there existed the possibility of an O2 explosion. I stayed to fix the tanks, even though it meant I'd probably be burned alive by the Engines. I'd worked too hard for the launch to fail at zero hour. But as the countdown dwindled,and the Captain realized I still hadn't evacuated...he... he...silly man. He pushed the Emergency Shutdown.The Rocket failed. The Captain killed his dreams to save my life.
+10;1;0;64;80;I heard they're rehearsing the reception for the new Shinra president.
+10;1;1;64;50;Rufus!?I gotta pay my respects.
+10;1;2;64;80;Grandpa and grandmatold me this beach was beautiful when they were small.Butafter the Shinra built that city above,the sun stopped shining here,and the water got polluted....I wasraised on that story and hate Shinra so much,I could die!
+10;1;3;64;52;You think Rufus is thinking about crossing the ocean from here,too?
+10;1;4;64;53;Cloud,didn't you finish Rufus off?
+10;1;5;64;50;We gotta get to thetown up there.... Mebbe we could climb the tower?
+10;1;6;64;80;You can climb the high voltage tower, follow me!
+10;1;7;64;49;What!?
+10;1;8;64;51;High voltage tower....I guess this means Cloud'll be all right.
+10;1;9;64;52;Yeah, better leave it to Cloud!@5We're counting on you, Cloud@1Wait a second!
+10;1;10;64;53;We're counting on you, Cloud@1Wait a second!
+10;1;11;64;49;Wait a second!
+10;1;12;64;80;Wait.If you jump just right,You can climb to the top ofthe town.
+10;1;13;64;49;Alright
+10;1;14;64;75;Captain:Hey!You still dressed like that!?
+10;1;15;64;75;Today's the big daywhen we welcome Pres.Rufus!Hurry upand change!
+10;1;16;64;49;It's the Shinra uniform.
+10;1;17;64;49;Brings back memories....
+10;1;18;64;75;Quit yappin'!Hurry up!
+10;1;19;64;49;A Shinra uniform....Iwas so proud when Ifirst put it on.I wonder when it was....I couldn't stand wearing this thing anymore.
+10;1;20;64;75;Wow!You look good in it!Good!Make sure you do well atthe real parade!
+10;1;21;0;0;Rufus has arrived! Preparation completed!
+10;1;22;64;75;All right,show time!Don't disgraceyourselves!
+10;1;23;64;62;How's the job?
+10;1;24;64;63;....
+10;1;25;64;62;What happened to the Airship?
+10;1;26;64;63;The long range airship is still being prepared.It should be ready in about three more days.Gya ha ha!
+10;1;27;64;62;Even the Air Force's Gelnika?
+10;1;28;64;63;....Gya ha ha!
+10;1;29;64;62;Stop that stupid horse laugh.Things are different than when father was in charge.
+10;1;30;64;63;Gya....
+10;1;31;64;62;Is the ship ready?
+10;1;32;64;63;Yes Sir,we'll get it ready quickly.
+10;1;33;64;75;Hey!Hey you!You messing with the army?
+10;1;34;64;49;Who cares?
+10;1;35;64;75;You're too lazy!No break for you!Get over here!
+10;1;36;64;75;This is the military,soldier! You orders for today are to send off Pres.Rufus at the dock!I'll keep drilling you until it's time!Don't mess up during the real thing!
+10;1;37;64;49;Yes,sir.
+10;1;38;64;75;Well then!Meet at the dock!
+10;1;39;64;75;All right,it's time!
+10;1;40;64;75;Pres.Rufus....has nowarrived!
+10;1;41;64;75;Ten....HUT!
+10;1;42;64;62;Well done.Keep up the good work for Shinra,Inc.
+10;1;43;64;63;Gya ha ha..!
+10;1;44;64;62;Once the word gets out that Sephiroth's here, Cloud and his friends will show up,too.
+10;1;45;64;63;We'll crush them assoon as we find them!
+10;1;46;64;62;We can't have them get in our way.
+10;1;47;64;63;Leave it up to me, sir!Gya ha ha!
+10;1;48;64;62;I thought I told you to stop that stupid laugh....
+10;1;49;64;63;Gya....
+10;1;50;64;75;All right! Dismissed!
+10;1;51;64;76;Soldier:That was close.
+10;1;52;64;76;Soldier:Heidegger's been really edgy lately.
+10;1;53;64;76;Because Hojo disappeared,leavinga letter of resignation.
+10;1;54;64;76;Heidegger's been forced to take careof that investigation,too.
+10;1;55;64;75;Hey!I thought you were dismissed!
+10;1;56;64;75;We've got some cleaning to do! Hurry up!
+10;1;57;64;49;We'll cross the ocean,to the new continent....even if we are wearing Shinra's uniforms....
+10;1;58;0;0;I'm workin' hard already,and you still want me to domore?
+10;1;59;0;0;The new President'sprobably the same.
+10;1;60;0;0;He's just gonna order us around anyway.
+10;1;61;0;0;It won't do any good trying to stopme!
+10;1;62;0;0;All right!I'm goingto show the new President what I'm made of!
+10;1;63;0;0;Hey,get to work!
+10;1;64;0;0;Both the new Pres. Rufus and Heideggerare aboard this ship!
+10;1;65;0;0;If we do good,we could get promoted!
+10;1;66;64;52;Umm....It's me,Aeris.
+10;1;67;64;52;Hey,Cloud.Did you see the Airship at Junon?
+10;1;68;64;49;....I heard it was big,but I didn't expect it to be THAT big.
+10;1;69;64;52;That was REALLY something.Hey,do you think I could get on it?
+10;1;70;64;49;I'll take you someday.
+10;1;71;64;52;Wow!I'm really looking forward to it!Let's ride the Airship together, OK?Promise,promise me!
+10;1;72;64;51;Yes sir!Everything quiet,sir!....It's me,Tifa.
+10;1;73;64;51;....But,you know what?I really hate this uniform. Uniforms,soldiers, war.I hate 'em all.They take away the things and people you love....I wish they'd all disappear.Right, Cloud?
+10;1;74;64;49;Yeah....
+10;1;75;64;51;You're right!Uh,yessir,I'll continue my watch sir!Hee hee....
+10;1;76;64;53;....It's me,RedX`.
+10;1;77;64;53;I'm a little woozy,but I shouldn't getcaught.Humans only look at appearancesanyway.Anyway you look at it,I'd say I make a fine humanbeing.It's pretty hard standing on two feet....
+10;1;78;64;52;Hey,Cloud,did you see Barret?I hope he's not doing anything stupid....
+10;1;79;64;50;Look,Cloud.It' Rufus and Heidegger.They're this close but we can't do a thing to'em....Umm....Gmm....How can he....Goin' off laughin' like that?Because of him, Biggs....Wedge.... Jessie..!Gggh.... Gggh..!Ggghh!
+10;1;80;64;50;God!I can't take itanymore!I'm gonna settle things here and now....
+10;1;81;64;84;Siren:Emergency alert!Reports of a suspicious character found! Those not on detail,search the ship.Report when found!
+10;1;82;64;50;Damn,did they find us?Hey,that don't seem like us.Do they mean....Tifa andthe others!?
+10;1;83;64;51;Everyone all right? 
+10;1;84;64;50;You all right!?
+10;1;85;64;52;Yes.
+10;1;86;64;53;Everyone's here.... right?
+10;1;87;64;50;Hey,wait.You don't think that suspicious character is.... Sephiroth!?
+10;1;88;64;51;Really!?
+10;1;89;64;50;How the hell am I supposed to know?
+10;1;90;64;49;....Let's find out.
+10;1;91;64;53;It's the most logical thing to do.Then,let's get going. 
+10;1;92;64;49;....Sephiroth....All right,let's go!
+10;1;93;0;0;....the Engine Room....a suspicious.... character....No.... there's no way.... that....not a human....That thing's not human....
+10;1;94;64;49;Is it....Sephiroth?
+10;1;95;64;49;No....not Sephiroth!
+10;1;96;0;0;After a long sleep....
+10;1;97;0;0;....the time....
+10;1;98;0;0;....time has....come....
+10;1;99;64;52;Look,Cloud!
+10;1;100;64;49;Sephiroth!You're alive!
+10;1;101;64;60;Sephiroth:....Who areyou?
+10;1;102;64;49;You don't remember me!?I'm Cloud!
+10;1;103;64;60;Cloud....
+10;1;104;64;49;Sephiroth!What are you thinking!?What are you doing!?
+10;1;105;64;60;....the time....is now....
+10;1;106;64;49;What are you saying!?Be more....
+10;1;107;64;51;I've seen this somewhere....before.
+10;1;108;64;49;....Jenova.The arm ofJenova.
+10;1;109;64;52;Jenova....With this thing?
+10;1;110;64;49;So it WAS Sephiroth.
+10;1;111;64;51;He said something about it being timefor something.
+10;1;112;64;49;....Time....is now?
+10;1;113;64;52;Hmm....I don't get it.Hey,Cloud.Can you explain it to us?
+10;1;114;64;49;I'll try,but don't interrupt me while I'm explaining. Sephiroth went off searching for the Promised Land,so hecould become the ruler of the planet....That was 5 years ago.Then Sephiroth came backand killed Pres. Shinra.
+10;1;115;64;49;And then just now all of us saw Sephiroth.
+10;1;116;64;49;He was carrying Jenova with him.... This much I do know.He told me he wants to go to the Promised Land with his mother,Jenova....I guess that's about it.
+10;1;117;64;84;Intercom:Dock workers....We will bedocking in Costa del Sol in 5 minutes.Prepare fordocking.
+10;1;118;64;52;Maybe we shouldn't stay in here anymore....
+10;1;119;64;49;Sephiroth....is alive....The PromisedLand....Does it really exist..?
+10;1;120;64;50;Damn!Sure is hot here!But I sure feel better now that I can say good-bye to this sailor suit.Yo listen up!Y'all be sure to mingle likeregular folks here!
+10;1;121;64;52;Oh,too bad.I liked Barret's sailor suit.He looked so cute.
+10;1;122;64;50;....What'ya mean \"cute\"?
+10;1;123;64;51;Right....well,uh.... Barret,why don't you use that sailorsuit for pajamas? Right,Cloud?
+10;1;124;64;49;Remember,this isn'ta vacation.We're here after Sephiroth.I'm goingon ahead.
+10;1;125;64;50;Hmmph,Cloud.You're the one,who's always hangin' around wastin' time.I'm going to skip this resort!
+10;1;126;64;53;....puff....puff..?Wouldyou kindly hurry? The heat here is drying my nose.
+10;1;127;64;49;All right.We'll take a break here and then head off. Don't wander too far off.
+10;1;128;64;50;I'll wander wherever I damn well want!Who made him the leader?
+10;1;129;64;53;It looks like my mane got messed up.I'm going to rest somewhere cool.
+10;1;130;64;62;Hmm....Good work everyone....
+10;1;131;64;63;Gya,Heh,heh....,ha!
+10;1;132;64;62;I heard Sephiroth was on board.
+10;1;133;64;63;....Yes.
+10;1;134;64;62;And it seems Cloud and the others wereon board,too.
+10;1;135;64;63;....Yes.
+10;1;136;64;62;They all slipped through....You messedup big this time, Heidegger.
+10;1;137;64;63;I'm ashamed of myself.
+10;1;138;64;62;Is that all you cando..?Give one word answers and apologize for everything?
+10;1;139;0;0;Ready for departure,sir!
+10;1;140;64;62;....Do something.I'llbe expecting results.
+10;1;141;0;0;Hey!Spread out,all of you,out!
+10;1;142;0;0;He's quite handsome,isn't he? ....Oh,don't worry, I'm not talking about you.I'm talking about Pres.Rufus.Charming, rich,blond....He evenlooks good in a double-breasted suit.
+10;1;143;0;0;Rufus complimented me on my job!Wow!I guess it pays to dogood work.
+10;1;144;0;0;Heidegger's such anidiot!And Rufus, acting all big!God,that sure felt good....Oops!You mustbe those AVALANCHE guys!Quick!Let's get outta here! Heidegger's in charge of the transport ship. That's tough for both of us.
+10;1;145;0;0;What a fluffy bed....feels so great....
+10;1;146;0;0;....SNORE....SNORE....
+10;1;147;0;0;Well, we're lucky to have that cutie working for us part-time.
+10;1;148;0;0;Whew!
+10;1;149;0;0;Hey!
+10;1;150;0;0;You're actually talking to me.
+10;1;151;64;49;What is it?
+10;1;152;0;0;I just passed a guyin a black cape back there.I just tried to tell him that it's dangerousup ahead,and he ignored me!
+10;1;153;64;49;Sephiroth....
+10;1;154;64;52;There was a black-cloaked guy here,too?
+10;1;155;64;51;Let's hurry on.
+10;1;156;0;0;Well,lookey here! Never thought I'd ever see your face again.
+10;1;157;0;0;They kick you out of another town or somethin'?You destroy everything you touch.
+10;1;158;0;0;You got a lot of balls comin' back here!Look at this place!It's all yourfault North Corel turned into a garbage heap!
+10;1;159;0;0;Why doncha say something!?Or did ya forget what you done here already?
+10;1;160;64;50;....I'm sorry....
+10;1;161;0;0;^%$#!You ain't evenworth the effort.
+10;1;162;0;0;Don't waste your time talkin' to theTechno-freak.
+10;1;163;64;50;You heard 'em....It'smy fault this town was....destroyed....
+10;1;164;0;0;YOU know who's responsible for North Corel windingup like this!
+10;1;165;0;0;The next train's coming in soon.
+10;1;166;0;0;Grandpa used to be a coal train engineer.He still can't kick his old habits from then.
+10;1;167;0;0;Take that road on the left to the Ropeway station!TheRoadway'll take youto the Gold Saucer.It don't mean much to the poor folks though....
+10;1;168;0;0;I hear it's a big fad now in the cityto get tattoos.Is that right?I guess I should get a \"0\" tattoo!For a poor man like me,\"0\" oughtta be perfect.
+10;1;169;64;49;I wouldn't know.
+10;1;170;0;0;Really..?I saw a big\"1\" on the arm of ayoung guy heading towards the Ropeway.That Black Cape he had on was really cool.
+10;1;171;0;0;Because of them.... ugh my husband got into that accident....He used to be such a strongman....
+10;1;172;0;0;How am I supposed to continue living in a town that's lost everything..?Tohell with the Mako reactor!
+10;1;173;64;49;Barret,what happened?
+10;1;174;64;50;Sorry.
+10;1;175;64;49;What happened?
+10;1;176;64;50;My hometown used tobe around here.
+10;1;177;64;49;What do you mean \"used to\"?
+10;1;178;64;50;It ain't here no more.Heard it got buried....in just 4 years.
+10;1;179;64;49;But how could thosepeople say those terrible things?
+10;1;180;64;50;An' it's my fault. ALL my fault.Corel was always a coal mining town.It's sodusty,but calm and so poor....a real small town,this one.That's the first time I ever heard the word \"Mako reactor\" mentioned since that time....
+10;1;181;0;0;Headman:What are wegoing to do?The only one against this is Dyne.
+10;1;182;64;74;Dyne:I am definitely against it,no matter what. There's nothing to talk about if you're thinking of throwing away our coal!Our coal's been protected for generations.Our fathers,and theirs before them,risked their lives for it.We have no right tothrow it all away so easily!
+10;1;183;64;50;But listen,Dyne.No one uses coal nowadays.It's the sign of the times.
+10;1;184;64;64;Right,everything isMako,now.It'll be all right,Dyne. Shinra,Inc will guarantee your livelihood once theMako Reactor is completed.
+10;1;185;64;50;Listen.Dyne.I don'twant my wife,Myrna,to suffer anymore.
+10;1;186;64;74;Dyne:I know how youfeel!I feel the same way too,damn it!But even so,I won't give away ourcoal mines!
+10;1;187;0;0;Dyne....you've got tounderstand.
+10;1;188;64;50;That's how the Corel Reactor was built....and completed.We all thought it would bring us an easier life.It happened when Dyne and I were out of town for a few days. Corel was burned down by the Shinra troops.All the townspeople....All myrelatives.... Everyone.... Everything....
+10;1;189;64;49;Shinra troops?What for?
+10;1;190;64;50;There was an explosion at a reactor.Shinra blamed the accidenton the people.Said it was done by a rebel faction.
+10;1;191;64;49;That's so terrible!
+10;1;192;64;50;Well,I guess that'strue.But more than Shinra,I couldn't forgive myself. Never should have gone along with thebuilding of the reactor....
+10;1;193;64;49;Don't blame yourself.We were all fooled by the promises Shinra made back then.
+10;1;194;64;50;That's why....that's why I get so pissedoff!Not only did they take advantageof me....But I lost my wife,Myrna,too....
+10;1;195;0;0;Hey everyone!If youwant to go to the Gold Saucer,hurry and get on!
+10;1;196;64;49;Go on.
+10;1;197;64;50;Dyne was my best friend.We was closeever since we was kids....
+10;1;198;64;52;Wow!I'm really looking forward to it!Let's ride the Airship together, OK?Promise me!
+10;2;0;0;0;
+10;2;1;0;0;Midgar
+10;2;2;0;0;Kalm
+10;2;3;0;0;ChocoboFarm 
+10;2;4;0;0;   Forest 
+10;2;5;0;0;Mythril Mine
+10;2;6;0;0;Junon
+10;2;7;0;0;
+10;2;8;0;0;
+10;2;9;0;0;
+10;2;10;0;0;
+10;2;11;0;0;
+10;2;12;0;0;Costa De Sol
+10;2;13;0;0;North Corel
+10;2;14;0;0;Gold Saucer
+10;2;15;0;0;
+10;2;16;0;0;Corel Prison
+10;2;17;0;0;
+10;2;18;0;0;Gongaga
+10;2;19;0;0;Cosmo Canyon
+10;2;20;0;0;
+10;2;21;0;0;
+10;2;22;0;0;Nibelheim
+10;2;23;0;0;
+10;2;24;0;0;Rocket Town
+10;2;25;0;0;Temple
+10;2;26;0;0;
+10;2;27;0;0;Bone Village
+10;2;28;0;0;Sleep Forest
+10;2;29;0;0;Forgot City
+10;2;30;0;0;
+10;2;31;0;0;Icicle Inn
+10;2;32;0;0;GreatGlacir
+10;2;33;0;0;Gaea's Cliff
+10;2;34;0;0;Materia Tree
+10;2;35;0;0;Planet Core
+10;2;36;0;0;
+11;0;0;0;0;Welcome to the GoldSaucer.Are you together?A single pass is 300 gil,or you can purchase a lifetime pass for 3000 gil.
+11;0;1;0;0;Pay 300 gil     Pay 3000 gil    
+11;0;2;0;0;Come on in!
+11;0;3;0;0;Buy it          Don't buy it    
+11;0;4;0;0;Come on in!
+11;0;5;64;52;Wow!Let's have fun!
+11;0;6;64;52;I know this isn't the right time to do this.
+11;0;7;64;52;Hey,Barret,cheer up!
+11;0;8;64;50;I ain't in no cheery mood.So jes'leave me alone.
+11;0;9;64;52;Really?That's too bad.
+11;0;10;64;52;Let's go!
+11;0;11;64;51;Wasn't that a little harsh,Aeris? 
+11;0;12;64;52;Just act normal when this happens.
+11;0;13;64;51;You think so..?
+11;0;14;64;52;Of course!
+11;0;15;64;52;We're gonna go play....
+11;0;16;64;50;So PLAY!....messin' round #@^%$!Don't forget we're after Sephiroth!
+11;0;17;64;52;....I think he's mad.
+11;0;18;64;51;He'll be fine.He seems to be doing alittle better now.
+11;0;19;0;0;Aeris joins you.Theothers leave.
+11;0;20;0;0;What's your problem?Can't you see we wanna be alone?
+11;0;21;0;0;Geez,you're a real bummer.Why don't you leave us alone?
+11;0;22;0;0;We put on a really unusual show here. It's not on today, but come back againsometime and see it.
+11;0;23;64;81;Hey boy.
+11;0;24;64;49;Boy....
+11;0;25;64;81;How is it?You having fun?Mmm,so you ARE having fun.Well,good,good for you boy.
+11;0;26;64;49;My name's Cloud.Andstop calling me boy.
+11;0;27;64;81;Mmm?Me?I'm the owner of the Gold Saucer.The name's Dio.Just call me Dio.
+11;0;28;64;49;....
+11;0;29;64;81;Dio:By the way,boy,do you know what a Black Materia is?
+11;0;30;64;49;What is it?
+11;0;31;64;81;Ha ha ha....that,I say,that's a good one,boy!But it's not good to lie.Youcan't fool me.
+11;0;32;64;49;Why d'you ask me?
+11;0;33;64;81;Well,a while back,aboy your age came in and asked me if I had a Black Materia.I thought you might know who he was,seein' as how you're both about the same age.
+11;0;34;64;49;Did he happen to have....a Black Cape....
+11;0;35;64;81;Why yes,yes indeed.And a tattoo on hishand that said \"1\".
+11;0;36;64;49;Where did he go!?
+11;0;37;64;81;Ha ha ha,I have no idea.Well then.I say,stop by the Battle Arena if youlike,boy.You'll probably like it. Many of my collections are on display there.Ha haha.
+11;0;38;0;0;I'm sorry,we're currently renovating.Please come again.
+11;0;39;64;54;Hey you!What're youlookin' so down for!?How 'bout it? Want me to read your fortune!?A bright future!A happy future!Oh,butdon't hold it against me if it's not a great prediction!Oh,so sorry!I'm a fortunetelling machine.Thename's....CaitSith
+11;0;40;64;49;You can only read the future?
+11;0;41;64;54;CaitSith:You kidding!?I can findmissing things, missing people, anything!
+11;0;42;64;49;Then can you tell me where a man named Sephiroth is?
+11;0;43;64;54;Sephiroth,right? Okay,here goes!
+11;0;44;64;49;....Ordinary luck.It will be an active fortune.Give into the good will of others,and something big'll happen by summer.... wait....what's this?
+11;0;45;64;54;Huh?Let me try again.
+11;0;46;64;49;Be careful of forgetfulness.Your lucky color is.... blue?....Forget it.
+11;0;47;64;54;Wait,wait give me another chance! Wait!Let me try it again!
+11;0;48;64;49;....What the!?
+11;0;49;64;53;Read it out loud Cloud.
+11;0;50;64;49;What you pursue will be yours.But you will lose something dear.
+11;0;51;64;54;I don't know if it's good OR bad.... This's the first time I ever got something like THIS....Then shall we?
+11;0;52;64;53;To where?
+11;0;53;64;54;As a fortune teller,I can't helpbut think about this.If I don't seewhat it leads to,I won't be able to relax.That's why I'm going with you!
+11;0;54;64;53;Is it alright with you Cloud? 
+11;0;55;64;54;I'm comin' with youno matter WHAT you say!
+11;0;56;0;0;CaitSith joins you.
+11;0;57;0;0;Come now,no running!
+11;0;58;0;0;Man,I just want to scream.
+11;0;59;0;0;....Don't worry 'boutme.Go ahead and play.
+11;0;60;0;0;I get so caught up in these....
+11;0;61;64;49;!
+11;0;62;64;49;Mm!?
+11;0;63;64;49;Dead....
+11;0;64;64;53;What the....
+11;0;65;64;53;Hey Cloud!
+11;0;66;64;49;Did Sephiroth do this!?
+11;0;67;64;49;No....it's not him.... They're all shot.... Sephiroth would never use a gun....
+11;0;68;0;0;Ugh,uggh.
+11;0;69;64;49;Hey,what happened!
+11;0;70;0;0;Ugh....ugh....a man with a gun....on his arm....
+11;0;71;64;53;....did he!?
+11;0;72;0;0;Hold it right there!And stay quiet!
+11;0;73;64;81;Did you guys do this!?
+11;0;74;64;49;N....no,it wasn't us!
+11;0;75;64;81;I must've been wrong....
+11;0;76;64;54;Hurry and run,it's gonna get ugly.
+11;0;77;64;49;H....hey!
+11;0;78;64;81;Hold them!
+11;0;79;64;81;That's as far as you go.
+11;0;80;64;49;Wait,listen to....
+11;0;81;64;54;Cloud....
+11;0;82;64;49;Hey!Pay attention!
+11;0;83;64;81;There's no need to listen.Pay for yourcrime down below!
+11;0;84;64;53;You all right?
+11;0;85;64;49;Where are we?
+11;0;86;64;54;A desert prison.... Corel Prison....
+11;0;87;64;49;A desert prison?
+11;0;88;64;54;Yup,a natural prison in the middle of the desert....surrounded entirely by quicksand.I heard that once you get in,you never get out....But,there was one special exception....
+11;0;89;64;53;Mmm?Barret?
+11;0;90;64;49;Barret....
+11;0;91;64;53;Did he really....
+11;0;92;64;50;Stay back!This's something I gotta deal with.
+11;0;93;64;50;Jes' leave me alone....
+11;0;94;64;54;Whew!That's one of your friends?He sure looks dangerous....
+11;0;95;64;53;Cloud,what should we do?Barret's not his normal self.
+11;0;96;64;49;This one's been shot too....
+11;0;97;0;0;Wo-ho!Welcome to Corel Prison.
+11;0;98;0;0;I'll tell you one thing,rookie.This desert is extremelydangerous.It'll welcome you in,but when you try to leave,it'll swallowya.I hear tell,someof them never make it out....the best thing is to stay out of the desert entirely....
+11;0;99;0;0;This place is heaven.
+11;0;100;0;0;Man with a gun on his arm?
+11;0;101;0;0;Never heard of him.
+11;0;102;0;0;You wanna see the Boss?
+11;0;103;0;0;Go Southwest and you'll meet him.
+11;0;104;0;0;Once out in the desert,stay still and don't walk.
+11;0;105;0;0;You new?Then go andpay your respects to Mr.Coates.
+11;0;106;0;0;Mr.Coates: Never  seen your faces 'round here before.Goin' up?
+11;0;107;64;49;Yeah,up.
+11;0;108;0;0;You don't seem to   understand how things work down here.This is the Gold Saucer's garbage dump.And that makes alluv yascrubs.The only wayto get back up there is if you gotthe boss's premission,but YOU'll never get that!Ha ha ha.
+11;0;109;64;50;Didn't I tell you not to come here!?
+11;0;110;64;54;Ju....just hold on for a second!We just want to talk! You'll understand if you just hear usout!
+11;0;111;64;50;Didn't want none ofya to get involved....
+11;0;112;64;52;Hey that's Cloud's line!\"....It's too dangerous,I can't let you get involved....\" blah, blah,blah....
+11;0;113;64;51;Yeah.We're already involved in this.Wesaw you and hurriedhere.So come on Barret,just tell uswhat's going on.
+11;0;114;64;50;You guys....
+11;0;115;64;53;I heard that the murders at the Battle Arena were done by a man with a gun arm....Was thatyou?
+11;0;116;64;50;There's another.... another man that got a gun grafted inta one of his arms....It was 4 years ago....My friend Dyne....I remember....We were on our way home from visiting a Mako Reactor being built.The village was attacked by Shinra soldiers.We saw the village buring from the cliffside.   Soldiers chased us down and fired on us....From then on,I couldn't use my right arm no more....I was depressed fora while.But then I threw away my artificial arm and got this gun grafted in.
+11;0;117;64;49;....
+11;0;118;64;50;Got a new right armto get revenge on the Shinra,who tookeverything away.... Back then,I heard the doc say there was another man whogot the same operation as me. But,his was the left arm....
+11;0;119;64;49;....
+11;0;120;64;52;But....Dyne's injury was the same as yours,right?
+11;0;121;64;51;Yeah,that's right. He was deceived by the Shinra too. He'll probably joinus to fight againstthe Shinra.
+11;0;122;64;50;....wouldn't bet on it.I gotta 'pologize to Dyne before I can rest in peace.An' that'swhy,I gotta go alone.
+11;0;123;64;49;Do whatever you want....Is that what you want to hear? Well,I can't let you do it.Because, if you die on me, I'm gonna have nightmares.
+11;0;124;64;52;Barret,this isn't the end.Weren't yougoing to save the Planet?
+11;0;125;64;50;Shit!Tifa,you oughtta know by now.
+11;0;126;64;51;....That's all right.I'm not so different from you.
+11;0;127;64;52;That's easier to understand.It's you,Barret.
+11;0;128;64;49;So there it is, Barret.Let's go pay Dyne a visit.
+11;0;129;64;50;....Dyne....Is that you?
+11;0;130;64;74;Dyne:Now that's a voice I haven't heard in years....A voice I'll never forget....
+11;0;131;64;50;I always hoped I'd be able to see you again someday....I knew you were alivesomewhere....we had the same operation.Listen to me Dyne.Iwant to....
+11;0;132;64;74;What's that?....I hear her voice.
+11;0;133;64;50;..?
+11;0;134;64;74;I hear her voice, Eleanor's voice. Begging me....not to hate your rotten guts.That's why I didn't hunt you down....
+11;0;135;64;50;I know I was stupid.I'm not asking you to forgive me.But.... What're you doin' in a place like this?Why ya wanna kill those that ain't even involved?Why?
+11;0;136;64;74;....Why!?The hell do you care for!?Are the people killed going to understand\"why\"?Are the people of Corel going to understandjust hearing Shinra's excuses?I don't CARE what thereason is!All they give us are artillery and stupid excuses.... What's left is a world of despair and emptiness....
+11;0;137;64;50;....
+11;0;138;64;74;You still want to hear \"why\"?....All right,I'll tell you.Cause I want todestroy everything.The people of this city.This city itself.The whole world!
+11;0;139;64;74;I got nothing left in this world. Corel,Eleanor.... Marlene....
+11;0;140;64;50;Dyne,Marlene.... Marlene's still alive.
+11;0;141;64;74;..?
+11;0;142;64;50;I went back into town.I thought she was gone for sure. That is why I wanted to be by herside till the end. That's when I foundher....found Marlene.
+11;0;143;64;74;....
+11;0;144;64;50;She's in Midgar. Let's go see her together,all right?
+11;0;145;64;74;So....she's still alive....All right, Barret.I guess thatmeans you and I gotta fight.
+11;0;146;64;50;What!?
+11;0;147;64;74;Eleanor's alone allby herself.I've gotto take Marlene to her.
+11;0;148;64;50;Dyne....are you insane!?
+11;0;149;64;74;Marlene wants to see her Mom,don't she?
+11;0;150;64;50;Stop,Dyne!I can't die yet!
+11;0;151;64;74;Oh yeah?Well my life's been over ever since then.
+11;0;152;64;50;Stop it!I don't wanna fight you!
+11;0;153;64;49;Barret!
+11;0;154;64;50;Cloud,you stay the hell out of it!Thisis MY problem!
+11;0;155;64;74;Back!
+11;0;156;64;50;Dyne....
+11;0;157;64;74;....it wasn't just myarm....back then....I lost something irreplaceable.I don't know where I went wrong....
+11;0;158;64;50;Dyne....I don't know either,man.Is this the only way....we can resolve this?
+11;0;159;64;74;I told you....I....I want to destroy everything.... Everything....This crazy world....Even me....
+11;0;160;64;50;An' what about Marlene?What's gonna happen to her!?
+11;0;161;64;74;Think about it.... Barret....How old wasMarlene back then..?Even if I did go toher now....she wouldn't even know me....And what's more....Barret....Thesehands are a little too stained to carry Marlene anymore....
+11;0;162;64;50;....
+11;0;163;64;74;Barret....
+11;0;164;64;74;Give this pendant to Marlene....It was....Eleanors's....mywife's....memento....
+11;0;165;64;50;All right....
+11;0;166;64;74;....wow....Marlene's.... already....4....
+11;0;167;64;74;Barret....Don't.... make....Don't ever make Marlene....cry....
+11;0;168;64;50;Dyne..?
+11;0;169;64;50;Dyne!
+11;0;170;64;50;Dy....ne!
+11;0;171;64;50;....Dyne.Me an' you were the same....My hands ain't any cleaner....I shouldn't be able to carry....Marlene either....Uurrgghh....
+11;0;172;0;0;You want somethin'?  
+11;0;173;64;50;I want to go up.
+11;0;174;0;0;Like I told you before,you gotta get the Boss' permission....  
+11;0;175;64;50;Dyne's got his reasons an' can't speak.So,I got thisinstead.
+11;0;176;0;0;Yeah,bull..!  
+11;0;177;64;50;I want to go up.
+11;0;178;0;0;R,right Did you kill Dyne?You must've.Or you'd never be holding that thing.So Dyne's dead....Maybe now,the place'll calm down a little.Dyne didn't care who anyone was....  
+11;0;179;64;50;The hell do YOU know!
+11;0;180;0;0;R....ri....right!I mean,no,I DON'T know anything.S,s....sorry.  
+11;0;181;64;49;Then,will you get us outta here?
+11;0;182;0;0;Oh yeah,the owner told me to give this letter to you.               
+11;0;183;64;81;\"Boy,I heard about Dyne,I'm sorry about wrongly accusing you and your friends,And also,by way of apology,I prepared a little gift for you to use on your journey.Sorry I couldn't be there to tell you this in person,but I'm a very busy man Sincerely,Dio\"
+11;0;184;64;49;A gift?
+11;0;185;0;0;The assistant manager just stopped by and dropped off a buggyfor you.Now you cango over deserts andrivers no problem.  
+11;0;186;64;49;Hmm?The letter continues....
+11;0;187;0;0;\"P.S.I just recently met Sephiroth.He must have a lot of fans with boys your age.Why don't you get his autograph?It seems he's headed toward the South ofthe river,towards Gongaga.\"
+11;0;188;64;49;Sephiroth.... Gongaga....
+11;0;189;64;49;Is someone there?
+11;0;190;64;68;Hey,Rude.Who do youlike?
+11;0;191;64;69;....
+11;0;192;64;68;What are you getting so embarrassed about? Come on?Who do you like?
+11;0;193;64;69;....Tifa.
+11;0;194;64;68;Hmm....That's a toughone.But,poor Elena.She....you....
+11;0;195;64;69;No,she likes Tseng.
+11;0;196;64;68;I never knew that! But Tseng likes that Ancient....
+11;0;197;64;49;What are they talking about?
+11;0;198;64;70;It's so stupid!Theyalways talk about who they like or don't like.But Tseng is different.Ah!Oh no!
+11;0;199;64;70;They're here! They're really here!
+11;0;200;64;68;Hmm....Then it's time....Rude....Don't go easy on them even though they'regirls.
+11;0;201;64;69;....Don't worry,I'll do my job.
+11;0;202;64;70;Then,we're countingon you.I'll report to Tseng!
+11;0;203;64;68;It's been a while. Payback time for what you did in Sec.7.
+11;0;204;64;49;Sec.7?
+11;0;205;64;68;That's sad.That's as far as you go.
+11;0;206;64;52;....How could they know we were cominghere?
+11;0;207;64;49;They followed us.... But there weren't any signs of it. Then,that means....
+11;0;208;64;51;A spy!?....No way.
+11;0;209;64;49;I don't even want to think that there's a spy....
+11;0;210;64;49;I trust everyone.
+11;0;211;64;49;A ruined reactor.
+11;0;212;64;49;Its Scarlet,Head ofShinra Weapon Dev.
+11;0;213;64;64;....Hmph!This isn't any good either.Youonly get junky materia from junky reactors.
+11;0;214;64;64;This reactor's a failure.What I'm looking for is big,large,huge materia.You seen any?
+11;0;215;64;67;No,I haven't seen it.I'll get on it right away.
+11;0;216;64;64;Please.We could make the ultimate weapon if we only had some.
+11;0;217;64;67;I just can't wait.
+11;0;218;64;64;With Hojo gone,the Weapon Dev.'s been getting a bigger budget.
+11;0;219;64;67;I envy them.
+11;0;220;64;64;But,even if we makethe perfect weapon,could that stupid Heidegger ever use it?
+11;0;221;64;67;....
+11;0;222;64;64;Oh....sorry!I forgot Heidegger was your boss!Ha ha ha!
+11;0;223;64;67;....
+11;0;224;64;64;Let's go!
+11;0;225;64;49;....Big,large,huge materia?An ultimateweapon?The perfect weapon?Just what are the Shinra up to..?
+11;0;226;0;0;3 years ago when the reactor exploded,my husband....
+11;0;227;0;0;People can live without the Shinra's Mako Reactors.
+11;0;228;0;0;It's been a while since the explosion,but you can still find pieces of it left all over town.
+11;0;229;0;0;Shinra built the reactor,without even thinking aboutthe town's safety. And,this is the result.
+11;0;230;0;0;One day,there was ahuge explosion.Manytownspeople died init....
+11;0;231;0;0;This is Gongaga Village.Many peopledied here in a Makoreactor explosion.
+11;0;232;0;0;The Shinra people told us that everyone would be happy once the Reactor was built. But,All it brought us was sadness....
+11;0;233;0;0;You a traveller?Heywait,That glare in your eye....you in SOLDIER?
+11;0;234;0;0;Oh you're right! Don't you know anything about our son?
+11;0;235;0;0;His name is Zack.
+11;0;236;0;0;It's been close to 10 years since he left for the city, saying that he didn't want to livein the country....
+11;0;237;0;0;He left saying he'sgoing to join SOLDIER.You ever hear of a Zack in SOLDIER?
+11;0;238;64;49;Hmm....I don't know.
+11;0;239;64;52;Zack....
+11;0;240;0;0;Young lady,you knowhim?
+11;0;241;0;0;I remember he wroteus 6 or 7 years agosaying that he had a girlfriend.Could that have been you?
+11;0;242;64;52;That can't....
+11;0;243;64;51;Zack....
+11;0;244;64;49;What happened to you 2?
+11;0;245;64;49;Aeris....
+11;0;246;64;52;What a shock....I didn't know Zack was from this town.
+11;0;247;64;49;You know him?
+11;0;248;64;52;Didn't I tell you? He was my first love.
+11;0;249;64;49;....
+11;0;250;64;52;Zack....SOLDIER 1st Class.Same as Cloud.
+11;0;251;0;0;I'm sorry,you don'thave enough gil!
+11;0;252;0;0;You're a Gold Member!Come on in!
+11;0;253;64;81;Ha ha ha,boy,what'sthe matter,just enjoy yourself....
+11;1;0;64;49;Strange,there aren't that many who make 1st Class,but I've never heard of him.
+11;1;1;64;52;That's all right. It's all in the past now.I was justworried because I heard he's been missing.
+11;1;2;64;49;Missing?
+11;1;3;64;52;I think it was 5 years ago.He went out on a job,and never came back.He loved women,a real lady's man.He probably found someone else....
+11;1;4;64;52;Hey?What's wrong?
+11;1;5;64;49;....
+11;1;6;64;52;Are you....jealous? Hmm?Hmm?Are you, Cloud?
+11;1;7;64;49;....
+11;1;8;64;52;I'm kidding.I'm sorry.Let's go, Cloud.
+11;1;9;64;51;That sounds just like you,leaving town,and saying \"I'm joining SOLDIER!\"
+11;1;10;64;49;There were a lot ofguys like that backthen.
+11;1;11;64;51;You must really be something making itin SOLDIER out of agroup like that.I really respect you....
+11;1;12;64;49;I just got lucky.
+11;1;13;64;51;Don't be so humble!
+11;1;14;64;53;I am home!It is I, Nanaki!
+11;1;15;0;0;Hey,Nanaki!You're safe!Come on,and say hello to Bugenhagen!
+11;1;16;64;49;....Nanaki?
+11;1;17;64;52;Cosmo....Canyon?I wonder if there's any relation to theplanet or the Ancients....
+11;1;18;64;51;RedX` seems different,doesn't he?
+11;1;19;0;0;Welcome to Cosmo Canyon.Are you familiar with this land?
+11;1;20;64;49;No.
+11;1;21;0;0;Let me explain. People from all over the world gather here to seekthe Study of PlanetLife.
+11;1;22;64;49;Who is Nanaki?
+11;1;23;0;0;Nanaki is Nanaki. That's his name.
+11;1;24;0;0;Welcome to Cosmo Canyon.Make yourselves at home.
+11;1;25;0;0;So this is Cosmo Canyon....Quite a mysterious place. Have you come to seek the Study of Planet Life?
+11;1;26;0;0;Yaay!Nanaki! Nanaki's back!It's all thanks to this flame!This fire is called Cosmo Candle.It has burned for generations.It's a holy flame that protects this canyon.I heard once,It only went out once,long ago. The elders said something horrifying occurred,but I really don't know much about it.
+11;1;27;0;0;Bugenhagen sealed this door shut. How'd he do that? With super glue?
+11;1;28;64;53;Here is where I was....I mean....this is my hometown.My tribe were protectors of thosewho appreciate thisbeautiful canyon and the Planet.My brave mother foughtand died here,but my cowardly father left her....I am the last of my race.
+11;1;29;64;49;Cowardly father?
+11;1;30;64;53;Yes.My father was awastrel.And so the mission I inheritedfrom my ancestors, is to protect this place.My journey ends here.
+11;1;31;0;0;Hey!Nanaki!You're home!
+11;1;32;64;53;Coming,Grandpa!
+11;1;33;64;51;That's perfect.Why don't we take a break too?We can meet back here in awhile,OK?
+11;1;34;64;53;Cloud,this is my grandfather,Bugen. He is incredible.Heknows everything.
+11;1;35;64;83;Bugenhagen:Ho Ho Hooo.I hear that you looked after Nanaki a bit.Nanakiis still a child you see.
+11;1;36;64;53;Please stop, grandfather.I'm 48.
+11;1;37;64;83;Ho Ho Hooo.Nanaki'stribe has incredible longevity.So you see his 48 years would only be equivalent to say that of a 15 or 16 years old in human reckoning.
+11;1;38;64;49;15 or 16!?
+11;1;39;64;83;He's quiet and verydeep.You thought hewas an adult?
+11;1;40;64;53;....grandfather.I want to be an adult.I want to grow up to be able to protect you and the village.
+11;1;41;64;83;Ho Ho Hooo.No Nanaki.You can't stand on your own yet.To do that now would destroy you in the long run.
+11;1;42;64;83;Looking up too muchmakes you lose perspective.When it's time for this planet to die, you'll understand that you know absolutely nothing.
+11;1;43;64;49;....When the planet dies?
+11;1;44;64;83;Ho Ho Hooo.It may be tomorrow,or 100 years from now....Butit's not long off.
+11;1;45;64;49;How do you know this?
+11;1;46;64;83;I hear the cries ofthe Planet.
+11;1;47;64;49;What's that?
+11;1;48;64;83;The sound of the stars in the heavens.While this goes on,planets areborn,and die.
+11;1;49;64;49;What was that?
+11;1;50;64;83;Ho Ho Hooo.That wasa scream from this planet.Didn't you hear it?As if to say....I hurt,I suffer....
+11;1;51;64;53;They have come hereon a journey to save the planet.Whydon't you show themyour apparatus?
+11;1;52;64;83;I guess it wouldn't hurt,come this way!  
+11;1;53;64;83;All workings of space are entered into this 3D model.Eventually....all humans die.What happens to them after they die?The body decomposes,andreturns to the Planet.That much everyone knows.Whatabout their consciousness,theirhearts and their souls?The soul too returns to the Planet.And not onlythose of humans,buteverything on this Planet.In fact,all living things in the universe,are the same.
+11;1;54;64;83;The spirits that return to the Planet,merge with one another and roam the Planet. They roam,converge,and divide,becominga swell,called the Lifestream. Lifestream....In other words,a path of energy of the souls roaming the Planet.
+11;1;55;64;83;Spirit Energy is a word that you should never forget.A new life....children are blessed with Spiritenergy and are brought into the world.Then,the timecomes when they dieand once again return to the Planet....Of course there are exceptions,but Thisis the way of the world.
+11;1;56;64;83;Spirit energy makes all things Possible.
+11;1;57;64;83;Not only living things, but also allows planets to be planets. 
+11;1;58;64;49;If the Spirit energy is lost,our Planet is destroyed..?
+11;1;59;64;83;Ho Ho Hooo.Spirit energy is efficientBECAUSE it exists within nature.When Spirit energy is forcefully extracted,and manufactured,it can't accomplish its true purpose.
+11;1;60;64;49;You're talking about Mako energy, right?
+11;1;61;64;83;Everyday Mako reactors suck up Spirit energy, diminishing it. Spirit energy gets compressed in the reactors and processed into Makoenergy.All living things are being used up and thrown away.In other words,Mako energy will only destroy the Planet....
+11;1;62;64;83;The story of the planets....and those who lived with them....You want to know more?Then you must listen to the words of the elders.
+11;1;63;64;52;I learned a lot.Theelders taught me many things.About the Cetra....And the Promised Land.... I'm....alone....I'm allalone now....
+11;1;64;64;49;But I'm....we're herefor you,right?
+11;1;65;64;52;I know.I know,but....I am the only.... Cetra.
+11;1;66;64;49;Does that mean we can't help?
+11;1;67;64;54;I wonder how many years it's been.... Gosh,it brings backmemories....
+11;1;68;64;50;Cosmo Canyon.... This's where AVALANCHE was born....I promised myguys someday....when we saved the planetfrom the Shinra, that we'd all go toCosmo Canyon and celebrate....Biggs.... Wedge....Jessie....Now they're all gone.... died for the planet.Really?To save the planet?We all hate the Shinra....Do I even got to go on?Will they....will they ever forgive me?
+11;1;69;64;50;....Right now,I really don't know. But I know one thing.If there's anything I can do, to save the planet....or the people livin' on it....Then I'm gonna do it!I don't care if it's for justiceor revenge,or whatever.I don't care....let'em decidefor 'emselves.
+11;1;70;64;50;Urrgh!I'm gonna do it!Again....Again.... AVALANCHE's born again!
+11;1;71;64;51;Cloud....Bonfires arefunny,aren't they? They make you remember all sorts of things.
+11;1;72;64;51;You know,Cloud.5 years ago....
+11;1;73;64;49;What is it..?
+11;1;74;64;51;It feels like....it feels like you're going far away....
+11;1;75;64;51;You really,really are....you....right?
+11;1;76;64;53;....Long ago....When I was still very small.We were all around this flame....
+11;1;77;64;49;What happened?
+11;1;78;64;53;It's about my parents.When I talkabout my mother,I am full of pride and joy....And that'sfine....But when I remember my father,my heart is full ofanger....
+11;1;79;64;83;....You really can't forgive your father..?
+11;1;80;64;53;Of course.He....left mother for dead. When the Gi tribe attacked,he ran offby himself,leaving mother and the people of the Canyon!
+11;1;81;64;83;....Come,Nanaki. There's something you should see.
+11;1;82;64;53;..?
+11;1;83;64;83;The place may be dangerous.Cloud. Will you and the others come with us?
+11;1;84;64;83;Ho Ho Hooo.Are we all set?
+11;1;85;64;83;All right.Come in, come in.
+11;1;86;64;53;Hey?Aren't you going with us, Grandpa?
+11;1;87;64;83;What are you crazy?It's dangerous in there.I told you that!You want an old man like me should go first? I'll be right behind you.
+11;1;88;64;83;Ho Ho Hooo. Everyone's here's aGhost of the Gi Tribe.Killed in a certain battle.
+11;1;89;64;53;A certain battle..?
+11;1;90;64;83;The vengeful spirits of the Gi didn't disappear, and couldn't returnto the Lifestream....We still have far to go.Ho Ho Hooo.
+11;1;91;64;83;As you can see,thiscave leads to the back of Cosmo Canyon.The Gi were larger then us.If they attacked through here,we wouldn't have stooda chance.
+11;1;92;64;53;....
+11;1;93;64;83;Let's move on.
+11;1;94;64;83;This warrior went through the cave all alone.Fighting attackers one afteranother....
+11;1;95;64;53;Grandpa....That warrior....
+11;1;96;64;83;Ho Ho Hooo.We're almost there.
+11;1;97;64;83;What's this..?
+11;1;98;64;53;Grandpa..?
+11;1;99;64;83;After death....The ghosts of the Gi.... Like stagnant air....This can't be!
+11;1;100;64;83;Thank you,Cloud. Because of you,we survived.Nanaki,youhave grown strong, too.
+11;1;101;64;53;....Oh yeah?
+11;1;102;64;83;Now I know that it wasn't a mistake bringing you here....Come,I have something I want toshow you.Right overhere.
+11;1;103;64;53;This is....
+11;1;104;64;83;....The warrior who fought against the Gi.He kept them from taking even one step into CosmoCanyon.But he was never able to return to town....
+11;1;105;64;83;Look,Nanaki.Look atyour father,at the warrior,Seto.
+11;1;106;64;53;....That's....That's.... Seto?
+11;1;107;64;83;Seto continued to fight the Gi tribe here....To protect this Canyon.Even after the Gi's poisonous arrows turned his body to stone....Even after they all ran away....Seto,continues to protect us.And he continues to protect us,even now.
+11;1;108;64;53;Even now....
+11;1;109;64;83;You thought that hewas a coward and ran away.But he, alone risked his life to protect Cosmo Canyon.That is your father, Seto.
+11;1;110;64;53;That....that is Seto?..!?Did mother know?
+11;1;111;64;83;Ho Ho Hooo....She knew.The 2 of them made me promise to keep this cave shut.They asked me to seal it myself and not to tell a soul.They said we should forget aboutthis cave.
+11;1;112;64;53;....
+11;1;113;64;83;Cloud....Would you mind leaving the two of us alone?
+11;1;114;64;83;Nanaki,I want you to continue your journey with Cloud and the others.
+11;1;115;64;53;Grandpa!?
+11;1;116;64;83;Listen,Nanaki.Cloudsays they are trying to save the planet.Honestly,I don't think it can be done.For even ifthey stop every reactor on the planet,it's only going to postpone the inevitable.Evenif they stop Sephiroth, everything will perish.
+11;1;117;64;83;But....,Nanaki.I've been thinking lately.I've been thinking if there was anything WE could do.As a part of the planet, something to help aplanet already in misery....No matter what happens,isn't it important to try?Am I just wishing against fate?
+11;1;118;64;83;I am too old to do anything about it....This year,I'll be 130.Ho Ho Hooo.
+11;1;119;64;83;That is why,Nanaki,you must go with them!For my sake.
+11;1;120;64;53;Grandpa....
+11;1;121;64;83;I wanted to show you your real father before you left....I'm so glad that you came back while I was still alive to show you.
+11;1;122;64;53;Grandpa....don't talklike that.I don't want to think of life....without you....
+11;1;123;64;83;Ho Ho Hooo.Well, I've had a long life.
+11;1;124;64;53;Grandpa!You must live!I'll see to it.I'll see to what's happening tothe planet.And I'llcome back to tell you.
+11;1;125;64;83;Nanaki....
+11;1;126;64;53;I am Nanaki of Cosmo Canyon!The son of the warrior,Seto!I'll come backa warrior true to that noble name!So please,Grandpa....
+11;1;127;64;83;That's....Seto's.... Seto....
+11;1;128;64;53;Seto....Fa....Father....
+11;1;129;64;49;Shall we get going?
+11;1;130;64;52;So this is it, RedX`....
+11;1;131;64;50;That's just the wayit goes....You came in handy at times....
+11;1;132;64;53;Wait for me!I'm coming too!
+11;1;133;64;49;Mmm?
+11;1;134;64;83;Cloud.Please look after Nanaki.
+11;1;135;64;49;What happened?
+11;1;136;64;53;I think I grew up alittle.That's what happened!
+11;1;137;0;0;RedX` joins you.
+11;1;138;64;51;What..!
+11;1;139;64;51;This was all supposed to be burnt down,right?
+11;1;140;64;49;I thought so.
+11;1;141;64;51;Then why..?My house is still there too....
+11;1;142;64;51;....something's strange?
+11;1;143;64;49;I'm not lying!
+11;1;144;64;49;I remember....the intense heat of theflames....
+11;1;145;64;49;This town was supposed to have burnt down 5 years ago.What the hell is going on?
+11;1;146;0;0;Sir,don't say such awful things.I was born and raised in this town.What you say never happened.
+11;1;147;64;49;You're lying....
+11;1;148;0;0;EXCUSE ME....That's so rude....If you're going to talk like that to me,I'm going to have to ask you to leave.
+11;1;149;0;0;Nice town,huh?We'vebeen in business here for a long time....
+11;1;150;64;49;....You're lying.
+11;1;151;0;0;Do you have anything to do withthis town?
+11;1;152;64;49;How about bein' born and raised here?
+11;1;153;64;49;I was here until I was 14 and I don't remember you.
+11;1;154;0;0;It's not nice to lie!
+11;1;155;64;49;A man in a black cape!?
+11;1;156;0;0;Can....you....hear? The....voice....of....Se....phi....ro....th.... The..Great..Seph....iroth....is....near The mansion....he's....calling....Sephiroth....is....calling ....Urrrrrrgh....
+11;1;157;64;49;The mansion....ShinraMansion? 
+11;1;158;0;0;Must....go. Re....un....ion
+11;2;0;64;55;Dunno.I'm history with the Shinra andI've given up on the town.
+11;2;1;64;49;How 'bout your wife?How 'bout Shera?
+11;2;2;64;55;Wife?Don't make me laugh!Just thinkin''bout marryin' her gives me the chills.What're you guys gonna do?
+11;2;3;64;49;We're going after aman named Sephiroth.We'll have to get Rufus of the Shinra someday,too.
+11;2;4;64;55;I don't know any ofthat,but....What the hell!?Sign me up!
+11;2;5;64;49;How 'bout it, everyone?
+11;2;6;64;51;Sure,no problem!
+11;2;7;64;55;Glad to be aboard, numbskulls!
+11;2;8;64;49;Numbskulls..?
+11;2;9;64;55;Yeah.Anyone stupid enough to go up against Shinra nowadays,has GOTTA be a numbskull!I like it!
+11;2;10;64;55;So,where we headed?Rufus was goin' after Sephiroth towards the Temple of the Ancients.
+11;2;11;64;49;Really!?....Where is it?That Temple of the Ancients?
+11;2;12;64;55;That numbskull kid was tellin' me he was headin' \"The wrong direction\".... so maybe it's off this way?
+11;2;13;64;49;Let's just head forland and get some information.Temple of the Ancients.... that name bothers me.
+12;0;0;0;0;Huh?Oh,another customer.You sure picked an out of the way place but....But if it's the Keystone you're looking for,you're too late.Don't haveit.
+12;0;1;64;49;Keystone?
+12;0;2;0;0;What?You didn't come here for that?The Keystone is thekey that unlocks the gate to a very old temple somewhere.You're not going to believe your ears, But I heard it was the Temple of the Ancients!
+12;0;3;64;49;The Temple of the Ancients....
+12;0;4;0;0;Kya,hah hah hah.... Don't take it seriously.It's justa legend!
+12;0;5;64;49;Where is this Keystone?
+12;0;6;0;0;I sold it already. Yeah well,to tell the truth,I didn't really want to sellit but....That guy had a way about himthat made you feel like it may not be a good idea NOT to sell it to him....
+12;0;7;64;49;Who did you sell itto?
+12;0;8;0;0;The manager of the Gold Saucer....think his name was Dio. Said he was going to put it in his museum,then he tookoff out of here.
+12;0;9;64;49;Where is the Temple?
+12;0;10;0;0;Come on....it's only a legend.But if it were true,that surewould be something,huh?Now that you mention it,I have heard of something called Ultimate Destruction Magic was supposed to be hidden somewhere inthe Temple of the Ancients.
+12;0;11;64;49;Ultimate Destruction Magic..?
+12;0;12;0;0;Come on!I told you not to take it seriously!
+12;0;13;64;49;Let's change the subject.
+12;0;14;0;0;All the weapons yousee here I made myself.But lately Ihaven't been able to get materials....
+12;0;15;64;49;It's the Keystone....
+12;0;16;64;81;Dio:Heh,heh,heh. Long time no see,myboy.Hmm?You like that,huh?
+12;0;17;64;49;Can you let me borrow this?
+12;0;18;64;81;Heh,heh,heh.but it's not for rent. Hmm,Since you've been good to me in the past,I CAN let you have it on one condition.
+12;0;19;64;49;One condition?
+12;0;20;64;81;Heh,heh,heh. Entertain me!
+12;0;21;64;49;What'd you want me to do?
+12;0;22;64;81;Hoo boy!Heh,heh, heh.It's not something that's really difficult. This is the Battle Arena.Show me your fighting skills. Just you,my boy,I'mexpecting a good fight!
+12;0;23;64;81;That's the best youcould do?Well,a promise is a promise.Go ahead, take it.
+12;0;24;0;0;Got Keystone.
+12;0;25;64;81;Well then,we shall meet again!Heh,heh,heh.
+12;0;26;0;0;Staff:Excuse me, sir.I'm sorry.The Tram is out of order right now.
+12;0;27;64;49;....so?
+12;0;28;0;0;I'm really sorry! I'm afraid you won't be able to leave until it's fully repaired.
+12;0;29;64;54;What's wrong?
+12;0;30;64;49;The Tram is down.
+12;0;31;64;54;Too bad.It happens,though.I know!Let'sstay at the hotel! They know me here. I'll go talk to them.
+12;0;32;0;0;I will let you knowonce the repairs are completed.
+12;0;33;64;54;We don't usually get the chance to be together like this,huh?Cloud,how 'bout it?Can you tell us what's happened so far?I don't really know what's gon' on because I wasn't here in the beginning.
+12;0;34;64;55;Yeah!I'm all for it!
+12;0;35;64;50;I been here since the beginnin',an' Istill don't know what the hell's goin' on either. Cloud,the hell's goin' on?C'mon,tellus!
+12;0;36;64;49;All right,I'll giveit a shot....
+12;0;37;64;49;We are going after Sephiroth.Sephirothmust be in search of the Promised Land.
+12;0;38;64;55;The Promised Land?
+12;0;39;64;49;A land full of Makoenergy,....or at least that's what the Shinra believe.I don't know if it actually exists.
+12;0;40;64;52;The Cetras return to the Promised Land.A land that promises boundless happiness.
+12;0;41;64;50;Cetra?That some kinda disease?
+12;0;42;64;52;That's what the Ancients call themselves.Hey, didn't you listen to the elders at Cosmo Canyon?....You don't \"know\" where the Promised Land of the Ancients is.You search and travel,until you feel it.Like you just know,....this isthe Promised Land.
+12;0;43;64;49;Aeris....can you feelit too?
+12;0;44;64;52;I think so.
+12;0;45;64;51;So Sephiroth is traveling the worldbecause he's searching for the Promised Land?Is that it?
+12;0;46;64;52;That,and one other thing he's searching for.
+12;0;47;64;49;The Black Materia....
+12;0;48;64;54;I heard from Dio that a man in a Black Cape was lookin' for the Black Materia.
+12;0;49;64;51;I don't even know what the Black Capeis....How many men with Black Capes and number tattoos are there?
+12;0;50;64;53;....you know,of course....My tattoo is number 13.
+12;0;51;64;49;How did you get that tattoo?
+12;0;52;64;53;....Hojo put it on me.Everything else is just war scars, but the number was done by Hojo.
+12;0;53;64;51;So there are at least 13!?
+12;0;54;64;52;....You know....I thinkHojo did something to those men in theBlack Capes.But I don't know what it has to do with Sephiroth though.... That's why I think we should just go after Sephiroth himself.
+12;0;55;64;50;Yeah,me too!It's all just to damn confusin'.
+12;0;56;64;52;And....I'm sorry, forget it!I think I'm tired.I'm goingto bed now.
+12;0;57;64;54;What was that,all of a sudden!?Is that all?How 'bout the Black Materia?
+12;0;58;64;49;You wouldn't understand even if I told you.
+12;0;59;64;50;Now all we gotta dois take action! We're startin' tomorrow!
+12;0;60;64;53;Cloud....
+12;0;61;64;53;I'm number 13.Am I going to go mad too?
+12;0;62;64;51;I don't know what Hojo did to you,butyou've been all right so far,right?
+12;0;63;64;53;But....
+12;0;64;64;51;Be strong.
+12;0;65;64;53;But,I....
+12;0;66;64;51;Stop it,RedX`!Be strong!
+12;0;67;64;49;Tifa?
+12;0;68;64;51;You're not the onlyone who's worried!
+12;0;69;64;54;I don't know what'sgoin' on,but we're in a bad situation....
+12;0;70;64;55;....zzz....zzz....
+12;0;71;64;52;Hee,hee!
+12;0;72;64;49;What's wrong?
+12;0;73;64;52;You want to go on adate?
+12;0;74;64;49;What?
+12;0;75;64;52;A DA-TE!Or haven't you ever gone on one?
+12;0;76;64;49;Well,not a real one....
+12;0;77;64;52;No,just a mixed-up kid....
+12;0;78;64;52;Oh well.Come on, let's go.
+12;0;79;64;49;Hey.
+12;0;80;0;0;Tonight's Enchantment Night! All the attractionsare free.How 'bout it you two?There's going to be an entertaining show in Event Square!
+12;0;81;64;52;Come on,let's go.
+12;0;82;0;0;Congratulations!Youare our 100th couple today!
+12;0;83;0;0;You 2 will be the leads in tonight's show!
+12;0;84;64;49;Wha?
+12;0;85;0;0;Oh,now,it's not hard.Just play it however you want toand the rest of thecast will cover up for you.Come this way.
+12;0;86;64;49;H,hey!
+12;0;87;64;52;This sounds like fun.Come on Cloud, let's do it.
+12;0;88;0;0;Narration:Long,longago....An evil shadowappeared over the peaceful kingdom ofGaldia....Princess Rosa was just kidnapped by the Evil Dragon King, Valvados.What will become of her?Just then,the legendary hero,Alfred, appears!
+12;0;89;0;0;Wizard:Oh....You mustbe the legendary hero....Alfred!
+12;0;90;0;0;....(Hey! It's your line!)
+12;0;91;64;49;Me?
+12;0;92;0;0;(Yeah you!) Ahem!
+12;0;93;0;0;Oh....You must be the legendary hero....Alfred! I know in my soul
+12;0;94;0;0; Please....please save Princess Rosa!
+12;0;95;0;0;On the peak of a dangerous mountain ....lives the Evil Dragon King, Valvados....who's kidnapped Princess Rosa!
+12;0;96;64;49;What is the Evil Dragon King's weakness?
+12;0;97;0;0;Wizard: Ahh, the weakness of the Evil Dragon King. It must be, it must be....Yes, it must be....True love!
+12;0;98;0;0;The power of love....is the only weapon that can withstand the fangs of the Evil Dragon King....!
+12;0;99;0;0;Narrator:Oh what is going to happen next....! Oh....Legendary Hero....look!
+12;0;100;0;0;Evil Dragon King: Gaaaaaah!
+12;0;101;0;0;I am the Evil Dragon King  Valvados! I have not harmed the Princess....I have been expecting  you!
+12;0;102;64;52;Princess: Please help me....Legendary Hero!
+12;0;103;64;52;(Psst....like that?)
+12;0;104;0;0;Valvados: Gaaah! Here I come Legendary Hero  Alfred! I already know....your name! Gaaaah!
+12;0;105;0;0;Wizard: Hurry! A kiss! The power of True Love!!
+12;0;106;0;0;Valvados:Wh,what!? ........URRRRGH!!
+12;0;107;0;0;Beautiful Girl: Thank you, You've released me....from the spell and I am back to my normal self....
+12;0;108;0;0;Wizard:Oh look! Love has triumphed!Now let's all return to celebrate!  
+12;0;109;64;52;Wh,what is this!?
+12;0;110;0;0;Narrator: Oh, how profound the power of love....And so thelegendary hero  Alfred and our story live on happily ever after.
+12;0;111;64;52;But!....You can't do this!!
+12;0;112;64;52;......
+12;0;113;64;49;What's wrong Aeris?
+12;0;114;64;52;It's beautiful, isn't it?
+12;0;115;64;52;....first off,it bothered me how youlooked exactly alike.Two completely different people, but look exactly the same.The way you walk,gesture....Ithink I must have seen him again,in you....
+12;0;116;64;52;But you're different.
+12;0;117;64;52;Things are different....
+12;0;118;64;52;Cloud....I'm searching for you....
+12;0;119;64;49;....?
+12;0;120;64;52;I want to meet you.
+12;0;121;64;49;But I'm right here.
+12;0;122;64;52;I know, I know, but what I mean is......I want to meet.... you.
+12;0;123;64;49;......Aeris?
+12;0;124;64;52;....
+12;0;125;0;0;Hello, welcome to the battle arena.
+12;0;126;0;0;Let me explain the rules of the battlearena.
+12;0;127;0;0;You will be challenged by a series of ten battles consecutively.
+12;0;128;0;0;If you manage to win all ten battles, then you will recieve a fabulous prize.
+12;0;129;0;0;But keep in mind that these are realmonsters you will be battling, so we cannot guarantee your saftey, so we recommend you save your game before entering.
+12;0;130;0;0;So would you like to enter the battlearena? 
+12;0;131;0;0;Enter           Don't Enter       
+12;0;132;0;0;Good Luck!
+12;0;133;0;0;Okay, come back anytime.
+12;0;134;0;0;Congratulations, here is your prize.
+12;0;135;0;0;Recieved 10,000 Gil!!! 
+12;0;136;64;49;Hmm? A VCR and a set of video tapes.Let's see what's on them.
+12;0;137;0;0;Tape 1: The original crisis     Gast: Camera's ready!, Then Ifalna, please tellus about the Cetra.Ifalna: 2000 years ago, our ancestors,the Cetra, heard the cries of the Planet. The first ones to discover the Planet's wound were the Cetra at the Knowlespole.       Gast: Tell us Ifalna....where is Knowlespole?   Ifalna: Knowlespolerefers to this area. The Cetra then began a planet-reading.       Gast: Ifalna, what exactly does Planet-reading entail? Ifalna: ....I can't explain it very well, but it's like having a conversation with the Planet....It saidsomething fell fromthe sky making a large wound. Thousands of Cetra pulled together, trying to heal the Planet....But, due tothe severity of thewound, it was only able to heal itself, over many years.     Gast: Do the Ancients,rather, the Cetra, have special powers to heal the Planet?       Ifalna: No,it's notthat kind of power.The life force of all living things on this Planet becomes the energy.The Cetra tried desperately to cultivate the land so as not to diminish the neededenergy.... Gast: Hmm, even here so close to the North Cave, thesnow never melts. Is that because theplanet's energy is gathered here to heal its injury? Ifalna: Yes, the energy that was needed to heal the Planet withered away the land....thenthe Planet....The Planet tried to persuade the Cetra to leave the Knowlespole, but.... When the Cetra.... were preparing to part with the land they loved....That's when it appeared! It looked like....our....our dead mothers ....and our dead brothers. Showing us spectres of their past.       Gast: Who is the person that appeared at the North Cave? I haven't any idea.       Ifalna:That's when the one who injured the Planet ....or the \"Crisis from the sky\" as wecall him, came.He first approached asa friend, deceived them, and finally....gave them the virus. The Cetra were attacked by the virus and went mad....transforming into monsters. Then, just as he had at the Knowlespole. He approached other Cetra clans.... infecting them with....the virus....     Gast: You don't look well....Let's call it a day.           Tape 2: What is Weapon?     Gast: Ifalna, can you comment on the thing called Weapon? Ifalna: Yes, Professor. The one the Professor mistook for a Cetra....was named Jenova. That is the\"Crisis from the Sky\". The Planet knew it had to destroy the \"Crisis from the sky\" You see, as long as Jenova exists, the Planet will never be able to fully heal itself.       Gast: Back then, Weapon was a weapon the Planet produced of its ownwill?       Ifalna: Yes, but.... There is no record of Weapon ever being used. A smallnumber of the surviving Cetra defeated Jenova andconfined it. The Planet produced Weapon....But it was no longer necessaryto use it. To this day Weapon remains asleep somewhere onthe Planet. Even though Jenova is confined, it could come back to life at some time....The Planet has not fully healed itselfyet. It is still watching Jenova.   Gast: Where is Weapon?     Ifalna: I don't know....I can't hear the voice of the Planet well....Times ....have changed. ThePlanet....is probably watching this situation closely.       Gast: ....Thank you, Ifalna, that will be all for today.           Tape 3: Daughter's Record: 10th Day after birth Ifalna: What are you doing, Profes....I mean, honey?   Gast: Oh, I'm thinking of taping it on video. But, the video's not working right....       Ifalna: What are you going to tape? Is there still something I haven'tmentioned?       Gast: No, that's not it. I'm going to record my beautiful daughter.And when she's sleeping, her face....looks like anangel. Ifalna: First, we have to figure out her name. We can take the video later!       Gast: I've already decided! Her name will be Aerith.             That's that!       Ifalna: You are SO selfish! But Aerithis a good name! Hee hee....it's a good name, considering it cameout of that forgetful head of yours!       Gast: Right!? Oh, the video tape....             Tape 4: Daughter's Record: 20th Day after birth Ifalna: Video again? You just gotthrough taping!   Gast: ....Please don't say it that way. It's our lovely daughter, both yours....and mine! Don't you want to capture herchildhood on videotape?       Ifalna: If you keepdoting on her like that, she won't grow up to be strong....Aerith is different from the other children. I wonder what dangersawait her....       Gast: Never say that! I will protect you and Aerith no matter what!! You and Aerith are my only treasures. I'll never let you go!! Ifalna: I feel so much better now, darling. If I hadn't met you, I........(Knock,Knock)       Gast: Who could that--! I was just about to....Damn!! How dare they intrude on our \"private time\" together!....I'll send them away. Ifalna: Yes, at once!!....Who the devil?   Gast: It, it's them!!             Hojo: Heh, heh, heh....I've been searching for you, Ifalna....or should I say, Cetra! Long time no see, Professor Gast!   Gast: Hojo....How didyou know?     Hojo: Believe me, Ihad to turn over a stone or two to find you. Two years I waited.... That's how much I wanted this new sample....Ha, ha, ha.Gast: ....New sample?You don't mean Aerith!?   Hojo: Hmm, Aerith? What a nice name....Ha, ha, ha.   Gast: That's it! I'm severing all ties with the Shinra. Hojo, please leave.       Ifalna: Please, Aerith has nothing to do with it! All you want is me, right?       Gast: Ifalna!       Hojo: I'll need all of you for my experiment.  You understand, don't you, Professor Gast? We can changethe future of the Planet! Gast: Don't worry, Ifalna. I'll take care of this!   Hojo: Please don't put up a fight. I don't want any harmto come to my precious sample.... Mmm? What a funny looking camera. Guard! Destroy it! ....*Crash* (The video is out but sound can stillbe heard) Hojo: Be careful with her!! Ha, ha, ha....   Gast: Wh....what are you doing, Professor!? Ifalna!Take Aerith and run!!       *Bang*       Gast: Eyaaaaah.... Darling....!             Hojo: ....Oh, and uh....don't forget the child!....Hmm, a video? The Ancients....Weapon!? Heh, heh, heh....a mountain of treasure! Thank you, Professor ....Ha,ha, ha.            
+12;0;138;64;49;....the master of my own illusionary world.But I can't remain trapped in an illusion any more....I'm going to live my life without pretending.
+12;0;139;64;49;We must stop Sephiroth. ....I'm the reason why Meteor is falling towards us.That's why I have to do everything inmy power to fight this thing.
+12;0;140;64;49;There ain't no gettin' offa this train we on!
+12;0;141;64;50;The train we on don't make no stops!
+12;0;142;64;116;Lugia2009:Why hellothere. Care to purchase something?   
+12;0;143;64;116;Lugia2009: Thank you! Come again soon!
+12;0;144;64;116;Lugia2009: Hm? Why am I here? There was no item shop inthis entire building. Can you believe it? ThoughtI'd set up one hereand help you out.
+12;0;145;64;116;Anyway, come find me later in the game. I want to give you something.
+12;0;146;0;0;Hello, I run the magic shop. Can I help you?
+12;0;147;0;0;Hm? Why am I here? There was some commotion down- stairs and I was sent up here until further notice. Anyway, enjoy your day sir.
+12;0;148;0;0;Hi,I manage the weapon shop. Can I help you?
+12;0;149;0;0;Huh? Why am I here?There was a security breach downstairs, I was sent here until further notice. Anyway....Have a good day sir.
+12;0;150;64;60;It's your first time back to your hometown in a long time,right? So how does it feel? ....I wouldn't know because I don't have a hometown....
+12;0;151;64;118;Zack:Ummm....how 'bout your parents?
+12;0;152;64;60;My mother is Jenova.She died right after she gave birth to me. My father....ha,ha,ha....Ha,Ha,Ha! ......What does it matter....?
+12;0;153;64;60;The Mako smell is pretty bad here ....Alright, let's go!
+12;0;154;64;117;It's so boring, being on watch.
+12;0;155;64;118;Just sit tight, it's you job, right?
+12;0;156;64;49;Hmm....Something tells me I should save my game before I go any further....
+12;0;157;64;116;Lugia2009: Hello friend!
+12;0;158;64;116;I'm Lugia2009,the lead hacker for this game.I was hoping to see you again,remember me from Shinra HQ?
+12;0;159;64;116;I'm glad you came, I want to give you a reward!
+12;0;160;64;116;Let's see....I know! How about some money so you can buy some new equipment for your characters?
+12;0;161;64;116;Let me just hack the Gil amount in your inventory.... Let's see.... aaaaaannnddd.... Done!!
+12;0;162;64;116;Wh,what?! Something's wrong with the computer! ....A virus?
+12;0;163;64;116;C'mon.... Ctrl,Alt,Delete!
+12;0;164;64;109;....I'm....Cloud..!
+12;0;165;64;111;....I'm....Tifa..!
+12;0;166;64;115;....I'm....Cid..!
+12;0;167;64;116;Huh? Those are the old characters I replaced!
+12;0;168;64;112;....I'm....Aeris..!
+12;0;169;64;114;....I'm....Cait Sith..!
+12;0;170;64;110;....I'm....Barret..!
+12;0;171;64;113;....I'm....RedX`..!
+12;0;172;64;116;I can't believe what happened....
+12;0;173;64;116;Heh,they were pretty weak,I'm glad I replaced them.......Hmm....     
+12;0;174;64;116;Hey,y'know what? I wish to challengeyou! Hope your characters are on a high level!
+12;0;175;64;116;Good job! I think you've earned every bit of Gil I've given you. Well,I've got otherprojects to work on. Hope you enjoy the rest of the game!
+12;0;176;64;116;Have a pleasant day!
+12;0;177;64;49;....This place looks abandoned.... It looks like the TV is still on. Maybe I should check it out....
+12;0;178;64;49;We shouldn't leave just yet....
+12;0;179;0;0;Welcome to our Itemshop,we've been in business here for over 10 years! Whatwould you like?
+12;0;180;0;0;Thanks,come again! ....Huh? Burnt down?   ............Please leave!
+12;0;181;0;0;Welcome to the  Nibelheim Armor shop, we've been inbusiness for over 10 years! What can I get you?
+12;0;182;0;0;Thank you!....Huh? Burnt down?....Pleasesir, don't say suchthings!
+12;0;183;0;0;Welcome to the Nibelheim weapon shop, we've been in business for years! Would you like me to upgrade your weapons?
+12;0;184;0;0;Have a nice--Huh? Burnt down? That NEVER happened! Don't say such things!
+12;0;185;0;0;Welcome to the Nibelheim Magic Shop, our family's been in business here for years! Would you like us to upgrade your magic?
+12;0;186;0;0;Thank you, come again!....Wha!? Burnt down? Are yousick....saying those things! Please leave!
+12;0;187;64;49;Hmm....It looks like something gets inserted here. Something's writtenhere....
+12;0;188;64;52;Let me see........ K.E.Y.S.T.O.N.E.?
+12;0;189;64;53;Key Stone? Hey, While we were in the Gold Saucer, I heard Dio talking about a Keystone.
+12;0;190;64;50;What'd he say?
+12;0;191;64;53;He wants to add it to his museum, thatthere's a man who lives near Gongaga that has it.
+12;0;192;64;51;Hope we're not too late....
+12;0;193;64;55;What're we waitin' for? Let's get goin'!
+12;0;194;64;54;I wonder if the guywould even sell it to him....or us for that matter.
+12;0;195;64;116;Hey! You can use that to restore your HP and MP anytime you wish. Just let me turn iton....
+12;0;196;64;116;There you are! All set!
+12;0;197;64;116;Good luck!
+12;1;0;64;54;I didn't want to dothis....using dirty tricks and taking hostages....But this is how it is....no compromises.So why don't we continue on as we did?
+12;1;1;64;54;Tomorrow is the Temple of the Ancients,right?I know where it is soI'll tell you later.Of course, we'll get there after the Shinra, but you'll have to deal with that.
+12;1;2;64;49;....Well,we're stuck....We'll have to do what he says.
+12;1;3;64;52;I wonder if Marleneis all right....I wonder what happened to Mom.
+12;1;4;64;54;What took you so long,Cloud?Oh yeah,about the Temple ofthe Ancients.I think if we take the Tiny Bronco East towards the sea,we should be able to find it. Well then,shall we get goin? Time's a wastin
+12;1;5;64;52;This is....the Templeof the Ancients.... I....I know....I feel it....the knowledge of the Ancients.... floating....You couldbecome one with thePlanet,but you're stopping it with the strength of will.For the future?For us?
+12;1;6;64;49;What are you saying?Do you understand?
+12;1;7;64;52;You're uneasy....But happy?Because I'm here?I'm sorry....I don't understand.I want to go inside!
+12;1;8;64;52;Hey!It's Tseng!
+12;1;9;64;49;Tseng?Of the Turks?
+12;1;10;64;67;Uh....I've been had.
+12;1;11;64;67;It's not the Promised Land.... Sephiroth's searching for....
+12;1;12;64;49;Sephiroth?He's inside!?
+12;1;13;64;67;Look....for yourself....
+12;1;14;64;67;Damn....Letting Aerisgo was the start.... of my....bad luck.... The President....was wrong....
+12;1;15;64;52;You're wrong.The Promised Land isn'tlike what you imagined.
+12;1;16;64;52;And,I'm not going to help.Either way,there was no way Shinra could have won.
+12;1;17;64;67;....pretty harsh. Sounds like something....you'd say.
+12;1;18;64;67;The Keystone....placeit....on....the altar....
+12;1;19;0;0;Got Keystone.
+12;1;20;64;49;You crying?
+12;1;21;64;52;....Tseng's with our enemy,the Turks,butI've known him since we were little....There's nota lot of people I can say that about.In fact,there are probably only a handful of people in the world who really know me.
+12;1;22;64;49;Let's put the Keystone in.
+12;1;23;64;52;Words....feelings....Somany of them here.
+12;1;24;64;51;What a strange place.Do you think we're welcome here?
+12;1;25;64;52;....Cloud!I know it'sgoing to be tough, but....Don't give up!We can do it!
+12;1;26;64;60;Splendid.
+12;1;27;64;60;A treasure house ofknowledge....
+12;1;28;64;49;I don't understand what you're saying!
+12;1;29;64;60;Look well.
+12;1;30;64;49;At what!?
+12;1;31;64;60;At that which adds to the knowledge of....
+12;1;32;64;60;I am becoming one with the Planet.
+12;1;33;64;60;Mother....it's almosttime....Soon....we willbecome one.
+12;1;34;64;52;How do you intend to become one with the Planet?
+12;1;35;64;60;It's simple.Once the Planet is hurt,it gathers Spirit Energy to heal the injury.
+12;1;36;64;60;The amount of energy gathered depends on the sizeof the injury.
+12;1;37;64;60;....What would happenif there was an injury that threatened the verylife of the Planet?Think how much energy would be gathered!
+12;1;38;64;60;Ha ha ha.And at thecenter of that injury,will be me. All that boundless energy will be mine.
+12;1;39;64;60;By merging with allthe energy of the Planet,I will become a new life form,a new existence.Melding with the Planet....I will cease to existas I am now.Only tobe reborn as a God to rule over every soul.
+12;1;40;64;52;An injury powerful enough to destroy the Planet?Injure....the Planet?
+12;1;41;64;60;Behold that mural. The Ultimate Destructive Magic....Meteor.
+12;1;42;64;49;That'll never happen!
+12;1;43;64;49;Where are you! Sephiroth!
+12;1;44;64;52;Wait!Cloud!
+12;1;45;64;52;Cloud!
+12;1;46;64;51;Hey,Cloud!
+12;1;47;64;49;Ha ha ha....Black Materia.Ha ha ha.... Call Meteor.
+12;1;48;64;52;Cloud!Get a hold ofyourself!
+12;1;49;64;49;Cloud....I'm....Cloud....
+12;1;50;64;49;How should I?
+12;1;51;64;49;....I remember!I remember my way.
+12;1;52;64;52;....Cloud.
+12;1;53;64;49;Mm?What's wrong?Is something wrong?
+12;1;54;64;52;....It's nothing so don't worry about it.
+12;1;55;64;52;Right,Cloud!It's nothing.
+12;1;56;64;52;Sephiroth got away.
+12;1;57;64;49;....Don't worry aboutit.I understood what he was saying.
+12;1;58;64;49;So this must be Meteor,right?
+12;1;59;64;51;Is something going to fall from the sky?
+12;1;60;64;52;....this must be magic.Just what Sephiroth was saying.
+12;1;61;64;52;The Ultimate Destructive Magic, Meteor.It finds small drifting planets with its magic.
+12;1;62;64;52;And then collides with them.This Planet might get wiped out entirely....
+12;1;63;64;49;Sephiroth!?
+12;1;64;64;60;Ha ha ha....It is notme.
+12;1;65;64;49;What is this?
+12;1;66;64;52;There's something written on it.
+12;1;67;64;52;....B.l.a.c.k....M.a.t.e.r.i.a.
+12;1;68;64;49;Black Materia?
+12;1;69;64;52;Hey!....Black Materia.What shouldwe do,Cloud?
+12;1;70;64;49;Shake it?
+12;1;71;64;52;Wait a minute.I'll ask!
+12;1;72;64;52;I don't understand....
+12;1;73;64;52;What?Really?
+12;1;74;64;52;They said that the Temple itself is the Black Materia.
+12;1;75;64;49;What do they mean?
+12;1;76;64;52;So,this whole building is the Black Materia?
+12;1;77;64;49;This huge Temple? This is the Black Materia!?Then no one could take it.
+12;1;78;64;52;Hmm,it's pretty hard.You see this is a model of the Temple.And inside it is a device, which gets smaller each time you solvea puzzle.As the model becomes smaller,you become smaller too.Until it's small enough to fit in the palm of your hand.
+12;1;79;64;49;So,if we solve the puzzles,the Black Materia will get smaller and smallerand we can take it out?
+12;1;80;64;52;Yes,but there's onething....You can onlyanswer puzzles inside the Temple. So,anyone who solves the puzzle will be crushed by the Temple.
+12;1;81;64;49;I see....the Ancientsdidn't want dangerous magic to be taken out of theTemple so easily....
+12;1;82;64;51;Let's just leave it,OK?
+12;1;83;64;49;No.We've got to think of a way to get it out.Because Sephiroth has lots of different flunkies.It's nothing to him to throw their lives away to get the Black Materia.
+12;1;84;64;49;This place isn't safe.
+12;1;85;64;52;So what are we going to do?
+12;1;86;64;54;Don't forget about me.Everything you said makes perfect sense!You can use my stuffed body forthe future of the Planet.
+12;1;87;64;49;We can't let Sephiroth get his hands on the Black Materia.And we can't let the Shinra get theirs on it either.
+12;1;88;64;54;But Cloud.There's really nothing elseyou can do. Everyone,please trust me.
+12;1;89;64;49;I guess we have no choice.
+12;1;90;64;54;All righty then! Leave it all to me!Please hurry,you'vegot to get out of there!I'll be waiting at the exit!
+12;1;91;64;49;It's warm....
+12;1;92;64;49;This isn't good....
+12;1;93;64;52;Cloud....behind you.
+12;1;94;64;54;Sorry to keep you waiting!It's me! I'll handle the rest!
+12;1;95;64;54;Well,everyone....Takecare of yourselves!
+12;1;96;64;52;CaitSith....
+12;1;97;64;52;Come on,Cloud....Say something.
+12;1;98;64;49;I'm not good at this.
+12;1;99;64;54;Mmm,I understand.I feel the same too.
+12;1;100;64;52;Why don't you read our fortunes?
+12;1;101;64;54;Say,that's right....Ihaven't done it in a while,huh?I'm so excited.Right or wrong,I'm still thesame 'ol me.Now, what should I predict?
+12;1;102;64;52;Hmm,let's see how compatible Cloud and I are!
+12;1;103;64;54;That'll cost ya. Exactly one date!
+12;1;104;64;54;Here I go!
+12;1;105;64;54;This isn't good.I can't say it.Poor Tifa.
+12;1;106;64;52;No!Tell me!I promise I won't getmad!
+12;1;107;64;54;Is that so?Then I'll tell you.Looksgood.You are perfect for each other!Aeris's star and Cloud's star! They show a great future!Cloud,I'll be your matchmaker,preacher....I'll do whatever you want me to!You just callme when it all happens!
+12;1;108;64;54;Thank you for believing in me, knowing that I was a spy.This is the final,final farewell!
+12;1;109;64;52;Be strong CaitSith!
+12;1;110;64;54;She told me to 'Be strong.' I feel so happy.
+12;1;111;0;0;It is Holy, the ultimate magic, summoned to resist the Meteor. Cloud and the others watch with wide eyes as Lifestream gushes from the wounded planet. Controlled by Aerith's will, Lifestream amplifies the Holy.Together, Light smites Darkness. Dazzling light blinds onlooking eyes as the Meteor is destroyed.
+12;1;112;0;0;Sephiroth was created to be a hero. Shinra's terrible experiments twistedhis soul, though, consuming him with unquenchable hatred. Using the power endowed to him, he manipulatedthe ancient creature Jenova, intending to destroy the planet.   Cloud was meant to be a pawn, a Shinradrone to be used and discarded by Sephiroth. Cloud found a power, however, Sephiroth had no hope of besting: Friendshipand love. Aided by friends, Cloud engaged in a fiercebattle against Sephiroth....Body and mind exhausted,he bested the evil and exorcised Sephiroth from his heart.   This struggle has proved humanity's worth. In obliterating the Meteor, Holy has given man a second chance. And so.... Cloud,Tifa,Barret, RedX`, Cait Sith, and Cid journey home to rebuild. ....To live out theirdays in peace.
+12;1;113;64;54;This must be it!TheAncients sure did agreat job making this.
+12;1;114;64;54;I can protect the Planet too!I'm kinda embarrassed....
+12;1;115;64;54;There's plenty of stuffed toys like my body around,but there's only one me!
+12;1;116;64;54;Don't forget me even if another CaitSith comes along.
+12;1;117;64;54;Good bye,then!I guess I'm off to save the Planet....
+12;1;118;64;49;This's the Black Materia....
+12;1;119;64;49;As long as we have this,Sephiroth won't be able to use Meteor.
+12;1;120;0;0;Got Black.
+12;1;121;64;49;Mmm? Can we use  it?
+12;1;122;64;52;Nope,we can't use it right now.You need great spiritual power to use it.
+12;1;123;64;49;You mean lots of Spiritual energy?
+12;1;124;64;52;That's right.One person's power alone won't do it. Somewhere special. Where there's plenty of the Planet's energy....Ohyeah!The Promised Land!
+12;1;125;64;49;The Promised Land? No,but....
+12;1;126;64;52;Sephiroth is different.He's not an Ancient.
+12;1;127;64;49;He shouldn't be able to find the Promised Land.
+12;1;128;64;60;....Ah,but I have.
+12;1;129;64;60;I'm far superior tothe Ancients.I became a traveler of the Lifestream and gained the knowledge and wisdom of the Ancients.I also gained the knowledge and wisdom of those after the extinction of the Ancients.And soon,Iwill create the future.
+12;1;130;64;52;I won't let you do it!The future is not only yours!
+12;1;131;64;60;Ha,ha,ha....I wonder?
+12;1;132;64;60;Wake up!
+12;1;133;64;49;Sh....shut up!
+12;1;134;64;60;There,Cloud....good boy.
+12;1;135;64;49;The....Noise....
+12;1;136;64;49;Wa....aa....aa
+12;1;137;64;60;....Well done.
+12;1;138;64;52;Cloud,are you all right?
+12;1;139;64;49;....I gave the Black Materia to Sephiroth..?
+12;1;140;64;49;Wha....what did I do....tell me,Aeris.
+12;1;141;64;52;Cloud....be strong, OK?
+12;1;142;64;49;....Urrgh....What have I done!?
+12;1;143;64;52;Cloud....you haven't done anything.It's not your fault.
+12;1;144;64;54;Oops! This looks like I came at a bad time!
+12;1;145;64;54;I'm Cait Sith No.2.Pleased to meet youall!
+12;1;146;64;49;Everything is white....What did I do?I don't rememberanything....My memory....since when..?If everything's a dream,don't wake me.
+13;0;0;64;50;You look like you was havin' a nightmare.How are you feeling?
+13;0;1;64;49;I seem to be OK.
+13;0;2;64;50;That's good.Man,I didn't know what was gonna happen.
+13;0;3;64;51;You know,Cloud, Aeris is gone.
+13;0;4;64;50;Everyone's out looking for Aeris.
+13;0;5;64;49;....City of the Ancients.Aeris is headed there.
+13;0;6;64;50;By herself!?Why didshe go by herself!?Hey,we're goin' too.
+13;0;7;64;49;Only the Ancients, only Aeris can saveus from Meteor....
+13;0;8;64;51;Then we must go. What'll we do if something happens to Aeris?If Sephiroth finds her,she's in trouble.
+13;0;9;64;49;Sephiroth....already knows.
+13;0;10;64;50;Hey!Why are you still sittin' around?
+13;0;11;64;51;Let's go,Cloud.
+13;0;12;64;49;No.
+13;0;13;64;49;I might lose it again.If Sephiroth comes near me I might....
+13;0;14;64;50;Yeah,godammit!It's 'cuz of you that Sephiroth got the Black Materia in the first place. It's your damn fault!
+13;0;15;64;49;My fault?
+13;0;16;64;50;I know you got problems....hell,we all do.But,you don't even understand yourself.But you gotta understand that there ain't nogettin' offa this train we're on,tillget to the end of the line.
+13;0;17;64;51;Cloud,we came this far....Aren't you even going to settle up with Sephiroth?
+13;0;18;64;49;No....
+13;0;19;64;49;I'm afraid.If this keeps up,I may go crazy!I'm afraid....
+13;0;20;64;50;Just a damn jackass,that's whatyou are....Yo,jes' think about it....Howmany people in thisworld do ya think really understand themselves?People get depressed in life because they don't know what's up.But,they go on living.They don't run away....isn't that how it is?
+13;0;21;64;51;Cloud....you'll come with us,right?I believe in you.
+13;0;22;64;49;What....am I supposedto do?Pull out of here?Pull out?....To where?
+13;0;23;64;51;Cloud....
+13;0;24;64;50;Wait a minute,Tifa.Give him a little time.He has to decide this on his own.
+13;0;25;64;50;You believe in Cloud....right?
+13;0;26;64;49;....I'm afraid to find out the truth..?But....why?
+13;0;27;0;0;You awake?Those people were so worried that they stayed by your sideuntil you woke up. You sure do have good friends.
+13;0;28;64;51;Cloud....
+13;0;29;64;50;Hey,how are you?I just wanna know, which is it gonna be?You wanna find out about yourself?Or are you afraid to find out?Either way,you stay aroundhere and about all you can do is worryabout it.Even if you do go nuts again when you see Sephiroth....If it happens,it happens.I'll go upside yourspikey white head and bring you back to normal!
+13;0;30;64;51;Cloud,it'll be all right.We're all with you.
+13;0;31;64;49;But....
+13;0;32;64;50;If it happens,it happens.Don't worry'bout it.
+13;0;33;64;49;....You're....right.... He's right,isn't he?
+13;0;34;64;51;Come on,let's go and find Aeris..?
+13;0;35;0;0;Welcome to Bone Village,a town for nature lovers.What do you want?
+13;0;36;64;49;Where is the City of the Ancients?
+13;0;37;0;0;The City of the Ancients?Oh,you must mean the Forgotten City.
+13;0;38;64;49;Do you know where Aeris is?
+13;0;39;0;0;Are you talking about that girl?I warned her,but she went into the Sleeping Forest anyway.
+13;0;40;64;49;What are you doing?
+13;0;41;0;0;We're excavating. It's like the land's telling a history of the planet.
+13;0;42;0;0;You can awaken the Sleeping Forest if you have the Lunar Harp.Once awake, they say the forestwill open a road for you.The girl inpink that just wentin also used a Lunar Harp to get through.
+13;0;43;0;0;The forest just beyond here is called the SleepingForest.Right now the forest is asleep and anyone who wanders in while it's asleep, it confuses.You cango in,but you may never come out....
+13;0;44;0;0;But just now,a girlin pink and a man in a Black Cape went in.You think they'll be all right?
+13;0;45;0;0;The Lunar Harp is somewhere in the ground here.We could excavate it for you if you wantto.
+13;0;46;64;49;Start diggin'.
+13;0;47;0;0;It's not just the Lunar Harp you're after.We else are you having us dig for?
+13;0;48;0;0;Normal treasure
+13;0;49;0;0;Good treasure   Lunar Harp      
+13;0;50;0;0;Lunar Harp
+13;0;51;0;0;All right!Then I'lllend you some of mystaff.Show us whereyou want to dig!
+13;0;52;0;0;Select the Dig Point by moving to the point and pressing the A button.
+13;0;53;0;0;The rock piles indicate the site for the dig.Each dig costs 100G.
+13;0;54;0;0;Now,the staff will dig here.
+13;0;55;0;0;The Sleeping Forestawoke....
+13;0;56;64;55;Yeah,and it looks pretty comfortable.
+13;0;57;64;51;Shall we take a break here?
+13;0;58;0;0;Yes             No              
+13;0;59;0;0;No
+13;0;60;0;0;Yes
+13;0;61;64;49;I feel it....
+13;0;62;64;50;Do you know what TIME it is!?
+13;0;63;64;49;Aeris is here....and so is Sephiroth.
+13;0;64;64;54;Wa,wa,wait a minute.You serious? 
+13;0;65;64;53;But how can you tell?
+13;0;66;64;49;....It's not an excuse.I feel it inmy soul.
+13;0;67;64;55;Shit,Cloud,we can'tbe sittin' around on our asses.
+13;0;68;64;49;....right.Let's hurryand find Aeris.
+13;0;69;64;49;Aeris's voice.... Coming from there?
+13;0;70;64;49;Aeris?
+13;0;71;64;55;Cloud!
+13;0;72;64;51;Stop!
+13;0;73;64;49;Ugh....what are you making me do?
+13;0;74;64;49;....Aeris.
+13;0;75;64;49;This can't be real!
+13;0;76;64;60;Do not worry.Soon the girl will become part of the Planet's energy.Allthat is left is to go North.The Promised Land waitsfor me over the snowy fields.There I will become a newbeing by uniting with the planet.As will this girl....
+13;0;77;64;49;....Shut up.
+13;0;78;64;49;The cycle of natureand your stupid plan don't mean a thing.
+13;0;79;64;49;Aeris is gone.Aeriswill no longer talk,no longer laugh,cry....or get angry....
+13;0;80;64;49;What about us....whatare WE supposed to do?
+13;0;81;64;49;What about my pain?
+13;0;82;64;49;My fingers are tingling.My mouth is dry.My eyes are burning!
+13;0;83;64;60;What are you saying?Are you trying to tell me you have feelings too?
+13;0;84;64;49;Of course!Who do you think I am!?
+13;0;85;64;60;Ha,ha,ha....Stop acting as if you were sad.There's noneed to act as though you're angryeither.
+13;0;86;64;60;Because,Cloud.You are....
+13;0;87;0;0;Jenova:Because,you are....a puppet.
+13;0;88;64;49;I'm....a puppet?
+13;0;89;64;49;Everyone,listen to me.
+13;0;90;64;49;I'm Cloud, ex-SOLDIER,born in Nibelheim.I came tosettle up with Sephiroth.
+13;0;91;64;54;....What's going on?
+13;0;92;64;49;I came here by my own free will....Or so I thought. However....
+13;0;93;64;49;....To tell the truth,I'm afraid ofmyself.
+13;0;94;64;49;....There is a part of me that I don't understand.That part that made me give the Black Materia to Sephiroth.
+13;0;95;64;49;If you hadn't stopped me,Aeris might've been.... There's something inside of me.A person who is not really me.
+13;0;96;64;49;That's why I shouldquit this journey. Before I do something terrible.
+13;0;97;64;49;But I am going.He destroyed my hometown 5 years ago,killed Aeris, and is now trying to destroy the Planet.I'll never forgive....Sephiroth.
+13;0;98;64;49;I....I must go on.
+13;0;99;64;49;....I have a favor toask of you.Will youall come with me?
+13;0;100;64;49;....to save me from doing something terrible.
+13;0;101;64;55;Well,we'll face it when that happens.
+13;0;102;64;49;I don't know how Aeris tried to savethe planet from theMeteor.And I guess now,we'll never know.But!
+13;0;103;64;49;We still have a chance.We must get that Black Materia back before Sephiroth uses it. Let's go.
+13;0;104;64;53;Sephiroth....I wonderwhich way he went?
+13;0;105;64;49;....ugh.
+13;0;106;64;50;Ey,hey!You alright?
+13;0;107;64;49;Hmm....Sephiroth saidto me....Head North....past the Snow Fields....
+13;0;108;0;0;Next time,I'm gonnamake an even biggerone.
+13;0;109;0;0;It's almost finished!
+13;0;110;0;0;My boy got hurt right about the time we moved here....I never should've bought him a snowboard.
+13;1;0;64;49;Just as I thought, This picture's fake.
+13;2;0;64;58;Concentrate on the mission,Cloud.Geez,we're really gonna blow this huge furnace up?This'll be somethin' to see!
+13;2;1;64;49;The gate is locked!
+13;2;2;64;56;Cloud,be careful!
+13;2;3;64;57;Take care!
+13;2;4;64;52;Thank you!
+13;2;5;0;0;It's over!
+13;2;6;64;59;....
+13;2;7;64;50;Didn't I tell you to go?Why are you still here!
+13;2;8;0;0;Entered the code.
+13;2;9;0;0;Damn,it's locked!
+13;2;10;64;52;My house is nearby!
+13;2;11;64;49;Okay!
+13;2;12;64;49;Are you just leaving like this!?....
+13;2;13;64;49;How did the wire break!?
+13;2;14;0;0;The next time you want new clothes, look for me!
+13;2;15;64;52;Now's our chance tosave Tifa,where areyou going?
+13;2;16;64;49;These clothes are too tight,it's making my head dizzy!
+13;2;17;64;49;I can't leave just yet.
+13;2;18;0;0;t.
+13;2;19;64;52;Aerith's Voice:No! Help!
+13;2;20;64;49;Let's help Tifa first!
+13;2;21;64;49;I shouldn't disturbthem....
+13;2;22;64;78;Aeris is an ill fated child....
+13;2;23;64;59;Cloud,do you need anything?
+13;2;24;64;49;....No,I just wanted to see you!
+13;2;25;0;0;With this little money,you still have the guts to come here!Ha ha ha....
+13;2;26;0;0;What'll it be,do you want or not?
+13;2;27;64;49;The Shinra Building's not far,we still have time!
+13;2;28;64;50;Cloud,who's coming with you?
+13;2;29;0;0;Take            Leave           
+13;2;30;64;50;Cloud!Shall we leave?
+13;2;31;64;49;Where to....I'll go this way!
+13;2;32;64;50;Cloud!We go together,so you don't get your selfkilled!
+13;2;33;64;49;I see your point! Pick another!
+13;2;34;64;49;Cloud!What do you mean!?
+13;2;35;64;49;....A simple matter!
+13;2;36;64;49;No going back, Midgar sure gave ussome memories!
+13;2;37;0;0;Not enough Gil!
+13;2;38;64;49;I really want to buy,but money's been short....You could give us a discount....
+13;2;39;0;0;Hmph!Who do you think you are!No exceptions!
+13;2;40;0;0;Chocobo Lure,buy itnow!
+13;2;41;0;0;You're strange folk.You bought thelast Chocobo Lure, yet you keep nagging!
+13;2;42;0;0;Here you go!.... Chole!See our guestout!
+13;2;43;64;49;I heard you can catch a Chocobo here,but how!?
+13;2;44;0;0;Chocobo escaped!
+13;2;45;0;0;A Chocobo came!  
+13;2;46;0;0;All aboard!
+13;2;47;0;0;I'm sorry.The Tram is out of order right now.
+13;2;48;0;0;I'm afraid you won't be able to leave.
+13;2;49;64;49;I guess we're stuckhere!
+13;2;50;0;0;Select the dig point!
+13;2;51;0;0;We found nothing....
+13;2;52;0;0;We found the Lunar Harp!
+13;2;53;0;0;You can't hire any more!
+13;2;54;0;0;Not enough Gil!
+13;2;55;0;0;I can't wait for myson to recover....
+13;2;56;0;0;Got Map.
+13;2;57;0;0;Andy:My cowboy and astronaut dolls areso lifelike!
+15;0;0;0;0;Kotch:All right ladies!Line up in front of the Don!
+15;0;1;64;79;Corneo:Hmm!Good, splendid!Now,let's see....which girl should I choose? Hmm....hmm..!
+15;0;2;64;79;This one?
+15;0;3;64;79;Or this one?
+15;0;4;64;79;Woo-hoo,I've made up my mind!My choice for tonight is....
+15;0;5;64;79;This healthy looking girl!
+15;0;6;64;51;Fu,fu,fu....Be nice, Don.
+15;0;7;64;79;You can have the other ones!
+15;0;8;0;0;Yes,sir!Thank you sir!
+15;0;9;64;79;Well then,shall we go my pretty?
+15;0;10;0;0;Scotch:Hey guys! We've got guests.
+15;0;11;0;0;We'll take REAL good care of you.
+15;0;12;0;0;This is all thanks to the big boss,DonCorneo!
+15;0;13;0;0;Hey!Hey!Hey!
+15;0;14;0;0;Heh,heh....Well sweatie,are you,  uh, ready?
+15;0;15;0;0;Hey....what's wrong? Want me to keep youcompany?
+15;0;16;64;49;No....I'm flattered, but no thanks. Because....
+15;0;17;0;0;Because..?
+15;0;18;64;49;Because....I ain't INTERESTED in a buncha scrubs like you!
+15;0;19;0;0;Wha....a MAN!?God damn it!You think you can get away with this!Get him! Knock the crap out of him!
+15;0;20;0;0;Grr!C'mon,What's the matter with yougood for nothings!?All right now,COME ON!I'll show you how it's done!
+15;0;21;64;52;No..!Help!
+15;0;22;64;52;No..!
+15;0;23;0;0;Kotch:Ha ha ha.... Wait,you!
+15;0;24;64;52;I'm so sorry!
+15;0;25;0;0;Oh,oh,oh....
+15;0;26;64;49;Aeris!You all right?
+15;0;27;64;52;I told you.I'm usedto danger.To tell you the truth,my heart was pounding.
+15;0;28;64;79;Woo-hoo!Come,come, don't be so shy....
+15;0;29;64;51;I know....But you know,Don Corneo,I'dlike you to explainsomething before westart....
+15;0;30;64;79;Hm?Oh,you mean about THAT?Don't worry.I'm single. There,feel better now?
+15;0;31;64;51;No....I'm not asking about that....Wa.... wait a minute!No, not yet!
+15;0;32;64;79;Come!Come!Aoooh!I can't wait any longer!Here comes papa!
+15;0;33;64;51;Cloud!
+15;0;34;64;79;Wha....what the hell?Who goes there?
+15;0;35;64;51;You still don't getit do you,Don Corneo?
+15;0;36;64;79;Get what?
+15;0;37;64;51;Shut up,we're asking the questions now....Whatdid your assistantsfind out?Talk!If you don't tell us....
+15;0;38;64;49;....I'll chop them off.
+15;0;39;64;79;No!Not that!I'll talk!I'll tell you everything!
+15;0;40;64;51;So....talk.
+15;0;41;64;79;....I made 'em find out where the man with the gun-arm was.But that's whatI was ordered to do.
+15;0;42;64;51;By who?
+15;0;43;64;79;No..!If I told you that,I'd be killed!
+15;0;44;64;51;Talk!If you don't tell us....
+15;0;45;64;52;....I'll rip them off.
+15;0;46;64;79;Waaah..!It was Heidegger of Shinra!Heidegger, Heidegger,the head of Public Safety Maintenance!
+15;0;47;64;49;The head of Public Safety Maintenance?
+15;0;48;64;51;Did you say the Shinra!?What are they up to!?Talk!Ifyou don't tell us....
+15;0;49;64;51;I'll smash them.
+15;0;50;64;79;....You're serious, aren't you....ohboy, ohboy,ohboy....I'm not fooling around here either,you know.Shinra's trying to crush a small rebel group called AVALANCHE, and want to infiltrate their hideout.And they'rereally going to crush them.... literally.By breaking the support holding up the plate above them.
+15;0;51;64;51;Break the support!?
+15;0;52;64;79;You know what's going to happen?Theplate'll go PING and everything's gonna go BAMMM!I heard their hideout's in the Sec.7 Slums....I'm just glad it's not here in Sec.6.
+15;0;53;64;51;They're going to wipe out the Sec.7 Slums?
+15;0;54;64;51;Cloud,will you comewith me to Sec.7?
+15;0;55;64;49;Of course,Tifa.
+15;0;56;64;79;Just a second!
+15;0;57;64;49;Shut up!
+15;0;58;64;79;No wait,it'll only take a second.How do you think scum like me feels when they babble on about the truth?
+15;0;59;64;49;They're sure they'll win.
+15;0;60;64;79;Woo-hoo!Right!
+15;0;61;64;61;How are the preparations going?
+15;0;62;64;63;Heidegger:Ha,ha,ha!Smoothly,very smoothly!I assignedthe Turks to this.
+15;0;63;64;66;Reeve:President!Arewe really going to do this?Simply destroy a group with only a few members....
+15;0;64;64;61;What's the problem,Reeve?You want out?
+15;0;65;64;66;....No.But,as head ofthe Urban Development Dept,I have been involved in the building andrunning of Midgar. That's why....
+15;0;66;64;63;Reeve,you should flush those personal problems in the morning!
+15;0;67;64;66;The Mayor's againstthis anyway....
+15;0;68;64;63;Mayor?He just sits in his building allday feeding his face!You still callthat a Mayor?Now ifyou'll excuse me sir!
+15;0;69;64;61;You're tired.Why don't you take a couple of days off and go somewhere.
+15;0;70;64;61;We'll destroy Sec.7and report that AVALANCHE did it. Then we'll send in the rescue operation care of Shinra,Inc....Heh, heh,heh....this is perfect.
+15;0;71;64;49;You alright?
+15;0;72;64;52;Yeah.
+15;0;73;64;49;You alright?
+15;0;74;64;51;Man!This is terrible.
+15;0;75;64;52;Well,the worst is over....Maybe not....
+15;0;76;0;0;Tifa joins you.
+15;0;77;0;0;Aeris joins you.
+15;0;78;64;51;It's too late.... Marlene....Barret.... the people of the slums.
+15;0;79;64;52;Don't give up,nevergive up hope.It's not easy to destroythe pillar,right?
+15;0;80;64;51;....Yeah....you're right!We still havetime.
+15;0;81;64;49;Aeris.I got you mixed up in all of this....
+15;0;82;64;52;Don't tell me to gohome.
+15;0;83;64;51;Let's see....If we can just get past the trains,we should be able to get out of here.
+15;0;84;64;51;We made it!The pillar's standing!
+15;0;85;64;49;Wait!You hear something....above us?
+15;0;86;64;52;....gun fire?
+15;0;87;64;49;Wedge!You all right!?
+15;0;88;64;58;....Cloud....You remembered....my name.Barret's up top....help him....An' Cloud....Sorry,I wasn't any help.
+15;0;89;64;49;I'm going up!Aeris!You look after Wedge.
+15;0;90;64;52;Don't worry.
+15;0;91;64;51;Aeris,do me a favor.I have a bar called 7th Heaven in this neighborhood. There's a little girl named Marlene there....
+15;0;92;64;52;Don't worry.I'll put her somewhere safe.
+15;0;93;64;51;It's dangerous here!Everyone get away from the pillar,quickly! Everyone get out ofSec.7!
+15;0;94;0;0;L,look....This is my job,so I have to behere until the absolute last minute.
+15;0;95;0;0;Umm....I just LOVE men with a sense ofduty.Let me stay here with you.
+15;0;96;0;0;Doh!And this was supposed to be my last job!Do something!
+15;0;97;0;0;I never thought this would ever happen to me! Great....I'm quittingtomorrow!
+15;0;98;0;0;Uh oh....There goes the pillar.
+15;0;99;0;0;Uhh....Help!My strange and wonderful little place.
+15;0;100;0;0;If things get too hairy,we'll escape.It's not something you'll see happen very often.
+15;0;101;64;56;Cloud....so you don'tcare....what happens....to the.... Planet?
+15;0;102;64;49;You're wounded....
+15;0;103;64;56;Thanks,Cloud....don'tworry 'bout me.... Barret's....fighting up there.Go help him....
+15;0;104;64;57;....Cloud....I'm glad....I could talk with you one last time.
+15;0;105;64;49;Don't say \"last\"....
+15;0;106;64;57;That's....all right....Because of our actions....many.... people died....this probably....is our punishment....
+15;0;107;64;49;Is that so....
+15;0;108;64;57;....Ha....cool....as usual....ex-SOLDIER....always....I liked that....in you....
+15;0;109;64;50;Tifa!Cloud!You came!Be careful!
+15;0;110;64;51;Here they come!
+15;0;111;64;68;You're too late. Once I push this button....That's all,folks!Mission accomplished.
+15;0;112;64;51;We have to disarm it!Cloud!Barret! Please!
+15;0;113;64;68;I can't have you dothat.No one gets inthe way of Reno andthe Turks....
+15;0;114;64;68;It's time.
+15;0;115;64;51;Cloud!I don't know how to stop this! Try it!
+15;0;116;64;49;It's not a normal time bomb.
+15;0;117;64;67;Tseng:That's right.You'll have a hard time disarming thatone.It'll blow the second some stupid jerk touches it.
+15;0;118;64;51;Please,stop it!
+15;0;119;64;67;Ha,ha,ha....Only a Shinra Executive can set up or disarm the Emergency Plate Release System.
+15;0;120;64;50;Shut yer hole!
+15;0;121;64;67;I wouldn't try that....You just might make me injure our special guest.
+15;0;122;64;51;Aeris!
+15;0;123;64;67;Oh,you know each other?How nice you could see each other one last time.You should thank me.
+15;0;124;64;49;What are you gonna do with Aeris?
+15;0;125;64;67;I haven't decided. Our orders were to find and catch the last remaining Ancient.It's taken us a long time,but now I can finally report this to the President.
+15;0;126;64;52;Tifa,don't worry! She's all right!
+15;0;127;64;51;Aeris!
+15;0;128;64;52;Hurry and get out!
+15;0;129;64;67;Ha,ha,ha....Well,it should be starting right about now. Think you can escape in time?
+15;0;130;64;51;Once that plate starts coming down it's too late.We gotta hurry!
+15;0;131;64;50;Yo,we can use this wire to get out!
+15;0;132;64;50;Biggs....Wedge.... Jessie....Marlene.... GOD DAMN IT!DAMMIT!DAMMIT ALL TO HELL!What the hell's it all for!?ARGGHH!
+15;0;133;64;49;Hey,Barret!
+15;0;134;64;51;Barret!
+15;0;135;64;50;ARGGHH!
+15;0;136;64;49;Hey!
+15;0;137;64;51;Barret,stop....Pleasestop,Barret.
+15;0;138;64;50;URGHH!God damn....
+15;0;139;64;49;....
+15;0;140;64;50;Marlene....
+15;0;141;64;51;....Barret..?Marlene is....I think Marleneis safe.
+15;0;142;64;50;....huh?
+15;0;143;64;51;Right before they took Aeris,she said,\"Don't worry, she's all right.  She was probably talking about Marlene.
+15;0;144;64;50;R,really!?
+15;0;145;64;51;But....
+15;0;146;64;50;Biggs....Wedge.... Jessie....
+15;0;147;64;49;All 3 of them were in the pillar.
+15;0;148;64;50;Think I don't know that?But....we,all ofus fought together.I don't wanna thinkof them as dead!
+15;0;149;64;51;And the other people in Sec.7.
+15;0;150;64;50;This is all screwedup!They destroyed an entire village just to get to us! They killed so manypeople....
+15;0;151;64;51;....are you saying it's our fault? Because AVALANCHE was here?Innocent people lost their lives because of us?
+15;0;152;64;50;No,Tifa!That ain't it!Hell no!It ain'tus!It's the damn Shinra!It's never been nobody but theShinra!They're eviland destroyin' our planet just to.... build their power and line their own damn pockets with gold!They're gonna kill this planet! Our fight ain't never gonna be overuntil we get rid ofthem!
+15;0;153;64;51;....I don't know.
+15;0;154;64;50;What don't you know!?You don't believe me?
+15;0;155;64;51;It's not that.I'm not sure about....me.My feelings.
+15;0;156;64;50;An' what about you?
+15;0;157;64;49;....
+15;0;158;64;50;Yo! Cloud!
+15;0;159;64;51;Oh!Aeris!
+15;0;160;64;50;Oh yeah,that girl. What's up with her?
+15;0;161;64;51;....I don't really know....But she's theone I left Marlene with.
+15;0;162;64;50;Tifa.There ain't noturnin' back now.
+15;0;163;64;51;You're going to help Aeris?
+15;0;164;64;49;Yeah....But before that,there's something I want toknow.
+15;0;165;64;51;What's that?
+15;0;166;64;49;It's about the Ancients....
+15;0;167;64;51;Are you all right?
+15;0;168;64;50;Pull it together, man!
+15;0;169;64;49;Aeris's home isn't far.Let's go.
+15;0;170;64;78;Cloud....wasn't it?
+15;0;171;64;49;....
+15;0;172;64;78;It's about Aeris, isn't it?
+15;0;173;64;49;....Sorry.The Shinra have her.
+15;0;174;64;78;I know.They took her from here.
+15;0;175;64;49;They were here?
+15;0;176;64;78;That's what Aeris wanted....
+15;0;177;64;49;Why is Shinra afterAeris?
+15;0;178;64;78;Aeris is an Ancient.The sole survivor.
+15;0;179;64;50;....What did you say?But,aren't you her mother?
+15;0;180;64;78;....Not her real mother.Oh....it must have been 15 years ago....during the war.My husband was sent to the front. One day,I went to the station becauseI got a letter saying he was coming home on leave.But....My husband never came back.I wonder if something happened to him?No,I'm sure his leave was just canceled.I went to the station everyday.Then,one day....There was a woman lying on the platform.A young girl running aroundher,crying....You used to see this sort of thing a lotduring the war.Her last words were, \"Please take Aeris somewhere safe.\"My husband never came back.I had no child.I was probably lonely.So I decided to take her home with me.
+15;0;181;0;0;Aeris and I became close very quickly.That child loved totalk.She used to talk to me about everything.She toldme she escaped formsome sort of research lab somewhere.And that her mother had already returned tothe planet,so she wasn't lonely....and many other things.
+15;0;182;64;50;Returned to the planet?
+15;0;183;64;78;I didn't know what she meant.I asked if she meant a starin the sky.But she said it was this planet....She was a mysterious child inmany ways....A lot had happened,but wewere happy!But I knew.I knew about her mysterious powers....She tried so hard to hide it,so I acted as though I never noticed.
+15;0;184;64;49;It's amazing how she's avoided the Shinra for all these years....
+15;0;185;64;78;The Shinra needed her.So I guess theywouldn't harm her.
+15;0;186;64;51;But,why now....
+15;0;187;64;78;She brought a little girl here with her.On the wayhere,Tseng found them.She decided togo to the Shinra inexchange for the little girl's safety.
+15;0;188;64;49;Must be Marlene.
+15;0;189;64;50;Marlene!Aeris was caught because of Marlene!?I'm sorry.Marlene's my daughter.I'm.... really....sorry....
+15;0;190;64;78;You're her father!?How in the world could you ever leave a child alonelike that!?
+15;0;191;64;50;....please don't start with that.I think about it all the time.What wouldhappen to Marlene, if I....But you gottaunderstand somethin'....I don't got an answer.I wanna be with Marlene....But I gotta fight.'Cause if I don't....the planet's gonna die.So I'm gonna keep fightin'!But,I'm worried 'bout Marlene.I really just wanna be with her....always.See?I'mgoin' in circles, now.
+15;0;192;64;78;I think I understand what you're saying.... She's upstairs asleep.Why don't you go and see her.
+15;0;193;64;51;It's my fault....I was the one who gotAeris involved in this.
+15;0;194;64;78;Don't say that. Aeris doesn't thinkthat.
+15;0;195;64;50;I'm so glad....I'm soglad you're all right....
+15;0;196;64;59;Daddy,don't cry. Your whiskers hurt!
+15;0;197;64;50;Cloud!
+15;0;198;64;49;?
+15;0;199;64;50;You gonna go help Aeris,right?She's done so much for me....If it's the Shinra you're dealin' with,I can't just sit here!I'm comin', too!
+15;0;200;64;59;Guess what?Guess what?Aeris was asking me lots of questions.Like whatkind of person Cloud is.I bet she likes you,Cloud!
+15;0;201;64;49;Let's hope so.
+15;0;202;64;59;I won't tell Tifa.
+15;0;203;64;51;You're going after Aeris,right?
+15;0;204;64;49;Yeah.
+15;0;205;64;51;I'm going with you.
+15;0;206;64;49;We're going right into Shinra HQ....Yougotta be prepared for the worst.
+15;0;207;64;51;I know.Right now,I feel I have to pushmyself to the limit.If I stayed here....I'll go crazy.
+15;0;208;64;50;Sorry,but can you take care of Marlene a bit longer?
+15;0;209;64;78;Yes,I don't mind.
+15;0;210;64;50;This place is dangerous now.You better go somewhereelse.
+15;0;211;64;78;....You're right.But promise me that you'll come back toher.Don't get yourself killed.
+15;0;212;64;51;How do we get to the Shinra Building?
+15;0;213;64;50;There ain't no train that goes up there anymore.... Well,let's just go to Wall Market.We might be able to find something there.
+15;0;214;0;0;You goin' up to theplate?You better have a battery.
+15;0;215;64;49;You're gonna sell me something you just found?
+15;0;216;0;0;Hey,you knew?But I repaired it,so it'sall right.
+15;0;217;64;49;Why do I need a battery to climb upto the plate?
+15;0;218;0;0;You'll find out when you get there.How 'bout 100G for one?
+15;0;219;64;49;....
+15;0;220;0;0;Yes             No              
+15;0;221;0;0;Buy
+15;0;222;0;0;Buy
+15;0;223;64;49;All right,I'll takethem.
+15;0;224;0;0;Everyone climbed upthis wire.Looks scary....Brr.
+15;0;225;64;51;Can we climb it?
+15;0;226;0;0;Yeah.It leads to the Upper World.
+15;0;227;64;50;Awright!We'll climbthis wire!
+15;0;228;64;49;There's no way we can do this.You know how far it goes up?
+15;0;229;64;50;There IS a way! Look!What's that look like?
+15;0;230;64;49;Just a normal wire.
+15;0;231;64;50;Oh yeah?Well to me it looks like a golden shiny wire of hope.
+15;0;232;64;51;You're right.This is the only way to save Aeris....
+15;0;233;64;49;Ok,that was a bad analogy,but,Barret,I understand how you feel.Let's go!
+15;0;234;64;49;We can't climb any more....
+15;0;235;64;51;We could reach thatwire if....Oh,we'd need a battery here....
+15;0;236;64;50;Dammit!Now how do we get up!?
+15;0;237;64;51;It worked!Now we can reach it....
+15;0;238;64;50;Hey,you oughta knowthis building well.
+15;0;239;64;49;....Not really,now that I think about it.This's the firsttime I've ever beento the HQ.
+15;0;240;64;50;I heard about this place before.Every floor above the 60th is special andnot easy to get to even for employees.Must be where they took Aeris.The security's pretty light now.Awright, let's go!
+15;0;241;64;51;Wait a second! You're not thinkingof just going rightthrough the main entrance,are you?
+15;0;242;64;50;Well what else doesit look like!?I'm gonna kick some Shinra butt and....
+15;0;243;64;51;That's not going towork!We've got to find another way....
+15;0;244;64;50;Ain't gonna be no other way!If we keep wastin' time like this, Aeris'll....
+15;0;245;64;51;I know that!But if we get caught here....Hey,Cloud.... What should we do?
+15;0;246;0;0;Bust on in      Sneak in quietly
+15;0;247;64;49;Let's sneak in quietly.
+15;0;248;64;49;Let's bust on in!
+15;0;249;64;50;That's more like it!C'mon,let's go!
+15;0;250;0;0;Excuse me!If you don't have an appointment,you'll just have to....
+15;0;251;0;0;Barret!?This isn't good!
+15;1;0;64;50;Don't need no appointment....This is a 'mergency! Anyone who don't wanna get their face bashed in better git outta the way!
+15;1;1;0;0;Who do they think they are?
+15;1;2;64;76;Guard: Hey, you don't think that's AVALANCHE? Intruders!Sieze them!
+15;1;3;64;50;Let's go to the top!
+15;1;4;64;49;We should use the elevators if we can.
+15;1;5;64;49;Let's sneak in quietly.
+15;1;6;64;51;See?Let's be careful and find a different route!
+15;1;7;64;50;Yo....You really gonna take these stairs all the way up?
+15;1;8;64;51;Well we've got to get to Aeris to help her somehow.
+15;1;9;64;50;Talk about out of the way....
+15;1;10;64;51;I don't have time to argue with you! I'm going!
+15;1;11;64;50;Y,yo,Tifa!Don't go off alone!
+15;1;12;64;50;Don't know....why thehell....we gotta climb....
+15;1;13;64;49;....because we don't want to start a commotion until we've saved Aeris.Idoubt that's possible though....
+15;1;14;64;50;....heh heh heh.
+15;1;15;64;49;Knock it off.You'regiving me the creeps.
+15;1;16;64;50;So even you will fight for someone else.I had you figured wrong I guess.
+15;1;17;64;49;Who cares what you figured!
+15;1;18;64;50;I'm just sayin' mebbe I was wrong....
+15;1;19;64;51;Heh heh heh....
+15;1;20;64;49;What's that supposed to mean, Tifa?
+15;1;21;64;50;How much farther dothese stairs go on?
+15;1;22;64;51;Why don't you ask them?
+15;1;23;64;50;It's not one of them endless stairways or somethin',d'ya think?
+15;1;24;64;51;Of course not!
+15;1;25;64;50;Right....couldn't be that....
+15;1;26;64;50;Are we there yet?
+15;1;27;64;51;Not yet.
+15;1;28;64;50;....we close? 
+15;1;29;64;51;I said not yet!
+15;1;30;64;50;Yo....
+15;1;31;64;51;Look,don't even ask!We're way way way way far away from being there, OK!?
+15;1;32;64;50;Damn,man!I've had it!I'm going back!
+15;1;33;64;51;And take just as long going down as you did coming up?
+15;1;34;64;50;....
+15;1;35;64;51;C'mon,Barret.Pull it together!
+15;1;36;64;50;Yeah,well all I know is I'm just flesh 'n' blood.... 'cept for this arm of mine.Don't treatme like I'm some ex-member of SOLDIER or somethin'....
+15;1;37;64;51;What about me!?I'm human too!Oh,do what you want,I'm going on!
+15;1;38;64;50;What're ya ignorant?I didn't mean that....
+15;1;39;64;51;All right,all right!
+15;1;40;64;51;Cloud,you go on ahead too!
+15;1;41;64;50;Yo....What floor is this?
+15;1;42;64;51;....I gave up counting.
+15;1;43;64;50;Why they gotta build these buildings so damn tall?That Shinra.... They're just no damn good.
+15;1;44;64;51;....
+15;1;45;64;50;huff....Man,I'm beat....Marlene,Daddywanted to see your face one more time....
+15;1;46;64;51;Would you stop acting like a retard and climb? It's just a bit more!....maybe.
+15;1;47;64;50;F....finally....M....madeit....N....never wanna see....no more stairsthe rest of my life....
+15;1;48;64;51;huff....puff....this really takes it outof you....But this isit.We'd better get ready..!
+15;1;49;64;76;Guard: Destroy the intruders!
+15;1;50;64;49;What's this?
+15;1;51;0;0;Got 61F Card.
+15;1;52;64;50;This is the real thing.Don't let your guard down.
+15;1;53;64;51;I hope Aeris is allright.
+15;1;54;0;0;What's keeping her?Did she forget her keycard?
+15;1;55;0;0;Even employees can't walk around above the 60th floor without a keycard....
+15;1;56;0;0;This is the lounge floor.Above us are the special floors for the big wigs inthe company.
+15;1;57;0;0;It's tough working under someone.Tiresyou out.
+15;1;58;0;0;I thought I heard aruckus downstairs aminute ago.Do you know what that was all about?
+15;1;59;0;0;No idea.But no needto worry because everything above the 60th floor is safe.
+15;1;60;0;0;The hell are you? What're you doin' around here?
+15;1;61;0;0;Where's Aeris?  ....               
+15;1;62;0;0;....
+15;1;63;0;0;Where's Aeris?
+15;1;64;64;49;Where's Aeris?
+15;1;65;0;0;Aeris,you mean thatkid.The receptionist?Yeah,Iwas starting to worry about her myself.She's new and is having trouble with her new job.wait, she's not?It's someone else?
+15;1;66;0;0;....
+15;1;67;0;0;Oh,I see.So you must be the whatchacall it....Shinra,IncRepair Division!Youknow,it looks like this building is starting to fall apart.This door wasjust pushed open. You ought to fix this right away.Oh yeah,and take a look on the other floors too.I'll give you this.
+15;1;68;0;0;Got 62F Card.
+15;1;69;0;0;I don't remember seeing your face here.You new here? Say,you're cute.Letme teach you some....things.
+15;1;70;64;49;Things?
+15;1;71;0;0;Wipe that stupid look off your face.I was only going toteach you how to get to the next floor.The higher ups in the company use the floors above the 60th floor.But You can'tget there without akeycard.Get a keycard and you canuse the elevators freely.Just remember there are different types of cards.One keycard won't let you go everywhere.For example,Keycard 60 only takes you to the 60th floor. Keycard 65 only takes you to the 65th floor.It's a security system worthy of Shinra. After all,all the power in Midgar andthe world,for that matter,is controlled by them.Oh,I have to go. Gotta get back to work!
+15;1;72;64;73;Hart:How do you do?This is the Midgar Mayor's Office. Mayor Domino is in his office.I am theDeputy Mayor.If youshould have any questions feel freeto ask me....
+15;1;73;64;72;Domino:Hmm?Oh,and who might you be? You all must be those....ahem....Me?I'mDomino,the Mayor ofMidgar.Actually,I'mMayor in name only.The city and everything in it isreally run by Shinra,Inc.My only real job is watching over Shinra's documents....Me!The Mayor!A librarian! Ohh....You want to get upstairs?I tellyou what,if you canguess the password,I'll give you my keycard.
+15;1;74;64;49;What?
+15;1;75;64;72;A:MAKO B:BEST (Look for clues to this)
+15;1;76;64;73;Did you speak with the Mayor?What?A password?Oh,I get it....He's got way too much time on his hands.But you can't really blame him.Everything in Midgar is controlled by Pres.Shinra.Maybe I can help you.
+15;1;77;64;72;BEST!! God,I love the sound of   that! Best!! BEST!!I AM the best....ME! No matter what anyone else says, you'd better believe it....hmm. Well,ok.Here,take it.
+15;1;78;0;0;Got 64F Card.
+15;1;79;0;0;Got 65F Card.
+15;1;80;64;72;Why would I do something like this,you ask?To mess with them,of course!Shinra's been torturing me forever.That's why I was a little rough on you all just now.Now go up there and really make them suffer. This ought to make us even!Heh heh heh....
+15;1;81;0;0;....huff....wheeze....
+15;1;82;0;0;I'm starting to worry about my belly....
+15;1;83;0;0;Hmph,hmph....Since I'm head of security for this building,stamina's very important to me.
+15;1;84;0;0;You must be a visitor.Please feelfree to use any unused machines
+15;1;85;0;0;You look tired, why don't you take a nap?
+15;1;86;0;0;Got 66F Card.
+15;1;87;64;49;They're having an executive meeting. I wonder if it's about that Plate incident.
+15;1;88;0;0;It gives me the feeling that I AM alive.The feeling of moving this world,just with my hands.
+15;1;89;0;0;Come on,We're building the futureof Mako!
+15;1;90;64;50;Geez..!That's a lotta suits!
+15;1;91;64;66;We have the damage estimates for Sec. 7.Considering thosefactories we already set up and all the investments,the damage is estimatedat approximately 10Billion gil....The estimated cost to rebuild Sec.7 is....
+15;1;92;64;61;We're not rebuilding.
+15;1;93;64;66;What?
+15;1;94;64;61;We're leaving Sec.7as it is.And restarting the Neo-Midgar plan.
+15;1;95;64;66;....then the Ancients?
+15;1;96;64;61;The Promised Land will soon be ours.Iwant you to raise the Mako rates 15% in every area.
+15;1;97;0;0;Palmer: Rate hike!  Rate hike!Tra,la, la!And please include our Space Program in the budget!
+15;1;98;64;61;Reeve and Scarlet will divide the extra income from the rate increase.
+15;1;99;0;0;Palmer:Oh man!
+15;1;100;64;66;Sir,if you raise the rates,the people will lose confidence....
+15;1;101;64;61;It'll be all right.The ignorant citizens won't loseconfidence,they'll trust Shinra,Inc even more.
+15;1;102;64;63;Ha ha ha!After all,we're the ones who saved Sec.7 from AVALANCHE!
+15;1;103;64;50;That dirty #$*$^!
+15;1;104;64;61;Hojo.How's the girl?
+15;1;105;64;65;Hojo:As a specimen,she is inferior to her mother.I'm still in the process of comparing her to her mother,Ifalna, but for now the difference is 18%.
+15;1;106;64;61;How long will the research take?
+15;1;107;64;65;Probably 120 years.It's probably impossible to finish in our lifetime.Or in the lifetime of the specimen too,for that matter.That's why we're thinking of breeding her. Then we could create one that would withstand ourresearch for a longtime.
+15;1;108;64;61;What about the Promised Land?Won'tit hinder our plans?
+15;1;109;64;65;That's what I need to plan.The mother is strong....and yet has her weaknesses.
+15;1;110;64;61;That concludes our meeting.
+15;1;111;64;49;They were talking about Aeris....right?
+15;1;112;64;50;I dunno.
+15;1;113;64;51;Probably.
+15;1;114;64;49;Let's follow 'em. Hojo....huh..?
+15;1;115;64;50;I remember him.ThatHojo guy.He's in charge of the Shinra's Science Dept.Cloud,don't you know him?
+15;1;116;64;49;This is the first time I've actually ever seen him.So.... that's what he looks like....
+15;1;117;0;0;Is this today's specimen?
+15;1;118;64;65;Yes.We're starting right away.Raise itto the upper level.
+15;1;119;64;65;My precious specimen....
+15;1;120;64;51;Precious specimen....Is it going to be used for a biological experiment?
+15;1;121;64;49;Jenova.... Sephiroth's....So.... they've brought it here.
+15;1;122;64;51;Cloud,be strong!
+15;1;123;64;49;Did you see it?
+15;1;124;64;50;See what?
+15;1;125;64;49;It's moving....still alive?
+15;1;126;64;50;Where's its $#&*&@ head?This whole thing's stupid. Let's keep goin'.
+15;1;127;64;49;Aeris!
+15;1;128;64;65;Aeris?Oh,is that her name?What do you want?
+15;1;129;64;49;We're taking Aeris back.
+15;1;130;64;65;Outsiders....
+15;1;131;64;50;Shoulda noticed it earlier,you....
+15;1;132;64;65;There's so many frivolous things inthis world.
+15;1;133;64;65;Are you going to kill me?I don't think you should. The equipment here is extremely delicate.Without me,who could operate it?Hmm?
+15;1;134;64;49;Ugh.
+15;1;135;64;65;That's right.I recommend you thinkthings out logically before you make any rash moves.Now,bring in the Specimen!
+15;1;136;64;52;Cloud,help!
+15;1;137;64;49;What do you think you're doin'?
+15;1;138;64;65;Lending a helping hand to an endangered species....Both of them are on the brink of extinction....If I don't help,all these animals will disappear.
+15;1;139;64;51;....animal?That's terrible!Aeris is ahuman being!
+15;1;140;64;50;You're gonna pay!
+15;1;141;64;49;Barret!Can't you doanything!
+15;1;142;64;50;Awright!Step back!
+15;1;143;64;65;Stop!Wh....what are you do....Oh!My precious specimens....
+15;1;144;64;49;Now's our chance toget Aeris!
+15;1;145;64;52;Thanks,Cloud.
+15;1;146;64;51;Cloud....what's wrong?
+15;1;147;64;49;....The elevator is moving.
+15;1;148;64;65;This is no ordinaryspecimen.This is a very ferocious specimen!
+15;1;149;64;53;He's rather strong.I'll help you all out.
+15;1;150;64;51;It talked!?
+15;1;151;64;53;I'll talk as much as you want later, Miss.
+15;1;152;64;49;We'll take care of that monster. Somebody take Aerissomewhere safe.... Barret,take care ofher!
+15;1;153;0;0;RedX` joins you.
+15;1;154;64;49;What's your name?
+15;1;155;64;53;Hojo has named me, RedX`.A name with no meaning whatsoever to me.
+15;1;156;64;49;Come on!
+15;1;157;64;49;Aeris,you all right?
+15;1;158;64;51;She seems all right,....in many ways.
+15;1;159;64;53;I have a right to choose,too.I don't like 2-legged things.
+15;1;160;64;50;What are you?
+15;1;161;64;53;An informed question.But difficult to answer.I am what you see....You must have many questions,but first,let's get outof here.I'll lead the way.
+15;1;162;64;52;Cloud....so you did come for me.
+15;1;163;64;53;I apologize for what happened back there.I was merely acting to throw Hojo off guard....
+15;1;164;64;50;Now we've saved Aeris,ain't no needto be in this buildin'!So let's get the hell outta here!
+15;1;165;64;49;If all of us go together,we'll be noticed.Let's breakinto groups.
+15;1;166;64;50;I'll see you later!We'll be waiting atthe 69th Floor Elevator.
+15;1;167;64;51;We'll be going first!Meet at the 69th Floor Elevator.
+15;1;168;0;0;Please don't kill me.I only did what Hojo told me to do.Here,this is the keycard to the 68thFloor.Would I be doing this if I wasthe enemy?
+15;1;169;0;0;Got 68F Card.
+15;1;170;64;49;H,hey!What is it?
+15;1;171;64;67;Going somewhere?            
+15;1;172;64;49;Turks?Must be a trap....
+15;1;173;64;67;It must have been areal thrill for you....Did you enjoy it?
+15;1;174;64;49;You all got caught,too?
+15;1;175;64;49;Where is Aerith!?
+15;1;176;64;61;In a safe place.
+15;1;177;64;61;She's the last surviving Ancient ....Don't you know? They called themselves the Cetra, and lived thousands of years ago. Now they are just a forgotten page in history.
+15;1;178;64;53;Cetra....That girl, she's a survivor ofthe Cetra?
+15;1;179;64;61;Cetra,or the Ancients will show us the way to the Promised Land.I'm expecting a lot outof her.
+15;1;180;64;53;The Promised Land? Isn't that just a legend?
+15;1;181;64;61;Even so,it's just too appealing to not to pursue.It's been said the Promised Land is very fertile....If the land is fertile....
+15;1;182;64;50;Then there's gotta be Mako!
+15;1;183;64;61;Exactly.That is whyour money sucking Mako Reactor is a necessity.The abundant Mako will just come out on its own.That is where Neo-Midgar will be built. Shinra's new glory....
+15;1;184;64;50;@$#^%!Quit dreamin'!
+15;1;185;64;61;Oh really,don't youknow?These days allit takes for your dreams to come trueis money and science.Well,that is all for our meeting.
+15;1;186;64;69;Rude:Come on!Outta his way!
+15;1;187;64;50;Hold it!I got a lotI wanna say to you!
+15;1;188;64;61;If you need something else.... talk to my secretary.
+15;1;189;64;51;Can we get out?
+15;1;190;64;49;Kinda hard.
+15;1;191;64;51;Don't give up!
+15;1;192;64;49;(I wonder how  everyone else is doing....)
+15;1;193;0;0; is doing....)
+15;1;194;0;0;I wonder how Aeris is doing....
+15;1;195;64;50;Hey!Aeris is an Ancient and the real name of the Ancients is Cetra. The Ancients know where the Promised Land is and the Shinra is searchingfor that Promised Land.I don't know if it really exists.Is that right?The Shinra believe it's full of Mako energy. Which means,if the Shinra get there, they'll suck up allthe Mako energy.... and the land'll wither away.The Planet's gonna get weaker.
+15;1;196;64;50;I can't just leave 'em be.I'm recruitin' new members!Me,Tifa, Cloud....and Aeris too.
+15;1;197;64;50;How 'bout you?
+15;1;198;64;53;....
+15;1;199;64;50;You're so damn boring.
+15;1;200;64;53;....Grandpa.
+15;1;201;64;50;Grandpa!?Ha,ha,ha....Grandpa,hmm....ha,ha,ha....
+15;1;202;64;53;What's so funny?
+15;1;203;64;50;Nothin'....ha,ha.
+15;1;204;64;52;Cloud,are you there?
+15;1;205;64;49;Aeris!?You safe?
+15;1;206;64;52;Yeah,I'm all right.I knew that you   would come for me.
+15;1;207;64;49;Hey,I'm your bodyguard,right?
+15;1;208;64;52;The deal was for 1 date,right?
+15;1;209;64;51;....oh,I get it.
+15;1;210;64;52;..!?Tifa!Tifa,you'rethere too!
+15;1;211;64;51;EXCUSE me.You know,Aeris,I have a question.
+15;1;212;64;52;What?
+15;1;213;64;51;Does the Promised Land really exist?
+15;1;214;64;52;....I don't know.All I know is....The Cetra were born from the Planet,andspeak with the Planet,and unlock the Planet.And.... then....The Cetra will return to the Promised Land.A land that promises supreme happiness.
+15;1;215;64;51;....What does that mean?
+15;1;216;64;52;More than words....I don't know.
+15;1;217;64;49;....Speak with the Planet?
+15;1;218;64;51;Just what does the Planet say?
+15;1;219;64;52;It's full of peopleand noise.That's why I can't make out what they're saying.
+15;1;220;64;49;You hear it now?
+15;1;221;64;52;I,I only heard it at the Church in the Slums.Mother said that Midgar was no longer safe.That is....my real mother.Someday I'llget out of Midgar....Speak with the Planet and find my Promised Land.... That's what mom said.I thought I would stop hearing her voice as I grewup,but....
+15;1;222;64;49;Let's just get somesleep.
+15;1;223;64;49;The door's open.... When did it open?
+15;1;224;64;49;What's happened?
+15;1;225;64;49;Tifa....Wake up!
+15;1;226;64;51;What's wrong?
+15;1;227;64;49;Something's wrong. Look outside.
+15;1;228;64;51;I wonder what happened....
+15;1;229;64;49;He should have the key on him....
+15;1;230;0;0;Got Keys.
+15;1;231;64;49;Come on,Tifa,get Aeris,I'll go help Barret and RedX`.     
+15;1;232;64;49;Barret,RedX`....come with me.Something'swrong.
+15;1;233;64;50;How'd you get in? Why's the door open!?The hell's goin' on!?
+15;1;234;64;53;No human could've done this.I'll go on ahead.
+15;1;235;64;50;I'll clean up back here,so you guys goahead.And don't getcaught by Shinra!
+15;1;236;0;0;Tifa and Aeris joinyou.
+15;1;237;64;51;Come on,let's follow RedX`!
+15;1;238;0;0;Used keycard.
+15;1;239;0;0;Locked!
+15;1;240;0;0;\"Shinra's World Domination Plan\"....
+15;1;241;0;0;The mayor's diary....\"Curse Pres.Shinra with short life!\"
+15;1;242;0;0;MAKO            BEST            
+15;1;243;64;72;You must be impossibly stupid!
+15;1;244;64;72;BEST!! God,I love the sound of   that! Best!! BEST!!I AM the best....ME! No matter what anyone else says, you'd better believe it....hmm. Well,ok.Here,take it.
+15;1;245;0;0;There's a switch. *Click*....Hm? I heard something open.
+15;1;246;0;0;Please don't kill me!

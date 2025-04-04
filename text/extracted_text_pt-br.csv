@@ -1,0 +1,2901 @@
+Bank Number;Block Num;String Index;Line First Char;Portrait Id;Extracted String
+6;0;0;0;0;þÚþßþäþÙþAtacar 
+6;0;1;0;0;Shenzhen Nanjing
+6;0;2;0;0;Cloud   
+6;0;3;0;0;Barret  
+6;0;4;0;0;Tifa    
+6;0;5;0;0;Aeris   
+6;0;6;0;0;RedXlll 
+6;0;7;0;0;CaitSith
+6;0;8;0;0;Cid     
+6;0;9;0;0;À·
+6;0;10;0;0;À¸
+6;0;11;0;0;À¹
+6;0;12;0;0;Àº
+6;0;13;0;0;        
+6;0;14;0;0;PV 
+6;0;15;0;0;For
+6;0;16;0;0;Vit
+6;0;17;0;0;Int
+6;0;18;0;0;Spr
+6;0;19;0;0;Agl
+6;0;20;0;0;µ 
+6;0;21;0;0;Apenas Um
+6;0;22;0;0;Todos 
+6;0;23;0;0;Para Um 
+6;0;24;0;0;Para Todos 
+6;0;25;0;0;Nada
+6;0;26;0;0;Cloud
+6;0;27;0;0;Barret
+6;0;28;0;0;Tifa
+6;0;29;0;0;Aeris
+6;0;30;0;0;RedXlll
+6;0;31;0;0;CaitSith
+6;0;32;0;0;Cid
+6;0;33;0;0;À»À¼
+6;0;34;0;0;À½À¾
+6;0;35;0;0;À¿ÀÀ
+6;0;36;0;0;ÀÁÀÂ
+6;0;37;0;0;Usou 
+6;0;38;0;0;Escapou!
+6;0;39;0;0;Não escapou...
+6;0;40;0;0;Sem efeito....
+6;0;41;0;0;Auto Curado 
+6;0;42;0;0;Curado 
+6;0;43;0;0;Derrotado....
+6;0;44;0;0;Fim de Jogo!
+6;0;45;0;0;Auto
+6;0;46;0;0; Restaurou PV
+6;0;47;0;0; Restaurou MP
+6;0;48;0;0;Todos 
+6;0;49;0;0;Reviveu 
+6;0;50;0;0;Vitória!
+6;0;51;0;0;EXP:
+6;0;52;0;0;Gil:
+6;0;53;0;0;Subiu de Nível!
+6;0;54;0;0;Obteve 
+6;0;55;0;0;Comprar?
+6;0;56;0;0;Vender?
+6;0;57;0;0;Combinado!
+6;0;58;0;0;Não pode 
+6;0;59;0;0;Gil insuficiente!
+6;0;60;0;0;PV 
+6;0;61;0;0;For
+6;0;62;0;0;Vit
+6;0;63;0;0;Int
+6;0;64;0;0;Spr
+6;0;65;0;0;Agl
+6;0;66;0;0; 
+6;0;67;0;0;Nada
+6;0;68;0;0;Dominado!
+6;0;69;0;0;EXP insuficiente!
+6;0;70;0;0;Melhorado!
+6;0;71;0;0;Para 
+6;0;72;0;0;Equipado 
+6;0;73;0;0;Clo
+6;0;74;0;0;Bar
+6;0;75;0;0;Tif
+6;0;76;0;0;Aer
+6;0;77;0;0;Red
+6;0;78;0;0;Cat
+6;0;79;0;0;
+6;1;0;0;0;Nada
+6;1;1;0;0;{Ira
+6;1;2;0;0;{Força
+6;1;3;0;0;{Leão
+6;1;4;0;0;{Branco
+6;1;5;0;0;{Luz
+6;1;6;0;0;{Serra
+6;1;7;0;0;{Bravura
+6;1;8;0;0;{Caveira
+6;1;9;0;0;{SGuerra
+6;1;10;0;0;{Besta
+6;1;11;0;0;{Chama
+6;1;12;0;0;{Tirano
+6;1;13;0;0;{Nevada
+6;1;14;0;0;{Fúria
+6;1;15;0;0;{Selva
+6;1;16;0;0;{Elemnto
+6;1;17;0;0;{Chama
+6;1;18;0;0;{Escala
+6;1;19;0;0;{Dupla
+6;1;20;0;0;{Cesta
+6;1;21;0;0;{Tenente
+6;1;22;0;0;{Pálido
+6;1;23;0;0;{Cotovia
+6;1;24;0;0;{Ladrão
+6;1;25;0;0;{Runa
+6;1;26;0;0;{Chama
+6;1;27;0;0;{Silex
+6;1;28;0;0;{Dragão
+6;1;29;0;0;{Fúria
+6;1;30;0;0;{Guarda
+6;1;31;0;0;{Arcano
+6;1;32;0;0;{Cetim
+6;1;33;0;0;{Seda
+6;1;34;0;0;{Demônio
+6;1;35;0;0;}O.Negro
+6;1;36;0;0;{Cristal
+6;1;37;0;0;{Profeta
+6;1;38;0;0;{Sábio
+6;1;39;0;0;{Goggle
+6;1;40;0;0;{Névoa
+6;1;41;0;0;{Sudário
+6;1;42;0;0;{Papa
+6;1;43;0;0;{Devoto
+6;1;44;0;0;{Major
+6;1;45;0;0;{Sagrado
+6;1;46;0;0;{Faísca
+6;1;47;0;0;{Carmsim
+6;1;48;0;0;{Pérola
+6;1;49;0;0;{Bispo
+6;1;50;0;0;{Lenço
+6;1;51;0;0;{Burca
+6;1;52;0;0;{Aros
+6;1;53;0;0;{Tecido
+6;1;54;0;0;{Malha
+6;1;55;0;0;{Capuz
+6;2;0;0;0;Nada
+6;2;1;0;0;|Dragão
+6;2;2;0;0;|Lei
+6;2;3;0;0;|Luz
+6;2;4;0;0;|Poder
+6;2;5;0;0;|Colina
+6;2;6;0;0;|Midgard
+6;2;7;0;0;|Liga
+6;2;8;0;0;|Chrono
+6;2;9;0;0;|Xamã
+6;2;10;0;0;|Esmagar
+6;2;11;0;0;|Morte
+6;2;12;0;0;|Bravura
+6;2;13;0;0;|Prata
+6;2;14;0;0;|Gear
+6;2;15;0;0;|Borda
+6;2;16;0;0;|Defesa
+6;2;17;0;0;|Cobra
+6;2;18;0;0;|Fidalgo
+6;2;19;0;0;|Demônio
+6;2;20;0;0;|Alma
+6;2;21;0;0;|Nobre
+6;2;22;0;0;|Titã
+6;2;23;0;0;|C.Tempo
+6;2;24;0;0;|Gelo
+6;2;25;0;0;|SGuerra
+6;2;26;0;0;|Besta
+6;2;27;0;0;|Evadir
+6;2;28;0;0;|Feroz
+6;2;29;0;0;|Pagoda
+6;2;30;0;0;|Recozer
+6;2;31;0;0;|Vingar
+6;2;32;0;0;|Pelt
+6;2;33;0;0;|Osso
+6;2;34;0;0;|Cágado
+6;2;35;0;0;|Lamell
+6;2;36;0;0;|Miragem
+6;2;37;0;0;|Escala
+6;2;38;0;0;|DragãoA
+6;2;39;0;0;|Verde
+6;2;40;0;0;|Polonês
+6;2;41;0;0;|Tenente
+6;2;42;0;0;|De.Alma
+6;2;43;0;0;|Cadeia
+6;2;44;0;0;|Selva
+6;2;45;0;0;|Necro
+6;2;46;0;0;|Sonho
+6;2;47;0;0;|C.Ferro
+6;2;48;0;0;|Sangue
+6;2;49;0;0;|Furioso
+6;2;50;0;0;|Argente
+6;2;51;0;0;|Rohan
+6;2;52;0;0;|Vampiro
+6;2;53;0;0;|Bane
+6;2;54;0;0;|Couro
+6;2;55;0;0;|Farsa
+6;2;56;0;0;|Pálido
+6;2;57;0;0;|Sombrio
+6;2;58;0;0;|Lobo
+6;2;59;0;0;|Trovão
+6;2;60;0;0;|Ordálio
+6;2;61;0;0;|Bruxa
+6;2;62;0;0;|Shroom
+6;2;63;0;0;|Grave
+6;2;64;0;0;|Sereno
+6;2;65;0;0;|C.Couro
+6;2;66;0;0;|Noite
+6;2;67;0;0;|Vento
+6;2;68;0;0;|Pena
+6;2;69;0;0;|Estrela
+6;2;70;0;0;|Sombra
+6;2;71;0;0;|Coração
+6;2;72;0;0;|Trevas
+6;2;73;0;0;|Pluma
+6;2;74;0;0;|Urso
+6;2;75;0;0;}Onda
+6;2;76;0;0;}Arcaico
+6;2;77;0;0;}Mestre
+6;2;78;0;0;}Wisdom
+6;2;79;0;0;}Chiffon
+6;2;80;0;0;}Demônio
+6;2;81;0;0;}Crença
+6;2;82;0;0;}Vazio
+6;2;83;0;0;}Profeta
+6;2;84;0;0;}Inverno
+6;2;85;0;0;}Osso
+6;2;86;0;0;}Névoa
+6;2;87;0;0;}Gelo
+6;2;88;0;0;}Real
+6;2;89;0;0;}Legião
+6;2;90;0;0;}Piedade
+6;2;91;0;0;}Mente
+6;2;92;0;0;}Eterno
+6;2;93;0;0;}Correio
+6;2;94;0;0;}Lunar
+6;2;95;0;0;}Honra
+6;2;96;0;0;}Ancião
+6;2;97;0;0;}Vital
+6;2;98;0;0;}Cardo
+6;2;99;0;0;}Sombra
+6;2;100;0;0;}Negro
+6;2;101;0;0;}Branco
+6;2;102;0;0;}Animar
+6;2;103;0;0;}Folha
+6;2;104;0;0;}Cor
+6;2;105;0;0;}Rubro
+6;2;106;0;0;}Neve
+6;2;107;0;0;}Pano
+6;2;108;0;0;}Tecido
+6;2;109;0;0;}Fino
+6;2;110;0;0;}Linho
+6;2;111;0;0;}Aspero
+6;2;112;0;0;}Avião
+6;2;113;0;0;}Torrado
+6;2;114;0;0;}Suave
+6;2;115;0;0;}Seda
+6;2;116;0;0;}Dupla
+6;2;117;0;0;}Aluno
+6;2;118;0;0;}Mago
+6;2;119;0;0;}Malha
+6;2;120;0;0;}Linho
+6;2;121;0;0;}Rede
+6;2;122;0;0;}Sarja
+6;2;123;0;0;}Monge
+6;2;124;0;0;}Algodão
+6;2;125;0;0;}Lona
+6;2;126;0;0;}Apprent
+6;2;127;0;0;}Novato
+6;2;128;0;0;}Sábio
+6;3;0;0;0;Nada
+6;3;1;0;0;~Nuvem
+6;3;2;0;0;~Culposo
+6;3;3;0;0;~Lei
+6;3;4;0;0;~Quitina
+6;3;5;0;0;~Luz
+6;3;6;0;0;~Boneco
+6;3;7;0;0;~Alado
+6;3;8;0;0;~Prata
+6;3;9;0;0;~Eterno
+6;3;10;0;0;~Bravura
+6;3;11;0;0;~Elemnto
+6;3;12;0;0;~Ira
+6;3;13;0;0;~Ordem
+6;3;14;0;0;~Emblema
+6;3;15;0;0;~Halite
+6;3;16;0;0;~Enviado
+6;3;17;0;0;~Fácil
+6;3;18;0;0;~Rebelde
+6;3;19;0;0;~General
+6;3;20;0;0;~Valor
+6;3;21;0;0;~Destrói
+6;3;22;0;0;~Fogo
+6;3;23;0;0;~Sonho
+6;3;24;0;0;~Dupla
+6;3;25;0;0;~Vortex
+6;3;26;0;0;~Crescnt
+6;3;27;0;0;~Vento
+6;3;28;0;0;~Milagre
+6;3;29;0;0;~Cor
+6;3;30;0;0;~Rótula
+6;3;31;0;0;~Pesado
+6;3;32;0;0;~Forte
+6;3;33;0;0;~Famoso
+6;3;34;0;0;~Urso
+6;3;35;0;0;~C.Malha
+6;3;36;0;0;~Escala
+6;3;37;0;0;~Solto
+6;3;38;0;0;~Cadeia
+6;3;39;0;0;~Comando
+6;3;40;0;0;~Connor
+6;3;41;0;0;~Desgrça
+6;3;42;0;0;~Orca
+6;3;43;0;0;~Mundo
+6;3;44;0;0;~Devassa
+6;3;45;0;0;~Éolo
+6;3;46;0;0;~Alma
+6;3;47;0;0;~Canino
+6;3;48;0;0;~Kensei
+6;3;49;0;0;~Raptor
+6;3;50;0;0;~Batista
+6;3;51;0;0;~Matador
+6;3;52;0;0;~Trovão
+6;3;53;0;0;~Viagem
+6;3;54;0;0;~Voodoo
+6;3;55;0;0;~Lamell
+6;3;56;0;0;~Destino
+6;3;57;0;0;~Lagarto
+6;3;58;0;0;~Musgo
+6;3;59;0;0;~Sombra
+6;3;60;0;0;~Kuma
+6;3;61;0;0;~Guerra
+6;3;62;0;0;~Cerda
+6;3;63;0;0;~Arcaico
+6;3;64;0;0;~Demônio
+6;3;65;0;0;~Mana
+6;3;66;0;0;~Tormnta
+6;3;67;0;0;~Magia
+6;3;68;0;0;~Profeta
+6;3;69;0;0;~Égua
+6;3;70;0;0;~Aclamar
+6;3;71;0;0;~Vale
+6;3;72;0;0;~Pálido
+6;3;73;0;0;~Esperça
+6;3;74;0;0;~Névoa
+6;3;75;0;0;~Ligação
+6;3;76;0;0;~Estéril
+6;3;77;0;0;~Clérigo
+6;3;78;0;0;~Fang
+6;3;79;0;0;~Devoto
+6;3;80;0;0;~Sagrado
+6;3;81;0;0;~Pedra
+6;3;82;0;0;~Céu
+6;3;83;0;0;~Mago
+6;3;84;0;0;~Vampiro
+6;3;85;0;0;~Correio
+6;3;86;0;0;~Chuva
+6;3;87;0;0;~Lunar
+6;3;88;0;0;~Natural
+6;3;89;0;0;~Folha
+6;3;90;0;0;~Rubro
+6;3;91;0;0;~Grosso
+6;3;92;0;0;~Tecido
+6;3;93;0;0;~Linho
+6;3;94;0;0;~Firma
+6;3;95;0;0;~Fino
+6;3;96;0;0;~Mulambo
+6;3;97;0;0;~Violado
+6;3;98;0;0;~Caça
+6;3;99;0;0;~Novato
+6;3;100;0;0;~Matador
+6;3;101;0;0;~Ladrão
+6;3;102;0;0;~Algodão
+6;3;103;0;0;~Servo
+6;3;104;0;0;~Monge
+6;3;105;0;0;~Recruta
+6;4;0;0;0;Nada
+6;4;1;0;0;Beato
+6;4;2;0;0;âmbio
+6;4;3;0;0;culto
+6;4;4;0;0;Forte
+6;4;5;0;0;Eclipse
+6;4;6;0;0;Frente
+6;4;7;0;0;metria
+6;4;8;0;0;ulso
+6;4;9;0;0;etnela
+6;4;10;0;0;Guarda
+6;4;11;0;0;Oráculo
+6;4;12;0;0;
+6;4;13;0;0;
+6;4;14;0;0;
+6;4;15;0;0;Alma
+6;4;16;0;0;Roland
+6;4;17;0;0;Chama
+6;4;18;0;0;Nobre
+6;4;19;0;0;Miragem
+6;4;20;0;0;Real
+6;4;21;0;0;Tocha
+6;4;22;0;0;Chama
+6;4;23;0;0;Fogo
+6;4;24;0;0;Pau
+6;4;25;0;0;Tigre
+6;4;26;0;0;Tenente
+6;4;27;0;0;Avivar
+6;4;28;0;0;Fino
+6;4;29;0;0;Tecido
+6;4;30;0;0;Ronco
+6;4;31;0;0;Demônio
+6;4;32;0;0;Cortex
+6;4;33;0;0;Mago
+6;4;34;0;0;Franco
+6;4;35;0;0;Emblema
+6;4;36;0;0;Tropa
+6;4;37;0;0;Lore
+6;4;38;0;0;Militar
+6;4;39;0;0;Soldado
+6;4;40;0;0;Onda
+6;4;41;0;0;Giro
+6;4;42;0;0;Usado
+6;4;43;0;0;Rasgado
+6;4;44;0;0;Salvdor
+6;4;45;0;0;Monte
+6;4;46;0;0;Obra
+6;4;47;0;0;Cana
+6;4;48;0;0;Caça
+6;4;49;0;0;Natural
+6;4;50;0;0;Nativo
+6;4;51;0;0;Neve
+6;4;52;0;0;Lã
+6;4;53;0;0;Linho
+6;4;54;0;0;Orignal
+6;4;55;0;0;Escala
+6;4;56;0;0;Tela
+6;4;57;0;0;Ancião
+6;4;58;0;0;Humilde
+6;5;0;0;0;Nada
+6;5;1;0;0;Buster
+6;5;2;0;0;Emoção
+6;5;3;0;0;Duro
+6;5;4;0;0;BBoleta
+6;5;5;0;0;Realçar
+6;5;6;0;0;Orgânco
+6;5;7;0;0;Cristal
+6;5;8;0;0;Força
+6;5;9;0;0;Runa
+6;5;10;0;0;Murasam
+6;5;11;0;0;B.Prego
+6;5;12;0;0;Yoshiyu
+6;5;13;0;0;Apocalp
+6;5;14;0;0;Céu
+6;5;15;0;0;Ragnrok
+6;5;16;0;0;Ultima
+6;5;17;0;0;Gatling
+6;5;18;0;0;Assalto
+6;5;19;0;0;Canhão
+6;5;20;0;0;Atômica
+6;5;21;0;0;HVulcão
+6;5;22;0;0;SCadeia
+6;5;23;0;0;MicroLS
+6;5;24;0;0;AM
+6;5;25;0;0;Máquina
+6;5;26;0;0;Broca
+6;5;27;0;0;Bazuxa
+6;5;28;0;0;Míssil
+6;5;29;0;0;LMíssil
+6;5;30;0;0;Estaca
+6;5;31;0;0;RaioMáx
+6;5;32;0;0;M.Corte
+6;5;33;0;0;Couro
+6;5;34;0;0;Metal
+6;5;35;0;0;Emoção
+6;5;36;0;0;Grande
+6;5;37;0;0;Tigre
+6;5;38;0;0;Losango
+6;5;39;0;0;Dragão
+6;5;40;0;0;Cristal
+6;5;41;0;0;Motor
+6;5;42;0;0;Platina
+6;5;43;0;0;Kaiser
+6;5;44;0;0;Obra
+6;5;45;0;0;A.Poder
+6;5;46;0;0;Mestre
+6;5;47;0;0;Deus
+6;5;48;0;0;Coração
+6;5;49;0;0;Guarda
+6;5;50;0;0;Emoção
+6;5;51;0;0;C.Metal
+6;5;52;0;0;Grave
+6;5;53;0;0;Prisma
+6;5;54;0;0;Aurora
+6;5;55;0;0;Mago
+6;5;56;0;0;Sábio
+6;5;57;0;0;H.Fada
+6;5;58;0;0;Umbrela
+6;5;59;0;0;Amo
+6;5;60;0;0;Emoção
+6;5;61;0;0;Losango
+6;5;62;0;0;Prata
+6;5;63;0;0;Ouro
+6;5;64;0;0;Adaman
+6;5;65;0;0;Cristal
+6;5;66;0;0;Magia
+6;5;67;0;0;Mais
+6;5;68;0;0;Moeda
+6;5;69;0;0;Gancho
+6;5;70;0;0;Serafim
+6;5;71;0;0;Behemot
+6;5;72;0;0;E.Arma
+6;5;73;0;0;L.Lua
+6;5;74;0;0;Amarelo
+6;5;75;0;0;Verde
+6;5;76;0;0;Azul
+6;5;77;0;0;Rubro
+6;5;78;0;0;Cristal
+6;5;79;0;0;Branco
+6;5;80;0;0;Pretp
+6;5;81;0;0;Prata
+6;5;82;0;0;Cometa
+6;5;83;0;0;Ouro
+6;5;84;0;0;Batalha
+6;5;85;0;0;Estrela
+6;5;86;0;0;Grito
+6;5;87;0;0;Lança
+6;5;88;0;0;Golpe
+6;5;89;0;0;Tridnte
+6;5;90;0;0;Mastro
+6;5;91;0;0;Partsan
+6;5;92;0;0;Cobra
+6;5;93;0;0;Javelin
+6;5;94;0;0;Grande
+6;5;95;0;0;Pano
+6;5;96;0;0;Dragão
+6;5;97;0;0;Espada
+6;5;98;0;0;Flayer
+6;5;99;0;0;Alma
+6;5;100;0;0;Vênus
+6;6;0;0;0;Nada
+6;6;1;0;0;Fogo
+6;6;2;0;0;água
+6;6;3;0;0;Raio
+6;6;4;0;0;Vento
+6;6;5;0;0;Terra
+6;6;6;0;0;Luz
+6;6;7;0;0;Gelo
+6;7;0;0;0;Nada
+6;7;1;0;0;À¯Fogo
+6;7;2;0;0;À¯Chama
+6;7;3;0;0;À¯Fogo2
+6;7;4;0;0;À¯Chama2
+6;7;5;0;0;À¯Fogo3
+6;7;6;0;0;À¯Chama3
+6;7;7;0;0;À¯Fogo4
+6;7;8;0;0;À¯Chama4
+6;7;9;0;0;À¯Ifrit
+6;7;10;0;0;À°água
+6;7;11;0;0;À°Onda
+6;7;12;0;0;À°água2
+6;7;13;0;0;À°Cura2
+6;7;14;0;0;À°água3
+6;7;15;0;0;À°Onda2
+6;7;16;0;0;À°água4
+6;7;17;0;0;À°Cura3
+6;7;18;0;0;À°Levita
+6;7;19;0;0;À±Raio
+6;7;20;0;0;À±Abalo
+6;7;21;0;0;À±Raio2
+6;7;22;0;0;À±Abalo2
+6;7;23;0;0;À±Raio3
+6;7;24;0;0;À±Abalo3
+6;7;25;0;0;À±Raio4
+6;7;26;0;0;À±Abalo4
+6;7;27;0;0;À±Ramuh
+6;7;28;0;0;À²Aero 
+6;7;29;0;0;À²Gale
+6;7;30;0;0;À²Aero2
+6;7;31;0;0;À²Cura2
+6;7;32;0;0;À²Aero3
+6;7;33;0;0;À²Gale2
+6;7;34;0;0;À²Aero4
+6;7;35;0;0;À²Cura3
+6;7;36;0;0;À²Tufão
+6;7;37;0;0;À³Pedra
+6;7;38;0;0;À³Abalo
+6;7;39;0;0;À³Pedra2
+6;7;40;0;0;À³Abalo2
+6;7;41;0;0;À³Pedra3
+6;7;42;0;0;À³Abalo3
+6;7;43;0;0;À³Pedra4
+6;7;44;0;0;À³Abalo4
+6;7;45;0;0;À³Titã
+6;7;46;0;0;À´Cura
+6;7;47;0;0;À´Dia
+6;7;48;0;0;À´Cura2
+6;7;49;0;0;À´Sarar
+6;7;50;0;0;À´Cura3
+6;7;51;0;0;À´Dia2
+6;7;52;0;0;À´Cura4
+6;7;53;0;0;À´Sarar2
+6;7;54;0;0;À´Bahamt
+6;7;55;0;0;ÀµGelo
+6;7;56;0;0;ÀµViva
+6;7;57;0;0;ÀµGelo2
+6;7;58;0;0;ÀµViva2
+6;7;59;0;0;ÀµGelo3
+6;7;60;0;0;ÀµViva3
+6;7;61;0;0;ÀµGelo4
+6;7;62;0;0;ÀµViva4
+6;7;63;0;0;ÀµShiva
+6;8;0;0;0;Nada
+6;8;1;0;0;Poção
+6;8;2;0;0;Grande-Poção
+6;8;3;0;0;Pequeno-Mega
+6;8;4;0;0;X-Poção
+6;8;5;0;0;Mega
+6;8;6;0;0;Grande-Mega
+6;8;7;0;0;X-Mega
+6;8;8;0;0;Éter
+6;8;9;0;0;Grande-Éter
+6;8;10;0;0;Fênix
+6;8;11;0;0;Incenso
+6;8;12;0;0;Mais HP
+6;8;13;0;0;Mais For
+6;8;14;0;0;Mais Vit
+6;8;15;0;0;Mais Int
+6;8;16;0;0;Mais Spr
+6;8;17;0;0;Mais Agl
+6;8;18;0;0;Bateria
+6;8;19;0;0;ChocLure
+6;8;20;0;0;DynePend
+6;8;21;0;0;PedraChave
+6;8;22;0;0;Preto
+6;8;23;0;0;HarpLunar
+6;8;24;0;0;Cartão 61
+6;8;25;0;0;Cartão 62
+6;8;26;0;0;Cartão 64
+6;8;27;0;0;Cartão 65
+6;8;28;0;0;Cartão 66
+6;8;29;0;0;Cartão 68
+6;8;30;0;0;Prancha
+6;8;31;0;0;Mapa
+6;9;0;0;0;Nada...
+6;9;1;0;0;Restaura 500 PV de um aliado
+6;9;2;0;0;Restaura 1000 PV deum aliado
+6;9;3;0;0;Restaura 200 PV de um aliado
+6;9;4;0;0;Restaura todo PV deum aliado
+6;9;5;0;0;Restaura 500 PV de todos os aliados
+6;9;6;0;0;Restaura 1000 PV detodos os aliados
+6;9;7;0;0;Restaura todo PV detodos os aliados
+6;9;8;0;0;Restaura 5 MP de   uma magia
+6;9;9;0;0;Restaura todo MP deuma magia
+6;9;10;0;0;Revive um aliado
+6;9;11;0;0;Escapa da batalha
+6;9;12;0;0;PV máximo aumenta  temporariamente 250
+6;9;13;0;0;Força máxima mais 1
+6;9;14;0;0;Vitalidade máxima  mais 1
+6;9;15;0;0;Inteligencia máximamais 1
+6;9;16;0;0;Espírito máximo    mais 1
+6;9;17;0;0;Agilidade máxima   mais 1
+6;9;18;0;0;Fornece energia
+6;9;19;0;0;Precisa disso para pegar Chocobos
+6;9;20;0;0;Pingente de Dyne
+6;9;21;0;0;Entra no Templo dosAnciãos
+6;9;22;0;0;Invoca Meteoro     ...Não faça isso
+6;9;23;0;0;Desperta a FlorestaAdormecida
+6;9;24;0;0;Acessa o piso 61   
+6;9;25;0;0;Acessa o piso 62   
+6;9;26;0;0;Acessa o piso 64   
+6;9;27;0;0;Acessa o piso 65   
+6;9;28;0;0;Acessa o piso 66   
+6;9;29;0;0;Acessa o piso 68   
+6;9;30;0;0;P.Diabo
+6;9;31;0;0;Mapa da Grande     Geleira
+6;10;0;0;0;Lugia209
+6;10;1;0;0;Cloud
+6;10;2;0;0;Barret
+6;10;3;0;0;Tifa
+6;10;4;0;0;Aeris
+6;10;5;0;0;RedXlll
+6;10;6;0;0;CaitSith
+6;10;7;0;0;Cid
+6;10;8;0;0;Guarda
+6;10;9;0;0;Scorpião
+6;10;10;0;0;B.Aéreo
+6;10;11;0;0;Reno
+6;10;12;0;0;Cobaia
+6;10;13;0;0;General
+6;10;14;0;0;Lugia209
+6;10;15;0;0;Aps
+6;10;16;0;0;Amostra
+6;10;17;0;0;H.Gunner
+6;10;18;0;0;Rufus
+6;10;19;0;0;N.Negro
+6;10;20;0;0;B.Motor
+6;10;21;0;0;M.doMar
+6;10;22;0;0;Jenova
+6;10;23;0;0;Dyne
+6;10;24;0;0;Rude
+6;10;25;0;0;R.Mortos
+6;10;26;0;0;Gi
+6;10;27;0;0;Palmer
+6;10;28;0;0;V.Dragão
+6;10;29;0;0;D.Tempo
+6;10;30;0;0;Schizo
+6;10;31;0;0;Sephirot
+6;10;32;0;0;Sephirot
+6;10;33;0;0;AnjoAsa
+6;10;34;0;0;Zolom
+6;10;35;0;0;B.Float
+6;10;36;0;0;Goblin
+6;10;37;0;0;Gárgula
+6;10;38;0;0;Tonberry
+6;10;39;0;0;Gremlin
+6;10;40;0;0;Agulha
+6;10;41;0;0;Zolkartr
+6;10;42;0;0;Launcher
+6;10;43;0;0;M.Piloto
+6;10;44;0;0;Réptil
+6;10;45;0;0;Miragem
+6;10;46;0;0;Ceasar
+6;10;47;0;0;Ninja
+6;10;48;0;0;Cactuar
+6;10;49;0;0;HedgePie
+6;10;50;0;0;RazrWeed
+6;10;51;0;0;Jayjujay
+6;10;52;0;0;Aviso
+6;10;53;0;0;Mu
+6;10;54;0;0;Jemnezmy
+6;10;55;0;0;Coringa
+6;10;56;0;0;C.Vagem
+6;10;57;0;0;Gritador
+6;10;58;0;0;SneakStp
+6;10;59;0;0;BatryCap
+6;10;60;0;0;Ghroflgo
+6;10;61;0;0;Líbero
+6;10;62;0;0;Bomba
+6;10;63;0;0;Alemange
+6;10;64;0;0;Espectro
+6;10;65;0;0;Cuahl
+6;10;66;0;0;Zemzelet
+6;10;67;0;0;ElfaDunk
+6;10;68;0;0;T.Touro
+6;10;69;0;0;Morcego
+6;10;70;0;0;Malboro
+6;10;71;0;0;Diablo
+6;10;72;0;0;Chrstofr
+6;10;73;0;0;Ironite
+6;10;74;0;0;Inferno
+6;10;75;0;0;Ochu
+6;10;76;0;0;8-Olhos
+6;10;77;0;0;D.Guarra
+6;10;78;0;0;Bndrsnch
+6;10;79;0;0;Bad Rap
+6;10;80;0;0;Bandido
+6;10;81;0;0;Bgndrana
+6;10;82;0;0;D.Face
+6;10;83;0;0;G.Chifre
+6;10;84;0;0;Estranho
+6;10;85;0;0;Grangaln
+6;10;86;0;0;X-Canon
+6;10;87;0;0;Camaleão
+6;10;88;0;0;Kimara
+6;10;89;0;0;A.Dragão
+6;10;90;0;0;Sahagin
+6;10;91;0;0;D.Espada
+6;10;92;0;0;DverNest
+6;10;93;0;0;Eligor
+6;10;94;0;0;Epiolnis
+6;10;95;0;0;Combate
+6;10;96;0;0;P.Diabo
+6;10;97;0;0;Caçador
+6;10;98;0;0;Rilfsak
+6;10;99;0;0;Espiral
+7;0;0;64;50;Barret:Vamos, novato.
+7;0;1;64;76;Guarda:Intruso!
+7;0;2;64;76;Guarda:Intruso!
+7;0;3;64;56;Biggs:Uau! Você era um SOLDIER, eitaa!  Não é todo dia que se vê um com os AVALANCHE.
+7;0;4;64;57;Jessie: SOLDIER? Eles não são os inimigos?  O que ele está fazendo com os AVALANCHE?
+7;0;5;64;56;Calma aí, Jessie. Ele ERA um SOLDIER.Agora ele é um de nós. Ainda não sabemos seu nome...
+7;0;6;64;49;Cloud:...Cloud.
+7;0;7;64;56;Cloud, eh? Eu sou...
+7;0;8;64;49;Não ligo para seus nomes. Quando este trabalho acabar... Darei o fora daqui.
+7;0;9;64;50;Que diabos é isso!?Pensei ter dito para vocês não andarem em grupo!
+7;0;10;64;50;Ex-SOLDIER, hã? Não confio em você!  (Segure o botão\"B\" enquanto aperta o botão direcional para correr)
+7;0;11;64;58;Wedge:Eu vou proteger a rota de fuga. Concentre-se na missão, Cloud. Nossa, vamos mesmo detonar essa enormefornalha? Vai ser demais!
+7;0;12;64;50;Yo! Essa é sua primeira vez em um reator?
+7;0;13;64;49;Não. Eu trabalhei para Shinra, sabe.
+7;0;14;64;50;O planeta está cheio da energia deMako.  As pessoas aqui usam todos os dias.Isso é o sangue do planeta. Mas Shinra continuachupando o sangue com essas máquinas.
+7;0;15;64;49;Eu não estou aqui para uma palestra. Vamos depressa.
+7;0;16;64;50;É isso aí! Você vai vir comigode agora em diante.
+7;0;17;0;0;Barret juntou-se a você.
+7;0;18;64;57;Biggs e eu temos o código dessa porta.
+7;0;19;64;56;Código decifrado.
+7;0;20;64;56;Imagine quantos de nosso povo arriscoua vida apenas por este código...
+7;0;21;64;57;Código decifrado.
+7;0;22;64;50;Pouco a pouco os reatores drenam a vida. Isso sempre foi assim.
+7;0;23;64;49;Não é problema meu.
+7;0;24;64;50;O planeta está morrendo, Cloud!
+7;0;25;64;49;A única coisa que me interessa é terminar logo antes que os seguranças e os GuardasRobô apareçam.
+7;0;26;64;50;Quando este lugar explodir, ele não será nada além de uma pilha de lixo. Cloud, você arma a bomba.
+7;0;27;64;49;Não deveria ser você?
+7;0;28;64;50;Vá logo! Preciso ficar de olho pra ver se você não faz nada errado.
+7;0;29;0;0;(Cuidado!) (Isso não é apenas um reator!)
+7;0;30;64;50;...O que há de  errado?
+7;0;31;64;49;Hã?
+7;0;32;64;50;O que foi, Cloud? Vamos, rápido!!!
+7;0;33;64;49;Ooh, desculpe.
+7;0;34;64;50;Atenção, lá vem eles!
+7;0;35;64;49;Vamos, vamos dá o fora daqui!
+7;0;36;64;50;Vamos terminar isto!
+7;0;37;64;50;Conseguimos, vamos sair daqui!
+7;0;38;64;49;Tá tudo bem? 
+7;0;39;64;57;Minha perna ficou presa.
+7;0;40;64;49;Eu te ajudo.
+7;0;41;64;57;Obrigada!
+7;0;42;64;57;Certo, seja cuidadoso.
+7;0;43;64;56;Isso deve manter o planeta vivo. Pelo menos um pouco mais.
+7;0;44;64;58;Isso.
+7;0;45;64;56;Vamos lá!
+7;0;46;64;50;Certo, agora vamos sair daqui. Nos encontramos na estação, Setor 8. Separem-se e peguemo trem!
+7;0;47;64;49;E-ei!
+7;0;48;64;50;Se é sobre seu pagamento, espere até a gente voltar para o esconderijo.
+7;0;49;64;52;Vendedora de Flor: Com licença. O que aconteceu?
+7;0;50;64;49;Nada... Não vejo muitas flores por aqui.
+7;0;51;64;52;Oh, estas? Gosta delas? custa apenas 1Gil...
+7;0;52;64;49;Eu vou comprar uma.
+7;0;53;64;52;Oh, obrigada! Aqui está!
+7;0;54;0;0;Então, que diabos está acontecendo!?
+7;0;55;0;0;O que será isso na parede. Vamos ver... \"Não se deixe enganar por Shinra!A energia Mako não é para sempre! Mako é a fonte de vida do planeta! O fim está perto!  Protetores do planeta: AVALANCHE\"
+7;0;56;64;76;Guarda:Ei! Você aí!
+7;0;57;64;49;Guardas de Shinra...
+7;0;58;64;76;Guarda:Este é o fimpara você.
+7;0;59;64;49;Eu não tenho tempo para ficar perdendocom vocês, caras.
+7;0;60;64;76;Guarda: Chega de conversa mole! É hora do pau!
+7;0;61;64;58;Cloud não chegou.
+7;0;62;64;56;Cloud... Será que está morto?
+7;0;63;64;50;Não mesmo!
+7;0;64;64;57;Cloud...
+7;0;65;64;56;Você acha que Cloud, é... irá lutar até o fimpelos AVALANCHE?
+7;0;66;64;50;E como vou saber? Eu pareço um adivinho? Hmph! Se vocês não fossemtão inúteis...
+7;0;67;64;58;Ei, Barret! E quanto ao nosso pagamento...?
+7;0;68;64;50;...
+7;0;69;64;58;Uh, nada... Desculpa. Ahh...
+7;0;70;64;56;Cloud!
+7;0;71;64;57;Cloud....
+7;0;72;64;58;Cloud!
+7;0;73;64;49;Parece que cheguei um pouco atrasado.
+7;0;74;64;50;Tem razão, está atrasado!   Chega como se não tivesse acontecido nada e fica se exibindo!
+7;0;75;64;49;Isso não foi nada. Sempre faço isso.
+7;0;76;64;50;Foda-se! Todos nós preocupados e você só se importa com você!
+7;0;77;64;49;Hmmmmmm... Você preocupado comigo?
+7;0;78;64;50;Quê? Vou descontar isso do seu pagamento, palhaço! Levanta! Vamos sair daqui! Sigam-me!
+7;0;79;64;58;Ei, Cloud! Você foi ótimo lá fora!
+7;0;80;64;56;Heh heh... Cloud! Vamos fazer melhor da próxima vez.
+7;0;81;64;57;tenha cuidado, vou fechar isso.
+7;0;82;64;57;Oh, Cloud! Seu rosto está sujo... Pronto! Obrigada por ter meajudado lá no Reator!
+7;0;83;0;0;Viu a manchete no Shinra Times?   Os terroristas que bombardearam o Reator são de algumlugar da favela.
+7;0;84;0;0;Explodindo um Reator... Devem ter alguma coisa em mente.
+7;0;85;0;0;Eles devem ter um líder muito frio. O que será que vão fazer agora?
+7;0;86;64;50;Para de agir como um maldito garoto.
+7;0;87;64;57;Ei, Cloud. Quer dar uma olhadaaqui comigo?  Este é o mapa Ferroviário de Midgar.  Vou te explicar. Gosto de Bombas e Monitores...  Sabe, coisas chamativas.
+7;0;88;64;57;Isto é um modelo completo de Midgar.  Uma estrutura principal suporta a plataforma no centro e ali estão outros suportes construídos em cadaseção.  8 Reatores fornecemeletricidade para Midgar.  Em cada ponto há um sensor configurado.  Lá se verifica os IDs e faces de cadapassageiro no trem.  ...Qualquer um pode nos identificar, por isso usamos falsos IDs.
+7;0;89;64;57;Falando do diabo... Aquela luz significa que estamos na área de Verificação de Segurança.   Quando ela apaga, nunca se sabe o quevai acontecer.  De todo jeito já estamos quase de volta.
+7;0;90;64;50;Olha... Dá para ver a superfície agora, está cidade não temdia ou noite.    Se aquela plataforma não estivesse lá...  Nós poderíamos ver o céu.
+7;0;91;64;49;Uma cidade suspensa... É perturbador esse cenário.
+7;0;92;64;50;Hã? Nunca imaginei ouvir isso vindo devocê... Você é cheio de surpresas. O mundo superior...  Uma cidade em uma plataforma...   Por causa dessa droga de pizza as pessoas aqui de baixo sofrem! Aqui em baixo tem oar poluído.   Pra piorar,o Reatorcontinua absorvendoenergia.
+7;0;93;64;49;Então por que todosnão vão para a plataforma?
+7;0;94;64;50;Não sei, deve ser porque eles não temdinheiro ou...  Amam este lugar,semse importam com a poluição.
+7;0;95;64;49;Sei... Ninguém vive em favelas porque quer. É como este trem, não podem ir além de onde os trilhos levam.
+7;0;96;64;50;Venham aqui!
+7;0;97;64;50;Esta missão foi um sucesso. Mas não vamos pararagora. O pior ainda estar por vir! Não se assustem comessa explosão! Porque a próxima será ainda maior! Nos vemos no esconderijo! Vão!
+7;0;98;0;0;Há muitas pessoas interessantes que trabalham na estação de trem.
+7;0;99;0;0;Há um Cemitério de Trens aqui, as pessoas dizem que é assombrado.
+7;0;100;0;0;O quê? Está indo no Cemitério de Trens?É muito perigoso, não vou deixar vocêcorrer esse risco!
+7;0;101;0;0;Ei, você é novato, certo?   Deixe-me dizer uma coisa sobre Armaduras.  Existem 4 tipos,suatela de estado diráo que pode ser equipado em cada personagem.    O tipo de armadura será exibido ao lado no menu da loja. Ah, lembrei, lá também dá para comprar armas, mas cuidado com o que vai gastar.
+7;0;102;0;0;Ei! Preciso falar sobreMatérias também! Escute bem! Cada Matéria pode levar a diferentes tipos de magias, cada uma pode ser nivelada em ordens diferentes para se aprender novas magias. As magias podem subir de nível e ficar mais forte, mas apenas nas lojas de magias.    Não precisa me agradecer, fico feliz em ajudar os novatos.
+7;0;103;0;0;Hã? Vai ver também?
+7;0;104;0;0;Houve um bombardeiolá.   Se aquele pilar desmoronar, tudo aqui vira poeira...
+7;0;105;0;0;Ei! Deixe-me falar alguma coisa sobre Armas! Quando se usa uma arma,ela ganha EXP.  Quando obtém uma certa quantidade depontos, pode ir em uma loja de armas para aumentar sua força. O mesmo pra magias.Legal, não? Oh! As Pousadas podem restaurar o HP e MP.  Também há lojas de itens nas Pousadas.Só tome cuidado pranão gastar demais!
+7;0;106;64;51;Marlene! Não vai dizer nada para o Cloud?
+7;0;107;64;51;Bem-vindo, Cloud. Parece que deu tudo certo.  Desculpe por Marlene, ela é um pouco tímida. Brigou com Barret?
+7;0;108;64;49;Não dessa vez.
+7;0;109;64;51;Hmm. Você cresceu, quando era pequeno costumava entrar emmuitas brigas. Flores? Que linda... Você quase nunca vem aqui. Mas... Uma flor pra mim? Oh, Cloud. Não precisava...
+7;0;110;64;49;Não é nada.
+7;0;111;64;51;Obrigada, Cloud. É maravilhosa.   Talvez eu deva encher a loja de flores.
+7;0;112;64;58;Oh, Cloud! Tifa sabe mesmo como cozinhar. Mmm, mmm... Bem, vou falar uma coisa.
+7;0;113;64;49;Sobre o quê?
+7;0;114;64;58;Tifa sempre deixou eu provar seus pratos, e olhe paramim agora. Não sei se fico feliz ou triste.   Mas é a boa comida que faz este lugar famoso.
+7;0;115;64;57;Você está ficando bem animadinho. Sabe por quê...?
+7;0;116;64;56;Aah! Nada como o primeiro gole após um dia de trabalho. Hic! Por que não toma uma também?
+7;0;117;64;49;Yeah, por que não?
+7;0;118;64;56;Oh! Tem mais dessa!   Mesmo que você já tenha sido um SOLDIER, você aindaé novato aqui. Então é melhor ouvir o que digo! Hic...! Oh... Não fale a Barret o que falei.
+7;0;119;64;59;Papai, bem-vindo!
+7;0;120;64;50;Ei, Marlene.
+7;0;121;64;51;Você está bem, Barret?
+7;0;122;0;0;...Isso me lembra.
+7;0;123;64;49;(Você de novo? ... Quem é você?)
+7;0;124;0;0;Logo descobrirá... O mais importante, 5 anos atrás em Nibelheim... Quando você foi para o Mt.Nibel, Tifa foi seu guia, certo?
+7;0;125;64;49;(Yeah... fiquei surpreso.)
+7;0;126;0;0;Mas onde estava Tifa após isso?   ...Foi um ótimo lugar para vocês se verem outra vez.  ...Por que não se viram de novo?
+7;0;127;64;49;(Não sei, eu não lembro direito...)
+7;0;128;0;0;Por que não tenta perguntar a Tifa?
+7;0;129;64;49;(...Yeah)
+7;0;130;0;0;Então, levante-se!
+7;0;131;64;51;Ei, acorde. Acorda, Cloud!
+7;0;132;64;82;Yuffie:Ah, Cloud! Você gostaria que eu melhorasse sua Matéria?
+7;0;133;64;82;Volte quando quiser!
+7;0;134;64;50;ótimo! Entrem aqui, idiotas! Vamos começar a reunião!
+7;0;135;64;51;Eh, estou aliviada por você estar de volta.
+7;0;136;64;49;O que deu em você? Aquilo nem foi um trabalho difícil.
+7;0;137;64;51;Acho que não... Você estava em SOLDIER.  Vá receber seu pagamento.
+7;0;138;64;49;Não se preocupe. Assim que eu pegar a grana, vou dá o fora daqui.
+7;0;139;64;51;Cloud, está se sentindo bem?
+7;0;140;64;49;...Sim ...Por quê?
+7;0;141;64;51;Por nada. Você está parecendoum pouco cansado. Melhor você descer.
+7;0;142;0;0;
+7;0;143;64;49;Ugh!! (Escuro... hã? Tifa!?)
+7;0;144;64;51;(Papai... Sephiroth?)   (Sephiroth fez isso com você, não foi?)  (Sephiroth... SOLDIER... Reatores Makos... Shinra... todos) (Eu odeio todos!!)
+7;0;145;64;58;A próxima missão será explodir o Reator 5.  Cloud, você é bom! Nunca fica nervoso? Ou só finge ser de pedra?
+7;0;146;64;58;Naw, não podia ser assim.
+7;0;147;64;57;Oops... Ei, olha as notícias... Que explosão. Acha que foi por causa de minha bomba?  Tudo que fiz foi seguir o que tinha no computador.  Oh, não! Devo ter feito algum cálculo errado.
+7;0;148;64;50;Yo, Cloud! Quero te perguntar uma coisa.  Tinha algum SOLDIER nos atacando hoje?
+7;0;149;64;49;Nenhum. Tenho certeza.
+7;0;150;64;50;Você parece bem seguro.
+7;0;151;64;49;Se tivesse algum SOLDIER você não estaria aqui agora.
+7;0;152;64;50;Não leve a mal.
+7;0;153;64;49;...
+7;0;154;64;50;Yeah, você é forte.Provavelmente todosem SOLDIER são.  Mas não esqueça,seumagrelo, que você trabalha para os AVALANCHEs agora! Não se preocupe comShinra.
+7;0;155;64;49;Shinra? Você me fez uma pergunta e eu respondi... só. Vou subir. Quero falar sobre meu pagamento.
+7;0;156;0;0;
+7;0;157;0;0;
+7;0;158;64;51;Espere, Cloud!
+7;0;159;64;50;Tifa! Deixe ele ir!Parece que ele ainda sente falta da Shinra!
+7;0;160;64;49;Cale-se! Não ligo pra Shinraou SOLDIER!  Não ligo para AVALANCHE ou este planeta!
+7;0;161;0;0;(Cuidado!) (Isso não é apenas um reator!)
+7;0;162;0;0;Ei! Deixe-me falar alguma coisa sobre Armas! Quando se usa uma arma,ela ganha EXP.  Quando obtém uma certa quantidade depontos, pode ir em uma loja de armas para aumentar sua força. O mesmo pra magias.Legal, não? Oh! As Pousadas podem restaurar o HP e MP.  Também há lojas de itens nas Pousadas.Só tome cuidado pranão gastar demais!
+7;0;163;0;0;
+7;0;164;64;51;Escute, Cloud. Te peço, por favor,junte-se a nós.
+7;0;165;64;49;Desculpa, Tifa.
+7;0;166;64;51;O Planeta está morrendo. Devagar, mas está morrendo. Alguém tem que fazer algo.
+7;0;167;64;49;Então deixe Barret e seus amigos fazerem isso.  Não tenho nada a ver com isso.
+7;0;168;64;51;Então! Você está mesmo indo!?  Vai simplesmente  ignorar seu amigos de infância?
+7;0;169;64;49;O quê? Como pode dizer isso!
+7;0;170;64;51;Você esqueceu da promessa.
+7;0;171;64;49;Promessa.
+7;0;172;64;51;Você ESQUECEU! Lembra... Cloud. Foi a 7 anos atrás.
+7;0;173;0;0;
+7;0;174;0;0;
+7;0;175;0;0;
+7;0;176;0;0;Desculpe o atraso.
+7;0;177;0;0;Disse que queria falar algo?
+7;0;178;0;0;Estou saindo desta cidade para Midgar.
+7;0;179;0;0;Todos os garotos estão fazendo isso.
+7;0;180;0;0;Mas sou diferente de todos eles.   Não estou apenas indo procurar trabalho.  Vou me juntar aos SOLDIER.   Vou para ser o melhor, assim como Sephiroth.
+7;0;181;0;0;Sephiroth... O Grande Sephroth.  Não é difícil se juntar a eles?
+7;0;182;0;0;...Provavelmente não vou vir aqui por um bom tempo.
+7;0;183;0;0;Vai mandar notíciasquando puder?
+7;0;184;0;0;Vou tentar.
+7;0;185;0;0;Ei, por que não fazemos uma promessa?  Umm, se você conseguir se tornarfamoso...  Vai voltar para me salvar, tá?
+7;0;186;0;0;O quê?
+7;0;187;0;0;Quando eu estiver com problemas, meu herói vem e me resgata. Quero sentir isso pelo menos uma vez.
+7;0;188;0;0;O quê?
+7;0;189;0;0;Vamos...! Me prometa...!
+7;0;190;0;0;Tá bem... Eu prometo.
+7;0;191;64;51;Lembra agora?... Nossa promessa?
+7;0;192;64;49;Não sou um herói e nem sou famoso. Não posso manter... a promessa.
+7;0;193;64;51;Mas você ainda tem seus  sonhos de infância, não é?  Você se juntou a SOLDIER.
+7;0;194;64;49;....
+7;0;195;64;51;Vamos! Você tem que mantersua promessa...
+7;0;196;64;50;Esperamos um segundo, SOLDIER! Uma promessa é uma promessa! Herói!
+7;0;197;0;0;Tenho 1500G.
+7;0;198;64;49;Este é meu pagamento? Não me faça rir.
+7;0;199;64;51;O quê? Então é isso!!
+7;0;200;64;49;Já sabe a próxima missão, né? Farei ela por 3000.
+7;0;201;64;50;O quê!!?
+7;0;202;64;50;2000!
+7;0;203;64;51;Obrigada, Cloud.
+7;0;204;64;51;Bom dia! Cloud! Você dormiu bem?
+7;0;205;64;49;Se o Barret tivesseparado de roncar umsegundo...
+7;0;206;64;50;Nosso objetivo é o Reator 5. Vão para a primeiraestação.
+7;0;207;64;51;Marlene, você fica aqui de olho!
+7;0;208;64;59;Beleza! Boa sorte.
+7;0;209;0;0;Tifa juntou-se a você.
+7;0;210;0;0;Infelizmente, os ponteiros dessa parte do game estão apontando para o nada. Tornando impossívela tradução desse diálogo. Acredito que seja erro de tradução do Japonês/Inglês.  Desculpa :/
+7;0;211;0;0;Infelizmente, os ponteiros dessa parte do game estão apontando para o nada. Tornando impossívela tradução desse diálogo. Acredito que seja erro de tradução do Japonês/Inglês.  Desculpa :/
+7;0;212;0;0;Infelizmente, os ponteiros dessa parte do game estão apontando para o nada. Tornando impossívela tradução desse diálogo. Acredito que seja erro de tradução do Japonês/Inglês.  Desculpa :/
+7;0;213;0;0;Infelizmente, os ponteiros dessa parte do game estão apontando para o nada. Tornando impossívela tradução desse diálogo. Acredito que seja erro de tradução do Japonês/Inglês.  Desculpa :/
+7;0;214;0;0;Infelizmente, os ponteiros dessa parte do game estão apontando para o nada. Tornando impossívela tradução desse diálogo. Acredito que seja erro de tradução do Japonês/Inglês.  Desculpa :/
+7;0;215;0;0;Infelizmente, os ponteiros dessa parte do game estão apontando para o nada. Tornando impossívela tradução desse diálogo. Acredito que seja erro de tradução do Japonês/Inglês.  Desculpa :/
+7;0;216;0;0;Infelizmente, os ponteiros dessa parte do game estão apontando para o nada. Tornando impossívela tradução desse diálogo. Acredito que seja erro de tradução do Japonês/Inglês.  Desculpa :/
+7;0;217;0;0;Infelizmente, os ponteiros dessa parte do game estão apontando para o nada. Tornando impossívela tradução desse diálogo. Acredito que seja erro de tradução do Japonês/Inglês.  Desculpa :/
+7;0;218;0;0;Infelizmente, os ponteiros dessa parte do game estão apontando para o nada. Tornando impossívela tradução desse diálogo. Acredito que seja erro de tradução do Japonês/Inglês.  Desculpa :/
+7;0;219;64;50;YO! Parece que isso nãoé um carro particular! Vamos, saim! Separem-se!
+7;0;220;0;0;Gerente:... Arruaceiros. Deus, não tenho tanta sorte...
+7;0;221;64;50;Disse alguma coisa?Perguntei, disse alguma coisa!?
+7;0;222;64;50;Yo, olhe isto! Esvaziou do nada. O que está havendo?
+7;0;223;0;0;MALDITO! Eh... está vazio porcausa... de vocês...
+7;0;224;64;50;...
+7;0;225;0;0;Y-y-yipes! Você... Viu as notícias, certo? AVALANCHE disse que haverá mais bombardeios. Só funcionários dedicados como eu iria para Midgar em um dia como hoje.
+7;0;226;64;50;Você trabalha para Shinra?
+7;0;227;0;0;Não vou ceder a violência.
+7;0;228;64;51;Barret!
+7;0;229;64;50;Merda! Sortudo!
+7;0;230;64;49;Então, o que vamos fazer agora?
+7;0;231;64;50;Merda! Como pode ser tão calmo?
+7;0;232;64;51;Parece que eles estão terminando deconectar os carros.  Estamos finalmente partindo.
+7;0;233;64;49;Então qual nosso próximo alvo?
+7;0;234;64;50;Hah! Escute, Sr.Trabalho-Sério! Certo... vou dizer! Há um ponto de verificação de segurança no topo da plataforma. É o sistema de verificação de ID de todos os trens.
+7;0;235;64;51;Shinra é muito orgulhosa.
+7;0;236;64;50;Não podemos mais usar nossos IDs falsos...
+7;0;237;0;0;´TInterfone:Bom diae bem vindos as Linhas Miggar.  Horário de chegada na Estação 4 será as 11:45.
+7;0;238;64;51;O que significa quetemos somente mais 3 minutos até a verificação de IDs.
+7;0;239;64;50;Certo,em 3 minutos pularemos do trem. Entenderam!?
+7;0;240;64;51;Que estranho.    O ponto de verificação de IDs deveria estar mais embaixo.
+7;0;241;0;0;´TInterfone: Tipo \"A\" Alertar de Verificação!  passageiros não identificados confirmados...
+7;0;242;64;51;O que é isso?
+7;0;243;64;50;O que está havendo?
+7;0;244;64;57;Estamos com problemas. Vou explicar depois. Depressa! Vão para o próximo carro!
+7;0;245;64;50;DROGA! Alguém explodiu... Vamos! Continuem!
+7;0;246;64;58;Eles vão trancar asportas, senhor!
+7;0;247;64;50;Certo! Preparados?
+7;0;248;64;50;Vamos lá! Vamos dar no pé!
+7;0;249;64;51;Assustador... hã.
+7;0;250;64;49;Tarde demais para falar isso. Por que você veio mesmo?
+7;0;251;64;56;Vamos lá!
+7;0;252;64;76;BESTA FERA!
+7;0;253;0;0;Jogo traduzido pelo caba mais bonito domundo!!  Eeeeeeeeu, Gutembergh Alencar!
+7;0;254;0;0;Jogo traduzido pelo caba mais bonito domundo!!  Eeeeeeeeu, Gutembergh Alencar!
+7;1;0;64;51;Porque...
+7;1;1;64;50;Ei, vocês dois! Não há tempo para isso!
+7;1;2;64;51;Sim! Já me decidi! Preste atenção. Eu vou pular!
+7;1;3;64;49;Se importa se eu for primeiro?
+7;1;4;64;50;Um líder sempre ficar até o fim. Não se preocupe comigo, vá!
+7;1;5;64;50;Até mais! Cuide do resto!
+7;1;6;64;50;Bom, até agora tudoestá indo como planejado.  Melhor não baixar a guardar até chegarmos no Reator 5. Biggs, Wedge e Jessie estão com tudo pronto para nós. MOVA-SE! O Reator em está embaixo desse túnel!
+7;1;7;64;49;Esses feixes de luzsão os sensores de segurança de Shinra. Não podemos ir maislonge.
+7;1;8;64;50;Esse maldito buraco é minúsculo.  Está me dizendo para entrar aí e ficar debaixo da Plataforma? Não mesmo! Cloud, o que vamos fazer?
+7;1;9;64;49;Olhe dentro.
+7;1;10;64;51;Parece que não tem nada que vá nos deixar preso.
+7;1;11;64;49;Parece que não temos outra escolha a não ser descer.
+7;1;12;64;50;Não perca tempo. Nunca se sabe quando Shinra vai nos encontrar. Cloud, você tem que ir.
+7;1;13;64;58;Cloud, por aqui. O Reator está acima dessa escada.
+7;1;14;64;57;Desculpa. O problema com o escaneador de ID foi minha culpa. Fiz sua ID especialmente... por isso.  Dei minha vida quando estava fazendo. Mas eu falhei.
+7;1;15;64;57;Da próxima, vou te dar algo mais decente.  Vou voltar para a sala de pesquisa noesconderijo para trabalhar nisso.
+7;1;16;64;56;Vamos recuar agora.Nos encontramos no esconderijo.  Cloud, contamos comvocê para explodir o Reator!
+7;1;17;64;50;Como Jessie disse para abrir o portão?
+7;1;18;64;51;Temos que inserir os códigos que ela deu nas 6 máquinas principais.
+7;1;19;64;50;DROGA, controle-se!
+7;1;20;64;51;Você está bem?
+7;1;21;64;49;...Tifa.
+7;1;22;64;51;Mmm?
+7;1;23;64;49;Nada... esquece... Vamos, vamos logo!
+7;1;24;64;50;Tá fácil demais...
+7;1;25;64;51;Vamos depressa!
+7;1;26;64;50;Por aqui!
+7;1;27;64;50;Soldados de Shinra!? MERDA! O que diabos está acontecendo?
+7;1;28;64;49;Uma armadilha...
+7;1;29;64;50;Presidente Shinra?
+7;1;30;64;51;Por que ele está aqui?
+7;1;31;64;61;Presidente Shinra: Hmm... Então vocês devem ser... Como era mesmo?
+7;1;32;64;50;AVALANCHE! Não esqueça! Você o Presidente Shinra, não é?
+7;1;33;64;49;Há quanto tempo, Presidente.
+7;1;34;64;61;...Há quando tempo? Oh... Você.  Foi você que saiu dos SOLDIER e se juntou aos AVALANCHE. Sei que você foi exposto a Mako, pelo brilho dos seus olhos... Diga-me, traidor... Qual o seu nome?
+7;1;35;64;49;Cloud.
+7;1;36;64;61;Perdoe-me por perguntar, mas não posso lembrar o nome de todas as pessoas. A não ser que você se torne outro Sephiroth... Sim. Sephiroth... Ele foi brilhante. Talvez MUITO brilhante...
+7;1;37;64;49;Sephiroth..?
+7;1;38;64;50;Nada dessa droga importa agora!   Este lugar logo irá para os ares com uma GRANDE explosão! Isso já serve!
+7;1;39;64;61;Um desperdício de bons fogos de artifícios, só parase livrar de vermescomo vocês...
+7;1;40;64;50;VERMES? É tudo que pode dizer... VERME! Vocês que são os VERMES, matando o planeta!  Isso faz de você o Rei VERME! Fique calado, idiota!
+7;1;41;64;61;...está começando a me aborrecer.   Sou um homem muito ocupado, então se me desculpa...  Tenho que ir a um jantar.
+7;1;42;64;50;Jantar!? Não venha com essa!Eu nem comecei ainda!
+7;1;43;64;61;Mas, eu arranjei um companheiro parabrincar com vocês.
+7;1;44;64;51;!?Que barulho foi esse?!
+7;1;45;64;50;Que diabos é isso?
+7;1;46;64;61;Conheça Airbuster, um Techno-Soldier.   Nosso Departamento de Desenvolvimento de Arma o criou.  Tenho certeza que os dados que ele extrairá de seus cadáveres serão de grande utilidade para experimentos futuros.
+7;1;47;64;49;...Techno-Soldier?
+7;1;48;64;61;Então, se vocês me desculpem.
+7;1;49;64;49;Espera,Presidente!
+7;1;50;64;50;Ei, Cloud! Temos que fazer algo!
+7;1;51;64;51;Ajuda, Cloud! ISTO... É de SOLDIER?
+7;1;52;64;49;Não mesmo! Isso é só uma máquina!
+7;1;53;64;50;Não tô nem aí para o que é isso! Eu vou acabar com ele!
+7;1;54;64;50;Vai explodir! Vamos, Tifa!
+7;1;55;64;51;Barret! Não dá para fazer nada?
+7;1;56;64;50;Não!
+7;1;57;64;51;Cloud! Por favor, não morra! Você não pode morrer! Há tanta coisa que ainda quero te contar!
+7;1;58;64;49;Eu sei, Tifa...
+7;1;59;64;50;Ei, você dá conta disso?
+7;1;60;64;49;...se preocupe apenas com vocês! Eu vou ficar bem, só cuide da Tifa!
+7;1;61;64;50;...tudo bem. Desculpa por tudo isso.
+7;1;62;64;49;Pare de falar como se isso fosse o fim!
+7;1;63;64;50;Certo, então, até.
+7;1;64;0;0;Você está bem? ...pode me ouvir?
+7;1;65;64;49;...sim...
+7;1;66;0;0;Naquele tempo... Você só ficava com os joelhos ralados...
+7;1;67;64;49;O que você quer dizer com \"naquele tempo\"?
+7;1;68;0;0;Como está agora? Pode ficar de pé?
+7;1;69;64;49;...o que você quis dizer com \"naquele tempo\"?...
+7;1;70;0;0;Não se preocupe comigo.   Preocupe-se apenas com você nesse momento.
+7;1;71;64;49;...vou dar uma chance.
+7;1;72;64;52;Oh! Ele se mexeu!
+7;1;73;0;0;...que tal isso? Vá devagar. Pouco a pouco...
+7;1;74;64;52;Olá, olá?
+7;1;75;64;49;...entendi.
+7;1;76;64;49;Ei... quem é você?
+7;1;77;64;52;Olá, olá?
+7;1;78;64;52;Você está bem? Estamos em uma igreja na favela.  Você caiu em cima de mim do nada. Você me deu um grande susto.
+7;1;79;64;49;...eu cai?
+7;1;80;64;52;O telhado e o canteiro de flores devem ter aparado sua queda. Você tem sorte.
+7;1;81;64;49;Flores... São suas? Desculpe por isso.
+7;1;82;64;52;Sem problema.    As flores aqui são bastante fortes porque este é um lugar sagrado. Dizem que não se pode cultivar ervas e flores em Midgar. Mas por alguma razão, as flores florescem aqui. Amo isso aqui... Então, nós nos encontramos outra vez. Não se lembra de mim?
+7;1;83;64;49;Sim, eu lembro. Você estava vendendo flores.
+7;1;84;64;52;Oh, estou tão feliz!   Obrigada por ter comprado minhas flores.  Me diga, você tem algum material?
+7;1;85;64;49;Sim, alguns. Hoje em dia dá paraencontrar material em qualquer lugar.
+7;1;86;64;52;Mas o meu é especial. É bom para absolutamente nada.
+7;1;87;64;49;...bom para nada? Provavelmente você só não sabe como usá-lo.
+7;1;88;64;52;Não, eu sei... ele não faz nada mesmo.  Me sinto segura só em tê-lo. Era da minha mãe... Você se sente bem?
+7;1;89;64;49;Eu não ligo.
+7;1;90;64;52;Só mais um pouco. Oh! Aquilo que você mencionou... Não sabemos o nome um do outro, né? Eu sou Aeris, a menina da flor. Muito prazer.
+7;1;91;64;49;Meu nome é Cloud. Eu... eu faço um pouco de tudo.
+7;1;92;64;52;Aeris: Oh... Um faz tudo.
+7;1;93;64;49;Sim, faço o que for necessário. O que é tão engraçado? Do que está rindo?
+7;1;94;64;52;Desculpa... Eu só...
+7;1;95;64;52;Desculpa, não consegui segurar.
+7;1;96;64;52;Cloud! Nunca se deixa abater!
+7;1;97;64;52;Diga, Cloud, você já foi um guarda- costas?  Você já FEZ tudo, certo?
+7;1;98;64;49;Sim, isso mesmo.
+7;1;99;64;52;Então, me tire daqui. Me leve pra casa.
+7;1;100;64;49;OK, eu faço isso... mas vai ter um custo.
+7;1;101;64;52;Bem então, vamos ver... que tal se eu saísse com você um dia?
+7;1;102;0;0;Aeris juntou-se a você.
+7;1;103;64;49;Eu não sei quem é você, mas...
+7;1;104;64;68;Não sabe quem sou? ...eu sou você.
+7;1;105;64;49;Oh, claro... Eu sou você. Esse uniforme...
+7;1;106;64;76;Ei, mana, esse é um pouco estranho.
+7;1;107;64;49;Cale-se! Você é espião de Shinra!
+7;1;108;64;76;Reno! Quer que ele seja retirado?
+7;1;109;64;68;Reno:Ainda não decidi.
+7;1;110;64;52;Não briguem aqui! Vocês vão acabar com as flores!
+7;1;111;64;68;Eles eram... olhos de Mako. Sim, tudo bem.  Voltando ao trabalho. Oh! E não pise nas flores...
+7;1;112;64;76;Ei, Reno, você só está pisando nelas!
+7;1;113;64;76;Estão todas acabadas!
+7;1;114;64;76;Vão todas para o INFERNO!
+7;1;115;64;52;O que vamos fazer?
+7;1;116;64;49;Bem, não podemos deixar que nos peguem, certo?  Então, só resta uma coisa.
+7;1;117;0;0;Traduzido por: Gutembergh e Redarts.
+7;1;118;0;0;Traduzido por: Gutembergh e Redarts.
+7;1;119;64;49;Droga!
+7;1;120;64;52;Obrigada, Cloud.
+7;1;121;64;52;Vamos lá, guarda- costas!
+7;1;122;64;49;OK.
+7;1;123;64;52;Ha, ha... Eles estão me procurando de novo.
+7;1;124;64;49;Quer dizer que não é a primeira vez que vieram atrás de você?
+7;1;125;64;52;...não.
+7;1;126;64;49;Eles são os Turks.
+7;1;127;64;52;Hmm...
+7;1;128;64;49;Os Turks são uma organização do Shinra.  Eles são possíveis candidatos para os SOLDIER.
+7;1;129;64;52;Eita preula!
+7;1;130;64;49;Além disso, também estão envolvidos em muitas outras sujeiras. Espionato... assassinato... Sabe.
+7;1;131;64;52;Eles se parecem.
+7;1;132;64;49;Mas, por que estão atrás de você? Deve haver um motivo, certo?
+7;1;133;64;52;Não,na verdade não.    Acho que eles acreditam que tenhoo que é preciso pra ser um SOLDIER!
+7;1;134;64;49;Talvez você tenha. Você quer?
+7;1;135;64;52;Não sei... mas não quero ser pega por ESSAS pessoas!
+7;1;136;64;49;Vamos indo.
+7;1;137;64;52;Ufa! Finalmente! Agora... Minha casa é aqui.  Vamos logo antes que eles cheguem!
+7;1;138;64;52;Estou em casa, mamãe.
+7;1;139;64;52;Este é Cloud, meu guarda-costas.
+7;1;140;64;78;Elmyra: Guarda-costas..? Quer dizer que te seguiram de novo? Você está bem!? Está machucada!?
+7;1;141;64;52;Eu estou bem. Cloud estava comigo.
+7;1;142;64;78;Obrigada, Cloud.
+7;1;143;64;52;Então, o que você vai fazer agora?
+7;1;144;64;49;O Reator 7 está longe daqui? Quero ir para o bar da Tifa.
+7;1;145;64;52;Tifa é... uma garota?
+7;1;146;64;49;Sim
+7;1;147;64;52;Um garota... amiga?
+7;1;148;64;49;Amiga!
+7;1;149;64;52;Hee, hee, hee... Não precisa ficar irritado...
+7;1;150;64;52;Bem, isso é... ótimo. Vamos ver,Reator 7? Eu mostro o caminho.
+7;1;151;64;49;Você deve estar brincando. Por que quer mesmo voltar para o perigo?
+7;1;152;64;52;Já estou acostumada.
+7;1;153;64;49;Acostumada!? ...bem, não sei... recebendo ajuda de uma garota...
+7;1;154;64;52;Uma garota! O que quer dizer com isso!?  Espera que eu fiqueassistindo depois de ouvir o que você falou!? Mãe! Vou levar o Cloud no Reator 7. Volto logo.
+7;1;155;64;78;Mas querida... desisto. Você nunca escuta nada. Mas se você vai, por que não vai só amanhã?  Está ficando tarde agora.
+7;1;156;64;52;Sim, tem razão, mamãe.
+7;1;157;64;78;Aeris, por favor, vá arrumar a cama.
+7;1;158;64;78;Esse brilho em seus olhos... Você é de SOLDIER, certo?
+7;1;159;64;49;Sim. Eu costumava ser...
+7;1;160;64;78;...não sei como dizer isso, mas...   Poderia deixar este lugar esta noite?
+7;1;161;64;52;Para chegar no Reator 7, primeiro precisa passar pelo Reator 6. Lá é um pouco perigoso, então é melhor descansar hoje a noite.
+7;1;162;64;49;...Hmm? ...Devo ter adormecido.
+7;1;163;64;49;Passar pelo Reator 6... Eu devo me sair bemsozinho...
+7;1;164;64;52;Onde está indo essa hora?
+7;1;165;64;49;Eu... eh...
+7;1;166;64;52;É bom não está saindo escondido!
+7;1;167;0;0;TV:E agora as notícias.   Devido a um ataque terrorista do grupo chamado AVALANCHE, partes de Midgar estão temporariamente sem energia.  Seguindo o Pres. Shinra, o prefeito Domino também falou publicamente contra o atentado.
+7;1;168;64;52;De pé essa hora. 
+7;1;169;64;49;Como posso pedir  a você que venha junto quando sei que é perigoso?
+7;1;170;64;52;Já terminou?    Temos que ir até a favela do Reator 6 para chegar nessa tal Tifa. Vou te levar até lá.
+7;1;171;0;0;Aeris juntou-se a você.
+7;1;172;64;52;O portão para o Reator 7 é ali.
+7;1;173;64;49;Obrigado. Acho que isso é um adeus.  Consegue voltar para casa?
+7;1;174;64;52;Oh, não! \"O que vou fazer?\" ...não é isso que quer ouvir?
+7;1;175;64;49;Eu levo você em casa.
+7;1;176;64;52;Isso não fica um pouco fora do caminho?
+7;1;177;64;49;Sim, eu acho.
+7;1;178;64;52;Podemos dar uma pausa?
+7;1;179;64;52;Não acredito que ainda está aqui.
+7;1;180;64;52;Cloud, venha aqui!
+7;1;181;64;52;Qual é sua classificação?
+7;1;182;64;49;Classificação?
+7;1;183;64;52;Você sabe, em SOLDIER.
+7;1;184;64;49;Oh, eu sou... Classe 1.
+7;1;185;64;52;Igual a ele.
+7;1;186;64;49;Igual a quem?
+7;1;187;64;52;Meu primeiro namorado.
+7;1;188;64;49;Você... sério?
+7;1;189;64;52;Não, mas gostei dele por um tempo.
+7;1;190;64;49;Eu provavelmente conhecia ele. Qual era seu nome?
+7;1;191;64;52;Isso não importa.
+7;1;192;64;49;Hã? Ei, espera aí... Tifa!?
+7;1;193;64;52;Ela que é a Tifa? Onde ela vai? Parece estranha...
+7;1;194;64;49;Espera! Eu irei sozinho! Vá para casa!
+7;1;195;64;52;Vai me deixar andando sozinha?
+7;1;196;64;49;...
+7;1;197;64;52;Este lugar é assustado. Principalmente pra garotas. Então, temos que encontrar Tifa logo!
+7;1;198;0;0;Ei, garoto! Você tem uma bela novilha aí!  Leve na casa de Don, ele faz ótimaspastilhas de hortelã.
+7;1;199;0;0;Whoa! Vai ficar aí paradosem falar nada?
+7;1;200;0;0;Graças ao Don podemos comer assim.
+7;1;201;0;0;Umf... (gemido)... (beijoca)... Saia daqui!
+7;1;202;0;0;É um pouco cedo para comer. Volte aqui depois.
+7;1;203;0;0;Não empurra! Miséra!
+7;1;204;0;0;Todo este lixo. Não podemos fazer nada?
+7;1;205;0;0;Tudo isso pertence ao dono da Loja de Armas.  Ele continua pegando as coisas e guardando aqui.
+7;1;206;0;0;Oh, ele até tem umadispensa em sua loja.
+7;1;207;0;0;Mas não o quanto olhe, só tem lixo aí...
+7;1;208;0;0;Junte-se ao clube.
+7;1;209;0;0;Experimente.
+7;1;210;0;0;Traduzido por: Gutembergh e Redarts.
+7;1;211;0;0;EI... tem gente AQUI... Não olhe!
+7;1;212;0;0;´GHomem... Devo ir... ou não?   Fico tão pensativo em momentos como esse. Sou um inútil! Ei! Você não é..? O quê! Você... também?
+7;1;213;64;49;Sim, eu também.
+7;1;214;0;0;´GVocê é amigo de infância de Tifa, como traz uma namorada para um lugar assim! Que tipo de cara é você!
+7;1;215;0;0;Bem-vindo! Nem sei o que tô fazendo aqui...
+7;1;216;0;0;Está procurando uma namorada também?
+7;1;217;64;49;Conhece uma garota chamada Tida?
+7;1;218;0;0;Ei, você é bem rapidinho. Tifa é nossa garotamais nova. Mas, infelizmente, ela está fazendo uma entrevista agora mesmo. Aqui no Hotel HoneyBee, é normal que todas as novatas sejam levadas pra mansão de Corneo. Don Corneo é um famoso apreciador.  Agora ele quer sossegar e achar uma noiva.
+7;1;219;0;0;O Honey Bee é um clube privado. Só membros podem ir lá. Shoo, shoo!
+7;1;220;64;77;Porteiro:Está é a mansão do Don Corneo, o homem mais poderoso em Wall Market. Veja, o Don não se interessa por homens. Então, não quero vê-lo por aqui de novo...  Ei, quem é essa gracinha com você?
+7;1;221;64;52;Ei, isso parece a mansão do Don. Vou dar uma olhada. Contarei a Tifa sobre você.
+7;1;222;64;49;Não! Não pode!
+7;1;223;64;52;Por quê?
+7;1;224;64;49;Bem... Que tipo de... Lugar é esse?
+7;1;225;64;52;Então o que faço? Quer entrar comigo?
+7;1;226;64;49;Bem, sou homem, vaiser muito difícil.   Além disso, se eu arrombar, vai chamar muito atenção.
+7;1;227;64;52;Tee hee...
+7;1;228;64;49;Mas, eu vou sozinhomesmo... Oh, homem...  Primeiro temos que saber se Tifa está bem...  por que está rindo,Aeris?
+7;1;229;64;52;Cloud, por que vocênão se veste de garota? É a única saída.
+7;1;230;64;49;COMO É!?
+7;1;231;64;52;Espere um pouco. Quero apresentar um amigo.
+7;1;232;64;49;Aeris! Não posso...
+7;1;233;64;52;Está PREOCUPADO com Tifa, não é? Então vamos,rápido!
+7;1;234;64;52;Com licença! Eu gostaria de um vestido.
+7;1;235;0;0;Umm, pode esperar um pouco? Vai ser rápido.
+7;1;236;64;52;Qual o problema?
+7;1;237;0;0;Bem, meu pai, o dono, não está. Como vê, ele que faz os vestidos.
+7;1;238;64;52;E onde está o seu pai?
+7;1;239;0;0;Provavelmente deve estar bêbado no bar.
+7;1;240;64;52;Então... está dizendo que não podemos ter um vestido a menos que façamos algo com seu pai?
+7;1;241;0;0;Sim. Sinto muito. Ele está causando muitos problemas. Ajudaria a trazer ele de volta?
+7;1;242;64;52;Bem,se não fizermosnada, não teremos um vestido certo?
+7;1;243;0;0;Sério!? Por favor, ajude meu o maluco do meu pai. Não sei mais o que fazer...
+7;1;244;64;52;Tudo bem, faremos algo. Vamos lá, Cloud!
+7;1;245;64;52;Nos desculpe, você é pai da garota da Loja de Roupas?
+7;1;246;0;0;Dono da Loja:Sou proprietário da loja... mas não sou seu pai.
+7;1;247;64;52;Não falei isso...
+7;1;248;64;49;Eu quero umas roupas.
+7;1;249;0;0;Não faço roupas masculinas.   E não sinto vontadede fazer roupas neste momento.
+7;1;250;64;52;Cloud, espere um segundo. Vou tentar falar com ele. Por que não vai lá e bebe algo.
+7;1;251;0;0;´GVocê é amigo de infância de Tifa, como traz uma namorada para um lugar assim! Que tipo de cara é você!
+7;1;252;0;0;O Honey Bee é um clube privado. Só membros podem ir lá. Shoo, shoo!
+7;1;253;0;0;´MVeja, o Don não está interessado em homens.
+7;1;254;0;0;(...Parece muito cansado...)    Cloud:..!?    (Eu não dormia em uma cama assim... fazia muito tempo)   Cloud:...Oh, sim.    (Desde aquela época)
+7;2;0;64;52;Sabe, senhor. Ele sempre disse que pelo menos uma vez na vida, gostaria de se vestir de menina. Então, por isso que eu queria um vestido bem fofo...
+7;2;1;0;0;O quê? Um cara grosso como ele?
+7;2;2;64;52;E então..? Pode fazer isso?
+7;2;3;0;0;...Talvez seja interessante. Eu já estava ficando entediado fazendo sempre as mesma roupas.
+7;2;4;64;52;Então vai fazer isso por nós?
+7;2;5;0;0;Hmm, vou. Que tipo de vestido você prefere?
+7;2;6;64;52;Um... bem delicado. E também... brilhante.
+7;2;7;0;0;Hmm, entendi. Tenho um amigo que tem o mesmo gosto dele. Eu vou falar com ele.
+7;2;8;0;0;Oh,você está aqui. Está pronto. Experimente.
+7;2;9;64;49;Como... se coloca esta coisa?
+7;2;10;64;52;Não vai se trocar?
+7;2;11;64;49;OK... estou pronto.
+7;2;12;0;0;Hmm, nada mal. Isso talvez seja meu próximo negócio.
+7;2;13;0;0;Sim, tem razão. Vamos tentar?
+7;2;14;0;0;Obrigada por nos mostrar algo novo. Meu pai ganhou uma nova motivação. O vestido é por conta da casa.
+7;2;15;64;52;Ande mais gentilmente... isso, Srta.Cloud.
+7;2;16;64;49;O que quer dizer com \"gentilmente\"?
+7;2;17;64;52;Oh, você está tão fofa, Srta.Cloud. Aaah, eu quero um.  Tem um parecido para mim também?
+7;2;18;0;0;Parecido?
+7;2;19;0;0;Que tal aquele?
+7;2;20;0;0;Pai, o que você está falando? Este aqui é muito melhor.
+7;2;21;0;0;Não, não mesmo! Este aqui.
+7;2;22;64;52;...eu quero ESTE.
+7;2;23;64;52;Vou provar ele.
+7;2;24;64;52;...não olhem!
+7;2;25;64;52;Então? Como estou?
+7;2;26;64;49;...
+7;2;27;64;52;Oh, como você é sem graça!
+7;2;28;64;77;Porteiro:Eitaa! Sua amiga é um xuxuzinho também! Entrem, entrem! Duas senhoras entrando!
+7;2;29;0;0;Ei, senhoras. Avisarei para o Don que vocês estão aqui. Não saiam daqui.
+7;2;30;64;52;Agora é nossa chance. Vamos procurar Tifa.
+7;2;31;64;52;...Tifa? Prazer em te conhecer. Eu sou Aeris. Cloud falou muito sobre você.
+7;2;32;64;51;...e você é? Ei, era você que estava com o cloud antes...
+7;2;33;64;52;Certo, com Cloud.
+7;2;34;64;51;Oh...
+7;2;35;64;52;Não se preocupe. Acabamos de nos conhecer.Não temos nada.
+7;2;36;64;51;\"Não se preocupe\"? ...do que está falando?  Não, não entenda mal. Cloud e eu crescemos juntos. Nada mais.
+7;2;37;64;52;Pobre Cloud, vir até aqui para ouvir isto.
+7;2;38;64;52;Certo, Cloud?
+7;2;39;64;51;Cloud?
+7;2;40;64;51;Cloud!? Por que você está vestido assim!?  E por que está aqui!? O que aconteceu depois da queda!? Você está se machucou?
+7;2;41;64;49;Ei, dê uma chance para eu explicar. Estou vestido assim... Porque não tinha outra maneira de entrar aqui. Eu estou bem. Aeris me ajudou.
+7;2;42;64;51;Oh, Aeris ajudou...
+7;2;43;64;49;Tifa, explique. O que está fazendo em um lugar como este?
+7;2;44;64;51;Eeeh, umm...
+7;2;45;64;52;Ahem! Vou até fechar os meus ouvidos.
+7;2;46;64;51;Estou feliz que você esteja bem.
+7;2;47;64;49;Obrigado. O que aconteceu?
+7;2;48;64;51;Quando voltamos para o Reator 5, havia estes homens estranhos lá. Barret fez eles darem algumas informações.
+7;2;49;64;49;Foi quando o nome de Don apareceu.
+7;2;50;64;51;Isso, Don Corneo. Barret disse para deixá-lo sozinho...  Mas algo está me incomodando.
+7;2;51;64;49;Entendo. Você quis saber da história diretamente da boca de Corneo.
+7;2;52;64;51;Então vim aqui, mas agora estou presa a isto.  Corneo procura uma noiva. Todos os dias ele recebe 3 garotas, escolhe uma e... E, bem... eu tenho que ser essa garota... ou me mandarão embora esta noite.
+7;2;53;64;52;Desculpa... Mas ouvi tudo...   Se você conhece as 3 garotas, então não tem problema, certo?
+7;2;54;64;51;Acho que sim, mas...
+7;2;55;64;52;Nós temos 2 aqui, certo?
+7;2;56;64;49;Não, Aeris! Eu não poso te envolver nisso.
+7;2;57;64;52;Oh? Então tudo bem em deixar a Tifa em perigo?
+7;2;58;64;49;Não, eu não quero Tifa em...
+7;2;59;64;51;Está tudo bem?
+7;2;60;64;52;Eu cresci nas favelas... Estou acostumada com o perigo.
+7;2;61;64;52;Você confia em mim?
+7;2;62;64;51;Sim. Obrigada, Sr.Aeris.
+7;2;63;64;52;Me chame de Aeris.
+7;2;64;0;0;Ei! Chegou a hora, senhoras. Don espera vocês! Eu disse para não saírem daqui... Essas mulheres de hoje em dia... Depressa!
+7;2;65;64;49;Provavelmente não preciso perguntar, mas as outras garotas... Eu... Certo?
+7;2;66;64;51;Tem razão, não precisa...
+7;2;67;64;52;...perguntar.
+11;0;0;0;0;Bem-vindos ao \"Pires Dourados\". Estão juntos? Um ingresso custa 300 gil, mas você pode comprar um ingresso para a vida toda por 3000 gil.
+11;0;1;0;0;Pagar 300 gil   Pagar 3000 gil  
+11;0;2;0;0;Entra aí!
+11;0;3;0;0;Comprar         Não comprar     
+11;0;4;0;0;Entra aí!
+11;0;5;64;52;Uau! Vamos nos divertir!
+11;0;6;64;52;Eu sei que não é a hora certa de fazer isso.
+11;0;7;64;52;Ei, Barret, se anima!
+11;0;8;64;50;Foi mal, não me sinto muito bem não. Só me deixa sozinho.
+11;0;9;64;52;Mesmo? Ah, que pena.
+11;0;10;64;52;Vamos lá!
+11;0;11;64;51;Isso não foi meio rude, Aeris?
+11;0;12;64;52;Só agir normalmente quando isso acontece.
+11;0;13;64;51;Você acha...?
+11;0;14;64;52;Claro!
+11;0;15;64;52;Nós vamos brincar no...
+11;0;16;64;50;Então VAI, PUTA! Para de me encher! Não se esqueça que estamos atrás de Sephiroth!
+11;0;17;64;52;... Acho que ele ficou bravo.
+11;0;18;64;51;Ele vai ficar bem. Já parece até melhor.
+11;0;19;0;0;Aeris entra no time. Os outros saem.
+11;0;20;0;0;Qual é o teu problema? Não viu que queremos ficar sozinhos?
+11;0;21;0;0;Cara, você é \"O Estraga-prazeres\". Deixa a gente em paz!
+11;0;22;0;0;Fazemos um show fora do normal aqui. Hoje não tem, mas volte algum dia e veja.
+11;0;23;64;81;Ei garoto.
+11;0;24;64;49;Garoto...?
+11;0;25;64;81;Como vai? Se divertindo? Parece que sim. Bom, muito bom, garoto.
+11;0;26;64;49;Meu nome é Cloud. E pare de me chamar de garoto.
+11;0;27;64;81;Eu? Eu sou o dono do \"Pires Dourados.\" O nome é Dio. Só me chame de Dio.
+11;0;28;64;49;...
+11;0;29;64;81;Dio: Aliás garoto, você sabe o que é uma Matéria Negra?
+11;0;30;64;49;O que é?
+11;0;31;64;81;Ha ha ha... Essa, foi boa, garoto! Mas mentir não faz bem. Não pode me enganar.
+11;0;32;64;49;Por que me perguntou?
+11;0;33;64;81;Bem, tem um tempo que um garoto da sua idade veio perguntar se eu tinha uma Matéria Negra. Achei que você poderia saber quem era ele, já que vocês pareciam ter a mesma idade.
+11;0;34;64;49;Por acaso ele tinha... Uma capa preta...?
+11;0;35;64;81;Sim, sim, ele tinha uma. E uma tatuagem de \"1\" na mão.
+11;0;36;64;49;Pra onde ele foi!?
+11;0;37;64;81;Ha ha ha, não faço ideia. Mas dê uma passada na Arena de Batalhas se quiser, garoto. Vai provavelmente gostar. Muitas das minhas coleções estão por lá. Ha ha ha.
+11;0;38;0;0;Me desculpe, agora estamos em reformas. Volte mais tarde.
+11;0;39;64;54;Olá! Por que está tão cabisbaixo? O que acha, quer que eu veja sua sorte? Um futuro brilhante! Um futuro feliz! Mas olha, não fica com raiva se sair algo ruim! Ih, desculpa! Sou uma máquina de prever o futuro. Meu nome é... CaitSith!
+11;0;40;64;49;Você só sabe prever o futuro?
+11;0;41;64;54;CaitSith: Ah, eu também acho coisas perdidas, pessoas perdidas, tudo!
+11;0;42;64;49;Então pode me dizer onde um homem chamado Sephiroth está?
+11;0;43;64;54;Sephiroth? Okay, lá vai!
+11;0;44;64;49;... Sorte medíocre. Será uma fortuna ativa. Se entregue na boa vontade dos outros, e algo grande vai acontecer no verão... Espera... O que é isso?
+11;0;45;64;54;Hã? Deixa eu tentar de novo.
+11;0;46;64;49;Cuidado com o esquecimento. Sua cor da sorte é... Azul? ... Esquece.
+11;0;47;64;54;Espera, me dá mais uma chance! Deixa eu tentar de novo!
+11;0;48;64;49;... Mas o que!?
+11;0;49;64;53;Leia em voz alta Cloud.
+11;0;50;64;49;O que procura será seu. Mas você irá perder algo precioso.
+11;0;51;64;54;Não sei se isso é bom OU ruim... É a primeira vez que sai algo desse tipo... Então, vamos lá?
+11;0;52;64;53;Pra onde?
+11;0;53;64;54;Sendo um vidente, não consigo parar de pensar nisso. Se eu não ver no que isso leva, não vou relaxar. Por isso eu vou com vocês!
+11;0;54;64;53;Está tudo bem pra você, Cloud?
+11;0;55;64;54;Eu vou com vocês não importa o que disserem!
+11;0;56;0;0;CaitSith entra pro time.
+11;0;57;0;0;Calma aí, sem correr!
+11;0;58;0;0;Cara, eu só quero gritar.
+11;0;59;0;0;... Não se preocupem comigo, vão brincar.
+11;0;60;0;0;Eu fico tão envolvido com essas coisas...
+11;0;61;64;49;!
+11;0;62;64;49;Mm!?
+11;0;63;64;49;Morto...
+11;0;64;64;53;Mas que...
+11;0;65;64;53;Ei, Cloud!
+11;0;66;64;49;Sephiroth fez isso?
+11;0;67;64;49;Não... Não foi ele... Todos tomaram tiros... Sephiroth não usaria uma arma...
+11;0;68;0;0;Ugh, ughh.
+11;0;69;64;49;Ei, o que houve?
+11;0;70;0;0;Ah... Ah... Um homem com uma arma... No braço...
+11;0;71;64;53;... Quê?Parados aí! Não se movam!
+11;0;72;0;0;Parados aí! Não se movam!
+11;0;73;64;81;Vocês fizeram isso?
+11;0;74;64;49;N-Não, não fomos nós!
+11;0;75;64;81;Eu poderia estar errado...
+11;0;76;64;54;Melor correr, a coisa vai ficar feia.
+11;0;77;64;49;E-Ei!
+11;0;78;64;81;Pare eles!
+11;0;79;64;81;Não tem como fugir agora.
+11;0;80;64;49;Espere, me ouça...
+11;0;81;64;54;Cloud...
+11;0;82;64;49;Ei! Preste atenção!
+11;0;83;64;81;Não tenho nada pra ouvir. Paguem pelo seu crime lá embaixo!
+11;0;84;64;53;Todos bem?
+11;0;85;64;49;Onde estamos?
+11;0;86;64;54;Uma prisão no deserto... A Prisão de Corel...
+11;0;87;64;49;Prisão no deserto?
+11;0;88;64;54;É, uma prisão natural no meio do deserto... Cercada por areia movediça. Ouvi que quando você entra, você nunca mais sai... Mas, teve uma exceção...
+11;0;89;64;53;Mmm? Barret?
+11;0;90;64;49;Barret...
+11;0;91;64;53;Foi ele que...
+11;0;92;64;50;Pra trás! Isso é algo que eu tenho que lidar.
+11;0;93;64;50;Só me deixa sozinho...
+11;0;94;64;54;Ufa! Esse aí é amigo seu? Ele parece perigoso...
+11;0;95;64;53;Cloud, o que faremos? Barret está fora de si.
+11;0;96;64;49;Esse tomou um tiro também...
+11;0;97;0;0;Uh-hul! Mais visitantes para a Prisão de Corel.
+11;0;98;0;0;Vou te dizer uma coisa, novato. Esse deserto é extremamente perigoso. Ele te recebe bem, mas quando tenta sair, ele te puxa. Ouvi dizerem que ninguem sai... O melhor a se fazer é ficar longe do deserto.
+11;0;99;0;0;Esse lugar é o Paraíso.
+11;0;100;0;0;Homem com uma arma no braço?
+11;0;101;0;0;Nunca nem vi.
+11;0;102;0;0;Quer ver o Chefe?
+11;0;103;0;0;Só ir Sudoeste, e vai vê-lo.
+11;0;104;0;0;Quando sair do deserto, fique parado, não ande.
+11;0;105;0;0;Você é novo? Então vá cumprimentar o Sr. Coates.
+11;0;106;0;0;Sr. Coates: Nunca vi vocês por aqui antes. Querem subir?
+11;0;107;64;49;Sim, queremos.
+11;0;108;0;0;Acho que ainda não entenderam como as coisas funcionam por aqui. Esse é o depósito de lixo do \"Pires Dourados\". Isso torna vocês um bocado de lixo. O único jeito de subir é com a permissão do Chefe, mas NUNCA vão conseguir! Ha, ha, ha!
+11;0;109;64;50;Não falei pra não vir pra cá!?
+11;0;110;64;54;Es... Espera um pouco! Só queremos conversar! Você vai entender se apenas nos escutar!
+11;0;111;64;50;Não queria nenhum de vocês no meio disso...
+11;0;112;64;52;Ei, essa fala é do Cloud! \"Blá blá blá, é muito perigoso, não quero você no meio disso... Blá blá blá...\"
+11;0;113;64;51;É, já estamos no meio disso. Vimos você e corremos pra cá. Fala sério, Barret, só fala o que está acontecendo pra gente.
+11;0;114;64;50;Galera...
+11;0;115;64;53;Disseram que os assassinatos na Arena de Batalhas foram feitos por um homem com uma arma no braço... Foi você?
+11;0;116;64;50;Tem outro... Outro homem que tem uma arma no braço... Isso tem 4 anos... Meu amigo Dyne... Eu me lembro... Estávamos no caminho pra casa depois de visitar a construção de um Reator de Mako. A vila foi atacada por soldados da Shinra. Queimaram tudo, e vimos isso de um morro. Soldados nos perseguiram e atiraram em nós dois... Daí em diante, eu não conseguia mais usar meu braço direito. Entrei em depressão por um tempo. Mas um dia eu joguei minha mão artificial fora, e coloquei essa arma no lugar dela.
+11;0;117;64;49;...
+11;0;118;64;50;Coloquei uma nova mão direita para me vingar da Shinra, que tirou tudo de mim... Naquele tempo, ouvi o doutor dizer que outro homem fez essa mesma operação que eu fiz. Mas a mão dele foi a esquerda...
+11;0;119;64;49;...
+11;0;120;64;52;Mas... Os ferimentos do Dyne foram os mesmos que os seus, certo?
+11;0;121;64;51;É, tem razão. Ele foi enganado pela Shinra também. Ele vai provavelmente se unir ao time para lutar contra a Shinra.
+11;0;122;64;50;... Eu não apostaria nisso. Eu tenho que pedir perdão ao Dyne antes que eu possa descansar em paz. E é por isso que eu tenho que ir sozinho.
+11;0;123;64;49;\"Faça o que quiser...\" É isso que quer ouvir? Bem, não vou deixar. Isso pois se você morrer, vou ter pesadelos.
+11;0;124;64;52;Barret, esse não é o fim. Você não ia salvar o Planeta?
+11;0;125;64;50;Merda! Tifa, você já deve saber tudo agora.
+11;0;126;64;51;... Tudo bem. Não sou tão diferente de você.
+11;0;127;64;52;É mais fácil de entender. É você, Barret.
+11;0;128;64;49;Aí está, Barret. Vamos dar uma visita pra esse Dyne.
+11;0;129;64;50;... Dyne... É você mesmo?
+11;0;130;64;74;Dyne: Aí está uma voz que eu não ouço há anos... Uma voz que nunca esqueceria...
+11;0;131;64;50;Eu sempre esperava revê-lo algum dia... Eu sabia que estava vivo em algum lugar... Tivemos a mesma operação... Me escute Dyne, eu quero...
+11;0;132;64;74;O que é isso? ... Eu ouço a voz dela.
+11;0;133;64;50;...?
+11;0;134;64;74;Eu ouço a voz dela, Eleanor. Me implorando... Para não odiar seus instintos podres. Por isso eu nunca o caçei...
+11;0;135;64;50;Eu sei que eu fui estúpido. Não estou te pedindo para me perdoar, mas... O que faz num lugar como esse? Por que quer matar os que nem estão envolvidos?
+11;0;136;64;74;... Por quê? E por que você liga? As pessoas mortas vão entender o \"por quê\"? O povo de Corel vai entender só ouvindo desculpas da Shinra? Eu não LIGO pro motivo! Tudo o que nos dão é artilharia e desculpas estúpidas... O que sobrou é um mundo com aflição e corações vazios...
+11;0;137;64;50;...
+11;0;138;64;74;Ainda quer ouvir o \"por quê\"? ... Beleza, vou contar. Eu quero destruir tudo. O povo dessa cidade, a própria cidade. Todo o mundo se necessário!
+11;0;139;64;74;Não sobrou mais nada pra mim. Corel, Eleanor... Marlene...
+11;0;140;64;50;Dyne, Marlene... Ela ainda está viva.
+11;0;141;64;74;...?
+11;0;142;64;50;Eu voltei pra cidade. Achei que ela tinha ido de vez. Por isso eu queria estar ao lado dela até o fim. Foi aí que achei ela... Marlene...
+11;0;143;64;74;...
+11;0;144;64;50;Ela está em Midgar. Vamos ver ela juntos, certo?
+11;0;145;64;74;Então... Ela ainda está viva... Certo, Barret. Acho que isso significa que devemos lutar.
+11;0;146;64;50;Quê!?
+11;0;147;64;74;Eleanor está sozinha, sem ninguém ao seu lado. Devo levar Marlene até ela.
+11;0;148;64;50;Dyne... Você ficou louco!?
+11;0;149;64;74;Marlene quer ver a sua mãe, não é?
+11;0;150;64;50;Pare, Dyne! Não posso morrer agora!
+11;0;151;64;74;Ah é? Saiba que minha vida já acabou faz tempo!
+11;0;152;64;50;Pare! Eu não quero lutar com você!
+11;0;153;64;49;Barret!
+11;0;154;64;49;Cloud, vai pra puta que te pariu! EU resolvo isso!
+11;0;155;64;74;Pra trás!
+11;0;156;64;74;Dyne...
+11;0;157;64;74;... Não foi só meu braço... Naquele tempo... Eu perdi algo insubstituível. Não sei onde eu errei...
+11;0;158;64;50;Dyne... Eu também não sei, cara. Temos que resolver isso... Desse jeito?
+11;0;159;64;74;Eu te disse... Eu... Quero destruir tudo... Tudo... Esse mundo louco... Até mesmo a mim...
+11;0;160;64;50;Mas e a sua filha? O que vai acontecer com a Marlene!?
+11;0;161;64;74;Pense assim... Barret... Quantos anos ela tinha naquele tempo...? Mesmo se eu fosse vê-la agora... Ela não me reconheceria... E ainda tem mais, Barret... Minhas mãos estão com sangue demais para carregar ela nos braços...
+11;0;162;64;50;...
+11;0;163;64;74;Barret...
+11;0;164;64;74;Entregue este colar para ela... Era... O amuleto... Da Eleanor... Da minha esposa...
+11;0;165;64;50;Tudo bem...
+11;0;166;64;74;... Uau... Ela já... Tem... 4 anos...
+11;0;167;64;74;Barret... Não... Faça... Nunca faça Marlene... Chorar...
+11;0;168;64;50;Dyne...?
+11;0;169;64;50;Dyne!
+11;0;170;64;50;Dy... Ne...!
+11;0;171;64;50;... Eu e você somos iguais... Minhas mãos também não estão limpas... Eu não deveria poder carregar... Marlene... Ahhhhh...
+11;0;172;0;0;Quer algo?
+11;0;173;64;50;Quero subir.
+11;0;174;0;0;Como eu disse antes, você deve ter a permissão do chefe...
+11;0;175;64;50;Dyne teve seus motivos e não pôde falar comigo. Então, eu tenho isso aqui no lugar da voz dele.
+11;0;176;0;0;Ih, mer...!
+11;0;177;64;50;Quero subir.
+11;0;178;0;0;C-certo. Você matou Dyne? Só pode. Você não estaria segurando isso se não tivesse. Então ele está morto... Talvez agora, tudo fique um pouco mais calmo. Dyne não se importava com ninguém...
+11;0;179;64;50;E quem se importa com o que você sabe, porra?
+11;0;180;0;0;C-ce-certo! Quero dizer, não, eu não sei de nada! F-foi... Mal.
+11;0;181;64;49;Então, pode nos tirar daqui?
+11;0;182;0;0;Ah é, o dono me pediu pra te dar esta carta.
+11;0;183;64;81;\"Garoto, eu ouvi do Dyne. Me perdoe por ter acusado você e seus amigos. Também, para me redimir, preparei um presentinho para usarem na sua jornada. Perdão também por não poder falar isso pessoalmente, sou um homem muito ocupado. Sinceramente, DIO.\"
+11;0;184;64;49;Um presente?
+11;0;185;0;0;O assistente parou e deixou um carrinho para vocês. Agora podem passar por desertos e rios sem nenhum problema.
+11;0;186;64;49;Hã? Tem mais na carta...
+11;0;187;0;0;\"P.S. Eu vi o Sephiroth. Ele parece ter muitos fãs com sua idade. Por que não pega um autógrafo com ele? Parece que ele foi ao Sul do rio, indo para Gongaga.\"
+11;0;188;64;49;Sephiroth... Gongaga...
+11;0;189;64;49;Tem alguém aí?
+11;0;190;64;68;Ei, Rude. De quem você gosta?
+11;0;191;64;69;...
+11;0;192;64;68;Por que está todo vermelho? Fala aí, de quem você gosta?
+11;0;193;64;69;... Da Tifa.
+11;0;194;64;68;Hum... Ela é boa mesmo. Mas pobre Elena... Ela... Você...
+11;0;195;64;69;Não, ela gosta do Tseng.
+11;0;196;64;68;Eu não sabia disso! Mas Tseng gosta daquela Antiga...
+11;0;197;64;49;Do que eles estão falando?
+11;0;198;64;70;Que estúpido! Eles sempre falam sobre quem gostam ou não gostam. Mas Tseng é diferente. Ah! Ah não!
+11;0;199;64;70;Eles estão aqui! Estão aqui mesmo!
+11;0;200;64;68;Hum... Então chegou a hora... Rude... Não pegue leve, mesmo sendo garotas.
+11;0;201;64;69;... Não se preocupe, farei meu trabalho.
+11;0;202;64;70;Então, contamos com você. Vou falar com Tseng!
+11;0;203;64;68;Quanto tempo. É a hora do troco pelo que fizeram no Setor 7.
+11;0;204;64;49;Setor 7?
+11;0;205;64;68;Que triste. Não vão passar daqui.
+11;0;206;64;52;... Como saberiam que estaríamos vindo pra cá?
+11;0;207;64;49;Eles nos seguiram... Mas não deram sinal algum. Então, isso quer dizer que...
+11;0;208;64;51;Um espião? Duvido.
+11;0;209;64;49;Eu não quero nem pensar que tem um espião...
+11;0;210;64;49;Eu confio em todos.
+11;0;211;64;49;Um reator arruinado.
+11;0;212;64;49;É Scarlet, chefe do Desenvolvimento de Armas da Shinra.
+11;0;213;64;64;... Hmph! Isso não é bom também. Você só consegue Matéria ruim de reatores ruins.
+11;0;214;64;64;Esse reator é uma falha. O que eu procuro é uma Matéria grande, enorme, gigante. Viu alguma?
+11;0;215;64;67;Não, não vi. Vamos tentar achá-la agora mesmo.
+11;0;216;64;64;Por favor. Poderiamos fazer a arma mais poderosa se tivéssemos isso.
+11;0;217;64;67;Mal posso esperar.
+11;0;218;64;64;Como Hojo se foi, nossa área têm ganhado um orçamento maior.
+11;0;219;64;67;Tenho inveja deles.
+11;0;220;64;64;Mas mesmo que façamos a arma perfeita, será que aquele tonto do Heidegger conseguiria usá-la?
+11;0;221;64;67;...
+11;0;222;64;64;Ah... Foi mal! Esqueci que ele é seu chefe! Ha ha ha!
+11;0;223;64;67;...
+11;0;224;64;64;Vamos lá!
+11;0;225;64;49;... Grande, enorme, e gigantesca? Arma mais poderosa? O que será que a Shinra quer?
+11;0;226;0;0;Há 3 anos, quando o reator explodiu, meu marido...
+11;0;227;0;0;As pessoas podem viver sem os Reatores de Mako da Shinra.
+11;0;228;0;0;Já tem um tempo que a explosão aconteceu, mas você ainda consegue achar peças dele por toda a cidade.
+11;0;229;0;0;Shinra construiu o reator, sem nem pensar na segurança da cidade. Esse, é o resultado.
+11;0;230;0;0;Um dia, teve uma explosão enorme. Muitos morreram nesse dia...
+11;0;231;0;0;Essa é a vila de Gongaga. Muitos morreram aqui quando um Reator de Mako explodiu.
+11;0;232;0;0;A galera da Shinra disse que todos estariam feliz quando terminássem de construir o Reator. Tudo o que ele nos trouxe foi tristeza...
+11;0;233;0;0;É um viajante? Espera... Esse brilho nos olhos... Você é da SOLDIER?
+11;0;234;0;0;Ah, é verdade! Sabe de algo do nosso filho?
+11;0;235;0;0;Seu nome é Zack.
+11;0;236;0;0;Já faz quase 10 anos que ele saiu, dizendo que não queria mais essa vida...
+11;0;237;0;0;Ele saiu dizendo que ia entrar pra SOLDIER. Conheceu algum Zack por lá?
+11;0;238;64;49;É... Eu não sei.
+11;0;239;64;52;Zack...
+11;0;240;0;0;Minha jovem, você conhece ele?
+11;0;241;0;0;Me lembro de ele ter nos mandado uma carta faz 6 ou 7 anos dizendo que ele teve uma namorada. Poderia ter sido você?
+11;0;242;64;52;Não pode...
+11;0;243;64;51;Zack...
+11;0;244;64;49;O que houve com vocês duas?
+11;0;245;64;49;Aeris...
+11;0;246;64;52;Estou chocada... Não sabia que Zack era dessa cidade.
+11;0;247;64;49;Conhece ele?
+11;0;248;64;49;Nunca te disse? Ele foi meu primeiro amor.
+11;0;249;64;49;...
+11;0;250;64;52;Zack... Da Primeira Classe da SOLDIER. Igual ao Cloud.
+11;0;251;0;0;Me desculpe, mas você não tem Gil suficiente!
+11;0;252;0;0;Você é um Membro de Ouro! Pode entrar!
+11;0;253;64;81;Ha ha ha, garoto, qual é o problema, é só se divertir!
+11;1;0;64;49;Que estranho, não tem muitos que chegaram na Primeira Classe, mas nunca ouvi falar dele.
+11;1;1;64;52;Tudo bem. Isso tudo é passado agora. Eu só fiquei preocupada por que ouvi que ele está perdido.
+11;1;2;64;49;Perdido?
+11;1;3;64;52;Acho que aconteceu faz 5 anos. Ele saiu para trabalhar, e nunca mais voltou. Ele amava mulheres, era um verdadeiro cavalheiro. Ele provavelmente achou outra...
+11;1;4;64;52;Ei, o que houve?
+11;1;5;64;49;...
+11;1;6;64;52;Está com... Ciúmes? Hein? Hein? Você está, Cloud?
+11;1;7;64;49;...
+11;1;8;64;52;É brincadeira. Me desculpe. Vamos embora.
+11;1;9;64;51;É bem sua cara, sair da cidade, e dizer que vai \"entrar para a SOLDIER!\"
+11;1;10;64;49;Muitos caras eram exatamente assim naquele tempo.
+11;1;11;64;51;Você deve ser muito bom se conseguiu entrar lá com tantos concorrentes. Eu realmente respeito você...
+11;1;12;64;49;Foi só sorte.
+11;1;13;64;51;Não precisa ser tão humilde!
+11;1;14;64;53;Estou em casa! Sou eu, Nanaki!
+11;1;15;0;0;Oi, Nanaki! Você está bem! Entre, e dê um oi ao Bugenhagen!
+11;1;16;64;49;... Nanaki?
+11;1;17;64;52;Desfiladeiro... Cósmico? Me pergunto se isso tem alguma relação com o planeta ou com os Antigos...
+11;1;18;64;51;RedXIII parece diferente também, não acha?
+11;1;19;0;0;Bem-vindos ao Desfiladeiro Cósmico. Já conhecem nossas terras?
+11;1;20;64;49;Não.
+11;1;21;0;0;Deixe-me explicar. Pessoas de todo o mundo se juntam aqui em busca do Estudo de Vida do Planeta.
+11;1;22;64;49;Quem é Nanaki?
+11;1;23;0;0;Nanaki é Nanaki. Esse é o nome dele.
+11;1;24;0;0;Bem-vindos ao Desfiladeiro Cósmico. Sintam-se em casa.
+11;1;25;0;0;Então aqui que é o Desfiladeiro Cósmico... Que lugar misterioso. Vieram em busca do Estudo de Vida do Planeta?
+11;1;26;0;0;Eba! Nanaki! Nanaki voltou! E quem nos ajudou foi essa chama aqui! Ela é chamada de \"Vela Cósmica\". Ela queima por gerações. É uma chama sagrada que protege o desfiladeiro. Ouvi que uma vez, ela apagou. Os sábios disseram que coisas horríveis aconteceram, mas eu não sei muito sobre isso.
+11;1;27;0;0;Bugenhagen selou bem essa porta. Como ele fez isso? Com Super Bonder?
+11;1;28;64;53;Aqui é onde eu era... Quero dizer... Aqui é minha cidade natal. Minha tribo era formada por protetores dos que apreciavam este lindo Desfiladeiro e o Planeta. Minha corajosa mãe lutou e morreu aqui, mas meu pai covarde fugiu e deixou ela para trás... Sou o último da minha raça.
+11;1;29;64;49;Pai covarde?
+11;1;30;64;53;Sim. Meu pai era um medroso. E a missão que eu herdei de meus ancestrais é a de proteger este lugar. Minha jornada acaba aqui.
+11;1;31;0;0;Ei! Nanaki! Você está de volta!
+11;1;32;64;53;Estou indo, vovô!
+11;1;33;64;51;Perfeito. Por que nós não aproveitamos para descansar também? Voltamos pra cá depois de um tempo, OK?
+11;1;34;64;53;Cloud, este é meu avó, Bugen. Ele é incrível. Ele sabe de tudo.
+11;1;35;64;83;Ho ho hoo. Ouvi que tomaram conta de Nanaki por um tempo. Sabe, ele ainda é uma criança.
+11;1;36;64;53;Por favor, pare vovô. Eu já tenho 48.
+11;1;37;64;83;Ho ho hooo. A tribo de Nanaki possue uma incrível longevidade. Seus 48 anos são equivalentes a 15 ou 16 anos humanos.
+11;1;38;64;49;15 ou 16!?
+11;1;39;64;83;Ele é quieto e bem fechado. Acharam que ele era um adulto?
+11;1;40;64;53;... Vovô. Eu quero ser um adulto. Quero crescer para poder proteger você e a vila.
+11;1;41;64;83;Ho ho hooo. Não, Nanaki. Você ainda não consegue se virar sozinho. Fazer isso agora te destruiria com certeza.
+11;1;42;64;83;Olhar muito para cima faz você perder o foco. Quando chegar a hora desse planeta morrer, você entenderá que não sabe absolutamente nada.
+11;1;43;64;49;... Morrer?
+11;1;44;64;83;Ho ho hoo. Pode ser amanhã, ou daqui a 100 anos... Mas não está longe.
+11;1;45;64;49;Como sabe disso?
+11;1;46;64;83;Eu ouço os gritos do Planeta.
+11;1;47;64;49;O que é isso?
+11;1;48;64;83;É o som das estrelas nos céus. Enquanto isso acontece, planetas nascem, e morrem.
+11;1;49;64;49;O que foi isso?
+11;1;50;64;83;Ho ho hoo. Esse foi um dos gritos deste planeta. Não o ouviu? É como se dissesse... \"Eu machuquei, eu sofro...\"
+11;1;51;64;53;Eles vieram de uma jornada para salvar o planeta. Por que não os mostra seu aparelho?
+11;1;52;64;83;Acho que não terá problemas, venham por aqui!
+11;1;53;64;83;Todos os trabalhos do espaço entram nesse modelo 3D. Com o tempo... Todos os humanos morrem. O que acontece com eles depois que morrem? O corpo decompõe, e retorna ao Planeta. Isso todos sabem. Mas e sua consciência, coração e alma? As almas retoram ao Planeta, e isso vale para todos os seres vivos no universo.
+11;1;54;64;83;Os espíritos que retornam ao Planeta se fundem com outros e vagam pelo Planeta. Eles vagam, se convergem, e depois se dividem, terminando o que chamamos de \"Fluxo de vida.\" Em outras palavras, um caminho de energia das almas que vagam por todo o Planeta.
+11;1;55;64;83;Energia Espiritual é um termo que nunca devem esquecer. Uma nova vida... Crianças são abençoadas com essa energia, e se unem ao nosso mundo. Até que elas morrem, e enfim retornam ao Planeta. Claro que existem excessões, mas é assim que tudo funciona.
+11;1;56;64;83;A Energia Espiritual faz tudo ser possível.
+11;1;57;64;83;Não só seres vivos, mas também permite que planetas sejam planetas.
+11;1;58;64;49;Então se essa Energia Espiritual acabar, nosso Planeta é destruído?
+11;1;59;64;83;Ho ho ho. Energia Espiritual é eficiente POIS ela existe na natureza. Quando ela é  forçadamente extraída e fabricada, ela não alcançará sua verdadeira proposta.
+11;1;60;64;49;Está falando da Energia de Mako, certo?
+11;1;61;64;83;Todos os dias ela suga a Energia Espiritual, a enfraquecendo. Ela é comprimida nos reatores e processada em Energia de Mako. Todos os seres vivos estão sendo usados e jogados fora. Em outras palavras, a Energia de Mako só irá destruir o Planeta...
+11;1;62;64;83;A história dos planetas... E os que viveram com eles... Querem saber mais? Então deveriam escutar as palavras dos sábios.
+11;1;63;64;52;Eu aprendi muito. Os sábios me ensinaram muitas coisas. Sobre os Cetra... E a Terra Prometida... Estou... Sozinha... Eu sozinha agora...
+11;1;64;64;49;Mas eu... Nós estamos aqui por você, certo?
+11;1;65;64;52;Eu sei, mas... Eu sou o único... dos Cetra.
+11;1;66;64;49;Isso quer dizer que não podemos ajudar?
+11;1;67;64;54;Me pergunto quanto tempo faz... Cara, isso traz muitas lembranças...
+11;1;68;64;50;Desfiladeiro Cósmico... Foi aqui que a AVALANCHE nasceu... Eu prometi aos caras que um dia... Quando salvássemos o planeta da Shinra, todos nós viríamos pra lá celebrar... Biggs... Wedge... Jessie... Agora eles já se foram... Morreram pelo planeta. Sério? Para salvar o planeta? Todos nós odiamos a Shinra... Eu nem preciso continuar, preciso? Mas eles... Eles me perdoariam?
+11;1;69;64;50;... Agora, eu não tenho certeza. Mas de uma coisa eu sei. Se tem algo que eu possa fazer para salvar o planeta... E as pessoas que vivem nele... Então eu vou fazer! Não ligo se é por justica, vingança, ou qualquer porra aí. Nem ligo pra isso. Vamos deixar eles decidirem.
+11;1;70;64;50;Ah! Eu vou fazer isso! De novo... Faço mesmo...? Ah, foda-se, A AVALANCHE renasceu!
+11;1;71;64;51;Cloud... Fogueiras são engraçadas, não acha? Elas te fazem lembrar de muitas coisas.
+11;1;72;64;51;Sabe, Cloud. Há 5 anos...
+11;1;73;64;49;O que é?
+11;1;74;64;51;Parece que... Parece que você está indo longe demais...
+11;1;75;64;51;Você ainda, ainda é... Você... Certo?
+11;1;76;64;53;... Há muito tempo... Quando eu ainda era bem pequeno, ficávamos em volta desta chama...
+11;1;77;64;49;O que houve?
+11;1;78;64;53;É sobre meus pais. Quando eu falo da minha mãe, eu fico cheio de orgulho e alegria... E isso é bom... Mas quando eu me lembro do meu pai, meu coração se enche de fúria...
+11;1;79;64;83;Não consegue perdoar seu pai?
+11;1;80;64;53;Lógico. Ele... Deixou a mamãe morrer. Quando a tribo Gi atacou, ele correu sozinho, deixando todos para trás no Desfiladeiro!
+11;1;81;64;83;... Venha, Nanaki. Tem uma coisa que você deve ver.
+11;1;82;64;53;?  ôSO lugar pode ser perigoso. Cloud, poderia vir conosco junto com os outros?
+11;1;83;64;83;O lugar pode ser perigoso. Cloud, poderia vir conosco junto com os outros?
+11;1;84;64;83;Ho ho hooo, estão prontos?
+11;1;85;64;83;Certo, entrem, por favor.
+11;1;86;64;53;Você não vem conosco, Vovô?
+11;1;87;64;83;Ficou louco? Eu já disse que é perigoso! Quer que um idoso como eu vá na frente? Vou estar atrás de vocês, não se preocupe.
+11;1;88;64;83;Ho ho hooo. Todos aqui são fantasmas da tribo Gi. Mortos em uma certa batalha.
+11;1;89;64;53;Certa batalha?
+11;1;90;64;83;Os espíritos vingativos dos Gi não desapareceram, e não conseguiram voltar ao Fluxo de Vida... Ainda tem mais para ver, ho ho hooo.
+11;1;91;64;83;Como podem ver, esta caverna leva aos fundos do Desfiladeiro Cósmico. Os Gi eram maiores que nós. Se eles atacassem por aqui, não teríamos chance.
+11;1;92;64;53;...
+11;1;93;64;83;Vamos em frente.
+11;1;94;64;83;Este guerreiro passou pela caverna sozinho. Lutando cada um que via...
+11;1;95;64;53;Vovô... O guerreiro...
+11;1;96;64;83;Ho ho hooo. Estamos quase lá.
+11;1;97;64;83;O que é isso?
+11;1;98;64;53;Vovô?
+11;1;99;64;83;Após a morte... Os fantasmas dos Gi... Como ar parado... Não pode ser!
+11;1;100;64;83;Obrigado por nos ajudar, Cloud. Nanaki, você ficou bem forte também.
+11;1;101;64;53;... É mesmo?
+11;1;102;64;83;Agora eu sei que não foi um erro te trazer aqui... Venha, eu tenho algo que eu quero mostrar. Logo ali.
+11;1;103;64;53;Esse é...
+11;1;104;64;83;... O guerreiro que lutou contra os Gi. Ele não os deixou dar nenhum passo dentro do Desfiladeiro Cósmico. Mas ele nunca pôde voltar para a cidade...
+11;1;105;64;83;Olhe, Nanaki. Olhe para o seu pai, ao guerreiro, Seto.
+11;1;106;64;53;... Este é... Este é... Seto?
+11;1;107;64;83;Ele continuou a lutar contra a tribo Gi aqui... Para proteger este Desfiladeiro. Mesmo após as flechas venenosas transformarem seu corpo em pedra... Mesmo depois de todos os inimigos fugirem... Seto, continua nos protegendo. E continua até os dias de hoje.
+11;1;108;64;53;Até agora...
+11;1;109;64;83;Você pensou que ele foi um covarde e fugiu. Mas ele, sozinho, arriscou a sua vida para proteger o Desfiladeiro Cósmico. Este é seu pai, Seto.
+11;1;110;64;53;Esse... Esse é Seto? E a mamãe sabia?
+11;1;111;64;83;Ho ho hooo... Ela sabia. Os 2 me fizeram prometer em manter esta caverna trancada. Eles me pediram para selá-la e não dizer a ninguém. Disseram que deveríamos esquecer esta caverna.
+11;1;112;64;53;...
+11;1;113;64;83;Cloud... Se importaria de nos deixar sozinhos?
+11;1;114;64;83;Nanaki, eu quero que continue sua jornada com Cloud e os outros.
+11;1;115;64;53;Vovô!?
+11;1;116;64;83;Ouça, Nanaki. Cloud disse que estão tentando salvar o planeta. Honestamente, não creio que possa ser feito. Mesmo que parem cada reator no planeta, só vai adiar o inevitável. Mesmo se pararem Sephiroth, tudo morrerá.
+11;1;117;64;83;Mas... Nanaki. Eu estive pensando ultimamente. Estive pensando se tem algo que nós possamos fazer. Sendo parte do planeta, fazer algo para ajudar um planeta em miséria... Não importa o que aconteça, é importante tentar, certo? Eu estou desejando contra o destino?
+11;1;118;64;83;Eu sou muito velho para fazer algo... Esse ano, eu faço 130. Ho ho hooo.
+11;1;119;64;83;É por isso, Nanaki, que você deve ir com eles! Por mim.
+11;1;120;64;53;Vovô...
+11;1;121;64;83;Eu queria te mostrar seu pai de verdade antes de ir... Estou feliz que voltou enquanto eu ainda estava vivo.
+11;1;122;64;53;Vovô... Não diga isso. Não quero pensar na vida... Sem você...
+11;1;123;64;83;Ho ho hooo. Bem, eu tive uma vida longa.
+11;1;124;64;53;Vovô! Você deve viver! Eu vou lá ver. Vou ver o que está acontecendo ao planeta, e vou voltar para te contar.
+11;1;125;64;83;Nanaki...
+11;1;126;64;53;Sou Nanaki do Canyon Cosmo! O filho do guerreiro, Seto! Voltarei como um guerreiro leal ao nome do meu pai! Então por favor, vovô...
+11;1;127;64;83;Esse é... Seto está... Seto...
+11;1;128;64;53;Seto... Pa... Pai...
+11;1;129;64;49;Podemos seguir em frente?
+11;1;130;64;52;Então é isso, RedXIII...
+11;1;131;64;50;Assim que são as coisas... Você foi útil ás vezes...
+11;1;132;64;53;Esperem por mim! Eu vou também!
+11;1;133;64;49;Hã?
+11;1;134;64;83;Cloud, por favor tome conta de Nanaki.
+11;1;135;64;49;O que houve?
+11;1;136;64;53;Sinto que cresci um pouco. Isso foi o que aconteceu!
+11;1;137;0;0;RedXIII se une ao time.
+11;1;138;64;51;O que...!
+11;1;139;64;51;Não deveria estar tudo queimado?
+11;1;140;64;49;Acho que sim.
+11;1;141;64;51;Então... Como minha casa está aqui...?
+11;1;142;64;51;... Tem algo estranho...
+11;1;143;64;49;Não estou mentindo!
+11;1;144;64;49;Eu me lembro... Do calor intenso das chamas...
+11;1;145;64;49;Essa cidade deveria ter sido queimada há 5 anos. Que porra está acontecendo?
+11;1;146;0;0;Senhor, não diga coisas tão horríveis. Eu nasci e cresci nesta cidade. O que diz nunca aconteceu.
+11;1;147;64;49;Está mentindo...
+11;1;148;0;0;COM LICENSA... Que rude... Se for falar desse jeito comigo, terei que pedir para saírem daqui.
+11;1;149;0;0;Cidade bonita, não acha? Estive trabalhando aqui por muito tempo...
+11;1;150;64;49;... Está mentindo.
+11;1;151;0;0;Você tem algum problema comigo ou com esta cidade?
+11;1;152;64;49;Que tal ter nascido e crescido aqui?
+11;1;153;64;49;Eu vivi aqui até os 14 e não me lembro de você.
+11;1;154;0;0;Mentir é feio, sabia?
+11;1;155;64;49;Um homem com uma Capa Preta?
+11;1;156;0;0;Pode... Ouvir? A... Voz... De... Se... Phi... Ro... Th... O... Grande... Seph... Iroth... Está... Perto... Da mansão... Ele está... Chamando... Sephiroth... Está... Chamando... Urrrrrrgh...
+11;1;157;64;49;A mansão... A mansão da Shinra?
+11;1;158;0;0;Devo... Ir. Re... U... Nião...
+11;1;159;0;0;Tradução feita por: O lindo, gostoso, delicioso, sonho de consumo da mulherada: Gutembergh. Ah é, o Redarts ajudou.
+11;1;160;0;0;Tradução feita por: O lindo, gostoso, delicioso, sonho de consumo da mulherada: Gutembergh. Ah é, o Redarts ajudou.
+11;1;161;64;49;Sephiroth!
+11;1;162;64;60;Estar aqui me traz lembranças. Vai participar da Reunião?
+11;1;163;64;49;Eu nem sei o que isso significa!
+11;1;164;64;60;Jenova estará lá. Jenova irá se juntar com a Reunião virando uma calamidade dos céus.
+11;1;165;64;49;Jenova, uma calamidade dos céus? Quer dizer que ela não era uma Antiga?
+11;1;166;64;60;... Entendi. Não acho que você tenha o direito de participar. Irei ao Norte, depois do Monte Nibel. Você quer descobrir...? Então me siga...
+11;1;167;64;49;... Reunião? Calamidade dos céus?
+11;1;168;64;49;O que foi isso!?
+11;1;169;64;49;Um foguete velho e enferrujado... Por que será que fariam algo tão grande?
+11;1;170;0;0;de dos céus? Quer dizer que ela não era uma Antiga?
+11;1;171;0;0;O Capitão foi um piloto quando a Shinra ainda estava interessada no seu Programa Espacial. Ele seria o primeiro astronauta do mundo, mas teve um acidente. Desde então, ele desperdiçou sua vida inteira aqui sonhando em ir ao Espaço Cideral.
+11;1;172;0;0;Tradução feita por: O lindo, gostoso, delicioso, sonho de consumo da mulherada: Gutembergh. Ah é, o Redarts ajudou.
+11;1;173;0;0;Tradução feita por: O lindo, gostoso, delicioso, sonho de consumo da mulherada: Gutembergh. Ah é, o Redarts ajudou.
+11;1;174;0;0;Todos nessa cidade foram mecânicos quando estavam pensando em lançar o foguete.
+11;1;175;0;0;Aquele foguete enferrujado é tudo o que sobrou do Programa Espacial da Shinra.
+11;1;176;0;0;Aqui foi uma base da Shinra onde costumavam lançar foguetes.
+11;1;177;0;0;Você viu o foguete inclinado, certo? Aquele é o n.26 da Shinra. Nunca saiu do chão.
+11;1;178;0;0;Já conheceram o Capitão? Ele é o representante da cidade, então deveriam falar com ele.
+11;1;179;64;49;Tem a marca da Shinra ali. \"Pequeno Bronco\". Isso é legal.
+11;1;180;64;51;Vamos entrar! OK, Cloud?
+11;1;181;0;0;É... Posso ajudar?
+11;1;182;64;49;Não... Estamos só olhando.
+11;1;183;0;0;Se quiserem usá-lo, por favor peçam ao Capitão. Ele deve estar lá no Foguete. Sou Shera. Quais são seus nomes?
+11;1;184;64;49;Sou Cloud.
+11;1;185;64;53;Sou RedXIII.
+11;1;186;64;51;O meu é Tifa. É um prazer.
+11;1;187;0;0;Shera: Hmm... Então não estão com a Shinra. Pensei que a aprovação da reabertura do Programa Espacial chegou.
+11;1;188;64;49;!?
+11;1;189;0;0;O Presidente Rufus foi programado para vir para cá. O Capitão não conseguiu dormir de tanta ansiedade.
+11;1;190;64;49;Rufus!?
+11;1;191;64;55;O que vocês estão fazendo aqui?
+11;1;192;64;49;Ouvimos que o Capitão estava aqui.
+11;1;193;64;55;Capitão? Eu sou esse cara! Meu nome é Cid. Todos me chamam de Capitão. O que vocês querem?
+11;1;194;64;49;Nos conte sobre este foguete.
+11;1;195;64;55;Cid: Uau! Nada mal para uma criança. Tudo bem, eu vou explicar para vocês.
+11;1;196;64;55;Você sabe que a Shinra desenvolveu muitas ferramentas tecnológicas durante a guerra sem sentido, certo? Agora é uma companhia de Mako, mas antigamente, eles trabalhavam com armas.
+11;1;197;64;55;Bem, eles vieram com um Motor de Foguete. Houveram muitos experimentos sobre ir ao Espaço Cideral. Nossos sonhos ficavam maiores a cada dia que passava. Um dia, colocaram um orçamento grande nele! Finalmente, a n.26 da Shinra foi completa. Quem seria o piloto? Escolheram o melhor da Shinra... Não. Do mundo... Eu. Assim, eu sou \"O Capitão\".
+11;1;198;64;55;E finalmente chegou o dia do lançamento. Tudo estava indo bem...
+11;1;199;64;55;Mas, por culpa daquela besta da Shera, o lançamento falhou. Por isso eles viraram um bando de bundões!
+11;1;200;64;55;E então, Shinra abandonou seus planos de ir ao Espaço Cideral. Depois de me falarem que \"O futuro é a Exploração Espacial\", minhas esperanças foram ao máximo... FILHOS DA PUTA!
+11;1;201;64;55;Então, tudo acabou quando descobriram que poderiam fazer dinheiro com a tal da Energia de Mako. Eles nem ligavam mais para o Espaço, e o que poderiam ter descoberto nele.
+11;1;202;64;49;Todos os dias, eu me irrito com isso mais e mais. Agora, eu nem sei o que vem primeiro: Essa coisa cair, ou eu meter o pé daqui.
+11;1;203;64;49;Minha última esperança é a de falar com o Presidente...
+11;1;204;0;0;Com licensa... Cloud? O Capitão disse algo?
+11;1;205;64;49;Não...
+11;1;206;0;0;Hã...?
+11;1;207;64;55;Porra Shera! Você é cega ou o quê? Temos visitas! VAI PEGAR ALGO PARA ELES! Que bosta!
+11;1;208;0;0;Me... Me perdoe.
+11;1;209;64;49;Sério, não se importe conosco.
+11;1;210;64;55;Cala a boca! Senta a bundinha aí na cadeira e bebe essa PORRA! AAAH! Merda, já tou puto! Shera, vou estar nos fundos preparando o \"Pequeno Bronco\". Não se esquece de servir chá! Beleza?
+11;1;211;64;52;Caramba... Que mal comportamento!
+11;1;212;64;49;Desculpe, foi nossa culpa.
+11;1;213;0;0;Não, não. Ele sempre é assim.
+11;1;214;64;49;Sempre...? Por que ele age assim com você?
+11;1;215;0;0;É por culpa do meu erro estúpido. Eu destruí os sonhos dele...
+11;1;216;64;49;O que houve?
+11;1;217;0;0;Depois daquilo, o Programa Espacial foi cortado e o lançamento foi cancelado. É minha culpa seus sonhos terem sido destruídos...
+11;1;218;0;0;É por isso... Está tudo bem. Não ligo pro que ele diz, ainda viverei minha vida por ele.
+11;1;219;64;55;Shera! Você ainda não os serviu a merda do chá!
+11;1;220;0;0;Me... Me perdoe.
+11;1;221;64;55;Rápido, senta aí! Ou minha hospitalidade não é o suficiente!?
+11;1;222;64;55;Estão atrasados... Onde está o Rufus?
+11;1;223;0;0;Ei-EI! Quanto tempo! Então Cid, como vai a vida?
+11;1;224;64;55;Bem, se não é o gordão, Palmer. Quanto tempo eu fiquei esperando! E então?
+11;1;225;64;55;Quando o Programa Espacial vai recomeçar?
+11;1;226;0;0;Ei-ei! Acho que o Presidente está lá fora, então por que não pergunta pra ele?
+11;1;227;64;55;Porra! Valeu então, seu gordo filho da puta!
+11;1;228;0;0;Não diga gordo!
+11;1;229;0;0;Ei-ei! Chá! Posso tomar um pouco? Com muito açúcar e mel e... Ah é, não esquece da banha!
+11;1;230;64;62;Eu quero o \"Pequeno Bronco\" emprestado. Estamos atrás de Sephiroth. Mas parece que estamos indo na direção errada. Agora, sinto que sei para onde ele foi. Mas, teremos que cruzar os oceanos. Por isso, precisaremos do seu avisão.
+11;1;231;64;55;Que porra é essa? Primeiro o Dirigível, depois o Foguete, e agora o meu \"Pequeno Bronco\"? Shinra tirou o Espaço Cideral de mim, e agora querem tirar os céus também!?
+11;1;232;64;62;Ah meu... Você esqueceu que fomos nós que o fizeram voar.
+11;1;233;64;55;Quê!?
+11;1;234;0;0;É, com licensa...
+11;1;235;0;0;Por aqui...
+11;1;236;0;0;Querem usar o \"Pequeno Bronco\", certo?
+11;1;237;0;0;Acredito que Palmer vai pegá-lo. Por que não conversam com ele?
+11;1;238;0;0;Hmm... Por que eu tenho que fazer isso...? Eu sou o líder do Programa Espacial...
+11;1;239;64;49;Vamos pegar o \"Pequeno Bronco\".
+11;1;240;0;0;Já vi vocês em algum lugar antes...
+11;1;241;0;0;Já sei! O prédio da Shinra! Quando o Presidente foi morto! Eita... Se... Se... SEGURANçAS!
+11;1;242;64;51;Não vai parar!
+11;1;243;64;49;Esquece! Entra logo!
+11;1;244;64;55;Merda! Nos acertaram!
+11;1;245;64;49;Pouso de emergência...
+11;1;246;64;55;Vai ser uma queda das feias! Se segurem aí!
+11;1;247;64;55;Ela não vai voar mais.
+11;1;248;64;49;Não podemos usar isso como barco?
+11;1;249;64;55;Usa ele como você quiser! Pra tomar no cú serve!
+11;1;250;64;49;Cid, o que vai fazer agora?
+11;1;251;0;0;Jovem, você veio em minha casa, qual é o problema?
+11;2;0;64;55;Não sei. Fiquei sabendo da história com Shinrae desisti  da cidade.
+11;2;1;64;49;Que tal sua esposa?Que tal Shera?
+11;2;2;64;55;Esposa? Não me faça rir! Só de pensar em \"casar\" com ela me dá arrepios. O que vocês vão fazer?
+11;2;3;64;49;Vamos atrás de um homem chamando Sephiroth. Também vamos dar umjeito no Rufus da Shinra qualquer dia.
+13;0;0;64;50;Você pareceu que estava num pesadelo. Como se sente?
+13;0;1;64;49;Eu me sinto OK.
+13;0;2;64;50;Isso é bom. Caraca, eu não sabia o que iria acontecer.
+13;0;3;64;51;Sabe, Cloud. Aeris sumiu.
+13;0;4;64;50;Todos estão procurando por ela.
+13;0;5;64;49;... A Cidade dos Antigos. Aeris foi para lá.
+13;0;6;64;50;Sozinha!? Por que ela foi sozinha? Ei, vamos lá também.
+13;0;7;64;49;Apenas os Antigos, apenas Aeris pode nos salvar do Meteoro...
+13;0;8;64;51;Então devemos ir. O que faremos se algo acontecer com ela? Se Sephiroth a encontrar, ela vai ter problemas.
+13;0;9;64;49;Sephiroth... Já sabe.
+13;0;10;64;50;Ei! Por que ainda estão parados aí?
+13;0;11;64;51;Vamos, Cloud.
+13;0;12;64;49;Não.
+13;0;13;64;49;Eu posso perder o controle mais uma vez. Se Sephiroth chegar perto de mim eu posso...
+13;0;14;64;50;É, que merda! É culpa sua Sephiroth ter pego a Matéria Negra. É SUA culpa!
+13;0;15;64;49;Minha?
+13;0;16;64;50;Eu sei que você tem seus problemas... Mas porra, todo mundo tem. Pra falar a verdade, você nem conhece você mesmo. Você tem que entender que ninguém vai pular pra fora desse trem que estamos, até chegar no ponto final.
+13;0;17;64;51;Cloud, chegamos tão longe... Você não vai nem resolver isso com Sephiroth?
+13;0;18;64;49;Não...
+13;0;19;64;49;Estou preocupado. Se isso continuar, eu vou enlouquecer! Estou com medo...
+13;0;20;64;50;Sabe o que você é? Um babaca, um imbecil... Olha, pensa assim: Quantas pessoas nesse mundo de bosta você acha que conhecem a si mesmas? As pessoas pegam depressão por que não sabem que porra tá acontecendo. Mas mesmo assim, elas estão lá vivendo. Elas não fogem... Não é assim?
+13;0;21;64;51;Cloud... Você vem, certo? Eu confio em você.
+13;0;22;64;49;O que... Eu tenho que fazer? Me arrastar pra fora daqui? Me arrastar... Pra onde?
+13;0;23;64;51;Cloud...
+13;0;24;64;50;Espera um pouco, Tifa. Vamos dar um tempinho pra ele. Ele tem que decidir sozinho.
+13;0;25;64;50;Você acredita nele... Certo?
+13;0;26;64;49;... Estou com medo de encontrar a verdade...? Mas... Por quê?
+13;0;27;0;0;Já acordou? Essas pessoas estavam tão preocupadas que não saíram do seu lado até acordar. Você tem ótimos amigos.
+13;0;28;64;51;Cloud...
+13;0;29;64;50;Ei, como você está? Só quero saber, qual você vai escolher: Quer se descobrir? Ou prefere ficar com medo de tudo? De qualquer jeito, você fica por aqui e tudo o que pode fazer é se preocupar com isso. Mesmo se ficar louco ao ver Sephiroth de novo... Se acontecer, aconteceu. Eu puxo o seu cabelinho espetado e você volta ao normal.
+13;0;30;64;51;Cloud, vai ficar tudo bem. Estaremos com você.
+13;0;31;64;49;Mas...
+13;0;32;64;50;Já falei, se acontecer, aconteceu. Relaxa!
+13;0;33;0;0;... Você está... Certo... Ele está certo, não é?
+13;0;34;64;51;Vamos logo, temos que encontrar Aeris!
+13;0;35;0;0;Aqui é a Aldeia dos Ossos, uma cidade para amantes da natureza. O que desejam?
+13;0;36;0;0;Onde está a Cidade dos Antigos?
+13;0;37;0;0;A Cidade dos Antigos? Ah, quer dizer a Cidade Perdida.
+13;0;38;64;49;Sabe onde Aeris está?
+13;0;39;0;0;Está falando daquela jovem? Eu a avisei, mas ela foi para a Mata do Sono mesmo assim.
+13;0;40;64;49;O que estão fazendo?
+13;0;41;0;0;Estamos escavando. É como se o solo nos contasse a história do Planeta.
+13;0;42;0;0;Você pode acordar a Mata do Sono se encontrar a Harpa Lunar. Uma vez que acordá-la, dizem que a floresta abrirá um caminho para você. A garota de rosa também usou uma Harpa Lunar para passar.
+13;0;43;0;0;Depois daqui você encontrará a \"Mata do Sono\". Agora, ela está dormindo, e qualquer um que andar nela enquanto ela dorme pode nunca mais voltar...
+13;0;44;0;0;Mas tem pouco tempo que uma moça de rosa e um rapaz com uma Capa Preta entraram. Acha que eles ficarão bem?
+13;0;45;0;0;A Harpa Lunar está em algum lugar no solo por aqui. Podemos escavá-la para vocês se quiserem.
+13;0;46;64;49;Pode começar.
+13;0;47;0;0;Não é só da Harpa Lunar que estão atrás. Para que mais você quer nos fazer cavar?
+13;0;48;0;0;Tesouro comum.
+13;0;49;0;0;Bom tesouro     Harpa Lunar     
+13;0;50;0;0;Harpa Lunar.
+13;0;51;0;0;Beleza! Então vou te mandar parte da minha equipe. Nos mostre onde você quer cavar!
+13;0;52;0;0;Selecione o ponto de escavação movendo até ele e apertando o botão A.
+13;0;53;0;0;As pilhas de pedras indicam onde podemos cavar. Cada escavação custa 100G. Achou que ia ser de graça?
+13;0;54;0;0;Agora, nossa equipe irá cavar aqui.
+13;0;55;0;0;A Mata do Sono acordou...
+13;0;56;64;55;E, e ela parece bem confortável.
+13;0;57;64;51;Podemos descansar aqui?
+13;0;58;0;0;Sim             Não             
+13;0;59;0;0;Não.
+13;0;60;0;0;Sim.
+13;0;61;64;49;Eu sinto...
+13;0;62;64;50;Você sabe que HORAS são?
+13;0;63;64;49;Aeris está aqui... Junto com Sephiroth
+13;0;64;64;54;Ou, ou, ou. Espera. É sério?
+13;0;65;64;53;Mas como sabe disso?
+13;0;66;64;49;... Não é uma desculpa. Eu sinto em minha alma.
+13;0;67;64;55;Merda, Cloud. Se ela está em perigo, não podemos ficar aqui com as bundas no chão.
+13;0;68;64;49;... Certo. Vamos correr e encontrar Aeris.
+13;0;69;64;49;A voz da Aeris... Vindo dali?
+13;0;70;64;49;Aeris?
+13;0;71;64;55;Cloud!
+13;0;72;64;51;Pare!
+13;0;73;64;49;Ugh... O que estão me levando a fazer?
+13;0;74;64;49;... Aeris.
+13;0;75;64;49;Isso não pode ser verdade!
+13;0;76;64;60;Não se preocupe. Em breve a garota será parte da Energia do Planeta. Tudo o que resta é ir para o Norte. A Terra Prometida espera por mim nos campos de neve. Lá, eu me tornarei um novo ser me unindo com o Planeta. Como essa garota acaba de fazer...
+13;0;77;64;49;...cala a boca.
+13;0;78;64;49;O Ciclo da Natureza e seu plano estúpido não querem dizer nada.
+13;0;79;64;49;Aeris se foi. Ela nunca mais falará, rirá, chorará... Ou sentir raiva...
+13;0;80;64;49;E a gente... O que A GENTE deveria fazer?
+13;0;81;64;49;E a minha dor?
+13;0;82;64;49;Meus dedos estão formigando. Meus lábios estão secos. Meus olhos estão queimando!
+13;0;83;64;60;O que está dizendo? Está tentando dizer a mim que você tem sentimentos também?
+13;0;84;64;49;É claro! Quem acha que eu sou!?
+13;0;85;64;60;Ha, ha, ha... Pare de agir como se estivesse triste. Não precisa agir como se estivesse furioso também.
+13;0;86;64;60;O motivo, Cloud... É que você é...
+13;0;87;0;0;Jenova: Pois, você é... Um fantoche.
+13;0;88;64;49;Sou um... Fantoche?
+13;0;89;64;49;Todos vocês, me escutem.
+13;0;90;64;49;Sou Cloud, ex-SOLDIER, nascido em Nibelheim. Eu vim resolver as coisas com Sephiroth.
+13;0;91;64;54;... O que está acontecendo?
+13;0;92;64;49;Eu vim aqui por vontade própria... Ou foi o que pensei. Porém...
+13;0;93;64;49;... Para ser sincero, estou com medo de mim mesmo.
+13;0;94;64;49;... Tem uma parte de mim que eu não entendo. Essa parte que me fez entregar a Matéria Negra para Sephiroth.
+13;0;95;64;49;Se não tivessem me parado, Aeris poderia ter sido... Tem algo dentro de mim. Uma pessoa que não sou eu.
+13;0;96;64;49;E é por isso que eu deveria abandonar essa jornada. Antes que eu faça algo terrível.
+13;0;97;64;49;Mas eu estou indo. Ele destruiu minha cidade natal faz 5 anos, matou Aeris, e agora está tentando destruir o Planeta. Eu nunca vou perdoá-lo... Sephiroth.
+13;0;98;64;49;Eu... Eu devo seguir em frente.
+13;0;99;64;49;... Eu tenho um favor para pedir. Vocês todos vem comigo?
+13;0;100;64;49;... Para me salvar de fazer algo terrível.
+13;0;101;64;55;Bem, vamos enfrentar isso quando acontecer.
+13;0;102;64;49;Eu não sei como Aeris tentou salvar o Planeta do Meteoro. E eu acho que agora, nunca saberemos. Mas!
+13;0;103;64;49;Ainda temos uma chance. Devemos conseguir aquela Matéria Negra de volta antes que Sephiroth a use. Vamos lá.
+13;0;104;64;53;Sephiroth... Pra que lado será que ele foi?
+13;0;105;64;49;... Ugh.
+13;0;106;64;50;Ei, ei! Tudo bem contigo?
+13;0;107;64;49;Hmm... Sephiroth disse pra mim... Seguir pelo North... Depois dos Campos de Neve...
+13;0;108;0;0;Na próxima, vou fazer um maior ainda.
+13;0;109;0;0;Está quase pronto!
+13;0;110;0;0;Meu garoto se machucou na hora que nos movemos para cá... Nunca deveria ter comprado um snowboard para ele.
+13;0;111;0;0;Imagine traduzir um jogo ruim.     Esse meme foi feito pela gangue Redarts e Gutembergh.
+13;0;112;0;0;Imagine traduzir um jogo ruim.     Esse meme foi feito pela gangue Redarts e Gutembergh.
+13;0;113;0;0;Meu marido saiu faz 20 anos atrás e ainda não voltou. Ele deve estar pelo menos no pé dos Penhascos Gaea. Está marcado no mapa... Ouvi que ele conhece cada canto da Geleira!
+13;0;114;0;0;É quase impossível chegar nos limites do Norte sem um mapa. Se pensam em chegar lá, melhor pegar o mapa no muro.
+13;0;115;0;0;Ouviu falar da colina deformada nessa cidade? É dito que está fora dos limites!
+13;0;116;0;0;Não, não faça isso! É uma ladeira indo para baixo daqui pra frente! É perigoso, por favor não vá!
+13;0;117;64;49;Ainda estou indo.
+13;0;118;0;0;Cara, eu só tava sendo bondoso... Mas o que? Quem são aquelas pessoas ali? Parece que vai dar problema!
+13;0;119;64;70;Lá estão eles, rápido!
+13;0;120;64;76;Sim Senhora!
+13;0;121;64;70;Cloud... Ufa... Não vou deixar você fugir de mim!
+13;0;122;64;49;O que tem lá  embaixo?
+13;0;123;64;70;É algo que eu chamo de... SE-GRE-DO! Realmente não importa! Mas você tem muita coragem por ter matado meu chefe![EMD-0A]ô1Chefe... Tseng? Não fomos nós, mas sim Sephiroth.
+13;0;124;64;49;Chefe... Tseng? Não fomos nós, mas sim Sephiroth.
+13;0;125;64;70;Não! Não tente me enganar, mentiroso!
+13;0;126;64;49;Não estou mentindo... Foi Sephiroth.
+13;0;127;64;70;Não se faça de inocente. Nunca vou esquecer disso!
+13;0;128;64;49;Ai, cara...
+13;0;129;64;70;Parece que só falar não adianta. Vocês vão ter que sentir um pouco de dor!
+13;0;130;64;70;Não, eu não consigo lidar com ele! É impossível ele ter esquivado do meu soco.
+13;0;131;64;76;Quê? É...
+13;0;132;0;0;...
+13;0;133;0;0;Imagine traduzir um jogo ruim.     Esse meme foi feito pela gangue Redarts e Gutembergh.
+13;0;134;0;0;Imagine traduzir um jogo ruim.     Esse meme foi feito pela gangue Redarts e Gutembergh.
+13;0;135;64;70;Tome isso!
+13;0;136;64;76;Ele... Elena!!
+13;0;137;0;0;Andy: Eu me machuquei no meu snowboard, e agora não posso sair por um tempo... Ei, eu vou te dar meu snowboard. Me fala quando ficar bom nele.
+13;0;138;0;0;Ganhou Snowboard.
+13;0;139;0;0;Você não tem nem um snowboard, nem um mapa. Se sair agora, o que vai conseguir é morrer mesmo. Não posso deixar você passar.
+13;0;140;64;49;Ugh...
+13;0;141;64;49;Acho que estamos inteiros. Todos estão bem?
+13;0;142;64;51;De algum jeito, sim.
+13;0;143;64;55;Eu não posso estar fazendo isso! Caralho!
+13;0;144;64;49;Então, onde estamos? Parece que pulamos pra bem longe...
+13;0;145;64;49;É frio demais. Vamos congelar se ficarmos parados.
+13;0;146;0;0;Já acordou?
+13;0;147;0;0;Vocês desmaiaram na Geleira. É um milagre vocês estarem bem. Meu nome é Holzoff. Eu vivo aqui tem 20 anos. Se querem ir ao Norte, melhor ouvirem minha história. Por que não vamos para a outra sala e sentamos?
+13;0;148;0;0;Holzoff: Já te falaram sobre os que desafiaram o penhasco?
+13;0;149;64;49;Ainda não.
+13;0;150;0;0;Existe uma lenda antiga que diz que algo caiu do céu aqui faz um bom tempo. É dito que foi o que empurrou essa terra para cima, e criou este penhasco. Há 30 anos, Yamski e eu enfrentamos este penhasco para ver o que tinha do outro lado. Mas, não estávamos preparados. Esperávamos a temperatura baixa, mas... No penhasco, enfrentamos ventos frios, que reduzem sua temperatura.
+13;0;151;0;0;Yamski estava atrás de mim. Ele cortou sua própria corda... E eu nem percebi...
+13;0;152;0;0;Daí em diante, eu fiquei aqui... Continuando a desafiar o penhasco, e providenciar avisos e abrigo para os meus amigos escaladores.
+13;0;153;64;50;Sabe, eu estive pensando...
+13;0;154;64;49;O que é?
+13;0;155;64;50;Ver um lugar como esse faz você perceber quão foda a natureza é. Mas, se alguém me dissessse para morar aqui, eu mandaria ele... Você sabe... Vou te falar uma coisa: Se eu morasse aqui eu mudaria as coisas para fazer ele ficar melhor. Acho que o contrário disso aqui seria... Midgar. Quando vê por esse ponto, Shinra não parece ser tão ruim...
+13;0;156;64;50;Urrrgh! Que porra eu tou falando!? A Shinra não ser ruim?
+13;0;157;64;49;Devemos seguir em frente.
+13;0;158;0;0;Errrgaahhh!!
+13;0;159;64;49;Uma cratera velha... Algo caiu do céu e bateu aqui... Deixando uma cicatriz no planeta.
+13;0;160;64;53;Incrível, o planeta juntou toda aquela energia para tentar se recuperar...
+13;0;161;64;49;Sephiroth pegou essa energia e está tentando usar o Meteoro. Na próxima o ferimento não será tão pequeno.
+13;0;162;64;51;A hora chegou para resolver as coisas com o Sephiroth, hein?
+13;0;163;64;51;Eu, também perdi muitas coisas por culpa dele.
+13;0;164;64;51;Vamos lá!
+13;0;165;64;49;Mas é o...!
+13;0;166;64;62;Finalmente os encontrei.
+13;0;167;64;64;Kyaa haa hah.
+13;0;168;64;64;Gya ha ha. Ha ha. Haa... Hah.
+13;0;169;64;63;Essa é a \"Terra Prometida\" que o Presidente esteve procurando.
+13;0;170;64;62;Mas, serei eu quem chegará nela.
+13;0;171;64;62;Perdão, meu velho.
+13;0;172;64;65;Heh heh heh...
+13;0;173;64;65;Essa terra não é de ninguém.
+13;0;174;64;65;É onde a Reunião acontecerá... Todos irão se juntar aqui... Será que veremos o... Sephiroth?
+13;0;175;64;49;Sephiroth!
+13;0;176;64;60;Esse é o fim! Está certo. É o fim da utilidade deste corpo.
+13;0;177;64;49;Ele desapareceu!?
+13;0;178;64;51;Ele pode ainda estar perto...
+13;0;179;0;0;Nossa proposta é entregar a Matéria Negra ao nosso mestre.
+13;0;180;64;49;Nosso...?
+13;0;181;64;55;Ei, ei! O que está acontecendo aí?
+13;0;182;64;49;Mestre...!?
+13;0;183;0;0;É claro... Sephiroth.
+13;0;184;64;49;As células de Jenova... Hum. Então era disso que estavam falando. A Reunião de Jenova...
+13;0;185;64;51;Não é Sephiroth!? Quer dizer que durante esse tempo todo, não era dele que estávamos atrás?
+13;0;186;64;49;Explico depois. Agora, a única coisa que penso é derrotar Sephiroth.
+13;0;187;64;51;Mas Sephiroth está...
+13;0;188;64;49;Ele está aqui. O verdadeiro Sephiroth está logo depois daqui. É incrivelmente perverso e cruel... Mas emana um poderoso desejo no fundo do ferimento deste planeta.
+13;0;189;64;49;... As Matérias Negras estão em nossas mãos. Agora tudo o que devemos fazer é derrotar Sephiroth, e será o fim.
+13;0;190;64;51;Melhor não levar a Matéria Negra para lá. Por que não a entrega para que alguém a segure?
+13;0;191;64;53;Quer que eu a segure? ... Tudo bem, eu entendo.
+13;0;192;64;49;Não a entregue a ninguém. Conto com você.
+13;0;193;64;51;Vamos encontrar Sephiroth!
+13;0;194;64;49;Nós vamos na frente! Vocês ficam por aqui na vigia.
+13;0;195;64;51;O quê? O que é isso?
+13;0;196;64;49;Acalme-se, Tifa. Sephiroth está próximo. Tudo pode acontecer.
+13;0;197;64;51;Nibelheim...
+13;0;198;64;49;Isso é uma ilusão feita por Sephiroth. Ele está tentando nos enganar. Não se preocupe, Tifa... Enquanto soubermos que é uma ilusão, não temos nada a temer. Venha, vamos seguir em frente.
+13;0;199;64;51;É, está certo... Hã!? Cloud, olha!
+13;0;200;64;60;Certo, vamos lá.
+13;0;201;64;51;Pare... Sephiroth.
+13;0;202;64;49;Isso é estúpido.
+13;0;203;64;51;Cloud... É só uma ilusão, não se preocupe.
+13;0;204;64;49;O que vem agora?
+13;0;205;64;51;Já pode parar!
+13;0;206;64;49;... Isso foi o que aconteceu há 5 anos atrás. Mas provavelmente não serei quem vai sair da mansão. Ele vai tentar nos mostrar outra ilusão estúpida.
+13;0;207;64;49;Aí... Não disse?
+13;0;208;0;0;Zangan: Ei! É você!
+13;0;209;0;0;Ainda está são, certo?
+13;0;210;0;0;Então venha aqui me ajudar!
+13;0;211;64;51;Eu não... Quero olhar para isso. Cloud... Não olhe!
+13;0;212;0;0;Vou checar esta casa. Você checa a de lá.
+13;0;213;64;49;Sephiroth! Eu sei que você pode nos ouvir! E sei o que quer dizer. Que eu não estava em Nibelheim há 5 anos. Não é isso?
+13;0;214;64;60;Vejo que finalmente entendeu.
+13;0;215;64;49;Mesmo fazendo eu ver isso não vai me afetar. Eu me lembro de tudo. O calor do fogo... A dor no meu corpo... E no meu coração!
+13;0;216;64;60;Ah, é isso? Você é só um fantoche... Você não tem coração... E não pode sentir dor... Como podem existir significados na memória de um ser como você? O que eu o mostrei é a realidade. O que você lembra, é a ilusão... Me entende?
+13;0;217;64;49;Eu não quero entender. Mas, eu quero te perguntar uma coisa. Por que... Por que está fazendo isso?
+13;0;218;64;60;Ha, ha, ha... Eu quero fazê-lo chegar em sua verdadeira forma. A que me deu a Matéria Negra naquele dia... Quem imaginaria que um experimento que não funcionou seria tão útil? Hojo morreria se soubesse.
+13;0;219;64;49;Hojo!? O que ele tem a ver comigo!?
+13;0;220;64;60;Há 5 anos atrás você foi... Construído por Hojo, peça por peça, depois que Nibelheim foi queimada. Um boneco feito das vibrantes células de Jenova, sua sabedoria, e o Poder de Mako. Um clone incompleto de Sephiroth. Nem sequer ganhou um número... Essa é sua realidade.
+13;0;221;64;51;Cloud... Não o escute... Tampe seus ouvidos e feche seus olhos! Tudo isso de você ter sido construído é mentira! Você não tem memórias nossas juntos? Sendo crianças, numa noite estrelada...
+13;0;222;64;60;Ha, ha, ha... Tifa... Por que está tão preocupada e com medo das minhas palavras? Hum... Devo mostrar a todos aqui o que está em seu coração? ... Ha, ha, ha! Você não parece estar se sentindo bem.
+13;0;223;64;49;... Tifa? Sephiroth está certo?
+13;0;224;64;51;Cloud...
+13;0;225;64;49;Por que está com medo? Não se preocupe comigo. Estou bem. Não importa o quão confuso eu esteja, eu não vou acreditar em uma palavra que ele diga. ... É verdade que ás vezes eu não consigo descobrir quem sou. Tem muitas coisas embaralhadas nas minhas memórias. Mas, Tifa... Mas você me disse: \"Há quanto tempo, Cloud!\", certo? Essas palavras vão sempre me dar suporte. Eu cresci com você. Sou Cloud de Nibelheim. Não importa quanta fé eu perco em mim mesmo, essa é a verdade. ... Que você não deve ter medo. Não importa o que alguém diga a mim, é a sua atitude que conta.
+13;0;226;64;51;Não, não é verdade, Cloud...
+13;0;227;64;49;O que não é verdade? Não sou o mesmo Cloud que cresceu com você?
+13;0;228;64;51;Não foi o que quis dizer... Não sei como dizer... Eu preciso de tempo... Só me dê mais tempo...
+13;0;229;64;60;Cloud... Não a culpe. A habilidade de mudar o visual, voz, e palavras, é o Poder de Jenova. Dentro de você, Jenova se uniu com as memórias de Tifa, criando você. Das memórias de Tifa... Um garoto chamado Cloud deve ter sido parte delas.
+13;0;230;64;51;Cloud... Por favor... Não pense nisso agora.
+13;0;231;64;60;Ha, ha, ha... Pense, Cloud! ... Espera, Cloud? Ah, mil perdões. Você nem teve um nome.
+13;0;232;64;49;Cale-se... Sephiroth.
+13;0;233;64;60;Ainda não entendeu? Então, você se lembra da foto que tiramos antes de ir ao Monte Nibel? ... Tifa, você se lembra, certo? Por que não tem como ele saber.
+13;0;234;64;60;Agora, o que aconteceu com a foto?
+13;0;235;64;60;... É isso?
+13;0;236;64;60;Quer ver? Ficou muito boa.
+13;0;237;64;51;Cloud, não...
+13;0;238;64;49;Eu devo estar nela. Mesmo se eu não estar, eu sei que é só uma ilusão.
+13;0;239;64;49;A verdade está em minhas memórias... Há 5 anos atrás, eu voltei para Nibelheim, para examinar o reator. Eu tinha 16 anos. Eu estava animado, pois era a minha primeira missão depois de chegar na primeira classe da SOLDIER.
+13;0;240;64;49;... Primeira classe, SOLDIER?
+13;0;241;64;49;... SOLDIER!?
+13;0;242;64;49;Quando eu entrei na SOLDIER?
+13;0;243;64;49;... Como eu entrei na SOLDIER!?
+13;0;244;64;49;... Por que... Não consigo me lembrar?ô3Cloud?
+13;0;245;64;51;Cloud?
+13;0;246;64;49;Eu... Eu... Ngh...
+13;0;247;0;0;Imagine traduzir um jogo ruim.     Esse meme foi feito pela gangue Redarts e Gutembergh.
+13;0;248;0;0;Imagine traduzir um jogo ruim.     Esse meme foi feito pela gangue Redarts e Gutembergh.
+13;0;249;0;0;Imagine traduzir um jogo ruim.     Esse meme foi feito pela gangue Redarts e Gutembergh.
+13;0;250;0;0;Imagine traduzir um jogo ruim.     Esse meme foi feito pela gangue Redarts e Gutembergh.
+13;0;251;0;0;Estou preocupado com aquela garota!
+13;0;252;0;0;Em todos esses anos, nunca vi alguém sair daquela floresta!
+13;0;253;0;0;Quem é você!? Ninguém pode me fazer mudar de ideia!
+13;0;254;0;0;Chefe, você já encontrou a Harpa Lunar, o que quer mais? Que cara mais ganancioso!
+13;1;0;64;49;Assim como pensei, essa foto é falsa.
+13;1;1;0;0;um.
+13;1;2;64;64;Uau! Incrível! É tudo matéria?
+13;1;3;64;62;O lado de fora é rico em energia Mako, dentro é um tesouro de Matéria.Sem duvida é a Terra Prometida.
+13;1;4;64;65;Não existe isso de Terra Prometida. Isso é uma lenda... um conto de fadas...chega a ser ridículo.
+13;1;5;64;62;É como eu imagina que fosse. Não é esplendido? É esse tipo de pensamento que faz de você um cientista de segunda categoria.
+13;1;6;64;62;O que está acontecendo?
+13;1;7;64;65;Arma... Então realmente existe...
+13;1;8;64;62;O que isso significa?
+13;1;9;64;65;...Arma. Monstros criados pelo Planeta. Foi isso que o Professor Gast relatou.
+13;1;10;64;62;Nunca vi esse relatório... Onde está ele?
+13;1;11;64;65;Aqui, bem aqui.
+13;1;12;64;62;Você leva muitas coisas com você.
+13;1;13;64;51;Cloud...
+13;1;14;64;53;O que está acontecendo? Onde estou!?   Não me deixe sozinho!
+13;1;15;0;0;RedXlll, você está aqui! Estou tão feliz.
+13;1;16;64;53;Tifa!
+13;1;17;64;53;Tem algo estranho...Por que ficou tudo escuro e onde está todo mundo?
+13;1;18;0;0;Todos estão esperando! Cloud está em apuros!
+13;1;19;0;0;Por favor, vamos. Nos ajude!
+13;1;20;0;0;Lá!
+13;1;21;64;53;C-certo! Não tenho certeza se entendi... Mas eu vou.
+13;1;22;0;0;...hee, hee, hee... e lembre...
+13;1;23;0;0;...a Matéria Negra!
+13;1;24;64;64;Sr.Presidente... Tenho uma mal pressentimento com este lugar...
+13;1;25;64;62;Hmm... talvez devêssemos voltar ao navio agora. Precisamos nos preparar para a inspeção.
+13;1;26;64;64;Ei! De onde você veio?
+13;1;27;64;49;...não sei...
+13;1;28;64;49;As coisas vão ficarpresta aqui. É melhor deixar as coisas comigo e sair daqui enquantoainda pode!
+13;1;29;64;62;Deixa com você? Hmph... não entendi o que quis dizer.
+13;1;30;64;49;É aqui onde a reunião está acontecendo.   Onde tudo começa e termina.
+13;1;31;64;51;Cloud!
+13;1;32;64;53;Estou aqui para ajudar você, Cloud!
+13;1;33;64;49;Obrigado... RedXlll.Onde está a MatériaNegra?
+13;1;34;64;51;Cloud!
+13;1;35;64;53;Está segura. Estou com ela.
+13;1;36;64;49;Eu vou tirá-la daqui. Me dê a... Matéria Negra.
+13;1;37;64;51;Não pode me ouvir, Cloud!?
+13;1;38;64;53;Você está bem, Cloud?
+13;1;39;64;53;Então... aqui vai você. Eu estava um pouco apreensivo com essacoisa.
+13;1;40;64;51;Não, RedXlll!! Por favor, pare, CLoud!
+13;1;41;64;49;Obrigado... Deixe o resto comigo.
+13;1;42;64;49;Todos, obrigado portudo. E... sinto muito.
+13;1;43;64;49;...desculpa.
+13;1;44;64;49;Especialmente você,Tifa. Realmente sinto muito. Você sempre foi boapara mim... Não sei o que falar... Nunca vivi como sendo o Cloud. Tifa... talvez um dia você conheça o verdadeiro Cloud.
+13;1;45;64;65;Ha, ha, ha... É perfeito! Isto significa que meu experimento foium completo sucesso!
+13;1;46;64;65;Qual era o seu número? Hã? Onde está sua tatuagem?
+13;1;47;64;49;Professor Hojo... Não tenho número. Você não me deu um número porque fui um experimento falho.
+13;1;48;64;65;O quê...? Quer dizer que vocêfoi uma falha vindadaqui?
+13;1;49;64;49;Professor... Por favor, me dê umnúmero. Por favor...
+13;1;50;64;65;Cale-se, falha miserável...
+13;1;51;64;62;Como..?
+13;1;52;64;65;...ele é um clone de Sephiroth, eu criei antes do Sephiroth verdadeiro morrer 5anos atrás. Células Jenova e Mako, com meu conhecimento e habilidades, foram combinados com ciência e natureza para trazê-lo a vida.
+13;1;53;64;65;...a Teoria da Reunião de Jenova já foi provada.
+13;1;54;64;65;Sabe, mesmo que o corpo de Jenova seja desmembrada, ela sempre será umasó. A Reunião de Jenovaé isso.
+13;1;55;64;65;Estive esperando a Junção começar. 5 anos se passaram e agora os clones começaram a voltar.
+13;1;56;64;65;Pensei que os clones começariam ase reunir em Midgar, onde Jenovaé armazena. Mas minhas previsões não foramtotalmente corretas. Jenova se começou ase afastar do Edifício Shinra.
+13;1;57;64;65;Mas sendo o gênio que sou, logo descobri. Você viu tudo que Sephiroth fez. Sephiroth não está apenas contente em difundir sua vontade na Lifestream... Ele quer manipular os próprios Clones.
+13;1;58;64;49;Sim, foi assim que começou.
+13;1;59;64;65;Eu me perguntava para onde os clonesestavam indo, mas nunca descobri.
+13;1;60;64;49;Também não conseguidescobrir.
+13;1;61;64;65;A única coisa que eu sabia era que Sephiroth estava emseus destinos finais.
+13;1;62;64;49;Eu não estava perseguindo Sephiroth.   Estava sendo convocado por Sephiroth.   Toda a raiva e ódio que eu sentia por ele tornavam impossível que eu oesquecesse. Isso e o que ele me deu.
+13;1;63;64;49;Sephiroth? Sephiroth? Eu estou aqui. E eu trouxe a Matéria Negra para você. Apareça. Onde está você?
+13;1;64;64;49;Sephiroth... Então finalmente nos encontramos novamente.
+13;1;65;64;65;Você viu! É Sephiroth! Ele está AQUI!
+13;1;66;64;65;Isso é perfeito! Tanto a Reunião de Jenova quanto a vontade de Sephiroth não serãodifundidas no Lifestream, mas reunidas aqui! Mwa haa, ha...
+13;1;67;64;51;Por que está tão feliz, Professor? Sabe o que isso significa, não é? Sephiroth vai convocar o Meteoro!Todos vão morrer!
+13;1;68;64;62;Só tenho uma coisa a dizer... Tarde demais... Devemos evacuar.
+13;1;69;64;53;Cloud, não! PARE!! Por favor!
+13;1;70;64;51;Cloud!!!
+13;1;71;64;49;...Tifa...
+13;1;72;64;51;É você? Cloud!
+13;1;73;64;51;Cloud... Fale comigo. Qualquer coisa, alguma lembrança importante... Por que quis se juntar a SOLDIER? Sempre pensei que foi uma decisão repentina sua...
+13;1;74;64;49;... Fiquei arrasado... Queria ser notado.   Eu pensei que se ficasse mais forte,poderia conseguir alguém para...
+13;1;75;64;51;Alguém para notar você..? ...quem?
+13;1;76;64;49;Você...
+13;1;77;64;51;...eu? Por quê!?
+13;1;78;64;49;Tifa... Você esqueceu... esses dias?
+13;1;79;64;51;Olha... eu... Desculpa... Mas o que está falando?
+13;1;80;64;49;Não... tudo bem. Você estava passando por um tempo difícil. É natural não se lembrar de mim naquela época. É importante para mim... Odeio dizer isso, mas... É uma lembrança muito importante...
+13;1;81;64;49;Eu costumava ficar olhando para sua casa.
+13;1;82;64;51;...tudo bem. Nós vivíamos um do lado do outro.   Mas eu não te conheço de verdade.
+13;1;83;64;49;Você sempre costumava estar com aquele trio.
+13;1;84;64;51;...
+13;1;85;64;49;Eu costumava pensar... São todos idiotas.
+13;1;86;64;51;O quê?
+13;1;87;64;49;Você era toda infantil, rindo de cada pequena coisa estúpida. ...eu sei. Sou o único que eraidiota. Eu realmente queriabrincar com todo mundo, mas nunca medeixavam entrar nosgrupos. Depois... comecei apensar que era diferente daqueles garotos imaturos. Isso então... talvez... só talvez, eles me convidassem para entrar. Pensei que isso poderia acontecer, então eu fiquei porperto... Naquela noite eu chamei você para o poço... Pensei comigo mesmoque você nunca viria, que você me odiava.
+13;1;88;64;51;Sim... foi tão de repente. Eu fiquei... surpresa. Mas... não éramos tão próximos, mas...Depois de você deixar a cidade, pensei muito em você. Eu vivia me perguntando como Cloud estava se saindo.  Queria se saber se Cloud conseguiu entrar na SOLDIER. Comecei a ler os jornais, pensando que poderia haver um artigo sobre você.
+13;1;89;64;49;Essa foi a primeiravez que ouvi falar sobre Sephiroth.   Se eu ficasse fortecomo Sephiroth, então todos poderiam... Se eu, Cloud, apenas ficasse maisforte... até mesmo você me notária...
+13;1;90;64;51;Cloud...
+13;1;91;64;49;Uh....Tifa....
+13;1;92;64;51;Oh, Cloud..! É você mesmo, não é?
+13;1;93;64;49;Sim... Tifa... nós finalmente... nos encontramos novamente...
+13;1;94;64;51;Seu idiota, idiota!Você deixou todos preocupados!
+13;1;95;64;49;Krgh..!
+13;1;96;64;51;Cloud!? Está tudo bem?
+13;1;97;64;50;Ei, ãh, Tifa? Não queria perguntar isso, mas... Ele realmente é seuamigo de infância? E não a sombra de Sephiroth?
+13;1;98;64;51;Não, tenho certeza disso!
+13;1;99;64;50;Entendi, sabia... Não deveria ter duvidado dele.
+13;1;100;64;51;Eu não fiz nada, o Cloud se encontrou sozinho...
+13;1;101;64;50;Não posso ganhar pra você. Você é algum tipo de dama.
+13;1;102;64;51;As pessoas tem tantas coisas reprimidas dentro de si mesmas... Elas esquecem tantas coisas... Estranho... Não é isso...
+13;1;103;64;49;Todos...
+13;1;104;64;53;Não fale nada, Cloud. Tudo o que você tem feito é sedesculpar.
+13;1;105;64;49;Me lembro de tudo agora... Eu nunca fui um SOLDIER.
+13;1;106;64;51;Mas, Cloud... Como você se lembrado que aconteceu?   Você não estava lá naquele dia...
+13;1;107;64;49;Me tornei um guardacontratado pela Shinra.   Depois de alguns anos, me tornei amigo de Zack, um membro da primeira classe da SOLDIER. Eu estava em uma missão para acompanhar Zack e Sephiroth até Nibelheim, para investigar o reator.
+13;1;108;64;51;Zack? Namorado perdido deAeris?
+13;1;109;64;49;Eu vi você, mas eu estava tão envergonhado, que não consegui mostrar meu rosto, escondi minha identidade... Mas eu vi tudo... Vi o reator, vi Sephiroth cair em um estado de loucura, depois aprendendo sobre o Projeto Jenova e testemunhei a queima de Nibelheim. Minha mãe, todo mundo, toda a cidade....
+13;1;110;64;49;Depois de incendiara cidade, Sephirothfoi em direção ao reator para chegar a Jenova... Zack e eu o seguimos...
+13;1;111;64;49;Zack foi para lutarcontra Sephiroth, enquanto eu te ajudava no reator...Mas Zack foi feridopor Sefiroth... Zack me deu sua espada e disse paramatar Sefiroth... Eu corri para o quarto de Jenova e apunhalei Sephiroth... Então voltei para você e Zack.
+13;1;112;64;49;Então eu vi ele, Sephiroth,mancando,levando a cabeça deJenova... Ele me apunhalou com sua espada, masde alguma forma consegui derrubar Sephiroth da ponte do reator, onde elemergulhou para a morte.
+13;1;113;64;49;Nunca fui um SOLDIER. Eu criei uma ilusãode mim mesmo, composta do que eu tinha visto em minha vida... E as histórias que Zack me contou sobre suas experiências em SOLDIER. Eu continuei a farsa como se fosseverdade.
+13;1;114;64;50;Ilusão, ãh..? Bastante realista para uma ilusão, eu diria.
+13;1;115;64;49;Zack e eu fomos capturados por Hojono reator, fomos experimentos por muitos anos... Zack saiu da cápsula em que estávamos e me ajudou a fugir com ele... Fomos caçados pelastropas da Shinra, fomos encurralados e atacados pelos guardas da Shinra...Eu estava em uma névoa e não conseguia me mexer ou responder, entãoos guardas me deixaram em paz. Quando consegui me mover de novo, fui até Zack, antes dele morrer, ele medeu sua espada. Eu ainda estava atordoado com todasas experiências, mas consegui chegara Midgar onde você me encontrou, Tifa.
+13;1;116;64;51;Então foi isso... Desculpe, Cloud. Se eu tivesse apenas lembrado do que tinha acontecido, eu poderia ter feito algo antes...
+13;1;117;64;49;Não é sua culpa, Tifa.
+13;1;118;64;49;Sou fisicamente construído como um SOLDIER. O plano de Cloho para clonar Sephiroth não foi tão difícil. Foi o mesmo procedimento que eles usavam pra criar membros do SOLDIER.
+13;1;119;64;49;Sabe, SOLDIER não são simplesmente exposto a energia Mako. São injetados em seus corpos célulasde Jenova... Pra melhor ou pior,somente os fortes sobrevivem. Não tem nada a ver com a Reunião Jenova. pessoas fracas... como eu, se perdem no caminho...
+13;1;120;64;49;A combinação de células de Jenova, a força de vontade de Sephiroth e minhas próprias fraquezas são o queme criou. Todos sabem. Eu sou... Cloud.
+13;1;121;64;50;Isso significa que não há diferença para antes!
+13;1;122;64;55;Sephiroth entrou naLifestream!
+13;1;123;64;49;É como você sempre me disse, Barret.
+13;1;124;64;53;Oh, então é isso que quer dizer!
+13;1;125;64;54;Meteoro foi invocado, pode ser tarde demais...
+13;1;126;64;50;Bom, então você vaicontinuar lutando para salvar o planeta!
+13;1;127;64;50;Está pronto?
+13;1;128;64;49;Uuuugh...!! ...Sephiroth!!
+13;1;129;64;50;Ugh..! Isso é... o verdadeiro poder de Sephiroth?
+13;1;130;64;55;Meu... meu corpo... Não posso controlarmeu corpo... Uugh!?
+13;1;131;64;53;Minhas pernas dianteiras... Minhas pernas traseiras... Minha cauda está prestes a arrancar!
+13;1;132;64;54;Definitivamente nãoé bom...
+13;1;133;64;51;Cloud... Cloud...
+13;1;134;64;49;Ugh... ugh... Lá... está... Lá...
+13;1;135;64;51;Cloud....?
+13;1;136;64;49;Holy... Holy está lá... O Holy está brilhando.... ...A oração de Aerith está brilhando...
+13;1;137;64;51;Holy... Aerith...
+13;1;138;64;49;Ainda não acabou... Este não é o fim ainda!!
+13;1;139;0;0;Eyaaaahhhhhh!!
+13;1;140;64;54;Estou tão feliz por ter conhecido todos vocês, de verdade! Todo mundo está contando com a gente! É isso!
+13;1;141;64;55;Não posso ficar brincando no fundo desse inferno...   Ainda tenho muitas coisas para fazer com a minha vida! ...Shera... Não se preocupe, Shera! Logo estarei de volta! Vai precisar mais do que isso para mematar!
+13;1;142;64;53;Toda a vida neste planeta, na verdadea própria vida deste planeta está em nossas mãos... Pai! Mãe! Vovô! Eu cuidarei da segurança deste planeta! Eu não vou perder!!
+13;1;143;64;50;Não se preocupe, Marlene! Papai está voltandopara casa! Este é o nosso último grande trabalho! Biggs!Wedge!Jesie! O sonho dos AVALANCHEs será realizado aqui!
+13;1;144;64;51;...Nós não vamos perder!!
+13;1;145;64;51;Aerith está aqui... Todo mundo está aqui...  Cloud está aqui comconosco! Ainda há muitas coisas para fazermos... Não vou desistir!!
+13;1;146;64;49;...Sephiroth! Memórias de Aeris...Nossas memórias... Viemos... para lhe contar... nossas memórias... Vem Planeta! Mostre-nos sua resposta! E Sephiroth! Resolução de tudo!
+13;1;147;64;49;Isso foi o que pudemos fazer.
+13;1;148;64;50;Espere! E Holy, o que vai acontecer com o Planeta?
+13;1;149;64;49;Isso... eu não sei. O resto não é com oPlaneta?
+13;1;150;64;51;...você está certo. Nós fizemos tudo o que podíamos.
+13;1;151;64;49;Tudo bem, todos. Não adianta pensar nisso.   Deixaremos todos osnossos erros aqui.
+13;1;152;64;49;Vamos para casa orgulhosos.
+13;1;153;64;51;O que aconteceu?
+13;1;154;64;49;...Eu sinto...
+13;1;155;64;51;O que...
+13;1;156;64;49;Ele ainda está aqui.
+13;1;157;64;50;Yo, Cloud!
+13;1;158;64;49;Still...
+13;1;159;64;53;Cloud...?
+13;1;160;64;49;Ele está... rindo...
+13;1;161;64;51;Cloud!!
+13;1;162;64;49;...Lifestream?
+13;1;163;64;49;...acho que estou começando a entender.
+13;1;164;64;51;O quê?
+13;1;165;64;49;Uma resposta do planeta...
+13;1;166;64;49;A Terra Prometida...
+13;1;167;64;51;Sim...
+13;1;168;64;50;Agora, o que vamos fazer?
+13;1;169;64;53;Holy deve se mover em breve, e isso significa que este lugar vai...
+13;1;170;64;54;Devemos ir.
+13;1;171;64;49;Vamos todos, vamos para casa.
+13;1;172;0;0;O Cetra temia a destruição total, caso o Meteoro nunca fosse aberto.Agora a morte despenca em direçãoa Midgar, brilhandoem um milhão de rostos inocentes. Shinra HQ é o primeiro a cair. Com ganância se transformado em pó e chovendo destruição sobre a cidade, uma luz fraca desperta a esperança a distância.
+13;1;173;0;0;Século após século,o mundo se cura.
+13;2;0;64;58;Se concentre na missão, Cloud. Geez, vamos mesmo explodir essa joça?
+13;2;1;64;49;O portão está fechado!
+13;2;2;64;56;Cloud, cuidado!
+13;2;3;64;57;Cuidado!
+13;2;4;64;52;Obrigada!
+13;2;5;0;0;Acabou!
+13;2;6;64;59;...
+13;2;7;64;50;Por que ainda está aqui?
+13;2;8;0;0;Inseriu o código.
+13;2;9;0;0;Droga, está fechado!
+13;2;10;64;52;Minha casa está perto!
+13;2;11;64;49;Okay!
+13;2;12;64;49;Vai sair assim!?...
+13;2;13;64;49;Como o fio quebrou!?
+13;2;14;0;0;Quando quiserroupas novas,procure por mim!
+13;2;15;64;52;Agora é sua chance de salvar Tifa, onde está indo?
+13;2;16;64;49;Essas roupas são muito apertadas, estou ficando tonto!
+13;2;17;64;49;Eu não posso ir ainda.
+13;2;18;0;0;
+13;2;19;64;52;Voz de Aerith: Não! Socorro!
+13;2;20;64;49;Vamos ajudar Tifa primeiro!
+13;2;21;64;49;Eu não deveria perturbar...
+13;2;22;64;78;Aeris é uma criançainfeliz.
+13;2;23;64;59;Cloud, precisa de alguma coisa?
+13;2;24;64;49;...não, só queria ver você!
+13;2;25;0;0;Com esse pouco de dinheiro, você ainda tem coragem de vir aqui! Ha ha ha...
+13;2;26;0;0;O que vai ser, vai querer ou não?
+13;2;27;64;49;O Prédio da Shinra não está longe, ainda temos tempo!
+13;2;28;64;50;Cloud, quem vai comvocê?
+13;2;29;0;0;Levar           Deixar          
+13;2;30;64;50;Cloud!  Vamos?
+13;2;31;64;49;Eu vou por este caminho!
+13;2;32;64;50;Cloud! Nós vamos juntos, não vá morrer!
+13;2;33;64;49;Estou de olho em você! conta outra!
+13;2;34;64;50;Cloud! O que você quis dizer!?
+13;2;35;64;49;...uma simples questão!
+13;2;36;64;49;Sem volta, Midgar com certeza nos deualgumas lembranças!
+13;2;37;0;0;Gil insuficiente!
+13;2;38;64;49;Eu queria comprar, mas tenho pouco dinheiro...   Mas se desse um desconto...
+13;2;39;0;0;Hmph! Quem você pensa que é! Sem exceções!
+13;2;40;0;0;Chocobo Lure, compre agora!
+13;2;41;0;0;Vocês são pessoas estranhas. Você comprou o último Chocobo Lure, mas continuam aqui!
+13;2;42;0;0;Aqui está você!... Chole! Veja nosso convidado!
+13;2;43;64;49;Eu ouvi que você pode pegar Chocobo,mas como?
+13;2;44;0;0;Chocobo escapou!
+13;2;45;0;0;Um Chocobo veio!
+13;2;46;0;0;Todos a bordo!
+13;2;47;0;0;Sinto muito. O Trem está fora deordem agora.
+13;2;48;0;0;Temo que você não será capaz de sair.
+13;2;49;64;49;Acho que estamos presos!
+13;2;50;0;0;Selecione o ponto de escavação!
+13;2;51;0;0;Não encontramos nada...
+13;2;52;0;0;Encontramos a Harpa Lunar!
+13;2;53;0;0;Não pode mais!
+13;2;54;0;0;Gil insuficiente!
+13;2;55;0;0;Não posso esperar meu filho se recuperar...
+13;2;56;0;0;Mapa obtido.
+13;2;57;0;0;Andy:Meus bonecos são tão reais!
+13;2;58;0;0;
+13;2;59;0;0;Andy:Cuidado para não escorregar!
+13;2;60;0;0;Sou só um velho, não preciso ser gentil!
+13;2;61;0;0;Quer me agradecer?
+13;2;62;64;49;...
+13;2;63;0;0;Acho que estamos acabados!
+13;2;64;64;53;Não se preocupe, Cloud.
+13;2;65;64;55;Ei, nós conseguimoslidar com isso, não se preocupe!
+13;2;66;0;0;Parabéns! Você ganhou!
+13;2;67;64;50;Você está realmentepronto?
+13;2;68;0;0;Só um minuto.   Estou pronto!   
+13;2;69;64;50;Vamos resolver isso!
+13;2;70;0;0;Bem-vindo! O que gostaria?
+13;2;71;0;0;Adeus!
+13;2;72;0;0;Bem-vindo! O que gostaria?
+13;2;73;0;0;Bem-vindo! Precisa melhorar a arma?
+13;2;74;0;0;Bem-vindo! Precisa de um aprimoramento mágico?
+13;2;75;0;0;Bem-vindo! Precisa descansar?
+13;2;76;0;0;Descansar(100G) Não descansar   
+13;2;77;0;0;Gil insuficiente!
+13;2;78;0;0;Tenha um bom dia!
+13;2;79;0;0;O reator de Mako foi bombardeado, saia daqui!
+13;2;80;0;0;Garçom:O chefe estáfora, por favor, volte em alguns dias!
+13;2;81;0;0;Obteve Poção.
+13;2;82;0;0;Obteve Éter.
+13;2;83;0;0;Obteve mais Int.
+13;2;84;0;0;Obteve Poção Média.
+13;2;85;0;0;Obteve mais For.
+13;2;86;0;0;Obteve Fênix.
+13;2;87;0;0;Obteve Poção Grande
+13;2;88;0;0;Obteve Poção Média.
+13;2;89;0;0;Obteve Fênix.
+13;2;90;0;0;Obteve mais Esp.
+13;2;91;0;0;Obteve mais Agi
+13;2;92;0;0;Obteve Poção Média.
+13;2;93;0;0;Obteve Incenso.
+13;2;94;0;0;Obteve mais Int.
+13;2;95;0;0;Obteve mais HP.
+13;2;96;0;0;Obteve mais HP.
+13;2;97;0;0;Obteve mais HP.
+13;2;98;0;0;Papai está muito melhor agora!
+13;2;99;0;0;Papai não tá aqui. Não posso te ajudaraté que ele volte.
+13;2;100;0;0;Por favor, ajude o coitado do meu pai.Não sei mais o que fazer...
+13;2;101;0;0;Garçom:O chefe estáfora, por favor, volte em alguns dias!
+13;2;102;64;71;Boa! Pena que não tenho dinheiro! Senão... Heh heh!
+13;2;103;0;0;Opa!
+13;2;104;64;49;..!
+13;2;105;64;59;Aeris pode ficar mais tempo?
+13;2;106;0;0;O hotel é gratuito,sinta-se a vontade!
+13;2;107;0;0;Recuperou tudo!
+13;2;108;64;56;Cloud, nosso trem chegou, cuidado!
+13;2;109;64;58;Vou esperar por você no trem!
+13;2;110;64;58;Nosso trem está aqui, vamos!
+13;2;111;64;49;Estou chegando.
+13;2;112;0;0;Quer descansar,jovem?
+13;2;113;0;0;O mapa é importante, não perca!
+13;2;114;64;78;Aeris é uma criançainfeliz.
+13;2;115;0;0;
+13;2;116;0;0;
+15;0;0;0;0;Kotch: Tudo bem moças! Alinhem-se na frente do Don!
+15;0;1;64;79;Corneo: Hmm! Bom, esplêndido! Agora, vamos ver... Que garota escolher? Hmm... Hmm...!
+15;0;2;64;79;Essa aqui?
+15;0;3;64;79;Talvez esta aqui?
+15;0;4;64;79;Who-hoo, mudei de ideia! Minha escolha para esta noite é...
+15;0;5;64;79;Esta linda e saudável jovem!
+15;0;6;64;51;He, he, he... Seja bonzinho, Don.
+15;0;7;64;79;Podem ficar com as outras!
+15;0;8;0;0;Sim, senhor! Obrigado senhor!
+15;0;9;64;79;Beleza, podemos começar, gracinha?
+15;0;10;0;0;Scotch: Ei caras! Temos visita hoje.
+15;0;11;0;0;Nós vamos tomar conta de vocês DE VERDADE.
+15;0;12;0;0;Isso é tudo graças ao nosso Chefão, Don Corneo!
+15;0;13;0;0;Ei! Ei! Ei!
+15;0;14;0;0;He, he... Ei fofa, você está, é... Pronta?
+15;0;15;0;0;... O que houve? Quer que eu te faça companhia?
+15;0;16;64;49;Não... Estou lisonjeada, mas não, obrigado. É que...
+15;0;17;0;0;Siiiiim?
+15;0;18;64;49;É que... Eu não tou \"INTERESSADA\" num bando de otários babões como você!
+15;0;19;0;0;Espera... UM HOMI? Mas que porra é essa? Acha que vai se safar, é? Peguem ele! Metam a porrada nesse travesti! (Sem preconceito, galerinha!)
+15;0;20;0;0;Grr! Fala sério, qual é o problema de vocês, seus inúteis? Certo, VENHAM! Vou mostrar como se faz!
+15;0;21;64;52;Não...! Me ajudem!
+15;0;22;64;52;Não...!
+15;0;23;0;0;Kotch: Ha, ha, ha... Espere, você!
+15;0;24;64;52;Me perdoe!
+15;0;25;0;0;Oh, oh, oh...
+15;0;26;64;49;Aeris! Está bem?
+15;0;27;64;52;Eu te disse. Estou acostumada com perigo. Para ser sincera, meu coração estava quase pulando pra fora.
+15;0;28;64;79;Who-hoo! Vem, vem, não seja tímida...
+15;0;29;64;51;Eu sei... Mas sabe, Don Corneo. Eu gostaria que explicasse uma coisinha antes de começar...
+15;0;30;64;79;Hein? Ah, está falando DAQUILO? Não se preocupe. Sou solteiro. Se sente melhor agora?
+15;0;31;64;51;Não... Não é sobre isso... Ei... Espera! Não, ainda não!
+15;0;32;64;79;Venha, venha! OOOOOPA! Não consigo esperar mais tempo! Aqui vai o papai!
+15;0;33;64;51;Cloud!
+15;0;34;64;79;Mas... Hã? Quem vem aí?
+15;0;35;64;51;Você ainda não entendeu, não é? Senhor Don Corneo.
+15;0;36;64;79;Entender o quê?
+15;0;37;64;51;Cale-se, nós fazemos as perguntas agora... O que seus assistentes descobriram? Fale! Pois se não nos falar...
+15;0;38;64;49;... Vou CORTAR suas duas bolas fora.
+15;0;39;64;79;Não! Isso não! Eu vou falar! Eu falo tudinho!
+15;0;40;64;51;Então... Fale.
+15;0;41;64;79;... Eu fiz eles descobrirem onde o homem com o braço de arma estava. Essas foram minhas ordens.
+15;0;42;64;51;Quem te ordenou?
+15;0;43;64;79;Não...! Se eu falar, eu posso ser morto!
+15;0;44;64;51;Fale! Pois se não falar...
+15;0;45;64;52;... Eu vou ARRANCAR suas duas bolas fora.
+15;0;46;64;79;Ahhh...! Foi o Heidegger da Shinra! Heidegger, o chefe da Manutenção da Segurança Pública!
+15;0;47;64;49;Chefe da Manutenção da Segurança Pública?
+15;0;48;64;51;Disse \"Shinra\"!? O que eles querem? Fale! Pois se não falar...
+15;0;49;64;51;Vou ESMAGAR suas duas bolas.
+15;0;50;64;79;... Está falando sério, não é...? Ai, ai, ai... Eu não estou sem fazer nada aqui também, sabe. A Shinra quer destruir um grupo rebelde chamado AVALANCHE, e quer infiltrar seu esconderijo. Realmente querem acabar com eles... Literalmente. Como? Destruindo o suporte segurando a plataforma acima deles.
+15;0;51;64;51;Quebrar!?
+15;0;52;64;79;Você sabe o que vai acontecer? A plataforma vai fazer PIM e tudo vai fazer BUUUM! Ouvi que seu esconderijo está nas favelas do Setor 7... Ainda bem que estou aqui no 6.
+15;0;53;64;51;Eles vão se livrar das favelas do Setor 7?
+15;0;54;64;51;Cloud, você vem comigo até lá?
+15;0;55;64;49;É claro, Tifa.
+15;0;56;64;79;Um momento!
+15;0;57;64;49;Calado!
+15;0;58;64;79;Não, espere, só vai levar um segundo. Como acham que merdas como eu se sentem ao falar sobre a verdade?
+15;0;59;64;49;Se sentem como se a vitória fosse garantida.
+15;0;60;64;79;Who-hoo! Correto!
+15;0;61;64;61;Como vão as preparações?
+15;0;62;64;63;Heidegger: Ha, ha, ha! Tudo correndo muito, muito bem! Eu contratei os Turks para isso.
+15;0;63;64;66;Reeve: Presidente! Nós vamos mesmo fazer isso? Simplesmente destruir um grupo com poucos membros...
+15;0;64;64;61;Qual é o problema, Reeve? Quer se demitir?
+15;0;65;64;66;... Não. Mas, como chefe do Departamento de Desenvolvimento Urbano, eu estive envolvido na construção e no começo de Midgar. É por isso...
+15;0;66;64;63;Reeve, você terá que jogar esses problemas pessoais na desgarga!
+15;0;67;64;66;O Prefeito está contra isso de qualquer maneira...
+15;0;68;64;63;Prefeito? Ele só senta no seu prédio o dia todo comendo coisas! Ainda chama aquilo de Prefeito? Agora, se me der licença!
+15;0;69;64;61;Está cansado. Por que não tira uns dias de folga, pra descontrair?
+15;0;70;64;61;Destruiremos o Setor 7, e diremos que a AVALANCHE foi a responsável. Então enviaremos a equipe de resgate da Corporação Shinra... Heh, heh, heh... É perfeito.
+15;0;71;64;49;Está bem?
+15;0;72;64;52;Sim.
+15;0;73;64;49;Está bem?
+15;0;74;64;51;Cara! Isso é terrível.
+15;0;75;64;52;Bem, o pior acabou... Talvez não...
+15;0;76;0;0;Tifa entra para a equipe.
+15;0;77;0;0;Aeris entra para a equipe.
+15;0;78;64;51;É tarde demais... Marlene... Barret... O povo das favelas...
+15;0;79;64;52;Não desistam, sempre tenham esperança! Não é fácil destruir o pilar, certo?
+15;0;80;64;51;... É... É verdade! Ainda temos tempo.
+15;0;81;64;49;Aeris. Te envolvi nisso tudo...
+15;0;82;64;52;Não diga \"Vá pra casa\" ou algo do tipo. Eu não vou.
+15;0;83;64;51;Vamos ver... Se conseguirmos só passar pelos trens, poderemos talvez sair daqui.
+15;0;84;64;51;Conseguimos! O pilar está de pé!
+15;0;85;64;49;Espere! Consegue ouvir algo... Acima de nós?
+15;0;86;64;52;... Armas de fogo?
+15;0;87;64;49;Wedge! Você está bem?
+15;0;88;64;58;... Cloud... Você se lembrou... Do meu nome. Barret está lá no topo... Ajude ele... E Cloud... Me desculpe, não pude ajudar muito.
+15;0;89;64;49;Eu vou subir! Aeris! Cuide do Wedge.
+15;0;90;64;52;Não se preocupe.
+15;0;91;64;51;Aeris, eu tenho um favor. Eu tenho um bar chamado \"Sétimo Céu\" nessa vizinhança. Tem uma garotinha chamada Marlene lá...
+15;0;92;64;52;Não se preocupe. Eu vou deixá-la em um lugar seguro.
+15;0;93;64;51;É perigoso por aqui! Todos, saiam do pilar, rápido! Saiam do Setor 7!
+15;0;94;0;0;O-olha... Esse é meu trabalho, então eu tenho que cobrir meu horário.
+15;0;95;0;0;Umm... Eu AMO homens com um senso de dever. Deixe-me ficar aqui com você.
+15;0;96;0;0;Doh! E esse deveria ser meu último emprego! Faça algo!
+15;0;97;0;0;Nunca pensei que isso fosse acontecer comigo! Que incrível... Me demito amanhã!
+15;0;98;0;0;Uh oh... Lá vai o pilar.
+15;0;99;0;0;Uhh... Socorro! Meu lugarzinho estranho e bonito está...
+15;0;100;0;0;Se as coisas ficarem feias, vamos fugir. Não é algo que você vai ver sempre.
+15;0;101;64;56;Cloud... Então você não liga... Para o que acontece... Com o... Planeta?
+15;0;102;64;49;Você está ferido...
+15;0;103;64;56;Valeu, Cloud... Não se preocupe comigo... Barret está... Lutando lá em cima. Ajude ele...
+15;0;104;64;57;... Cloud... Estou feliz... De poder falar com você uma última vez.
+15;0;105;64;49;Não diga \"última\"...
+15;0;106;64;57;Está... Tudo bem... Nossas ações... Mataram muitos... Essa é nossa... Punição...
+15;0;107;64;49;Só isso...
+15;0;108;64;57;... Ha... Legal... Como sempre... Ex-SOLDIER... Sempre... Gostei disso... Em você...
+15;0;109;64;50;Tifa! Cloud! Vocês vieram! Tomem cuidado!
+15;0;110;64;51;Preparem-se!
+15;0;111;64;68;Estão atrasados. Quando eu apertar este botão... \"Isso é tudo, pessoal!\" Missão cumprida.
+15;0;112;64;51;Temos que desarmar a bomba! Cloud! Barret! Por favor!
+15;0;113;64;68;Não permitirei. Ninguém fica no caminho de Reno e dos Turks...
+15;0;114;64;68;Chegou a hora.
+15;0;115;64;51;Cloud! Eu não sei como parar isso! Tente!
+15;0;116;64;49;Não é uma bomba comum.
+15;0;117;64;67;Tseng: Correto. É bem difícil de desarmar essa aí. Ela explodirá no momento que algum besta tocá-la.
+15;0;118;64;51;Por favor, pare ela!
+15;0;119;64;67;Ha, ha, ha... Apenas um Executivo da Shinra pode armar ou desarmar o Sistema de Emergência da Plataforma.
+15;0;120;64;50;Cala sua boca!
+15;0;121;64;67;Eu não tentaria isso... Podem acabar me fazendo ferir nossa linda visitante.
+15;0;122;64;51;Aeris!
+15;0;123;64;67;Ah, vocês se conhecem? Que bom vocês terem conseguido se ver pela última vez. Deveriam me agradecer.
+15;0;124;64;49;O que vai fazer com Aeris?
+15;0;125;64;67;Ainda não me decidi. Nossas ordens foram encontrar a última Antiga. Nos levou muito tempo, mas agora posso entregar o relatório ao Presidente.
+15;0;126;64;52;Tifa, não se preocupe! Ela está bem!
+15;0;127;64;51;Aeris!
+15;0;128;64;52;Rápido, fujam!
+15;0;129;0;0;Ha, ha, ha... Bem, a contagem já começou, creio eu. Será que conseguem escapar vivos?
+15;0;130;64;51;Quando a plataforma começar a cair, é tarde demais. Temos que correr!
+15;0;131;64;50;Aí, dá pra usar essa corda pra sair!
+15;0;132;64;50;Biggs... Wedge... Jessie... Marlene... QUE MERDA! MEERDAAAAAA! TUDO ISSO TEM QUE IR PRO INFERNO! TODO O NOSSO TRABALHO E NOSSAS VIDAS FORAM PRO LIXO! AARGGHH!
+15;0;133;64;49;Ei, Barret!
+15;0;134;64;51;Barret!
+15;0;135;64;50;ARGHH!
+15;0;136;64;49;Ei!
+15;0;137;64;51;Barret, pare... Por favor.
+15;0;138;64;50;URGHH! Malditos...
+15;0;139;64;49;...
+15;0;140;64;50;Marlene...
+15;0;141;64;51;... Barret...? Marlene está... Eu acho que ela está bem.
+15;0;142;64;50;Hã?
+15;0;143;64;51;Antes de levarem Aeris, ela disse: \"Não se preocupe, ela está bem.\" Provavelmente ela falou da Marlene.
+15;0;144;64;50;S-sério!?
+15;0;145;64;51;Mas...
+15;0;146;64;50;Biggs... Wedge... Jessie...
+15;0;147;64;49;Os 3 ficaram no pilar.
+15;0;148;64;50;Acha que eu não sei? Mas... Todos nós lutamos juntos. Não quero pensar que eles estão mortos!
+15;0;149;64;51;E as outras pessoas do Setor 7.
+15;0;150;64;50;Que bagunça! Eles destruíram uma vila INTEIRA só para chegar na gente! Eles mataram tantos...
+15;0;151;64;51;... Está dizendo que é nossa culpa? Só por que a AVALANCHE estava lá? Inocentes morreram por nossa culpa?
+15;0;152;64;50;Não, Tifa! Não é isso! De jeito nenhum! Foi a Shinra! Sempre foi a Shinra! Eles estão aí destruindo nosso planeta só para... Encher os bolsos de grana! Eles vão acabar com tudo! Nossa luta não vai acabar até nos livrarmos deles!
+15;0;153;64;51;... Não sei.
+15;0;154;64;50;Como assim não sabe? Não acredita em mim?
+15;0;155;64;51;Não é isso. Não tenho certeza sobre... Mim. Meus sentimentos.
+15;0;156;64;50;E você?
+15;0;157;64;49;...
+15;0;158;64;50;Ou! Cloud!
+15;0;159;64;51;Ah! Aeris!
+15;0;160;64;50;Ah é, aquela garota. Qual é o paradeiro dela?
+15;0;161;64;51;... Eu não sei... Mas foi com ela que eu deixei a Marlene.
+15;0;162;64;50;Tifa. Não tem mais volta agora.
+15;0;163;64;51;Você vai ajudá-la?
+15;0;164;64;49;Sim... Mas antes, tem algo que eu quero saber.
+15;0;165;64;51;O que é?
+15;0;166;64;49;É sobre os Antigos...
+15;0;167;64;51;Está bem?
+15;0;168;64;50;Se acalma, cara!
+15;0;169;64;49;A casa de Aeris não é muito longe, vamos.
+15;0;170;64;78;Cloud... Não é?
+15;0;171;64;49;...
+15;0;172;64;78;É sobre a Aeris, certo?
+15;0;173;64;49;... Me perdoe. A Shinra está com ela.
+15;0;174;64;78;Eu sei. Eles levaram ela daqui pra lá.
+15;0;175;64;49;Eles estiveram aqui?
+15;0;176;64;78;Era o que Aeris queria...
+15;0;177;64;49;E por que estão atrás dela?
+15;0;178;64;78;Aeris é uma Antiga. A última sobrevivente.
+15;0;179;64;50;... O que você disse? Você não é a mãe dela?
+15;0;180;64;78;... Não a mãe de verdade. Ah... Deve ter acontecido há uns 15 anos atrás... Durante a guerra. Meu marido foi para a linha de frente. Um dia, eu fui para a estação pois recebi uma carta dizendo que ele estava voltando para casa. Mas... Ele nunca voltou. Sempre me pergunto se algo ruim aconteceu. Não, sei que cancelaram a viagem de retorno. Eu ia para a estação todos os dias. Até que num certo dia... Tinha uma moça caída na plataforma. Uma jovem estava correndo em volta dela,chorando. Isso era bem comum durante a guerra. Suas últimas palavras foram: \"Por favor, leve Aeris para um lugar seguro.\" No fim, meu marido nunca mais voltou. E eu não tive nenhum filho, ou seja, estava sozinha. Por isso, decidi cuidar da Aeris.
+15;0;181;0;0;Nós duas viramos amigas bem rápido. Ela amava conversar. Falava sobre tudo! Ela me disse que escapou de um laboratório de pesquisas em algum lugar. E que sua mãe já tinha retornado ao Planeta, então ela não se sentiria sozinha... E muitas outras coisas.
+15;0;182;64;50;Retornou ao planeta? (Será que ela usava drogas ou algo do tipo?)
+15;0;183;64;78;Eu não entendi o que ela quis dizer. Eu perguntei se ela queria dizer que sua mãe virou uma estrela no céu. Mas ela disse que era este planeta... Ela era uma criança muito misteriosa... Muitas coisas aconteceram, mas estávamos felizes! Mas eu sabia. Sabia dos seus poderes... Ela sempre tentava esconder, então eu agia como se nunca tivesse os visto.
+15;0;184;64;49;É incrível como ela conseguiu evitar a Shinra durante todos esses anos...
+15;0;185;64;78;A Shinra precisava dela. Duvido que a machuquem.
+15;0;186;64;51;Mas, por que agora...
+15;0;187;64;78;Ela trouxe uma garotinha com ela. No caminho para cá, Tseng as encontrou. Ela decidiu se entregar em troca da segurança da menina.
+15;0;188;64;49;Deve ser a Marlene.
+15;0;189;64;50;Marlene! Aeris foi capturada pela Marlene!? Me perdoe. Ela é minha filha. Me... Perdoe... De verdade...
+15;0;190;64;78;É o pai dela!? Como pôde ter deixado uma criança sozinha daquele jeito!?
+15;0;191;64;50;... Por favor não diga isso. Eu penso nisso o tempo todo. O que aconteceria com a Marlene, se eu... Mas entenda uma coisa... Eu não tenho uma resposta. Eu quero estar com a minha filha... Mas eu tenho que lutar. Por que se eu não fizer isso, o planeta morre. Então, vou continuar! Mesmo assim, ainda me preocupo com ela... Sempre. Viu? Agora estou andando em círculos.
+15;0;192;64;78;Acho que entendi o que está dizendo... Ela está lá em cima dormindo. Pode ir lá vê-la.
+15;0;193;64;51;É minha culpa... Fui eu quem meti Aeris nessa.
+15;0;194;64;78;Não diga isso. Ela não pensa assim.
+15;0;195;64;50;Estou tão feliz... Tão feliz de você estar bem...
+15;0;196;64;59;Papai, não chore. Ai! Seu bigode machuca!
+15;0;197;64;50;Cloud!
+15;0;198;64;49;?
+15;0;199;64;50;Você vai ajudar a Aeris, certo? Ela fez tanto por mim... Se é com a Shinra que você vai lidar, não vou ficar aqui parado! Vou com você, colega!
+15;0;200;64;59;Adivinha só! Aeris estava me perguntando muitas coisas. Como: \"Que tipo de pessoa é o Cloud?\" Aposto que ela gosta de você, Cloud!
+15;0;201;64;49;Veremos.
+15;0;202;64;59;Não vou contar pra Tifa.
+15;0;203;64;51;Você vai atrás dela, certo?
+15;0;204;64;49;Claro.
+15;0;205;64;51;Vou com você.
+15;0;206;64;49;Estamos indo ao Quartel General da Shinra... Se prepare para o pior.
+15;0;207;64;51;Eu sei. Agora, eu sinto que tenho que me ultrapassar meus limites. Se eu ficasse aqui... Eu ficaria louca.
+15;0;208;64;50;Perdão, mas posso deixar a Marlene aqui por mais um tempo?
+15;0;209;64;78;Claro, não me importo.
+15;0;210;64;50;Aqui é perigoso agora. Melhor irem para outro lugar.
+15;0;211;64;78;... Está certo. Mas me prometa que vai voltar para ela. Não vá morrer no meio do caminho.
+15;0;212;64;51;Como entramos no prédio?
+15;0;213;64;50;Não tem mais aquele trem que vai lá pra cima...
+15;0;214;0;0;Vão lá pra cima? Melhor ter uma bateria.
+15;0;215;64;49;Você vai me vender algo que acabou de encontrar?
+15;0;216;0;0;Ei, você já sabia? Mas eu consertei, então está tudo bem.
+15;0;217;64;49;Por que eu preciso de uma bateria pra subir até a plataforma?
+15;0;218;0;0;Vão descobrir quando chegarem lá. Que tal 100G por uma?
+15;0;219;64;49;...
+15;0;220;0;0;Sim             Não             
+15;0;221;0;0;Comprar
+15;0;222;0;0;Comprar
+15;0;223;64;49;Tudo bem, eu vou levar.
+15;0;224;0;0;Todos subindo por esta corda. Que medo... Brr.
+15;0;225;64;51;Dá pra subir?
+15;0;226;0;0;Sim, leva ao Mundo Superior.
+15;0;227;64;50;Beleza! Vamos subir!
+15;0;228;64;49;Não tem como. Você sabe qual é a altura disso?
+15;0;229;64;50;TEM um jeito! Olha lá! O que aquilo ali parece?
+15;0;230;64;49;Uma corda comum.
+15;0;231;64;50;Ah é? Pra mim parece \"A Corda Dourada Brilhosa da Esperança\"! (Brilhosa por que sim :P)
+15;0;232;64;51;Está certo. É o único caminho que temos...
+15;0;233;64;49;Ok, foi uma analogia ruim, mas eu entendi como se sente, Barret. Vamos lá!
+15;0;234;64;49;Não podemos subir mais...
+15;0;235;64;51;Poderíamos alcançar aquela corda se... Ah, precisaríamos da bateria aqui...
+15;0;236;64;50;Merda! Agora como a gente sobe!?
+15;0;237;64;51;Funcionou! Agora podemos alcançá-la...
+15;0;238;64;50;Ei, você deve conhecer esse prédio de cabeça pra baixo.
+15;0;239;64;49;... Na verdade não. É a primeira vez que entro aqui.
+15;0;240;64;50;Já ouvi falar desse lugar antes. Cada andar acima do Sextagésimo é especial e não é fácil de chegar, mesmo para quem trabalha aqui. Aeris deve estar por lá. A segurança parece bem fraca também. Beleza, vamos!
+15;0;241;64;51;Espera aí! Não está pensando em passar pela entrada principal, certo?
+15;0;242;64;50;Bem, o que você acha!? Eu vou chutar o cú da Shinra e...
+15;0;243;64;51;Não vai funcionar! Temos que achar outro jeito...
+15;0;244;64;50;Não tem outro! Se perdermos muito tempo, Aeris vai...
+15;0;245;64;51;Eu sei! Mas se formos pegos aqui... Ei, Cloud... O que faremos?
+15;0;246;0;0;Ir pra cima     Entrar de fininho
+15;0;247;64;49;Vamos entrar de fininho, sem ninguém perceber.
+15;0;248;64;49;Bora pra cima deles!
+15;0;249;64;50;Assim que eu gosto! Bora lá!
+15;0;250;0;0;Com licença! Se não têm nenhum compromisso aqui, eu vou ter que...
+15;0;251;0;0;Barret!? Isso não é bom!
+15;1;0;64;50;Não precisa ser comprometido... Esta é uma emergência!
+15;1;1;0;0;Quem eles pensam que são?
+15;1;2;64;76;Ei, você não é um AVALANCHE?Intrusos! Peguem eles!
+15;1;3;64;50;Vamos para o topo!
+15;1;4;64;49;Vamos tentar usar os elevadores.
+15;1;5;64;49;Vamos entrar discretamente.
+15;1;6;64;51;Viu? Vamos encontraroutra rota!
+15;1;7;64;50;Yo. Você vai mesmo subir essas escadas?
+15;1;8;64;51;Bem, precisamos ajudar Aeris de alguma forma.
+15;1;9;64;50;Mas desse jeito...
+15;1;10;64;51;Não tenho tempo para discutir com você! Eu vou!
+15;1;11;64;50;Você não vai sozinha!
+15;1;12;64;50;Não sei... Que inferno... Vamos subir...
+15;1;13;64;49;...não podemos fazer nada até que Aeris esteja salva.
+15;1;14;64;50;... Heh heh heh.
+15;1;15;64;49;Pare com isso. Está me dando arrepios.
+15;1;16;64;50;Então, você vai lutar mesmo por outra pessoa.   Achei que você estava errado.
+15;1;17;64;49;Quem se importa como que você acha!
+15;1;18;64;50;Só estou dizendo que talvez eu esteja errado...
+15;1;19;64;51;Heh heh heh...
+15;1;20;64;49;O que isso quer dizer, Tifa?
+15;1;21;64;50;Essas escadas não acabam nunca?
+15;1;22;64;51;Por que não pergunta a eles?
+15;1;23;64;50;Não é uma daquelas escada sem fim, não é?
+15;1;24;64;51;Claro que não!
+15;1;25;64;50;Certo...
+15;1;26;64;50;Já chegamos?
+15;1;27;64;51;Ainda não.
+15;1;28;64;50;...estamos perto?
+15;1;29;64;51;Eu já disse não!
+15;1;30;64;50;Yo...
+15;1;31;64;51;Olha, nem pergunte!Estamos muito longeainda, OK!?
+15;1;32;64;50;Droga, cara! Já deu! Estou voltando!
+15;1;33;64;51;Vai voltar tudo de novo?
+15;1;34;64;50;...
+15;1;35;64;51;Vamos, Barret. Vamos juntos!
+15;1;36;64;50;Yeah, bem, tudo quesei é que sou apenas carne e sangue... Esse meu braço... Não fico me gabandocomo se fosse um ex-membro da SOLDIER ou algo assim...
+15;1;37;64;51;Eu também sou humana...     Oh, faça o que quiser, eu estou indo!
+15;1;38;64;50;Pra que essa ignorância? Eu não quis dizer isso...
+15;1;39;64;51;Tudo bem, tudo bem!
+15;1;40;64;51;Cloud, você também está muito na frente!
+15;1;41;64;50;Yo... Que andar é esse?
+15;1;42;64;51;...desisti de contar.
+15;1;43;64;50;Por que eles tem que construir esses prédios tão alto? Essa Shinra...
+15;1;44;64;51;...
+15;1;45;64;50;Huff... Eu vou morrer... Marlene, papai queria ver seu rosto mais uma vez...
+15;1;46;64;51;Poderia deixar de agir como um retardado e subir? Só um pouco mais!...Talvez.
+15;1;47;64;50;F... finalmente... C... chegamos... N.... nunca mais quero ver... Escadas pelo resto de minha vida...
+15;1;48;64;51;Huff... puff... Isso realmente foi foda... Mas é isso. É melhor nos prepararmos...
+15;1;49;64;76;Destruam osintrusos!
+15;1;50;64;49;O que é isso?
+15;1;51;0;0;Obteve Cartão 61
+15;1;52;64;50;Não baixe a guarda.
+15;1;53;64;51;Espero que Aeris esteja bem.
+15;1;54;0;0;Ela esqueceu seu cartão-chave?
+15;1;55;0;0;Nem mesmo os funcionários podem andar acima do andar 60 sem um cartão-chave...
+15;1;56;0;0;Este é o piso do salão. Acima de nós estão os andares especiais dos manda-chuva.
+15;1;57;0;0;É difícil trabalharcom outras pessoas.
+15;1;58;0;0;Pensei ter ouvido um tumulto no andarde baixo. Sabe do que foi isso?
+15;1;59;0;0;Não tem ideia. Mas não precisa se preocupar, tudo que está acima do andar 60 está seguro.
+15;1;60;0;0;Quem diabos é você?O que você está fazendo por aqui?
+15;1;61;0;0;Cadê Aeris?     ...                
+15;1;62;0;0;...
+15;1;63;0;0;Onde está a Aeris?
+15;1;64;64;49;Onde está a Aeris?
+15;1;65;0;0;Aeris, quer dizer aquela garota. A recepcionista? Sim, eu estava começando a me preocupar com ela. Ela é nova e está tendo problemas como novo emprego. Espera, não é ela? É outra pessoa?
+15;1;66;0;0;...
+15;1;67;0;0;Ah, entendi. Então você deve sera tal... Divisão deReparos Shinra! Sabe, parece que este prédio está começando a desmoronar. Essa porta aberta, você deve consertarimediatamente. Ah sim, e dê uma olhada nos outros andares também. Eu vou te dar isso.
+15;1;68;0;0;Obteve Cartão 62
+15;1;69;0;0;Não me lembro de ter visto seu rostopor aqui. Você é novato? Vamos te ensinar algumas coisas...
+15;1;70;64;49;Coisas?
+15;1;71;0;0;Quero te ensinarcomo chegar nopróximo andar. Você não pode ir até o andar 60sem um cartão-chave. Pegue um e você poderá usar os elevadores. Basta lembrar que existem diferentes tipos de cartões. Um cartão-chave não vai deixar você ir em todos oslugares. Por exemplo, o cartão 60 só leva até o andar 60. Cartão-chave 65 só leva até o 65. É um sistema de segurança digno da Shinra.
+15;1;72;64;73;Hart: Como vai? Este é o escritóriodo prefeito de Midgar. Prefeito Domino está em seu escritório.   Se tiver alguma dúvida, sinta-se livre para me perguntar...
+15;1;73;64;72;Domino: Hmm? Ah, e quem é você? Vocês todos devem ser... Uhum... Eu? Eu sou Domino, o prefeito de Midgar. A cidade e tudo nela é realmente administrado pela Shinra. Meu único trabalho é vigiar os documentos da Shinra... Eu! O Prefeito! Um bibliotecário! Ohh... você quer subir as escadas? Eu te digo que, se conseguir usar a senha, eu darei meucartão-chave.
+15;1;74;64;49;O quê?
+15;1;75;64;72;A: MAKO B: BEST (Procure por pistasagora)
+15;1;76;64;73;Você falou com o prefeito? O quê? Uma senha? Ah, entendi... Mas você não pode culpá-lo. Tudo em Midgar é controlado pelo Pres.Shinra. Talvez eu posso te ajudar.
+15;1;77;64;72;O MELHOR!! Deus, eu amo o som disso!   O Melhor!! MELHOR EU SOU o melhor... EU!   Não importa o que falem, é melhor acreditar... hmm. Bem, ok. Aqui, pegue.
+15;1;78;0;0;Obteve Cartão 64.
+15;1;79;0;0;Obteve Cartão 65.
+15;1;80;64;72;Por que eu faria algo assim? Mexer com eles, é claro! Shinra está me torturando sempre. É por isso que eu fui um pouco rude com você. Agora vá até lá e faça eles sofrerem de verdade! Heh heh heh...
+15;1;81;0;0;...huff...wheeze...
+15;1;82;0;0;Estou começando a me preocupar com a minha barriga...
+15;1;83;0;0;Hmph, ohmph... Como sou chefe de segurança desse prédio, a resistência é muitoimportante para mim.
+15;1;84;0;0;Você deve ser um visitante. Por favor, use só as máquinas não utilizadas.
+15;1;85;0;0;Você parece cansado, por que não tira uma soneca?
+15;1;86;0;0;Obteve Cartão 66.
+15;1;87;64;49;Eles estão tendo uma reunião executiva.   Me pergunto se é sobre o incidente com o Plate.
+15;1;88;0;0;Isso me dá uma sensação de ESTAR VIVO.   A sensação de movereste mundo, apenas com minhas mãos.
+15;1;89;0;0;Vamos lá, estamos construindo o futuro de Mako!
+15;1;90;64;50;Geez..! Isso é um monte de fatos!
+15;1;91;64;66;Temos as estimativas de danopara o Reator 7. Considerando as fábricas que já montamos e todos osinvestimentos, o dano é estimado em aproximadamente 10 bilhões de Gil...O custo estimado para reconstruir o Reator 7...
+15;1;92;64;61;Não estamos reconstruindo.
+15;1;93;64;66;O quê?
+15;1;94;64;61;Estamos deixando o Reator 7 como está.E reiniciando o plano Neo-Midgar.
+15;1;95;64;66;...os antigos?
+15;1;96;64;61;A Terra Prometida será em breve nossa. Quero aumentar as taxas de Mako 15 1232519313nem todas as áreas.
+15;1;97;0;0;Palmer: Taxa encaminhada! Taxa encaminhada! Tra, la, la! E por favor, incluao nosso Programa Espacial no orçamento!
+15;1;98;64;61;Reeve e Scarlet dividirão a renda extra do aumento dataxa.
+15;1;99;0;0;Palmer: Oh, cara!
+15;1;100;64;66;Senhor, se você aumentar as taxas, as pessoas perderãoa confiança...
+15;1;101;64;61;Vai dar tudo certo.Os cidadãos ignorantes não perderão a confiança, eles vãoconfiar na Shinra ainda mais.
+15;1;102;64;63;Ha ha ha! Afinal, somos nós que salvamos o Reator 7 da AVALANCHE!
+15;1;103;64;50;Esse porco imundo!
+15;1;104;64;61;Hojo, como é a garota?
+15;1;105;64;65;Hojo: Como um espécime, ela é inferior a mãe. Ainda estou no processo de compará-la com a mãe dela, Ifalna, mas por enquanto a diferença é 18.
+15;1;106;64;61;Quanto tempo a pesquisa levará?
+15;1;107;64;65;Provavelmente 120 anos. É provavelmente impossível terminarem nossa vida. Ou na vida da espécime também. É por isso que estamos pensando emreproduzi-la. Então, poderíamos criar um que resistisse a nossa pesquisa por um longo tempo.
+15;1;108;64;61;E a Terra Prometida? Não vai atrapalhar nossos planos?
+15;1;109;64;65;Isso é o que eu preciso planejar. A mãe é forte...   E ainda tem suas fraquezas.
+15;1;110;64;61;Isso conclui nossa reunião.
+15;1;111;64;49;Eles estavam falando sobre Aeris... né?
+15;1;112;64;50;Eu não sei.
+15;1;113;64;51;Provavelmente.
+15;1;114;64;49;Vamos segui-los. Hojo... hã..?
+15;1;115;64;50;Me lembro dele. Aquela cara de Hojo. Ele é o encarregadodo Departamento de Ciências da Shinra.Cloud, você não o conhece?
+15;1;116;64;49;Essa é a primeira vez que eu realmente o vejo. Então... Ele é assim...
+15;1;117;0;0;Este exemplar é de hoje?
+15;1;118;64;65;Sim. Estamos começando imediatamente. Aumente para o nível superior.
+15;1;119;64;65;Minha preciosa espécime ....
+15;1;120;64;51;Espécime preciosa...Será usado para um experimento biológico?
+15;1;121;64;49;Jenova... Sephiroth... Então... eles vieram aqui.
+15;1;122;64;51;Cloud, seja forte!
+15;1;123;64;49;Você viu?
+15;1;124;64;50;Viu o quê?
+15;1;125;64;49;Está se movendo... Ainda está vivo?
+15;1;126;64;50;Que carai é isso, papai. Bora continuar!
+15;1;127;64;49;Aeris!
+15;1;128;64;65;Aeris? Oh, esse é o nome dela? O que você quer?
+15;1;129;64;49;Estamos levando Aeris de volta.
+15;1;130;64;65;Estranhos...
+15;1;131;64;50;Deveria ter notado antes, você...
+15;1;132;64;65;Há tantas coisas frívolas nesse mundo.
+15;1;133;64;65;Você vai me matar? Não acho que deveria. O equipamento aqui é extremamente delicado. Sem mim, quem poderia operá-lo? Hmm?
+15;1;134;64;49;Ugh.
+15;1;135;64;65;Isso mesmo. Recomendo que você pense logicamente antes de fazer qualquer movimento precipitado. Agora, traga a amostra!
+15;1;136;64;52;Cloud, socorro!
+15;1;137;64;49;O que acha que estáfazendo?
+15;1;138;64;65;Prestando ajuda a uma espécie ameaçada...   Ambos estão a beirada extinção... Se eu não ajudar, todos esses animaisdesaparecerão.
+15;1;139;64;51;...animal? Isso é terrível! Aeris é um ser humano!
+15;1;140;64;50;Você vai pagar por isso!
+15;1;141;64;49;Barret! Consegue fazer algo?
+15;1;142;64;50;Claro! Se afastem!
+15;1;143;64;65;Pare! O... O que estão fa... Ah! Meus preciosos espécimes...
+15;1;144;64;49;Agora é a nossa chance de resgatar Aeris!
+15;1;145;64;52;Obrigado, Cloud.
+15;1;146;64;51;Cloud... Aconteceu algo?
+15;1;147;64;49;O elevator está se movendo.
+15;1;148;64;65;Esse espécime não é um comum. É um espécime feroz!
+15;1;149;64;53;Ele é bem forte. Eu vou ajudá-los.
+15;1;150;64;51;Isso fala!?
+15;1;151;64;53;Falarei o quanto quiser depois, moça.
+15;1;152;64;49;Cuidaremos desse monstro. Alguém leve Aeris para um lugar seguro... Barret, tome conta dela!
+15;1;153;0;0;RedXIII entra para o time.
+15;1;154;64;49;Qual é o seu nome?
+15;1;155;64;53;Hojo me chamou de RedXIII. Um nome sem significado algum para mim.
+15;1;156;64;49;Venha!
+15;1;157;64;49;Aeris, você está bem?
+15;1;158;64;51;Ela parece bem... De muitos jeitos.
+15;1;159;64;53;Eu tenho o direito de escolha também. Eu não gosto de coisas com 2 pernas.
+15;1;160;64;50;O que é você?
+15;1;161;64;53;Uma pergunta bem direta, mas é difícil de responder. Eu sou o que vê... Vocês devem ter muitas perguntas, mas primeiro, vamos sair daqui. Eu vou na frente.
+15;1;162;64;52;Cloud... Então você veio por mim.
+15;1;163;64;53;Mil perdões pelo o que aconteceu antes. Eu estava apenas tentando pegar o Hojo desprevenido...
+15;1;164;64;50;Agora que salvamos Aeris, não precisamos mais ficar nesse prédio! Então bora meter o pé daqui!
+15;1;165;64;49;Se formos juntos, vão nos encontrar mais facilmente. Melhor nos separarmos.
+15;1;166;64;50;Vejo vocês depois! Estaremos esperando no elevador do Sextagésimo Nono andar.
+15;1;167;64;51;Vamos na frente! Nos vemos lá.
+15;1;168;0;0;Por favor não me mate. Eu só fiz o que Hojo me ordenou. Aqui, este é o cartão para o Sextagésimo Nono andar. Se eu fosse um inimigo, eu faria isso?
+15;1;169;0;0;Ganhou o Cartão do andar 68.
+15;1;170;64;49;E-ei! O que é?
+15;1;171;64;67;Para onde vão?              
+15;1;172;64;49;Turks? Deve ser uma armadilha...
+15;1;173;64;67;Deve ter sido uma grande aventura... Se divertiram?
+15;1;174;64;49;Foram pegos também?
+15;1;175;64;49;Onde está a Aeris?
+15;1;176;64;61;Num lugar seguro.
+15;1;177;64;61;Ela é a última sobrevivente dos Antigos... Não sabiam? Eles se chamavam de \"Cetra\", e vivem há milhares de anos. Agora são apenas uma página virada na história.
+15;1;178;64;53;Cetra... Aquela moça, é uma sobrevivente dos Cetra?
+15;1;179;64;61;Cetra, ou os Antigos nos mostrarão o caminho para a Terra Prometida. Espero muito vindo dela.
+15;1;180;64;53;A Terra Prometida? Não é apenas uma lenda?
+15;1;181;64;61;Mesmo assim, é valioso demais para não procurar. É dito que a Terra Prometida é bem fértil... Se ela é fértil...
+15;1;182;64;50;Então deve ter Mako!
+15;1;183;64;61;Exatamente. Por isso nosso Reator de Mako sugador de dinheiro é uma necessidade. O Mako abundante irá apenas sair por si só. Lá é onde a Neo-Midgar será construída. A nova glória da Shinra...
+15;1;184;64;50;Desgraçado! Para de sonhar!
+15;1;185;64;61;Sério, não sabia? Hoje em dia tudo o que precisa para realizar seus sonhos é dinheiro e ciência. Bom, esse é o fim da nossa reunião.
+15;1;186;64;69;Rude: Venham, por aqui!
+15;1;187;64;50;Espera! Tenho muito pra te dizer ainda!
+15;1;188;64;61;Se querem algo mais... Vão na secretaria.
+15;1;189;64;51;Podemos sair?
+15;1;190;64;49;Meio difícil.
+15;1;191;64;51;Não desista!
+15;1;192;64;49;(Como será que os outros estão...?)
+15;1;193;0;0;
+15;1;194;0;0;Como será que a Aeris está?
+15;1;195;64;50;Ei! Aeris é uma Antiga e o nome verdadeiro deles é Cetra. Eles sabem onde a Terra Prometida está e a Shinra procura por ela. Nem sei se existe. Estou certo? A Shinra acredita que lá é cheio da Energia de Mako. Ou seja, se a Shinra chegar lá, eles vão sugar toda a energia... E a terra vai morrer. O Planeta vai ficar mais fraco.
+15;1;196;64;50;Isso não vai ficar assim. Estou recrutando novos membros! Eu, Tifa, Cloud... A Aeris também.
+15;1;197;64;50;E você?
+15;1;198;64;53;...
+15;1;199;64;50;Carinha chato você, viu?
+15;1;200;64;53;... Vovô.
+15;1;201;64;50;Vovô!? Ha, ha, ha... Vovô, hmm... Ha, ha, ha...
+15;1;202;64;53;Qual é a graça?
+15;1;203;64;50;Nunca nem vi... Ha, ha.
+15;1;204;64;52;Cloud, está aí?
+15;1;205;64;49;Aeris!? Está bem?
+15;1;206;64;52;Sim, estou bem. Eu sabia que viria por mim.
+15;1;207;64;49;Ei, sou seu guarda-costas, não é?
+15;1;208;64;52;O acordo foi de 1 encontro, não é?
+15;1;209;64;51;... Ah, entendi.
+15;1;210;64;52;Hã!? Tifa! Tifa, você veio também!
+15;1;211;64;51;Com licença. Sabe, Aeris, eu tenho uma pergunta.
+15;1;212;64;52;O que é?
+15;1;213;64;51;A Terra Prometida existe mesmo?
+15;1;214;64;52;... Eu não sei. O que eu sei é que... Os Cetra nasceram do Planeta, falam com o Planeta, e destrancam o Planeta. E... Então... Os Cetra retornarão para a Terra Prometida. Uma Terra que promete felicidade suprema.
+15;1;215;64;51;... O que isso quer dizer?
+15;1;216;64;52;Mais que palavras... Eu não sei.
+15;1;217;64;49;... Falar com o Planeta?
+15;1;218;64;51;O que o Planeta diz?
+15;1;219;64;52;É cheia de pessoas e de barulho. Por isso eu não sei o que estão dizendo.
+15;1;220;64;49;Você escuta agora?
+15;1;221;64;52;Só escutei na igreja da favela. Mamãe disse que Midgar não estava mais segura. Minha... mãe verdadeira. Hoje vou sair de Midgar... Fale com o Planeta e encontre minha Terra Prometida... Isso é o que mamãe disse. Pensei em parar de ouvir sua voz enquanto crescia, mas...
+15;1;222;64;49;Vamos apenas dormir.
+15;1;223;64;49;A porta está aberta... Quando foi aberta?
+15;1;224;64;49;O que aconteceu?
+15;1;225;64;49;Tifa... acorde!
+15;1;226;64;51;O que há de errado?
+15;1;227;64;49;Algo está errado. Olhe para fora.
+15;1;228;64;51;O que será que aconteceu...
+15;1;229;64;49;Ele deve ter a chave...
+15;1;230;0;0;Obteve Chaves.
+15;1;231;64;49;Vamos, Tifa, pegue Aeris, eu vou ajudar Barret e RedXlll.
+15;1;232;64;49;Barret, RedXlll... Venham comigo. Alguma coisa está errada.
+15;1;233;64;50;Como você entrou? Por que a porta está aberta! O que porra está acontecendo?!
+15;1;234;64;53;Nenhum ser humano poderia ter feito isso. Eu vou na frente.
+15;1;235;64;50;Vou fazer o limpa aqui, então vocês vão na frente. E não sejam pegos pela Shinra!
+15;1;236;0;0;Tifa e Aeris se juntaram a você.
+15;1;237;64;51;Vamos lá, vamos seguir RedXlll!
+15;1;238;0;0;Cartão-chave usado.
+15;1;239;0;0;Bloqueado!
+15;1;240;0;0;\"Plano de DominaçãoMundial da Shinra\"
+15;1;241;0;0;O diário do prefeito...     \"Maldito Pres.Shinra com vida curta!\"
+15;1;242;0;0;MAKO            BEST            
+15;1;243;64;72;Você deve ser incrivelmente idiota!
+15;1;244;64;72;O MELHOR!! Deus, eu amo o som disso!   O Melhor!! MELHOR EU SOU o melhor... EU!   Não importa o que falem, é melhor acreditar... hmm. Bem, ok. Aqui, pegue.
+15;1;245;0;0;Há um interruptor. -Clique- ...hm? Ouvi algo abrindo.
+15;1;246;0;0;Por favor, não me mate!
