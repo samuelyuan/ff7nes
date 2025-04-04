@@ -298,6 +298,18 @@ LABEL {
   ADDR  $A3D7;
 };
 LABEL {
+  NAME "AudioOpcodeCEAndCFLoopJump";
+  ADDR  $A5E4;
+};
+LABEL {
+  NAME "SelectAltChannelBank";
+  ADDR  $A5F7;
+};
+LABEL {
+  NAME "ApplyLoopOffsetWithBank";
+  ADDR  $A5F9;
+};
+LABEL {
   NAME "ScrollBufferScreenUp";
   ADDR  $D13A;
 };
