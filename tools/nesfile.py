@@ -14,6 +14,12 @@ class NESFile:
         baseAddr = (bankNum * 0x8000) + 0x10
         return self.getDataBlock(baseAddr, baseAddr + 0x8000)
 
+    def writeDataBlock(self, bankNum, dataBlock):
+        baseAddr = (bankNum * 0x8000) + 0x10
+        with open(self.filename, "r+b") as file:
+            file.seek(baseAddr)
+            file.write(bytearray(dataBlock))
+
     def getAddressBlock(self, bankNum, startAddressOffset, endAddressOffset):
         addrBlock = []
 
