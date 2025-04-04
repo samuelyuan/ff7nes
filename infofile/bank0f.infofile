@@ -24,16 +24,16 @@ RANGE {
 };
 RANGE {
   START $91F9;
-  END $C7CE;
+  END $BFE1;
   TYPE TEXTTABLE;
 };
 RANGE {
-  START $C7CF;
-  END $C9BC;
+  START $BFE2;
+  END $C1CF;
   TYPE ADDRTABLE;
 };
 RANGE {
-  START $C9BD;
+  START $C1D0;
   END $FFBF;
   TYPE TEXTTABLE;
 };
@@ -57,1969 +57,1997 @@ LABEL {
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index1";
-  ADDR  $922D;
+  ADDR  $921F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index2";
-  ADDR  $927F;
+  ADDR  $9265;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index3";
-  ADDR  $928B;
+  ADDR  $927B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index4";
-  ADDR  $929A;
+  ADDR  $9293;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index5";
-  ADDR  $92D4;
+  ADDR  $92B3;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index6";
-  ADDR  $92F1;
+  ADDR  $92CD;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index7";
-  ADDR  $930B;
+  ADDR  $92ED;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index8";
-  ADDR  $932A;
+  ADDR  $930B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index9";
-  ADDR  $9341;
+  ADDR  $9325;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index10";
-  ADDR  $9364;
+  ADDR  $934F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index11";
-  ADDR  $9387;
+  ADDR  $936A;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index12";
-  ADDR  $93A9;
+  ADDR  $937F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index13";
-  ADDR  $93D7;
+  ADDR  $939F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index14";
-  ADDR  $93E4;
+  ADDR  $93A5;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index15";
-  ADDR  $940F;
+  ADDR  $93C6;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index16";
-  ADDR  $943E;
+  ADDR  $93E6;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index17";
-  ADDR  $946C;
+  ADDR  $9417;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index18";
-  ADDR  $9476;
+  ADDR  $9426;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index19";
-  ADDR  $94B1;
+  ADDR  $944F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index20";
-  ADDR  $9512;
+  ADDR  $9492;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index21";
-  ADDR  $957C;
+  ADDR  $94CF;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index22";
-  ADDR  $9588;
+  ADDR  $94EB;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index23";
-  ADDR  $958F;
+  ADDR  $9501;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index24";
-  ADDR  $95AA;
+  ADDR  $9519;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index25";
-  ADDR  $95BA;
+  ADDR  $952D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index26";
-  ADDR  $95C5;
+  ADDR  $9540;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index27";
-  ADDR  $95DC;
+  ADDR  $955E;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index28";
-  ADDR  $9628;
+  ADDR  $95A5;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index29";
-  ADDR  $964F;
+  ADDR  $95C9;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index30";
-  ADDR  $96A2;
+  ADDR  $960E;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index31";
-  ADDR  $96ED;
+  ADDR  $9657;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index32";
-  ADDR  $972E;
+  ADDR  $968B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index33";
-  ADDR  $9769;
+  ADDR  $96AA;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index34";
-  ADDR  $9772;
+  ADDR  $96BD;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index35";
-  ADDR  $9797;
+  ADDR  $96DF;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index36";
-  ADDR  $97C2;
+  ADDR  $970C;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index37";
-  ADDR  $97CE;
+  ADDR  $9726;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index38";
-  ADDR  $9834;
+  ADDR  $977A;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index39";
-  ADDR  $984C;
+  ADDR  $979B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index40";
-  ADDR  $987E;
+  ADDR  $97C2;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index41";
-  ADDR  $988A;
+  ADDR  $97D7;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index42";
-  ADDR  $98E9;
+  ADDR  $982F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index43";
-  ADDR  $98F3;
+  ADDR  $9843;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index44";
-  ADDR  $991B;
+  ADDR  $986E;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index45";
-  ADDR  $9939;
+  ADDR  $9891;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index46";
-  ADDR  $9950;
+  ADDR  $98B6;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index47";
-  ADDR  $99B0;
+  ADDR  $98F9;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index48";
-  ADDR  $99D9;
+  ADDR  $991B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index49";
-  ADDR  $9A23;
+  ADDR  $9959;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index50";
-  ADDR  $9A36;
+  ADDR  $9975;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index51";
-  ADDR  $9B65;
+  ADDR  $9A24;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index52";
-  ADDR  $9B7B;
+  ADDR  $9A37;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index53";
-  ADDR  $9C23;
+  ADDR  $9A9F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index54";
-  ADDR  $9C50;
+  ADDR  $9ABF;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index55";
-  ADDR  $9C77;
+  ADDR  $9AE7;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index56";
-  ADDR  $9C89;
+  ADDR  $9B00;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index57";
-  ADDR  $9C9A;
+  ADDR  $9B14;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index58";
-  ADDR  $9CA5;
+  ADDR  $9B26;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index59";
-  ADDR  $9D11;
+  ADDR  $9B7C;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index60";
-  ADDR  $9D2D;
+  ADDR  $9B95;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index61";
-  ADDR  $9D3E;
+  ADDR  $9BAE;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index62";
-  ADDR  $9D60;
+  ADDR  $9BD2;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index63";
-  ADDR  $9DA9;
+  ADDR  $9C0D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index64";
-  ADDR  $9E0A;
+  ADDR  $9C36;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index65";
-  ADDR  $9E33;
+  ADDR  $9C5C;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index66";
-  ADDR  $9EAB;
+  ADDR  $9CAF;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index67";
-  ADDR  $9EEC;
+  ADDR  $9CDC;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index68";
-  ADDR  $9F0F;
+  ADDR  $9CFB;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index69";
-  ADDR  $9F83;
+  ADDR  $9D52;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index70";
-  ADDR  $9FCC;
+  ADDR  $9D82;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index71";
-  ADDR  $A05E;
+  ADDR  $9DE4;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index72";
-  ADDR  $A06D;
+  ADDR  $9DF8;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock0Index73";
+  ADDR  $9E0A;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index74";
-  ADDR  $A075;
+  ADDR  $9E20;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index75";
-  ADDR  $A08D;
+  ADDR  $9E39;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index76";
-  ADDR  $A0B3;
+  ADDR  $9E71;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index77";
-  ADDR  $A0C3;
+  ADDR  $9E7B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index78";
-  ADDR  $A0D4;
+  ADDR  $9E87;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index79";
-  ADDR  $A111;
+  ADDR  $9EB8;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index80";
-  ADDR  $A15D;
+  ADDR  $9F01;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index81";
-  ADDR  $A187;
+  ADDR  $9F31;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index82";
-  ADDR  $A1B3;
+  ADDR  $9F62;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index83";
-  ADDR  $A1CE;
+  ADDR  $9F82;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index84";
-  ADDR  $A224;
+  ADDR  $9FCA;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index85";
-  ADDR  $A248;
+  ADDR  $9FE9;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index86";
-  ADDR  $A26D;
+  ADDR  $A013;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index87";
-  ADDR  $A27B;
+  ADDR  $A02A;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index88";
-  ADDR  $A293;
+  ADDR  $A045;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index89";
-  ADDR  $A2F5;
+  ADDR  $A0A7;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index90";
-  ADDR  $A320;
+  ADDR  $A0D1;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index91";
-  ADDR  $A32F;
+  ADDR  $A0F4;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index92";
-  ADDR  $A3A6;
+  ADDR  $A14D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index93";
-  ADDR  $A3D1;
+  ADDR  $A17A;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index94";
-  ADDR  $A42C;
+  ADDR  $A1BA;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index95";
-  ADDR  $A477;
+  ADDR  $A1F2;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index96";
-  ADDR  $A4BB;
+  ADDR  $A221;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index97";
-  ADDR  $A4F5;
+  ADDR  $A24B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index98";
-  ADDR  $A540;
+  ADDR  $A282;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index99";
-  ADDR  $A55E;
+  ADDR  $A29A;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index100";
-  ADDR  $A58F;
+  ADDR  $A2A4;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index101";
-  ADDR  $A5E5;
+  ADDR  $A2C2;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index102";
-  ADDR  $A61F;
+  ADDR  $A2FD;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index103";
-  ADDR  $A632;
+  ADDR  $A317;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index104";
-  ADDR  $A682;
+  ADDR  $A35D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index105";
-  ADDR  $A6BC;
+  ADDR  $A398;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index106";
-  ADDR  $A6D1;
+  ADDR  $A3B7;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index107";
-  ADDR  $A735;
+  ADDR  $A40D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index108";
-  ADDR  $A744;
+  ADDR  $A422;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index109";
-  ADDR  $A787;
+  ADDR  $A474;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index110";
-  ADDR  $A7A9;
+  ADDR  $A49B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index111";
-  ADDR  $A7BB;
+  ADDR  $A4AF;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index112";
-  ADDR  $A80E;
+  ADDR  $A4F3;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index113";
-  ADDR  $A83B;
+  ADDR  $A522;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index114";
-  ADDR  $A882;
+  ADDR  $A55B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index115";
-  ADDR  $A88F;
+  ADDR  $A56F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index116";
-  ADDR  $A8BE;
+  ADDR  $A59D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index117";
-  ADDR  $A8DD;
+  ADDR  $A5BF;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index118";
-  ADDR  $A94F;
+  ADDR  $A603;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index119";
-  ADDR  $A961;
+  ADDR  $A61A;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index120";
-  ADDR  $A9BE;
+  ADDR  $A657;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index121";
-  ADDR  $A9CF;
+  ADDR  $A671;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index122";
-  ADDR  $AA17;
+  ADDR  $A6A6;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index123";
-  ADDR  $AA20;
+  ADDR  $A6B9;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index124";
-  ADDR  $AA7E;
+  ADDR  $A6F4;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index125";
-  ADDR  $AAA2;
+  ADDR  $A712;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index126";
-  ADDR  $AB42;
+  ADDR  $A77B;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock0Index127";
+  ADDR  $A79B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index128";
-  ADDR  $AB67;
+  ADDR  $A7AD;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index129";
-  ADDR  $AB7C;
+  ADDR  $A7BF;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index130";
-  ADDR  $ABD2;
+  ADDR  $A7FB;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index131";
-  ADDR  $AC15;
+  ADDR  $A822;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index132";
-  ADDR  $AC3B;
+  ADDR  $A83D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index133";
-  ADDR  $ACA8;
+  ADDR  $A87D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index134";
-  ADDR  $ACB6;
+  ADDR  $A894;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index135";
-  ADDR  $ACC0;
+  ADDR  $A8A6;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index136";
-  ADDR  $ACCA;
+  ADDR  $A8C0;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index137";
-  ADDR  $ACD1;
+  ADDR  $A8D0;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index138";
-  ADDR  $ACF3;
+  ADDR  $A8FB;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index139";
-  ADDR  $AD06;
+  ADDR  $A91D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index140";
-  ADDR  $AD0B;
+  ADDR  $A92D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index141";
-  ADDR  $AD17;
+  ADDR  $A941;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index142";
-  ADDR  $AD47;
+  ADDR  $A97B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index143";
-  ADDR  $AD50;
+  ADDR  $A98F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index144";
-  ADDR  $ADC0;
+  ADDR  $A9D8;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index145";
-  ADDR  $ADCD;
+  ADDR  $A9F0;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index146";
-  ADDR  $ADD5;
+  ADDR  $AA02;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index147";
-  ADDR  $ADEF;
+  ADDR  $AA2D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index148";
-  ADDR  $AE13;
+  ADDR  $AA4F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index149";
-  ADDR  $AE72;
+  ADDR  $AAA3;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index150";
-  ADDR  $AE93;
+  ADDR  $AAC0;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index151";
-  ADDR  $AEFB;
+  ADDR  $AB0D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index152";
-  ADDR  $AF69;
+  ADDR  $AB5D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index153";
-  ADDR  $B096;
+  ADDR  $AC26;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index154";
-  ADDR  $B0A8;
+  ADDR  $AC46;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index155";
-  ADDR  $B0D5;
+  ADDR  $AC5C;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index156";
-  ADDR  $B109;
+  ADDR  $AC99;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock0Index157";
+  ADDR  $ACB2;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index158";
-  ADDR  $B11F;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index99";
-  ADDR  $B12C;
+  ADDR  $ACCA;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index159";
-  ADDR  $B140;
+  ADDR  $ACE7;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index160";
-  ADDR  $B14C;
+  ADDR  $ACFC;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index161";
-  ADDR  $B175;
+  ADDR  $AD28;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index162";
-  ADDR  $B1B4;
+  ADDR  $AD60;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index163";
-  ADDR  $B1DB;
+  ADDR  $AD85;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index164";
-  ADDR  $B1F9;
+  ADDR  $ADA7;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index165";
-  ADDR  $B232;
+  ADDR  $ADD7;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index166";
-  ADDR  $B241;
+  ADDR  $ADE9;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index167";
-  ADDR  $B25D;
+  ADDR  $AE05;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index168";
-  ADDR  $B272;
+  ADDR  $AE19;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index169";
-  ADDR  $B28B;
+  ADDR  $AE3A;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index170";
-  ADDR  $B2AE;
+  ADDR  $AE68;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock0Index171";
+  ADDR  $AE86;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index172";
-  ADDR  $B2C2;
+  ADDR  $AE95;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index173";
-  ADDR  $B2E0;
+  ADDR  $AEB6;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index174";
-  ADDR  $B2FF;
+  ADDR  $AEDA;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index175";
-  ADDR  $B321;
+  ADDR  $AF03;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index176";
-  ADDR  $B333;
+  ADDR  $AF1D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index177";
-  ADDR  $B350;
+  ADDR  $AF3F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index178";
-  ADDR  $B36C;
+  ADDR  $AF63;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index179";
-  ADDR  $B395;
+  ADDR  $AF92;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index180";
-  ADDR  $B3C5;
+  ADDR  $AFC3;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index181";
-  ADDR  $B649;
+  ADDR  $B1BA;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index182";
-  ADDR  $B751;
+  ADDR  $B261;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index183";
-  ADDR  $B76B;
+  ADDR  $B279;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index184";
-  ADDR  $B88F;
+  ADDR  $B36A;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index185";
-  ADDR  $B8D1;
+  ADDR  $B3A3;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index186";
-  ADDR  $B90B;
+  ADDR  $B3D2;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index187";
-  ADDR  $B91B;
+  ADDR  $B3EF;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index188";
-  ADDR  $B9AD;
+  ADDR  $B45C;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index189";
-  ADDR  $B9C0;
+  ADDR  $B474;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index190";
-  ADDR  $BA25;
+  ADDR  $B4C8;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index191";
-  ADDR  $BA79;
+  ADDR  $B4E1;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index192";
-  ADDR  $BBE8;
+  ADDR  $B5D9;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index193";
-  ADDR  $BC48;
+  ADDR  $B617;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index194";
-  ADDR  $BC86;
+  ADDR  $B64A;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index195";
-  ADDR  $BCB1;
+  ADDR  $B671;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index196";
-  ADDR  $BCDE;
+  ADDR  $B6A2;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index197";
-  ADDR  $BD05;
+  ADDR  $B6C6;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index198";
-  ADDR  $BD0E;
+  ADDR  $B6DA;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index199";
-  ADDR  $BD12;
+  ADDR  $B6E8;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index200";
-  ADDR  $BD9B;
+  ADDR  $B747;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index201";
-  ADDR  $BE15;
+  ADDR  $B7A6;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index202";
-  ADDR  $BE26;
+  ADDR  $B7BB;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index203";
-  ADDR  $BE3B;
+  ADDR  $B7D7;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index204";
-  ADDR  $BE5D;
+  ADDR  $B7F8;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index205";
-  ADDR  $BE65;
+  ADDR  $B808;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index206";
-  ADDR  $BE7B;
+  ADDR  $B822;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index207";
-  ADDR  $BEC3;
+  ADDR  $B859;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index208";
-  ADDR  $BF20;
+  ADDR  $B8A1;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index209";
-  ADDR  $BF57;
+  ADDR  $B8D0;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index210";
-  ADDR  $BF6B;
+  ADDR  $B8EB;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index211";
-  ADDR  $BFA6;
+  ADDR  $B91C;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index212";
-  ADDR  $BFFD;
+  ADDR  $B95C;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index213";
-  ADDR  $C025;
+  ADDR  $B97A;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index214";
-  ADDR  $C0A5;
+  ADDR  $B9C9;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index215";
-  ADDR  $C0D9;
+  ADDR  $B9F2;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index216";
-  ADDR  $C10A;
+  ADDR  $BA26;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index217";
-  ADDR  $C13B;
+  ADDR  $BA57;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index218";
-  ADDR  $C16E;
+  ADDR  $BA7D;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock0Index219";
+  ADDR  $BAAD;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index220";
-  ADDR  $C1A9;
+  ADDR  $BAC1;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index221";
-  ADDR  $C1CA;
+  ADDR  $BAE3;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index222";
-  ADDR  $C1CE;
+  ADDR  $BAED;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index223";
-  ADDR  $C1D2;
+  ADDR  $BAF7;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index224";
-  ADDR  $C1ED;
+  ADDR  $BB10;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index225";
-  ADDR  $C21C;
+  ADDR  $BB42;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index226";
-  ADDR  $C22F;
+  ADDR  $BB5C;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index227";
-  ADDR  $C251;
+  ADDR  $BB7F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index228";
-  ADDR  $C271;
+  ADDR  $BB98;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index229";
-  ADDR  $C2AE;
+  ADDR  $BBC3;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index230";
-  ADDR  $C2DC;
+  ADDR  $BBDE;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index231";
-  ADDR  $C2F2;
+  ADDR  $BC00;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index232";
-  ADDR  $C332;
+  ADDR  $BC3B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index233";
-  ADDR  $C366;
+  ADDR  $BC68;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index234";
-  ADDR  $C3B1;
+  ADDR  $BCAC;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index235";
-  ADDR  $C3CD;
+  ADDR  $BCCE;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index236";
-  ADDR  $C409;
+  ADDR  $BCF5;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index237";
-  ADDR  $C429;
+  ADDR  $BD1B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index238";
-  ADDR  $C44B;
+  ADDR  $BD3E;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index239";
-  ADDR  $C474;
+  ADDR  $BD5F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index240";
-  ADDR  $C4CB;
+  ADDR  $BD97;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index241";
-  ADDR  $C58D;
+  ADDR  $BE27;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index242";
-  ADDR  $C5E7;
+  ADDR  $BE50;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index243";
-  ADDR  $C630;
+  ADDR  $BE68;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index244";
-  ADDR  $C66A;
+  ADDR  $BE93;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index245";
-  ADDR  $C6B6;
+  ADDR  $BED1;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index246";
-  ADDR  $C6FE;
+  ADDR  $BF15;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index247";
-  ADDR  $C71F;
+  ADDR  $BF37;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index248";
-  ADDR  $C739;
+  ADDR  $BF47;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index249";
-  ADDR  $C74D;
+  ADDR  $BF5F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index250";
-  ADDR  $C773;
+  ADDR  $BF7C;
 };
 LABEL {
   NAME "Bank0fDialogueBlock0Index251";
-  ADDR  $C7B4;
+  ADDR  $BFA8;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1";
-  ADDR  $C7CF;
+  ADDR  $BFE2;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index0";
-  ADDR  $C9BD;
+  ADDR  $C1D0;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index1";
-  ADDR  $CA39;
+  ADDR  $C21E;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index2";
-  ADDR  $CA55;
+  ADDR  $C238;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index3";
-  ADDR  $CA9B;
+  ADDR  $C26E;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index4";
-  ADDR  $CAB2;
+  ADDR  $C286;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index5";
-  ADDR  $CADB;
+  ADDR  $C2A9;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index6";
-  ADDR  $CAF5;
+  ADDR  $C2C4;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index7";
-  ADDR  $CB28;
+  ADDR  $C2ED;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index8";
-  ADDR  $CB61;
+  ADDR  $C31C;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index9";
-  ADDR  $CB97;
+  ADDR  $C341;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index10";
-  ADDR  $CBB5;
+  ADDR  $C35D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index11";
-  ADDR  $CBE7;
+  ADDR  $C380;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index12";
-  ADDR  $CC07;
+  ADDR  $C397;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index13";
-  ADDR  $CC33;
+  ADDR  $C3CE;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index14";
-  ADDR  $CC9A;
+  ADDR  $C421;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index15";
-  ADDR  $CCAB;
+  ADDR  $C438;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index16";
-  ADDR  $CCD6;
+  ADDR  $C457;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index17";
-  ADDR  $CD21;
+  ADDR  $C49A;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index18";
-  ADDR  $CD3F;
+  ADDR  $C4B8;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index19";
-  ADDR  $CD65;
+  ADDR  $C4DA;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index20";
-  ADDR  $CD75;
+  ADDR  $C4F2;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index21";
-  ADDR  $CD9B;
+  ADDR  $C511;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index22";
-  ADDR  $CDC4;
+  ADDR  $C533;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index23";
-  ADDR  $CDDE;
+  ADDR  $C549;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index24";
-  ADDR  $CE20;
+  ADDR  $C573;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index25";
-  ADDR  $CE31;
+  ADDR  $C588;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index26";
-  ADDR  $CE4D;
+  ADDR  $C5A7;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index27";
-  ADDR  $CE61;
+  ADDR  $C5C1;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index28";
-  ADDR  $CE6C;
+  ADDR  $C5D1;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index29";
-  ADDR  $CE7B;
+  ADDR  $C5EA;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index30";
-  ADDR  $CE8D;
+  ADDR  $C602;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index31";
-  ADDR  $CE94;
+  ADDR  $C614;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index32";
-  ADDR  $CEE0;
+  ADDR  $C64E;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index33";
-  ADDR  $CF07;
+  ADDR  $C674;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index34";
-  ADDR  $CF40;
+  ADDR  $C69C;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index35";
-  ADDR  $CF45;
+  ADDR  $C6B6;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index36";
-  ADDR  $CF66;
+  ADDR  $C6D8;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index37";
-  ADDR  $CFF6;
+  ADDR  $C738;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index38";
-  ADDR  $D037;
+  ADDR  $C762;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index39";
-  ADDR  $D062;
+  ADDR  $C785;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index40";
-  ADDR  $D079;
+  ADDR  $C79A;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index41";
-  ADDR  $D096;
+  ADDR  $C7BA;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index42";
-  ADDR  $D0B0;
+  ADDR  $C7D7;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index43";
-  ADDR  $D0C8;
+  ADDR  $C7F4;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index44";
-  ADDR  $D125;
+  ADDR  $C840;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index45";
-  ADDR  $D12A;
+  ADDR  $C854;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index46";
-  ADDR  $D175;
+  ADDR  $C898;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index47";
-  ADDR  $D1C4;
+  ADDR  $C8DD;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index48";
-  ADDR  $D215;
+  ADDR  $C92F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index49";
-  ADDR  $D269;
+  ADDR  $C97E;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index50";
-  ADDR  $D289;
+  ADDR  $C98B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index51";
-  ADDR  $D298;
+  ADDR  $C9A1;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index52";
-  ADDR  $D2A6;
+  ADDR  $C9B1;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index53";
-  ADDR  $D2DA;
+  ADDR  $C9D2;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index54";
-  ADDR  $D2F6;
+  ADDR  $C9EE;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index55";
-  ADDR  $D325;
+  ADDR  $CA0A;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index56";
-  ADDR  $D36F;
+  ADDR  $CA38;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index57";
-  ADDR  $D3C8;
+  ADDR  $CA6E;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index58";
-  ADDR  $D3F7;
+  ADDR  $CA94;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index59";
-  ADDR  $D44D;
+  ADDR  $CAC0;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index60";
-  ADDR  $D49A;
+  ADDR  $CAEB;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index61";
-  ADDR  $D4CB;
+  ADDR  $CB0F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index62";
-  ADDR  $D4ED;
+  ADDR  $CB31;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index63";
-  ADDR  $D4F0;
+  ADDR  $CB43;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index64";
-  ADDR  $D4FF;
+  ADDR  $CB52;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index65";
-  ADDR  $D510;
+  ADDR  $CB6C;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index66";
+  ADDR  $CBE1;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index67";
-  ADDR  $D5B9;
+  ADDR  $CBF3;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index68";
-  ADDR  $D6C1;
+  ADDR  $CC7C;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index69";
-  ADDR  $D6CF;
+  ADDR  $CC92;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index70";
-  ADDR  $D732;
+  ADDR  $CCD2;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index71";
-  ADDR  $D73C;
+  ADDR  $CCE8;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index72";
-  ADDR  $D99B;
+  ADDR  $CE19;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index73";
-  ADDR  $DA3B;
+  ADDR  $CE77;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index74";
-  ADDR  $DBAA;
+  ADDR  $CF9C;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index75";
-  ADDR  $DBB2;
+  ADDR  $CFB2;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index76";
-  ADDR  $DBDB;
+  ADDR  $CFF3;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index77";
-  ADDR  $DCA6;
+  ADDR  $D079;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index78";
-  ADDR  $DD44;
+  ADDR  $D0DA;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index79";
-  ADDR  $DD52;
+  ADDR  $D0EA;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index80";
-  ADDR  $DD60;
+  ADDR  $D0FA;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index81";
-  ADDR  $DE56;
+  ADDR  $D19F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index82";
-  ADDR  $DE67;
+  ADDR  $D1CC;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index83";
-  ADDR  $DE8E;
+  ADDR  $D1F4;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index84";
-  ADDR  $DEE6;
+  ADDR  $D22C;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index85";
-  ADDR  $DF27;
+  ADDR  $D25C;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index86";
-  ADDR  $DF51;
+  ADDR  $D27E;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index87";
-  ADDR  $DF5F;
+  ADDR  $D28E;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index88";
-  ADDR  $DFB3;
+  ADDR  $D2C0;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index89";
-  ADDR  $E010;
+  ADDR  $D2FD;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index90";
-  ADDR  $E03A;
+  ADDR  $D319;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index91";
-  ADDR  $E058;
+  ADDR  $D32F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index92";
-  ADDR  $E127;
+  ADDR  $D39D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index93";
-  ADDR  $E13F;
+  ADDR  $D3B9;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index94";
-  ADDR  $E147;
+  ADDR  $D3C9;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index95";
-  ADDR  $E189;
+  ADDR  $D403;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index96";
-  ADDR  $E1A0;
+  ADDR  $D41C;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index97";
-  ADDR  $E1FB;
+  ADDR  $D466;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index98";
-  ADDR  $E258;
+  ADDR  $D4A9;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index99";
+  ADDR  $D4E3;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index100";
-  ADDR  $E2AA;
+  ADDR  $D4F5;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index101";
-  ADDR  $E2E9;
+  ADDR  $D529;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index102";
-  ADDR  $E34D;
+  ADDR  $D571;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index103";
-  ADDR  $E391;
+  ADDR  $D5B2;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index104";
-  ADDR  $E3A5;
+  ADDR  $D5CB;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index105";
-  ADDR  $E3BC;
+  ADDR  $D5EA;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index106";
-  ADDR  $E452;
+  ADDR  $D633;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index107";
-  ADDR  $E475;
+  ADDR  $D653;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index108";
-  ADDR  $E569;
+  ADDR  $D6E9;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index109";
-  ADDR  $E5A2;
+  ADDR  $D71E;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index110";
-  ADDR  $E5F1;
+  ADDR  $D75A;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index111";
-  ADDR  $E60F;
+  ADDR  $D776;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index112";
-  ADDR  $E637;
+  ADDR  $D79B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index113";
-  ADDR  $E642;
+  ADDR  $D7B1;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index114";
-  ADDR  $E64E;
+  ADDR  $D7C3;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index115";
-  ADDR  $E66E;
+  ADDR  $D7E8;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index116";
-  ADDR  $E6D2;
+  ADDR  $D82E;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index117";
-  ADDR  $E728;
+  ADDR  $D862;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index118";
-  ADDR  $E742;
+  ADDR  $D875;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index119";
-  ADDR  $E77E;
+  ADDR  $D8A1;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index120";
-  ADDR  $E797;
+  ADDR  $D8BB;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index121";
-  ADDR  $E7E0;
+  ADDR  $D8E9;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index122";
-  ADDR  $E816;
+  ADDR  $D928;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index123";
-  ADDR  $E829;
+  ADDR  $D941;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index124";
-  ADDR  $E83B;
+  ADDR  $D959;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index125";
-  ADDR  $E847;
+  ADDR  $D96F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index126";
-  ADDR  $E863;
+  ADDR  $D990;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index127";
-  ADDR  $E8AA;
+  ADDR  $D9CC;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index128";
-  ADDR  $E8B3;
+  ADDR  $D9E0;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index129";
-  ADDR  $E8E1;
+  ADDR  $DA0F;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index130";
-  ADDR  $E8FC;
+  ADDR  $DA31;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index131";
-  ADDR  $E90A;
+  ADDR  $DA4B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index132";
-  ADDR  $E92D;
+  ADDR  $DA6E;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index133";
-  ADDR  $E95E;
+  ADDR  $DA98;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index134";
-  ADDR  $E9E1;
+  ADDR  $DAE3;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index135";
-  ADDR  $E9E8;
+  ADDR  $DAF3;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index136";
-  ADDR  $EA5B;
+  ADDR  $DB4A;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index137";
-  ADDR  $EA69;
+  ADDR  $DB63;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index138";
-  ADDR  $EA8B;
+  ADDR  $DB81;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index139";
-  ADDR  $EB1D;
+  ADDR  $DBE8;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index140";
-  ADDR  $EB4F;
+  ADDR  $DC0D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index141";
-  ADDR  $EB63;
+  ADDR  $DC2D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index142";
-  ADDR  $EB82;
+  ADDR  $DC4C;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index143";
-  ADDR  $EB97;
+  ADDR  $DC5B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index144";
-  ADDR  $EBCE;
+  ADDR  $DC88;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index145";
-  ADDR  $EBEE;
+  ADDR  $DCB0;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index146";
-  ADDR  $EBFE;
+  ADDR  $DCC9;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index147";
-  ADDR  $EC15;
+  ADDR  $DCE4;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index148";
-  ADDR  $EC31;
+  ADDR  $DCFD;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index149";
-  ADDR  $EC72;
+  ADDR  $DD30;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index150";
-  ADDR  $EC9E;
+  ADDR  $DD61;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index151";
-  ADDR  $ECAC;
+  ADDR  $DD75;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index152";
-  ADDR  $ECD9;
+  ADDR  $DDA8;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index153";
-  ADDR  $ED38;
+  ADDR  $DDF5;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index154";
-  ADDR  $ED49;
+  ADDR  $DE03;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index155";
-  ADDR  $ED5D;
+  ADDR  $DE1D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index156";
-  ADDR  $EDA1;
+  ADDR  $DE72;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index157";
-  ADDR  $EDAC;
+  ADDR  $DE84;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index158";
-  ADDR  $EDC3;
+  ADDR  $DEA1;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index159";
-  ADDR  $EDE9;
+  ADDR  $DECA;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index160";
-  ADDR  $EE26;
+  ADDR  $DEFB;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index161";
-  ADDR  $EE36;
+  ADDR  $DF11;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index162";
-  ADDR  $EEC7;
+  ADDR  $DF89;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index163";
-  ADDR  $EEE8;
+  ADDR  $DFB0;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index164";
-  ADDR  $EF41;
+  ADDR  $DFEB;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index165";
-  ADDR  $EF9F;
+  ADDR  $E03D;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index166";
-  ADDR  $EFE3;
+  ADDR  $E078;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index167";
-  ADDR  $F024;
+  ADDR  $E0A5;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index168";
-  ADDR  $F05C;
+  ADDR  $E0C7;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index169";
-  ADDR  $F0E7;
+  ADDR  $E12B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index170";
-  ADDR  $F0F5;
+  ADDR  $E13B;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index171";
-  ADDR  $F109;
+  ADDR  $E151;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index172";
-  ADDR  $F128;
+  ADDR  $E182;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index173";
-  ADDR  $F141;
+  ADDR  $E1A3;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index174";
-  ADDR  $F17D;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index179";
-  ADDR  $F197;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index180";
-  ADDR  $F1F8;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index181";
-  ADDR  $F227;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index182";
-  ADDR  $F2A5;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index183";
-  ADDR  $F2C3;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index184";
-  ADDR  $F373;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index185";
-  ADDR  $F38A;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index186";
-  ADDR  $F40E;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index187";
-  ADDR  $F42C;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index188";
-  ADDR  $F455;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index189";
-  ADDR  $F48A;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index190";
-  ADDR  $F49C;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index191";
-  ADDR  $F4AA;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index192";
-  ADDR  $F4BB;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index193";
-  ADDR  $F4D9;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index194";
-  ADDR  $F4F7;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index195";
-  ADDR  $F515;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index196";
-  ADDR  $F69B;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index197";
-  ADDR  $F6F1;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index198";
-  ADDR  $F702;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index199";
-  ADDR  $F707;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index200";
-  ADDR  $F720;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index201";
-  ADDR  $F72D;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index202";
-  ADDR  $F75A;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index203";
-  ADDR  $F76D;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index204";
-  ADDR  $F77F;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index205";
-  ADDR  $F796;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index206";
-  ADDR  $F7A9;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index207";
-  ADDR  $F7E3;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index208";
-  ADDR  $F803;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index209";
-  ADDR  $F824;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index210";
-  ADDR  $F835;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index211";
-  ADDR  $F855;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index212";
-  ADDR  $F883;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index213";
-  ADDR  $F88B;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index214";
-  ADDR  $F8B2;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index215";
-  ADDR  $F984;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index216";
-  ADDR  $F99D;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index217";
-  ADDR  $F9BE;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index218";
-  ADDR  $F9D9;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index219";
-  ADDR  $F9FA;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index220";
-  ADDR  $FA4A;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index221";
-  ADDR  $FA5D;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index222";
-  ADDR  $FB70;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index223";
-  ADDR  $FB8C;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index224";
-  ADDR  $FBB2;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index225";
-  ADDR  $FBC5;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index226";
-  ADDR  $FBD6;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index227";
-  ADDR  $FBE6;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index228";
-  ADDR  $FC09;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index229";
-  ADDR  $FC24;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index230";
-  ADDR  $FC46;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index231";
-  ADDR  $FC50;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index232";
-  ADDR  $FC8D;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index233";
-  ADDR  $FCBC;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index234";
-  ADDR  $FCFB;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index235";
-  ADDR  $FD2B;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index236";
-  ADDR  $FD78;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index237";
-  ADDR  $FD90;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index238";
-  ADDR  $FDAE;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index239";
-  ADDR  $FDBC;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index240";
-  ADDR  $FDC4;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index241";
-  ADDR  $FDE7;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index242";
-  ADDR  $FE1F;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index243";
-  ADDR  $FE40;
-};
-LABEL {
-  NAME "Bank0fDialogueBlock1Index246";
-  ADDR  $FE72;
+  ADDR  $E1C9;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index175";
-  ADDR  $FE88;
+  ADDR  $E1E3;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index176";
-  ADDR  $FE9C;
+  ADDR  $E203;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index177";
-  ADDR  $FEAF;
+  ADDR  $E21E;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index178";
-  ADDR  $FF57;
+  ADDR  $E2AC;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index179";
+  ADDR  $E2E8;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index180";
+  ADDR  $E345;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index181";
+  ADDR  $E372;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index182";
+  ADDR  $E3E3;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index183";
+  ADDR  $E407;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index184";
+  ADDR  $E47D;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index185";
+  ADDR  $E493;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index186";
+  ADDR  $E4F2;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index187";
+  ADDR  $E507;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index188";
+  ADDR  $E52C;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index189";
+  ADDR  $E55B;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index190";
+  ADDR  $E573;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index191";
+  ADDR  $E588;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index192";
+  ADDR  $E59C;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index193";
+  ADDR  $E5B8;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index194";
+  ADDR  $E5D6;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index195";
+  ADDR  $E5F2;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index196";
+  ADDR  $E725;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index197";
+  ADDR  $E778;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index198";
+  ADDR  $E78E;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index199";
+  ADDR  $E7A3;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index200";
+  ADDR  $E7C7;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index201";
+  ADDR  $E7E7;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index202";
+  ADDR  $E80C;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index203";
+  ADDR  $E826;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index204";
+  ADDR  $E844;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index205";
+  ADDR  $E85F;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index206";
+  ADDR  $E87D;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index207";
+  ADDR  $E8AF;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index208";
+  ADDR  $E8D1;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index209";
+  ADDR  $E8F4;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index210";
+  ADDR  $E917;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index211";
+  ADDR  $E93E;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index212";
+  ADDR  $E967;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index213";
+  ADDR  $E979;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index214";
+  ADDR  $E997;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index215";
+  ADDR  $EA2F;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index216";
+  ADDR  $EA4A;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index217";
+  ADDR  $EA71;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index218";
+  ADDR  $EA8C;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index219";
+  ADDR  $EAA8;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index220";
+  ADDR  $EAE5;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index221";
+  ADDR  $EB01;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index222";
+  ADDR  $EBC4;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index223";
+  ADDR  $EBE2;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index224";
+  ADDR  $EC05;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index225";
+  ADDR  $EC1F;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index226";
+  ADDR  $EC3A;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index227";
+  ADDR  $EC4C;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index228";
+  ADDR  $EC6F;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index229";
+  ADDR  $EC8E;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index230";
+  ADDR  $ECAE;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index231";
+  ADDR  $ECBC;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index232";
+  ADDR  $ECF3;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index233";
+  ADDR  $ED24;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index234";
+  ADDR  $ED5D;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index235";
+  ADDR  $ED8A;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index236";
+  ADDR  $EDB8;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index237";
+  ADDR  $EDC9;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index238";
+  ADDR  $EDEA;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index239";
+  ADDR  $EDFF;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index240";
+  ADDR  $EE13;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index241";
+  ADDR  $EE35;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index242";
+  ADDR  $EE76;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index243";
+  ADDR  $EE98;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index244";
+  ADDR  $EEDE;
 };
 LABEL {
   NAME "Bank0fDialogueBlock1Index245";
-  ADDR  $FF89;
+  ADDR  $EF2F;
+};
+LABEL {
+  NAME "Bank0fDialogueBlock1Index246";
+  ADDR  $EF45;
 };

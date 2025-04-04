@@ -2,13 +2,11 @@
 
 Decompilation of the NES version of Final Fantasy VII Advent Children.
 
+This project is to patch the ROM back with the original Chinese text, but still keep the improvements of the FF7 Advent Children ROM. It is a work in progress and the MD5 checksum may change if any of the code is changed.
+
 This project builds the following rom:
 
-* game.nes ```md5: 62b74bb9f3146d5ef81a19ec9042c5bf```
-
-Translations of the rom can be found in other branches:
-
-* [ff7-pt-br.nes](https://github.com/samuelyuan/ff7nes/tree/pt-br-patch) ```md5: e28035707a9bc9e41ee84127b03c4ce4```
+* ff7-zh.nes ```md5: 1232beb6387a947cef85768c1387dcf1```
 
 Scripts can be run to extract all maps from the game using the following command:
 
