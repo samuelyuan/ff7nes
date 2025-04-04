@@ -5637,7 +5637,7 @@ AudioOpcode0e:
 LA5C8:
         iny                                     ; A5C8 C8                       .
         dec     $6E6C,x                         ; A5C9 DE 6C 6E                 .ln
-        bne     LA5E4                           ; A5CC D0 16                    ..
+        bne     AudioOpcodeCEAndCFLoopJump      ; A5CC D0 16                    ..
         iny                                     ; A5CE C8                       .
         iny                                     ; A5CF C8                       .
         rts                                     ; A5D0 60                       `
@@ -5651,13 +5651,13 @@ AudioOpcode0f:
 LA5DB:
         iny                                     ; A5DB C8                       .
         dec     $6E74,x                         ; A5DC DE 74 6E                 .tn
-        bne     LA5E4                           ; A5DF D0 03                    ..
+        bne     AudioOpcodeCEAndCFLoopJump      ; A5DF D0 03                    ..
         iny                                     ; A5E1 C8                       .
         iny                                     ; A5E2 C8                       .
         rts                                     ; A5E3 60                       `
 
 ; ----------------------------------------------------------------------------
-LA5E4:
+AudioOpcodeCEAndCFLoopJump:
         lda     ($C7),y                         ; A5E4 B1 C7                    ..
         pha                                     ; A5E6 48                       H
         iny                                     ; A5E7 C8                       .
@@ -5666,12 +5666,12 @@ LA5E4:
         pla                                     ; A5EC 68                       h
         sta     $C7                             ; A5ED 85 C7                    ..
         cpx     #$04                            ; A5EF E0 04                    ..
-        bcs     LA5F7                           ; A5F1 B0 04                    ..
+        bcs     SelectAltChannelBank            ; A5F1 B0 04                    ..
         ldx     #$00                            ; A5F3 A2 00                    ..
-        beq     LA5F9                           ; A5F5 F0 02                    ..
-LA5F7:
+        beq     ApplyLoopOffsetWithBank         ; A5F5 F0 02                    ..
+SelectAltChannelBank:
         ldx     #$02                            ; A5F7 A2 02                    ..
-LA5F9:
+ApplyLoopOffsetWithBank:
         lda     $C7                             ; A5F9 A5 C7                    ..
         clc                                     ; A5FB 18                       .
         adc     $6E00,x                         ; A5FC 7D 00 6E                 }.n
@@ -6016,7 +6016,7 @@ LA81D:
 ; ----------------------------------------------------------------------------
 LA822:
         iny                                     ; A822 C8                       .
-        jmp     LA5E4                           ; A823 4C E4 A5                 L..
+        jmp     AudioOpcodeCEAndCFLoopJump      ; A823 4C E4 A5                 L..
 
 ; ----------------------------------------------------------------------------
         sta     $C8                             ; A826 85 C8                    ..

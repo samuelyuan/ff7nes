@@ -6,7 +6,7 @@ The interpretation of these commands is still an ongoing process. However, consi
 
 ## Command Class Breakdown
 
-### Opcodes (`$C0–$FF`)
+### Opcodes (`0xC0–0xFF`)
 
 Any byte with a value of `$C0` or higher is treated as an opcode within the music data stream. Opcodes typically modify playback flow, control behavior like rests, loops, or effects, and may take one or more operands (i.e., additional bytes of data that follow the opcode).
 
@@ -20,22 +20,19 @@ Any byte with a value of `$C0` or higher is treated as an opcode within the musi
 | `$D8`  | Set Pitch Shift    | Sets a new pitch shift that gets added to all upcoming notes. |
 | `$DB`  | Extended Command   | Takes 4 bytes. Exact purpose unknown. |
 
-#### Percussion Data Encoding
-Following the `#$D0` (Repeat) opcode—particularly in the triangle channel—a sequence of raw bytes often encodes percussion patterns. This behavior suggests the engine borrows melodic channels for percussion due to limitations of the NES noise channel (which is shared with SFX). This design choice is consistent with techniques seen in other NES games like *The Guardian Legend*.
+### Note Values (`0x40–0x80`)
+   Byte values in the range of `#$40` to `#$80` are probably note values.
 
-### Note Length Indicators
+### Note Length Indicators (`0x00–0x3F`)
    Byte values below `#$40` likely indicate note duration. The following behavior has been observed:
    - A duration byte such as `#$06` precedes a series of notes.
    - When the value changes to `#$0C` (twice `#$06`), the subsequent note duration doubles, suggesting a direct mapping between byte value and duration multiplier.
    - Further tempo changes (e.g., `#$04`) align with faster musical passages.
    - While `#$40` appears to be the cutoff, note pitch values have been observed as low as `#$0D`, so this boundary is still under review.
 
-### Note Values –  
-   Byte values in the range of `#$40` to `#$BF` are probably note values.
-
 ## Music Note Table
 
-Bytes in the range `$40–$80` correspond to musical notes, but there is discrepancy in community documentation regarding which pitch maps to which byte. Two competing interpretations exist:
+Bytes in the range `0x40–0x80` correspond to musical notes, but there is discrepancy in community documentation regarding which pitch maps to which byte. Two competing interpretations exist:
 
 - Table 1: NTSC-Centric Interpretation  
   - Assumes `0x40` corresponds to A, matching traditional NES tuning in NTSC environments.
@@ -128,6 +125,31 @@ CC C8 C7 FF C4 6B DB 07 00 00 00 DE 05 CD 03 02 D8 00
 ```
 
 By using the 0xCE opcode, you save significant space by repeating the phrase without writing it out multiple times.
+
+#### Assembly Logic Summary
+
+- If the loop counter for the current channel is `0`
+  (`LA5C3` – `lda ($C7),y` → `sta $6E6C,x`)  
+  - Reads the repeat count (the `[num]` operand) from the music stream.
+  - Stores it to the per-channel loop counter at `$6E6C,x`.
+
+- On subsequent passes  
+  (`LA5C9` – `dec $6E6C,x`)  
+  - Decrements the loop counter.
+  - If the counter is non-zero, execution branches to the start of the loop (`bne LA5E4`).
+
+- If the loop is complete  
+  (`LA5CC` → `LA5D0`)  
+  - Skips the next two bytes (which contain the 2 byte address offset).
+  - Returns from the subroutine (`rts`) to continue song playback normally.
+
+- If looping continues (`bne LA5E4`)  
+  - Loads the loop offset from the next two bytes in the music stream  
+    (`LA5E4–LA5E8`: reads lo and hi bytes into `$C7` and `$C8`)
+  - Adds this offset to the song header base pointer stored in `$6E00,x / $6E01,x`  
+    (`LA5F9–LA606`).
+  - Updates the current read pointer (`$C7:$C8`) to the loop start position.
+  - Resets parsing state and returns (`LA60E`).
 
 ### 0xCF: Nested Looping Opcode
 
@@ -367,6 +389,12 @@ Since negative values cannot be directly represented in hexadecimal, the followi
 | `F5`                | Subtract `0B`             |  
 | `F4`                | Subtract `0C`             |  
 | ...                 | ...                       |
+
+
+### 0xD0: Repeat 
+
+#### Percussion Data Encoding
+Following the `#$D0` (Repeat) opcode—particularly in the triangle channel—a sequence of raw bytes often encodes percussion patterns. This behavior suggests the engine borrows melodic channels for percussion due to limitations of the NES noise channel (which is shared with SFX). This design choice is consistent with techniques seen in other NES games like *The Guardian Legend*.
 
 ## Acknowledgements
 
