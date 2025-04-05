@@ -922,14 +922,14 @@ Bank Number	Block Num	String Index	Line First Char	Portrait Id	Extracted String
 7	0	153	64	49	__
 7	0	154	64	50	Yeah,you're strong.Probably all them\\guys in SOLDIER\\are.But don't\\forget your skinny\\ass's working for\\AVALANCHE now!Don'tget no ideas 'bout\\hangin' on to\\Shinra.
 7	0	155	64	49	Stayin' with\\Shinra?You asked mea question and I\\answered it__that'sall.I'm going\\upstairs.I want to\\talk about my\\money.
-7	0	156	0	0	0000000000000000000000000000000000000000000@3Wait,Cloud!
-7	0	157	0	0	000000000000000000000000@3Wait,Cloud!
+7	0	156	0	0	
+7	0	157	0	0	
 7	0	158	64	51	Wait,Cloud!
 7	0	159	64	50	Tifa!Let him go!\\Looks like he stillmisses the Shinra!
 7	0	160	64	49	Shut up!I don't\\care about either\\Shinra or SOLDIER!\\But don't get me\\wrong!I don't care\\about AVALANCHE or\\the Planet for thatmatter!
 7	0	161	0	0	(Watch out!)\\(This isn't just a reactor!)
 7	0	162	0	0	!Let me tell yousomething about\\Weapons!As you use a weapon,it will\\gain EXP. Once it\\reaches a certain\\point you can go toa weapon shop to\\level up your\\weapons and\\increase their\\power.The same goesfor magic! Cool \\huh? Oh! and\\although there\\isn't one here,\\there are Inns you can stay in to\\replenish your HP\\and MP. There's\\also item shops\\located inside of\\the Inns too. Just be careful on how\\you spend.\\Have fun!
-7	0	163	0	0	hops\\located inside of\\the Inns too. Just be careful on how\\you spend.\\Have fun!
+7	0	163	0	0	
 7	0	164	64	51	Listen,Cloud.I'm\\asking you.Please\\join us.
 7	0	165	64	49	Sorry Tifa__
 7	0	166	64	51	The Planet is\\dying.Slowly but\\surely it's dying.\\Someone has to do\\something.
@@ -939,9 +939,9 @@ Bank Number	Block Num	String Index	Line First Char	Portrait Id	Extracted String
 7	0	170	64	51	You forgot the\\promise,too.
 7	0	171	64	49	Promise?
 7	0	172	64	51	So you DID forget.\\Remember__Cloud.It\\was 7 years ago__
-7	0	173	0	0	00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000Sorry I'm late.
-7	0	174	0	0	00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000Sorry I'm late.
-7	0	175	0	0	0000000000000000000Sorry I'm late.
+7	0	173	0	0	
+7	0	174	0	0	
+7	0	175	0	0	
 7	0	176	0	0	Sorry I'm late.
 7	0	177	0	0	You said you wantedto talk to me aboutsomething?
 7	0	178	0	0	Come this spring__\\I'm leaving this\\town for Midgar.
@@ -978,13 +978,13 @@ Bank Number	Block Num	String Index	Line First Char	Portrait Id	Extracted String
 7	0	209	0	0	Tifa joins you.
 7	0	210	64	49	Ugh!!(Everything's dark__wha? Tifa!?)
 7	0	211	0	0	__Everything)(I hate them all!!)
-7	0	212	0	0	you about Materia\\too! Listen up!\\Each Materia can\\let you cast\\different types of\\spells, each\\Materia can be\\leveled up in orderto learn new spellswith that Materia, but that's not all.Each individual\\spell can also\\level up and becomemore powerful too. Just keep casting\\magic to gain\\experience. Be sureto visit the magic shop to level up\\the spells. No needto thank me,I'm\\happy to help out\\the newbies.
-7	0	213	0	0	s of\\spells, each\\Materia can be\\leveled up in orderto learn new spellswith that Materia, but that's not all.Each individual\\spell can also\\level up and becomemore powerful too. Just keep casting\\magic to gain\\experience. Be sureto visit the magic shop to level up\\the spells. No needto thank me,I'm\\happy to help out\\the newbies.
-7	0	214	0	0	n be\\leveled up in orderto learn new spellswith that Materia, but that's not all.Each individual\\spell can also\\level up and becomemore powerful too. Just keep casting\\magic to gain\\experience. Be sureto visit the magic shop to level up\\the spells. No needto thank me,I'm\\happy to help out\\the newbies.
-7	0	215	0	0	o learn new spellswith that Materia, but that's not all.Each individual\\spell can also\\level up and becomemore powerful too. Just keep casting\\magic to gain\\experience. Be sureto visit the magic shop to level up\\the spells. No needto thank me,I'm\\happy to help out\\the newbies.
-7	0	216	0	0	l can also\\level up and becomemore powerful too. Just keep casting\\magic to gain\\experience. Be sureto visit the magic shop to level up\\the spells. No needto thank me,I'm\\happy to help out\\the newbies.
-7	0	217	0	0	 too. Just keep casting\\magic to gain\\experience. Be sureto visit the magic shop to level up\\the spells. No needto thank me,I'm\\happy to help out\\the newbies.
-7	0	218	0	0	me,I'm\\happy to help out\\the newbies.
+7	0	212	0	0	
+7	0	213	0	0	
+7	0	214	0	0	
+7	0	215	0	0	
+7	0	216	0	0	
+7	0	217	0	0	
+7	0	218	0	0	
 7	0	219	64	50	YO!Looks like this\\ain't no private\\car!So split up!
 7	0	220	0	0	Manager:__Hoodlums\\again.God,Don't I\\just have all the\\luck__
 7	0	221	64	50	You say sumthin'?I\\said,'you say\\sumthin'!?
@@ -1085,11 +1085,11 @@ Bank Number	Block Num	String Index	Line First Char	Portrait Id	Extracted String
 7	1	61	64	50	__Alright.Sorry\\'bout all this.
 7	1	62	64	49	Stop talkin' like\\this is the end!
 7	1	63	64	50	Alright,then,later.
-7	1	64	0	0	You all right?\\__Can you hear me?@1__Yeah__00000000000Back then__You\\could get by with\\just skinned\\knees__@1What do you mean by\"back then\"?What about now?Can\\you get up?@1__What do you mean\\by \"that time\"?__\\What about now?
-7	1	65	64	49	__Yeah__00000000000Back then__You\\could get by with\\just skinned\\knees__@1What do you mean by\"back then\"?What about now?Can\\you get up?@1__What do you mean\\by \"that time\"?__\\What about now?
-7	1	66	0	0	Back then__You\\could get by with\\just skinned\\knees__@1What do you mean by\"back then\"?What about now?Can\\you get up?@1__What do you mean\\by \"that time\"?__\\What about now?
-7	1	67	64	49	What do you mean by\"back then\"?What about now?Can\\you get up?@1__What do you mean\\by \"that time\"?__\\What about now?
-7	1	68	0	0	What about now?Can\\you get up?@1__What do you mean\\by \"that time\"?__\\What about now?
+7	1	64	0	0	You all right?\\__Can you hear me?
+7	1	65	64	49	__Yeah__
+7	1	66	0	0	Back then__You\\could get by with\\just skinned\\knees__
+7	1	67	64	49	What do you mean by\"back then\"?
+7	1	68	0	0	What about now?Can\\you get up?
 7	1	69	64	49	__What do you mean\\by \"that time\"?__\\What about now?
 7	1	70	0	0	Don't worry about\\me.You just worry\\about yourself now.
 7	1	71	64	49	__I'll give it a\\try.
@@ -2259,10 +2259,10 @@ Bank Number	Block Num	String Index	Line First Char	Portrait Id	Extracted String
 11	1	167	64	49	__Reunion?Calamity\\from the skies?
 11	1	168	64	49	What's that_!?
 11	1	169	64	49	A rusty old\\rocket__Wonder whatthey'd make\\something that hugefor?
-11	1	170	0	0	000000000000000000000The Captain was a\\pilot when Shinra\\was still\\interested in theirSpace Program.He\\was going to be theworld's first\\astronaut,but therewas an accident__\\Ever since then,\\he's been wasting\\his life away here\\dreaming about\\going into outer\\space.
+11	1	170	0	0	
 11	1	171	0	0	The Captain was a\\pilot when Shinra\\was still\\interested in theirSpace Program.He\\was going to be theworld's first\\astronaut,but therewas an accident__\\Ever since then,\\he's been wasting\\his life away here\\dreaming about\\going into outer\\space.
-11	1	172	0	0	0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000Everyone in this\\town was a mechanicback when they wereplanning to launch\\the rocket.
-11	1	173	0	0	000000000000000000000000000000000000000000000000000000000Everyone in this\\town was a mechanicback when they wereplanning to launch\\the rocket.
+11	1	172	0	0	
+11	1	173	0	0	
 11	1	174	0	0	Everyone in this\\town was a mechanicback when they wereplanning to launch\\the rocket.
 11	1	175	0	0	That rusted old\\rocket is all that\\remains of the\\Shinra's Space\\Program.
 11	1	176	0	0	This used to be a\\Shinra base where\\they used to launchrockets.
