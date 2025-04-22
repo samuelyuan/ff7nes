@@ -487,231 +487,574 @@ LABEL {
   ADDR  $B8DF;
 };
 LABEL {
-  NAME "Song01Opcodes";
+  NAME "Song01_Section02";
   ADDR  $B8ED;
+};
+LABEL {
+  NAME "Song01_Section01";
+  ADDR  $B960;
+};
+LABEL {
+  NAME "Song01_Section00";
+  ADDR  $B97C;
 };
 LABEL {
   NAME "MusicOpeningMakoReactorTheme";
   ADDR  $B980;
 };
 LABEL {
-  NAME "Song00Opcodes";
+  NAME "Song00_Section00";
   ADDR  $B98E;
+};
+LABEL {
+  NAME "Song00_Section01";
+  ADDR  $BA27;
+};
+LABEL {
+  NAME "Song00_Section02";
+  ADDR  $BA86;
+};
+LABEL {
+  NAME "Song00_Section03";
+  ADDR  $BACA;
 };
 LABEL {
   NAME "Song06";
   ADDR  $BB58;
 };
 LABEL {
-  NAME "Song06Opcodes";
+  NAME "Song06_Section03";
   ADDR  $BB66;
+};
+LABEL {
+  NAME "Song06_Section00";
+  ADDR  $BB6C;
+};
+LABEL {
+  NAME "Song06_Section01";
+  ADDR  $BC70;
+};
+LABEL {
+  NAME "Song06_Section02";
+  ADDR  $BD94;
 };
 LABEL {
   NAME "Song07";
   ADDR  $BE08;
 };
 LABEL {
-  NAME "Song07Opcodes";
+  NAME "Song07_Section00";
   ADDR  $BE16;
+};
+LABEL {
+  NAME "Song07_Section01";
+  ADDR  $BF8B;
+};
+LABEL {
+  NAME "Song07_Section02";
+  ADDR  $C1B3;
+};
+LABEL {
+  NAME "Song07_Section03";
+  ADDR  $C2D5;
 };
 LABEL {
   NAME "Song08";
   ADDR  $C2FF;
 };
 LABEL {
-  NAME "Song08Opcodes";
+  NAME "Song08_Section00";
   ADDR  $C30D;
+};
+LABEL {
+  NAME "Song08_Section01";
+  ADDR  $C36B;
+};
+LABEL {
+  NAME "Song08_Section02";
+  ADDR  $C3C9;
+};
+LABEL {
+  NAME "Song08_Section03";
+  ADDR  $C42D;
 };
 LABEL {
   NAME "MusicTownTheme";
   ADDR  $C44A;
 };
 LABEL {
-  NAME "Song02Opcodes";
+  NAME "Song02_Section00";
   ADDR  $C458;
+};
+LABEL {
+  NAME "Song02_Section01";
+  ADDR  $C4E8;
+};
+LABEL {
+  NAME "Song02_Section02";
+  ADDR  $C525;
+};
+LABEL {
+  NAME "Song02_Section03";
+  ADDR  $C540;
 };
 LABEL {
   NAME "MusicCostaDelSolTheme";
   ADDR  $C563;
 };
 LABEL {
-  NAME "Song17Opcodes";
+  NAME "Song17_Section00";
   ADDR  $C571;
+};
+LABEL {
+  NAME "Song17_Section01";
+  ADDR  $C5BC;
+};
+LABEL {
+  NAME "Song17_Section02";
+  ADDR  $C60F;
+};
+LABEL {
+  NAME "Song17_Section03";
+  ADDR  $C66A;
 };
 LABEL {
   NAME "MusicOverworldTheme";
   ADDR  $D9D0;
 };
 LABEL {
-  NAME "Song03Opcodes";
+  NAME "Song03_Section00";
   ADDR  $D9DE;
+};
+LABEL {
+  NAME "Song03_Section01";
+  ADDR  $DA6F;
+};
+LABEL {
+  NAME "Song03_Section02";
+  ADDR  $DB0E;
+};
+LABEL {
+  NAME "Song03_Section03";
+  ADDR  $DB97;
 };
 LABEL {
   NAME "MusicKalmTheme";
   ADDR  $DBB6;
 };
 LABEL {
-  NAME "Song04Opcodes";
+  NAME "Song04_Section00";
   ADDR  $DBC4;
+};
+LABEL {
+  NAME "Song04_Section01";
+  ADDR  $DC18;
+};
+LABEL {
+  NAME "Song04_Section02";
+  ADDR  $DC71;
+};
+LABEL {
+  NAME "Song04_Section03";
+  ADDR  $DC8C;
 };
 LABEL {
   NAME "Song05";
   ADDR  $DCA3;
 };
 LABEL {
-  NAME "Song05Opcodes";
+  NAME "Song05_Section00";
   ADDR  $DCB1;
+};
+LABEL {
+  NAME "Song05_Section01";
+  ADDR  $DCD6;
+};
+LABEL {
+  NAME "Song05_Section02";
+  ADDR  $DD05;
+};
+LABEL {
+  NAME "Song05_Section03";
+  ADDR  $DD59;
 };
 LABEL {
   NAME "Song09";
   ADDR  $DDDF;
 };
 LABEL {
-  NAME "Song09Opcodes";
+  NAME "Song09_Section00";
   ADDR  $DDED;
+};
+LABEL {
+  NAME "Song09_Section01";
+  ADDR  $DED0;
+};
+LABEL {
+  NAME "Song09_Section02";
+  ADDR  $DFF2;
+};
+LABEL {
+  NAME "Song09_Section03";
+  ADDR  $E10C;
 };
 LABEL {
   NAME "MusicNorthCorelTheme";
   ADDR  $E123;
 };
 LABEL {
-  NAME "Song0aOpcodes";
+  NAME "Song0a_Section00";
   ADDR  $E131;
+};
+LABEL {
+  NAME "Song0a_Section01";
+  ADDR  $E1EE;
+};
+LABEL {
+  NAME "Song0a_Section02";
+  ADDR  $E213;
+};
+LABEL {
+  NAME "Song0a_Section03";
+  ADDR  $E232;
 };
 LABEL {
   NAME "MusicChocoboFarmTheme";
   ADDR  $E251;
 };
 LABEL {
-  NAME "Song0bOpcodes";
+  NAME "Song0b_Section00";
   ADDR  $E25F;
+};
+LABEL {
+  NAME "Song0b_Section01";
+  ADDR  $E32C;
+};
+LABEL {
+  NAME "Song0b_Section02";
+  ADDR  $E39C;
+};
+LABEL {
+  NAME "Song0b_Section03";
+  ADDR  $E40A;
 };
 LABEL {
   NAME "MusicNibelheimTheme";
   ADDR  $E42C;
 };
 LABEL {
-  NAME "Song0cOpcodes";
+  NAME "Song0c_Section00";
   ADDR  $E43A;
+};
+LABEL {
+  NAME "Song0c_Section01";
+  ADDR  $E4FA;
+};
+LABEL {
+  NAME "Song0c_Section02";
+  ADDR  $E55D;
+};
+LABEL {
+  NAME "Song0c_Section03";
+  ADDR  $E56E;
 };
 LABEL {
   NAME "Song0d";
   ADDR  $E57D;
 };
 LABEL {
-  NAME "Song0dOpcodes";
+  NAME "Song0d_Section00";
   ADDR  $E58B;
+};
+LABEL {
+  NAME "Song0d_Section01";
+  ADDR  $E686;
+};
+LABEL {
+  NAME "Song0d_Section02";
+  ADDR  $E7ED;
+};
+LABEL {
+  NAME "Song0d_Section03";
+  ADDR  $E868;
 };
 LABEL {
   NAME "MusicTifaTheme";
   ADDR  $E88D;
 };
 LABEL {
-  NAME "Song0eOpcodes";
+  NAME "Song0e_Section00";
   ADDR  $E89B;
+};
+LABEL {
+  NAME "Song0e_Section01";
+  ADDR  $E945;
+};
+LABEL {
+  NAME "Song0e_Section02";
+  ADDR  $EA0B;
+};
+LABEL {
+  NAME "Song0e_Section03";
+  ADDR  $EA4B;
 };
 LABEL {
   NAME "MusicGoldSaucerTheme";
   ADDR  $EA6D;
 };
 LABEL {
-  NAME "Song0fOpcodes";
+  NAME "Song0f_Section00";
   ADDR  $EA7B;
+};
+LABEL {
+  NAME "Song0f_Section01";
+  ADDR  $EB21;
+};
+LABEL {
+  NAME "Song0f_Section02";
+  ADDR  $EBEA;
+};
+LABEL {
+  NAME "Song0f_Section03";
+  ADDR  $EC0A;
 };
 LABEL {
   NAME "Song10";
   ADDR  $EC2A;
 };
 LABEL {
-  NAME "Song10Opcodes";
+  NAME "Song10_Section00";
   ADDR  $EC38;
+};
+LABEL {
+  NAME "Song10_Section01";
+  ADDR  $ECD7;
+};
+LABEL {
+  NAME "Song10_Section02";
+  ADDR  $ED6D;
+};
+LABEL {
+  NAME "Song10_Section03";
+  ADDR  $EDD7;
 };
 LABEL {
   NAME "MusicMythrilMinesTheme";
   ADDR  $EDF8;
 };
 LABEL {
-  NAME "Song12Opcodes";
+  NAME "Song12_Section00";
   ADDR  $EE06;
+};
+LABEL {
+  NAME "Song12_Section01";
+  ADDR  $EE33;
+};
+LABEL {
+  NAME "Song12_Section02";
+  ADDR  $EE60;
+};
+LABEL {
+  NAME "Song12_Section03";
+  ADDR  $EED3;
 };
 LABEL {
   NAME "MusicJunonOrRocketTownTheme";
   ADDR  $EEF2;
 };
 LABEL {
-  NAME "Song13Opcodes";
+  NAME "Song13_Section00";
   ADDR  $EF00;
+};
+LABEL {
+  NAME "Song13_Section01";
+  ADDR  $EF74;
+};
+LABEL {
+  NAME "Song13_Section02";
+  ADDR  $EFF4;
+};
+LABEL {
+  NAME "Song13_Section03";
+  ADDR  $F07A;
 };
 LABEL {
   NAME "MusicAerithTheme";
   ADDR  $F09A;
 };
 LABEL {
-  NAME "Song14Opcodes";
+  NAME "Song14_Section00";
   ADDR  $F0A8;
+};
+LABEL {
+  NAME "Song14_Section01";
+  ADDR  $F141;
+};
+LABEL {
+  NAME "Song14_Section02";
+  ADDR  $F1E6;
+};
+LABEL {
+  NAME "Song14_Section03";
+  ADDR  $F228;
 };
 LABEL {
   NAME "MusicForgottenCityTheme";
   ADDR  $F24D;
 };
 LABEL {
-  NAME "Song15Opcodes";
+  NAME "Song15_Section00";
   ADDR  $F25B;
+};
+LABEL {
+  NAME "Song15_Section01";
+  ADDR  $F291;
+};
+LABEL {
+  NAME "Song15_Section02";
+  ADDR  $F2E1;
+};
+LABEL {
+  NAME "Song15_Section03";
+  ADDR  $F305;
 };
 LABEL {
   NAME "MusicShinraCompanyTheme";
   ADDR  $F321;
 };
 LABEL {
-  NAME "Song16Opcodes";
+  NAME "Song16_Section00";
   ADDR  $F32F;
+};
+LABEL {
+  NAME "Song16_Section01";
+  ADDR  $F366;
+};
+LABEL {
+  NAME "Song16_Section02";
+  ADDR  $F3A9;
+};
+LABEL {
+  NAME "Song16_Section03";
+  ADDR  $F3EE;
 };
 LABEL {
   NAME "MusicGaeaCliffTheme";
   ADDR  $F410;
 };
 LABEL {
-  NAME "Song18Opcodes";
+  NAME "Song18_Section00";
   ADDR  $F41E;
+};
+LABEL {
+  NAME "Song18_Section01";
+  ADDR  $F45F;
+};
+LABEL {
+  NAME "Song18_Section02";
+  ADDR  $F4A3;
+};
+LABEL {
+  NAME "Song18_Section03";
+  ADDR  $F4E8;
 };
 LABEL {
   NAME "MusicIcicleInnTheme";
   ADDR  $F505;
 };
 LABEL {
-  NAME "Song19Opcodes";
+  NAME "Song19_Section00";
   ADDR  $F513;
+};
+LABEL {
+  NAME "Song19_Section01";
+  ADDR  $F566;
+};
+LABEL {
+  NAME "Song19_Section02";
+  ADDR  $F663;
+};
+LABEL {
+  NAME "Song19_Section03";
+  ADDR  $F6E2;
 };
 LABEL {
   NAME "MusicGongagaTheme";
   ADDR  $F702;
 };
 LABEL {
-  NAME "Song1aOpcodes";
+  NAME "Song1a_Section00";
   ADDR  $F710;
+};
+LABEL {
+  NAME "Song1a_Section01";
+  ADDR  $F792;
+};
+LABEL {
+  NAME "Song1a_Section02";
+  ADDR  $F7B2;
+};
+LABEL {
+  NAME "Song1a_Section03";
+  ADDR  $F7D4;
 };
 LABEL {
   NAME "Song1b";
   ADDR  $F7F3;
 };
 LABEL {
-  NAME "Song1bOpcodes";
+  NAME "Song1b_Section00";
   ADDR  $F801;
+};
+LABEL {
+  NAME "Song1b_Section01";
+  ADDR  $F875;
+};
+LABEL {
+  NAME "Song1b_Section02";
+  ADDR  $F91B;
+};
+LABEL {
+  NAME "Song1b_Section03";
+  ADDR  $F94E;
 };
 LABEL {
   NAME "Song1c";
   ADDR  $F96D;
 };
 LABEL {
-  NAME "Song1cOpcodes";
+  NAME "Song1c_Section00";
   ADDR  $F97B;
+};
+LABEL {
+  NAME "Song1c_Section01";
+  ADDR  $F9ED;
+};
+LABEL {
+  NAME "Song1c_Section02";
+  ADDR  $FA3E;
+};
+LABEL {
+  NAME "Song1c_Section03";
+  ADDR  $FAE1;
 };
 LABEL {
   NAME "MusicInfiltratingShinraTheme";
   ADDR  $FB02;
 };
 LABEL {
-  NAME "Song11Opcodes";
+  NAME "Song11_Section00";
   ADDR  $FB10;
 };
-
+LABEL {
+  NAME "Song11_Section01";
+  ADDR  $FB51;
+};
+LABEL {
+  NAME "Song11_Section02";
+  ADDR  $FBA6;
+};
+LABEL {
+  NAME "Song11_Section03";
+  ADDR  $FBC8;
+};

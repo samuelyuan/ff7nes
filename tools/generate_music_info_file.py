@@ -38,11 +38,35 @@ def generate_labels_opcodes(nes_file: NESFile, bank_num: int):
     
     return labels
 
+def extract_offsets_from_header(data, start_index):
+    # Extract 14 bytes starting from the given index
+    header = data[start_index:start_index + 14]
+
+    print ("header:", header)
+
+    # Validate header
+    if header[0] != 0xFF or header[1] != 0x00 or header[4] != 0x01 or header[7] != 0x02 or header[10] != 0x03 or header[13] != 0xFF:
+        print(f"Invalid header at {start_index:04X}")
+        return None
+
+    offsets = {}
+    try:
+        offsets['00'] = header[2] | (header[3] << 8)   # After 0x00
+        offsets['01'] = header[5] | (header[6] << 8)   # After 0x01
+        offsets['02'] = header[8] | (header[9] << 8) # After 0x02
+        offsets['03'] = header[11] | (header[12] << 8) # After 0x03
+    except IndexError:
+        print(f"Header too short at {start_index:04X}")
+        return None
+
+    return offsets
+
 def generate_labels_songs(nes_file: NESFile, bank_num: int):
     music_table_addr = 0xB8A1
     num_songs = 30
     start_addr_arr = nes_file.getAddressBlock(bank_num, music_table_addr - 0x8000, music_table_addr - 0x8000 + (num_songs * 2))
     labels = []
+    bank_data = nes_file.getBankDataBlock(bank_num)
 
     labels.append((music_table_addr, "MusicThemeTable"))
 
@@ -84,7 +108,15 @@ def generate_labels_songs(nes_file: NESFile, bank_num: int):
             labels.append((addr, song_name_map.get(label_count, f"Song{convert_to_hex(label_count).zfill(2)}")))
 
         # All songs start with "FF 00 _ _ 01 _ _ 02 _ _ 03 _ _ FF"
-        labels.append((addr + 14, f"Song{convert_to_hex(label_count).zfill(2)}Opcodes"))
+        header_offsets = extract_offsets_from_header(bank_data, addr - 0x8000)
+        print("Song (%02X):" % label_count, header_offsets)
+        #labels.append((addr + 14, f"Song{convert_to_hex(label_count).zfill(2)}Opcodes"))
+        seen_offsets = set()
+        for key, offset in header_offsets.items():
+            if addr + offset in seen_offsets:
+                continue
+            labels.append((addr + offset, f"Song{convert_to_hex(label_count).zfill(2)}_Section{key}"))
+            seen_offsets.add(addr + offset)
         label_count += 1
         addr_set.add(addr)
     return labels
