@@ -491,8 +491,44 @@ LABEL {
   ADDR  $B8ED;
 };
 LABEL {
+  NAME "Song01_LoopOffset_001e";
+  ADDR  $B8FD;
+};
+LABEL {
+  NAME "Song01_LoopOffset_0028";
+  ADDR  $B907;
+};
+LABEL {
+  NAME "Song01_LoopOffset_0032";
+  ADDR  $B911;
+};
+LABEL {
+  NAME "Song01_LoopOffset_003c";
+  ADDR  $B91B;
+};
+LABEL {
+  NAME "Song01_LoopOffset_004a";
+  ADDR  $B929;
+};
+LABEL {
+  NAME "Song01_LoopOffset_0054";
+  ADDR  $B933;
+};
+LABEL {
+  NAME "Song01_LoopOffset_0066";
+  ADDR  $B945;
+};
+LABEL {
+  NAME "Song01_LoopOffset_0070";
+  ADDR  $B94F;
+};
+LABEL {
   NAME "Song01_Section01";
   ADDR  $B960;
+};
+LABEL {
+  NAME "Song01_LoopOffset_0093";
+  ADDR  $B972;
 };
 LABEL {
   NAME "Song01_Section00";
@@ -507,6 +543,10 @@ LABEL {
   ADDR  $B98E;
 };
 LABEL {
+  NAME "Song00_LoopOffset_0052";
+  ADDR  $B9D2;
+};
+LABEL {
   NAME "Song00_Section01";
   ADDR  $BA27;
 };
@@ -515,8 +555,20 @@ LABEL {
   ADDR  $BA86;
 };
 LABEL {
+  NAME "Song00_LoopOffset_0120";
+  ADDR  $BAA0;
+};
+LABEL {
+  NAME "Song00_LoopOffset_013a";
+  ADDR  $BABA;
+};
+LABEL {
   NAME "Song00_Section03";
   ADDR  $BACA;
+};
+LABEL {
+  NAME "Song01_LoopOffset_0200";
+  ADDR  $BADF;
 };
 LABEL {
   NAME "Song06";
@@ -531,8 +583,48 @@ LABEL {
   ADDR  $BB6C;
 };
 LABEL {
+  NAME "Song06_LoopOffset_0027";
+  ADDR  $BB7F;
+};
+LABEL {
+  NAME "Song06_LoopOffset_0036";
+  ADDR  $BB8E;
+};
+LABEL {
+  NAME "Song06_LoopOffset_0052";
+  ADDR  $BBAA;
+};
+LABEL {
+  NAME "Song06_LoopOffset_0062";
+  ADDR  $BBBA;
+};
+LABEL {
+  NAME "Song06_LoopOffset_0087";
+  ADDR  $BBDF;
+};
+LABEL {
+  NAME "Song06_LoopOffset_00e7";
+  ADDR  $BC3F;
+};
+LABEL {
   NAME "Song06_Section01";
   ADDR  $BC70;
+};
+LABEL {
+  NAME "Song06_LoopOffset_012b";
+  ADDR  $BC83;
+};
+LABEL {
+  NAME "Song06_LoopOffset_013a";
+  ADDR  $BC92;
+};
+LABEL {
+  NAME "Song06_LoopOffset_016d";
+  ADDR  $BCC5;
+};
+LABEL {
+  NAME "Song06_LoopOffset_0192";
+  ADDR  $BCEA;
 };
 LABEL {
   NAME "Song06_Section02";
@@ -567,12 +659,24 @@ LABEL {
   ADDR  $C30D;
 };
 LABEL {
+  NAME "Song08_LoopOffset_0033";
+  ADDR  $C332;
+};
+LABEL {
   NAME "Song08_Section01";
   ADDR  $C36B;
 };
 LABEL {
+  NAME "Song08_LoopOffset_0091";
+  ADDR  $C390;
+};
+LABEL {
   NAME "Song08_Section02";
   ADDR  $C3C9;
+};
+LABEL {
+  NAME "Song08_LoopOffset_00ef";
+  ADDR  $C3EE;
 };
 LABEL {
   NAME "Song08_Section03";
@@ -597,6 +701,10 @@ LABEL {
 LABEL {
   NAME "Song02_Section03";
   ADDR  $C540;
+};
+LABEL {
+  NAME "Song02_LoopOffset_0103";
+  ADDR  $C54D;
 };
 LABEL {
   NAME "MusicCostaDelSolTheme";
@@ -631,8 +739,20 @@ LABEL {
   ADDR  $DA6F;
 };
 LABEL {
+  NAME "Song03_LoopOffset_00e1";
+  ADDR  $DAB1;
+};
+LABEL {
+  NAME "Song03_LoopOffset_00f3";
+  ADDR  $DAC3;
+};
+LABEL {
   NAME "Song03_Section02";
   ADDR  $DB0E;
+};
+LABEL {
+  NAME "Song03_LoopOffset_0166";
+  ADDR  $DB36;
 };
 LABEL {
   NAME "Song03_Section03";
@@ -691,12 +811,20 @@ LABEL {
   ADDR  $DED0;
 };
 LABEL {
+  NAME "Song09_LoopOffset_0204";
+  ADDR  $DFE3;
+};
+LABEL {
   NAME "Song09_Section02";
   ADDR  $DFF2;
 };
 LABEL {
   NAME "Song09_Section03";
   ADDR  $E10C;
+};
+LABEL {
+  NAME "Song09_LoopOffset_033d";
+  ADDR  $E11C;
 };
 LABEL {
   NAME "MusicNorthCorelTheme";
@@ -709,6 +837,10 @@ LABEL {
 LABEL {
   NAME "Song0a_Section01";
   ADDR  $E1EE;
+};
+LABEL {
+  NAME "Song0a_LoopOffset_00e3";
+  ADDR  $E206;
 };
 LABEL {
   NAME "Song0a_Section02";
@@ -731,8 +863,16 @@ LABEL {
   ADDR  $E32C;
 };
 LABEL {
+  NAME "Song0b_LoopOffset_00f3";
+  ADDR  $E344;
+};
+LABEL {
   NAME "Song0b_Section02";
   ADDR  $E39C;
+};
+LABEL {
+  NAME "Song0b_LoopOffset_0163";
+  ADDR  $E3B4;
 };
 LABEL {
   NAME "Song0b_Section03";
@@ -775,6 +915,10 @@ LABEL {
   ADDR  $E7ED;
 };
 LABEL {
+  NAME "Song0d_LoopOffset_0288";
+  ADDR  $E805;
+};
+LABEL {
   NAME "Song0d_Section03";
   ADDR  $E868;
 };
@@ -811,6 +955,10 @@ LABEL {
   ADDR  $EB21;
 };
 LABEL {
+  NAME "Song0f_LoopOffset_00cc";
+  ADDR  $EB39;
+};
+LABEL {
   NAME "Song0f_Section02";
   ADDR  $EBEA;
 };
@@ -827,12 +975,24 @@ LABEL {
   ADDR  $EC38;
 };
 LABEL {
+  NAME "Song10_LoopOffset_003d";
+  ADDR  $EC67;
+};
+LABEL {
+  NAME "Song10_LoopOffset_008e";
+  ADDR  $ECB8;
+};
+LABEL {
   NAME "Song10_Section01";
   ADDR  $ECD7;
 };
 LABEL {
   NAME "Song10_Section02";
   ADDR  $ED6D;
+};
+LABEL {
+  NAME "Song10_LoopOffset_0187";
+  ADDR  $EDB1;
 };
 LABEL {
   NAME "Song10_Section03";
@@ -867,12 +1027,24 @@ LABEL {
   ADDR  $EF00;
 };
 LABEL {
+  NAME "Song13_LoopOffset_0026";
+  ADDR  $EF18;
+};
+LABEL {
   NAME "Song13_Section01";
   ADDR  $EF74;
 };
 LABEL {
+  NAME "Song13_LoopOffset_009a";
+  ADDR  $EF8C;
+};
+LABEL {
   NAME "Song13_Section02";
   ADDR  $EFF4;
+};
+LABEL {
+  NAME "Song13_LoopOffset_011a";
+  ADDR  $F00C;
 };
 LABEL {
   NAME "Song13_Section03";
@@ -911,8 +1083,16 @@ LABEL {
   ADDR  $F291;
 };
 LABEL {
+  NAME "Song15_LoopOffset_0069";
+  ADDR  $F2B6;
+};
+LABEL {
   NAME "Song15_Section02";
   ADDR  $F2E1;
+};
+LABEL {
+  NAME "Song15_LoopOffset_00ac";
+  ADDR  $F2F9;
 };
 LABEL {
   NAME "Song15_Section03";
@@ -951,8 +1131,36 @@ LABEL {
   ADDR  $F45F;
 };
 LABEL {
+  NAME "Song18_LoopOffset_0067";
+  ADDR  $F477;
+};
+LABEL {
+  NAME "Song18_LoopOffset_0084";
+  ADDR  $F494;
+};
+LABEL {
+  NAME "Song18_LoopOffset_008b";
+  ADDR  $F49B;
+};
+LABEL {
   NAME "Song18_Section02";
   ADDR  $F4A3;
+};
+LABEL {
+  NAME "Song18_LoopOffset_00a7";
+  ADDR  $F4B7;
+};
+LABEL {
+  NAME "Song18_LoopOffset_00be";
+  ADDR  $F4CE;
+};
+LABEL {
+  NAME "Song18_LoopOffset_00ca";
+  ADDR  $F4DA;
+};
+LABEL {
+  NAME "Song18_LoopOffset_00d1";
+  ADDR  $F4E1;
 };
 LABEL {
   NAME "Song18_Section03";
@@ -971,8 +1179,36 @@ LABEL {
   ADDR  $F566;
 };
 LABEL {
+  NAME "Song19_LoopOffset_007e";
+  ADDR  $F583;
+};
+LABEL {
+  NAME "Song19_LoopOffset_00cc";
+  ADDR  $F5D1;
+};
+LABEL {
+  NAME "Song19_LoopOffset_00f1";
+  ADDR  $F5F6;
+};
+LABEL {
+  NAME "Song19_LoopOffset_0116";
+  ADDR  $F61B;
+};
+LABEL {
   NAME "Song19_Section02";
   ADDR  $F663;
+};
+LABEL {
+  NAME "Song19_LoopOffset_0176";
+  ADDR  $F67B;
+};
+LABEL {
+  NAME "Song19_LoopOffset_0198";
+  ADDR  $F69D;
+};
+LABEL {
+  NAME "Song19_LoopOffset_01ba";
+  ADDR  $F6BF;
 };
 LABEL {
   NAME "Song19_Section03";
@@ -991,8 +1227,16 @@ LABEL {
   ADDR  $F792;
 };
 LABEL {
+  NAME "Song1a_LoopOffset_00a8";
+  ADDR  $F7AA;
+};
+LABEL {
   NAME "Song1a_Section02";
   ADDR  $F7B2;
+};
+LABEL {
+  NAME "Song1a_LoopOffset_00c8";
+  ADDR  $F7CA;
 };
 LABEL {
   NAME "Song1a_Section03";
@@ -1027,12 +1271,28 @@ LABEL {
   ADDR  $F97B;
 };
 LABEL {
+  NAME "Song1c_LoopOffset_0043";
+  ADDR  $F9B0;
+};
+LABEL {
   NAME "Song1c_Section01";
   ADDR  $F9ED;
 };
 LABEL {
+  NAME "Song1c_LoopOffset_009d";
+  ADDR  $FA0A;
+};
+LABEL {
   NAME "Song1c_Section02";
   ADDR  $FA3E;
+};
+LABEL {
+  NAME "Song1c_LoopOffset_00e9";
+  ADDR  $FA56;
+};
+LABEL {
+  NAME "Song1c_LoopOffset_0100";
+  ADDR  $FA6D;
 };
 LABEL {
   NAME "Song1c_Section03";
@@ -1049,6 +1309,14 @@ LABEL {
 LABEL {
   NAME "Song11_Section01";
   ADDR  $FB51;
+};
+LABEL {
+  NAME "Song11_LoopOffset_0069";
+  ADDR  $FB6B;
+};
+LABEL {
+  NAME "Song11_LoopOffset_0087";
+  ADDR  $FB89;
 };
 LABEL {
   NAME "Song11_Section02";

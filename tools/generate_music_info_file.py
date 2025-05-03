@@ -110,15 +110,52 @@ def generate_labels_songs(nes_file: NESFile, bank_num: int):
         # All songs start with "FF 00 _ _ 01 _ _ 02 _ _ 03 _ _ FF"
         header_offsets = extract_offsets_from_header(bank_data, addr - 0x8000)
         print("Song (%02X):" % label_count, header_offsets)
-        #labels.append((addr + 14, f"Song{convert_to_hex(label_count).zfill(2)}Opcodes"))
+
         seen_offsets = set()
+
+        # Label header sections first
         for key, offset in header_offsets.items():
-            if addr + offset in seen_offsets:
+            target_addr = addr + offset
+            if target_addr in seen_offsets:
                 continue
-            labels.append((addr + offset, f"Song{convert_to_hex(label_count).zfill(2)}_Section{key}"))
-            seen_offsets.add(addr + offset)
+            labels.append((target_addr, f"Song{convert_to_hex(label_count).zfill(2)}_Section{key}"))
+            seen_offsets.add(target_addr)
+
+        # Now scan for 0xCE opcodes to find loop offsets
+        song_base_addr = addr
+        current_addr = addr + 14  # After header
+
+        while current_addr < len(bank_data) + 0x8000:
+            opcode = bank_data[current_addr - 0x8000]
+
+            # Break if end of song data is reached
+            # Assuming end of song data is marked by 0xFF opcode followed by 0x00
+            if opcode == 0xFF and current_addr + 1 - 0x8000 < len(bank_data) and bank_data[current_addr + 1 - 0x8000] == 0x00:
+                break
+
+            if opcode == 0xCE:
+                if current_addr + 3 - 0x8000 > len(bank_data):
+                    break  # Avoid out of bounds
+
+                repeat_count = bank_data[current_addr + 1 - 0x8000]
+                offset_lo = bank_data[current_addr + 2 - 0x8000]
+                offset_hi = bank_data[current_addr + 3 - 0x8000]
+                loop_offset = offset_lo | (offset_hi << 8)
+
+                print ("Loop Offset:", loop_offset)
+
+                loop_target_addr = song_base_addr + loop_offset
+                if loop_target_addr not in seen_offsets:
+                    labels.append((loop_target_addr, f"Song{convert_to_hex(label_count).zfill(2)}_LoopOffset_{convert_to_hex(loop_offset).zfill(4)}"))
+                    seen_offsets.add(loop_target_addr)
+
+                current_addr += 4  # Move past CE opcode, repeat count, 2-byte offset
+            else:
+                current_addr += 1  # Normal opcode
+
         label_count += 1
         addr_set.add(addr)
+
     return labels
 
 def main():
